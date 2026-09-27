@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/schema/worldbook_entry.schema.json",
+  "title": "Canonical Campaign Worldbook Entry",
+  "description": "One reviewed entry in the canonical intermediate worldbook source.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "type",
+    "name",
+    "aliases",
+    "keys",
+    "content",
+    "canon_status",
+    "canon_layer",
+    "importance",
+    "sources",
+    "notes"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9]*(?:_[A-Z0-9]+)*$"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["world", "faction", "location", "character", "concept", "event"]
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "aliases": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "keys": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "content": {
+      "type": "string",
+      "minLength": 1
+    },
+    "canon_status": {
+      "type": "string",
+      "enum": ["confirmed", "uncertain", "rumor", "character_belief"]
+    },
+    "canon_layer": {
+      "type": "string",
+      "enum": ["original_campaign", "transition", "continuation", "special_interlude"]
+    },
+    "importance": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["document", "reference"],
+        "properties": {
+          "document": {"type": "string", "minLength": 1},
+          "reference": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}
