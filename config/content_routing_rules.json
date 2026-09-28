@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "mode": "recommend_only",
+  "can_apply_mutation": false,
+  "description": "Classification hints for future authoring inputs. This router never approves Canon and never writes canonical databases.",
+  "targets": {
+    "worldbook": {
+      "content_categories": [
+        "objective_world_fact",
+        "persistent_entity",
+        "durable_relationship_fact",
+        "consequential_historical_event"
+      ],
+      "excludes": ["personality_prompt", "game_rule", "present_snapshot", "future_possibility"]
+    },
+    "npc_profiles": {
+      "content_categories": [
+        "character_personality",
+        "values",
+        "speech_style",
+        "decision_habit",
+        "private_goal",
+        "subjective_relationship"
+      ],
+      "schema": "schema/npc_profile.schema.json"
+    },
+    "pc_continuity": {
+      "content_categories": [
+        "player_declared_goal",
+        "confirmed_pc_continuity",
+        "pc_acquired_knowledge",
+        "pc_current_objective_state",
+        "pc_established_relationship"
+      ],
+      "schema": "schema/pc_continuity_profile.schema.json",
+      "prohibits": [
+        "predicted_pc_future_action",
+        "predicted_pc_dialogue",
+        "predicted_pc_private_thought",
+        "predicted_pc_emotion",
+        "predicted_pc_decision",
+        "ai_assigned_pc_goal"
+      ]
+    },
+    "rules": {
+      "content_categories": ["game_rule", "resolution_mechanic", "setting_mechanic"],
+      "requires_future_database": true
+    },
+    "current_state": {
+      "content_categories": [
+        "present_snapshot",
+        "active_condition",
+        "current_location",
+        "current_relationship_state"
+      ],
+      "history_sink": false
+    },
+    "continuation": {
+      "content_categories": [
+        "occurred_in_continuation",
+        "relationship_change",
+        "knowledge_change",
+        "state_change",
+        "revelation"
+      ],
+      "must_be_confirmed_before_patch_source": true
+    },
+    "director": {
+      "content_categories": [
+        "possible_future",
+        "plot_seed",
+        "hypothetical_truth",
+        "faction_agenda",
+        "open_question"
+      ],
+      "canonical_by_presence": false
+    }
+  },
+  "routing_cases": {
+    "objective_world_fact": "worldbook",
+    "character_personality": "npc_profiles",
+    "pc_declared_goal": "pc_continuity",
+    "pc_acquired_knowledge": "pc_continuity",
+    "pc_current_objective_state": "pc_continuity",
+    "predicted_pc_future_action": "forbidden",
+    "predicted_pc_private_thought": "forbidden",
+    "predicted_pc_emotion": "forbidden",
+    "predicted_pc_decision": "forbidden",
+    "rule_mechanic": "rules",
+    "present_state": "current_state",
+    "occurred_in_continuation": "continuation",
+    "possible_future": "director"
+  },
+  "cross_cutting_rules": {
+    "confirmed_secret": "route by fact domain and attach restricted/secret visibility plus knowledge partition",
+    "character_belief": "retain attribution; do not route as an objective fact",
+    "character_suspicion": "retain attribution; do not route as an objective fact",
+    "rumor": "retain rumor status; do not auto-promote",
+    "director_hypothesis": "route to director and prohibit direct Canon mutation"
+  }
+}

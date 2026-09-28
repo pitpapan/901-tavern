@@ -1,0 +1,73 @@
+{
+  "id": "PC_EXAMPLE_PLAYER",
+  "profile_kind": "pc_continuity",
+  "worldbook_id": "CHARACTER_EXAMPLE_PLAYER",
+  "name": "Example Player Character",
+  "aliases": [],
+  "profile_depth": "compact",
+  "activation_policy": "compact_when_supporting",
+  "knowledge_partition": true,
+  "canon_layers": ["original_campaign"],
+  "control_mode": "user_controlled",
+  "ai_permissions": {
+    "may_generate_dialogue": false,
+    "may_choose_voluntary_actions": false,
+    "may_generate_private_thoughts": false,
+    "may_assign_new_goals": false,
+    "may_describe_external_effects": true,
+    "may_describe_involuntary_physical_reactions": true,
+    "may_summarize_user_declared_actions": true,
+    "may_reference_established_history": true
+  },
+  "identity": {
+    "public_identity": [
+      {
+        "claim_id": "CLAIM_EXAMPLE_PC_IDENTITY",
+        "claim": "Placeholder identity text; replace only with source-supported continuity.",
+        "evidence_mode": "explicit_source_statement",
+        "origin": "original_campaign",
+        "stability": "stable",
+        "context": "",
+        "exceptions": [],
+        "sources": ["SOURCE_REF_REQUIRED"],
+        "notes": "This example is not a campaign profile."
+      }
+    ],
+    "durable_roles": [],
+    "established_history": []
+  },
+  "core_personality": [],
+  "values": [],
+  "speech_style": [],
+  "decision_patterns": [],
+  "relationships": [],
+  "epistemic_state": [],
+  "goals": {
+    "declared_goals": [],
+    "confirmed_continuation_goals": []
+  },
+  "dynamic_state": {
+    "as_of": "BASELINE_REFERENCE_REQUIRED",
+    "current_conditions": [],
+    "current_obligations": [],
+    "current_location_ref": "",
+    "current_faction_role": "",
+    "current_concerns": [],
+    "sources": ["SOURCE_REF_REQUIRED"],
+    "notes": "Do not infer voluntary actions, thoughts, emotions, decisions, or goals."
+  },
+  "presence": {
+    "life_status": "unknown",
+    "narrative_availability": "inactive",
+    "realm_scope": ["original_campaign"],
+    "sources": ["SOURCE_REF_REQUIRED"],
+    "notes": "Unknown is not deceased."
+  },
+  "rp_constraints": [],
+  "provenance": {
+    "canon_origin": ["original_campaign"],
+    "source_origin_ids": ["SOURCE_REF_REQUIRED"]
+  },
+  "evidence_gaps": ["Replace placeholder evidence before approval."],
+  "notes": "Neutral schema example only; not canonical campaign data."
+}

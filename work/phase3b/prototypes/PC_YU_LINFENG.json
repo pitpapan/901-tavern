@@ -1,0 +1,236 @@
+{
+  "id": "PC_YU_LINFENG",
+  "profile_kind": "pc_continuity",
+  "worldbook_id": "CHARACTER_YU_LINFENG",
+  "name": "御临风",
+  "aliases": [],
+  "profile_depth": "full",
+  "activation_policy": "full_when_active",
+  "knowledge_partition": true,
+  "canon_layers": ["original_campaign", "transition"],
+  "control_mode": "user_controlled",
+  "ai_permissions": {
+    "may_generate_dialogue": false,
+    "may_choose_voluntary_actions": false,
+    "may_generate_private_thoughts": false,
+    "may_assign_new_goals": false,
+    "may_describe_external_effects": true,
+    "may_describe_involuntary_physical_reactions": true,
+    "may_summarize_user_declared_actions": true,
+    "may_reference_established_history": true
+  },
+  "identity": {
+    "public_identity": [
+      {
+        "claim_id": "CLAIM_YU_LINFENG_IDENTITY",
+        "claim": "御临风是从现实世界来到飘零大陆的十四岁少年。",
+        "evidence_mode": "authorial_definition",
+        "origin": "authorial_supplement",
+        "stability": "stable",
+        "context": "原团人物卡基线。",
+        "exceptions": ["年龄是原团记录年龄，不自动随未记录时间推移改写。"],
+        "sources": ["设定 人物/人物卡资料集_叙事检索版.md:38-80"],
+        "notes": "身份连续性，不授权 AI 扮演。"
+      }
+    ],
+    "durable_roles": [
+      {
+        "claim_id": "CLAIM_YU_LINFENG_DURABLE_ROLES",
+        "claim": "他以剑术、调查与广泛知识参与帝国和魔兽战争，并在承接诅咒后成为耶各的代行者。",
+        "evidence_mode": "explicit_source_statement",
+        "origin": "original_campaign",
+        "stability": "stable",
+        "context": "原团既成身份与经历。",
+        "exceptions": ["能力与身份不得扩写为未记录的具体技能清单。"],
+        "sources": ["output/worldbook_source.jsonl#CHARACTER_YU_LINFENG", "设定 人物/人物卡资料集_叙事检索版.md:38-80"],
+        "notes": "历史事实而非未来行为指令。"
+      }
+    ],
+    "established_history": [
+      {
+        "claim_id": "CLAIM_YU_LINFENG_CURSE_HISTORY",
+        "claim": "他自愿把悠悠身上的诅咒转移到自己身上。",
+        "evidence_mode": "explicit_source_statement",
+        "origin": "original_campaign",
+        "stability": "stable",
+        "context": "帝都诅咒事件。",
+        "exceptions": ["不得据此替玩家决定未来继续自我牺牲。"],
+        "sources": ["extracted-first/27/posts.md:224-269", "extracted-first/28/posts.md:265-377"],
+        "notes": "只记录已发生行为。"
+      },
+      {
+        "claim_id": "CLAIM_YU_LINFENG_DRAGON_SANCTUARY_HISTORY",
+        "claim": "原团后期他护送悠悠进入龙族秘境，并与谢尔伦击败死亡之翼本轮肉身。",
+        "evidence_mode": "explicit_source_statement",
+        "origin": "original_campaign",
+        "stability": "stable",
+        "context": "原团龙族秘境终局。",
+        "exceptions": ["不把本轮肉身被击败写成永久死亡。"],
+        "sources": ["output/worldbook_source.jsonl#CHARACTER_YU_LINFENG", "current_state.md:D0"],
+        "notes": "Original Campaign 历史连续性。"
+      },
+      {
+        "claim_id": "CLAIM_YU_LINFENG_TRANSITION_EVACUATION",
+        "claim": "龙族秘境毁灭后的过渡阶段中，他完成撤离。",
+        "evidence_mode": "explicit_source_statement",
+        "origin": "transition",
+        "stability": "stable",
+        "context": "龙族秘境毁灭后的 D1 过渡状态。",
+        "exceptions": [],
+        "sources": ["current_state.md:D0-D1", "output/worldbook_source.jsonl#CHARACTER_YU_LINFENG"],
+        "notes": "与原团内的秘境战斗分开记录，避免跨层来源混合。"
+      }
+    ]
+  },
+  "core_personality": [
+    {
+      "claim_id": "CLAIM_YU_LINFENG_AUTHORIAL_TRAITS",
+      "claim": "人物参考将御临风定义为有责任感、重感情、固执、果断且理想主义。",
+      "evidence_mode": "authorial_definition",
+      "origin": "authorial_supplement",
+      "stability": "stable",
+      "context": "角色连续性档案。",
+      "exceptions": ["不得用这些标签生成其未来对白、行动、思想、情绪或决定。"],
+      "sources": ["设定 人物/人物卡资料集_叙事检索版.md:38-80"],
+      "notes": "仅供一致性检查。"
+    }
+  ],
+  "values": [
+    {
+      "claim_id": "CLAIM_YU_LINFENG_PAST_PROTECTION_CHOICE",
+      "claim": "在悠悠诅咒审议中，他拒绝把她作为战略牺牲，并选择自己承接诅咒。",
+      "evidence_mode": "single_observed_behavior",
+      "origin": "original_campaign",
+      "stability": "observed_only",
+      "context": "特定救援与审议事件。",
+      "exceptions": ["不预测玩家在其他困境中的选择。"],
+      "sources": ["extracted-first/27/posts.md:224-269", "extracted-first/28/posts.md:265-377"],
+      "notes": "历史价值表现，不是自动决策规则。"
+    }
+  ],
+  "speech_style": [],
+  "decision_patterns": [
+    {
+      "claim_id": "CLAIM_YU_LINFENG_PAST_CURSE_DECISION",
+      "claim": "他在明确自己仍想活下去且有未竟之事后，仍于该次事件中选择承接诅咒。",
+      "evidence_mode": "single_observed_behavior",
+      "origin": "original_campaign",
+      "stability": "observed_only",
+      "context": "帝都诅咒转移。",
+      "exceptions": ["不得由 AI 重演、类推或替玩家作出新决定。"],
+      "sources": ["extracted-first/28/posts.md:265-377"],
+      "notes": "作为历史检查点保留。"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_id": "RELATIONSHIP_YU_LINFENG_YOUYOU",
+      "subject_ref": "CHARACTER_YOUYOU",
+      "relationship_type": "mutual life-saving history",
+      "established_history": [
+        {
+          "claim_id": "CLAIM_YU_LINFENG_YOUYOU_HISTORY",
+          "claim": "悠悠曾救治御临风与雪老；御临风后来承担她的诅咒并护送她前往龙族秘境。",
+          "evidence_mode": "explicit_source_statement",
+          "origin": "original_campaign",
+          "stability": "stable",
+          "context": "原团持续关系史。",
+          "exceptions": ["不自动生成当前情绪或未来承诺。"],
+          "sources": ["设定 人物/人物卡资料集_叙事检索版.md:38-80", "extracted-first/28/posts.md:265-377", "output/worldbook_source.jsonl#CHARACTER_YU_LINFENG"],
+          "notes": "relationship depth is historical, not AI control."
+        }
+      ],
+      "current_stance": [],
+      "obligations": [],
+      "tensions": [],
+      "known_shared_experiences": ["悠悠救治御临风与雪老", "诅咒转移", "龙族秘境护送与撤离"],
+      "visibility": "restricted",
+      "sources": ["设定 人物/人物卡资料集_叙事检索版.md:38-80", "extracted-first/28/posts.md:265-377", "current_state.md:D1"],
+      "notes": "不得代替玩家表述感情。"
+    },
+    {
+      "relationship_id": "RELATIONSHIP_YU_LINFENG_ZHENZI",
+      "subject_ref": "CHARACTER_ZHENZI",
+      "relationship_type": "life-saving bond and bereavement continuity",
+      "established_history": [
+        {
+          "claim_id": "CLAIM_YU_LINFENG_ZHENZI_HISTORY",
+          "claim": "贞子多次帮助御临风与雪老，并以自身为代价换取御临风生还；御临风后来恢复了相关记忆。",
+          "evidence_mode": "explicit_source_statement",
+          "origin": "original_campaign",
+          "stability": "stable",
+          "context": "边关创伤与记忆恢复。",
+          "exceptions": ["贞子已故；不得暗示她当前可正常行动或必将复活。", "不得生成御临风当前悲伤程度。"],
+          "sources": ["设定 人物/人物卡资料集_叙事检索版.md:45-53", "output/worldbook_source.jsonl#CHARACTER_ZHENZI"],
+          "notes": "修正后的贞子 Canon；不存在其他无来源实体替代。"
+        }
+      ],
+      "current_stance": [],
+      "obligations": [],
+      "tensions": [],
+      "known_shared_experiences": ["边关救援", "记忆被抹去", "后来恢复记忆并确认贞子已故"],
+      "visibility": "restricted",
+      "sources": ["设定 人物/人物卡资料集_叙事检索版.md:45-53", "output/worldbook_source.jsonl#CHARACTER_ZHENZI"],
+      "notes": "仅用于连续性提醒。"
+    }
+  ],
+  "epistemic_state": [
+    {
+      "knowledge_id": "KNOWLEDGE_YU_LINFENG_WHITE_MAGICIAN_CLAIMS",
+      "subject_ref": "CHARACTER_WHITE_MAGICIAN",
+      "statement": "御临风亲耳听到白色魔法使关于家人、理想乡、研究与命运理论的陈述。",
+      "epistemic_type": "knows",
+      "assertion_scope": "character_cognition",
+      "acquired_context": "龙族秘境终局交涉。",
+      "visibility": "restricted",
+      "sources": ["extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.md:#225-#229"],
+      "notes": "他知道对方说过这些；不等于陈述内容是真实世界事实。"
+    }
+  ],
+  "goals": {
+    "declared_goals": [
+      {
+        "goal_id": "GOAL_YU_LINFENG_HISTORICAL_LIFE_AND_DEBTS",
+        "goal": "他在诅咒转移前声明自己想活下去，并仍有复仇与偿还人情等未竟之事。",
+        "status": "unknown",
+        "basis": "player_declared",
+        "origin": "original_campaign",
+        "sources": ["extracted-first/28/posts.md:265-377"],
+        "notes": "历史声明；D3 是否仍为主动目标未被确认。"
+      }
+    ],
+    "confirmed_continuation_goals": []
+  },
+  "dynamic_state": {
+    "as_of": "current_state.md D3 baseline",
+    "current_conditions": ["保留耶各代行者与诅咒承接的既成连续性"],
+    "current_obligations": [],
+    "current_location_ref": "",
+    "current_faction_role": "",
+    "current_concerns": [],
+    "sources": ["current_state.md:D3", "output/worldbook_source.jsonl#CHARACTER_YU_LINFENG"],
+    "notes": "不填入未由玩家声明的下一步、情绪或决定。"
+  },
+  "presence": {
+    "life_status": "alive",
+    "narrative_availability": "normal",
+    "realm_scope": ["original_campaign", "transition"],
+    "sources": ["current_state.md:D3", "output/worldbook_source.jsonl#CHARACTER_YU_LINFENG"],
+    "notes": "user-controlled PC; normal presence never authorizes autonomous portrayal."
+  },
+  "rp_constraints": [
+    {
+      "constraint_id": "CONSTRAINT_YU_LINFENG_SPECIAL_INTERLUDE",
+      "constraint": "特殊梦境知识不得进入主世界 PC 连续性，除非原团明确记载被带回。",
+      "origin": "special_interlude",
+      "sources": ["current_state.md:D3", "AGENTS.md#Canon-layers-and-dream-material"],
+      "notes": "保持主世界与 Special Interlude 隔离。"
+    }
+  ],
+  "provenance": {
+    "canon_origin": ["original_campaign", "transition", "authorial_supplement"],
+    "source_origin_ids": ["output/worldbook_source.jsonl#CHARACTER_YU_LINFENG", "work/phase3b/evidence/PC_YU_LINFENG_evidence.md"]
+  },
+  "evidence_gaps": ["D3 后没有确认的 continuation goal。", "D3 精确位置与当前情绪未记录。", "不存在生成 PC 对白、行动、思想、情绪、决定或新目标的权限。", "特殊梦境知识是否带回必须逐项有原团证据。"],
+  "notes": "Phase 3B PC continuity prototype only; user control is absolute."
+}

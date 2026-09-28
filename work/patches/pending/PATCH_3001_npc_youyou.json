@@ -1,0 +1,13 @@
+{
+  "patch_id": "PATCH_3001",
+  "created_from": ["work/phase3b/evidence/NPC_YOUYOU_evidence.md", "work/phase3b/prototypes/NPC_YOUYOU.json"],
+  "target_database": "npc_profiles",
+  "operation": "add",
+  "target_id": "NPC_YOUYOU",
+  "reason": "Propose the Phase 3B evidence-backed full NPC profile for human review without creating a formal profile database.",
+  "proposed_changes": {"before": null, "after": {"prototype_ref": "work/phase3b/prototypes/NPC_YOUYOU.json", "profile_id": "NPC_YOUYOU"}},
+  "affected_entries": ["NPC_YOUYOU", "CHARACTER_YOUYOU"],
+  "conflict_check": {"status": "clear", "items": []},
+  "status": "draft",
+  "review_notes": "Names are stage-bearing; human review must preserve the distinction between both full names. Not approved or applied."
+}

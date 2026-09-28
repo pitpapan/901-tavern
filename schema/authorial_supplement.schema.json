@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/schema/authorial_supplement.schema.json",
+  "title": "Authorial Supplement",
+  "description": "A human-authored proposal that may become a reviewed Canon patch but is not Canon by itself.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "supplement_type",
+    "target_domain",
+    "status",
+    "content",
+    "effective_scope",
+    "visibility",
+    "known_by",
+    "unknown_to",
+    "supersedes",
+    "provenance",
+    "notes"
+  ],
+  "properties": {
+    "id": {"type": "string", "pattern": "^SUPPLEMENT_[0-9]{4,}$"},
+    "title": {"type": "string", "minLength": 1},
+    "supplement_type": {
+      "type": "string",
+      "enum": ["world", "character", "faction", "location", "concept", "rule", "secret", "state"]
+    },
+    "target_domain": {
+      "type": "string",
+      "enum": ["worldbook", "npc_profile", "npc_profiles", "pc_continuity", "rules", "state", "multiple"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "review", "approved", "rejected", "superseded"]
+    },
+    "content": {"type": "string", "minLength": 1},
+    "effective_scope": {
+      "type": "string",
+      "enum": ["preexisting_world", "original_campaign", "transition", "continuation", "special_interlude"]
+    },
+    "visibility": {"type": "string", "enum": ["public", "restricted", "secret"]},
+    "known_by": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "unknown_to": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "supersedes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^SUPPLEMENT_[0-9]{4,}$"}
+    },
+    "superseded_by": {"type": "string", "pattern": "^SUPPLEMENT_[0-9]{4,}$"},
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["provided_by", "source_reference", "recorded_at"],
+      "properties": {
+        "provided_by": {"type": "string", "minLength": 1},
+        "source_reference": {"type": "string", "minLength": 1},
+        "recorded_at": {"type": "string", "minLength": 1}
+      }
+    },
+    "notes": {"type": "string"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"visibility": {"enum": ["restricted", "secret"]}}, "required": ["visibility"]},
+      "then": {
+        "anyOf": [
+          {"properties": {"known_by": {"minItems": 1}}},
+          {"properties": {"unknown_to": {"minItems": 1}}}
+        ]
+      }
+    },
+    {
+      "if": {"properties": {"status": {"const": "superseded"}}, "required": ["status"]},
+      "then": {"required": ["superseded_by"]}
+    }
+  ]
+}

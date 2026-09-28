@@ -1,0 +1,28 @@
+{
+  "patch_id": "PATCH_4019",
+  "created_from": [
+    "work/phase3c/evidence/NPC_LEI_GUANG_evidence.md",
+    "work/phase3c/profiles/NPC_LEI_GUANG.json"
+  ],
+  "target_database": "npc_profiles",
+  "operation": "add",
+  "target_id": "NPC_LEI_GUANG",
+  "reason": "Propose an evidence-backed Phase 3C NPC profile for later human review without creating a formal profile database.",
+  "proposed_changes": {
+    "before": null,
+    "after": {
+      "profile_ref": "work/phase3c/profiles/NPC_LEI_GUANG.json",
+      "profile_id": "NPC_LEI_GUANG"
+    }
+  },
+  "affected_entries": [
+    "NPC_LEI_GUANG",
+    "CHARACTER_LEI_GUANG"
+  ],
+  "conflict_check": {
+    "status": "not_checked",
+    "items": []
+  },
+  "status": "draft",
+  "review_notes": "Candidate only; not approved or applied. Evidence gaps and presence restrictions remain binding."
+}

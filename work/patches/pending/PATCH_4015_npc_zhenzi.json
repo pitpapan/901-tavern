@@ -1,0 +1,28 @@
+{
+  "patch_id": "PATCH_4015",
+  "created_from": [
+    "work/phase3c/evidence/NPC_ZHENZI_evidence.md",
+    "work/phase3c/profiles/NPC_ZHENZI.json"
+  ],
+  "target_database": "npc_profiles",
+  "operation": "add",
+  "target_id": "NPC_ZHENZI",
+  "reason": "Propose an evidence-backed Phase 3C NPC profile for later human review without creating a formal profile database.",
+  "proposed_changes": {
+    "before": null,
+    "after": {
+      "profile_ref": "work/phase3c/profiles/NPC_ZHENZI.json",
+      "profile_id": "NPC_ZHENZI"
+    }
+  },
+  "affected_entries": [
+    "NPC_ZHENZI",
+    "CHARACTER_ZHENZI"
+  ],
+  "conflict_check": {
+    "status": "not_checked",
+    "items": []
+  },
+  "status": "draft",
+  "review_notes": "Candidate only; not approved or applied. Evidence gaps and presence restrictions remain binding."
+}

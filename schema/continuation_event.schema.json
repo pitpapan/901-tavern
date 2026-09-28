@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/schema/continuation_event.schema.json",
+  "title": "Continuation Event",
+  "description": "A structured record of something that actually happened during continuation play.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "session_id",
+    "event_type",
+    "actors",
+    "summary",
+    "facts_established",
+    "relationships_changed",
+    "knowledge_changed",
+    "state_changes",
+    "source_record",
+    "canon_status",
+    "notes"
+  ],
+  "properties": {
+    "event_id": {"type": "string", "pattern": "^CONT_[0-9]{4,}$"},
+    "session_id": {"type": "string", "minLength": 1},
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "event",
+        "relationship_change",
+        "knowledge_change",
+        "state_change",
+        "location_change",
+        "faction_change",
+        "character_status_change",
+        "item_change",
+        "goal_change",
+        "revelation"
+      ]
+    },
+    "actors": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "summary": {"type": "string", "minLength": 1},
+    "facts_established": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "relationships_changed": {"type": "array", "items": {"type": "object"}},
+    "knowledge_changed": {"type": "array", "items": {"type": "object"}},
+    "state_changes": {"type": "array", "items": {"type": "object"}},
+    "source_record": {"type": "string", "minLength": 1},
+    "canon_status": {"type": "string", "enum": ["pending", "confirmed", "rejected"]},
+    "notes": {"type": "string"}
+  }
+}

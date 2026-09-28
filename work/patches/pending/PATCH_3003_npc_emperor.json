@@ -1,0 +1,13 @@
+{
+  "patch_id": "PATCH_3003",
+  "created_from": ["work/phase3b/evidence/NPC_EMPEROR_evidence.md", "work/phase3b/prototypes/NPC_EMPEROR.json"],
+  "target_database": "npc_profiles",
+  "operation": "add",
+  "target_id": "NPC_EMPEROR",
+  "reason": "Propose the Phase 3B evidence-backed full NPC profile while keeping powers, private motives, and political inferences unresolved.",
+  "proposed_changes": {"before": null, "after": {"prototype_ref": "work/phase3b/prototypes/NPC_EMPEROR.json", "profile_id": "NPC_EMPEROR"}},
+  "affected_entries": ["NPC_EMPEROR", "CHARACTER_EMPEROR"],
+  "conflict_check": {"status": "clear", "items": []},
+  "status": "draft",
+  "review_notes": "Rumored class, immortality, and inferred private concern are excluded; not approved or applied."
+}

@@ -1,0 +1,250 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/schema/character_profile_common.schema.json",
+  "title": "Character Profile Common Definitions",
+  "description": "Shared closed records for NPC Profiles and Player Character Continuity Profiles. This file is a definition library; the two specialized schemas are the authoritative root contracts.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [],
+  "properties": {},
+  "$defs": {
+    "CanonLayer": {
+      "type": "string",
+      "enum": ["original_campaign", "transition", "continuation", "special_interlude"]
+    },
+    "SourceList": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "ProfileClaim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim_id", "claim", "evidence_mode", "origin", "stability",
+        "context", "exceptions", "sources", "notes"
+      ],
+      "properties": {
+        "claim_id": {"type": "string", "pattern": "^CLAIM_[A-Z0-9_]+$"},
+        "claim": {"type": "string", "minLength": 1},
+        "evidence_mode": {
+          "type": "string",
+          "enum": [
+            "explicit_source_statement", "repeated_observed_behavior",
+            "single_observed_behavior", "authorial_definition", "continuation_confirmed"
+          ]
+        },
+        "origin": {
+          "type": "string",
+          "enum": ["original_campaign", "transition", "continuation", "special_interlude", "authorial_supplement"]
+        },
+        "stability": {"type": "string", "enum": ["stable", "conditional", "observed_only"]},
+        "context": {"type": "string"},
+        "exceptions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "sources": {"$ref": "#/$defs/SourceList"},
+        "notes": {"type": "string"}
+      }
+    },
+    "IdentitySection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["public_identity", "durable_roles", "established_history"],
+      "properties": {
+        "public_identity": {"type": "array", "items": {"$ref": "#/$defs/ProfileClaim"}},
+        "durable_roles": {"type": "array", "items": {"$ref": "#/$defs/ProfileClaim"}},
+        "established_history": {"type": "array", "items": {"$ref": "#/$defs/ProfileClaim"}}
+      }
+    },
+    "RelationshipRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "relationship_id", "subject_ref", "relationship_type", "established_history",
+        "current_stance", "obligations", "tensions", "known_shared_experiences",
+        "visibility", "sources", "notes"
+      ],
+      "properties": {
+        "relationship_id": {"type": "string", "pattern": "^RELATIONSHIP_[A-Z0-9_]+$"},
+        "subject_ref": {"type": "string", "minLength": 1},
+        "relationship_type": {"type": "string", "minLength": 1},
+        "established_history": {"type": "array", "items": {"$ref": "#/$defs/ProfileClaim"}},
+        "current_stance": {"type": "array", "items": {"$ref": "#/$defs/ProfileClaim"}},
+        "obligations": {"type": "array", "items": {"$ref": "#/$defs/ProfileClaim"}},
+        "tensions": {"type": "array", "items": {"$ref": "#/$defs/ProfileClaim"}},
+        "known_shared_experiences": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "visibility": {"type": "string", "enum": ["public", "restricted", "secret"]},
+        "sources": {"$ref": "#/$defs/SourceList"},
+        "notes": {"type": "string"}
+      }
+    },
+    "KnowledgeItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "knowledge_id", "subject_ref", "statement", "epistemic_type",
+        "assertion_scope", "acquired_context", "visibility", "sources", "notes"
+      ],
+      "properties": {
+        "knowledge_id": {"type": "string", "pattern": "^KNOWLEDGE_[A-Z0-9_]+$"},
+        "subject_ref": {"type": "string", "minLength": 1},
+        "fact_ref": {"type": "string", "minLength": 1},
+        "statement": {"type": "string", "minLength": 1},
+        "epistemic_type": {"type": "string", "enum": ["knows", "believes", "suspects", "does_not_know", "secrets"]},
+        "assertion_scope": {"type": "string", "enum": ["character_cognition", "confirmed_world_fact"]},
+        "acquired_context": {"type": "string"},
+        "visibility": {"type": "string", "enum": ["public", "restricted", "secret"]},
+        "sources": {"$ref": "#/$defs/SourceList"},
+        "notes": {"type": "string"}
+      }
+    },
+    "GoalItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["goal_id", "goal", "status", "basis", "origin", "sources", "notes"],
+      "properties": {
+        "goal_id": {"type": "string", "pattern": "^GOAL_[A-Z0-9_]+$"},
+        "goal": {"type": "string", "minLength": 1},
+        "status": {"type": "string", "enum": ["active", "paused", "completed", "failed", "abandoned", "unknown"]},
+        "basis": {"type": "string", "enum": ["source_confirmed", "authorial_definition", "player_declared", "continuation_confirmed"]},
+        "origin": {"type": "string", "enum": ["original_campaign", "transition", "continuation", "special_interlude", "authorial_supplement"]},
+        "sources": {"$ref": "#/$defs/SourceList"},
+        "notes": {"type": "string"}
+      }
+    },
+    "NpcGoals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["public_goals", "private_goals", "current_goals", "long_term_goals"],
+      "properties": {
+        "public_goals": {"type": "array", "items": {"$ref": "#/$defs/GoalItem"}},
+        "private_goals": {"type": "array", "items": {"$ref": "#/$defs/GoalItem"}},
+        "current_goals": {"type": "array", "items": {"$ref": "#/$defs/GoalItem"}},
+        "long_term_goals": {"type": "array", "items": {"$ref": "#/$defs/GoalItem"}}
+      }
+    },
+    "PcGoals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["declared_goals", "confirmed_continuation_goals"],
+      "properties": {
+        "declared_goals": {"type": "array", "items": {"$ref": "#/$defs/GoalItem"}},
+        "confirmed_continuation_goals": {"type": "array", "items": {"$ref": "#/$defs/GoalItem"}}
+      }
+    },
+    "DynamicState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "as_of", "current_conditions", "current_obligations", "current_location_ref",
+        "current_faction_role", "current_concerns", "sources", "notes"
+      ],
+      "properties": {
+        "as_of": {"type": "string", "minLength": 1},
+        "current_conditions": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "current_obligations": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "current_location_ref": {"type": "string"},
+        "current_faction_role": {"type": "string"},
+        "current_concerns": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "sources": {"$ref": "#/$defs/SourceList"},
+        "notes": {"type": "string"}
+      }
+    },
+    "Presence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["life_status", "narrative_availability", "realm_scope", "sources", "notes"],
+      "properties": {
+        "life_status": {"type": "string", "enum": ["alive", "deceased", "unknown", "not_applicable"]},
+        "narrative_availability": {"type": "string", "enum": ["normal", "inactive", "missing", "historical_only", "special_interlude_only", "restricted"]},
+        "realm_scope": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/CanonLayer"}
+        },
+        "sources": {"$ref": "#/$defs/SourceList"},
+        "notes": {"type": "string"}
+      }
+    },
+    "RpConstraint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["constraint_id", "constraint", "origin", "sources", "notes"],
+      "properties": {
+        "constraint_id": {"type": "string", "pattern": "^CONSTRAINT_[A-Z0-9_]+$"},
+        "constraint": {"type": "string", "minLength": 1},
+        "origin": {"type": "string", "enum": ["original_campaign", "transition", "continuation", "special_interlude", "authorial_supplement"]},
+        "sources": {"$ref": "#/$defs/SourceList"},
+        "notes": {"type": "string"}
+      }
+    },
+    "Provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["canon_origin", "source_origin_ids"],
+      "properties": {
+        "canon_origin": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": ["original_campaign", "transition", "continuation", "special_interlude", "authorial_supplement"]
+          }
+        },
+        "introduced_by_patch": {"type": "string", "pattern": "^PATCH_[0-9]{4,}$"},
+        "last_modified_by_patch": {"type": "string", "pattern": "^PATCH_[0-9]{4,}$"},
+        "source_origin_ids": {"$ref": "#/$defs/SourceList"}
+      }
+    },
+    "NpcPermissions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "may_generate_dialogue", "may_choose_voluntary_actions", "may_generate_private_thoughts",
+        "may_assign_new_goals", "may_describe_external_effects",
+        "may_describe_involuntary_physical_reactions", "may_summarize_user_declared_actions",
+        "may_reference_established_history"
+      ],
+      "properties": {
+        "may_generate_dialogue": {"const": true},
+        "may_choose_voluntary_actions": {"const": true},
+        "may_generate_private_thoughts": {"const": true},
+        "may_assign_new_goals": {"const": false},
+        "may_describe_external_effects": {"const": true},
+        "may_describe_involuntary_physical_reactions": {"const": true},
+        "may_summarize_user_declared_actions": {"const": false},
+        "may_reference_established_history": {"const": true}
+      }
+    },
+    "PcPermissions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "may_generate_dialogue", "may_choose_voluntary_actions", "may_generate_private_thoughts",
+        "may_assign_new_goals", "may_describe_external_effects",
+        "may_describe_involuntary_physical_reactions", "may_summarize_user_declared_actions",
+        "may_reference_established_history"
+      ],
+      "properties": {
+        "may_generate_dialogue": {"const": false},
+        "may_choose_voluntary_actions": {"const": false},
+        "may_generate_private_thoughts": {"const": false},
+        "may_assign_new_goals": {"const": false},
+        "may_describe_external_effects": {"const": true},
+        "may_describe_involuntary_physical_reactions": {"const": true},
+        "may_summarize_user_declared_actions": {"const": true},
+        "may_reference_established_history": {"const": true}
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/schema/director_item.schema.json",
+  "title": "Director Item",
+  "description": "A non-canonical hypothesis or possibility available to an AI GM for consideration.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "type",
+    "title",
+    "premise",
+    "related_entities",
+    "possible_directions",
+    "locked",
+    "canon_dependencies",
+    "status",
+    "notes"
+  ],
+  "properties": {
+    "id": {"type": "string", "pattern": "^DIRECTOR_[0-9]{4,}$"},
+    "type": {
+      "type": "string",
+      "enum": ["plot_seed", "faction_agenda", "mystery", "possible_development", "open_question"]
+    },
+    "title": {"type": "string", "minLength": 1},
+    "premise": {"type": "string", "minLength": 1},
+    "related_entities": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "possible_directions": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1}
+    },
+    "locked": {"type": "boolean"},
+    "canon_dependencies": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "status": {"type": "string", "enum": ["open", "held", "realized", "closed", "rejected"]},
+    "notes": {"type": "string"}
+  }
+}

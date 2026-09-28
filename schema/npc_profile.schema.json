@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/schema/npc_profile.schema.json",
+  "title": "NPC Profile",
+  "description": "Source-bound roleplay continuity data for a non-player character. It is not a Worldbook entry or a future-plot instruction.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "profile_kind", "worldbook_id", "name", "aliases", "profile_depth",
+    "activation_policy", "knowledge_partition", "canon_layers", "control_mode",
+    "ai_permissions", "identity", "core_personality", "values", "speech_style",
+    "decision_patterns", "relationships", "epistemic_state", "goals", "dynamic_state",
+    "presence", "rp_constraints", "provenance", "evidence_gaps", "notes"
+  ],
+  "properties": {
+    "id": {"type": "string", "pattern": "^NPC_[A-Z0-9_]+$"},
+    "profile_kind": {"const": "npc"},
+    "worldbook_id": {"type": "string", "pattern": "^CHARACTER_[A-Z0-9_]+$"},
+    "name": {"type": "string", "minLength": 1},
+    "aliases": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "profile_depth": {"type": "string", "enum": ["full", "compact", "minimal"]},
+    "activation_policy": {"type": "string", "enum": ["full_when_active", "compact_when_supporting", "worldbook_until_promoted"]},
+    "knowledge_partition": {"type": "boolean"},
+    "canon_layers": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "character_profile_common.schema.json#/$defs/CanonLayer"}},
+    "control_mode": {"const": "npc_runtime"},
+    "ai_permissions": {"$ref": "character_profile_common.schema.json#/$defs/NpcPermissions"},
+    "identity": {"$ref": "character_profile_common.schema.json#/$defs/IdentitySection"},
+    "core_personality": {"type": "array", "items": {"$ref": "character_profile_common.schema.json#/$defs/ProfileClaim"}},
+    "values": {"type": "array", "items": {"$ref": "character_profile_common.schema.json#/$defs/ProfileClaim"}},
+    "speech_style": {"type": "array", "items": {"$ref": "character_profile_common.schema.json#/$defs/ProfileClaim"}},
+    "decision_patterns": {"type": "array", "items": {"$ref": "character_profile_common.schema.json#/$defs/ProfileClaim"}},
+    "relationships": {"type": "array", "items": {"$ref": "character_profile_common.schema.json#/$defs/RelationshipRecord"}},
+    "epistemic_state": {"type": "array", "items": {"$ref": "character_profile_common.schema.json#/$defs/KnowledgeItem"}},
+    "goals": {"$ref": "character_profile_common.schema.json#/$defs/NpcGoals"},
+    "dynamic_state": {"$ref": "character_profile_common.schema.json#/$defs/DynamicState"},
+    "presence": {"$ref": "character_profile_common.schema.json#/$defs/Presence"},
+    "rp_constraints": {"type": "array", "items": {"$ref": "character_profile_common.schema.json#/$defs/RpConstraint"}},
+    "provenance": {"$ref": "character_profile_common.schema.json#/$defs/Provenance"},
+    "evidence_gaps": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "notes": {"type": "string"}
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "id": "NPC_KUON",
+  "profile_kind": "npc",
+  "worldbook_id": "CHARACTER_KUON",
+  "name": "久远",
+  "aliases": [],
+  "profile_depth": "compact",
+  "activation_policy": "compact_when_supporting",
+  "knowledge_partition": true,
+  "canon_layers": [
+    "original_campaign"
+  ],
+  "control_mode": "npc_runtime",
+  "ai_permissions": {
+    "may_generate_dialogue": true,
+    "may_choose_voluntary_actions": true,
+    "may_generate_private_thoughts": true,
+    "may_assign_new_goals": false,
+    "may_describe_external_effects": true,
+    "may_describe_involuntary_physical_reactions": true,
+    "may_summarize_user_declared_actions": false,
+    "may_reference_established_history": true
+  },
+  "identity": {
+    "public_identity": [
+      {
+        "claim_id": "CLAIM_KUON_IDENTITY",
+        "claim": "久远是药师，也是从雪地救起哈克并为其命名的同行者。",
+        "evidence_mode": "explicit_source_statement",
+        "origin": "original_campaign",
+        "stability": "stable",
+        "context": "Only the Campaign-specific identity is retained; outside-franchise completion is excluded.",
+        "exceptions": [
+          "不得超出所引来源的时点与语境。"
+        ],
+        "sources": [
+          "设定 人物/妄想大陆设定集_检索版.md:久远（lines 101-108）"
+        ],
+        "notes": "仅保留来源直接支持的范围。"
+      }
+    ],
+    "durable_roles": [],
+    "established_history": []
+  },
+  "core_personality": [],
+  "values": [],
+  "speech_style": [],
+  "decision_patterns": [],
+  "relationships": [
+    {
+      "relationship_id": "RELATIONSHIP_KUON_HAKU",
+      "subject_ref": "CHARACTER_HAKU",
+      "relationship_type": "guardian and travelling companion",
+      "established_history": [
+        {
+          "claim_id": "CLAIM_KUON_RELATIONSHIP",
+          "claim": "久远在雪地救起哈克、为其命名并以监护人身份同行。",
+          "evidence_mode": "explicit_source_statement",
+          "origin": "original_campaign",
+          "stability": "stable",
+          "context": "Established relationship history only; no current emotion, loyalty, or future obligation is inferred.",
+          "exceptions": [
+            "不得超出所引来源的时点与语境。"
+          ],
+          "sources": [
+            "设定 人物/妄想大陆设定集_检索版.md:久远（lines 101-108）"
+          ],
+          "notes": "仅保留来源直接支持的范围。"
+        }
+      ],
+      "current_stance": [],
+      "obligations": [],
+      "tensions": [],
+      "known_shared_experiences": [],
+      "visibility": "public",
+      "sources": [
+        "设定 人物/妄想大陆设定集_检索版.md:久远（lines 101-108）"
+      ],
+      "notes": "关系历史不自动构成当前情感、忠诚或未来义务。"
+    }
+  ],
+  "epistemic_state": [],
+  "goals": {
+    "public_goals": [],
+    "private_goals": [],
+    "current_goals": [],
+    "long_term_goals": []
+  },
+  "dynamic_state": {
+    "as_of": "current_state.md D3 baseline",
+    "current_conditions": [],
+    "current_obligations": [],
+    "current_location_ref": "",
+    "current_faction_role": "",
+    "current_concerns": [],
+    "sources": [
+      "current_state.md:D3 state check"
+    ],
+    "notes": "Only explicitly anchored present-state details may be added after human review."
+  },
+  "presence": {
+    "life_status": "unknown",
+    "narrative_availability": "inactive",
+    "realm_scope": [
+      "original_campaign"
+    ],
+    "sources": [
+      "设定 人物/妄想大陆设定集_检索版.md:久远（lines 101-108）"
+    ],
+    "notes": "Profile depth does not force scene presence; inactive, restricted, historical, and interlude boundaries remain operative."
+  },
+  "rp_constraints": [
+    {
+      "constraint_id": "CONSTRAINT_KUON_EVIDENCE_BOUNDARY",
+      "constraint": "不得以单次行为、职业、能力或身份推断稳定人格、私人动机、未来目标或场景必然出席。",
+      "origin": "original_campaign",
+      "sources": [
+        "work/phase3c/evidence/NPC_KUON_evidence.md"
+      ],
+      "notes": "Construction safety boundary; not a new world fact."
+    }
+  ],
+  "provenance": {
+    "canon_origin": [
+      "original_campaign"
+    ],
+    "source_origin_ids": [
+      "output/worldbook_source.jsonl#CHARACTER_KUON",
+      "work/phase3c/evidence/NPC_KUON_evidence.md"
+    ]
+  },
+  "evidence_gaps": [
+    "稳定人格、价值排序与跨情境声线证据不足。",
+    "D3 精确位置、即时议程与当前目标未知。"
+  ],
+  "notes": "Phase 3C READY_FOR_HUMAN_REVIEW candidate. Sparse fields are intentional and must not be fictionalized."
+}

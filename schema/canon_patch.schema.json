@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/schema/canon_patch.schema.json",
+  "title": "Canon Patch",
+  "description": "The only reviewable intermediate format permitted to propose a mutation to a canonical database.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "patch_id",
+    "created_from",
+    "target_database",
+    "operation",
+    "target_id",
+    "reason",
+    "proposed_changes",
+    "affected_entries",
+    "conflict_check",
+    "status",
+    "review_notes"
+  ],
+  "properties": {
+    "patch_id": {"type": "string", "pattern": "^PATCH_[0-9]{4,}$"},
+    "created_from": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "target_database": {
+      "type": "string",
+      "enum": ["worldbook", "npc_profiles", "pc_continuity", "rules", "current_state"]
+    },
+    "operation": {"type": "string", "enum": ["add", "update", "supersede", "deprecate"]},
+    "target_id": {"type": "string", "minLength": 1},
+    "reason": {"type": "string", "minLength": 1},
+    "proposed_changes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["before", "after"],
+      "properties": {
+        "before": {},
+        "after": {}
+      }
+    },
+    "affected_entries": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "conflict_check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "items"],
+      "properties": {
+        "status": {"type": "string", "enum": ["not_checked", "clear", "conflicts", "resolved", "blocked"]},
+        "items": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "review", "approved", "rejected", "applied", "superseded"]
+    },
+    "approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["decision", "approved_by", "approved_at"],
+      "properties": {
+        "decision": {"const": "approved"},
+        "approved_by": {"type": "string", "minLength": 1},
+        "approved_at": {"type": "string", "minLength": 1}
+      }
+    },
+    "application": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["applied_by", "applied_at", "result_reference"],
+      "properties": {
+        "applied_by": {"type": "string", "minLength": 1},
+        "applied_at": {"type": "string", "minLength": 1},
+        "result_reference": {"type": "string", "minLength": 1}
+      }
+    },
+    "review_notes": {"type": "string"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"enum": ["approved", "applied"]}}, "required": ["status"]},
+      "then": {"required": ["approval"]}
+    },
+    {
+      "if": {"properties": {"status": {"const": "applied"}}, "required": ["status"]},
+      "then": {"required": ["application"]}
+    }
+  ]
+}

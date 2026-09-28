@@ -1,0 +1,28 @@
+{
+  "patch_id": "PATCH_4029",
+  "created_from": [
+    "work/phase3c/evidence/NPC_REN_FANZHEN_evidence.md",
+    "work/phase3c/profiles/NPC_REN_FANZHEN.json"
+  ],
+  "target_database": "npc_profiles",
+  "operation": "add",
+  "target_id": "NPC_REN_FANZHEN",
+  "reason": "Propose an evidence-backed Phase 3C NPC profile for later human review without creating a formal profile database.",
+  "proposed_changes": {
+    "before": null,
+    "after": {
+      "profile_ref": "work/phase3c/profiles/NPC_REN_FANZHEN.json",
+      "profile_id": "NPC_REN_FANZHEN"
+    }
+  },
+  "affected_entries": [
+    "NPC_REN_FANZHEN",
+    "CHARACTER_REN_FANZHEN"
+  ],
+  "conflict_check": {
+    "status": "not_checked",
+    "items": []
+  },
+  "status": "draft",
+  "review_notes": "Candidate only; not approved or applied. Evidence gaps and presence restrictions remain binding."
+}

@@ -1,0 +1,28 @@
+{
+  "patch_id": "PATCH_4006",
+  "created_from": [
+    "work/phase3c/evidence/NPC_AINZ_OOAL_GOWN_evidence.md",
+    "work/phase3c/profiles/NPC_AINZ_OOAL_GOWN.json"
+  ],
+  "target_database": "npc_profiles",
+  "operation": "add",
+  "target_id": "NPC_AINZ_OOAL_GOWN",
+  "reason": "Propose an evidence-backed Phase 3C NPC profile for later human review without creating a formal profile database.",
+  "proposed_changes": {
+    "before": null,
+    "after": {
+      "profile_ref": "work/phase3c/profiles/NPC_AINZ_OOAL_GOWN.json",
+      "profile_id": "NPC_AINZ_OOAL_GOWN"
+    }
+  },
+  "affected_entries": [
+    "NPC_AINZ_OOAL_GOWN",
+    "CHARACTER_AINZ_OOAL_GOWN"
+  ],
+  "conflict_check": {
+    "status": "not_checked",
+    "items": []
+  },
+  "status": "draft",
+  "review_notes": "Candidate only; not approved or applied. Evidence gaps and presence restrictions remain binding."
+}
