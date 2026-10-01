@@ -1,0 +1,492 @@
+{
+  "ability_status_items": [
+    {
+      "after_state": "昏倒后被带走，后续仍被注意为失踪",
+      "attribution": "R1A-2A source review of the cited legacy evidence",
+      "background_ref": null,
+      "before_state": "在宅邸战现场并有意识",
+      "event_ref": "EVENT_P2_005_GREMLIN_MANSION_BATTLE",
+      "evidence_mode": "explicit_source_statement",
+      "notes": "R1A-2A reviewed atomic realization; no present state or future conduct is inferred.",
+      "persistence": "unknown",
+      "reality_status": "ACTUAL_EVENT",
+      "source_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.md:37-46,725-766",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.md:330",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.md:140,424"
+      ],
+      "story_order": "P2-005",
+      "transition_id": "TRANSITION_CLAIM_KUON_REMOVAL_EVENT_P2_005_GREMLIN_MANSION_BATTLE",
+      "transition_type": "consciousness_and_presence_loss",
+      "uncertainty": "confirmed"
+    }
+  ],
+  "background_items": [
+    {
+      "attribution": "R1A-2A source review of the cited legacy evidence",
+      "background_id": "BACKGROUND_CLAIM_KUON_RELATIONSHIP_1",
+      "evidence_mode": "explicit_source_statement",
+      "notes": "R1A-2A reviewed atomic realization; no present state or future conduct is inferred.",
+      "reality_status": "BIOGRAPHICAL_BACKGROUND",
+      "related_event_refs": [],
+      "relative_time": "Campaign 前史或在 Campaign 中回述的既往历史",
+      "source_refs": [
+        "设定 人物/妄想大陆设定集_检索版.md:久远（lines 101-108）"
+      ],
+      "statement": "久远在雪地救起哈克、为其命名并以监护人身份同行。",
+      "temporal_scope": "R1A-1 审定的 Campaign 前史或回述历史范围。",
+      "uncertainty": "confirmed"
+    }
+  ],
+  "dynamic_state": {
+    "as_of": "D3",
+    "current_concerns": [],
+    "current_conditions": [],
+    "current_faction_role": null,
+    "current_location_ref": null,
+    "current_obligations": [],
+    "notes": "没有以历史资料推断 D3 角色专属状态。",
+    "source_refs": []
+  },
+  "evidence_gaps": [
+    "除本候选已记录的人物参考明示特征外，完整价值排序、跨情境声线与 D3 人格变化仍无充分证据。",
+    "D3 精确位置、即时议程与当前目标未知。"
+  ],
+  "gap_routing": [
+    {
+      "gap_id": "GAP_NPC_KUON_1",
+      "issue": "除本候选已记录的人物参考明示特征外，完整价值排序、跨情境声线与 D3 人格变化仍无充分证据。",
+      "notes": "保持未解决，不由迁移自动填补。",
+      "routes": [
+        "PROFILE_ONLY"
+      ],
+      "source_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_KUON.json"
+      ]
+    },
+    {
+      "gap_id": "GAP_NPC_KUON_2",
+      "issue": "D3 精确位置、即时议程与当前目标未知。",
+      "notes": "保持未解决，不由迁移自动填补。",
+      "routes": [
+        "PROFILE_ONLY"
+      ],
+      "source_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_KUON.json"
+      ]
+    }
+  ],
+  "goals": {
+    "current_goals": [],
+    "historical_goals": [],
+    "long_term_goals": [],
+    "private_goals": []
+  },
+  "human_review_notes": [
+    "所有自动迁移结果均为 provisional，需逐项人工批准。"
+  ],
+  "inputs_considered": [
+    {
+      "input_class": "old_claims",
+      "path": "work/phase3d_recall/repaired_candidates/NPC_KUON.json",
+      "result": "逐项建立 disposition；没有旧档案时为空。"
+    },
+    {
+      "input_class": "direct_temporal_links",
+      "path": "work/phase3d_r2b/indexes/by_profile/NPC_KUON.json",
+      "result": "仅作为 exact-reference lookup，不视为完整历史。"
+    },
+    {
+      "input_class": "indirect_continuity_events",
+      "path": "work/phase3d_r2/chronology/campaign_chronology.jsonl",
+      "result": "按显式 migration rules 审查间接关键事件。"
+    },
+    {
+      "input_class": "revelations",
+      "path": "work/phase3d_r2/chronology/character_revelations.jsonl",
+      "result": "保持 attribution 与 evidence status。"
+    },
+    {
+      "input_class": "event_audits",
+      "path": "work/phase3d_r2/event_audits/",
+      "result": "用于高风险事件语义边界。"
+    },
+    {
+      "input_class": "retention_records",
+      "path": "work/phase3d_r2/reports/early_arc_character_retention.md",
+      "result": "检查 Part 1 持续影响。"
+    },
+    {
+      "input_class": "discoveries",
+      "path": "work/phase3d_r2/character_discoveries/",
+      "result": "只创建证据足够的 provisional discovery。"
+    },
+    {
+      "input_class": "d3_state",
+      "path": "current_state.md:D3",
+      "result": "仅此来源可填 dynamic_state。"
+    },
+    {
+      "input_class": "worldbook_references",
+      "path": "output/worldbook_source.jsonl",
+      "result": "只辅助稳定身份与架构映射。"
+    }
+  ],
+  "knowledge_items": [
+    {
+      "acquired_at_event_ref": "EVENT_P2_005_GREMLIN_MANSION_BATTLE",
+      "acquired_at_story_order": "P2-005",
+      "attribution": "久远对自身反应的解释",
+      "epistemic_status": "BELIEVES",
+      "knowledge_id": "KNOWLEDGE_CLAIM_KUON_MASK_REACTION_EVENT_P2_005_GREMLIN_MANSION_BATTLE",
+      "notes": "R1A-2A reviewed atomic realization; no present state or future conduct is inferred.",
+      "proposition": "久远把面具附近的疼痛与声音自行联系到继承的解放者之血。",
+      "reality_status": "BELIEF",
+      "source_character_ref": "NPC_KUON",
+      "source_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.md:37-46"
+      ],
+      "supersedes": [],
+      "uncertainty": "character_belief",
+      "valid_from": "P2-005",
+      "valid_until": null
+    }
+  ],
+  "nonactual_projections": [],
+  "old_claim_migrations": [
+    {
+      "destination_ids": [
+        "IDENTITY_KUON_IDENTITY"
+      ],
+      "migration_status": "MIGRATED",
+      "old_claim_id": "CLAIM_KUON_IDENTITY",
+      "original_statement": "久远是药师，也是从雪地救起哈克并为其命名的同行者。",
+      "reason": "R2C explicit section routing; ambiguous chronology remains unresolved rather than inferred.",
+      "source_section": "identity.public_identity[0]",
+      "supporting_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_KUON.json"
+      ]
+    },
+    {
+      "destination_ids": [
+        "TIMELINE_KUON_P2_001_CURSE_AND_CLINIC_OPENING",
+        "TIMELINE_KUON_P2_004_BAIT_PLAN_PREPARATION",
+        "IDENTITY_CLAIM_KUON_APOTHECARY_STAGE_1"
+      ],
+      "migration_status": "SPLIT",
+      "old_claim_id": "CLAIM_KUON_APOTHECARY_STAGE",
+      "original_statement": "设定资料把久远记为救起并命名哈克的年轻药师，并在该参考时点居于九雪医馆；团录中她检查御临风手臂印记并治疗同伴。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['campaign_timeline:EVENT_P2_001_CURSE_AND_CLINIC_OPENING', 'campaign_timeline:EVENT_P2_004_BAIT_PLAN_PREPARATION', 'identity.durable_roles:1']; event_refs=['EVENT_P2_001_CURSE_AND_CLINIC_OPENING', 'EVENT_P2_004_BAIT_PLAN_PREPARATION'].",
+      "source_section": "identity.established_history[0]",
+      "supporting_refs": [
+        "设定 人物/妄想大陆设定集_检索版.md:101-108",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.md:378-404",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.md:341-346",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.md:77-78",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_KUON/CLAIM_KUON_APOTHECARY_STAGE"
+      ]
+    },
+    {
+      "destination_ids": [
+        "TIMELINE_KUON_P2_005_GREMLIN_MANSION_BATTLE",
+        "KNOWLEDGE_CLAIM_KUON_MASK_REACTION_EVENT_P2_005_GREMLIN_MANSION_BATTLE"
+      ],
+      "migration_status": "SPLIT",
+      "old_claim_id": "CLAIM_KUON_MASK_REACTION",
+      "original_statement": "久远看到左近的面具后疼痛并听到声音；她回忆右近附近曾有较轻反应，并自行把现象联系到继承的解放者之血。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['campaign_timeline:EVENT_P2_005_GREMLIN_MANSION_BATTLE', 'knowledge_timeline:EVENT_P2_005_GREMLIN_MANSION_BATTLE']; event_refs=['EVENT_P2_005_GREMLIN_MANSION_BATTLE'].",
+      "source_section": "identity.established_history[1]",
+      "supporting_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.md:37-46",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_KUON/CLAIM_KUON_MASK_REACTION"
+      ]
+    },
+    {
+      "destination_ids": [
+        "TRANSITION_CLAIM_KUON_REMOVAL_EVENT_P2_005_GREMLIN_MANSION_BATTLE",
+        "TIMELINE_KUON_P2_005_GREMLIN_MANSION_BATTLE",
+        "TIMELINE_KUON_P2_010_SEWER_SEARCH_AND_PREPARATION"
+      ],
+      "migration_status": "SPLIT",
+      "old_claim_id": "CLAIM_KUON_REMOVAL",
+      "original_statement": "该次反应中久远昏倒，并被两个小型身影带走；之后同伴持续注意到她失踪，来源未记录其获救或当前处境。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['ability_status_transitions:EVENT_P2_005_GREMLIN_MANSION_BATTLE', 'campaign_timeline:EVENT_P2_005_GREMLIN_MANSION_BATTLE', 'campaign_timeline:EVENT_P2_010_SEWER_SEARCH_AND_PREPARATION']; event_refs=['EVENT_P2_005_GREMLIN_MANSION_BATTLE', 'EVENT_P2_010_SEWER_SEARCH_AND_PREPARATION'].",
+      "source_section": "identity.established_history[2]",
+      "supporting_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.md:37-46,725-766",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.md:330",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.md:140,424",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_KUON/CLAIM_KUON_REMOVAL"
+      ]
+    },
+    {
+      "destination_ids": [
+        "PERSONA_KUON_REFERENCE_TRAITS"
+      ],
+      "migration_status": "RETAINED_AS_PERSONA",
+      "old_claim_id": "CLAIM_KUON_REFERENCE_TRAITS",
+      "original_statement": "设定参考把久远明确写为善良、活泼、聪明且能力全面的年轻药师。",
+      "reason": "R2C explicit section routing; ambiguous chronology remains unresolved rather than inferred.",
+      "source_section": "core_personality[0]",
+      "supporting_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_KUON.json"
+      ]
+    },
+    {
+      "destination_ids": [
+        "RELATIONSHIP_KUON_HAKU"
+      ],
+      "migration_status": "MOVED_TO_RELATIONSHIP",
+      "old_claim_id": "RELATIONSHIP_KUON_HAKU",
+      "original_statement": "guardian and travelling companion",
+      "reason": "R2C explicit section routing; ambiguous chronology remains unresolved rather than inferred.",
+      "source_section": "relationships[0]",
+      "supporting_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_KUON.json"
+      ]
+    },
+    {
+      "destination_ids": [
+        "BACKGROUND_CLAIM_KUON_RELATIONSHIP_1",
+        "RELATIONSHIP_NPC_HAKU_CLAIM_KUON_RELATIONSHIP_NPC_HAKU"
+      ],
+      "migration_status": "SPLIT",
+      "old_claim_id": "CLAIM_KUON_RELATIONSHIP",
+      "original_statement": "久远在雪地救起哈克、为其命名并以监护人身份同行。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['biographical_background:1', 'relationships[].relationship_baseline:NPC_HAKU']; event_refs=[].",
+      "source_section": "relationships[0].established_history[0]",
+      "supporting_refs": [
+        "设定 人物/妄想大陆设定集_检索版.md:久远（lines 101-108）",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_KUON/CLAIM_KUON_RELATIONSHIP"
+      ]
+    },
+    {
+      "destination_ids": [
+        "CONSTRAINT_KUON_EVIDENCE_BOUNDARY"
+      ],
+      "migration_status": "MIGRATED",
+      "old_claim_id": "CONSTRAINT_KUON_EVIDENCE_BOUNDARY",
+      "original_statement": "不得以单次行为、职业、能力或身份推断稳定人格、私人动机、未来目标或场景必然出席。",
+      "reason": "R2C explicit section routing; ambiguous chronology remains unresolved rather than inferred.",
+      "source_section": "rp_constraints[0]",
+      "supporting_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_KUON.json"
+      ]
+    }
+  ],
+  "package_status": "PROVISIONAL_REVIEWABLE_DECISION_LAYER",
+  "persona": {
+    "core_personality": [
+      {
+        "attribution": "旧 Profile persona claim",
+        "evidence_mode": "authorial_definition",
+        "notes": "Phase 3D-R source-recall repair; no future state is inferred.",
+        "persona_id": "PERSONA_KUON_REFERENCE_TRAITS",
+        "reality_status": "BELIEF",
+        "source_refs": [
+          "设定 人物/妄想大陆设定集_检索版.md:101-108"
+        ],
+        "stability": "stable",
+        "statement": "设定参考把久远明确写为善良、活泼、聪明且能力全面的年轻药师。",
+        "supporting_event_refs": [],
+        "supporting_revelation_refs": [],
+        "uncertainty": "confirmed"
+      }
+    ],
+    "decision_patterns": [],
+    "motivations": [],
+    "speech_style": [],
+    "values": []
+  },
+  "phase": "3D-R2C",
+  "presence": {
+    "canon_layers": [
+      "original_campaign"
+    ],
+    "life_status": "unknown",
+    "narrative_availability": "inactive",
+    "notes": "Profile depth does not force scene presence; inactive, restricted, historical, and interlude boundaries remain operative.",
+    "source_refs": [
+      "设定 人物/妄想大陆设定集_检索版.md:久远（lines 101-108）"
+    ],
+    "uncertainty": "uncertain"
+  },
+  "profile_id": "NPC_KUON",
+  "profile_metadata": {
+    "ai_permissions": {
+      "may_assign_new_goals": false,
+      "may_choose_voluntary_actions": true,
+      "may_describe_external_effects": true,
+      "may_describe_involuntary_physical_reactions": true,
+      "may_generate_dialogue": true,
+      "may_generate_private_thoughts": true,
+      "may_reference_established_history": true,
+      "may_summarize_user_declared_actions": false
+    },
+    "aliases": [],
+    "canon_layers": [
+      "original_campaign"
+    ],
+    "control_mode": "npc_runtime",
+    "identity": {
+      "durable_affiliations": [],
+      "durable_roles": [
+        {
+          "attribution": "R1A-2A source review of the cited legacy evidence",
+          "evidence_mode": "explicit_source_statement",
+          "identity_id": "IDENTITY_CLAIM_KUON_APOTHECARY_STAGE_1",
+          "notes": "R1A-2A reviewed atomic realization; no present state or future conduct is inferred.",
+          "source_refs": [
+            "设定 人物/妄想大陆设定集_检索版.md:101-108",
+            "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.md:378-404",
+            "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.md:341-346",
+            "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.md:77-78"
+          ],
+          "statement": "参考资料把久远记为年轻药师，并在该参考时点居于九雪医馆。",
+          "uncertainty": "confirmed"
+        }
+      ],
+      "public_identity": [
+        {
+          "attribution": "旧 Profile 中已有来源支持的身份 claim",
+          "evidence_mode": "explicit_source_statement",
+          "identity_id": "IDENTITY_KUON_IDENTITY",
+          "notes": "仅保留来源直接支持的范围。",
+          "source_refs": [
+            "设定 人物/妄想大陆设定集_检索版.md:久远（lines 101-108）"
+          ],
+          "statement": "久远是药师，也是从雪地救起哈克并为其命名的同行者。",
+          "uncertainty": "confirmed"
+        }
+      ],
+      "species_or_entity": []
+    },
+    "name": "久远",
+    "notes": "Existing effective profile migrated provisionally; not approved or applied.",
+    "profile_depth": "compact",
+    "profile_kind": "npc",
+    "profile_status": "existing",
+    "worldbook_id": "CHARACTER_KUON",
+    "worldbook_mapping_status": "existing"
+  },
+  "relationship_items": [
+    {
+      "current_stance": null,
+      "notes": "关系历史不自动构成当前情感、忠诚或未来义务。",
+      "related_character_label": null,
+      "related_character_ref": "NPC_HAKU",
+      "relationship_baseline": "guardian and travelling companion",
+      "relationship_id": "RELATIONSHIP_KUON_HAKU",
+      "relationship_milestones": [],
+      "source_refs": [
+        "设定 人物/妄想大陆设定集_检索版.md:久远（lines 101-108）"
+      ],
+      "uncertainty": "uncertain"
+    },
+    {
+      "current_stance": null,
+      "notes": "Historical/durable baseline only; no current emotion, loyalty, obligation, or future choice is inferred.",
+      "related_character_label": null,
+      "related_character_ref": "NPC_HAKU",
+      "relationship_baseline": "久远是救起、命名并监护失忆哈克的同行者。",
+      "relationship_id": "RELATIONSHIP_NPC_HAKU_CLAIM_KUON_RELATIONSHIP_NPC_HAKU",
+      "relationship_milestones": [],
+      "source_refs": [
+        "设定 人物/妄想大陆设定集_检索版.md:久远（lines 101-108）"
+      ],
+      "uncertainty": "confirmed"
+    }
+  ],
+  "rp_constraints": [
+    {
+      "constraint_id": "CONSTRAINT_KUON_EVIDENCE_BOUNDARY",
+      "notes": "Construction safety boundary; not a new world fact.",
+      "source_refs": [
+        "work/phase3c/evidence/NPC_KUON_evidence.md"
+      ],
+      "statement": "不得以单次行为、职业、能力或身份推断稳定人格、私人动机、未来目标或场景必然出席。"
+    }
+  ],
+  "schema_version": "R2C-MIGRATION-1",
+  "source_profile_candidate": "work/phase3d_recall/repaired_candidates/NPC_KUON.json",
+  "timeline_items": [
+    {
+      "character_consequence": "",
+      "character_specific_summary": "角色以“participant”参与；第二部由御临风所承受的耶各诅咒与九雪医馆日常开场；哈克和久远卷入误会后转入诅咒讨论。",
+      "event_ref": "EVENT_P2_001_CURSE_AND_CLINIC_OPENING",
+      "evidence_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl post 862378",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl post 862877",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl post 863417"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "participant",
+      "story_order_end": null,
+      "story_order_start": "P2-001",
+      "timeline_id": "TIMELINE_KUON_P2_001_CURSE_AND_CLINIC_OPENING",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "",
+      "character_specific_summary": "间接但人物连续性关键：艾利等人围绕宅邸、诱饵与战术资源主动设局，准备截击古雷姆林。",
+      "event_ref": "EVENT_P2_004_BAIT_PLAN_PREPARATION",
+      "evidence_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl post 868902",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl post 895388",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl post 900474"
+      ],
+      "notes": "Indirect continuity inclusion.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "indirect continuity subject",
+      "story_order_end": null,
+      "story_order_start": "P2-004",
+      "timeline_id": "TIMELINE_KUON_P2_004_BAIT_PLAN_PREPARATION",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "",
+      "character_specific_summary": "间接但人物连续性关键：御临风在宅邸战中斩断古雷姆林脚筋并临阵悟出正十七；艾利、黄泉、诺斯莉加入围攻，但古雷姆林挟持艾利、制造魔偶后逃脱。御临风在追击失败后死亡。",
+      "event_ref": "EVENT_P2_005_GREMLIN_MANSION_BATTLE",
+      "evidence_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl post 902068",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl post 908892",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl post 913039",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl post 913595"
+      ],
+      "notes": "Indirect continuity inclusion.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "indirect continuity subject",
+      "story_order_end": null,
+      "story_order_start": "P2-005",
+      "timeline_id": "TIMELINE_KUON_P2_005_GREMLIN_MANSION_BATTLE",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "艾利由外部支援转为队伍同行者。；御临风把保护悠悠落实为装备准备，并再次把此事与贞子遗憾相连。；悠悠取得托尔金提供的出行装备。；下水道追查失败，相关目标位置仍未知。",
+      "character_specific_summary": "间接但人物连续性关键：下水道追查无果后艾利加入后续行动；御临风请求托尔金为悠悠准备装备，并在雪翁提醒下再次面对贞子遗憾与保护悠悠的动机。",
+      "event_ref": "EVENT_P2_010_SEWER_SEARCH_AND_PREPARATION",
+      "evidence_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl post 917739",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl post 919205",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl post 920942",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl post 921071"
+      ],
+      "notes": "Indirect continuity inclusion.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "indirect continuity subject",
+      "story_order_end": null,
+      "story_order_start": "P2-010",
+      "timeline_id": "TIMELINE_KUON_P2_010_SEWER_SEARCH_AND_PREPARATION",
+      "uncertainty": "confirmed"
+    }
+  ]
+}

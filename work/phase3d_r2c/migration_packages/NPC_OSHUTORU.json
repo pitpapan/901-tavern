@@ -1,0 +1,716 @@
+{
+  "ability_status_items": [
+    {
+      "after_state": "解放水属性假面力量并投入战斗",
+      "attribution": "R1A-2A source review of the cited legacy evidence",
+      "background_ref": null,
+      "before_state": "该场景中尚未解放水属性假面力量",
+      "event_ref": "EVENT_P1_015_UKON_BATTLE_YOUYOU_RESCUE",
+      "evidence_mode": "explicit_source_statement",
+      "notes": "R1A-2A reviewed atomic realization; no present state or future conduct is inferred.",
+      "persistence": "temporary",
+      "reality_status": "ACTUAL_EVENT",
+      "source_refs": [
+        "设定 人物/妄想大陆设定集_检索版.md:90-97,165",
+        "extracted-first/19/posts.md:755-797"
+      ],
+      "story_order": "P1-015",
+      "transition_id": "TRANSITION_CLAIM_OSHUTORU_MASK_BATTLE_EVENT_P1_015_UKON_BATTLE_YOUYOU_RESCUE",
+      "transition_type": "mask_power_activation",
+      "uncertainty": "confirmed"
+    }
+  ],
+  "background_items": [
+    {
+      "attribution": "R1A-2A source review of the cited legacy evidence",
+      "background_id": "BACKGROUND_CLAIM_OSHUTORU_RELATIONSHIP_1",
+      "evidence_mode": "explicit_source_statement",
+      "notes": "R1A-2A reviewed atomic realization; no present state or future conduct is inferred.",
+      "reality_status": "BIOGRAPHICAL_BACKGROUND",
+      "related_event_refs": [],
+      "relative_time": "Campaign 前史或在 Campaign 中回述的既往历史",
+      "source_refs": [
+        "设定 人物/妄想大陆设定集_检索版.md:哈克（lines 90-97）"
+      ],
+      "statement": "奥修特尔赏识哈克的智谋并邀请他成为部下。",
+      "temporal_scope": "R1A-1 审定的 Campaign 前史或回述历史范围。",
+      "uncertainty": "confirmed"
+    }
+  ],
+  "dynamic_state": {
+    "as_of": "D3",
+    "current_concerns": [],
+    "current_conditions": [],
+    "current_faction_role": null,
+    "current_location_ref": null,
+    "current_obligations": [],
+    "notes": "没有以历史资料推断 D3 角色专属状态。",
+    "source_refs": []
+  },
+  "evidence_gaps": [
+    "除本候选已记录的人物参考明示特征外，完整价值排序、跨情境声线与 D3 人格变化仍无充分证据。",
+    "D3 精确位置、即时议程与当前目标未知。"
+  ],
+  "gap_routing": [
+    {
+      "gap_id": "GAP_NPC_OSHUTORU_1",
+      "issue": "除本候选已记录的人物参考明示特征外，完整价值排序、跨情境声线与 D3 人格变化仍无充分证据。",
+      "notes": "保持未解决，不由迁移自动填补。",
+      "routes": [
+        "PROFILE_ONLY"
+      ],
+      "source_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_OSHUTORU.json"
+      ]
+    },
+    {
+      "gap_id": "GAP_NPC_OSHUTORU_2",
+      "issue": "D3 精确位置、即时议程与当前目标未知。",
+      "notes": "保持未解决，不由迁移自动填补。",
+      "routes": [
+        "PROFILE_ONLY"
+      ],
+      "source_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_OSHUTORU.json"
+      ]
+    }
+  ],
+  "goals": {
+    "current_goals": [],
+    "historical_goals": [],
+    "long_term_goals": [],
+    "private_goals": []
+  },
+  "human_review_notes": [
+    "所有自动迁移结果均为 provisional，需逐项人工批准。"
+  ],
+  "inputs_considered": [
+    {
+      "input_class": "old_claims",
+      "path": "work/phase3d_recall/repaired_candidates/NPC_OSHUTORU.json",
+      "result": "逐项建立 disposition；没有旧档案时为空。"
+    },
+    {
+      "input_class": "direct_temporal_links",
+      "path": "work/phase3d_r2b/indexes/by_profile/NPC_OSHUTORU.json",
+      "result": "仅作为 exact-reference lookup，不视为完整历史。"
+    },
+    {
+      "input_class": "indirect_continuity_events",
+      "path": "work/phase3d_r2/chronology/campaign_chronology.jsonl",
+      "result": "按显式 migration rules 审查间接关键事件。"
+    },
+    {
+      "input_class": "revelations",
+      "path": "work/phase3d_r2/chronology/character_revelations.jsonl",
+      "result": "保持 attribution 与 evidence status。"
+    },
+    {
+      "input_class": "event_audits",
+      "path": "work/phase3d_r2/event_audits/",
+      "result": "用于高风险事件语义边界。"
+    },
+    {
+      "input_class": "retention_records",
+      "path": "work/phase3d_r2/reports/early_arc_character_retention.md",
+      "result": "检查 Part 1 持续影响。"
+    },
+    {
+      "input_class": "discoveries",
+      "path": "work/phase3d_r2/character_discoveries/",
+      "result": "只创建证据足够的 provisional discovery。"
+    },
+    {
+      "input_class": "d3_state",
+      "path": "current_state.md:D3",
+      "result": "仅此来源可填 dynamic_state。"
+    },
+    {
+      "input_class": "worldbook_references",
+      "path": "output/worldbook_source.jsonl",
+      "result": "只辅助稳定身份与架构映射。"
+    }
+  ],
+  "knowledge_items": [
+    {
+      "acquired_at_event_ref": "EVENT_P2_020_SPACE_DRAGON_HISTORY_AND_KENDA_WARNING",
+      "acquired_at_story_order": "P2-020",
+      "attribution": "龙族任务指挥记录",
+      "epistemic_status": "KNOWS",
+      "knowledge_id": "KNOWLEDGE_CLAIM_OSHUTORU_LATE_COMMAND_EVENT_P2_020_SPACE_DRAGON_HISTORY_AND_KENDA_WARNING_1",
+      "notes": "R1A-2A reviewed atomic realization; no present state or future conduct is inferred.",
+      "proposition": "奥修特尔知道御临风所在单位受其直属指挥。",
+      "reality_status": "BELIEF",
+      "source_character_ref": null,
+      "source_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.md:122,175-192",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.md:497-511"
+      ],
+      "supersedes": [],
+      "uncertainty": "confirmed",
+      "valid_from": "P2-020",
+      "valid_until": null
+    },
+    {
+      "acquired_at_event_ref": "EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING",
+      "acquired_at_story_order": "P2-029",
+      "attribution": "红月战事后的战场报告",
+      "epistemic_status": "TESTIMONY_HEARD",
+      "knowledge_id": "KNOWLEDGE_CLAIM_OSHUTORU_LATE_COMMAND_EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING_2",
+      "notes": "R1A-2A reviewed atomic realization; no present state or future conduct is inferred.",
+      "proposition": "战场报告称奥修特尔与武赖所在战线遭袭并失去通讯。",
+      "reality_status": "TESTIMONY",
+      "source_character_ref": null,
+      "source_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.md:122,175-192",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.md:497-511"
+      ],
+      "supersedes": [],
+      "uncertainty": "uncertain",
+      "valid_from": "P2-029",
+      "valid_until": null
+    }
+  ],
+  "nonactual_projections": [],
+  "old_claim_migrations": [
+    {
+      "destination_ids": [
+        "IDENTITY_OSHUTORU_IDENTITY"
+      ],
+      "migration_status": "MIGRATED",
+      "old_claim_id": "CLAIM_OSHUTORU_IDENTITY",
+      "original_statement": "奥修特尔在团录中向悠悠自报本名，此前以右近之名活动。",
+      "reason": "R2C explicit section routing; ambiguous chronology remains unresolved rather than inferred.",
+      "source_section": "identity.public_identity[0]",
+      "supporting_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_OSHUTORU.json"
+      ]
+    },
+    {
+      "destination_ids": [
+        "IDENTITY_CLAIM_OSHUTORU_HISTORY_1_1"
+      ],
+      "migration_status": "MIGRATED",
+      "old_claim_id": "CLAIM_OSHUTORU_HISTORY_1",
+      "original_statement": "以右近之名活动时，他是帝国八柱将所属的右近卫大将。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['identity.durable_roles:1']; event_refs=[].",
+      "source_section": "identity.established_history[0]",
+      "supporting_refs": [
+        "extracted-first/6/posts.md:右近卫大将右近介入达卡斯出征安排（lines 452-466）",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_OSHUTORU/CLAIM_OSHUTORU_HISTORY_1"
+      ]
+    },
+    {
+      "destination_ids": [
+        "TIMELINE_OSHUTORU_P1_017_IMPERIAL_AUDIENCE_CURSE_EXAMINATION",
+        "IDENTITY_CLAIM_OSHUTORU_HISTORY_2_1"
+      ],
+      "migration_status": "SPLIT",
+      "old_claim_id": "CLAIM_OSHUTORU_HISTORY_2",
+      "original_statement": "右近后来向悠悠自报本名为奥修特尔。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['campaign_timeline:EVENT_P1_017_IMPERIAL_AUDIENCE_CURSE_EXAMINATION', 'identity.public_identity:1']; event_refs=['EVENT_P1_017_IMPERIAL_AUDIENCE_CURSE_EXAMINATION'].",
+      "source_section": "identity.established_history[1]",
+      "supporting_refs": [
+        "extracted-first/21/posts.md:右近自报本名奥修特尔、朝见时以奥修特尔署名（lines 175-177, 602-606）",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_OSHUTORU/CLAIM_OSHUTORU_HISTORY_2"
+      ]
+    },
+    {
+      "destination_ids": [
+        "TRANSITION_CLAIM_OSHUTORU_MASK_BATTLE_EVENT_P1_015_UKON_BATTLE_YOUYOU_RESCUE",
+        "TIMELINE_OSHUTORU_P1_015_UKON_BATTLE_YOUYOU_RESCUE"
+      ],
+      "migration_status": "SPLIT",
+      "old_claim_id": "CLAIM_OSHUTORU_MASK_BATTLE",
+      "original_statement": "峡谷战中，奥修特尔保护御临风，解放水属性假面力量并以伏龙梅迎战黑泥敌人。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['ability_status_transitions:EVENT_P1_015_UKON_BATTLE_YOUYOU_RESCUE', 'campaign_timeline:EVENT_P1_015_UKON_BATTLE_YOUYOU_RESCUE']; event_refs=['EVENT_P1_015_UKON_BATTLE_YOUYOU_RESCUE'].",
+      "source_section": "identity.established_history[2]",
+      "supporting_refs": [
+        "设定 人物/妄想大陆设定集_检索版.md:90-97,165",
+        "extracted-first/19/posts.md:755-797",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_OSHUTORU/CLAIM_OSHUTORU_MASK_BATTLE"
+      ]
+    },
+    {
+      "destination_ids": [
+        "TIMELINE_OSHUTORU_P1_007_UKON_BROTHERHOOD_CONTACT",
+        "TIMELINE_OSHUTORU_P1_009_BORDER_TRUTH_AND_PURSUIT_MISSION",
+        "RELATIONSHIP_NPC_HAKU_CLAIM_OSHUTORU_RELATIONSHIPS_NPC_HAKU_1",
+        "RELATIONSHIP_NPC_KUON_CLAIM_OSHUTORU_RELATIONSHIPS_NPC_KUON_2",
+        "RELATIONSHIP_NPC_MU_SHAOAI_CLAIM_OSHUTORU_RELATIONSHIPS_NPC_MU_SHAOAI_3"
+      ],
+      "migration_status": "SPLIT",
+      "old_claim_id": "CLAIM_OSHUTORU_RELATIONSHIPS",
+      "original_statement": "奥修特尔收留哈克与久远进入其麾下；以右近身份接收御临风的边关报告、识别达卡斯威胁，并称慕少艾为朋友。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['campaign_timeline:EVENT_P1_007_UKON_BROTHERHOOD_CONTACT', 'campaign_timeline:EVENT_P1_009_BORDER_TRUTH_AND_PURSUIT_MISSION', 'relationships[].relationship_baseline:NPC_HAKU_1', 'relationships[].relationship_baseline:NPC_KUON_2', 'relationships[].relationship_baseline:NPC_MU_SHAOAI_3']; event_refs=['EVENT_P1_007_UKON_BROTHERHOOD_CONTACT', 'EVENT_P1_009_BORDER_TRUTH_AND_PURSUIT_MISSION'].",
+      "source_section": "identity.established_history[3]",
+      "supporting_refs": [
+        "设定 人物/妄想大陆设定集_检索版.md:90-97",
+        "extracted-first/4/posts.md:426",
+        "extracted-first/5/posts.md:14-25,184-185",
+        "extracted-first/6/posts.md:452-466",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_OSHUTORU/CLAIM_OSHUTORU_RELATIONSHIPS"
+      ]
+    },
+    {
+      "destination_ids": [
+        "TIMELINE_OSHUTORU_P2_020_SPACE_DRAGON_HISTORY_AND_KENDA_WARNING",
+        "TIMELINE_OSHUTORU_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING",
+        "KNOWLEDGE_CLAIM_OSHUTORU_LATE_COMMAND_EVENT_P2_020_SPACE_DRAGON_HISTORY_AND_KENDA_WARNING_1",
+        "KNOWLEDGE_CLAIM_OSHUTORU_LATE_COMMAND_EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING_2"
+      ],
+      "migration_status": "SPLIT",
+      "old_claim_id": "CLAIM_OSHUTORU_LATE_COMMAND",
+      "original_statement": "龙族任务中御临风所在单位被记为奥修特尔直属；红月战事后报告称奥修特尔与武赖所在战线遭袭并失去通讯。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['campaign_timeline:EVENT_P2_020_SPACE_DRAGON_HISTORY_AND_KENDA_WARNING', 'campaign_timeline:EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING', 'knowledge_timeline:EVENT_P2_020_SPACE_DRAGON_HISTORY_AND_KENDA_WARNING_1', 'knowledge_timeline:EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING_2']; event_refs=['EVENT_P2_020_SPACE_DRAGON_HISTORY_AND_KENDA_WARNING', 'EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING'].",
+      "source_section": "identity.established_history[4]",
+      "supporting_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.md:122,175-192",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.md:497-511",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_OSHUTORU/CLAIM_OSHUTORU_LATE_COMMAND"
+      ]
+    },
+    {
+      "destination_ids": [
+        "PERSONA_OSHUTORU_DUTY"
+      ],
+      "migration_status": "RETAINED_AS_PERSONA",
+      "old_claim_id": "CLAIM_OSHUTORU_DUTY",
+      "original_statement": "人物资料把奥修特尔描述为清廉正直、责任心极强。",
+      "reason": "R2C explicit section routing; ambiguous chronology remains unresolved rather than inferred.",
+      "source_section": "core_personality[0]",
+      "supporting_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_OSHUTORU.json"
+      ]
+    },
+    {
+      "destination_ids": [
+        "PERSONA_OSHUTORU_REFERENCE_IDENTITY"
+      ],
+      "migration_status": "RETAINED_AS_PERSONA",
+      "old_claim_id": "CLAIM_OSHUTORU_REFERENCE_IDENTITY",
+      "original_statement": "人物参考把奥修特尔明确写为富有正义感的年轻剑士。",
+      "reason": "R2C explicit section routing; ambiguous chronology remains unresolved rather than inferred.",
+      "source_section": "core_personality[1]",
+      "supporting_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_OSHUTORU.json"
+      ]
+    },
+    {
+      "destination_ids": [
+        "RELATIONSHIP_OSHUTORU_HAKU"
+      ],
+      "migration_status": "MOVED_TO_RELATIONSHIP",
+      "old_claim_id": "RELATIONSHIP_OSHUTORU_HAKU",
+      "original_statement": "commander and subordinate",
+      "reason": "R2C explicit section routing; ambiguous chronology remains unresolved rather than inferred.",
+      "source_section": "relationships[0]",
+      "supporting_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_OSHUTORU.json"
+      ]
+    },
+    {
+      "destination_ids": [
+        "BACKGROUND_CLAIM_OSHUTORU_RELATIONSHIP_1",
+        "RELATIONSHIP_NPC_HAKU_CLAIM_OSHUTORU_RELATIONSHIP_NPC_HAKU"
+      ],
+      "migration_status": "SPLIT",
+      "old_claim_id": "CLAIM_OSHUTORU_RELATIONSHIP",
+      "original_statement": "赏识哈克的智谋并邀请他成为部下。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['biographical_background:1', 'relationships[].relationship_baseline:NPC_HAKU']; event_refs=[].",
+      "source_section": "relationships[0].established_history[0]",
+      "supporting_refs": [
+        "设定 人物/妄想大陆设定集_检索版.md:哈克（lines 90-97）",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_OSHUTORU/CLAIM_OSHUTORU_RELATIONSHIP"
+      ]
+    },
+    {
+      "destination_ids": [
+        "CONSTRAINT_OSHUTORU_EVIDENCE_BOUNDARY"
+      ],
+      "migration_status": "MIGRATED",
+      "old_claim_id": "CONSTRAINT_OSHUTORU_EVIDENCE_BOUNDARY",
+      "original_statement": "不得以单次行为、职业、能力或身份推断稳定人格、私人动机、未来目标或场景必然出席。",
+      "reason": "R2C explicit section routing; ambiguous chronology remains unresolved rather than inferred.",
+      "source_section": "rp_constraints[0]",
+      "supporting_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_OSHUTORU.json"
+      ]
+    }
+  ],
+  "package_status": "PROVISIONAL_REVIEWABLE_DECISION_LAYER",
+  "persona": {
+    "core_personality": [
+      {
+        "attribution": "旧 Profile persona claim",
+        "evidence_mode": "authorial_definition",
+        "notes": "仅保留来源直接支持的范围。",
+        "persona_id": "PERSONA_OSHUTORU_DUTY",
+        "reality_status": "BELIEF",
+        "source_refs": [
+          "设定 人物/人物卡资料集_叙事检索版.md:奥修特尔（lines 154-160）"
+        ],
+        "stability": "stable",
+        "statement": "人物资料把奥修特尔描述为清廉正直、责任心极强。",
+        "supporting_event_refs": [],
+        "supporting_revelation_refs": [],
+        "uncertainty": "confirmed"
+      },
+      {
+        "attribution": "旧 Profile persona claim",
+        "evidence_mode": "authorial_definition",
+        "notes": "Phase 3D-R source-recall repair; no future state is inferred.",
+        "persona_id": "PERSONA_OSHUTORU_REFERENCE_IDENTITY",
+        "reality_status": "BELIEF",
+        "source_refs": [
+          "设定 人物/人物卡资料集_叙事检索版.md:154-165",
+          "设定 人物/妄想大陆设定集_检索版.md:90-97,165"
+        ],
+        "stability": "stable",
+        "statement": "人物参考把奥修特尔明确写为富有正义感的年轻剑士。",
+        "supporting_event_refs": [],
+        "supporting_revelation_refs": [],
+        "uncertainty": "confirmed"
+      }
+    ],
+    "decision_patterns": [],
+    "motivations": [],
+    "speech_style": [],
+    "values": []
+  },
+  "phase": "3D-R2C",
+  "presence": {
+    "canon_layers": [
+      "original_campaign"
+    ],
+    "life_status": "unknown",
+    "narrative_availability": "inactive",
+    "notes": "Profile depth does not force scene presence; inactive, restricted, historical, and interlude boundaries remain operative.",
+    "source_refs": [
+      "extracted-first/4/posts.md:右近自我介绍并接收御临风情报（around line 426）"
+    ],
+    "uncertainty": "uncertain"
+  },
+  "profile_id": "NPC_OSHUTORU",
+  "profile_metadata": {
+    "ai_permissions": {
+      "may_assign_new_goals": false,
+      "may_choose_voluntary_actions": true,
+      "may_describe_external_effects": true,
+      "may_describe_involuntary_physical_reactions": true,
+      "may_generate_dialogue": true,
+      "may_generate_private_thoughts": true,
+      "may_reference_established_history": true,
+      "may_summarize_user_declared_actions": false
+    },
+    "aliases": [
+      "右近"
+    ],
+    "canon_layers": [
+      "original_campaign"
+    ],
+    "control_mode": "npc_runtime",
+    "identity": {
+      "durable_affiliations": [],
+      "durable_roles": [
+        {
+          "attribution": "R1A-2A source review of the cited legacy evidence",
+          "evidence_mode": "explicit_source_statement",
+          "identity_id": "IDENTITY_CLAIM_OSHUTORU_HISTORY_1_1",
+          "notes": "R1A-2A reviewed atomic realization; no present state or future conduct is inferred.",
+          "source_refs": [
+            "extracted-first/6/posts.md:右近卫大将右近介入达卡斯出征安排（lines 452-466）"
+          ],
+          "statement": "以右近之名活动时，他是帝国八柱将所属的右近卫大将。",
+          "uncertainty": "confirmed"
+        }
+      ],
+      "public_identity": [
+        {
+          "attribution": "旧 Profile 中已有来源支持的身份 claim",
+          "evidence_mode": "explicit_source_statement",
+          "identity_id": "IDENTITY_OSHUTORU_IDENTITY",
+          "notes": "仅保留来源直接支持的范围。",
+          "source_refs": [
+            "extracted-first/21/posts.md:右近自报本名奥修特尔（lines 175-177）"
+          ],
+          "statement": "奥修特尔在团录中向悠悠自报本名，此前以右近之名活动。",
+          "uncertainty": "confirmed"
+        },
+        {
+          "attribution": "奥修特尔的自我介绍",
+          "evidence_mode": "explicit_source_statement",
+          "identity_id": "IDENTITY_CLAIM_OSHUTORU_HISTORY_2_1",
+          "notes": "R1A-2A reviewed atomic realization; no present state or future conduct is inferred.",
+          "source_refs": [
+            "extracted-first/21/posts.md:右近自报本名奥修特尔、朝见时以奥修特尔署名（lines 175-177, 602-606）"
+          ],
+          "statement": "右近自报本名为奥修特尔。",
+          "uncertainty": "confirmed"
+        }
+      ],
+      "species_or_entity": []
+    },
+    "name": "奥修特尔",
+    "notes": "Existing effective profile migrated provisionally; not approved or applied.",
+    "profile_depth": "full",
+    "profile_kind": "npc",
+    "profile_status": "existing",
+    "worldbook_id": "CHARACTER_OSHUTORU",
+    "worldbook_mapping_status": "existing"
+  },
+  "relationship_items": [
+    {
+      "current_stance": null,
+      "notes": "关系历史不自动构成当前情感、忠诚或未来义务。",
+      "related_character_label": null,
+      "related_character_ref": "NPC_HAKU",
+      "relationship_baseline": "commander and subordinate",
+      "relationship_id": "RELATIONSHIP_OSHUTORU_HAKU",
+      "relationship_milestones": [],
+      "source_refs": [
+        "设定 人物/妄想大陆设定集_检索版.md:哈克（lines 90-97）"
+      ],
+      "uncertainty": "uncertain"
+    },
+    {
+      "current_stance": null,
+      "notes": "Historical/durable baseline only; no current emotion, loyalty, obligation, or future choice is inferred.",
+      "related_character_label": null,
+      "related_character_ref": "NPC_HAKU",
+      "relationship_baseline": "奥修特尔曾赏识并招揽哈克成为部下。",
+      "relationship_id": "RELATIONSHIP_NPC_HAKU_CLAIM_OSHUTORU_RELATIONSHIP_NPC_HAKU",
+      "relationship_milestones": [],
+      "source_refs": [
+        "设定 人物/妄想大陆设定集_检索版.md:哈克（lines 90-97）"
+      ],
+      "uncertainty": "confirmed"
+    },
+    {
+      "current_stance": null,
+      "notes": "Historical/durable baseline only; no current emotion, loyalty, obligation, or future choice is inferred.",
+      "related_character_label": null,
+      "related_character_ref": "NPC_HAKU",
+      "relationship_baseline": "奥修特尔收留哈克进入麾下。",
+      "relationship_id": "RELATIONSHIP_NPC_HAKU_CLAIM_OSHUTORU_RELATIONSHIPS_NPC_HAKU_1",
+      "relationship_milestones": [],
+      "source_refs": [
+        "设定 人物/妄想大陆设定集_检索版.md:90-97",
+        "extracted-first/4/posts.md:426",
+        "extracted-first/5/posts.md:14-25,184-185",
+        "extracted-first/6/posts.md:452-466"
+      ],
+      "uncertainty": "confirmed"
+    },
+    {
+      "current_stance": null,
+      "notes": "Historical/durable baseline only; no current emotion, loyalty, obligation, or future choice is inferred.",
+      "related_character_label": null,
+      "related_character_ref": "NPC_KUON",
+      "relationship_baseline": "奥修特尔收留久远进入麾下。",
+      "relationship_id": "RELATIONSHIP_NPC_KUON_CLAIM_OSHUTORU_RELATIONSHIPS_NPC_KUON_2",
+      "relationship_milestones": [],
+      "source_refs": [
+        "设定 人物/妄想大陆设定集_检索版.md:90-97",
+        "extracted-first/4/posts.md:426",
+        "extracted-first/5/posts.md:14-25,184-185",
+        "extracted-first/6/posts.md:452-466"
+      ],
+      "uncertainty": "confirmed"
+    },
+    {
+      "current_stance": null,
+      "notes": "Historical/durable baseline only; no current emotion, loyalty, obligation, or future choice is inferred.",
+      "related_character_label": null,
+      "related_character_ref": "NPC_MU_SHAOAI",
+      "relationship_baseline": "奥修特尔称慕少艾为朋友。",
+      "relationship_id": "RELATIONSHIP_NPC_MU_SHAOAI_CLAIM_OSHUTORU_RELATIONSHIPS_NPC_MU_SHAOAI_3",
+      "relationship_milestones": [],
+      "source_refs": [
+        "设定 人物/妄想大陆设定集_检索版.md:90-97",
+        "extracted-first/4/posts.md:426",
+        "extracted-first/5/posts.md:14-25,184-185",
+        "extracted-first/6/posts.md:452-466"
+      ],
+      "uncertainty": "confirmed"
+    }
+  ],
+  "rp_constraints": [
+    {
+      "constraint_id": "CONSTRAINT_OSHUTORU_EVIDENCE_BOUNDARY",
+      "notes": "Construction safety boundary; not a new world fact.",
+      "source_refs": [
+        "work/phase3c/evidence/NPC_OSHUTORU_evidence.md"
+      ],
+      "statement": "不得以单次行为、职业、能力或身份推断稳定人格、私人动机、未来目标或场景必然出席。"
+    }
+  ],
+  "schema_version": "R2C-MIGRATION-1",
+  "source_profile_candidate": "work/phase3d_recall/repaired_candidates/NPC_OSHUTORU.json",
+  "timeline_items": [
+    {
+      "character_consequence": "御临风注意到右近对大陆称谓的异常，并开始形成有限信任。；御临风与右近建立基于共同线索的初次合作。；右近获知队伍的边关报告。",
+      "character_specific_summary": "角色以“actor”参与；御临风被带去会见右近，双方以兄弟会关系与诗句试探；右近确认达卡斯存在问题并派人核查边关。",
+      "event_ref": "EVENT_P1_007_UKON_BROTHERHOOD_CONTACT",
+      "evidence_refs": [
+        "extracted-first/4/posts.jsonl post 817699",
+        "extracted-first/5/posts.jsonl post 818236",
+        "extracted-first/5/posts.jsonl post 818405",
+        "extracted-first/5/posts.jsonl post 818416"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [
+        "REVEAL_P1_UKON_ACTIVE_COOPERATION_001"
+      ],
+      "role_in_event": "actor",
+      "story_order_end": null,
+      "story_order_start": "P1-007",
+      "timeline_id": "TIMELINE_OSHUTORU_P1_007_UKON_BROTHERHOOD_CONTACT",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "御临风意识到自己的边关记忆可能被改动。；布莱特安排孤儿院后事，黄泉适应新刀。；主要参与者得知魔兽战术已发生组织化变化。",
+      "character_specific_summary": "角色以“commander”参与；右近说明黄祸龙狼率魔兽逼近帝都并请求队伍追踪达卡斯；雪老复盘边关陷落的战术变化，包括龙背投兵、反魔箭、盾阵、萨满强化、科多扰乱与强敌收尾。",
+      "event_ref": "EVENT_P1_009_BORDER_TRUTH_AND_PURSUIT_MISSION",
+      "evidence_refs": [
+        "extracted-first/6/posts.jsonl post 821604",
+        "extracted-first/7/posts.jsonl post 822916",
+        "extracted-first/7/posts.jsonl post 824464",
+        "extracted-first/7/posts.jsonl post 824748"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "commander",
+      "story_order_end": null,
+      "story_order_start": "P1-009",
+      "timeline_id": "TIMELINE_OSHUTORU_P1_009_BORDER_TRUTH_AND_PURSUIT_MISSION",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "御临风濒死时仍传出空间龙位置信息。；布莱特交出麻痹匕首，黄泉以纵火牵制。；队伍的侦察成为帝国收网的一部分，但不是收网唯一主体。；参与者确认达卡斯身份与凌迟计划存在欺骗。",
+      "character_specific_summary": "角色以“commander”参与；达卡斯调动军队，布莱特与黄泉被卡泽追击；御临风等人与接应者会合，帝与八柱将的援军落场，凌迟伪装的达卡斯身份及计划败露。",
+      "event_ref": "EVENT_P1_014_DAKAS_PLOT_EXPOSED",
+      "evidence_refs": [
+        "extracted-first/17/posts.jsonl post 844064",
+        "extracted-first/18/posts.jsonl post 844648",
+        "extracted-first/19/posts.jsonl post 845112",
+        "extracted-first/19/posts.jsonl post 845600"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "commander",
+      "story_order_end": null,
+      "story_order_start": "P1-014",
+      "timeline_id": "TIMELINE_OSHUTORU_P1_014_DAKAS_PLOT_EXPOSED",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "御临风从仇恨追逐中转向保护悠悠。；御临风与悠悠建立救命、赠礼与初次私人联系。；御临风与姜子尤得到悠悠治疗。；雪老从前线角色转为后方。；御临风等人得知悠悠的姓名。",
+      "character_specific_summary": "角色以“actor”参与；右近使用假面与伏龙梅对抗黑泥龙；御临风与姜子尤昏迷后在草原醒来，银发女孩悠悠治愈二人并自报芬尔德·特兰希尔，御临风赠她玫瑰念珠。",
+      "event_ref": "EVENT_P1_015_UKON_BATTLE_YOUYOU_RESCUE",
+      "evidence_refs": [
+        "extracted-first/19/posts.jsonl post 845604",
+        "extracted-first/20/posts.jsonl post 845644",
+        "extracted-first/20/posts.jsonl post 845659",
+        "extracted-first/20/posts.jsonl post 845699"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "actor",
+      "story_order_end": null,
+      "story_order_start": "P1-015",
+      "timeline_id": "TIMELINE_OSHUTORU_P1_015_UKON_BATTLE_YOUYOU_RESCUE",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "御临风的异常记忆/魔力被检测。；悠悠处于受限制状态。；帝国高层获得关于御临风异常和悠悠身份的信息。",
+      "character_specific_summary": "间接但人物连续性关键：帝与八柱将接见队伍；威廉以孔雀和法印检查御临风，确认其记忆与魔力异常，悠悠的空间龙身份、诅咒与风险进入帝国高层审议。",
+      "event_ref": "EVENT_P1_017_IMPERIAL_AUDIENCE_CURSE_EXAMINATION",
+      "evidence_refs": [
+        "extracted-first/21/posts.jsonl post 846113",
+        "extracted-first/22/posts.jsonl post 846373",
+        "extracted-first/22/posts.jsonl post 846645",
+        "extracted-first/22/posts.jsonl post 846744"
+      ],
+      "notes": "Indirect continuity inclusion.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "indirect continuity subject",
+      "story_order_end": null,
+      "story_order_start": "P1-017",
+      "timeline_id": "TIMELINE_OSHUTORU_P1_017_IMPERIAL_AUDIENCE_CURSE_EXAMINATION",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "御临风从自责转向寻求共同帮助并承担代价。；雪老以训斥维护悠悠选择的主体性。；御临风得知转移是当时可行的主要救治方案及其死亡风险。",
+      "character_specific_summary": "角色以“participant”参与；雪老纠正御临风把悠悠选择归咎于自己的说法；御临风转而求助艾利、阿德莱德、慕少艾、宝石翁与帝，得知诅咒只能转移后自愿承接，并继续确认执行条件。",
+      "event_ref": "EVENT_P1_019_XUE_REBUKE_AND_TRANSFER_DECISION",
+      "evidence_refs": [
+        "extracted-first/24/posts.jsonl post 849058",
+        "extracted-first/25/posts.jsonl post 849066",
+        "extracted-first/25/posts.jsonl post 851802",
+        "extracted-first/27/posts.jsonl post 856896",
+        "extracted-first/27/posts.jsonl post 859329"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "participant",
+      "story_order_end": null,
+      "story_order_start": "P1-019",
+      "timeline_id": "TIMELINE_OSHUTORU_P1_019_XUE_REBUKE_AND_TRANSFER_DECISION",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "肯达公开要求御临风放弃考验或婚约，双方立场冲突加深。；御临风从谢尔伦获得空间龙灭族 testimony，从肯达获得白色黑龙预言 testimony。",
+      "character_specific_summary": "间接但人物连续性关键：谢尔伦讲述空间龙秘境因凌迟获救而暴露、随后被不明势力灭族等旧史；肯达要求御临风放弃考验或婚约，并透露黑龙中曾有具预言能力的白色异类。",
+      "event_ref": "EVENT_P2_020_SPACE_DRAGON_HISTORY_AND_KENDA_WARNING",
+      "evidence_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl post 971561",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl post 972331",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl post 974324",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl post 974730"
+      ],
+      "notes": "Indirect continuity inclusion.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "indirect continuity subject",
+      "story_order_end": null,
+      "story_order_start": "P2-020",
+      "timeline_id": "TIMELINE_OSHUTORU_P2_020_SPACE_DRAGON_HISTORY_AND_KENDA_WARNING",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "御临风临时接过侦察兵指挥并向雷光报告，雷光派奥斯卡贝接应。；红月干扰魔法与远程通讯；御临风救下两名士兵。；耶各手套警示受荣之道存在死亡之翼最后一道封印，并要求悠悠在那里等待。",
+      "character_specific_summary": "间接但人物连续性关键：现实线回归后御临风在雪地与队伍分离；死亡之翼带黑龙冲击战场，红月干扰魔法和通讯。御临风救援侦察兵并临时接过指挥；耶各手套警示其前往受荣之道，让悠悠在那里等待，称那里有死亡之翼最后一道封印。",
+      "event_ref": "EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING",
+      "evidence_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl post 1031470",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl post 1032053",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl post 1033262",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl post 1033271",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl post 1033318"
+      ],
+      "notes": "Indirect continuity inclusion.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "indirect continuity subject",
+      "story_order_end": null,
+      "story_order_start": "P2-029",
+      "timeline_id": "TIMELINE_OSHUTORU_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING",
+      "uncertainty": "confirmed"
+    }
+  ]
+}

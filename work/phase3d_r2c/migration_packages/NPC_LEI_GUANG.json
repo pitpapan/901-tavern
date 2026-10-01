@@ -1,0 +1,410 @@
+{
+  "ability_status_items": [],
+  "background_items": [],
+  "dynamic_state": {
+    "as_of": "D3",
+    "current_concerns": [],
+    "current_conditions": [],
+    "current_faction_role": null,
+    "current_location_ref": null,
+    "current_obligations": [],
+    "notes": "没有以历史资料推断 D3 角色专属状态。",
+    "source_refs": []
+  },
+  "evidence_gaps": [
+    "稳定人格、价值排序与跨情境声线证据不足。",
+    "D3 精确位置、即时议程与当前目标未知。"
+  ],
+  "gap_routing": [
+    {
+      "gap_id": "GAP_NPC_LEI_GUANG_1",
+      "issue": "稳定人格、价值排序与跨情境声线证据不足。",
+      "notes": "保持未解决，不由迁移自动填补。",
+      "routes": [
+        "PROFILE_ONLY"
+      ],
+      "source_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_LEI_GUANG.json"
+      ]
+    },
+    {
+      "gap_id": "GAP_NPC_LEI_GUANG_2",
+      "issue": "D3 精确位置、即时议程与当前目标未知。",
+      "notes": "保持未解决，不由迁移自动填补。",
+      "routes": [
+        "PROFILE_ONLY"
+      ],
+      "source_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_LEI_GUANG.json"
+      ]
+    }
+  ],
+  "goals": {
+    "current_goals": [],
+    "historical_goals": [],
+    "long_term_goals": [],
+    "private_goals": []
+  },
+  "human_review_notes": [
+    "所有自动迁移结果均为 provisional，需逐项人工批准。"
+  ],
+  "inputs_considered": [
+    {
+      "input_class": "old_claims",
+      "path": "work/phase3d_recall/repaired_candidates/NPC_LEI_GUANG.json",
+      "result": "逐项建立 disposition；没有旧档案时为空。"
+    },
+    {
+      "input_class": "direct_temporal_links",
+      "path": "work/phase3d_r2b/indexes/by_profile/NPC_LEI_GUANG.json",
+      "result": "仅作为 exact-reference lookup，不视为完整历史。"
+    },
+    {
+      "input_class": "indirect_continuity_events",
+      "path": "work/phase3d_r2/chronology/campaign_chronology.jsonl",
+      "result": "按显式 migration rules 审查间接关键事件。"
+    },
+    {
+      "input_class": "revelations",
+      "path": "work/phase3d_r2/chronology/character_revelations.jsonl",
+      "result": "保持 attribution 与 evidence status。"
+    },
+    {
+      "input_class": "event_audits",
+      "path": "work/phase3d_r2/event_audits/",
+      "result": "用于高风险事件语义边界。"
+    },
+    {
+      "input_class": "retention_records",
+      "path": "work/phase3d_r2/reports/early_arc_character_retention.md",
+      "result": "检查 Part 1 持续影响。"
+    },
+    {
+      "input_class": "discoveries",
+      "path": "work/phase3d_r2/character_discoveries/",
+      "result": "只创建证据足够的 provisional discovery。"
+    },
+    {
+      "input_class": "d3_state",
+      "path": "current_state.md:D3",
+      "result": "仅此来源可填 dynamic_state。"
+    },
+    {
+      "input_class": "worldbook_references",
+      "path": "output/worldbook_source.jsonl",
+      "result": "只辅助稳定身份与架构映射。"
+    }
+  ],
+  "knowledge_items": [
+    {
+      "acquired_at_event_ref": "EVENT_P2_011_REVIVAL_DILEMMA_WOSIS_BORDER",
+      "acquired_at_story_order": "P2-011",
+      "attribution": "雷光对副手的统帅原则陈述",
+      "epistemic_status": "BELIEVES",
+      "knowledge_id": "KNOWLEDGE_CLAIM_LEI_GUANG_COMMAND_HISTORY_EVENT_P2_011_REVIVAL_DILEMMA_WOSIS_BORDER_1",
+      "notes": "R1A-2A reviewed atomic realization; no present state or future conduct is inferred.",
+      "proposition": "雷光主张统帅应控制而非抛弃对牺牲士兵的恐惧。",
+      "reality_status": "BELIEF",
+      "source_character_ref": "NPC_LEI_GUANG",
+      "source_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.md:169-219",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.md:649-835",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.md:233-238",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.md:549-704",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.md:81-194"
+      ],
+      "supersedes": [],
+      "uncertainty": "confirmed",
+      "valid_from": "P2-011",
+      "valid_until": null
+    },
+    {
+      "acquired_at_event_ref": "EVENT_P2_022_DEATHWING_HISTORY_TESTIMONY",
+      "acquired_at_story_order": "P2-022",
+      "attribution": "御临风在军议中的情报",
+      "epistemic_status": "TESTIMONY_HEARD",
+      "knowledge_id": "KNOWLEDGE_CLAIM_LEI_GUANG_COMMAND_HISTORY_EVENT_P2_022_DEATHWING_HISTORY_TESTIMONY_2",
+      "notes": "R1A-2A reviewed atomic realization; no present state or future conduct is inferred.",
+      "proposition": "雷光在龙族战役军议中接收了御临风提供的情报。",
+      "reality_status": "TESTIMONY",
+      "source_character_ref": "PC_YU_LINFENG",
+      "source_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.md:169-219",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.md:649-835",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.md:233-238",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.md:549-704",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.md:81-194"
+      ],
+      "supersedes": [],
+      "uncertainty": "confirmed",
+      "valid_from": "P2-022",
+      "valid_until": null
+    },
+    {
+      "acquired_at_event_ref": "EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING",
+      "acquired_at_story_order": "P2-029",
+      "attribution": "御临风的战场警告",
+      "epistemic_status": "TESTIMONY_HEARD",
+      "knowledge_id": "KNOWLEDGE_CLAIM_LEI_GUANG_FINAL_WAR_ORDERS_EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING",
+      "notes": "R1A-2A reviewed atomic realization; no present state or future conduct is inferred.",
+      "proposition": "雷光已收到御临风关于最终封印与白色魔法使的警告。",
+      "reality_status": "TESTIMONY",
+      "source_character_ref": "PC_YU_LINFENG",
+      "source_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.md:497-523",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.md:5-47"
+      ],
+      "supersedes": [],
+      "uncertainty": "confirmed",
+      "valid_from": "P2-029",
+      "valid_until": null
+    }
+  ],
+  "nonactual_projections": [],
+  "old_claim_migrations": [
+    {
+      "destination_ids": [
+        "IDENTITY_LEI_GUANG_IDENTITY"
+      ],
+      "migration_status": "MIGRATED",
+      "old_claim_id": "CLAIM_LEI_GUANG_IDENTITY",
+      "original_statement": "雷光是帝国八柱将中被称为圣贤的智将。",
+      "reason": "R2C explicit section routing; ambiguous chronology remains unresolved rather than inferred.",
+      "source_section": "identity.public_identity[0]",
+      "supporting_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_LEI_GUANG.json"
+      ]
+    },
+    {
+      "destination_ids": [
+        "TIMELINE_LEI_GUANG_P2_011_REVIVAL_DILEMMA_WOSIS_BORDER"
+      ],
+      "migration_status": "MOVED_TO_TIMELINE",
+      "old_claim_id": "CLAIM_LEI_GUANG_HISTORY_1",
+      "original_statement": "雷光指挥军队向边境关卡推进，并以八柱将圣贤雷公之名下令反攻。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['campaign_timeline:EVENT_P2_011_REVIVAL_DILEMMA_WOSIS_BORDER']; event_refs=['EVENT_P2_011_REVIVAL_DILEMMA_WOSIS_BORDER'].",
+      "source_section": "identity.established_history[0]",
+      "supporting_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.md:雷光指挥边境关卡反攻（lines 649-835）",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_LEI_GUANG/CLAIM_LEI_GUANG_HISTORY_1"
+      ]
+    },
+    {
+      "destination_ids": [
+        "IDENTITY_CLAIM_LEI_GUANG_ADMINISTRATION_1"
+      ],
+      "migration_status": "MIGRATED",
+      "old_claim_id": "CLAIM_LEI_GUANG_ADMINISTRATION",
+      "original_statement": "设定资料记载雷光与沃西斯是帝之下主要处理帝国日常政务的人。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['identity.durable_roles:1']; event_refs=[].",
+      "source_section": "identity.established_history[1]",
+      "supporting_refs": [
+        "设定 人物/妄想大陆设定集_检索版.md:23-26",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_LEI_GUANG/CLAIM_LEI_GUANG_ADMINISTRATION"
+      ]
+    },
+    {
+      "destination_ids": [
+        "TIMELINE_LEI_GUANG_P2_011_REVIVAL_DILEMMA_WOSIS_BORDER",
+        "TIMELINE_LEI_GUANG_P2_022_DEATHWING_HISTORY_TESTIMONY",
+        "KNOWLEDGE_CLAIM_LEI_GUANG_COMMAND_HISTORY_EVENT_P2_011_REVIVAL_DILEMMA_WOSIS_BORDER_1",
+        "KNOWLEDGE_CLAIM_LEI_GUANG_COMMAND_HISTORY_EVENT_P2_022_DEATHWING_HISTORY_TESTIMONY_2"
+      ],
+      "migration_status": "SPLIT",
+      "old_claim_id": "CLAIM_LEI_GUANG_COMMAND_HISTORY",
+      "original_statement": "边关反攻中，雷光判断魔物的新战术并指挥反击；他对副手明确表示，统帅应控制而非抛弃对牺牲士兵的恐惧。其后又主持龙族战役军议并接收御临风情报。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['campaign_timeline:EVENT_P2_011_REVIVAL_DILEMMA_WOSIS_BORDER', 'campaign_timeline:EVENT_P2_022_DEATHWING_HISTORY_TESTIMONY', 'knowledge_timeline:EVENT_P2_011_REVIVAL_DILEMMA_WOSIS_BORDER_1', 'knowledge_timeline:EVENT_P2_022_DEATHWING_HISTORY_TESTIMONY_2']; event_refs=['EVENT_P2_011_REVIVAL_DILEMMA_WOSIS_BORDER', 'EVENT_P2_022_DEATHWING_HISTORY_TESTIMONY'].",
+      "source_section": "identity.established_history[2]",
+      "supporting_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.md:169-219",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.md:649-835",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.md:233-238",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.md:549-704",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.md:81-194",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_LEI_GUANG/CLAIM_LEI_GUANG_COMMAND_HISTORY"
+      ]
+    },
+    {
+      "destination_ids": [
+        "TIMELINE_LEI_GUANG_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING",
+        "KNOWLEDGE_CLAIM_LEI_GUANG_FINAL_WAR_ORDERS_EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING"
+      ],
+      "migration_status": "SPLIT",
+      "old_claim_id": "CLAIM_LEI_GUANG_FINAL_WAR_ORDERS",
+      "original_statement": "红月导致通讯与各战线隔离后，雷光派出传令、召集罗伯特执行紧急任务、下令楔形分割战场并派部队接应御临风；他已收到御临风关于最终封印与白魔的警告。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['campaign_timeline:EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING', 'knowledge_timeline:EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING']; event_refs=['EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING'].",
+      "source_section": "identity.established_history[3]",
+      "supporting_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.md:497-523",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.md:5-47",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_LEI_GUANG/CLAIM_LEI_GUANG_FINAL_WAR_ORDERS"
+      ]
+    },
+    {
+      "destination_ids": [
+        "CONSTRAINT_LEI_GUANG_EVIDENCE_BOUNDARY"
+      ],
+      "migration_status": "MIGRATED",
+      "old_claim_id": "CONSTRAINT_LEI_GUANG_EVIDENCE_BOUNDARY",
+      "original_statement": "不得以单次行为、职业、能力或身份推断稳定人格、私人动机、未来目标或场景必然出席。",
+      "reason": "R2C explicit section routing; ambiguous chronology remains unresolved rather than inferred.",
+      "source_section": "rp_constraints[0]",
+      "supporting_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_LEI_GUANG.json"
+      ]
+    }
+  ],
+  "package_status": "PROVISIONAL_REVIEWABLE_DECISION_LAYER",
+  "persona": {
+    "core_personality": [],
+    "decision_patterns": [],
+    "motivations": [],
+    "speech_style": [],
+    "values": []
+  },
+  "phase": "3D-R2C",
+  "presence": {
+    "canon_layers": [
+      "original_campaign"
+    ],
+    "life_status": "unknown",
+    "narrative_availability": "inactive",
+    "notes": "Profile depth does not force scene presence; inactive, restricted, historical, and interlude boundaries remain operative.",
+    "source_refs": [
+      "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.md:雷光作为八柱将圣贤分析战局（lines 169-218）"
+    ],
+    "uncertainty": "uncertain"
+  },
+  "profile_id": "NPC_LEI_GUANG",
+  "profile_metadata": {
+    "ai_permissions": {
+      "may_assign_new_goals": false,
+      "may_choose_voluntary_actions": true,
+      "may_describe_external_effects": true,
+      "may_describe_involuntary_physical_reactions": true,
+      "may_generate_dialogue": true,
+      "may_generate_private_thoughts": true,
+      "may_reference_established_history": true,
+      "may_summarize_user_declared_actions": false
+    },
+    "aliases": [],
+    "canon_layers": [
+      "original_campaign"
+    ],
+    "control_mode": "npc_runtime",
+    "identity": {
+      "durable_affiliations": [],
+      "durable_roles": [
+        {
+          "attribution": "R1A-2A source review of the cited legacy evidence",
+          "evidence_mode": "explicit_source_statement",
+          "identity_id": "IDENTITY_CLAIM_LEI_GUANG_ADMINISTRATION_1",
+          "notes": "R1A-2A reviewed atomic realization; no present state or future conduct is inferred.",
+          "source_refs": [
+            "设定 人物/妄想大陆设定集_检索版.md:23-26"
+          ],
+          "statement": "设定资料记载雷光与沃西斯是帝之下主要处理帝国日常政务的人。",
+          "uncertainty": "confirmed"
+        }
+      ],
+      "public_identity": [
+        {
+          "attribution": "旧 Profile 中已有来源支持的身份 claim",
+          "evidence_mode": "explicit_source_statement",
+          "identity_id": "IDENTITY_LEI_GUANG_IDENTITY",
+          "notes": "仅保留来源直接支持的范围。",
+          "source_refs": [
+            "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.md:雷光作为八柱将圣贤分析战局（lines 169-218）"
+          ],
+          "statement": "雷光是帝国八柱将中被称为圣贤的智将。",
+          "uncertainty": "confirmed"
+        }
+      ],
+      "species_or_entity": []
+    },
+    "name": "雷光",
+    "notes": "Existing effective profile migrated provisionally; not approved or applied.",
+    "profile_depth": "compact",
+    "profile_kind": "npc",
+    "profile_status": "existing",
+    "worldbook_id": "CHARACTER_LEI_GUANG",
+    "worldbook_mapping_status": "existing"
+  },
+  "relationship_items": [],
+  "rp_constraints": [
+    {
+      "constraint_id": "CONSTRAINT_LEI_GUANG_EVIDENCE_BOUNDARY",
+      "notes": "Construction safety boundary; not a new world fact.",
+      "source_refs": [
+        "work/phase3c/evidence/NPC_LEI_GUANG_evidence.md"
+      ],
+      "statement": "不得以单次行为、职业、能力或身份推断稳定人格、私人动机、未来目标或场景必然出席。"
+    }
+  ],
+  "schema_version": "R2C-MIGRATION-1",
+  "source_profile_candidate": "work/phase3d_recall/repaired_candidates/NPC_LEI_GUANG.json",
+  "timeline_items": [
+    {
+      "character_consequence": "沃西斯对御临风身份和组织的怀疑进入直接逼问阶段。；雷光夺回边境关卡，帝国军得以推进妄想山脉。；御临风明确表达复活贞子可能动摇道德边界的恐惧；这是自我担忧而非未来决定。",
+      "character_specific_summary": "角色以“commander”参与；御临风与雪翁讨论复活贞子是否会诱使自己背叛一切；沃西斯随后支开悠悠、逼问其异界身份与组织。与此同时雷光通过卷轴道路和三线推进夺回边境关卡。",
+      "event_ref": "EVENT_P2_011_REVIVAL_DILEMMA_WOSIS_BORDER",
+      "evidence_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl post 921122",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl post 921305",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl post 921518",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl post 922381",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl post 923303"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "commander",
+      "story_order_end": null,
+      "story_order_start": "P2-011",
+      "timeline_id": "TIMELINE_LEI_GUANG_P2_011_REVIVAL_DILEMMA_WOSIS_BORDER",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "奥希拉的黑龙古史 testimony、御临风对预言的对应和其诅咒猜测被分层记录。",
+      "character_specific_summary": "间接但人物连续性关键：奥希拉补充黑龙族与先祖死亡之翼的历史；御临风把降生祝福、战争繁荣、死亡换来和平的叙述与预言对应，并怀疑后段指向黑龙族或龙族毁灭。",
+      "event_ref": "EVENT_P2_022_DEATHWING_HISTORY_TESTIMONY",
+      "evidence_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl post 987243",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl post 987507",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl post 987885",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl post 989838"
+      ],
+      "notes": "Indirect continuity inclusion.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "indirect continuity subject",
+      "story_order_end": null,
+      "story_order_start": "P2-022",
+      "timeline_id": "TIMELINE_LEI_GUANG_P2_022_DEATHWING_HISTORY_TESTIMONY",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "御临风临时接过侦察兵指挥并向雷光报告，雷光派奥斯卡贝接应。；红月干扰魔法与远程通讯；御临风救下两名士兵。；耶各手套警示受荣之道存在死亡之翼最后一道封印，并要求悠悠在那里等待。",
+      "character_specific_summary": "角色以“commander”参与；现实线回归后御临风在雪地与队伍分离；死亡之翼带黑龙冲击战场，红月干扰魔法和通讯。御临风救援侦察兵并临时接过指挥；耶各手套警示其前往受荣之道，让悠悠在那里等待，称那里有死亡之翼最后一道封印。",
+      "event_ref": "EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING",
+      "evidence_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl post 1031470",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl post 1032053",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl post 1033262",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl post 1033271",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl post 1033318"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "commander",
+      "story_order_end": null,
+      "story_order_start": "P2-029",
+      "timeline_id": "TIMELINE_LEI_GUANG_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING",
+      "uncertainty": "confirmed"
+    }
+  ]
+}

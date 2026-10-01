@@ -1,0 +1,804 @@
+{
+  "ability_status_items": [],
+  "background_items": [
+    {
+      "attribution": "R1A-2A source review of the cited legacy evidence",
+      "background_id": "BACKGROUND_CLAIM_BRIGHT_BACKGROUND_1",
+      "evidence_mode": "explicit_source_statement",
+      "notes": "R1A-2A reviewed atomic realization; no present state or future conduct is inferred.",
+      "reality_status": "BIOGRAPHICAL_BACKGROUND",
+      "related_event_refs": [],
+      "relative_time": "Campaign 前史或在 Campaign 中回述的既往历史",
+      "source_refs": [
+        "设定 人物/人物卡资料集_叙事检索版.md:112-134",
+        "设定 人物/人物卡资料集_检索版.md:1104-1135"
+      ],
+      "statement": "人物参考记载布莱特的村庄与妻儿被害；他曾误认并追捕一名精灵，后来得知另有凶手，遭闪光魔法反击失明后学会以风感知，并以独行游击士及“雪漫之袭”之名活动。",
+      "temporal_scope": "R1A-1 审定的 Campaign 前史或回述历史范围。",
+      "uncertainty": "confirmed"
+    }
+  ],
+  "dynamic_state": {
+    "as_of": "D3",
+    "current_concerns": [],
+    "current_conditions": [],
+    "current_faction_role": null,
+    "current_location_ref": null,
+    "current_obligations": [],
+    "notes": "没有以历史资料推断 D3 角色专属状态。",
+    "source_refs": []
+  },
+  "evidence_gaps": [
+    "除本候选已记录的人物参考明示特征外，完整价值排序、跨情境声线与 D3 人格变化仍无充分证据。",
+    "D3 精确位置、即时议程与当前目标未知。"
+  ],
+  "gap_routing": [
+    {
+      "gap_id": "GAP_NPC_CASSIUS_BRIGHT_1",
+      "issue": "除本候选已记录的人物参考明示特征外，完整价值排序、跨情境声线与 D3 人格变化仍无充分证据。",
+      "notes": "保持未解决，不由迁移自动填补。",
+      "routes": [
+        "PROFILE_ONLY"
+      ],
+      "source_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_CASSIUS_BRIGHT.json"
+      ]
+    },
+    {
+      "gap_id": "GAP_NPC_CASSIUS_BRIGHT_2",
+      "issue": "D3 精确位置、即时议程与当前目标未知。",
+      "notes": "保持未解决，不由迁移自动填补。",
+      "routes": [
+        "PROFILE_ONLY"
+      ],
+      "source_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_CASSIUS_BRIGHT.json"
+      ]
+    }
+  ],
+  "goals": {
+    "current_goals": [],
+    "historical_goals": [],
+    "long_term_goals": [],
+    "private_goals": []
+  },
+  "human_review_notes": [
+    "所有自动迁移结果均为 provisional，需逐项人工批准。"
+  ],
+  "inputs_considered": [
+    {
+      "input_class": "old_claims",
+      "path": "work/phase3d_recall/repaired_candidates/NPC_CASSIUS_BRIGHT.json",
+      "result": "逐项建立 disposition；没有旧档案时为空。"
+    },
+    {
+      "input_class": "direct_temporal_links",
+      "path": "work/phase3d_r2b/indexes/by_profile/NPC_CASSIUS_BRIGHT.json",
+      "result": "仅作为 exact-reference lookup，不视为完整历史。"
+    },
+    {
+      "input_class": "indirect_continuity_events",
+      "path": "work/phase3d_r2/chronology/campaign_chronology.jsonl",
+      "result": "按显式 migration rules 审查间接关键事件。"
+    },
+    {
+      "input_class": "revelations",
+      "path": "work/phase3d_r2/chronology/character_revelations.jsonl",
+      "result": "保持 attribution 与 evidence status。"
+    },
+    {
+      "input_class": "event_audits",
+      "path": "work/phase3d_r2/event_audits/",
+      "result": "用于高风险事件语义边界。"
+    },
+    {
+      "input_class": "retention_records",
+      "path": "work/phase3d_r2/reports/early_arc_character_retention.md",
+      "result": "检查 Part 1 持续影响。"
+    },
+    {
+      "input_class": "discoveries",
+      "path": "work/phase3d_r2/character_discoveries/",
+      "result": "只创建证据足够的 provisional discovery。"
+    },
+    {
+      "input_class": "d3_state",
+      "path": "current_state.md:D3",
+      "result": "仅此来源可填 dynamic_state。"
+    },
+    {
+      "input_class": "worldbook_references",
+      "path": "output/worldbook_source.jsonl",
+      "result": "只辅助稳定身份与架构映射。"
+    }
+  ],
+  "knowledge_items": [
+    {
+      "acquired_at_event_ref": null,
+      "acquired_at_story_order": null,
+      "attribution": "古雷姆林的转告与现场未决观察",
+      "epistemic_status": "TESTIMONY_HEARD",
+      "knowledge_id": "KNOWLEDGE_CLAIM_BRIGHT_LATE_FATE_1",
+      "notes": "R1A-2A reviewed atomic realization; no present state or future conduct is inferred.",
+      "proposition": "古雷姆林转告布莱特为正义而死；遗骸中盲眼幼龙与布莱特是否具有身份连续性未获确认。",
+      "reality_status": "TESTIMONY",
+      "source_character_ref": null,
+      "source_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.md:48-106",
+        "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.md:551-565",
+        "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.md:9-76"
+      ],
+      "supersedes": [],
+      "uncertainty": "uncertain",
+      "valid_from": null,
+      "valid_until": null
+    }
+  ],
+  "nonactual_projections": [],
+  "old_claim_migrations": [
+    {
+      "destination_ids": [
+        "IDENTITY_CASSIUS_BRIGHT_IDENTITY"
+      ],
+      "migration_status": "MIGRATED",
+      "old_claim_id": "CLAIM_CASSIUS_BRIGHT_IDENTITY",
+      "original_statement": "卡西乌斯·布莱特是失明的猎户与赏金猎人，也是以风感知环境的远距离射手。",
+      "reason": "R2C explicit section routing; ambiguous chronology remains unresolved rather than inferred.",
+      "source_section": "identity.public_identity[0]",
+      "supporting_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_CASSIUS_BRIGHT.json"
+      ]
+    },
+    {
+      "destination_ids": [
+        "TIMELINE_CASSIUS_BRIGHT_P1_020_MONSTER_BOX_DISASTER"
+      ],
+      "migration_status": "MOVED_TO_TIMELINE",
+      "old_claim_id": "CLAIM_CASSIUS_BRIGHT_HISTORY_1",
+      "original_statement": "布莱特在帝都小巷撞见携带魔物之盒的人后呼救，并守住现场等待夜巡士兵。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['campaign_timeline:EVENT_P1_020_MONSTER_BOX_DISASTER']; event_refs=['EVENT_P1_020_MONSTER_BOX_DISASTER'].",
+      "source_section": "identity.established_history[0]",
+      "supporting_refs": [
+        "extracted-first/27/posts.md:布莱特撞见携盒者并呼救（lines 523-540）",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_CASSIUS_BRIGHT/CLAIM_CASSIUS_BRIGHT_HISTORY_1"
+      ]
+    },
+    {
+      "destination_ids": [
+        "BACKGROUND_CLAIM_BRIGHT_BACKGROUND_1"
+      ],
+      "migration_status": "MOVED_TO_BACKGROUND",
+      "old_claim_id": "CLAIM_BRIGHT_BACKGROUND",
+      "original_statement": "人物参考记载布莱特的村庄与妻儿被害；他曾误认并追捕一名精灵，后来得知另有凶手，遭闪光魔法反击失明后学会以风感知，并以独行游击士及“雪漫之袭”之名活动。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['biographical_background:1']; event_refs=[].",
+      "source_section": "identity.established_history[1]",
+      "supporting_refs": [
+        "设定 人物/人物卡资料集_叙事检索版.md:112-134",
+        "设定 人物/人物卡资料集_检索版.md:1104-1135",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_CASSIUS_BRIGHT/CLAIM_BRIGHT_BACKGROUND"
+      ]
+    },
+    {
+      "destination_ids": [
+        "TIMELINE_CASSIUS_BRIGHT_P1_001_RUINS_COMPASS_CELLAR",
+        "TIMELINE_CASSIUS_BRIGHT_P1_013_SPLIT_RECONNAISSANCE_SPACE_DRAGON",
+        "TIMELINE_CASSIUS_BRIGHT_P1_014_DAKAS_PLOT_EXPOSED"
+      ],
+      "migration_status": "MOVED_TO_TIMELINE",
+      "old_claim_id": "CLAIM_BRIGHT_EARLY_CAMPAIGN",
+      "original_statement": "布莱特以游击士身份与御临风一行同行，并参与峡谷调查与战斗。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['campaign_timeline:EVENT_P1_001_RUINS_COMPASS_CELLAR', 'campaign_timeline:EVENT_P1_013_SPLIT_RECONNAISSANCE_SPACE_DRAGON', 'campaign_timeline:EVENT_P1_014_DAKAS_PLOT_EXPOSED']; event_refs=['EVENT_P1_001_RUINS_COMPASS_CELLAR', 'EVENT_P1_013_SPLIT_RECONNAISSANCE_SPACE_DRAGON', 'EVENT_P1_014_DAKAS_PLOT_EXPOSED'].",
+      "source_section": "identity.established_history[2]",
+      "supporting_refs": [
+        "extracted-first/1/posts.md:293-297",
+        "extracted-first/17/posts.md:10-44",
+        "extracted-first/20/posts.md:20-35",
+        "extracted-first/22/posts.md:8-37",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_CASSIUS_BRIGHT/CLAIM_BRIGHT_EARLY_CAMPAIGN"
+      ]
+    },
+    {
+      "destination_ids": [
+        "TIMELINE_CASSIUS_BRIGHT_P3_002_SANCTUARY_ENTRY",
+        "KNOWLEDGE_CLAIM_BRIGHT_LATE_FATE_1"
+      ],
+      "migration_status": "SPLIT",
+      "old_claim_id": "CLAIM_BRIGHT_LATE_FATE",
+      "original_statement": "布莱特在追查古雷姆林期间失踪；终局时古雷姆林颈部出现被认作布莱特的面容并留下关于其为正义而死的转告，随后该面容死亡。古雷姆林遗骸出现的盲眼幼龙是否与布莱特具有身份连续性，来源没有确认。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['campaign_timeline:EVENT_P3_002_SANCTUARY_ENTRY', 'knowledge_timeline:1']; event_refs=['EVENT_P3_002_SANCTUARY_ENTRY'].",
+      "source_section": "identity.established_history[3]",
+      "supporting_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.md:48-106",
+        "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.md:551-565",
+        "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.md:9-76",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_CASSIUS_BRIGHT/CLAIM_BRIGHT_LATE_FATE"
+      ]
+    },
+    {
+      "destination_ids": [
+        "PERSONA_CASSIUS_BRIGHT_PATIENCE"
+      ],
+      "migration_status": "RETAINED_AS_PERSONA",
+      "old_claim_id": "CLAIM_CASSIUS_BRIGHT_PATIENCE",
+      "original_statement": "人物资料明确把他描述为耐心、寡言。",
+      "reason": "R2C explicit section routing; ambiguous chronology remains unresolved rather than inferred.",
+      "source_section": "core_personality[0]",
+      "supporting_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_CASSIUS_BRIGHT.json"
+      ]
+    },
+    {
+      "destination_ids": [
+        "PERSONA_BRIGHT_REFERENCE_TRAITS"
+      ],
+      "migration_status": "RETAINED_AS_PERSONA",
+      "old_claim_id": "CLAIM_BRIGHT_REFERENCE_TRAITS",
+      "original_statement": "人物参考把布莱特明确写为嫉恶如仇，并会把握机会。",
+      "reason": "R2C explicit section routing; ambiguous chronology remains unresolved rather than inferred.",
+      "source_section": "core_personality[1]",
+      "supporting_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_CASSIUS_BRIGHT.json"
+      ]
+    },
+    {
+      "destination_ids": [
+        "PERSONA_CASSIUS_BRIGHT_TERSE"
+      ],
+      "migration_status": "RETAINED_AS_PERSONA",
+      "old_claim_id": "CLAIM_CASSIUS_BRIGHT_TERSE",
+      "original_statement": "其表达应保持寡言，不以持续宣告技能替代行动。",
+      "reason": "R2C explicit section routing; ambiguous chronology remains unresolved rather than inferred.",
+      "source_section": "speech_style[0]",
+      "supporting_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_CASSIUS_BRIGHT.json"
+      ]
+    },
+    {
+      "destination_ids": [
+        "RELATIONSHIP_CASSIUS_BRIGHT_YU_LINFENG"
+      ],
+      "migration_status": "MOVED_TO_RELATIONSHIP",
+      "old_claim_id": "RELATIONSHIP_CASSIUS_BRIGHT_YU_LINFENG",
+      "original_statement": "campaign companion",
+      "reason": "R2C explicit section routing; ambiguous chronology remains unresolved rather than inferred.",
+      "source_section": "relationships[0]",
+      "supporting_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_CASSIUS_BRIGHT.json"
+      ]
+    },
+    {
+      "destination_ids": [
+        "MILESTONE_CLAIM_CASSIUS_BRIGHT_RELATIONSHIP_EVENT_P1_002_ANTIDOTE_NIGHTMARES_DEPARTURE"
+      ],
+      "migration_status": "MOVED_TO_RELATIONSHIP",
+      "old_claim_id": "CLAIM_CASSIUS_BRIGHT_RELATIONSHIP",
+      "original_statement": "车队休整时，布莱特与御临风共同轮流守夜。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['relationships[].relationship_milestones:EVENT_P1_002_ANTIDOTE_NIGHTMARES_DEPARTURE']; event_refs=['EVENT_P1_002_ANTIDOTE_NIGHTMARES_DEPARTURE'].",
+      "source_section": "relationships[0].established_history[0]",
+      "supporting_refs": [
+        "extracted-first/1/posts.md:lines 293-297",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_CASSIUS_BRIGHT/CLAIM_CASSIUS_BRIGHT_RELATIONSHIP"
+      ]
+    },
+    {
+      "destination_ids": [
+        "CONSTRAINT_CASSIUS_BRIGHT_EVIDENCE_BOUNDARY"
+      ],
+      "migration_status": "MIGRATED",
+      "old_claim_id": "CONSTRAINT_CASSIUS_BRIGHT_EVIDENCE_BOUNDARY",
+      "original_statement": "不得以单次行为、职业、能力或身份推断稳定人格、私人动机、未来目标或场景必然出席。",
+      "reason": "R2C explicit section routing; ambiguous chronology remains unresolved rather than inferred.",
+      "source_section": "rp_constraints[0]",
+      "supporting_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_CASSIUS_BRIGHT.json"
+      ]
+    }
+  ],
+  "package_status": "PROVISIONAL_REVIEWABLE_DECISION_LAYER",
+  "persona": {
+    "core_personality": [
+      {
+        "attribution": "旧 Profile persona claim",
+        "evidence_mode": "authorial_definition",
+        "notes": "仅保留来源直接支持的范围。",
+        "persona_id": "PERSONA_CASSIUS_BRIGHT_PATIENCE",
+        "reality_status": "BELIEF",
+        "source_refs": [
+          "设定 人物/人物卡资料集_叙事检索版.md:卡西乌斯·布莱特（lines 112-134）"
+        ],
+        "stability": "stable",
+        "statement": "人物资料明确把他描述为耐心、寡言。",
+        "supporting_event_refs": [],
+        "supporting_revelation_refs": [],
+        "uncertainty": "confirmed"
+      },
+      {
+        "attribution": "旧 Profile persona claim",
+        "evidence_mode": "authorial_definition",
+        "notes": "Phase 3D-R source-recall repair; no future state is inferred.",
+        "persona_id": "PERSONA_BRIGHT_REFERENCE_TRAITS",
+        "reality_status": "BELIEF",
+        "source_refs": [
+          "设定 人物/人物卡资料集_叙事检索版.md:112-134",
+          "设定 人物/人物卡资料集_检索版.md:1104-1135"
+        ],
+        "stability": "stable",
+        "statement": "人物参考把布莱特明确写为嫉恶如仇，并会把握机会。",
+        "supporting_event_refs": [],
+        "supporting_revelation_refs": [],
+        "uncertainty": "confirmed"
+      }
+    ],
+    "decision_patterns": [],
+    "motivations": [],
+    "speech_style": [
+      {
+        "attribution": "旧 Profile persona claim",
+        "evidence_mode": "authorial_definition",
+        "notes": "仅保留来源直接支持的范围。",
+        "persona_id": "PERSONA_CASSIUS_BRIGHT_TERSE",
+        "reality_status": "BELIEF",
+        "source_refs": [
+          "设定 人物/人物卡资料集_叙事检索版.md:卡西乌斯·布莱特（lines 112-134）"
+        ],
+        "stability": "conditional",
+        "statement": "其表达应保持寡言，不以持续宣告技能替代行动。",
+        "supporting_event_refs": [],
+        "supporting_revelation_refs": [],
+        "uncertainty": "uncertain"
+      }
+    ],
+    "values": []
+  },
+  "phase": "3D-R2C",
+  "presence": {
+    "canon_layers": [
+      "original_campaign"
+    ],
+    "life_status": "unknown",
+    "narrative_availability": "inactive",
+    "notes": "Profile depth does not force scene presence; inactive, restricted, historical, and interlude boundaries remain operative.",
+    "source_refs": [
+      "设定 人物/人物卡资料集_叙事检索版.md:卡西乌斯·布莱特"
+    ],
+    "uncertainty": "uncertain"
+  },
+  "profile_id": "NPC_CASSIUS_BRIGHT",
+  "profile_metadata": {
+    "ai_permissions": {
+      "may_assign_new_goals": false,
+      "may_choose_voluntary_actions": true,
+      "may_describe_external_effects": true,
+      "may_describe_involuntary_physical_reactions": true,
+      "may_generate_dialogue": true,
+      "may_generate_private_thoughts": true,
+      "may_reference_established_history": true,
+      "may_summarize_user_declared_actions": false
+    },
+    "aliases": [
+      "布莱特"
+    ],
+    "canon_layers": [
+      "original_campaign"
+    ],
+    "control_mode": "npc_runtime",
+    "identity": {
+      "durable_affiliations": [],
+      "durable_roles": [],
+      "public_identity": [
+        {
+          "attribution": "旧 Profile 中已有来源支持的身份 claim",
+          "evidence_mode": "authorial_definition",
+          "identity_id": "IDENTITY_CASSIUS_BRIGHT_IDENTITY",
+          "notes": "仅保留来源直接支持的范围。",
+          "source_refs": [
+            "设定 人物/人物卡资料集_叙事检索版.md:卡西乌斯·布莱特"
+          ],
+          "statement": "卡西乌斯·布莱特是失明的猎户与赏金猎人，也是以风感知环境的远距离射手。",
+          "uncertainty": "confirmed"
+        }
+      ],
+      "species_or_entity": []
+    },
+    "name": "卡西乌斯·布莱特",
+    "notes": "Existing effective profile migrated provisionally; not approved or applied.",
+    "profile_depth": "full",
+    "profile_kind": "npc",
+    "profile_status": "existing",
+    "worldbook_id": "CHARACTER_CASSIUS_BRIGHT",
+    "worldbook_mapping_status": "existing"
+  },
+  "relationship_items": [
+    {
+      "current_stance": null,
+      "notes": "关系历史不自动构成当前情感、忠诚或未来义务。",
+      "related_character_label": null,
+      "related_character_ref": "PC_YU_LINFENG",
+      "relationship_baseline": "campaign companion",
+      "relationship_id": "RELATIONSHIP_CASSIUS_BRIGHT_YU_LINFENG",
+      "relationship_milestones": [
+        {
+          "attribution": "R1A-2A source review of the cited legacy evidence",
+          "background_ref": null,
+          "change": "车队休整时，布莱特与御临风共同轮流守夜。",
+          "event_ref": "EVENT_P1_002_ANTIDOTE_NIGHTMARES_DEPARTURE",
+          "evidence_mode": "explicit_source_statement",
+          "milestone_id": "MILESTONE_CLAIM_CASSIUS_BRIGHT_RELATIONSHIP_EVENT_P1_002_ANTIDOTE_NIGHTMARES_DEPARTURE",
+          "notes": "R1A-2A reviewed atomic realization; no present state or future conduct is inferred.",
+          "reality_status": "ACTUAL_EVENT",
+          "source_refs": [
+            "extracted-first/1/posts.md:lines 293-297"
+          ],
+          "story_order": "P1-002",
+          "uncertainty": "confirmed"
+        }
+      ],
+      "source_refs": [
+        "extracted-first/1/posts.md:lines 293-297"
+      ],
+      "uncertainty": "uncertain"
+    }
+  ],
+  "rp_constraints": [
+    {
+      "constraint_id": "CONSTRAINT_CASSIUS_BRIGHT_EVIDENCE_BOUNDARY",
+      "notes": "Construction safety boundary; not a new world fact.",
+      "source_refs": [
+        "work/phase3c/evidence/NPC_CASSIUS_BRIGHT_evidence.md"
+      ],
+      "statement": "不得以单次行为、职业、能力或身份推断稳定人格、私人动机、未来目标或场景必然出席。"
+    }
+  ],
+  "schema_version": "R2C-MIGRATION-1",
+  "source_profile_candidate": "work/phase3d_recall/repaired_candidates/NPC_CASSIUS_BRIGHT.json",
+  "timeline_items": [
+    {
+      "character_consequence": "御临风与布莱特继续承担报信与搜证。；二人得知地下室存在研究痕迹并取得可供村医辨读的手稿。",
+      "character_specific_summary": "角色以“actor”参与；布莱特继续搜查二五仔，御临风在废墟找到黄金圆盘；戒指嵌入圆盘后指向帝都，两人误触机关进入血腥地下室并取得手稿。",
+      "event_ref": "EVENT_P1_001_RUINS_COMPASS_CELLAR",
+      "evidence_refs": [
+        "extracted-first/1/posts.jsonl post 816001",
+        "extracted-first/1/posts.jsonl post 816014",
+        "extracted-first/1/posts.jsonl post 816045",
+        "extracted-first/1/posts.jsonl post 816112"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [
+        "REVEAL_P1_BRIGHT_INVESTIGATIVE_001"
+      ],
+      "role_in_event": "actor",
+      "story_order_end": null,
+      "story_order_start": "P1-001",
+      "timeline_id": "TIMELINE_CASSIUS_BRIGHT_P1_001_RUINS_COMPASS_CELLAR",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "御临风对二五仔仍有强烈敌意。；布莱特仍牵挂孤儿院。；雅儿中毒状态得到处理。；老村医提供九雪医馆方向。",
+      "character_specific_summary": "角色以“participant”参与；老村医依据手稿配制解药；御临风与布莱特经历创伤性噩梦，黄泉与雅儿醒来，队伍决定前往帝都报信。",
+      "event_ref": "EVENT_P1_002_ANTIDOTE_NIGHTMARES_DEPARTURE",
+      "evidence_refs": [
+        "extracted-first/1/posts.jsonl post 816119",
+        "extracted-first/1/posts.jsonl post 816161",
+        "extracted-first/1/posts.jsonl post 816286"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [
+        "REVEAL_P1_BRIGHT_ORPHANAGE_001"
+      ],
+      "role_in_event": "participant",
+      "story_order_end": null,
+      "story_order_start": "P1-002",
+      "timeline_id": "TIMELINE_CASSIUS_BRIGHT_P1_002_ANTIDOTE_NIGHTMARES_DEPARTURE",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "黄泉选择加入报信行动。；御临风与布莱特在爆炸中受伤。；队伍获得二五仔对山贼与毒害的供述。",
+      "character_specific_summary": "角色以“actor”参与；黄泉得知边关被破并同行；布莱特与御临风继续审问二五仔，二五仔承认利用山贼与毒害雅儿，随后引发爆炸，队伍救出村医并抵达帝都。",
+      "event_ref": "EVENT_P1_003_TRAITOR_INTERROGATION_CITY_ARRIVAL",
+      "evidence_refs": [
+        "extracted-first/1/posts.jsonl post 816289",
+        "extracted-first/2/posts.jsonl post 816545",
+        "extracted-first/2/posts.jsonl post 816557",
+        "extracted-first/2/posts.jsonl post 816583"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "actor",
+      "story_order_end": null,
+      "story_order_start": "P1-003",
+      "timeline_id": "TIMELINE_CASSIUS_BRIGHT_P1_003_TRAITOR_INTERROGATION_CITY_ARRIVAL",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "御临风在警讯被拒后感到愤怒和无力。；露露缇耶处于被捕状态。；队伍得知医馆被控与刺杀达卡斯有关。",
+      "character_specific_summary": "角色以“participant”参与；御临风向军方报告边关陷落，但军方以达卡斯声称守住关卡为由拒绝；队伍转往九雪医馆，发现医馆被封、露露缇耶被捕。",
+      "event_ref": "EVENT_P1_004_WARNING_REJECTED_CLINIC_SEALED",
+      "evidence_refs": [
+        "extracted-first/2/posts.jsonl post 816648",
+        "extracted-first/2/posts.jsonl post 816665",
+        "extracted-first/3/posts.jsonl post 816708",
+        "extracted-first/3/posts.jsonl post 816730"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "participant",
+      "story_order_end": null,
+      "story_order_start": "P1-004",
+      "timeline_id": "TIMELINE_CASSIUS_BRIGHT_P1_004_WARNING_REJECTED_CLINIC_SEALED",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "大妈与雪老/兄弟会的联系成为队伍求援线索。；队伍确认达卡斯对医馆线进行具体追捕。",
+      "character_specific_summary": "角色以“participant”参与；队伍向大妈询问医馆与露露缇耶；达卡斯带兵包围，大妈用烟雾脱离，御临风以兄弟会线索求取信任，三人分散逃亡。",
+      "event_ref": "EVENT_P1_005_DAKAS_SURROUNDS_AUNT",
+      "evidence_refs": [
+        "extracted-first/3/posts.jsonl post 816731",
+        "extracted-first/3/posts.jsonl post 816803",
+        "extracted-first/3/posts.jsonl post 817134",
+        "extracted-first/3/posts.jsonl post 817164"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "participant",
+      "story_order_end": null,
+      "story_order_start": "P1-005",
+      "timeline_id": "TIMELINE_CASSIUS_BRIGHT_P1_005_DAKAS_SURROUNDS_AUNT",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "御临风反省自己的鲁莽。；怪眼队长被黄泉斩首。；队伍取得进一步协会线索。",
+      "character_specific_summary": "角色以“participant”参与；布莱特雇人送信；御临风经下水道误入女澡堂后在人群中制造混乱脱身；黄泉潜入协会并斩杀怪眼队长。",
+      "event_ref": "EVENT_P1_006_SEWER_BATH_ASSOCIATION_FIGHT",
+      "evidence_refs": [
+        "extracted-first/3/posts.jsonl post 817167",
+        "extracted-first/4/posts.jsonl post 817447",
+        "extracted-first/4/posts.jsonl post 817612",
+        "extracted-first/4/posts.jsonl post 817665"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "participant",
+      "story_order_end": null,
+      "story_order_start": "P1-006",
+      "timeline_id": "TIMELINE_CASSIUS_BRIGHT_P1_006_SEWER_BATH_ASSOCIATION_FIGHT",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "御临风用剑围保护同伴。；黄泉明确认可御临风的成长。；参与者形成共同救援与战斗经历。；雪老的重伤得到紧急治疗。",
+      "character_specific_summary": "角色以“participant”参与；队伍在矮人铺补给时遭袭，大妈破顶带回昏迷雪老；艾利、佐间、阿德莱德及队伍共同迎战并救治雪老。",
+      "event_ref": "EVENT_P1_008_DWARF_SHOP_RESCUE",
+      "evidence_refs": [
+        "extracted-first/5/posts.jsonl post 818431",
+        "extracted-first/6/posts.jsonl post 819306",
+        "extracted-first/6/posts.jsonl post 820316",
+        "extracted-first/6/posts.jsonl post 821602"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "participant",
+      "story_order_end": null,
+      "story_order_start": "P1-008",
+      "timeline_id": "TIMELINE_CASSIUS_BRIGHT_P1_008_DWARF_SHOP_RESCUE",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "御临风意识到自己的边关记忆可能被改动。；布莱特安排孤儿院后事，黄泉适应新刀。；主要参与者得知魔兽战术已发生组织化变化。",
+      "character_specific_summary": "角色以“recipient”参与；右近说明黄祸龙狼率魔兽逼近帝都并请求队伍追踪达卡斯；雪老复盘边关陷落的战术变化，包括龙背投兵、反魔箭、盾阵、萨满强化、科多扰乱与强敌收尾。",
+      "event_ref": "EVENT_P1_009_BORDER_TRUTH_AND_PURSUIT_MISSION",
+      "evidence_refs": [
+        "extracted-first/6/posts.jsonl post 821604",
+        "extracted-first/7/posts.jsonl post 822916",
+        "extracted-first/7/posts.jsonl post 824464",
+        "extracted-first/7/posts.jsonl post 824748"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "recipient",
+      "story_order_end": null,
+      "story_order_start": "P1-009",
+      "timeline_id": "TIMELINE_CASSIUS_BRIGHT_P1_009_BORDER_TRUTH_AND_PURSUIT_MISSION",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "御临风以知识参与解谜；布莱特承担侦察；黄泉发现隐藏线索；姜子尤承担蛮力突破。；四人形成独立幕间共同探索经历。；队伍获得地图、金鹿号与运输路线信息。",
+      "character_specific_summary": "角色以“participant”参与；四人进入神秘海域幕间，登岛后从树屋地图、金鹿号标志与机械零件追索运输路线，并在洞穴方向发现英军遗骸和机关线索。",
+      "event_ref": "EVENT_INTERLUDE_001_DRAKE_ISLAND_EXPLORATION",
+      "evidence_refs": [
+        "extracted-first/7/posts.jsonl post 824837",
+        "extracted-first/8/posts.jsonl post 825632",
+        "extracted-first/9/posts.jsonl post 826738",
+        "extracted-first/10/posts.jsonl post 839294"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "special_interlude",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "participant",
+      "story_order_end": null,
+      "story_order_start": "INTERLUDE-001",
+      "timeline_id": "TIMELINE_CASSIUS_BRIGHT_INTERLUDE_001_DRAKE_ISLAND_EXPLORATION",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "队伍取得可被带回主世界的封印物候选。；参与者获知魔盒的开启、沉睡与释放风险说明。",
+      "character_specific_summary": "角色以“participant”参与；队伍通过洞穴机关与怪物阻碍，罗盘在繁星下显出线索，并取得魔物之盒；盒子被说明可在多次开启后实现愿望但会释放其中魔物。",
+      "event_ref": "EVENT_INTERLUDE_002_MONSTER_BOX_ACQUIRED",
+      "evidence_refs": [
+        "extracted-first/10/posts.jsonl post 839296",
+        "extracted-first/12/posts.jsonl post 839991",
+        "extracted-first/13/posts.jsonl post 840842",
+        "extracted-first/13/posts.jsonl post 841022"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "special_interlude",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "participant",
+      "story_order_end": null,
+      "story_order_start": "INTERLUDE-002",
+      "timeline_id": "TIMELINE_CASSIUS_BRIGHT_INTERLUDE_002_MONSTER_BOX_ACQUIRED",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "御临风牺牲弃风剑状态推进谜题。；参与者获得各自奖励；具体带回范围逐项依赖后续证据。",
+      "character_specific_summary": "角色以“participant”参与；追来的佣兵、龙吼与八头龙把队伍推入宝库终局；众人完成雕像光影谜题，刚特姆开放宝库，四人取得各自奖励后离开幕间。",
+      "event_ref": "EVENT_INTERLUDE_003_EIGHT_DRAGONS_VAULT_REWARDS",
+      "evidence_refs": [
+        "extracted-first/13/posts.jsonl post 841025",
+        "extracted-first/15/posts.jsonl post 842163",
+        "extracted-first/16/posts.jsonl post 843232",
+        "extracted-first/16/posts.jsonl post 843976"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "special_interlude",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "participant",
+      "story_order_end": null,
+      "story_order_start": "INTERLUDE-003",
+      "timeline_id": "TIMELINE_CASSIUS_BRIGHT_INTERLUDE_003_EIGHT_DRAGONS_VAULT_REWARDS",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "布莱特判断现场不适合直接狙杀。；队伍开始把空间龙纳入达卡斯/魔兽行动分析。",
+      "character_specific_summary": "角色以“participant”参与；队伍分路侦察：御临风、姜子尤与雪老查看风魔犬旧巢；布莱特与黄泉发现峡谷工兵布阵、魔兽军、黄祸龙狼及空间龙。",
+      "event_ref": "EVENT_P1_013_SPLIT_RECONNAISSANCE_SPACE_DRAGON",
+      "evidence_refs": [
+        "extracted-first/16/posts.jsonl post 843978",
+        "extracted-first/17/posts.jsonl post 843999",
+        "extracted-first/17/posts.jsonl post 844018",
+        "extracted-first/17/posts.jsonl post 844039"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "participant",
+      "story_order_end": null,
+      "story_order_start": "P1-013",
+      "timeline_id": "TIMELINE_CASSIUS_BRIGHT_P1_013_SPLIT_RECONNAISSANCE_SPACE_DRAGON",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "御临风濒死时仍传出空间龙位置信息。；布莱特交出麻痹匕首，黄泉以纵火牵制。；队伍的侦察成为帝国收网的一部分，但不是收网唯一主体。；参与者确认达卡斯身份与凌迟计划存在欺骗。",
+      "character_specific_summary": "角色以“target”参与；达卡斯调动军队，布莱特与黄泉被卡泽追击；御临风等人与接应者会合，帝与八柱将的援军落场，凌迟伪装的达卡斯身份及计划败露。",
+      "event_ref": "EVENT_P1_014_DAKAS_PLOT_EXPOSED",
+      "evidence_refs": [
+        "extracted-first/17/posts.jsonl post 844064",
+        "extracted-first/18/posts.jsonl post 844648",
+        "extracted-first/19/posts.jsonl post 845112",
+        "extracted-first/19/posts.jsonl post 845600"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "target",
+      "story_order_end": null,
+      "story_order_start": "P1-014",
+      "timeline_id": "TIMELINE_CASSIUS_BRIGHT_P1_014_DAKAS_PLOT_EXPOSED",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "布莱特在重伤和恐惧中产生明确后悔。；布莱特重伤昏迷。；露露缇耶留下心灵创伤并接受记忆处理。；御临风等人认出魔眼危险并采取闭眼/警告行动。",
+      "character_specific_summary": "角色以“actor”参与；布莱特夜间撞见携带魔物之盒的男子并呼救；男子在卫兵接近时打开盒子，魔物之眼投影笼罩帝都，引发全城恐惧。布莱特夺盒后被重创，事件随后被帝国力量暂时控制。",
+      "event_ref": "EVENT_P1_020_MONSTER_BOX_DISASTER",
+      "evidence_refs": [
+        "extracted-first/27/posts.jsonl post 859420",
+        "extracted-first/27/posts.jsonl post 859427",
+        "extracted-first/28/posts.jsonl post 859470",
+        "extracted-first/28/posts.jsonl post 859963",
+        "extracted-first/28/posts.jsonl post 859995",
+        "extracted-first/28/posts.jsonl post 860124",
+        "extracted-first/28/posts.jsonl post 860377"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [
+        "REVEAL_P1_BRIGHT_REGRET_001"
+      ],
+      "role_in_event": "actor",
+      "story_order_end": null,
+      "story_order_start": "P1-020",
+      "timeline_id": "TIMELINE_CASSIUS_BRIGHT_P1_020_MONSTER_BOX_DISASTER",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "哈克开始承担明确行动协调职责。；部分角色获知白色魔法使试炼传闻；传闻本身不等于其全部目的已确认。",
+      "character_specific_summary": "角色以“participant”参与；法场与护送任务线启动：沃西斯将公开凌迟/达卡斯阴谋，黄祸龙狼处刑牵出龙族交涉；哈克协调布莱特等人的秘密任务。并行线中出现白色魔法使设置试炼的传闻，直接连接第二部。",
+      "event_ref": "EVENT_P1_022_EXECUTION_TAIL_HOOK",
+      "evidence_refs": [
+        "extracted-first/28/posts.jsonl post 862279",
+        "extracted-first/28/posts.jsonl post 862289",
+        "extracted-first/28/posts.jsonl post 862302",
+        "extracted-first/28/posts.jsonl post 862306",
+        "extracted-first/28/posts.jsonl post 862337",
+        "extracted-first/28/posts.jsonl post 862379"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "participant",
+      "story_order_end": null,
+      "story_order_start": "P1-022",
+      "timeline_id": "TIMELINE_CASSIUS_BRIGHT_P1_022_EXECUTION_TAIL_HOOK",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "A 线从个人悲剧扩大为帝都级灾难；武赖、宗近、布莱特与艾利分别承担制裁或救援。；帝都法师力量因百余名法师死亡而受到重大损失。；帝都确认 A 的失控已造成大规模平民与法师死亡。",
+      "character_specific_summary": "角色以“rescuer”参与；A 的异常控制引发法师塔灾难，武赖以火柱制裁 A，宗近接管现场；布莱特和艾利参与救援。记录称平民死亡规模接近三千，法师死亡过百。",
+      "event_ref": "EVENT_P2_008_MAGE_TOWER_MASSACRE",
+      "evidence_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl post 914301",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl post 914868",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl post 915324"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "rescuer",
+      "story_order_end": null,
+      "story_order_start": "P2-008",
+      "timeline_id": "TIMELINE_CASSIUS_BRIGHT_P2_008_MAGE_TOWER_MASSACRE",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "",
+      "character_specific_summary": "间接但人物连续性关键：骑兵以尖刀阵型穿过战场，御临风服用抗毒剂后进入龙族秘境，看见白魔、死亡之翼与龙族内战造成的惨状。",
+      "event_ref": "EVENT_P3_002_SANCTUARY_ENTRY",
+      "evidence_refs": [
+        "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl post 1041256",
+        "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl post 1042360",
+        "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl post 1042846"
+      ],
+      "notes": "Indirect continuity inclusion.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "indirect continuity subject",
+      "story_order_end": null,
+      "story_order_start": "P3-002",
+      "timeline_id": "TIMELINE_CASSIUS_BRIGHT_P3_002_SANCTUARY_ENTRY",
+      "uncertainty": "confirmed"
+    }
+  ]
+}

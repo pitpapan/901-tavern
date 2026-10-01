@@ -1,0 +1,377 @@
+{
+  "ability_status_items": [],
+  "background_items": [],
+  "dynamic_state": {
+    "as_of": "D3",
+    "current_concerns": [],
+    "current_conditions": [],
+    "current_faction_role": null,
+    "current_location_ref": null,
+    "current_obligations": [],
+    "notes": "没有以历史资料推断 D3 角色专属状态。",
+    "source_refs": []
+  },
+  "evidence_gaps": [
+    "神格、教会、宇宙职责及死后世界多数来自角色知识或信仰资料。",
+    "没有可直接支持声线、人格或当前目标的客观场景。"
+  ],
+  "gap_routing": [
+    {
+      "gap_id": "GAP_NPC_JERGAL_1",
+      "issue": "神格、教会、宇宙职责及死后世界多数来自角色知识或信仰资料。",
+      "notes": "保持未解决，不由迁移自动填补。",
+      "routes": [
+        "PROFILE_ONLY"
+      ],
+      "source_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_JERGAL.json"
+      ]
+    },
+    {
+      "gap_id": "GAP_NPC_JERGAL_2",
+      "issue": "没有可直接支持声线、人格或当前目标的客观场景。",
+      "notes": "保持未解决，不由迁移自动填补。",
+      "routes": [
+        "PROFILE_ONLY"
+      ],
+      "source_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_JERGAL.json"
+      ]
+    }
+  ],
+  "goals": {
+    "current_goals": [],
+    "historical_goals": [],
+    "long_term_goals": [],
+    "private_goals": []
+  },
+  "human_review_notes": [
+    "所有自动迁移结果均为 provisional，需逐项人工批准。"
+  ],
+  "inputs_considered": [
+    {
+      "input_class": "old_claims",
+      "path": "work/phase3d_recall/repaired_candidates/NPC_JERGAL.json",
+      "result": "逐项建立 disposition；没有旧档案时为空。"
+    },
+    {
+      "input_class": "direct_temporal_links",
+      "path": "work/phase3d_r2b/indexes/by_profile/NPC_JERGAL.json",
+      "result": "仅作为 exact-reference lookup，不视为完整历史。"
+    },
+    {
+      "input_class": "indirect_continuity_events",
+      "path": "work/phase3d_r2/chronology/campaign_chronology.jsonl",
+      "result": "按显式 migration rules 审查间接关键事件。"
+    },
+    {
+      "input_class": "revelations",
+      "path": "work/phase3d_r2/chronology/character_revelations.jsonl",
+      "result": "保持 attribution 与 evidence status。"
+    },
+    {
+      "input_class": "event_audits",
+      "path": "work/phase3d_r2/event_audits/",
+      "result": "用于高风险事件语义边界。"
+    },
+    {
+      "input_class": "retention_records",
+      "path": "work/phase3d_r2/reports/early_arc_character_retention.md",
+      "result": "检查 Part 1 持续影响。"
+    },
+    {
+      "input_class": "discoveries",
+      "path": "work/phase3d_r2/character_discoveries/",
+      "result": "只创建证据足够的 provisional discovery。"
+    },
+    {
+      "input_class": "d3_state",
+      "path": "current_state.md:D3",
+      "result": "仅此来源可填 dynamic_state。"
+    },
+    {
+      "input_class": "worldbook_references",
+      "path": "output/worldbook_source.jsonl",
+      "result": "只辅助稳定身份与架构映射。"
+    }
+  ],
+  "knowledge_items": [
+    {
+      "acquired_at_event_ref": "EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING",
+      "acquired_at_story_order": "P2-029",
+      "attribution": "御临风对异象的理解",
+      "epistemic_status": "BELIEVES",
+      "knowledge_id": "KNOWLEDGE_CLAIM_JERGAL_GLOVE_GUIDANCE_EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING",
+      "notes": "R1A-2A reviewed atomic realization; no present state or future conduct is inferred.",
+      "proposition": "御临风把手套接触后经历的异象理解为耶各关于受荣之道与死亡之翼封印的指引。",
+      "reality_status": "BELIEF",
+      "source_character_ref": "PC_YU_LINFENG",
+      "source_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.md:603",
+        "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.md:602-619"
+      ],
+      "supersedes": [],
+      "uncertainty": "character_belief",
+      "valid_from": "P2-029",
+      "valid_until": null
+    },
+    {
+      "acquired_at_event_ref": "EVENT_P2_001_CURSE_AND_CLINIC_OPENING",
+      "acquired_at_story_order": "P2-001",
+      "attribution": "慕少艾的查证说明",
+      "epistemic_status": "TESTIMONY_HEARD",
+      "knowledge_id": "KNOWLEDGE_CLAIM_JERGAL_HISTORY_1_EVENT_P2_001_CURSE_AND_CLINIC_OPENING",
+      "notes": "R1A-2A reviewed atomic realization; no present state or future conduct is inferred.",
+      "proposition": "慕少艾查证后向御临风说明咒文名为“耶各”，并把耶各描述为异世界死神。",
+      "reality_status": "TESTIMONY",
+      "source_character_ref": "NPC_MU_SHAOAI",
+      "source_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.md:慕少艾说明耶各咒文、契约性质与查证所得身份（lines 83-91）"
+      ],
+      "supersedes": [],
+      "uncertainty": "confirmed",
+      "valid_from": "P2-001",
+      "valid_until": null
+    }
+  ],
+  "nonactual_projections": [],
+  "old_claim_migrations": [
+    {
+      "destination_ids": [
+        "IDENTITY_JERGAL_IDENTITY"
+      ],
+      "migration_status": "MIGRATED",
+      "old_claim_id": "CLAIM_JERGAL_IDENTITY",
+      "original_statement": "在御临风的自述中，耶各被称为死神，并被他视为诅咒来源与交易对象。",
+      "reason": "R2C explicit section routing; ambiguous chronology remains unresolved rather than inferred.",
+      "source_section": "identity.public_identity[0]",
+      "supporting_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_JERGAL.json"
+      ]
+    },
+    {
+      "destination_ids": [
+        "TIMELINE_JERGAL_P2_001_CURSE_AND_CLINIC_OPENING",
+        "KNOWLEDGE_CLAIM_JERGAL_HISTORY_1_EVENT_P2_001_CURSE_AND_CLINIC_OPENING"
+      ],
+      "migration_status": "SPLIT",
+      "old_claim_id": "CLAIM_JERGAL_HISTORY_1",
+      "original_statement": "慕少艾向御临风说明：经其查证，咒文名为‘耶各’，并把耶各描述为异世界死神；这是角色查证所得的说明。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['campaign_timeline:EVENT_P2_001_CURSE_AND_CLINIC_OPENING', 'knowledge_timeline:EVENT_P2_001_CURSE_AND_CLINIC_OPENING']; event_refs=['EVENT_P2_001_CURSE_AND_CLINIC_OPENING'].",
+      "source_section": "identity.established_history[0]",
+      "supporting_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.md:慕少艾说明耶各咒文、契约性质与查证所得身份（lines 83-91）",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_JERGAL/CLAIM_JERGAL_HISTORY_1"
+      ]
+    },
+    {
+      "destination_ids": [
+        "TIMELINE_JERGAL_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING",
+        "KNOWLEDGE_CLAIM_JERGAL_GLOVE_GUIDANCE_EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING"
+      ],
+      "migration_status": "SPLIT",
+      "old_claim_id": "CLAIM_JERGAL_GLOVE_GUIDANCE",
+      "original_statement": "团录描写御临风的手套触碰他并反复传达关于受荣之道与死亡之翼封印的指令；御临风后来把由此经历的异象理解为耶各的指引。",
+      "reason": "R1A-2A reviewed realization authority; no semantic fallback. destination_instance_keys=['campaign_timeline:EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING', 'knowledge_timeline:EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING']; event_refs=['EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING'].",
+      "source_section": "identity.established_history[1]",
+      "supporting_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.md:603",
+        "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.md:602-619",
+        "work/remediation/r1a2/semantic_realization_ledger.jsonl#NPC_JERGAL/CLAIM_JERGAL_GLOVE_GUIDANCE"
+      ]
+    },
+    {
+      "destination_ids": [
+        "CONSTRAINT_JERGAL_EVIDENCE_BOUNDARY"
+      ],
+      "migration_status": "MIGRATED",
+      "old_claim_id": "CONSTRAINT_JERGAL_EVIDENCE_BOUNDARY",
+      "original_statement": "严格区分客观事件、代行者知识、角色信仰资料、角色推理与未确认宇宙论。",
+      "reason": "R2C explicit section routing; ambiguous chronology remains unresolved rather than inferred.",
+      "source_section": "rp_constraints[0]",
+      "supporting_refs": [
+        "work/phase3d_recall/repaired_candidates/NPC_JERGAL.json"
+      ]
+    }
+  ],
+  "package_status": "PROVISIONAL_REVIEWABLE_DECISION_LAYER",
+  "persona": {
+    "core_personality": [],
+    "decision_patterns": [],
+    "motivations": [],
+    "speech_style": [],
+    "values": []
+  },
+  "phase": "3D-R2C",
+  "presence": {
+    "canon_layers": [
+      "original_campaign"
+    ],
+    "life_status": "unknown",
+    "narrative_availability": "restricted",
+    "notes": "Profile depth does not force scene presence; inactive, restricted, historical, and interlude boundaries remain operative.",
+    "source_refs": [
+      "设定 人物/人物卡资料集_检索版.md:御临风经历、耶各代行者资料及“耶格”异写（lines 258, 264, 437-453, 574-575）"
+    ],
+    "uncertainty": "uncertain"
+  },
+  "profile_id": "NPC_JERGAL",
+  "profile_metadata": {
+    "ai_permissions": {
+      "may_assign_new_goals": false,
+      "may_choose_voluntary_actions": true,
+      "may_describe_external_effects": true,
+      "may_describe_involuntary_physical_reactions": true,
+      "may_generate_dialogue": true,
+      "may_generate_private_thoughts": true,
+      "may_reference_established_history": true,
+      "may_summarize_user_declared_actions": false
+    },
+    "aliases": [
+      "死神耶各",
+      "耶格"
+    ],
+    "canon_layers": [
+      "original_campaign"
+    ],
+    "control_mode": "npc_runtime",
+    "identity": {
+      "durable_affiliations": [],
+      "durable_roles": [],
+      "public_identity": [
+        {
+          "attribution": "旧 Profile 中已有来源支持的身份 claim",
+          "evidence_mode": "explicit_source_statement",
+          "identity_id": "IDENTITY_JERGAL_IDENTITY",
+          "notes": "仅保留来源直接支持的范围。",
+          "source_refs": [
+            "设定 人物/人物卡资料集_检索版.md:御临风经历、耶各代行者资料及“耶格”异写（lines 258, 264, 437-453, 574-575）"
+          ],
+          "statement": "在御临风的自述中，耶各被称为死神，并被他视为诅咒来源与交易对象。",
+          "uncertainty": "confirmed"
+        }
+      ],
+      "species_or_entity": []
+    },
+    "name": "耶各",
+    "notes": "Existing effective profile migrated provisionally; not approved or applied.",
+    "profile_depth": "full",
+    "profile_kind": "npc",
+    "profile_status": "existing",
+    "worldbook_id": "CHARACTER_JERGAL",
+    "worldbook_mapping_status": "existing"
+  },
+  "relationship_items": [],
+  "rp_constraints": [
+    {
+      "constraint_id": "CONSTRAINT_JERGAL_EVIDENCE_BOUNDARY",
+      "notes": "Construction safety boundary; not a new world fact.",
+      "source_refs": [
+        "work/phase3c/evidence/NPC_JERGAL_evidence.md"
+      ],
+      "statement": "严格区分客观事件、代行者知识、角色信仰资料、角色推理与未确认宇宙论。"
+    }
+  ],
+  "schema_version": "R2C-MIGRATION-1",
+  "source_profile_candidate": "work/phase3d_recall/repaired_candidates/NPC_JERGAL.json",
+  "timeline_items": [
+    {
+      "character_consequence": "御临风的历史选择完成，但不授权 AI 生成其未来选择。；御临风—悠悠关系新增自愿代受诅咒里程碑。；诅咒从悠悠转移到御临风。；御临风获得伴随诅咒的魔力与生存限制。；御临风获知自身预计仅有数日寿命及诅咒暴走条件。",
+      "character_specific_summary": "角色以“absent_but_affected”参与；威廉、宝石翁与慕少艾完成转移阵式；御临风在明确死亡风险后坐到悠悠身旁，黑水与能量从悠悠转入御临风，悠悠获得新生，御临风承受耶各诅咒。",
+      "event_ref": "EVENT_P1_021_JERGAL_TRANSFER",
+      "evidence_refs": [
+        "extracted-first/28/posts.jsonl post 861478",
+        "extracted-first/28/posts.jsonl post 861484",
+        "extracted-first/28/posts.jsonl post 861774",
+        "extracted-first/28/posts.jsonl post 862100",
+        "extracted-first/28/posts.jsonl post 862152"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "absent_but_affected",
+      "story_order_end": null,
+      "story_order_start": "P1-021",
+      "timeline_id": "TIMELINE_JERGAL_P1_021_JERGAL_TRANSFER",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "",
+      "character_specific_summary": "间接但人物连续性关键：第二部由御临风所承受的耶各诅咒与九雪医馆日常开场；哈克和久远卷入误会后转入诅咒讨论。",
+      "event_ref": "EVENT_P2_001_CURSE_AND_CLINIC_OPENING",
+      "evidence_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl post 862378",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl post 862877",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl post 863417"
+      ],
+      "notes": "Indirect continuity inclusion.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "indirect continuity subject",
+      "story_order_end": null,
+      "story_order_start": "P2-001",
+      "timeline_id": "TIMELINE_JERGAL_P2_001_CURSE_AND_CLINIC_OPENING",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "",
+      "character_specific_summary": "角色以“subject”参与；围绕费伦、耶各、死亡神系与不生不死问题的资料和讨论说明御临风面对的是跨世界死亡秩序，而非普通诅咒。",
+      "event_ref": "EVENT_P2_002_DEATH_ORDER_EXPOSITION",
+      "evidence_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl post 863420",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl post 864437",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl post 864618"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "subject",
+      "story_order_end": null,
+      "story_order_start": "P2-002",
+      "timeline_id": "TIMELINE_JERGAL_P2_002_DEATH_ORDER_EXPOSITION",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "御临风从死亡状态返回，并承担耶各代行者职责。；御临风获得代行者身份、装备与相应神术线索。；御临风得知耶各对死亡秩序危机的说法及黑龙天启。",
+      "character_specific_summary": "角色以“contracting_party”参与；御临风在死后意识中听取耶各对死亡秩序危机的说明，同意交易并成为代行者，随后返回尘世。",
+      "event_ref": "EVENT_P2_006_JERGAL_TRANSACTION",
+      "evidence_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl post 913665",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl post 913719"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "contracting_party",
+      "story_order_end": null,
+      "story_order_start": "P2-006",
+      "timeline_id": "TIMELINE_JERGAL_P2_006_JERGAL_TRANSACTION",
+      "uncertainty": "confirmed"
+    },
+    {
+      "character_consequence": "御临风临时接过侦察兵指挥并向雷光报告，雷光派奥斯卡贝接应。；红月干扰魔法与远程通讯；御临风救下两名士兵。；耶各手套警示受荣之道存在死亡之翼最后一道封印，并要求悠悠在那里等待。",
+      "character_specific_summary": "角色以“warning_source”参与；现实线回归后御临风在雪地与队伍分离；死亡之翼带黑龙冲击战场，红月干扰魔法和通讯。御临风救援侦察兵并临时接过指挥；耶各手套警示其前往受荣之道，让悠悠在那里等待，称那里有死亡之翼最后一道封印。",
+      "event_ref": "EVENT_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING",
+      "evidence_refs": [
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl post 1031470",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl post 1032053",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl post 1033262",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl post 1033271",
+        "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl post 1033318"
+      ],
+      "notes": "Exact-reference R2B link reviewed in R2C.",
+      "profile_canon_layer": "original_campaign",
+      "reality_status": "ACTUAL_EVENT",
+      "revelation_refs": [],
+      "role_in_event": "warning_source",
+      "story_order_end": null,
+      "story_order_start": "P2-029",
+      "timeline_id": "TIMELINE_JERGAL_P2_029_DEATHWING_BATTLEFIELD_AND_SEAL_WARNING",
+      "uncertainty": "confirmed"
+    }
+  ]
+}
