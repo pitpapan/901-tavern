@@ -1,0 +1,37 @@
+[
+  {
+    "profile_id": "NPC_YOUYOU",
+    "relationship_id": "REL_PILOT_YOUYOU_YU_TRUST",
+    "target_ref": "PC_YU_LINFENG",
+    "baseline": "在该场景中，悠悠与御临风明确互相表达信任。",
+    "baseline_status": "ESTABLISHED",
+    "baseline_fact_refs": ["FACT_YOUYOU_YU_MUTUAL_TRUST_SCENE"],
+    "current_stance": null,
+    "milestones": [
+      {"milestone_id": "MILESTONE_PILOT_FATE_INFORMATION", "fact_refs": ["FACT_FATE_INFORMATION_TRANSMISSION", "FACT_YOUYOU_PREFERS_FIRST_BRANCH"]}
+    ]
+  },
+  {
+    "profile_id": "PC_YU_LINFENG",
+    "relationship_id": "REL_PILOT_YU_YOUYOU_TRUST",
+    "target_ref": "NPC_YOUYOU",
+    "baseline": "在该场景中，御临风与悠悠明确互相表达信任。",
+    "baseline_status": "ESTABLISHED",
+    "baseline_fact_refs": ["FACT_YOUYOU_YU_MUTUAL_TRUST_SCENE"],
+    "current_stance": null,
+    "milestones": [
+      {"milestone_id": "MILESTONE_PILOT_FATE_DECISION_BOUNDARY", "fact_refs": ["FACT_YOUYOU_PREFERS_FIRST_BRANCH", "FACT_YU_BRANCH_SELECTION_NOT_STATED", "FACT_YU_DESTROY_SANCTUARY_PLAN"]}
+    ]
+  },
+  {
+    "profile_id": "NPC_CASSANDRA",
+    "relationship_id": "REL_PILOT_CASSANDRA_YU_EVENT_ONLY",
+    "target_ref": "PC_YU_LINFENG",
+    "baseline": null,
+    "baseline_status": "NOT_ESTABLISHED",
+    "current_stance": null,
+    "milestones": [
+      {"milestone_id": "MILESTONE_PILOT_CASSANDRA_RISK_ADVICE", "fact_refs": ["FACT_CASSANDRA_PROPHECY_CLAIM", "FACT_CASSANDRA_ELIMINATION_ADVICE"]}
+    ]
+  }
+]
