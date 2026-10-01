@@ -21,6 +21,14 @@ try:
         validate_package,
         verify_frozen_manifest,
     )
+    from scripts.r1a2b_realization_serializer import (
+        AuthorityStack,
+        RealizationAuthority,
+        apply_high_risk_reroute_amendments,
+        apply_profile_realizations,
+        load_authority_stack,
+        validate_production_realizations,
+    )
 except ModuleNotFoundError:  # pragma: no cover - direct script execution
     from phase3d_r2c_common import (
         ROOT,
@@ -31,6 +39,14 @@ except ModuleNotFoundError:  # pragma: no cover - direct script execution
         render_json,
         validate_package,
         verify_frozen_manifest,
+    )
+    from r1a2b_realization_serializer import (
+        AuthorityStack,
+        RealizationAuthority,
+        apply_high_risk_reroute_amendments,
+        apply_profile_realizations,
+        load_authority_stack,
+        validate_production_realizations,
     )
 
 
@@ -574,7 +590,9 @@ def build_existing_package(
     events: dict[str, dict[str, Any]],
     event_order: dict[str, int],
     rules: dict[str, Any],
+    authority_stack: AuthorityStack,
 ) -> dict[str, Any]:
+    authority = authority_stack.realization
     profile = load_json(path)
     fallback = path.relative_to(ROOT).as_posix()
     wb_map = worldbook_to_profile_map(profiles)
@@ -585,7 +603,14 @@ def build_existing_package(
         "durable_roles": [convert_identity_claim(item, fallback) for item in profile["identity"]["durable_roles"]],
         "durable_affiliations": [],
     }
-    backgrounds = [convert_background_claim(item, fallback) for item in profile["identity"]["established_history"]]
+    audited_claim_ids = {
+        record["old_claim_id"] for record in authority.by_profile.get(profile_id, [])
+    }
+    backgrounds = [
+        convert_background_claim(item, fallback)
+        for item in profile["identity"]["established_history"]
+        if item["claim_id"] not in audited_claim_ids
+    ]
     persona = {
         "core_personality": [convert_persona_claim(item, fallback) for item in profile["core_personality"]],
         "values": [convert_persona_claim(item, fallback) for item in profile["values"]],
@@ -603,9 +628,13 @@ def build_existing_package(
         goals[target].extend(convert_goal(item, fallback) for item in items)
 
     relationships: list[dict[str, Any]] = []
+    legacy_relationship_ids: dict[str, str] = {}
     for relationship in profile["relationships"]:
         milestones = []
         for claim in relationship["established_history"]:
+            legacy_relationship_ids[claim["claim_id"]] = relationship["relationship_id"]
+            if claim["claim_id"] in audited_claim_ids:
+                continue
             background = convert_background_claim(claim, fallback, prefix="REL_")
             backgrounds.append(background)
             suffix = safe_token(claim["claim_id"].removeprefix("CLAIM_"))
@@ -778,6 +807,17 @@ def build_existing_package(
         "human_review_notes": ["所有自动迁移结果均为 provisional，需逐项人工批准。"],
     }
     apply_high_risk_overrides(package, events)
+    apply_high_risk_reroute_amendments(
+        package, authority_stack.high_risk_reroute_amendments
+    )
+    apply_profile_realizations(
+        package,
+        authority,
+        authority_stack.relationship_containers,
+        events,
+        timeline_item,
+        legacy_relationship_ids,
+    )
     return package
 
 
@@ -834,13 +874,20 @@ def build_yang_package(events: dict[str, dict[str, Any]]) -> dict[str, Any]:
     return package
 
 
-def prepare_all_packages(write: bool = True, output_root: Path = PACKAGE_ROOT) -> list[dict[str, Any]]:
+def prepare_all_packages(
+    write: bool = True,
+    output_root: Path = PACKAGE_ROOT,
+    check: bool = False,
+) -> list[dict[str, Any]]:
+    if check:
+        write = False
     verify_frozen_manifest()
+    authority_stack = load_authority_stack(ROOT)
     profiles = load_effective_profiles()
     events, order = event_catalog()
     rules = load_json(RULES_PATH)
     packages = [
-        build_existing_package(profile_id, path, profiles, events, order, rules)
+        build_existing_package(profile_id, path, profiles, events, order, rules, authority_stack)
         for profile_id, path in profiles.items()
     ]
     packages.append(build_yang_package(events))
@@ -852,12 +899,27 @@ def prepare_all_packages(write: bool = True, output_root: Path = PACKAGE_ROOT) -
     }
     if errors:
         raise ValueError("invalid migration packages:\n" + render_json(errors))
+    validate_production_realizations(packages, authority_stack)
+    expected = {
+        f"{package['profile_id']}.json": render_json(package)
+        for package in packages
+    }
+    if check:
+        actual_files = {path.name for path in output_root.glob("*.json")} if output_root.is_dir() else set()
+        if actual_files != set(expected):
+            raise ValueError("migration package file set differs from deterministic preparation")
+        mismatches = [
+            filename for filename, text in expected.items()
+            if (output_root / filename).read_bytes() != text.encode("utf-8")
+        ]
+        if mismatches:
+            raise ValueError("migration package byte mismatch: " + ", ".join(sorted(mismatches)))
     if write:
         output_root.parent.mkdir(parents=True, exist_ok=True)
         staging = Path(tempfile.mkdtemp(prefix="phase3d_r2c_packages_", dir=output_root.parent))
         try:
-            for package in packages:
-                atomic_write_text(staging / f"{package['profile_id']}.json", render_json(package))
+            for filename, text in expected.items():
+                atomic_write_text(staging / filename, text)
             if output_root.exists():
                 shutil.rmtree(output_root)
             staging.replace(output_root)
@@ -871,7 +933,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
-    packages = prepare_all_packages(write=not args.check)
+    packages = prepare_all_packages(write=not args.check, check=args.check)
     print(f"prepared {len(packages)} provisional migration packages")
 
 

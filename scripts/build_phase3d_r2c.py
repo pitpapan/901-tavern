@@ -25,6 +25,10 @@ try:
         validate_profile,
         verify_frozen_manifest,
     )
+    from scripts.r1a2b_realization_serializer import (
+        load_authority_stack,
+        validate_production_realizations,
+    )
 except ModuleNotFoundError:  # pragma: no cover - direct script execution
     from phase3d_r2c_common import (
         ROOT,
@@ -38,6 +42,10 @@ except ModuleNotFoundError:  # pragma: no cover - direct script execution
         validate_package,
         validate_profile,
         verify_frozen_manifest,
+    )
+    from r1a2b_realization_serializer import (
+        load_authority_stack,
+        validate_production_realizations,
     )
 
 
@@ -343,6 +351,8 @@ def _population_texts(packages: list[dict[str, Any]]) -> dict[Path, str]:
     gap_rows = build_gap_routes(packages)
     retention_rows = build_part1_retention_routes(packages)
     fallback_rows = build_source_fallback_rows()
+    realization_audit = validate_production_realizations(packages, load_authority_stack(ROOT))
+    realization_rows = realization_audit.pop("realized_rows")
 
     def jsonl(rows: list[dict[str, Any]]) -> str:
         return "".join(
@@ -357,6 +367,8 @@ def _population_texts(packages: list[dict[str, Any]]) -> dict[Path, str]:
         Path("reports/unresolved_profile_questions.md"): render_unresolved_report(gap_rows),
         Path("reports/pc_control_boundary_report.md"): render_pc_control_boundary_report(packages),
         Path("reports/source_fallback_log.jsonl"): jsonl(fallback_rows),
+        Path("migration/r1a2b_realization_lineage.jsonl"): jsonl(realization_rows),
+        Path("reports/r1a2b_semantic_realization_audit.json"): render_json(realization_audit),
     }
 
 
@@ -398,7 +410,13 @@ def render_character_review(
         "## 1. 身份", "",
         f"档案 ID：`{package['profile_id']}`；状态：`{metadata['profile_status']}`；类型：`{metadata['profile_kind']}`。", "",
     ]
-    identity_items = [item for bucket in metadata["identity"].values() for item in bucket]
+    identity_items = [
+        item
+        for bucket_name in (
+            "public_identity", "species_or_entity", "durable_roles", "durable_affiliations"
+        )
+        for item in metadata["identity"][bucket_name]
+    ]
     lines.extend(_review_items(identity_items, "statement", "identity_id"))
 
     lines.extend(["", "## 2. 人物背景", ""])
@@ -830,7 +848,7 @@ def check_all(
     mismatches = [
         filename
         for filename, text in expected.items()
-        if (target / filename).read_text(encoding="utf-8") != text
+        if (target / filename).read_bytes() != text.encode("utf-8")
     ]
     if mismatches:
         raise GeneratedOutputMismatch("candidate byte mismatch: " + ", ".join(sorted(mismatches)))
@@ -838,7 +856,7 @@ def check_all(
         relative_path.as_posix()
         for relative_path, text in expected_cross_profile.items()
         if not (output_root / relative_path).is_file()
-        or (output_root / relative_path).read_text(encoding="utf-8") != text
+        or (output_root / relative_path).read_bytes() != text.encode("utf-8")
     ]
     if auxiliary_mismatches:
         raise GeneratedOutputMismatch("cross-profile output mismatch: " + ", ".join(sorted(auxiliary_mismatches)))
@@ -848,7 +866,7 @@ def check_all(
         raise GeneratedOutputMismatch("review file set differs from deterministic compilation")
     review_mismatches = [
         filename for filename, text in expected_reviews.items()
-        if (review_target / filename).read_text(encoding="utf-8") != text
+        if (review_target / filename).read_bytes() != text.encode("utf-8")
     ]
     if review_mismatches:
         raise GeneratedOutputMismatch("review byte mismatch: " + ", ".join(sorted(review_mismatches)))
