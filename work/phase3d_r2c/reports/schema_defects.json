@@ -1,0 +1,18 @@
+{
+  "phase": "3D-R2C",
+  "status": "RESOLVED_BY_SCHEMA_REVISION",
+  "defects": [
+    {
+      "defect_id": "R2C-SCHEMA-001",
+      "summary": "Cassandra 的可能未来投影无法在原冻结 schema 中无损表达",
+      "information_at_risk": [
+        "该内容不是已发生的 campaign event",
+        "该内容不是 Cassandra 已知的 knowledge",
+        "观察者是 PC_YU_LINFENG",
+        "Cassandra 是否知情未被来源指出"
+      ],
+      "resolution": "新增独立 nonactual_projections 字段与 NonactualProjection 定义，显式记录 reality_status、observer、subject_awareness、来源事件和不确定性。",
+      "migration_policy": "重新运行六组 fixture gate，重新冻结全部 schema，并从头重建所有 migration packages 与 candidates；禁止局部补丁。"
+    }
+  ]
+}

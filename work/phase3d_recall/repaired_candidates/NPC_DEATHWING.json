@@ -1,0 +1,213 @@
+{
+  "id": "NPC_DEATHWING",
+  "profile_kind": "npc",
+  "worldbook_id": "CHARACTER_DEATHWING",
+  "name": "死亡之翼",
+  "aliases": [],
+  "profile_depth": "full",
+  "activation_policy": "full_when_active",
+  "knowledge_partition": true,
+  "canon_layers": [
+    "original_campaign",
+    "transition"
+  ],
+  "control_mode": "npc_runtime",
+  "ai_permissions": {
+    "may_generate_dialogue": true,
+    "may_choose_voluntary_actions": true,
+    "may_generate_private_thoughts": true,
+    "may_assign_new_goals": false,
+    "may_describe_external_effects": true,
+    "may_describe_involuntary_physical_reactions": true,
+    "may_summarize_user_declared_actions": false,
+    "may_reference_established_history": true
+  },
+  "identity": {
+    "public_identity": [
+      {
+        "claim_id": "CLAIM_DEATHWING_IDENTITY",
+        "claim": "死亡之翼是龙族秘境战役中的核心敌对巨龙。",
+        "evidence_mode": "explicit_source_statement",
+        "origin": "original_campaign",
+        "stability": "stable",
+        "context": "Only the Campaign-specific identity is retained; outside-franchise completion is excluded.",
+        "exceptions": [
+          "不得超出所引来源的时点与语境。"
+        ],
+        "sources": [
+          "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.md:谢尔伦压制、御临风突入并瓦解死亡之翼本轮肉身（lines 261-329）"
+        ],
+        "notes": "仅保留来源直接支持的范围。"
+      }
+    ],
+    "durable_roles": [],
+    "established_history": [
+      {
+        "claim_id": "CLAIM_DEATHWING_HISTORY_1",
+        "claim": "原团战役中，谢尔伦压制死亡之翼，御临风突入其体内破坏心脏，随后本轮肉身瓦解。",
+        "evidence_mode": "explicit_source_statement",
+        "origin": "original_campaign",
+        "stability": "stable",
+        "context": "Atomic historical fact only; it does not establish a future behavior, motive, or allegiance.",
+        "exceptions": [
+          "不得超出所引来源的时点与语境。"
+        ],
+        "sources": [
+          "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.md:谢尔伦压制、御临风突入并瓦解死亡之翼本轮肉身（lines 261-329）"
+        ],
+        "notes": "仅保留来源直接支持的范围。"
+      },
+      {
+        "claim_id": "CLAIM_DEATHWING_INVASION_CONTINUITY",
+        "claim": "死亡之翼在大战前公开宣告归来；谢尔伦随后报告诺顿、南茜的背叛，以及包含奥希拉在内的黑龙受控。",
+        "evidence_mode": "explicit_source_statement",
+        "origin": "original_campaign",
+        "stability": "stable",
+        "context": "死亡之翼入侵阶段及其阵营后果。",
+        "exceptions": [
+          "谢尔伦的报告确认受控结果，不证明死亡之翼亲自施术，也不确认具体控制机制。"
+        ],
+        "sources": [
+          "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.md:451-474",
+          "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.md:5-46",
+          "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.md:104-108"
+        ],
+        "notes": "Phase 3D-R source-recall repair; no future state is inferred."
+      }
+    ]
+  },
+  "core_personality": [],
+  "values": [],
+  "speech_style": [],
+  "decision_patterns": [],
+  "relationships": [
+    {
+      "relationship_id": "RELATIONSHIP_DEATHWING_YU_LINFENG",
+      "subject_ref": "CHARACTER_YU_LINFENG",
+      "relationship_type": "battle adversary",
+      "established_history": [
+        {
+          "claim_id": "CLAIM_DEATHWING_RELATIONSHIP",
+          "claim": "御临风进入其本轮肉身并破坏心脏，使肉身瓦解。",
+          "evidence_mode": "explicit_source_statement",
+          "origin": "original_campaign",
+          "stability": "stable",
+          "context": "Established relationship history only; no current emotion, loyalty, or future obligation is inferred.",
+          "exceptions": [
+            "不得超出所引来源的时点与语境。"
+          ],
+          "sources": [
+            "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.md:lines 261-329"
+          ],
+          "notes": "仅保留来源直接支持的范围。"
+        }
+      ],
+      "current_stance": [],
+      "obligations": [],
+      "tensions": [],
+      "known_shared_experiences": [],
+      "visibility": "public",
+      "sources": [
+        "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.md:lines 261-329"
+      ],
+      "notes": "关系历史不自动构成当前情感、忠诚或未来义务。"
+    },
+    {
+      "relationship_id": "RELATIONSHIP_DEATHWING_XIERLUN",
+      "subject_ref": "CHARACTER_XIERLUN_VON_GILCODE",
+      "relationship_type": "historical and final-war adversary",
+      "established_history": [
+        {
+          "claim_id": "CLAIM_DEATHWING_XIERLUN_HISTORY",
+          "claim": "谢尔伦曾作为实际战力对抗死亡之翼，并在终局战中压制其本轮肉身，为御临风突入创造条件。",
+          "evidence_mode": "explicit_source_statement",
+          "origin": "original_campaign",
+          "stability": "stable",
+          "context": "长期对抗背景与原团终局战。",
+          "exceptions": [
+            "不把本轮肉身瓦解写成永久死亡，也不推断当前敌对行动仍在持续。"
+          ],
+          "sources": [
+            "设定 人物/妄想大陆设定集_检索版.md:148-153",
+            "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.md:16-20",
+            "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.md:43-105",
+            "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.md:261-308"
+          ],
+          "notes": "Phase 3D-R source-recall repair; no future state is inferred."
+        }
+      ],
+      "current_stance": [],
+      "obligations": [],
+      "tensions": [],
+      "known_shared_experiences": [
+        "死亡之翼终局战"
+      ],
+      "visibility": "public",
+      "sources": [
+        "设定 人物/妄想大陆设定集_检索版.md:148-153",
+        "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.md:16-20",
+        "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.md:43-105",
+        "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.md:261-308"
+      ],
+      "notes": "Historical continuity only; current feeling, allegiance, and future obligation are not inferred."
+    }
+  ],
+  "epistemic_state": [],
+  "goals": {
+    "public_goals": [],
+    "private_goals": [],
+    "current_goals": [],
+    "long_term_goals": []
+  },
+  "dynamic_state": {
+    "as_of": "current_state.md D3 baseline",
+    "current_conditions": [],
+    "current_obligations": [],
+    "current_location_ref": "",
+    "current_faction_role": "",
+    "current_concerns": [],
+    "sources": [
+      "current_state.md:D3 state check"
+    ],
+    "notes": "Only explicitly anchored present-state details may be added after human review."
+  },
+  "presence": {
+    "life_status": "unknown",
+    "narrative_availability": "restricted",
+    "realm_scope": [
+      "original_campaign",
+      "transition"
+    ],
+    "sources": [
+      "current_state.md:死亡之翼当前状态与未决边界（lines 69-75, 95-112）"
+    ],
+    "notes": "Profile depth does not force scene presence; inactive, restricted, historical, and interlude boundaries remain operative."
+  },
+  "rp_constraints": [
+    {
+      "constraint_id": "CONSTRAINT_DEATHWING_EVIDENCE_BOUNDARY",
+      "constraint": "只确认本轮肉身被击败；不得生成永久死亡、不死原理或古神关系为事实。",
+      "origin": "original_campaign",
+      "sources": [
+        "work/phase3c/evidence/NPC_DEATHWING_evidence.md"
+      ],
+      "notes": "Construction safety boundary; not a new world fact."
+    }
+  ],
+  "provenance": {
+    "canon_origin": [
+      "original_campaign",
+      "transition"
+    ],
+    "source_origin_ids": [
+      "output/worldbook_source.jsonl#CHARACTER_DEATHWING",
+      "work/phase3c/evidence/NPC_DEATHWING_evidence.md"
+    ]
+  },
+  "evidence_gaps": [
+    "永久生死状态未知。",
+    "不死机制及古神关系未确认。",
+    "没有可安全概括的稳定声线或内在目标。"
+  ],
+  "notes": "Phase 3D-R repaired candidate. It preserves the Phase 3D review baseline and remains pending human approval."
+}

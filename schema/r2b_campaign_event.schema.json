@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/schema/r2b_campaign_event.schema.json",
+  "title": "R2B Campaign Event Derived from R2A Chronology",
+  "description": "Closed contract matching the reviewed R2A event records without field renaming or semantic migration.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id", "campaign_part", "source_campaign_part", "arc", "canon_layer",
+    "story_axis", "source_axis", "source_span", "location", "participants",
+    "event_summary", "objective_results", "character_consequences",
+    "relationship_consequences", "ability_status_consequences", "knowledge_consequences",
+    "character_revelations", "routing", "continuity_classifications", "unresolved_questions"
+  ],
+  "properties": {
+    "event_id": {"type": "string", "pattern": "^EVENT_[A-Z0-9_]+$"},
+    "campaign_part": {"type": "string", "enum": ["P1", "P2", "P3", "SPECIAL_INTERLUDE", "TRANSITION"]},
+    "source_campaign_part": {"type": "string", "enum": ["P1", "P2", "P3", "TRANSITION"]},
+    "arc": {"type": "string", "minLength": 1},
+    "canon_layer": {
+      "type": "string",
+      "enum": ["original_campaign", "original_campaign_special_interlude", "transition_canon"]
+    },
+    "story_axis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["story_order_start", "story_order_end", "order_certainty", "temporal_scope"],
+      "properties": {
+        "story_order_start": {"type": "string", "minLength": 1},
+        "story_order_end": {
+          "anyOf": [
+            {"type": "string", "minLength": 1},
+            {"type": "null"}
+          ]
+        },
+        "order_certainty": {"type": "string", "enum": ["confirmed", "uncertain"]},
+        "temporal_scope": {
+          "type": "string",
+          "enum": ["original_campaign", "special_interlude", "transition_canon"]
+        }
+      }
+    },
+    "source_axis": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["document", "post_id", "reference", "source_chunk_id", "source_order"],
+        "properties": {
+          "document": {"type": "string", "minLength": 1},
+          "post_id": {"type": "string", "minLength": 1},
+          "reference": {"type": "string", "minLength": 1},
+          "source_chunk_id": {"type": "string", "minLength": 1},
+          "source_order": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "source_span": {
+      "anyOf": [
+        {"type": "array", "minItems": 2, "items": {"type": "integer"}},
+        {"type": "null"}
+      ]
+    },
+    "location": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["certainty", "label"],
+      "properties": {
+        "certainty": {"type": "string", "enum": ["confirmed", "uncertain"]},
+        "label": {"type": "string", "minLength": 1}
+      }
+    },
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["role"],
+        "properties": {
+          "character_ref": {"type": "string", "pattern": "^(NPC|PC)_[A-Z0-9_]+$"},
+          "character_label": {"type": "string", "minLength": 1},
+          "participant_kind": {"type": "string", "enum": ["non_character_entity"]},
+          "role": {"type": "string", "minLength": 1}
+        },
+        "anyOf": [
+          {"type": "object", "required": ["character_ref"]},
+          {"type": "object", "required": ["character_label"]}
+        ]
+      }
+    },
+    "event_summary": {"type": "string", "minLength": 1},
+    "objective_results": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "character_consequences": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "relationship_consequences": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "ability_status_consequences": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "knowledge_consequences": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "character_revelations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "revelation_id", "revelation_type", "statement", "evidence_status",
+          "attribution", "temporal_scope", "source_global_indices", "routing"
+        ],
+        "properties": {
+          "revelation_id": {"type": "string", "pattern": "^REVEAL_[A-Z0-9_]+$"},
+          "character_ref": {"type": "string", "pattern": "^(NPC|PC)_[A-Z0-9_]+$"},
+          "character_label": {"type": "string", "minLength": 1},
+          "revelation_type": {"type": "string", "minLength": 1},
+          "statement": {"type": "string", "minLength": 1},
+          "evidence_status": {
+            "type": "string",
+            "enum": ["confirmed_observation", "character_belief", "character_testimony", "possible_future"]
+          },
+          "attribution": {"type": "string", "minLength": 1},
+          "temporal_scope": {"type": "string", "minLength": 1},
+          "source_campaign_part": {"type": "string", "enum": ["P1", "P2", "P3"]},
+          "source_global_indices": {"type": "array", "minItems": 1, "items": {"type": "integer"}},
+          "routing": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["target", "reason"],
+              "properties": {
+                "target": {
+                  "type": "string",
+                  "enum": [
+                    "ABILITY_STATUS_TIMELINE", "CHARACTER_BACKGROUND_REVIEW",
+                    "CHARACTER_DISCOVERY", "CHARACTER_KNOWLEDGE", "CHARACTER_REVELATION",
+                    "CHARACTER_STATUS_REVIEW", "CHARACTER_TESTIMONY", "CHARACTER_THEORY",
+                    "CHARACTER_TIMELINE", "DEATHWING_BACKGROUND_AUDIT",
+                    "HISTORICAL_TESTIMONY", "PC_CONTINUITY_HISTORY", "POSSIBLE_FUTURE",
+                    "SPECIAL_INTERLUDE_CHARACTER_TIMELINE"
+                  ]
+                },
+                "reason": {"type": "string", "minLength": 1}
+              }
+            }
+          }
+        },
+        "anyOf": [
+          {"type": "object", "required": ["character_ref"]},
+          {"type": "object", "required": ["character_label"]}
+        ]
+      }
+    },
+    "routing": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["target", "reason"],
+        "properties": {
+          "target": {
+            "type": "string",
+            "enum": [
+              "WORLDBOOK", "CHARACTER_BACKGROUND", "CHARACTER_TIMELINE",
+              "RELATIONSHIP_TIMELINE", "KNOWLEDGE_TIMELINE", "ABILITY_STATUS_TIMELINE",
+              "CURRENT_STATE", "SPECIAL_INTERLUDE", "SEEN_NOT_PROMOTED"
+            ]
+          },
+          "reason": {"type": "string", "minLength": 1},
+          "source_routing_label": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "continuity_classifications": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "BIOGRAPHICAL_BACKGROUND", "CAMPAIGN_EVENT", "RELATIONSHIP_MILESTONE",
+          "ABILITY_STATUS_TRANSITION", "KNOWLEDGE_ACQUISITION", "CURRENT_STATE",
+          "WORLD_FACT", "SPECIAL_INTERLUDE_ONLY"
+        ]
+      }
+    },
+    "unresolved_questions": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "sequence": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+  }
+}

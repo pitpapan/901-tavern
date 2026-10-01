@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/schema/r2b_canon_layer_crosswalk.schema.json",
+  "title": "R2B Canon Layer Crosswalk",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "source_namespace", "profile_namespace", "mappings"],
+  "properties": {
+    "schema_version": {"const": "R2B-1"},
+    "source_namespace": {"type": "string", "minLength": 1},
+    "profile_namespace": {"type": "string", "minLength": 1},
+    "mappings": {
+      "type": "array",
+      "minItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_canon_layer", "source_story_temporal_scope",
+          "profile_canon_layer", "reason"
+        ],
+        "properties": {
+          "source_canon_layer": {
+            "type": "string",
+            "enum": ["original_campaign", "original_campaign_special_interlude", "transition_canon"]
+          },
+          "source_story_temporal_scope": {
+            "type": "string",
+            "enum": ["original_campaign", "special_interlude", "transition_canon"]
+          },
+          "profile_canon_layer": {
+            "type": "string",
+            "enum": ["original_campaign", "special_interlude", "transition"]
+          },
+          "reason": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

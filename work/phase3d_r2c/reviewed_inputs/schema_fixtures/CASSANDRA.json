@@ -1,0 +1,64 @@
+{
+  "schema_version": "2.0",
+  "phase": "3D-R2C",
+  "id": "NPC_CASSANDRA",
+  "profile_kind": "npc",
+  "profile_status": "existing",
+  "worldbook_id": "CHARACTER_CASSANDRA",
+  "worldbook_mapping_status": "existing",
+  "name": "卡珊德拉",
+  "aliases": [],
+  "profile_depth": "full",
+  "canon_layers": ["original_campaign"],
+  "control_mode": "npc_runtime",
+  "ai_permissions": {"may_generate_dialogue": true, "may_choose_voluntary_actions": true, "may_generate_private_thoughts": true, "may_assign_new_goals": false, "may_describe_external_effects": true, "may_describe_involuntary_physical_reactions": true, "may_summarize_user_declared_actions": false, "may_reference_established_history": true},
+  "identity": {"public_identity": [], "species_or_entity": [], "durable_roles": [], "durable_affiliations": []},
+  "biographical_background": [],
+  "persona": {
+    "core_personality": [], "values": [], "speech_style": [], "decision_patterns": [],
+    "motivations": [
+      {
+        "motivation_id": "MOTIVATION_CASSANDRA_REVENGE_WHITE_MAGICIAN",
+        "statement": "卡珊德拉对付白色魔法使的复仇驱动力在当时已被来源独立支持。",
+        "stability": "situational",
+        "valid_from_event_ref": "EVENT_P3_006_CASSANDRA_FUTURES_AND_TRADE",
+        "valid_until_event_ref": null,
+        "supporting_event_refs": ["EVENT_P3_006_CASSANDRA_FUTURES_AND_TRADE"],
+        "supporting_revelation_refs": [],
+        "reality_status": "BELIEF",
+        "evidence_mode": "explicit_source_statement",
+        "attribution": "卡珊德拉在谈判中的既有立场",
+        "source_refs": ["work/phase3d_r2/event_audits/EVENT_P3_006_CASSANDRA_FUTURES.md"],
+        "uncertainty": "confirmed",
+        "notes": "当前动机不由未来画面反推。"
+      }
+    ]
+  },
+  "goals": {"historical_goals": [], "current_goals": [], "long_term_goals": [], "private_goals": []},
+  "campaign_timeline": [],
+  "relationships": [],
+  "ability_status_transitions": [],
+  "knowledge_timeline": [],
+  "nonactual_projections": [
+    {
+      "projection_id": "PROJECTION_CASSANDRA_POSSIBLE_FUTURE_REVENGE",
+      "subject_character_ref": "NPC_CASSANDRA",
+      "statement": "一个可被改写的未来显示白魔发动魔女之宴后遭卡珊德拉复仇。",
+      "reality_status": "POSSIBLE_FUTURE_VISION",
+      "source_event_ref": "EVENT_P3_006_CASSANDRA_FUTURES_AND_TRADE",
+      "source_story_order": "P3-006",
+      "observer_character_ref": "PC_YU_LINFENG",
+      "attribution": "耶各装备展示的可变未来",
+      "subject_awareness": "not_indicated",
+      "source_refs": ["work/phase3d_r2/chronology/campaign_chronology.jsonl#EVENT_P3_006_CASSANDRA_FUTURES_AND_TRADE"],
+      "uncertainty": "uncertain",
+      "notes": "不是已发生事件，也不表示卡珊德拉知道该画面。"
+    }
+  ],
+  "dynamic_state": {"as_of": "D3", "current_conditions": [], "current_obligations": [], "current_location_ref": null, "current_faction_role": null, "current_concerns": [], "source_refs": [], "notes": "D3 无角色专属状态。"},
+  "presence": {"life_status": "alive", "narrative_availability": "normal", "canon_layers": ["original_campaign"], "source_refs": ["work/phase3d_r2/chronology/campaign_chronology.jsonl#EVENT_P3_006_CASSANDRA_FUTURES_AND_TRADE"], "uncertainty": "confirmed", "notes": "仅表示原团出场。"},
+  "rp_constraints": [],
+  "provenance": {"source_profile_candidate": "work/phase3d_recall/repaired_candidates/NPC_CASSANDRA.json", "migration_package": "fixture:CASSANDRA", "source_origin_ids": ["EVENT_P3_006_CASSANDRA_FUTURES_AND_TRADE"], "generated_by": "scripts/build_phase3d_r2c.py"},
+  "evidence_gaps": ["未来画面是否实现未知。"],
+  "notes": "R2C schema fixture only."
+}

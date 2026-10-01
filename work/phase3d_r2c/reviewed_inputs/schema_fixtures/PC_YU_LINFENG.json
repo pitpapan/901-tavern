@@ -1,0 +1,21 @@
+{
+  "schema_version": "2.0", "phase": "3D-R2C", "id": "PC_YU_LINFENG", "profile_kind": "pc_continuity",
+  "profile_status": "existing", "worldbook_id": "CHARACTER_YU_LINFENG", "worldbook_mapping_status": "existing",
+  "name": "御临风", "aliases": [], "profile_depth": "full", "canon_layers": ["original_campaign", "transition", "authorial_supplement"],
+  "control_mode": "user_controlled",
+  "ai_permissions": {"may_generate_dialogue": false, "may_choose_voluntary_actions": false, "may_generate_private_thoughts": false, "may_assign_new_goals": false, "may_describe_external_effects": true, "may_describe_involuntary_physical_reactions": true, "may_summarize_user_declared_actions": true, "may_reference_established_history": true},
+  "identity": {"public_identity": [], "species_or_entity": [], "durable_roles": [], "durable_affiliations": []},
+  "biographical_background": [],
+  "persona": {"core_personality": [], "values": [], "speech_style": [], "decision_patterns": [], "motivations": []},
+  "goals": {"historical_goals": [], "current_goals": [], "long_term_goals": [], "private_goals": []},
+  "campaign_timeline": [], "relationships": [], "ability_status_transitions": [],
+  "knowledge_timeline": [
+    {"knowledge_id": "KNOWLEDGE_YU_WHITE_MAGE_THEORY_HEARD", "proposition": "御临风听到白魔提出命运与死亡之翼不死性的理论。", "epistemic_status": "TESTIMONY_HEARD", "acquired_at_event_ref": "EVENT_P3_010_WHITE_MAGE_EXIT_AND_THEORY", "acquired_at_story_order": "P3-010", "source_character_ref": "NPC_WHITE_MAGICIAN", "attribution": "白色魔法使在根基密室中的陈述", "supersedes": [], "valid_from": "P3-010", "valid_until": null, "reality_status": "TESTIMONY", "source_refs": ["work/phase3d_r2/chronology/campaign_chronology.jsonl#EVENT_P3_010_WHITE_MAGE_EXIT_AND_THEORY"], "uncertainty": "confirmed", "notes": "知道对方说过，不等于理论为真。"}
+  ],
+  "nonactual_projections": [],
+  "dynamic_state": {"as_of": "D3", "current_conditions": [], "current_obligations": [], "current_location_ref": null, "current_faction_role": null, "current_concerns": [], "source_refs": [], "notes": "不得生成玩家下一步。"},
+  "presence": {"life_status": "alive", "narrative_availability": "normal", "canon_layers": ["original_campaign", "transition"], "source_refs": ["current_state.md:D3"], "uncertainty": "confirmed", "notes": "存在不等于 AI 可自主控制。"},
+  "rp_constraints": [{"constraint_id": "CONSTRAINT_YU_AUTONOMY", "statement": "不得生成御临风的对白、自主行动、私密思想或新目标。", "source_refs": ["schema/pc_continuity_profile.schema.json"], "notes": "硬边界。"}],
+  "provenance": {"source_profile_candidate": "work/phase3d_recall/repaired_candidates/PC_YU_LINFENG.json", "migration_package": "fixture:PC_YU_LINFENG", "source_origin_ids": ["EVENT_P3_010_WHITE_MAGE_EXIT_AND_THEORY"], "generated_by": "scripts/build_phase3d_r2c.py"},
+  "evidence_gaps": ["D3 当前目标、位置与情绪未确认。"], "notes": "R2C schema fixture only."
+}

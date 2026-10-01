@@ -1,0 +1,120 @@
+{
+  "id": "NPC_NOSURI",
+  "profile_kind": "npc",
+  "worldbook_id": "CHARACTER_NOSURI",
+  "name": "诺斯莉",
+  "aliases": [],
+  "profile_depth": "compact",
+  "activation_policy": "compact_when_supporting",
+  "knowledge_partition": true,
+  "canon_layers": [
+    "original_campaign"
+  ],
+  "control_mode": "npc_runtime",
+  "ai_permissions": {
+    "may_generate_dialogue": true,
+    "may_choose_voluntary_actions": true,
+    "may_generate_private_thoughts": true,
+    "may_assign_new_goals": false,
+    "may_describe_external_effects": true,
+    "may_describe_involuntary_physical_reactions": true,
+    "may_summarize_user_declared_actions": false,
+    "may_reference_established_history": true
+  },
+  "identity": {
+    "public_identity": [],
+    "durable_roles": [],
+    "established_history": [
+      {
+        "claim_id": "CLAIM_NOSURI_HISTORY_1",
+        "claim": "宅邸战中，诺斯莉以弓箭参与围攻古雷姆林，并在其逃离时继续追击。",
+        "evidence_mode": "explicit_source_statement",
+        "origin": "original_campaign",
+        "stability": "stable",
+        "context": "Atomic historical fact only; it does not establish a future behavior, motive, or allegiance.",
+        "exceptions": [
+          "不得超出所引来源的时点与语境。"
+        ],
+        "sources": [
+          "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.md:宅邸战援助、反击与追击（lines 381-487）"
+        ],
+        "notes": "仅保留来源直接支持的范围。"
+      },
+      {
+        "claim_id": "CLAIM_NOSURI_IDENTITY",
+        "claim": "诺斯莉是欧基称作姐姐的人物，并参与了围捕古雷姆林的计划。",
+        "evidence_mode": "explicit_source_statement",
+        "origin": "original_campaign",
+        "stability": "stable",
+        "context": "Atomic historical fact only; it does not establish a profession, permanent role, motive, or allegiance.",
+        "exceptions": [
+          "不得超出所引来源的时点与语境。"
+        ],
+        "sources": [
+          "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.md:诺斯莉参与诱饵与围捕计划（lines 11-38, 147-220）"
+        ],
+        "notes": "仅保留来源直接支持的范围。"
+      }
+    ]
+  },
+  "core_personality": [],
+  "values": [],
+  "speech_style": [],
+  "decision_patterns": [],
+  "relationships": [],
+  "epistemic_state": [],
+  "goals": {
+    "public_goals": [],
+    "private_goals": [],
+    "current_goals": [],
+    "long_term_goals": []
+  },
+  "dynamic_state": {
+    "as_of": "current_state.md D3 baseline",
+    "current_conditions": [],
+    "current_obligations": [],
+    "current_location_ref": "",
+    "current_faction_role": "",
+    "current_concerns": [],
+    "sources": [
+      "current_state.md:D3 state check"
+    ],
+    "notes": "Only explicitly anchored present-state details may be added after human review."
+  },
+  "presence": {
+    "life_status": "unknown",
+    "narrative_availability": "inactive",
+    "realm_scope": [
+      "original_campaign"
+    ],
+    "sources": [
+      "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.md:诺斯莉参与诱饵与围捕计划（lines 11-38, 147-220）"
+    ],
+    "notes": "Profile depth does not force scene presence; inactive, restricted, historical, and interlude boundaries remain operative."
+  },
+  "rp_constraints": [
+    {
+      "constraint_id": "CONSTRAINT_NOSURI_EVIDENCE_BOUNDARY",
+      "constraint": "不得以单次行为、职业、能力或身份推断稳定人格、私人动机、未来目标或场景必然出席。",
+      "origin": "original_campaign",
+      "sources": [
+        "work/phase3c/evidence/NPC_NOSURI_evidence.md"
+      ],
+      "notes": "Construction safety boundary; not a new world fact."
+    }
+  ],
+  "provenance": {
+    "canon_origin": [
+      "original_campaign"
+    ],
+    "source_origin_ids": [
+      "output/worldbook_source.jsonl#CHARACTER_NOSURI",
+      "work/phase3c/evidence/NPC_NOSURI_evidence.md"
+    ]
+  },
+  "evidence_gaps": [
+    "稳定人格、价值排序与跨情境声线证据不足。",
+    "D3 精确位置、即时议程与当前目标未知。"
+  ],
+  "notes": "Phase 3D semantically reviewed candidate. Human approval remains pending; this record is not a formal database entry."
+}

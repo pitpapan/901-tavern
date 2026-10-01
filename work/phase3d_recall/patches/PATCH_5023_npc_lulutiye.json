@@ -1,0 +1,30 @@
+{
+  "patch_id": "PATCH_5023",
+  "created_from": [
+    "work/patches/pending/PATCH_4023_npc_lulutiye.json",
+    "work/phase3d_recall/repaired_candidates/NPC_LULUTIYE.json",
+    "work/phase3d_recall/source_coverage/NPC_LULUTIYE_coverage.md",
+    "work/phase3d_recall/reviews/NPC_LULUTIYE_recall_review.md"
+  ],
+  "target_database": "npc_profiles",
+  "operation": "add",
+  "target_id": "NPC_LULUTIYE",
+  "reason": "Propose the Phase 3D-R repaired, evidence-backed profile candidate for human review without creating a formal profile database.",
+  "proposed_changes": {
+    "before": null,
+    "after": {
+      "profile_ref": "work/phase3d_recall/repaired_candidates/NPC_LULUTIYE.json",
+      "profile_id": "NPC_LULUTIYE"
+    }
+  },
+  "affected_entries": [
+    "NPC_LULUTIYE",
+    "CHARACTER_LULUTIYE"
+  ],
+  "conflict_check": {
+    "status": "not_checked",
+    "items": []
+  },
+  "status": "draft",
+  "review_notes": "Phase 3D-R recall repair candidate only; not approved or applied. Historical Phase 3B/3C draft patch remains frozen."
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "2.0", "phase": "3D-R2C", "id": "NPC_DEATHWING", "profile_kind": "npc",
+  "profile_status": "existing", "worldbook_id": "CHARACTER_DEATHWING", "worldbook_mapping_status": "existing",
+  "name": "死亡之翼", "aliases": [], "profile_depth": "full", "canon_layers": ["original_campaign", "transition"],
+  "control_mode": "npc_runtime",
+  "ai_permissions": {"may_generate_dialogue": true, "may_choose_voluntary_actions": true, "may_generate_private_thoughts": true, "may_assign_new_goals": false, "may_describe_external_effects": true, "may_describe_involuntary_physical_reactions": true, "may_summarize_user_declared_actions": false, "may_reference_established_history": true},
+  "identity": {"public_identity": [], "species_or_entity": [], "durable_roles": [], "durable_affiliations": []},
+  "biographical_background": [],
+  "persona": {"core_personality": [], "values": [], "speech_style": [], "decision_patterns": [], "motivations": []},
+  "goals": {"historical_goals": [], "current_goals": [], "long_term_goals": [], "private_goals": []},
+  "campaign_timeline": [
+    {"timeline_id": "TIMELINE_DEATHWING_FINAL_WAR", "event_ref": "EVENT_P3_009_DEATHWING_FINAL_WAR", "story_order_start": "P3-009", "story_order_end": null, "profile_canon_layer": "original_campaign", "role_in_event": "本轮战役敌方核心", "character_specific_summary": "死亡之翼本轮肉身被御临风与谢尔伦协同击败。", "character_consequence": "当前肉身被毁，不等于永久死亡。", "revelation_refs": [], "evidence_refs": ["work/phase3d_r2/chronology/campaign_chronology.jsonl#EVENT_P3_009_DEATHWING_FINAL_WAR"], "reality_status": "ACTUAL_EVENT", "uncertainty": "confirmed", "notes": "永久死亡未知。"}
+  ],
+  "relationships": [], "ability_status_transitions": [],
+  "knowledge_timeline": [
+    {"knowledge_id": "KNOWLEDGE_DEATHWING_OSHIRA_TESTIMONY", "proposition": "奥希拉讲述黑龙族与死亡之翼的古史。", "epistemic_status": "TESTIMONY_HEARD", "acquired_at_event_ref": "EVENT_P2_022_DEATHWING_HISTORY_TESTIMONY", "acquired_at_story_order": "P2-022", "source_character_ref": "NPC_OSHIRA", "attribution": "奥希拉 testimony", "supersedes": [], "valid_from": "P2-022", "valid_until": null, "reality_status": "TESTIMONY", "source_refs": ["work/phase3d_r2/chronology/campaign_chronology.jsonl#EVENT_P2_022_DEATHWING_HISTORY_TESTIMONY"], "uncertainty": "character_belief", "notes": "testimony 不是独立确认的客观真相。"},
+    {"knowledge_id": "KNOWLEDGE_DEATHWING_WHITE_MAGE_THEORY", "proposition": "白魔认为死亡之翼的不死性与大地及世界平衡有关。", "epistemic_status": "THEORY", "acquired_at_event_ref": "EVENT_P3_010_WHITE_MAGE_EXIT_AND_THEORY", "acquired_at_story_order": "P3-010", "source_character_ref": "NPC_WHITE_MAGICIAN", "attribution": "白色魔法使理论", "supersedes": [], "valid_from": "P3-010", "valid_until": null, "reality_status": "THEORY", "source_refs": ["work/phase3d_r2/chronology/campaign_chronology.jsonl#EVENT_P3_010_WHITE_MAGE_EXIT_AND_THEORY"], "uncertainty": "uncertain", "notes": "理论不升级为事实。"}
+  ],
+  "nonactual_projections": [],
+  "dynamic_state": {"as_of": "D3", "current_conditions": ["本轮肉身已被击败"], "current_obligations": [], "current_location_ref": null, "current_faction_role": null, "current_concerns": [], "source_refs": ["current_state.md:D3"], "notes": "永久死亡与再次复活未知。"},
+  "presence": {"life_status": "unknown", "narrative_availability": "restricted", "canon_layers": ["original_campaign", "transition"], "source_refs": ["current_state.md:D3"], "uncertainty": "uncertain", "notes": "当前肉身毁灭不证明永久死亡。"},
+  "rp_constraints": [],
+  "provenance": {"source_profile_candidate": "work/phase3d_recall/repaired_candidates/NPC_DEATHWING.json", "migration_package": "fixture:DEATHWING", "source_origin_ids": ["EVENT_P2_022_DEATHWING_HISTORY_TESTIMONY", "EVENT_P3_009_DEATHWING_FINAL_WAR", "EVENT_P3_010_WHITE_MAGE_EXIT_AND_THEORY"], "generated_by": "scripts/build_phase3d_r2c.py"},
+  "evidence_gaps": ["永久死亡与不死性机制未知。"], "notes": "R2C schema fixture only."
+}

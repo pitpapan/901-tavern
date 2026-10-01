@@ -1,0 +1,23 @@
+{
+  "patch_id": "PATCH_R2A_001",
+  "created_from": [
+    "work/phase3d_r2/character_discoveries/CHARACTER_YANG.json",
+    "work/phase3d_r2/reviewed_inputs/events_part2.jsonl",
+    "work/phase3d_r2/reviewed_inputs/revelations_part2.jsonl",
+    "work/phase3d_r2/reports/yang_character_audit.md"
+  ],
+  "target_database": "future_character_schema_review",
+  "operation": "add",
+  "target_id": "CHARACTER_YANG",
+  "reason": "Propose a Canon character discovery for later schema/profile review; runtime trigger suitability is deliberately out of scope.",
+  "proposed_changes": {
+    "before": null,
+    "after": {
+      "discovery_ref": "work/phase3d_r2/character_discoveries/CHARACTER_YANG.json"
+    }
+  },
+  "status": "draft",
+  "approved": false,
+  "applied": false,
+  "review_notes": "R2A discovery only. Does not create a formal profile, alias, trigger key, or database row."
+}

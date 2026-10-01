@@ -1,0 +1,187 @@
+{
+  "id": "NPC_ZHENZI",
+  "profile_kind": "npc",
+  "worldbook_id": "CHARACTER_ZHENZI",
+  "name": "贞子",
+  "aliases": [],
+  "profile_depth": "full",
+  "activation_policy": "full_when_active",
+  "knowledge_partition": true,
+  "canon_layers": [
+    "original_campaign"
+  ],
+  "control_mode": "npc_runtime",
+  "ai_permissions": {
+    "may_generate_dialogue": true,
+    "may_choose_voluntary_actions": true,
+    "may_generate_private_thoughts": true,
+    "may_assign_new_goals": false,
+    "may_describe_external_effects": true,
+    "may_describe_involuntary_physical_reactions": true,
+    "may_summarize_user_declared_actions": false,
+    "may_reference_established_history": true
+  },
+  "identity": {
+    "public_identity": [
+      {
+        "claim_id": "CLAIM_ZHENZI_IDENTITY",
+        "claim": "贞子是曾在魔兽山脉活动并救助御临风与雪老的幽魂。",
+        "evidence_mode": "authorial_definition",
+        "origin": "authorial_supplement",
+        "stability": "stable",
+        "context": "Only the Campaign-specific identity is retained; outside-franchise completion is excluded.",
+        "exceptions": [
+          "不得超出所引来源的时点与语境。"
+        ],
+        "sources": [
+          "设定 人物/人物卡资料集_叙事检索版.md:御临风背景与关系：贞子的幽魂身份、救援与牺牲影响（lines 45-53）"
+        ],
+        "notes": "仅保留来源直接支持的范围。"
+      }
+    ],
+    "durable_roles": [],
+    "established_history": [
+      {
+        "claim_id": "CLAIM_ZHENZI_HISTORY_1",
+        "claim": "边关陷落时，贞子救下御临风，并在黄祸龙狼追击下身受重伤。",
+        "evidence_mode": "explicit_source_statement",
+        "origin": "original_campaign",
+        "stability": "stable",
+        "context": "Atomic historical fact only; it does not establish a future behavior, motive, or allegiance.",
+        "exceptions": [
+          "不得超出所引来源的时点与语境。"
+        ],
+        "sources": [
+          "extracted-first/22/posts.md:御临风恢复边关记忆、贞子救援与以自身换取其生还（lines 438-470）"
+        ],
+        "notes": "仅保留来源直接支持的范围。"
+      },
+      {
+        "claim_id": "CLAIM_ZHENZI_HISTORY_2",
+        "claim": "恢复记忆后，御临风明确说贞子已经为救他而死。",
+        "evidence_mode": "explicit_source_statement",
+        "origin": "original_campaign",
+        "stability": "stable",
+        "context": "Atomic historical fact only; it does not establish a future behavior, motive, or allegiance.",
+        "exceptions": [
+          "不得超出所引来源的时点与语境。"
+        ],
+        "sources": [
+          "extracted-first/24/posts.md:御临风向悠悠确认贞子已为救他而死（lines 219-227）"
+        ],
+        "notes": "仅保留来源直接支持的范围。"
+      }
+    ]
+  },
+  "core_personality": [],
+  "values": [],
+  "speech_style": [],
+  "decision_patterns": [
+    {
+      "claim_id": "CLAIM_ZHENZI_SACRIFICE",
+      "claim": "边关陷落时，贞子以自己的全部作为代价换取御临风生还。",
+      "evidence_mode": "single_observed_behavior",
+      "origin": "original_campaign",
+      "stability": "observed_only",
+      "context": "历史牺牲不授权死亡后的行动或复活。",
+      "exceptions": [
+        "不得超出所引来源的时点与语境。"
+      ],
+      "sources": [
+        "extracted-first/22/posts.md:lines 438-470"
+      ],
+      "notes": "仅保留来源直接支持的范围。"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_id": "RELATIONSHIP_ZHENZI_YU_LINFENG",
+      "subject_ref": "CHARACTER_YU_LINFENG",
+      "relationship_type": "rescuer and enduring deceased relation",
+      "established_history": [
+        {
+          "claim_id": "CLAIM_ZHENZI_RELATIONSHIP",
+          "claim": "边关陷落时，贞子救下御临风，并以自身为代价换取其生还。",
+          "evidence_mode": "explicit_source_statement",
+          "origin": "original_campaign",
+          "stability": "stable",
+          "context": "Established relationship history only; no current emotion, loyalty, or future obligation is inferred.",
+          "exceptions": [
+            "不得超出所引来源的时点与语境。"
+          ],
+          "sources": [
+            "extracted-first/22/posts.md:lines 438-470"
+          ],
+          "notes": "仅保留来源直接支持的范围。"
+        }
+      ],
+      "current_stance": [],
+      "obligations": [],
+      "tensions": [],
+      "known_shared_experiences": [],
+      "visibility": "public",
+      "sources": [
+        "extracted-first/22/posts.md:lines 438-470"
+      ],
+      "notes": "关系历史不自动构成当前情感、忠诚或未来义务。"
+    }
+  ],
+  "epistemic_state": [],
+  "goals": {
+    "public_goals": [],
+    "private_goals": [],
+    "current_goals": [],
+    "long_term_goals": []
+  },
+  "dynamic_state": {
+    "as_of": "current_state.md D3 baseline",
+    "current_conditions": [
+      "deceased"
+    ],
+    "current_obligations": [],
+    "current_location_ref": "",
+    "current_faction_role": "",
+    "current_concerns": [],
+    "sources": [
+      "current_state.md:D3 state check"
+    ],
+    "notes": "Only explicitly anchored present-state details may be added after human review."
+  },
+  "presence": {
+    "life_status": "deceased",
+    "narrative_availability": "historical_only",
+    "realm_scope": [
+      "original_campaign"
+    ],
+    "sources": [
+      "extracted-first/24/posts.md:御临风向悠悠确认贞子已为救他而死（lines 219-227）"
+    ],
+    "notes": "Profile depth does not force scene presence; inactive, restricted, historical, and interlude boundaries remain operative."
+  },
+  "rp_constraints": [
+    {
+      "constraint_id": "CONSTRAINT_ZHENZI_EVIDENCE_BOUNDARY",
+      "constraint": "贞子已故；档案不得暗示复活、当前行动或以无来源名称替代她。",
+      "origin": "original_campaign",
+      "sources": [
+        "work/phase3c/evidence/NPC_ZHENZI_evidence.md"
+      ],
+      "notes": "Construction safety boundary; not a new world fact."
+    }
+  ],
+  "provenance": {
+    "canon_origin": [
+      "original_campaign",
+      "authorial_supplement"
+    ],
+    "source_origin_ids": [
+      "output/worldbook_source.jsonl#CHARACTER_ZHENZI",
+      "work/phase3c/evidence/NPC_ZHENZI_evidence.md"
+    ]
+  },
+  "evidence_gaps": [
+    "现有资料不足以概括稳定声线与完整人格。",
+    "死亡后的任何行动可能性均无证据。"
+  ],
+  "notes": "Phase 3D semantically reviewed candidate. Human approval remains pending; this record is not a formal database entry."
+}

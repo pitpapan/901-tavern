@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/schema/r2c/migration_package.schema.json",
+  "title": "R2C semantic migration package",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "phase", "package_status", "profile_id", "source_profile_candidate",
+    "inputs_considered", "profile_metadata", "old_claim_migrations", "background_items", "persona",
+    "goals", "timeline_items", "relationship_items", "ability_status_items", "knowledge_items",
+    "nonactual_projections", "dynamic_state", "presence", "rp_constraints", "evidence_gaps", "gap_routing",
+    "human_review_notes"
+  ],
+  "properties": {
+    "schema_version": {"const": "R2C-MIGRATION-1"},
+    "phase": {"const": "3D-R2C"},
+    "package_status": {"const": "PROVISIONAL_REVIEWABLE_DECISION_LAYER"},
+    "profile_id": {"type": "string", "pattern": "^(NPC|PC)_[A-Z0-9_]+$"},
+    "source_profile_candidate": {"type": ["string", "null"]},
+    "inputs_considered": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["input_class", "path", "result"],
+        "properties": {
+          "input_class": {
+            "type": "string",
+            "enum": [
+              "old_claims", "direct_temporal_links", "indirect_continuity_events", "revelations",
+              "event_audits", "retention_records", "discoveries", "d3_state", "worldbook_references"
+            ]
+          },
+          "path": {"type": "string", "minLength": 1},
+          "result": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "profile_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile_kind", "profile_status", "worldbook_id", "worldbook_mapping_status", "name", "aliases",
+        "profile_depth", "canon_layers", "control_mode", "ai_permissions", "identity", "notes"
+      ],
+      "properties": {
+        "profile_kind": {"type": "string", "enum": ["npc", "pc_continuity"]},
+        "profile_status": {"type": "string", "enum": ["existing", "provisional_discovery", "historical_only", "blocked"]},
+        "worldbook_id": {"type": ["string", "null"]},
+        "worldbook_mapping_status": {"type": "string", "enum": ["existing", "provisional_unmapped", "unresolved"]},
+        "name": {"type": "string", "minLength": 1},
+        "aliases": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "profile_depth": {"type": "string", "enum": ["full", "compact", "minimal"]},
+        "canon_layers": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "character_profile_v2.schema.json#/$defs/CanonLayer"}},
+        "control_mode": {"type": "string", "enum": ["npc_runtime", "user_controlled"]},
+        "ai_permissions": {
+          "oneOf": [
+            {"$ref": "character_profile_v2.schema.json#/$defs/NpcPermissions"},
+            {"$ref": "character_profile_v2.schema.json#/$defs/PcPermissions"}
+          ]
+        },
+        "identity": {"$ref": "character_profile_v2.schema.json#/$defs/IdentitySection"},
+        "notes": {"type": "string"}
+      }
+    },
+    "old_claim_migrations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "old_claim_id", "source_section", "original_statement", "migration_status",
+          "destination_ids", "reason", "supporting_refs"
+        ],
+        "properties": {
+          "old_claim_id": {"type": "string", "minLength": 1},
+          "source_section": {"type": "string", "minLength": 1},
+          "original_statement": {"type": "string", "minLength": 1},
+          "migration_status": {
+            "type": "string",
+            "enum": [
+              "MIGRATED", "SPLIT", "MERGED_WITH_EVENT_REFERENCE", "MOVED_TO_BACKGROUND",
+              "MOVED_TO_TIMELINE", "MOVED_TO_RELATIONSHIP", "MOVED_TO_ABILITY_STATUS",
+              "MOVED_TO_KNOWLEDGE", "MOVED_TO_MOTIVATION", "MOVED_TO_GOAL",
+              "RETAINED_AS_PERSONA", "DEMOTED_TO_OBSERVED_BEHAVIOR", "SEEN_NOT_PROMOTED",
+              "UNRESOLVED"
+            ]
+          },
+          "destination_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "reason": {"type": "string", "minLength": 1},
+          "supporting_refs": {"type": "array", "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    },
+    "background_items": {"type": "array", "items": {"$ref": "character_profile_v2.schema.json#/$defs/BackgroundItem"}},
+    "persona": {"$ref": "character_profile_v2.schema.json#/$defs/PersonaSection"},
+    "goals": {"$ref": "character_profile_v2.schema.json#/$defs/GoalsSection"},
+    "timeline_items": {"type": "array", "items": {"$ref": "character_profile_v2.schema.json#/$defs/TimelineItem"}},
+    "relationship_items": {"type": "array", "items": {"$ref": "character_profile_v2.schema.json#/$defs/RelationshipRecord"}},
+    "ability_status_items": {"type": "array", "items": {"$ref": "character_profile_v2.schema.json#/$defs/AbilityStatusTransition"}},
+    "knowledge_items": {"type": "array", "items": {"$ref": "character_profile_v2.schema.json#/$defs/KnowledgeItem"}},
+    "nonactual_projections": {"type": "array", "items": {"$ref": "character_profile_v2.schema.json#/$defs/NonactualProjection"}},
+    "dynamic_state": {"$ref": "character_profile_v2.schema.json#/$defs/DynamicState"},
+    "presence": {"$ref": "character_profile_v2.schema.json#/$defs/Presence"},
+    "rp_constraints": {"type": "array", "items": {"$ref": "character_profile_v2.schema.json#/$defs/RpConstraint"}},
+    "evidence_gaps": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "gap_routing": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["gap_id", "issue", "routes", "source_refs", "notes"],
+        "properties": {
+          "gap_id": {"type": "string", "pattern": "^GAP_[A-Z0-9_]+$"},
+          "issue": {"type": "string", "minLength": 1},
+          "routes": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "enum": [
+                "PROFILE_ONLY", "WORLDBOOK_REQUIRED", "EVENT_LAYER_REQUIRED", "CURRENT_STATE_REQUIRED",
+                "CHARACTER_DISCOVERY_REQUIRED", "HUMAN_DECISION_REQUIRED", "SEEN_NOT_PROMOTED"
+              ]
+            }
+          },
+          "source_refs": {"type": "array", "items": {"type": "string", "minLength": 1}},
+          "notes": {"type": "string"}
+        }
+      }
+    },
+    "human_review_notes": {"type": "array", "items": {"type": "string", "minLength": 1}}
+  }
+}
