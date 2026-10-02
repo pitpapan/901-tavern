@@ -1,0 +1,8 @@
+# R1C review artifacts contain byte-level provenance hashes.
+# Preserve their original bytes across staging and checkout.
+docs/remediation/R1C*.md -text
+scripts/build_r1c0_semantic_trust_audit.py -text
+scripts/r1c_vnext/** -text
+tests/test_r1c_vnext_*.py -text
+work/remediation/r1c0/** -text
+work/rebuild/r1c_vnext/** -text
