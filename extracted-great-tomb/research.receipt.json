@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0",
+  "record_type": "reading_receipt",
+  "research_document": "research.md",
+  "scope": "大墓地 page-01 至 page-03，#0 至 #111",
+  "review_status": "provisional_research",
+  "full_body_read": true,
+  "body_read_method": "四段直接完整读取 posts.jsonl 的 body：page-01 #0至19、#20至49；page-02 #50至74；page-02 #75至99与page-03 #100至111。均未截断。",
+  "character_count_definition": "body_char_count 为 Python len(body) 的 Unicode 字符数，含空白、正文中的图片占位；han_char_count 为 U+3400至U+9FFF 汉字数。未重复计算preview或compact。",
+  "image_contents_read": false,
+  "image_read_limit": "仅读取正文图像占位和图片数量，未查看6幅图像内容。",
+  "source_relationship": {
+    "same_world_as_main_campaign": "user_confirmed",
+    "world_time": "依正文相对时间；不按发帖时间与主线强排先后",
+    "main_campaign_bodies_reopened": 0
+  },
+  "time_anchor": {
+    "page": "page-02",
+    "floor": "74",
+    "post_id": "968335",
+    "confirmed": "到镇为绕道回村后的次日中午，距昏迷第四天；收到军情有至少一两天传播延迟。",
+    "reported_news": "凌迟公开处刑、帝国收复边关、召集远征军。",
+    "certainty_of_news": "rumor",
+    "absolute_world_date": null
+  },
+  "unresolved_questions": [
+    {
+      "question": "安兹所说村袭与墓地出现有关，有何独立证据？实际引诱魔兽者是谁？",
+      "source_post_ids": [
+        "923284",
+        "923404"
+      ]
+    },
+    {
+      "question": "艾鲁尔外貌的男子、其人类记忆与Phantom之间的连续性；解放过程是否符合其他已知实例？",
+      "source_post_ids": [
+        "923288",
+        "1016053"
+      ]
+    },
+    {
+      "question": "黑衣女性真实姓名、所属、能力与对男子的控制方式；不可依据图片或别线相似情节补名。",
+      "source_post_ids": [
+        "978566",
+        "1000177",
+        "1016053",
+        "1022610"
+      ]
+    },
+    {
+      "question": "科普卢受袭和本线到镇的绝对日期，以及与主线处刑、收关、远征的精确间隔。",
+      "source_post_ids": [
+        "968335"
+      ]
+    },
+    {
+      "question": "合适导师是否落实；觉醒之后新能力为何；安兹对魔力回路的解释与机制实际边界。",
+      "source_post_ids": [
+        "954706",
+        "954760"
+      ]
+    },
+    {
+      "question": "通讯、传送卷轴与笛子是否使用；经验项圈是否已有结算；后续是否实际提交报告。",
+      "source_post_ids": [
+        "923284",
+        "954561",
+        "954760"
+      ]
+    },
+    {
+      "question": "镇上联系驻军、寻找游击士与贝克求援有无实际结果；埃弗纳斯是否脱离胁迫或返回墓地。",
+      "source_post_ids": [
+        "993920",
+        "1058086",
+        "1081976"
+      ]
+    },
+    {
+      "question": "第八层禁入与陪同穿行的适用权限，以及其他未展示层内结构；不把一次穿行泛化。",
+      "source_post_ids": [
+        "923436",
+        "955517"
+      ]
+    },
+    {
+      "question": "四十位至尊离去的原因、去向与墓地异变原因；皮奇自责并非证实的因果。",
+      "source_post_ids": [
+        "928618",
+        "929389",
+        "931037"
+      ]
+    }
+  ],
+  "non_actions": [
+    "未改导航、旧研究、候选或正式worldbook",
+    "未创建JSONL候选",
+    "未重复转换提取检查或全量审计"
+  ],
+  "reading_date": "2026-10-03",
+  "pages": [
+    {
+      "page": "page-01",
+      "source": "page-01/posts.jsonl",
+      "readable_source": "page-01/posts.md",
+      "source_posts": 50,
+      "first_floor": "0",
+      "last_floor": "49",
+      "body_char_count": 10302,
+      "han_char_count": 8244,
+      "full_body_read": true,
+      "complete_post_ids": [
+        "922950",
+        "922969",
+        "922976",
+        "923079",
+        "923103",
+        "923247",
+        "923262",
+        "923275",
+        "923284",
+        "923287",
+        "923288",
+        "923400",
+        "923404",
+        "923423",
+        "923436",
+        "923452",
+        "923462",
+        "923550",
+        "923568",
+        "923992",
+        "923998",
+        "924961",
+        "925268",
+        "926407",
+        "926668",
+        "927424",
+        "927646",
+        "928185",
+        "928408",
+        "928570",
+        "928618",
+        "929382",
+        "929389",
+        "930875",
+        "931037",
+        "932235",
+        "932676",
+        "933765",
+        "934724",
+        "935835",
+        "939231",
+        "944072",
+        "944276",
+        "947104",
+        "948390",
+        "949360",
+        "949503",
+        "952689",
+        "952746",
+        "954249"
+      ],
+      "image_count": 3,
+      "image_post_ids": [
+        "922950",
+        "949503"
+      ],
+      "image_contents_read": false,
+      "source_sha256": "2dd581e9bbd0a4f5174ddf72fda33d0cdf4b2aaef85df7d47d1dd4ea854527f3"
+    },
+    {
+      "page": "page-02",
+      "source": "page-02/posts.jsonl",
+      "readable_source": "page-02/posts.md",
+      "source_posts": 50,
+      "first_floor": "50",
+      "last_floor": "99",
+      "body_char_count": 12705,
+      "han_char_count": 10265,
+      "full_body_read": true,
+      "complete_post_ids": [
+        "954393",
+        "954510",
+        "954561",
+        "954685",
+        "954706",
+        "954737",
+        "954760",
+        "954941",
+        "955110",
+        "955492",
+        "955517",
+        "955539",
+        "955598",
+        "955791",
+        "955870",
+        "956004",
+        "956355",
+        "956584",
+        "957027",
+        "957121",
+        "957925",
+        "962489",
+        "962500",
+        "968057",
+        "968335",
+        "971544",
+        "971887",
+        "978158",
+        "978566",
+        "985587",
+        "985871",
+        "987299",
+        "987337",
+        "988053",
+        "988116",
+        "989666",
+        "989836",
+        "990696",
+        "990702",
+        "992334",
+        "992345",
+        "993889",
+        "993920",
+        "994826",
+        "996029",
+        "997080",
+        "997679",
+        "1000143",
+        "1000177",
+        "1008041"
+      ],
+      "image_count": 3,
+      "image_post_ids": [
+        "954561",
+        "997679"
+      ],
+      "image_contents_read": false,
+      "source_sha256": "a19caad4c0adfd8cb44548cdf71edb1cf14e78567772664ee943e6da1cb1fedd"
+    },
+    {
+      "page": "page-03",
+      "source": "page-03/posts.jsonl",
+      "readable_source": "page-03/posts.md",
+      "source_posts": 12,
+      "first_floor": "100",
+      "last_floor": "111",
+      "body_char_count": 2352,
+      "han_char_count": 2019,
+      "full_body_read": true,
+      "complete_post_ids": [
+        "1008821",
+        "1015970",
+        "1016053",
+        "1022503",
+        "1022610",
+        "1033827",
+        "1034858",
+        "1043814",
+        "1055352",
+        "1056029",
+        "1058086",
+        "1081976"
+      ],
+      "image_count": 0,
+      "image_post_ids": [],
+      "image_contents_read": false,
+      "source_sha256": "f8f906195065266a88aada7e704a874010203db416bf701bcfc8c0e548c7a182"
+    }
+  ],
+  "totals": {
+    "source_posts": 112,
+    "body_char_count": 25359,
+    "han_char_count": 20528,
+    "image_count": 6,
+    "full_body_reads": 112
+  },
+  "reading_batches": [
+    {
+      "page": "page-01",
+      "floor_range": [
+        0,
+        19
+      ],
+      "output_truncated": false
+    },
+    {
+      "page": "page-01",
+      "floor_range": [
+        20,
+        49
+      ],
+      "output_truncated": false
+    },
+    {
+      "page": "page-02",
+      "floor_range": [
+        50,
+        74
+      ],
+      "output_truncated": false
+    },
+    {
+      "pages": [
+        "page-02",
+        "page-03"
+      ],
+      "floor_range": [
+        75,
+        111
+      ],
+      "output_truncated": false
+    }
+  ],
+  "research_sha256": "22cf54ffd6f15f7a17405cc499ed7a565b78ec1c05efe39693778f4e1ae1b342"
+}

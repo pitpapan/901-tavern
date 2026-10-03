@@ -1,0 +1,77 @@
+{
+  "as_of": "2026-10-03",
+  "scope": "E阶段关键冲突与开局资料审阅",
+  "user_plot_anchor_decision": {
+    "question": "E阶段会整理飘零祭、帝都军情、空间龙诅咒等重大节点。你更希望按哪种原则设计？这只确定原则，不会自动锁定某场死亡或胜负。",
+    "verbatim_reply": "这次先审资料，固定节点以后再定",
+    "source": "direct_user_reply_in_this_conversation",
+    "effect": "记录当时先审资料、不另选无条件未来结果的范围；后续因果原则已由UCL_20261003_001明确，现已按继续档案指令完成本轮事件条件整理。"
+  },
+  "canon_acceptance": "No blanket human approval inferred from a request to review.",
+  "formal_export": "not_requested",
+  "image_interpretation": "excluded_by_prior_user_instruction",
+  "established_facts_and_causality": {
+    "clarification_id": "UCL_20261003_001",
+    "rule": "Preserve settled world facts and pre-opening history; independent actors continue unless relevant causal conditions actually change.",
+    "confirmed_examples": [
+      "Tower attack and White Wizard escape are not cancelled merely by different Yulinfeng choices.",
+      "Emperor and Haku are brothers.",
+      "Emotional transaction is established prehistory."
+    ],
+    "growth_wording": "Restore the documented pre-entry settlement; no new enablement gate inferred from a missing separate approval post."
+  },
+  "growth_policy": {
+    "clarification_id": "UCL_20261003_002",
+    "opening": "Reconstruct the chosen initial state from original records.",
+    "player": "User chooses a new growth path after opening; no original future progression queue.",
+    "companion_npcs": "Grow over time within the user-provided character templates; event awards require current-branch conditions.",
+    "archive": "Keep historical records; stop work whose sole purpose is reproducing post-opening protagonist progression."
+  },
+  "event_causality_application": {
+    "principles": "established_by_UCL_20261003_001",
+    "growth": "UCL_20261003_002",
+    "research_package": "event_causality_overview.md",
+    "records": 26,
+    "autonomous_actions": "Continue under evidenced conditions; no automatic suspension for different PC choices.",
+    "affected_outcomes": "Reassess only when new actions change relevant causes.",
+    "extra_unconditional_future_results": "not_requested"
+  },
+  "dream_handling": {
+    "source": "direct_user_message_in_current_conversation",
+    "user_quote": "梦境是否是额外的context开销，其实我认为不演出，或者存入它们也没什么关系",
+    "working_default": "Preserve existing dream archives; omit dream performance and loading by default. No additional dream expansion needed for main-world archive completion.",
+    "optional_use": "Read only relevant fragments for a specific inquiry or a later request to play a dream.",
+    "export_plan": "Omit dream content from the default deliverable entirely: no dream lorebook/card embedding, global/character/persona/chat binding, prompt fields or retrieval corpus. Optional dream package only on a later explicit request. This is a design constraint, not an implemented export.",
+    "mainworld_effects": "Only opening-established or actual new-branch effects enter current state. Original later dream rewards are not automatically inherited.",
+    "latest_explicit_request": "请设计成避免酒馆加载它的样子，之后则是沐透和大墓地线，有处理的必要吗",
+    "scope_unit": "Passage/claim, not whole post or file; mixed dream/main-world sources must be segmented."
+  },
+  "runtime_content_routing": {
+    "status": "design_constraint_for_phase_F_not_SillyTavern_native_configuration",
+    "default_selection": "approved main-world claims valid for the selected period and actual branch state",
+    "dream_content": {
+      "in_default_export": false,
+      "in_card_embeddings": false,
+      "in_prompt_fields": false,
+      "in_default_retrieval_sources": false,
+      "archive_preserved": true
+    },
+    "side_lines": {
+      "source_ids": [
+        "MUTOU",
+        "GREAT_TOMB"
+      ],
+      "treatment": "Source provenance only. Integrate evidence into the shared background setting, faction/location/concept/event topics and common character dossiers. Select runtime content by topic, entity, valid time and current relevance, never by campaign-source line.",
+      "full_story_always_loaded": false,
+      "extra_full_reconstruction_needed": false,
+      "autonomous_actions_continue": true,
+      "player_knowledge": "requires an actual supported information route",
+      "user_preference_quote": "那么比起载入旁线，把它们的设定放入背景设定集不是更方便简洁吗",
+      "separate_runtime_bundle": false,
+      "raw_research_packages_imported": false,
+      "deduplication": "One shared entity/topic with multiple source references; preserve conflicts, historical validity and character knowledge separately."
+    },
+    "verification": "Use the existing export inventory and one G-stage assembled-prompt inspection; no per-turn audit.",
+    "reference": "https://docs.sillytavern.app/usage/core-concepts/worldinfo/"
+  }
+}

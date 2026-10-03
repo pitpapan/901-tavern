@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "scope": "One new-batch integrity check only: worldbook schema, profile/card and label mapping, source locations, PC control, dream exclusion and original-file preservation. Not a whole-corpus semantic audit or human approval.",
+  "counts": {
+    "worldbook_entries": 182,
+    "worldbook_noncharacter": 99,
+    "worldbook_character": 83,
+    "worldbook_types": {
+      "world": 1,
+      "concept": 39,
+      "location": 16,
+      "faction": 17,
+      "event": 26,
+      "character": 83
+    },
+    "npc_author_profiles": 94,
+    "npc_runtime_cards": 94,
+    "opening_card_eligibility": {
+      "encounter_only": 36,
+      "present": 2,
+      "requires_timing_review": 41,
+      "historical_only": 15
+    },
+    "pc_personas": 1,
+    "character_labels_accounted": 125,
+    "character_dispositions": {
+      "user_controlled_persona": 1,
+      "author_profile_and_card": 39,
+      "excluded_dream": 2,
+      "included_author_archive_and_card_draft": 49,
+      "merged_confirmed_label": 2,
+      "identity_unresolved_index_only": 3,
+      "included_historical_background_only": 6,
+      "excluded_special_interlude": 23
+    }
+  },
+  "worldbook_schema_check": "existing_worldbook_schema",
+  "unique_local_source_locators": 2044,
+  "errors": [],
+  "warnings": [],
+  "navigation_followup": {
+    "reason": "Readable worldbook reference strings use jsonl_line=/line_start=; add direct line anchors and check only these string-form references.",
+    "source_locations": 1148,
+    "link_targets_updated": 307,
+    "errors": []
+  }
+}

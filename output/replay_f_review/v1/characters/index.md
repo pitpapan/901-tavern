@@ -1,0 +1,230 @@
+# 人物审核索引
+
+已知人物按来源深度编写，资料不足保留短档；身份标签去向另列。先读御临风、黄泉、布莱特与主要人物，再按需看扩展人物。运行卡的开局适用条件不等于此人自动出现在开局。
+
+| 人物 | 作者档案 | 卡稿 | 开局适用 |
+|---|---|---|---|
+| 姜子尤 | [作者档案](profiles/CRC_002.md) | [卡稿](runtime_cards.md:5) | 相遇时按开局范围使用 |
+| 谏山黄泉 | [作者档案](profiles/CRC_003.md) | [卡稿](runtime_cards.md:45) | 开局同行 |
+| 沐透 | [作者档案](profiles/CRC_004.md) | [卡稿](runtime_cards.md:86) | 出场前确认时期 |
+| 卡西乌斯·布莱特 | [作者档案](profiles/CRC_005.md) | [卡稿](runtime_cards.md:127) | 开局同行 |
+| 帝 | [作者档案](profiles/CRC_006.md) | [卡稿](runtime_cards.md:168) | 相遇时按开局范围使用 |
+| 雪老 | [作者档案](profiles/CRC_007.md) | [卡稿](runtime_cards.md:209) | 相遇时按开局范围使用 |
+| 哈克 | [作者档案](profiles/CRC_008.md) | [卡稿](runtime_cards.md:251) | 相遇时按开局范围使用 |
+| 久远 | [作者档案](profiles/CRC_009.md) | [卡稿](runtime_cards.md:292) | 相遇时按开局范围使用 |
+| 悠悠 | [作者档案](profiles/CRC_010.md) | [卡稿](runtime_cards.md:332) | 相遇时按开局范围使用 |
+| 白色魔法使 | [作者档案](profiles/CRC_011.md) | [卡稿](runtime_cards.md:373) | 相遇时按开局范围使用 |
+| 安兹·乌尔·恭 | [作者档案](profiles/CRC_012.md) | [卡稿](runtime_cards.md:415) | 出场前确认时期 |
+| 奥修特尔 | [作者档案](profiles/CRC_013.md) | [卡稿](runtime_cards.md:456) | 相遇时按开局范围使用 |
+| 艾利 | [作者档案](profiles/CRC_014.md) | [卡稿](runtime_cards.md:496) | 相遇时按开局范围使用 |
+| 谢尔伦·冯·吉尔科德 | [作者档案](profiles/CRC_015.md) | [卡稿](runtime_cards.md:537) | 相遇时按开局范围使用 |
+| 慕少艾 | [作者档案](profiles/CRC_016.md) | [卡稿](runtime_cards.md:578) | 相遇时按开局范围使用 |
+| 沃西斯 | [作者档案](profiles/CRC_017.md) | [卡稿](runtime_cards.md:619) | 相遇时按开局范围使用 |
+| 雷光 | [作者档案](profiles/CRC_018.md) | [卡稿](runtime_cards.md:659) | 相遇时按开局范围使用 |
+| 死亡之翼 | [作者档案](profiles/CRC_019.md) | [卡稿](runtime_cards.md:700) | 仅历史资料 |
+| 肯达·凯·弗格斯 | [作者档案](profiles/CRC_020.md) | [卡稿](runtime_cards.md:740) | 相遇时按开局范围使用 |
+| 卡珊德拉 | [作者档案](profiles/CRC_021.md) | [卡稿](runtime_cards.md:780) | 出场前确认时期 |
+| 耶各 | [作者档案](profiles/CRC_022.md) | [卡稿](runtime_cards.md:820) | 仅历史资料 |
+| 贞子 | [作者档案](profiles/CRC_023.md) | [卡稿](runtime_cards.md:860) | 仅历史资料 |
+| 托尔金 | [作者档案](profiles/CRC_024.md) | [卡稿](runtime_cards.md:900) | 相遇时按开局范围使用 |
+| 本多·凯·弗格斯 | [作者档案](profiles/CRC_025.md) | [卡稿](runtime_cards.md:940) | 相遇时按开局范围使用 |
+| 古雷姆林 | [作者档案](profiles/CRC_026.md) | [卡稿](runtime_cards.md:981) | 出场前确认时期 |
+| 诺斯莉 | [作者档案](profiles/CRC_027.md) | [卡稿](runtime_cards.md:1021) | 相遇时按开局范围使用 |
+| 奥希拉 | [作者档案](profiles/CRC_028.md) | [卡稿](runtime_cards.md:1061) | 相遇时按开局范围使用 |
+| 武赖 | [作者档案](profiles/CRC_029.md) | [卡稿](runtime_cards.md:1100) | 相遇时按开局范围使用 |
+| 凌迟 | [作者档案](profiles/CRC_030.md) | [卡稿](runtime_cards.md:1140) | 相遇时按开局范围使用 |
+| 露露缇耶 | [作者档案](profiles/CRC_031.md) | [卡稿](runtime_cards.md:1181) | 相遇时按开局范围使用 |
+| 威廉 | [作者档案](profiles/CRC_032.md) | [卡稿](runtime_cards.md:1221) | 相遇时按开局范围使用 |
+| 宝石翁 | [作者档案](profiles/CRC_033.md) | [卡稿](runtime_cards.md:1261) | 相遇时按开局范围使用 |
+| 瑟坦特·卢·优尔兰 | [作者档案](profiles/CRC_034.md) | [卡稿](runtime_cards.md:1301) | 相遇时按开局范围使用 |
+| 海森·罗伯 | [作者档案](profiles/CRC_037.md) | [卡稿](runtime_cards.md:1341) | 相遇时按开局范围使用 |
+| 杨 | [作者档案](profiles/CRC_038.md) | [卡稿](runtime_cards.md:1382) | 相遇时按开局范围使用 |
+| 无名哥布林（杨的同行者） | [作者档案](profiles/CRC_039.md) | [卡稿](runtime_cards.md:1422) | 相遇时按开局范围使用 |
+| 左近 | [作者档案](profiles/CRC_040.md) | [卡稿](runtime_cards.md:1457) | 相遇时按开局范围使用 |
+| 宗近 | [作者档案](profiles/CRC_041.md) | [卡稿](runtime_cards.md:1497) | 相遇时按开局范围使用 |
+| 雅儿 | [作者档案](profiles/CRC_042.md) | [卡稿](runtime_cards.md:1538) | 仅历史资料 |
+| 老村医 | [作者档案](profiles/CRC_043.md) | [卡稿](runtime_cards.md:1581) | 仅历史资料 |
+| 邻居大妈 | [作者档案](profiles/CRC_044.md) | [卡稿](runtime_cards.md:1624) | 相遇时按开局范围使用 |
+| 怪眼队长 | [作者档案](profiles/CRC_045.md) | [卡稿](runtime_cards.md:1667) | 相遇时按开局范围使用 |
+| 佐间 | [作者档案](profiles/CRC_046.md) | [卡稿](runtime_cards.md:1710) | 相遇时按开局范围使用 |
+| 阿德莱德 | [作者档案](profiles/CRC_047.md) | [卡稿](runtime_cards.md:1753) | 相遇时按开局范围使用 |
+| 卡泽 | [作者档案](profiles/CRC_048.md) | [卡稿](runtime_cards.md:1796) | 相遇时按开局范围使用 |
+| 携盒男子 | [作者档案](profiles/CRC_049.md) | [卡稿](runtime_cards.md:1839) | 相遇时按开局范围使用 |
+| 黄祸龙狼 | [作者档案](profiles/CRC_050.md) | [卡稿](runtime_cards.md:1882) | 出场前确认时期 |
+| 奥斯卡贝 | [作者档案](profiles/CRC_052.md) | [卡稿](runtime_cards.md:1926) | 出场前确认时期 |
+| 泰蕾斯 | [作者档案](profiles/CRC_053.md) | [卡稿](runtime_cards.md:1970) | 出场前确认时期 |
+| 陈萍生 | [作者档案](profiles/CRC_055.md) | [卡稿](runtime_cards.md:2014) | 仅历史资料 |
+| 达卡斯 | [作者档案](profiles/CRC_056.md) | [卡稿](runtime_cards.md:2057) | 仅历史资料 |
+| 巴力西卜（魔法师A） | [作者档案](profiles/CRC_058.md) | [卡稿](runtime_cards.md:2100) | 出场前确认时期 |
+| 欧基 | [作者档案](profiles/CRC_059.md) | [卡稿](runtime_cards.md:2144) | 相遇时按开局范围使用 |
+| 欧吉尔德 | [作者档案](profiles/CRC_060.md) | [卡稿](runtime_cards.md:2186) | 出场前确认时期 |
+| 塞拉尔博士（主线线索） | [作者档案](profiles/CRC_061.md) | [卡稿](runtime_cards.md:2230) | 出场前确认时期 |
+| 幻剑（移除机制的前史引导者） | [作者档案](profiles/CRC_062.md) | [卡稿](runtime_cards.md:2275) | 仅历史资料 |
+| 逸冷 | [作者档案](profiles/CRC_063.md) | [卡稿](runtime_cards.md:2318) | 仅历史资料 |
+| 韩诺 | [作者档案](profiles/CRC_064.md) | [卡稿](runtime_cards.md:2361) | 仅历史资料 |
+| 维克多（主线笔记线索） | [作者档案](profiles/CRC_065.md) | [卡稿](runtime_cards.md:2404) | 出场前确认时期 |
+| 阿尔塞斯（死亡骑士线索） | [作者档案](profiles/CRC_066.md) | [卡稿](runtime_cards.md:2448) | 出场前确认时期 |
+| 赫伯特·金·墨菲 | [作者档案](profiles/CRC_067.md) | [卡稿](runtime_cards.md:2492) | 出场前确认时期 |
+| 诺顿·由谢夫·崔斯福特 | [作者档案](profiles/CRC_068.md) | [卡稿](runtime_cards.md:2536) | 出场前确认时期 |
+| 南希·夏·缪拉 | [作者档案](profiles/CRC_069.md) | [卡稿](runtime_cards.md:2580) | 出场前确认时期 |
+| 土宫神乐（黄泉原乡背景） | [作者档案](profiles/CRC_092.md) | [卡稿](runtime_cards.md:2624) | 仅历史资料 |
+| 谏山奈落（黄泉原乡背景） | [作者档案](profiles/CRC_093.md) | [卡稿](runtime_cards.md:2667) | 仅历史资料 |
+| 饭纲纪之（黄泉原乡背景） | [作者档案](profiles/CRC_094.md) | [卡稿](runtime_cards.md:2710) | 仅历史资料 |
+| 谏山冥（黄泉原乡背景） | [作者档案](profiles/CRC_095.md) | [卡稿](runtime_cards.md:2753) | 仅历史资料 |
+| 三途河（黄泉原乡背景） | [作者档案](profiles/CRC_096.md) | [卡稿](runtime_cards.md:2796) | 仅历史资料 |
+| 影魔 | [作者档案](profiles/CRC_097.md) | [卡稿](runtime_cards.md:2839) | 出场前确认时期 |
+| 百首黄金龙（沐透内在Phantom） | [作者档案](profiles/CRC_098.md) | [卡稿](runtime_cards.md:2883) | 出场前确认时期 |
+| 阿伊达 | [作者档案](profiles/CRC_102.md) | [卡稿](runtime_cards.md:2927) | 出场前确认时期 |
+| 维尔 | [作者档案](profiles/CRC_103.md) | [卡稿](runtime_cards.md:2971) | 出场前确认时期 |
+| 研究所博士（拉塞尔） | [作者档案](profiles/CRC_104.md) | [卡稿](runtime_cards.md:3015) | 出场前确认时期 |
+| 逆羽·霞 | [作者档案](profiles/CRC_105.md) | [卡稿](runtime_cards.md:3060) | 出场前确认时期 |
+| 幻翎·洛 | [作者档案](profiles/CRC_106.md) | [卡稿](runtime_cards.md:3104) | 出场前确认时期 |
+| 劳霖 | [作者档案](profiles/CRC_107.md) | [卡稿](runtime_cards.md:3148) | 出场前确认时期 |
+| 王骑 | [作者档案](profiles/CRC_108.md) | [卡稿](runtime_cards.md:3192) | 出场前确认时期 |
+| 克拉肯 | [作者档案](profiles/CRC_109.md) | [卡稿](runtime_cards.md:3236) | 出场前确认时期 |
+| 曼吉 | [作者档案](profiles/CRC_110.md) | [卡稿](runtime_cards.md:3280) | 出场前确认时期 |
+| 皮谢 | [作者档案](profiles/CRC_111.md) | [卡稿](runtime_cards.md:3324) | 出场前确认时期 |
+| 雅莱佩 | [作者档案](profiles/CRC_112.md) | [卡稿](runtime_cards.md:3368) | 出场前确认时期 |
+| 夏洛克·査丁（被冒名镇长） | [作者档案](profiles/CRC_113.md) | [卡稿](runtime_cards.md:3412) | 出场前确认时期 |
+| 博恩婆婆 | [作者档案](profiles/CRC_114.md) | [卡稿](runtime_cards.md:3456) | 出场前确认时期 |
+| 未名吸血鬼老人 | [作者档案](profiles/CRC_115.md) | [卡稿](runtime_cards.md:3500) | 出场前确认时期 |
+| 埃弗纳斯 | [作者档案](profiles/CRC_116.md) | [卡稿](runtime_cards.md:3544) | 出场前确认时期 |
+| 雅儿贝德 | [作者档案](profiles/CRC_117.md) | [卡稿](runtime_cards.md:3588) | 出场前确认时期 |
+| 迪米乌哥斯 | [作者档案](profiles/CRC_118.md) | [卡稿](runtime_cards.md:3632) | 出场前确认时期 |
+| 亚乌菈·贝拉·菲欧拉 | [作者档案](profiles/CRC_119.md) | [卡稿](runtime_cards.md:3676) | 出场前确认时期 |
+| 皮奇 | [作者档案](profiles/CRC_120.md) | [卡稿](runtime_cards.md:3720) | 出场前确认时期 |
+| 养父外貌男子（艾鲁尔连续性待定） | [作者档案](profiles/CRC_121.md) | [卡稿](runtime_cards.md:3764) | 出场前确认时期 |
+| 美杜莎 | [作者档案](profiles/CRC_122.md) | [卡稿](runtime_cards.md:3808) | 出场前确认时期 |
+| 欧登 | [作者档案](profiles/CRC_123.md) | [卡稿](runtime_cards.md:3852) | 出场前确认时期 |
+| 科斯雷 | [作者档案](profiles/CRC_124.md) | [卡稿](runtime_cards.md:3896) | 出场前确认时期 |
+| 贝克 | [作者档案](profiles/CRC_125.md) | [卡稿](runtime_cards.md:3940) | 出场前确认时期 |
+
+## 编写去向
+
+| 研究标签 | 名称 | 处理 | 说明 |
+|---|---|---|---|
+| CRC_001 | 御临风 | user_controlled_persona | 用户PC，制作独立作者档案与开局Persona，不制作自主NPC卡。 |
+| CRC_002 | 姜子尤 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_003 | 谏山黄泉 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_004 | 沐透 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_005 | 卡西乌斯·布莱特 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_006 | 帝 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_007 | 雪老 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_008 | 哈克 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_009 | 久远 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_010 | 悠悠 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_011 | 白色魔法使 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_012 | 安兹·乌尔·恭 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_013 | 奥修特尔 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_014 | 艾利 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_015 | 谢尔伦·冯·吉尔科德 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_016 | 慕少艾 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_017 | 沃西斯 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_018 | 雷光 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_019 | 死亡之翼 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_020 | 肯达·凯·弗格斯 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_021 | 卡珊德拉 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_022 | 耶各 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_023 | 贞子 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_024 | 托尔金 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_025 | 本多·凯·弗格斯 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_026 | 古雷姆林 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_027 | 诺斯莉 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_028 | 奥希拉 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_029 | 武赖 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_030 | 凌迟 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_031 | 露露缇耶 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_032 | 威廉 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_033 | 宝石翁 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_034 | 瑟坦特·卢·优尔兰 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_035 | 任帆真 | excluded_dream | 现代灵异梦境专属身份，原研究档保留，本版无默认运行卡。 |
+| CRC_036 | 周正 | excluded_dream | 现代灵异梦境专属身份，原研究档保留，本版无默认运行卡。 |
+| CRC_037 | 海森·罗伯 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_038 | 杨 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_039 | 无名哥布林（杨的同行者） | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_040 | 左近 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_041 | 宗近 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_042 | 雅儿 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_043 | 老村医 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 默认不转正式世界书实体：称呼未具名或独立持久身份／作用不足，保留作者短档和情境卡。 |
+| CRC_044 | 邻居大妈 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 默认不转正式世界书实体：称呼未具名或独立持久身份／作用不足，保留作者短档和情境卡。 |
+| CRC_045 | 怪眼队长 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 默认不转正式世界书实体：称呼未具名或独立持久身份／作用不足，保留作者短档和情境卡。 |
+| CRC_046 | 佐间 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_047 | 阿德莱德 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_048 | 卡泽 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_049 | 携盒男子 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 默认不转正式世界书实体：称呼未具名或独立持久身份／作用不足，保留作者短档和情境卡。 |
+| CRC_050 | 黄祸龙狼 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_051 | 二五仔 | merged_confirmed_label | P1 #78旧称“雅儿口中的魔法师就是二五仔（慕少艾）”；用户后补明确开局被御临风制裁的魔法师为陈萍生、慕少艾的徒弟。按纠正将二五仔收至CRC_055，保留旧括注差异，不将徒弟与CRC_016师父合并。 |
+| CRC_052 | 奥斯卡贝 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_053 | 泰蕾斯 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_054 | 李萍生 | identity_unresolved_index_only | 李萍生为慕少艾旧证言名，与用户纠正陈萍生保留来源差异；尚未确认正式别名，不造第二位徒弟。 |
+| CRC_055 | 陈萍生 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_056 | 达卡斯 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_057 | A | merged_confirmed_label | 早期学徒A与转化后A为连续人物；共享精读ERC_P2_0030明确不可误拆，设定确认巴力西卜对应魔法师A。 |
+| CRC_058 | 巴力西卜（魔法师A） | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_059 | 欧基 | author_profile_and_card | 已接受的主世界人物资料编写为作者档案与分期卡稿；不表示T0自动在场。 |
+| CRC_060 | 欧吉尔德 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_061 | 塞拉尔博士（主线线索） | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 默认不转正式世界书实体：称呼未具名或独立持久身份／作用不足，保留作者短档和情境卡。 |
+| CRC_062 | 幻剑（移除机制的前史引导者） | included_historical_background_only | 已有独立证据，按资料厚度写档；薄资料不补全人格。原乡或移除机制人物，仅历史，不默认主世界激活。 默认不转正式世界书实体：称呼未具名或独立持久身份／作用不足，保留作者短档和情境卡。 |
+| CRC_063 | 逸冷 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_064 | 韩诺 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_065 | 维克多（主线笔记线索） | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 默认不转正式世界书实体：称呼未具名或独立持久身份／作用不足，保留作者短档和情境卡。 |
+| CRC_066 | 阿尔塞斯（死亡骑士线索） | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 默认不转正式世界书实体：称呼未具名或独立持久身份／作用不足，保留作者短档和情境卡。 |
+| CRC_067 | 赫伯特·金·墨菲 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_068 | 诺顿·由谢夫·崔斯福特 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_069 | 南希·夏·缪拉 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_070 | 瑟西斯 | identity_unresolved_index_only | 目前只有旧导航未决姓名，没有足以形成独立人物档案的身份或行为；保留索引待定点核实。 |
+| CRC_071 | 凯多 | identity_unresolved_index_only | 目前只有旧导航未决姓名，没有足以形成独立人物档案的身份或行为；保留索引待定点核实。 |
+| CRC_072 | 德雷克 | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_073 | 刚特姆 | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_074 | 八头龙 | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_075 | 尼克弗瑞 | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_076 | 陈萧生 | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_077 | 操真晴人 | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_078 | 笛木奏（游戏梦境） | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_079 | 道格拉斯·威尔逊 | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_080 | 诺顿（伦敦梦境） | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_081 | 赫伯特医生（伦敦梦境） | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_082 | 戴安娜 | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_083 | 杰西卡 | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_084 | 谢尔伦（伦敦梦境） | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_085 | 悠悠（伦敦梦境） | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_086 | 食人魔（伦敦梦境） | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_087 | 英国国王（伦敦梦境） | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_088 | 方镜 | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_089 | 神父（现代灵异梦境） | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_090 | 敲门老人 | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_091 | 雷电法王 | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_092 | 土宫神乐（黄泉原乡背景） | included_historical_background_only | 已有独立证据，按资料厚度写档；薄资料不补全人格。原乡或移除机制人物，仅历史，不默认主世界激活。 |
+| CRC_093 | 谏山奈落（黄泉原乡背景） | included_historical_background_only | 已有独立证据，按资料厚度写档；薄资料不补全人格。原乡或移除机制人物，仅历史，不默认主世界激活。 |
+| CRC_094 | 饭纲纪之（黄泉原乡背景） | included_historical_background_only | 已有独立证据，按资料厚度写档；薄资料不补全人格。原乡或移除机制人物，仅历史，不默认主世界激活。 |
+| CRC_095 | 谏山冥（黄泉原乡背景） | included_historical_background_only | 已有独立证据，按资料厚度写档；薄资料不补全人格。原乡或移除机制人物，仅历史，不默认主世界激活。 |
+| CRC_096 | 三途河（黄泉原乡背景） | included_historical_background_only | 已有独立证据，按资料厚度写档；薄资料不补全人格。原乡或移除机制人物，仅历史，不默认主世界激活。 |
+| CRC_097 | 影魔 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_098 | 百首黄金龙（沐透内在Phantom） | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 默认不转正式世界书实体：称呼未具名或独立持久身份／作用不足，保留作者短档和情境卡。 |
+| CRC_099 | 尼克·弗瑞（伦敦梦境警监） | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_100 | 未具名心理医生（伦敦梦境） | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_101 | 中学音乐教师嫌犯（伦敦梦境） | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
+| CRC_102 | 阿伊达 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_103 | 维尔 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_104 | 研究所博士（拉塞尔） | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_105 | 逆羽·霞 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_106 | 幻翎·洛 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_107 | 劳霖 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_108 | 王骑 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_109 | 克拉肯 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_110 | 曼吉 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_111 | 皮谢 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_112 | 雅莱佩 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_113 | 夏洛克·査丁（被冒名镇长） | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_114 | 博恩婆婆 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_115 | 未名吸血鬼老人 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 默认不转正式世界书实体：称呼未具名或独立持久身份／作用不足，保留作者短档和情境卡。 |
+| CRC_116 | 埃弗纳斯 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_117 | 雅儿贝德 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_118 | 迪米乌哥斯 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_119 | 亚乌菈·贝拉·菲欧拉 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_120 | 皮奇 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_121 | 养父外貌男子（艾鲁尔连续性待定） | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 默认不转正式世界书实体：称呼未具名或独立持久身份／作用不足，保留作者短档和情境卡。 |
+| CRC_122 | 美杜莎 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 用户实名并确认Phantom与忠于白魔，不能加载同名飞马技能。 |
+| CRC_123 | 欧登 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_124 | 科斯雷 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_125 | 贝克 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |

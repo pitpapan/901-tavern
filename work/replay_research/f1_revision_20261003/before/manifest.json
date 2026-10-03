@@ -1,0 +1,140 @@
+{
+  "id": "REPLAY_F_REVIEW_V1",
+  "version": 1,
+  "created_on": "2026-10-03",
+  "status": "ready_for_user_review",
+  "authorization": {
+    "verbatim": "接受本轮审阅范围，进入F，先做出1和2让我审核",
+    "source": "direct_user_message",
+    "accepted_research_scope": "E集中审阅结果review_packet.md及其当前引用档案",
+    "phase_2_explicitly_authorized": true,
+    "authorized_deliverables": [
+      "F1正式世界书编写稿",
+      "F2人物作者档案、NPC运行卡稿、御临风开局Persona"
+    ],
+    "output_review_status": "pending_user_review"
+  },
+  "scope": {
+    "worldbook": "main-world persistent entities, concepts and important original-history records",
+    "character_archives": "confirmed main-world identities and source-supported behavior with temporal boundaries",
+    "runtime_cards": "reviewable T0-oriented text; timing-uncertain characters restricted to an appropriate later activation",
+    "persona": "user-controlled Yu Linfeng immediately before first imperial-capital action",
+    "deferred": [
+      "F3主持及事件推进系统",
+      "F4酒馆格式导出与自动加载",
+      "G实际导入体验"
+    ],
+    "dreams": "Original archives preserved; dream-only profiles and dream-world entries excluded from this review pack."
+  },
+  "source_of_truth": "New replay draft package. Existing output/worldbook_source.jsonl and current_state.md remain the original continuation branch.",
+  "protected_baselines": {
+    "output/worldbook_source.jsonl": {
+      "sha256": "cb35ea99aa2f86e0a7c4ffce86049d6dab66c93e82b22719771c1ed00c24f3ec"
+    },
+    "current_state.md": {
+      "sha256": "ebf6159bc248600be6371da29bc405bfb781de9e6eaccf700d3dab7e093ed43e"
+    }
+  },
+  "inputs": [
+    "work/replay_research/review_packet.md",
+    "work/replay_research/user_clarifications.md",
+    "work/replay_research/world_model.md",
+    "work/replay_research/empire_dossier.md",
+    "work/replay_research/faction_operations_dossier.md",
+    "work/replay_research/power_rules_dossier.md",
+    "work/replay_research/white_mage_phantom_dossier.md",
+    "work/replay_research/character_coverage.md",
+    "work/replay_research/yulinfeng_identity.jsonl",
+    "work/replay_research/opening_state_consolidated.jsonl"
+  ],
+  "pending_work": [],
+  "counts": {
+    "worldbook_entries": 182,
+    "worldbook_noncharacter": 99,
+    "worldbook_character": 83,
+    "worldbook_types": {
+      "world": 1,
+      "concept": 39,
+      "location": 16,
+      "faction": 17,
+      "event": 26,
+      "character": 83
+    },
+    "npc_author_profiles": 94,
+    "npc_runtime_cards": 94,
+    "opening_card_eligibility": {
+      "encounter_only": 36,
+      "present": 2,
+      "requires_timing_review": 41,
+      "historical_only": 15
+    },
+    "pc_personas": 1,
+    "character_labels_accounted": 125,
+    "character_dispositions": {
+      "user_controlled_persona": 1,
+      "author_profile_and_card": 39,
+      "excluded_dream": 2,
+      "included_author_archive_and_card_draft": 49,
+      "merged_confirmed_label": 2,
+      "identity_unresolved_index_only": 3,
+      "included_historical_background_only": 6,
+      "excluded_special_interlude": 23
+    }
+  },
+  "outputs": [
+    "README.md",
+    "worldbook.md",
+    "worldbook_source.jsonl",
+    "worldbook/world_topic_coverage.jsonl",
+    "characters/index.md",
+    "characters/main_characters.md",
+    "characters/extended_characters.md",
+    "characters/author_profiles.jsonl",
+    "characters/runtime_cards.md",
+    "characters/runtime_cards.jsonl",
+    "characters/all_character_dispositions.jsonl",
+    "persona/yulinfeng.md",
+    "persona/yulinfeng_author.json",
+    "persona/yulinfeng_persona.json",
+    "format.md"
+  ],
+  "review_status": "F1_F2_drafted_pending_user_review",
+  "integrity_check": {
+    "path": "integrity_check.json",
+    "status": "passed",
+    "scope": "new_F1_F2_batch_only",
+    "warnings": []
+  },
+  "limits": [
+    "NPC cards are reviewable prose, not a configured SillyTavern import.",
+    "Cards marked requires_timing_review retain source-scene observations and require a time-appropriate projection before play.",
+    "No F3 narrative director/event runner, F4 loading/export, or G play test produced.",
+    "Source gaps remain explicit; worldbook facts preserve attribution and chronology."
+  ],
+  "user_review_revisions": [
+    {
+      "id": "F1F2_USER_REVIEW_001",
+      "source_id": "UCL_20261003_009",
+      "world_entries": [
+        "WORLD_WRC_005",
+        "WORLD_WRC_044",
+        "WORLD_WRC_068",
+        "WORLD_WRC_071",
+        "WORLD_WRC_072",
+        "CHARACTER_CRC_010"
+      ],
+      "npc_profiles": [
+        "CRC_010"
+      ],
+      "whole_draft_approved": false
+    },
+    {
+      "id": "F1F2_USER_REVIEW_001_FOLLOWUP",
+      "source_id": "UCL_20261003_009",
+      "world_entries": [
+        "WORLD_WRC_011"
+      ],
+      "whole_draft_approved": false
+    }
+  ]
+}
