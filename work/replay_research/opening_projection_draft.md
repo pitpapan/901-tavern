@@ -52,7 +52,7 @@
 
 ## 已定事实与未来因果
 
-帝与哈克的兄弟关系、情感交易和其他已发生前史直接保留。高塔受袭、白魔脱逃与已有独立依据的NPC行动，按自身因果推进；御临风改选只改变确实受到影响的后续。节点不再作为整批等待重新选择的剧情菜单。
+帝与哈克的兄弟关系、情感交易和其他已发生前史直接保留。高塔在边关失守时受到双潮冲击，白魔脱逃已在帝都T0之前完成。其他有独立依据的NPC行动按自身因果推进；御临风改选只改变确实受到影响的后续。[用户澄清](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:243>)。节点不再作为整批等待重新选择的剧情菜单。
 
 [26组事件条件档案](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/event_causality_overview.md>)已分别整理节庆、军政行动、诅咒、龙族危机和跨线行动的发生依据、玩家参与、资源与消息条件。真实改变前提时就更新后果，不替换受害者或补新阴谋来抵消玩家成功；没有默认锁定主角参与、死亡、胜负或情感结果。
 

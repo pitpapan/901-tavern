@@ -1,0 +1,1268 @@
+{
+  "format": "acu-table-checkpoint",
+  "version": 1,
+  "createdAt": 1791091682682,
+  "source": {
+    "storageMode": "sqlite"
+  },
+  "tableSnapshot": {
+    "mate": {
+      "type": "chatSheets",
+      "version": 1,
+      "updateConfigUiSentinel": -1,
+      "globalInjectionConfig": {
+        "readableEntryPlacement": {
+          "position": "before_char",
+          "depth": 2,
+          "order": 99981
+        },
+        "wrapperPlacement": {
+          "position": "before_char",
+          "depth": 2,
+          "order": 99980
+        }
+      }
+    },
+    "sheet_901_scene": {
+      "uid": "sheet_901_scene",
+      "name": "场景状态",
+      "sourceData": {
+        "note": "只记录当前重玩分支中已经发生、明确说出或用户已核定的状态，不复制原团百科、后期结局或作者考据。来源优先为本次聊天的实际叙述与用户澄清；对白中的推测保留说话人及确定性。未知保留未知，未说出的【内心】只归御临风个人，不能据此更新其他人物知情。每条记录填写来源定位；输入未带楼层编号时使用短原话锚点，不编造编号。更新同一对象既有行，避免重复。\n只保留一行，场景标识为 current。时间精度由正文决定，不推算绝对日期或旅程天数。当前行动区分玩家已宣告、执行中、已经完成，提议不是结果。局势只留当前实际障碍或已发生变化，不列假想刺客和固定二选一。每字段以一两句说清。",
+        "initNode": "仅从已核定当前分支聊天初始化；没有证据就保持空表，不补齐未知。",
+        "insertNode": "移动、时间推进、人员离场或主要行动阶段改变时更新同一行。",
+        "updateNode": "移动、时间推进、人员离场或主要行动阶段改变时更新同一行。",
+        "deleteNode": "仅纠正误录或已合并重复项；情报与承诺的已解决内容先压入分支纪要。人物离场只更新出入状态，不删除其记录。",
+        "ddl": "CREATE TABLE replay_scene ( -- 场景状态\n  row_id INTEGER PRIMARY KEY, -- 行号\n  scene_key TEXT UNIQUE, -- 场景标识\n  time_anchor TEXT, -- 时间锚点\n  location TEXT, -- 所在地点\n  present_people TEXT, -- 在场者\n  declared_action TEXT, -- 当前行动\n  situation TEXT, -- 眼前局势\n  source_anchor TEXT -- 依据定位\n);"
+      },
+      "content": [
+        [
+          "row_id",
+          "场景标识",
+          "时间锚点",
+          "所在地点",
+          "在场者",
+          "当前行动",
+          "眼前局势",
+          "依据定位"
+        ],
+        [
+          "1",
+          "current",
+          "入城后的协会询问阶段；绝对日期与时刻未定",
+          "帝都游击士协会接待柜台",
+          "御临风、布莱特、黄泉、接待员菲娜",
+          "御临风已选择先到协会探听情报；刚出示村医推荐信，询问九雪医馆位置，尚未前往医馆。",
+          "边关消息与帝都表面平静的落差仍待查明。最新关于医馆正常接待的答复待主持纠正，不据此判定可住宿。",
+          "当前聊天JSONL第19、23、27行用户；第22行AI入内；作者纠错见情报与承诺。"
+        ]
+      ],
+      "updateConfig": {
+        "uiSentinel": -1,
+        "contextDepth": 4,
+        "updateFrequency": 1,
+        "batchSize": 3,
+        "skipFloors": 1
+      },
+      "exportConfig": {
+        "enabled": true,
+        "injectIntoWorldbook": true,
+        "splitByRow": false,
+        "entryName": "901_场景状态",
+        "entryType": "constant",
+        "keywords": "",
+        "preventRecursion": true,
+        "injectionTemplate": "<901_scene>\n$1\n</901_scene>",
+        "extraIndexEnabled": false,
+        "extraIndexEntryName": "901_场景状态_索引",
+        "extraIndexColumns": [],
+        "extraIndexColumnModes": {},
+        "extraIndexInjectionTemplate": "",
+        "sqlInjectionTemplate": "",
+        "entryPlacement": {
+          "position": "after_character_definition",
+          "depth": 2,
+          "order": 650
+        },
+        "extraIndexPlacement": {
+          "position": "after_character_definition",
+          "depth": 2,
+          "order": 651
+        },
+        "fixedEntryPlacement": {
+          "position": "after_character_definition",
+          "depth": 2,
+          "order": 650
+        },
+        "fixedIndexPlacement": {
+          "position": "after_character_definition",
+          "depth": 2,
+          "order": 651
+        }
+      },
+      "orderNo": 0
+    },
+    "sheet_901_people": {
+      "uid": "sheet_901_people",
+      "name": "人物动态",
+      "sourceData": {
+        "note": "只记录当前重玩分支中已经发生、明确说出或用户已核定的状态，不复制原团百科、后期结局或作者考据。来源优先为本次聊天的实际叙述与用户澄清；对白中的推测保留说话人及确定性。未知保留未知，未说出的【内心】只归御临风个人，不能据此更新其他人物知情。每条记录填写来源定位；输入未带楼层编号时使用短原话锚点，不编造编号。更新同一对象既有行，避免重复。\n只写出现过的具名人物的动态变化，不重抄身世、性格、技能清单。明确意图须来自其发言或行动，未表露的动机记未知。身体状态沿实际施法、受伤、休息更新，历史受伤不等于持续虚弱。关系变化用具体承诺、冲突、合作记录，不发明好感数值。离场人物保留已证变化，知情在情报与承诺表单独记录。姓名不能只因相似就合并。",
+        "initNode": "仅从已核定当前分支聊天初始化；没有证据就保持空表，不补齐未知。",
+        "insertNode": "人物初次实际出场，或已有动态发生变化时写入；普通同声复述不追加行。",
+        "updateNode": "人物初次实际出场，或已有动态发生变化时写入；普通同声复述不追加行。",
+        "deleteNode": "仅纠正误录或已合并重复项；情报与承诺的已解决内容先压入分支纪要。人物离场只更新出入状态，不删除其记录。",
+        "ddl": "CREATE TABLE replay_people ( -- 人物动态\n  row_id INTEGER PRIMARY KEY, -- 行号\n  person_name TEXT UNIQUE, -- 人物姓名\n  presence TEXT, -- 出入状态\n  current_intent TEXT, -- 明确意图\n  condition TEXT, -- 身体状态\n  observed_change TEXT, -- 关系变化\n  source_anchor TEXT -- 依据定位\n);"
+      },
+      "content": [
+        [
+          "row_id",
+          "人物姓名",
+          "出入状态",
+          "明确意图",
+          "身体状态",
+          "关系变化",
+          "依据定位"
+        ],
+        [
+          "1",
+          "御临风",
+          "在协会柜台",
+          "先借协会获取情报，希望在必要时引出关注者，并向合适的人传达边关情况。刚询问九雪医馆位置。",
+          "用户明确不会骑马；其他即时体力、伤势余量未重新核定。",
+          "同行关系延续；由自己说明行动，已请布莱特先接洽。",
+          "当前聊天JSONL第17、19、23、27行用户"
+        ],
+        [
+          "2",
+          "布莱特",
+          "在协会柜台",
+          "已随行到协会，被御临风请托出面接洽。",
+          "失明背景保留；本分支未新增已核伤势或资源数值。",
+          "御临风称其大叔并请其接洽；称呼不确立训导关系。",
+          "当前聊天JSONL第15、23行用户；第24行AI"
+        ],
+        [
+          "3",
+          "黄泉",
+          "在协会柜台",
+          "与御临风、布莱特同行；后续具体分工未由用户重新核定。",
+          "村庄苏醒后已调养并旅行多日；当前灵力余量未记，不据旧温养经历判定持续虚弱。",
+          "保持同行关系；没有新证据建立新的固定从属或爱情关系。",
+          "开局卡黄泉；当前聊天JSONL第22行AI"
+        ],
+        [
+          "4",
+          "菲娜",
+          "协会接待柜台",
+          "正在回答一行的询问。",
+          "本分支未说明。",
+          "本次重玩出现的接待员称呼；不是原团正式人物身份补全。",
+          "当前聊天JSONL第24、26、28行AI；作者核定保留分支名"
+        ]
+      ],
+      "updateConfig": {
+        "uiSentinel": -1,
+        "contextDepth": 4,
+        "updateFrequency": 1,
+        "batchSize": 3,
+        "skipFloors": 1
+      },
+      "exportConfig": {
+        "enabled": true,
+        "injectIntoWorldbook": true,
+        "splitByRow": true,
+        "entryName": "901_人物动态",
+        "entryType": "keyword",
+        "keywords": "人物姓名",
+        "preventRecursion": true,
+        "injectionTemplate": "<901_people>\n$1\n</901_people>",
+        "extraIndexEnabled": false,
+        "extraIndexEntryName": "901_人物动态_索引",
+        "extraIndexColumns": [],
+        "extraIndexColumnModes": {},
+        "extraIndexInjectionTemplate": "",
+        "sqlInjectionTemplate": "",
+        "entryPlacement": {
+          "position": "after_character_definition",
+          "depth": 2,
+          "order": 660
+        },
+        "extraIndexPlacement": {
+          "position": "after_character_definition",
+          "depth": 2,
+          "order": 661
+        },
+        "fixedEntryPlacement": {
+          "position": "after_character_definition",
+          "depth": 2,
+          "order": 660
+        },
+        "fixedIndexPlacement": {
+          "position": "after_character_definition",
+          "depth": 2,
+          "order": 661
+        }
+      },
+      "orderNo": 1
+    },
+    "sheet_901_resources": {
+      "uid": "sheet_901_resources",
+      "name": "物资变化",
+      "sourceData": {
+        "note": "只记录当前重玩分支中已经发生、明确说出或用户已核定的状态，不复制原团百科、后期结局或作者考据。来源优先为本次聊天的实际叙述与用户澄清；对白中的推测保留说话人及确定性。未知保留未知，未说出的【内心】只归御临风个人，不能据此更新其他人物知情。每条记录填写来源定位；输入未带楼层编号时使用短原话锚点，不编造编号。更新同一对象既有行，避免重复。\n记录影响近期行动且在本分支被确认取得、交付、使用、遗失或消耗的金钱、药品、凭证、装备及坐骑。每个持有人与物品只有一行。未知数量写未知，不以最初账目重置旅途后余额。剑招与能力不是物品，不填早期/后期作者分期。计划购买和建议交付尚未完成时不改余额。",
+        "initNode": "仅从已核定当前分支聊天初始化；没有证据就保持空表，不补齐未知。",
+        "insertNode": "物资持有、数量、存放位置或可用性被明确改变时更新。",
+        "updateNode": "物资持有、数量、存放位置或可用性被明确改变时更新。",
+        "deleteNode": "仅纠正误录或已合并重复项；情报与承诺的已解决内容先压入分支纪要。人物离场只更新出入状态，不删除其记录。",
+        "ddl": "CREATE TABLE replay_resources ( -- 物资变化\n  row_id INTEGER PRIMARY KEY, -- 行号\n  asset_key TEXT UNIQUE, -- 物资标识\n  holder TEXT, -- 持有人\n  object_name TEXT, -- 物资名称\n  quantity TEXT, -- 当前数量\n  condition TEXT, -- 使用状态\n  source_anchor TEXT -- 依据定位\n);"
+      },
+      "content": [
+        [
+          "row_id",
+          "物资标识",
+          "持有人",
+          "物资名称",
+          "当前数量",
+          "使用状态",
+          "依据定位"
+        ],
+        [
+          "1",
+          "yulinfeng_armor",
+          "御临风",
+          "士兵轻甲",
+          "1件",
+          "已包裹隐藏于驮包，入协会前由御临风亲自背走；当前未交出。",
+          "当前聊天JSONL第5、7、21行用户；第8、22行AI"
+        ],
+        [
+          "2",
+          "yulinfeng_sword",
+          "御临风",
+          "长剑",
+          "1柄",
+          "已在入城盘问时报出佩剑；后续无已核交付或遗失。",
+          "当前聊天JSONL第13行用户"
+        ],
+        [
+          "3",
+          "yulinfeng_letter",
+          "御临风",
+          "村医推荐信",
+          "1封",
+          "已在协会柜台出示并询问九雪医馆位置；推荐信不证明目的地现在能够住宿。",
+          "当前聊天JSONL第27行用户"
+        ],
+        [
+          "4",
+          "party_horses",
+          "同行一行",
+          "坐骑",
+          "2匹",
+          "抵都后随行至协会；AI描述交由协会后院马厩照管。御临风已自行取走装甲驮包。",
+          "开局种子；当前聊天JSONL第21行用户、第22行AI"
+        ]
+      ],
+      "updateConfig": {
+        "uiSentinel": -1,
+        "contextDepth": 4,
+        "updateFrequency": 1,
+        "batchSize": 3,
+        "skipFloors": 1
+      },
+      "exportConfig": {
+        "enabled": true,
+        "injectIntoWorldbook": true,
+        "splitByRow": false,
+        "entryName": "901_物资变化",
+        "entryType": "constant",
+        "keywords": "",
+        "preventRecursion": true,
+        "injectionTemplate": "<901_resources>\n$1\n</901_resources>",
+        "extraIndexEnabled": false,
+        "extraIndexEntryName": "901_物资变化_索引",
+        "extraIndexColumns": [],
+        "extraIndexColumnModes": {},
+        "extraIndexInjectionTemplate": "",
+        "sqlInjectionTemplate": "",
+        "entryPlacement": {
+          "position": "after_character_definition",
+          "depth": 2,
+          "order": 670
+        },
+        "extraIndexPlacement": {
+          "position": "after_character_definition",
+          "depth": 2,
+          "order": 671
+        },
+        "fixedEntryPlacement": {
+          "position": "after_character_definition",
+          "depth": 2,
+          "order": 670
+        },
+        "fixedIndexPlacement": {
+          "position": "after_character_definition",
+          "depth": 2,
+          "order": 671
+        }
+      },
+      "orderNo": 2
+    },
+    "sheet_901_threads": {
+      "uid": "sheet_901_threads",
+      "name": "情报与承诺",
+      "sourceData": {
+        "note": "只记录当前重玩分支中已经发生、明确说出或用户已核定的状态，不复制原团百科、后期结局或作者考据。来源优先为本次聊天的实际叙述与用户澄清；对白中的推测保留说话人及确定性。未知保留未知，未说出的【内心】只归御临风个人，不能据此更新其他人物知情。每条记录填写来源定位；输入未带楼层编号时使用短原话锚点，不编造编号。更新同一对象既有行，避免重复。\n每行一个待办、承诺、线索或待核实判断。事项类别只填情报/承诺/目标/作者校正；作者校正仅供主持，不能成为角色已知情报。确定性使用 confirmed/uncertain/rumor/character_belief：confirmed只确认实际事件，转述默认只确认有人这样说，内容本身另判。知情者列明确知道这一内容的人，不自动扩大到全队或全帝都。已选择目标保留至完成/改变；NPC提醒不使用户选择失效。只保留仍相关事项，已解决事项压入分支纪要后移出；有时限才填入具体内容。",
+        "initNode": "仅从已核定当前分支聊天初始化；没有证据就保持空表，不补齐未知。",
+        "insertNode": "实际得到新信息、做出承诺、玩家明确选择目标或事项得到结果时更新；不预测新阴谋。",
+        "updateNode": "实际得到新信息、做出承诺、玩家明确选择目标或事项得到结果时更新；不预测新阴谋。",
+        "deleteNode": "仅纠正误录或已合并重复项；情报与承诺的已解决内容先压入分支纪要。人物离场只更新出入状态，不删除其记录。",
+        "ddl": "CREATE TABLE replay_threads ( -- 情报与承诺\n  row_id INTEGER PRIMARY KEY, -- 行号\n  thread_key TEXT UNIQUE, -- 事项标识\n  subject_keys TEXT, -- 关联对象\n  kind TEXT, -- 事项类别\n  proposition TEXT, -- 具体内容\n  certainty TEXT, -- 确定性\n  information_source TEXT, -- 消息来源\n  knows TEXT, -- 知情者\n  status TEXT, -- 进展状态\n  source_anchor TEXT -- 依据定位\n);"
+      },
+      "content": [
+        [
+          "row_id",
+          "事项标识",
+          "关联对象",
+          "事项类别",
+          "具体内容",
+          "确定性",
+          "消息来源",
+          "知情者",
+          "进展状态",
+          "依据定位"
+        ],
+        [
+          "1",
+          "border_message",
+          "帝都,游击士协会",
+          "目标",
+          "御临风选择先去协会获取相关情报，再寻找合适渠道传达边关实际情况；尚未完成可靠传讯。",
+          "confirmed",
+          "御临风明确的行动选择",
+          "御临风、布莱特、黄泉；柜台是否听到全部目标未定",
+          "进行中",
+          "当前聊天JSONL第17、19、23行用户"
+        ],
+        [
+          "2",
+          "infiltration_hypothesis",
+          "帝都,御临风",
+          "情报",
+          "御临风提出：假如消息一直被封锁，魔兽方面可能已有人渗透帝都；这是条件性推测，没有在本分支查证。",
+          "character_belief",
+          "御临风说话",
+          "御临风、布莱特、黄泉",
+          "待核实",
+          "当前聊天JSONL第17行用户"
+        ],
+        [
+          "3",
+          "clinic_location_query",
+          "九雪医馆",
+          "目标",
+          "御临风出示村医推荐信，询问九雪医馆位置，希望此后前往；地点问询尚未以修正后的答复落实。",
+          "confirmed",
+          "御临风说话及出示推荐信",
+          "御临风、布莱特、黄泉、菲娜",
+          "等待回答",
+          "当前聊天JSONL第27行用户"
+        ],
+        [
+          "4",
+          "clinic_author_correction",
+          "九雪医馆",
+          "作者校正",
+          "九雪医馆在抵都前已经受牵连遭查封、馆内人员被拘押，尚无本分支事件解除。最新AI把医馆写成安稳可借宿，是生成错误，不能以菲娜撒谎、过时消息或暗中交易为它补造动机。协会已掌握相关刺杀指控及医馆人员被捕，正在调查其所怀疑的达卡斯撤单问题；怀疑不等于真相已明。这属于主持及协会方面的资料，不自动变成御临风与同行者已知。后续沿当前推荐信问询纠正答复，实际告诉多少由接待人员职责与场景交流决定。",
+          "confirmed",
+          "用户指出试跑错误；已审医馆及协会背景；本轮主代理核定",
+          "主持；协会掌握指控、拘捕及调查事项；御临风与同行者尚需经场景交流获知",
+          "需纠正最新答复",
+          "901_帝都重玩_T0_v1“九雪医馆”；本轮用户反馈"
+        ],
+        [
+          "5",
+          "guild_author_correction",
+          "游击士协会",
+          "作者校正",
+          "此前AI将协会概括为绝对不能接触军政、没有可靠传讯或联络门路，不作为已经证实的全组织制度。具体协助与限制依已审协会设定、相关人物实际权限和本分支接洽结果判断。",
+          "confirmed",
+          "试跑纠错与主持资料",
+          "仅主持；角色可以保留已说过话的场景记录，但错误结论不作世界法则",
+          "后续依具体接洽继续",
+          "本轮试跑纠错；已审协会设定"
+        ],
+        [
+          "6",
+          "unsupported_chat_background",
+          "边关,帝都,游击士协会",
+          "作者校正",
+          "旧聊天中AI自行添入的“黑松隘口”“第三近卫团”“普遍封口”“两队B级调查”等，均不作为本分支已经证实的背景、军制或行动记录。保留玩家真实选择、携物、问询与条件性猜测；不为迁就生成错误而给菲娜编造撒谎动机，也不从这些词继续放大阴谋。",
+          "confirmed",
+          "本轮试跑纠错，主代理核定",
+          "仅主持；不把这些生成词改写为角色已知的世界事实",
+          "后续忽略旧AI未获依据的背景结论",
+          "当前聊天生成内容；本轮适配审阅"
+        ]
+      ],
+      "updateConfig": {
+        "uiSentinel": -1,
+        "contextDepth": 4,
+        "updateFrequency": 1,
+        "batchSize": 3,
+        "skipFloors": 1
+      },
+      "exportConfig": {
+        "enabled": true,
+        "injectIntoWorldbook": true,
+        "splitByRow": false,
+        "entryName": "901_情报与承诺",
+        "entryType": "constant",
+        "keywords": "",
+        "preventRecursion": true,
+        "injectionTemplate": "<901_threads>\n$1\n</901_threads>",
+        "extraIndexEnabled": false,
+        "extraIndexEntryName": "901_情报与承诺_索引",
+        "extraIndexColumns": [],
+        "extraIndexColumnModes": {},
+        "extraIndexInjectionTemplate": "",
+        "sqlInjectionTemplate": "",
+        "entryPlacement": {
+          "position": "after_character_definition",
+          "depth": 2,
+          "order": 680
+        },
+        "extraIndexPlacement": {
+          "position": "after_character_definition",
+          "depth": 2,
+          "order": 681
+        },
+        "fixedEntryPlacement": {
+          "position": "after_character_definition",
+          "depth": 2,
+          "order": 680
+        },
+        "fixedIndexPlacement": {
+          "position": "after_character_definition",
+          "depth": 2,
+          "order": 681
+        }
+      },
+      "orderNo": 3
+    },
+    "sheet_901_memory": {
+      "uid": "sheet_901_memory",
+      "name": "分支纪要",
+      "sourceData": {
+        "note": "只记录当前重玩分支中已经发生、明确说出或用户已核定的状态，不复制原团百科、后期结局或作者考据。来源优先为本次聊天的实际叙述与用户澄清；对白中的推测保留说话人及确定性。未知保留未知，未说出的【内心】只归御临风个人，不能据此更新其他人物知情。每条记录填写来源定位；输入未带楼层编号时使用短原话锚点，不编造编号。更新同一对象既有行，避免重复。\n仅记录本分支有持续影响的已发生事件，每件一行，保留原因、结果和仍在生效的影响。日常寒暄和重复劝告不必入表。一个场景连续动作合并为一条简短纪要，不按每轮强制新增。触发名称只填本事件涉及的正式人名、地点或具名组织，以英文逗号分隔，不用今天/帝国/事情等泛词。人物推测与传闻必须标记并写清归属，未来计划不能当已经发生。",
+        "initNode": "仅从已核定当前分支聊天初始化；没有证据就保持空表，不补齐未知。",
+        "insertNode": "场景结束或出现持久结果时添加/完善；不根据旧团未来章节自动补完。",
+        "updateNode": "场景结束或出现持久结果时添加/完善；不根据旧团未来章节自动补完。",
+        "deleteNode": "仅纠正误录或已合并重复项；情报与承诺的已解决内容先压入分支纪要。人物离场只更新出入状态，不删除其记录。",
+        "ddl": "CREATE TABLE replay_memory ( -- 分支纪要\n  row_id INTEGER PRIMARY KEY, -- 行号\n  event_key TEXT UNIQUE, -- 事件标识\n  trigger_names TEXT, -- 触发名称\n  time_anchor TEXT, -- 发生时间\n  summary TEXT, -- 事件及结果\n  certainty TEXT, -- 确定性\n  knows TEXT, -- 知情范围\n  source_anchor TEXT -- 依据定位\n);"
+      },
+      "content": [
+        [
+          "row_id",
+          "事件标识",
+          "触发名称",
+          "发生时间",
+          "事件及结果",
+          "确定性",
+          "知情范围",
+          "依据定位"
+        ],
+        [
+          "1",
+          "arrival_and_entry",
+          "御临风,布莱特,黄泉",
+          "本分支抵都当天",
+          "三人抵达帝都附近。御临风担心军甲引来盘问，接受包裹隐藏军甲的办法，以想来帝都碰碰运气的新人身份答话，并报上御临风与佩长剑；随后一行获准入城。",
+          "confirmed",
+          "御临风、布莱特、黄泉；守卫仅知道实际说出的身份与所见",
+          "当前聊天JSONL第3、5、7、11、13行用户；第14行AI"
+        ],
+        [
+          "2",
+          "guild_visit",
+          "御临风,布莱特,黄泉,游击士协会",
+          "入城后",
+          "御临风说明自己要先从协会获得情报，并明确决定先去协会。到门口后，他亲自背走装着军甲的驮包，随后请布莱特出面接洽。",
+          "confirmed",
+          "御临风、布莱特、黄泉",
+          "当前聊天JSONL第17、19、21、23行用户；第22行AI"
+        ]
+      ],
+      "updateConfig": {
+        "uiSentinel": -1,
+        "contextDepth": 4,
+        "updateFrequency": 3,
+        "batchSize": 3,
+        "skipFloors": 1
+      },
+      "exportConfig": {
+        "enabled": true,
+        "injectIntoWorldbook": true,
+        "splitByRow": true,
+        "entryName": "901_分支纪要",
+        "entryType": "keyword",
+        "keywords": "触发名称",
+        "preventRecursion": true,
+        "injectionTemplate": "<901_memory>\n$1\n</901_memory>",
+        "extraIndexEnabled": false,
+        "extraIndexEntryName": "901_分支纪要_索引",
+        "extraIndexColumns": [],
+        "extraIndexColumnModes": {},
+        "extraIndexInjectionTemplate": "",
+        "sqlInjectionTemplate": "",
+        "entryPlacement": {
+          "position": "after_character_definition",
+          "depth": 2,
+          "order": 690
+        },
+        "extraIndexPlacement": {
+          "position": "after_character_definition",
+          "depth": 2,
+          "order": 691
+        },
+        "fixedEntryPlacement": {
+          "position": "after_character_definition",
+          "depth": 2,
+          "order": 690
+        },
+        "fixedIndexPlacement": {
+          "position": "after_character_definition",
+          "depth": 2,
+          "order": 691
+        }
+      },
+      "orderNo": 4
+    }
+  },
+  "templateSnapshot": {
+    "data": {
+      "mate": {
+        "type": "chatSheets",
+        "version": 1,
+        "updateConfigUiSentinel": -1,
+        "globalInjectionConfig": {
+          "readableEntryPlacement": {
+            "position": "before_char",
+            "depth": 2,
+            "order": 99981
+          },
+          "wrapperPlacement": {
+            "position": "before_char",
+            "depth": 2,
+            "order": 99980
+          }
+        }
+      },
+      "sheet_901_scene": {
+        "uid": "sheet_901_scene",
+        "name": "场景状态",
+        "sourceData": {
+          "note": "只记录当前重玩分支中已经发生、明确说出或用户已核定的状态，不复制原团百科、后期结局或作者考据。来源优先为本次聊天的实际叙述与用户澄清；对白中的推测保留说话人及确定性。未知保留未知，未说出的【内心】只归御临风个人，不能据此更新其他人物知情。每条记录填写来源定位；输入未带楼层编号时使用短原话锚点，不编造编号。更新同一对象既有行，避免重复。\n只保留一行，场景标识为 current。时间精度由正文决定，不推算绝对日期或旅程天数。当前行动区分玩家已宣告、执行中、已经完成，提议不是结果。局势只留当前实际障碍或已发生变化，不列假想刺客和固定二选一。每字段以一两句说清。",
+          "initNode": "仅从已核定当前分支聊天初始化；没有证据就保持空表，不补齐未知。",
+          "insertNode": "移动、时间推进、人员离场或主要行动阶段改变时更新同一行。",
+          "updateNode": "移动、时间推进、人员离场或主要行动阶段改变时更新同一行。",
+          "deleteNode": "仅纠正误录或已合并重复项；情报与承诺的已解决内容先压入分支纪要。人物离场只更新出入状态，不删除其记录。",
+          "ddl": "CREATE TABLE replay_scene ( -- 场景状态\n  row_id INTEGER PRIMARY KEY, -- 行号\n  scene_key TEXT UNIQUE, -- 场景标识\n  time_anchor TEXT, -- 时间锚点\n  location TEXT, -- 所在地点\n  present_people TEXT, -- 在场者\n  declared_action TEXT, -- 当前行动\n  situation TEXT, -- 眼前局势\n  source_anchor TEXT -- 依据定位\n);"
+        },
+        "content": [
+          [
+            "row_id",
+            "场景标识",
+            "时间锚点",
+            "所在地点",
+            "在场者",
+            "当前行动",
+            "眼前局势",
+            "依据定位"
+          ]
+        ],
+        "updateConfig": {
+          "uiSentinel": -1,
+          "contextDepth": 4,
+          "updateFrequency": 1,
+          "batchSize": 3,
+          "skipFloors": 1
+        },
+        "exportConfig": {
+          "enabled": true,
+          "injectIntoWorldbook": true,
+          "splitByRow": false,
+          "entryName": "901_场景状态",
+          "entryType": "constant",
+          "keywords": "",
+          "preventRecursion": true,
+          "injectionTemplate": "<901_scene>\n$1\n</901_scene>",
+          "extraIndexEnabled": false,
+          "extraIndexEntryName": "901_场景状态_索引",
+          "extraIndexColumns": [],
+          "extraIndexColumnModes": {},
+          "extraIndexInjectionTemplate": "",
+          "sqlInjectionTemplate": "",
+          "entryPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 650
+          },
+          "extraIndexPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 651
+          },
+          "fixedEntryPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 650
+          },
+          "fixedIndexPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 651
+          }
+        },
+        "orderNo": 0
+      },
+      "sheet_901_people": {
+        "uid": "sheet_901_people",
+        "name": "人物动态",
+        "sourceData": {
+          "note": "只记录当前重玩分支中已经发生、明确说出或用户已核定的状态，不复制原团百科、后期结局或作者考据。来源优先为本次聊天的实际叙述与用户澄清；对白中的推测保留说话人及确定性。未知保留未知，未说出的【内心】只归御临风个人，不能据此更新其他人物知情。每条记录填写来源定位；输入未带楼层编号时使用短原话锚点，不编造编号。更新同一对象既有行，避免重复。\n只写出现过的具名人物的动态变化，不重抄身世、性格、技能清单。明确意图须来自其发言或行动，未表露的动机记未知。身体状态沿实际施法、受伤、休息更新，历史受伤不等于持续虚弱。关系变化用具体承诺、冲突、合作记录，不发明好感数值。离场人物保留已证变化，知情在情报与承诺表单独记录。姓名不能只因相似就合并。",
+          "initNode": "仅从已核定当前分支聊天初始化；没有证据就保持空表，不补齐未知。",
+          "insertNode": "人物初次实际出场，或已有动态发生变化时写入；普通同声复述不追加行。",
+          "updateNode": "人物初次实际出场，或已有动态发生变化时写入；普通同声复述不追加行。",
+          "deleteNode": "仅纠正误录或已合并重复项；情报与承诺的已解决内容先压入分支纪要。人物离场只更新出入状态，不删除其记录。",
+          "ddl": "CREATE TABLE replay_people ( -- 人物动态\n  row_id INTEGER PRIMARY KEY, -- 行号\n  person_name TEXT UNIQUE, -- 人物姓名\n  presence TEXT, -- 出入状态\n  current_intent TEXT, -- 明确意图\n  condition TEXT, -- 身体状态\n  observed_change TEXT, -- 关系变化\n  source_anchor TEXT -- 依据定位\n);"
+        },
+        "content": [
+          [
+            "row_id",
+            "人物姓名",
+            "出入状态",
+            "明确意图",
+            "身体状态",
+            "关系变化",
+            "依据定位"
+          ]
+        ],
+        "updateConfig": {
+          "uiSentinel": -1,
+          "contextDepth": 4,
+          "updateFrequency": 1,
+          "batchSize": 3,
+          "skipFloors": 1
+        },
+        "exportConfig": {
+          "enabled": true,
+          "injectIntoWorldbook": true,
+          "splitByRow": true,
+          "entryName": "901_人物动态",
+          "entryType": "keyword",
+          "keywords": "人物姓名",
+          "preventRecursion": true,
+          "injectionTemplate": "<901_people>\n$1\n</901_people>",
+          "extraIndexEnabled": false,
+          "extraIndexEntryName": "901_人物动态_索引",
+          "extraIndexColumns": [],
+          "extraIndexColumnModes": {},
+          "extraIndexInjectionTemplate": "",
+          "sqlInjectionTemplate": "",
+          "entryPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 660
+          },
+          "extraIndexPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 661
+          },
+          "fixedEntryPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 660
+          },
+          "fixedIndexPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 661
+          }
+        },
+        "orderNo": 1
+      },
+      "sheet_901_resources": {
+        "uid": "sheet_901_resources",
+        "name": "物资变化",
+        "sourceData": {
+          "note": "只记录当前重玩分支中已经发生、明确说出或用户已核定的状态，不复制原团百科、后期结局或作者考据。来源优先为本次聊天的实际叙述与用户澄清；对白中的推测保留说话人及确定性。未知保留未知，未说出的【内心】只归御临风个人，不能据此更新其他人物知情。每条记录填写来源定位；输入未带楼层编号时使用短原话锚点，不编造编号。更新同一对象既有行，避免重复。\n记录影响近期行动且在本分支被确认取得、交付、使用、遗失或消耗的金钱、药品、凭证、装备及坐骑。每个持有人与物品只有一行。未知数量写未知，不以最初账目重置旅途后余额。剑招与能力不是物品，不填早期/后期作者分期。计划购买和建议交付尚未完成时不改余额。",
+          "initNode": "仅从已核定当前分支聊天初始化；没有证据就保持空表，不补齐未知。",
+          "insertNode": "物资持有、数量、存放位置或可用性被明确改变时更新。",
+          "updateNode": "物资持有、数量、存放位置或可用性被明确改变时更新。",
+          "deleteNode": "仅纠正误录或已合并重复项；情报与承诺的已解决内容先压入分支纪要。人物离场只更新出入状态，不删除其记录。",
+          "ddl": "CREATE TABLE replay_resources ( -- 物资变化\n  row_id INTEGER PRIMARY KEY, -- 行号\n  asset_key TEXT UNIQUE, -- 物资标识\n  holder TEXT, -- 持有人\n  object_name TEXT, -- 物资名称\n  quantity TEXT, -- 当前数量\n  condition TEXT, -- 使用状态\n  source_anchor TEXT -- 依据定位\n);"
+        },
+        "content": [
+          [
+            "row_id",
+            "物资标识",
+            "持有人",
+            "物资名称",
+            "当前数量",
+            "使用状态",
+            "依据定位"
+          ]
+        ],
+        "updateConfig": {
+          "uiSentinel": -1,
+          "contextDepth": 4,
+          "updateFrequency": 1,
+          "batchSize": 3,
+          "skipFloors": 1
+        },
+        "exportConfig": {
+          "enabled": true,
+          "injectIntoWorldbook": true,
+          "splitByRow": false,
+          "entryName": "901_物资变化",
+          "entryType": "constant",
+          "keywords": "",
+          "preventRecursion": true,
+          "injectionTemplate": "<901_resources>\n$1\n</901_resources>",
+          "extraIndexEnabled": false,
+          "extraIndexEntryName": "901_物资变化_索引",
+          "extraIndexColumns": [],
+          "extraIndexColumnModes": {},
+          "extraIndexInjectionTemplate": "",
+          "sqlInjectionTemplate": "",
+          "entryPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 670
+          },
+          "extraIndexPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 671
+          },
+          "fixedEntryPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 670
+          },
+          "fixedIndexPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 671
+          }
+        },
+        "orderNo": 2
+      },
+      "sheet_901_threads": {
+        "uid": "sheet_901_threads",
+        "name": "情报与承诺",
+        "sourceData": {
+          "note": "只记录当前重玩分支中已经发生、明确说出或用户已核定的状态，不复制原团百科、后期结局或作者考据。来源优先为本次聊天的实际叙述与用户澄清；对白中的推测保留说话人及确定性。未知保留未知，未说出的【内心】只归御临风个人，不能据此更新其他人物知情。每条记录填写来源定位；输入未带楼层编号时使用短原话锚点，不编造编号。更新同一对象既有行，避免重复。\n每行一个待办、承诺、线索或待核实判断。事项类别只填情报/承诺/目标/作者校正；作者校正仅供主持，不能成为角色已知情报。确定性使用 confirmed/uncertain/rumor/character_belief：confirmed只确认实际事件，转述默认只确认有人这样说，内容本身另判。知情者列明确知道这一内容的人，不自动扩大到全队或全帝都。已选择目标保留至完成/改变；NPC提醒不使用户选择失效。只保留仍相关事项，已解决事项压入分支纪要后移出；有时限才填入具体内容。",
+          "initNode": "仅从已核定当前分支聊天初始化；没有证据就保持空表，不补齐未知。",
+          "insertNode": "实际得到新信息、做出承诺、玩家明确选择目标或事项得到结果时更新；不预测新阴谋。",
+          "updateNode": "实际得到新信息、做出承诺、玩家明确选择目标或事项得到结果时更新；不预测新阴谋。",
+          "deleteNode": "仅纠正误录或已合并重复项；情报与承诺的已解决内容先压入分支纪要。人物离场只更新出入状态，不删除其记录。",
+          "ddl": "CREATE TABLE replay_threads ( -- 情报与承诺\n  row_id INTEGER PRIMARY KEY, -- 行号\n  thread_key TEXT UNIQUE, -- 事项标识\n  subject_keys TEXT, -- 关联对象\n  kind TEXT, -- 事项类别\n  proposition TEXT, -- 具体内容\n  certainty TEXT, -- 确定性\n  information_source TEXT, -- 消息来源\n  knows TEXT, -- 知情者\n  status TEXT, -- 进展状态\n  source_anchor TEXT -- 依据定位\n);"
+        },
+        "content": [
+          [
+            "row_id",
+            "事项标识",
+            "关联对象",
+            "事项类别",
+            "具体内容",
+            "确定性",
+            "消息来源",
+            "知情者",
+            "进展状态",
+            "依据定位"
+          ]
+        ],
+        "updateConfig": {
+          "uiSentinel": -1,
+          "contextDepth": 4,
+          "updateFrequency": 1,
+          "batchSize": 3,
+          "skipFloors": 1
+        },
+        "exportConfig": {
+          "enabled": true,
+          "injectIntoWorldbook": true,
+          "splitByRow": false,
+          "entryName": "901_情报与承诺",
+          "entryType": "constant",
+          "keywords": "",
+          "preventRecursion": true,
+          "injectionTemplate": "<901_threads>\n$1\n</901_threads>",
+          "extraIndexEnabled": false,
+          "extraIndexEntryName": "901_情报与承诺_索引",
+          "extraIndexColumns": [],
+          "extraIndexColumnModes": {},
+          "extraIndexInjectionTemplate": "",
+          "sqlInjectionTemplate": "",
+          "entryPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 680
+          },
+          "extraIndexPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 681
+          },
+          "fixedEntryPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 680
+          },
+          "fixedIndexPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 681
+          }
+        },
+        "orderNo": 3
+      },
+      "sheet_901_memory": {
+        "uid": "sheet_901_memory",
+        "name": "分支纪要",
+        "sourceData": {
+          "note": "只记录当前重玩分支中已经发生、明确说出或用户已核定的状态，不复制原团百科、后期结局或作者考据。来源优先为本次聊天的实际叙述与用户澄清；对白中的推测保留说话人及确定性。未知保留未知，未说出的【内心】只归御临风个人，不能据此更新其他人物知情。每条记录填写来源定位；输入未带楼层编号时使用短原话锚点，不编造编号。更新同一对象既有行，避免重复。\n仅记录本分支有持续影响的已发生事件，每件一行，保留原因、结果和仍在生效的影响。日常寒暄和重复劝告不必入表。一个场景连续动作合并为一条简短纪要，不按每轮强制新增。触发名称只填本事件涉及的正式人名、地点或具名组织，以英文逗号分隔，不用今天/帝国/事情等泛词。人物推测与传闻必须标记并写清归属，未来计划不能当已经发生。",
+          "initNode": "仅从已核定当前分支聊天初始化；没有证据就保持空表，不补齐未知。",
+          "insertNode": "场景结束或出现持久结果时添加/完善；不根据旧团未来章节自动补完。",
+          "updateNode": "场景结束或出现持久结果时添加/完善；不根据旧团未来章节自动补完。",
+          "deleteNode": "仅纠正误录或已合并重复项；情报与承诺的已解决内容先压入分支纪要。人物离场只更新出入状态，不删除其记录。",
+          "ddl": "CREATE TABLE replay_memory ( -- 分支纪要\n  row_id INTEGER PRIMARY KEY, -- 行号\n  event_key TEXT UNIQUE, -- 事件标识\n  trigger_names TEXT, -- 触发名称\n  time_anchor TEXT, -- 发生时间\n  summary TEXT, -- 事件及结果\n  certainty TEXT, -- 确定性\n  knows TEXT, -- 知情范围\n  source_anchor TEXT -- 依据定位\n);"
+        },
+        "content": [
+          [
+            "row_id",
+            "事件标识",
+            "触发名称",
+            "发生时间",
+            "事件及结果",
+            "确定性",
+            "知情范围",
+            "依据定位"
+          ]
+        ],
+        "updateConfig": {
+          "uiSentinel": -1,
+          "contextDepth": 4,
+          "updateFrequency": 3,
+          "batchSize": 3,
+          "skipFloors": 1
+        },
+        "exportConfig": {
+          "enabled": true,
+          "injectIntoWorldbook": true,
+          "splitByRow": true,
+          "entryName": "901_分支纪要",
+          "entryType": "keyword",
+          "keywords": "触发名称",
+          "preventRecursion": true,
+          "injectionTemplate": "<901_memory>\n$1\n</901_memory>",
+          "extraIndexEnabled": false,
+          "extraIndexEntryName": "901_分支纪要_索引",
+          "extraIndexColumns": [],
+          "extraIndexColumnModes": {},
+          "extraIndexInjectionTemplate": "",
+          "sqlInjectionTemplate": "",
+          "entryPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 690
+          },
+          "extraIndexPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 691
+          },
+          "fixedEntryPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 690
+          },
+          "fixedIndexPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 691
+          }
+        },
+        "orderNo": 4
+      }
+    },
+    "presetName": "901_帝都动态状态_v1"
+  },
+  "guideSnapshot": {
+    "data": {
+      "mate": {
+        "type": "chatSheets",
+        "version": 2,
+        "updateConfigUiSentinel": -1,
+        "globalInjectionConfig": {
+          "readableEntryPlacement": {
+            "position": "before_char",
+            "depth": 2,
+            "order": 99981
+          },
+          "wrapperPlacement": {
+            "position": "before_char",
+            "depth": 2,
+            "order": 99980
+          }
+        }
+      },
+      "sheet_901_scene": {
+        "uid": "sheet_901_scene",
+        "name": "场景状态",
+        "sourceData": {
+          "note": "只记录当前重玩分支中已经发生、明确说出或用户已核定的状态，不复制原团百科、后期结局或作者考据。来源优先为本次聊天的实际叙述与用户澄清；对白中的推测保留说话人及确定性。未知保留未知，未说出的【内心】只归御临风个人，不能据此更新其他人物知情。每条记录填写来源定位；输入未带楼层编号时使用短原话锚点，不编造编号。更新同一对象既有行，避免重复。\n只保留一行，场景标识为 current。时间精度由正文决定，不推算绝对日期或旅程天数。当前行动区分玩家已宣告、执行中、已经完成，提议不是结果。局势只留当前实际障碍或已发生变化，不列假想刺客和固定二选一。每字段以一两句说清。",
+          "initNode": "仅从已核定当前分支聊天初始化；没有证据就保持空表，不补齐未知。",
+          "insertNode": "移动、时间推进、人员离场或主要行动阶段改变时更新同一行。",
+          "updateNode": "移动、时间推进、人员离场或主要行动阶段改变时更新同一行。",
+          "deleteNode": "仅纠正误录或已合并重复项；情报与承诺的已解决内容先压入分支纪要。人物离场只更新出入状态，不删除其记录。",
+          "ddl": "CREATE TABLE replay_scene ( -- 场景状态\n  row_id INTEGER PRIMARY KEY, -- 行号\n  scene_key TEXT UNIQUE, -- 场景标识\n  time_anchor TEXT, -- 时间锚点\n  location TEXT, -- 所在地点\n  present_people TEXT, -- 在场者\n  declared_action TEXT, -- 当前行动\n  situation TEXT, -- 眼前局势\n  source_anchor TEXT -- 依据定位\n);"
+        },
+        "content": [
+          [
+            "row_id",
+            "场景标识",
+            "时间锚点",
+            "所在地点",
+            "在场者",
+            "当前行动",
+            "眼前局势",
+            "依据定位"
+          ]
+        ],
+        "updateConfig": {
+          "uiSentinel": -1,
+          "contextDepth": 4,
+          "updateFrequency": 1,
+          "batchSize": 3,
+          "skipFloors": 1
+        },
+        "exportConfig": {
+          "enabled": true,
+          "injectIntoWorldbook": true,
+          "splitByRow": false,
+          "entryName": "901_场景状态",
+          "entryType": "constant",
+          "keywords": "",
+          "preventRecursion": true,
+          "injectionTemplate": "<901_scene>\n$1\n</901_scene>",
+          "extraIndexEnabled": false,
+          "extraIndexEntryName": "901_场景状态_索引",
+          "extraIndexColumns": [],
+          "extraIndexColumnModes": {},
+          "extraIndexInjectionTemplate": "",
+          "sqlInjectionTemplate": "",
+          "entryPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 650
+          },
+          "extraIndexPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 651
+          },
+          "fixedEntryPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 650
+          },
+          "fixedIndexPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 651
+          }
+        },
+        "orderNo": 0
+      },
+      "sheet_901_people": {
+        "uid": "sheet_901_people",
+        "name": "人物动态",
+        "sourceData": {
+          "note": "只记录当前重玩分支中已经发生、明确说出或用户已核定的状态，不复制原团百科、后期结局或作者考据。来源优先为本次聊天的实际叙述与用户澄清；对白中的推测保留说话人及确定性。未知保留未知，未说出的【内心】只归御临风个人，不能据此更新其他人物知情。每条记录填写来源定位；输入未带楼层编号时使用短原话锚点，不编造编号。更新同一对象既有行，避免重复。\n只写出现过的具名人物的动态变化，不重抄身世、性格、技能清单。明确意图须来自其发言或行动，未表露的动机记未知。身体状态沿实际施法、受伤、休息更新，历史受伤不等于持续虚弱。关系变化用具体承诺、冲突、合作记录，不发明好感数值。离场人物保留已证变化，知情在情报与承诺表单独记录。姓名不能只因相似就合并。",
+          "initNode": "仅从已核定当前分支聊天初始化；没有证据就保持空表，不补齐未知。",
+          "insertNode": "人物初次实际出场，或已有动态发生变化时写入；普通同声复述不追加行。",
+          "updateNode": "人物初次实际出场，或已有动态发生变化时写入；普通同声复述不追加行。",
+          "deleteNode": "仅纠正误录或已合并重复项；情报与承诺的已解决内容先压入分支纪要。人物离场只更新出入状态，不删除其记录。",
+          "ddl": "CREATE TABLE replay_people ( -- 人物动态\n  row_id INTEGER PRIMARY KEY, -- 行号\n  person_name TEXT UNIQUE, -- 人物姓名\n  presence TEXT, -- 出入状态\n  current_intent TEXT, -- 明确意图\n  condition TEXT, -- 身体状态\n  observed_change TEXT, -- 关系变化\n  source_anchor TEXT -- 依据定位\n);"
+        },
+        "content": [
+          [
+            "row_id",
+            "人物姓名",
+            "出入状态",
+            "明确意图",
+            "身体状态",
+            "关系变化",
+            "依据定位"
+          ]
+        ],
+        "updateConfig": {
+          "uiSentinel": -1,
+          "contextDepth": 4,
+          "updateFrequency": 1,
+          "batchSize": 3,
+          "skipFloors": 1
+        },
+        "exportConfig": {
+          "enabled": true,
+          "injectIntoWorldbook": true,
+          "splitByRow": true,
+          "entryName": "901_人物动态",
+          "entryType": "keyword",
+          "keywords": "人物姓名",
+          "preventRecursion": true,
+          "injectionTemplate": "<901_people>\n$1\n</901_people>",
+          "extraIndexEnabled": false,
+          "extraIndexEntryName": "901_人物动态_索引",
+          "extraIndexColumns": [],
+          "extraIndexColumnModes": {},
+          "extraIndexInjectionTemplate": "",
+          "sqlInjectionTemplate": "",
+          "entryPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 660
+          },
+          "extraIndexPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 661
+          },
+          "fixedEntryPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 660
+          },
+          "fixedIndexPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 661
+          }
+        },
+        "orderNo": 1
+      },
+      "sheet_901_resources": {
+        "uid": "sheet_901_resources",
+        "name": "物资变化",
+        "sourceData": {
+          "note": "只记录当前重玩分支中已经发生、明确说出或用户已核定的状态，不复制原团百科、后期结局或作者考据。来源优先为本次聊天的实际叙述与用户澄清；对白中的推测保留说话人及确定性。未知保留未知，未说出的【内心】只归御临风个人，不能据此更新其他人物知情。每条记录填写来源定位；输入未带楼层编号时使用短原话锚点，不编造编号。更新同一对象既有行，避免重复。\n记录影响近期行动且在本分支被确认取得、交付、使用、遗失或消耗的金钱、药品、凭证、装备及坐骑。每个持有人与物品只有一行。未知数量写未知，不以最初账目重置旅途后余额。剑招与能力不是物品，不填早期/后期作者分期。计划购买和建议交付尚未完成时不改余额。",
+          "initNode": "仅从已核定当前分支聊天初始化；没有证据就保持空表，不补齐未知。",
+          "insertNode": "物资持有、数量、存放位置或可用性被明确改变时更新。",
+          "updateNode": "物资持有、数量、存放位置或可用性被明确改变时更新。",
+          "deleteNode": "仅纠正误录或已合并重复项；情报与承诺的已解决内容先压入分支纪要。人物离场只更新出入状态，不删除其记录。",
+          "ddl": "CREATE TABLE replay_resources ( -- 物资变化\n  row_id INTEGER PRIMARY KEY, -- 行号\n  asset_key TEXT UNIQUE, -- 物资标识\n  holder TEXT, -- 持有人\n  object_name TEXT, -- 物资名称\n  quantity TEXT, -- 当前数量\n  condition TEXT, -- 使用状态\n  source_anchor TEXT -- 依据定位\n);"
+        },
+        "content": [
+          [
+            "row_id",
+            "物资标识",
+            "持有人",
+            "物资名称",
+            "当前数量",
+            "使用状态",
+            "依据定位"
+          ]
+        ],
+        "updateConfig": {
+          "uiSentinel": -1,
+          "contextDepth": 4,
+          "updateFrequency": 1,
+          "batchSize": 3,
+          "skipFloors": 1
+        },
+        "exportConfig": {
+          "enabled": true,
+          "injectIntoWorldbook": true,
+          "splitByRow": false,
+          "entryName": "901_物资变化",
+          "entryType": "constant",
+          "keywords": "",
+          "preventRecursion": true,
+          "injectionTemplate": "<901_resources>\n$1\n</901_resources>",
+          "extraIndexEnabled": false,
+          "extraIndexEntryName": "901_物资变化_索引",
+          "extraIndexColumns": [],
+          "extraIndexColumnModes": {},
+          "extraIndexInjectionTemplate": "",
+          "sqlInjectionTemplate": "",
+          "entryPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 670
+          },
+          "extraIndexPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 671
+          },
+          "fixedEntryPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 670
+          },
+          "fixedIndexPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 671
+          }
+        },
+        "orderNo": 2
+      },
+      "sheet_901_threads": {
+        "uid": "sheet_901_threads",
+        "name": "情报与承诺",
+        "sourceData": {
+          "note": "只记录当前重玩分支中已经发生、明确说出或用户已核定的状态，不复制原团百科、后期结局或作者考据。来源优先为本次聊天的实际叙述与用户澄清；对白中的推测保留说话人及确定性。未知保留未知，未说出的【内心】只归御临风个人，不能据此更新其他人物知情。每条记录填写来源定位；输入未带楼层编号时使用短原话锚点，不编造编号。更新同一对象既有行，避免重复。\n每行一个待办、承诺、线索或待核实判断。事项类别只填情报/承诺/目标/作者校正；作者校正仅供主持，不能成为角色已知情报。确定性使用 confirmed/uncertain/rumor/character_belief：confirmed只确认实际事件，转述默认只确认有人这样说，内容本身另判。知情者列明确知道这一内容的人，不自动扩大到全队或全帝都。已选择目标保留至完成/改变；NPC提醒不使用户选择失效。只保留仍相关事项，已解决事项压入分支纪要后移出；有时限才填入具体内容。",
+          "initNode": "仅从已核定当前分支聊天初始化；没有证据就保持空表，不补齐未知。",
+          "insertNode": "实际得到新信息、做出承诺、玩家明确选择目标或事项得到结果时更新；不预测新阴谋。",
+          "updateNode": "实际得到新信息、做出承诺、玩家明确选择目标或事项得到结果时更新；不预测新阴谋。",
+          "deleteNode": "仅纠正误录或已合并重复项；情报与承诺的已解决内容先压入分支纪要。人物离场只更新出入状态，不删除其记录。",
+          "ddl": "CREATE TABLE replay_threads ( -- 情报与承诺\n  row_id INTEGER PRIMARY KEY, -- 行号\n  thread_key TEXT UNIQUE, -- 事项标识\n  subject_keys TEXT, -- 关联对象\n  kind TEXT, -- 事项类别\n  proposition TEXT, -- 具体内容\n  certainty TEXT, -- 确定性\n  information_source TEXT, -- 消息来源\n  knows TEXT, -- 知情者\n  status TEXT, -- 进展状态\n  source_anchor TEXT -- 依据定位\n);"
+        },
+        "content": [
+          [
+            "row_id",
+            "事项标识",
+            "关联对象",
+            "事项类别",
+            "具体内容",
+            "确定性",
+            "消息来源",
+            "知情者",
+            "进展状态",
+            "依据定位"
+          ]
+        ],
+        "updateConfig": {
+          "uiSentinel": -1,
+          "contextDepth": 4,
+          "updateFrequency": 1,
+          "batchSize": 3,
+          "skipFloors": 1
+        },
+        "exportConfig": {
+          "enabled": true,
+          "injectIntoWorldbook": true,
+          "splitByRow": false,
+          "entryName": "901_情报与承诺",
+          "entryType": "constant",
+          "keywords": "",
+          "preventRecursion": true,
+          "injectionTemplate": "<901_threads>\n$1\n</901_threads>",
+          "extraIndexEnabled": false,
+          "extraIndexEntryName": "901_情报与承诺_索引",
+          "extraIndexColumns": [],
+          "extraIndexColumnModes": {},
+          "extraIndexInjectionTemplate": "",
+          "sqlInjectionTemplate": "",
+          "entryPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 680
+          },
+          "extraIndexPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 681
+          },
+          "fixedEntryPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 680
+          },
+          "fixedIndexPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 681
+          }
+        },
+        "orderNo": 3
+      },
+      "sheet_901_memory": {
+        "uid": "sheet_901_memory",
+        "name": "分支纪要",
+        "sourceData": {
+          "note": "只记录当前重玩分支中已经发生、明确说出或用户已核定的状态，不复制原团百科、后期结局或作者考据。来源优先为本次聊天的实际叙述与用户澄清；对白中的推测保留说话人及确定性。未知保留未知，未说出的【内心】只归御临风个人，不能据此更新其他人物知情。每条记录填写来源定位；输入未带楼层编号时使用短原话锚点，不编造编号。更新同一对象既有行，避免重复。\n仅记录本分支有持续影响的已发生事件，每件一行，保留原因、结果和仍在生效的影响。日常寒暄和重复劝告不必入表。一个场景连续动作合并为一条简短纪要，不按每轮强制新增。触发名称只填本事件涉及的正式人名、地点或具名组织，以英文逗号分隔，不用今天/帝国/事情等泛词。人物推测与传闻必须标记并写清归属，未来计划不能当已经发生。",
+          "initNode": "仅从已核定当前分支聊天初始化；没有证据就保持空表，不补齐未知。",
+          "insertNode": "场景结束或出现持久结果时添加/完善；不根据旧团未来章节自动补完。",
+          "updateNode": "场景结束或出现持久结果时添加/完善；不根据旧团未来章节自动补完。",
+          "deleteNode": "仅纠正误录或已合并重复项；情报与承诺的已解决内容先压入分支纪要。人物离场只更新出入状态，不删除其记录。",
+          "ddl": "CREATE TABLE replay_memory ( -- 分支纪要\n  row_id INTEGER PRIMARY KEY, -- 行号\n  event_key TEXT UNIQUE, -- 事件标识\n  trigger_names TEXT, -- 触发名称\n  time_anchor TEXT, -- 发生时间\n  summary TEXT, -- 事件及结果\n  certainty TEXT, -- 确定性\n  knows TEXT, -- 知情范围\n  source_anchor TEXT -- 依据定位\n);"
+        },
+        "content": [
+          [
+            "row_id",
+            "事件标识",
+            "触发名称",
+            "发生时间",
+            "事件及结果",
+            "确定性",
+            "知情范围",
+            "依据定位"
+          ]
+        ],
+        "updateConfig": {
+          "uiSentinel": -1,
+          "contextDepth": 4,
+          "updateFrequency": 3,
+          "batchSize": 3,
+          "skipFloors": 1
+        },
+        "exportConfig": {
+          "enabled": true,
+          "injectIntoWorldbook": true,
+          "splitByRow": true,
+          "entryName": "901_分支纪要",
+          "entryType": "keyword",
+          "keywords": "触发名称",
+          "preventRecursion": true,
+          "injectionTemplate": "<901_memory>\n$1\n</901_memory>",
+          "extraIndexEnabled": false,
+          "extraIndexEntryName": "901_分支纪要_索引",
+          "extraIndexColumns": [],
+          "extraIndexColumnModes": {},
+          "extraIndexInjectionTemplate": "",
+          "sqlInjectionTemplate": "",
+          "entryPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 690
+          },
+          "extraIndexPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 691
+          },
+          "fixedEntryPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 690
+          },
+          "fixedIndexPlacement": {
+            "position": "after_character_definition",
+            "depth": 2,
+            "order": 691
+          }
+        },
+        "orderNo": 4
+      }
+    }
+  },
+  "integrity": {
+    "algorithm": "fnv1a",
+    "payloadHash": "-13cq24s"
+  }
+}

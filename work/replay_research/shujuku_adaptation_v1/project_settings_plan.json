@@ -1,0 +1,64 @@
+{
+  "kind": "901_project_settings_review_not_importable",
+  "status": "checkpoint_migration_prepared_auto_fill_off_pending_story_correction",
+  "scope": "current 901 chat template; profile-scoped fill settings",
+  "suggested_settings": {
+    "autoUpdateEnabled": false,
+    "autoUpdateThreshold": 4,
+    "autoUpdateFrequency": 1,
+    "updateBatchSize": 3,
+    "autoUpdateTokenThreshold": 0,
+    "skipUpdateFloors": 1,
+    "tableMaxRetries": 1,
+    "strictJsonTableFillEnabled": false,
+    "tableFillNativeToolEnabled": false
+  },
+  "template_overrides": {
+    "scene_people_resources_threads": {
+      "contextDepth": 4,
+      "updateFrequency": 1,
+      "batchSize": 3,
+      "skipFloors": 1
+    },
+    "memory": {
+      "contextDepth": 4,
+      "updateFrequency": 3,
+      "batchSize": 3,
+      "skipFloors": 1
+    }
+  },
+  "injection": {
+    "target": "901_帝都重玩_记忆_01",
+    "entries_source": "仅当前聊天证据，不将整套背景加载进填表请求；提示不含$4/$C/$U",
+    "always": [
+      "场景状态",
+      "物资变化",
+      "情报与承诺"
+    ],
+    "keyword": [
+      "人物动态",
+      "分支纪要"
+    ],
+    "keyword_indexes": false,
+    "native_summarize": "若旧摘要仍启用，先停用其自动重复摘要，现有文本由root判定，不自行删除",
+    "unneeded_features": [
+      "不启用独立剧情推进/智能续写/世界模拟/交火向量",
+      "不要求第二个聊天会话"
+    ],
+    "notes": "不是0 token：自动填表有独立模型调用成本，注入的动态内容也占正文上下文。没有API配置前可导入空模板与提示，不能声称自动记忆已运行。"
+  },
+  "apply_order": [
+    "使用已完整备份的原聊天及世界书；暂停自动填表。",
+    "先将填表输出目标改成901_帝都重玩_记忆_01；停用T0中的旧插件条目。",
+    "在进阶档位的数据管理中导入901_当前分支_清洁五表.checkpoint.json，并确认恢复；这将保留聊天正文，清理所有旧AI楼层及隔离槽中的插件元数据，在最新AI楼层创建单一五表根快照。",
+    "按settings_whitelist_patch.json白名单应用填表提示与更新参数；不要导入为全局配置。",
+    "刷新原用户浏览器，避免其他窗口旧内存覆盖服务端设置。",
+    "修正最新医馆答复，实际确认后再决定何时启用自动填表。"
+  ],
+  "safety_boundaries": [
+    "空模板可用于新聊天；已核当前聊天使用17行分支种子Checkpoint，不把它当原团canon。",
+    "当前聊天旧表清理由官方Checkpoint恢复执行，原历史已备份；不手工拼接多根frame。",
+    "同楼swipe共享表，skipFloors=1只缓冲尚未填入的最新层，已填入后的重选需重填或恢复。"
+  ],
+  "deferred_current_state": []
+}

@@ -36,13 +36,13 @@
 
 主持后台闪回展示悠悠父母救凌迟、凌迟醒见女孩及后来借命。设定的族长与袭击者同归，和谢尔伦所说暴走凌迟消灭入侵者，保留终局分工差异。旧事早于悠悠被护送入都，不补与边关战精确先后。
 
-发生／定位：在悠悠被护送至帝都之前；与其他近代旧事未全定序。依据：ERC_P1_0431、ERC_P2_0401、WRC_044。
+发生／定位：在悠悠被护送至帝都之前。据谢尔伦的有限叙述，凌迟遭追杀及被悠悠母亲救起发生在其成功上位之前；这条证言提供先后线索，不能直接把整个惨剧、借命或军事统合定为同日。[P2 #805/msg971895](<../../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl:6>)。具体间隔仍未知。其他依据：ERC_P1_0431、ERC_P2_0401、WRC_044。
 
-### TML_006 · 纳萨力克异界迁入（日期未定）
+### TML_006 · 纳萨力克异界迁入（约本次魔兽之潮前后）
 
-设定记飞鼠与据点从停运的YGGDRASIL迁入异界，NPC有自我意识，飞鼠改名安兹并出现不死身心变化。只能定为直接交涉前的来历；迁入相对T0的日期未知，放在本栏不代表已证先于T0。
+设定记飞鼠与据点从停运的YGGDRASIL迁入异界，NPC有自我意识，飞鼠改名安兹并出现不死身心变化。用户已确认纳萨力克在T0前来到本世界，大致与本次魔兽之潮同时；结合破关距T0约2—3周，将迁入放在相近时间范围附近，不指定同日或因果关系。[纳萨力克到来时点](user_clarifications.md:1020)。组织到来不使后来招募与调查成果自动出现在T0。
 
-发生／定位：原乡YGGDRASIL停运时；与T0及边关战的相对日期未证。依据：WRC_050。
+发生／定位：原乡YGGDRASIL停运时；本地相对时间由用户确认在T0前、约本次魔兽之潮前后，具体日期未定。依据：WRC_050、UCL_20261004_035。
 
 ## 前史与首次入都 T0
 
@@ -62,7 +62,7 @@
 
 晚期主持复原边关被攻破、真达卡斯及三军统领阵亡；贞子救临风后重伤，以全部换他活命并请韩诺抹忆送走。事件在T0前，御直到TML_017才重获记忆；灵魂最终去向未独立演出。
 
-发生／定位：T0之前：边关破→逃亡追杀→封忆送走。依据：ERC_P1_0415、ERC_P1_0085、WRC_057。
+发生／定位：边关失陷距T0约2—3周（[破关至入都间隔](user_clarifications.md:984)）；其后逃亡追杀、封忆送走分别保留先后，不并成同一天。白魔在破关与双潮冲击时脱困，同步位于该区间（[用户原话](user_clarifications.md:243)）。原证据：ERC_P1_0415、ERC_P1_0085、WRC_057。
 
 ### TML_010 · 商队、山寨庙与村医调养后赴帝都
 
@@ -74,7 +74,7 @@
 
 研究开局取P1 #78抵都附近，纳入#79成长申报而未执行#81主动行动。小队两马、三人，最后明文十银、疗伤药与培元丹各五、新推荐信；这是小队资源记录，旅途余量仍需区分。UCL法则只解释既有剑气为何可用，不构成当天获得新能力。
 
-发生／定位：P1 #78抵都附近，纳入#79申报；#81主动行动尚未发生。依据：ERC_P1_0028、ERC_P1_0008。
+发生／定位：P1 #78抵都附近，纳入#79申报；#81主动行动尚未发生。此时距边关失陷约2—3周（[破关至入都间隔](user_clarifications.md:984)），不将总间隔全部作为净赶路天数。原证据：ERC_P1_0028、ERC_P1_0008。
 
 ## 第一部原线：帝都、神秘海域与凌迟
 
@@ -150,7 +150,7 @@ A面对被展示为父母与莉亚的尸体，受古雷姆林诱导并转化为�
 
 小队获护送路线、任务物资与资金后出发，跨天险需悠悠与一次性道具。离场朝堂宣布全面远征，雷光随后实际收复边关。另一分线布莱特被拖入地下，小队限时搜索无果继续任务；此时的失踪尚不等于死亡或魔物化。
 
-发生／定位：第二部出都至山脉传送前。依据：ERC_P2_0201、ERC_P2_0204、ERC_P2_0208、ERC_P2_0212。
+发生／定位：其中护送离都发生在原团T0后约3—4天（[原团帝都阶段长度](user_clarifications.md:1062)），此后延续至山脉传送前；军队后台与失踪事件不一并定为出发当日。其他依据：ERC_P2_0201、ERC_P2_0204、ERC_P2_0208、ERC_P2_0212。
 
 ### TML_024 · 校园／游戏梦与明确幕间奖励
 
@@ -168,7 +168,7 @@ A面对被展示为父母与莉亚的尸体，受古雷姆林诱导并转化为�
 
 抵龙族秘境后，私下挡箭牌婚约保留悠悠未来选择，公开场合临风称未婚夫；不能删除私下条件或替悠悠补完整意愿。悠悠交付白假面后有闭门会谈，继而被公开授为空间龙族长、承祖字。送达和宣告不等于所有条约与婚礼完成。
 
-发生／定位：第二部护送抵达至仪式。依据：ERC_P2_0251、ERC_P2_0254、ERC_P2_0410。
+发生／定位：首次抵达发生于离都护送出发8天后，结合入都至离都约3—4天，派生为原团T0后约11—12天；继任等后续事件不自动与抵达同日。全程包含数次短距与一次长距传送，8天禁止用于距离标定。[护送八天与传送限制](user_clarifications.md:1085)。其他依据：ERC_P2_0251、ERC_P2_0254、ERC_P2_0410。
 
 ### TML_027 · 试赛遭袭昏迷与帝军情报汇合
 
@@ -275,11 +275,11 @@ D3紧急撤离及基础事务已结束，角色可自主选择后续，重大未
 | [XLINE_003](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/side_timeline_relationships.jsonl:3>) 阿伊达救子、维尔契约与帝国培养 | 救治接触先于遗迹取物，取物先于第一次变身，返都培养报告后于这些事件。；本线返都报告回述约一个半星期，不与其他支线直接拼日历。 | 新增旁线窗口 |
 | [XLINE_004](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/side_timeline_relationships.jsonl:4>) 劳霖救护、暗青之月拘押与报告链 | 河道失利昏迷之后获救，后续驻军战斗和拘押先于返帝都。；近一周的照料时距经劳霖报告，不据此算出共同绝对日期。 | 新增旁线窗口 |
 | [XLINE_005](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/side_timeline_relationships.jsonl:5>) 协会、研究所与军部之间的合作条件 | 返都后的协会约见先于研究所接触，再赴军部请求正式委托。；博士初步绘图早于现有篇末；后续研制和文书送达时间未给。 | 新增旁线窗口 |
-| [XLINE_006](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/side_timeline_relationships.jsonl:6>) 安兹招募本地代理：效力与道德拒绝 | 招募在村袭后苏醒阶段，早于代理人出行。；TML_006迁入是来历入口；迁入与T0及本次村袭的精确间隔未由本线证明。 | TML_006、REL_023 |
+| [XLINE_006](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/side_timeline_relationships.jsonl:6>) 安兹招募本地代理：效力与道德拒绝 | 招募在村袭后苏醒阶段，早于代理人出行。；TML_006迁入已由用户确认在T0前、约本次魔兽之潮前后；村袭、代理招募与T0的具体间隔仍未由本线证明。 | TML_006、REL_023 |
 | [XLINE_007](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/side_timeline_relationships.jsonl:7>) 代理人的保密任务、资源交付与报告未回传 | 保密和通讯安排在代理出行前，隐瞒与受胁泄名在之后。；与主线外交记录只作信息条件对照，未建立本次调查已回传并促成TML_034的因果。 | TML_034、REL_013、REL_023、DEP_012 |
 | [XLINE_008](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/side_timeline_relationships.jsonl:8>) 村袭情报、地方登记与应急调整 | 村袭先于苏醒、招募及返村，返村先于到镇受理。；到镇主持给出距昏迷第四天，不能据此拆出每段睡眠时长。 | 新增旁线窗口 |
 | [XLINE_009](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/side_timeline_relationships.jsonl:9>) 养父样貌者与美杜莎：杀戮、口供及受胁外行 | 地方受理之后商人牵线重逢，关门杀人之后发生身份口供和要求引见；出门遭贝克拦截后仍外行。；本线停止于受胁外行，没有抵达墓地的后续场面。 | 新增旁线窗口 |
 | [XLINE_010](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/side_timeline_relationships.jsonl:10>) 主线处刑、帝都危机与远征的跨线消息窗口 | 事件发生先于其消息到达；大墓地明确有至少一两天传播滞后。；A案两周前是阿伊达相对于该次对话的回述，不据论坛发帖时间换算。；远征令、实际收关、地方动员不是同一瞬间；四千万是报告中的动员规模。；未给出沐透返都、大墓地到镇与主线每一场景的统一日历。 | TML_019、TML_020、TML_022、TML_023、DEP_006 |
-| [XLINE_011](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/side_timeline_relationships.jsonl:11>) 御临风任务交点、问候委托与两条旁线终点 | 御的机密任务先于劳霖当次介绍；是否已到某地点仍是推測。；沐透先赴研究所和军部，后回协会；大墓地终点与此场景之间未定先后。；不把两线结尾自动拼到D3续跑锚。 | TML_023、DEP_007 |
+| [XLINE_011](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/side_timeline_relationships.jsonl:11>) 御临风任务交点、问候委托与两条旁线终点 | 用户确认沐透入都时御已到达魔兽山脉；山脉内具体地点未定。劳霖当时的说辞仍为其推测，不等于掌握完整路线。；沐透先赴研究所和军部，后回协会；大墓地终点与此场景之间未定先后。；不把两线结尾自动拼到D3续跑锚。 | TML_023、DEP_007 |
 
 三线未完部分和知识传递见 [旁线整合正文](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/side_timeline_relationships.md>) 与 [角色知情表](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/knowledge_projection.md>)。与旧ID对接可能只是同一人物/事件窗口，不代表已证明因果。

@@ -1,0 +1,158 @@
+{
+  "sources": [
+    {
+      "use": "opening",
+      "part": "P1",
+      "post_id": "816583",
+      "file": "extracted-first/2/posts.jsonl",
+      "line": 29,
+      "span_start": "临走的时候，三人挥着手告别了这个村庄",
+      "span_end": "更是与路上所见的村庄小镇完全不在一个级别上。",
+      "edits": [
+        "只选用户指定的旅行与抵都两段，排除同帖救火、结算、图片及后附物品规则。",
+        "拆句并修正“收拾好东西车队”等病句，不新增城貌、守卫或城门事件。",
+        "把“三人隐约看到”改为景物呈现，避免替失明的布莱特补出视觉。",
+        "保留用户选定的开场历史中御临风与黄泉的惊叹；不是未来回合代写主角的规则。"
+      ]
+    },
+    {
+      "use": "example_1",
+      "part": "P1",
+      "post_id": "816062",
+      "file": "extracted-first/1/posts.jsonl",
+      "line": 16,
+      "player_input": {
+        "post_id": "816061",
+        "author": "夜小胖",
+        "file": "extracted-first/1/posts.jsonl",
+        "line": 15
+      },
+      "edits": [
+        "GM正文逐字保留。",
+        "场景条件是作者简述，不冒充玩家原句；原帖为布莱特玩家的点灯、收集文书声明。"
+      ]
+    },
+    {
+      "use": "example_2",
+      "part": "P1",
+      "post_id": "816130",
+      "file": "extracted-first/1/posts.jsonl",
+      "line": 32,
+      "player_input": {
+        "post_id": "816129",
+        "author": "我是小白",
+        "file": "extracted-first/1/posts.jsonl",
+        "line": 31
+      },
+      "preceding_gm": {
+        "post_id": "816127",
+        "file": "extracted-first/1/posts.jsonl",
+        "line": 30
+      },
+      "edits": [
+        "统一引号与省略号。",
+        "将“似乎突然想到什么时候”修为“似乎突然想起什么事情”。",
+        "将“两位大人份手稿”修为“两位大人，这份手稿”。",
+        "场景条件是相邻原帖简述，删除玩家未公开内心与无关行动，不新增台词或结果。"
+      ]
+    },
+    {
+      "use": "imperial_visual_direction",
+      "source_kind": "user_explicit_style_clarification",
+      "certainty": "confirmed",
+      "ref": "UCL_20261004_002",
+      "file": "work/replay_research/user_clarifications.md",
+      "note": "作者给主持的环境表现方向，不指定现实建筑史、制度或新增建筑体系。"
+    },
+    {
+      "use": "capital_visual_anchor",
+      "part": "P1",
+      "post_id": "816583",
+      "file": "extracted-first/2/posts.jsonl",
+      "line": 29,
+      "certainty": "confirmed",
+      "attribution": "GM",
+      "fact": "帝都有高大的城门与城堡。"
+    },
+    {
+      "use": "capital_visual_anchor",
+      "part": "P2",
+      "post_id": "974730",
+      "file": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl",
+      "line": 50,
+      "certainty": "confirmed",
+      "attribution": "GM",
+      "fact": "与龙族依山错落的建筑相比，帝都建筑有规划、整齐建立。",
+      "note": "比较城市布局，不推导现代建筑技术或具体街区网格。"
+    },
+    {
+      "use": "author_evidence_only_not_runtime_fact",
+      "part": "P1",
+      "post_id": "816648",
+      "file": "extracted-first/2/posts.jsonl",
+      "line": 32,
+      "certainty": "character_belief",
+      "attribution": "御临风玩家的观感",
+      "note": "中世纪风格是角色比较，不升级为帝国统一建筑规范。"
+    },
+    {
+      "use": "preserve_existing_location",
+      "part": "P1",
+      "post_id": "845814",
+      "file": "extracted-first/20/posts.jsonl",
+      "line": 34,
+      "certainty": "confirmed",
+      "attribution": "GM",
+      "fact": "皇宫稍前方右侧有圣庙，平时人少，佳节时帝与民同乐。",
+      "note": "不据此推导圣庙穹顶的造型。"
+    },
+    {
+      "use": "preserve_existing_structure",
+      "part": "P1",
+      "post_id": "846107",
+      "file": "extracted-first/21/posts.jsonl",
+      "line": 38,
+      "certainty": "confirmed",
+      "attribution": "GM",
+      "fact": "宫殿有整齐交错的梁柱及与背景融为一体的防御魔法符文。",
+      "note": "不移植成城门石缝中常驻的加固回路。"
+    },
+    {
+      "use": "natural_turn_handoff",
+      "source_kind": "user_explicit_runtime_clarification",
+      "certainty": "confirmed",
+      "ref": "UCL_20261004_003",
+      "file": "work/replay_research/user_clarifications.md",
+      "line_start": 402,
+      "line_end": 404
+    },
+    {
+      "use": "player_reaction_and_location_naming",
+      "source_kind": "user_playtest_feedback",
+      "certainty": "confirmed",
+      "ref": "UCL_20261004_004",
+      "file": "work/replay_research/user_clarifications.md"
+    },
+    {
+      "use": "sensitive_information_scene",
+      "source_kind": "user_playtest_feedback",
+      "certainty": "confirmed",
+      "ref": "UCL_20261004_005",
+      "file": "work/replay_research/user_clarifications.md"
+    }
+  ],
+  "runtime_policy": {
+    "canon_changed": false,
+    "worldbook_changed": false,
+    "persona_changed": false,
+    "host_card_changed": false,
+    "raw_corpus_loaded": false,
+    "original_future_loaded": false,
+    "dream_scenes_loaded": false,
+    "mes_example_used": false,
+    "requires_new_session": false,
+    "installed_sillytavern_modified": false,
+    "model_request_sent": false
+  },
+  "notes": "风格判断是样本分析，不是全部1508帖逐条语义分类；全量GM账号原文保持独立可追溯。 角色扮演符号约定依据用户补充UCL_20261003_016；同时按此前反馈移除未经模型体验验证的网络梗与人生总结禁令，保留正向文风描述。 2026-10-04试跑反馈：发言按人物新增内容分配，接住玩家已选行动；人物声线由各自原帖校准，GM语料不替代原角色玩家台词。 帝国视觉基调依据UCL_20261004_002，城门城堡与规划布局有原团出处；作品原型不自动迁移建筑风格，既有圣庙与宫殿防御符文保留。 UCL_20261004_003：自然收束不等于必须问玩家选项；保留情境中需要答复的真正提问。 UCL_20261004_004：地名须符合已定帝国表现方向；新增明确区分玩家决定的情绪性身体反应与主持裁定的客观后果。未操作酒馆或模型复跑。 UCL_20261004_005：敏感信息披露考虑谈话场所、关系与旁听，公开消息不一律转成机密，不强迫主角转场。"
+}

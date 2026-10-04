@@ -60,7 +60,7 @@
 
 委托通过任务板和前台接洽，接任务者可以向接待员询问详情；承接协会任务涉及会员资格，原线曾拒绝非会员接取。游击士按等级活动，任务成绩与奖励可影响晋升。布莱特初入帝都时为C级，峡谷战后才因帝的专属委托所获认可升为B级。
 
-协会的中立地位仍会受到国家权力的实际压力。原线接待员解释，协会不能公开对抗国家势力，在必须保全整个组织时可能舍弃个人〔character_belief〕；随后发生的军队搜查支部和截信也限制了当地行动。战争后期，A级游击士参与前线协作，一些支部因人员支援前线而冷清，但仍继续接待和代传约见。协会还可为求助者联系学者，提供进入专业研究的渠道。
+原线首次入帝都时，协会接待员已掌握九雪医馆被捕的案件消息：有人暗杀达卡斯未遂、医馆被指为幕后，军方已将一家人关入帝国监狱；这些是她转述的案情指控，不证明医馆有罪〔rumor〕。逮捕由达卡斯下令的说法，她明确称为小道消息〔rumor〕。接待员称协会调查过露露缇耶的爷爷，并以其传奇士兵经历及医馆多为老人孩子为由，质疑刺杀指控；她又称城中从谈话前一天起出现边关失守传闻、多数人不信，认为时机巧合〔character_belief〕。达卡斯此前交付的琐事与魔兽清理委托，在他回到帝都后紧急撤回；接待员明确说协会也觉得他可疑，正在调查，有消息会通知布莱特〔character_belief〕。她还答应尝试联系被捕者，但未保证成功。私下调查和传递线索不等于公开对抗军方，也不表示协会已经识破冒名或查明真正刺客。 协会的中立地位仍会受到国家权力的实际压力。原线接待员解释，协会不能公开对抗国家势力，在必须保全整个组织时可能舍弃个人〔character_belief〕；随后发生的军队搜查支部和截信也限制了当地行动。战争后期，A级游击士参与前线协作，一些支部因人员支援前线而冷清，但仍继续接待和代传约见。协会还可为求助者联系学者，提供进入专业研究的渠道。
 
 来源：[设定资料 第25行](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md:25>)；[设定资料 第33行](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md:33>)；[原帖 #30](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl:31>)。 [完整来源与编写备注](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/output/replay_f_review/v1/worldbook/author_notes.md:489>)
 
@@ -257,11 +257,11 @@
 
 ### 监狱塔
 
-监狱塔是囚禁白色魔法使等魔物的高塔，白色魔法使被关押在塔顶，沐透曾在塔中担任守卫。帝为何保留这些囚犯的性命并将其囚禁，至今没有明确答案。
+监狱塔曾囚禁白色魔法使等魔物，白色魔法使过去被关押在塔顶，沐透曾在塔中担任守卫。帝为何保留这些囚犯的性命并将其囚禁，至今没有明确答案。
 
-高塔后来同时遭到魔物之潮与魔兽之潮冲击。白色魔法使利用袭击，并在沐透协助下逃出监狱塔。受袭、求援、地方上报和帝都获知并非同时完成：原线有破塔求援的军报，也有沐透事后向地方报告逃犯的行动，后来雷光掌握了白魔从塔顶囚犯转为在外活动者的情报。高塔完整结构、囚犯名单及所有逃亡者去向仍未明确。
+边关被攻破时，高塔同时遭到魔物之潮与魔兽之潮冲击。白色魔法使利用袭击，并在沐透协助下逃出监狱塔；帝都篇开始前，他已经脱困。受袭、求援、地方上报和帝都获知并非同时完成：原线有破塔求援的军报，也有沐透事后向地方报告逃犯的行动，后来雷光掌握了白魔从塔顶囚犯转为在外活动者的情报。高塔完整结构、囚犯名单及所有逃亡者去向仍未明确。
 
-来源：[设定资料 第123行](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md:123>)；[用户补充 第5行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.jsonl:5>)；[用户补充 第114行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:114>)。 [完整来源与编写备注](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/output/replay_f_review/v1/worldbook/author_notes.md:1422>)
+来源：[设定资料 第123行](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md:123>)；[用户补充 第5行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.jsonl:5>)；[用户补充 第114行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:114>)。 [完整来源与编写备注](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/output/replay_f_review/v1/worldbook/author_notes.md:1422>)；本轮修订：[用户澄清](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:243>)。
 
 ### 帝都图书馆
 
@@ -693,10 +693,10 @@ Faer是克拉肯给维尔所接入的古代魔法装具所用的名称。沐透�
 
 ### 监狱塔脱逃
 
-监狱塔脱逃是白色魔法师利用高塔遭袭而逃离囚禁的事件。高塔同时受到魔物之潮与魔兽之潮冲击，白魔在袭击中得到沐透协助，成功离开塔顶监牢。白魔此前已经在大陆各地酿成惨剧，被捕后才遭关押；帝为何留下其性命收监仍不明确。
+监狱塔脱逃发生于边关被攻破时，早于首次入帝都；白色魔法师利用高塔遭袭逃离囚禁。高塔同时受到魔物之潮与魔兽之潮冲击，白魔在袭击中得到沐透协助，成功离开塔顶监牢。白魔此前已经在大陆各地酿成惨剧，被捕后才遭关押；帝为何留下其性命收监仍不明确。
 原线第一部的后台已有高塔被攻破的军报和派援行动。沐透后来向地方报告塔袭发生于四天前，地方以鸽子携带魔法信件求援并收到回复；霞、洛和小队医生随后到场，先抑制毒性，再与镇上诊所共同治疗伤者。原线第二部，雷光才向御临风透露Gate与夜宴的相关情报。破塔、报告、援军行动及不同人物获知消息各有时间，完整日历尚无法统一。
 
-来源：[设定资料 第123行](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md:123>)；[用户补充 第2行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.jsonl:2>)；[用户补充 第42行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:42>)。 [完整来源与编写备注](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/output/replay_f_review/v1/worldbook/author_notes.md:2501>)
+来源：[设定资料 第123行](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md:123>)；[用户补充 第2行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.jsonl:2>)；[用户补充 第42行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:42>)。 [完整来源与编写备注](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/output/replay_f_review/v1/worldbook/author_notes.md:2501>)；本轮修订：[用户澄清](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:243>)。
 
 ### 纳萨力克异界迁入
 
@@ -852,11 +852,11 @@ Faer是克拉肯给维尔所接入的古代魔法装具所用的名称。沐透�
 
 ### 谏山黄泉
 
-谏山黄泉是来自日本的除灵师。她在原乡被谏山家主谏山奈落收养并接受训练，主动接土宫神乐同住，成为神乐除灵道路上的引领者。后来奈落被杀、家业遭夺，黄泉本人重伤，与饭纲纪之的婚约也被取消；这些是她来到飘零大陆前的原乡关系与变故。
+谏山黄泉是来自日本的除灵师。她在原乡被谏山家主谏山奈落收养并接受训练；土宫神乐是她穿越前的一名朋友。后来奈落被杀、家业遭夺，黄泉本人重伤，与饭纲纪之的婚约也被取消；这些是她来到飘零大陆前的原乡关系与变故。
 
 黄泉与御临风经历了帝国边关和村庄阶段，随后与御临风、布莱特一同首次抵达帝都。原线中，她持续参与队伍的救援和帝都刑案战斗；后来才获得并解封狮子王，与剑中的灵兽乱红莲建立契约。
 
-来源：[人物资料](<D:/备份文件/901记录/TRPG outputs/设定 人物/人物卡资料集_检索版.md>)；[原帖 #44](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-first/1/posts.jsonl:45>)。 [完整来源与编写备注](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/output/replay_f_review/v1/worldbook/author_notes.md:5565>)
+来源：[人物资料](<D:/备份文件/901记录/TRPG outputs/设定 人物/人物卡资料集_检索版.md>)；[原帖 #44](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-first/1/posts.jsonl:45>)。 [完整来源与编写备注](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/output/replay_f_review/v1/worldbook/author_notes.md:5565>)；本轮修订：[用户澄清](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:243>)。
 
 ### 沐透
 
@@ -870,9 +870,9 @@ Faer是克拉肯给维尔所接入的古代魔法装具所用的名称。沐透�
 
 卡西乌斯·布莱特是失明的猎人、赏金猎人和游击士。布莱特自述曾有平静家庭，灭村后追查凶手，误追精灵并在偷袭龙裔后失明，后来在荣耀城孤儿院重建生活。关照孤儿院是其持续牵挂，原线中多次通过照料、捐款和嘱托落实。
 
-布莱特与御临风、黄泉首次抵达帝都时同行，当时为C级游击士，峡谷战后才获升B级。原线后期，他被古雷姆林掳走并吸收，残存面相仍咬住敌人的刀、阻碍敌人行动，催促御临风进攻，最终与古雷姆林一同失去生命，遗言仍指向帝都郊外孤儿院。随后从古雷姆林体内破出的盲眼幼黑龙确有其物，但“幼龙就是布莱特”只是御临风的猜测。
+布莱特与御临风、黄泉首次抵达帝都时同行，当时为C级游击士，峡谷战后才获升B级。
 
-来源：[人物资料](<D:/备份文件/901记录/TRPG outputs/设定 人物/人物卡资料集_检索版.md>)。 [完整来源与编写备注](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/output/replay_f_review/v1/worldbook/author_notes.md:5668>)
+来源：[人物资料](<D:/备份文件/901记录/TRPG outputs/设定 人物/人物卡资料集_检索版.md>)。 [完整来源与编写备注](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/output/replay_f_review/v1/worldbook/author_notes.md:5668>)；本轮修订：[用户澄清](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:243>)。
 
 ### 帝
 
@@ -908,21 +908,21 @@ Faer是克拉肯给维尔所接入的古代魔法装具所用的名称。沐透�
 
 ### 悠悠
 
-悠悠本名芬尔德·特兰希尔，人物资料记为11岁，是旧空间龙秘境惨剧中唯一幸存的空间龙。毁掉旧秘境的是追击凌迟的人类部队，凌迟并非灭族凶手；她的父母一家曾救助凌迟，后来凌迟在坟前向她道歉并请求借用她的生命，悠悠答应了。她曾向御临风表示，凌迟叔叔要求她死在帝都，好让大家幸福；这是她对命令和咒文的理解，并非咒文真实效果的确认。威廉在拘押后的鉴识中确认她为四分之一精灵、四分之三龙族的空间龙变种，并判断咒文以寿命换取庞大魔力，但未完全读透术式。
+悠悠本名芬尔德·特兰希尔，人物资料记为11岁，是旧空间龙秘境惨剧中唯一幸存的空间龙。毁掉旧秘境的是追击凌迟的人类部队，凌迟并非灭族凶手；她的父母一家曾救助凌迟，后来凌迟在坟前向她道歉并请求借用她的生命，悠悠答应了。她认为自己的责任是完成凌迟的托付，到达帝都后等待身上的诅咒爆发；她曾向御临风表示这样能让大家幸福。等待是她理解的托付内容，幸福效果则是她的信念，并非咒文真实效果的确认。威廉在拘押后的鉴识中确认她为四分之一精灵、四分之三龙族的空间龙变种，并判断咒文以寿命换取庞大魔力，但未完全读透术式。
 
 原线中，悠悠与御临风相识并成为朋友，探监时曾因御临风的激烈施压受到伤害；后来御临风承接诅咒，受命护送她回龙族秘境。谢尔伦是她称作“爷爷”的保护者，奥希拉被她称作“叔叔”，两种称呼尚未给出明确血缘。谢尔伦为保护她提出帝国婚约，御临风答应暂作挡箭牌、尊重她长大后的选择，宴会上公开称自己是未婚夫；悠悠当时尚未完整说出自己的婚约意见。
 
 在原线护送抵达龙族秘境后的仪式上，本多宣布悠悠继任空间龙族长、继承先祖之字，自此姓名为芬尔德·琳·特兰希尔。后来她获得泰蕾斯最后的力量，并在秘境危机中承认自己是最后的封印、需要活下去。她能向御临风展示条件不同的未来图景，但这不是已经发生的结果，也不是对一切危险细节的全知。
 
-来源：[人物资料](<D:/备份文件/901记录/TRPG outputs/设定 人物/人物卡资料集_检索版.md>)；[设定资料](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md>)。 [完整来源与编写备注](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/output/replay_f_review/v1/worldbook/author_notes.md:5928>)
+来源：[人物资料](<D:/备份文件/901记录/TRPG outputs/设定 人物/人物卡资料集_检索版.md>)；[设定资料](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md>)。 [完整来源与编写备注](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/output/replay_f_review/v1/worldbook/author_notes.md:5928>)；本轮修订：[用户澄清](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:243>)。
 
 ### 白色魔法使
 
-白色魔法使亦称白魔、笛木奏，是曾被监禁在监狱塔的异界魔法师。监狱塔受到两潮冲击、沐透又协助他脱逃，此后他向沐透提供驱动器。白魔参与Phantom、驱动器和宝石魔法道具的研究，忠于他的美杜莎是Phantom；其他Phantom与他的具体关系各不相同。
+白色魔法使亦称白魔、笛木奏，是曾被监禁在监狱塔的异界魔法师。边关被攻破时，监狱塔受到魔物之潮与魔兽之潮的双重冲击，沐透协助他脱逃；帝都篇开始前他已脱困，此后与沐透建立驱动器交易。白魔参与Phantom、驱动器和宝石魔法道具的研究，忠于他的美杜莎是Phantom；其他Phantom与他的具体关系各不相同。
 
 原线后期，白魔以人质、攻击和交易向御临风施压，却自称并不想杀他、Phantom也不是最终目的。他说自己为家人的幸福而行动，可与任何能提供帮助的人合作，并明确称肯达只是多名合作者之一；卡珊德拉另称他想建立新世界与新神、重建家人和故乡，这些动机仍分别属于本人供述与他人情报。在龙族秘境根基洞穴，白魔的多个个体挟持本多并研究瑟坦特的假面，受到安兹威胁后放人，继续取用根基之石；当时取石仍在交涉中，离去与毁境是否完成尚未确认。
 
-来源：[设定资料](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md>)；[原帖 #966](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl:17>)；[原帖 #967](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl:18>)。 [完整来源与编写备注](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/output/replay_f_review/v1/worldbook/author_notes.md:6041>)
+来源：[设定资料](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md>)；[原帖 #966](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl:17>)；[原帖 #967](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl:18>)。 [完整来源与编写备注](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/output/replay_f_review/v1/worldbook/author_notes.md:6041>)；本轮修订：[用户澄清](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:243>)。
 
 ### 安兹·乌尔·恭
 

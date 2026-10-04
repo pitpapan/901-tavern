@@ -1,6 +1,6 @@
 # 人物审核索引
 
-已知人物按来源深度编写，资料不足保留短档；身份标签去向另列。先读御临风、黄泉、布莱特与主要人物，再按需看扩展人物。运行卡的开局适用条件不等于此人自动出现在开局。
+已知人物按来源深度编写，资料不足保留短档；身份标签去向另列。本轮按用户要求审核NPC；御临风Persona不在审阅范围，再按需看扩展人物。运行卡的开局适用条件不等于此人自动出现在开局。
 
 | 人物 | 作者档案 | 卡稿 | 开局适用 |
 |---|---|---|---|
@@ -98,6 +98,11 @@
 | 欧登 | [作者档案](profiles/CRC_123.md) | [卡稿](runtime_cards.md:3852) | 出场前确认时期 |
 | 科斯雷 | [作者档案](profiles/CRC_124.md) | [卡稿](runtime_cards.md:3896) | 出场前确认时期 |
 | 贝克 | [作者档案](profiles/CRC_125.md) | [卡稿](runtime_cards.md:3940) | 出场前确认时期 |
+| 七理夜 | [作者档案](profiles/CRC_126.md) | [卡稿](runtime_cards.md:3984) | 出场前确认时期；新增待审 |
+| 穗乃香 | [作者档案](profiles/CRC_127.md) | [卡稿](runtime_cards.md:4022) | 出场前确认时期；新增待审 |
+| 猫音 | [作者档案](profiles/CRC_128.md) | [卡稿](runtime_cards.md:4060) | 出场前确认时期；新增待审 |
+| 时房 | [作者档案](profiles/CRC_129.md) | [卡稿](runtime_cards.md:4098) | 出场前确认时期；新增待审 |
+| 索扬肯库尔 | [作者档案](profiles/CRC_130.md) | [卡稿](runtime_cards.md:4136) | 出场前确认时期；新增待审 |
 
 ## 编写去向
 
@@ -228,3 +233,8 @@
 | CRC_123 | 欧登 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
 | CRC_124 | 科斯雷 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
 | CRC_125 | 贝克 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_126 | 七理夜 | new_reference_character_draft_pending_review | 本人实见登场；作者短档与卡稿已写，世界书未新增。 |
+| CRC_127 | 穗乃香 | new_reference_character_draft_pending_review | 本人实见登场；作者短档与卡稿已写，世界书未新增。 |
+| CRC_128 | 猫音 | new_reference_character_draft_pending_review | 目前仅核到具名提及；作者短档与卡稿已写，世界书未新增。 |
+| CRC_129 | 时房 | new_reference_character_draft_pending_review | 目前仅核到具名提及；作者短档与卡稿已写，世界书未新增。 |
+| CRC_130 | 索扬肯库尔 | new_reference_character_draft_pending_review | 目前仅核到具名提及；作者短档与卡稿已写，世界书未新增。 |

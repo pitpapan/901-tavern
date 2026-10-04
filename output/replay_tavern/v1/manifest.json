@@ -1,0 +1,115 @@
+{
+  "id": "901-tavern-f4-v1",
+  "created_on": "2026-10-03",
+  "status": "revised_after_user_playtest_pending_manual_update_and_retest",
+  "tested_target_version": "1.19.0",
+  "source_review": "F3 accepted as basis to proceed by user; prior F1/F2 review limitations preserved",
+  "counts": {
+    "F1_sources": 182,
+    "F2_sources": 99,
+    "world_dispositions": {
+      "core": 3,
+      "keyword": 79,
+      "author_only": 100
+    },
+    "npc_dispositions": {
+      "keyword": 30,
+      "on_scene": 2,
+      "author_only": 61,
+      "manual": 6
+    },
+    "embedded_entries": 120,
+    "enabled_constant": 5,
+    "enabled_keyword": 109,
+    "disabled_manual": 6
+  },
+  "constant_entries": [
+    "妄想大陆",
+    "大陆法则限制",
+    "帝国",
+    "人物·谏山黄泉",
+    "人物·卡西乌斯·布莱特"
+  ],
+  "manual_entries": [
+    "【手动启用】人物·帝",
+    "【手动启用】人物·杨",
+    "【手动启用】人物·无名哥布林（杨的同行者）",
+    "【手动启用】人物·邻居大妈",
+    "【手动启用】人物·怪眼队长",
+    "【手动启用】人物·携盒男子"
+  ],
+  "context_measurement": {
+    "unit": "Unicode characters, NOT tokens",
+    "host_chars": 1756,
+    "persona_chars": 504,
+    "scenario_chars": 156,
+    "constant_lore_chars": 2410,
+    "worldbook_budget_recommendation": "20% of configured context, cap 5000 tokens; actual token count and overflow checked in G"
+  },
+  "inputs": [
+    {
+      "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+      "sha256": "aa5835d33e47a822bd3c1217483e7fd41c8beb9253df21a57846da4b54329774"
+    },
+    {
+      "path": "output/replay_f_review/v1/characters/runtime_cards.jsonl",
+      "sha256": "3e92b9dd8982f18fb4a926b94a71790363e3fe227d7c1112638aabedc5b66193"
+    },
+    {
+      "path": "output/replay_f_review/v1/persona/yulinfeng_persona.json",
+      "sha256": "e954589800108273d25d052fa9f7cafd1cfb9788d7df97f91a3acfd8243bcf44"
+    },
+    {
+      "path": "work/replay_research/f4_drafts/worldbook_projection.json",
+      "sha256": "c19644aa34213cfc8a719be624fa55857152af6a062f0aed96d05ac79c9b64bd"
+    },
+    {
+      "path": "work/replay_research/f4_drafts/npc_projection.json",
+      "sha256": "ae95305504979e16e48bdefbe4093ed999297cb0a817ca9687565c59183ad3dc"
+    },
+    {
+      "path": "output/replay_f_review/v1/gm/host_rules.md",
+      "sha256": "8f27e50f4e3d472b2ee553bb37c4eec3a5a404b96a3bac25e789083aa95e0b6d"
+    },
+    {
+      "path": "output/replay_f_review/v1/gm/summary_prompt.md",
+      "sha256": "1e60f463112a0ef63462092be5871a765e960a4725b2afa3c21a0a37b5e41295"
+    }
+  ],
+  "persona_reused_verbatim": true,
+  "dream_only_material_exported": false,
+  "future_Bright_ending_exported": false,
+  "local_settings_changed": false,
+  "model_request_sent": false,
+  "portable_sources": "author/entry_sources.json",
+  "regenerate": "python scripts/export_replay_tavern.py --replace-generated; edit source projections first, never generated import files",
+  "verification": {
+    "checked_on": "date_not_supplied",
+    "passed": true,
+    "target_version": "1.19.0",
+    "character_card": "local TavernCardValidator.validateV2 passed",
+    "worldbook": "All emitted native fields match local convertCharacterBook output for all 120 entries",
+    "persona": "Native backup shape; exact original persona_text retained",
+    "source_mapping": "120 exports and 161 omitted-source locators resolve to matching IDs",
+    "scope": "F4 files only; no full-source audit, frontend import, API request or model play test",
+    "counts": {
+      "F1_sources": 182,
+      "F2_sources": 99,
+      "world_dispositions": {
+        "core": 3,
+        "keyword": 79,
+        "author_only": 100
+      },
+      "npc_dispositions": {
+        "keyword": 30,
+        "on_scene": 2,
+        "author_only": 61,
+        "manual": 6
+      },
+      "embedded_entries": 120,
+      "enabled_constant": 5,
+      "enabled_keyword": 109,
+      "disabled_manual": 6
+    }
+  }
+}

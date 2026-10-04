@@ -66,7 +66,7 @@
 
 委托通过任务板和前台接洽，接任务者可以向接待员询问详情；承接协会任务涉及会员资格，原线曾拒绝非会员接取。游击士按等级活动，任务成绩与奖励可影响晋升。布莱特初入帝都时为C级，峡谷战后才因帝的专属委托所获认可升为B级。
 
-协会的中立地位仍会受到国家权力的实际压力。原线接待员解释，协会不能公开对抗国家势力，在必须保全整个组织时可能舍弃个人〔character_belief〕；随后发生的军队搜查支部和截信也限制了当地行动。战争后期，A级游击士参与前线协作，一些支部因人员支援前线而冷清，但仍继续接待和代传约见。协会还可为求助者联系学者，提供进入专业研究的渠道。
+原线首次入帝都时，协会接待员已掌握九雪医馆被捕的案件消息：有人暗杀达卡斯未遂、医馆被指为幕后，军方已将一家人关入帝国监狱；这些是她转述的案情指控，不证明医馆有罪〔rumor〕。逮捕由达卡斯下令的说法，她明确称为小道消息〔rumor〕。接待员称协会调查过露露缇耶的爷爷，并以其传奇士兵经历及医馆多为老人孩子为由，质疑刺杀指控；她又称城中从谈话前一天起出现边关失守传闻、多数人不信，认为时机巧合〔character_belief〕。达卡斯此前交付的琐事与魔兽清理委托，在他回到帝都后紧急撤回；接待员明确说协会也觉得他可疑，正在调查，有消息会通知布莱特〔character_belief〕。她还答应尝试联系被捕者，但未保证成功。私下调查和传递线索不等于公开对抗军方，也不表示协会已经识破冒名或查明真正刺客。 协会的中立地位仍会受到国家权力的实际压力。原线接待员解释，协会不能公开对抗国家势力，在必须保全整个组织时可能舍弃个人〔character_belief〕；随后发生的军队搜查支部和截信也限制了当地行动。战争后期，A级游击士参与前线协作，一些支部因人员支援前线而冷清，但仍继续接待和代传约见。协会还可为求助者联系学者，提供进入专业研究的渠道。
 
 来源：[设定资料 第25行](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md:25>)；[设定资料 第33行](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md:33>)；[原帖 #30](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl:31>)。 [完整来源与编写备注](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/output/replay_f_review/v1/worldbook/author_notes.md:489>)
 
@@ -212,11 +212,11 @@
 
 ## 监狱塔
 
-监狱塔是囚禁白色魔法使等魔物的高塔，白色魔法使被关押在塔顶，沐透曾在塔中担任守卫。帝为何保留这些囚犯的性命并将其囚禁，至今没有明确答案。
+监狱塔曾囚禁白色魔法使等魔物，白色魔法使过去被关押在塔顶，沐透曾在塔中担任守卫。帝为何保留这些囚犯的性命并将其囚禁，至今没有明确答案。
 
-高塔后来同时遭到魔物之潮与魔兽之潮冲击。白色魔法使利用袭击，并在沐透协助下逃出监狱塔。受袭、求援、地方上报和帝都获知并非同时完成：原线有破塔求援的军报，也有沐透事后向地方报告逃犯的行动，后来雷光掌握了白魔从塔顶囚犯转为在外活动者的情报。高塔完整结构、囚犯名单及所有逃亡者去向仍未明确。
+边关被攻破时，高塔同时遭到魔物之潮与魔兽之潮冲击。白色魔法使利用袭击，并在沐透协助下逃出监狱塔；帝都篇开始前，他已经脱困。受袭、求援、地方上报和帝都获知并非同时完成：原线有破塔求援的军报，也有沐透事后向地方报告逃犯的行动，后来雷光掌握了白魔从塔顶囚犯转为在外活动者的情报。高塔完整结构、囚犯名单及所有逃亡者去向仍未明确。
 
-来源：[设定资料 第123行](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md:123>)；[用户补充 第5行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.jsonl:5>)；[用户补充 第114行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:114>)。 [完整来源与编写备注](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/output/replay_f_review/v1/worldbook/author_notes.md:1422>)
+来源：[设定资料 第123行](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md:123>)；[用户补充 第5行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.jsonl:5>)；[用户补充 第114行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:114>)。 [完整来源与编写备注](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/output/replay_f_review/v1/worldbook/author_notes.md:1422>)；本轮修订：[用户澄清](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:243>)。
 
 ## 帝都图书馆
 
@@ -384,10 +384,10 @@ Phantom是白色魔法师在飘零大陆大量催生的存在，与被称为Gate
 
 ## 监狱塔脱逃
 
-监狱塔脱逃是白色魔法师利用高塔遭袭而逃离囚禁的事件。高塔同时受到魔物之潮与魔兽之潮冲击，白魔在袭击中得到沐透协助，成功离开塔顶监牢。白魔此前已经在大陆各地酿成惨剧，被捕后才遭关押；帝为何留下其性命收监仍不明确。
+监狱塔脱逃发生于边关被攻破时，早于首次入帝都；白色魔法师利用高塔遭袭逃离囚禁。高塔同时受到魔物之潮与魔兽之潮冲击，白魔在袭击中得到沐透协助，成功离开塔顶监牢。白魔此前已经在大陆各地酿成惨剧，被捕后才遭关押；帝为何留下其性命收监仍不明确。
 原线第一部的后台已有高塔被攻破的军报和派援行动。沐透后来向地方报告塔袭发生于四天前，地方以鸽子携带魔法信件求援并收到回复；霞、洛和小队医生随后到场，先抑制毒性，再与镇上诊所共同治疗伤者。原线第二部，雷光才向御临风透露Gate与夜宴的相关情报。破塔、报告、援军行动及不同人物获知消息各有时间，完整日历尚无法统一。
 
-来源：[设定资料 第123行](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md:123>)；[用户补充 第2行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.jsonl:2>)；[用户补充 第42行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:42>)。 [完整来源与编写备注](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/output/replay_f_review/v1/worldbook/author_notes.md:2501>)
+来源：[设定资料 第123行](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md:123>)；[用户补充 第2行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.jsonl:2>)；[用户补充 第42行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:42>)。 [完整来源与编写备注](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/output/replay_f_review/v1/worldbook/author_notes.md:2501>)；本轮修订：[用户澄清](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:243>)。
 
 ## 纳萨力克异界迁入
 

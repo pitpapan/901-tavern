@@ -1,0 +1,30 @@
+{
+  "id": "901-gm-style-v1",
+  "created_on": "2026-10-03",
+  "status": "files_exported_pending_user_review_and_manual_use",
+  "kind": "Prompt Manager modules, not a full model sampling preset",
+  "target_version": "SillyTavern 1.19.0",
+  "source": "work/replay_research/gm_style/v1/authoring.json",
+  "source_sha256": "aca7b03be1518c2784c26b94c06582e32d7c096299d6ff2b3dcd22d0ad995539",
+  "context_characters_not_tokens": {
+    "901-gm-style-v1": 1598,
+    "901-gm-style-examples-v1": 446
+  },
+  "opening_characters": 195,
+  "runtime_policy": {
+    "canon_changed": false,
+    "worldbook_changed": false,
+    "persona_changed": false,
+    "host_card_changed": false,
+    "raw_corpus_loaded": false,
+    "original_future_loaded": false,
+    "dream_scenes_loaded": false,
+    "mes_example_used": false,
+    "requires_new_session": false,
+    "installed_sillytavern_modified": false,
+    "model_request_sent": false
+  },
+  "format_verification": "pending separate bounded check",
+  "manual_import_and_model_test": "not performed",
+  "regenerate": "python -X utf8 scripts/export_gm_style_pack.py --replace-generated"
+}

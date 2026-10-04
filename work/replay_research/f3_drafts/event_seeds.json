@@ -1,0 +1,226 @@
+{
+  "document_kind": "F3_author_event_seed_design",
+  "review_status": "provisional_requires_human_review",
+  "schema_note": "本稿是六条有来源的事件样板，不是正式世界书或已安装调度器；全部条件用法均为设计，未开始游玩。",
+  "branch_anchor": "T0：御临风、布莱特、黄泉将入帝都，尚未执行原线 #81 主动行动。",
+  "author_only": true,
+  "runtime_guarantees": {
+    "automatic_timekeeping": false,
+    "automatic_persistence": false,
+    "automatic_rollback": false,
+    "secret_isolation_by_field": false,
+    "note": "这些 false 只表示本 JSON 不实现事件自动化，不否认酒馆保存聊天、分支或检查点的原生功能。直接复用现有聊天与摘要位置；主持按世界内时间处理条件，在关键变化时保留短摘要，不要求每轮手工跑表。不要把本文件整份发送为 T0 上下文。"
+  },
+  "field_notes": {
+    "source": "source_id 为既有研究/用户补充编号或原帖 msg；path 与 line 是库内定位。原帖定位继承指定研究记录，本轮未重新整库阅读。",
+    "world_facts": "作者可用事实，逐项保留证据地位、适用时期与 source_ids；后期原线事实不等于 T0 已发生。",
+    "knowledge": "只授予有来源或本分支消息支持的知识。未记录知情不是已证明无知。",
+    "status": "当前样板所指动作或资料的状态；不是整条因果链统一开关。",
+    "activation": "明确所指动作何时进入当前场景。已有事实不等待激活；未知开始日期不等于等待 PC。",
+    "dependencies": "区分已经成立、尚未建立与未知的具体条件；它们不替代 confirmed/uncertain/rumor/character_belief。",
+    "outcome_not_fixed": "仅指 T0 后的过程与结果；已发生前史不因此开放重写。"
+  },
+  "seeds": [
+    {
+      "id": "F3_EVT_001",
+      "title": "高塔双潮与白魔脱逃的 T0 前史",
+      "kind": "completed_history",
+      "author_only": true,
+      "source": [
+        {"source_id": "UCL_20261003_004", "path": "work/replay_research/user_clarifications.md", "line": 125},
+        {"source_id": "UCL_20261003_010", "path": "work/replay_research/user_clarifications.md", "line": 250},
+        {"source_id": "UCL_20261003_010", "path": "work/replay_research/opening_state_consolidated.md", "line": 81}
+      ],
+      "status": "completed_pre_t0",
+      "status_scope": "双潮冲击及白魔脱逃已完成；未来追捕和冲突不在该完成状态内。",
+      "world_facts": [
+        {"text": "高塔受到魔物之潮与魔兽之潮双重冲击。", "epistemic_status": "confirmed", "valid_time": "T0 以前", "source_ids": ["UCL_20261003_004"]},
+        {"text": "白色魔法师在边关被攻破、两潮同时出现的时间点脱困，T0 已脱逃。", "epistemic_status": "confirmed", "valid_time": "T0 以前及 T0", "source_ids": ["UCL_20261003_010"]}
+      ],
+      "knowledge": {
+        "t0_pc": "御临风有边关被破的记忆和可报告内容；这不自动授予高塔后台全貌或白魔个别行动情报。",
+        "knowledge_source": {"source_id": "OPENR_007", "path": "work/replay_research/opening_state_consolidated.md", "line": 43},
+        "other_characters": "按各自经历和实际接收消息另记，不从本条自动共享。"
+      },
+      "activation": {"rule": "无需再触发。选取相关后台事实用于裁定；不能等待御临风报信才让白魔逃出。", "pc_participation_required": false},
+      "dependencies": [
+        {"condition": "边关失守、双潮冲击及白魔脱困", "condition_state": "established_pre_t0"},
+        {"condition": "各具体 Phantom 的个别转化时间", "condition_state": "unknown", "effect": "不从白魔已脱逃推定统一转化日期。"}
+      ],
+      "time_and_messages": "不新造日期或传播路径。后续得知只改变人物知识，不改变事件已经发生。",
+      "outcome_not_fixed": {"value": true, "scope": "T0 后对白魔的追查、遭遇、处置与胜负；不包括撤销脱逃前史。"},
+      "loading": {"include_in_t0_host_context": true, "include_in_t0_initial_state": true, "projection": "必要后台短句：高塔双潮、白魔已脱逃；不得当作 PC 自动已知旁白。"}
+    },
+    {
+      "id": "F3_EVT_002",
+      "title": "帝都报信与调查接触",
+      "kind": "conditional_interaction",
+      "author_only": true,
+      "source": [
+        {"source_id": "ECAP_001", "path": "work/replay_research/event_causality_capital.jsonl", "line": 1},
+        {"source_id": "OPENR_008", "path": "work/replay_research/opening_state_consolidated.md", "line": 49},
+        {"source_id": "msg817008", "path": "extracted-first/3/posts.jsonl", "line": 42, "floor": 141},
+        {"source_id": "msg818243", "path": "extracted-first/5/posts.jsonl", "line": 4, "floor": 203},
+        {"source_id": "UCL_20261003_011", "path": "work/replay_research/user_clarifications.md", "line": 266}
+      ],
+      "status": "waiting_conditions",
+      "status_scope": "本分支的报信或查访接触尚未由玩家声明；不表示医馆案和达卡斯一方关系尚不存在。",
+      "world_facts": [
+        {"text": "守门军官属于达卡斯一方；改用礼貌语气不改变这项已有联系。", "epistemic_status": "confirmed", "valid_time": "T0 的既有关系", "source_ids": ["ECAP_001", "OPENR_008", "msg817008"]},
+        {"text": "原线走访医馆时见关闭，并听邻居说全家被捕；发现时点不等于关闭与逮捕开始时点。", "epistemic_status": "confirmed", "valid_time": "原线 T0 后发现", "source_ids": ["ECAP_001"]},
+        {"text": "医馆案确切起时、军官是否被催眠及完整知情范围未确认。", "epistemic_status": "uncertain", "valid_time": "作者资料缺口", "source_ids": ["ECAP_001", "OPENR_008"]},
+        {"text": "原线右近在得知关卡失守后派快骑秘密核查；核查身份、军情与权限符合其职责上的谨慎。", "epistemic_status": "confirmed", "valid_time": "原线行动及适用职责；新分支须有收到信息的条件", "source_ids": ["ECAP_001", "msg818243", "UCL_20261003_011"]}
+      ],
+      "knowledge": {
+        "t0_pc": "不预授军官后台联系、后期催眠调查或医馆案完整消息。推荐信与边关亲历按开局状态保留。",
+        "acquisition": "报信对象只获得实际告知内容；查访、邻居、协会、现场旁听及右近转述各自记录渠道和接收者。",
+        "npc_limits": "军官的具体内心和知晓真相程度未证；右近未收到的报告不能视作已经收到。"
+      },
+      "activation": {
+        "rule": "玩家选择报信或查访时处理对应互动；右近通过已有或实际形成的渠道收到相关消息时可依职责核查，不要求必须由 PC 亲自触发。",
+        "do_not_require": "不把御临风原线的激动反驳、发信、逃亡作为唯一允许路径。",
+        "do_not_infer": "不为等玩家而把医馆案开始设在走访瞬间；未知日期保持未知。"
+      },
+      "dependencies": [
+        {"condition": "具体对象收到关卡消息", "condition_state": "not_yet_established_in_branch", "effect": "影响其能针对该报告采取什么行动。"},
+        {"condition": "本分支实际使用推荐信、查访或发送信件", "condition_state": "not_performed_at_t0", "effect": "只有实做才产生相应互动和证物。"},
+        {"condition": "军官与达卡斯一方联系", "condition_state": "established", "effect": "不因更换沟通语气消失。"}
+      ],
+      "time_and_messages": "一次短谈只推进短谈经过的时间。原线搜查、截信和接触先后不得合为全城即时知情。",
+      "outcome_not_fixed": {"value": true, "scope": "信任、阻挠、追捕、调查速度、接触与保护；不保证被捕或右近保底救援。"},
+      "loading": {"include_in_t0_host_context": true, "include_in_t0_initial_state": false, "projection": "城门互动需要时载入军官联系及知情限制；未交谈时不输出幕后解释。"}
+    },
+    {
+      "id": "F3_EVT_003",
+      "title": "军令与侦察参与分别推进",
+      "kind": "autonomous_action_pattern",
+      "author_only": true,
+      "source": [
+        {"source_id": "ECAP_002", "path": "work/replay_research/event_causality_capital.jsonl", "line": 2},
+        {"source_id": "msg820769", "path": "extracted-first/6/posts.jsonl", "line": 37, "floor": 286},
+        {"source_id": "msg824139", "path": "extracted-first/7/posts.jsonl", "line": 27, "floor": 326},
+        {"source_id": "msg846061", "path": "extracted-first/21/posts.jsonl", "line": 22, "floor": 1021}
+      ],
+      "status": "background",
+      "status_scope": "作者保留的军政因果样板；这些来源不足以认定具体讨伐令在 T0 已下。相关行动到其时期后按自身条件成为 active，不等 PC 接任务。",
+      "world_facts": [
+        {"text": "原线帝批准达卡斯率千人讨伐并让右近副官随军；右近留守，另委队伍隐藏调查。", "epistemic_status": "confirmed", "valid_time": "原线 T0 之后的相应军令阶段", "source_ids": ["ECAP_002", "msg820769", "msg824139"]},
+        {"text": "原线战后右近解释：毁阵迫使沃西斯副官启用七曜石后手。该解释及其获知时点须保留。", "epistemic_status": "confirmed", "valid_time": "原线事后解释，不能作为 T0 的已完成动作", "source_ids": ["ECAP_002", "msg846061"]},
+        {"text": "达卡斯认为暴露比计划早一天半；哈克所述次晨峡谷迎敌是当时报告，不构成完整日历。", "epistemic_status": "character_belief", "valid_time": "原线各自说话或思考时点", "source_ids": ["ECAP_002"]}
+      ],
+      "knowledge": {
+        "t0_pc": "不预知密令、达卡斯后台内心、阵式用途或战后解释。",
+        "acquisition": "只按本分支实际收到的任务说明、侦察见闻和后续报告更新；原线解释不直接进入现时人物记忆。"
+      },
+      "activation": {
+        "rule": "到达有关军政阶段并确认相应命令、资源与行动条件后，军队与行动者自行推进。PC 接受或拒绝侦察仅改变其参与及由此产生的情报和介入。",
+        "local_pending": "初始资料未建立某条命令已下时，保留该具体动作的时期边界；不能因缺精确日历冻结一切独立行动。",
+        "changed_condition": "只有本分支实际毁阵或其他行动改变相关条件，才重判后手与结果；不照搬原线结果。"
+      },
+      "dependencies": [
+        {"condition": "相关命令与部署在本分支已成立", "condition_state": "not_established_at_t0", "effect": "成立即按实际资源和时间推进，不增设 PC 同意条件。"},
+        {"condition": "PC 接受并执行侦察", "condition_state": "optional_player_action", "effect": "只影响其参与、报告和实际介入，不控制军令是否存在。"},
+        {"condition": "实际阵式破坏触及后手", "condition_state": "not_performed_at_t0", "effect": "未破坏不能复用因 PC 毁阵而启用的归因。"}
+      ],
+      "time_and_messages": "军程、工事、行军、命令和报告各保留实际相对顺序；一天半不是全团通用倒计时。",
+      "outcome_not_fixed": {"value": true, "scope": "侦察、毁阵、救援、包围执行、伤势与胜负；不强迫 PC 参与或代授能力。"},
+      "loading": {"include_in_t0_host_context": false, "include_in_t0_initial_state": false, "projection": "仅在军政阶段有关时取命令及行动依据；不把战后解释整段预载。"}
+    },
+    {
+      "id": "F3_EVT_004",
+      "title": "飘零祭年度背景与当届消息",
+      "kind": "background_calendar",
+      "author_only": true,
+      "source": [
+        {"source_id": "ECAP_008", "path": "work/replay_research/event_causality_capital.jsonl", "line": 8},
+        {"source_id": "msg816684", "path": "extracted-first/2/posts.jsonl", "line": 47, "floor": 96},
+        {"source_id": "OPENR_009", "path": "work/replay_research/opening_state_consolidated.md", "line": 55}
+      ],
+      "status": "background",
+      "status_scope": "习俗与近期开局背景；当届节目不计为已发生。",
+      "world_facts": [
+        {"text": "飘零祭纪念夏去冬来，帝每年在城外点燃首堆祭火。", "epistemic_status": "confirmed", "valid_time": "既有年度习俗", "source_ids": ["ECAP_008", "msg816684"]},
+        {"text": "原线 #96 军官说过两天就是飘零祭。", "epistemic_status": "confirmed", "valid_time": "确认其在该场给出相对日期；不补精确年月日", "source_ids": ["msg816684"]},
+        {"text": "当届巨大军武演戏和御前擂台由同帖以听说提及。", "epistemic_status": "rumor", "valid_time": "原线当场听闻", "source_ids": ["ECAP_008", "msg816684"]}
+      ],
+      "knowledge": {
+        "t0_pc": "不因作者读到 #96 就已有该场记忆；已有常识与新听闻分别记录。",
+        "acquisition": "该届日期、节目与实际参加由本分支接触决定；换路线不自动接收军官原话。"
+      },
+      "activation": {"rule": "随着当前世界内时段和场景接触使用年度背景；不要求御临风报信或参加才能存在。具体活动安排只有在有依据或本分支实际形成后才作事实。", "pc_participation_required": false},
+      "dependencies": [
+        {"condition": "既有年度习俗", "condition_state": "established"},
+        {"condition": "该届活动实际日程及节目落实", "condition_state": "partly_unknown", "effect": "相对两天锚不变成自动精确倒计时，传闻不等于已办。"},
+        {"condition": "御临风收到消息或选择参加", "condition_state": "not_performed_at_t0", "effect": "只影响其知情和参与。"}
+      ],
+      "time_and_messages": "保留过两天的原说话时点与不完整历法；真实时间推进后才重新判断相对距离，不能每次载入都重置为两天。",
+      "outcome_not_fixed": {"value": true, "scope": "当届具体节目、出席、玩家参与及现场结果；不因玩家换路抹去年度习俗。"},
+      "loading": {"include_in_t0_host_context": true, "include_in_t0_initial_state": false, "projection": "城市背景需要时载入习俗；准确日期和节目不能直接作为所有人共同知识。"}
+    },
+    {
+      "id": "F3_EVT_005",
+      "title": "大墓地非敌意调查与有条件的通信",
+      "kind": "autonomous_background",
+      "author_only": true,
+      "source": [
+        {"source_id": "UCL_20261003_003", "path": "work/replay_research/user_clarifications.md", "line": 96},
+        {"source_id": "UCL_20261003_003", "path": "work/replay_research/user_clarifications.md", "line": 106},
+        {"source_id": "ESIDE_006", "path": "work/replay_research/event_causality_sides.jsonl", "line": 6},
+        {"source_id": "msg954706", "path": "extracted-great-tomb/page-02/posts.jsonl", "line": 5, "floor": 54},
+        {"source_id": "msg954760", "path": "extracted-great-tomb/page-02/posts.jsonl", "line": 7, "floor": 56}
+      ],
+      "status": "background",
+      "status_scope": "组织调查方向独立存在；具体招募、交物和回报与 T0 的绝对间隔未证，不能整批作为 T0 已完成任务。",
+      "world_facts": [
+        {"text": "大墓地自身渗透、查探帝国，采用非敌意方式。", "epistemic_status": "confirmed", "valid_time": "用户明确的组织背景；未给具体成立日历", "source_ids": ["UCL_20261003_003"]},
+        {"text": "原线安兹要求本地代理暂不公开归属、调查外界；曾交付物资及通信工具，并演示焚纸传送，说明日常送情报室、紧急卷轴联系本人。", "epistemic_status": "confirmed", "valid_time": "原线代理招募与出行前阶段；不得倒填 T0", "source_ids": ["ESIDE_006", "msg954706", "msg954760"]},
+        {"text": "本线迁入、村袭、招募与御临风 T0 的绝对间隔未证明；现存结尾无代理报告已发出或收讫的证据。", "epistemic_status": "uncertain", "valid_time": "作者时序与完成度边界", "source_ids": ["ESIDE_006"]}
+      ],
+      "knowledge": {
+        "t0_pc": "用户补充组织活动不使御临风自动知情。",
+        "agent_and_ainz": "通信工具具备不等于安兹已获最新遭遇；实际发出和接收后逐项更新。",
+        "empire": "非敌意方式不等于帝国知情许可或已结盟。"
+      },
+      "activation": {
+        "rule": "不依御临风许可保留该组织的自主调查方向；到有关阶段或发生相关接触时取用具体行动依据。已经在本分支成立的调查和通信照常继续。",
+        "message_rule": "有实际消息、可用渠道及发送行动才处理传递；到达才授予接收者知识，不自动共享全世界场景。",
+        "unknown_boundary": "不凭尚无原线结局就让代理人永不回报，也不凭通信手段存在捏造报告已经发出。"
+      },
+      "dependencies": [
+        {"condition": "组织非敌意调查方向", "condition_state": "established_background"},
+        {"condition": "本分支具体代理与工具已就位", "condition_state": "not_established_at_t0", "effect": "不通过全时期档案倒填；有相应时期或行动依据后使用。"},
+        {"condition": "某份报告已发出及收讫", "condition_state": "unknown_or_not_yet_recorded", "effect": "只记录可证阶段，不把未记录直接判为成功或失败。"}
+      ],
+      "time_and_messages": "招募、交物、出行与报告分开；世界内时间到达相关阶段时复核，不造主线和旁线的精确同步日历。",
+      "outcome_not_fixed": {"value": true, "scope": "具体接触、保密、合作与通信成果；不预定联盟、敌对、报告成功或失败。"},
+      "loading": {"include_in_t0_host_context": false, "include_in_t0_initial_state": false, "projection": "仅在调查或接触成为当前判断所需时加载阶段片段，不载整条旁线。"}
+    },
+    {
+      "id": "F3_EVT_006",
+      "title": "远期秘境取石的作者索引",
+      "kind": "remote_author_reference",
+      "author_only": true,
+      "source": [
+        {"source_id": "ELATE_008", "path": "work/replay_research/event_causality_main_late.jsonl", "line": 8},
+        {"source_id": "msg1247358", "path": "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl", "line": 25, "floor": 224},
+        {"source_id": "msg1334073", "path": "extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl", "line": 29, "floor": 228},
+        {"source_id": "ELATE_008", "path": "work/replay_research/event_causality_overview.md", "line": 42}
+      ],
+      "status": "dormant",
+      "status_scope": "只标记该远期资料在 T0 不加载；不是白魔或秘境在世界中等待御临风的运行状态。",
+      "world_facts": [
+        {"text": "原线后期 #224 与 #228 对取石动作阶段存在字面差异，缺完整取出、离开与毁境实录。", "epistemic_status": "confirmed", "valid_time": "原线后期记录的证据边界，非 T0 现状", "source_ids": ["ELATE_008", "msg1247358", "msg1334073"]},
+        {"text": "既有续跑的最终取走、毁境、撤离与三日交接是最小过渡约定；不证明原帖完整演出，也不固定从帝都出发的本分支终局。", "epistemic_status": "confirmed", "valid_time": "既有 D3 续跑与 T0 重玩的版本边界", "source_ids": ["ELATE_008", "ELATE_008"]}
+      ],
+      "knowledge": {"t0_pc": "本条不授予未来遭遇、现场条件、毁境结果或过渡后的知识。", "future_acquisition": "仅在本分支实际达到有关情境时，依现场接触处理。"},
+      "activation": {"rule": "将来本分支实际涉及相关目标和条件时，只提取当时需要的最小主世界片段。不是按章节编号自动激活，不规定最终必须到场。", "default_loaded": false},
+      "dependencies": [
+        {"condition": "本分支已实际进入相关后期情境", "condition_state": "not_established_at_t0"},
+        {"condition": "具体取石、阻拦、谈判及撤离条件", "condition_state": "not_evaluated_for_t0", "effect": "届时依实际状态判断，不能套用既有 D3 桥接结果。"}
+      ],
+      "time_and_messages": "不创建 T0 至毁境的自动时钟，不把跨分支 current_state 作为本分支的未来日程。",
+      "outcome_not_fixed": {"value": true, "scope": "是否遇到、是否取石、冲突、毁境与撤离；既有 D3 续跑状态单独保留。"},
+      "loading": {"include_in_t0_host_context": false, "include_in_t0_initial_state": false, "projection": "禁止默认投送；完整条目仅在作者事件库。梦境材料不在此条内。"}
+    }
+  ]
+}

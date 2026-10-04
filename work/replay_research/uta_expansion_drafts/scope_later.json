@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-03",
+  "task": "本地后续主线与旁线《传颂之物》出场人物补漏",
+  "scope": [
+    {
+      "directory": "extracted-second",
+      "posts_md_files": 27
+    },
+    {
+      "directory": "extracted-third",
+      "posts_md_files": 6
+    },
+    {
+      "directory": "extracted-mutou",
+      "posts_md_files": 10
+    },
+    {
+      "directory": "extracted-great-tomb",
+      "posts_md_files": 3
+    }
+  ],
+  "method": "先用rg在posts.md与posts.compact.md检索常见中文异译及日文原名，随后用公主/皇女等上下文词定点排除误中；未通读全团，未读PC专档，未读图。",
+  "existing_scope_size": 17,
+  "additional_confirmed_characters": [],
+  "result": "在指定四个提取目录的本次有界姓名检索中，未找到超出已有17人名单的新《传颂之物》具名人物。此结果不是对未知异译或未具名原型的穷尽证明。",
+  "alias_groups_checked": [
+    "安洁/安潔/杏树/杏樹/安玖/杏珠/安珠/アンジュ",
+    "阿图依/阿图伊/阿杜依/アトゥイ",
+    "亚库托/雅库托/亚克托/ヤクト",
+    "希诺/西诺/悉诺/忍音/辛农/シノ",
+    "奇乌/琪乌/基乌/奇羽/奇璐/姬乌/启乌/キウル",
+    "玛洛洛/马洛洛/麻吕/麻呂/玛萝/玛洛/马洛/马罗/マロロ",
+    "芙米/芙蜜/芙美",
+    "乌露/乌璐/乌鲁/萨拉娜/莎拉娜",
+    "卡露/卡鲁拉/藤香/藤华/藤華",
+    "卡缪/卡谬/阿露露/艾露露/艾尔露/阿鲁",
+    "贝纳/贝那/贝拿/克罗/库罗/库洛/克洛",
+    "哈库奥/哈克奥/乌尔托/乌露托/乌托丽",
+    "德考/奥泽恩/奥森/奥扇/伊塔克/伊达库/亚修马/八须/托莉可/古恩",
+    "可可啵/可可波/可可朴/图斯库尔/图斯库鲁"
+  ],
+  "noncharacter_hits_rejected": [
+    {
+      "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.md",
+      "line": 301,
+      "reason": "勇士拯救公主的故事类型，不是新增原型人物。"
+    },
+    {
+      "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.md",
+      "lines": [
+        561,
+        588
+      ],
+      "reason": "对悠悠的公主称呼及长发公主童话，不是安洁/杏树。"
+    }
+  ],
+  "existing_scope_spot_checks": [
+    {
+      "name": "猫音",
+      "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.md",
+      "line": 36,
+      "quote": "原本久远和猫音都让我读书练字，是说以后方便我找工作糊口。"
+    },
+    {
+      "name": "七理夜",
+      "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.md",
+      "line": 650,
+      "quote": "雷光的侍从，也是副官之一——七理夜"
+    }
+  ]
+}

@@ -1,0 +1,3741 @@
+{
+  "document_kind": "F4_author_worldbook_projection_mapping",
+  "review_status": "provisional_runtime_projection_draft",
+  "anchor": "T0：三人已到帝都附近，尚未执行原线#81主动行动",
+  "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+  "source_entry_count": 182,
+  "original_content_policy": "F1原文与来源保持不动；本文件只保存运行取舍及必要的时期投影，不复制original_content。runtime_content为null且disposition不是author_only时，复用F1 content。",
+  "loading_policy": {
+    "core_is_recommendation": true,
+    "core_limit": 3,
+    "keyword_is_not_autoload_all": true,
+    "npc_worldbook_duplicates_disabled": true,
+    "persona_unchanged": true,
+    "dream_material_disabled": true,
+    "bright_finale_disabled": true,
+    "secret_policy": "后台真相保留供主持按需检索，不等于任何人物已知，也不提供程序级秘密隔离。晚揭示的旧事实仍可存在；后期才发生的事件不提前发生。",
+    "side_line_policy": "旁线贡献背景、权限资源与能力条件，不载入整条旁线经历，不提前完成招募研究或消息送达。",
+    "ability_policy": "世界机制是相应能力的运行条件，不是向人物授予技能、装备或魔力池。",
+    "export_note": "导出器仅处理core/keyword；author_only保留在作者映射中，不导出成禁用但含完整旧结局的条目。"
+  },
+  "counts": {
+    "core": 3,
+    "keyword": 79,
+    "author_only": 100
+  },
+  "review_items": [
+    {
+      "id": "F4_WI_001",
+      "issue": "CHARACTER_CRC_056写真达卡斯生死未明，WORLD_WRC_045及已采开局前史明确阵亡。",
+      "handling": "F1不修改；该人物世界书禁载。F2运行投影应采用已采开局结论，不重新制造悬案。"
+    },
+    {
+      "id": "F4_WI_002",
+      "issue": "CHARACTER_CRC_026古雷姆林简传仍含布莱特终局。",
+      "handling": "该人物世界书禁载；F2导出须去除对应结局，原始历史只在作者档案保留。"
+    },
+    {
+      "id": "F4_WI_003",
+      "issue": "纳萨力克迁入相对T0日历不完整，而用户已指定其非敌意查探作为势力背景。",
+      "handling": "纳萨力克条目保留背景方针、内部制度和资源；不自动指定代理已招募、物资已交付或镇中消息已回报。迁入事件单独作者留存。"
+    },
+    {
+      "id": "F4_WI_004",
+      "issue": "部分Phantom个体的转化时点、雷光获得夜宴细节的时点尚不完整。",
+      "handling": "保留机制与已确认美杜莎归属，后台加载不直接推出全名单已诞生或军方全员已获知；具体人物片段由F2时期约束。"
+    },
+    {
+      "id": "F4_WI_005",
+      "issue": "F1的部分主题名是研究归类标题（如魔兽部族联合体），不必然是世界内正式组织自称。",
+      "handling": "触发沿用既有精确标题；运行不得宣称这些标题是已确认国号。未新增“魔法”“军队”等高频泛词。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "WORLD_WRC_001",
+      "name": "妄想大陆",
+      "type": "world",
+      "disposition": "core",
+      "category": "current_background",
+      "keys": [
+        "妄想大陆"
+      ],
+      "reason": "开局主持须持续遵守的世界/法则/帝国基本框架；仅3条常驻。",
+      "runtime_content": null,
+      "source_line": 1,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 1,
+        "id": "WORLD_WRC_001"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_002",
+      "name": "大陆法则限制",
+      "type": "concept",
+      "disposition": "core",
+      "category": "current_background",
+      "keys": [
+        "大陆法则限制"
+      ],
+      "reason": "开局主持须持续遵守的世界/法则/帝国基本框架；仅3条常驻。",
+      "runtime_content": null,
+      "source_line": 2,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 2,
+        "id": "WORLD_WRC_002"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_003",
+      "name": "飘零大陆",
+      "type": "location",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "飘零大陆"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "飘零大陆是妄想大陆世界的四片大陆之一，帝国长期在此统治，并整合了非敌对的精灵、矮人等族。帝国以帝为政治中心，既有城市、村镇、学术机构与工坊，也有面向妄想山脉的边境防线。过去边境关卡阻止山脉魔兽大军深入大陆，长期的和平与富裕建立在帝国治理和边防之上。\n\n御临风首次进入帝都以前，凌迟已经统合魔兽部族、攻破边关，使帝国内部面临直接入侵。",
+      "source_line": 3,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 3,
+        "id": "WORLD_WRC_003"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_004",
+      "name": "妄想山脉",
+      "type": "location",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "妄想山脉"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "妄想山脉是妄想大陆“四陆一脉”中的山脉，按四片大陆所在区域划分，各区域栖居的怪物不同。飘零大陆一侧有魔兽部族与龙族活动，帝国边境关卡曾把成军魔兽限制在山脉中；山脉最中央另有独立、隔绝而广阔的无法地带。山中还分布着部族居处、洞窟、地下通道、天险和多处秘境。\n\n有学者认为，山脉优越的环境使魔兽大量繁衍，而当地资源难以容纳过剩人口，因而推动魔兽向外扩张〔character_belief〕。",
+      "source_line": 4,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 4,
+        "id": "WORLD_WRC_004"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_005",
+      "name": "帝国",
+      "type": "faction",
+      "disposition": "core",
+      "category": "current_background",
+      "keys": [
+        "帝国"
+      ],
+      "reason": "开局主持须持续遵守的世界/法则/帝国基本框架；仅3条常驻。",
+      "runtime_content": "帝国是长期统治飘零大陆的政权，最高统治者被称为“帝”。帝以集中的最高权威统合军政事务，并将非敌对的精灵、矮人等族纳入帝国。帝国没有贵族阶级，官僚不因任职而被视为比普通人更高贵；与此同时，帝、八柱将及名人享有显著的个人威望，财富、职权和居民生活处境仍有差异。帝国不提倡宗教。\n\n帝国任官唯才，不实行世袭，每年提供多次考试或考核机会。官员既受中央政府监督，也受民间游击士协会的第三方监督。日常事务由帝下设的常务机构办理，八柱将、其直系下属及其他官员参与处理，旁听专员再向帝报告结果；需要最高统治者判断的事项才提交朝堂。朝会按官阶列班，地方报告经专门部门上达，特殊危机可召开紧急朝会。这使常规办理与重大决策各有入口，而非每件事务都等待帝亲自处置。\n\n帝国的军政能力依靠官署、驻军、地方守备及专业人员共同执行。地方可登记敌情、联系法师传讯并向帝都或附近军队求援，军方也能在核验身份后拨给活动经费与马匹；研究者则会要求获得官方正式委托，才继续相关项目。异界知识的长期吸收曾促成魔法武技改革、卷轴工厂化、人才培养军事化与统一管理；实际行动仍受消息传递、材料、人员与补给限制。帝与哈克本来就是兄弟；亲缘是既存后台事实，不表示哈克或其他角色在开局已知。",
+      "source_line": 5,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 5,
+        "id": "WORLD_WRC_005"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge",
+      "additional_source_refs": [
+        {
+          "path": "work/replay_research/opening_state_consolidated.md",
+          "section": "既定前史、时期与后台知情边界"
+        }
+      ]
+    },
+    {
+      "id": "WORLD_WRC_006",
+      "name": "八柱将",
+      "type": "faction",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "八柱将"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "八柱将是帝麾下以武力与智谋居于最高层的八人，既参与帝国常务办理，也按帝的命令承担防务、出征等职责。奥修特尔与右近是同一人物；他负责帝都防务并须参加朝会，因此不能在每次危机中都离城代行任务。\n\n八柱将中的武者可获得帝赏赐的假面。已知奥修特尔持水神假面，宗近持土神假面，武赖持火神假面，左近持雷神假面。假面会选择使用者，只有获得帝的许可者才能解放其中力量；力量能大幅强化身体和自愈能力，却会不断消耗佩戴者生命，解放越深代价越大，生命力不足者甚至可能迅速死亡。",
+      "source_line": 6,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 6,
+        "id": "WORLD_WRC_006"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_007",
+      "name": "兄弟会",
+      "type": "faction",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "兄弟会"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "兄弟会是帝直接掌控的秘密组织，以守护大陆为口号，在暗中从事情报收集、谍报和暗杀。组织严格挑选成员，并采用与上线单线联系的管理方式；一旦失去上线，成员往往难以证明自己的身份，但受选者即使脱离联系，仍会按照兄弟会的标准行动。帝未向八柱将公开兄弟会的真实面目。\n\n雪老曾在兄弟会中直属帝行事数十年，后来转往边关任职。兄弟会完整的层级、身份验证方式和断联补救办法尚未公开。",
+      "source_line": 7,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 7,
+        "id": "WORLD_WRC_007"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_008",
+      "name": "游击士协会",
+      "type": "faction",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "游击士协会"
+      ],
+      "reason": "既存组织及首次入都阶段分部已掌握的医馆案情、疑点和调查；指控、传闻与怀疑保留归属，不预演追捕结果。",
+      "runtime_content": "游击士协会是以保护民间百姓安全、维持地区和平为宗旨的民间组织。协会从民间或政府接受委托，派遣游击士处理魔兽与犯罪，也承接寻宠、寻物、采药、疏通下水道、清理洞穴和临时兼职等日常任务。协会拒绝违法委托，奉行不干涉国家政权的原则，在帝国制度中同时承担对官员的第三方监督。\n\n委托通过任务板和前台接洽，接任务者可以向接待员询问详情；承接协会任务涉及会员资格，非会员不能据此视作已有接取资格。游击士按等级活动，任务成绩与奖励可影响晋升。布莱特初入帝都时为C级。协会还可为求助者联系学者，提供进入专业研究的渠道。\n\n御临风初入帝都这一阶段，帝都分部已有九雪医馆案件的消息。接待员所知的案情说法是：有人暗杀边关步兵统领达卡斯未遂，医馆一家被指为幕后，军方已逮捕包括露露缇耶在内的人，并将他们囚于帝国监狱；这是她转述的指控，不证明医馆有罪〔rumor〕。逮捕由达卡斯下令的说法属于她听到的小道消息〔rumor〕。医馆已卷入逮捕案件，不能按仍在照常接待来保证安全住宿。\n\n协会已调查露露缇耶的爷爷。接待员称他是多次挽救边关、在任务中折损大部分斗气的传奇士兵，认为这样的人物及多为老人孩子的医馆参与刺杀不合理〔character_belief〕。城内也已流传边关失守消息，多数人不信；她认为消息与医馆案出现的时机过于巧合〔character_belief〕。\n\n接待员称，达卡斯此前交付过常见琐事和魔兽清理委托，但在回到帝都后紧急撤回；协会也怀疑他，正在调查，获得新消息后可以继续联系布莱特〔character_belief〕。这不等于协会已经查明刺客身份、案件真相或识破冒名。敏感消息经实际交谈传给听者，未参与私谈的人须另行获告。\n\n协会的中立不妨碍调查和提供已知线索，但不保证能公开对抗国家势力。接待员曾表示可尝试联系被捕者，同时提醒不要抱太大期望；尚无联系已经成功的结果。她还认为组织受压时可能为了整体而舍弃个人〔character_belief〕。本次是否披露、联系及提供帮助，按实际交谈与局势推进，不预演搜查、截信或原线包围。",
+      "source_line": 8,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 8,
+        "id": "WORLD_WRC_008"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge",
+      "additional_source_refs": [
+        {
+          "path": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 15,
+          "post_id": "816726",
+          "floor": "114"
+        },
+        {
+          "path": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 19,
+          "post_id": "816731",
+          "floor": "118"
+        },
+        {
+          "path": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 21,
+          "post_id": "816734",
+          "floor": "120"
+        },
+        {
+          "path": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 25,
+          "post_id": "816745",
+          "floor": "124"
+        },
+        {
+          "path": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 28,
+          "post_id": "816783",
+          "floor": "127"
+        },
+        {
+          "path": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 31,
+          "post_id": "816790",
+          "floor": "130"
+        },
+        {
+          "path": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 34,
+          "post_id": "816807",
+          "floor": "133"
+        }
+      ]
+    },
+    {
+      "id": "WORLD_WRC_009",
+      "name": "魔兽部族联合体",
+      "type": "faction",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "魔兽部族联合体"
+      ],
+      "reason": "可直接使用F1正文的持续背景或T0前史，按正式名与已确认别名触发。",
+      "runtime_content": null,
+      "source_line": 9,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 9,
+        "id": "WORLD_WRC_009"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_010",
+      "name": "龙族",
+      "type": "faction",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "龙族"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "龙族是长期生活于妄想山脉的强大种族，具有长寿、巨翼和高度魔法元素亲和力，后者甚至胜过精灵。龙族繁衍率很低，长期战争和猎杀使其在设定所述时期出现人口负增长。族内有六大龙王，各部族另有首领。冰霜龙王谢尔伦·冯·吉尔科德是龙王中最年长者，也是仍存活的上古龙，曾实际参战对抗死亡之翼与黑龙一族；他依靠丰富经验和奇物，仍保持龙族一线战力。\n\n龙族内部并非立场一致。奥希拉关于黑龙旧日霸权及后来改行龙王制度的家族历史，来自他听说的往事〔rumor〕；全部古战结果、六王经历和各部族政治关系仍不完整。龙族灭族预言属于既存危机背景；对外关系与具体行动依已成立的授权和实际接触发展。",
+      "source_line": 10,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 10,
+        "id": "WORLD_WRC_010"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_011",
+      "name": "空间龙部族",
+      "type": "faction",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "空间龙部族"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "空间龙部族曾居住在妄想山脉边缘的一处空间龙秘境。悠悠的母亲救下了受诅咒、已呈半人半魔兽状态的凌迟，追击凌迟的人类部队由此察觉秘境位置，继而发动奇袭并屠杀部族。造成覆灭的是这支人类部队，凌迟不是灭族的加害者；这处秘境的空间龙仅悠悠幸存。\n\n反击入侵者的具体过程仍有不同记述：设定记空间龙族长牺牲生命，与人类部队同归于尽；谢尔伦的讲述则提到凌迟杀死入侵者。族长与凌迟各自参战、歼敌的先后和配合尚未确定〔uncertain〕。悠悠本名芬尔德·特兰希尔；旧秘境的幸存结论只涉及那里的族人，秘境之外是否仍有其他空间龙未明。",
+      "source_line": 11,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 11,
+        "id": "WORLD_WRC_011"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_012",
+      "name": "娜迦",
+      "type": "faction",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "娜迦"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "娜迦是由古代高等精灵转变而来的种族。高等精灵原是古代精灵社会的贵族与权贵，沉迷永恒之井的能量，无节制滥用魔法，并试图利用北海巨妖称霸世界。永恒之井崩塌后，大部分高等精灵沉入海底，受到永久诅咒而变为娜迦。后来苏醒的娜迦仍保留对下等精灵的歧视和称霸的野心。\n\n娜迦并非全族嗜虐；不同个体的行动与指挥关系必须分别识别。尚无证据确认娜迦全体受卡珊德拉指挥。",
+      "source_line": 12,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 12,
+        "id": "WORLD_WRC_012"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_013",
+      "name": "古代精灵社会",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "古代精灵社会"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "古代精灵社会中，高等精灵属于贵族与权贵阶层。精灵王与传说级魔法驱动器“腰带”的制造有关：腰带以魔法戒指施法，并让使用者通过契约调用其中强大生物的力量。随着古代精灵内乱、精灵王陨落，相关制造技术失传。高等精灵滥用永恒之井、遭遇灾变并有大部分化为娜迦，是另一项明确记载的古代变故；这些事件的完整年代和相互次序尚未统一。\n\n泰蕾斯关于古史的证言包含部分高等精灵受蛊惑、精灵流亡，以及早期人类在帝与假面帮助下立足并接纳流亡者的历史。克拉肯关于古史的证言则称，高等精灵曾受古神迷惑，首都沉海；精灵王为平息战争造出强大而难控的腰带，亲自使用后与古神同灭〔character_belief〕。这些证言提供不同人物所知的古史，仍不足以确定一套涵盖内乱、灾变、战争与技术失落全部因果的统一年代史。",
+      "source_line": 13,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 13,
+        "id": "WORLD_WRC_013"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_014",
+      "name": "纳萨力克地下大坟墓",
+      "type": "faction",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "纳萨力克地下大坟墓",
+        "纳萨力克",
+        "大墓地"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "纳萨力克地下大坟墓是从异世界迁入的据点与势力，由安兹·乌尔·恭统领。它原属同名公会，四十一位创建者被尊为“无上至尊”，迁入后只剩安兹一位。内部成员包括不死生物、恶魔、黑暗精灵、吸血鬼和龙人等，仆役地位取决于是否为至尊所创造，而非单看实力；至尊创造的NPC对造物者怀有绝对忠诚与敬爱。据点自身能产生用于守护的不死生物，安兹另可在尸体充足时大量制造不死生物。\n\n纳萨力克以非敌意方式隐蔽查探帝国。安兹的调查方针包括隐藏归属、先取得本地成绩，再调查潜在势力对墓地的态度，优先保障代理人与墓地安全。纳萨力克具有支持外派行动的武装、马匹、干粮和生活用品；定期情报可用特制本子的纸页传递，焚纸后送往附近情报室，紧急情况则以卷轴直接联系安兹。具备这些资源，不等于某名代理已在T0领受物资、出发或回报。\n\n据点内部通行须获许可。第八层禁止自由参观，私人住所和研究所也有限制；获准陪同穿行不代表自由进入。原乡曾有约一千五百人的公会与佣兵联军在第八层全灭。迁入与T0的精确日期未统一；外交关系须由实际接触与有效授权成立。",
+      "source_line": 14,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 14,
+        "id": "WORLD_WRC_014"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge",
+      "additional_source_refs": [
+        {
+          "path": "work/replay_research/opening_state_consolidated.md",
+          "section": "既定前史、时期与后台知情边界"
+        }
+      ]
+    },
+    {
+      "id": "WORLD_WRC_015",
+      "name": "无法地带",
+      "type": "location",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "无法地带"
+      ],
+      "reason": "可直接使用F1正文的持续背景或T0前史，按正式名与已确认别名触发。",
+      "runtime_content": null,
+      "source_line": 15,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 15,
+        "id": "WORLD_WRC_015"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_016",
+      "name": "狂信者",
+      "type": "faction",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "狂信者"
+      ],
+      "reason": "可直接使用F1正文的持续背景或T0前史，按正式名与已确认别名触发。",
+      "runtime_content": null,
+      "source_line": 16,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 16,
+        "id": "WORLD_WRC_016"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_017",
+      "name": "无法组织",
+      "type": "faction",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "无法组织"
+      ],
+      "reason": "可直接使用F1正文的持续背景或T0前史，按正式名与已确认别名触发。",
+      "runtime_content": null,
+      "source_line": 17,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 17,
+        "id": "WORLD_WRC_017"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_018",
+      "name": "高等评议会",
+      "type": "faction",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "高等评议会"
+      ],
+      "reason": "可直接使用F1正文的持续背景或T0前史，按正式名与已确认别名触发。",
+      "runtime_content": null,
+      "source_line": 18,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 18,
+        "id": "WORLD_WRC_018"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_019",
+      "name": "帝都",
+      "type": "location",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "帝都"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "帝都是帝与朝廷所在的城市，也是帝国中央办理军政事务的重要地点。城内有通向宫廷的道路、圣庙、商业街区、民居和贫民区；公共澡堂使用热水，居民也会沿水渠、河畔洗衣。普通商店出售木铁用品等生活物资，宫前节市和学校活动在节庆期间带来额外的人流与交易。\n\n右近承担帝都防务、朝会和民愿事务，民愿包括疏通下水道、修桥修路、屋顶和邻里争执。军情可经守卫、办公室和队长接报；接报本身不等于内容已核实，消息真伪与受理者的私人关系会影响办理。\n\n御临风首次入城时，贫民区仍是帝都生活的一部分。",
+      "source_line": 19,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 19,
+        "id": "WORLD_WRC_019"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_020",
+      "name": "边境关卡",
+      "type": "location",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "边境关卡"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "边境关卡是帝国面向妄想山脉的军事防线，过去长期阻止成军魔兽深入飘零大陆。御临风首次进入帝都前，凌迟已经利用制空、空投和多兵种协同攻破关卡，真达卡斯及边关三军统领阵亡，魔兽势力由此打开通往帝国内部的道路。",
+      "source_line": 20,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 20,
+        "id": "WORLD_WRC_020"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_021",
+      "name": "帝都近郊峡谷",
+      "type": "location",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "帝都近郊峡谷"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "帝都近郊有一处峡谷。地形包括峡壁与对岸栈道，能为人员提供隐蔽位置。当前人员部署和法术布设尚无已确认状态。",
+      "source_line": 21,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 21,
+        "id": "WORLD_WRC_021"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge",
+      "additional_source_refs": [
+        {
+          "path": "work/replay_research/opening_state_consolidated.md",
+          "section": "既定前史、时期与后台知情边界"
+        }
+      ]
+    },
+    {
+      "id": "WORLD_WRC_022",
+      "name": "九雪医馆",
+      "type": "location",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "九雪医馆"
+      ],
+      "reason": "保留医馆持续背景与T0前已成立的刺杀、查封；具体日时差异不抹除先行事实，角色获知和新分支结果另定。",
+      "runtime_content": "九雪医馆位于帝都，馆主与雪老交好。雪老在边关服役期间，孙女露露缇耶寄居于此。村医称馆主是自己的同门师兄，已经给御临风写了推荐信。\n\n首次抵达帝都之前，雪老已在达卡斯赴帝都途中刺杀失败。达卡斯入都奏报，帝下令全军协助追查，九雪医馆受牵连遭查封，馆内人员包括露露缇耶被捕。原线一行首次到访时大门紧闭、敲门无人回应。具体日时的说法有差异，但这条先行事件链不由御临风报信或查访触发，也不会因改走协会而消失。\n\n本分支尚未实际改变查封与拘押状态前，医馆不能正常提供接待、住宿或教学；推荐信不解除这些处置。医馆曾有照护、转荐与洗浴设施，但已有设施不代表当前可用。地点、知情与介入时机分开：接待员或路人按实际消息谈论医馆，旧印象不等于当前安全已获确认；不得由旁白直接保证适合藏甲或不受巡兵注意。达卡斯是否亲临、队伍如何调查或救援、医馆何时恢复，取决于新分支的实际条件，不预演原线结果。",
+      "source_line": 22,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 22,
+        "id": "WORLD_WRC_022"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge",
+      "additional_source_refs": [
+        {
+          "path": "work/replay_research/opening_state_consolidated.md",
+          "section": "既定前史、时期与后台知情边界"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "816667",
+          "posts_jsonl": "extracted-first/2/posts.jsonl",
+          "jsonl_line": 39,
+          "floor": 88,
+          "author": "剑"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "816699",
+          "posts_jsonl": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 1,
+          "floor": 100,
+          "author": "剑"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "816704",
+          "posts_jsonl": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 3,
+          "floor": 102,
+          "author": "剑"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "816726",
+          "posts_jsonl": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 15,
+          "floor": 114,
+          "author": "剑"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "817008",
+          "posts_jsonl": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 42,
+          "floor": 141,
+          "author": "剑"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "818410",
+          "posts_jsonl": "extracted-first/5/posts.jsonl",
+          "jsonl_line": 20,
+          "floor": 219,
+          "author": "剑"
+        }
+      ]
+    },
+    {
+      "id": "WORLD_WRC_023",
+      "name": "九重里",
+      "type": "location",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "九重里"
+      ],
+      "reason": "可直接使用F1正文的持续背景或T0前史，按正式名与已确认别名触发。",
+      "runtime_content": null,
+      "source_line": 23,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 23,
+        "id": "WORLD_WRC_023"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_024",
+      "name": "空间龙秘境",
+      "type": "location",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "空间龙秘境"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "空间龙秘境位于妄想山脉边缘，是悠悠原先生活的故乡。悠悠的母亲救下遭追杀的凌迟后，追击他的人类部队发现了秘境位置，并发动奇袭，屠杀其中的空间龙。该秘境的空间龙仅悠悠幸存，凌迟不是屠族者。\n\n关于歼灭入侵人类部队的经过，设定记空间龙族长牺牲生命与敌人同归于尽，谢尔伦则提到凌迟杀死入侵者；双方行动的具体先后和分工仍有缺口〔uncertain〕。这处旧秘境与龙族中央聚居秘境是两个地方，前者的惨剧早在御临风首次进入帝都以前已经发生。",
+      "source_line": 24,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 24,
+        "id": "WORLD_WRC_024"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_025",
+      "name": "龙族秘境",
+      "type": "location",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "龙族秘境"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "龙族秘境是龙族中央聚居地，与悠悠遭屠毁的空间龙故乡不同。悠悠把它描述为龙族最繁荣、人口最多、类似首都的秘境〔character_belief〕。秘境内四季如春，浮空宫殿与崖壁建筑并存，街道、塔楼和钟声构成聚居区的日常景象，其中还有名为“受荣之道”的场所。\n\n外界可通过空间通道进入秘境，谢尔伦具有开启通道的能力；入口位置不视作永久固定。谢尔伦称圣地由空间龙创造；泰蕾斯则解释，秘境根基是维持结界的基础，一旦被毁，虚无就会吞噬秘境〔character_belief〕。按这项解释，根基安全关系到内部居民和建筑能否存续。两人的解释属于各自所知，并非来访者自动掌握的地图与机制。",
+      "source_line": 25,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 25,
+        "id": "WORLD_WRC_025"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_026",
+      "name": "监狱塔",
+      "type": "location",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "监狱塔"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "监狱塔曾囚禁白色魔法使等魔物，白色魔法使过去被关押在塔顶，沐透曾在塔中担任守卫。帝为何保留这些囚犯的性命并将其囚禁，至今没有明确答案。\n\n边关被攻破时，高塔同时遭到魔物之潮与魔兽之潮冲击。白色魔法使利用袭击，并在沐透协助下逃出监狱塔；帝都篇开始前，他已经脱困。受袭、求援、地方上报和帝都获知并非同时完成。高塔完整结构、囚犯名单及所有逃亡者去向仍未明确。",
+      "source_line": 26,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 26,
+        "id": "WORLD_WRC_026"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_027",
+      "name": "帝都图书馆",
+      "type": "location",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "帝都图书馆"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "帝都图书馆是一座高达数十层的圆形建筑，馆内各层以书架环绕中间座位，楼层之间靠楼梯通行。进入图书馆需要入门卡，已知价格为二十金币；管理员以探知魔法查验卡片后放行。入门卡须实际持有或获准借用，不随人物抵达帝都自动发放。\n\n馆藏按楼层与主题分类，异世界相关书籍位于第二十三层，再按各世界名称排列。目录标明存放区域，并以类似字母加数字的编号帮助寻找书架。馆内有关于异界物种、神系和神术的研究，也包含作者猜想，读到书中记载仍需辨明其证据性质。馆长菲利普能够提供专业查阅与鉴定意见。谢尔伦年轻时乔装在帝国游历、读完图书馆初期藏书的经历，至今作为馆内佳话与传说流传〔rumor〕。",
+      "source_line": 27,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 27,
+        "id": "WORLD_WRC_027"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge",
+      "additional_source_refs": [
+        {
+          "path": "work/replay_research/opening_state_consolidated.md",
+          "section": "既定前史、时期与后台知情边界"
+        }
+      ]
+    },
+    {
+      "id": "WORLD_WRC_028",
+      "name": "永恒之井",
+      "type": "location",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "永恒之井"
+      ],
+      "reason": "可直接使用F1正文的持续背景或T0前史，按正式名与已确认别名触发。",
+      "runtime_content": null,
+      "source_line": 28,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 28,
+        "id": "WORLD_WRC_028"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_029",
+      "name": "尼伯龙根",
+      "type": "location",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "尼伯龙根"
+      ],
+      "reason": "可直接使用F1正文的持续背景或T0前史，按正式名与已确认别名触发。",
+      "runtime_content": null,
+      "source_line": 29,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 29,
+        "id": "WORLD_WRC_029"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_030",
+      "name": "YGGDRASIL",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "YGGDRASIL",
+        "世界树"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "YGGDRASIL又称“世界树”，是飞鼠、公会安兹·乌尔·恭及纳萨力克地下大坟墓原先所在的游戏世界。飞鼠珍视在游戏中与公会成员建立的友情，公会成员创造的NPC和据点也成为他重视的遗产。\n\n游戏停止运营的最后一天，飞鼠留在据点等待系统注销，却意外与纳萨力克一同迁入异世界。据点中的NPC随之拥有自我意识，飞鼠保有原来的能力与法术，并改名为安兹·乌尔·恭。造成穿越及游戏造物获得生命的完整机制仍未解释，迁入与本次帝都开局的精确日期尚未统一。",
+      "source_line": 30,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 30,
+        "id": "WORLD_WRC_030"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_031",
+      "name": "帝赐假面",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "帝赐假面"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "帝赐假面是帝授予受选者的力量装具，佩戴者还须取得帝的允许，才能解放其中的力量。假面大幅增强身体能力和自我治愈能力；进一步解放时，佩戴者可以脱离人形，化为具有超常力量的巨大形态。使用过程中，假面持续剥夺佩戴者的生命力，解放的力量越强，代价越大；若因过度使用而死，身体会化为同质的盐分。\n不同假面具有不同能力。奥修特尔持水神假面，宗近持土神假面，武赖持火神假面，左近持雷神假面。\n克拉肯把假面与腰带都解释为取得可控力量的古代技术，并称人类王仍保有假面之力〔character_belief〕。这份古史证言没有说明假面的完整制作过程，也没有给出每次解放消耗多少寿命、可安全维持多久的统一数值。",
+      "source_line": 31,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 31,
+        "id": "WORLD_WRC_031"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_032",
+      "name": "古代精灵腰带技术",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "古代精灵腰带技术"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "古代精灵腰带技术以魔法驱动器和魔法戒指组成独立的施法体系。戒指由魔宝石等材料制成，使用者借它发动腰带中的力量，无须咏唱。腰带内部封印或寄生着强大的魔兽、魔法生物乃至神话生物，使用者通过契约借用这些存在及装置蕴藏的力量，因此它被列为足以与假面抗衡的传说级物品。古代精灵内乱、精灵王陨落后，相关技术失传；不过，异界来客白色魔法师仍掌握制造知识，并曾把Wizard驱动器交给沐透。\n沐透的Wizard必须由已戴上的戒指接触驱动器感应装置才能生效。变身消耗3点魔力和一个标准动作，变身瞬间不能被打断；变换属性只需迅捷动作，却没有这层保护。变身铠甲占据原有铠甲位置，其防护不能与变身前铠甲叠加。古代装具Faer也有宿主供魔和意志控制方面的要求；具体宿主的接入与熟练度不随词条加载自动成立。\n关于腰带的旧传说称，过度使用会腐蚀心智，甚至可能是精灵内乱的原因之一〔rumor〕；现存各装具的具体契约、供能方式与控制风险仍各不相同。",
+      "source_line": 32,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 32,
+        "id": "WORLD_WRC_032"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_033",
+      "name": "魔宝石与魔法戒指制作",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "魔宝石与魔法戒指制作"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "魔宝石与魔法戒指制作是腰带施法体系的核心工艺：魔宝石等材料制成戒指，戒指再作为驱动器发动魔法的媒介。白色魔法师已经掌握魔宝石和戒指的制造方法；掌握这项技术的人员在当地仍然稀少。\n拉塞尔博士认为这类戒指结构与导力器类似，但其中宝石并非普通七曜石；普通七曜石或魔核能否替代，需要实际试验〔character_belief〕。相关研究需要实物、材料、技师及正式军方委托，没有通用替代材料或量产成果可直接采用。",
+      "source_line": 33,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 33,
+        "id": "WORLD_WRC_033"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_034",
+      "name": "贤者之石",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "贤者之石"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "贤者之石是一种特殊魔宝石，被称为万能的炼金材料；白色魔法师懂得它的炼成方法。现有知识没有列出它能处理的全部材料、炼成所需资源及限制，也没有证明它能不受条件地实现任意愿望。\n拉塞尔博士称飘零大陆尚无贤者之石的相关发现，这是他的专业知识范围〔character_belief〕，不否定白魔另有炼成技术。",
+      "source_line": 34,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 34,
+        "id": "WORLD_WRC_034"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_035",
+      "name": "厌魔石",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "厌魔石"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "厌魔石是极其稀少的特殊矿石，其矿脉由帝国掌握，并作为限制物品管理，极少流入平民或其他组织手中。矿石能够免疫绝大多数A级及以下的魔力或能量打击；以它制成的特制锁链还具有使施法及能量使用无条件失败的效果。矿物自身的抗击能力与加工成束缚器具后的禁能效果是不同用途。\n未锁闭的单纯接触，不等于已经发生完整禁能。艾利称某些传送魔法难以穿过厌魔石等物质〔character_belief〕。对消耗体力的精神力量等特殊能力是否适用，应保留未知，不凭矿石名称宣告无条件有效。",
+      "source_line": 35,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 35,
+        "id": "WORLD_WRC_035"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_036",
+      "name": "魔兽之潮",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "魔兽之潮"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "魔兽之潮是妄想山脉本土魔兽势力定期进攻帝国边关的军事行动。过去的攻势规模不一，兼有消耗过剩人口和训练士兵的目的，战绩败多胜少，魔兽大军此前未能由此深入帝国内部。\n凌迟掌握军权、统合部族后改变了作战方式：他争夺制空权、大规模空投兵种，并把史莱姆等不擅正面作战的生物编入执行特殊任务的部队。第一次魔兽大侵攻由此突破边境关卡，使山脉势力能够向帝国纵深推进。帝国后续反应和战争结果按局势与实际行动发展。",
+      "source_line": 36,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 36,
+        "id": "WORLD_WRC_036"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_037",
+      "name": "魔物之潮",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "魔物之潮"
+      ],
+      "reason": "可直接使用F1正文的持续背景或T0前史，按正式名与已确认别名触发。",
+      "runtime_content": null,
+      "source_line": 37,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 37,
+        "id": "WORLD_WRC_037"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_038",
+      "name": "龙族灭族预言",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "龙族灭族预言"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "龙族灭族预言是龙族长期传承的危机预告。肯达称它出自黑龙族曾诞生的一头纯白龙；关于出处与龙语解释属于他的证言〔character_belief〕。\n肯达所译内容并列受祝福与受诅咒的诞生、受喜爱与受厌恶的存在、带来和平与混乱的死亡，又对照“降生”后的繁荣与“重临”后的大地撕裂、全族带咒而亡。这是预言内容，并非已经完成的世界事实或唯一确定解释。具体人物是否知晓预言及译文，依其实际接触范围处理。",
+      "source_line": 38,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 38,
+        "id": "WORLD_WRC_038"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge",
+      "additional_source_refs": [
+        {
+          "path": "work/replay_research/opening_state_consolidated.md",
+          "section": "既定前史、时期与后台知情边界"
+        }
+      ]
+    },
+    {
+      "id": "WORLD_WRC_039",
+      "name": "凌迟与悠悠涉及的诅咒",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "凌迟与悠悠涉及的诅咒"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "凌迟与悠悠涉及的诅咒见于空间龙旧事，两人诅咒的同源关系和完整传染过程尚不明确〔uncertain〕。凌迟被悠悠父母救下时已经身受诅咒，呈半人半魔兽状态；悠悠也承受了侵蚀身体的咒术。\n悠悠认为自己的责任是完成凌迟的托付，到帝都后等待身上的诅咒爆发，并相信这样可以让大家幸福〔character_belief〕。她的信念不证明咒术真实效果，亦不表示已知其完整机制。相关诅咒只作用于已有承受者；其他人的状态不得因后台资料而改变。",
+      "source_line": 39,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 39,
+        "id": "WORLD_WRC_039"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge",
+      "additional_source_refs": [
+        {
+          "path": "work/replay_research/user_clarifications.md",
+          "line_start": 243,
+          "line_end": 253
+        }
+      ]
+    },
+    {
+      "id": "WORLD_WRC_040",
+      "name": "Phantom",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "Phantom"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "Phantom是白色魔法师在飘零大陆大量催生的存在，与被称为Gate的宿主及绝望转化有关。雷光所掌握的情报称，白魔一类施法者能够把Gate转变为Phantom，并可借小型夜宴使一片区域内的Gate陷入绝望、批量催生〔character_belief〕。本团尚未给出判定Gate资质或转化完成的统一阈值；雷光在T0已掌握每项细节的时间尚未逐项确定。\n美杜莎是Phantom，并忠于白魔。其他个体是否已经完成转化，应遵守各自已确认的时间状态。宿主样貌不能证明原有人格完整存续；有关保有人类记忆的说法仍是有关个体的自述〔character_belief〕。沐透报告普通武器不能伤害Phantom、需要魔法攻击，这是他提供的作战情报〔character_belief〕，不自动成为所有军人已知知识。",
+      "source_line": 40,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 40,
+        "id": "WORLD_WRC_040"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_041",
+      "name": "古代精灵灾变",
+      "type": "event",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "古代精灵灾变"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "古代精灵灾变发生于高等精灵滥用永恒之井力量的时代。高等精灵试图迷惑并利用北海巨妖，随后永恒之井崩塌，大批精灵随陆地沉入海中，受到诅咒而变成娜迦；当代娜迦族群的来历与这场灾难相连。\n关于这段古史，泰蕾斯把精灵堕落与外神诱导联系起来；克拉肯则讲述，高等精灵受古神迷惑、首都沉海，娜迦形成后战争继续扩展〔character_belief〕。这些证言补充了古史的参与者和战争背景，但准确年代、不同战场的先后，以及它与精灵王陨落和内乱的关系仍未确定〔uncertain〕。",
+      "source_line": 41,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 41,
+        "id": "WORLD_WRC_041"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_042",
+      "name": "古代精灵内乱",
+      "type": "event",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "古代精灵内乱"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "古代精灵内乱导致精灵王陨落，腰带相关技术也随之失传。腰带原本是精灵王创造的强力魔法驱动器，内乱后的完整传承经过没有留下明确记载。旧传说称，过度使用腰带会腐蚀心智，内乱可能部分由此引起〔rumor〕，但没有完整的起兵、阵营或责任记录。\n克拉肯关于古史的另一份证言称，精灵王为平息与古神有关的战争，制造了以古神为原型、力量强大却难以控制的腰带，并亲自使用，最终与古神同归于尽〔character_belief〕。这份证言与内乱、永恒之井崩塌之间的准确对应尚不明确〔uncertain〕。",
+      "source_line": 42,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 42,
+        "id": "WORLD_WRC_042"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_044",
+      "name": "空间龙部族覆灭",
+      "type": "event",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "空间龙部族覆灭"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "空间龙部族覆灭发生在御临风首次抵达帝都之前。悠悠的父母救下了身受诅咒、遭到追杀的凌迟；追击凌迟的人类部队因此发现空间龙秘境，并发动奇袭，造成部族覆灭。实施灭族袭击的是人类追兵，凌迟不是这场屠杀的加害者。该秘境的空间龙只有悠悠幸存，她本名芬尔德·特兰希尔。\n关于击退入侵者的经过，旧设定记载族长牺牲，与敌人同归于尽；谢尔伦的证言则称，凌迟杀死了入侵者。两份资料对反击终局的记述不同，族长与凌迟参战的具体先后仍不清楚〔uncertain〕。惨剧使悠悠失去原有的家庭和部族依托，也构成庇护需求及龙族对人类关系的重要背景。",
+      "source_line": 43,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 43,
+        "id": "WORLD_WRC_044"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_045",
+      "name": "第一次魔兽大侵攻",
+      "type": "event",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "第一次魔兽大侵攻"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "第一次魔兽大侵攻是凌迟统合魔兽部族后攻破帝国边关的战役，发生在御临风首次入都之前。凌迟改变了过去以地面冲击关卡的打法，通过空运越过城墙，再让盾阵、萨满强化、反魔咒箭与扰乱骑兵的部队相互配合，破坏守军原有防御。\n真达卡斯和三军统领在战役中阵亡，边关失陷使魔兽大军首次打开通向帝国纵深的道路，帝国与山脉势力由周期攻边转入全面战争。雪老是亲历者；御临风首次入都时知道边关失守，尚未完整恢复破关、将领阵亡和追杀的记忆。后台前史不得直接替代他的现有认知。",
+      "source_line": 44,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 44,
+        "id": "WORLD_WRC_045"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge",
+      "additional_source_refs": [
+        {
+          "path": "work/replay_research/opening_state_consolidated.md",
+          "section": "既定前史、时期与后台知情边界"
+        }
+      ]
+    },
+    {
+      "id": "WORLD_WRC_046",
+      "name": "峡谷战",
+      "type": "event",
+      "disposition": "author_only",
+      "category": "late_or_unaligned_event",
+      "keys": [
+        "峡谷战"
+      ],
+      "reason": "原线入都后峡谷战及处刑，不是T0既定史。",
+      "runtime_content": null,
+      "source_line": 45,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 45,
+        "id": "WORLD_WRC_046"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_047",
+      "name": "帝国与龙族结盟",
+      "type": "event",
+      "disposition": "author_only",
+      "category": "late_or_unaligned_event",
+      "keys": [
+        "帝国与龙族结盟"
+      ],
+      "reason": "原线后期外交、护送和婚约成果，不预定重玩结果。",
+      "runtime_content": null,
+      "source_line": 46,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 46,
+        "id": "WORLD_WRC_047"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_048",
+      "name": "帝国远征军与边境战争",
+      "type": "event",
+      "disposition": "author_only",
+      "category": "late_or_unaligned_event",
+      "keys": [
+        "帝国远征军与边境战争"
+      ],
+      "reason": "原线夺关与远征具体历程；T0仅保留已破关背景。",
+      "runtime_content": null,
+      "source_line": 47,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 47,
+        "id": "WORLD_WRC_048"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_049",
+      "name": "监狱塔脱逃",
+      "type": "event",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "监狱塔脱逃"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "监狱塔脱逃发生于边关被攻破时，早于首次入帝都；白色魔法师利用高塔遭袭逃离囚禁。高塔同时受到魔物之潮与魔兽之潮冲击，白魔在袭击中得到沐透协助，成功离开塔顶监牢。白魔此前已经在大陆各地酿成惨剧，被捕后才遭关押；帝为何留下其性命收监仍不明确。\n袭击、地方报告、军方接报、派援与援军到达各有时间。开局已脱困不等于帝都每名官员已经获知，更不等于其他角色已知Gate与夜宴的细节。",
+      "source_line": 48,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 48,
+        "id": "WORLD_WRC_049"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_050",
+      "name": "纳萨力克异界迁入",
+      "type": "event",
+      "disposition": "author_only",
+      "category": "late_or_unaligned_event",
+      "keys": [
+        "纳萨力克异界迁入"
+      ],
+      "reason": "迁入事件相对T0日期未统一；既存势力背景由纳萨力克条目承接，不直接载入整段代理过程。",
+      "runtime_content": null,
+      "source_line": 49,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 49,
+        "id": "WORLD_WRC_050"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_051",
+      "name": "主神式任务机制",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "主神式任务机制"
+      ],
+      "reason": "可直接使用F1正文的持续背景或T0前史，按正式名与已确认别名触发。",
+      "runtime_content": null,
+      "source_line": 50,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 50,
+        "id": "WORLD_WRC_051"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_052",
+      "name": "边关七日任务",
+      "type": "event",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "边关七日任务"
+      ],
+      "reason": "可直接使用F1正文的持续背景或T0前史，按正式名与已确认别名触发。",
+      "runtime_content": null,
+      "source_line": 51,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 51,
+        "id": "WORLD_WRC_052"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_053",
+      "name": "第八号当铺",
+      "type": "faction",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "第八号当铺"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "第八号当铺是御临风边关前史中接触过的交易机构，其掌柜能够以契约收取人的正面情感，并给予相应的生存机会。御临风曾在军事任务中与掌柜韩诺交易，交易留下可识别的纹路与影响。\n当铺的完整组织、营业地点、空间性质和跨世界经营范围均未明，也没有证据证明它是兄弟会的真实网点。",
+      "source_line": 52,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 52,
+        "id": "WORLD_WRC_053"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_054",
+      "name": "弃风剑",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "弃风剑"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "弃风剑是御临风在边关前史中取得并长期使用的武器；他在人物自述中记载，逸冷把剑交给自己并教他持剑。入都前，御临风已经借弃风施展狂岚，村庄救援也确实救到了村医，但没有因此消除他自身的重伤。\n开局剑的具体数值尚需沿早期使用记录确定，不能凭缺失参数赋予额外能量池、防护或其他能力。",
+      "source_line": 53,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 53,
+        "id": "WORLD_WRC_054"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge",
+      "additional_source_refs": [
+        {
+          "path": "work/replay_research/opening_state_consolidated.md",
+          "section": "既定前史、时期与后台知情边界"
+        }
+      ]
+    },
+    {
+      "id": "WORLD_WRC_055",
+      "name": "贞子首次救命",
+      "type": "event",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "贞子首次救命"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "贞子首次救命发生在御临风的边关七日前史中。御临风第一次执行军事任务时濒临死亡，被在魔兽山脉飘荡的女鬼贞子救下，由此建立了两人的救命关系。御临风与雪老共同执行军事任务的经历也属于这一时期，但现有资料没有恢复各次任务的完整分工与战斗经过。\n这段救命关系属于已经发生的前史，不表示御临风首次入都时已完整记起后来的追杀、贞子最后交易和封忆经过。",
+      "source_line": 54,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 54,
+        "id": "WORLD_WRC_055"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge",
+      "additional_source_refs": [
+        {
+          "path": "work/replay_research/opening_state_consolidated.md",
+          "section": "既定前史、时期与后台知情边界"
+        }
+      ]
+    },
+    {
+      "id": "WORLD_WRC_056",
+      "name": "第八号当铺交易",
+      "type": "event",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "第八号当铺交易"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "第八号当铺交易发生在御临风边关时期的第二次军事任务中，他濒死时以自己的正面情感为筹码，向掌柜换取活下去的机会。关于当时直接想保住谁的性命，口述前史记为御临风自身活命；另一份本人对旧事的陈述则称自己是为保住雪老，与名为韩诺的男子交换了感情。两份叙述的侧重点不同，完整交易现场尚未恢复〔uncertain〕。\n首次入帝都时，这笔交易及其影响已经存在。如何解除、能否解除及代价尚无本次分支的处理结果。",
+      "source_line": 55,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 55,
+        "id": "WORLD_WRC_056"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge",
+      "additional_source_refs": [
+        {
+          "path": "work/replay_research/opening_state_consolidated.md",
+          "section": "既定前史、时期与后台知情边界"
+        }
+      ]
+    },
+    {
+      "id": "WORLD_WRC_057",
+      "name": "边关破后失散",
+      "type": "event",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "边关破后失散"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "边关破后失散发生在凌迟攻陷关卡之后。原先被投放的现代人陆续清醒、失散，并有人遭到追杀；御临风离开失陷的边关进入逃亡，随后接上村庄阶段的经历。真达卡斯及三军统领已经在破关战中阵亡，御临风首次入都时尚未完整记起这段败亡旧事。\n村庄阶段也是原团软重启的起点，主神与幻剑的运行机制由此移除，早先的投放、任务、成长和关系仍然成立。现有资料没有把失散原因解释为另一轮主神任务，也没有提供所有投放者破关后的完整路线。",
+      "source_line": 56,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 56,
+        "id": "WORLD_WRC_057"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_058",
+      "name": "御临风追杀与记忆封锁",
+      "type": "event",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "御临风追杀与记忆封锁"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "御临风在边关失陷后的逃亡中遭黄祸龙狼追杀，贞子以索命形式再次救下了他，并与其记忆被封锁的经历相连。后台前史记载，贞子救人后已受重创，又以自身的一切换取御临风活命，要求韩诺抹去他的相关记忆并送走他。贞子灵魂最终的去向没有独立演出〔uncertain〕。\n首次入都时，御临风已经知道边关失守，也保有此前师承和部分旧人关系，但尚未完整记起破关败亡、追杀及贞子最后交易的经过。后台保留这段事实，叙述不得无由赋予主角失去的记忆。",
+      "source_line": 57,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 57,
+        "id": "WORLD_WRC_058"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge",
+      "additional_source_refs": [
+        {
+          "path": "work/replay_research/opening_state_consolidated.md",
+          "section": "既定前史、时期与后台知情边界"
+        }
+      ]
+    },
+    {
+      "id": "WORLD_WRC_059",
+      "name": "雅儿商队与山寨庙事件",
+      "type": "event",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "雅儿商队与山寨庙事件"
+      ],
+      "reason": "可直接使用F1正文的持续背景或T0前史，按正式名与已确认别名触发。",
+      "runtime_content": null,
+      "source_line": 58,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 58,
+        "id": "WORLD_WRC_059"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_061",
+      "name": "耶各相关死亡秩序",
+      "type": "concept",
+      "disposition": "author_only",
+      "category": "late_or_unaligned_event",
+      "keys": [
+        "耶各相关死亡秩序"
+      ],
+      "reason": "原线御临风死亡、复生和神约后的关系，不属于T0能力或契约。",
+      "runtime_content": null,
+      "source_line": 59,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 59,
+        "id": "WORLD_WRC_061"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_062",
+      "name": "飘零祭",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "飘零祭"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "飘零祭是飘零大陆纪念夏去冬来的年度节庆。每年冬初，帝在城外点燃第一堆祭火，为来年祈求庇佑；居民生活中的相关活动包括宫前摊位、学校庆祝、游戏以及圣庙祭坛。帝国不提倡宗教，节庆中的祈愿习俗本身仍然存在。\n本次抵城处于该届飘零祭将至的时期。具体倒计时尚未选定精确日历。军武演习与御前擂台只以“听说”的节目消息出现〔rumor〕，不视作节目已经举行或御临风必须参与。",
+      "source_line": 60,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 60,
+        "id": "WORLD_WRC_062"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge",
+      "additional_source_refs": [
+        {
+          "path": "work/replay_research/opening_state_consolidated.md",
+          "section": "既定前史、时期与后台知情边界"
+        }
+      ]
+    },
+    {
+      "id": "WORLD_WRC_063",
+      "name": "帝国教育与知识传播",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "帝国教育与知识传播"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "帝国已有通过教材、学校、图书馆和专业人士传播知识的渠道。市面可以买到国文、数学、历史、地理、武技与基础魔法教材；初级数学内容包括四则运算、九九乘法、面积及圆周率3.14。教材把许多基础理论归于帝及后世数学家，这反映教材所记的知识传承。\n\n学城具有类似大学的教学与学术活动，教师可以任职、出版专业著作，学校也在飘零祭举办活动。识字、熟悉本地文字与理解专业内容是不同门槛：黄泉不熟本世界文字，诺斯莉阅读魔法专业内容感到吃力，久远则能阅读有关魔法的书籍。\n\n哈克关于猫音就学的讲述称，她在学校免费领书，原应回收，因继续考学士而未收回〔character_belief〕。学校供书的个案不足以确认全国普及免费义务教育。协会、学院和研究所之间也有人际转介：协会可代传约见，熟悉研究者的人提供身份与地址，使求助者能够找到具备资料和设备的专业机构。",
+      "source_line": 61,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 61,
+        "id": "WORLD_WRC_063"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_064",
+      "name": "帝国医疗与药理",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "帝国医疗与药理"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "帝国的救治由药师、医师、治疗法师和军方医疗人员等承担，各人的能力与所需条件不同。村医能够阅读研究稿、配制解药，并通过同门关系推荐求学者前往帝都医馆；医术学习需要长期积累，获得住宿或递交推荐信尚不等于已经拜师。\n\n御临风入都前取得的疗伤药，明文效果为恢复一点严重伤或两点冲击伤，每天只能生效一次；培元丹则要等到下一次长休或睡眠后，才移除与耐力值相同的伤害，多颗不叠加。即时疗伤与休养后恢复有不同使用条件。治疗法师仍有施术范围、次数、耗魔及休养方面的限制，暂时抑毒也不等于完成治疗。\n\n现有医药和治疗魔法不能使所有损伤即时消失，也未构成普遍复活手段。个别危险装具使用者的持续供魔需求须单独诊断，不能外推为普遍疗法。",
+      "source_line": 62,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 62,
+        "id": "WORLD_WRC_064"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_065",
+      "name": "帝都市政与公共生活",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "帝都市政与公共生活"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "帝都有公共热水澡堂、排水水渠和河畔洗衣处，也有普通民居、商店、圣庙与宫前节市。居民会提出排水、桥路、屋顶维修及邻里争执等请求；右近曾将代听民愿和处理这些事务的工作交给哈克等人，市政因此有具体的接待与办理者。\n\n首次入都时贫民区仍然存在。",
+      "source_line": 63,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 63,
+        "id": "WORLD_WRC_065"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_066",
+      "name": "帝国军令与情报渠道",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "帝国军令与情报渠道"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "帝国军令与情报通过直属上报、专门部门、朝会、密谈和战地通信等渠道传递。地方报告经部门上达，朝会再由有权处理的官员和帝作出决定；有明确直属职务者也有相应报告责任。战场上使用通信卷轴，地方可借助驻镇法师发送消息，不同地点的接报、核实、下令和人员抵达会有时间差。\n\n保密任务可限制接触者和传播范围。雷光的指挥处具备隔绝侦知魔法的条件，他有自己的秘密情报部门，帝则直接掌控兄弟会，两者归属不同。\n\n正式渠道会受错误情报和私人关系影响。首次入都附近的守门军官与冒名达卡斯一方有联系；礼貌报信并不改变这一关系，但其是否受控、掌握多少内幕尚未确定，也不能推出全部城卫都属于同一阴谋。接报、查证、扣押和保护的结果按本次行动与局势推进。",
+      "source_line": 64,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 64,
+        "id": "WORLD_WRC_066"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge",
+      "additional_source_refs": [
+        {
+          "path": "work/replay_research/opening_state_consolidated.md",
+          "section": "既定前史、时期与后台知情边界"
+        }
+      ]
+    },
+    {
+      "id": "WORLD_WRC_067",
+      "name": "帝国工坊与装备交易",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "帝国工坊与装备交易"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "帝国的矮人工坊提供锻造、装备买卖和维修服务，现场有炉具、工具及成品装备。修复要满足工艺、材料与交易条件，复杂魔法器具并非只要付款就一定修好；工坊也依赖库存材料。\n\n帝国已经吸收异界知识，发展出魔法卷轴工厂化等生产方式。拉塞尔博士认为，常见魔偶的精细动作有限，又消耗昂贵魔核，因此主要用于战场；能够制作近似真人魔偶的宝石翁、维克托和泰德勒属于少数专家〔character_belief〕。他也认为，陌生魔法戒指虽与本地魔导器结构相近，其宝石仍不同于常见七曜石，能否用其他材料替代须做实验〔character_belief〕。\n\n装备品质、税和价格受帝国限制是一名路人的解释〔rumor〕；克德取世界树枝制作苍穹弓也以传闻流传〔rumor〕。求见宝石翁的镇上聚集等待者，沿街店铺为他们提供服务，当地食宿报价可高于其他城镇，价格并不全国统一。",
+      "source_line": 65,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 65,
+        "id": "WORLD_WRC_067"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_068",
+      "name": "帝都丧葬与死灵防范",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "帝都丧葬与死灵防范"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "帝都的遗体处置与防范死灵术有关。威廉解释，帝要求死者火葬后入公墓，以免遗体被死灵术利用〔character_belief〕。既有处置流程包括法师和家属确认身份、统一火化及殡仪处理；墓地也承担悼念用途。帝国不提倡宗教。",
+      "source_line": 66,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 66,
+        "id": "WORLD_WRC_068"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_069",
+      "name": "魔兽最高评议会",
+      "type": "faction",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "魔兽最高评议会"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "魔兽最高评议会是妄想山脉魔兽势力高层议事的组织。谢尔伦解释，长老议会地位最高的五人被称为“五大头”，龙族通常不参与其决定〔character_belief〕。全体成员、权限及不同会议席位的对应仍不完整。\n\n魔兽最高评议会与无法地带执行最低限法律的高等评议会是不同组织。当前具体会议信息与命令须分别有接触或后台行动记录。",
+      "source_line": 67,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 67,
+        "id": "WORLD_WRC_069"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_070",
+      "name": "受荣之道",
+      "type": "location",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "受荣之道"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "受荣之道位于龙族中心秘境，是举行成人礼及其他重要仪式的道路。龙族称道路由古代流传的龙晶铺成，死者的一部分灵魂寄居其中〔character_belief〕。族人会在这里接受仪式与试炼，不同场合的试炼形式并不固定。",
+      "source_line": 68,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 68,
+        "id": "WORLD_WRC_070"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_071",
+      "name": "恐惧圆环",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "恐惧圆环"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "恐惧圆环是一件分为七片碎片的物品，与授予名与力量的仪式有关。涉及圆环的匿名少女可能是魔兽山脉五巨头之一，或与五巨头有关的人员，但具体身份尚未确认〔uncertain〕。\n完整授力能力、对接受者身心的控制程度及碎片去向均不明确。当前持有者及已接受仪式者的具体状态仍需另行确认。",
+      "source_line": 69,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 69,
+        "id": "WORLD_WRC_071"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_072",
+      "name": "魔物之盒",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "魔物之盒"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "魔物之盒是一件可释放魔眼、实现其能力范围内愿望的容器。它属于主世界物品；开局未自动由御临风持有。\n魔物之盒的沉睡值为3。打开时每轮减少1点，关闭时每日恢复1点；沉睡值降为零后，魔眼从盒中获释。魔眼可以实现能力范围内的愿望，但实现方式可能扭曲愿望本意，或采用暴力、粗暴的手段，许愿者无法仅凭愿望措辞保证理想过程与结果。若提出“不合理的愿望”，魔眼会被迫杀死解放者，并返回盒中；若愿望完成，魔眼便获得自由。现有规则没有给出所有愿望是否合理的完整判准，也没有说明魔眼能力的全部上限。",
+      "source_line": 70,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 70,
+        "id": "WORLD_WRC_072"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_073",
+      "name": "外神与旧日支配者",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "外神与旧日支配者"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "外神与旧日支配者是泰蕾斯讲述古代灾难时使用的称呼。她说两者是同一类存在的不同名字，却承认自己不知道它们的真实面目；她把精灵堕落、死亡之翼受到感染，以及外界力量渗入飘零大陆的过程与它们联系起来〔character_belief〕。\n依泰蕾斯的解释，飘零法则阻止神明从外部直接施加影响，但异乡人带来了建立联系的方法，外神力量因而仍能通过联系有限渗透〔character_belief〕。这份解释没有给出外神的完整谱系、阵营、姓名，也未确认它们与前史主神的关系，更不足以建立所有神明共用的完整规则。",
+      "source_line": 71,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 71,
+        "id": "WORLD_WRC_073"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_074",
+      "name": "预言、神谕与可能未来",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "预言、神谕与可能未来"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "预言、神谕和未来显现中的内容，须与已经发生的事实区别。泰蕾斯认为自己只看见龙族未来的一条道路，并担心干预使它偏离〔character_belief〕；不能把这种有限预见写成全知或无条件命运。\n预见内容须保留看见者、当时条件和未知范围。任何人物能否获得预见及其方式，都依当前实际掌握的能力与条件决定。",
+      "source_line": 72,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 72,
+        "id": "WORLD_WRC_074"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_075",
+      "name": "死亡之翼重临与龙族秘境大战",
+      "type": "event",
+      "disposition": "author_only",
+      "category": "late_or_unaligned_event",
+      "keys": [
+        "死亡之翼重临与龙族秘境大战"
+      ],
+      "reason": "原线后期重临、战役、胜负及救援，不作为本分支必然结果。",
+      "runtime_content": null,
+      "source_line": 73,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 73,
+        "id": "WORLD_WRC_075"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_077",
+      "name": "帝都法师塔区域灾难",
+      "type": "event",
+      "disposition": "author_only",
+      "category": "late_or_unaligned_event",
+      "keys": [
+        "帝都法师塔区域灾难"
+      ],
+      "reason": "原线后期追捕灾难与伤亡统计，不提前发生。",
+      "runtime_content": null,
+      "source_line": 74,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 74,
+        "id": "WORLD_WRC_077"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WRC_078",
+      "name": "大魔女夜宴",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "大魔女夜宴"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "大魔女夜宴是白色魔法师相关的大范围仪式。雷光的军情资料把它分成两种用途：小型夜宴使一定区域的Gate陷入绝望，以批量催生Phantom；大型夜宴使用四名同种魔法使作为人柱和阵眼，把阵内生物炼化为魔力。这是雷光掌握的情报，他也承认发动条件尚不清楚〔character_belief〕；具体获讯时点不自动提前到T0。\n沐透的另一份报告说需要四个或更多魔法使作为阵眼，规模至少可覆盖城市；增加阵眼怎样扩大范围未明〔character_belief〕。四人与四人以上的说法尚未统一验证。夜宴的存在与机制不表示开局已集齐材料、阵眼，或在某城市完成布置。",
+      "source_line": 75,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 75,
+        "id": "WORLD_WRC_078"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_EMPIRE_COURT",
+      "name": "帝国朝会与常务办理",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "帝国朝会与常务办理"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "帝国朝会与常务办理分别承接重大判断和日常事务。帝下设常务机构，由八柱将、其直系下属和其他官员处理每日事件，旁听专员把结果向帝报告；只有被认为需要帝判断的事项，才进一步交朝堂处理。沃西斯与雷光是主要经办者。\n\n帝国每周有数次固定朝会，朝堂中文武分列，官员按官阶站位，八柱将居前。地方报告由专门部门上达，因此地方事件可以经常设渠道进入中央决策。特殊危机可召开紧急朝会。帝可在朝会上决定出兵及人员随行，执行者仍须兼顾原有职责，例如右近受帝都防务和朝会责任约束，不能随意离岗。",
+      "source_line": 76,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 76,
+        "id": "WORLD_EMPIRE_COURT"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_RAIGU_INTELLIGENCE",
+      "name": "雷光的秘密情报部门",
+      "type": "faction",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "雷光的秘密情报部门"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "雷光是唯一一名拥有自己秘密情报部门的人。他的自有部门与帝直接掌控的兄弟会有不同归属。\n\n雷光处理情报时重视保密：指挥处可以隔绝侦知魔法，他会要求来者亲自报告并控制内容传播。雷光负责处理白色魔法师事务，具备情报和专业行动资源；部分消息来源未公开。秘密部门的正式名称、全部人员、权限和完整来源仍不明。拥有情报部门不等于自动知道尚未送达的消息。",
+      "source_line": 77,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 77,
+        "id": "WORLD_RAIGU_INTELLIGENCE"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_RAIGU_UNIT",
+      "name": "雷光直属第一大队第二小队",
+      "type": "faction",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "雷光直属第一大队第二小队",
+        "雷公直属第一大队第二小队"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "雷光直属第一大队第二小队是其任务体系中的行动小队，队长为逆羽·霞，副队长为幻翎·洛。雷光负责处理白色魔法师，并有专门对白魔行动的小分队；霞和洛所率队伍承担有关追缉与地方应援。\n\n小队可核查军籍、询问陌生力量并要求进一步核实目标情报。对于具有白魔直接接触经历的沐透，双方都希望阻止白魔，这使他成为潜在合作人选；正式招募、领牌和当次资金马匹交付仍按本次时期与实际行动处理。小队有医疗支援：洛能暂时抑毒，完整治疗则可能需等队医抵达并与地方诊所协作。队伍也掌握以羽毛定位的大概位置情报手段，完整范围未明。",
+      "source_line": 78,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 78,
+        "id": "WORLD_RAIGU_UNIT"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge",
+      "additional_source_refs": [
+        {
+          "path": "work/replay_research/opening_state_consolidated.md",
+          "section": "既定前史、时期与后台知情边界"
+        }
+      ]
+    },
+    {
+      "id": "WORLD_LOCAL_ADMINISTRATION",
+      "name": "帝国地方受理与通信",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "帝国地方受理与通信"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "帝国地方官署能够受理敌情、登记警戒，协调守备、法师和医师，并向帝都或附近驻军请求支援。地方获得消息后，要经过接报、判断、传信及后续执行，援助不会因报告送出便立刻到场。\n\n地方通信有驻镇法师把魔法信化作丝线、缠在鸽腿上放飞的做法。雅莱佩对其所在地方的通信能力解释为不发达、须等次日才会有帝都消息〔character_belief〕，不应作为所有地区的统一时延。偏远小镇获战讯也可能滞后一两天。\n\n地方可少量派人侦察、联系附近驻军和寻找游击士，同时保留守备；具体由谁出动、是否守镇及援军何时抵达，须按当地判断与实际执行记录。",
+      "source_line": 79,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 79,
+        "id": "WORLD_LOCAL_ADMINISTRATION"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_RESEARCH_INSTITUTE",
+      "name": "帝都博士研究所",
+      "type": "location",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "帝都博士研究所"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "帝都博士研究所是专业研究地点，设有保安、文献资料和魔法实验工具。维尔称拉塞尔博士兼任协会名誉博士和学院教师；博士说明，大部分研究经费来自军方，继续开展相关项目需要正式官方委托〔character_belief〕。游击士协会可代传约见，熟悉研究者者也能提供地址。\n\n陌生器物的研究通常从实物、演示、结构检查与资料研议开始。博士认为宝石魔法戒指与本地魔导器结构相近，但其宝石不同于七曜石，替代材料需要实验〔character_belief〕。新的研究项目须有时间、材料与实际样本，不保证陌生问题已有通用解决方法。\n\n博士称保存和操作人类灵魂属于严禁领域〔character_belief〕，这是研究面临的限制。正式委托的承诺、文书送达、研究开始和成功验收分别是不同状态，不能因为研究所存在就全部成立。",
+      "source_line": 80,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 80,
+        "id": "WORLD_RESEARCH_INSTITUTE"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_MAGICAL_AUTOMATA",
+      "name": "魔偶制造与灵魂研究",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "魔偶制造与灵魂研究"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "魔偶制造与灵魂研究在帝国已有专业知识和制造基础，但工艺、成本与研究权限都构成限制。拉塞尔博士说，普通魔偶受精细动作能力和昂贵魔核制约，多用于战场；宝石翁、维克托、泰德勒等少数专家能够制造近似真人的精密魔偶。这是他的行业见闻，并非帝国所有制造者的完整名单〔character_belief〕。\n\n博士称保存和操作人类灵魂属于被严禁的法术，慕少艾的一名弟子曾为此研究、叛逃并被诛〔character_belief〕。陈萍生确是慕少艾之徒，也是御临风开局前制裁的魔法师；具体罪由仍以上述证言为限，现有资料没有完整法条、管辖范围或例外程序。没有经证实的通用Phantom逆转流程或灵魂容器成品可直接调用。",
+      "source_line": 81,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 81,
+        "id": "WORLD_MAGICAL_AUTOMATA"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_GATE",
+      "name": "Gate",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "Gate"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "Gate是白色魔法师催生Phantom时寻找的宿主对象。雷光的情报称白魔一类施法者能令Gate因绝望而转化，小型夜宴可使区域内多名Gate陷入绝望并批量制造Phantom；沐透的报告也把Gate、绝望和夜宴相联系〔character_belief〕。这些机制情报何时到达哪位角色须另按知情状态处理，不因后台加载而成为全员常识。\n本团尚未给出可直接测量的资质阈值、绝望程度或完整启动条件。个体是否具备资质、是否已受影响或完成转化，须分别有已发生的证据。",
+      "source_line": 82,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 82,
+        "id": "WORLD_GATE"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_PHANTOM_RESCUE",
+      "name": "Phantom救援与逆转研究",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "Phantom救援与逆转研究"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "精神世界入口与现实化后的Phantom逆转是不同问题。沐透的Engage戒指能使施术者进入指环佩戴者的Underworld，耗时一轮，魔力消耗为0。进入精神世界本身不等于已经消除内在威胁，更没有验证现实化后的Phantom可以借同一步骤恢复。Sleep戒指另需1点魔力和一个标准动作，佩戴者可以进行DC4的意志对抗；催眠与进入Underworld是两个不同效果。戒指规则仅在实际取得并符合人物时期时可用，不由世界书赋予开局物品。\n维尔转述一则二十多年前的旧闻，称有变成怪物者曾被“权杖博士”复原〔rumor〕。恢复人形者极少，旧闻没有留下可照做的治疗流程，也未证明恢复外貌必定等于原人格完整归来。",
+      "source_line": 83,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 83,
+        "id": "WORLD_PHANTOM_RESCUE"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_ARTIFICIAL_PHANTOM",
+      "name": "人工Phantom与供魔路径",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "人工Phantom与供魔路径"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "人工Phantom与供魔路径是沐透对白色魔法师力量来源提出的解释。他报告笛木奏并非Gate，而是制造了卡邦克鲁和新的装置来取得力量；对于多个个体及其与白魔同时存在的关系，他仍作疑似判断〔character_belief〕。这份解释不成为已公开的制造配方，也不表示所有角色在开局已收到该报告。\n本团尚未演示制造卡邦克鲁、植入人体或分体供能的完整过程。内在存在、契约及装具均可涉及力量取得，但没有已确认的共同魔力池或统一换算规则。",
+      "source_line": 84,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 84,
+        "id": "WORLD_ARTIFICIAL_PHANTOM"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_FAER",
+      "name": "Faer",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "Faer"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "Faer是一种古代魔法装具，克拉肯明确否定以Beast、Rogue等别的装具直接类比它。他称精灵王以古神为原型制造Faer，王亲自使用后与古神同灭；这段制造与战争史来自克拉肯的证言〔character_belief〕。\n装具涉及腰带、戒指、契约和持续供魔。克拉肯表示，宿主必须学习控制魔力，并以足够强的意志抵抗驱动器追杀娜迦的本能〔character_belief〕。具体装具接入、契约成立及对某名宿主的影响，须按本次实际状态确定。",
+      "source_line": 85,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 85,
+        "id": "WORLD_FAER"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_MAGIC_SEA",
+      "name": "魔力之海",
+      "type": "concept",
+      "disposition": "author_only",
+      "category": "late_or_unaligned_event",
+      "keys": [
+        "魔力之海"
+      ],
+      "reason": "沐透在旁线形成的供魔理论与研究设想，缺乏T0已掌握锚点；不能当通用力量模型。",
+      "runtime_content": null,
+      "source_line": 86,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 86,
+        "id": "WORLD_MAGIC_SEA"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_BLOODLINE_MAGIC",
+      "name": "魔力体质与持续供能",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "魔力体质与持续供能"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "魔力体质与持续供能共同决定施法者能否取得、感知及维持魔法力量；获得体质不等于已经学会法术。\n魔力体质允许使用魔力启动相应物品，并在限定范围内感到施法和魔法物品启用造成的波动。暴露在外、未放入次元收纳器的魔法物品，其常态波动比启用时低两级；不加掩饰的施法者也会发出比自身最高魔法相关强化等级低三级的波动。感到异常仍须进一步鉴别，不能直接得知身份、用途和意图。适用的通用魔力池可经四小时睡眠恢复，按实际睡眠分钟累计，每日睡眠恢复量不超过池上限；也可每小时作一次感知加智力判定，按成功数恢复，冥想恢复不计入该上限。\n持续效果还依赖具体供能者。Garuda侦察有耗尽魔力后返回、需要补魔的条件；飞行骑乘物也可能因供能者重伤昏迷、失去魔力源而无法保持飞行。不同物品各按自身维持条件，不外推为所有使魔、坐骑和装具共用供能结构。以上机制不自动授予御临风开局魔力体质或魔力池。",
+      "source_line": 87,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 87,
+        "id": "WORLD_BLOODLINE_MAGIC"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge",
+      "additional_source_refs": [
+        {
+          "path": "work/replay_research/opening_state_consolidated.md",
+          "section": "既定前史、时期与后台知情边界"
+        }
+      ]
+    },
+    {
+      "id": "WORLD_SPACE_MAGIC",
+      "name": "空间传送与龙族空间能力",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "空间传送与龙族空间能力"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "空间传送与龙族空间能力受到目标、距离、动作和魔力条件限制；掌握相应法术并不意味着能无限制运输人员。\n下位传送消耗1点魔力，需要语言、动作和一整轮施法，可把自己传到没有视野阻挡、最远50米的位置。携带物体积达到2时，需作DC2施法判定，此后每增加1体积，DC和魔力消耗各加1。该法术也可作用于施法范围1米内自愿或无意识的生物，但传送距离减半；目标体积超过5的部分，另依携物规则增加判定和消耗。\n上位传送的基础消耗为9魔力，只能前往施术者曾经到达且仍有印象的地点，不能跨越位面或世界。基础距离为1000米，需进行DC100、每分钟一次的长时间施法判定；每增加1000米，DC增加100、魔力消耗增加1。失败时返还一半魔力，向下取整。\n具体人物在开局掌握哪一法术、魔力池和携带余量，按人物时期处理；不能单由空间龙身份赋予全部法术或一次撤走整支军队。",
+      "source_line": 88,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 88,
+        "id": "WORLD_SPACE_MAGIC"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_FOREIGN_DRAGON",
+      "name": "异乡之龙",
+      "type": "concept",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "异乡之龙"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "异乡之龙是本团对“华夏人都是龙的传人”的血脉解释，御临风已有的龙血与这一共同来源相连。它描述的是既有出身，但没有给出所有华夏人相同的血统浓度或能力，也没有赋予每人同一套龙族能力。\n御临风的龙血极微量、经过多代稀释，这是既有出身背景；首次入都时，他尚未获知具体血统浓度；主持掌握的出身背景不等于人物已知。",
+      "source_line": 89,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 89,
+        "id": "WORLD_FOREIGN_DRAGON"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge",
+      "additional_source_refs": [
+        {
+          "path": "work/replay_research/opening_state_consolidated.md",
+          "section": "既定前史、时期与后台知情边界"
+        }
+      ]
+    },
+    {
+      "id": "WORLD_WHITE_MAGE_NETWORK",
+      "name": "白色魔法师的合作网络",
+      "type": "faction",
+      "disposition": "keyword",
+      "category": "current_background",
+      "keys": [
+        "白色魔法师的合作网络"
+      ],
+      "reason": "保留持续背景、机制或T0前史；投影去除已识别的后期结果或作者考据过程，按主题触发。",
+      "runtime_content": "白色魔法师的合作网络包括他催生、指挥的Phantom，也包括以交易与共同目标联系的合作者。美杜莎是Phantom，并忠于白魔。网络没有已知的正式组织名称或完整成员表。\n各参与者获得的情报、资源和许诺各有限制，没有证据证明他们共享全部计划或由同一人格控制。其他具体成员、交易与共同活动须依各自已确认的当前状态处理，不凭推测扩张网络名单。",
+      "source_line": 90,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 90,
+        "id": "WORLD_WHITE_MAGE_NETWORK"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_WHITE_MAGE_HOSTAGES",
+      "name": "龙族根基洞穴交涉",
+      "type": "event",
+      "disposition": "author_only",
+      "category": "late_or_unaligned_event",
+      "keys": [
+        "龙族根基洞穴交涉"
+      ],
+      "reason": "原线末期取石人质交涉，不是T0事实或预定结局。",
+      "runtime_content": null,
+      "source_line": 91,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 91,
+        "id": "WORLD_WHITE_MAGE_HOSTAGES"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_CAPITAL_PURSUIT",
+      "name": "帝都报信与达卡斯栽赃追捕",
+      "type": "event",
+      "disposition": "author_only",
+      "category": "late_or_unaligned_event",
+      "keys": [
+        "帝都报信与达卡斯栽赃追捕"
+      ],
+      "reason": "原线报信、栽赃追捕与保护的具体后续仍留作者库；T0前刺杀、医馆查封和逮捕已提取到九雪医馆条目，冒名后台由凌迟片段承接。",
+      "runtime_content": null,
+      "source_line": 92,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 92,
+        "id": "WORLD_CAPITAL_PURSUIT"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_CURSE_TRANSFER",
+      "name": "悠悠诅咒转移",
+      "type": "event",
+      "disposition": "author_only",
+      "category": "late_or_unaligned_event",
+      "keys": [
+        "悠悠诅咒转移"
+      ],
+      "reason": "御临风原线的自愿选择及其结果，不能预先选定。",
+      "runtime_content": null,
+      "source_line": 93,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 93,
+        "id": "WORLD_CURSE_TRANSFER"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_VIEL_FAER_CONTRACT",
+      "name": "维尔Faer装具接入",
+      "type": "event",
+      "disposition": "author_only",
+      "category": "late_or_unaligned_event",
+      "keys": [
+        "维尔Faer装具接入"
+      ],
+      "reason": "旁线装具接入、契约与治疗流程，相对T0未统一，不提前结算。",
+      "runtime_content": null,
+      "source_line": 94,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 94,
+        "id": "WORLD_VIEL_FAER_CONTRACT"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_MUTOU_STONE_TRANSFER",
+      "name": "欧吉尔德交石与庄园变化",
+      "type": "event",
+      "disposition": "author_only",
+      "category": "late_or_unaligned_event",
+      "keys": [
+        "欧吉尔德交石与庄园变化"
+      ],
+      "reason": "旁线交石及庄园变化，相对T0未统一，转化不能按后期名单提前。",
+      "runtime_content": null,
+      "source_line": 95,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 95,
+        "id": "WORLD_MUTOU_STONE_TRANSFER"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_MUTOU_NAGA_RECOVERY",
+      "name": "娜迦遗迹夺回装具与水手拘押",
+      "type": "event",
+      "disposition": "author_only",
+      "category": "late_or_unaligned_event",
+      "keys": [
+        "娜迦遗迹夺回装具与水手拘押"
+      ],
+      "reason": "旁线救援、夺具与拘押的具体事件，不加载完整支线。",
+      "runtime_content": null,
+      "source_line": 96,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 96,
+        "id": "WORLD_MUTOU_NAGA_RECOVERY"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_GREAT_TOMB_COERCION",
+      "name": "美杜莎与养父样貌者的镇中胁迫",
+      "type": "event",
+      "disposition": "author_only",
+      "category": "late_or_unaligned_event",
+      "keys": [
+        "美杜莎与养父样貌者的镇中胁迫"
+      ],
+      "reason": "旁线胁迫与行程未对齐T0，不提前造成会面或消息传播。",
+      "runtime_content": null,
+      "source_line": 97,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 97,
+        "id": "WORLD_GREAT_TOMB_COERCION"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_GREAT_TOMB_AGENT",
+      "name": "纳萨力克本地代理招募",
+      "type": "event",
+      "disposition": "author_only",
+      "category": "late_or_unaligned_event",
+      "keys": [
+        "纳萨力克本地代理招募"
+      ],
+      "reason": "旁线代理招募、能力取得和领取物资未对齐T0；势力方针与资源另保留。",
+      "runtime_content": null,
+      "source_line": 98,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 98,
+        "id": "WORLD_GREAT_TOMB_AGENT"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "WORLD_CITY_REFORM",
+      "name": "帝都战时生产与新政改革",
+      "type": "event",
+      "disposition": "author_only",
+      "category": "late_or_unaligned_event",
+      "keys": [
+        "帝都战时生产与新政改革"
+      ],
+      "reason": "原线后期新政与战时生产成果，首次入都尚未完成。",
+      "runtime_content": null,
+      "source_line": 99,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 99,
+        "id": "WORLD_CITY_REFORM"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_001",
+      "name": "御临风",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "persona_duplicate",
+      "keys": [
+        "御临风"
+      ],
+      "reason": "玩家身份由原有Persona承接，不并行加载世界书人物生平。",
+      "runtime_content": null,
+      "source_line": 100,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 100,
+        "id": "CHARACTER_CRC_001"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_002",
+      "name": "姜子尤",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "姜子尤"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 101,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 101,
+        "id": "CHARACTER_CRC_002"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_003",
+      "name": "谏山黄泉",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "谏山黄泉",
+        "黄泉"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 102,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 102,
+        "id": "CHARACTER_CRC_003"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_004",
+      "name": "沐透",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "沐透"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 103,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 103,
+        "id": "CHARACTER_CRC_004"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_005",
+      "name": "卡西乌斯·布莱特",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "卡西乌斯·布莱特",
+        "布莱特",
+        "雪漫之袭"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 104,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 104,
+        "id": "CHARACTER_CRC_005"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_006",
+      "name": "帝",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "帝"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 105,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 105,
+        "id": "CHARACTER_CRC_006"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_007",
+      "name": "雪老",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "雪老"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 106,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 106,
+        "id": "CHARACTER_CRC_007"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_008",
+      "name": "哈克",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "哈克"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 107,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 107,
+        "id": "CHARACTER_CRC_008"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_009",
+      "name": "久远",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "久远"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 108,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 108,
+        "id": "CHARACTER_CRC_009"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_010",
+      "name": "悠悠",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "悠悠",
+        "芬尔德·特兰希尔",
+        "芬尔德·琳·特兰希尔"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 109,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 109,
+        "id": "CHARACTER_CRC_010"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_011",
+      "name": "白色魔法使",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "白色魔法使",
+        "白魔",
+        "笛木奏"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 110,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 110,
+        "id": "CHARACTER_CRC_011"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_012",
+      "name": "安兹·乌尔·恭",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "安兹·乌尔·恭",
+        "飞鼠",
+        "铃木悟"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 111,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 111,
+        "id": "CHARACTER_CRC_012"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_013",
+      "name": "奥修特尔",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "奥修特尔",
+        "右近"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 112,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 112,
+        "id": "CHARACTER_CRC_013"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_014",
+      "name": "艾利",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "艾利"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 113,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 113,
+        "id": "CHARACTER_CRC_014"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_015",
+      "name": "谢尔伦·冯·吉尔科德",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "谢尔伦·冯·吉尔科德",
+        "冰霜龙王"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 114,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 114,
+        "id": "CHARACTER_CRC_015"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_016",
+      "name": "慕少艾",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "慕少艾"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 115,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 115,
+        "id": "CHARACTER_CRC_016"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_017",
+      "name": "沃西斯",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "沃西斯"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 116,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 116,
+        "id": "CHARACTER_CRC_017"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_018",
+      "name": "雷光",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "雷光",
+        "圣贤"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 117,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 117,
+        "id": "CHARACTER_CRC_018"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_019",
+      "name": "死亡之翼",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "死亡之翼"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 118,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 118,
+        "id": "CHARACTER_CRC_019"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_020",
+      "name": "肯达·凯·弗格斯",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "肯达·凯·弗格斯"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 119,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 119,
+        "id": "CHARACTER_CRC_020"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_021",
+      "name": "卡珊德拉",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "卡珊德拉"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 120,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 120,
+        "id": "CHARACTER_CRC_021"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_022",
+      "name": "耶各",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "耶各"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 121,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 121,
+        "id": "CHARACTER_CRC_022"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_023",
+      "name": "贞子",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "贞子"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 122,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 122,
+        "id": "CHARACTER_CRC_023"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_024",
+      "name": "托尔金",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "托尔金"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 123,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 123,
+        "id": "CHARACTER_CRC_024"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_025",
+      "name": "本多·凯·弗格斯",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "本多·凯·弗格斯",
+        "赤炎龙王"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 124,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 124,
+        "id": "CHARACTER_CRC_025"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_026",
+      "name": "古雷姆林",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "古雷姆林"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 125,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 125,
+        "id": "CHARACTER_CRC_026"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_027",
+      "name": "诺斯莉",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "诺斯莉"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 126,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 126,
+        "id": "CHARACTER_CRC_027"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_028",
+      "name": "奥希拉",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "奥希拉",
+        "黑龙族长"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 127,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 127,
+        "id": "CHARACTER_CRC_028"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_029",
+      "name": "武赖",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "武赖"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 128,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 128,
+        "id": "CHARACTER_CRC_029"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_030",
+      "name": "凌迟",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "凌迟"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 129,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 129,
+        "id": "CHARACTER_CRC_030"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_031",
+      "name": "露露缇耶",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "露露缇耶"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 130,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 130,
+        "id": "CHARACTER_CRC_031"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_032",
+      "name": "威廉",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "威廉"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 131,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 131,
+        "id": "CHARACTER_CRC_032"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_033",
+      "name": "宝石翁",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "宝石翁"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 132,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 132,
+        "id": "CHARACTER_CRC_033"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_034",
+      "name": "瑟坦特·卢·优尔兰",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "瑟坦特·卢·优尔兰"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 133,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 133,
+        "id": "CHARACTER_CRC_034"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_037",
+      "name": "海森·罗伯",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "海森·罗伯",
+        "罗伯"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 134,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 134,
+        "id": "CHARACTER_CRC_037"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_038",
+      "name": "杨",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "杨"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 135,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 135,
+        "id": "CHARACTER_CRC_038"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_040",
+      "name": "左近",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "左近"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 136,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 136,
+        "id": "CHARACTER_CRC_040"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_041",
+      "name": "宗近",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "宗近"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 137,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 137,
+        "id": "CHARACTER_CRC_041"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_042",
+      "name": "雅儿",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "雅儿"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 138,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 138,
+        "id": "CHARACTER_CRC_042"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_046",
+      "name": "佐间",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "佐间"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 139,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 139,
+        "id": "CHARACTER_CRC_046"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_047",
+      "name": "阿德莱德",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "阿德莱德"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 140,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 140,
+        "id": "CHARACTER_CRC_047"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_048",
+      "name": "卡泽",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "卡泽"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 141,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 141,
+        "id": "CHARACTER_CRC_048"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_050",
+      "name": "黄祸龙狼",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "黄祸龙狼"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 142,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 142,
+        "id": "CHARACTER_CRC_050"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_052",
+      "name": "奥斯卡贝",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "奥斯卡贝"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 143,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 143,
+        "id": "CHARACTER_CRC_052"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_053",
+      "name": "泰蕾斯",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "泰蕾斯"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 144,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 144,
+        "id": "CHARACTER_CRC_053"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_055",
+      "name": "陈萍生",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "陈萍生",
+        "二五仔"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 145,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 145,
+        "id": "CHARACTER_CRC_055"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_056",
+      "name": "达卡斯",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "达卡斯"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 146,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 146,
+        "id": "CHARACTER_CRC_056"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_058",
+      "name": "巴力西卜",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "巴力西卜",
+        "魔法师Ａ",
+        "魔法师A"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 147,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 147,
+        "id": "CHARACTER_CRC_058"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_059",
+      "name": "欧基",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "欧基"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 148,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 148,
+        "id": "CHARACTER_CRC_059"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_060",
+      "name": "欧吉尔德",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "欧吉尔德"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 149,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 149,
+        "id": "CHARACTER_CRC_060"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_063",
+      "name": "逸冷",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "逸冷"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 150,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 150,
+        "id": "CHARACTER_CRC_063"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_064",
+      "name": "韩诺",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "韩诺"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 151,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 151,
+        "id": "CHARACTER_CRC_064"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_067",
+      "name": "赫伯特·金·墨菲",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "赫伯特·金·墨菲",
+        "剧毒龙王"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 152,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 152,
+        "id": "CHARACTER_CRC_067"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_068",
+      "name": "诺顿·由谢夫·崔斯福特",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "诺顿·由谢夫·崔斯福特",
+        "青铜龙王"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 153,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 153,
+        "id": "CHARACTER_CRC_068"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_069",
+      "name": "南希·夏·缪拉",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "南希·夏·缪拉",
+        "幽影龙王"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 154,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 154,
+        "id": "CHARACTER_CRC_069"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_092",
+      "name": "土宫神乐",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "土宫神乐"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 155,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 155,
+        "id": "CHARACTER_CRC_092"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_093",
+      "name": "谏山奈落",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "谏山奈落"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 156,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 156,
+        "id": "CHARACTER_CRC_093"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_094",
+      "name": "饭纲纪之",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "饭纲纪之"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 157,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 157,
+        "id": "CHARACTER_CRC_094"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_095",
+      "name": "谏山冥",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "谏山冥"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 158,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 158,
+        "id": "CHARACTER_CRC_095"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_096",
+      "name": "三途河",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "三途河"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 159,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 159,
+        "id": "CHARACTER_CRC_096"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_097",
+      "name": "影魔",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "影魔"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 160,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 160,
+        "id": "CHARACTER_CRC_097"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_102",
+      "name": "阿伊达",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "阿伊达",
+        "阿依达"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 161,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 161,
+        "id": "CHARACTER_CRC_102"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_103",
+      "name": "维尔",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "维尔"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 162,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 162,
+        "id": "CHARACTER_CRC_103"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_104",
+      "name": "拉塞尔博士",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "拉塞尔博士",
+        "拉塞尔",
+        "塞拉尔",
+        "赛博尔"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 163,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 163,
+        "id": "CHARACTER_CRC_104"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_105",
+      "name": "逆羽·霞",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "逆羽·霞"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 164,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 164,
+        "id": "CHARACTER_CRC_105"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_106",
+      "name": "幻翎·洛",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "幻翎·洛"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 165,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 165,
+        "id": "CHARACTER_CRC_106"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_107",
+      "name": "劳霖",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "劳霖"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 166,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 166,
+        "id": "CHARACTER_CRC_107"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_108",
+      "name": "王骑",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "王骑"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 167,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 167,
+        "id": "CHARACTER_CRC_108"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_109",
+      "name": "克拉肯",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "克拉肯",
+        "Kraken",
+        "北海巨妖"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 168,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 168,
+        "id": "CHARACTER_CRC_109"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_110",
+      "name": "曼吉",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "曼吉"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 169,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 169,
+        "id": "CHARACTER_CRC_110"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_111",
+      "name": "皮谢",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "皮谢"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 170,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 170,
+        "id": "CHARACTER_CRC_111"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_112",
+      "name": "雅莱佩",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "雅莱佩"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 171,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 171,
+        "id": "CHARACTER_CRC_112"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_113",
+      "name": "夏洛克·査丁",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "夏洛克·査丁"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 172,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 172,
+        "id": "CHARACTER_CRC_113"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_114",
+      "name": "博恩婆婆",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "博恩婆婆"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 173,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 173,
+        "id": "CHARACTER_CRC_114"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_116",
+      "name": "埃弗纳斯",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "埃弗纳斯",
+        "埃佛纳斯"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 174,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 174,
+        "id": "CHARACTER_CRC_116"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_117",
+      "name": "雅儿贝德",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "雅儿贝德"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 175,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 175,
+        "id": "CHARACTER_CRC_117"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_118",
+      "name": "迪米乌哥斯",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "迪米乌哥斯"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 176,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 176,
+        "id": "CHARACTER_CRC_118"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_119",
+      "name": "亚乌菈·贝拉·菲欧拉",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "亚乌菈·贝拉·菲欧拉",
+        "亚乌菈"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 177,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 177,
+        "id": "CHARACTER_CRC_119"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_120",
+      "name": "皮奇",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "皮奇"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 178,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 178,
+        "id": "CHARACTER_CRC_120"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_122",
+      "name": "美杜莎",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "美杜莎"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 179,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 179,
+        "id": "CHARACTER_CRC_122"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_123",
+      "name": "欧登",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "欧登"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 180,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 180,
+        "id": "CHARACTER_CRC_123"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_124",
+      "name": "科斯雷",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "科斯雷"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 181,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 181,
+        "id": "CHARACTER_CRC_124"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    },
+    {
+      "id": "CHARACTER_CRC_125",
+      "name": "贝克",
+      "type": "character",
+      "disposition": "author_only",
+      "category": "author_only_duplicate",
+      "keys": [
+        "贝克"
+      ],
+      "reason": "author_only_duplicate：人物身份、性格和能力由F2对应的T0运行片段承接，避免两份生平重复或载入后期结局。",
+      "runtime_content": null,
+      "source_line": 182,
+      "source_reference": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "jsonl_line": 182,
+        "id": "CHARACTER_CRC_125"
+      },
+      "knowledge_scope": "host_background_not_automatic_character_knowledge"
+    }
+  ]
+}

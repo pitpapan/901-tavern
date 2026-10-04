@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-03",
+  "status": "passed_static_checks",
+  "scope": "One bounded source/format/link check. Not a canon re-audit or live model evaluation.",
+  "source_check": {
+    "gm_posts": 1508,
+    "body_characters": 490542,
+    "all_bodies_and_locators_match_original_jsonl": true,
+    "duplicate_snapshot_matches": true
+  },
+  "reading_check": {
+    "unique_gm_posts": 376,
+    "pages_covered": 71,
+    "body_hashes_valid": true
+  },
+  "runtime_check": {
+    "module_characters": [
+      1187,
+      446
+    ],
+    "opening_characters": 195,
+    "independent_prompt_ids": true,
+    "empty_order_preserves_existing_list": true,
+    "generation_triggers": [
+      "normal",
+      "continue",
+      "swipe",
+      "regenerate"
+    ],
+    "source_locators_valid": true,
+    "links_valid": true,
+    "last_checked_on": "2026-10-04",
+    "check_scope": "Source/export text equality, IDs/order/triggers and output links; original corpus checks retained as historical evidence."
+  },
+  "not_performed": [
+    "SillyTavern UI import",
+    "model request",
+    "Persona review",
+    "whole-canon validation",
+    "image interpretation"
+  ],
+  "limits": "Prompt Manager format checked against local 1.19.0 code. Model-dependent prose quality remains untested.",
+  "revisions": [
+    {
+      "status": "passed_narrow_source_export_check",
+      "change": "spoken dialogue and unspoken player thoughts; no NPC internal monologue",
+      "core_characters": 988,
+      "examples_characters": 446,
+      "live_import_tested": false,
+      "model_tested": false
+    },
+    {
+      "date": "2026-10-04",
+      "status": "passed_narrow_revision_check",
+      "scope": "Current edited fields and exports only; no new whole-canon, full-corpus or live-model validation.",
+      "checks": {
+        "style_json_and_text_match_source": true,
+        "main_style_characters": 1118,
+        "optional_example_characters": 446,
+        "opening_characters": 195,
+        "two_npc_runtime_texts_match_export": true,
+        "skill_name_and_riding_corrections_present": true,
+        "local_delivery_links_checked": 19,
+        "f4_format_check": "Reused successful 2026-10-04 local validator/converter result; F4 unchanged since that run."
+      },
+      "installed_sillytavern_modified": false,
+      "model_retest_performed": false,
+      "limits": "User reported a first trial; revised prompt effect remains to be observed in normal play."
+    },
+    {
+      "date": "2026-10-04",
+      "revision": "UCL_20261004_003",
+      "status": "passed_scoped_export_check",
+      "style_characters": [
+        1187,
+        446
+      ],
+      "opening_characters": 195,
+      "bright_source_profile_projection_and_export_match": true,
+      "natural_handoff_in_style_and_exported_host": true,
+      "user_source_locator_valid": true,
+      "local_links_checked": 21,
+      "f4_format_check": "Passed local TavernCardValidator and native converter check for 120 entries in this revision.",
+      "model_retest_performed": false,
+      "installed_sillytavern_modified": false
+    }
+  ],
+  "latest_revision_date": "2026-10-04"
+}

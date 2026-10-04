@@ -1,0 +1,657 @@
+{
+  "review_meta": {
+    "record_kind": "opening_state_seed",
+    "design_version": "F3-draft-1",
+    "review_status": "provisional_requires_human_review",
+    "use": "首次入帝都的作者审阅种子及可选迁移参考；不要求用户另维护 JSON，也不直接作为默认提示词",
+    "branch_created": false,
+    "implementation_status": "F3 只定摘要内容规则；前端优先使用原生 Persona、聊天 Branch/Checkpoint 和 Summarize，尚未进行 F4 适配；本项目不增加存档引擎。",
+    "source_paths_relative_to": "project_root",
+    "source_note": "source_index 定位本地研究或用户澄清；OPENR 记录内保留原帖引用。所有本轮结构与规则属于设计约定，不新增世界事实。"
+  },
+  "design_rules": {
+    "control": {
+      "pc": "御临风",
+      "profile_kind": "pc_continuity",
+      "control_mode": "user_controlled",
+      "may_generate_dialogue": false,
+      "may_choose_voluntary_actions": false,
+      "may_generate_private_thoughts": false,
+      "may_assign_new_goals": false,
+      "may_describe_external_effects": true,
+      "may_describe_involuntary_physical_reactions": true,
+      "may_summarize_user_declared_actions": true,
+      "may_reference_established_history": true,
+      "source_refs": [
+        "PC_BOUNDARY"
+      ]
+    },
+    "growth": {
+      "pc_after_T0": "由用户重新选择；原团后期成长不自动继承",
+      "companions_after_T0": "按已有模板及本分支实际时间与条件成长；不补造速度、经验公式或事件奖励",
+      "source_refs": [
+        "OPENR_001",
+        "RUNTIME_DESIGN"
+      ]
+    },
+    "default_loading": {
+      "mode": "manual_selection_pending_F4",
+      "include_entire_seed": false,
+      "include_author_only_by_default": false,
+      "include_dream_material": false,
+      "include_original_future_route": false,
+      "include_bright_specific_ending": false,
+      "include_all_npc_drafts": false,
+      "note": "此字段不是已配置的前端过滤器；只按当前场景选择需要的资料。",
+      "source_refs": [
+        "OPENR_010",
+        "UCL_BRIGHT_END",
+        "RUNTIME_DESIGN"
+      ]
+    },
+    "retired_mechanisms": {
+      "mechanisms": [
+        "主神任务与兑换自动结算",
+        "幻剑引导"
+      ],
+      "enabled": false,
+      "scope": "村庄软重启之后的运行机制；保留过往经历，不解释为世界内失踪案",
+      "source_refs": [
+        "UCL_MECHANISM"
+      ]
+    },
+    "frontend_preference": {
+      "identity": "SillyTavern Persona",
+      "identity_note": "管理身份、描述和聊天绑定；不声称程序上强制 PC 控制权限",
+      "branch_and_checkpoint": "native_chat_branch_and_checkpoint",
+      "long_memory": "Summarize_current_summary",
+      "external_state_files_required": false,
+      "implemented_for_this_project": false
+    }
+  },
+  "header": {
+    "branch_id": null,
+    "snapshot_id": null,
+    "parent_snapshot_id": null,
+    "seed_ref": "output/replay_f_review/v1/gm/opening_seed.json",
+    "through": null,
+    "scope": "作者审阅格式；运行时优先沿用前端聊天和摘要，不替代原 current_state.md，也不自动修改正式正典",
+    "fixed_history_refs": [
+      "OPENR_007"
+    ]
+  },
+  "scene": {
+    "time": {
+      "relative": "T0：三人抵达帝都附近，尚未执行原线 #81 的主动行动",
+      "exact_date": {
+        "value": null,
+        "value_state": "unknown"
+      },
+      "certainty": "confirmed",
+      "source_refs": [
+        "OPENR_001",
+        "OPENR_002"
+      ]
+    },
+    "location": {
+      "name": "帝都附近",
+      "certainty": "confirmed",
+      "source_refs": [
+        "OPENR_002"
+      ]
+    },
+    "participants": {
+      "names": [
+        "御临风",
+        "布莱特",
+        "黄泉"
+      ],
+      "scope": "已证同行者；不是对全城人员的穷尽清单",
+      "certainty": "confirmed",
+      "source_refs": [
+        "OPENR_002"
+      ]
+    },
+    "adopted_preopening_settlement": {
+      "text": "#79 与 #80 的成长在 #78 结算节点内还原；不等待另一次逐项批准。",
+      "certainty": "confirmed",
+      "source_refs": [
+        "OPENR_001"
+      ]
+    }
+  },
+  "facts": [
+    {
+      "id": "starter_growth_pc",
+      "subject": "御临风",
+      "text": "通用语 2、制药、医学 2 及去除幽默 2 属于开局前节点成长。",
+      "certainty": "confirmed",
+      "valid_time": "T0",
+      "source_refs": [
+        "OPENR_001"
+      ]
+    },
+    {
+      "id": "starter_growth_bright",
+      "subject": "布莱特",
+      "text": "力量 2 到 3、岛田双雄及除恶务尽 2 属于开局前节点成长。",
+      "certainty": "confirmed",
+      "valid_time": "T0",
+      "source_refs": [
+        "OPENR_001"
+      ]
+    },
+    {
+      "id": "riding",
+      "subject": "御临风、布莱特",
+      "text": "御临风不会骑马，与布莱特共骑。",
+      "certainty": "confirmed",
+      "valid_time": "T0",
+      "source_refs": [
+        "OPENR_002"
+      ]
+    },
+    {
+      "id": "early_equipment",
+      "subject": "御临风",
+      "text": "保留已使用的弃风、剑招狂岚与烧损的帝国制式轻甲；数值适用版本另查，不套用修复后参数。",
+      "certainty": "confirmed",
+      "valid_time": "T0",
+      "source_refs": [
+        "OPENR_004"
+      ]
+    },
+    {
+      "id": "sword_energy",
+      "subject": "御临风",
+      "text": "既有剑气兼具斗气性质，可在飘零大陆生效；不据此追加突破世界法则的新能力。",
+      "certainty": "confirmed",
+      "valid_time": "T0",
+      "source_refs": [
+        "OPENR_004"
+      ]
+    },
+    {
+      "id": "injury_course",
+      "subject": "御临风、布莱特",
+      "text": "曾受重伤，随后扑灭火势、接受村医调养并完成多日抵城旅程；入城时不保留持续燃烧，不由此推定已满血或满能量。",
+      "certainty": "confirmed",
+      "valid_time": "T0",
+      "source_refs": [
+        "OPENR_006"
+      ]
+    },
+    {
+      "id": "blindness",
+      "subject": "布莱特",
+      "text": "保留失明及已表现出的行动能力；盲视或空气感知不等于恢复视力。",
+      "certainty": "confirmed",
+      "valid_time": "T0",
+      "source_refs": [
+        "OPENR_005"
+      ]
+    },
+    {
+      "id": "treatment",
+      "subject": "黄泉",
+      "text": "已经接受村医治疗并醒来。",
+      "certainty": "confirmed",
+      "valid_time": "T0",
+      "source_refs": [
+        "OPENR_005"
+      ]
+    },
+    {
+      "id": "fatigue",
+      "subject": "黄泉",
+      "text": "需要灵力的技能用多会疲劳；本轮以叙事条件表达，不恢复精细失败与疲劳公式。",
+      "certainty": "confirmed",
+      "valid_time": "T0",
+      "source_refs": [
+        "UCL_HUANGQUAN"
+      ]
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "pc_border_knowledge",
+      "owner": "御临风",
+      "mode": "knows",
+      "text": "已能知道并报告边关被破；将领下落不明是其入城邻近原线表达的知识范围，不附后期才恢复的完整经过。",
+      "certainty": "confirmed",
+      "acquisition": {
+        "time": "T0 前既有记忆的有限范围",
+        "channel": "开局研究依据紧邻入城原线反证；不表示本分支已经报信"
+      },
+      "source_refs": [
+        "OPENR_007"
+      ]
+    },
+    {
+      "id": "pc_clinic_referral",
+      "owner": "御临风",
+      "mode": "knows",
+      "text": "已有村医向九雪医馆师兄转介的求学入口及推荐信；不预定接待或拜师结果。",
+      "certainty": "confirmed",
+      "acquisition": {
+        "time": "T0 前",
+        "channel": "村医说明与推荐"
+      },
+      "source_refs": [
+        "OPENR_003",
+        "OPENR_009"
+      ]
+    },
+    {
+      "id": "huangquan_condition_account",
+      "owner": "黄泉",
+      "mode": "believes",
+      "text": "自述已重获灵力，并需温养后遗症。",
+      "certainty": "character_belief",
+      "acquisition": {
+        "time": "T0 前",
+        "channel": "本人自述；不在此扩展经历或奖励"
+      },
+      "source_refs": [
+        "OPENR_005"
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "horses",
+      "subject": "同行队伍",
+      "item": "马",
+      "current": {
+        "value": 2,
+        "unit": "匹",
+        "value_state": "known"
+      },
+      "holder": {
+        "value": null,
+        "value_state": "unknown"
+      },
+      "notes": "第二匹的独立所有权、当前牵引者和货物装载未分配。",
+      "certainty": "confirmed",
+      "source_refs": [
+        "OPENR_002"
+      ]
+    },
+    {
+      "id": "silver",
+      "subject": "同行队伍",
+      "item": "飘零银币",
+      "last_account": {
+        "value": 10,
+        "unit": "枚",
+        "at": "离村结算；已扣赔偿、采购和寄孤儿院款项"
+      },
+      "current": {
+        "value": null,
+        "unit": "枚",
+        "value_state": "unknown"
+      },
+      "holder": {
+        "value": null,
+        "value_state": "unknown"
+      },
+      "notes": "为小队合计；抵城实余未列。不得重扣已结算支出，也不得假定途中零消耗。",
+      "certainty": "confirmed",
+      "source_refs": [
+        "OPENR_003"
+      ]
+    },
+    {
+      "id": "healing_medicine",
+      "subject": "同行队伍",
+      "item": "疗伤药",
+      "last_account": {
+        "value": 5,
+        "unit": "份",
+        "at": "村医赠药"
+      },
+      "current": {
+        "value": null,
+        "unit": "份",
+        "value_state": "unknown"
+      },
+      "holder": {
+        "value": null,
+        "value_state": "unknown"
+      },
+      "notes": "抵城实余与途中使用未列。",
+      "certainty": "confirmed",
+      "source_refs": [
+        "OPENR_003"
+      ]
+    },
+    {
+      "id": "peiyuan_pills",
+      "subject": "同行队伍",
+      "item": "培元丹",
+      "last_account": {
+        "value": 5,
+        "unit": "份",
+        "at": "村医赠药"
+      },
+      "current": {
+        "value": null,
+        "unit": "份",
+        "value_state": "unknown"
+      },
+      "holder": {
+        "value": null,
+        "value_state": "unknown"
+      },
+      "notes": "抵城实余与途中使用未列。",
+      "certainty": "confirmed",
+      "source_refs": [
+        "OPENR_003"
+      ]
+    },
+    {
+      "id": "recommendation_letter",
+      "subject": "同行队伍",
+      "item": "新推荐信",
+      "current": {
+        "value": "已有物品",
+        "value_state": "known"
+      },
+      "holder": {
+        "value": null,
+        "value_state": "unknown"
+      },
+      "notes": "已有入口不保证医馆接待或拜师成功。",
+      "certainty": "confirmed",
+      "source_refs": [
+        "OPENR_003"
+      ]
+    }
+  ],
+  "open_threads": [
+    {
+      "id": "resource_balances",
+      "kind": "resolution_gap",
+      "text": "首次交易或用药前，再明确对应实余与保管；目前未知不阻止普通场景推进。",
+      "value_state": "unknown",
+      "source_refs": [
+        "OPENR_003"
+      ]
+    },
+    {
+      "id": "combat_values",
+      "kind": "resolution_gap",
+      "text": "首次确需精确战斗裁定时，再处理当前伤害与能量、旧剑与旧甲适用参数、布莱特箭数等相关项；不默认满额或不存在。",
+      "value_state": "unknown",
+      "source_refs": [
+        "OPENR_004",
+        "OPENR_005",
+        "OPENR_006"
+      ]
+    },
+    {
+      "id": "memory_scope",
+      "kind": "source_gap",
+      "text": "T0 具体记忆范围按来源逐项区别；遗失的边关原团录和首次交易表述差异保持，既有交易不重新选择。",
+      "value_state": "unknown",
+      "source_refs": [
+        "OPENR_007"
+      ]
+    }
+  ],
+  "disclosures": [],
+  "author_only": {
+    "handling": "审阅用后台；不得整体纳入默认上下文或自动转成人物知识。具体裁定需要时另选最少片段。",
+    "facts": [
+      {
+        "id": "white_mage_escaped",
+        "subject": "白魔",
+        "text": "边关被攻破、魔物之潮与魔兽之潮同时冲击高塔时已经脱困；T0 前已脱逃。双潮袭塔与脱困均为前史，不是等待玩家行动才触发的未来事件。",
+        "certainty": "confirmed",
+        "valid_time": "T0 前已经成立",
+        "source_refs": [
+          "OPENR_010",
+          "UCL_WHITE_MAGE"
+        ]
+      },
+      {
+        "id": "capital_impersonation",
+        "subject": "凌迟、达卡斯",
+        "text": "冒用达卡斯身份进入帝都是既定后台；角色获知时点另定。",
+        "certainty": "confirmed",
+        "valid_time": "T0 后台",
+        "source_refs": [
+          "OPENR_008"
+        ]
+      },
+      {
+        "id": "gate_officer_link",
+        "subject": "守门军官",
+        "text": "既有证据将接报队长与达卡斯一方联系；改变报信语气不使其关系自动消失。完整从属程度、知情与是否受控仍未明。",
+        "certainty": "confirmed",
+        "valid_time": "T0 后台",
+        "source_refs": [
+          "OPENR_008"
+        ]
+      },
+      {
+        "id": "snow_attempt_and_clinic_closure",
+        "subject": "雪老、达卡斯、九雪医馆",
+        "text": "首次抵达帝都之前，雪老已经在达卡斯赴帝都途中刺杀失败。达卡斯入都奏报后，帝下令全军协助追查，九雪医馆随即遭逮捕处置；原线一行首次到访时医馆已经关闭，露露缇耶也在被捕人员之中。这些先行事件不由御临风入城后的报信或查访触发。",
+        "certainty": "confirmed",
+        "valid_time": "T0前已成立；精确日时未统一",
+        "source_refs": [
+          "OPENR_009",
+          "CLINIC_TIMING_RECHECK"
+        ]
+      }
+    ],
+    "knowledge": [
+      {
+        "id": "youyou_duty",
+        "owner": "悠悠",
+        "mode": "believes",
+        "text": "自己的责任是完成凌迟托付，到帝都后等待身上的诅咒爆发。",
+        "certainty": "character_belief",
+        "acquisition": {
+          "time": "开局人物理解",
+          "channel": "用户明确；不表示她此刻位于入城场景"
+        },
+        "source_refs": [
+          "OPENR_010",
+          "UCL_YOUYOU"
+        ]
+      },
+      {
+        "id": "youyou_limits",
+        "owner": "悠悠",
+        "mode": "does_not_know",
+        "text": "上述责任理解不包含咒术真实机理、实际后果或幕后计划的全貌。",
+        "certainty": "confirmed",
+        "acquisition": {
+          "time": "开局人物知识边界",
+          "channel": "用户明确的适用范围"
+        },
+        "source_refs": [
+          "UCL_YOUYOU"
+        ]
+      }
+    ],
+    "open_threads": [
+      {
+        "id": "gate_officer_unknowns",
+        "kind": "source_gap",
+        "text": "守门军官秘密从属程度、获命时间、是否被催眠及完整所知未明；不预置 T0 封锁命令。",
+        "value_state": "unknown",
+        "source_refs": [
+          "OPENR_008"
+        ]
+      },
+      {
+        "id": "clinic_timing",
+        "kind": "source_gap",
+        "text": "右近在原线稍后的谈话中称刺杀发生于三天前、逮捕发生于达卡斯入都奏报之后；邻居则称前几日被捕。保留说话者及相对时间差异，不把“三天前”机械换算为T0前三天；具体日时未统一不等于事件是否发生未定。 各人物获知渠道和时刻另按实际接触。",
+        "value_state": "unknown",
+        "source_refs": [
+          "OPENR_009"
+        ]
+      }
+    ]
+  },
+  "source_index": {
+    "OPENR_001": {
+      "path": "work/replay_research/opening_state_consolidated.jsonl",
+      "line": 1,
+      "record_id": "OPENR_001",
+      "source_kind": "review_source_with_original_post_locators"
+    },
+    "OPENR_002": {
+      "path": "work/replay_research/opening_state_consolidated.jsonl",
+      "line": 2,
+      "record_id": "OPENR_002",
+      "source_kind": "review_source_with_original_post_locators"
+    },
+    "OPENR_003": {
+      "path": "work/replay_research/opening_state_consolidated.jsonl",
+      "line": 3,
+      "record_id": "OPENR_003",
+      "source_kind": "review_source_with_original_post_locators"
+    },
+    "OPENR_004": {
+      "path": "work/replay_research/opening_state_consolidated.jsonl",
+      "line": 4,
+      "record_id": "OPENR_004",
+      "source_kind": "review_source_with_original_post_locators"
+    },
+    "OPENR_005": {
+      "path": "work/replay_research/opening_state_consolidated.jsonl",
+      "line": 5,
+      "record_id": "OPENR_005",
+      "source_kind": "review_source_with_original_post_locators"
+    },
+    "OPENR_006": {
+      "path": "work/replay_research/opening_state_consolidated.jsonl",
+      "line": 6,
+      "record_id": "OPENR_006",
+      "source_kind": "review_source_with_original_post_locators"
+    },
+    "OPENR_007": {
+      "path": "work/replay_research/opening_state_consolidated.jsonl",
+      "line": 7,
+      "record_id": "OPENR_007",
+      "source_kind": "review_source_with_original_post_locators"
+    },
+    "OPENR_008": {
+      "path": "work/replay_research/opening_state_consolidated.jsonl",
+      "line": 8,
+      "record_id": "OPENR_008",
+      "source_kind": "review_source_with_original_post_locators"
+    },
+    "OPENR_009": {
+      "path": "work/replay_research/opening_state_consolidated.jsonl",
+      "line": 9,
+      "record_id": "OPENR_009",
+      "source_kind": "review_source_with_original_post_locators"
+    },
+    "OPENR_010": {
+      "path": "work/replay_research/opening_state_consolidated.jsonl",
+      "line": 10,
+      "record_id": "OPENR_010",
+      "source_kind": "review_source_with_original_post_locators"
+    },
+    "UCL_MECHANISM": {
+      "path": "work/replay_research/user_clarifications.md",
+      "line_start": 186,
+      "line_end": 193,
+      "source_kind": "user_clarification"
+    },
+    "UCL_WHITE_MAGE": {
+      "path": "work/replay_research/user_clarifications.md",
+      "line_start": 243,
+      "line_end": 250,
+      "source_kind": "user_clarification"
+    },
+    "UCL_BRIGHT_END": {
+      "path": "work/replay_research/user_clarifications.md",
+      "line_start": 244,
+      "line_end": 251,
+      "source_kind": "user_clarification"
+    },
+    "UCL_HUANGQUAN": {
+      "path": "work/replay_research/user_clarifications.md",
+      "line_start": 245,
+      "line_end": 252,
+      "source_kind": "user_clarification"
+    },
+    "UCL_YOUYOU": {
+      "path": "work/replay_research/user_clarifications.md",
+      "line_start": 246,
+      "line_end": 253,
+      "source_kind": "user_clarification"
+    },
+    "PC_BOUNDARY": {
+      "path": "docs/pc_control_boundary.md",
+      "section": "Non-negotiable authority",
+      "source_kind": "existing_control_contract"
+    },
+    "RUNTIME_DESIGN": {
+      "path": "docs/superpowers/specs/2026-10-02-tavern-story-runtime-design.md",
+      "section": "6 状态与上下文如何长期接续；开局之后的成长",
+      "source_kind": "reviewed_design_input"
+    },
+    "CLINIC_TIMING_RECHECK": {
+      "path": "work/replay_research/playtest_20261004/clinic_background_fix.md",
+      "source_kind": "targeted_source_recheck",
+      "original_source_refs": [
+        {
+          "source_id": "P1",
+          "post_id": "816667",
+          "posts_jsonl": "extracted-first/2/posts.jsonl",
+          "jsonl_line": 39,
+          "floor": 88,
+          "author": "剑"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "816699",
+          "posts_jsonl": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 1,
+          "floor": 100,
+          "author": "剑"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "816704",
+          "posts_jsonl": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 3,
+          "floor": 102,
+          "author": "剑"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "816726",
+          "posts_jsonl": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 15,
+          "floor": 114,
+          "author": "剑"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "817008",
+          "posts_jsonl": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 42,
+          "floor": 141,
+          "author": "剑"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "818410",
+          "posts_jsonl": "extracted-first/5/posts.jsonl",
+          "jsonl_line": 20,
+          "floor": 219,
+          "author": "剑"
+        }
+      ]
+    }
+  }
+}

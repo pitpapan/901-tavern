@@ -1,0 +1,47 @@
+{
+  "kind": "reviewable_whitelist_patch_not_plugin_import",
+  "target_file": "D:/github/sillyTavern/data/default-user/settings.json",
+  "profile_path": [
+    "extension_settings",
+    "__userscripts",
+    "shujuku_v120__userscript_settings_v1",
+    "shujuku_v120_profile_v1____default____settings"
+  ],
+  "profile_merge": {
+    "autoUpdateEnabled": false,
+    "autoUpdateThreshold": 4,
+    "autoUpdateFrequency": 1,
+    "updateBatchSize": 3,
+    "skipUpdateFloors": 1,
+    "autoUpdateTokenThreshold": 0,
+    "tableMaxRetries": 1,
+    "strictJsonTableFillEnabled": false,
+    "tableFillNativeToolEnabled": false,
+    "charCardPrompt": [
+      {
+        "role": "SYSTEM",
+        "content": "你负责维护901重玩分支的动态状态。只处理提供的聊天证据和当前表格，完成数据更新后停止；不续写剧情。\n先按每张表的note和触发条件判断是否需要变更，只更新实际改变的字段。空表不表示必须编造记录，未知保留未知；没有变化时输出空tableEdit块。\n证据分层：已发生事件、谁说了什么、人物的猜测、未执行的计划分别记录。消息被封锁、潜伏刺客等若只是人物推断，应填character_belief并保留人物归属；被传述的信息可标rumor。只有确有证据时才提升为confirmed。表格是主持参考，不等于NPC共同知识。\n御临风的“……”是说话，【……】是由玩家书写的内心；内心不产生其他人物知情或已执行行动。用户表示去某处是已宣告目标，抵达须由后续叙述确认。NPC重复劝告不取消玩家已经表达的选择。\n只总结本分支已经实际发生的内容，不从旧团世界书、作者分期、素材里的未来章节补事件。新技能、装备与关系只随本分支证据更新。保留来源定位，未给编号时用原话短锚，不编编号。\n已有同一对象或事项时更新原行；可合并同一场景的细碎动作，保留具体因果、结果与知情范围。无需每轮写纪要，也无需解释思考过程。只输出一对<tableEdit>标签及其中必要修改，不附故事、分析、确认台词或外层代码围栏。\n在<tableEdit>中输出当前DDL对应的INSERT INTO、UPDATE或DELETE FROM语句，每句用分号结束。字段和物理表名以本次提供的DDL为准；INSERT显式列出业务列，不写row_id；UPDATE/DELETE必须用唯一业务标识或现有row_id限定WHERE。字符串用单引号，内部单引号写两次。不输出CREATE、ALTER、DROP或查询语句。不要修改本次未提供的表。",
+        "deletable": false,
+        "mainSlot": "A",
+        "isMain": true,
+        "isMain2": false
+      },
+      {
+        "role": "USER",
+        "content": "<当前表格与逐表规则>\n$0\n</当前表格与逐表规则>\n<本次聊天证据>\n$1\n</本次聊天证据>\n<本次人工补充>\n$8\n</本次人工补充>",
+        "deletable": false,
+        "mainSlot": "B",
+        "isMain": false,
+        "isMain2": true
+      }
+    ]
+  },
+  "character_scope": "char:901·飘零大陆主持.png",
+  "worldbookConfig_merge": {
+    "source": "manual",
+    "manualSelection": [],
+    "enabledEntries": {},
+    "injectionTarget": "901_帝都重玩_记忆_01"
+  },
+  "preserve": "All other settings including API settings, credentials, unrelated characters, global template library and chat prose. Refresh app after file patch before further UI save."
+}

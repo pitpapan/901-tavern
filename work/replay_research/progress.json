@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
   "purpose": "Shared research coverage and restart state; not canon approval or a formal character/worldbook schema.",
-  "as_of": "2026-10-03",
+  "as_of": "2026-10-04",
   "worktree_root": "C:\\Users\\pit\\.codex\\worktrees\\yulinfeng-tavern-plan\\TRPG outputs",
   "branch": "codex/yulinfeng-tavern-plan",
   "extraction_snapshot": "2a81f9e5019e48bb6a091bd72ef67749a6759503",
-  "milestone": "F1 basically accepted. Focused review of six F2 NPCs completed; targeted card repairs recommended. Yu Persona excluded from this review by user. F3/F4/G not started.",
+  "milestone": "F3 design and F4 replay export complete; G user playtest feedback received and targeted revisions authored. On 2026-10-04 user explicitly authorized agent execution of manual updates and shujuku/full-model-preset adaptation. Actual application is in progress, not yet verified. Live source is custom with model alias 3.5-flash; old GM style was disabled in active prompt order. Association opening knowledge and investigation added to runtime source. Full preset artifact passed one local format check. One targeted generation/context check remains after application; no completion claim yet.",
   "artifacts": {
     "world_candidates": {
       "path": "world_candidates.jsonl",
@@ -398,7 +398,7 @@
     },
     "character_coverage": {
       "path": "character_coverage.md",
-      "research_identity_labels": 125,
+      "research_identity_labels": 130,
       "not_unique_person_count": true,
       "complete_named_reference_sections": 9,
       "complete_section_lines": 1944,
@@ -518,14 +518,14 @@
     "prototype_character_references": {
       "readable": "utawarerumono_reference_dossiers.md",
       "structured": "utawarerumono_reference_dossiers.jsonl",
-      "records": 10,
-      "prototype_claims": 15,
+      "records": 17,
+      "prototype_claims": 26,
       "campaign_baseline_claims": 25,
       "adoption_suggestions": 20,
       "official_pages": 6,
       "integration": "npc_portraits.md",
-      "authority": "UCL_20261003_005",
-      "review_status": "provisional_requires_human_review"
+      "authority": "UCL_20261003_013",
+      "review_status": "adaptations_applied_to_pending_F2_drafts"
     },
     "yulinfeng_identity": {
       "structured": "yulinfeng_identity.jsonl",
@@ -562,12 +562,13 @@
     "empire_character_dossiers": {
       "structured": "empire_character_dossiers.jsonl",
       "readable": "empire_character_dossiers.md",
-      "characters": 10,
-      "campaign_claims": 53,
-      "prototype_claims": 15,
-      "prototype_adaptations": 20,
-      "status": "research_ready_for_content_review",
-      "stable_ids_reused": true
+      "characters": 17,
+      "campaign_claims": 71,
+      "prototype_claims": 23,
+      "prototype_adaptations": 17,
+      "status": "local_first_cast_enrichment_written_pending_user_review",
+      "stable_ids_reused": true,
+      "adaptation_count_meaning": "characters with current F2 personality adaptation, not count of individual claims"
     },
     "consolidated_topic_index": {
       "path": "../reading/consolidated_topic_index.tsv",
@@ -613,16 +614,16 @@
           "event": 26,
           "character": 83
         },
-        "npc_author_profiles": 94,
-        "npc_runtime_cards": 94,
+        "npc_author_profiles": 99,
+        "npc_runtime_cards": 99,
         "opening_card_eligibility": {
           "encounter_only": 36,
           "present": 2,
-          "requires_timing_review": 41,
+          "requires_timing_review": 46,
           "historical_only": 15
         },
         "pc_personas": 1,
-        "character_labels_accounted": 125,
+        "character_labels_accounted": 130,
         "character_dispositions": {
           "user_controlled_persona": 1,
           "author_profile_and_card": 39,
@@ -631,17 +632,50 @@
           "merged_confirmed_label": 2,
           "identity_unresolved_index_only": 3,
           "included_historical_background_only": 6,
-          "excluded_special_interlude": 23
+          "excluded_special_interlude": 23,
+          "new_reference_character_draft_pending_review": 5
         }
       },
       "new_output_review": "pending_user_review",
       "structured_worldbook": "../../output/replay_f_review/v1/worldbook_source.jsonl",
       "character_index": "../../output/replay_f_review/v1/characters/index.md",
       "persona": "../../output/replay_f_review/v1/persona/yulinfeng.md",
-      "latest_review_revision": "F1_EDITORIAL_REVISION_002",
+      "latest_review_revision": "F2_UTA_LOCAL_FIRST_004",
       "F1_review": "basically_accepted_by_user_2026-10-03",
-      "F2_review": "focused_six_npc_review_complete_repairs_recommended_2026-10-03",
-      "F2_review_report": "../../output/replay_f_review/v1/characters/f2_review_20261003.md"
+      "F2_review": "user_corrections_applied_other_targeted_repairs_pending",
+      "F2_review_report": "../../output/replay_f_review/v1/characters/f2_review_20261003.md",
+      "checkpoint_before_user_corrections": "39840ae"
+    },
+    "utawarerumono_character_supplement": {
+      "path": "utawarerumono_character_supplement.jsonl",
+      "new_labels": 5,
+      "ids": [
+        "CRC_126",
+        "CRC_127",
+        "CRC_128",
+        "CRC_129",
+        "CRC_130"
+      ],
+      "review_status": "pending_user_review",
+      "formal_worldbook_entries_added": 0
+    },
+    "playtest_20261004": {
+      "path": "playtest_20261004/diagnosis.md",
+      "manual_update": "../../output/replay_tavern/playtest_fix_20261004/README.md",
+      "model_user_reported": "gemini flash3.5",
+      "actual_api_id_verified": false,
+      "installed_app_modified": false,
+      "model_retest_performed": false,
+      "status": "latest_handoff_blindsight_files_checked_pending_user_manual_update_and_retest",
+      "latest_clinic_repair": {
+        "evidence": "playtest_20261004/clinic_background_fix.md",
+        "manual_patch": "../../output/replay_tavern/playtest_fix_20261004/医馆背景修正.md",
+        "status": "files_checked_pending_user_manual_update_and_retest"
+      }
+    },
+    "handoff_20261004": {
+      "path": "handoff_20261004.md",
+      "purpose": "Restart summary for another window; author-only, not Tavern context"
     }
   },
   "reading": {
@@ -3807,6 +3841,7 @@
     "next_full_read_pages": [],
     "purpose": "Review the concrete world/character candidates, identity and source conflicts, and the opening projection. Generate formal worldbook only after human review plus explicit phase-2 request.",
     "reuse_first": [
+      "work/replay_research/gm_style/v1/README.md: all GM corpus, 376-post style analysis, optional prompt modules and revised opening",
       "output/replay_f_review/v1/characters/f2_review_20261003.md: six NPC findings and bounded repair recommendations; excludes PC",
       "output/replay_f_review/v1/README.md: concrete F1/F2 review deliverables and limits",
       "output/replay_f_review/v1/worldbook/index.jsonl: small topic-to-prose locator",
@@ -3814,7 +3849,7 @@
       "work/replay_research/user_clarifications.md and precise source only for a specific correction"
     ],
     "important_open_issues": [
-      "Whole-candidate acceptance and explicit formal phase-2 request remain pending; specific user clarifications are already adopted and are not re-asked.",
+      "Root canonical output/worldbook_source.jsonl remains under its separate AGENTS candidate gate; accepted replay E/F review outputs and their authorized corrections are not waiting for renewed approval.",
       "Doctor CRC061/104 is a likely duplicate research label; within-scene spelling variants already recognized. Preserve crossline mapping evidence without making an identity mystery.",
       "Specific source differences remain in old space-dragon attacker-defeat allocation and some ability versions. Existing survivor and identity corrections are settled.",
       "Wizard remaining details: Gate thresholds, batch activation, actual artificial Phantom manufacture/multiple bodies, original-person continuity, reverse transformation and material-substitution outcomes.",
@@ -3827,7 +3862,7 @@
     "original_current_state_changed": false,
     "in_progress_batches": [],
     "in_progress_outputs": [],
-    "next_action": "Use F2 focused NPC review to repair temporal contradictions, remove explicit future outcomes from current runtime prose, and restore supported ability conditions, relationships and motives. Yu Persona is excluded from this review by user; do not reopen it as a review prerequisite. F3 follows the F2 repair; F4 and G remain unstarted.",
+    "next_action": "Finish authorized live targeted update, shujuku adaptation, and full preset application while preserving current chat and local extensions; then perform one bounded actual generation/context check. Do not repeat full-corpus review, reset story, or treat in-progress application as complete.",
     "deferred_by_user": {
       "npc_character_card_skill": "User explicitly deferred on 2026-10-02; continue archive plan execution. Do not create this skill in current work.",
       "image_interpretation": {
@@ -3853,14 +3888,51 @@
       "Opening growth restored from original node; user chooses future Yu progression, companions follow their original templates over time.",
       "Dreams excluded from default runtime; side lines integrated by topic and valid time, not imported as raw story bundles.",
       "Original sanctuary endpoint, minimum Transition and D3 continuation remain separate from the new replay branch.",
-      "主神/幻剑机制已在村庄软重启时移除；本次入帝都重玩保留早期历史，不再运行主神任务或引导机制。"
+      "主神/幻剑机制已在村庄软重启时移除；本次入帝都重玩保留早期历史，不再运行主神任务或引导机制。",
+      "UCL_20261003_010: 白魔T0前已脱困；悠悠以到帝都等待诅咒爆发为责任；黄泉灵力仅用多疲劳、神乐为普通旧友；布莱特原线终局只留作者历史。"
     ],
     "upcoming_deliverables": [
-      "Three-group E content review of the now consolidated research",
-      "F worldbook/cards/Persona/GM/start-state and branch-state package after the existing gate",
-      "G one import and short scene; targeted fixes only"
+      "in_progress: apply shujuku compact branch-state tables, filling instructions, injection scope and adopted-reply/rollback behavior",
+      "in_progress: apply full Chat Completion preset for observed custom/3.5-flash alias, preserving endpoint/model and local extensions",
+      "pending_after_application: one G generation/context check for clinic/association facts, differentiated NPC voices, natural handoff and memory continuity"
     ],
-    "formal_worldbook_location": "output/replay_f_review/v1/worldbook_source.jsonl; new draft awaiting review, original continuation file preserved"
+    "formal_worldbook_location": "output/replay_f_review/v1/worldbook_source.jsonl; new draft awaiting review, original continuation file preserved",
+    "latest_npc_clarification": "UCL_20261003_013",
+    "latest_runtime_clarification": "UCL_20261004_003: natural endings without routine choice questions; real NPC questions allowed; Bright auditory blindsight, no cane.",
+    "handoff": "work/replay_research/handoff_20261004.md",
+    "live_application": {
+      "date": "2026-10-04",
+      "status": "handed_back_per_user",
+      "authorization": "User explicitly requested agent execution of manual update instructions and start of shujuku/full-model-preset adaptation; supersedes manual-steps-only preference.",
+      "private_backup": "D:/github/sillyTavern/data/default-user/backups/901-adaptation-20261004-072331",
+      "observed_model": {
+        "main_api": "openai",
+        "chat_completion_source": "custom",
+        "custom_model": "3.5-flash",
+        "official_identity": "unverified"
+      },
+      "observed_previous_prompt_state": "Old 901-gm-style-v1 disabled in active global order 100001; short examples not in active order.",
+      "source_repair": "Association opening case knowledge and ongoing Dakas suspicion/investigation restored with source and knowledge boundaries.",
+      "shujuku": "five_tables_imported_settings_applied_export_and_model_fill_unverified",
+      "full_preset": "artifact_ready_application_in_progress",
+      "generation_check": "pending_after_application",
+      "full_preset_entry": "output/replay_tavern/model_preset_v1/README.md",
+      "safe_preset_patch": "work/replay_research/model_preset_v1/safe_oai_settings_patch.json",
+      "preserve": [
+        "current adopted chat progress",
+        "unrelated user customizations",
+        "connection/model fields",
+        "oai_settings.extensions"
+      ],
+      "completion_claim": false,
+      "static_manual_updates": "applied",
+      "full_model_preset": "delivered_and_saved_in_installation",
+      "preset_ui_context_mismatch": "Saved preset 32768; active settings read 2000000. User to refresh/reselect; no unqualified runtime parity claim.",
+      "auto_fill_enabled": false,
+      "model_generation_calls": 0,
+      "voice_regeneration": "skipped_per_user",
+      "manual_handoff": "output/replay_tavern/playtest_fix_20261004/本机更新交接.md"
+    }
   },
   "verification": {
     "policy": "One bounded check per new package; no legacy global audit or repeated Pass A/B.",
@@ -4132,20 +4204,33 @@
         }
       },
       "warnings": []
+    },
+    "F2_UTA_cast_20261003": {
+      "policy": "One scoped data/mirror/source check; no full-corpus rerun or model/import simulation.",
+      "status": "passed_after_prose_sync_repair",
+      "report": "../../output/replay_f_review/v1/characters/uta_enrichment_check_20261003.json",
+      "scope": [
+        "17 dossier/profile/card mirrors",
+        "local source paths and line locations",
+        "character index runtime links",
+        "previous five corrected cards preserved",
+        "right-near caution preserved",
+        "new draft cards require timing review and have no default loading"
+      ]
     }
   },
   "schema_change": "v2 stores multiple reading batches in reading.packages; message and candidate IDs stay unchanged.",
   "plan_stage": {
-    "current": "F",
-    "label": "F1基本认可；F2六名NPC集中审阅完成，建议定点返修",
+    "current": "G",
+    "label": "F导出已完成；用户已授权代执行修订，龙血玄黄与实际模型完整预设应用进行中；G待一次生成验证",
     "A": "complete",
     "B": "named_character_reference_sections_complete_with_lost_border_source_gap",
     "C": "world_model_faction_operations_and_power_rules_ready_for_content_review",
     "D": "main_and_side_dossiers_expanded_nine_named_reference_sections_read",
     "E": "focused_review_scope_accepted_by_user",
-    "F": "F1_basically_accepted_F2_focused_review_complete_repairs_recommended_F3_F4_not_started",
-    "G": "not_started",
-    "clarification": "User basically accepted F1. Six F2 NPCs were reviewed with common-pattern inspection of the 94 cards; not all-NPC semantic acceptance. Yu Persona excluded by user. No live Tavern import.",
+    "F": "F3_design_complete_F4_export_and_configuration_guide_complete",
+    "G": "user_playtest_feedback_repaired_live_application_in_progress_then_one_targeted_generation_check",
+    "clarification": "User accepted prior replay E/F scope; no renewed approval gate. Yu Persona broad review remains excluded. Previous manual-only preference was superseded on 2026-10-04 by explicit authorization to execute updates and begin shujuku/full preset adaptation. Live application remains in progress; historical no-live-test snapshots do not describe completion of this current operation.",
     "new_source_intake": "Two side lines fully integrated into provisional research; key conflicts examined in E review, without resolving unknown events by invention."
   },
   "user_feedback": [
@@ -4393,5 +4478,81 @@
     "instruction": "不需要解读图片，只是过一遍之前的流程方便填补世界观",
     "scope": "Current campaign archive and world-framework enrichment",
     "effect": "Keep existing references/locators; do not schedule image reading or treat unread images as unfinished work. Do not infer image-only content."
+  },
+  "f3_design": {
+    "entry": "output/replay_f_review/v1/gm/README.md",
+    "status": "design_complete_user_directed_F4",
+    "native_features_first": true,
+    "external_state_files_required": false,
+    "event_samples": 6,
+    "all_event_groups_converted": false,
+    "live_play_or_configuration": false,
+    "source": "UCL_20261003_014"
+  },
+  "long_term_enhancement": {
+    "entry": "work/replay_research/long_term_enhancement_plan.md",
+    "timeline_intake": "work/replay_research/timeline_weekly_intake.md",
+    "selected_memory_extension": "shujuku",
+    "selection_source": "Direct user message on 2026-10-03: 我会选择龙血玄黄",
+    "plugin_installation_or_configuration_done": false,
+    "existing_f4_v1_memory": "native_Summarize_snapshot",
+    "timeline_status": "user_offered_weekly_anchors_intake_prepared_no_new_dates_received",
+    "geography_status": "feasibility_and_options_documented_no_shape_scale_or_area_adopted",
+    "geographic_scale_preference": "awaiting_optional_user_preference",
+    "user_geography_qualitative": "大陆特别大；交通依赖马车；魔幻世界的马较现实马快；没有提供面积和速度数值。",
+    "runtime_export_changed": false
+  },
+  "f4_export": {
+    "status": "files_and_configuration_ready",
+    "entry": "output/replay_tavern/v1/README.md",
+    "manifest": "output/replay_tavern/v1/manifest.json",
+    "target_version": "1.19.0",
+    "counts": {
+      "F1_sources": 182,
+      "F2_sources": 99,
+      "world_dispositions": {
+        "core": 3,
+        "keyword": 79,
+        "author_only": 100
+      },
+      "npc_dispositions": {
+        "keyword": 30,
+        "on_scene": 2,
+        "author_only": 61,
+        "manual": 6
+      },
+      "embedded_entries": 120,
+      "enabled_constant": 5,
+      "enabled_keyword": 109,
+      "disabled_manual": 6
+    },
+    "format_check_passed": true,
+    "local_settings_changed": false,
+    "live_import_or_model_test": false,
+    "current_application_status": "in_progress; historical local_settings_changed/live_import_or_model_test booleans describe the earlier export-only verification snapshot, pending root final result"
+  },
+  "gm_style": {
+    "date": "2026-10-04",
+    "status": "latest_module_ready_authorized_live_application_in_progress",
+    "research_entry": "work/replay_research/gm_style/v1/README.md",
+    "runtime_entry": "output/replay_tavern/gm_style_v1/README.md",
+    "gm_posts_extracted": 1508,
+    "body_characters": 490542,
+    "gm_posts_close_read": 376,
+    "pages_covered_by_samples": 71,
+    "scope_note": "Complete extraction; stratified close reading, not semantic reading of all posts.",
+    "context_characters_not_tokens": {
+      "core_style": 1187,
+      "optional_examples": 446
+    },
+    "format_check": "passed_scoped_export_check_for_natural_handoff_and_blindsight",
+    "worldbook_or_persona_changed": true,
+    "installed_sillytavern_modified": false,
+    "live_import_or_model_test": false,
+    "user_operating_preference": "2026-10-04 user explicitly authorized agent execution of manual updates and shujuku/full preset adaptation, superseding prior manual-only preference.",
+    "notation_clarification": "UCL_20261003_016: spoken Chinese quotes; player brackets are unspoken thoughts; no NPC inner monologue.",
+    "latest_revision": "Natural handoff, NPC voices, Bright auditory blindsight/no cane and empire visual direction authored. Current live application in progress; old installed module observed disabled. Final persistence/generation result pending.",
+    "user_playtest_received": true,
+    "change_scope": "Related trial repair changed exact Persona skill wording and two NPC projections; visual style itself is only in the GM module."
   }
 }

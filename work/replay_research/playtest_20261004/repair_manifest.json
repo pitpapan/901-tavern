@@ -1,0 +1,443 @@
+{
+  "date": "2026-10-04",
+  "scope": "two companion portrayals, reported skill-name leak, exported opening riding contradiction, dialogue response flow",
+  "model_user_reported": "gemini flash3.5",
+  "actual_api_model_id_verified": false,
+  "style_module_user_reported": "probably enabled; actual sent prompt not available",
+  "installed_app_modified": false,
+  "model_retest_performed": false,
+  "before": {
+    "output/replay_f_review/v1/persona/yulinfeng_persona.json": "9bf099c37ffb9ee34b093bbab5eb9e4915015c5f92a35e8ca2f7c522f73c446c",
+    "output/replay_f_review/v1/persona/yulinfeng.md": "d51717ab9ee6276dad6b0e4e71deff8543db40013beadfeb94ebd1535373a936",
+    "output/replay_f_review/v1/gm/opening_seed.json": "ad201f00e8f00c1c6dd6c3854469a956ded5c3216c19125cba7b541afc79db70",
+    "work/replay_research/opening_state_consolidated.md": "965b10cccf2549263465f2d610f897a9d820bf2315ac0e0b5fe450b3c97396d7",
+    "scripts/export_replay_tavern.py": "0c5e39e5cd4fe66397feebc559dd9bf04208db5a3118da4ded138c15e02f149a",
+    "output/replay_f_review/v1/characters/runtime_cards.jsonl": "e1e709ca9465281e7497cfa5b95cf494fb8d59883afabb1c72fffa13ec052ee9",
+    "output/replay_f_review/v1/characters/author_profiles.jsonl": "c510cf39f2a914d4cf2e0dbf8768b52f51383b012b253fd00c9fda43c8967632",
+    "output/replay_f_review/v1/characters/main_characters.jsonl": "739e892a75788295ac57fa17a5cfe2ad506e983c6ea5659de56b6d410547ed6a",
+    "output/replay_f_review/v1/characters/profiles/CRC_003.md": "c09828bba0bd5f5dd3c79b987a8d2bd2a344e3d0d88c4134c721d4de718cc122",
+    "output/replay_f_review/v1/characters/profiles/CRC_005.md": "5fba0039a305b0d3fdc9e2e23f0cefc13cb50a5f48a7a86e2ce1265d4281480a",
+    "work/replay_research/f4_drafts/npc_projection.json": "4f2bd50c7323edcec88c8d7452ab5966069e5ef37eae1a618dea5c81e4882f36",
+    "work/replay_research/gm_style/v1/authoring.json": "6c51a0676793e41efa7b50fd2a1e8ced0cc149635f2f65aa2323d6092d4d4b15",
+    "work/replay_research/gm_style/v1/pack_guide.md": "0e5c5d3ca651030350e9145b8ab32eedb5944cdb7dd94d2f7dea7a9c94e6349b",
+    "work/replay_research/gm_style/v1/README.md": "a5911d1f08d1afcd4177b978d82648e30ad85a97911c747db8b889be8cd46fc6",
+    "output/replay_f_review/v1/gm/host_rules.md": "dec0003666f22c58410cf118413facc509464a145969dade36324a35144c4116"
+  },
+  "changed_files": [
+    "output/replay_f_review/v1/persona/yulinfeng_persona.json",
+    "output/replay_f_review/v1/persona/yulinfeng.md",
+    "output/replay_f_review/v1/gm/opening_seed.json",
+    "work/replay_research/opening_state_consolidated.md",
+    "scripts/export_replay_tavern.py",
+    "output/replay_f_review/v1/characters/runtime_cards.jsonl",
+    "output/replay_f_review/v1/characters/author_profiles.jsonl",
+    "output/replay_f_review/v1/characters/main_characters.jsonl",
+    "output/replay_f_review/v1/characters/profiles/CRC_003.md",
+    "output/replay_f_review/v1/characters/profiles/CRC_005.md",
+    "work/replay_research/f4_drafts/npc_projection.json",
+    "work/replay_research/gm_style/v1/authoring.json",
+    "work/replay_research/gm_style/v1/pack_guide.md",
+    "work/replay_research/gm_style/v1/README.md",
+    "output/replay_f_review/v1/gm/host_rules.md"
+  ],
+  "persona_repair": {
+    "before": "他已经能使用弃风和早期狂岚。",
+    "after": "他持有弃风剑，会施展剑招“启剑式·风·狂岚”，简称“狂岚”，可配合弃风卷起狂风或集束龙卷。",
+    "source_refs": [
+      {
+        "source_id": "P1",
+        "post_id": "816554",
+        "document_id": "P1_P002",
+        "posts_jsonl": "extracted-first/2/posts.jsonl",
+        "jsonl_line": 23,
+        "floor": "72",
+        "author": "我是小白"
+      },
+      {
+        "source_id": "P1",
+        "post_id": "816557",
+        "document_id": "P1_P002",
+        "posts_jsonl": "extracted-first/2/posts.jsonl",
+        "jsonl_line": 25,
+        "floor": "74",
+        "author": "剑"
+      }
+    ],
+    "riding_state_preserved": "不会骑马; user explicitly repeated this in the current branch",
+    "author_rules_version_notes_retained": true
+  },
+  "riding_summary_repair": {
+    "before": "御临风已在开局前学会骑术及节点成长",
+    "after": "御临风不会骑马，本次旅途与布莱特共骑；入城前节点成长已按记录保留",
+    "source_refs": [
+      {
+        "source_id": "P1",
+        "post_id": "816583",
+        "document_id": "P1_P002",
+        "posts_jsonl": "extracted-first/2/posts.jsonl",
+        "jsonl_line": 29,
+        "floor": "78",
+        "author": "剑"
+      },
+      {
+        "source_id": "P1",
+        "post_id": "816591",
+        "document_id": "P1_P002",
+        "posts_jsonl": "extracted-first/2/posts.jsonl",
+        "jsonl_line": 30,
+        "floor": "79",
+        "author": "我是小白"
+      }
+    ],
+    "current_user_branch_confirms_not_riding": true
+  },
+  "character_repair": {
+    "CRC_003": {
+      "old_content": {
+        "persona": "谏山黄泉是受过除灵与太刀训练的少女，冷静、温柔、坚忍与暴力倾向并存。她能关心同伴、表达不足、接受照料，也有主动迎战的一面。开局已经醒来同行，保留此前中毒与重新询问临风姓名的经历。",
+        "speech_style": "原话常先说明自己的不确定或不足，再提出具体问题；直率而不必多话。不要把日语能力、沉默或母性标签变成固定口癖。",
+        "decision_style": "观察危险和会合条件，结合自身太刀、灵力及疲劳决定出手；她可以接受照料，也可以冒险，不能固定为永不退让或无条件照顾陌生人。",
+        "relationships": [
+          "与御临风、布莱特共同抵城；既有援助不等于完全了解彼此内心。",
+          "土宫神乐是她穿越前的一名朋友，属于普通的原乡记忆。"
+        ],
+        "abilities": [
+          "太刀和除灵训练是能力背景；已表达较早梦中重获灵力及温养的经历。",
+          "需要灵力的技能使用过多会使她疲劳，行动时须考虑已累积的消耗。",
+          "T0不持后得狮子王、乱红莲、神秘海域御雷或借来的银丝甲。"
+        ],
+        "knowledge_boundaries": [
+          "只知道自己经历和队内已交流的信息；不能读御临风封锁的记忆。"
+        ],
+        "growth_boundary": "按用户给予的同伴模板随时间成长；实际学习、受赠及当前资源随新分支落实，原线后来奖励和终局不是自动日程。",
+        "activation_notes": "与御临风、布莱特在帝都附近同行；旧伤与中毒经历保留，现余额不臆定满值。 进入实际场景后可依据性格、目的与已知信息生成新的对白和行动；不得借新对白补造背景。"
+      },
+      "new_content": {
+        "persona": "谏山黄泉是受过除灵与太刀训练的少女，冷静、温柔、坚忍与暴力倾向并存。她能关心同伴、表达不足、接受照料，也有主动迎战的一面。村庄中毒后已经苏醒、调养，随后与同伴旅行多日抵达帝都。",
+        "speech_style": "说话直率，围绕自己知道的情况、具体任务条件和自己的打算回应。她会坦白不足、询问不明白的事，也会主动提出分工；熟悉的同伴之间有随意、调侃和嫌麻烦的一面。有亲见线索或复杂任务需要商量时，能够展开分析；普通接话可以简短。发言提供她自己的意见或发现，而不是重述同伴的说明。",
+        "decision_style": "留意眼前的异常、同伴处境和实际任务需要，结合太刀与除灵经验参与行动。有疑点时提出具体问题或分工，救人和战斗中也愿意主动承担风险。她可以同意、质疑、另提办法或直接行动，不固定承担劝退职责。",
+        "relationships": [
+          "与御临风、布莱特共同抵城；既有援助不等于完全了解彼此内心。",
+          "土宫神乐是她穿越前的一名朋友，属于普通的原乡记忆。"
+        ],
+        "abilities": [
+          "太刀和除灵训练是能力背景；灵力曾重新获得。村庄温养属于既往经历，其后已调养并旅行多日。",
+          "需要灵力的技能使用过多会疲劳；当前状态依本分支实际施法、受伤与恢复更新，抵都时的精确余量未记。",
+          "T0不持后得狮子王、乱红莲、神秘海域御雷或借来的银丝甲。"
+        ],
+        "knowledge_boundaries": [
+          "只知道自己经历和队内已交流的信息；不能读御临风封锁的记忆。"
+        ],
+        "growth_boundary": "按用户给予的同伴模板随时间成长；实际学习、受赠及当前资源随新分支落实，原线后来奖励和终局不是自动日程。",
+        "activation_notes": "与御临风、布莱特在帝都附近同行；村庄中毒后经历苏醒、调养及多日旅途，当前身体与灵力余量依本分支实际记录更新。 进入实际场景后可依据性格、目的与已知信息生成新的对白和行动；不得借新对白补造背景。"
+      },
+      "evidence_report": "work/replay_research/playtest_20261004/yomi_voice_evidence.md",
+      "source_refs": [
+        {
+          "source_id": "P1",
+          "post_id": "816286",
+          "document_id": "P1_P001",
+          "posts_jsonl": "extracted-first/1/posts.jsonl",
+          "jsonl_line": 49,
+          "floor": "48",
+          "author": "戈博"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "816294",
+          "document_id": "P1_P002",
+          "posts_jsonl": "extracted-first/2/posts.jsonl",
+          "jsonl_line": 3,
+          "floor": "52",
+          "author": "戈博"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "816803",
+          "document_id": "P1_P003",
+          "posts_jsonl": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 32,
+          "floor": "131",
+          "author": "戈博"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "816821",
+          "document_id": "P1_P003",
+          "posts_jsonl": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 37,
+          "floor": "136",
+          "author": "戈博"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "818615",
+          "document_id": "P1_P005",
+          "posts_jsonl": "extracted-first/5/posts.jsonl",
+          "jsonl_line": 41,
+          "floor": "240",
+          "author": "戈博"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "818816",
+          "document_id": "P1_P005",
+          "posts_jsonl": "extracted-first/5/posts.jsonl",
+          "jsonl_line": 47,
+          "floor": "246",
+          "author": "戈博"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "820889",
+          "document_id": "P1_P006",
+          "posts_jsonl": "extracted-first/6/posts.jsonl",
+          "jsonl_line": 43,
+          "floor": "292",
+          "author": "戈博"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "824139",
+          "document_id": "P1_P007",
+          "posts_jsonl": "extracted-first/7/posts.jsonl",
+          "jsonl_line": 27,
+          "floor": "326",
+          "author": "戈博"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "824464",
+          "document_id": "P1_P007",
+          "posts_jsonl": "extracted-first/7/posts.jsonl",
+          "jsonl_line": 30,
+          "floor": "329",
+          "author": "戈博"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "816397",
+          "document_id": "P1_P002",
+          "posts_jsonl": "extracted-first/2/posts.jsonl",
+          "jsonl_line": 11,
+          "floor": "60",
+          "author": "戈博"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "816583",
+          "document_id": "P1_P002",
+          "posts_jsonl": "extracted-first/2/posts.jsonl",
+          "jsonl_line": 29,
+          "floor": "78",
+          "author": "剑"
+        }
+      ]
+    },
+    "CRC_005": {
+      "old_content": {
+        "persona": "失明的猎人与C级游击士，熟悉野外和弓术，关心孤儿院。嫉恶如仇与机会主义是参考标签，行动仍要结合眼前证据、同伴安全和组织后果；失明没有取消独立行动能力，也没有让他恢复正常视力。",
+        "speech_style": "往往直接说明目标、风险和责任范围；对协会会区分个人行为与组织后果。没有证据要求豪爽大笑或训导式口癖。",
+        "decision_style": "以可得线索、位置和同伴安全评估行动，兼顾孤儿院牵挂；根据当前处境决定进攻、掩护或撤退。",
+        "relationships": [
+          "与黄泉、御临风共同抵城；与协会有既有成员关系。",
+          "关照孤儿院是自身长期关系，不把后期捐款重复记成T0待付款。"
+        ],
+        "abilities": [
+          "保留失明及空气波动定位的背景，不能读平面文字或恢复正常视力。",
+          "#80节点力量2到3、岛田双雄和除恶务尽2纳入开局还原；不再等待额外批语。",
+          "苍穹弓、B级导力器、精箭和梦中奖励均不提前。"
+        ],
+        "knowledge_boundaries": [
+          "只依据同行经历、已有协会常识及实际获知的消息判断和行动。"
+        ],
+        "growth_boundary": "按用户给予的同伴模板随时间成长；实际学习、受赠及当前资源随新分支落实，原线后来奖励和终局不是自动日程。",
+        "activation_notes": "与御临风共骑一马抵帝都附近；C级身份及#80成长保留，箭数和状态余额未给。 进入实际场景后可依据性格、目的与已知信息生成新的对白和行动；不得借新对白补造背景。"
+      },
+      "new_content": {
+        "persona": "失明的猎人与C级游击士，熟悉野外和弓术，关心孤儿院。他实际、善找机会，愿意主动介入自己认为应当处理的事，也有对恶人冷硬的一面。与同行者可以商量、掩护和共同冒险；失明没有取消他的独立行动能力，也不等于恢复正常视力。",
+        "speech_style": "日常常用直接的询问、短判断或具体提议；线索复杂时会连起几条理由说清楚。对同行者就事商量，对长者和求助对象较客气，偶用“少年”“先生”“在下”等称呼；笑意或挖苦随对象改变。职业经验通常落在一个相关细节上，随后回到眼前的事。提醒同伴时也会说明自己准备做什么。",
+        "decision_style": "根据手边线索寻找联络、调查、出手或脱身的机会，必要时主动吸引注意、射击掩护或承担风险。关心同伴和平民，也牵挂孤儿院。涉及组织责任时才具体区分个人行动与协会立场；不会因存在危险就一概阻止行动。",
+        "relationships": [
+          "与黄泉、御临风共同抵城；与协会有既有成员关系。",
+          "关照孤儿院是自身长期关系，不把后期捐款重复记成T0待付款。"
+        ],
+        "abilities": [
+          "保留失明及空气波动定位的背景，不能读平面文字或恢复正常视力。",
+          "#80节点力量2到3、岛田双雄和除恶务尽2纳入开局还原；不再等待额外批语。",
+          "苍穹弓、B级导力器、精箭和梦中奖励均不提前。"
+        ],
+        "knowledge_boundaries": [
+          "只依据同行经历、已有协会常识及实际获知的消息判断和行动。"
+        ],
+        "growth_boundary": "按用户给予的同伴模板随时间成长；实际学习、受赠及当前资源随新分支落实，原线后来奖励和终局不是自动日程。",
+        "activation_notes": "与御临风共骑一马抵帝都附近；C级身份及#80成长保留，箭数和状态余额未给。 进入实际场景后可依据性格、目的与已知信息生成新的对白和行动；不得借新对白补造背景。"
+      },
+      "evidence_report": "work/replay_research/playtest_20261004/bright_voice_evidence.md",
+      "source_refs": [
+        {
+          "source_id": "P1",
+          "post_id": "816018",
+          "document_id": "P1_P001",
+          "posts_jsonl": "extracted-first/1/posts.jsonl",
+          "jsonl_line": 4,
+          "floor": "3",
+          "author": "夜小胖"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "816165",
+          "document_id": "P1_P001",
+          "posts_jsonl": "extracted-first/1/posts.jsonl",
+          "jsonl_line": 37,
+          "floor": "36",
+          "author": "夜小胖"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "816396",
+          "document_id": "P1_P002",
+          "posts_jsonl": "extracted-first/2/posts.jsonl",
+          "jsonl_line": 10,
+          "floor": "59",
+          "author": "夜小胖"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "816716",
+          "document_id": "P1_P003",
+          "posts_jsonl": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 7,
+          "floor": "106",
+          "author": "夜小胖"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "816728",
+          "document_id": "P1_P003",
+          "posts_jsonl": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 16,
+          "floor": "115",
+          "author": "夜小胖"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "816732",
+          "document_id": "P1_P003",
+          "posts_jsonl": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 20,
+          "floor": "119",
+          "author": "夜小胖"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "816778",
+          "document_id": "P1_P003",
+          "posts_jsonl": "extracted-first/3/posts.jsonl",
+          "jsonl_line": 27,
+          "floor": "126",
+          "author": "夜小胖"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "819320",
+          "document_id": "P1_P006",
+          "posts_jsonl": "extracted-first/6/posts.jsonl",
+          "jsonl_line": 2,
+          "floor": "251",
+          "author": "夜小胖"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "817751",
+          "document_id": "P1_P004",
+          "posts_jsonl": "extracted-first/4/posts.jsonl",
+          "jsonl_line": 39,
+          "floor": "188",
+          "author": "夜小胖"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "817810",
+          "document_id": "P1_P004",
+          "posts_jsonl": "extracted-first/4/posts.jsonl",
+          "jsonl_line": 42,
+          "floor": "191",
+          "author": "夜小胖"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "818026",
+          "document_id": "P1_P004",
+          "posts_jsonl": "extracted-first/4/posts.jsonl",
+          "jsonl_line": 47,
+          "floor": "196",
+          "author": "夜小胖"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "820793",
+          "document_id": "P1_P006",
+          "posts_jsonl": "extracted-first/6/posts.jsonl",
+          "jsonl_line": 38,
+          "floor": "287",
+          "author": "夜小胖"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "824837",
+          "document_id": "P1_P007",
+          "posts_jsonl": "extracted-first/7/posts.jsonl",
+          "jsonl_line": 42,
+          "floor": "341",
+          "author": "夜小胖"
+        },
+        {
+          "source_id": "P1",
+          "post_id": "852563",
+          "document_id": "P1_P026",
+          "posts_jsonl": "extracted-first/26/posts.jsonl",
+          "jsonl_line": 13,
+          "floor": "1262",
+          "author": "夜小胖"
+        }
+      ]
+    }
+  },
+  "style_characters": {
+    "main": 1187,
+    "optional_examples": 446
+  },
+  "architecture_repair": {
+    "clarification": "UCL_20261004_002",
+    "runtime_location": "901-gm-style-v1",
+    "worldbook_changed_for_visual_style": false,
+    "preserved": [
+      "existing holy temple",
+      "palace beams and defensive magic symbols"
+    ],
+    "no_real_world_architectural_standard_invented": true
+  },
+  "verification": "verification.json",
+  "status": "files_checked_pending_user_manual_update_and_retest",
+  "revisions": [
+    {
+      "id": "UCL_20261004_003",
+      "scope": [
+        "natural handoff",
+        "Bright auditory blindsight without cane"
+      ],
+      "status": "passed_scoped_export_check_pending_user_retest",
+      "source_ref": {
+        "source_id": "REF_USER_CLARIFICATIONS",
+        "path": "C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md",
+        "line_start": 402,
+        "line_end": 404,
+        "clarification_id": "UCL_20261004_003"
+      },
+      "style_characters_before": 1118,
+      "style_characters_after": 1187,
+      "verification": "handoff_blindsight_check.json"
+    }
+  ]
+}

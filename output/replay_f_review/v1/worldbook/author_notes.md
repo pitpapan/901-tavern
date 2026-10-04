@@ -492,7 +492,7 @@ F1正文返修稿，本轮逐条待审；对应WRC_007。适用时期：既存�
 
 ### 编写备注
 
-F1正文返修稿，本轮逐条待审；对应WRC_008。适用时期：既存组织；战争分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_008,EMP_007,FOP_005 本轮正文整理：协会监督的具体权限、对国家不干涉原则与战时合作的授权边界尚不完整；不能以支援前线判定协会已被帝国吞并。 布莱特后来的B级不提前至首次入都。
+F1正文返修稿，本轮逐条待审；对应WRC_008。适用时期：既存组织；战争分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_008,EMP_007,FOP_005 本轮正文整理：协会监督的具体权限、对国家不干涉原则与战时合作的授权边界尚不完整；不能以支援前线判定协会已被帝国吞并。 布莱特后来的B级不提前至首次入都。 2026-10-04按用户试跑纠正补回P1 #114、118、120、124、127的既有协会案情、质疑及撤单调查；案情指控和小道消息不升为真相，二楼告知和随后向队友转述分开。协会资料不得只剩中立制度。
 
 ### 完整来源
 
@@ -638,7 +638,7 @@ F1正文返修稿，本轮逐条待审；对应WRC_008。适用时期：既存�
 - [source_id=MUTOU; document_id=MUTOU_PAGE_10; jsonl_line=13; post_id=1056638; floor=462](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-mutou/page-10/posts.jsonl:13>)
 - [source_id=MUTOU; document_id=MUTOU_PAGE_10; jsonl_line=14; post_id=1068640; floor=463](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-mutou/page-10/posts.jsonl:14>)
 - [source_id=MUTOU; document_id=MUTOU_PAGE_10; jsonl_line=15; post_id=1069865; floor=464](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-mutou/page-10/posts.jsonl:15>)
-- [source_id=MUTOU; document_id=MUTOU_PAGE_10; jsonl_line=19; post_id=1090503; floor=468](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-mutou/page-10/posts.jsonl:19>)
+- [source_id=MUTOU; document_id=MUTOU_PAGE_10; jsonl_line=19; post_id=1090503; floor=468](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-mutou/page-10/posts.jsonl:19>)；本轮定点补充：[P1 #114/msg816726，JSONL第15行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-first/3/posts.jsonl:15>)；[P1 #118/msg816731，JSONL第19行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-first/3/posts.jsonl:19>)；[P1 #120/msg816734，JSONL第21行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-first/3/posts.jsonl:21>)；[P1 #124/msg816745，JSONL第25行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-first/3/posts.jsonl:25>)；[P1 #127/msg816783，JSONL第28行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-first/3/posts.jsonl:28>)；[P1 #130/msg816790，JSONL第31行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-first/3/posts.jsonl:31>)；[P1 #133/msg816807，JSONL第34行](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-first/3/posts.jsonl:34>)
 
 ## 魔兽部族联合体
 
@@ -1425,7 +1425,7 @@ F1正文返修稿，本轮逐条待审；对应WRC_025。适用时期：护送�
 
 ### 编写备注
 
-F1正文返修稿，本轮逐条待审；对应WRC_026。适用时期：囚禁→双潮脱逃。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_026,UCL_20261003_004,WMPR_010 本轮正文整理：双潮已由用户确认。旧材料各自强调魔物潮或魔兽潮的用字仍留在来源，不再作二选一冲突，也不合并两潮概念。
+F1正文返修稿，本轮逐条待审；对应WRC_026。适用时期：囚禁→双潮脱逃。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_026,UCL_20261003_004,WMPR_010 本轮正文整理：双潮已由用户确认。旧材料各自强调魔物潮或魔兽潮的用字仍留在来源，不再作二选一冲突，也不合并两潮概念。 本轮用户澄清已采用：白魔在边关失守与双潮出现时已脱困，早于帝都T0。 [用户澄清](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:243>)。
 
 ### 完整来源
 
@@ -2504,7 +2504,7 @@ F1正文返修v2，逐条待审；对应WRC_048。适用时期：原线后期军
 
 ### 编写备注
 
-F1正文返修v2，逐条待审；对应WRC_049。适用时期：独立敌方行动；获知分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_049,UCL_20261003_001,UCL_20261003_004,WMPR_010 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+F1正文返修v2，逐条待审；对应WRC_049。适用时期：独立敌方行动；获知分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_049,UCL_20261003_001,UCL_20261003_004,WMPR_010 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。 本轮用户澄清已采用：白魔在边关失守与双潮出现时已脱困，早于帝都T0。 [用户澄清](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:243>)。
 
 ### 完整来源
 
@@ -5568,7 +5568,7 @@ F1人物简传返修稿待用户审核。对应CRC_002；作者档案与运行�
 
 ### 编写备注
 
-F1人物简传返修稿待用户审核。对应CRC_003；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 谏山家及神乐等原乡关系不据此成为飘零大陆现存势力。
+F1人物简传返修稿待用户审核。对应CRC_003；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 谏山家及神乐等原乡关系不据此成为飘零大陆现存势力。 本轮用户澄清已采用：神乐只是穿越前的普通朋友。 [用户澄清](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:243>)。
 
 ### 完整来源
 
@@ -5671,7 +5671,7 @@ F1人物简传返修稿待用户审核。对应CRC_004；作者档案与运行�
 
 ### 编写备注
 
-F1人物简传返修稿待用户审核。对应CRC_005；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+F1人物简传返修稿待用户审核。对应CRC_005；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 本轮用户澄清已采用：具体终局仅留作者历史，不在人物简传或默认运行内容中列出。 [用户澄清](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:243>)。
 
 ### 完整来源
 
@@ -5931,7 +5931,7 @@ F1人物简传返修稿待用户审核。对应CRC_009；作者档案与运行�
 
 ### 编写备注
 
-F1人物简传返修稿待用户审核。对应CRC_010；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 最新用户确认旧空间龙秘境毁于追击凌迟的人类部队，凌迟非凶手；空间龙唯一幸存者为悠悠。“琳”与族长身份仅从后期继承起生效。婚约公开身份不替代双方感情与婚姻意愿。
+F1人物简传返修稿待用户审核。对应CRC_010；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 最新用户确认旧空间龙秘境毁于追击凌迟的人类部队，凌迟非凶手；空间龙唯一幸存者为悠悠。“琳”与族长身份仅从后期继承起生效。婚约公开身份不替代双方感情与婚姻意愿。 本轮用户澄清已采用：责任为赴帝都等待诅咒爆发；保留character_belief归属。 [用户澄清](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:243>)。
 
 ### 完整来源
 
@@ -6044,7 +6044,7 @@ F1人物简传返修稿待用户审核。对应CRC_010；作者档案与运行�
 
 ### 编写备注
 
-F1人物简传返修稿待用户审核。对应CRC_011；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 监狱塔脱逃为用户确认的独立历史节点；最小毁境衔接另属Transition Canon，本条未将其冒记为原帖已完整结算。
+F1人物简传返修稿待用户审核。对应CRC_011；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 监狱塔脱逃为用户确认的独立历史节点；最小毁境衔接另属Transition Canon，本条未将其冒记为原帖已完整结算。 本轮用户澄清已采用：白魔在边关失守与双潮出现时已脱困，早于帝都T0。 [用户澄清](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:243>)。
 
 ### 完整来源
 

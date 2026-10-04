@@ -12,7 +12,15 @@
       "F1正式世界书编写稿",
       "F2人物作者档案、NPC运行卡稿、御临风开局Persona"
     ],
-    "output_review_status": "pending_user_review"
+    "output_review_status": "pending_user_review",
+    "f3": {
+      "user_quotes": [
+        "下一步不是F3，AI怎么推演剧情吗？ 怎么被你快进到加载配置了",
+        "那你可以开始推进了"
+      ],
+      "source": "work/replay_research/user_clarifications.md#UCL_20261003_014",
+      "scope": "F3 design draft for review; no F4 configuration or live play"
+    }
   },
   "scope": {
     "worldbook": "main-world persistent entities, concepts and important original-history records",
@@ -20,11 +28,10 @@
     "runtime_cards": "reviewable T0-oriented text; timing-uncertain characters restricted to an appropriate later activation",
     "persona": "user-controlled Yu Linfeng immediately before first imperial-capital action",
     "deferred": [
-      "F3主持及事件推进系统",
-      "F4酒馆格式导出与自动加载",
-      "G实际导入体验"
+      "G实际导入与短场景体验"
     ],
-    "dreams": "Original archives preserved; dream-only profiles and dream-world entries excluded from this review pack."
+    "dreams": "Original archives preserved; dream-only profiles and dream-world entries excluded from this review pack.",
+    "gm_design": "F3 review draft using native SillyTavern Persona, character/world info, chat branches/checkpoints and summaries; JSON author references are optional, not runtime requirements"
   },
   "source_of_truth": "New replay draft package. Existing output/worldbook_source.jsonl and current_state.md remain the original continuation branch.",
   "protected_baselines": {
@@ -60,16 +67,16 @@
       "event": 26,
       "character": 83
     },
-    "npc_author_profiles": 94,
-    "npc_runtime_cards": 94,
+    "npc_author_profiles": 99,
+    "npc_runtime_cards": 99,
     "opening_card_eligibility": {
       "encounter_only": 36,
       "present": 2,
-      "requires_timing_review": 41,
+      "requires_timing_review": 46,
       "historical_only": 15
     },
     "pc_personas": 1,
-    "character_labels_accounted": 125,
+    "character_labels_accounted": 130,
     "character_dispositions": {
       "user_controlled_persona": 1,
       "author_profile_and_card": 39,
@@ -78,7 +85,8 @@
       "merged_confirmed_label": 2,
       "identity_unresolved_index_only": 3,
       "included_historical_background_only": 6,
-      "excluded_special_interlude": 23
+      "excluded_special_interlude": 23,
+      "new_reference_character_draft_pending_review": 5
     }
   },
   "outputs": [
@@ -97,9 +105,20 @@
     "persona/yulinfeng_author.json",
     "persona/yulinfeng_persona.json",
     "format.md",
-    "worldbook/author_notes.md"
+    "worldbook/author_notes.md",
+    "gm/author_sources.md",
+    "gm/event_seeds.json",
+    "gm/events.md",
+    "gm/host_rules.md",
+    "gm/opening_seed.json",
+    "gm/README.md",
+    "gm/sillytavern_mapping.md",
+    "gm/state_and_memory.md",
+    "gm/summary_prompt.md",
+    "gm/turn_flow.md",
+    "gm/worked_example.md"
   ],
-  "review_status": "F1_basically_accepted_F2_focused_review_complete_repairs_recommended",
+  "review_status": "F1_basically_accepted_F2_user_corrections_applied_remaining_repairs",
   "integrity_check": {
     "path": "integrity_check.json",
     "status": "passed",
@@ -109,7 +128,7 @@
   "limits": [
     "NPC cards are reviewable prose, not a configured SillyTavern import.",
     "Cards marked requires_timing_review retain source-scene observations and require a time-appropriate projection before play.",
-    "No F3 narrative director/event runner, F4 loading/export, or G play test produced.",
+    "F3 design and F4 derived import files/configuration guide are complete; G live import and play remain unstarted.",
     "Source gaps remain explicit; worldbook facts preserve attribution and chronology."
   ],
   "user_review_revisions": [
@@ -330,6 +349,15 @@
       "before_snapshot": "C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/f1_revision_20261003/before",
       "F2_modified": false,
       "whole_draft_approved": false
+    },
+    {
+      "id": "F2_UTA_CAST_003",
+      "sources": [
+        "UCL_20261003_012",
+        "UCL_20261003_013"
+      ],
+      "scope": "Local campaign evidence first, official prototype character enrichment second; NPC dossiers and review drafts only.",
+      "human_acceptance": "pending"
     }
   ],
   "editorial_revision": 2,
@@ -346,7 +374,7 @@
       "scope": "F1 revised worldbook prose; does not imply F2 acceptance or Tavern runtime completion"
     },
     "F2": {
-      "status": "focused_npc_review_complete_repairs_recommended",
+      "status": "user_corrections_applied_remaining_targeted_repairs",
       "date": "2026-10-03",
       "report": "characters/f2_review_20261003.md",
       "reviewed_npcs": [
@@ -359,8 +387,66 @@
       ],
       "common_pattern_scope": "94 NPC cards; not 94 full source audits",
       "persona_review": "excluded_from_this_round_by_user",
-      "card_changes_this_round": false,
-      "human_acceptance": "pending"
+      "card_changes_this_round": [
+        "CRC_003",
+        "CRC_005",
+        "CRC_010",
+        "CRC_011"
+      ],
+      "human_acceptance": "pending",
+      "latest_correction": "UCL_20261003_013",
+      "checkpoint_before_corrections": "39840ae",
+      "review_report_updated": true,
+      "remaining_scope": "Other content gaps only; do not repeat withdrawn advice on caution, Yomi mechanics/Kagura, White escape or Yoyo responsibility",
+      "latest_personality_update": "17 Utawarerumono-reference cast dossiers; 11 existing cards enriched, Raiko previous update retained, 5 new draft cards",
+      "right_near_caution_review": "withdrawn_keep_existing_card",
+      "new_draft_profiles": [
+        "CRC_126",
+        "CRC_127",
+        "CRC_128",
+        "CRC_129",
+        "CRC_130"
+      ],
+      "new_drafts_worldbook_included": false
+    },
+    "F3": {
+      "status": "design_complete_user_directed_F4",
+      "date": "2026-10-03",
+      "entry": "gm/README.md",
+      "clarification": "UCL_20261003_014",
+      "host_prompt": "gm/host_rules.md",
+      "summary_prompt": "gm/summary_prompt.md",
+      "native_features_first": true,
+      "new_pc_or_save_engine_required": false,
+      "author_event_samples": 6,
+      "all_26_event_groups_converted": false,
+      "active_play_branch_created": false,
+      "live_configuration_changed": false,
+      "model_play_test_run": false,
+      "persona_reaudited": false,
+      "bounded_check": {
+        "json_parsed": true,
+        "source_locations": 42,
+        "local_links": 45,
+        "errors": 0,
+        "coverage": "New F3 artifacts only; source locators and opening boundaries, not a fresh source audit or model test"
+      },
+      "proceed_authorization": "UCL_20261003_015"
+    },
+    "F4": {
+      "status": "export_and_configuration_guide_complete",
+      "date": "2026-10-03",
+      "entry": "../../replay_tavern/v1/README.md",
+      "format_check_passed": true,
+      "live_import_or_play": false,
+      "local_settings_changed": false
+    }
+  },
+  "runtime_exclusion_policy": {
+    "bright_original_final_outcome": {
+      "status": "applied_to_F4_runtime_content",
+      "rule": "布莱特原线被掳、死亡和盲幼龙身份猜测仅留作者历史；不得因关联人物、事件条目、检索片段或否定式知情说明进入默认重玩提示。",
+      "source": "UCL_20261003_010"
     }
   }
 }

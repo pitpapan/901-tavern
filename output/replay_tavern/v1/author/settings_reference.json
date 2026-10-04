@@ -1,0 +1,36 @@
+{
+  "kind": "reference_only_partial_settings_not_an_import_preset",
+  "target_version": "SillyTavern 1.19.0",
+  "apply_via": "UI；不要用本文件覆盖settings.json",
+  "world_info_settings": {
+    "world_info_depth": 4,
+    "world_info_min_activations": 0,
+    "world_info_recursive": false,
+    "world_info_max_recursion_steps": 1,
+    "world_info_match_whole_words": false,
+    "world_info_include_names": false,
+    "world_info_budget": 20,
+    "world_info_budget_cap": 5000,
+    "world_info_overflow_alert": true
+  },
+  "extension_settings": {
+    "memory": {
+      "source": "main",
+      "memoryFrozen": true,
+      "promptInterval": 0,
+      "promptForceWords": 0,
+      "prompt_builder": 1,
+      "SkipWIAN": true,
+      "scan": false,
+      "position": 0,
+      "role": 0,
+      "depth": 2,
+      "promptWords": 600,
+      "prompt": "根据旧摘要和当前聊天中实际保留的消息，更新这一分支的短摘要。保留仍然影响后续的旧事实，合并重复项，补充实际改变的条件。不要继续演出剧情或输出分析过程。\n\n按需要用短段落记录：当前地点、相对时间与在场者；重要结果、伤势与资源变化；关系和承诺；获得的线索及其持有者；仍未解决的事项和已启动行动。没有变化的背景不重抄，闲聊和无后效细节留在聊天中。\n\n分清“实际成立”“某人声称或相信”“计划但未执行”。提议不等于接受，寄出不等于收到，收到不等于相信；不要把玩家的思考或问题写成御临风已作出的行动。保留会影响理解的信息来源、适用时期和未解冲突。\n\n只沿用当前保留版本；不叠加弃稿的资源消耗、承诺或泄密。当前余额、行动成果、到达时间尚未明确时，保留未知；最后已知账目不得改成当前余额。新分支结果不追认为原团历史，不从后期档案补入未来奖励、能力或结局。\n\n只整理本次输入中确已提供的信息。后台设定不自动成为御临风或其他NPC所知；若输入含后台信息，保持其归属和知情限制。摘要用于主持接续，不把未揭示秘密写进面向玩家的回顾或角色记忆。仍有疑问且会影响当前行动的内容，用一句短说明保留。\n\n以约{{words}}词为篇幅目标；优先保留当前局势、关键经历与未决事项，不为凑字数补写事实。",
+      "template": "[本分支已发生事实与现状\n{{summary}}]",
+      "overrideResponseLength": 0,
+      "maxMessagesPerRequest": 0
+    }
+  },
+  "model": "未选定，沿用用户后续选择的模型及其实际可用窗口，不写API密钥或采样预设"
+}
