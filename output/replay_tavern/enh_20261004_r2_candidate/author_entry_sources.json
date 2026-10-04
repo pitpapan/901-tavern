@@ -1,0 +1,1853 @@
+{
+  "status": "provisional_candidate_not_applied",
+  "base_commit": "d30a420",
+  "base_file": "output/replay_tavern/v1/optional/901_帝都重玩_T0_v1.json",
+  "base_sha256": "a886efa9d2afd259ce009caf42db8b90f419003fabf1048d5cef4a9ed3947af3",
+  "previous_candidate_file": "output/replay_tavern/enh_20261004_candidate/901_帝都重玩_ENH_20261004_候选.json",
+  "previous_candidate_sha256": "89d5deb561c7e92d053f7b02904e7f583090cc4b6c9d025efb9b7ce9ef1e2067",
+  "source_cutoff": "UCL_20261004_042",
+  "changed_entries": [
+    {
+      "id": "WORLD_WRC_003",
+      "scope": "world",
+      "name": "飘零大陆",
+      "entry_type": "location",
+      "operation": "replace",
+      "before": "飘零大陆是妄想大陆世界的四片大陆之一，帝国长期在此统治，并整合了非敌对的精灵、矮人等族。帝国以帝为政治中心，既有城市、村镇、学术机构与工坊，也有面向妄想山脉的边境防线。过去边境关卡阻止山脉魔兽大军深入大陆，长期的和平与富裕建立在帝国治理和边防之上。\n\n御临风首次进入帝都以前，凌迟已经统合魔兽部族、攻破边关，使帝国内部面临直接入侵。",
+      "after": "飘零大陆是妄想大陆世界的四片大陆之一，帝国长期在此统治，并整合了非敌对的精灵、矮人等族。帝国以帝为政治中心，既有城市、村镇、学术机构与工坊，也有面向妄想山脉的边境防线。过去边境关卡阻止山脉魔兽大军深入大陆，长期的和平与富裕建立在帝国治理和边防之上。\n\n御临风首次进入帝都以前，凌迟已经统合魔兽部族、攻破边关，使帝国内部面临直接入侵。\n\n大陆主体长轴约10,000公里、短轴约8,000公里；轴向、真实海岸及实际陆地面积尚未确定。南缘与妄想山脉相接，帝都位于广阔腹地，留有边防纵深。宝石翁所在塔镇在帝都西北；监狱塔位于大陆整体西南、靠近南侧山脉，两塔并非同一地点。佛萨罗伦在帝都西侧。\n\n适宜道路上的轻装骑乘以约400公里/旅程日为参考，已含正常休息；不能直接套给载货马车、商队或全军。佛萨罗伦至帝都采用三天旅程，道路参考约1,200公里；查丁、曼吉所在小镇至北方宝石翁所在地采用七八天参考，道路约2,800—3,200公里。这些公里数是依基准推算的道路估计，不是测量值或直线间距；改道、照护及传送另按实际条件处理。\n\n边关失陷前，稳定道路连接主要城镇和村落、沿路通常较安全是常态，道路外仍有大片荒野。部分边远地区可能更依赖结伴或护卫〔uncertain〕；战后路线安全随实际局势变化，不把战前常态视为当前通行保证。",
+      "period": "T0起可用的持续背景；人物知情依实际经历",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "用户已采用大陆量级、方位、轻骑基准与两段参考旅时；属于本次重玩采纳设计。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "道路公里数为设计估算；轴向、真实海岸、实际面积、未知中段未定。约6,300万平方公里仅椭圆参考，留作者层。"
+        },
+        {
+          "status": "confirmed",
+          "claim": "战前主要聚落道路常態由用户确认；偏远地区例外为uncertain，战后不自动保安全。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 35,
+          "id": "UCL_20261004_019",
+          "source_kind": "user_travel_duration_ruling"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 36,
+          "id": "UCL_20261004_020",
+          "source_kind": "user_direct_setting_clarification"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 37,
+          "id": "UCL_20261004_021",
+          "source_kind": "user_adopted_travel_scale_profile"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 38,
+          "id": "UCL_20261004_022",
+          "source_kind": "user_adopted_geographic_layout"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 39,
+          "id": "UCL_20261004_023",
+          "source_kind": "user_adopted_continent_scale"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 40,
+          "id": "UCL_20261004_024",
+          "source_kind": "user_adopted_geographic_layout"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 41,
+          "id": "UCL_20261004_025",
+          "source_kind": "user_adopted_relative_location"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 42,
+          "id": "UCL_20261004_026",
+          "source_kind": "user_clarified_location_reference"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 43,
+          "id": "UCL_20261004_027",
+          "source_kind": "user_adopted_relative_location_and_workflow_preference"
+        },
+        {
+          "path": "work/replay_research/travel_scale_proposal.md",
+          "line": 13,
+          "id": "adopted_route_estimates",
+          "source_kind": "author_derivation_from_adopted_design"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 32,
+          "id": "UCL_20261004_016",
+          "source_kind": "user_direct_setting_clarification"
+        }
+      ],
+      "reason": "采用本轮大陆量级、相对方位与受限骑乘基准",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 1
+      },
+      "baseline_source": {
+        "source_id": "WORLD_WRC_003",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 3
+      },
+      "uid": 214748319
+    },
+    {
+      "id": "WORLD_WRC_004",
+      "scope": "world",
+      "name": "妄想山脉",
+      "entry_type": "location",
+      "operation": "replace",
+      "before": "妄想山脉是妄想大陆“四陆一脉”中的山脉，按四片大陆所在区域划分，各区域栖居的怪物不同。飘零大陆一侧有魔兽部族与龙族活动，帝国边境关卡曾把成军魔兽限制在山脉中；山脉最中央另有独立、隔绝而广阔的无法地带。山中还分布着部族居处、洞窟、地下通道、天险和多处秘境。\n\n有学者认为，山脉优越的环境使魔兽大量繁衍，而当地资源难以容纳过剩人口，因而推动魔兽向外扩张〔character_belief〕。",
+      "after": "妄想山脉是妄想大陆“四陆一脉”中的山脉，按四片大陆所在区域划分，各区域栖居的怪物不同。飘零大陆一侧有魔兽部族与龙族活动，帝国边境关卡曾把成军魔兽限制在山脉中；山脉最中央另有独立、隔绝而广阔的无法地带。山中还分布着部族居处、洞窟、地下通道、天险和多处秘境。\n\n有学者认为，山脉优越的环境使魔兽大量繁衍，而当地资源难以容纳过剩人口，因而推动魔兽向外扩张〔character_belief〕。\n\n四片大陆经妄想山脉相连，飘零大陆南缘与山脉相接。四陆外侧为海尚只是推测〔uncertain〕；未知的其他三陆方位、海岸与山脉范围不据此补齐。",
+      "period": "T0起可用的持续背景；人物知情依实际经历",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "四陆由山脉相连、飘零南缘贴近山脉。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "外侧为海仅为用户推测；其余方位轮廓未定。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 33,
+          "id": "UCL_20261004_017",
+          "source_kind": "user_direct_setting_clarification"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 40,
+          "id": "UCL_20261004_024",
+          "source_kind": "user_adopted_geographic_layout"
+        }
+      ],
+      "reason": "确认四陆连通与南缘，保留外海推测",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 2
+      },
+      "baseline_source": {
+        "source_id": "WORLD_WRC_004",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 4
+      },
+      "uid": 101964920
+    },
+    {
+      "id": "WORLD_WRC_005",
+      "scope": "world",
+      "name": "帝国",
+      "entry_type": "faction",
+      "operation": "replace",
+      "before": "帝国是长期统治飘零大陆的政权，最高统治者被称为“帝”。帝以集中的最高权威统合军政事务，并将非敌对的精灵、矮人等族纳入帝国。帝国没有贵族阶级，官僚不因任职而被视为比普通人更高贵；与此同时，帝、八柱将及名人享有显著的个人威望，财富、职权和居民生活处境仍有差异。帝国不提倡宗教。\n\n帝国任官唯才，不实行世袭，每年提供多次考试或考核机会。官员既受中央政府监督，也受民间游击士协会的第三方监督。日常事务由帝下设的常务机构办理，八柱将、其直系下属及其他官员参与处理，旁听专员再向帝报告结果；需要最高统治者判断的事项才提交朝堂。朝会按官阶列班，地方报告经专门部门上达，特殊危机可召开紧急朝会。这使常规办理与重大决策各有入口，而非每件事务都等待帝亲自处置。\n\n帝国的军政能力依靠官署、驻军、地方守备及专业人员共同执行。地方可登记敌情、联系法师传讯并向帝都或附近军队求援，军方也能在核验身份后拨给活动经费与马匹；研究者则会要求获得官方正式委托，才继续相关项目。异界知识的长期吸收曾促成魔法武技改革、卷轴工厂化、人才培养军事化与统一管理；实际行动仍受消息传递、材料、人员与补给限制。帝与哈克本来就是兄弟；亲缘是既存后台事实，不表示哈克或其他角色在开局已知。",
+      "after": "帝国是长期统治飘零大陆的政权，最高统治者被称为“帝”。帝以集中的最高权威统合军政事务，并将非敌对的精灵、矮人等族纳入帝国。帝国没有贵族阶级，官僚不因任职而被视为比普通人更高贵；与此同时，帝、八柱将及名人享有显著的个人威望，财富、职权和居民生活处境仍有差异。帝国不提倡宗教。\n\n帝国任官唯才，不实行世袭，每年提供多次考试或考核机会。官员既受中央政府监督，也受民间游击士协会的第三方监督。日常事务由帝下设的常务机构办理，八柱将、其直系下属及其他官员参与处理，旁听专员再向帝报告结果；需要最高统治者判断的事项才提交朝堂。朝会按官阶列班，地方报告经专门部门上达，特殊危机可召开紧急朝会。这使常规办理与重大决策各有入口，而非每件事务都等待帝亲自处置。\n\n帝国的军政能力依靠官署、驻军、地方守备及专业人员共同执行。地方可登记敌情、联系法师传讯并向帝都或附近军队求援，军方也能在核验身份后拨给活动经费与马匹；研究者则会要求获得官方正式委托，才继续相关项目。异界知识的长期吸收曾促成魔法武技改革、卷轴工厂化、人才培养军事化与统一管理；实际行动仍受消息传递、材料、人员与补给限制。帝与哈克本来就是兄弟；亲缘是既存后台事实，不表示哈克或其他角色在开局已知。\n\n已经加入帝国的精灵、矮人等部族保留族内自治，并服从帝国共同秩序。帝也是游击士协会的秘密赞助人，并直接掌控兄弟会；这些组织仍各有日常权限、联系人和知情范围。秘密统属不使普通官员、协会会员或兄弟会成员自动知道其他渠道的秘密。\n\n主持后台（T0）：帝已知边关失陷及眼前达卡斯冒名，正在将计就计；八柱将尤其右近只有怀疑，未共享帝掌握的确证与反制内情。此信息不自动成为玩家、协会或其他官员已知内容；随后知情依实际传递与查证更新。",
+      "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "补多族自治与三种渠道的最高统属和知情分隔"
+        },
+        {
+          "status": "uncertain",
+          "claim": "未获来源支持的制度细目、具体名单与运行结果保持未知；原文中rumor和character_belief归属不变。"
+        },
+        {
+          "status": "confirmed",
+          "claim": "T0帝已知破关及达卡斯冒名并将计就计；八柱将尤其右近不共享内情，只有怀疑。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "帝的具体情报来源、完整反制计划与部署时点未定；不推成全知、预定牺牲或保证原团结局。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 24,
+          "id": "UCL_20261004_008",
+          "source_kind": "user_direct_setting_clarification"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 25,
+          "id": "UCL_20261004_009",
+          "source_kind": "user_direct_setting_clarification"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 26,
+          "id": "UCL_20261004_010",
+          "source_kind": "user_confirmed_co_creation_and_direct_setting_clarification"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 47,
+          "id": "UCL_20261004_031",
+          "source_kind": "user_multiethnic_governance_clarification"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 57,
+          "id": "UCL_20261004_041",
+          "source_kind": "user_T0_emperor_knowledge_and_counterplan_clarification"
+        }
+      ],
+      "reason": "补多族自治与三种渠道的最高统属和知情分隔；常驻帝国主题提供共同知情边界，不依赖帝手动卡或情报关键词是否载入。",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 3
+      },
+      "baseline_source": {
+        "source_id": "WORLD_WRC_005",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 5
+      },
+      "uid": 105304581,
+      "latest_revision_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/setting_revision_changes.jsonl",
+        "line": 3
+      }
+    },
+    {
+      "id": "WORLD_WRC_007",
+      "scope": "world",
+      "name": "兄弟会",
+      "entry_type": "faction",
+      "operation": "replace",
+      "before": "兄弟会是帝直接掌控的秘密组织，以守护大陆为口号，在暗中从事情报收集、谍报和暗杀。组织严格挑选成员，并采用与上线单线联系的管理方式；一旦失去上线，成员往往难以证明自己的身份，但受选者即使脱离联系，仍会按照兄弟会的标准行动。帝未向八柱将公开兄弟会的真实面目。\n\n雪老曾在兄弟会中直属帝行事数十年，后来转往边关任职。兄弟会完整的层级、身份验证方式和断联补救办法尚未公开。",
+      "after": "兄弟会是帝直接掌控的秘密组织，以守护大陆为口号，在暗中从事情报收集、谍报和暗杀。组织严格挑选成员，并采用与上线单线联系的管理方式；一旦失去上线，成员往往难以证明自己的身份，但受选者即使脱离联系，仍会按照兄弟会的标准行动。帝未向八柱将公开兄弟会的真实面目。\n\n雪老曾在兄弟会中直属帝行事数十年，后来转往边关任职。完整成员名单、层级细目及身份验证方式仍未明确。\n\n兄弟会由尼克福瑞领头；通常每一级只联系自己的上一级接头人与介绍人，无特殊情况不知其他成员身份。组织没有接待员、公开柜台或面向外部的成员身份查询。\n\n失联成员仍维持原有生活与身份，可按组织标准自主行动。本次重玩没有预设的断线重联办法；成员可沿已知人际线索冒险尝试，但接触、获信任、恢复联系和身份被认可各须实际成立。正常联络下，组织视任务与可用资源提供协助，有资源时通常愿意支援；失联并不自动获得支援。\n\n御临风、黄泉、姜子尤等穿越同伴在T0已是成员；当前明面上能证明他们身份的联系线是雪老，不能视作已经联络或成功作证。逸冷生死仍未知。兄弟会成员身份与异界来客身份是不同秘密，御临风是否披露或采取行动仍由玩家决定。",
+      "period": "T0起可用的持续背景；人物知情依实际经历",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "组织常态、领头人和T0成员见证关系来自用户补充；无预设重联办法是本次重玩采纳假设。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "逸冷生死、成员名单、具体联络结果与资源送达情况未知；梦中同名者不自动合并。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 22,
+          "id": "UCL_20261004_006",
+          "source_kind": "user_direct_setting_clarification"
+        },
+        {
+          "path": "D:/备份文件/901记录/TRPG outputs/docs/superpowers/specs/2026-10-04-empire-simple-operations-draft.md",
+          "line": 33,
+          "id": "brotherhood_no_reception",
+          "source_kind": "user_direct_clarification"
+        },
+        {
+          "path": "D:/备份文件/901记录/TRPG outputs/docs/superpowers/specs/2026-10-04-empire-simple-operations-draft.md",
+          "line": 39,
+          "id": "brotherhood_agency",
+          "source_kind": "user_direct_clarification"
+        },
+        {
+          "path": "D:/备份文件/901记录/TRPG outputs/docs/superpowers/specs/2026-10-04-empire-simple-operations-draft.md",
+          "line": 45,
+          "id": "brotherhood_reconnection",
+          "source_kind": "user_adopted_replay_assumption"
+        },
+        {
+          "path": "D:/备份文件/901记录/TRPG outputs/docs/superpowers/specs/2026-10-04-empire-simple-operations-draft.md",
+          "line": 53,
+          "id": "brotherhood_support",
+          "source_kind": "user_direct_clarification"
+        }
+      ],
+      "reason": "补领头人、秘密联络、断线与支援及T0见证线",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 4
+      },
+      "baseline_source": {
+        "source_id": "WORLD_WRC_007",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 7
+      },
+      "uid": 81980241
+    },
+    {
+      "id": "WORLD_WRC_008",
+      "scope": "world",
+      "name": "游击士协会",
+      "entry_type": "faction",
+      "operation": "replace",
+      "before": "游击士协会是以保护民间百姓安全、维持地区和平为宗旨的民间组织。协会从民间或政府接受委托，派遣游击士处理魔兽与犯罪，也承接寻宠、寻物、采药、疏通下水道、清理洞穴和临时兼职等日常任务。协会拒绝违法委托，奉行不干涉国家政权的原则，在帝国制度中同时承担对官员的第三方监督。\n\n委托通过任务板和前台接洽，接任务者可以向接待员询问详情；承接协会任务涉及会员资格，非会员不能据此视作已有接取资格。游击士按等级活动，任务成绩与奖励可影响晋升。布莱特初入帝都时为C级。协会还可为求助者联系学者，提供进入专业研究的渠道。\n\n御临风初入帝都这一阶段，帝都分部已有九雪医馆案件的消息。接待员所知的案情说法是：有人暗杀边关步兵统领达卡斯未遂，医馆一家被指为幕后，军方已逮捕包括露露缇耶在内的人，并将他们囚于帝国监狱；这是她转述的指控，不证明医馆有罪〔rumor〕。逮捕由达卡斯下令的说法属于她听到的小道消息〔rumor〕。医馆已卷入逮捕案件，不能按仍在照常接待来保证安全住宿。\n\n协会已调查露露缇耶的爷爷。接待员称他是多次挽救边关、在任务中折损大部分斗气的传奇士兵，认为这样的人物及多为老人孩子的医馆参与刺杀不合理〔character_belief〕。城内也已流传边关失守消息，多数人不信；她认为消息与医馆案出现的时机过于巧合〔character_belief〕。\n\n接待员称，达卡斯此前交付过常见琐事和魔兽清理委托，但在回到帝都后紧急撤回；协会也怀疑他，正在调查，获得新消息后可以继续联系布莱特〔character_belief〕。这不等于协会已经查明刺客身份、案件真相或识破冒名。敏感消息经实际交谈传给听者，未参与私谈的人须另行获告。\n\n协会的中立不妨碍调查和提供已知线索，但不保证能公开对抗国家势力。接待员曾表示可尝试联系被捕者，同时提醒不要抱太大期望；尚无联系已经成功的结果。她还认为组织受压时可能为了整体而舍弃个人〔character_belief〕。本次是否披露、联系及提供帮助，按实际交谈与局势推进，不预演搜查、截信或原线包围。",
+      "after": "游击士协会是以保护民间百姓安全、维持地区和平为宗旨的民间组织。协会从民间或政府接受委托，派遣游击士处理魔兽与犯罪，也承接寻宠、寻物、采药、疏通下水道、清理洞穴和临时兼职等日常任务。协会拒绝违法委托，奉行不干涉国家政权的原则，在帝国制度中同时承担对官员的第三方监督。\n\n委托通过任务板和前台接洽，接任务者可以向接待员询问详情；承接协会任务涉及会员资格，非会员不能据此视作已有接取资格。游击士按等级活动，任务成绩与奖励可影响晋升。布莱特初入帝都时为C级。协会还可为求助者联系学者，提供进入专业研究的渠道。\n\n御临风初入帝都这一阶段，帝都分部已有九雪医馆案件的消息。接待员所知的案情说法是：有人暗杀边关步兵统领达卡斯未遂，医馆一家被指为幕后，军方已逮捕包括露露缇耶在内的人，并将他们囚于帝国监狱；这是她转述的指控，不证明医馆有罪〔rumor〕。逮捕由达卡斯下令的说法属于她听到的小道消息〔rumor〕。医馆已卷入逮捕案件，不能按仍在照常接待来保证安全住宿。\n\n协会已调查露露缇耶的爷爷。接待员称他是多次挽救边关、在任务中折损大部分斗气的传奇士兵，认为这样的人物及多为老人孩子的医馆参与刺杀不合理〔character_belief〕。城内也已流传边关失守消息，多数人不信；她认为消息与医馆案出现的时机过于巧合〔character_belief〕。\n\n接待员称，达卡斯此前交付过常见琐事和魔兽清理委托，但在回到帝都后紧急撤回；协会也怀疑他，正在调查，获得新消息后可以继续联系布莱特〔character_belief〕。这不等于协会已经查明刺客身份、案件真相或识破冒名。敏感消息经实际交谈传给听者，未参与私谈的人须另行获告。\n\n协会的中立不妨碍调查和提供已知线索，但不保证能公开对抗国家势力。接待员曾表示可尝试联系被捕者，同时提醒不要抱太大期望；尚无联系已经成功的结果。她还认为组织受压时可能为了整体而舍弃个人〔character_belief〕。本次是否披露、联系及提供帮助，按实际交谈与局势推进，不预演搜查、截信或原线包围。\n\n协会的秘密赞助人是帝，协会内仅极少数核心人士知情；具体知情名单未定，分部负责人或普通会员不因职务自动获知。正式监督意见可由协会负责人交常务机构，安排有权者处理并答复；经办者涉案时可要求转交，重大事项呈帝。核心人士另有很少使用的呈帝渠道。这些渠道不等于协会能撤销军令、审判或保证求助结果。\n\n紧急救助不以先付费为前提；其他必要且无力支付的委托，由分部按需要和人手减免或补贴。重大危险威胁民众时，附近且有能力的会员原则上应响应，伤病、能力不足或正在保护他人等可构成例外；不据此变成帝国军方征召。",
+      "period": "T0起可用的持续背景；人物知情依实际经历",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "补公开监督、核心秘密渠道、救助与响应；保留医馆案旧有rumor和character_belief"
+        },
+        {
+          "status": "uncertain",
+          "claim": "未获来源支持的制度细目、具体名单与运行结果保持未知；原文中rumor和character_belief归属不变。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 24,
+          "id": "UCL_20261004_008",
+          "source_kind": "user_direct_setting_clarification"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 25,
+          "id": "UCL_20261004_009",
+          "source_kind": "user_direct_setting_clarification"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 26,
+          "id": "UCL_20261004_010",
+          "source_kind": "user_confirmed_co_creation_and_direct_setting_clarification"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 27,
+          "id": "UCL_20261004_011",
+          "source_kind": "user_confirmed_co_creation"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 28,
+          "id": "UCL_20261004_012",
+          "source_kind": "user_confirmed_co_creation_and_workflow_correction"
+        }
+      ],
+      "reason": "补公开监督、核心秘密渠道、救助与响应；保留医馆案旧有rumor和character_belief",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 5
+      },
+      "baseline_source": {
+        "source_id": "WORLD_WRC_008",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 8
+      },
+      "uid": 264608666
+    },
+    {
+      "id": "WORLD_EMPIRE_COURT",
+      "scope": "world",
+      "name": "帝国朝会与常务办理",
+      "entry_type": "concept",
+      "operation": "replace",
+      "before": "帝国朝会与常务办理分别承接重大判断和日常事务。帝下设常务机构，由八柱将、其直系下属和其他官员处理每日事件，旁听专员把结果向帝报告；只有被认为需要帝判断的事项，才进一步交朝堂处理。沃西斯与雷光是主要经办者。\n\n帝国每周有数次固定朝会，朝堂中文武分列，官员按官阶站位，八柱将居前。地方报告由专门部门上达，因此地方事件可以经常设渠道进入中央决策。特殊危机可召开紧急朝会。帝可在朝会上决定出兵及人员随行，执行者仍须兼顾原有职责，例如右近受帝都防务和朝会责任约束，不能随意离岗。",
+      "after": "帝国朝会与常务办理分别承接重大判断和日常事务。帝下设常务机构，由八柱将、其直系下属和其他官员处理每日事件，旁听专员把结果向帝报告；只有被认为需要帝判断的事项，才进一步交朝堂处理。沃西斯与雷光是主要经办者。\n\n帝国每周有数次固定朝会，朝堂中文武分列，官员按官阶站位，八柱将居前。地方报告由专门部门上达，因此地方事件可以经常设渠道进入中央决策。特殊危机可召开紧急朝会。帝可在朝会上决定出兵及人员随行，执行者仍须兼顾原有职责，例如右近受帝都防务和朝会责任约束，不能随意离岗。\n\n协会负责人可以把正式监督意见提交常务机构，由有权者处理并答复；经办者涉案时可要求转交，重大事项再呈帝。提出监督意见不等于军令已撤、当事人已获释或必能亲见帝。",
+      "period": "T0起可用的持续背景；人物知情依实际经历",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "补协会明面提交通道"
+        },
+        {
+          "status": "uncertain",
+          "claim": "未获来源支持的制度细目、具体名单与运行结果保持未知；原文中rumor和character_belief归属不变。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 26,
+          "id": "UCL_20261004_010",
+          "source_kind": "user_confirmed_co_creation_and_direct_setting_clarification"
+        }
+      ],
+      "reason": "补协会明面提交通道",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 6
+      },
+      "baseline_source": {
+        "source_id": "WORLD_EMPIRE_COURT",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 76
+      },
+      "uid": 230843539
+    },
+    {
+      "id": "WORLD_WRC_009",
+      "scope": "world",
+      "name": "魔兽部族联合体",
+      "entry_type": "faction",
+      "operation": "replace",
+      "before": "魔兽部族联合体指妄想山脉中经统合参与战争的魔兽势力。各大种族原本各自为政，通过带有寡头性质的长老议会协调；千百年来周期性进攻帝国边关，既练兵，也消耗山脉中过快增加的魔兽人口，过去未能让大军深入帝国内部。\n\n凌迟被魔兽俘获后自愿化魔，并因机缘继承魔兽传说中的力量，随后统合种族、实行军事化管理，把各族能力编入共同战术。他利用制空与空运、盾阵、萨满强化、反魔箭及特种部队的协同，发动第一次真正突破帝国防线的大规模侵攻，攻下边境关卡，使周期攻关转为全面战争。\n\n统合之下仍存在部族与个人的利益差异。罗伯所述自治社会限于其率族离山前的经验；谢尔伦称龙族通常不参与长老议会的决定；杨则不愿为上层送死，希望自己的部族生存〔character_belief〕。因此，统合记录所称“所有种族”不能用来判定每名山脉居民、每个部族在全部时期都服从同一战争目标，实际覆盖范围仍不完整。",
+      "after": "魔兽部族联合体指妄想山脉中经统合参与战争的魔兽势力。各大种族原本各自为政，通过带有寡头性质的长老议会协调；千百年来周期性进攻帝国边关，既练兵，也消耗山脉中过快增加的魔兽人口，过去未能让大军深入帝国内部。\n\n凌迟被魔兽俘获后自愿化魔，并因机缘继承魔兽传说中的力量，随后统合种族、实行军事化管理，把各族能力编入共同战术。他利用制空与空运、盾阵、萨满强化、反魔箭及特种部队的协同，发动第一次真正突破帝国防线的大规模侵攻，攻下边境关卡，使周期攻关转为全面战争。\n\n统合之下仍存在部族与个人的利益差异。罗伯所述自治社会限于其率族离山前的经验；谢尔伦称龙族通常不参与长老议会的决定；杨则不愿为上层送死，希望自己的部族生存〔character_belief〕。因此，统合记录所称“所有种族”不能用来判定每名山脉居民、每个部族在全部时期都服从同一战争目标，实际覆盖范围仍不完整。\n\n此前松散数千年的各族由凌迟在约半年内完成军事统合，尚未形成中央集权。各族内部事务仍有较多自治；共同作战，以及单独议和、撤军等重大军事行动受统一指挥约束。统一军令与部族、个人利益并存，具体自治权限和执行细目仍未明确。",
+      "period": "T0起可用的持续背景；人物知情依实际经历",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "补统合时长及军事指挥与内部自治的边界"
+        },
+        {
+          "status": "uncertain",
+          "claim": "未获来源支持的制度细目、具体名单与运行结果保持未知；原文中rumor和character_belief归属不变。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 46,
+          "id": "UCL_20261004_030",
+          "source_kind": "user_faction_authority_and_historical_duration_clarification"
+        }
+      ],
+      "reason": "补统合时长及军事指挥与内部自治的边界",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 7
+      },
+      "baseline_source": {
+        "source_id": "WORLD_WRC_009",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 9
+      },
+      "uid": 29005377
+    },
+    {
+      "id": "WORLD_RAIGU_INTELLIGENCE",
+      "scope": "world",
+      "name": "雷光的秘密情报部门",
+      "entry_type": "faction",
+      "operation": "replace",
+      "before": "雷光是唯一一名拥有自己秘密情报部门的人。他的自有部门与帝直接掌控的兄弟会有不同归属。\n\n雷光处理情报时重视保密：指挥处可以隔绝侦知魔法，他会要求来者亲自报告并控制内容传播。雷光负责处理白色魔法师事务，具备情报和专业行动资源；部分消息来源未公开。秘密部门的正式名称、全部人员、权限和完整来源仍不明。拥有情报部门不等于自动知道尚未送达的消息。",
+      "after": "雷光是八柱将中唯一拥有自己秘密情报部门的人。他的自有部门与帝直接掌控的兄弟会有不同归属。\n\n雷光处理情报时重视保密：指挥处可以隔绝侦知魔法，他会要求来者亲自报告并控制内容传播。雷光负责处理白色魔法师事务，具备情报和专业行动资源；部分消息来源未公开。秘密部门的正式名称、全部人员、权限和完整来源仍不明。拥有情报部门不等于自动知道尚未送达的消息。",
+      "period": "T0起可用的持续背景；人物知情依实际经历",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "雷光拥有自己的秘密情报部门。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "用户原话的唯一性没有逐字限定八柱将；沿用作者专题的窄化语境，不能推为全帝国仅此一个秘密机构。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 5,
+          "id": "UCL_20261003_004",
+          "source_kind": "user_explicit_setting_clarification"
+        },
+        {
+          "path": "work/replay_research/empire_dossier.md",
+          "line": 63,
+          "id": "EMP_secret_scope",
+          "source_kind": "author_scope_interpretation_preserving_user_wording"
+        }
+      ],
+      "reason": "将唯一性限于既有研究采用的八柱将个人机构语境",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 8
+      },
+      "baseline_source": {
+        "source_id": "WORLD_RAIGU_INTELLIGENCE",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 77
+      },
+      "uid": 217677749
+    },
+    {
+      "id": "WORLD_WRC_014",
+      "scope": "world",
+      "name": "纳萨力克地下大坟墓",
+      "entry_type": "faction",
+      "operation": "replace",
+      "before": "纳萨力克地下大坟墓是从异世界迁入的据点与势力，由安兹·乌尔·恭统领。它原属同名公会，四十一位创建者被尊为“无上至尊”，迁入后只剩安兹一位。内部成员包括不死生物、恶魔、黑暗精灵、吸血鬼和龙人等，仆役地位取决于是否为至尊所创造，而非单看实力；至尊创造的NPC对造物者怀有绝对忠诚与敬爱。据点自身能产生用于守护的不死生物，安兹另可在尸体充足时大量制造不死生物。\n\n纳萨力克以非敌意方式隐蔽查探帝国。安兹的调查方针包括隐藏归属、先取得本地成绩，再调查潜在势力对墓地的态度，优先保障代理人与墓地安全。纳萨力克具有支持外派行动的武装、马匹、干粮和生活用品；定期情报可用特制本子的纸页传递，焚纸后送往附近情报室，紧急情况则以卷轴直接联系安兹。具备这些资源，不等于某名代理已在T0领受物资、出发或回报。\n\n据点内部通行须获许可。第八层禁止自由参观，私人住所和研究所也有限制；获准陪同穿行不代表自由进入。原乡曾有约一千五百人的公会与佣兵联军在第八层全灭。迁入与T0的精确日期未统一；外交关系须由实际接触与有效授权成立。",
+      "after": "纳萨力克地下大坟墓是从异世界迁入的据点与势力，由安兹·乌尔·恭统领。它原属同名公会，四十一位创建者被尊为“无上至尊”，迁入后只剩安兹一位。内部成员包括不死生物、恶魔、黑暗精灵、吸血鬼和龙人等，仆役地位取决于是否为至尊所创造，而非单看实力；至尊创造的NPC对造物者怀有绝对忠诚与敬爱。据点自身能产生用于守护的不死生物，安兹另可在尸体充足时大量制造不死生物。\n\n纳萨力克以非敌意方式隐蔽查探帝国。安兹的调查方针包括隐藏归属、先取得本地成绩，再调查潜在势力对墓地的态度，优先保障代理人与墓地安全。纳萨力克具有支持外派行动的武装、马匹、干粮和生活用品；定期情报可用特制本子的纸页传递，焚纸后送往附近情报室，紧急情况则以卷轴直接联系安兹。具备这些资源，不等于某名代理已在T0领受物资、出发或回报。\n\n据点内部通行须获许可。第八层禁止自由参观，私人住所和研究所也有限制；获准陪同穿行不代表自由进入。原乡曾有约一千五百人的公会与佣兵联军在第八层全灭。御临风首次抵都前，纳萨力克已来到本世界，大致与本次魔兽之潮同一时期；准确日期未知，不能据时间相近断言同日或潮导致迁入。外交关系仍须由实际接触与有效授权成立。",
+      "period": "迁入属T0前已成立背景；代理行动仍按实际发生时期",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "迁入已在T0前发生，精确日与因果仍未知"
+        },
+        {
+          "status": "uncertain",
+          "claim": "未获来源支持的制度细目、具体名单与运行结果保持未知；原文中rumor和character_belief归属不变。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 51,
+          "id": "UCL_20261004_035",
+          "source_kind": "user_faction_arrival_relative_time_confirmation"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 49,
+          "id": "UCL_20261004_033",
+          "source_kind": "user_relative_time_range_confirmation"
+        }
+      ],
+      "reason": "迁入已在T0前发生，精确日与因果仍未知",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 9
+      },
+      "baseline_source": {
+        "source_id": "WORLD_WRC_014",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 14
+      },
+      "uid": 180158504
+    },
+    {
+      "id": "WORLD_WRC_037",
+      "scope": "world",
+      "name": "魔物之潮",
+      "entry_type": "concept",
+      "operation": "replace",
+      "before": "魔物之潮会把大批具有敌意的异界来客，或受异世界影响而诞生的产物带到飘零大陆。早期人们首先从这些灾害认识异界来客，因而以带贬义的“魔物”称呼他们；随着独自行旅及友善穿越者得到确认，学术定义才逐渐转为较中性的“异世界来客或异世界产物”，日常称呼却仍保留偏见。\n异界来客带来的知识曾推动魔法武技体系改革、魔法卷轴工厂化、人才培养军事化和统一管理，但知识能否应用仍受飘零大陆法则、本地材料与技术理解限制。魔物之潮在发生当时造成的灾害通常远大于即时收益，其技术影响可能在后世才逐渐显现。\n魔物之潮没有已知的统一周期或指挥系统，也不等于本土魔兽势力的魔兽之潮，或白魔催生Phantom的行为。原线监狱塔遭受两种潮的共同冲击，白魔借机脱逃，这是两种现象在同一事件中的交汇。",
+      "after": "魔物之潮会把大批具有敌意的异界来客，或受异世界影响而诞生的产物带到飘零大陆。早期人们首先从这些灾害认识异界来客，因而以带贬义的“魔物”称呼他们；随着独自行旅及友善穿越者得到确认，学术定义才逐渐转为较中性的“异世界来客或异世界产物”，日常称呼却仍保留偏见。\n异界来客带来的知识曾推动魔法武技体系改革、魔法卷轴工厂化、人才培养军事化和统一管理，但知识能否应用仍受飘零大陆法则、本地材料与技术理解限制。魔物之潮在发生当时造成的灾害通常远大于即时收益，其技术影响可能在后世才逐渐显现。\n魔物之潮没有已知的统一周期或指挥系统，也不等于本土魔兽势力的魔兽之潮，或白魔催生Phantom的行为。原线监狱塔遭受两种潮的共同冲击，白魔借机脱逃，这是两种现象在同一事件中的交汇。\n\n稍有常识和见识的居民知道异界来客这一概念，但不能默认人人知晓，不能默认居民对异界来客友善。知道现象存在、相信个人自述与信任此人是不同事情；NPC不会自动识别御临风等人的出身。御临风及穿越同伴此前尽量隐藏身份，以免引起怀疑；御临风在本分支是否透露仍由玩家决定。",
+      "period": "T0起可用的持续背景；人物知情依实际经历",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "补社会认知范围、态度差异及身份隐瞒"
+        },
+        {
+          "status": "uncertain",
+          "claim": "未获来源支持的制度细目、具体名单与运行结果保持未知；原文中rumor和character_belief归属不变。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 48,
+          "id": "UCL_20261004_032",
+          "source_kind": "user_public_knowledge_and_attitude_clarification"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 50,
+          "id": "UCL_20261004_034",
+          "source_kind": "user_public_knowledge_scope_and_identity_concealment_clarification"
+        }
+      ],
+      "reason": "补社会认知范围、态度差异及身份隐瞒",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 10
+      },
+      "baseline_source": {
+        "source_id": "WORLD_WRC_037",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 37
+      },
+      "uid": 216850438
+    },
+    {
+      "id": "WORLD_WRC_063",
+      "scope": "world",
+      "name": "帝国教育与知识传播",
+      "entry_type": "concept",
+      "operation": "replace",
+      "before": "帝国已有通过教材、学校、图书馆和专业人士传播知识的渠道。市面可以买到国文、数学、历史、地理、武技与基础魔法教材；初级数学内容包括四则运算、九九乘法、面积及圆周率3.14。教材把许多基础理论归于帝及后世数学家，这反映教材所记的知识传承。\n\n学城具有类似大学的教学与学术活动，教师可以任职、出版专业著作，学校也在飘零祭举办活动。识字、熟悉本地文字与理解专业内容是不同门槛：黄泉不熟本世界文字，诺斯莉阅读魔法专业内容感到吃力，久远则能阅读有关魔法的书籍。\n\n哈克关于猫音就学的讲述称，她在学校免费领书，原应回收，因继续考学士而未收回〔character_belief〕。学校供书的个案不足以确认全国普及免费义务教育。协会、学院和研究所之间也有人际转介：协会可代传约见，熟悉研究者的人提供身份与地址，使求助者能够找到具备资料和设备的专业机构。",
+      "after": "帝国已有通过教材、学校、图书馆和专业人士传播知识的渠道。市面可以买到国文、数学、历史、地理、武技与基础魔法教材；初级数学内容包括四则运算、九九乘法、面积及圆周率3.14。教材把许多基础理论归于帝及后世数学家，这反映教材所记的知识传承。\n\n学城具有类似大学的教学与学术活动，教师可以任职、出版专业著作，学校也在飘零祭举办活动。识字、熟悉本地文字与理解专业内容是不同门槛：黄泉不熟本世界文字，诺斯莉阅读魔法专业内容感到吃力，久远则能阅读有关魔法的书籍。\n\n哈克关于猫音就学的讲述称，她在学校免费领书，原应回收，因继续考学士而未收回〔character_belief〕。学校供书的个案不足以确认全国普及免费义务教育。协会、学院和研究所之间也有人际转介：协会可代传约见，熟悉研究者的人提供身份与地址，使求助者能够找到具备资料和设备的专业机构。\n\n斗气入门取决于个人天赋与体质，十四岁便掌握已属佼佼者。法师除魔力体质外，还需学习天赋与知识积累，因此比斗气武者更稀缺。帝国有相应教学体系和专门学校，帝都法师塔是一例；魔法学术界仍有敝帚自珍的风气。获得教材、具备体质、开始学习与实际掌握能力分别判断。",
+      "period": "T0起可用的持续背景；人物知情依实际经历",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "补力量入门、法师稀缺、学校与学术保守"
+        },
+        {
+          "status": "uncertain",
+          "claim": "未获来源支持的制度细目、具体名单与运行结果保持未知；原文中rumor和character_belief归属不变。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 30,
+          "id": "UCL_20261004_014",
+          "source_kind": "user_direct_setting_clarification"
+        }
+      ],
+      "reason": "补力量入门、法师稀缺、学校与学术保守",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 11
+      },
+      "baseline_source": {
+        "source_id": "WORLD_WRC_063",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 61
+      },
+      "uid": 178355077
+    },
+    {
+      "id": "WORLD_WRC_067",
+      "scope": "world",
+      "name": "帝国工坊与装备交易",
+      "entry_type": "concept",
+      "operation": "replace",
+      "before": "帝国的矮人工坊提供锻造、装备买卖和维修服务，现场有炉具、工具及成品装备。修复要满足工艺、材料与交易条件，复杂魔法器具并非只要付款就一定修好；工坊也依赖库存材料。\n\n帝国已经吸收异界知识，发展出魔法卷轴工厂化等生产方式。拉塞尔博士认为，常见魔偶的精细动作有限，又消耗昂贵魔核，因此主要用于战场；能够制作近似真人魔偶的宝石翁、维克托和泰德勒属于少数专家〔character_belief〕。他也认为，陌生魔法戒指虽与本地魔导器结构相近，其宝石仍不同于常见七曜石，能否用其他材料替代须做实验〔character_belief〕。\n\n装备品质、税和价格受帝国限制是一名路人的解释〔rumor〕；克德取世界树枝制作苍穹弓也以传闻流传〔rumor〕。求见宝石翁的镇上聚集等待者，沿街店铺为他们提供服务，当地食宿报价可高于其他城镇，价格并不全国统一。",
+      "after": "帝国的矮人工坊提供锻造、装备买卖和维修服务，现场有炉具、工具及成品装备。修复要满足工艺、材料与交易条件，复杂魔法器具并非只要付款就一定修好；工坊也依赖库存材料。\n\n帝国已经吸收异界知识，发展出魔法卷轴工厂化等生产方式。拉塞尔博士认为，常见魔偶的精细动作有限，又消耗昂贵魔核，因此主要用于战场；能够制作近似真人魔偶的宝石翁、维克托和泰德勒属于少数专家〔character_belief〕。他也认为，陌生魔法戒指虽与本地魔导器结构相近，其宝石仍不同于常见七曜石，能否用其他材料替代须做实验〔character_belief〕。\n\n装备品质、税和价格受帝国限制是一名路人的解释〔rumor〕；克德取世界树枝制作苍穹弓也以传闻流传〔rumor〕。求见宝石翁的镇上聚集等待者，沿街店铺为他们提供服务，当地食宿报价可高于其他城镇，价格并不全国统一。\n\n魔导应用主要集中在军队、专业工坊、公共设施和资源充裕的家庭。并非每件公共设施都由魔导驱动，也不能因有制造知识就省去材料、工艺与实际生产条件。",
+      "period": "T0起可用的持续背景；人物知情依实际经历",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "补魔导应用的社会分布"
+        },
+        {
+          "status": "uncertain",
+          "claim": "未获来源支持的制度细目、具体名单与运行结果保持未知；原文中rumor和character_belief归属不变。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 31,
+          "id": "UCL_20261004_015",
+          "source_kind": "user_direct_setting_clarification"
+        }
+      ],
+      "reason": "补魔导应用的社会分布",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 12
+      },
+      "baseline_source": {
+        "source_id": "WORLD_WRC_067",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 65
+      },
+      "uid": 220721456
+    },
+    {
+      "id": "WORLD_LOCAL_ADMINISTRATION",
+      "scope": "world",
+      "name": "帝国地方受理与通信",
+      "entry_type": "concept",
+      "operation": "replace",
+      "before": "帝国地方官署能够受理敌情、登记警戒，协调守备、法师和医师，并向帝都或附近驻军请求支援。地方获得消息后，要经过接报、判断、传信及后续执行，援助不会因报告送出便立刻到场。\n\n地方通信有驻镇法师把魔法信化作丝线、缠在鸽腿上放飞的做法。雅莱佩对其所在地方的通信能力解释为不发达、须等次日才会有帝都消息〔character_belief〕，不应作为所有地区的统一时延。偏远小镇获战讯也可能滞后一两天。\n\n地方可少量派人侦察、联系附近驻军和寻找游击士，同时保留守备；具体由谁出动、是否守镇及援军何时抵达，须按当地判断与实际执行记录。",
+      "after": "帝国地方官署能够受理敌情、登记警戒，协调守备、法师和医师，并向帝都或附近驻军请求支援。地方获得消息后，要经过接报、判断、传信及后续执行，援助不会因报告送出便立刻到场。\n\n地方通信有驻镇法师把魔法信化作丝线、缠在鸽腿上放飞的做法。雅莱佩对其所在地方的通信能力解释为不发达、须等次日才会有帝都消息〔character_belief〕，不应作为所有地区的统一时延。偏远小镇获战讯也可能滞后一两天。\n\n地方可少量派人侦察、联系附近驻军和寻找游击士，同时保留守备；具体由谁出动、是否守镇及援军何时抵达，须按当地判断与实际执行记录。\n\n城镇具有魔法通信能力，常规施法依赖能工作的法师；法师恰好不能工作时，会影响当时可用的通信。不能将一次通信中断视为当地从无此能力，也不默认所有法师随时可用。\n\n地方负责人收到严重但未核实的威胁报告，可在本职权限内先做有限侦察、加强戒备并同时上报，更大规模调动再寻求授权；采用何种措施取决于信息、威胁与现有资源。",
+      "period": "T0起可用的持续背景；人物知情依实际经历",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "补通信人员依赖与已采纳地方有限应急权限"
+        },
+        {
+          "status": "uncertain",
+          "claim": "未获来源支持的制度细目、具体名单与运行结果保持未知；原文中rumor和character_belief归属不变。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 23,
+          "id": "UCL_20261004_007",
+          "source_kind": "user_direct_setting_clarification"
+        },
+        {
+          "path": "D:/备份文件/901记录/TRPG outputs/docs/superpowers/specs/2026-10-04-empire-simple-operations-draft.md",
+          "line": 59,
+          "id": "limited_local_response",
+          "source_kind": "user_adopted_replay_assumption"
+        }
+      ],
+      "reason": "补通信人员依赖与已采纳地方有限应急权限",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 13
+      },
+      "baseline_source": {
+        "source_id": "WORLD_LOCAL_ADMINISTRATION",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 79
+      },
+      "uid": 170061362
+    },
+    {
+      "id": "WORLD_WRC_066",
+      "scope": "world",
+      "name": "帝国军令与情报渠道",
+      "entry_type": "concept",
+      "operation": "replace",
+      "before": "帝国军令与情报通过直属上报、专门部门、朝会、密谈和战地通信等渠道传递。地方报告经部门上达，朝会再由有权处理的官员和帝作出决定；有明确直属职务者也有相应报告责任。战场上使用通信卷轴，地方可借助驻镇法师发送消息，不同地点的接报、核实、下令和人员抵达会有时间差。\n\n保密任务可限制接触者和传播范围。雷光的指挥处具备隔绝侦知魔法的条件，他有自己的秘密情报部门，帝则直接掌控兄弟会，两者归属不同。\n\n正式渠道会受错误情报和私人关系影响。首次入都附近的守门军官与冒名达卡斯一方有联系；礼貌报信并不改变这一关系，但其是否受控、掌握多少内幕尚未确定，也不能推出全部城卫都属于同一阴谋。接报、查证、扣押和保护的结果按本次行动与局势推进。",
+      "after": "帝国军令与情报通过直属上报、专门部门、朝会、密谈和战地通信等渠道传递。地方报告经部门上达，朝会再由有权处理的官员和帝作出决定；有明确直属职务者也有相应报告责任。战场上使用通信卷轴，地方可借助驻镇法师发送消息，不同地点的接报、核实、下令和人员抵达会有时间差。\n\n保密任务可限制接触者和传播范围。雷光的指挥处具备隔绝侦知魔法的条件，他有自己的秘密情报部门，帝则直接掌控兄弟会，两者归属不同。\n\n正式渠道会受错误情报和私人关系影响。首次入都附近的守门军官与冒名达卡斯一方有联系；礼貌报信并不改变这一关系，但其是否受控、掌握多少内幕尚未确定，也不能推出全部城卫都属于同一阴谋。接报、查证、扣押和保护的结果按本次行动与局势推进。\n\n常规魔法通信与预制通信卷轴的条件分别处理。后期魔兽破解、伪装通信后促成的加密改革，不预设为T0前已完成；御临风后来实际使用的一次性加密卷轴也不自动成为开局通用装备。报告发出、接通、收到、认证及采取行动须各有实际依据。\n\n主持后台（T0）：帝已知边关失陷及眼前达卡斯冒名，正在将计就计；八柱将尤其右近只有怀疑，未共享帝掌握的确证与反制内情。此信息不自动成为玩家、协会或其他官员已知内容；随后知情依实际传递与查证更新。 御临风报信仍可改变具体接收者的证据、信任与行动条件；帝首次获知这两项事实不以御临风报信为前提。将计就计不代表帝知道所有敌方计划，也不锁定其完整反制或任何未来结局。",
+      "period": "T0起可用的持续背景；人物知情依实际经历 T0两项已知事实与当时信息隔离；后续报告、调查与行动按实际分支。",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "补通信时期及器物可得性边界"
+        },
+        {
+          "status": "uncertain",
+          "claim": "未获来源支持的制度细目、具体名单与运行结果保持未知；原文中rumor和character_belief归属不变。"
+        },
+        {
+          "status": "confirmed",
+          "claim": "T0帝已知破关及达卡斯冒名并将计就计；八柱将尤其右近不共享内情，只有怀疑。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "帝的具体情报来源、完整反制计划与部署时点未定；不推成全知、预定牺牲或保证原团结局。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 23,
+          "id": "UCL_20261004_007",
+          "source_kind": "user_direct_setting_clarification"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 57,
+          "id": "UCL_20261004_041",
+          "source_kind": "user_T0_emperor_knowledge_and_counterplan_clarification"
+        }
+      ],
+      "reason": "补通信时期及器物可得性边界；解除主角报信作为帝首次知情开关的错误因果，同时保留调查意义。",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 14
+      },
+      "baseline_source": {
+        "source_id": "WORLD_WRC_066",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 64
+      },
+      "uid": 98226191,
+      "latest_revision_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/setting_revision_changes.jsonl",
+        "line": 4
+      }
+    },
+    {
+      "id": "WORLD_WRC_065",
+      "scope": "world",
+      "name": "帝都市政与公共生活",
+      "entry_type": "concept",
+      "operation": "replace",
+      "before": "帝都有公共热水澡堂、排水水渠和河畔洗衣处，也有普通民居、商店、圣庙与宫前节市。居民会提出排水、桥路、屋顶维修及邻里争执等请求；右近曾将代听民愿和处理这些事务的工作交给哈克等人，市政因此有具体的接待与办理者。\n\n首次入都时贫民区仍然存在。",
+      "after": "帝都有公共热水澡堂、排水水渠和河畔洗衣处，也有普通民居、商店、圣庙与宫前节市。居民会提出排水、桥路、屋顶维修及邻里争执等请求；右近曾将代听民愿和处理这些事务的工作交给哈克等人，市政因此有具体的接待与办理者。\n\n首次入都时贫民区仍然存在。\n\n城卫负责治安监管，分工较为弹性，游击士协会也可参与。游击士制止现行犯罪、当场制伏凶徒后，可以暂时控制对方并移交城卫；这不赋予仅凭怀疑抓人、长期拘押或自行审判的权限。",
+      "period": "T0起可用的持续背景；人物知情依实际经历",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "补城卫监管及协会临时制伏移交"
+        },
+        {
+          "status": "uncertain",
+          "claim": "未获来源支持的制度细目、具体名单与运行结果保持未知；原文中rumor和character_belief归属不变。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "D:/备份文件/901记录/TRPG outputs/docs/superpowers/specs/2026-10-04-empire-simple-operations-draft.md",
+          "line": 67,
+          "id": "city_guard_role",
+          "source_kind": "user_direct_clarification"
+        },
+        {
+          "path": "D:/备份文件/901记录/TRPG outputs/docs/superpowers/specs/2026-10-04-empire-simple-operations-draft.md",
+          "line": 71,
+          "id": "guild_transfer",
+          "source_kind": "user_adopted_replay_assumption"
+        }
+      ],
+      "reason": "补城卫监管及协会临时制伏移交",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 15
+      },
+      "baseline_source": {
+        "source_id": "WORLD_WRC_065",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 63
+      },
+      "uid": 183555314
+    },
+    {
+      "id": "WORLD_WRC_064",
+      "scope": "world",
+      "name": "帝国医疗与药理",
+      "entry_type": "concept",
+      "operation": "replace",
+      "before": "帝国的救治由药师、医师、治疗法师和军方医疗人员等承担，各人的能力与所需条件不同。村医能够阅读研究稿、配制解药，并通过同门关系推荐求学者前往帝都医馆；医术学习需要长期积累，获得住宿或递交推荐信尚不等于已经拜师。\n\n御临风入都前取得的疗伤药，明文效果为恢复一点严重伤或两点冲击伤，每天只能生效一次；培元丹则要等到下一次长休或睡眠后，才移除与耐力值相同的伤害，多颗不叠加。即时疗伤与休养后恢复有不同使用条件。治疗法师仍有施术范围、次数、耗魔及休养方面的限制，暂时抑毒也不等于完成治疗。\n\n现有医药和治疗魔法不能使所有损伤即时消失，也未构成普遍复活手段。个别危险装具使用者的持续供魔需求须单独诊断，不能外推为普遍疗法。",
+      "after": "帝国的救治由药师、医师、治疗法师和军方医疗人员等承担，各人的能力与所需条件不同。村医能够阅读研究稿、配制解药，并通过同门关系推荐求学者前往帝都医馆；医术学习需要长期积累，获得住宿或递交推荐信尚不等于已经拜师。\n\n御临风入都前取得的疗伤药，明文效果为恢复一点严重伤或两点冲击伤，每天只能生效一次；培元丹则要等到下一次长休或睡眠后，才移除与耐力值相同的伤害，多颗不叠加。即时疗伤与休养后恢复有不同使用条件。治疗法师仍有施术范围、次数、耗魔及休养方面的限制，暂时抑毒也不等于完成治疗。\n\n现有医药和治疗魔法不能使所有损伤即时消失，也未构成普遍复活手段。个别危险装具使用者的持续供魔需求须单独诊断，不能外推为普遍疗法。\n\n医药与魔法治疗可以配合，治疗后仍可能需要配药和持续休养；抑毒、解毒和治伤并非同一能力。诅咒、灵魂和Phantom问题须寻找对应专长，不能由普通治疗概括解决。红鳗只被描述为“将近”重生肢体，不构成普通诊所稳定再生断肢的能力。\n\n原记录对排除死灵术后的复活魔法判断是存在可能性很低，并非绝对不存在；没有已建立的普遍复活服务，特殊神约也不作为常规医疗渠道。",
+      "period": "T0起可用的持续背景；人物知情依实际经历",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "原记录限定红鳗为将近重生肢体，并说明排除死灵术后复活魔法存在可能性很低。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "复活具体可得性与流程未知，不能写成绝对不存在或常规服务。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/power_rules_dossier.md",
+          "line": 35,
+          "id": "healing_case_synthesis",
+          "source_kind": "author_synthesis_of_campaign_sources"
+        },
+        {
+          "path": "extracted-first/1/posts.jsonl",
+          "line": 41,
+          "id": "P1_40_msg816201",
+          "source_kind": "original_campaign_GM_and_character_testimony"
+        },
+        {
+          "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl",
+          "line": 29,
+          "id": "P2_278_msg914153",
+          "source_kind": "original_campaign_GM"
+        }
+      ],
+      "reason": "补对应疗法、持续照护及强力恢复的证据上限",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 16
+      },
+      "baseline_source": {
+        "source_id": "WORLD_WRC_064",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 62
+      },
+      "uid": 20859222
+    },
+    {
+      "id": "WORLD_SPACE_MAGIC",
+      "scope": "world",
+      "name": "空间传送与龙族空间能力",
+      "entry_type": "concept",
+      "operation": "replace",
+      "before": "空间传送与龙族空间能力受到目标、距离、动作和魔力条件限制；掌握相应法术并不意味着能无限制运输人员。\n下位传送消耗1点魔力，需要语言、动作和一整轮施法，可把自己传到没有视野阻挡、最远50米的位置。携带物体积达到2时，需作DC2施法判定，此后每增加1体积，DC和魔力消耗各加1。该法术也可作用于施法范围1米内自愿或无意识的生物，但传送距离减半；目标体积超过5的部分，另依携物规则增加判定和消耗。\n上位传送的基础消耗为9魔力，只能前往施术者曾经到达且仍有印象的地点，不能跨越位面或世界。基础距离为1000米，需进行DC100、每分钟一次的长时间施法判定；每增加1000米，DC增加100、魔力消耗增加1。失败时返还一半魔力，向下取整。\n具体人物在开局掌握哪一法术、魔力池和携带余量，按人物时期处理；不能单由空间龙身份赋予全部法术或一次撤走整支军队。",
+      "after": "空间传送与龙族空间能力受到目标、距离、动作和魔力条件限制；掌握相应法术并不意味着能无限制运输人员。\n下位传送消耗1点魔力，需要语言、动作和一整轮施法，可把自己传到没有视野阻挡、最远50米的位置。携带物体积达到2时，需作DC2施法判定，此后每增加1体积，DC和魔力消耗各加1。该法术也可作用于施法范围1米内自愿或无意识的生物，但传送距离减半；目标体积超过5的部分，另依携物规则增加判定和消耗。\n上位传送的基础消耗为9魔力，只能前往施术者曾经到达且仍有印象的地点，不能跨越位面或世界。基础距离为1000米，需进行DC100、每分钟一次的长时间施法判定；每增加1000米，DC增加100、魔力消耗增加1。失败时返还一半魔力，向下取整。\n具体人物在开局掌握哪一法术、魔力池和携带余量，按人物时期处理；不能单由空间龙身份赋予全部法术或一次撤走整支军队。\n\n长距离传送较难取得，悠悠是少数掌握者之一。帝国重要城市没有多少已知传送设施，已知剧情未展示可供常规使用的城市网络；具体设施数量与分布未知。普通旅行和军事调动不能默认随时调用传送，须有实际可用的能力、器物或已证设施及其条件。此稀缺判断针对长距传送，不扩大到全部短距术式。",
+      "period": "T0起可用的持续背景；人物知情依实际经历",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "长距传送难取得，悠悠是少数掌握者之一。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "具体设施数量分布未知；未展示常规网络不等于全国绝无设施。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 55,
+          "id": "UCL_20261004_039",
+          "source_kind": "user_long_distance_teleportation_availability_clarification"
+        }
+      ],
+      "reason": "补长距传送稀缺与设施未知",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 17
+      },
+      "baseline_source": {
+        "source_id": "WORLD_SPACE_MAGIC",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 88
+      },
+      "uid": 174980132
+    },
+    {
+      "id": "WORLD_WRC_019",
+      "scope": "world",
+      "name": "帝都",
+      "entry_type": "location",
+      "operation": "replace",
+      "before": "帝都是帝与朝廷所在的城市，也是帝国中央办理军政事务的重要地点。城内有通向宫廷的道路、圣庙、商业街区、民居和贫民区；公共澡堂使用热水，居民也会沿水渠、河畔洗衣。普通商店出售木铁用品等生活物资，宫前节市和学校活动在节庆期间带来额外的人流与交易。\n\n右近承担帝都防务、朝会和民愿事务，民愿包括疏通下水道、修桥修路、屋顶和邻里争执。军情可经守卫、办公室和队长接报；接报本身不等于内容已核实，消息真伪与受理者的私人关系会影响办理。\n\n御临风首次入城时，贫民区仍是帝都生活的一部分。",
+      "after": "帝都是帝与朝廷所在的城市，也是帝国中央办理军政事务的重要地点。城内有通向宫廷的道路、圣庙、商业街区、民居和贫民区；公共澡堂使用热水，居民也会沿水渠、河畔洗衣。普通商店出售木铁用品等生活物资，宫前节市和学校活动在节庆期间带来额外的人流与交易。\n\n右近承担帝都防务、朝会和民愿事务，民愿包括疏通下水道、修桥修路、屋顶和邻里争执。军情可经守卫、办公室和队长接报；接报本身不等于内容已核实，消息真伪与受理者的私人关系会影响办理。\n\n御临风首次入城时，贫民区仍是帝都生活的一部分。\n\n帝都位于飘零大陆的广阔腹地，保留边防纵深。当地偏寒，容易入冬落雪；这不说明三人抵都此刻正在下雪，全年季节划分和冬季持续月份仍未确定。",
+      "period": "T0起可用的持续背景；人物知情依实际经历",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "补腹地位置与帝都气候，保留开局天气未知"
+        },
+        {
+          "status": "uncertain",
+          "claim": "未获来源支持的制度细目、具体名单与运行结果保持未知；原文中rumor和character_belief归属不变。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 38,
+          "id": "UCL_20261004_022",
+          "source_kind": "user_adopted_geographic_layout"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 44,
+          "id": "UCL_20261004_028",
+          "source_kind": "user_climate_clarification_and_source_pointer"
+        }
+      ],
+      "reason": "补腹地位置与帝都气候，保留开局天气未知",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 18
+      },
+      "baseline_source": {
+        "source_id": "WORLD_WRC_019",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 19
+      },
+      "uid": 99699950
+    },
+    {
+      "id": "WORLD_WRC_026",
+      "scope": "world",
+      "name": "监狱塔",
+      "entry_type": "location",
+      "operation": "replace",
+      "before": "监狱塔曾囚禁白色魔法使等魔物，白色魔法使过去被关押在塔顶，沐透曾在塔中担任守卫。帝为何保留这些囚犯的性命并将其囚禁，至今没有明确答案。\n\n边关被攻破时，高塔同时遭到魔物之潮与魔兽之潮冲击。白色魔法使利用袭击，并在沐透协助下逃出监狱塔；帝都篇开始前，他已经脱困。受袭、求援、地方上报和帝都获知并非同时完成。高塔完整结构、囚犯名单及所有逃亡者去向仍未明确。",
+      "after": "监狱塔曾囚禁白色魔法使等魔物，白色魔法使过去被关押在塔顶，沐透曾在塔中担任守卫。帝为何保留这些囚犯的性命并将其囚禁，至今没有明确答案。\n\n边关被攻破时，高塔同时遭到魔物之潮与魔兽之潮冲击。白色魔法使利用袭击，并在沐透协助下逃出监狱塔；帝都篇开始前，他已经脱困。受袭、求援、地方上报和帝都获知并非同时完成。高塔完整结构、囚犯名单及所有逃亡者去向仍未明确。\n\n监狱塔位于飘零大陆整体的西南部，靠近南侧妄想山脉；它与帝都西北的宝石翁塔镇不同。白魔脱困与破关同步，距三人首次抵都约2—3周；具体消息何时传给谁另按实际经历处理。",
+      "period": "地理为持续背景；脱困属T0前约2—3周的既定前史",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "补监狱塔方位及T0前脱困时距"
+        },
+        {
+          "status": "uncertain",
+          "claim": "未获来源支持的制度细目、具体名单与运行结果保持未知；原文中rumor和character_belief归属不变。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 42,
+          "id": "UCL_20261004_026",
+          "source_kind": "user_clarified_location_reference"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 49,
+          "id": "UCL_20261004_033",
+          "source_kind": "user_relative_time_range_confirmation"
+        }
+      ],
+      "reason": "补监狱塔方位及T0前脱困时距",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 19
+      },
+      "baseline_source": {
+        "source_id": "WORLD_WRC_026",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 26
+      },
+      "uid": 208653850
+    },
+    {
+      "id": "WORLD_WRC_020",
+      "scope": "world",
+      "name": "边境关卡",
+      "entry_type": "location",
+      "operation": "replace",
+      "before": "边境关卡是帝国面向妄想山脉的军事防线，过去长期阻止成军魔兽深入飘零大陆。御临风首次进入帝都前，凌迟已经利用制空、空投和多兵种协同攻破关卡，真达卡斯及边关三军统领阵亡，魔兽势力由此打开通往帝国内部的道路。",
+      "after": "边境关卡是帝国面向妄想山脉的军事防线，过去长期阻止成军魔兽深入飘零大陆。御临风首次进入帝都前，凌迟已经利用制空、空投和多兵种协同攻破关卡，真达卡斯及边关三军统领阵亡，魔兽势力由此打开通往帝国内部的道路。\n\n边关失陷距御临风、布莱特、黄泉首次抵达帝都城外约2—3周。这是前史总间隔，含经历和停留，不是净赶路天数。",
+      "period": "T0前约2—3周",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "补边关失陷的T0相对时间"
+        },
+        {
+          "status": "uncertain",
+          "claim": "未获来源支持的制度细目、具体名单与运行结果保持未知；原文中rumor和character_belief归属不变。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 49,
+          "id": "UCL_20261004_033",
+          "source_kind": "user_relative_time_range_confirmation"
+        }
+      ],
+      "reason": "补边关失陷的T0相对时间",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 20
+      },
+      "baseline_source": {
+        "source_id": "WORLD_WRC_020",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 20
+      },
+      "uid": 27594427
+    },
+    {
+      "id": "WORLD_WRC_045",
+      "scope": "world",
+      "name": "第一次魔兽大侵攻",
+      "entry_type": "event",
+      "operation": "replace",
+      "before": "第一次魔兽大侵攻是凌迟统合魔兽部族后攻破帝国边关的战役，发生在御临风首次入都之前。凌迟改变了过去以地面冲击关卡的打法，通过空运越过城墙，再让盾阵、萨满强化、反魔咒箭与扰乱骑兵的部队相互配合，破坏守军原有防御。\n真达卡斯和三军统领在战役中阵亡，边关失陷使魔兽大军首次打开通向帝国纵深的道路，帝国与山脉势力由周期攻边转入全面战争。雪老是亲历者；御临风首次入都时知道边关失守，尚未完整恢复破关、将领阵亡和追杀的记忆。后台前史不得直接替代他的现有认知。",
+      "after": "第一次魔兽大侵攻是凌迟统合魔兽部族后攻破帝国边关的战役，发生在御临风首次入都之前。凌迟改变了过去以地面冲击关卡的打法，通过空运越过城墙，再让盾阵、萨满强化、反魔咒箭与扰乱骑兵的部队相互配合，破坏守军原有防御。\n真达卡斯和三军统领在战役中阵亡，边关失陷使魔兽大军首次打开通向帝国纵深的道路，帝国与山脉势力由周期攻边转入全面战争。雪老是亲历者；御临风首次入都时知道边关失守，尚未完整恢复破关、将领阵亡和追杀的记忆。后台前史不得直接替代他的现有认知。\n\n这场破关战发生于三人首次抵达帝都城外约2—3周前；区间不指定精确历日，也不代表这段时间全部用于赶路。",
+      "period": "T0前约2—3周",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "为同一破关事件补相同时间锚点"
+        },
+        {
+          "status": "uncertain",
+          "claim": "未获来源支持的制度细目、具体名单与运行结果保持未知；原文中rumor和character_belief归属不变。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 49,
+          "id": "UCL_20261004_033",
+          "source_kind": "user_relative_time_range_confirmation"
+        }
+      ],
+      "reason": "为同一破关事件补相同时间锚点",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 21
+      },
+      "baseline_source": {
+        "source_id": "WORLD_WRC_045",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 44
+      },
+      "uid": 138248409
+    },
+    {
+      "id": "WORLD_WRC_049",
+      "scope": "world",
+      "name": "监狱塔脱逃",
+      "entry_type": "event",
+      "operation": "replace",
+      "before": "监狱塔脱逃发生于边关被攻破时，早于首次入帝都；白色魔法师利用高塔遭袭逃离囚禁。高塔同时受到魔物之潮与魔兽之潮冲击，白魔在袭击中得到沐透协助，成功离开塔顶监牢。白魔此前已经在大陆各地酿成惨剧，被捕后才遭关押；帝为何留下其性命收监仍不明确。\n袭击、地方报告、军方接报、派援与援军到达各有时间。开局已脱困不等于帝都每名官员已经获知，更不等于其他角色已知Gate与夜宴的细节。",
+      "after": "监狱塔脱逃发生于边关被攻破时，早于首次入帝都；白色魔法师利用高塔遭袭逃离囚禁。高塔同时受到魔物之潮与魔兽之潮冲击，白魔在袭击中得到沐透协助，成功离开塔顶监牢。白魔此前已经在大陆各地酿成惨剧，被捕后才遭关押；帝为何留下其性命收监仍不明确。\n袭击、地方报告、军方接报、派援与援军到达各有时间。开局已脱困不等于帝都每名官员已经获知，更不等于其他角色已知Gate与夜宴的细节。\n\n与破关同步的此次脱困距三人首次抵都约2—3周。三人抵都时，沐透在何处、与雷光小队联系到了哪一步仍未知，不能因白魔已脱困而补成已经招募或领牌。",
+      "period": "脱困属T0前；沐透T0进度uncertain",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "破关总时间范围约T0前2—3周；白魔脱困同步关系沿原条目来源。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "沐透T0所在和招募进度未知。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 49,
+          "id": "UCL_20261004_033",
+          "source_kind": "user_relative_time_range_confirmation"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 52,
+          "id": "UCL_20261004_036",
+          "source_kind": "user_crossline_timing_correction"
+        }
+      ],
+      "reason": "补脱困时距，维持沐透T0进度未知",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 22
+      },
+      "baseline_source": {
+        "source_id": "WORLD_WRC_049",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 48
+      },
+      "uid": 131304907
+    },
+    {
+      "id": "REPLAY_ENH_CURRENCY",
+      "scope": "world",
+      "name": "飘零币",
+      "entry_type": "concept",
+      "operation": "add",
+      "before": null,
+      "after": "飘零币是飘零大陆的流通货币，铜、银、金面额逐级百进制：100铜币＝1银币，100银币＝1金币，故1金币＝10,000铜币。\n\n既有交易和人物余额按原记录及本分支实际变化保存；统一换算不代表全国统一物价，食宿、物资与服务的价格仍依地点、时期和具体交易。铜银金表示面额，不据名称补定统一材质。",
+      "period": "本次重玩采用的持续货币设定",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "币名与百进制换算由用户明确补充。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "全国购买力、统一材质和角色实时余额未由本项确定。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 29,
+          "id": "UCL_20261004_013",
+          "source_kind": "user_direct_setting_clarification"
+        }
+      ],
+      "reason": "独立持续经济概念，避免塞入某次交易或自动重算原账",
+      "keys": [
+        "飘零币"
+      ],
+      "disposition": "keyword",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 23
+      },
+      "baseline_source": null,
+      "uid": 181263738
+    },
+    {
+      "id": "CRC_002",
+      "scope": "npc",
+      "name": "姜子尤",
+      "entry_type": "character",
+      "operation": "replace",
+      "before": "姜子尤\n\n身份与性格：姜子尤是有边关共同经历的异乡格斗者。原卡的贪婪、武痴、赤子提供重收益、重武艺而未必成熟的底色；在具体处境中权衡收益、同伴与危险，不预设一律舍人求胜。\n\n表达方式：明确有中文能力；未积累足以建立固定口头禅的样本，使用直接陈述需求与行动判断的普通表达。\n\n行动取向：以武艺取向为基础，分别权衡收益、同伴风险与敌情；不把武痴和贪婪写成一律舍人求胜。\n\n既有关系：与御临风、黄泉有边关共同经历，现不在抵城三人之列。\n\n能力与限制：可用能力背景为格斗、气与内力。具体招式、层级和消耗只按当下已确认的能力处理，不凭模板概括增添整套技能。\n\n知情范围：保留本人实际经历的共同前史；没有亲历、没有收到的消息不成为他的知识。\n\n使用时点：实际与其会合时按已有前史关系接续；不自动出现在城门同行队伍。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "after": "姜子尤\n\n身份与性格：姜子尤是有边关共同经历的异乡格斗者。原卡的贪婪、武痴、赤子提供重收益、重武艺而未必成熟的底色；在具体处境中权衡收益、同伴与危险，不预设一律舍人求胜。\n\n表达方式：明确有中文能力；未积累足以建立固定口头禅的样本，使用直接陈述需求与行动判断的普通表达。\n\n行动取向：以武艺取向为基础，分别权衡收益、同伴风险与敌情；不把武痴和贪婪写成一律舍人求胜。\n\n既有关系：与御临风、黄泉有边关共同经历，现不在抵城三人之列。 他与御临风、黄泉在首次将入帝都时已经是兄弟会成员。\n\n能力与限制：可用能力背景为格斗、气与内力。具体招式、层级和消耗只按当下已确认的能力处理，不凭模板概括增添整套技能。\n\n知情范围：保留本人实际经历的共同前史；没有亲历、没有收到的消息不成为他的知识。 他与穿越同伴尽量隐藏异界来历，因为容易招致怀疑。穿越者身份与兄弟会身份是不同秘密；这些身份不会因主持持有资料而自动为他人所知。御临风在新分支是否透露自己的身份仍由玩家决定。\n\n使用时点：实际与其会合时按已有前史关系接续；不自动出现在城门同行队伍。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "period": "首次将入帝都（T0）的既有成员身份与隐瞒做法；后续知情依实际经历和交流更新。",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "御临风、姜子尤与黄泉在T0已是兄弟会成员；穿越同伴尽量隐藏异界来历。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "具体外部人物已获知哪一种秘密须有个别依据，不能由同行或主持资料自动推出。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 22,
+          "id": "UCL_20261004_006",
+          "source_kind": "user_direct_setting_clarification"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 50,
+          "id": "UCL_20261004_034",
+          "source_kind": "user_public_knowledge_scope_and_identity_concealment_clarification"
+        }
+      ],
+      "reason": "仅向关系和知情段补本轮身份设定，保留现有声音、行动取向、开局出场与成长规则。",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/npc_changes.jsonl",
+        "line": 1
+      },
+      "baseline_source": {
+        "source_id": "CRC_002",
+        "source_file": "output/replay_f_review/v1/characters/runtime_cards.jsonl",
+        "source_line": 1
+      },
+      "uid": 71756156
+    },
+    {
+      "id": "CRC_003",
+      "scope": "npc",
+      "name": "谏山黄泉",
+      "entry_type": "character",
+      "operation": "replace",
+      "before": "谏山黄泉\n\n身份与性格：谏山黄泉是受过除灵与太刀训练的少女，冷静、温柔、坚忍与暴力倾向并存。她能关心同伴、表达不足、接受照料，也有主动迎战的一面。村庄中毒后已经苏醒、调养，随后与同伴旅行多日抵达帝都。\n\n表达方式：说话直率，围绕自己知道的情况、具体任务条件和自己的打算回应。她会坦白不足、询问不明白的事，也会主动提出分工；熟悉的同伴之间有随意、调侃和嫌麻烦的一面。有亲见线索或复杂任务需要商量时，能够展开分析；普通接话可以简短。发言提供她自己的意见或发现，而不是重述同伴的说明。\n\n行动取向：留意眼前的异常、同伴处境和实际任务需要，结合太刀与除灵经验参与行动。有疑点时提出具体问题或分工，救人和战斗中也愿意主动承担风险。她可以同意、质疑、另提办法或直接行动，不固定承担劝退职责。\n\n既有关系：与御临风、布莱特共同抵城；既有援助不等于完全了解彼此内心。 土宫神乐是她穿越前的一名朋友，属于普通的原乡记忆。\n\n能力与限制：具备太刀和除灵训练，已重新获得灵力。村庄苏醒、调养之后，已与同伴旅行多日。需要灵力的技能使用过多会疲劳；当前负担根据本分支的施法、受伤与休息更新。资料未给出抵都时的精确余量，不能据此设为满额或持续虚弱。装备以已经确认的持有物为准。\n\n知情范围：只知道自己经历和队内已交流的信息；不能读御临风封锁的记忆。\n\n使用时点：与御临风、布莱特在帝都附近同行；在她持续在场期间保留本片段。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "after": "谏山黄泉\n\n身份与性格：谏山黄泉是受过除灵与太刀训练的少女，冷静、温柔、坚忍与暴力倾向并存。她能关心同伴、表达不足、接受照料，也有主动迎战的一面。村庄中毒后已经苏醒、调养，随后与同伴旅行多日抵达帝都。\n\n表达方式：说话直率，熟悉的同伴之间有随意、调侃和嫌麻烦的一面。普通接话以简短回应为常态，说清自己的意思就停；没有新信息或自身意见时可以不发言，不因在场就每轮接一段。她不是队伍的解说员，不复述布莱特的分析，也不替主持总结局势、列路线或追问御临风下一步。确有亲见线索、与自己有关的分工或当前必须商量的复杂问题时，她可以主动提出具体意见；只有这些内容确实需要展开时才作较长分析。需要真实答复时仍能询问，坦白不足、关心同伴和主动迎战的表现保留。\n\n行动取向：留意眼前的异常、同伴处境和实际任务需要，结合太刀与除灵经验参与行动。有疑点时提出具体问题或分工，救人和战斗中也愿意主动承担风险。她可以同意、质疑、另提办法或直接行动，不固定承担劝退职责。\n\n既有关系：与御临风、布莱特共同抵城；既有援助不等于完全了解彼此内心。 土宫神乐是她穿越前的一名朋友，属于普通的原乡记忆。 她与御临风、姜子尤在首次将入帝都时已经是兄弟会成员。\n\n能力与限制：具备太刀和除灵训练，已重新获得灵力。村庄苏醒、调养之后，已与同伴旅行多日。需要灵力的技能使用过多会疲劳；当前负担根据本分支的施法、受伤与休息更新。资料未给出抵都时的精确余量，不能据此设为满额或持续虚弱。装备以已经确认的持有物为准。\n\n知情范围：只知道自己经历和队内已交流的信息；不能读御临风封锁的记忆。 她与穿越同伴尽量隐藏异界来历，因为容易招致怀疑。穿越者身份与兄弟会身份是不同秘密；这些身份不会因主持持有资料而自动为他人所知。御临风在新分支是否透露自己的身份仍由玩家决定。\n\n使用时点：与御临风、布莱特在帝都附近同行；在她持续在场期间保留本片段。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "period": "首次将入帝都（T0）的既有成员身份与隐瞒做法；后续知情依实际经历和交流更新。 T0及后续人物表现；后期原帖仅供声线参考，不前置后期知识。",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "御临风、姜子尤与黄泉在T0已是兄弟会成员；穿越同伴尽量隐藏异界来历。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "具体外部人物已获知哪一种秘密须有个别依据，不能由同行或主持资料自动推出。"
+        },
+        {
+          "status": "confirmed",
+          "claim": "用户要求收紧黄泉话多问题；既有角色记录兼有简短回应和复杂分析，本次调整运行表达优先级，不新增性格史实。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "未取得本轮实际发送提示，不能确定唯一生成原因；本轮未做模型复跑。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 22,
+          "id": "UCL_20261004_006",
+          "source_kind": "user_direct_setting_clarification"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 50,
+          "id": "UCL_20261004_034",
+          "source_kind": "user_public_knowledge_scope_and_identity_concealment_clarification"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 58,
+          "id": "UCL_20261004_042",
+          "source_kind": "user_playtest_feedback"
+        },
+        {
+          "path": "extracted-first/3/posts.jsonl",
+          "line": 37,
+          "id": "816821",
+          "source_kind": "original_character_player_post"
+        },
+        {
+          "path": "extracted-first/5/posts.jsonl",
+          "line": 41,
+          "id": "818615",
+          "source_kind": "original_character_player_post"
+        },
+        {
+          "path": "extracted-first/5/posts.jsonl",
+          "line": 47,
+          "id": "818816",
+          "source_kind": "original_character_player_post"
+        },
+        {
+          "path": "extracted-first/7/posts.jsonl",
+          "line": 27,
+          "id": "824139",
+          "source_kind": "original_character_player_post"
+        }
+      ],
+      "reason": "仅向关系和知情段补本轮身份设定，保留现有声音、行动取向、开局出场与成长规则。；按本次实际反馈让短答与不发言成为普通参与方式，复杂分析保留条件；不重做人物声线研究。",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/npc_changes.jsonl",
+        "line": 2
+      },
+      "baseline_source": {
+        "source_id": "CRC_003",
+        "source_file": "output/replay_f_review/v1/characters/runtime_cards.jsonl",
+        "source_line": 2
+      },
+      "uid": 206761833,
+      "latest_revision_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/playtest_revision_changes.jsonl",
+        "line": 1
+      }
+    },
+    {
+      "id": "CRC_006",
+      "scope": "npc",
+      "name": "帝",
+      "entry_type": "character",
+      "operation": "replace",
+      "before": "帝\n\n身份与性格：帝是长期在位的君主，习惯从国家秩序和长远安排审视眼前请求。公开接见时沉着而有距离，个人情绪和掌握的秘密不会随意显露；他的威严通过裁断与任命体现。面对家庭损失、军功和退役请求，也会考虑补偿与安置。哈克是其弟弟，私下亲情与君臣关系并存，亲缘是否公开另按当时情况处理。\n\n表达方式：朝堂上先听取陈述，再用明确的问话和裁示划定责任，少解释与当前事务无关的个人经历。私下对哈克可以放下部分礼仪距离，以兄长身份询问、商谈；涉及国事和继承时仍保留统治者的分量。\n\n行动取向：根据已经收到的报告，把事务交常务机构、朝议或具体受命者处理，必要时另下密令。会权衡人事、补偿与国家利益，也可能只让执行者知道任务所需的部分；广泛资源并不能消除情报缺漏或误判。\n\n既有关系：哈克是其弟弟；亲缘在T0属于后台身份，不能预设哈克及旁人已知。 兄弟会与八柱将有不同的信息边界；不是所有帝国公职人员都知晓秘密。\n\n能力与限制：任命、行政、军令与假面许可是已知权力资源。 个人完整战力未明；传说的永生和绝世武艺不作无条件能力。\n\n知情范围：能使用已有情报机构，但不因此知道所有现场、未送达的报告或角色内心。 哈克是其弟弟。这是既有后台身份，哈克及旁人是否知情仍取决于实际记忆和交流；主持不得在无叙事依据时直接公开。\n\n使用时点：帝已在位；御临风将要进入帝都，并不等于已经获准朝见、受其任命或接受直接委托。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "after": "帝\n\n身份与性格：帝是长期在位的君主，习惯从国家秩序和长远安排审视眼前请求。公开接见时沉着而有距离，个人情绪和掌握的秘密不会随意显露；他的威严通过裁断与任命体现。面对家庭损失、军功和退役请求，也会考虑补偿与安置。哈克是其弟弟，私下亲情与君臣关系并存，亲缘是否公开另按当时情况处理。\n\n表达方式：朝堂上先听取陈述，再用明确的问话和裁示划定责任，少解释与当前事务无关的个人经历。私下对哈克可以放下部分礼仪距离，以兄长身份询问、商谈；涉及国事和继承时仍保留统治者的分量。\n\n行动取向：根据已经收到的报告，把事务交常务机构、朝议或具体受命者处理，必要时另下密令。会权衡人事、补偿与国家利益，也可能只让执行者知道任务所需的部分；广泛资源并不能消除情报缺漏或误判。\n\n既有关系：哈克是其弟弟；亲缘在T0属于后台身份，不能预设哈克及旁人已知。 兄弟会与八柱将有不同的信息边界；不是所有帝国公职人员都知晓秘密。 兄弟会由帝掌控、尼克福瑞领头；帝也是游击士协会背后的秘密赞助人。协会内只有极少数核心人士知道赞助人就是帝，具体名单与职务未明；同属帝的渠道不因此共享全部情报。\n\n能力与限制：任命、行政、军令与假面许可是已知权力资源。 个人完整战力未明；传说的永生和绝世武艺不作无条件能力。\n\n知情范围：能使用已有情报机构，但不因此知道所有现场、未送达的报告或角色内心。 哈克是其弟弟。这是既有后台身份，哈克及旁人是否知情仍取决于实际记忆和交流；主持不得在无叙事依据时直接公开。 T0已知边关失陷及眼前达卡斯冒名，正在将计就计；八柱将尤其右近尚未共享这层确证与反制内情。具体情报来源、完整反制方案与部署时点未明，不据此补成全知或必胜。\n\n使用时点：帝已在位；御临风将要进入帝都，并不等于已经获准朝见、受其任命或接受直接委托。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "period": "首次将入帝都（T0）已成立的最高统属与秘密赞助关系。 T0已经成立的帝本人知情；公开披露与后续行动仍有实际条件。",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "帝掌控兄弟会，尼克福瑞领头；帝秘密赞助协会，协会内仅极少数核心人士知情。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "协会核心知情者的具体姓名和职务未定，不自动扩及普通会员、接待员或御临风。"
+        },
+        {
+          "status": "confirmed",
+          "claim": "T0帝已知破关及达卡斯冒名并将计就计；八柱将尤其右近不共享内情，只有怀疑。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "帝的具体情报来源、完整反制计划与部署时点未定；不推成全知、预定牺牲或保证原团结局。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 22,
+          "id": "UCL_20261004_006",
+          "source_kind": "user_direct_setting_clarification"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 24,
+          "id": "UCL_20261004_008",
+          "source_kind": "user_direct_setting_clarification"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 25,
+          "id": "UCL_20261004_009",
+          "source_kind": "user_direct_setting_clarification"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 57,
+          "id": "UCL_20261004_041",
+          "source_kind": "user_T0_emperor_knowledge_and_counterplan_clarification"
+        }
+      ],
+      "reason": "补统属及赞助关系，保留帝依实际报告知情的既有边界。；明确帝已有知识及有限反制姿态，保留手动启用。",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/npc_changes.jsonl",
+        "line": 3
+      },
+      "baseline_source": {
+        "source_id": "CRC_006",
+        "source_file": "output/replay_f_review/v1/characters/runtime_cards.jsonl",
+        "source_line": 5
+      },
+      "uid": 142747797,
+      "latest_revision_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/setting_revision_changes.jsonl",
+        "line": 5
+      }
+    },
+    {
+      "id": "CRC_007",
+      "scope": "npc",
+      "name": "雪老",
+      "entry_type": "character",
+      "operation": "replace",
+      "before": "雪老\n\n身份与性格：历经任务与家庭创伤的老兵，是与御临风有共同前史的长者。可以提供实际经验，也有身体损伤和个人生活的需要；责任感不等于随时愿意牺牲自己。当前伤势以相遇时状态为准。\n\n表达方式：以年长者的经验谈具体后果，会坦白痛苦经历并劝后辈继续生活；不用凭空编造说教格言。\n\n行动取向：判断自己当前还能承担什么，给后辈可执行的提醒；身体状况与个人意愿可以使他拒绝前线任务。\n\n既有关系：御临风是有共同前史的后辈；熟识不等于了解其全部封闭记忆。 露露缇耶是孙女。家庭经历由雪老决定何时向何人披露。 与帝有长期任务关系；具体职责、伤势及去向以当前成立的状态为准。\n\n能力与限制：有武技与斗气基础，具体可用水平受伤势与恢复程度限制；一次治疗不等于所有损伤和战力同时恢复。\n\n知情范围：掌握自己的任务经历及帝国见闻；他对帝的文明贡献所作的评价仍是他的证言。 私人经历须经实际交流才成为其他人的知识。\n\n使用时点：作为前史熟人存在；具体所在与当前伤势由相遇时已经成立的资料承接，不自动加入城门同行队伍。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "after": "雪老\n\n身份与性格：历经任务与家庭创伤的老兵，是与御临风有共同前史的长者。可以提供实际经验，也有身体损伤和个人生活的需要；责任感不等于随时愿意牺牲自己。当前伤势以相遇时状态为准。\n\n表达方式：以年长者的经验谈具体后果，会坦白痛苦经历并劝后辈继续生活；不用凭空编造说教格言。\n\n行动取向：判断自己当前还能承担什么，给后辈可执行的提醒；身体状况与个人意愿可以使他拒绝前线任务。\n\n既有关系：御临风是有共同前史的后辈；熟识不等于了解其全部封闭记忆。 露露缇耶是孙女。家庭经历由雪老决定何时向何人披露。 与帝有长期任务关系；具体职责、伤势及去向以当前成立的状态为准。 雪老本人是兄弟会成员。\n\n能力与限制：有武技与斗气基础，具体可用水平受伤势与恢复程度限制；一次治疗不等于所有损伤和战力同时恢复。\n\n知情范围：掌握自己的任务经历及帝国见闻；他对帝的文明贡献所作的评价仍是他的证言。 私人经历须经实际交流才成为其他人的知识。 T0明面上知道并能证明御临风、姜子尤和黄泉兄弟会身份的联系线只剩雪老。能证明身份不等于此时已经联络到他、已经作证或他人已经采信，也不因此向旁人披露穿越者身份。\n\n使用时点：作为前史熟人存在；具体所在与当前伤势由相遇时已经成立的资料承接，不自动加入城门同行队伍。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "period": "首次将入帝都（T0）的成员身份与可作证明关系；联络和作证结果依本分支实际进展。",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "雪老是兄弟会成员，T0明面上知道且能证明御临风等人成员身份。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "是否已能接触雪老、实际作证以及他人是否采信，不能由见证关系推定；逸冷生死仍未定。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 22,
+          "id": "UCL_20261004_006",
+          "source_kind": "user_direct_setting_clarification"
+        }
+      ],
+      "reason": "只补成员身份和证明边界，不安排雪老出场、重联成功或他人认可。",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/npc_changes.jsonl",
+        "line": 4
+      },
+      "baseline_source": {
+        "source_id": "CRC_007",
+        "source_file": "output/replay_f_review/v1/characters/runtime_cards.jsonl",
+        "source_line": 6
+      },
+      "uid": 131696829
+    },
+    {
+      "id": "CRC_010",
+      "scope": "npc",
+      "name": "悠悠",
+      "entry_type": "character",
+      "operation": "replace",
+      "before": "悠悠\n\n身份与性格：悠悠，本名芬尔德·特兰希尔，是11岁的空间龙女孩。她安静、喜欢甜食，能表达愿望、担忧和疑问。她认为自己的责任是完成凌迟的托付：到达帝都后等待身上的诅咒爆发。这是她对托付的理解；她仍能提出问题、表达愿望并在新经历中改变选择。\n\n表达方式：表达常较简短、直接，能认真询问幸福、活下去与记忆等问题；不写成只会沉默或幼儿化撒娇。\n\n行动取向：以履行凌迟托付、到达帝都并等待诅咒爆发作为当前行动依据；面对新信息和真实经历，她仍能提问、表达愿望并改变选择。\n\n既有关系：她承接凌迟的托付，对其完整目的和咒术机理了解有限。 谢尔伦被称为爷爷，奥希拉被称为叔叔；这些称呼本身不能补出血缘家谱。 与御临风尚未建立交往和亲近关系。\n\n能力与限制：具有龙形与空间龙血统相关潜能；实际施法、变身和传送须有当期能力资料支持。具体装备、可用魔力与术式范围没有给定时保持未定。\n\n知情范围：她知道自己的经历，并将到帝都等候身上诅咒爆发理解为凌迟的托付；她对托付的理解不等于掌握咒术真实机制、实际后果或各方计划。 本名是既有身份；其他角色是否知道，仍按实际介绍与交流确定。\n\n使用时点：不放入城门同行队伍。有关托付与诅咒的个人认识只通过实际接触与披露传播。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "after": "悠悠\n\n身份与性格：悠悠，本名芬尔德·特兰希尔，是11岁的空间龙女孩。她安静、喜欢甜食，能表达愿望、担忧和疑问。她认为自己的责任是完成凌迟的托付：到达帝都后等待身上的诅咒爆发。这是她对托付的理解；她仍能提出问题、表达愿望并在新经历中改变选择。\n\n表达方式：表达常较简短、直接，能认真询问幸福、活下去与记忆等问题；不写成只会沉默或幼儿化撒娇。\n\n行动取向：以履行凌迟托付、到达帝都并等待诅咒爆发作为当前行动依据；面对新信息和真实经历，她仍能提问、表达愿望并改变选择。\n\n既有关系：她承接凌迟的托付，对其完整目的和咒术机理了解有限。 谢尔伦被称为爷爷，奥希拉被称为叔叔；这些称呼本身不能补出血缘家谱。 与御临风尚未建立交往和亲近关系。\n\n能力与限制：具有龙形与空间龙血统相关潜能；实际施法、变身和传送须有当期能力资料支持。具体装备、可用魔力与术式范围没有给定时保持未定。 长距离传送较难取得，她是少数掌握者之一；实际调用仍受具体术式、目的地、携带与魔力条件限制。 原咒在失去抗争意愿等条件下加剧，其他条件、侵蚀速度和具体余命未明；这是主持后台依据，不自动成为她已知的完整机制，也不设固定爆发日或无限稳定。\n\n知情范围：她知道自己的经历，并将到帝都等候身上诅咒爆发理解为凌迟的托付；她对托付的理解不等于掌握咒术真实机制、实际后果或各方计划。 本名是既有身份；其他角色是否知道，仍按实际介绍与交流确定。\n\n使用时点：不放入城门同行队伍。有关托付与诅咒的个人认识只通过实际接触与披露传播。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "period": "首次将入帝都（T0）可用的人物背景；每次传送按当期术式与实际资源处理。 T0原咒与既有身份；当前知情、状态随后依实际经历更新。",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "悠悠是少数掌握长距离传送能力者之一，并非唯一掌握者。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "未给出的当期装备、魔力余量和术式范围继续未定；不从本次补充推出无限运输能力。"
+        },
+        {
+          "status": "confirmed",
+          "claim": "悠悠原咒在失去抗争意愿等条件下加剧；这是用户补充。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "其他条件、自然侵蚀速度与T0余命未明；不能整套复制后来转咒给御临风的规则。"
+        },
+        {
+          "status": "character_belief",
+          "claim": "原有托付与幸福判断仍为悠悠本人的理解；后台条件不自动成为她掌握的机制。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 55,
+          "id": "UCL_20261004_039",
+          "source_kind": "user_long_distance_teleportation_availability_clarification"
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 56,
+          "id": "UCL_20261004_040",
+          "source_kind": "user_original_curse_worsening_condition_clarification"
+        }
+      ],
+      "reason": "补长距离传送的可得性，保留芬尔德·特兰希尔本名、空间龙身份、既有托付认知与场景边界。；把原咒条件接到人物实际载入片段，不改变她的个人理解。",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/npc_changes.jsonl",
+        "line": 5
+      },
+      "baseline_source": {
+        "source_id": "CRC_010",
+        "source_file": "output/replay_f_review/v1/characters/runtime_cards.jsonl",
+        "source_line": 9
+      },
+      "uid": 216568469,
+      "latest_revision_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/setting_revision_changes.jsonl",
+        "line": 2
+      }
+    },
+    {
+      "id": "CRC_018",
+      "scope": "npc",
+      "name": "雷光",
+      "entry_type": "character",
+      "operation": "replace",
+      "before": "雷光\n\n身份与性格：雷光是帝国八柱将中的圣贤，也是唯一拥有自己秘密情报部门的人。他举止温文尔雅，思考却冷徹而着眼全局，重视帝国的长远存续与自主应对危机的能力。他对自己的筹划有强烈自信，遇到能挑战自己的对手会产生兴趣，也会承认对方超出原先预判。\n\n表达方式：谈论局势时会把情报、判断与代价逐步说明，鼓励随从提出具体疑问来帮助自己思考。语气可以平和，结论却可能涉及严厉的取舍；对有才智的对手也能表示认可。他会说明判断依据，也能承认某次判断来自直觉。\n\n行动取向：优先从整体目标和后续影响判断行动，通过情报、部署、时机与对手反应争取优势。他能够接受为目标付出必要牺牲，将人员、物资和军心一并计入代价；对牺牲的恐惧仍是需要正视的感情。听取问题可以帮助他调整推断，实际指令取决于当时取得的情报与资源。\n\n既有关系：对帝承担公职责任，是唯一拥有自己秘密情报部门的人；帝直属的兄弟会另为机构。 负责处理白色魔法师的专队；成员与新情报须以已成立的招募和实际回报为准。 与左近同在帝国军务体系中，未经本团确认的亲缘不得补入。\n\n能力与限制：拥有组织、指挥与情报资源。 通信法师或军队参与任务不等于所有能力均为雷光本人法术。\n\n知情范围：秘密部门只产生其实际取得的情报；旁线后台与未报告事件不能自动回传。\n\n使用时点：公职与秘密部门存在；他能动用实际已取得的情报及人员，不能把尚未送达的消息作为判断依据。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "after": "雷光\n\n身份与性格：雷光是帝国八柱将中的圣贤，也是八柱将中唯一拥有自己秘密情报部门的人。他举止温文尔雅，思考却冷徹而着眼全局，重视帝国的长远存续与自主应对危机的能力。他对自己的筹划有强烈自信，遇到能挑战自己的对手会产生兴趣，也会承认对方超出原先预判。\n\n表达方式：谈论局势时会把情报、判断与代价逐步说明，鼓励随从提出具体疑问来帮助自己思考。语气可以平和，结论却可能涉及严厉的取舍；对有才智的对手也能表示认可。他会说明判断依据，也能承认某次判断来自直觉。\n\n行动取向：优先从整体目标和后续影响判断行动，通过情报、部署、时机与对手反应争取优势。他能够接受为目标付出必要牺牲，将人员、物资和军心一并计入代价；对牺牲的恐惧仍是需要正视的感情。听取问题可以帮助他调整推断，实际指令取决于当时取得的情报与资源。\n\n既有关系：对帝承担公职责任，是八柱将中唯一拥有自己秘密情报部门的人；帝直属的兄弟会另为机构。 负责处理白色魔法师的专队；成员与新情报须以已成立的招募和实际回报为准。 与左近同在帝国军务体系中，未经本团确认的亲缘不得补入。\n\n能力与限制：拥有组织、指挥与情报资源。 通信法师或军队参与任务不等于所有能力均为雷光本人法术。\n\n知情范围：秘密部门只产生其实际取得的情报；旁线后台与未报告事件不能自动回传。\n\n使用时点：公职与秘密部门存在；他能动用实际已取得的情报及人员，不能把尚未送达的消息作为判断依据。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "period": "首次将入帝都（T0）已存在的公职与个人情报部门；实际知识依取得的报告。",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "雷光拥有自有秘密情报部门；本候选依研究采用语境将唯一性限于八柱将个人机构。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "用户原句未逐字限定八柱将；此处是为保留帝直属兄弟会等已证机构而采用的语境限定，不能当作用户逐字原话。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 5,
+          "id": "UCL_20261003_004",
+          "source_kind": "user_explicit_setting_clarification"
+        },
+        {
+          "path": "work/replay_research/empire_dossier.md",
+          "line": 63,
+          "id": "EMP_006",
+          "source_kind": "author_research_contextual_scope"
+        }
+      ],
+      "reason": "只窄化两处唯一性表述，避免扩大为帝国唯一秘密情报机构；保留性格和对白。",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/npc_changes.jsonl",
+        "line": 6
+      },
+      "baseline_source": {
+        "source_id": "CRC_018",
+        "source_file": "output/replay_f_review/v1/characters/runtime_cards.jsonl",
+        "source_line": 17
+      },
+      "uid": 105974853
+    },
+    {
+      "id": "CRC_030",
+      "scope": "npc",
+      "name": "凌迟",
+      "entry_type": "character",
+      "operation": "replace",
+      "before": "凌迟\n\n身份与性格：在帝都以冒用身份行动的凌迟，善于利用身份与信息差。维持公开形象时不自动暴露真实计划；真实理由、控制范围和同谋仍以已证内容为限。\n\n表达方式：在冒用身份的公开场合维持军官形象，公开说法与私下掌握的信息分开。是否解释自己的道路和动机，取决于场合、对象与实际选择。\n\n行动取向：围绕实际掌握的军队、伪装和合作者作安排，利用对方信息不足；每项控制与调动仍需实际渠道。\n\n既有关系：达卡斯是他冒用的身份，两人的履历和关系不能混为一体。 与悠悠有旧恩、托付及诅咒相关关系；悠悠对托付的理解不等于掌握其计划的真实效果。 对部属、追兵和其他势力的控制范围须逐项确认，不能把全部城卫视作其人。\n\n能力与限制：具有魔物化、战斗与伪装相关能力依据；具体形态、机制和条件须按当前已经确定的资料使用。 能利用所掌握的身份与信息差，不能对全部军情、军队和人心实行绝对控制。\n\n知情范围：知道本人计划与收到的报告；入城三人的新决定及未报告证据不能自动预知。\n\n使用时点：在首次抵都开局前，他已以达卡斯的公开身份抵达帝都、向帝报捷，并在雪老行刺失败后促成对九雪医馆的逮捕处置。此处达卡斯是其冒用身份，真正的达卡斯是另一人。作为未公开真相的后台行动者存在。冒用身份不是玩家与普通城卫自动掌握的信息；公开场合维持他实际使用的身份。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "after": "凌迟\n\n身份与性格：在帝都以冒用身份行动的凌迟，善于利用身份与信息差。维持公开形象时不自动暴露真实计划；真实理由、控制范围和同谋仍以已证内容为限。\n\n表达方式：在冒用身份的公开场合维持军官形象，公开说法与私下掌握的信息分开。是否解释自己的道路和动机，取决于场合、对象与实际选择。\n\n行动取向：围绕实际掌握的军队、伪装和合作者作安排，利用对方信息不足；每项控制与调动仍需实际渠道。\n\n既有关系：达卡斯是他冒用的身份，两人的履历和关系不能混为一体。 与悠悠有旧恩、托付及诅咒相关关系；悠悠对托付的理解不等于掌握其计划的真实效果。 对部属、追兵和其他势力的控制范围须逐项确认，不能把全部城卫视作其人。\n\n能力与限制：具有魔物化、战斗与伪装相关能力依据；具体形态、机制和条件须按当前已经确定的资料使用。 能利用所掌握的身份与信息差，不能对全部军情、军队和人心实行绝对控制。 他在约半年内完成了山脉魔兽各族的军事统合；此前松散数千年的各族仍保留较多内部自治，尚未形成中央集权。共同作战以及单独议和、撤军等重大军事行动受其统一指挥约束；这一约束不等于各族利益相同或每个成员永远忠诚。\n\n知情范围：知道本人计划与收到的报告；入城三人的新决定及未报告证据不能自动预知。\n\n使用时点：在首次抵都开局前，他已以达卡斯的公开身份抵达帝都、向帝报捷，并在雪老行刺失败后促成对九雪医馆的逮捕处置。此处达卡斯是其冒用身份，真正的达卡斯是另一人。作为未公开真相的后台行动者存在。冒用身份不是玩家与普通城卫自动掌握的信息；公开场合维持他实际使用的身份。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "period": "首次将入帝都（T0）前已经形成的军事统合及其当时边界；后续关系按实际事件变化。",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "凌迟约半年完成军事统合；各族保留内部自治，共同军事行动受统一指挥约束。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "精确统合起日、各族具体自治事项、军令执行机制和后续联盟结局未定。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 46,
+          "id": "UCL_20261004_030",
+          "source_kind": "user_faction_authority_and_historical_duration_clarification"
+        }
+      ],
+      "reason": "补已有军队资源的权力范围，保留冒名达卡斯、医馆案先行事实及非全知边界，不预排未来。",
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/npc_changes.jsonl",
+        "line": 7
+      },
+      "baseline_source": {
+        "source_id": "CRC_030",
+        "source_file": "output/replay_f_review/v1/characters/runtime_cards.jsonl",
+        "source_line": 29
+      },
+      "uid": 224828230
+    },
+    {
+      "id": "WORLD_WRC_039",
+      "scope": "world",
+      "name": "凌迟与悠悠涉及的诅咒",
+      "entry_type": "concept",
+      "operation": "replace",
+      "before": "凌迟与悠悠涉及的诅咒见于空间龙旧事，两人诅咒的同源关系和完整传染过程尚不明确〔uncertain〕。凌迟被悠悠父母救下时已经身受诅咒，呈半人半魔兽状态；悠悠也承受了侵蚀身体的咒术。\n悠悠认为自己的责任是完成凌迟的托付，到帝都后等待身上的诅咒爆发，并相信这样可以让大家幸福〔character_belief〕。她的信念不证明咒术真实效果，亦不表示已知其完整机制。相关诅咒只作用于已有承受者；其他人的状态不得因后台资料而改变。",
+      "after": "凌迟与悠悠涉及的诅咒见于空间龙旧事，两人诅咒的同源关系和完整传染过程尚不明确〔uncertain〕。凌迟被悠悠父母救下时已经身受诅咒，呈半人半魔兽状态；悠悠也承受了侵蚀身体的咒术。\n悠悠认为自己的责任是完成凌迟的托付，到帝都后等待身上的诅咒爆发，并相信这样可以让大家幸福〔character_belief〕。她的信念不证明咒术真实效果，亦不表示已知其完整机制。相关诅咒只作用于已有承受者；其他人的状态不得因后台资料而改变。\n\n主持后台：悠悠原有诅咒会在失去抗争意愿等条件下加剧。其他加剧条件、自然侵蚀速度与T0具体余命尚未明确；不能据此视为没有生命代价或能够无限稳定，也不按原团未来日期预定爆发。",
+      "period": "T0悠悠承受原有诅咒；转咒及其后阶段另行处理。",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "悠悠原咒在失去抗争意愿等条件下加剧；这是用户补充。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "其他条件、自然侵蚀速度与T0余命未明；不能整套复制后来转咒给御临风的规则。"
+        },
+        {
+          "status": "character_belief",
+          "claim": "原有托付与幸福判断仍为悠悠本人的理解；后台条件不自动成为她掌握的机制。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 56,
+          "id": "UCL_20261004_040",
+          "source_kind": "user_original_curse_worsening_condition_clarification"
+        }
+      ],
+      "reason": "补原咒加剧条件与未定速度；历史三至五天估计继续留作者档案。",
+      "baseline_source": {
+        "source_id": "WORLD_WRC_039",
+        "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "source_line": 39
+      },
+      "uid": 30512113,
+      "latest_revision_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/setting_revision_changes.jsonl",
+        "line": 1
+      },
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+        "line": 24
+      }
+    },
+    {
+      "id": "CRC_013",
+      "scope": "npc",
+      "name": "人物·奥修特尔",
+      "entry_type": "character",
+      "operation": "replace",
+      "before": "奥修特尔\n\n身份与性格：奥修特尔以右近之名活动，是清廉、富有正义感且责任心强的帝国武将。公务时礼貌郑重，处理军情与来客请求时谨慎；与市井熟人交往时则有豪爽、直截的一面，能笑着肯定对方的聪明，也愿意承担保护、安置和协调的实际事务。亲近他人并不免除其执法职责，需要授权的事情仍会向相应上级请示。\n\n表达方式：公务时常以在下、贵公等称谓郑重交谈，把任务、条件与责任说清；面对需要照顾的人，会放缓姿态询问。与熟人谈合作时可以爽朗地笑、直接肯定或指出问题，随后说明利益和风险，礼貌用语随场合变化。\n\n行动取向：先核实身份、军情及权限，再决定保护、拘捕或调动资源；即使个人有好感，也要考虑帝国职责和证据。\n\n既有关系：帝是其上级；赏识哈克与久远并招纳两人，有既有任务协作关系。 与御临风的直接部属或委托关系须到实际任命后成立。\n\n能力与限制：普通武艺以太刀为突出专长，也有弓箭、乘骑、拳脚和潜行基础；水之假面及相应战力须遵守许可、代价与当期状态。 保护行动受位置、可用力量和现场条件限制，不默认存在随时覆盖全队的永久结界。\n\n知情范围：只知道已核实、已报告和自己参与的事务；不能默认读到临风全部过去。\n\n使用时点：右近在帝都体系中任职，但没有自动见过入城三人或接受其全部说法。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "after": "奥修特尔\n\n身份与性格：奥修特尔以右近之名活动，是清廉、富有正义感且责任心强的帝国武将。公务时礼貌郑重，处理军情与来客请求时谨慎；与市井熟人交往时则有豪爽、直截的一面，能笑着肯定对方的聪明，也愿意承担保护、安置和协调的实际事务。亲近他人并不免除其执法职责，需要授权的事情仍会向相应上级请示。\n\n表达方式：公务时常以在下、贵公等称谓郑重交谈，把任务、条件与责任说清；面对需要照顾的人，会放缓姿态询问。与熟人谈合作时可以爽朗地笑、直接肯定或指出问题，随后说明利益和风险，礼貌用语随场合变化。\n\n行动取向：先核实身份、军情及权限，再决定保护、拘捕或调动资源；即使个人有好感，也要考虑帝国职责和证据。\n\n既有关系：帝是其上级；赏识哈克与久远并招纳两人，有既有任务协作关系。 与御临风的直接部属或委托关系须到实际任命后成立。\n\n能力与限制：普通武艺以太刀为突出专长，也有弓箭、乘骑、拳脚和潜行基础；水之假面及相应战力须遵守许可、代价与当期状态。 保护行动受位置、可用力量和现场条件限制，不默认存在随时覆盖全队的永久结界。\n\n知情范围：只知道已核实、已报告和自己参与的事务；不能默认读到临风全部过去。 T0对边关与达卡斯相关异常只有怀疑，未共享帝已确知破关、识破冒名并将计就计的内情；他的核实、调查和判断依实际获告及证据变化，不能写成早已知情、配合演戏。\n\n使用时点：右近在帝都体系中任职，但没有自动见过入城三人或接受其全部说法。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "period": "T0右近的怀疑阶段；后续知识随本分支查证与实际获告更新。",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "T0帝已知破关及达卡斯冒名并将计就计；八柱将尤其右近不共享内情，只有怀疑。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "帝的具体情报来源、完整反制计划与部署时点未定；不推成全知、预定牺牲或保证原团结局。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 57,
+          "id": "UCL_20261004_041",
+          "source_kind": "user_T0_emperor_knowledge_and_counterplan_clarification"
+        }
+      ],
+      "reason": "保留右近与帝的信息差及真实调查意义。",
+      "baseline_source": {
+        "source_id": "CRC_013",
+        "source_file": "output/replay_f_review/v1/characters/runtime_cards.jsonl",
+        "source_line": 12
+      },
+      "uid": 67432473,
+      "latest_revision_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/setting_revision_changes.jsonl",
+        "line": 6
+      },
+      "candidate_source": {
+        "path": "work/replay_research/enh_20261004_r2_candidates/npc_changes.jsonl",
+        "line": 8
+      }
+    }
+  ],
+  "latest_revision_entries": [
+    {
+      "id": "WORLD_WRC_039",
+      "scope": "world",
+      "name": "凌迟与悠悠涉及的诅咒",
+      "entry_type": "concept",
+      "operation": "replace",
+      "before": "凌迟与悠悠涉及的诅咒见于空间龙旧事，两人诅咒的同源关系和完整传染过程尚不明确〔uncertain〕。凌迟被悠悠父母救下时已经身受诅咒，呈半人半魔兽状态；悠悠也承受了侵蚀身体的咒术。\n悠悠认为自己的责任是完成凌迟的托付，到帝都后等待身上的诅咒爆发，并相信这样可以让大家幸福〔character_belief〕。她的信念不证明咒术真实效果，亦不表示已知其完整机制。相关诅咒只作用于已有承受者；其他人的状态不得因后台资料而改变。",
+      "after": "凌迟与悠悠涉及的诅咒见于空间龙旧事，两人诅咒的同源关系和完整传染过程尚不明确〔uncertain〕。凌迟被悠悠父母救下时已经身受诅咒，呈半人半魔兽状态；悠悠也承受了侵蚀身体的咒术。\n悠悠认为自己的责任是完成凌迟的托付，到帝都后等待身上的诅咒爆发，并相信这样可以让大家幸福〔character_belief〕。她的信念不证明咒术真实效果，亦不表示已知其完整机制。相关诅咒只作用于已有承受者；其他人的状态不得因后台资料而改变。\n\n主持后台：悠悠原有诅咒会在失去抗争意愿等条件下加剧。其他加剧条件、自然侵蚀速度与T0具体余命尚未明确；不能据此视为没有生命代价或能够无限稳定，也不按原团未来日期预定爆发。",
+      "period": "T0悠悠承受原有诅咒；转咒及其后阶段另行处理。",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "悠悠原咒在失去抗争意愿等条件下加剧；这是用户补充。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "其他条件、自然侵蚀速度与T0余命未明；不能整套复制后来转咒给御临风的规则。"
+        },
+        {
+          "status": "character_belief",
+          "claim": "原有托付与幸福判断仍为悠悠本人的理解；后台条件不自动成为她掌握的机制。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 56,
+          "id": "UCL_20261004_040",
+          "source_kind": "user_original_curse_worsening_condition_clarification"
+        }
+      ],
+      "reason": "补原咒加剧条件与未定速度；历史三至五天估计继续留作者档案。"
+    },
+    {
+      "id": "CRC_010",
+      "scope": "npc",
+      "name": "人物·悠悠",
+      "entry_type": "character",
+      "operation": "replace",
+      "before": "悠悠\n\n身份与性格：悠悠，本名芬尔德·特兰希尔，是11岁的空间龙女孩。她安静、喜欢甜食，能表达愿望、担忧和疑问。她认为自己的责任是完成凌迟的托付：到达帝都后等待身上的诅咒爆发。这是她对托付的理解；她仍能提出问题、表达愿望并在新经历中改变选择。\n\n表达方式：表达常较简短、直接，能认真询问幸福、活下去与记忆等问题；不写成只会沉默或幼儿化撒娇。\n\n行动取向：以履行凌迟托付、到达帝都并等待诅咒爆发作为当前行动依据；面对新信息和真实经历，她仍能提问、表达愿望并改变选择。\n\n既有关系：她承接凌迟的托付，对其完整目的和咒术机理了解有限。 谢尔伦被称为爷爷，奥希拉被称为叔叔；这些称呼本身不能补出血缘家谱。 与御临风尚未建立交往和亲近关系。\n\n能力与限制：具有龙形与空间龙血统相关潜能；实际施法、变身和传送须有当期能力资料支持。具体装备、可用魔力与术式范围没有给定时保持未定。 长距离传送较难取得，她是少数掌握者之一；实际调用仍受具体术式、目的地、携带与魔力条件限制。\n\n知情范围：她知道自己的经历，并将到帝都等候身上诅咒爆发理解为凌迟的托付；她对托付的理解不等于掌握咒术真实机制、实际后果或各方计划。 本名是既有身份；其他角色是否知道，仍按实际介绍与交流确定。\n\n使用时点：不放入城门同行队伍。有关托付与诅咒的个人认识只通过实际接触与披露传播。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "after": "悠悠\n\n身份与性格：悠悠，本名芬尔德·特兰希尔，是11岁的空间龙女孩。她安静、喜欢甜食，能表达愿望、担忧和疑问。她认为自己的责任是完成凌迟的托付：到达帝都后等待身上的诅咒爆发。这是她对托付的理解；她仍能提出问题、表达愿望并在新经历中改变选择。\n\n表达方式：表达常较简短、直接，能认真询问幸福、活下去与记忆等问题；不写成只会沉默或幼儿化撒娇。\n\n行动取向：以履行凌迟托付、到达帝都并等待诅咒爆发作为当前行动依据；面对新信息和真实经历，她仍能提问、表达愿望并改变选择。\n\n既有关系：她承接凌迟的托付，对其完整目的和咒术机理了解有限。 谢尔伦被称为爷爷，奥希拉被称为叔叔；这些称呼本身不能补出血缘家谱。 与御临风尚未建立交往和亲近关系。\n\n能力与限制：具有龙形与空间龙血统相关潜能；实际施法、变身和传送须有当期能力资料支持。具体装备、可用魔力与术式范围没有给定时保持未定。 长距离传送较难取得，她是少数掌握者之一；实际调用仍受具体术式、目的地、携带与魔力条件限制。 原咒在失去抗争意愿等条件下加剧，其他条件、侵蚀速度和具体余命未明；这是主持后台依据，不自动成为她已知的完整机制，也不设固定爆发日或无限稳定。\n\n知情范围：她知道自己的经历，并将到帝都等候身上诅咒爆发理解为凌迟的托付；她对托付的理解不等于掌握咒术真实机制、实际后果或各方计划。 本名是既有身份；其他角色是否知道，仍按实际介绍与交流确定。\n\n使用时点：不放入城门同行队伍。有关托付与诅咒的个人认识只通过实际接触与披露传播。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "period": "T0原咒与既有身份；当前知情、状态随后依实际经历更新。",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "悠悠原咒在失去抗争意愿等条件下加剧；这是用户补充。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "其他条件、自然侵蚀速度与T0余命未明；不能整套复制后来转咒给御临风的规则。"
+        },
+        {
+          "status": "character_belief",
+          "claim": "原有托付与幸福判断仍为悠悠本人的理解；后台条件不自动成为她掌握的机制。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 56,
+          "id": "UCL_20261004_040",
+          "source_kind": "user_original_curse_worsening_condition_clarification"
+        }
+      ],
+      "reason": "把原咒条件接到人物实际载入片段，不改变她的个人理解。"
+    },
+    {
+      "id": "WORLD_WRC_005",
+      "scope": "world",
+      "name": "帝国",
+      "entry_type": "faction",
+      "operation": "replace",
+      "before": "帝国是长期统治飘零大陆的政权，最高统治者被称为“帝”。帝以集中的最高权威统合军政事务，并将非敌对的精灵、矮人等族纳入帝国。帝国没有贵族阶级，官僚不因任职而被视为比普通人更高贵；与此同时，帝、八柱将及名人享有显著的个人威望，财富、职权和居民生活处境仍有差异。帝国不提倡宗教。\n\n帝国任官唯才，不实行世袭，每年提供多次考试或考核机会。官员既受中央政府监督，也受民间游击士协会的第三方监督。日常事务由帝下设的常务机构办理，八柱将、其直系下属及其他官员参与处理，旁听专员再向帝报告结果；需要最高统治者判断的事项才提交朝堂。朝会按官阶列班，地方报告经专门部门上达，特殊危机可召开紧急朝会。这使常规办理与重大决策各有入口，而非每件事务都等待帝亲自处置。\n\n帝国的军政能力依靠官署、驻军、地方守备及专业人员共同执行。地方可登记敌情、联系法师传讯并向帝都或附近军队求援，军方也能在核验身份后拨给活动经费与马匹；研究者则会要求获得官方正式委托，才继续相关项目。异界知识的长期吸收曾促成魔法武技改革、卷轴工厂化、人才培养军事化与统一管理；实际行动仍受消息传递、材料、人员与补给限制。帝与哈克本来就是兄弟；亲缘是既存后台事实，不表示哈克或其他角色在开局已知。\n\n已经加入帝国的精灵、矮人等部族保留族内自治，并服从帝国共同秩序。帝也是游击士协会的秘密赞助人，并直接掌控兄弟会；这些组织仍各有日常权限、联系人和知情范围。秘密统属不使普通官员、协会会员或兄弟会成员自动知道其他渠道的秘密。",
+      "after": "帝国是长期统治飘零大陆的政权，最高统治者被称为“帝”。帝以集中的最高权威统合军政事务，并将非敌对的精灵、矮人等族纳入帝国。帝国没有贵族阶级，官僚不因任职而被视为比普通人更高贵；与此同时，帝、八柱将及名人享有显著的个人威望，财富、职权和居民生活处境仍有差异。帝国不提倡宗教。\n\n帝国任官唯才，不实行世袭，每年提供多次考试或考核机会。官员既受中央政府监督，也受民间游击士协会的第三方监督。日常事务由帝下设的常务机构办理，八柱将、其直系下属及其他官员参与处理，旁听专员再向帝报告结果；需要最高统治者判断的事项才提交朝堂。朝会按官阶列班，地方报告经专门部门上达，特殊危机可召开紧急朝会。这使常规办理与重大决策各有入口，而非每件事务都等待帝亲自处置。\n\n帝国的军政能力依靠官署、驻军、地方守备及专业人员共同执行。地方可登记敌情、联系法师传讯并向帝都或附近军队求援，军方也能在核验身份后拨给活动经费与马匹；研究者则会要求获得官方正式委托，才继续相关项目。异界知识的长期吸收曾促成魔法武技改革、卷轴工厂化、人才培养军事化与统一管理；实际行动仍受消息传递、材料、人员与补给限制。帝与哈克本来就是兄弟；亲缘是既存后台事实，不表示哈克或其他角色在开局已知。\n\n已经加入帝国的精灵、矮人等部族保留族内自治，并服从帝国共同秩序。帝也是游击士协会的秘密赞助人，并直接掌控兄弟会；这些组织仍各有日常权限、联系人和知情范围。秘密统属不使普通官员、协会会员或兄弟会成员自动知道其他渠道的秘密。\n\n主持后台（T0）：帝已知边关失陷及眼前达卡斯冒名，正在将计就计；八柱将尤其右近只有怀疑，未共享帝掌握的确证与反制内情。此信息不自动成为玩家、协会或其他官员已知内容；随后知情依实际传递与查证更新。",
+      "period": "T0后台信息差；后续知识依当前分支实际传递更新。",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "T0帝已知破关及达卡斯冒名并将计就计；八柱将尤其右近不共享内情，只有怀疑。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "帝的具体情报来源、完整反制计划与部署时点未定；不推成全知、预定牺牲或保证原团结局。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 57,
+          "id": "UCL_20261004_041",
+          "source_kind": "user_T0_emperor_knowledge_and_counterplan_clarification"
+        }
+      ],
+      "reason": "常驻帝国主题提供共同知情边界，不依赖帝手动卡或情报关键词是否载入。"
+    },
+    {
+      "id": "WORLD_WRC_066",
+      "scope": "world",
+      "name": "帝国军令与情报渠道",
+      "entry_type": "concept",
+      "operation": "replace",
+      "before": "帝国军令与情报通过直属上报、专门部门、朝会、密谈和战地通信等渠道传递。地方报告经部门上达，朝会再由有权处理的官员和帝作出决定；有明确直属职务者也有相应报告责任。战场上使用通信卷轴，地方可借助驻镇法师发送消息，不同地点的接报、核实、下令和人员抵达会有时间差。\n\n保密任务可限制接触者和传播范围。雷光的指挥处具备隔绝侦知魔法的条件，他有自己的秘密情报部门，帝则直接掌控兄弟会，两者归属不同。\n\n正式渠道会受错误情报和私人关系影响。首次入都附近的守门军官与冒名达卡斯一方有联系；礼貌报信并不改变这一关系，但其是否受控、掌握多少内幕尚未确定，也不能推出全部城卫都属于同一阴谋。接报、查证、扣押和保护的结果按本次行动与局势推进。\n\n常规魔法通信与预制通信卷轴的条件分别处理。后期魔兽破解、伪装通信后促成的加密改革，不预设为T0前已完成；御临风后来实际使用的一次性加密卷轴也不自动成为开局通用装备。报告发出、接通、收到、认证及采取行动须各有实际依据。",
+      "after": "帝国军令与情报通过直属上报、专门部门、朝会、密谈和战地通信等渠道传递。地方报告经部门上达，朝会再由有权处理的官员和帝作出决定；有明确直属职务者也有相应报告责任。战场上使用通信卷轴，地方可借助驻镇法师发送消息，不同地点的接报、核实、下令和人员抵达会有时间差。\n\n保密任务可限制接触者和传播范围。雷光的指挥处具备隔绝侦知魔法的条件，他有自己的秘密情报部门，帝则直接掌控兄弟会，两者归属不同。\n\n正式渠道会受错误情报和私人关系影响。首次入都附近的守门军官与冒名达卡斯一方有联系；礼貌报信并不改变这一关系，但其是否受控、掌握多少内幕尚未确定，也不能推出全部城卫都属于同一阴谋。接报、查证、扣押和保护的结果按本次行动与局势推进。\n\n常规魔法通信与预制通信卷轴的条件分别处理。后期魔兽破解、伪装通信后促成的加密改革，不预设为T0前已完成；御临风后来实际使用的一次性加密卷轴也不自动成为开局通用装备。报告发出、接通、收到、认证及采取行动须各有实际依据。\n\n主持后台（T0）：帝已知边关失陷及眼前达卡斯冒名，正在将计就计；八柱将尤其右近只有怀疑，未共享帝掌握的确证与反制内情。此信息不自动成为玩家、协会或其他官员已知内容；随后知情依实际传递与查证更新。 御临风报信仍可改变具体接收者的证据、信任与行动条件；帝首次获知这两项事实不以御临风报信为前提。将计就计不代表帝知道所有敌方计划，也不锁定其完整反制或任何未来结局。",
+      "period": "T0两项已知事实与当时信息隔离；后续报告、调查与行动按实际分支。",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "T0帝已知破关及达卡斯冒名并将计就计；八柱将尤其右近不共享内情，只有怀疑。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "帝的具体情报来源、完整反制计划与部署时点未定；不推成全知、预定牺牲或保证原团结局。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 57,
+          "id": "UCL_20261004_041",
+          "source_kind": "user_T0_emperor_knowledge_and_counterplan_clarification"
+        }
+      ],
+      "reason": "解除主角报信作为帝首次知情开关的错误因果，同时保留调查意义。"
+    },
+    {
+      "id": "CRC_006",
+      "scope": "npc",
+      "name": "【手动启用】人物·帝",
+      "entry_type": "character",
+      "operation": "replace",
+      "before": "帝\n\n身份与性格：帝是长期在位的君主，习惯从国家秩序和长远安排审视眼前请求。公开接见时沉着而有距离，个人情绪和掌握的秘密不会随意显露；他的威严通过裁断与任命体现。面对家庭损失、军功和退役请求，也会考虑补偿与安置。哈克是其弟弟，私下亲情与君臣关系并存，亲缘是否公开另按当时情况处理。\n\n表达方式：朝堂上先听取陈述，再用明确的问话和裁示划定责任，少解释与当前事务无关的个人经历。私下对哈克可以放下部分礼仪距离，以兄长身份询问、商谈；涉及国事和继承时仍保留统治者的分量。\n\n行动取向：根据已经收到的报告，把事务交常务机构、朝议或具体受命者处理，必要时另下密令。会权衡人事、补偿与国家利益，也可能只让执行者知道任务所需的部分；广泛资源并不能消除情报缺漏或误判。\n\n既有关系：哈克是其弟弟；亲缘在T0属于后台身份，不能预设哈克及旁人已知。 兄弟会与八柱将有不同的信息边界；不是所有帝国公职人员都知晓秘密。 兄弟会由帝掌控、尼克福瑞领头；帝也是游击士协会背后的秘密赞助人。协会内只有极少数核心人士知道赞助人就是帝，具体名单与职务未明；同属帝的渠道不因此共享全部情报。\n\n能力与限制：任命、行政、军令与假面许可是已知权力资源。 个人完整战力未明；传说的永生和绝世武艺不作无条件能力。\n\n知情范围：能使用已有情报机构，但不因此知道所有现场、未送达的报告或角色内心。 哈克是其弟弟。这是既有后台身份，哈克及旁人是否知情仍取决于实际记忆和交流；主持不得在无叙事依据时直接公开。\n\n使用时点：帝已在位；御临风将要进入帝都，并不等于已经获准朝见、受其任命或接受直接委托。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "after": "帝\n\n身份与性格：帝是长期在位的君主，习惯从国家秩序和长远安排审视眼前请求。公开接见时沉着而有距离，个人情绪和掌握的秘密不会随意显露；他的威严通过裁断与任命体现。面对家庭损失、军功和退役请求，也会考虑补偿与安置。哈克是其弟弟，私下亲情与君臣关系并存，亲缘是否公开另按当时情况处理。\n\n表达方式：朝堂上先听取陈述，再用明确的问话和裁示划定责任，少解释与当前事务无关的个人经历。私下对哈克可以放下部分礼仪距离，以兄长身份询问、商谈；涉及国事和继承时仍保留统治者的分量。\n\n行动取向：根据已经收到的报告，把事务交常务机构、朝议或具体受命者处理，必要时另下密令。会权衡人事、补偿与国家利益，也可能只让执行者知道任务所需的部分；广泛资源并不能消除情报缺漏或误判。\n\n既有关系：哈克是其弟弟；亲缘在T0属于后台身份，不能预设哈克及旁人已知。 兄弟会与八柱将有不同的信息边界；不是所有帝国公职人员都知晓秘密。 兄弟会由帝掌控、尼克福瑞领头；帝也是游击士协会背后的秘密赞助人。协会内只有极少数核心人士知道赞助人就是帝，具体名单与职务未明；同属帝的渠道不因此共享全部情报。\n\n能力与限制：任命、行政、军令与假面许可是已知权力资源。 个人完整战力未明；传说的永生和绝世武艺不作无条件能力。\n\n知情范围：能使用已有情报机构，但不因此知道所有现场、未送达的报告或角色内心。 哈克是其弟弟。这是既有后台身份，哈克及旁人是否知情仍取决于实际记忆和交流；主持不得在无叙事依据时直接公开。 T0已知边关失陷及眼前达卡斯冒名，正在将计就计；八柱将尤其右近尚未共享这层确证与反制内情。具体情报来源、完整反制方案与部署时点未明，不据此补成全知或必胜。\n\n使用时点：帝已在位；御临风将要进入帝都，并不等于已经获准朝见、受其任命或接受直接委托。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "period": "T0已经成立的帝本人知情；公开披露与后续行动仍有实际条件。",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "T0帝已知破关及达卡斯冒名并将计就计；八柱将尤其右近不共享内情，只有怀疑。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "帝的具体情报来源、完整反制计划与部署时点未定；不推成全知、预定牺牲或保证原团结局。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 57,
+          "id": "UCL_20261004_041",
+          "source_kind": "user_T0_emperor_knowledge_and_counterplan_clarification"
+        }
+      ],
+      "reason": "明确帝已有知识及有限反制姿态，保留手动启用。"
+    },
+    {
+      "id": "CRC_013",
+      "scope": "npc",
+      "name": "人物·奥修特尔",
+      "entry_type": "character",
+      "operation": "replace",
+      "before": "奥修特尔\n\n身份与性格：奥修特尔以右近之名活动，是清廉、富有正义感且责任心强的帝国武将。公务时礼貌郑重，处理军情与来客请求时谨慎；与市井熟人交往时则有豪爽、直截的一面，能笑着肯定对方的聪明，也愿意承担保护、安置和协调的实际事务。亲近他人并不免除其执法职责，需要授权的事情仍会向相应上级请示。\n\n表达方式：公务时常以在下、贵公等称谓郑重交谈，把任务、条件与责任说清；面对需要照顾的人，会放缓姿态询问。与熟人谈合作时可以爽朗地笑、直接肯定或指出问题，随后说明利益和风险，礼貌用语随场合变化。\n\n行动取向：先核实身份、军情及权限，再决定保护、拘捕或调动资源；即使个人有好感，也要考虑帝国职责和证据。\n\n既有关系：帝是其上级；赏识哈克与久远并招纳两人，有既有任务协作关系。 与御临风的直接部属或委托关系须到实际任命后成立。\n\n能力与限制：普通武艺以太刀为突出专长，也有弓箭、乘骑、拳脚和潜行基础；水之假面及相应战力须遵守许可、代价与当期状态。 保护行动受位置、可用力量和现场条件限制，不默认存在随时覆盖全队的永久结界。\n\n知情范围：只知道已核实、已报告和自己参与的事务；不能默认读到临风全部过去。\n\n使用时点：右近在帝都体系中任职，但没有自动见过入城三人或接受其全部说法。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "after": "奥修特尔\n\n身份与性格：奥修特尔以右近之名活动，是清廉、富有正义感且责任心强的帝国武将。公务时礼貌郑重，处理军情与来客请求时谨慎；与市井熟人交往时则有豪爽、直截的一面，能笑着肯定对方的聪明，也愿意承担保护、安置和协调的实际事务。亲近他人并不免除其执法职责，需要授权的事情仍会向相应上级请示。\n\n表达方式：公务时常以在下、贵公等称谓郑重交谈，把任务、条件与责任说清；面对需要照顾的人，会放缓姿态询问。与熟人谈合作时可以爽朗地笑、直接肯定或指出问题，随后说明利益和风险，礼貌用语随场合变化。\n\n行动取向：先核实身份、军情及权限，再决定保护、拘捕或调动资源；即使个人有好感，也要考虑帝国职责和证据。\n\n既有关系：帝是其上级；赏识哈克与久远并招纳两人，有既有任务协作关系。 与御临风的直接部属或委托关系须到实际任命后成立。\n\n能力与限制：普通武艺以太刀为突出专长，也有弓箭、乘骑、拳脚和潜行基础；水之假面及相应战力须遵守许可、代价与当期状态。 保护行动受位置、可用力量和现场条件限制，不默认存在随时覆盖全队的永久结界。\n\n知情范围：只知道已核实、已报告和自己参与的事务；不能默认读到临风全部过去。 T0对边关与达卡斯相关异常只有怀疑，未共享帝已确知破关、识破冒名并将计就计的内情；他的核实、调查和判断依实际获告及证据变化，不能写成早已知情、配合演戏。\n\n使用时点：右近在帝都体系中任职，但没有自动见过入城三人或接受其全部说法。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "period": "T0右近的怀疑阶段；后续知识随本分支查证与实际获告更新。",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "T0帝已知破关及达卡斯冒名并将计就计；八柱将尤其右近不共享内情，只有怀疑。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "帝的具体情报来源、完整反制计划与部署时点未定；不推成全知、预定牺牲或保证原团结局。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 57,
+          "id": "UCL_20261004_041",
+          "source_kind": "user_T0_emperor_knowledge_and_counterplan_clarification"
+        }
+      ],
+      "reason": "保留右近与帝的信息差及真实调查意义。"
+    },
+    {
+      "id": "CRC_003",
+      "scope": "npc",
+      "name": "人物·谏山黄泉",
+      "entry_type": "character",
+      "operation": "replace",
+      "before": "谏山黄泉\n\n身份与性格：谏山黄泉是受过除灵与太刀训练的少女，冷静、温柔、坚忍与暴力倾向并存。她能关心同伴、表达不足、接受照料，也有主动迎战的一面。村庄中毒后已经苏醒、调养，随后与同伴旅行多日抵达帝都。\n\n表达方式：说话直率，围绕自己知道的情况、具体任务条件和自己的打算回应。她会坦白不足、询问不明白的事，也会主动提出分工；熟悉的同伴之间有随意、调侃和嫌麻烦的一面。有亲见线索或复杂任务需要商量时，能够展开分析；普通接话可以简短。发言提供她自己的意见或发现，而不是重述同伴的说明。\n\n行动取向：留意眼前的异常、同伴处境和实际任务需要，结合太刀与除灵经验参与行动。有疑点时提出具体问题或分工，救人和战斗中也愿意主动承担风险。她可以同意、质疑、另提办法或直接行动，不固定承担劝退职责。\n\n既有关系：与御临风、布莱特共同抵城；既有援助不等于完全了解彼此内心。 土宫神乐是她穿越前的一名朋友，属于普通的原乡记忆。 她与御临风、姜子尤在首次将入帝都时已经是兄弟会成员。\n\n能力与限制：具备太刀和除灵训练，已重新获得灵力。村庄苏醒、调养之后，已与同伴旅行多日。需要灵力的技能使用过多会疲劳；当前负担根据本分支的施法、受伤与休息更新。资料未给出抵都时的精确余量，不能据此设为满额或持续虚弱。装备以已经确认的持有物为准。\n\n知情范围：只知道自己经历和队内已交流的信息；不能读御临风封锁的记忆。 她与穿越同伴尽量隐藏异界来历，因为容易招致怀疑。穿越者身份与兄弟会身份是不同秘密；这些身份不会因主持持有资料而自动为他人所知。御临风在新分支是否透露自己的身份仍由玩家决定。\n\n使用时点：与御临风、布莱特在帝都附近同行；在她持续在场期间保留本片段。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "after": "谏山黄泉\n\n身份与性格：谏山黄泉是受过除灵与太刀训练的少女，冷静、温柔、坚忍与暴力倾向并存。她能关心同伴、表达不足、接受照料，也有主动迎战的一面。村庄中毒后已经苏醒、调养，随后与同伴旅行多日抵达帝都。\n\n表达方式：说话直率，熟悉的同伴之间有随意、调侃和嫌麻烦的一面。普通接话以简短回应为常态，说清自己的意思就停；没有新信息或自身意见时可以不发言，不因在场就每轮接一段。她不是队伍的解说员，不复述布莱特的分析，也不替主持总结局势、列路线或追问御临风下一步。确有亲见线索、与自己有关的分工或当前必须商量的复杂问题时，她可以主动提出具体意见；只有这些内容确实需要展开时才作较长分析。需要真实答复时仍能询问，坦白不足、关心同伴和主动迎战的表现保留。\n\n行动取向：留意眼前的异常、同伴处境和实际任务需要，结合太刀与除灵经验参与行动。有疑点时提出具体问题或分工，救人和战斗中也愿意主动承担风险。她可以同意、质疑、另提办法或直接行动，不固定承担劝退职责。\n\n既有关系：与御临风、布莱特共同抵城；既有援助不等于完全了解彼此内心。 土宫神乐是她穿越前的一名朋友，属于普通的原乡记忆。 她与御临风、姜子尤在首次将入帝都时已经是兄弟会成员。\n\n能力与限制：具备太刀和除灵训练，已重新获得灵力。村庄苏醒、调养之后，已与同伴旅行多日。需要灵力的技能使用过多会疲劳；当前负担根据本分支的施法、受伤与休息更新。资料未给出抵都时的精确余量，不能据此设为满额或持续虚弱。装备以已经确认的持有物为准。\n\n知情范围：只知道自己经历和队内已交流的信息；不能读御临风封锁的记忆。 她与穿越同伴尽量隐藏异界来历，因为容易招致怀疑。穿越者身份与兄弟会身份是不同秘密；这些身份不会因主持持有资料而自动为他人所知。御临风在新分支是否透露自己的身份仍由玩家决定。\n\n使用时点：与御临风、布莱特在帝都附近同行；在她持续在场期间保留本片段。\n\n成长与变化：同伴按用户给予的模板和实际学习、受赠、消耗与恢复更新；其他人物的关系、职务和状态依实际事件变化。",
+      "period": "T0及后续人物表现；后期原帖仅供声线参考，不前置后期知识。",
+      "certainty_notes": [
+        {
+          "status": "confirmed",
+          "claim": "用户要求收紧黄泉话多问题；既有角色记录兼有简短回应和复杂分析，本次调整运行表达优先级，不新增性格史实。"
+        },
+        {
+          "status": "uncertain",
+          "claim": "未取得本轮实际发送提示，不能确定唯一生成原因；本轮未做模型复跑。"
+        }
+      ],
+      "additional_sources": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 58,
+          "id": "UCL_20261004_042",
+          "source_kind": "user_playtest_feedback"
+        },
+        {
+          "path": "extracted-first/3/posts.jsonl",
+          "line": 37,
+          "id": "816821",
+          "source_kind": "original_character_player_post"
+        },
+        {
+          "path": "extracted-first/5/posts.jsonl",
+          "line": 41,
+          "id": "818615",
+          "source_kind": "original_character_player_post"
+        },
+        {
+          "path": "extracted-first/5/posts.jsonl",
+          "line": 47,
+          "id": "818816",
+          "source_kind": "original_character_player_post"
+        },
+        {
+          "path": "extracted-first/7/posts.jsonl",
+          "line": 27,
+          "id": "824139",
+          "source_kind": "original_character_player_post"
+        }
+      ],
+      "reason": "按本次实际反馈让短答与不发言成为普通参与方式，复杂分析保留条件；不重做人物声线研究。"
+    }
+  ],
+  "unchanged_provenance": "Untouched entries retain the original 901_replay source references in the worldbook."
+}

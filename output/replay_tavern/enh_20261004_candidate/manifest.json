@@ -1,0 +1,35 @@
+{
+  "status": "provisional_for_review_not_installed",
+  "date": "2026-10-04",
+  "base_commit": "d30a420",
+  "counts": {
+    "entries": 121,
+    "enabled_constant": 5,
+    "enabled_keyword": 110,
+    "disabled_manual": 6,
+    "replaced": 29,
+    "added": 1,
+    "unchanged": 91
+  },
+  "runtime_file": "901_帝都重玩_ENH_20261004_候选.json",
+  "source_index": "author_entry_sources.json",
+  "changes": "逐条差异.md",
+  "base_sha256": "a886efa9d2afd259ce009caf42db8b90f419003fabf1048d5cef4a9ed3947af3",
+  "runtime_sha256": "89d5deb561c7e92d053f7b02904e7f583090cc4b6c9d025efb9b7ce9ef1e2067",
+  "fixed_future_schedule_added": false,
+  "canonical_total_database_written": false,
+  "map_updated": false,
+  "local_settings_changed": false,
+  "model_request_sent": false,
+  "checks": {
+    "before_matches_base": true,
+    "source_locations_checked": 67,
+    "unmodified_entries_identical": 91,
+    "stable_uid_and_loading_preserved": true,
+    "json_roundtrip": true,
+    "scope": "仅本轮候选及受影响来源；未作模型或前端试跑"
+  },
+  "author_dispositions": "work/replay_research/enh_20261004_candidates/author_dispositions.json",
+  "generation_note": "从d30a420的native世界书复制，逐条应用world_changes.jsonl和npc_changes.jsonl；新增飘零币使用既有stable_uid算法与keyword字段模板。未运行会覆盖v1的全包导出器。候选若被人审，后续用新版本目录，不能脚本覆盖。",
+  "content_review": "定点复核后收紧社会态度与公开身份查询两句；无新增模型或前端测试。"
+}
