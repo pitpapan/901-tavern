@@ -1,14 +1,16 @@
 # 901世界与人物资料入口
 
-## 当前补充入口（UCL_20261007_018）
+## 当前作者阶段已收拢（UCL_20261007_019）
 
-当前已按[UCL_016](user_clarifications.jsonl:85)修正上一轮额外关系联想，并完成[第二轮：普通人的服务渠道](ordinary_services_reference_20261007.md)与[第三轮：消息传播和后效](information_consequences_reference_20261007.md)。两项实际缺口已向用户询问并补明：普通居民可委托私人魔法通信、接单受当地条件限制〔[UCL_017](user_clarifications.jsonl:86)〕；伤口通常优先用药，治疗魔法高效但反复使用不利〔[UCL_018](user_clarifications.jsonl:87)，久远原帖已核对〕。完成范围见[待办WM15／16](world_model_todo.md)，城市后置，运行002尚未投影。
+当前作者世界模型补充阶段已按[UCL_019](user_clarifications.jsonl:88)收拢；完成范围与保留空白见[阶段评估](world_model_stage_review_20261007.md)，后续统一见[待办表](world_model_todo.md)。已有修改提交113d109后，本轮补齐[宝石翁原型与本团直接表现](prototype_reference_followup_20261007.md)及[古史与族群社会](history_society_reference_20261007.md)。精灵王终局的不同证言保留，不补历史解释；不再有本阶段必须提问的设定项。
+
+上一轮已完成日常生活、人物交往、[专业服务](ordinary_services_reference_20261007.md)和[消息后效](information_consequences_reference_20261007.md)。民用通信接单条件〔UCL017〕、伤口优先用药与反复治疗魔法不利〔UCL018〕已经入档；UCL016指出的额外关系联想已删除。城市细化、地图、难度引擎、M2／M3继续后置；运行M1_IMPORT_20261005_002尚未投影这些作者补充。
 
 用户已采用[帝国地图与城镇工作初稿](empire_working_draft_20261007.md)，机器稿为[结构稿](empire_working_draft_20261007.json)。最新更正明确：帝都为全国首都；佛萨罗伦、白暮城、洛汀、烬辉城、风门城为五座区域重点城市；宝石翁塔镇与最初小镇保持小城镇。此前把宝石翁所在地升级的解释已撤回，不新增扩城史或另一座西北省会。监狱塔与边关仍为设施。
 
 城市特色已按[UCL_009](user_clarifications.jsonl:78)收拢。[城镇服务](regional_services_proposal_20261007.md)和[魔幻特色](regional_fantasy_character_20261007.md)保留提案状态，不把停止扩写理解为整体采用。佛萨罗伦原帖大都市定位的核查仍有效。当前补充[久远的前代王者血缘](empire_character_dossiers.md:39)：[UCL_010](user_clarifications.jsonl:79)确认她是帝之前大陆王者的后裔；[UCL_011](user_clarifications.jsonl:80)已确认此身份为秘密，仅家乡人士知道，家乡之外T0默认不知。[UCL_012](user_clarifications.jsonl:81)进一步确认血脉承载神秘力量、性质近于本土神明；T0基本掌控已按[UCL_013授权原型适配](kuon_power_reference_20261007.md)补齐，不再等待同一问题的答复。普通居民的外貌分布保持未知，本轮不重复追问。运行仍M1_IMPORT_20261005_002，作者稿尚未投影。
 
-更新：2026-10-07。当前运行候选为 **M1_IMPORT_20261005_002**，作者补充记录截至UCL_20261007_018（第二、三轮完成所列范围，民用通信与医疗原则已补；城市后置）。此前补丁的“最新”称呼和未提交状态属于制作时快照，不再决定当前入口。
+更新：2026-10-07。当前运行候选为 **M1_IMPORT_20261005_002**，作者记录截至UCL_20261007_019（本轮作者阶段完成；城市等后置项见待办）。此前补丁的“最新”称呼和未提交状态属于制作时快照，不再决定当前入口。
 
 ## 当前入口
 
@@ -29,10 +31,11 @@
 | 势力独立行动、资源与限制 | [势力运作](faction_operations_dossier.md)、[事件因果](event_causality_overview.md) |
 | 力量、学习与治疗 | [力量规则](power_rules_dossier.md)、[成长恢复](growth_recovery_reference.md)、[白魔专题](white_mage_phantom_dossier.md) |
 | 人物依据与早晚期差别 | [帝国人物](empire_character_dossiers.md)、[人物画像](npc_portraits.md)、[人物覆盖](character_coverage.md)、[御临风分期](yulinfeng_period_dossier.md) |
+| 古史、族群与神性 | [古史与社会](history_society_reference_20261007.md)、[神性与信仰](divinity_belief_reference_20261007.md) |
 | 关系、知情与时间 | [双向关系](relationship_matrix.md)、[知识边界](knowledge_projection.md)、[时间线](integrated_timeline.md) |
 | 帝都T0前史与状态 | [开局整合](opening_state_consolidated.md) |
 | 已确认补充与精确来源 | [用户确认](user_clarifications.md)、[结构记录](user_clarifications.jsonl) |
-| 补充范围和已知空白 | [当前待办表](world_model_todo.md)、[完整度评估](world_model_completeness_review_20261004.md)、[增强历史](long_term_enhancement_plan.md) |
+| 补充范围和已知空白 | [当前待办表](world_model_todo.md)、[当前阶段评估](world_model_stage_review_20261007.md)、[增强历史](long_term_enhancement_plan.md) |
 
 宏观模型已足以支持帝都起步。后续补人物与世界时，优先处理影响具体行动、关系、知情或能力时期的缺口；先查已有资料，确实无法回答才问用户。缺动机不代写解释，未知不当成否定，原团后续不变成重玩固定日程。
 
@@ -42,6 +45,8 @@
 
 继续使用既有工作树和来源ID，不重读整团或反复核验。禁止恢复已取消的文风复跑、代操作酒馆及龙血适配；地图共创已由UCL_20261007_001重新授权；本次commit保存不等于发布或实际应用。新增作者补充与运行投影分别记录状态。
 
+
+## 本日阶段记录（按形成时保留，当前状态以页首为准）
 
 2026-10-07后续：[本批世界与人物作者补充](world_character_followup_20261007.md)已修正雪老案情证言归属，并补黄泉获告、右近本名及协会联系条件。此前版本入口与M1修订已提交bbfcf5f；本批是提交后的作者修改，尚未进入002运行包。
 

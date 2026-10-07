@@ -581,8 +581,8 @@
 - [confirmed] 咒文解释场景中答复由圣上处理部分事项，与威廉及慕少艾同在。
 - 原控制：NPC/背景人物，详细控制归属待核（uncertain）。本次：可研究为NPC；出场/控制待投影阶段；不预设未来剧情。
 - 时期边界：来源可能跨多个原线时期；不把后期生死、联盟、关系和能力回填首次入帝都。
-- 原型〔confirmed；UCL_20261007_001〕：参考Fate系列。此前“未获外部作品参照授权”判断已由本次用户说明更新；全名另见曼吉转述（沐透#40/msg846797），仍保留说话者与知情范围。第二魔法等完整能力不因原型参照自动获确认。见[原型补充](prototype_reference_followup_20261007.md)。
-- 待读：C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-first/27/posts.md:L201-323；C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-first/28/posts.md:L269-377（诅咒转移条件/法阵）。
+- 原型〔confirmed；UCL_20261007_001〕：参考Fate系列。此前“未获外部作品参照授权”判断已由本次用户说明更新；简称泽尔里奇已有直接对应（P1 #1313/msg858359、#1321/msg859087）；全名另见曼吉转述（沐透#40/msg846797），仍保留说话者与知情范围。第二魔法等完整能力不因原型参照自动获确认。见[原型补充](prototype_reference_followup_20261007.md)。
+- 已读补齐：[本团直接表现与原型版本](prototype_reference_followup_20261007.md)，含调查、转咒条件、绘阵、材料检查及三人协作；均保留原团后期时期，不初始化T0相识与知情。
 - 粒度：具身份/持久关系的研究候选，尚非正式NPC卡
 - 来源：[posts.md:L83–91](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.md:83>)；[phase3c_inventory.md:L36](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3c_inventory.md:36>)
 

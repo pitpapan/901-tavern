@@ -11,6 +11,7 @@
 | 能力原理、取得、媒介、代价与限制 | [力量规则](power_rules_dossier.md) |
 | 白魔与Phantom的本团机制 | [完整专题](white_mage_phantom_dossier.md) |
 | 帝国核心人物及原型补充 | [十人人物档案](empire_character_dossiers.md) |
+| 古史、族群与证言差异 | [古史与社会归并](history_society_reference_20261007.md)，保留讲述者、时期及未解差异 |
 | 事实时期与角色知情 | [总时间线](integrated_timeline.md)、[知识边界](knowledge_projection.md)、[开局状态](opening_state_consolidated.md) |
 
 ## 世界怎样运作
