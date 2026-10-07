@@ -1,0 +1,128 @@
+{
+  "revision": "M1_20261005_001",
+  "status": "passed",
+  "scope": "local_artifacts_sources_patch_chain_and_manual_workflow_only",
+  "checks": [
+    {
+      "check": "new_JSON_JSONL_parse",
+      "passed": true,
+      "detail": {
+        "files": 12
+      }
+    },
+    {
+      "check": "18_unique_sourced_facts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "source_locators_and_record_IDs",
+      "passed": true,
+      "detail": {
+        "references": 26,
+        "errors": []
+      }
+    },
+    {
+      "check": "unbound_scene_has_no_fabricated_state",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "projection_texts/当前场景.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "projection_texts/按需_雪老身份见证.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "projection_texts/按需_帝与右近知情.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "author_only_memory_history_not_projected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "knowledge_status_and_separate_views",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "10_patch_copies_byte_identical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "004_005_006_before_after_chain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "latest_cumulative_Snow_and_relations",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "host_style_008_and_prompt_module_consistent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "protected_F1_F2_current_state_and_121_book_unchanged",
+      "passed": true,
+      "detail": {
+        "files": 5
+      }
+    },
+    {
+      "check": "all_baseline_input_fingerprints_unchanged",
+      "passed": true,
+      "detail": {
+        "files": 10
+      }
+    },
+    {
+      "check": "synthetic_swipes_keep_same_player_input",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "local_delivery_links",
+      "passed": true,
+      "detail": {
+        "links": 33,
+        "errors": []
+      }
+    },
+    {
+      "check": "targeted_git_diff_whitespace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "10_reference_cases_not_model_evaluation",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "source_semantics_review": "fact selection checked against exact user clarifications and narrow original source review; automated source locator checks do not establish semantic entailment alone",
+  "model_calls": 0,
+  "actual_tavern_load_verified": false,
+  "automatic_guard_implemented": false,
+  "review_findings_resolved": [
+    "同一swipe不得替玩家改变输入或授权",
+    "人工记忆流程需先核对并按需暂停自动写入"
+  ],
+  "runtime_unknowns": [
+    "实际请求载荷",
+    "当时预算与启用条目",
+    "当前记忆自动写入开关",
+    "安装及生成效果"
+  ]
+}

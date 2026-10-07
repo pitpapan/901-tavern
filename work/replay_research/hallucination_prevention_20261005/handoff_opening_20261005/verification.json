@@ -1,0 +1,82 @@
+{
+  "revision": "M1_IMPORT_20261005_002",
+  "status": "passed",
+  "scope": "post_011_affected_chain_static_consistency_only",
+  "checks": [
+    {
+      "check": "011_exact_user_source_locator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_facts_prior_18_preserved_and_011_sourced",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "palace_tower_texts_card_revision_synced",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "city_source_preserved_and_only_visual_paragraph_added",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "125_UIDs_settings_preserved_only_3_002_entries_changed",
+      "passed": true,
+      "detail": [
+        "68093225",
+        "79768996",
+        "99699950"
+      ]
+    },
+    {
+      "check": "embedded_and_native_125_entries_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "scenario_limited_runtime_fields_preserved_version_metadata_updated",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "3_style_aliases_same_latest_module",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "F21_general_projection_and_scene_unbound",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "core_brief_append_only_and_protected_files_unchanged",
+      "passed": true,
+      "detail": {
+        "protected_files": 6
+      }
+    },
+    {
+      "check": "current_import_manifest_hashes_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "scoped_git_diff_whitespace",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "previous_report": "verification_before_011.json",
+  "previous_report_scope": "18 checks before UCL_011; historical snapshot, not claimed rerun",
+  "editorial_review": "review.md",
+  "post_011_editorial_review": "narrow palace/tower opening, scenario and city review passed",
+  "boundary_reference_cases": 6,
+  "model_calls": 0,
+  "tavern_modified": false,
+  "generated_turn_effect": "unverified",
+  "difficulty_rules_changed": false
+}

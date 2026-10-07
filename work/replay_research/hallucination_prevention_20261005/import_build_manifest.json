@@ -1,0 +1,185 @@
+{
+  "revision": "M1_IMPORT_20261005_002",
+  "user_request": "进行fix吧：开场、布莱特相遇前史与自然交接",
+  "baseline_book": "output/replay_tavern/enh_20261004_r2_candidate/901_帝都重玩_ENH_20261004_r2_候选.json",
+  "card_template": "output/replay_tavern/v1/import/901_帝都主持.card.json",
+  "protected_files": [
+    {
+      "path": "output/replay_tavern/enh_20261004_r2_candidate/901_帝都重玩_ENH_20261004_r2_候选.json",
+      "sha256": "67c7686693e7cdc5525582acc4ca35bda78f7f07eb341a6b8d426e16d08be990"
+    },
+    {
+      "path": "output/replay_tavern/v1/import/901_帝都主持.card.json",
+      "sha256": "048c4247e5b80cfe423e31e6bdacca37aa6b246451a726207f24c1d9e0b8f93c"
+    },
+    {
+      "path": "current_state.md",
+      "sha256": "ebf6159bc248600be6371da29bc405bfb781de9e6eaccf700d3dab7e093ed43e"
+    },
+    {
+      "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+      "sha256": "aa5835d33e47a822bd3c1217483e7fd41c8beb9253df21a57846da4b54329774"
+    },
+    {
+      "path": "output/replay_f_review/v1/characters/author_profiles.jsonl",
+      "sha256": "33027cad2260695352527277bc86adcba56dfc873ab568af5b3207ed3de88a26"
+    },
+    {
+      "path": "output/replay_f_review/v1/characters/runtime_cards.jsonl",
+      "sha256": "3e92b9dd8982f18fb4a926b94a71790363e3fe227d7c1112638aabedc5b66193"
+    }
+  ],
+  "entry_counts": {
+    "total": 125,
+    "enabled_constant": 6,
+    "enabled_keyword": 111,
+    "disabled": 8
+  },
+  "changes": [
+    {
+      "source_id": "CRC_007",
+      "uid": 131696829,
+      "operation": "replace_content_preserve_uid_and_activation",
+      "before_sha256": "33dad63a4d81d393e99639f811aca88e5a8fc27b2e9f88d74430061c564e8cd6",
+      "after_sha256": "5ee9e10ffa5861d26f6107099dce8156cc664215dbd4fcc162bcd78d89c1661f"
+    },
+    {
+      "source_id": "CRC_003",
+      "uid": 206761833,
+      "operation": "replace_content_preserve_uid_and_activation",
+      "before_sha256": "8088c8b222c89907ec1b0ba768f6d12cfe77ac11aa1024d38e0f5cdde4316a86",
+      "after_sha256": "1c904fa6bd354e28932f79f9146754212e6852a856441b33295f85501a6e9727"
+    },
+    {
+      "source_id": "WORLD_WRC_022",
+      "uid": 90242150,
+      "operation": "replace_content_preserve_uid_and_activation",
+      "before_sha256": "2338d6bcb11c3ad6a44415d38c3f19529b8e82a0afbb96b05fbdcee88b715148",
+      "after_sha256": "ff8b2cae88cd21a44d4ffaee24e06ae95591324e856f683618869899840f4f3e"
+    },
+    {
+      "source_id": "CRC_023",
+      "uid": 266475933,
+      "operation": "add",
+      "constant": false,
+      "disable": false,
+      "keys": [
+        "贞子"
+      ]
+    },
+    {
+      "source_id": "M1_CONTEXT_GENERAL",
+      "uid": 79768996,
+      "operation": "add",
+      "constant": true,
+      "disable": false,
+      "keys": []
+    },
+    {
+      "source_id": "M1_CONTEXT_SNOW_ATTESTATION",
+      "uid": 223308897,
+      "operation": "add",
+      "constant": true,
+      "disable": true,
+      "keys": []
+    },
+    {
+      "source_id": "M1_CONTEXT_EMPEROR_UKON",
+      "uid": 46225613,
+      "operation": "add",
+      "constant": true,
+      "disable": true,
+      "keys": []
+    },
+    {
+      "source_id": "CRC_005",
+      "uid": 68093225,
+      "operation": "replace_relationship_and_knowledge_preserve_uid_activation",
+      "source": "work/replay_research/hallucination_prevention_20261005/handoff_opening_20261005/revision.json",
+      "field": "bright"
+    },
+    {
+      "source_id": "M1_CONTEXT_GENERAL",
+      "uid": 79768996,
+      "operation": "update_Bright_boundary_and_turn_end",
+      "source": "work/replay_research/hallucination_prevention_20261005/handoff_opening_20261005/revision.json"
+    },
+    {
+      "source_id": "WORLD_WRC_019",
+      "uid": 99699950,
+      "operation": "add_user_confirmed_palace_and_mage_tower_visuals",
+      "source": "work/replay_research/hallucination_prevention_20261005/handoff_opening_20261005/capital_visual_revision.json"
+    }
+  ],
+  "new_runtime_entries": [
+    "CRC_023",
+    "M1_CONTEXT_GENERAL",
+    "M1_CONTEXT_SNOW_ATTESTATION",
+    "M1_CONTEXT_EMPEROR_UKON"
+  ],
+  "host_description_source": "texts/主持提示.txt",
+  "style_module_source": "import/文风_prompt.json",
+  "book_name": "901_帝都重玩_M1_20261005",
+  "embedded_and_standalone_must_match": true,
+  "scene_mode": "unbound_general",
+  "legacy_style_alias_prior": null,
+  "files": [
+    {
+      "path": "output/replay_tavern/hallucination_prevention_20261005_candidate/import/901_帝都重玩_M1_20261005.json",
+      "sha256": "cebe2a92e416f0276c13ab88ef259ce5ee67b9f208999973a2b594f75704d078",
+      "bytes": 388500
+    },
+    {
+      "path": "output/replay_tavern/hallucination_prevention_20261005_candidate/import/901_帝都主持.card.json",
+      "sha256": "b33c4f8e4bb05dfe97b5ec95d0d3913fc212e5960a084524cc9fafcef04d03b1",
+      "bytes": 348750
+    },
+    {
+      "path": "output/replay_tavern/hallucination_prevention_20261005_candidate/import/文风_prompt.json",
+      "sha256": "9badecdfaf9a20e5e0ac07917d82a2a389ee3ff1edab0a6586d6b61e63f27687",
+      "bytes": 10482
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261005/import/文风_prompt.json",
+      "sha256": "9badecdfaf9a20e5e0ac07917d82a2a389ee3ff1edab0a6586d6b61e63f27687",
+      "bytes": 10482
+    }
+  ],
+  "source_provenance": "既有条目元数据保留；局部修订指向004/006档（006承接005），新条目带事实及原文定位。",
+  "not_performed": [
+    "SillyTavern installation changes",
+    "model calls",
+    "memory writes",
+    "canonical source generation",
+    "git commit"
+  ],
+  "original_uids_preserved": 121,
+  "manual_update_UI_evidence": {
+    "path": "D:/github/sillyTavern/public/script.js",
+    "line_ranges": [
+      [
+        12382,
+        12427
+      ],
+      [
+        10537,
+        10549
+      ]
+    ],
+    "use_scope": "仅确认Replace with File接受JSON并保留聊天；不代表实际替换已执行"
+  },
+  "parent_revision": "M1_IMPORT_20261005_001",
+  "latest_revision_source": "work/replay_research/hallucination_prevention_20261005/handoff_opening_20261005/revision.json",
+  "cumulative_source_ids": [
+    "UCL_20261005_004",
+    "UCL_20261005_005",
+    "UCL_20261005_006",
+    "UCL_20261005_007",
+    "UCL_20261005_008",
+    "UCL_20261005_009",
+    "UCL_20261005_010",
+    "UCL_20261005_011"
+  ],
+  "opening_source": "texts/开场白.txt",
+  "verification_report": "work/replay_research/hallucination_prevention_20261005/handoff_opening_20261005/verification.json"
+}

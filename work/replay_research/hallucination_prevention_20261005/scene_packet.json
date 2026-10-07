@@ -1,0 +1,196 @@
+{
+  "revision": "M1_IMPORT_20261005_002",
+  "status": "general_candidate_not_installed",
+  "request_file": "scene_request.json",
+  "fact_index": "facts.jsonl",
+  "general_fact_ids": [
+    "M1_F01",
+    "M1_F02",
+    "M1_F03",
+    "M1_F04",
+    "M1_F05",
+    "M1_F06",
+    "M1_F07",
+    "M1_F08",
+    "M1_F15",
+    "M1_F16",
+    "M1_F17",
+    "M1_F18",
+    "M1_F19",
+    "M1_F20",
+    "M1_F21"
+  ],
+  "optional_host_sections": {
+    "Snow_membership": [
+      "M1_F10",
+      "M1_F11",
+      "M1_F12"
+    ],
+    "Emperor_Ukon": [
+      "M1_F13",
+      "M1_F14"
+    ]
+  },
+  "author_only_fact_ids": [
+    "M1_F09"
+  ],
+  "knowledge_views": [
+    {
+      "entity_id": "CRC_001",
+      "facts": [
+        {
+          "fact_id": "M1_F10",
+          "entity_id": "CRC_001",
+          "knowledge_status": "known",
+          "scope": "本人的成员身份"
+        },
+        {
+          "fact_id": "M1_F18",
+          "entity_id": "CRC_001",
+          "knowledge_status": "known",
+          "scope": "本人获交推荐信的前史"
+        },
+        {
+          "fact_id": "M1_F19",
+          "entity_id": "CRC_001",
+          "knowledge_status": "known",
+          "scope": "与布莱特的相遇及共同经历；不扩为知道布莱特全部过去"
+        }
+      ]
+    },
+    {
+      "entity_id": "CRC_002",
+      "facts": [
+        {
+          "fact_id": "M1_F10",
+          "entity_id": "CRC_002",
+          "knowledge_status": "known",
+          "scope": "本人的成员身份"
+        }
+      ]
+    },
+    {
+      "entity_id": "CRC_003",
+      "facts": [
+        {
+          "fact_id": "M1_F10",
+          "entity_id": "CRC_003",
+          "knowledge_status": "known",
+          "scope": "本人的成员身份"
+        }
+      ]
+    },
+    {
+      "entity_id": "CRC_006",
+      "facts": [
+        {
+          "fact_id": "M1_F13",
+          "entity_id": "CRC_006",
+          "knowledge_status": "known",
+          "scope": "两项事实与本人将计就计的态度"
+        }
+      ]
+    },
+    {
+      "entity_id": "CRC_007",
+      "facts": [
+        {
+          "fact_id": "M1_F02",
+          "entity_id": "CRC_007",
+          "knowledge_status": "known",
+          "scope": "自身好友关系"
+        },
+        {
+          "fact_id": "M1_F03",
+          "entity_id": "CRC_007",
+          "knowledge_status": "known",
+          "scope": "自身亲属及既有寄居安排"
+        },
+        {
+          "fact_id": "M1_F04",
+          "entity_id": "CRC_007",
+          "knowledge_status": "known",
+          "scope": "黄泉是边关旧识"
+        },
+        {
+          "fact_id": "M1_F10",
+          "entity_id": "CRC_007",
+          "knowledge_status": "known",
+          "scope": "三人的成员身份与自身可作证能力"
+        }
+      ]
+    },
+    {
+      "entity_id": "CRC_013",
+      "facts": [
+        {
+          "fact_id": "M1_F14",
+          "entity_id": "CRC_013",
+          "knowledge_status": "suspected",
+          "scope": "边关失陷及达卡斯冒名"
+        },
+        {
+          "fact_id": "M1_F14",
+          "entity_id": "CRC_013",
+          "knowledge_status": "not_yet_known",
+          "scope": "帝掌握的确证与将计就计内情"
+        }
+      ]
+    },
+    {
+      "entity_id": "CRC_031",
+      "facts": [
+        {
+          "fact_id": "M1_F03",
+          "entity_id": "CRC_031",
+          "knowledge_status": "known",
+          "scope": "自身亲属与寄居经历"
+        }
+      ]
+    },
+    {
+      "entity_id": "WORLD_WRC_022::owner",
+      "facts": [
+        {
+          "fact_id": "M1_F02",
+          "entity_id": "WORLD_WRC_022::owner",
+          "knowledge_status": "known",
+          "scope": "自身好友关系"
+        }
+      ]
+    },
+    {
+      "entity_id": "CRC_005",
+      "facts": [
+        {
+          "fact_id": "M1_F19",
+          "entity_id": "CRC_005",
+          "knowledge_status": "known",
+          "scope": "自己实际参与的相遇、共同事件和旅程；不扩为御临风完整边关记忆"
+        }
+      ]
+    }
+  ],
+  "current_branch_state": {
+    "status": "unprovided",
+    "events": null,
+    "presence": null,
+    "location": null
+  },
+  "publicly_communicated_current_scene_information": null,
+  "private_player_content": null,
+  "declared_actions": null,
+  "uncertainties": [
+    "雪老与布莱特在本分支是否已经相识",
+    "当前所在地、在场者、伤势及物品持有状态",
+    "是否已向任何人告知住处、同伴身份或秘密",
+    "骨印的具体认证功能和他人的识别依据",
+    "失败回合实际发送上下文及记忆插件开关"
+  ],
+  "rules": [
+    "作者参照不自动变成任何NPC或玩家可读的全部知识。",
+    "T0关系不重置已经成立的当前分支。",
+    "诊断样例不自动进入当前状态。",
+    "本文件不是自动编译器或程序隔离层。"
+  ]
+}

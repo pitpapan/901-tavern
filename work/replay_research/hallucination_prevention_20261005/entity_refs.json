@@ -1,0 +1,85 @@
+{
+  "revision": "M1_IMPORT_20261005_002",
+  "record_type": "entity_references_not_canonical_entries",
+  "entities": [
+    {
+      "id": "CRC_001",
+      "name": "御临风"
+    },
+    {
+      "id": "CRC_002",
+      "name": "姜子尤"
+    },
+    {
+      "id": "CRC_003",
+      "name": "谏山黄泉"
+    },
+    {
+      "id": "CRC_005",
+      "name": "卡西乌斯·布莱特"
+    },
+    {
+      "id": "CRC_006",
+      "name": "帝"
+    },
+    {
+      "id": "CRC_007",
+      "name": "雪老"
+    },
+    {
+      "id": "CRC_013",
+      "name": "奥修特尔"
+    },
+    {
+      "id": "CRC_023",
+      "name": "贞子",
+      "runtime_scope": "007最小身份候选；完整作者档不整体投影"
+    },
+    {
+      "id": "CRC_031",
+      "name": "露露缇耶"
+    },
+    {
+      "id": "WORLD_WRC_007",
+      "name": "兄弟会"
+    },
+    {
+      "id": "WORLD_WRC_022",
+      "name": "九雪医馆"
+    },
+    {
+      "id": "WORLD_WRC_055",
+      "name": "贞子首次救命"
+    },
+    {
+      "id": "WORLD_WRC_022::owner",
+      "name": null,
+      "label": "九雪医馆馆主",
+      "reference_scope": "existing_location_owner_internal_ref_only",
+      "trigger_keys": []
+    },
+    {
+      "id": "WORLD_WRC_019",
+      "name": "帝都",
+      "source_ref": {
+        "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+        "use_scope": "既有实体ID；本次不是新增地点"
+      }
+    }
+  ],
+  "source_refs": [
+    {
+      "path": "work/replay_research/character_register.jsonl",
+      "use_scope": "既有CRC索引"
+    },
+    {
+      "path": "output/replay_tavern/enh_20261004_r2_candidate/901_帝都重玩_ENH_20261004_r2_候选.json",
+      "use_scope": "既有世界书ID"
+    },
+    {
+      "path": "work/replay_research/user_clarifications.jsonl",
+      "jsonl_line": 64,
+      "record_id": "UCL_20261005_006"
+    }
+  ]
+}

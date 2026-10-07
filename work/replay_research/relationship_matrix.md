@@ -635,3 +635,10 @@ T0 为第一部 #78 结束、纳入 #79 成长申报、尚未执行 #81 主动�
 | [XLINE_010](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/side_timeline_relationships.jsonl:10>) | 地方消息网络 → 埃佛纳斯及镇民 | 传来处刑、收关与动员战讯 | 镇民重新武装，埃佛纳斯得知局势变化 | 不能把收到所有战讯当作同日发生 |
 | [XLINE_011](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/side_timeline_relationships.jsonl:11>) | 劳霖 → 沐透 | 给画像并托转达对御的问候 | 沐透接受画像继续寻人意向，未实际会面 | 任务细节仍保密，劳霖的猜测不授予路线情报 |
 | [XLINE_011](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/side_timeline_relationships.jsonl:11>) | 沐透 → 劳霖 | 以灾难说辞解释为什么寻找御 | 劳霖获其说辞，未获得可靠新预言 | 玩家知道自己有意误导，听者是否识破未明 |
+
+
+## REL_025　雪老与谏山黄泉：边关旧识
+
+黄泉参加边关共同经历，雪老在T0前已经认识她，不能在重逢时把她与布莱特一起当作新面孔。[本轮用户纠正](user_clarifications.jsonl:62)。此前[UCL_20261004_006](user_clarifications.jsonl:22)也已确认雪老知道并能证明她的兄弟会身份；[前史第21至23行](<D:/备份文件/901记录/战报/901前史与设定备忘录.md:21>)记录她参加边关防务。
+
+布莱特不继承这段共同前史；双方当前是否相识按已发生的介绍和接触判断。相识不等于共享全部经历、秘密或无条件信任。不能为维持错误的陌生人问话临时编失忆；也不通过本次样例补定雪老伤势、见面地点和时间。

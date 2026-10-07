@@ -1,0 +1,80 @@
+{
+  "revision": "M1_IMPORT_20261005_002",
+  "scope": "M1_general_candidate_offline",
+  "current_scene": "unbound_as_requested",
+  "tasks": {
+    "1": {
+      "status": "offline_diagnosis_ready_runtime_evidence_incomplete",
+      "saved_input_reply_found": true,
+      "actual_request_available": false,
+      "memory_runtime_switches": "unverified",
+      "classification": "insufficient_evidence"
+    },
+    "2": {
+      "status": "ready_for_human_review",
+      "facts": 21,
+      "current_branch_state_bound": false
+    },
+    "3": {
+      "status": "complete_import_files_ready_manual_application_pending",
+      "actual_loaded_context": "unverified",
+      "generation_effect": "unverified",
+      "files": [
+        "import/901_帝都主持.card.json",
+        "import/901_帝都重玩_M1_20261005.json",
+        "import/文风_prompt.json"
+      ],
+      "worldbook_entries": 125
+    },
+    "4": {
+      "status": "manual_workflow_and_synthetic_example_ready",
+      "real_memory_written": false
+    },
+    "5": {
+      "status": "not_started_optional_M2"
+    },
+    "6": {
+      "status": "not_started_optional_M2"
+    },
+    "7": {
+      "status": "not_started_optional_M3"
+    },
+    "8": {
+      "status": "offline_delivery_checks_passed",
+      "report": "verification.json",
+      "checks": 19,
+      "remaining": "实际酒馆应用与下一次正常请求不属于已通过的离线检查",
+      "latest_import_report": "handoff_opening_20261005/verification.json",
+      "latest_import_checks": 12,
+      "latest_import_check_scope": "post_011_affected_chain_static_consistency_only",
+      "previous_002_report": "handoff_opening_20261005/verification_before_011.json"
+    }
+  },
+  "model_calls": 0,
+  "automatic_interception": false,
+  "automatic_memory_guard": false,
+  "tavern_modified": false,
+  "committed": true,
+  "remaining_runtime_checks": [
+    "用户通过原角色替换入口和Prompt Manager手动应用整合文件；无需逐条组装补丁",
+    "下一次正常游玩的实际提示明细核对一次",
+    "仅现场确认现有唯一记忆来源与自动写入开关，不需额外提供账户配置"
+  ],
+  "root_cause_not_proven": true,
+  "overall_status": "M1_integrated_import_files_ready_runtime_unverified",
+  "artifact_counts": {
+    "facts": 21,
+    "reference_case_groups": 10,
+    "current_patch_copies": 10,
+    "new_runtime_projections": 3
+  },
+  "latest_import_revision": "M1_IMPORT_20261005_002",
+  "latest_source_ids": [
+    "UCL_20261005_009",
+    "UCL_20261005_010",
+    "UCL_20261005_011"
+  ],
+  "checkpoint_authorized_on": "2026-10-07",
+  "checkpoint_note": "This delivery and version routing are included in the user-requested checkpoint; resolve its commit from git history for output/replay_tavern/latest_release.json.",
+  "parent_checkpoint": "56c0386562218657ab65c9047338313485873070"
+}

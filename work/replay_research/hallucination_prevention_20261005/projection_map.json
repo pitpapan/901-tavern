@@ -1,0 +1,47 @@
+{
+  "revision": "M1_IMPORT_20261005_002",
+  "projections": [
+    {
+      "file": "texts/当前场景.txt",
+      "fact_ids": [
+        "M1_F01",
+        "M1_F02",
+        "M1_F03",
+        "M1_F04",
+        "M1_F05",
+        "M1_F06",
+        "M1_F07",
+        "M1_F08",
+        "M1_F15",
+        "M1_F16",
+        "M1_F17",
+        "M1_F18",
+        "M1_F19",
+        "M1_F20",
+        "M1_F21"
+      ],
+      "mode": "general_host_reference_no_presence_claim"
+    },
+    {
+      "file": "texts/按需_雪老身份见证.txt",
+      "fact_ids": [
+        "M1_F10",
+        "M1_F11",
+        "M1_F12"
+      ],
+      "mode": "optional_host_only"
+    },
+    {
+      "file": "texts/按需_帝与右近知情.txt",
+      "fact_ids": [
+        "M1_F13",
+        "M1_F14"
+      ],
+      "mode": "optional_host_only"
+    }
+  ],
+  "not_projected": [
+    "M1_F09"
+  ],
+  "notes": "事实来源保留facts.jsonl；运行正文不是正式世界书总库。既有完整人物片段按copied_patch_manifest.json溯源，不由此事实列表取代。"
+}

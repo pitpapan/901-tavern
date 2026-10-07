@@ -1,0 +1,66 @@
+{
+  "revision": "M1_20261005_001",
+  "example_only": true,
+  "branch_id": "EXAMPLE_ONLY_BRANCH",
+  "parent_memory_revision": "EXAMPLE_MEMORY_03",
+  "facts_file": "facts.jsonl",
+  "candidates": [
+    {
+      "candidate_id": "EXAMPLE_A",
+      "message_id": "EXAMPLE_12",
+      "swipe_id": 0,
+      "reply_text": "示例A：主持用旁白概述已授权的告知完成，雪老听见了此次调查结果。",
+      "reply_sha256": "b98d9987bb083825cd4a930d28744676f26331e9d3024cb556a38d20110ec2d4",
+      "state": "discarded",
+      "player_input_revision": "INPUT_01"
+    },
+    {
+      "candidate_id": "EXAMPLE_B",
+      "message_id": "EXAMPLE_12",
+      "swipe_id": 1,
+      "reply_text": "示例B：突发声响打断交流，获授权的转告尚未实际完成；玩家的原授权仍然有效。",
+      "reply_sha256": "57b5785bb17f5c424c580cb26377bd57bfdc8d42ac571801f6c62764526e7baa",
+      "state": "selected_example",
+      "player_input_revision": "INPUT_01"
+    }
+  ],
+  "pending_delta_for_A": {
+    "candidate_id": "EXAMPLE_A",
+    "reply_sha256": "b98d9987bb083825cd4a930d28744676f26331e9d3024cb556a38d20110ec2d4",
+    "parent_memory_revision": "EXAMPLE_MEMORY_03",
+    "changes": [
+      {
+        "type": "communication",
+        "speaker": "CRC_001",
+        "listeners": [
+          "CRC_007"
+        ],
+        "epistemic_status": "confirmed",
+        "confirmed_scope": "发生了获授权的转告，不确认转告内容全是真相",
+        "payload_status": "须逐条保留其中事实与猜测的归属",
+        "source_message": "EXAMPLE_12/A",
+        "authorization_source": "EXAMPLE_PLAYER_11 / INPUT_01"
+      }
+    ],
+    "status": "invalidated_after_swipe",
+    "commit_allowed": false
+  },
+  "pending_delta_for_B": {
+    "candidate_id": "EXAMPLE_B",
+    "reply_sha256": "57b5785bb17f5c424c580cb26377bd57bfdc8d42ac571801f6c62764526e7baa",
+    "parent_memory_revision": "EXAMPLE_MEMORY_03",
+    "changes": [],
+    "status": "pending_human_review",
+    "commit_allowed": false,
+    "scope_note": "仅示例知情传播差异；B未完成转告，因此不继承A的听见记录。省略本例无关的环境变化。换swipe不撤销玩家授权。"
+  },
+  "real_memory_modified": false,
+  "note": "示例内的状态标签不是已实现的程序校验；hash可留在作者侧，手动流程只需辨认消息和保留候选。",
+  "player_input": {
+    "message_id": "EXAMPLE_PLAYER_11",
+    "revision": "INPUT_01",
+    "text": "示例玩家输入：我把这次已保留的调查结果告诉雪老。",
+    "sha256": "81f795bddfa056ad9807ecf06808df4aa9d3b861954d1c07262b45bed24cc563",
+    "authorization": "允许向雪老转告该次已保留结果；两份AI候选共用同一授权。"
+  }
+}
