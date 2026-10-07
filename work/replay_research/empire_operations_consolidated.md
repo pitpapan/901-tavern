@@ -67,3 +67,9 @@
 | 场景物价与币材 | [MUTOU #224/msg869062](../../extracted-mutou/page-05/posts.jsonl:25)；[P3 #22/msg1040710](<../../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl:23>) |
 
 原帖事实、用户直接补充与本次重玩采用的约定在各来源中分别标注；本稿不把新约定追认为原线已经发生的办理过程。外部《空之轨迹》仅作参考，完整讨论及未采纳建议保留在[讨论稿](<D:/备份文件/901记录/TRPG outputs/docs/superpowers/specs/2026-10-04-empire-simple-operations-draft.md>)。
+
+## 2026-10-07补充：民用通信与常见伤口治疗
+
+普通居民可以委托发送私人魔法消息，是否接单取决于当地法师与具体条件。〔[UCL_017](user_clarifications.jsonl:86)〕没有统一公开邮局、价目、送达或保密保证的确认；机构愿接单和消息实际送达分开记录。
+
+一般伤口尽量用药物治疗；治疗魔法高效，但反复使用有不利影响。〔[UCL_018](user_clarifications.jsonl:87)〕保留原有医疗效果和药物／休养配合，不追改已发生治疗；具体副作用机制未定。上述原则与协会紧急救助、按需要减免或补贴的既有规则共同使用，实际供给仍看人手与条件。精确来源见[服务渠道](ordinary_services_reference_20261007.md)。

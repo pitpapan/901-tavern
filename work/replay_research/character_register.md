@@ -282,7 +282,7 @@
 - 能力：[confirmed] 药物制作、道具制作、闪光弹与强化暴风弹，文武兼长（S:L106）。
 - 原控制：NPC或背景人物；原控制归属未逐帖核完（uncertain）。本次：可研究为NPC；是否出场及控制方式待酒馆投影阶段决定。
 - 时期边界：人物卡/设定及原线后期状态须定年；不得回填首次入帝都。
-- 问题：不能由外观或原作品知识补种族全名、故乡政治或亲属身份。
+- 背景追加：[UCL_20261007_010](user_clarifications.jsonl:79)确认久远为帝之前大陆王者的后裔（confirmed，T0前背景）；[UCL_012](user_clarifications.jsonl:81)确认神秘血脉力量性质近于本土神明，具体技能未定，T0基本掌控已见[授权适配](kuon_power_reference_20261007.md)；前王姓名与代数仍未给出；[UCL_011](user_clarifications.jsonl:80)确认身世为秘密，知情范围仅限家乡人士。外观仍不确定种族全名或故乡政治。
 - 待读：随全团场景顺读补充关系、言语样本、能力出现时点和人物知情边界。
 - 粒度：具身份/持久关系的研究候选，尚非正式NPC卡
 - 来源：[妄想大陆设定集_检索版.md:L101–108](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md:101>)
@@ -382,7 +382,8 @@
 - 原控制：NPC或背景人物；原控制归属未逐帖核完（uncertain）。本次：可研究为NPC；是否出场及控制方式待酒馆投影阶段决定。
 - 待审称呼：药师：旧导航使用称号，仍需正文直接称谓入口。
 - 时期边界：人物卡/设定及原线后期状态须定年；不得回填首次入帝都。
-- 问题：P1页5 #226前两段明确‘都是假的’，不能记其撕假脸、杀雪老或爆炸为事实。；徒弟‘李萍生’与更新卡‘陈萍生’待核；慕少艾与徒弟不能因相貌或误认合并。
+- 问题：P1页5 #226前两段明确‘都是假的’，不能记其撕假脸、杀雪老或爆炸为事实。弟子对应已由UCL_20261003_004_05确认：陈萍生是本团弟子及开局受制裁魔法师；李萍生保留为早期异写，不能把师徒合并。
+- 原型〔confirmed；UCL_20261007_001〕：霹雳布袋戏慕少艾，保留人设参照，本团内力改为术法／魔法；已知白莲色法阵与原团治疗限制保留。原作“認萍生”化名不覆盖本团陈萍生弟子。见[原型补充](prototype_reference_followup_20261007.md)。
 - 待读：随全团场景顺读补充关系、言语样本、能力出现时点和人物知情边界。
 - 粒度：具身份/持久关系的研究候选，尚非正式NPC卡
 - 来源：[posts.md:L163–250](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-first/5/posts.md:163>)；[posts.md:L83–91](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.md:83>)
@@ -580,7 +581,7 @@
 - [confirmed] 咒文解释场景中答复由圣上处理部分事项，与威廉及慕少艾同在。
 - 原控制：NPC/背景人物，详细控制归属待核（uncertain）。本次：可研究为NPC；出场/控制待投影阶段；不预设未来剧情。
 - 时期边界：来源可能跨多个原线时期；不把后期生死、联盟、关系和能力回填首次入帝都。
-- 问题：称号不是外部作品身份授权；真名、第二魔法等不得从作品补入。
+- 原型〔confirmed；UCL_20261007_001〕：参考Fate系列。此前“未获外部作品参照授权”判断已由本次用户说明更新；全名另见曼吉转述（沐透#40/msg846797），仍保留说话者与知情范围。第二魔法等完整能力不因原型参照自动获确认。见[原型补充](prototype_reference_followup_20261007.md)。
 - 待读：C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-first/27/posts.md:L201-323；C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-first/28/posts.md:L269-377（诅咒转移条件/法阵）。
 - 粒度：具身份/持久关系的研究候选，尚非正式NPC卡
 - 来源：[posts.md:L83–91](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.md:83>)；[phase3c_inventory.md:L36](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3c_inventory.md:36>)

@@ -62,7 +62,7 @@
 
 **能力与反例〔confirmed〕** 白莲色复杂法阵长时治好黄泉、布莱特；探临风记忆却双方痛、自己吐血中止。后来烟竹治临风旧伤全消，但拒毒物分析因麻烦，不能把拒绝当不会解毒。 [ERC_P1_0060](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p1_005_007.jsonl:5>)（msg818463等2帖）；[ERC_P1_0065](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p1_005_007.jsonl:10>)（msg818572等3帖）；[ERC_P1_0526](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p1_025_028.jsonl:26>)（msg859108等3帖）
 
-**交际证据〔confirmed〕** 以诗号及‘好友’措辞登场、制止不适当喂药后亲自接手，为孽徒作恶叹息并给予补偿；与右近合作且自然进府。可见医者判断和交际方式，不能补原作品性格/动机。 [ERC_P1_0060](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p1_005_007.jsonl:5>)（msg818410等4帖）；[ERC_P1_0526](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p1_025_028.jsonl:26>)（msg859109）
+**交际证据〔confirmed〕** 以诗号及‘好友’措辞登场、制止不适当喂药后亲自接手，为孽徒作恶叹息并给予补偿；与右近合作且自然进府。可见医者判断和交际方式。2026-10-07用户已授权以霹雳慕少艾人设作参照，可补其幽默、风雅、逆境自嘲的表达倾向；具体本团动机、关系和经历仍各依本团来源，不照搬原作。详见[原型补充](prototype_reference_followup_20261007.md)。 [ERC_P1_0060](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p1_005_007.jsonl:5>)（msg818410等4帖）；[ERC_P1_0526](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p1_025_028.jsonl:26>)（msg859109）
 
 **知情边界。** 队伍听到这些声明；用户已确认陈萍生是慕少艾徒弟及开局被制裁魔法师；早期异写保留来源，不再悬置对应。 治疗当事人知道结果，不自动知道失败机制。 共同经历者；无需推为一切时刻的固定口癖。
 
@@ -295,3 +295,7 @@ P2 #1171伦敦梦明确18XP/C侦探结算而非侧写师；#1184主世界调查�
 [沐透、影魔、阿伊达、维尔、博士及相关人物](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/mutou_character_dossiers.md>)；[安兹、埃弗纳斯与大墓地人物](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/great_tomb_character_dossiers.md>)；[姜子尤与悠悠分期档案](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/jiang_yoyo_period_dossiers.md>)。
 
 这些档案包含实际目标、行为反例、能力媒介与限制、关系回应和知情边界。安兹采用有效设定和团录，明确排除废弃数值卡；悠悠的公开婚约、私下安排及本人意愿分开。旧画像继续保留，各篇通过CRC连接，完整查阅入口见 [覆盖表](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/character_coverage.md>)。
+
+## 2026-10-07生活层与关系连续性
+
+首轮八人整理见[人物生活与关系NLR01—08](npc_life_relationships_20261007.md)。新增可用入口包括黄泉原卡私人兴趣、布莱特料理喝茶与孤儿院关切、雪老家庭牵挂、久远旅行甜食、慕少艾帮助边界、右近职责、艾利私人喜好与研究选择、悠悠个人愿望。所有后期互动仍保留各自阶段，不扩成T0既有人情或固定未来。本轮私人生活补充的范围为已有兴趣、职责和实际交往，不新增关系发展方向。

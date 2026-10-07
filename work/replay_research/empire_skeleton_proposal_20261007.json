@@ -1,0 +1,581 @@
+{
+  "id": "EMPIRE_SKELETON_20261007_V1_2",
+  "date": "2026-10-07",
+  "status": "proposed_not_adopted",
+  "authority": "author_design_not_canon",
+  "scope_approval_refs": [
+    {
+      "path": "work/replay_research/user_clarifications.jsonl",
+      "line": 70,
+      "id": "UCL_20261007_001"
+    },
+    {
+      "path": "work/replay_research/user_clarifications.jsonl",
+      "line": 71,
+      "id": "UCL_20261007_002"
+    }
+  ],
+  "runtime_projection": "not_projected",
+  "runtime_baseline_unchanged": "M1_IMPORT_20261005_002",
+  "units": "schematic_only_not_km",
+  "nodes": [
+    {
+      "id": "capital",
+      "name": "帝都",
+      "certainty": "confirmed",
+      "adoption_status": "existing_anchor",
+      "position": {
+        "x": 0.52,
+        "y": 0.46,
+        "type": "schematic_layout_only",
+        "certainty": "uncertain",
+        "coordinates_confirmed": false
+      },
+      "facts_or_proposal": [
+        "广阔腹地",
+        "皇宫与高耸法师塔"
+      ],
+      "source_refs": [
+        {
+          "path": "work/replay_research/user_clarifications.md",
+          "line": 759
+        },
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 69,
+          "id": "UCL_20261005_011"
+        }
+      ],
+      "proposal_origin": null
+    },
+    {
+      "id": "fossarolen",
+      "name": "佛萨罗伦",
+      "certainty": "confirmed",
+      "adoption_status": "existing_anchor",
+      "position": {
+        "x": 0.24,
+        "y": 0.48,
+        "type": "schematic_layout_only",
+        "certainty": "uncertain",
+        "coordinates_confirmed": false
+      },
+      "facts_or_proposal": [
+        "帝都西侧",
+        "至帝都三天；道路参考1200公里"
+      ],
+      "source_refs": [
+        {
+          "path": "work/replay_research/user_clarifications.md",
+          "line": 854
+        },
+        {
+          "path": "work/replay_research/user_clarifications.md",
+          "line": 701
+        }
+      ],
+      "proposal_origin": null
+    },
+    {
+      "id": "tower",
+      "name": "宝石翁塔镇",
+      "certainty": "confirmed",
+      "adoption_status": "existing_anchor",
+      "position": {
+        "x": 0.18,
+        "y": 0.22,
+        "type": "schematic_layout_only",
+        "certainty": "uncertain",
+        "coordinates_confirmed": false
+      },
+      "facts_or_proposal": [
+        "帝都西北",
+        "最初小镇北方；正式镇名未定"
+      ],
+      "source_refs": [
+        {
+          "path": "work/replay_research/user_clarifications.md",
+          "line": 816
+        },
+        {
+          "path": "work/replay_research/mutou_travel_evidence.md",
+          "id": "MTR_003"
+        }
+      ],
+      "proposal_origin": null
+    },
+    {
+      "id": "first_town",
+      "name": "最初小镇",
+      "certainty": "confirmed",
+      "adoption_status": "existing_anchor",
+      "position": {
+        "x": 0.18,
+        "y": 0.71,
+        "type": "schematic_layout_only",
+        "certainty": "uncertain",
+        "coordinates_confirmed": false
+      },
+      "facts_or_proposal": [
+        "查丁、曼吉所在",
+        "靠山且距帝都偏远；不是开场村庄"
+      ],
+      "source_refs": [
+        {
+          "path": "extracted-mutou/page-01/posts.jsonl",
+          "line": 23,
+          "id": "msg846251"
+        }
+      ],
+      "proposal_origin": null
+    },
+    {
+      "id": "prison",
+      "name": "监狱塔",
+      "certainty": "confirmed",
+      "adoption_status": "existing_anchor",
+      "position": {
+        "x": 0.08,
+        "y": 0.85,
+        "type": "schematic_layout_only",
+        "certainty": "uncertain",
+        "coordinates_confirmed": false
+      },
+      "facts_or_proposal": [
+        "大陆整体西南近南侧山脉",
+        "道路与安防未定"
+      ],
+      "source_refs": [
+        {
+          "path": "work/replay_research/user_clarifications.md",
+          "line": 836
+        }
+      ],
+      "proposal_origin": null
+    },
+    {
+      "id": "border",
+      "name": "边境关卡",
+      "certainty": "confirmed",
+      "adoption_status": "existing_anchor",
+      "position": {
+        "x": 0.53,
+        "y": 0.88,
+        "type": "schematic_layout_only",
+        "certainty": "uncertain",
+        "coordinates_confirmed": false
+      },
+      "facts_or_proposal": [
+        "帝国重要边关",
+        "T0已失陷；精确关名与坐标未定"
+      ],
+      "source_refs": [
+        {
+          "path": "work/replay_research/world_candidates.jsonl",
+          "line": 20,
+          "id": "WRC_020"
+        }
+      ],
+      "proposal_origin": null
+    },
+    {
+      "id": "frostlake",
+      "name": "白暮城",
+      "certainty": "uncertain",
+      "adoption_status": "proposed_not_adopted",
+      "position": {
+        "x": 0.52,
+        "y": 0.16,
+        "type": "schematic_layout_only",
+        "certainty": "uncertain",
+        "coordinates_confirmed": false
+      },
+      "facts_or_proposal": [
+        "提议安放北境南缘的雪中城市，重储藏、维修与远行物资；符合解冻条件时季节性通航",
+        "北方气候已确认；城市暂名、具体位置和林湖分布仍未采用"
+      ],
+      "source_refs": [],
+      "proposal_origin": "author_design_20261007",
+      "draft_previous_name": "霜湖城",
+      "alternate_draft_name": "伊瑟维恩"
+    },
+    {
+      "id": "clearbay",
+      "name": "洛汀",
+      "certainty": "uncertain",
+      "adoption_status": "proposed_not_adopted",
+      "position": {
+        "x": 0.83,
+        "y": 0.44,
+        "type": "schematic_layout_only",
+        "certainty": "uncertain",
+        "coordinates_confirmed": false
+      },
+      "facts_or_proposal": [
+        "提议东部内河货运、仓储与船修",
+        "不预设海港或连通帝都水系"
+      ],
+      "source_refs": [],
+      "proposal_origin": "author_design_20261007",
+      "draft_previous_name": "澄湾城"
+    },
+    {
+      "id": "copperleaf",
+      "name": "烬辉城",
+      "certainty": "uncertain",
+      "adoption_status": "proposed_not_adopted",
+      "position": {
+        "x": 0.82,
+        "y": 0.68,
+        "type": "schematic_layout_only",
+        "certainty": "uncertain",
+        "coordinates_confirmed": false
+      },
+      "facts_or_proposal": [
+        "提议东南丘陵材料加工与器具维修",
+        "不新增传奇矿产或普及自动机械"
+      ],
+      "source_refs": [],
+      "proposal_origin": "author_design_20261007",
+      "draft_previous_name": "铜叶城",
+      "alternate_draft_name": "维兰铎"
+    },
+    {
+      "id": "greystone",
+      "name": "风门城",
+      "certainty": "uncertain",
+      "adoption_status": "proposed_not_adopted",
+      "position": {
+        "x": 0.53,
+        "y": 0.68,
+        "type": "schematic_layout_only",
+        "certainty": "uncertain",
+        "coordinates_confirmed": false
+      },
+      "facts_or_proposal": [
+        "提议山前补给、修造与照护",
+        "T0受影响程度及军队部署未定"
+      ],
+      "source_refs": [],
+      "proposal_origin": "author_design_20261007",
+      "draft_previous_name": "灰石城",
+      "alternate_draft_name": "阿尔德岚"
+    }
+  ],
+  "regions": [
+    {
+      "id": "central",
+      "name": "中央腹地",
+      "proposed_character": "耕作带与河流阶地待采用；已确认帝都偏寒，不能改成温暖地区",
+      "anchor": "capital",
+      "certainty": "uncertain",
+      "adoption_status": "proposed_not_adopted",
+      "administrative_boundary": false,
+      "proposal_origin": "author_design_20261007"
+    },
+    {
+      "id": "west",
+      "name": "西部交通带",
+      "proposed_character": "宽谷、牧地与陆路集散",
+      "anchor": "fossarolen",
+      "certainty": "uncertain",
+      "adoption_status": "proposed_not_adopted",
+      "administrative_boundary": false,
+      "proposal_origin": "author_design_20261007"
+    },
+    {
+      "id": "northwest",
+      "name": "西北高地",
+      "proposed_character": "高地盆地、器材与材料交换",
+      "anchor": "tower",
+      "certainty": "uncertain",
+      "adoption_status": "proposed_not_adopted",
+      "administrative_boundary": false,
+      "proposal_origin": "author_design_20261007"
+    },
+    {
+      "id": "north",
+      "name": "北方雪境",
+      "proposed_character": "雪林、冰湖与雪原分布待采用；区域长期气候另见已确认climate_facts",
+      "anchor": "frostlake",
+      "certainty": "uncertain",
+      "adoption_status": "proposed_not_adopted",
+      "administrative_boundary": false,
+      "proposal_origin": "author_design_20261007"
+    },
+    {
+      "id": "east",
+      "name": "东部河谷",
+      "proposed_character": "地区性内河运输与仓储",
+      "anchor": "clearbay",
+      "certainty": "uncertain",
+      "adoption_status": "proposed_not_adopted",
+      "administrative_boundary": false,
+      "proposal_origin": "author_design_20261007"
+    },
+    {
+      "id": "southeast",
+      "name": "东南丘陵",
+      "proposed_character": "材料、器具生产与维修",
+      "anchor": "copperleaf",
+      "certainty": "uncertain",
+      "adoption_status": "proposed_not_adopted",
+      "administrative_boundary": false,
+      "proposal_origin": "author_design_20261007"
+    },
+    {
+      "id": "south",
+      "name": "南部山前带",
+      "proposed_character": "宽谷台地、远行补给与照护",
+      "anchor": "greystone",
+      "certainty": "uncertain",
+      "adoption_status": "proposed_not_adopted",
+      "administrative_boundary": false,
+      "proposal_origin": "author_design_20261007"
+    }
+  ],
+  "roads": [
+    {
+      "id": "route_capital_west",
+      "start": "fossarolen",
+      "end": "capital",
+      "status": "existing_evidence",
+      "certainty": "confirmed",
+      "note": "三天／道路参考1200公里",
+      "source_refs": [
+        {
+          "path": "work/replay_research/user_clarifications.md",
+          "line": 701
+        },
+        {
+          "path": "work/replay_research/user_clarifications.md",
+          "line": 854
+        }
+      ],
+      "shape": "schematic_not_measurable",
+      "current_passability": "uncertain",
+      "proposal_origin": null
+    },
+    {
+      "id": "route_north_plan",
+      "start": "first_town",
+      "end": "tower",
+      "status": "original_planned_route",
+      "certainty": "confirmed",
+      "note": "原拟北上七至八天／道路参考2800—3200公里",
+      "source_refs": [
+        {
+          "path": "work/replay_research/mutou_travel_evidence.md",
+          "id": "MTR_003"
+        }
+      ],
+      "shape": "schematic_not_measurable",
+      "current_passability": "uncertain",
+      "proposal_origin": null
+    },
+    {
+      "id": "draft_capital_frostlake",
+      "start": "capital",
+      "end": "frostlake",
+      "status": "proposed_not_adopted",
+      "certainty": "uncertain",
+      "note": "拟议北境干线，具体季节通行条件未定；不默认全年湖运",
+      "source_refs": [],
+      "shape": "schematic_not_measurable",
+      "current_passability": "uncertain",
+      "proposal_origin": "author_design_20261007"
+    },
+    {
+      "id": "draft_capital_clearbay",
+      "start": "capital",
+      "end": "clearbay",
+      "status": "proposed_not_adopted",
+      "certainty": "uncertain",
+      "note": "拟议干线；距离和T0通行情况未定",
+      "source_refs": [],
+      "shape": "schematic_not_measurable",
+      "current_passability": "uncertain",
+      "proposal_origin": "author_design_20261007"
+    },
+    {
+      "id": "draft_clearbay_copperleaf",
+      "start": "clearbay",
+      "end": "copperleaf",
+      "status": "proposed_not_adopted",
+      "certainty": "uncertain",
+      "note": "拟议干线；距离和T0通行情况未定",
+      "source_refs": [],
+      "shape": "schematic_not_measurable",
+      "current_passability": "uncertain",
+      "proposal_origin": "author_design_20261007"
+    },
+    {
+      "id": "draft_copperleaf_greystone",
+      "start": "copperleaf",
+      "end": "greystone",
+      "status": "proposed_not_adopted",
+      "certainty": "uncertain",
+      "note": "拟议干线；距离和T0通行情况未定",
+      "source_refs": [],
+      "shape": "schematic_not_measurable",
+      "current_passability": "uncertain",
+      "proposal_origin": "author_design_20261007"
+    },
+    {
+      "id": "draft_capital_greystone",
+      "start": "capital",
+      "end": "greystone",
+      "status": "proposed_not_adopted",
+      "certainty": "uncertain",
+      "note": "拟议干线；距离和T0通行情况未定",
+      "source_refs": [],
+      "shape": "schematic_not_measurable",
+      "current_passability": "uncertain",
+      "proposal_origin": "author_design_20261007"
+    },
+    {
+      "id": "draft_greystone_border",
+      "start": "greystone",
+      "end": "border",
+      "status": "proposed_not_adopted",
+      "certainty": "uncertain",
+      "note": "拟议干线；距离和T0通行情况未定",
+      "source_refs": [],
+      "shape": "schematic_not_measurable",
+      "current_passability": "uncertain",
+      "proposal_origin": "author_design_20261007"
+    },
+    {
+      "id": "draft_fossarolen_tower",
+      "start": "fossarolen",
+      "end": "tower",
+      "status": "proposed_not_adopted",
+      "certainty": "uncertain",
+      "note": "拟议干线；距离和T0通行情况未定",
+      "source_refs": [],
+      "shape": "schematic_not_measurable",
+      "current_passability": "uncertain",
+      "proposal_origin": "author_design_20261007"
+    }
+  ],
+  "unplaced_existing": [
+    {
+      "name": "九重里",
+      "certainty": "confirmed",
+      "known": "原设称北方的九重里；参照点和聚落等级未定",
+      "source_refs": [
+        {
+          "path": "D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md",
+          "line": 103
+        }
+      ]
+    },
+    {
+      "name": "沐透开场村庄",
+      "certainty": "confirmed",
+      "known": "与最初小镇分别保留；精确位置未定",
+      "source_refs": [
+        {
+          "path": "work/replay_research/geography_relationships.md"
+        }
+      ]
+    },
+    {
+      "name": "无法地带及主城",
+      "certainty": "confirmed",
+      "known": "山脉内部中央独立区域，非帝国普通城市",
+      "source_refs": [
+        {
+          "path": "work/replay_research/world_candidates.jsonl",
+          "line": 15,
+          "id": "WRC_015"
+        }
+      ]
+    }
+  ],
+  "constraints": [
+    "大陆量级10000×8000公里，长短轴朝向和真实海岸未定",
+    "南侧接山脉，不把整条南缘封成墙",
+    "已确认方位与旅程不改变；地图像素无距离意义",
+    "新城市不是全城镇名单；七区不是行政省或种族分区",
+    "不开传送交通网；不用护送八天定距离",
+    "T0只采用已有失陷事实，不创造战争日程或各城当前损失",
+    "北方气候已确认；长雪季不等于每天降雪，不把北境南缘误作大陆南缘"
+  ],
+  "revision": "v1.2",
+  "climate_status": "confirmed_by_UCL_20261007_004_geography_names_still_proposed",
+  "naming_revision": {
+    "source_ref": {
+      "path": "work/replay_research/user_clarifications.jsonl",
+      "line": 72,
+      "id": "UCL_20261007_003"
+    },
+    "proposed_names": {
+      "霜湖城": "伊瑟维恩",
+      "澄湾城": "洛汀",
+      "铜叶城": "维兰铎",
+      "灰石城": "阿尔德岚"
+    },
+    "old_names_are_world_aliases": false,
+    "v1_2": {
+      "source_ref": {
+        "path": "work/replay_research/user_clarifications.jsonl",
+        "line": 74,
+        "id": "UCL_20261007_005"
+      },
+      "style": "mixed_fantasy_proper_names_and_evocative_translated_names",
+      "new_recommendations": {
+        "伊瑟维恩": "白暮城",
+        "维兰铎": "烬辉城",
+        "阿尔德岚": "风门城"
+      },
+      "specific_names_adopted": false,
+      "imports_dnd_lore": false
+    }
+  },
+  "climate_facts": [
+    {
+      "id": "NORTH_CLIMATE_001",
+      "certainty": "confirmed",
+      "statement": "北方漫长雪季，极北常年积雪，北境南缘短暂解冻",
+      "period": "persistent_climate_not_T0_daily_weather",
+      "source_refs": [
+        {
+          "path": "work/replay_research/user_clarifications.jsonl",
+          "line": 73,
+          "id": "UCL_20261007_004"
+        }
+      ]
+    },
+    {
+      "id": "CAPITAL_CLIMATE_028",
+      "certainty": "confirmed",
+      "statement": "帝都偏寒，容易入冬落雪；不推广为所有腹地同冷",
+      "source_refs": [
+        {
+          "path": "work/replay_research/user_clarifications.md",
+          "line": 872,
+          "id": "UCL_20261004_028"
+        }
+      ]
+    },
+    {
+      "id": "NORTH_SNOW_ORIGINAL",
+      "certainty": "confirmed",
+      "statement": "沐透北上塔镇时入冬雪势加重、北方白茫茫；入镇时雪天能见度低",
+      "period": "MUTOU_214_216_original_scene_not_T0_weather",
+      "source_refs": [
+        {
+          "path": "extracted-mutou/page-05/posts.jsonl",
+          "line": 15,
+          "id": "867048"
+        },
+        {
+          "path": "extracted-mutou/page-05/posts.jsonl",
+          "line": 17,
+          "id": "867911"
+        }
+      ]
+    }
+  ]
+}

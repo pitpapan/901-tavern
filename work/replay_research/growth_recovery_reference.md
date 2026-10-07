@@ -16,3 +16,7 @@
 厌魔石对替身、Phantom或特定能源的未知，逆Phantom研究是否成功，外来武器的材料替代，均依已有能力条文、实验与实际场景处理。资料不足时保留uncertain；不为世界完整而预造统一裁定公式。
 
 相关入口：[力量专题](power_rules_dossier.md)、[开局状态](opening_state_consolidated.md)、[人物时期与知识边界](knowledge_projection.md)。
+
+## 2026-10-07医疗选择补充
+
+[UCL_018](user_clarifications.jsonl:87)已明确普通伤口倾向用药物，治疗魔法高效但反复使用对身体不好；[久远药房原帖与作用范围](ordinary_services_reference_20261007.md)已归并。保留既有施法恢复效果，具体副作用尚无阈值或公式，不对过去治疗追记伤害。当前伤势与已接受治疗仍由实际分支决定。
