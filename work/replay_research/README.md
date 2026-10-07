@@ -31,3 +31,6 @@
 [收拢前研究首页](README_history_20261007.md)和[收拢前交接](handoff_history_20261007.md)完整保留旧阶段记录。更早的[原规划](../../docs/superpowers/specs/2026-10-02-yulinfeng-tavern-replay-plan.md)、[运行设计](../../docs/superpowers/specs/2026-10-02-tavern-story-runtime-design.md)和[基础审核包](../../output/replay_f_review/v1/README.md)继续作为历史依据。
 
 继续使用既有工作树和来源ID，不重读整团或反复核验。禁止恢复已取消的文风复跑、代操作酒馆、龙血适配及地图更新；本次commit保存不等于发布或实际应用。新增作者补充与运行投影分别记录状态。
+
+
+2026-10-07后续：[本批世界与人物作者补充](world_character_followup_20261007.md)已修正雪老案情证言归属，并补黄泉获告、右近本名及协会联系条件。此前版本入口与M1修订已提交bbfcf5f；本批是提交后的作者修改，尚未进入002运行包。

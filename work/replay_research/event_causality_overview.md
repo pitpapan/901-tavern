@@ -85,3 +85,7 @@
 | ESIDE_008 | [养父样貌者的暴力胁迫、有限泄名与贝克应急](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/event_causality_sides.jsonl:8>) | XLINE_009, XLINE_007, KNO_009, KNO_008, UCL_20261003_001 |
 | ESIDE_009 | [帝国处刑、夺关与远征的旁线消息窗口](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/event_causality_sides.jsonl:9>) | XLINE_010, KNO_010, TML_019, TML_023, UCL_20261003_001 |
 | ESIDE_010 | [寻御线索、问候转交与两条旁线的未完终点](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/event_causality_sides.jsonl:10>) | XLINE_011, KNO_003, XLINE_005, XLINE_009, UCL_20261003_001 |
+
+## 2026-10-07：医馆案的证言与联系入口
+
+ECAP_001与OPENR_009已分开先行拘捕事实、右近所述刺杀及雪老所述遇袭；不将指控当成确定行刺史。协会愿尝试联系被捕者的既有案例也已接入条件，但没有保证探视、通信成功或放人权限。逐条出处见[本轮作者补充](world_character_followup_20261007.md)，目前尚未投影到002运行包。

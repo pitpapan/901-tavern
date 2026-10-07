@@ -32,8 +32,11 @@
 
 ## 状态与后续
 
-当前候选已通过定点文件核验，准备纳入本次用户授权的Git检查点。实际酒馆应用、请求加载和当前记忆开关没有新的验证记录；不能把文件已提交视为运行已验收。
+当前候选已通过定点文件核验，已纳入用户授权的Git检查点bbfcf5f。实际酒馆应用、请求加载和当前记忆开关没有新的验证记录；不能把文件已提交视为运行已验收。
 
 难度机制留待后续游戏引擎；不恢复文风复跑、代操作酒馆、数据库适配或地图更新。世界与人物补充先进入有来源的作者档案，只有受影响且确认可用的内容才更新运行候选。
 
 机器可读入口见[latest_release.json](latest_release.json)；内容指纹沿用[整合清单](../../work/replay_research/hallucination_prevention_20261005/import_build_manifest.json)，不建立另一套内容副本。作者接续见[研究入口](../../work/replay_research/README.md)。
+
+
+2026-10-07提交后新增[作者补充](../../work/replay_research/world_character_followup_20261007.md)，尚未同步到上述002文件；待修正的医馆案情归属等已列入运行队列。
