@@ -1,0 +1,34 @@
+# 输出模板，字段为空说明未核查；纯模板不是901正史。
+report_id: null
+subject: null
+reviewed_at: null
+repo_revision: null
+scope:
+  timeline_cut_source: null
+  approved_canon_locations: []
+  original_record_locations: []
+  draft_locations: []
+searched_locations: []
+claims:
+  - claim_id: null
+    claim: null
+    source_class: UNKNOWN # APPROVED_901 / ORIGINAL_RECORD / SOURCE_WORK_ONLY / INFERENCE / NEW_901 / UNKNOWN
+    timeline_scope: null # PRE_CUT_HISTORY / OLD_POST_CUT_REFERENCE / NEW_TIMELINE / unknown; not an approval flag
+    time_ref: null # date/event order/relative time if known, regardless of draft status
+    content_state_before: null # null = use report-level default; set for mixed-status claims
+    content_state_after: null # null = use report-level default; no automatic promotion
+    evidence:
+      - location: null # real path, line/record/msg ID where available
+        evidence_kind: null # world_fact / utterance / belief / source_work
+        excerpt: null
+    conflict_with: []
+    risk: null # LOW / MEDIUM / HIGH
+    review_decision: HOLD # PASS / REVISE / HOLD
+    missing_source: NEEDS_SOURCE # null when no source missing
+    proposed_change: null
+content_state_before: DRAFT # report-level default; individual claims may override
+content_state_after: DRAFT # report does not grant authority to promote
+required_approval: null
+impacted_files: []
+unreviewed_scope: []
+notes: []

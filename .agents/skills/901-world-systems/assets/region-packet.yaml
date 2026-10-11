@@ -1,0 +1,45 @@
+# 输出模板；示意字段不表示901已有相应地区事实。
+packet_id: null
+mode: region_extension
+region_id: null
+status: DRAFT
+sources:
+  approved_canon: []
+  original_records: []
+confirmed_facts: []
+inferred_rules: []
+proposed_rules: []
+regional_profile:
+  livelihoods: []
+  exchange_and_transport: []
+  authority_and_law: []
+  customs_and_daily_life: []
+  local_tensions: []
+causal_rules:
+  - condition: null
+    actors: []
+    interests: []
+    resources_and_constraints: []
+    feasible_actions: []
+    observable_consequences: []
+    basis_status: proposed # confirmed / inferred / proposed
+    basis_refs: [] # real source locators or IDs from confirmed_facts / inferred_rules / proposed_rules
+    uncertainty: []
+ordinary_day:
+  scenario: null
+  key_actors: []
+  everyday_behaviors: []
+  supported_by: []
+  gaps: []
+disruption:
+  changed_condition: null
+  first_affected: []
+  news_travel_and_delays: []
+  short_term_responses: []
+  longer_term_possibilities: []
+  unsupported_precise_numbers: []
+review:
+  canon_conflicts: []
+  unknowns: []
+  impacted_files: []
+  decision: needs_sources # ready_for_review / needs_sources / blocked

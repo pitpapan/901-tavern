@@ -1,0 +1,30 @@
+# TEMPLATE ONLY; does not assert any established 901 fact.
+mode: plot-design
+plot_id: draft-plot-001
+scope: null
+current_time: null
+source_files: []
+established_constraints:
+  original_campaign_facts: []
+  current_timeline_facts: []
+premise:
+  established: []
+  tensions: []
+actors: []  # Existing person/faction IDs only; no spontaneous full character builds.
+hidden_facts: []  # Proposals must indicate when/why facts are committed by evidence or actions.
+leads: []  # Cause, source, holders, possible discovery paths.
+next_actions: []  # Other actors' actions, not the player's choices.
+contingencies:
+  player_engages: []
+  player_ignores: []
+  player_disrupts: []
+resolution_conditions: []
+role_requirements: []  # Optional PENDING_BUILDER slots if genuinely new characters are required.
+visibility:
+  gm_only: []
+  player_observable: []
+  actor_knowledge: []  # Each relevant item: actor_id, claim_or_belief, knowledge_type (fact/belief/misinformation), source_ref, learned_at.
+unknowns: []
+continuity_checks: []
+status: DRAFT  # DRAFT | ELIGIBLE; cannot self-establish new history.
+handoff: null
