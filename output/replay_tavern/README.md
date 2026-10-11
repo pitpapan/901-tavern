@@ -23,8 +23,10 @@
 
 [清理记录](../../work/maintenance/cleanup_20261011/README.md)说明已删除的旧导出和缓存及Git恢复点。原始团录、作者档案、人工审阅、来源清单、F交付与完整参数预设保留。旧作者记录或manifest中的历史文件路径按形成时期理解，已退役载荷可据清理清单从Git读取。
 
-scripts/export_replay_tavern.py与scripts/check_replay_tavern_format.mjs是旧v1导出工具，不用于维护004，不应为本次交付运行。
+旧v1导出器与格式检查器已在第二轮清理中退役；当前004文件及来源仍从本页进入。
 
 [004内容核验](../../work/replay_research/runtime_sync_20261008/verification.json)与[本次打包核验](../../work/maintenance/cleanup_20261011/verification.json)分开记录。未操作酒馆、调用模型或重新试跑，实际运行仍未验收。
 
 [机器入口](latest_release.json) · [004来源与指纹](../../work/replay_research/runtime_sync_20261008/manifest.json) · [作者接续](../../work/replay_research/README.md)
+
+2026-10-11第二轮继续清理退役工具、配套旧测试、重复语料及合册；[范围与恢复点](../../work/maintenance/cleanup_20261011_round2/README.md)。当前004、回退资料和作者基线保留，ZIP与导入文件未变。

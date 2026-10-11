@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-11",
+  "cleanup_checks_passed": true,
+  "deleted_files": 66,
+  "deleted_bytes": 17690700,
+  "protected_files_unchanged": 948,
+  "runtime_direct_source_files": 130,
+  "runtime_direct_line_locators": 127,
+  "runtime_projection_source_refs": 52,
+  "package_payload_hashes_matched": 10,
+  "style_index_original_post_locators": 3016,
+  "generic_validator_tests": {
+    "run": 76,
+    "passed": 75,
+    "failed": 1,
+    "failure": "test_required_authoring_directories_exist",
+    "cause": "14 required empty directories absent in this replay checkout; no tracked checkpoint contents under those directories and no deletions in those paths; validator and test unchanged",
+    "missing_directories": [
+      "sources/supplements/world",
+      "sources/supplements/characters",
+      "sources/supplements/factions",
+      "sources/supplements/locations",
+      "sources/supplements/concepts",
+      "sources/supplements/rules",
+      "sources/continuation",
+      "sources/director/plot_seeds",
+      "sources/director/faction_agendas",
+      "sources/director/mysteries",
+      "sources/director/possible_developments",
+      "work/patches/approved",
+      "work/patches/applied",
+      "work/patches/rejected"
+    ]
+  },
+  "model_calls": 0,
+  "st_ui_operations": 0,
+  "r1c_rebuilds": 0,
+  "main_D_workspace_modified": false,
+  "git_history_pruned": false,
+  "pushed": false
+}

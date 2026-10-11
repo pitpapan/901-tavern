@@ -4,13 +4,13 @@
 
 先读[风格结论与采用方式](style_profile.md)。要审阅实际文风及开场，打开[运行包说明](../../../../output/replay_tavern/gm_style_v1/README.md)。继续工作时从这两处进入，只有需要验证具体说法时再取相关原帖，不必加载完整语料。
 
-## 完整语料
+## 原帖定位与历史语料
 
-可复现的主语料入口是 [GM 全文 JSONL](../../../gm_style/v1/corpus/all_gm.jsonl)、[定位索引](../../../gm_style/v1/corpus/index.tsv)和[统计清单](../../../gm_style/v1/corpus/manifest.json)。按来源阅读的文件为 [P1](../../../gm_style/v1/corpus/P1.md)、[P2](../../../gm_style/v1/corpus/P2.md)、[P3](../../../gm_style/v1/corpus/P3.md)、[沐透](../../../gm_style/v1/corpus/MUTOU.md)、[大墓地](../../../gm_style/v1/corpus/GREAT_TOMB.md)。
+2026-10-11已清理两套同源派生语料（全文、按来源分卷及样本阅读版），原始帖子没有删除。需要核对原话时，用[定位索引](../../../gm_style/v1/corpus/index.tsv)中的 `source_file` 和 `source_line` 回到原帖；[另一份索引](index.tsv)、[统计清单](../../../gm_style/v1/corpus/manifest.json)和精读记录保留。原先 1,508 帖的覆盖说明是历史研究记录，不表示全文仍复制在此目录。
 
-本目录的 gm_posts.jsonl、by_source 和 manifest.json 是本轮另一份同源研究快照，正文与原帖定位已经对照一致。两份不能相加计数，也不用重复阅读；后续默认使用上述可复现主入口。提取脚本为 [extract_gm_style_corpus.py](../../../../scripts/extract_gm_style_corpus.py)，只生成派生语料，不修改原帖。
+旧提取/导出工具随已取消流程退役。确需复查旧派生文本时，从[第二轮清理记录](../../../maintenance/cleanup_20261011_round2/README.md)指定的 Git 提交恢复；不恢复文风复跑。当前手动导入入口是[004运行包](../../../../output/replay_tavern/README.md)。
 
-GM 作者帖不等于纯旁白。源文里的 NPC 台词、玩家动作重述、规则、场外交流、梦境和后期信息均保留；自动标签只是检索线索。**本研究目录与完整语料都是作者层资料，不导入酒馆或龙血玄黄。**
+GM 原帖包括 NPC 台词、玩家动作重述、规则、场外交流、梦境和后期信息；检索标签不能把这些内容自动提升为 T0 世界事实。保留的研究材料仍属于作者层。
 
 ## 精读与表达稿
 

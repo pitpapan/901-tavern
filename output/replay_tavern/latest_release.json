@@ -33,7 +33,7 @@
     "gm_style_v1",
     "playtest_fix_20261004"
   ],
-  "history_note": "Current 004 and rollback 003/002 retained. Superseded older payloads removed on 2026-10-11 with Git recovery recorded; historical source/review documents retained. Current style aliases and unchanged legacy Persona remain usable; full parameter presets are a separate history.",
+  "history_note": "Current 004 and rollback 003/002 retained. Superseded older payloads removed on 2026-10-11 with Git recovery recorded; historical source/review documents retained. Current style aliases and unchanged legacy Persona remain usable; full parameter presets are a separate history. Second cleanup retired historical tools/tests and redundant views/corpora; canonical sources and active R1C data retained.",
   "authorization_source_id": "UCL_20261008_009",
   "style_changed": false,
   "persona_legacy_alias": "v1/import/901_御临风.persona.json",
@@ -49,5 +49,6 @@
     25,
     26
   ],
-  "cleanup_manifest": "../../work/maintenance/cleanup_20261011/deletion_manifest.json"
+  "cleanup_manifest": "../../work/maintenance/cleanup_20261011_round2/deletion_manifest.json",
+  "previous_cleanup_manifest": "../../work/maintenance/cleanup_20261011/deletion_manifest.json"
 }
