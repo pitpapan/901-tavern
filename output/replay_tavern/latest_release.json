@@ -1,26 +1,30 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-07",
-  "current_revision": "M1_IMPORT_20261005_002",
+  "updated_on": "2026-10-11",
+  "current_revision": "M1_IMPORT_20261008_004",
   "status": "runtime_candidate_files_ready_actual_runtime_unverified",
-  "manual": "hallucination_prevention_20261005_candidate/README.md",
+  "manual": "world_sync_20261008_candidate/手动导入说明.md",
   "files": {
-    "host_card": "hallucination_prevention_20261005_candidate/import/901_帝都主持.card.json",
-    "worldbook": "hallucination_prevention_20261005_candidate/import/901_帝都重玩_M1_20261005.json",
-    "style": "hallucination_prevention_20261005_candidate/import/文风_prompt.json"
+    "host_card": "world_sync_20261008_candidate/import/901_帝都主持.card.json",
+    "worldbook": "world_sync_20261008_candidate/import/901_帝都重玩_M1_20261008.json",
+    "style": "world_sync_20261008_candidate/import/文风_prompt.json",
+    "persona": "world_sync_20261008_candidate/import/901_御临风.persona.json"
   },
   "style_aliases": [
+    "hallucination_prevention_20261005_candidate/import/文风_prompt.json",
     "playtest_fix_20261005/import/文风_prompt.json",
     "hallucination_prevention_20261005_candidate/import/901_GM文风_20261005_r2.prompts.json"
   ],
-  "manifest": "../../work/replay_research/hallucination_prevention_20261005/import_build_manifest.json",
-  "latest_source_id": "UCL_20261005_011",
-  "worldbook_entries": 125,
+  "manifest": "../../work/replay_research/runtime_sync_20261008/manifest.json",
+  "latest_source_id": "UCL_20261008_007",
+  "worldbook_entries": 130,
   "author_handoff": "../../work/replay_research/handoff_20261004.md",
   "difficulty": "deferred_to_future_game_engine",
   "scene_binding": "unbound_general",
   "automatic_installation": false,
   "historical_runtime_directories": [
+    "world_sync_20261007_candidate",
+    "hallucination_prevention_20261005_candidate",
     "playtest_fix_20261005",
     "playtest_fix_20261005_r2",
     "enh_20261004_r2_candidate",
@@ -29,5 +33,21 @@
     "gm_style_v1",
     "playtest_fix_20261004"
   ],
-  "history_note": "Historical directory classification concerns host/worldbook/style releases. Explicit current style aliases and unchanged Persona remain usable; full parameter presets are a separate history."
+  "history_note": "Current 004 and rollback 003/002 retained. Superseded older payloads removed on 2026-10-11 with Git recovery recorded; historical source/review documents retained. Current style aliases and unchanged legacy Persona remain usable; full parameter presets are a separate history.",
+  "authorization_source_id": "UCL_20261008_009",
+  "style_changed": false,
+  "persona_legacy_alias": "v1/import/901_御临风.persona.json",
+  "delivery": {
+    "packaged_on": "2026-10-11",
+    "archive": "901_帝都重玩_004_手动导入包_20261011.zip",
+    "manifest": "world_sync_20261008_candidate/package_manifest.json",
+    "paths": "world_sync_20261008_candidate/路径清单.txt"
+  },
+  "author_latest_source_id": "UCL_20261008_012",
+  "pending_runtime_queue_items": [
+    24,
+    25,
+    26
+  ],
+  "cleanup_manifest": "../../work/maintenance/cleanup_20261011/deletion_manifest.json"
 }

@@ -6,3 +6,7 @@ scripts/r1c_vnext/** -text
 tests/test_r1c_vnext_*.py -text
 work/remediation/r1c0/** -text
 work/rebuild/r1c_vnext/** -text
+
+# Runtime delivery manifests hash original bytes, including bundled manuals.
+output/replay_tavern/world_sync_20261007_candidate/** -text whitespace=cr-at-eol
+output/replay_tavern/world_sync_20261008_candidate/** -text whitespace=cr-at-eol

@@ -76,7 +76,7 @@
 
 ## 主神与幻剑旧机制的开局边界
 
-御临风由主神带到异世界，并经历早期主神任务；从村子开始软重启后，主神与幻剑机制直接移除。首次入帝都位于此后，保留历史经历，不再发布主神任务、自动结算兑换或启动幻剑引导，也不把移除改写成新的世界内谜案。[用户明确说明](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:186>)。
+御临风由主神带到异世界，并经历早期主神任务；从村子开始软重启后，主神与幻剑机制直接移除。首次入帝都位于此后，保留历史经历，不再发布主神任务、自动结算兑换或启动幻剑引导，也不把移除改写成新的世界内谜案。[用户明确说明](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:186>)。 〔2026-10-08补充：[UCL_007](user_clarifications.jsonl:108)明确御临风、黄泉、姜子尤保留主神授予的各种语言听说能力；加持不授读写，原有及后天学习另记。任务、兑换和幻剑引导仍停用，详见[语言专题](language_education_reference_20261008.md)。〕
 
 ## 本轮明确的开局后台与人物负担
 

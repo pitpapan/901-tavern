@@ -1235,3 +1235,7 @@
 ## 两条旁线的人物更新（2026-10-03）
 
 新增30条人物研究更新，其中24个新CRC标签、6个既有CRC更新；另补姜子尤与悠悠2个既有记录。博士与CRC_061仅提待审匹配，不自动合并。详见 [全人物覆盖](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/character_coverage.md>)、[旁线结构化证据](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/character_side_evidence.jsonl>)。
+
+## 2026-10-08语言补充：CRC_001／002／003
+
+[UCL_007](user_clarifications.jsonl:108)明确御临风、姜子尤、黄泉的主神加持可听说各种语言，加持本身不授读写。原卡语言证据与后天学习仍保留；御临风T0通用语2不删除，不自动赋予其他文字读写。口语能力保留不恢复任务、兑换与幻剑引导。详见[语言与教育](language_education_reference_20261008.md)。

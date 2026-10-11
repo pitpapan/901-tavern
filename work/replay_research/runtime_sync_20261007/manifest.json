@@ -1,0 +1,92 @@
+{
+  "revision": "M1_IMPORT_20261007_003",
+  "parent_revision": "M1_IMPORT_20261005_002",
+  "latest_setting_source": "UCL_20261007_020",
+  "authorization": "UCL_20261007_021",
+  "status": "runtime_candidate_files_ready_actual_runtime_unverified",
+  "counts": {
+    "total": 130,
+    "enabled_constant": 6,
+    "enabled_keyword": 116,
+    "disabled": 8
+  },
+  "changed_existing": 18,
+  "added": 5,
+  "uids_preserved": 125,
+  "constants_added": 0,
+  "keys_changed": [
+    {
+      "source_id": "CRC_033",
+      "before": [
+        "宝石翁"
+      ],
+      "after": [
+        "宝石翁",
+        "泽尔里奇"
+      ],
+      "basis": "P1#1313/#1321直接对应"
+    }
+  ],
+  "baseline_book": "output/replay_tavern/hallucination_prevention_20261005_candidate/import/901_帝都重玩_M1_20261005.json",
+  "projection_file": "work/replay_research/runtime_sync_20261007/projection_edits.json",
+  "projected_source": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+  "files": [
+    {
+      "path": "output/replay_tavern/world_sync_20261007_candidate/import/901_帝都主持.card.json",
+      "sha256": "5080b99faca76dc92a08fc03ceafddcb3e2e635d650d3efc5e947b34470a4af2",
+      "bytes": 384406
+    },
+    {
+      "path": "output/replay_tavern/world_sync_20261007_candidate/import/901_帝都重玩_M1_20261007.json",
+      "sha256": "95075a521fb44a516494b25aa412590edfa024fa7b43d2f7c05e96803dd01efb",
+      "bytes": 424485
+    },
+    {
+      "path": "output/replay_tavern/world_sync_20261007_candidate/import/文风_prompt.json",
+      "sha256": "9badecdfaf9a20e5e0ac07917d82a2a389ee3ff1edab0a6586d6b61e63f27687",
+      "bytes": 10482
+    }
+  ],
+  "protected_files": [
+    {
+      "path": "output/replay_tavern/hallucination_prevention_20261005_candidate/import/901_帝都重玩_M1_20261005.json",
+      "sha256": "cebe2a92e416f0276c13ab88ef259ce5ee67b9f208999973a2b594f75704d078"
+    },
+    {
+      "path": "output/replay_tavern/hallucination_prevention_20261005_candidate/import/901_帝都主持.card.json",
+      "sha256": "b33c4f8e4bb05dfe97b5ec95d0d3913fc212e5960a084524cc9fafcef04d03b1"
+    },
+    {
+      "path": "output/replay_tavern/hallucination_prevention_20261005_candidate/import/文风_prompt.json",
+      "sha256": "9badecdfaf9a20e5e0ac07917d82a2a389ee3ff1edab0a6586d6b61e63f27687"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261005/import/文风_prompt.json",
+      "sha256": "9badecdfaf9a20e5e0ac07917d82a2a389ee3ff1edab0a6586d6b61e63f27687"
+    },
+    {
+      "path": "current_state.md",
+      "sha256": "ebf6159bc248600be6371da29bc405bfb781de9e6eaccf700d3dab7e093ed43e"
+    },
+    {
+      "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+      "sha256": "aa5835d33e47a822bd3c1217483e7fd41c8beb9253df21a57846da4b54329774"
+    },
+    {
+      "path": "output/replay_f_review/v1/characters/author_profiles.jsonl",
+      "sha256": "33027cad2260695352527277bc86adcba56dfc873ab568af5b3207ed3de88a26"
+    },
+    {
+      "path": "output/replay_f_review/v1/characters/runtime_cards.jsonl",
+      "sha256": "3e92b9dd8982f18fb4a926b94a71790363e3fe227d7c1112638aabedc5b66193"
+    }
+  ],
+  "host_behavior_changed": false,
+  "style_changed": false,
+  "current_scene_bound": false,
+  "automatic_installation": false,
+  "model_calls": 0,
+  "runtime_verified": false,
+  "city_service_proposals_included": false,
+  "verification_file": "work/replay_research/runtime_sync_20261007/verification.json"
+}

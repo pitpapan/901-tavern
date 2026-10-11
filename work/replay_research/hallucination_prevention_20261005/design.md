@@ -56,7 +56,7 @@ M1在场景结束或关键变化时人工审核少量差异。若当前插件无
 - [详细实施规划](implementation_plan.md)
 - [当前累计手动补丁](../../../output/replay_tavern/playtest_fix_20261005_r2/README.md)
 - [最新身份区分来源](../user_clarifications.jsonl:64)
-- [原交接与停止点](../handoff_20261004.md:83)
+- [当时交接与停止点（历史快照）](../handoff_history_20261007.md)
 - [世界书加载原配置](../../../output/replay_tavern/v1/README.md:19)
 - [SillyTavern世界书机制](https://docs.sillytavern.app/usage/core-concepts/worldinfo/)
 - [实际请求查看方式](https://docs.sillytavern.app/usage/common-settings/)

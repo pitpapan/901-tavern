@@ -1,0 +1,751 @@
+{
+  "date": "2026-10-11",
+  "status": "completed",
+  "scope": "existing worktree only; remove superseded runtime payloads and caches; retain source/review data, 002/003 rollback, current 004 and aliases",
+  "checkpoint_commit": "b705df1a0d062248965381b270067d779cd9c378",
+  "git_history_pruned": false,
+  "preexisting_changes_committed": false,
+  "files": [
+    {
+      "path": "scripts/__pycache__/audit_r1a1_semantic_routes.cpython-312.pyc",
+      "bytes": 16979,
+      "sha256": "2e4511c98327e0f278df55148496d01776d0035dae3c33b7c70c9d8132180f6c",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "7fc40ecb286dbda1e0206b13eb13a344c5ea6a89"
+    },
+    {
+      "path": "scripts/__pycache__/audit_r1a2a1_relationship_containers.cpython-312.pyc",
+      "bytes": 25095,
+      "sha256": "e9678cc6c89b55fd52f431acd6a05178d25bfb4d76f9364fae45fb9205715b23",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "2371aedfc6ec7b0baece566574fa3caf6c2eafcc"
+    },
+    {
+      "path": "scripts/__pycache__/audit_r1a2a_realizations.cpython-312.pyc",
+      "bytes": 18792,
+      "sha256": "2de2dad96158555f8b0b78697be69fa8735120418c1ab77f2d96bc2cece19f46",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "3f7a6356a3c3fd84e4a08ab9543b7be379e1cc0e"
+    },
+    {
+      "path": "scripts/__pycache__/audit_r1a2b_production_drift.cpython-312.pyc",
+      "bytes": 12954,
+      "sha256": "ef319c27b80858e94437948f54e26cc13c972b9f72d4f2108f04252f542d83f9",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "985e1bedc13b43c0247b398c6a0df5d1b0d24796"
+    },
+    {
+      "path": "scripts/__pycache__/audit_r1a_final_independent.cpython-312.pyc",
+      "bytes": 70369,
+      "sha256": "50a8cd524cbea928a5907e1108a4854384cff270a425f1faad6b31468a93fc92",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "eb1738c5d758b9e882e3139b03737a8421cd03c4"
+    },
+    {
+      "path": "scripts/__pycache__/build_hap0r_approval_package.cpython-312.pyc",
+      "bytes": 65397,
+      "sha256": "185a9cb071eaf9ec64a4943ddddcded31caccd2727fc3e0b89efb4d901932fe0",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "2d5a0556209d2652e9b3327ae1c02813e1167f8c"
+    },
+    {
+      "path": "scripts/__pycache__/build_phase3c_candidates.cpython-312.pyc",
+      "bytes": 55029,
+      "sha256": "fcbf752d420087a8feff6a8a7933ca3ac7b0ef6fcb216a1a36564973138388ff",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "68e3d72c8efc36e94ab09abf99b7a5420847a65c"
+    },
+    {
+      "path": "scripts/__pycache__/build_phase3d_r2.cpython-312.pyc",
+      "bytes": 72651,
+      "sha256": "99d51c89bdedbc32181bc3dc69368530aeca618012b5b4b60a08b42b3d33a17f",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "ba3f9efc2a0f410ff539984e2986b2cff5d7e0a4"
+    },
+    {
+      "path": "scripts/__pycache__/build_phase3d_r2b.cpython-312.pyc",
+      "bytes": 33375,
+      "sha256": "be8e1993a5b7a441a7c37e28caee397b66aa53fe6fdbe4589b483afc9dd9b627",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "eb893e2429c8914a47012ea99316f9d23d33fd74"
+    },
+    {
+      "path": "scripts/__pycache__/build_phase3d_r2c.cpython-312.pyc",
+      "bytes": 56276,
+      "sha256": "6079b8750c5c8c5eca1fbbebf80ce3b67ca313dbb2ad41de4c99ef17742ff1c9",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "bb70240d680ce1cc3351618d09d4e9cc8a4a1a43"
+    },
+    {
+      "path": "scripts/__pycache__/build_phase3d_recall.cpython-312.pyc",
+      "bytes": 170066,
+      "sha256": "cd43a7f1120cfd8ee2390db9a1f3a507ff22b0dd86bb7747b3f41f58efdc186e",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "5583097b0fd5f2b1bdc46b510e00c4f82939a6af"
+    },
+    {
+      "path": "scripts/__pycache__/extract_candidates.cpython-312.pyc",
+      "bytes": 85108,
+      "sha256": "7024b156b6590b54a6756758a6cedfcd752c665c3069d9810acaefb4a4f2877e",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "049eb1800d94de8649a08c4e3c21c5e9c3a75c2e"
+    },
+    {
+      "path": "scripts/__pycache__/phase3d_r2c_common.cpython-312.pyc",
+      "bytes": 13288,
+      "sha256": "9c1cabdb59a2081d772eeeca1ab43a1b1c29effb00539fb6f264c4789613f168",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "12a9e4486b0ef0067d3d58e25aea336fe507992c"
+    },
+    {
+      "path": "scripts/__pycache__/prepare_phase3d_r2c_packages.cpython-312.pyc",
+      "bytes": 50136,
+      "sha256": "ace0070eb7107db24699a39a23a91de78c5fb3cd567ed3d964203d0e05b5ca34",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "32bd193377f509438e81dbad9a484edce5192076"
+    },
+    {
+      "path": "scripts/__pycache__/r1a2b_realization_serializer.cpython-312.pyc",
+      "bytes": 75627,
+      "sha256": "d9cd140627d2d14705418a908381d7ef6a2a6a8bcec64b8555897fa4aa05d728",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "ffd2c53f2356572be6b28c4918a8dbad53d01d8b"
+    },
+    {
+      "path": "scripts/__pycache__/run_r1a2br_rebuild.cpython-312.pyc",
+      "bytes": 10348,
+      "sha256": "c7e05e271db23e15c88cf3f973607cf31e4ac50012652245a82768379d09cc1b",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "5b4e132f06b41fc45dde749e192d572e2a3fe9c3"
+    },
+    {
+      "path": "scripts/__pycache__/validate_authoring_framework.cpython-312.pyc",
+      "bytes": 26291,
+      "sha256": "20435ceceeea6f97626ae078a25126e800bcd913fd1ad2963f9fabef83b18fc8",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "edf5272cc2ca9064edc60befdbafc71fd50e7ac3"
+    },
+    {
+      "path": "scripts/__pycache__/validate_character_profiles.cpython-312.pyc",
+      "bytes": 23791,
+      "sha256": "01d6ffaa0d786fd97d935ef3b175ec19a448fe08010365c91631c2cf990bb337",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "99370a71c06bc3678e856738b762080afacece76"
+    },
+    {
+      "path": "scripts/__pycache__/validate_worldbook.cpython-312.pyc",
+      "bytes": 13096,
+      "sha256": "75b6df89aa691e980b084ca6ca6b904c498ad84fdb2b66f7e88c0027ba547d2f",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "f6398a2a25c11cd5cc9660875e37033eea9cee56"
+    },
+    {
+      "path": "tests/__pycache__/test_extract_candidates.cpython-312.pyc",
+      "bytes": 44185,
+      "sha256": "3b84c35e70eed06bb024a9ace5aabf08e04792bbeb952b873cc8d1f1f9a501f7",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "fae37cfe09070a80c3837a8a7cd20a0255e1a486"
+    },
+    {
+      "path": "tests/__pycache__/test_hap0r_readable_approval.cpython-312.pyc",
+      "bytes": 13663,
+      "sha256": "92bdfae3c2b41b0c395e7d3c9ea2ead45ae21c56bb3bb532826904aaf96cd497",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "33eb4630570cd9e1a424410e1c457e18a1e7328c"
+    },
+    {
+      "path": "tests/__pycache__/test_phase3b_prototypes.cpython-312.pyc",
+      "bytes": 13173,
+      "sha256": "d7cfbec9b6b803b585982754e2308bc5405db019284341226bd9f9581dffaa9d",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "49388834ec72450c0259f1ccd825b8b977e7c0df"
+    },
+    {
+      "path": "tests/__pycache__/test_phase3c_profiles.cpython-312.pyc",
+      "bytes": 28780,
+      "sha256": "fb70c8eb5732580f6b282234dea5587bb68acb0b6e172b079c40b688b9550b3c",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "1dae90349b09b886e77e8496a7b81836fc37e545"
+    },
+    {
+      "path": "tests/__pycache__/test_phase3d_r2.cpython-312.pyc",
+      "bytes": 35089,
+      "sha256": "60ba9eafcae62c5bc2fc27fc4a219ece45cbcc3ac0ac87be681aaa081326fcdf",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "8e3c80bb02588215c42247ebc6ec9258bcdc4092"
+    },
+    {
+      "path": "tests/__pycache__/test_phase3d_r2b.cpython-312.pyc",
+      "bytes": 35217,
+      "sha256": "240fc98fb756f577ec5d6cf40ae5143a9ae0b08303b62ae70d7013d8c5652230",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "5abb08153cb89d724eed271477f0e71292069ff7"
+    },
+    {
+      "path": "tests/__pycache__/test_phase3d_r2c.cpython-312.pyc",
+      "bytes": 64545,
+      "sha256": "fe2ba8f1e998aeae6735ab0b24b16353eee926bde43588ed3901255b46afcea3",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "7e4ac7ebb1e482c2221a33d00abd0d1046275240"
+    },
+    {
+      "path": "tests/__pycache__/test_phase3d_recall.cpython-312.pyc",
+      "bytes": 42734,
+      "sha256": "0726cad6c14fb2790ff3401d7e2f793dcc2ea97a39e0290155f8acedf8e0f6bf",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "10c9185d00fb211acba9cb33df7695b526b4fa1b"
+    },
+    {
+      "path": "tests/__pycache__/test_phase3d_review.cpython-312.pyc",
+      "bytes": 23549,
+      "sha256": "ddb97dee38472dff15e9b09d37d17be77f4f77acf3485269d535869c88d02d51",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "f6c29dbdc3e37c5f6ece064b404ac43186dd1f9a"
+    },
+    {
+      "path": "tests/__pycache__/test_r1a1_semantic_audit.cpython-312.pyc",
+      "bytes": 10482,
+      "sha256": "b601974453d3a90036858b06fb0e0da23f7dbed2aee8675c400babc6172163f3",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "1694db1abfce949ca477300db86feaf3a26904d4"
+    },
+    {
+      "path": "tests/__pycache__/test_r1a2a1_relationship_containers.cpython-312.pyc",
+      "bytes": 11937,
+      "sha256": "87653d0bd773fd80e580b0b860de36baf52cbd8bb5f5423b9d3a04f98b44ce8b",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "3ac9582e422fcd8cb6830134c84aa3eedca8a460"
+    },
+    {
+      "path": "tests/__pycache__/test_r1a2a_realization_surface.cpython-312.pyc",
+      "bytes": 8339,
+      "sha256": "7d26736e296e1a9c8d08903a8598c3b4831cb1c41a5ae79b1c63604ec0d92ece",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "bf5167b3efe25b78ccaa6c3a68654bb7473cf39b"
+    },
+    {
+      "path": "tests/__pycache__/test_r1a2br_resumed_rebuild.cpython-312.pyc",
+      "bytes": 5992,
+      "sha256": "3b223178c3c36fddb294c2b0ac37b941eecc53d5f8fafa690e2e91bef325b5da",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "259fb32aba451d6ce6054399c279b78209bf0773"
+    },
+    {
+      "path": "tests/__pycache__/test_r1a2b_realization_serializer.cpython-312.pyc",
+      "bytes": 22510,
+      "sha256": "e5d658ca6775980325b7b148866ede914bcd7b8fb33c880d9bf3bb4d791fcb5e",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "c83876336783aa4fa6abff469807a895ed9330e4"
+    },
+    {
+      "path": "tests/__pycache__/test_r1a_fix1_migration_destination_integrity.cpython-312.pyc",
+      "bytes": 9831,
+      "sha256": "bc9970372668a525e3694c07b186e02157ea8c546f7e3e56f8376fa0dcdcffda",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "1c6e82649790598da576377a227f9a76e1f79b0d"
+    },
+    {
+      "path": "tests/__pycache__/test_validate_authoring_framework.cpython-312.pyc",
+      "bytes": 28957,
+      "sha256": "66ef7d203ac422af2b014806c823d2ef4741b2d86370937705f89967a91d8bbd",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "1043fb691b168d0e22c4ee14a0e262675111fca9"
+    },
+    {
+      "path": "tests/__pycache__/test_validate_character_profiles.cpython-312.pyc",
+      "bytes": 30658,
+      "sha256": "a6ccf18b821ac021cc15179aceb1b453f4f237702b3c52920353860399844ab6",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "eeed4cc099e86baae07fbec73fc02cb680af4d5b"
+    },
+    {
+      "path": "tests/__pycache__/test_validate_worldbook.cpython-312.pyc",
+      "bytes": 15180,
+      "sha256": "bd0b2ec0a10fbcd54f4b85136ff0daec8570b192c617cc5782f57cca7c3f0060",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": true,
+      "git_blob": "59aaee9817cacaaadef02c4ffb3d6c33359e543a"
+    },
+    {
+      "path": "work/reading/tools/__pycache__/forum_extract_legacy.cpython-312.pyc",
+      "bytes": 22694,
+      "sha256": "de04732ef2f16a552ceea9d1f2aca61a635e844174eb5b43ee39e414ea46da2f",
+      "reason": "regenerable_python_cache",
+      "tracked_at_checkpoint": false,
+      "git_blob": null
+    },
+    {
+      "path": "output/replay_tavern/901_帝都重玩_F4_v1.zip",
+      "bytes": 153281,
+      "sha256": "aaf185909c9dc8aa47dbb2c2b725cda0c194f27474c90008686fc9195c10fc87",
+      "reason": "superseded_v1_bundle",
+      "tracked_at_checkpoint": true,
+      "git_blob": "5cd2d9ebdf1f987220018cadd76debdc1afe724d"
+    },
+    {
+      "path": "output/replay_tavern/enh_20261004_candidate/901_帝都重玩_ENH_20261004_候选.json",
+      "bytes": 358923,
+      "sha256": "89d5deb561c7e92d053f7b02904e7f583090cc4b6c9d025efb9b7ce9ef1e2067",
+      "reason": "superseded_runtime_payload",
+      "tracked_at_checkpoint": true,
+      "git_blob": "ee5e280f23495154d282ce5ae8a18aa5f7550790"
+    },
+    {
+      "path": "output/replay_tavern/enh_20261004_r2_candidate/901_帝都重玩_ENH_20261004_r2_候选.json",
+      "bytes": 362165,
+      "sha256": "67c7686693e7cdc5525582acc4ca35bda78f7f07eb341a6b8d426e16d08be990",
+      "reason": "superseded_runtime_payload",
+      "tracked_at_checkpoint": true,
+      "git_blob": "37d6c1487ba9807b8025661bf7725e9ac40a0728"
+    },
+    {
+      "path": "output/replay_tavern/gm_style_v1/import/901_GM文风.prompts.json",
+      "bytes": 7108,
+      "sha256": "15c928c178e553d26f2e91bf8a901c1cae7da02fd603c989485068137653ac67",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "00299dfa1165817826b0e38bf11b04ede688a056"
+    },
+    {
+      "path": "output/replay_tavern/gm_style_v1/texts/901_帝都开场_修订.txt",
+      "bytes": 583,
+      "sha256": "576083347c22cd1342dae34d19092fac6ecba7dd489660d13ccbfadd2c7a85c2",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "e3e10f84018337f02e5e9f0ec8a819c2073e48a2"
+    },
+    {
+      "path": "output/replay_tavern/gm_style_v1/texts/901_文风提示.txt",
+      "bytes": 4716,
+      "sha256": "4c72384b2429ed81b069fe8931cacfc817a69eacbab00e737ffb89d4eafb614b",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "5e1c4637ae885e32f90b3182259af4130cb1448e"
+    },
+    {
+      "path": "output/replay_tavern/gm_style_v1/texts/901_短示例_可选.txt",
+      "bytes": 1323,
+      "sha256": "8a5ef6afdb2cdf95850b03c7550dfb21d4f955129a365e12cb9f09de6d7120dd",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "cf17970bcfc4f7ee128b782d94d92ad4f74b3142"
+    },
+    {
+      "path": "output/replay_tavern/enh_20261004_r2_candidate/import/901_GM文风_r2.prompts.json",
+      "bytes": 6947,
+      "sha256": "b60e2f866b984ac0be39564c43392233c9c55507ea43cc2805d22bf569055591",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "63bbacdaa2d0faae286ec148f8bc8cf2c59b4ad3"
+    },
+    {
+      "path": "output/replay_tavern/enh_20261004_r2_candidate/texts/901_文风提示.txt",
+      "bytes": 6370,
+      "sha256": "59bd8ea57d7d1df4350d6427e3bd760d8b39843b58095b833aca4e8a58b70edf",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "2fd7eecb96dbc536074b403e899ead12235f3bdc"
+    },
+    {
+      "path": "output/replay_tavern/enh_20261004_r2_candidate/texts/主持提示.txt",
+      "bytes": 5434,
+      "sha256": "b8bdde160cb6f94e6dbe161c321b270655aa7986cff34d07fc910f2a93102406",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "dcff892d4da99d3c68d37c1b014b4e894734933b"
+    },
+    {
+      "path": "output/replay_tavern/enh_20261004_r2_candidate/texts/主持规则_两段替换.md",
+      "bytes": 1816,
+      "sha256": "18fabdb78016e9c039af110b32341be74648df0a1ac5fac21b6c713b8e4aff21",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "a08333046dacae71023c5ca9c654bc881eea5c7a"
+    },
+    {
+      "path": "output/replay_tavern/enh_20261004_r2_candidate/texts/黄泉完整候选片段.txt",
+      "bytes": 2524,
+      "sha256": "45f46c50abc6df56bcf824cb5c99c8b6048566f0ff7a1ca0bf1211a4ce6156b3",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "3808bbba98248c85bcd29e7432377965c175c4c3"
+    },
+    {
+      "path": "output/replay_tavern/enh_20261004_r2_candidate/texts/黄泉表达方式_只替换本段.txt",
+      "bytes": 656,
+      "sha256": "1dc91c5c74f794473d8fa910eba632b18fae628b8d2f76d6f34e6919d4355337",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "4421a511d7eb190253e1df082bcfb59650f1305e"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261004/texts/九雪医馆片段.txt",
+      "bytes": 1153,
+      "sha256": "b45e9f79b2424976ee69a7653eb456ef95217232c91c6247c79f16587158175a",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "47c7d307ec5084eb576880dac5319a9dd36d2b77"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261004/texts/凌迟片段.txt",
+      "bytes": 1819,
+      "sha256": "ded9b2d359ad0ef8d559eb364a5c6fa8a044c655711668fafd2cdb71e472d003",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "116753d0559ca2baa78e7cb3e4a784fde83fbb90"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261004/texts/多人对白与行动接续.txt",
+      "bytes": 990,
+      "sha256": "8418fc00641b52a436a49b06524bc6445195b1b589a96168e6385fb0078f45d9",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "01b28fe3d8894053226deca28d8b1b5b7043f950"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261004/texts/布莱特片段.txt",
+      "bytes": 2144,
+      "sha256": "f4133119bb6d4881d1bfcf3175b0816e341d65353be5c5c470787b8a1dc6f910",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "89a7b37e82430ac544cae8288170cdd6c9022e90"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261004/texts/布莱特盲视修正句.txt",
+      "bytes": 239,
+      "sha256": "9ee7b1153e822f31e55eb0928c4d85e98cf10561751fe540155736a3ef4af4ea",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "6defb376c4c9c826346d59131f6fd789fce3f9ff"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261004/texts/帝国风貌约定.txt",
+      "bytes": 360,
+      "sha256": "404f0d09a4fd1e732fea013b7714b630b036c711e189fac5fc1c171680963a5a",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "3cd6010bcd89794331d2f3fb968ef52b211d172c"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261004/texts/游击士协会片段.txt",
+      "bytes": 2416,
+      "sha256": "67ef4461847b3e6f9fbc4fcd4236d5638a62b94adde5e390c329327106193a57",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "ef3c5331a59bc6276f4d2927ba05fd8a4287fad5"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261004/texts/狂岚修正句.txt",
+      "bytes": 135,
+      "sha256": "c473db7013345d8cc3ef4019642f4064315cdfbc02d1671ce73c3f0cdbdfe9b7",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "95cd5dc44b1e9201c86175058b14b1c9c583fa97"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261004/texts/自然交棒_主持修订段.txt",
+      "bytes": 800,
+      "sha256": "0aba82be283ddd0aa0d2a7ab4ad41836416f23267db15785ca1b8574053fb4ab",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "5c031aa3353261ceeebe81773f5f28d31dbba580"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261004/texts/黄泉片段.txt",
+      "bytes": 1943,
+      "sha256": "66648759cecf87b53d642aafd963277755b3cfcd4e460b2342ed4ac39376598d",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "ea6ede9140d73268292e45a11f152b6be2e716c6"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261005/import/901_GM文风_20261005.prompts.json",
+      "bytes": 8312,
+      "sha256": "32c8ffe3d47da4b0573992539b23c2a4b3bf07ff35b8061ce88408d6868305a6",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "492c0fb126cd38ac8eb31a34b4f29ce218502297"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261005/texts/901_文风提示.txt",
+      "bytes": 7735,
+      "sha256": "4170e6eed36b91746dfa18e1f171066419ab875c50226e43a3e927fd62f38aea",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "436063acbf0b6853df99dc9b35f1145781cd3793"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261005/texts/主持提示.txt",
+      "bytes": 5689,
+      "sha256": "0651ee0683e1302bde59a8455b64df0921876f5eef9d510c3c0e3c5bd5eb65eb",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "896d1e414cbdb5939638a4712931aab9683908ba"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261005/texts/对白与内心_替换段.txt",
+      "bytes": 599,
+      "sha256": "e6857227c1a58750db895f6fe53a78eb63430eda9961dc777d5a7034397e4111",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "72b8728e1500aee73a75258eec0b19c42190e75d"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261005_r2/import/901_GM文风_20261005_r2.prompts.json",
+      "bytes": 10010,
+      "sha256": "5dc573036cbe887dcfcc4083c9a9b31bda2f897f1c1ca2752e10da560e770c53",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "b9042619f814537f76769fd462f0646c8f13a87b"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261005_r2/texts/901_文风提示.txt",
+      "bytes": 9433,
+      "sha256": "a535d285d9ad4b2b922d6591a5198b61a3cecf5bdc79af5131cbf27de113a803",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "2aa93df7bcb556ed743e6504669fdf2cfbcc21b8"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261005_r2/texts/主持提示.txt",
+      "bytes": 9638,
+      "sha256": "1c8518691f9136674b818d249d6285f8f44adc23339e2d2a5b4c493c5290e0cd",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "ede0ddba873fdc5f2abebe5b0c983ab216e62ac1"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261005_r2/texts/主持规则_三处替换.md",
+      "bytes": 300,
+      "sha256": "bba9f90f0aaaa8f84c93989d0b3f86756980e2f5d48b57e10909c8fe8c96cf6b",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "3484df6a8d960d7a1a56489826eb832a2d9414af"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261005_r2/texts/主持规则_更新段落.md",
+      "bytes": 7873,
+      "sha256": "462af067a6af9cb87eee7da38d99934661de710e74c89ddf99230853d9f9a7c1",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "5d3867746c2185089aa8a9cb95fa60f9c7e7fadc"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261005_r2/texts/九雪医馆_首段替换.txt",
+      "bytes": 221,
+      "sha256": "097e3d66615be0c406c5abd102ddfa366cc78e0a18b3a9f90845679fc0ad8740",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "c6d45e0bfc2a21e385bda4bd135462b8e1efc578"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261005_r2/texts/贞子_前史身份.txt",
+      "bytes": 775,
+      "sha256": "4d81bf22689125e8e6dc1574510304c86833301c544e116bd7af6e7aef6c7687",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "a3e33ef349ab3ff661434e60486fd6e375619659"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261005_r2/texts/雪老_完整人物片段.txt",
+      "bytes": 2701,
+      "sha256": "b038e9051730961400fb4de831944c7be6db1520d780d13404484a3e87a9737b",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "764f1fb6891da2e68529bf7f0cd4f46d31305777"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261005_r2/texts/雪老_性格与表达替换.txt",
+      "bytes": 888,
+      "sha256": "4b7c66417d194152ff1e4b814674682b1b19901cb5d50598be71493aefb07568",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "7a41871b7d9fc0afdc00580033ee6e6209d1b79d"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261005_r2/texts/雪老_既有关系替换.txt",
+      "bytes": 760,
+      "sha256": "f6c8f013390621a5acbe9e9c2131c4cdac25459f6eb046e3d5e90596061916a4",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "572a577955a641309a447d88f840ebfef157914d"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261005_r2/texts/黄泉_既有关系替换.txt",
+      "bytes": 478,
+      "sha256": "77e6166cd7e9039afec0c3970d542d335e17ee6087360867e15532ff59c6d5b8",
+      "reason": "superseded_prompt_or_patch",
+      "tracked_at_checkpoint": true,
+      "git_blob": "3ab66f7617c9d4eea7c47aec9420aa7841be84c9"
+    },
+    {
+      "path": "output/replay_tavern/v1/import/901_帝都主持.card.json",
+      "bytes": 289909,
+      "sha256": "048c4247e5b80cfe423e31e6bdacca37aa6b246451a726207f24c1d9e0b8f93c",
+      "reason": "superseded_v1_payload",
+      "tracked_at_checkpoint": true,
+      "git_blob": "08a1e85fb1500ec079e690c30d7f2be0defa37cc"
+    },
+    {
+      "path": "output/replay_tavern/v1/optional/901_帝都重玩_T0_v1.json",
+      "bytes": 336131,
+      "sha256": "a886efa9d2afd259ce009caf42db8b90f419003fabf1048d5cef4a9ed3947af3",
+      "reason": "superseded_v1_payload",
+      "tracked_at_checkpoint": true,
+      "git_blob": "682eea03c4ec879871bb6fd19226b7ce13e29a37"
+    },
+    {
+      "path": "output/replay_tavern/v1/texts/开局摘要.txt",
+      "bytes": 845,
+      "sha256": "5308149c5ed42a7cde8ddf383152aefa86b43b69572911a8f04bfc4353dd5f2f",
+      "reason": "superseded_v1_payload",
+      "tracked_at_checkpoint": true,
+      "git_blob": "7653fb015b44638ad9c8107bc9faf8df75361c71"
+    },
+    {
+      "path": "output/replay_tavern/v1/texts/摘要提示.txt",
+      "bytes": 1570,
+      "sha256": "3905197397bcc8882fc01b1044a3efeaac51a4cf1824236994582ff4e3a596ad",
+      "reason": "superseded_v1_payload",
+      "tracked_at_checkpoint": true,
+      "git_blob": "a4d9281527e007966c7d03f2fd675ab2cc9420b7"
+    },
+    {
+      "path": "output/replay_tavern/v1/texts/主持提示.txt",
+      "bytes": 5102,
+      "sha256": "df8c56f9f9f4a37fe6f7d734b5f05213648da6d32cbcf7b1905bc70df79e7aad",
+      "reason": "superseded_v1_payload",
+      "tracked_at_checkpoint": true,
+      "git_blob": "5698f54a6d574d2763d39ce470f02fcca0b5b0fe"
+    },
+    {
+      "path": "output/replay_tavern/enh_20261004_candidate/仅新故事_T0补充.txt",
+      "bytes": 927,
+      "sha256": "334c08ffe597ed7450bfcd64db51a1f49e904691c39b674e79415bccf4575176",
+      "reason": "superseded_runtime_payload",
+      "tracked_at_checkpoint": true,
+      "git_blob": "4bbeaa5526484083d98c24da56e92c0deebc684c"
+    },
+    {
+      "path": "output/replay_tavern/enh_20261004_r2_candidate/仅新故事_T0补充.txt",
+      "bytes": 927,
+      "sha256": "334c08ffe597ed7450bfcd64db51a1f49e904691c39b674e79415bccf4575176",
+      "reason": "superseded_runtime_payload",
+      "tracked_at_checkpoint": true,
+      "git_blob": "4bbeaa5526484083d98c24da56e92c0deebc684c"
+    }
+  ],
+  "total_files": 83,
+  "total_bytes": 2986851,
+  "protected_files": [
+    {
+      "path": "current_state.md",
+      "sha256": "ebf6159bc248600be6371da29bc405bfb781de9e6eaccf700d3dab7e093ed43e"
+    },
+    {
+      "path": "output/replay_f_review/v1/characters/runtime_cards.jsonl",
+      "sha256": "3e92b9dd8982f18fb4a926b94a71790363e3fe227d7c1112638aabedc5b66193"
+    },
+    {
+      "path": "output/replay_f_review/v1/worldbook_source.jsonl",
+      "sha256": "aa5835d33e47a822bd3c1217483e7fd41c8beb9253df21a57846da4b54329774"
+    },
+    {
+      "path": "output/replay_tavern/hallucination_prevention_20261005_candidate/import/901_GM文风_20261005_r2.prompts.json",
+      "sha256": "9badecdfaf9a20e5e0ac07917d82a2a389ee3ff1edab0a6586d6b61e63f27687"
+    },
+    {
+      "path": "output/replay_tavern/hallucination_prevention_20261005_candidate/import/文风_prompt.json",
+      "sha256": "9badecdfaf9a20e5e0ac07917d82a2a389ee3ff1edab0a6586d6b61e63f27687"
+    },
+    {
+      "path": "output/replay_tavern/playtest_fix_20261005/import/文风_prompt.json",
+      "sha256": "9badecdfaf9a20e5e0ac07917d82a2a389ee3ff1edab0a6586d6b61e63f27687"
+    },
+    {
+      "path": "output/replay_tavern/v1/import/901_御临风.persona.json",
+      "sha256": "06a141ab55cdc34d28cc2264a755d43224927e52a2c4af52aaa2bce27c6ee463"
+    },
+    {
+      "path": "output/replay_tavern/world_sync_20261007_candidate/import/901_帝都主持.card.json",
+      "sha256": "5080b99faca76dc92a08fc03ceafddcb3e2e635d650d3efc5e947b34470a4af2"
+    },
+    {
+      "path": "output/replay_tavern/world_sync_20261007_candidate/import/901_帝都重玩_M1_20261007.json",
+      "sha256": "95075a521fb44a516494b25aa412590edfa024fa7b43d2f7c05e96803dd01efb"
+    },
+    {
+      "path": "output/replay_tavern/world_sync_20261007_candidate/import/文风_prompt.json",
+      "sha256": "9badecdfaf9a20e5e0ac07917d82a2a389ee3ff1edab0a6586d6b61e63f27687"
+    },
+    {
+      "path": "output/replay_tavern/world_sync_20261008_candidate/import/901_帝都主持.card.json",
+      "sha256": "f0e28e8e106a152e6dbff00f6d200496318e4ec21e47541870864cd2d096d9fb"
+    },
+    {
+      "path": "output/replay_tavern/world_sync_20261008_candidate/import/901_帝都重玩_M1_20261008.json",
+      "sha256": "a78b34d08243f518e180498d1bcfb8ebbb32556b0d3ac4e60ca1df7175b99641"
+    },
+    {
+      "path": "output/replay_tavern/world_sync_20261008_candidate/import/文风_prompt.json",
+      "sha256": "9badecdfaf9a20e5e0ac07917d82a2a389ee3ff1edab0a6586d6b61e63f27687"
+    },
+    {
+      "path": "work/replay_research/long_term_residence_reference_20261008.md",
+      "sha256": "3f58c52e8821260399080805b91d0d49e2c02bae2cf25ffcc55edc53feeccec4"
+    },
+    {
+      "path": "work/replay_research/organization_evidence_20261008.md",
+      "sha256": "24d2f515c714235e32fd588f0949a3e16b20f81c409e46c9cdebefaee827fab2"
+    },
+    {
+      "path": "work/replay_research/outsider_society_reference_20261008.md",
+      "sha256": "189f45ca8b7dac06ec4b74af6f6c912e5d62761f536536f3b8e8d06083e53466"
+    },
+    {
+      "path": "work/replay_research/runtime_followup_queue.jsonl",
+      "sha256": "a99bbd1b34f5d695a829876220deab04e64db6e1414341d8fc2bfbf7f4089b29"
+    },
+    {
+      "path": "work/replay_research/user_clarifications.jsonl",
+      "sha256": "e5c95b16e1495eab1fd9687f08e7fb8f3814f2d636277cb77c6d0196569195ca"
+    }
+  ],
+  "removed_empty_directories": 12
+}
