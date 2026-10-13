@@ -8,21 +8,35 @@ Maintain the campaign's canonical records and support explicitly requested world
 - When asked to deliver a draft or implement an agreed change, proceed with the known requirements. Do not add mandatory brainstorming, planning documents, or another approval round.
 - Develop material needed for the active task. Leave unused background and endgame antagonists unexpanded unless requested.
 - Preserve the player's control of 御临风. Resolve already authorized actions within the user's delegated limits; do not add player dialogue, thoughts, goals, or decisions.
-2. Agent roles and model preferences
-Roles describe work, not mandatory separate sessions or installed agents. The active user-facing session normally performs the task itself.
+2. Agent roles, sessions, and model preferences
+Roles describe work, not mandatory extra sessions or installed agents. Keep authorial discussion with the user in the active main session.
 Role	Preferred model	Responsibility
-Workshop / main agent	Sol High	Interactive worldbuilding, existing NPC development, local plot design, and ordinary project work.
-Major-design agent	Astra, at the user's selected effort	Direct discussion of core characters, major narrative choices, and consequential multi-faction plans.
-Review agent	Sol High	A requested, bounded review of specified claims, evidence, or changes; read-only.
-Maintenance agent	Sol Medium	Bounded organization, formatting, scripts, and file maintenance within assigned paths.
+Workshop — single-session mode	Sol High	Related worldbuilding, existing NPC development, and local plot work in one conversation.
+World — split-session mode	Sol High	Social operation, regions, factions, and institutions; primarily 901-world-systems.
+Story — split-session mode	Sol High; user-selected Astra for major design	Existing important characters and behind-the-scenes plots; primarily 901-story-factory.
+Researcher	Sol Medium	Bounded, read-only evidence retrieval and relevant file discovery.
+Canon Reviewer	Sol High	Bounded, read-only assessment using 901-canon-review when section 3 calls for it.
+Maintenance	Sol Medium	Bounded organization, formatting, scripts, and file maintenance within assigned paths.
 
 
+Sessions and context
+- Use one Workshop for a connected workstream. When World and Story become recurring workstreams with substantial distinct discussion, use two interactive sessions. Honor the user's selected arrangement; do not repeatedly redesign it or open sessions without their direction.
+- One Workshop and a World/Story pair are alternative arrangements. Do not add a coordinator, standing review session, GM session, or a separate session for every skill, model, character, or task.
+- World and Story are areas of focus. Either main session may use another relevant skill within the authorized scope when that avoids an unnecessary handoff. Keep tightly coupled work together.
+- Changing model does not require changing session. Major design remains directly interactive in the active session; a separate Astra session requires the user's choice.
+- Independent sessions use saved project material for handoffs. Do not assume access to another session's unsaved decisions or the ability to command it. Separate sessions do not automatically synchronize conversation context.
+- At a meaningful handoff, update existing task or candidate material with the relevant decisions, unresolved questions, branch/period, and source or approval references. Preserve a rejected direction only when needed to prevent reopening it. Reference the material; do not copy complete transcripts, duplicate databases, or create a coordination registry.
+- Read only the other workstream's material needed for the current task. Reopen changed relevant material before relying on it. Keep detailed search logs and unrelated design exploration out of the other main session.
+- Assign each actively edited file to one writer in the current task instructions. Avoid simultaneous writes to shared Canon or exports; use the existing authorized integration procedure. Do not introduce locks, new worktrees, or synchronization systems for ordinary sequential work.
+Models and bounded delegation
 - Model names above are project preferences. Actual availability, model IDs, and effort settings come from the environment. Do not claim a model switch or another agent's work without an actual tool result.
 - Use the selected model. Recommend an upgrade only for a specific difficulty; do not automatically repeat work with a more expensive model.
-- Default to one interactive session. The user may switch models or open a separate design session. Independent sessions exchange saved project material; do not assume one can command another.
-- Do not automatically spawn subagents. Delegate only under the user's task-specific or standing authorization, for a bounded job that benefits from separation.
-- An authorized subagent receives the task, relevant source references, allowed output paths, and a concrete completion condition. Return consequential questions to the main agent; the main agent obtains and accurately relays the user's answer. Do not settle creative preferences on the user's behalf.
-- Review agents report findings without rewriting the work. Maintenance agents modify only assigned files. Avoid concurrent edits to the same files and recursive review chains.
+- Standing delegation is limited to useful, bounded, read-only research and targeted Canon review within the active authorized task. It permits delegation without asking again each time; it does not authorize new creative scope or routine review of every draft.
+- Use Researcher when substantial source retrieval would clutter the main discussion. Read a few known passages directly. Use Canon Reviewer only for a requested review, disputed evidence, concrete continuity conflict, or consequential adoption/change needing assessment. Research does not automatically trigger review.
+- Delegate a specific question, relevant source references or search scope, active branch/period, allowed tools and output paths, and a completion condition. Return concise findings with precise references; keep raw exploration output in the child thread. The parent uses the result rather than repeating the whole search.
+- Keep personality, tone, narrative direction, and consequential choices in direct user conversation. A subagent returns unresolved choices to its parent. Relay the user's correction accurately and cancel or redirect obsolete work instead of continuing an abandoned brief.
+- Review and research agents report findings without editing files. Maintenance may write only within an explicitly assigned task and paths. Start one child for a bounded job; add parallel children only for genuinely independent work. Children do not spawn further agents or initiate review chains.
+- Use actual available agent tools and supported model settings. If delegation is unavailable, perform the bounded task directly when feasible. Do not fabricate a delegation result or silently substitute a more expensive model.
 3. Skills and context
 - Before the first 901-* use in a session, read the relevant parts of docs/901_skills_integration.md if they are not already in context. It identifies real project paths, branch entry points, and approved integration boundaries.
 - Reuse unchanged instructions already available. Reread only what changed, was lost from context, or is needed to resolve a concrete question. Read task-relevant files rather than the whole repository.

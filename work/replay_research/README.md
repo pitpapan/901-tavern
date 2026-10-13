@@ -23,11 +23,22 @@
 | 主题 | 主要档案 |
 |---|---|
 | 地理与城市定位 | [帝国初稿](empire_working_draft_20261007.md)、[旅行尺度](travel_scale_proposal.md) |
-| 人口、聚居与军力 | [人口专题](population_settlements_reference_20261007.md)、[军力口径](empire_military_strength_20261007.md) |
+| 人口、聚居与军力 | [人口专题](population_settlements_reference_20261007.md)〔2026-10-12已修订：帝都数百万属极限、佛萨罗伦几十万、塔镇至多几百；撤回UCL026旧城市默认表〕、[军力口径](empire_military_strength_20261007.md) |
 | 异界来客与组织候选 | [已确认的来客原则](outsider_society_reference_20261008.md)、[组织分类与采用范围](organization_options_20261008.md)、[组织原文依据](organization_evidence_20261008.md) |
 | 长期居住与本轮完成范围 | [住房依据与LRQ01—04结论](long_term_residence_reference_20261008.md) |
 | 语言、读写与教育 | [语言与免费教育](language_education_reference_20261008.md) |
 | 城镇服务与公共设施 | [服务首、二轮](town_services_working_draft_20261007.md)、[第三轮城镇运作](town_operations_reference_20261008.md)、[普通服务](ordinary_services_reference_20261007.md) |
+| 帝都日常供给与城市生计 | [2026-10-12作者初稿](town_operations_reference_20261008.md#2026-10-12帝都日常供给与城市生计初稿region_extension作者层draft)：本版已采用，保持作者层DRAFT，本主题文化细化已恢复 |
+| 帝都直接腹地的村镇与集货 | [2026-10-12腹地续稿](town_operations_reference_20261008.md#2026-10-12帝都直接腹地的村镇与集货节点新增作者层draft)：本版已采用，保持作者层DRAFT |
+| 腹地集货与帝都的稳定往来 | [2026-10-12供货往来续稿](town_operations_reference_20261008.md#2026-10-12腹地集货与帝都的稳定往来新增作者层draft)：本版已采用，农业魔法服务费用已明确由帝国政府承担；保持作者层DRAFT |
+| 腹地农作的公共法术服务 | [2026-10-12公共服务稿](town_operations_reference_20261008.md#2026-10-12腹地农业魔法的日常公共服务新增作者层draft)：本版已按修正采用；法师掌握适用法术，不另立职业类别；继承政府付费及公共资源化取向 |
+| 帝都教学与腹地知识交流 | [2026-10-12教育交流续稿](language_education_reference_20261008.md#2026-10-12帝都教学与腹地的双向知识交流新增作者层draft)：K01至K06已采用，保持作者层DRAFT；继承免费教育、过往来客的技术进步及公共资源化 |
+| 洛汀与东部河谷的水土、生产和往来 | [2026-10-12河谷主题稿](lotin_river_valley_working_draft_20261012.md)：L、LM、LC、LD、LP、LW、LO各节已采用，作者层DRAFT，不绘图、不更新运行；器物及采购见烬辉城主题文件 |
+| 烬辉城与东南丘陵的原料、技艺和生计 | [2026-10-12丘陵主题稿](jinhui_hills_working_draft_20261012.md)：JC与JM各节已采用；权属续稿在洛汀主题文件，旧J01至J06未整篇采用，作者层DRAFT，不绘图、不更新运行 |
+| 佛萨罗伦与西部腹地的陆运、商旅和生活 | [2026-10-12西部主题稿](fossarolen_western_hinterland_working_draft_20261012.md)：F01至F06、FW01至FW06均已采用，继承修订人口；保持作者层DRAFT，不绘图、不更新运行 |
+| 风门城与南部山前的生产、运输和生活 | [2026-10-12风门主题稿](fengmen_foothills_working_draft_20261012.md)：FM01至FM11全部已采用，含尚武、普通军械与军需货运，保持作者层DRAFT |
+| 白暮城及北境南缘的长雪季生产供给和生活 | [2026-10-12白暮主题稿](baimu_northern_margin_working_draft_20261012.md)：BM、BW、BC、BN、修订后BH、BG、长寿修订后BE及BP01至BP06全部已采用；已补精灵繁衍率明显低于人类的共同前提；BFC一般生活候选暂存，用户纠正为地域整体特色；BRT01至BRT06地域特色已采用；BME01至BME06寒地魔法生态已采用；BMP01至BMP06雪针杉霜脂辉鳞鳟生产加工与用途新提案待采用，原团沐透线依据与T0边界另列；保持作者层DRAFT |
+| 远西新城市的林湖手艺与生活 | [现有西部主题稿WC至DWU各节](fossarolen_western_hinterland_working_draft_20261012.md)：WC01为主及少量WC02衣料加工、WL、WE、WY、WZ、WTM、FJ、DW、DWG及DWU01至DWU06全部已采用；WT02世界树存在定位已采用，WT重叠机制以WY/WZ后续采用范围为准；WR、WX及其他未获采用范围仍保留；WS01至WS03长寿生活机制已采用；精灵低繁衍率为共同前提，WF01至WF06家庭传艺与独立发展已采用；WK01至WK06及LS01至LS02均已采用；WM01至WM06分工传艺交接已采用；WJ01至WJ06独立工坊合作已采用；WP01至WP06长期采购维修已采用；WQ01至WQ06特殊木材长期供料已采用；WU01至WU06缺料调整已采用；WV01至WV06恢复供料后的积压备料与日常往来已采用；保持作者层DRAFT，不定城市名与具体坐标、不绘图或更新运行 |
 | 世界、制度与势力 | [世界模型](world_model.md)、[制度简版](empire_operations_consolidated.md)、[帝国专题](empire_dossier.md)、[势力运作](faction_operations_dossier.md) |
 | 生活与人物关系 | [日常生活](everyday_life_reference_20261007.md)、[人物生活](npc_life_relationships_20261007.md)、[关系矩阵](relationship_matrix.md) |
 | 人物身份与分期 | [帝国人物](empire_character_dossiers.md)、[画像](npc_portraits.md)、[覆盖](character_coverage.md)、[御临风分期](yulinfeng_period_dossier.md) |

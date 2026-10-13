@@ -1,0 +1,61 @@
+{
+  "revision": "M1_IMPORT_20261012_005",
+  "parent_revision": "M1_IMPORT_20261008_004",
+  "authorization": "UCL_20261012_070",
+  "status": "independent_runtime_candidate_not_applied",
+  "counts": {
+    "total": 130,
+    "enabled_constant": 6,
+    "enabled_keyword": 115,
+    "disabled": 9
+  },
+  "changed_content": 14,
+  "scope_disabled_uid": 259268599,
+  "added": 0,
+  "uids_preserved": 130,
+  "loading_changes": [
+    {
+      "uid": 259268599,
+      "disable": true,
+      "reason": "explicit_user_scope_exclusion"
+    }
+  ],
+  "host_body_unchanged": true,
+  "persona_unchanged": true,
+  "style_unchanged": true,
+  "baseline": "output/replay_tavern/world_sync_20261008_candidate",
+  "output": "output/replay_tavern/capital_entry_20261012_candidate",
+  "projection_file": "work/replay_research/runtime_sync_20261012/projection_edits.json",
+  "character_projection": "characters/runtime_cards.jsonl (seven-row delta, not independent chat cards)",
+  "runtime_verified": false,
+  "automatic_installation": false,
+  "model_calls": 0,
+  "skills_used": [
+    "local tavern-cards: partial editing/compression/revision",
+    "901-canon-review: only projected claims"
+  ],
+  "forge_executed": false,
+  "forge_reason": "existing compatibility assessment: full roundtrip changes UID/loading/provenance; preserve 004 path",
+  "files": [
+    {
+      "path": "output/replay_tavern/capital_entry_20261012_candidate/import/901_帝都主持.card.json",
+      "sha256": "b722d1de5782e87f56dff45edf80a67cc7483585b91c9ed6c97dd193aaacfe36",
+      "bytes": 437695
+    },
+    {
+      "path": "output/replay_tavern/capital_entry_20261012_candidate/import/901_帝都入口_M1_20261012.json",
+      "sha256": "0e24ef32c5f79e2b10b9b7e0951bf953de02220716ff92daf4b73581dd0abf47",
+      "bytes": 473896
+    },
+    {
+      "path": "output/replay_tavern/capital_entry_20261012_candidate/import/901_御临风.persona.json",
+      "sha256": "06a141ab55cdc34d28cc2264a755d43224927e52a2c4af52aaa2bce27c6ee463",
+      "bytes": 1837
+    },
+    {
+      "path": "output/replay_tavern/capital_entry_20261012_candidate/import/文风_prompt.json",
+      "sha256": "9badecdfaf9a20e5e0ac07917d82a2a389ee3ff1edab0a6586d6b61e63f27687",
+      "bytes": 10482
+    }
+  ]
+}
