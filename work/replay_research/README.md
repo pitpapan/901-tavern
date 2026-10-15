@@ -8,6 +8,8 @@
 
 ## 当前入口
 
+2026-10-15作者建设阶段保存：北方当前收束，采用与待采用范围见[银月城阶段入口](silvermoon_high_elf_city_working_draft_20261015.md#2026-10-15北方阶段收束与保存入口)及白暮主题稿；SMN01至SMN06随后已明确全部采用，保持作者层DRAFT。下一地区尚未选择。东西外缘与跨陆连接的CG01至CG04见[帝国地理主题稿](empire_working_draft_20261007.md#2026-10-15大陆外缘与跨陆连接讨论未采用作者层draft)，为未采用作者层DRAFT，不覆盖已采用地图。
+
 2026-10-11已收拢[手动导入包与路径](../../output/replay_tavern/README.md)，并清理旧导出及缓存；详见[清理记录](../maintenance/cleanup_20261011/README.md)。作者与运行的来源截止点不变。
 
 | 阅读需要 | 唯一当前入口 |
@@ -37,7 +39,8 @@
 | 烬辉城与东南丘陵的原料、技艺和生计 | [2026-10-12丘陵主题稿](jinhui_hills_working_draft_20261012.md)：JC与JM各节已采用；权属续稿在洛汀主题文件，旧J01至J06未整篇采用，作者层DRAFT，不绘图、不更新运行 |
 | 佛萨罗伦与西部腹地的陆运、商旅和生活 | [2026-10-12西部主题稿](fossarolen_western_hinterland_working_draft_20261012.md)：F01至F06、FW01至FW06均已采用，继承修订人口；保持作者层DRAFT，不绘图、不更新运行 |
 | 风门城与南部山前的生产、运输和生活 | [2026-10-12风门主题稿](fengmen_foothills_working_draft_20261012.md)：FM01至FM11全部已采用，含尚武、普通军械与军需货运，保持作者层DRAFT |
-| 白暮城及北境南缘的长雪季生产供给和生活 | [2026-10-12白暮主题稿](baimu_northern_margin_working_draft_20261012.md)：BM、BW、BC、BN、修订后BH、BG、长寿修订后BE及BP01至BP06全部已采用；已补精灵繁衍率明显低于人类的共同前提；BFC一般生活候选暂存，用户纠正为地域整体特色；BRT01至BRT06地域特色已采用；BME01至BME06寒地魔法生态已采用；BMP01至BMP06雪针杉霜脂辉鳞鳟生产加工与用途新提案待采用，原团沐透线依据与T0边界另列；保持作者层DRAFT |
+| 白暮城及北境南缘的长雪季生产供给和生活 | [2026-10-12白暮主题稿](baimu_northern_margin_working_draft_20261012.md)：BM、BW、BC、BN、修订后BH、BG、长寿修订后BE及BP01至BP06全部已采用；已补精灵繁衍率明显低于人类的共同前提；BFC一般生活候选暂存，用户纠正为地域整体特色；BRT01至BRT06地域特色已采用；BME01至BME06寒地魔法生态已采用；BMP01至BMP06生产加工用途已采用；2026-10-15修订后BWF01至BWF06已采用，删除的遗迹生态不恢复；BWA01至BWA06动物物候材料已采用；BCO01至BCO06海岸特色已采用；BCS01至BCS06潮丝藻培育加工用途已采用；BCI01至BCI06特色器材已采用；BRL01至BRL05高等精灵社会关系已采用；BRD01至BRD06日常往来已采用；BCT01至BCT06制作教学仍待采用，原团沐透线依据与T0边界另列；保持作者层DRAFT |
+| 银月城与稀少高等精灵城市生活 | [2026-10-15银月城主题稿](silvermoon_high_elf_city_working_draft_20261015.md)：用户提出建城并确认精灵少、高等精灵更少；SM01至SM06城市定位、人口基准及生活机制已采用（帝国内高等精灵约五千，城常住约一万其中高等精灵约一千五百）；SME01至SME06魔法教育、传承工艺和白暮往来全部已采用；教育关系按后续用户意见修正为较封闭家族圈子和优秀学生外派交流，帝国免费教育作为外部条件；修订后SMT01至SMT06全部已采用；SMA01至SMA06外派关系及SMH01至SMH04覆亡史分层知情全部已采用；SMN01至SMN06家族授史与古精灵娜迦问答全部已采用；具体地点、建城史、旧都及永恒之井关系未定；保持作者层DRAFT |
 | 远西新城市的林湖手艺与生活 | [现有西部主题稿WC至DWU各节](fossarolen_western_hinterland_working_draft_20261012.md)：WC01为主及少量WC02衣料加工、WL、WE、WY、WZ、WTM、FJ、DW、DWG及DWU01至DWU06全部已采用；WT02世界树存在定位已采用，WT重叠机制以WY/WZ后续采用范围为准；WR、WX及其他未获采用范围仍保留；WS01至WS03长寿生活机制已采用；精灵低繁衍率为共同前提，WF01至WF06家庭传艺与独立发展已采用；WK01至WK06及LS01至LS02均已采用；WM01至WM06分工传艺交接已采用；WJ01至WJ06独立工坊合作已采用；WP01至WP06长期采购维修已采用；WQ01至WQ06特殊木材长期供料已采用；WU01至WU06缺料调整已采用；WV01至WV06恢复供料后的积压备料与日常往来已采用；保持作者层DRAFT，不定城市名与具体坐标、不绘图或更新运行 |
 | 世界、制度与势力 | [世界模型](world_model.md)、[制度简版](empire_operations_consolidated.md)、[帝国专题](empire_dossier.md)、[势力运作](faction_operations_dossier.md) |
 | 生活与人物关系 | [日常生活](everyday_life_reference_20261007.md)、[人物生活](npc_life_relationships_20261007.md)、[关系矩阵](relationship_matrix.md) |
