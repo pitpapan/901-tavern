@@ -1,5 +1,7 @@
 # 帝都早期事件条件与消息传播研究
 
+局部主持稿入口（2026-10-15）：[入城—医馆求助—接触右近—寻找雪老](capital_opening_playable_draft.md)已按UCL_20261015_002整版采用；[救援—撤离—安置及绕开医馆](capital_rescue_playable_draft.md)已按UCL_20261015_003整版采用；[身份核实—查问医馆众人—救治与释放](capital_clinic_release_playable_draft.md)已按UCL_20261015_004整版采用；[右近调查委托](capital_commission_playable_draft.md)已按UCL_20261015_005整版采用；[异常发现—消息核对—有限介入](capital_discovery_playable_draft.md)已按UCL_20261015_006整版采用；[帝介入后的收网](capital_intervention_playable_draft.md)已按UCL_20261015_007整版采用；[排查解控—责任核查—名誉与生活恢复](capital_recovery_playable_draft.md)已按UCL_20261015_008整版采用。[悠悠与空间龙后手](capital_yoyo_playable_draft.md)已按UCL_20261015_009整版采用。[诅咒求治与转咒取舍](capital_curse_playable_draft.md)已按UCL_20261015_010整版采用。[古雷姆林案件与追凶](capital_gremlin_playable_draft.md)已按UCL_20261015_011整版采用。十份细化ENTRY_001至GREMLIN_010，不增加主线条数；作者采用不是事件已发生，也不是005运行更新。
+
 范围：第一部第1–7页的早期事件链，另补后文对报信军官的调查线索。本文把共享证据整理为可供后续主持设计使用的事件依赖，不是正式 event 条目、已批准固定节点或正在运行的状态机。原线事实、角色所知与重玩评估项分别列出；后一项是设计上的检查条件，不宣称原文已演出全部可能分支。
 
 主要来源为 [P1第1–4页证据](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p1_001_004.jsonl>)、[P1第5–7页证据](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p1_005_007.jsonl>)。下列每项保留ERC及msg入口，可按post_locator回到原文。资料主读次数不因这次归并增加。
