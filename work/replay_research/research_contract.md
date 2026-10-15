@@ -51,7 +51,7 @@ certainty 与工作进度分开：
 
 **人物档案的扩展方式**
 
-沿用已有 [NPC 草稿模板](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/templates/npc_profile_draft.md>) 和 [PC 控制边界](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/docs/pc_control_boundary.md>) 的内容结构，不再新建一套平行的正式人物 schema。
+沿用已有 [NPC 草稿模板](<../../archive/legacy_engineering_20261015/README.md>) 和 [PC 控制边界](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/docs/pc_control_boundary.md>) 的内容结构，不再新建一套平行的正式人物 schema。
 
 主要人物保存身份与前史、性格证据、价值观、言语方式、掌握语言、能力取得与限制、双向关系、目标依据、知识变化、动态状态及反例。角色卡上的数值不是社会身份，某一次选择不是永远的性格，原玩家使用的桌外绰号不是角色正式别名。
 

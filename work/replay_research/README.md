@@ -1,6 +1,8 @@
 # 901世界与人物资料入口
 
-## 当前：组织实例已补档，商运方向获采用，地下网络关联待证
+面向读者：[世界总览](../../world/overview.md) · [主题阅读目录](../../world/README.md) · [来源入口](../../sources/README.md)。本页继续保留作者工作状态；2026-10-15已退役历史导航与中间稿见[清理恢复入口](../maintenance/cleanup_20261015/README.md)。
+
+## 2026-10-08阶段记录：组织实例已补档，商运方向获采用，地下网络关联待证
 
 作者设定已补至[UCL_20261008_012](user_clarifications.jsonl:113)：考古队、阿伊达的佣兵小队背景及国立图书馆按[原团来源](organization_evidence_20261008.md)复用；商运公司／联合商会方向获采用。[组织清单](organization_options_20261008.md)已区分既有、采用与未采用类型。追兵觊觎空间龙活体与尸材有原帖，背后跨大陆地下交易网仍属用户回忆的uncertain线索。居住、异界来客、组织／商运三组资料在[004后队列24—26项](runtime_followup_queue.jsonl:24)，尚未更新运行。
 
@@ -8,7 +10,7 @@
 
 ## 当前入口
 
-2026-10-15作者建设阶段保存：北方当前收束，采用与待采用范围见[银月城阶段入口](silvermoon_high_elf_city_working_draft_20261015.md#2026-10-15北方阶段收束与保存入口)及白暮主题稿；SMN01至SMN06随后已明确全部采用，保持作者层DRAFT。下一地区尚未选择。东西外缘与跨陆连接的CG01至CG04见[帝国地理主题稿](empire_working_draft_20261007.md#2026-10-15大陆外缘与跨陆连接讨论未采用作者层draft)，为未采用作者层DRAFT，不覆盖已采用地图。
+2026-10-15作者建设阶段保存：北方当前收束，采用与待采用范围见[银月城阶段入口](silvermoon_high_elf_city_working_draft_20261015.md#2026-10-15北方阶段收束与保存入口)及白暮主题稿；SMN01至SMN06随后已明确全部采用，保持作者层DRAFT。下一地区尚未选择。东西外缘与跨陆连接的CG01至CG04见[帝国地理主题稿](empire_working_draft_20261007.md#2026-10-15大陆外缘与跨陆连接讨论未采用作者层draft)，为未采用作者层DRAFT，不覆盖已采用地图；后续OC01至OC04为跨洋来客稀少的补充候选，远海法则交界带属于新增提案，尚未采用；OB01至OB06细化近海稳定区、远海潮变及窗口，仍为草案；后续用户已收紧背景为无跨陆购票渠道、历来仅极个别兼具能力与动机的强者跨洋，更多强者可能走魔兽山脉，独立特殊船队通行推荐相应收起。
 
 2026-10-11已收拢[手动导入包与路径](../../output/replay_tavern/README.md)，并清理旧导出及缓存；详见[清理记录](../maintenance/cleanup_20261011/README.md)。作者与运行的来源截止点不变。
 
@@ -24,38 +26,49 @@
 
 | 主题 | 主要档案 |
 |---|---|
-| 地理与城市定位 | [帝国初稿](empire_working_draft_20261007.md)、[旅行尺度](travel_scale_proposal.md) |
-| 人口、聚居与军力 | [人口专题](population_settlements_reference_20261007.md)〔2026-10-12已修订：帝都数百万属极限、佛萨罗伦几十万、塔镇至多几百；撤回UCL026旧城市默认表〕、[军力口径](empire_military_strength_20261007.md) |
+| 聚居地、荒野、魔兽与遗迹 | [2026-10-15主题初稿](settlements_wilderness_working_draft_20261015.md)：SW01至SW06已采用，联系既有地图人口、稳定城乡道路与多样探索空间；同文件修订后SI01至SI06贸易交涉、有限接触及冲突已采用；MP01至MP06山脉强弱依附、竞争联合及私下交换已采用；MA01至MA05首领权威及力量变化后的关系调整已采用；原文重写后的MU01至MU06已采用，山脉阶段按用户要求暂时收束：传说力量、五大头举荐与最高评议会、跨物种军事改革及表层战事与幕后计划分层，保留来源性质和T0知情差；山脉多数部族的强弱秩序、通常私下交换及同种多部族丰富度按UCL_20261015_022直接确认；作者层DRAFT，不绘图、不审核测试或导出 |
+| 地理与城市定位 | [帝国初稿](empire_working_draft_20261007.md)、[旅行尺度](travel_scale_proposal.md)、[2026-10-15大陆总览工作图](maps/piaoling_atlas_working_20261015.md)〔用户已将地貌图v02选作当前作者地图底稿，继续DRAFT；海岸山河森林与聚居网络均可见，更多未名聚落为抽样表达，精确距离及国界未定；塔镇覆雪，银月城候选置于白暮西侧，不覆盖已采用结构〕 |
+| 人口、聚居与军力 | [人口专题](population_settlements_reference_20261007.md)〔2026-10-12已修订：帝都数百万属极限、佛萨罗伦几十万、塔镇至多几百；撤回UCL026旧城市默认表〕、[军力口径及2026-10-13军制与T0—T8作者记录](empire_military_strength_20261007.md)〔确认、认可方向、提案与未定分列；MR01至MR05地区军务、驻军与机动军势全部已采用，保持作者层DRAFT；MD01至MD06五区划分及军事关系已采用，中央腹地按用户补充由帝或受命八柱将直辖；MT01至MT06地区部队类型驻守机动及直属协作全部已采用；ML01至ML06训练轮换补员及抽调留守全部已采用；MS01至MS06日常供给装备维护和跨区军需仍待采用，2026-10-15本轮军制讨论已收束；未投影运行〕 |
 | 异界来客与组织候选 | [已确认的来客原则](outsider_society_reference_20261008.md)、[组织分类与采用范围](organization_options_20261008.md)、[组织原文依据](organization_evidence_20261008.md) |
 | 长期居住与本轮完成范围 | [住房依据与LRQ01—04结论](long_term_residence_reference_20261008.md) |
 | 语言、读写与教育 | [语言与免费教育](language_education_reference_20261008.md) |
 | 城镇服务与公共设施 | [服务首、二轮](town_services_working_draft_20261007.md)、[第三轮城镇运作](town_operations_reference_20261008.md)、[普通服务](ordinary_services_reference_20261007.md) |
-| 帝都日常供给与城市生计 | [2026-10-12作者初稿](town_operations_reference_20261008.md#2026-10-12帝都日常供给与城市生计初稿region_extension作者层draft)：本版已采用，保持作者层DRAFT，本主题文化细化已恢复 |
+| 帝都日常供给与城市生计 | [2026-10-12作者初稿](town_operations_reference_20261008.md#2026-10-12帝都日常供给与城市生计初稿region_extension作者层draft)：本版已采用；同文件CTR01至CTR04寒凉腹地、学识公共应用与迎冬文化已采用，保持作者层DRAFT，本主题文化细化已恢复 |
 | 帝都直接腹地的村镇与集货 | [2026-10-12腹地续稿](town_operations_reference_20261008.md#2026-10-12帝都直接腹地的村镇与集货节点新增作者层draft)：本版已采用，保持作者层DRAFT |
 | 腹地集货与帝都的稳定往来 | [2026-10-12供货往来续稿](town_operations_reference_20261008.md#2026-10-12腹地集货与帝都的稳定往来新增作者层draft)：本版已采用，农业魔法服务费用已明确由帝国政府承担；保持作者层DRAFT |
 | 腹地农作的公共法术服务 | [2026-10-12公共服务稿](town_operations_reference_20261008.md#2026-10-12腹地农业魔法的日常公共服务新增作者层draft)：本版已按修正采用；法师掌握适用法术，不另立职业类别；继承政府付费及公共资源化取向 |
 | 帝都教学与腹地知识交流 | [2026-10-12教育交流续稿](language_education_reference_20261008.md#2026-10-12帝都教学与腹地的双向知识交流新增作者层draft)：K01至K06已采用，保持作者层DRAFT；继承免费教育、过往来客的技术进步及公共资源化 |
-| 洛汀与东部河谷的水土、生产和往来 | [2026-10-12河谷主题稿](lotin_river_valley_working_draft_20261012.md)：L、LM、LC、LD、LP、LW、LO各节已采用，作者层DRAFT，不绘图、不更新运行；器物及采购见烬辉城主题文件 |
-| 烬辉城与东南丘陵的原料、技艺和生计 | [2026-10-12丘陵主题稿](jinhui_hills_working_draft_20261012.md)：JC与JM各节已采用；权属续稿在洛汀主题文件，旧J01至J06未整篇采用，作者层DRAFT，不绘图、不更新运行 |
-| 佛萨罗伦与西部腹地的陆运、商旅和生活 | [2026-10-12西部主题稿](fossarolen_western_hinterland_working_draft_20261012.md)：F01至F06、FW01至FW06均已采用，继承修订人口；保持作者层DRAFT，不绘图、不更新运行 |
-| 风门城与南部山前的生产、运输和生活 | [2026-10-12风门主题稿](fengmen_foothills_working_draft_20261012.md)：FM01至FM11全部已采用，含尚武、普通军械与军需货运，保持作者层DRAFT |
+| 洛汀与东部河谷的水土、生产和往来 | [2026-10-12河谷主题稿](lotin_river_valley_working_draft_20261012.md)：L、LM、LC、LD、LP、LW、LO及LR各节已采用；LR补河阶水位、公共水工魔法及陶食文化，作者层DRAFT，不绘图、不更新运行；器物及采购见烬辉城主题文件 |
+| 烬辉城与东南丘陵的原料、技艺和生计 | [2026-10-12丘陵主题稿](jinhui_hills_working_draft_20261012.md)：JC、JM及JR各节已采用；JR补丘坡岩谷、炉火蓄热与材料转化文化；权属续稿在洛汀主题文件，旧J01至J06未整篇采用，作者层DRAFT，不绘图、不更新运行 |
+| 佛萨罗伦与西部腹地的陆运、商旅和生活 | [2026-10-12西部主题稿](fossarolen_western_hinterland_working_draft_20261012.md)：F01至F06、FW01至FW06均已采用，继承修订人口；FR01至FR04田牧浅谷、稳载魔法与衣食文化已采用；保持作者层DRAFT，不绘图、不更新运行 |
+| 风门城与南部山前的生产、运输和生活 | [2026-10-12风门主题稿](fengmen_foothills_working_draft_20261012.md)：FM01至FM11全部已采用，含尚武、普通军械与军需货运；2026-10-15 FRT01至FRT06山前风土、响穗草、岩蹄驮羊及魔法生活全部已采用；FME01至FME06按用户指示仅保留待采用草案、不再细化，保持作者层DRAFT |
 | 白暮城及北境南缘的长雪季生产供给和生活 | [2026-10-12白暮主题稿](baimu_northern_margin_working_draft_20261012.md)：BM、BW、BC、BN、修订后BH、BG、长寿修订后BE及BP01至BP06全部已采用；已补精灵繁衍率明显低于人类的共同前提；BFC一般生活候选暂存，用户纠正为地域整体特色；BRT01至BRT06地域特色已采用；BME01至BME06寒地魔法生态已采用；BMP01至BMP06生产加工用途已采用；2026-10-15修订后BWF01至BWF06已采用，删除的遗迹生态不恢复；BWA01至BWA06动物物候材料已采用；BCO01至BCO06海岸特色已采用；BCS01至BCS06潮丝藻培育加工用途已采用；BCI01至BCI06特色器材已采用；BRL01至BRL05高等精灵社会关系已采用；BRD01至BRD06日常往来已采用；BCT01至BCT06制作教学仍待采用，原团沐透线依据与T0边界另列；保持作者层DRAFT |
-| 银月城与稀少高等精灵城市生活 | [2026-10-15银月城主题稿](silvermoon_high_elf_city_working_draft_20261015.md)：用户提出建城并确认精灵少、高等精灵更少；SM01至SM06城市定位、人口基准及生活机制已采用（帝国内高等精灵约五千，城常住约一万其中高等精灵约一千五百）；SME01至SME06魔法教育、传承工艺和白暮往来全部已采用；教育关系按后续用户意见修正为较封闭家族圈子和优秀学生外派交流，帝国免费教育作为外部条件；修订后SMT01至SMT06全部已采用；SMA01至SMA06外派关系及SMH01至SMH04覆亡史分层知情全部已采用；SMN01至SMN06家族授史与古精灵娜迦问答全部已采用；具体地点、建城史、旧都及永恒之井关系未定；保持作者层DRAFT |
-| 远西新城市的林湖手艺与生活 | [现有西部主题稿WC至DWU各节](fossarolen_western_hinterland_working_draft_20261012.md)：WC01为主及少量WC02衣料加工、WL、WE、WY、WZ、WTM、FJ、DW、DWG及DWU01至DWU06全部已采用；WT02世界树存在定位已采用，WT重叠机制以WY/WZ后续采用范围为准；WR、WX及其他未获采用范围仍保留；WS01至WS03长寿生活机制已采用；精灵低繁衍率为共同前提，WF01至WF06家庭传艺与独立发展已采用；WK01至WK06及LS01至LS02均已采用；WM01至WM06分工传艺交接已采用；WJ01至WJ06独立工坊合作已采用；WP01至WP06长期采购维修已采用；WQ01至WQ06特殊木材长期供料已采用；WU01至WU06缺料调整已采用；WV01至WV06恢复供料后的积压备料与日常往来已采用；保持作者层DRAFT，不定城市名与具体坐标、不绘图或更新运行 |
+| 银月城与稀少高等精灵城市生活 | [2026-10-15银月城主题稿](silvermoon_high_elf_city_working_draft_20261015.md)：用户提出建城并确认精灵少、高等精灵更少；SM01至SM06城市定位、人口基准及生活机制已采用（帝国内高等精灵约五千，城常住约一万其中高等精灵约一千五百）；SME01至SME06魔法教育、传承工艺和白暮往来全部已采用；教育关系按后续用户意见修正为较封闭家族圈子和优秀学生外派交流，帝国免费教育作为外部条件；修订后SMT01至SMT06全部已采用；SMA01至SMA06外派关系及SMH01至SMH04覆亡史分层知情全部已采用；SMN01至SMN06家族授史与古精灵娜迦问答全部已采用；最新地图候选将银月城暂置白暮西侧，精确地点、建城史、旧都及永恒之井关系仍未定；保持作者层DRAFT |
+| 远西新城市的林湖手艺与生活 | [现有西部主题稿WC至DWU各节](fossarolen_western_hinterland_working_draft_20261012.md)：WC01为主及少量WC02衣料加工、WL、WE、WY、WZ、WTM、FJ、DW、DWG及DWU01至DWU06全部已采用；WT02世界树存在定位已采用，WT重叠机制以WY/WZ后续采用范围为准；WR、WX及其他未获采用范围仍保留；WS01至WS03长寿生活机制已采用；精灵低繁衍率为共同前提，WF01至WF06家庭传艺与独立发展已采用；WK01至WK06及LS01至LS02均已采用；WM01至WM06分工传艺交接已采用；WJ01至WJ06独立工坊合作已采用；WP01至WP06长期采购维修已采用；WQ01至WQ06特殊木材长期供料已采用；WU01至WU06缺料调整已采用；WV01至WV06恢复供料后的积压备料与日常往来已采用；WRT01至WRT04林湖层次、生材魔法与多族时间文化已采用；保持作者层DRAFT，不定城市名与具体坐标、不绘图或更新运行 |
+| 经济与货币基础 | [2026-10-15飘零币经济工作稿](economy_currency_working_draft_20261015.md)：原有币名、百进制及交易原则复用；MC01至MC04、PV01及IN01至IN04均已采用为作者层DRAFT：有限防伪与国家收付信用、一铜约一元作者参照、普通稳定劳动者月入20至40银及30银预算和有限储蓄；原团交易分别留出处，不冒充工资统计。SV01至SV05公营储汇骨干及获准商号补充、家庭储蓄、大额划付与实际跨地承接为新提案待采用；EC重合部分以后续采用为准，其余不整体追认。不建全国实时金融、不编全国价目税率，不审核测试或导出 |
 | 世界、制度与势力 | [世界模型](world_model.md)、[制度简版](empire_operations_consolidated.md)、[帝国专题](empire_dossier.md)、[势力运作](faction_operations_dossier.md) |
 | 生活与人物关系 | [日常生活](everyday_life_reference_20261007.md)、[人物生活](npc_life_relationships_20261007.md)、[关系矩阵](relationship_matrix.md) |
 | 人物身份与分期 | [帝国人物](empire_character_dossiers.md)、[画像](npc_portraits.md)、[覆盖](character_coverage.md)、[御临风分期](yulinfeng_period_dossier.md) |
+| 力量与社会位置 | [日常生活作者稿](everyday_life_reference_20261007.md#2026-10-15力量与社会位置ps新增作者层draft)：修订后PS、PC、PD、DQ、DR及DS各六项全部采用，保留作者层DRAFT；力量与社会位置阶段已收束；用户已要求停止过细的协议及指导文件式展开，DT未采用旧稿不再推进逐项采用。后续以社会关系、群体差异与生活后果为主，具体场景只补必要未知，不自动延伸处置流程；不固定阵营，不制作战力等级表，不额外审核测试或导出 |
 | 力量、学习与治疗 | [力量规则](power_rules_dossier.md)、[成长恢复](growth_recovery_reference.md)、[白魔](white_mage_phantom_dossier.md) |
-| 古史、神性与原型 | [古史社会](history_society_reference_20261007.md)、[信仰](divinity_belief_reference_20261007.md)、[原型](prototype_reference_followup_20261007.md) |
+| 帝国共同价值观 | [日常生活作者稿CV](everyday_life_reference_20261007.md#2026-10-15帝国共同价值观cv新增作者层draft)：CV01至CV05全部采用，保留作者层DRAFT；普通生活希望、对帝信任、可靠贡献、求知传承及多重归属。用户补充大陆观念较自由，所述14岁御临风与11岁悠悠婚约少因年龄被认为不妥，记录社会态度而不预定重玩婚约或新设统一婚龄 |
+| 地方特色与共享文化 | [现有生活主题稿CF](everyday_life_reference_20261007.md#2026-10-15地方特色的传播改编与共享文化cf新增作者层draft)：CF01至CF06全部采用，保留作者层DRAFT；本主题阶段收束，联系商旅求学人口往来、饮食衣饰音乐审美的改编和城乡回流，保留实际材料及私人传承，不设同步潮流或统一文化，不展开流程，不审核测试或导出 |
+| 多族家庭与人生观 | [现有生活主题稿FL](everyday_life_reference_20261007.md#2026-10-15多族家庭与不同生命尺度的人生观fl新增作者层draft)：FL01至FL06全部采用，保留作者层DRAFT；继承LS寿命、精灵低繁衍率与强者延寿，讨论成家、陪伴、多代独立及地域生活差异；不新设成年婚龄或跨族生殖机制，不展开流程，不审核测试或导出 |
+| 民间文艺与游艺 | [现有生活主题稿AR](everyday_life_reference_20261007.md#2026-10-15免费教育魔法进步与民间文艺游艺ar新增作者层draft)：AR01至AR06全部采用，保留作者层DRAFT；联系免费教育、故事流转、地区族群音色与舞台、有限魔法表达及日常游戏；不建节目单或操作流程，不审核测试或导出 |
+| 乡土认同与远行返乡 | [现有生活主题稿HT](everyday_life_reference_20261007.md#2026-10-15乡土认同与远行返乡ht新增作者层draft)：HT01至HT06全部采用，保留作者层DRAFT；讨论多层故乡、留乡外出返乡的生活意义及各地多族差异，继承免费教育、乡村重心与长寿，不展开迁居或职业安排流程，不审核测试或导出 |
+| 火化与纪念文化 | [现有信仰专题CM](divinity_belief_reference_20261007.md#2026-10-15统一火化之下的地域与族群纪念文化cm新增作者层draft)：CM01至CM06全部采用，保留作者层DRAFT；统一火化下按地方生计审美及族群关系保存名字、故事与物件，不展开仪式流程，不新增灵魂机制，不审核测试或导出 |
+| 古史、神性与原型 | [古史社会](history_society_reference_20261007.md)、[信仰](divinity_belief_reference_20261007.md)、[原型](prototype_reference_followup_20261007.md)；2026-10-15用户明确帝国不供奉任何神明、死者一律火化，见信仰专题当前补充及UCL_20261015_019 |
 | T0与事件信息 | [开局](opening_state_consolidated.md)、[知识边界](knowledge_projection.md)、[时间线](integrated_timeline.md)、[消息后效](information_consequences_reference_20261007.md)、[事件因果](event_causality_overview.md) |
 | 第三方技能技术评估 | [tavern-cards适用性及兼容问题](tavern_cards_skill_assessment_20261009.md) |
 | 用户确认及精确出处 | [原话](user_clarifications.md)、[结构记录](user_clarifications.jsonl) |
 
 ## 历史与维护
 
+2026-10-15旧phase、重建、审计与审批资料已[成套归档](../../archive/legacy_engineering_20261015/README.md)。D盘同内容副本移出当前树，独有／差异版本本地打包；当前来源与采用记录继续保留。需要查旧路径时使用[来源映射](../../sources/legacy_evidence/path_map.json)，不恢复旧流水线。
+
 2026-10-11[第二轮清理](../maintenance/cleanup_20261011_round2/README.md)已移除退役工具、配套旧测试、重复语料及合册；作者基线、逐人档案、用户确认和运行来源保留。历史报告中的旧文件可由该记录指定的 Git 提交恢复。
 
-[10月7日评估](world_model_stage_review_20261007.md)、[增强计划](long_term_enhancement_plan.md)和下方日志保留其形成时期；最新状态以本页、速读和当前待办为准。[收拢前速读](world_model_core_brief_history_20261008.md)、[更早首页](README_history_20261007.md)与[更早交接](handoff_history_20261007.md)保留旧记录。
+[10月7日历史评估恢复位置](../maintenance/cleanup_20261015/README.md)、[增强计划](long_term_enhancement_plan.md)和下方日志保留其形成时期；最新状态以本页、速读和当前待办为准。收拢前速读、更早首页与交接已从活跃树退役，旧记录可按[清理清单](../maintenance/cleanup_20261015/README.md)恢复。
 
 继续使用既有工作树与来源ID。原团适用事实直接沿用，真正影响设定且无资料的问题再问；不重读整团或过度验证。酒馆由用户手动操作，已取消的复跑、代操作及龙血适配不恢复。新设定保留来源、时期与不确定性；原团未来不固定，当前分支不重置。
 

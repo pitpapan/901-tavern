@@ -1,7 +1,11 @@
-# 保留的维护程序
+# 现用通用维护工具
 
-当前程序用于通用世界书/人物格式校验、既有 R2C/R1A 修复链及在研 R1C。当前重玩运行版本请从 [004 版本入口](../output/replay_tavern/README.md)进入；该版本的阶段格式检查位于 `work/replay_research/runtime_sync_20261008/verify004.mjs`，依赖本地 ST，执行时会写入阶段检查报告，并非本目录旧导出器的替代通用构建命令。
+保留三个独立校验器：
 
-2026-10-11 已移除旧 v1 导出、已取消文风流程，以及已完成的候选/早期 Phase 3 生成器。配套旧测试一起退役，人工确认及数据未删除。旧命令出现在历史规格或报告中时，不表示仍可在当前树执行。
+- `validate_worldbook.py`：世界书结构数据的格式检查，默认对应`schema/worldbook_entry.schema.json`。
+- `validate_authoring_framework.py`：补充、事件及patch等结构数据的格式检查。
+- `validate_character_profiles.py`：人物格式检查，复用同目录的`validate_authoring_framework.py`。
 
-范围及恢复方法见 [第二轮清理记录](../work/maintenance/cleanup_20261011_round2/README.md)。
+配套schema、示例和测试仍保留原位置，不在普通设定写作时自动执行。当前运行文件见[运行入口](../output/replay_tavern/README.md)，作者世界见[世界目录](../world/README.md)。
+
+旧R2C／R1A／R1C重建、审计、审批包生成及公共模块已[成套归档](../archive/legacy_engineering_20261015/README.md)。旧报告中的命令属于历史记录，不是当前可执行任务；不要求恢复它们后才能创作或阅读。规则程序另见[JS规则引擎](../work/rules_engine/README.md)。本次没有执行任何校验或测试。

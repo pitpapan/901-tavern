@@ -1,7 +1,7 @@
-# 保留的测试
+# 现用工具的配套测试
 
-本目录保留仍维护的通用世界书/人物校验、R2C/R1A 修复链和 R1C 测试。已退役候选提取及早期 Phase 3 流程的 7 份测试已与相应旧工具一起清理。
+这里只保留三份通用校验器的测试：`test_validate_worldbook.py`、`test_validate_authoring_framework.py`、`test_validate_character_profiles.py`。相应工具位于`scripts/`，使用的八份schema及六个JSON示例保留原路径。
 
-普通文档或设定编辑不要求运行全部测试；按 AGENTS.md 选择受影响的检查。历史流水线带有冻结基线，不能把其旧基线通过与否当作重玩 004 的验收标准。
+旧phase、人物重建、R1A／R1C审计及审批工具的测试与相应工程[一起归档](../archive/legacy_engineering_20261015/README.md)。规则引擎、Builder、适配器和GM原型自己的JS测试保留在各模块目录。
 
-删除清单与恢复点见 [清理记录](../work/maintenance/cleanup_20261011_round2/README.md)。
+本次只整理文件，没有运行测试。普通作者DRAFT不自动触发这些程序。

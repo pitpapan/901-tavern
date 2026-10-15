@@ -1,6 +1,8 @@
 # 资料阅读短入口
 
-> 当前继续工作先读 [E阶段审阅结论](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/e_review_results.md>)，再按 [审阅定位表](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/reading/e_review_locator.tsv>) 查具体原帖；不重复展开全团。固定未来节点已由用户明确延期。
+2026-10-15：初次阅读先看[世界总览](../../world/overview.md)与[主题目录](../../world/README.md)；原设定与人物参考已有[仓库内快照](../../sources/README.md)。本页下方保留证据检索方法和较早阶段记录，旧暂停安排不覆盖后续采用。
+
+> 当前继续工作先读 [E阶段审阅结论](<../../work/replay_research/e_review_results.md>)，再按 [审阅定位表](<../../work/reading/e_review_locator.tsv>) 查具体原帖；不重复展开全团。固定未来节点已由用户明确延期。
 
 目标是完整整理世界观、历史背景、势力、力量与人物，最后投影为御临风首次入帝都时的酒馆运行包。按成果推进，没有固定一周工期。资料导航优先于内容提炼。
 
@@ -12,7 +14,7 @@
 
 **当前内容工作入口**
 
-[世界与人物研究包](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/README.md>) 汇总本轮实际内容、共享阅读进度、重要缺口和下一读取范围。接续工作先读这个短入口，再按主题打开候选；不必重载完整规划和机器总表。
+[世界与人物研究包](<../../work/replay_research/README.md>) 汇总本轮实际内容、共享阅读进度、重要缺口和下一读取范围。接续工作先读这个短入口，再按主题打开候选；不必重载完整规划和机器总表。
 
 **每次工作的最短路径**
 
@@ -81,4 +83,4 @@ $evidenceHits | Select-Object evidence_id,package,jsonl_line,title
 
 ## 人物与跨线资料的最新入口（2026-10-03）
 
-[125个研究标签覆盖表](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/character_coverage.md>)、[人物／跨线／知情定位表](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/reading/character_crossline_locator.tsv>)、[角色知情边界](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/knowledge_projection.md>)。九个人物参考章节已全节读到；安兹旧卡废弃，其他卡仍按版本和取得时期使用。早期资料的“长表未读”仅为历史快照，不要据此重新读整份人物集。两旁线585帖已在既有总覆盖内，本轮只复用与定点回查。
+[125个研究标签覆盖表](<../../work/replay_research/character_coverage.md>)、[人物／跨线／知情定位表](<../../work/reading/character_crossline_locator.tsv>)、[角色知情边界](<../../work/replay_research/knowledge_projection.md>)。九个人物参考章节已全节读到；安兹旧卡废弃，其他卡仍按版本和取得时期使用。早期资料的“长表未读”仅为历史快照，不要据此重新读整份人物集。两旁线585帖已在既有总覆盖内，本轮只复用与定点回查。

@@ -5,8 +5,8 @@
 | 用途 | 来源 |
 |---|---|
 | 本轮F3授权及原生功能核对要求 | [用户澄清014](../../../../work/replay_research/user_clarifications.md:299) |
-| 整体顺序与F3任务 | [原规划](../../../../docs/superpowers/specs/2026-10-02-yulinfeng-tavern-replay-plan.md:307) |
-| 单主持、条件推进与短状态的早期设计 | [既有运行设计](../../../../docs/superpowers/specs/2026-10-02-tavern-story-runtime-design.md:1) |
+| 整体顺序与F3任务 | [原规划](<../../../../sources/legacy_evidence/docs/superpowers/specs/2026-10-02-yulinfeng-tavern-replay-plan.md>) |
+| 单主持、条件推进与短状态的早期设计 | [既有运行设计](<../../../../sources/legacy_evidence/docs/superpowers/specs/2026-10-02-tavern-story-runtime-design.md>) |
 | 玩家决定主动选择，主持处理外部后果 | [PC控制边界](../../../../docs/pc_control_boundary.md:1) |
 | 相关人物片段、人物知识归属与投影范围 | [人物运行投影约定](../../../../docs/profile_runtime_projection_contract.md:1) |
 | 首次入都三人、交通、资源缺口、时期与报信对象 | [开局整合](../../../../work/replay_research/opening_state_consolidated.md:1)及[逐项依据](../../../../work/replay_research/opening_state_consolidated.jsonl:1) |

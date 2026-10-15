@@ -194,4 +194,4 @@
 
 例如埃弗纳斯末帖没有回报，安兹可以按自己已知的任务与约定继续判断，但不能准确回应他刚遭遇的胁迫；研究所已有观察记录，可继续研究，不能凭一次时间跳转就默认逆转术成功。重玩若实际产生消息传递、实验结果或新的选择，就另存分支变化，原线尾部仍保持原样。
 
-起点具体内容继续使用 [入帝都投影](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/opening_projection_draft.md>)；每轮主持与存档流程见 [剧情运行设计](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/docs/superpowers/specs/2026-10-02-tavern-story-runtime-design.md>)。本表提供资料边界，没有宣称过滤、存档或检索已经自动化。
+起点具体内容继续使用 [入帝都投影](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/opening_projection_draft.md>)；每轮主持与存档流程见 [剧情运行设计](<../../sources/legacy_evidence/docs/superpowers/specs/2026-10-02-tavern-story-runtime-design.md>)。本表提供资料边界，没有宣称过滤、存档或检索已经自动化。

@@ -1,0 +1,9050 @@
+# 901世界书 · F作者基线阅读版
+
+[返回世界目录](README.md) · [当前作者总览](overview.md) · [结构化原文](../output/replay_f_review/v1/worldbook_source.jsonl)
+
+本页于2026-10-15按既有182条F作者基线转换为可读Markdown，不改正文、状态、来源或条目ID。它包含秘密与原团后期信息；不是全部人物的T0知识。后续已采用的地区、文化和经济增量仍在主题稿，参见[当前目录](README.md)，不能以旧基线覆盖后续采用。
+
+各条来源及备注原样呈现；来源路径在能对应本仓库文件时转为相对链接，原始字段仍在上方JSONL中。
+
+## 世界（1条）
+
+<a id="WORLD_WRC_001"></a>
+### 妄想大陆
+
+`WORLD_WRC_001` · confirmed · original_campaign
+
+妄想大陆是整个世界的称呼。这个世界同时存在科技、魔法、剑气、斗气、魔兽及异世界生物，地域总体分为“四陆一脉”：四片大陆以及按各大陆区域划分的妄想山脉。不同大陆有各自的法则，某一大陆能够使用的器物或力量，到了另一大陆可能失效。
+
+飘零大陆及妄想山脉是原团故事主要发生的地域。帝国长期统治飘零大陆，并将非敌对的精灵、矮人等族纳入政治共同体；山脉中的魔兽部族、龙族与中央的无法地带，则有各自的组织和利益。飘零大陆既受到本土魔兽势力的侵袭，也会接触从异世界来到这里的生物和知识。异界来客有恶意者，也有友善者，其知识曾在长期吸收后推动本地的魔法、武技与生产方式变革。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=1; record_id=WRC_001
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=15; line_end=19
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=1; record_id=SWU_ROOT_001
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=15; line_end=26
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=17; line_end=19
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=37; line_end=64
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; source_id=P3; jsonl_line=21; post_id=1046075; floor=70
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=184; line_end=187
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_001。适用时期：世界背景。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_001,SWU_ROOT_001 本轮正文整理：四陆完整名称、全图与边界资料不足；世界称名、地理区域及政治归属分开使用。
+
+## 势力（17条）
+
+<a id="WORLD_WRC_005"></a>
+### 帝国
+
+`WORLD_WRC_005` · confirmed · original_campaign
+
+帝国是长期统治飘零大陆的政权，最高统治者被称为“帝”。帝以集中的最高权威统合军政事务，并将非敌对的精灵、矮人等族纳入帝国。帝国没有贵族阶级，官僚不因任职而被视为比普通人更高贵；与此同时，帝、八柱将及名人享有显著的个人威望，财富、职权和居民生活处境仍有差异。帝国不提倡宗教。
+
+帝国任官唯才，不实行世袭，每年提供多次考试或考核机会。官员既受中央政府监督，也受民间游击士协会的第三方监督。日常事务由帝下设的常务机构办理，八柱将、其直系下属及其他官员参与处理，旁听专员再向帝报告结果；需要最高统治者判断的事项才提交朝堂。朝会按官阶列班，地方报告经专门部门上达，特殊危机可召开紧急朝会。这使常规办理与重大决策各有入口，而非每件事务都等待帝亲自处置。
+
+帝国的军政能力依靠官署、驻军、地方守备及专业人员共同执行。原线可见地方登记敌情、联系法师传讯并向帝都或附近军队求援，也可见军方核验身份后拨给活动经费与马匹；研究者则会要求获得官方正式委托，才继续相关项目。异界知识的长期吸收曾促成魔法武技改革、卷轴工厂化、人才培养军事化与统一管理；实际行动仍受消息传递、材料、人员与补给限制。帝与哈克本来就是兄弟，帝在原线后来向哈克提出继位希望，但现有记录未显示哈克已继位。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=5; record_id=WRC_005
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=21; line_end=26
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：source_id=P1_P002; jsonl_line=33; post_id=816651; floor=82
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=1; record_id=EMP_001
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=37; post_id=820769; floor=286
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=3; record_id=EMP_003
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=17; line_end=26
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=186; line_end=187
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; source_id=P3; jsonl_line=21; post_id=1046075; floor=70
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=25; post_id=823927; floor=324
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=1; post_id=922950; floor=0
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=3; post_id=922976; floor=2
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=49; line_end=49
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=117; line_end=119
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=150; line_end=151
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=163; line_end=169
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=27; post_id=914145; floor=276
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=28; post_id=914149; floor=277
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=29; post_id=914153; floor=278
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=31; post_id=914157; floor=280
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=32; post_id=914171; floor=281
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=33; post_id=914172; floor=282
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=34; post_id=914181; floor=283
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=37; post_id=914301; floor=286
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=43; post_id=914582; floor=292
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=44; post_id=914606; floor=293
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=22; post_id=960244; floor=721
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=23; post_id=960245; floor=722
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=24; post_id=960247; floor=723
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=27; post_id=960254; floor=726
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=28; post_id=960439; floor=727
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=30; post_id=960504; floor=729
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=31; post_id=960512; floor=730
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=33; post_id=960572; floor=732
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=37; post_id=960594; floor=736
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=39; post_id=960885; floor=738
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=6; post_id=964513; floor=755
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=8; post_id=964526; floor=757
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=10; post_id=966347; floor=759
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=50; post_id=974730; floor=849
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=46; post_id=962304; floor=745
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=47; post_id=962305; floor=746
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=4; post_id=963675; floor=753
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=5; post_id=963731; floor=754
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=28; post_id=985223; floor=877
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=29; post_id=985898; floor=878
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=30; post_id=986052; floor=879
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=38; post_id=987018; floor=887
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=39; post_id=987026; floor=888
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=40; post_id=987029; floor=889
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=19; post_id=1179677; floor=218
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=20; post_id=1182889; floor=219
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=4; record_id=SWU_SOC_001
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=2; record_id=EMP_002
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=24; line_end=26
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=161; line_end=169
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=29; post_id=843621; floor=778
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=24; line_end=24
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=159; line_end=169
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=44; line_end=44
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：jsonl_line=11; post_id=846884; floor=1110
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=119; line_end=119
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=17; post_id=846047; floor=1016
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=19; post_id=846054; floor=1018
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=22; post_id=846061; floor=1021
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=3; post_id=846217; floor=1052
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=12; post_id=967530; floor=761
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=2; record_id=UCL_20261003_001
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=42; line_end=42
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=43; line_end=43
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=45; line_end=45
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：line 221; UCL_20261003_009
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=7; record_id=EMP_007
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=31; post_id=863001; floor=30
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=32; post_id=863002; floor=31
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=33; post_id=863005; floor=32
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=35; post_id=863009; floor=34
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=4; post_id=863462; floor=53
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=6; post_id=863468; floor=55
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=7; post_id=863469; floor=56
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=8; post_id=863470; floor=57
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=9; post_id=863472; floor=58
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=22; post_id=874508; floor=171
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=23; post_id=874647; floor=172
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=25; post_id=878056; floor=174
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=46; post_id=899931; floor=195
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=48; post_id=900199; floor=197
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：jsonl_line=50; post_id=851837; floor=1249
+- [posts.jsonl](<../extracted-first/26/posts.jsonl>)：jsonl_line=9; post_id=852222; floor=1258
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=30; post_id=816127; floor=29
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=32; post_id=816130; floor=31
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=33; post_id=816133; floor=32
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=34; post_id=816137; floor=33
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=35; post_id=816141; floor=34
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=38; post_id=816170; floor=37
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=41; post_id=816201; floor=40
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=43; post_id=816246; floor=42
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=47; post_id=816280; floor=46
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：jsonl_line=29; post_id=816583; floor=78
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=1; post_id=816699; floor=100
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=3; post_id=816704; floor=102
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=23; post_id=915324; floor=322
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=31; post_id=915456; floor=330
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=32; post_id=915502; floor=331
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=35; post_id=915755; floor=334
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=38; post_id=915989; floor=337
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=39; post_id=916086; floor=338
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=1; post_id=819306; floor=250
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=2; post_id=819320; floor=251
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=3; post_id=819325; floor=252
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=4; post_id=819333; floor=253
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=29; post_id=846089; floor=1028
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=31; post_id=846093; floor=1030
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=32; post_id=846094; floor=1031
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=33; post_id=846096; floor=1032
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=34; post_id=846097; floor=1033
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=36; post_id=846103; floor=1035
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=37; post_id=846104; floor=1036
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=10; post_id=846370; floor=1059
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=19; post_id=846466; floor=1068
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=36; post_id=845834; floor=985
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=37; post_id=845835; floor=986
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=38; post_id=845836; floor=987
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=39; post_id=845880; floor=988
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=40; post_id=845914; floor=989
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=41; post_id=845931; floor=990
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=44; post_id=845976; floor=993
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=45; post_id=845977; floor=994
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=46; post_id=845982; floor=995
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=47; post_id=845983; floor=996
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=48; post_id=845985; floor=997
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=49; post_id=845988; floor=998
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=5; post_id=819466; floor=254
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=6; post_id=819483; floor=255
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=7; post_id=819493; floor=256
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=8; post_id=819499; floor=257
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=30; post_id=820363; floor=279
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=25; line_end=25
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=33; line_end=35
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=10; post_id=816720; floor=109
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=11; post_id=816721; floor=110
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=15; post_id=816726; floor=114
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=50; post_id=845994; floor=999
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：jsonl_line=40; post_id=851625; floor=1239
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：jsonl_line=44; post_id=851773; floor=1243
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=25; post_id=816745; floor=124
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=27; post_id=816778; floor=126
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=6; post_id=817368; floor=155
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=11; post_id=817447; floor=160
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=22; post_id=817537; floor=171
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=24; post_id=817616; floor=173
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=42; post_id=863173; floor=41
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=43; post_id=863343; floor=42
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=50; post_id=863417; floor=49
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=2; post_id=863435; floor=51
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=3; post_id=863447; floor=52
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=38; post_id=846107; floor=1037
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=39; post_id=846109; floor=1038
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=40; post_id=846113; floor=1039
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=41; post_id=846114; floor=1040
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=42; post_id=846115; floor=1041
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=43; post_id=846116; floor=1042
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=44; post_id=846119; floor=1043
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=45; post_id=846120; floor=1044
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=24; post_id=846530; floor=1073
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=25; post_id=846531; floor=1074
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=25; post_id=1042442; floor=424
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=33; post_id=1043390; floor=432
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=35; post_id=1043686; floor=434
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=37; post_id=1044477; floor=436
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=39; post_id=1044705; floor=438
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_06; jsonl_line=6; post_id=895365; floor=255
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_06; jsonl_line=7; post_id=895386; floor=256
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=41; post_id=1046096; floor=440
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=43; post_id=1046862; floor=442
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_10; jsonl_line=3; post_id=1049842; floor=452
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_10; jsonl_line=5; post_id=1051559; floor=454
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=45; post_id=1047210; floor=444
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=47; post_id=1047660; floor=446
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=49; post_id=1047852; floor=448
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=8; record_id=EMP_008
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=184; line_end=187
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl>)：document_id=P3_P001; jsonl_line=1; post_id=1033317; floor=
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=23; post_id=1042344; floor=422
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=42; post_id=1031470; floor=1191
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=43; post_id=1031478; floor=1192
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=44; post_id=1032053; floor=1193
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_005。适用时期：T0政制。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_005,EMP_001,EMP_003,SWU_SOC_001 本轮正文整理：不从无贵族阶级外推财富、职权或全部法律待遇平等。兄弟关系已由用户确认，旧资料差异不再把该关系降为未决。
+
+<a id="WORLD_WRC_006"></a>
+### 八柱将
+
+`WORLD_WRC_006` · confirmed · original_campaign
+
+八柱将是帝麾下以武力与智谋居于最高层的八人，既参与帝国常务办理，也按帝的命令承担防务、出征等职责。奥修特尔与右近是同一人物；他负责帝都防务并须参加朝会，因此不能在每次危机中都离城代行任务。原线战争中各柱将又随军令改变部署，后来可见雷光、左近前往龙族秘境，右近、武赖负责前线。
+
+八柱将中的武者可获得帝赏赐的假面。已知奥修特尔持水神假面，宗近持土神假面，武赖持火神假面，左近持雷神假面。假面会选择使用者，只有获得帝的许可者才能解放其中力量；力量能大幅强化身体和自愈能力，却会不断消耗佩戴者生命，解放越深代价越大，生命力不足者甚至可能迅速死亡。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=6; record_id=WRC_006
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=24; line_end=26
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=161; line_end=169
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=2; record_id=EMP_002
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=29; post_id=843621; floor=778
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=24; line_end=24
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=159; line_end=169
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=44; line_end=44
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：jsonl_line=11; post_id=846884; floor=1110
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=119; line_end=119
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=37; post_id=820769; floor=286
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=25; post_id=823927; floor=324
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=17; post_id=846047; floor=1016
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=19; post_id=846054; floor=1018
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=22; post_id=846061; floor=1021
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=3; post_id=846217; floor=1052
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=12; post_id=967530; floor=761
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=28; post_id=985223; floor=877
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=29; post_id=985898; floor=878
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=30; post_id=986052; floor=879
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=38; post_id=987018; floor=887
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=39; post_id=987026; floor=888
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=40; post_id=987029; floor=889
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=5; record_id=UCL_20261003_004
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=114; line_end=114
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=115; line_end=115
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=116; line_end=116
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=117; line_end=117
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=4; record_id=WRS_004
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=159; line_end=168
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_006。适用时期：T0职务；部署分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_006,EMP_002,UCL_20261003_004 本轮正文整理：用户明确本团参考《传颂之物》大和八柱将及《二人的白皇》；没有德考波姆，其位置由奥修特尔／右近替代。原型任期、战争和未来结局不自动成为本团历史。 四名持有者不推出八人均持假面或职责相同。
+
+<a id="WORLD_WRC_007"></a>
+### 兄弟会
+
+`WORLD_WRC_007` · confirmed · original_campaign
+
+兄弟会是帝直接掌控的秘密组织，以守护大陆为口号，在暗中从事情报收集、谍报和暗杀。组织严格挑选成员，并采用与上线单线联系的管理方式；一旦失去上线，成员往往难以证明自己的身份，但受选者即使脱离联系，仍会按照兄弟会的标准行动。帝未向八柱将公开兄弟会的真实面目。
+
+雪老曾在兄弟会中直属帝行事数十年，后来转往边关任职，原线峡谷战后获准归田。原线后期，沃西斯、罗伯和艾利与一场忠诚测试发生明确联系，测试的想法由雪老提出。雪老也曾指引御临风先向直属的右近报告军情，说明秘密组织的接触与正规职务上的报告责任可以同时存在。现有接头和测试记录只显示有关人员掌握的局部关系，兄弟会完整的层级、身份验证方式和断联补救办法尚未公开。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=7; record_id=WRC_007
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=28; line_end=31
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=83; line_end=86
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=68; line_end=72
+- [faction_operations_dossier.jsonl](<../work/replay_research/faction_operations_dossier.jsonl>)：jsonl_line=2; record_id=FOP_002
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=5; post_id=921264; floor=404
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=6; post_id=921305; floor=405
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=7; post_id=921321; floor=406
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=8; post_id=921322; floor=407
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=9; post_id=921323; floor=408
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=10; post_id=921324; floor=409
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=11; post_id=921325; floor=410
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=12; post_id=921328; floor=411
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=13; post_id=921329; floor=412
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=25; post_id=915370; floor=324
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=26; post_id=915381; floor=325
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=27; post_id=915402; floor=326
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=28; post_id=915409; floor=327
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=29; post_id=915414; floor=328
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=30; post_id=915419; floor=329
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=32; post_id=915502; floor=331
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=33; post_id=915504; floor=332
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=35; post_id=915755; floor=334
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=36; post_id=915862; floor=335
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：source_id=MUTOU; jsonl_line=1; post_id=845702; floor=0; source_html_line=342
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：source_id=MUTOU; jsonl_line=2; post_id=845717; floor=1; source_html_line=435
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：source_id=MUTOU; jsonl_line=3; post_id=845721; floor=2; source_html_line=526
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_007。适用时期：既存组织；接触分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_007,FOP_002 本轮正文整理：“未获知真实面目”不等于从未听说组织。御临风回答韩诺与当铺是在误导，不能登记为兄弟会网点；邀请布莱特不等于他完成入会。
+
+<a id="WORLD_WRC_008"></a>
+### 游击士协会
+
+`WORLD_WRC_008` · confirmed · original_campaign
+
+游击士协会是以保护民间百姓安全、维持地区和平为宗旨的民间组织。协会从民间或政府接受委托，派遣游击士处理魔兽与犯罪，也承接寻宠、寻物、采药、疏通下水道、清理洞穴和临时兼职等日常任务。协会拒绝违法委托，奉行不干涉国家政权的原则，在帝国制度中同时承担对官员的第三方监督。
+
+委托通过任务板和前台接洽，接任务者可以向接待员询问详情；承接协会任务涉及会员资格，原线曾拒绝非会员接取。游击士按等级活动，任务成绩与奖励可影响晋升。布莱特初入帝都时为C级，峡谷战后才因帝的专属委托所获认可升为B级。
+
+原线首次入帝都时，协会接待员已掌握九雪医馆被捕的案件消息：有人暗杀达卡斯未遂、医馆被指为幕后，军方已将一家人关入帝国监狱；这些是她转述的案情指控，不证明医馆有罪〔rumor〕。逮捕由达卡斯下令的说法，她明确称为小道消息〔rumor〕。接待员称协会调查过露露缇耶的爷爷，并以其传奇士兵经历及医馆多为老人孩子为由，质疑刺杀指控；她又称城中从谈话前一天起出现边关失守传闻、多数人不信，认为时机巧合〔character_belief〕。达卡斯此前交付的琐事与魔兽清理委托，在他回到帝都后紧急撤回；接待员明确说协会也觉得他可疑，正在调查，有消息会通知布莱特〔character_belief〕。她还答应尝试联系被捕者，但未保证成功。私下调查和传递线索不等于公开对抗军方，也不表示协会已经识破冒名或查明真正刺客。
+
+协会的中立地位仍会受到国家权力的实际压力。原线接待员解释，协会不能公开对抗国家势力，在必须保全整个组织时可能舍弃个人〔character_belief〕；随后发生的军队搜查支部和截信也限制了当地行动。战争后期，A级游击士参与前线协作，一些支部因人员支援前线而冷清，但仍继续接待和代传约见。协会还可为求助者联系学者，提供进入专业研究的渠道。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=8; record_id=WRC_008
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=25; line_end=25
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=33; line_end=35
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=7; record_id=EMP_007
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=31; post_id=863001; floor=30
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=32; post_id=863002; floor=31
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=33; post_id=863005; floor=32
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=35; post_id=863009; floor=34
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=4; post_id=863462; floor=53
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=6; post_id=863468; floor=55
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=7; post_id=863469; floor=56
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=8; post_id=863470; floor=57
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=9; post_id=863472; floor=58
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=22; post_id=874508; floor=171
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=23; post_id=874647; floor=172
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=25; post_id=878056; floor=174
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=46; post_id=899931; floor=195
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=48; post_id=900199; floor=197
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：jsonl_line=50; post_id=851837; floor=1249
+- [posts.jsonl](<../extracted-first/26/posts.jsonl>)：jsonl_line=9; post_id=852222; floor=1258
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=30; post_id=816127; floor=29
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=32; post_id=816130; floor=31
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=33; post_id=816133; floor=32
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=34; post_id=816137; floor=33
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=35; post_id=816141; floor=34
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=38; post_id=816170; floor=37
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=41; post_id=816201; floor=40
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=43; post_id=816246; floor=42
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=47; post_id=816280; floor=46
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：jsonl_line=29; post_id=816583; floor=78
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=1; post_id=816699; floor=100
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=3; post_id=816704; floor=102
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=23; post_id=915324; floor=322
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=31; post_id=915456; floor=330
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=32; post_id=915502; floor=331
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=35; post_id=915755; floor=334
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=38; post_id=915989; floor=337
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=39; post_id=916086; floor=338
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=1; post_id=819306; floor=250
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=2; post_id=819320; floor=251
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=3; post_id=819325; floor=252
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=4; post_id=819333; floor=253
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=29; post_id=846089; floor=1028
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=31; post_id=846093; floor=1030
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=32; post_id=846094; floor=1031
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=33; post_id=846096; floor=1032
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=34; post_id=846097; floor=1033
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=36; post_id=846103; floor=1035
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=37; post_id=846104; floor=1036
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=10; post_id=846370; floor=1059
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=19; post_id=846466; floor=1068
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=36; post_id=845834; floor=985
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=37; post_id=845835; floor=986
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=38; post_id=845836; floor=987
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=39; post_id=845880; floor=988
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=40; post_id=845914; floor=989
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=41; post_id=845931; floor=990
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=44; post_id=845976; floor=993
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=45; post_id=845977; floor=994
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=46; post_id=845982; floor=995
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=47; post_id=845983; floor=996
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=48; post_id=845985; floor=997
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=49; post_id=845988; floor=998
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=5; post_id=819466; floor=254
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=6; post_id=819483; floor=255
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=7; post_id=819493; floor=256
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=8; post_id=819499; floor=257
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=30; post_id=820363; floor=279
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=10; post_id=816720; floor=109
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=11; post_id=816721; floor=110
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=15; post_id=816726; floor=114
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=50; post_id=845994; floor=999
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：jsonl_line=40; post_id=851625; floor=1239
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：jsonl_line=44; post_id=851773; floor=1243
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=25; post_id=816745; floor=124
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=27; post_id=816778; floor=126
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=6; post_id=817368; floor=155
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=11; post_id=817447; floor=160
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=22; post_id=817537; floor=171
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=24; post_id=817616; floor=173
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=42; post_id=863173; floor=41
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=43; post_id=863343; floor=42
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=50; post_id=863417; floor=49
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=2; post_id=863435; floor=51
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=3; post_id=863447; floor=52
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=38; post_id=846107; floor=1037
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=39; post_id=846109; floor=1038
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=40; post_id=846113; floor=1039
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=41; post_id=846114; floor=1040
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=42; post_id=846115; floor=1041
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=43; post_id=846116; floor=1042
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=44; post_id=846119; floor=1043
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=45; post_id=846120; floor=1044
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=24; post_id=846530; floor=1073
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=25; post_id=846531; floor=1074
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=25; post_id=1042442; floor=424
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=33; post_id=1043390; floor=432
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=35; post_id=1043686; floor=434
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=37; post_id=1044477; floor=436
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=39; post_id=1044705; floor=438
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=6; post_id=895365; floor=255
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=7; post_id=895386; floor=256
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=41; post_id=1046096; floor=440
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=43; post_id=1046862; floor=442
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=3; post_id=1049842; floor=452
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=5; post_id=1051559; floor=454
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=45; post_id=1047210; floor=444
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=47; post_id=1047660; floor=446
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=49; post_id=1047852; floor=448
+- [faction_operations_dossier.jsonl](<../work/replay_research/faction_operations_dossier.jsonl>)：jsonl_line=5; record_id=FOP_005
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=15; post_id=921465; floor=414
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=46; post_id=989075; floor=945
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=47; post_id=989077; floor=946
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=48; post_id=989082; floor=947
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=49; post_id=989174; floor=948
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=50; post_id=989838; floor=949
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=9; post_id=1052875; floor=458
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=11; post_id=1055378; floor=460
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=13; post_id=1056638; floor=462
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=12; post_id=1055963; floor=461
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=14; post_id=1068640; floor=463
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=15; post_id=1069865; floor=464
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=19; post_id=1090503; floor=468
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=6; record_id=WRS_006
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=21; record_id=SWU_FAC_004
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=23; post_id=1042344; floor=422
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=25; post_id=1042442; floor=424
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=31; post_id=1043190; floor=430
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=33; post_id=1043390; floor=432
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=35; post_id=1043686; floor=434
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=37; post_id=1044477; floor=436
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=39; post_id=1044705; floor=438
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=41; post_id=1046096; floor=440
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=43; post_id=1046862; floor=442
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_10; jsonl_line=3; post_id=1049842; floor=452
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_10; jsonl_line=5; post_id=1051559; floor=454
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_10; jsonl_line=9; post_id=1052875; floor=458
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_10; jsonl_line=11; post_id=1055378; floor=460
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_10; jsonl_line=12; post_id=1055963; floor=461
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_10; jsonl_line=13; post_id=1056638; floor=462
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_10; jsonl_line=14; post_id=1068640; floor=463
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_10; jsonl_line=15; post_id=1069865; floor=464
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_10; jsonl_line=19; post_id=1090503; floor=468
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=19; post_id=816731; floor=118
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=21; post_id=816734; floor=120
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=28; post_id=816783; floor=127
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=31; post_id=816790; floor=130
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=34; post_id=816807; floor=133
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_008。适用时期：既存组织；战争分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_008,EMP_007,FOP_005 本轮正文整理：协会监督的具体权限、对国家不干涉原则与战时合作的授权边界尚不完整；不能以支援前线判定协会已被帝国吞并。 布莱特后来的B级不提前至首次入都。 2026-10-04按用户试跑纠正补回P1 #114、118、120、124、127的既有协会案情、质疑及撤单调查；案情指控和小道消息不升为真相，二楼告知和随后向队友转述分开。协会资料不得只剩中立制度。
+
+<a id="WORLD_WRC_009"></a>
+### 魔兽部族联合体
+
+`WORLD_WRC_009` · confirmed · original_campaign
+
+魔兽部族联合体指妄想山脉中经统合参与战争的魔兽势力。各大种族原本各自为政，通过带有寡头性质的长老议会协调；千百年来周期性进攻帝国边关，既练兵，也消耗山脉中过快增加的魔兽人口，过去未能让大军深入帝国内部。
+
+凌迟被魔兽俘获后自愿化魔，并因机缘继承魔兽传说中的力量，随后统合种族、实行军事化管理，把各族能力编入共同战术。他利用制空与空运、盾阵、萨满强化、反魔箭及特种部队的协同，发动第一次真正突破帝国防线的大规模侵攻，攻下边境关卡，使周期攻关转为全面战争。
+
+统合之下仍存在部族与个人的利益差异。罗伯所述自治社会限于其率族离山前的经验；谢尔伦称龙族通常不参与长老议会的决定；杨则不愿为上层送死，希望自己的部族生存〔character_belief〕。因此，统合记录所称“所有种族”不能用来判定每名山脉居民、每个部族在全部时期都服从同一战争目标，实际覆盖范围仍不完整。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=9; record_id=WRC_009
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=37; line_end=44
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=180; line_end=182
+- [faction_operations_dossier.jsonl](<../work/replay_research/faction_operations_dossier.jsonl>)：jsonl_line=7; record_id=FOP_007
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=37; line_end=44
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=180; line_end=182
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=25; post_id=968335; floor=74
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=43; post_id=923265; floor=442
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=44; post_id=923272; floor=443
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=45; post_id=923290; floor=444
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=7; post_id=971896; floor=806
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=8; post_id=971909; floor=807
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=9; post_id=971912; floor=808
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=10; post_id=971915; floor=809
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=1; post_id=959208; floor=700
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=2; post_id=959370; floor=701
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=4; post_id=959641; floor=703
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=5; post_id=959646; floor=704
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=6; post_id=959651; floor=705
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=9; post_id=959976; floor=708
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=11; post_id=959982; floor=710
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=14; post_id=960048; floor=713
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=16; post_id=960068; floor=715
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=17; post_id=960072; floor=716
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=18; post_id=960111; floor=717
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=50; post_id=959199; floor=699
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=36; post_id=824604; floor=335
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=37; post_id=824621; floor=336
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=38; post_id=846670; floor=1087
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=46; line_end=49
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=114; line_end=119
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=150; line_end=153
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=34; post_id=960576; floor=733
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=36; post_id=960586; floor=735
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=38; post_id=960881; floor=737
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=4; post_id=963675; floor=753
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=50; post_id=974730; floor=849
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=28; post_id=985223; floor=877
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=29; post_id=985898; floor=878
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=30; post_id=986052; floor=879
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=38; post_id=987018; floor=887
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=39; post_id=987026; floor=888
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=40; post_id=987029; floor=889
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=48; post_id=987233; floor=897
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=49; post_id=987234; floor=898
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=50; post_id=987239; floor=899
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=27; post_id=914145; floor=276
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=28; post_id=914149; floor=277
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=29; post_id=914153; floor=278
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=31; post_id=914157; floor=280
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=32; post_id=914171; floor=281
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=33; post_id=914172; floor=282
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=34; post_id=914181; floor=283
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=37; post_id=914301; floor=286
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=43; post_id=914582; floor=292
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=44; post_id=914606; floor=293
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=22; post_id=960244; floor=721
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=23; post_id=960245; floor=722
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=24; post_id=960247; floor=723
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=27; post_id=960254; floor=726
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=28; post_id=960439; floor=727
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=30; post_id=960504; floor=729
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=31; post_id=960512; floor=730
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=33; post_id=960572; floor=732
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=37; post_id=960594; floor=736
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=39; post_id=960885; floor=738
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=6; post_id=964513; floor=755
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=8; post_id=964526; floor=757
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=10; post_id=966347; floor=759
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=46; post_id=962304; floor=745
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=47; post_id=962305; floor=746
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=5; post_id=963731; floor=754
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=19; post_id=1179677; floor=218
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=20; post_id=1182889; floor=219
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=42; post_id=1031470; floor=1191
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=43; post_id=1031478; floor=1192
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=44; post_id=1032053; floor=1193
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=115; line_end=115
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_009。适用时期：自治→凌迟统合。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_009,FOP_007 本轮正文整理：本条名称为组织主题描述，非已确认正式国号；未补全全部种族、成员及实控名单。
+
+<a id="WORLD_WRC_010"></a>
+### 龙族
+
+`WORLD_WRC_010` · confirmed · original_campaign
+
+龙族是长期生活于妄想山脉的强大种族，具有长寿、巨翼和高度魔法元素亲和力，后者甚至胜过精灵。龙族繁衍率很低，长期战争和猎杀使其在设定所述时期出现人口负增长。族内有六大龙王，各部族另有首领。冰霜龙王谢尔伦·冯·吉尔科德是龙王中最年长者，也是仍存活的上古龙，曾实际参战对抗死亡之翼与黑龙一族；他依靠丰富经验和奇物，仍保持龙族一线战力。
+
+灭族预言与空间龙事件使龙族的延续问题成为政治危机。帝以帮助解决预言为条件，要求龙族加入帝国；公开牵线者是肯达，谢尔伦与帝则在幕后合作推动谈判。原线后来逐步发生护送悠悠、交付假面、公开仪式、附近驻军及共同防御，龙族与帝国的关系随这些行动发展。宴会时曾只有五位龙王在场，元素龙王瑟坦特在后来归来。
+
+龙族内部并非立场一致。奥希拉关于黑龙旧日霸权及后来改行龙王制度的家族历史，明确来自他听说的往事〔rumor〕；现有资料尚未提供全部古战结果、六王经历和各部族政治关系。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=10; record_id=WRC_010
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=46; line_end=49
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=114; line_end=119
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=150; line_end=153
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=43; record_id=WRC_043
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=29; record_id=WRS_029
+- [reading_p1_017_020.jsonl](<../work/replay_research/reading_p1_017_020.jsonl>)：jsonl_line=27; ERC_P1_0327; post_ids=845598,845599,845600,845604
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=44; post_id=845598; floor=943
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=45; post_id=845599; floor=944
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=46; post_id=845600; floor=945
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=47; post_id=845604; floor=946
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=2; ERC_P1_0402; post_ids=846047,846054,846061,846217
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=17; post_id=846047; floor=1016
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=19; post_id=846054; floor=1018
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=22; post_id=846061; floor=1021
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=3; post_id=846217; floor=1052
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=8; ERC_P1_0408; post_ids=846107,846109,846113,846114,846115,846116,846119,846120,846530,846531
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=38; post_id=846107; floor=1037
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=39; post_id=846109; floor=1038
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=40; post_id=846113; floor=1039
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=41; post_id=846114; floor=1040
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=42; post_id=846115; floor=1041
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=43; post_id=846116; floor=1042
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=44; post_id=846119; floor=1043
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=45; post_id=846120; floor=1044
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=24; post_id=846530; floor=1073
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=25; post_id=846531; floor=1074
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=34; ERC_P1_0534; post_ids=862100
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=30; post_id=862100; floor=1379
+- [faction_operations_dossier.jsonl](<../work/replay_research/faction_operations_dossier.jsonl>)：jsonl_line=7; record_id=FOP_007
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=37; line_end=44
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=180; line_end=182
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=37; line_end=44
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=180; line_end=182
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=25; post_id=968335; floor=74
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=43; post_id=923265; floor=442
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=44; post_id=923272; floor=443
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=45; post_id=923290; floor=444
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=7; post_id=971896; floor=806
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=8; post_id=971909; floor=807
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=9; post_id=971912; floor=808
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=10; post_id=971915; floor=809
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=1; post_id=959208; floor=700
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=2; post_id=959370; floor=701
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=4; post_id=959641; floor=703
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=5; post_id=959646; floor=704
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=6; post_id=959651; floor=705
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=9; post_id=959976; floor=708
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=11; post_id=959982; floor=710
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=14; post_id=960048; floor=713
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=16; post_id=960068; floor=715
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=17; post_id=960072; floor=716
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=18; post_id=960111; floor=717
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=50; post_id=959199; floor=699
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=36; post_id=824604; floor=335
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=37; post_id=824621; floor=336
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=38; post_id=846670; floor=1087
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=34; post_id=960576; floor=733
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=36; post_id=960586; floor=735
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=38; post_id=960881; floor=737
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=4; post_id=963675; floor=753
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=50; post_id=974730; floor=849
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=28; post_id=985223; floor=877
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=29; post_id=985898; floor=878
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=30; post_id=986052; floor=879
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=38; post_id=987018; floor=887
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=39; post_id=987026; floor=888
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=40; post_id=987029; floor=889
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=48; post_id=987233; floor=897
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=49; post_id=987234; floor=898
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=50; post_id=987239; floor=899
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=27; post_id=914145; floor=276
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=28; post_id=914149; floor=277
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=29; post_id=914153; floor=278
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=31; post_id=914157; floor=280
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=32; post_id=914171; floor=281
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=33; post_id=914172; floor=282
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=34; post_id=914181; floor=283
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=37; post_id=914301; floor=286
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=43; post_id=914582; floor=292
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=44; post_id=914606; floor=293
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=22; post_id=960244; floor=721
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=23; post_id=960245; floor=722
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=24; post_id=960247; floor=723
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=27; post_id=960254; floor=726
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=28; post_id=960439; floor=727
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=30; post_id=960504; floor=729
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=31; post_id=960512; floor=730
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=33; post_id=960572; floor=732
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=37; post_id=960594; floor=736
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=39; post_id=960885; floor=738
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=6; post_id=964513; floor=755
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=8; post_id=964526; floor=757
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=10; post_id=966347; floor=759
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=46; post_id=962304; floor=745
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=47; post_id=962305; floor=746
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=5; post_id=963731; floor=754
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=19; post_id=1179677; floor=218
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=20; post_id=1182889; floor=219
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=42; post_id=1031470; floor=1191
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=43; post_id=1031478; floor=1192
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=44; post_id=1032053; floor=1193
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=115; line_end=115
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=8; record_id=WRS_008
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_010。适用时期：背景；外交授职分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_010,WRC_043,WRS_029,FOP_007 本轮正文整理：五王在场不等于第六王已死；长寿也不授予全族统一万年寿命或永生。
+
+<a id="WORLD_WRC_011"></a>
+### 空间龙部族
+
+`WORLD_WRC_011` · confirmed · original_campaign
+
+空间龙部族曾居住在妄想山脉边缘的一处空间龙秘境。悠悠的母亲救下了受诅咒、已呈半人半魔兽状态的凌迟，追击凌迟的人类部队由此察觉秘境位置，继而发动奇袭并屠杀部族。造成覆灭的是这支人类部队，凌迟不是灭族的加害者；这处秘境的空间龙仅悠悠幸存。
+
+反击入侵者的具体过程仍有不同记述：设定记空间龙族长牺牲生命，与人类部队同归于尽；谢尔伦的讲述则提到凌迟杀死入侵者。族长与凌迟各自参战、歼敌的先后和配合尚未确定〔uncertain〕。悠悠原本名为芬尔德·特兰希尔；原线后来，她被护送到龙族中央聚居的秘境，接受先祖姓名传承，成为芬尔德·琳·特兰希尔，并继任空间龙族长。旧秘境的幸存结论只涉及那里的族人，秘境之外是否仍有其他空间龙未明。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=11; record_id=WRC_011
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=114; line_end=119
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=27; record_id=WRS_027
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=31; ERC_P1_0431; post_ids=848689,848738
+- [posts.jsonl](<../extracted-first/24/posts.jsonl>)：jsonl_line=37; post_id=848689; floor=1186
+- [posts.jsonl](<../extracted-first/24/posts.jsonl>)：jsonl_line=38; post_id=848738; floor=1187
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=1; ERC_P2_0401; post_ids=971889,971895,971896
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=5; post_id=971889; floor=804
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=6; post_id=971895; floor=805
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=7; post_id=971896; floor=806
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=115; line_end=115
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=5; record_id=UCL_20261003_004
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=114; line_end=114
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=116; line_end=116
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=117; line_end=117
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=119; line_end=119
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：line 225; UCL_20261003_009
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=225; line_end=225
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_011。适用时期：T0前惨剧；后期继任。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_011,WRS_027,UCL_20261003_004 本轮正文整理：覆灭责任和旧秘境唯一空间龙幸存者依用户明确纠正。分歧仅限族长与凌迟歼敌经过，不得改为凌迟是否屠族仍有争议。
+
+<a id="WORLD_WRC_012"></a>
+### 娜迦
+
+`WORLD_WRC_012` · confirmed · original_campaign
+
+娜迦是由古代高等精灵转变而来的种族。高等精灵原是古代精灵社会的贵族与权贵，沉迷永恒之井的能量，无节制滥用魔法，并试图利用北海巨妖称霸世界。永恒之井崩塌后，大部分高等精灵沉入海底，受到永久诅咒而变为娜迦。后来苏醒的娜迦仍保留对下等精灵的歧视和称霸的野心。
+
+沐透进入的娜迦遗迹中，有尚存呼吸的被拖入者、守卫、歌唱施法的女性娜迦和悬浮祭坛，石化的腰带与戒指也在祭品之中。沐透取走装具后，原本的歌唱施法中断。影魔猜测仪式是在唤醒或复活某种怪物，沐透进一步推测是古神，但仪式目的没有得到现场结果证实〔character_belief〕。这批娜迦追踪闯入者时，仍能在迷雾中凭吼声寻找目标；楼层阻隔才令它们暂时失去目标。娜迦并非全族嗜虐。后来一名索要腰带的水手曾袭击沐透，并宣扬娜迦与旧日支配者的荣光；他的行动和自述尚未揭示完整指挥链，现有记录也未确认娜迦全体受卡珊德拉指挥。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=12; record_id=WRC_012
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=51; line_end=54
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=22; record_id=SWU_FAC_005
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=21; post_id=899698; floor=270
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=23; post_id=900259; floor=272
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=27; post_id=904858; floor=276
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=29; post_id=908013; floor=278
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=39; post_id=914896; floor=288
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=31; post_id=909398; floor=280
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=45; post_id=915859; floor=294
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=47; post_id=918376; floor=296
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：document_id=MUTOU_PAGE_08; source_id=MUTOU; jsonl_line=13; post_id=954394; floor=362
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=21; post_id=1042094; floor=420
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：document_id=MUTOU_PAGE_08; source_id=MUTOU; jsonl_line=17; post_id=955329; floor=366
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：document_id=MUTOU_PAGE_08; source_id=MUTOU; jsonl_line=21; post_id=955484; floor=370
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=4; post_id=991804; floor=403
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=9; post_id=1039814; floor=408
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=11; record_id=SWU_PWR_001
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=25; post_id=948659; floor=324
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=27; post_id=948754; floor=326
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_06; jsonl_line=21; post_id=899698; floor=270
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_06; jsonl_line=23; post_id=900259; floor=272
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_06; jsonl_line=27; post_id=904858; floor=276
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_06; jsonl_line=29; post_id=908013; floor=278
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_06; jsonl_line=39; post_id=914896; floor=288
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_06; jsonl_line=31; post_id=909398; floor=280
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_06; jsonl_line=45; post_id=915859; floor=294
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_06; jsonl_line=47; post_id=918376; floor=296
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_08; jsonl_line=13; post_id=954394; floor=362
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=21; post_id=1042094; floor=420
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_08; jsonl_line=17; post_id=955329; floor=366
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_08; jsonl_line=21; post_id=955484; floor=370
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=4; post_id=991804; floor=403
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=9; post_id=1039814; floor=408
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_012。适用时期：古史；旁线分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_012,SWU_FAC_005,SWU_PWR_001
+
+<a id="WORLD_WRC_014"></a>
+### 纳萨力克地下大坟墓
+
+`WORLD_WRC_014` · confirmed · original_campaign
+
+纳萨力克地下大坟墓是从异世界迁入的据点与势力，由安兹·乌尔·恭统领。它原属同名公会，四十一位创建者被尊为“无上至尊”，迁入后只剩安兹一位。内部成员包括不死生物、恶魔、黑暗精灵、吸血鬼和龙人等，仆役地位取决于是否为至尊所创造，而非单看实力；至尊创造的NPC对造物者怀有绝对忠诚与敬爱。据点自身能产生用于守护的不死生物，安兹另可在尸体充足时大量制造不死生物。
+
+纳萨力克正在以非敌意方式隐蔽查探帝国。安兹招募本地人埃弗纳斯效力，要求他暂时隐瞒归属、先取得成绩，再调查潜在势力对墓地的态度，优先保障代理人与墓地安全。为支持行动，墓地提供符合本地常规工艺的武装、马匹、干粮与生活用品；定期情报可用特制本子的纸页传递，焚纸后送往附近情报室，紧急情况则以卷轴直接联系安兹。埃弗纳斯后来向地方官署报告时隐去了墓地经历，现存旁线结尾也没有展示其正式回报，因此墓地尚未被证明收到他经历的全部情报。
+
+据点内部通行须获许可。第八层禁止自由参观，私人住所和研究所也有限制；获准陪同穿行不代表自由进入。原乡曾有约一千五百人的公会与佣兵联军在第八层全灭。原线后来安兹实际参与龙族救援，并对御临风提出的帝国承认建国及外交建议表示兴趣，但帝的正式授权、国家承认和长期盟约尚未完成。
+
+别名：纳萨力克、大墓地
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=14; record_id=WRC_014
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=56; line_end=59
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=136; line_end=142
+- [faction_operations_dossier.jsonl](<../work/replay_research/faction_operations_dossier.jsonl>)：jsonl_line=6; record_id=FOP_006
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=89; line_end=89
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=6; post_id=923247; floor=5
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=7; post_id=923262; floor=6
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=8; post_id=923275; floor=7
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=9; post_id=923284; floor=8
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=13; post_id=923404; floor=12
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=5; post_id=954706; floor=54
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=9; post_id=955110; floor=58
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=7; post_id=954760; floor=56
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_03; source_id=GREAT_TOMB; jsonl_line=12; post_id=1081976; floor=111
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=10; post_id=923287; floor=9
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=11; post_id=955517; floor=60
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=13; post_id=955598; floor=62
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=15; post_id=955870; floor=64
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=38; post_id=990696; floor=87
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_03; source_id=GREAT_TOMB; jsonl_line=2; post_id=1015970; floor=101
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_03; source_id=GREAT_TOMB; jsonl_line=3; post_id=1016053; floor=102
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=15; post_id=923436; floor=14
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=29; post_id=928408; floor=28
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=41; post_id=939231; floor=40
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=12; post_id=959984; floor=711
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=13; post_id=959986; floor=712
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=14; post_id=960048; floor=713
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=18; post_id=960111; floor=717
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=12; post_id=967530; floor=761
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=3; post_id=1072134; floor=152
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=5; post_id=1072771; floor=154
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=8; post_id=1072826; floor=157
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=9; post_id=1073337; floor=158
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=10; post_id=1073342; floor=159
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=11; post_id=1073364; floor=160
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=13; post_id=1073378; floor=162
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=15; post_id=1073384; floor=164
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=35; post_id=1077728; floor=184
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=1; post_id=1090502; floor=200
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=16; post_id=1073385; floor=165
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=17; post_id=1073563; floor=166
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=20; post_id=1073566; floor=169
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=21; post_id=1074136; floor=170
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=26; record_id=SWU_USER_002
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=4; record_id=UCL_20261003_003
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=88; line_end=88
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=18; record_id=SWU_FAC_001
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_01; jsonl_line=3; post_id=922976; floor=2
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_01; jsonl_line=19; post_id=923568; floor=18
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_01; jsonl_line=29; post_id=928408; floor=28
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_01; jsonl_line=45; post_id=948390; floor=44
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_01; jsonl_line=31; post_id=928618; floor=30
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_01; jsonl_line=33; post_id=929389; floor=32
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_01; jsonl_line=35; post_id=931037; floor=34
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_01; jsonl_line=15; post_id=923436; floor=14
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_01; jsonl_line=41; post_id=939231; floor=40
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_02; jsonl_line=11; post_id=955517; floor=60
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=19; record_id=SWU_FAC_002
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_01; jsonl_line=6; post_id=923247; floor=5
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_01; jsonl_line=7; post_id=923262; floor=6
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_01; jsonl_line=8; post_id=923275; floor=7
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_01; jsonl_line=9; post_id=923284; floor=8
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_01; jsonl_line=13; post_id=923404; floor=12
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_02; jsonl_line=5; post_id=954706; floor=54
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_02; jsonl_line=9; post_id=955110; floor=58
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_02; jsonl_line=7; post_id=954760; floor=56
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_03; jsonl_line=12; post_id=1081976; floor=111
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_01; jsonl_line=10; post_id=923287; floor=9
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_02; jsonl_line=13; post_id=955598; floor=62
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_02; jsonl_line=15; post_id=955870; floor=64
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_02; jsonl_line=38; post_id=990696; floor=87
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_03; jsonl_line=2; post_id=1015970; floor=101
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：source_id=GREAT_TOMB; document_id=GREAT_TOMB_PAGE_03; jsonl_line=3; post_id=1016053; floor=102
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=11; record_id=WRS_011
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_014。适用时期：迁入后；相对T0未定。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_014,FOP_006,SWU_USER_002,UCL_20261003_003 本轮正文整理：非敌意调查由用户确认；原乡攻防战不计为本土战绩。安兹兴趣与救援不补成帝国许可、建国承认或已成立同盟。
+
+<a id="WORLD_WRC_016"></a>
+### 狂信者
+
+`WORLD_WRC_016` · confirmed · original_campaign
+
+狂信者是无法地带主城的三大势力之一，统合当地的一切宗教，人数仅次于无法组织。这个组织奉行自身教条，为完成教条可以采取极端行动。现有资料没有给出其具体信仰、神谱、领袖及内部编制。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=16; record_id=WRC_016
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=63; line_end=64
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_016。适用时期：既存势力。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_016 本轮正文整理：不凭“狂信者”之名补写教义、神术、仪式或完整编制。
+
+<a id="WORLD_WRC_017"></a>
+### 无法组织
+
+`WORLD_WRC_017` · confirmed · original_campaign
+
+无法组织是无法地带主城的三大势力之一，囊括当地三教九流的黑帮，只遵守组织内部制定的规则。它是三大组织中人数最多的一方；但无法地带整体仍以不隶属任何组织的居民为最多，现有资料也未证明无法组织独自控制整片地域。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=17; record_id=WRC_017
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=63; line_end=64
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_017。适用时期：既存势力。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_017 本轮正文整理：收入、内部规章细则、成员名单及与另外两大势力的协议未给。
+
+<a id="WORLD_WRC_018"></a>
+### 高等评议会
+
+`WORLD_WRC_018` · confirmed · original_campaign
+
+高等评议会是无法地带主城的三大势力之一，成员大多来自龙、仙人等高等种族。它的人数在三大势力中最少，却负责执行保障人权与生命权的最低限度法律。无法地带多数居民不属于任何组织，最底层居民的生存尤其依赖这些规则受到执行。高等评议会还怀有未公开的自身目的，具体内容不明。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=18; record_id=WRC_018
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=63; line_end=64
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_018。适用时期：既存势力。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_018 本轮正文整理：无法地带高等评议会与魔兽最高评议会是不同组织，不因近名合并。
+
+<a id="WORLD_WRC_053"></a>
+### 第八号当铺
+
+`WORLD_WRC_053` · confirmed · original_campaign
+
+第八号当铺是御临风边关前史中接触过的交易机构，其掌柜能够以契约收取人的正面情感，并给予相应的生存机会。御临风曾在军事任务中与掌柜韩诺交易，后来威廉从他手上的纹路辨认出交换契约，说明这段交易在原线第一部仍留下可识别的影响。
+当铺的完整组织、营业地点、空间性质和跨世界经营范围均未明。御临风后来以“韩诺／当铺”回答兄弟会查问时使用的是假答案，那次说辞没有证明当铺是兄弟会的真实网点。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=53; record_id=WRC_053
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=94; line_end=102
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=204; line_end=215
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=242; line_end=257
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=56; record_id=WRC_056
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=242; line_end=254
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=2; record_id=UCL_20261003_001
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=42; line_end=42
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=43; line_end=43
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=44; line_end=44
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=45; line_end=45
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_053。适用时期：T0前交易机构。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_053,WRC_056,UCL_20261003_001 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_069"></a>
+### 魔兽最高评议会
+
+`WORLD_WRC_069` · confirmed · original_campaign
+
+魔兽最高评议会是妄想山脉魔兽势力高层议事的组织。原线后台会议中，普通参加者离场后，只留下三名首脑继续密议；他们召来卡邦克鲁，并讨论龙族可能在接下来几场战斗中倒向帝国及其他计划。这些发言表明高层在考虑联盟变化和战争安排，但当时所作预测尚不是已经实现的结果。
+
+谢尔伦另曾解释，长老议会地位最高的五人被称为“五大头”，龙族通常不参与其决定〔character_belief〕。三名留场首脑与这五人的完整对应关系、全体成员及权限划分仍不明确。魔兽最高评议会与无法地带执行最低限法律的高等评议会是不同组织。
+
+<details>
+<summary>来源</summary>
+
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=45; record_id=WRS_045
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=45; ERC_P2_0245; post_ids=959199
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=50; post_id=959199; floor=699
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=2; ERC_P2_0402; post_ids=971896,971909,971912,971915
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=7; post_id=971896; floor=806
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=8; post_id=971909; floor=807
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=9; post_id=971912; floor=808
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=10; post_id=971915; floor=809
+- [faction_operations_dossier.jsonl](<../work/replay_research/faction_operations_dossier.jsonl>)：jsonl_line=7; record_id=FOP_007
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=37; line_end=44
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=180; line_end=182
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=37; line_end=44
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=180; line_end=182
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=25; post_id=968335; floor=74
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=43; post_id=923265; floor=442
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=44; post_id=923272; floor=443
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=45; post_id=923290; floor=444
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=1; post_id=959208; floor=700
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=2; post_id=959370; floor=701
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=4; post_id=959641; floor=703
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=5; post_id=959646; floor=704
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=6; post_id=959651; floor=705
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=9; post_id=959976; floor=708
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=11; post_id=959982; floor=710
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=14; post_id=960048; floor=713
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=16; post_id=960068; floor=715
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=17; post_id=960072; floor=716
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=18; post_id=960111; floor=717
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=36; post_id=824604; floor=335
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=37; post_id=824621; floor=336
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=38; post_id=846670; floor=1087
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=46; line_end=49
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=114; line_end=119
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=150; line_end=153
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=34; post_id=960576; floor=733
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=36; post_id=960586; floor=735
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=38; post_id=960881; floor=737
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=4; post_id=963675; floor=753
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=50; post_id=974730; floor=849
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=28; post_id=985223; floor=877
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=29; post_id=985898; floor=878
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=30; post_id=986052; floor=879
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=38; post_id=987018; floor=887
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=39; post_id=987026; floor=888
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=40; post_id=987029; floor=889
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=48; post_id=987233; floor=897
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=49; post_id=987234; floor=898
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=50; post_id=987239; floor=899
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=27; post_id=914145; floor=276
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=28; post_id=914149; floor=277
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=29; post_id=914153; floor=278
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=31; post_id=914157; floor=280
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=32; post_id=914171; floor=281
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=33; post_id=914172; floor=282
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=34; post_id=914181; floor=283
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=37; post_id=914301; floor=286
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=43; post_id=914582; floor=292
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=44; post_id=914606; floor=293
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=22; post_id=960244; floor=721
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=23; post_id=960245; floor=722
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=24; post_id=960247; floor=723
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=27; post_id=960254; floor=726
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=28; post_id=960439; floor=727
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=30; post_id=960504; floor=729
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=31; post_id=960512; floor=730
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=33; post_id=960572; floor=732
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=37; post_id=960594; floor=736
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=39; post_id=960885; floor=738
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=6; post_id=964513; floor=755
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=8; post_id=964526; floor=757
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=10; post_id=966347; floor=759
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=46; post_id=962304; floor=745
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=47; post_id=962305; floor=746
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=5; post_id=963731; floor=754
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=19; post_id=1179677; floor=218
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=20; post_id=1182889; floor=219
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=42; post_id=1031470; floor=1191
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=43; post_id=1031478; floor=1192
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=44; post_id=1032053; floor=1193
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=115; line_end=115
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_069。适用时期：原线后台组织。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRS_045,FOP_007 本轮正文整理：后台会议不自动成为御临风知识；两评议会不合并，未补五大头名单或预测结果。
+
+<a id="WORLD_RAIGU_INTELLIGENCE"></a>
+### 雷光的秘密情报部门
+
+`WORLD_RAIGU_INTELLIGENCE` · confirmed · original_campaign
+
+雷光是唯一一名拥有自己秘密情报部门的人。他的自有部门与帝直接掌控的兄弟会有不同归属。
+
+原线雷光接报时采取了具体保密措施：指挥处隔绝侦知魔法，他要求御临风亲自报告，阅过笔记后归还，并要求内容保密。雷光还负责处理白色魔法师的事务，掌握过有关白魔及Phantom的情报，但其部分消息来源没有公开。秘密部门的正式名称、全部人员、权限和完整情报来源仍不明。
+
+<details>
+<summary>来源</summary>
+
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=6; record_id=EMP_006
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=28; line_end=31
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=83; line_end=86
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=68; line_end=72
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=5; post_id=921264; floor=404
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=6; post_id=921305; floor=405
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=7; post_id=921321; floor=406
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=8; post_id=921322; floor=407
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=9; post_id=921323; floor=408
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=10; post_id=921324; floor=409
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=11; post_id=921325; floor=410
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=12; post_id=921328; floor=411
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=13; post_id=921329; floor=412
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=25; post_id=915370; floor=324
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=26; post_id=915381; floor=325
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=27; post_id=915402; floor=326
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=28; post_id=915409; floor=327
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=29; post_id=915414; floor=328
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=30; post_id=915419; floor=329
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=32; post_id=915502; floor=331
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=33; post_id=915504; floor=332
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=35; post_id=915755; floor=334
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=36; post_id=915862; floor=335
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=114; line_end=114
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=6; post_id=817368; floor=155
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=11; post_id=817447; floor=160
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=22; post_id=817537; floor=171
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=24; post_id=817616; floor=173
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=42; post_id=958884; floor=691
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=43; post_id=958885; floor=692
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=44; post_id=958896; floor=693
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=45; post_id=958900; floor=694
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=46; post_id=959037; floor=695
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=47; post_id=959039; floor=696
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=48; post_id=959104; floor=697
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=49; post_id=959113; floor=698
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=50; post_id=959199; floor=699
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=40; post_id=987029; floor=889
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=41; post_id=987031; floor=890
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=42; post_id=987032; floor=891
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=44; post_id=987209; floor=893
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=4; post_id=987498; floor=903
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=5; post_id=987503; floor=904
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=6; post_id=987507; floor=905
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=7; post_id=987509; floor=906
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=88; line_end=88
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=39; post_id=864444; floor=188
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=41; post_id=864574; floor=190
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=49; post_id=864800; floor=198
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=50; post_id=864917; floor=199
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：document_id=MUTOU_PAGE_08; source_id=MUTOU; jsonl_line=37; post_id=957923; floor=386
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=36; post_id=1044064; floor=435
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=5; record_id=UCL_20261003_004
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=115; line_end=115
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=116; line_end=116
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=117; line_end=117
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=119; line_end=119
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应RAIGU_INTELLIGENCE。适用时期：既存个人部门；名称编制未给。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：EMP_006,UCL_20261003_004 本轮正文整理：直接采用用户“雷光是唯一一个拥有自己秘密情报部门的人”的确认，不擅自收窄为仅八柱将范围。帝直属兄弟会另外保留。标题是归属描述，非新增正式组织名。 不因秘密活动合并兄弟会，也不把部门持有者视为全知。
+
+<a id="WORLD_RAIGU_UNIT"></a>
+### 雷光直属第一大队第二小队
+
+`WORLD_RAIGU_UNIT` · confirmed · original_campaign
+
+雷光直属第一大队第二小队是其任务体系中的行动小队，队长为逆羽·霞，副队长为幻翎·洛。雷光负责处理白色魔法师，并有专门对白魔行动的小分队；霞和洛所率队伍参与了有关追缉与地方应援。
+
+洛在当地邀请沐透协助，是因为沐透与白魔有直接渊源，掌握军方尚不充分的目标情报，而且双方都希望阻止白魔。他先核查沐透军籍、询问陌生力量，并召出影魔核实说法，随后提供十金币活动资金、准其取用马匹，并提出将犯人活捉送往帝都。洛还提议提供旅途所需的地图；霞另交给沐透一根从洛翅膀上拔下的羽毛，说明小队可凭它知道沐透的大概位置。小队也具有医疗支援：洛先暂时抑制伤者毒性，待次日队医到达，再与镇诊所逐个治疗。
+
+初次招募时，霞宣布沐透已加入小队，沐透仍提出异议并推迟答复。原线后来，沐透实际领到身份铁牌，返都时又持牌自报现任该小队队员，因此早期争议与后期实际队籍分属不同阶段。
+
+别名：雷公直属第一大队第二小队
+
+<details>
+<summary>来源</summary>
+
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=25; record_id=SWU_USER_001
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=88; line_end=88
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=39; post_id=864444; floor=188
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=41; post_id=864574; floor=190
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=49; post_id=864800; floor=198
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=50; post_id=864917; floor=199
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：document_id=MUTOU_PAGE_08; source_id=MUTOU; jsonl_line=37; post_id=957923; floor=386
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=36; post_id=1044064; floor=435
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=114; line_end=114
+- [faction_operations_dossier.jsonl](<../work/replay_research/faction_operations_dossier.jsonl>)：jsonl_line=3; record_id=FOP_003
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=47; post_id=864765; floor=196
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=7; post_id=862103; floor=156
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=37; post_id=864394; floor=186
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=45; post_id=864656; floor=194
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=4; post_id=987498; floor=903
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=5; post_id=987503; floor=904
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=6; post_id=987507; floor=905
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=7; post_id=987509; floor=906
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=43; line_end=43
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：document_id=MUTOU_PAGE_01; source_id=MUTOU; jsonl_line=30; post_id=846491; floor=29
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=125; line_end=125
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=115; line_end=115
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=9; record_id=WMPR_009
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=114; line_end=124
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=14; post_id=1068640; floor=463
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=15; post_id=1069865; floor=464
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：source_id=P2; jsonl_line=6; post_id=918970; floor=355
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; jsonl_line=6; post_id=895365; floor=255
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：source_id=P2; jsonl_line=8; post_id=919057; floor=357
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=25; post_id=911872; floor=224
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=27; post_id=912206; floor=226
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=4; record_id=UCL_20261003_003
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=89; line_end=89
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应RAIGU_UNIT。适用时期：职责既存；招募领牌分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：SWU_USER_001,FOP_003,WMPR_009,UCL_20261003_003 本轮正文整理：原帖编制写作“雷公”，原用字保存在来源；白魔任务及小队指挥归属按用户确认统一雷光。早期异议不延续成全线未入队，后期队籍不提前至初入帝都。
+
+<a id="WORLD_WHITE_MAGE_NETWORK"></a>
+### 白色魔法师的合作网络
+
+`WORLD_WHITE_MAGE_NETWORK` · confirmed · original_campaign
+
+白色魔法师的合作网络包括他催生、指挥的Phantom，也包括以交易与共同目标联系的合作者。已确认的Phantom有卡珊德拉、古雷姆林、巴力西卜和欧吉尔德对应的未知名者；美杜莎也是Phantom，并忠于白魔。网络并没有已知的正式组织名称或完整成员表。
+卡珊德拉参与交易、引见和资源筹划，曾向小粘液人许诺报偿；她称白魔需要龙族根基能源，以创造新世界、新神并重建家人与故乡〔character_belief〕。欧吉尔德把胸内红宝石交给沐透运输，却声称不知道最后的接收者〔character_belief〕。白魔后来还称肯达只是众多合作者之一，这是他的口供，肯达全部合作经过并未因此明朗。
+大墓地旁线中，美杜莎与具有埃弗纳斯养父样貌的男子共同杀人、控制现场，逼埃弗纳斯引见救助者；这属于实际暴力合作，不能视作埃弗纳斯自愿加入。各参与者得到的情报、资源和许诺各有限制，现有记录没有证明他们共享全部计划或由同一人格控制。
+
+<details>
+<summary>来源</summary>
+
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=2; record_id=WMPR_002
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=20; post_id=997651; floor=969
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=22; post_id=998481; floor=971
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：jsonl_line=39; post_id=1068182; floor=138
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：jsonl_line=41; post_id=1068230; floor=140
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=27; post_id=1333705; floor=226
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=29; post_id=1334073; floor=228
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=21; post_id=1186459; floor=220
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=25; post_id=1247358; floor=224
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=3; record_id=WMPR_003
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=130; line_end=130
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=146; line_end=146
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=49; post_id=1000177; floor=98
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_03; source_id=GREAT_TOMB; jsonl_line=5; post_id=1022610; floor=104
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_03; source_id=GREAT_TOMB; jsonl_line=12; post_id=1081976; floor=111
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=9; post_id=865910; floor=208
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=11; post_id=866075; floor=210
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=15; post_id=867048; floor=214
+- https://www.kamen-rider-official.com/zukan/characters/3160：东映官方图鉴 ミサ; 人物说明，读取行28–48
+- [faction_operations_dossier.jsonl](<../work/replay_research/faction_operations_dossier.jsonl>)：jsonl_line=8; record_id=FOP_008
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=123; line_end=130
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=17; post_id=994593; floor=966
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=18; post_id=996028; floor=967
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=19; post_id=996035; floor=968
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=21; post_id=997687; floor=970
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：jsonl_line=9; post_id=1059916; floor=108
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：jsonl_line=12; post_id=1059924; floor=111
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：jsonl_line=40; post_id=1068185; floor=139
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=13; post_id=866833; floor=212
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_03; source_id=GREAT_TOMB; jsonl_line=3; post_id=1016053; floor=102
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=12; post_id=1055963; floor=461
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=13; post_id=1056638; floor=462
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=14; post_id=1068640; floor=463
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=15; post_id=1069865; floor=464
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=19; post_id=1090503; floor=468
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=48; post_id=987233; floor=897
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：jsonl_line=37; post_id=1068038; floor=136
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=5; post_id=1072771; floor=154
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=6; record_id=UCL_20261003_005
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=147; line_end=147
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WHITE_MAGE_NETWORK。适用时期：跨时期关系；非正式组织名。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WMPR_002,WMPR_003,FOP_008,UCL_20261003_005 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+## 地点（16条）
+
+<a id="WORLD_WRC_003"></a>
+### 飘零大陆
+
+`WORLD_WRC_003` · confirmed · original_campaign
+
+飘零大陆是妄想大陆世界的四片大陆之一，帝国长期在此统治，并整合了非敌对的精灵、矮人等族。帝国以帝为政治中心，既有城市、村镇、学术机构与工坊，也有面向妄想山脉的边境防线。过去边境关卡阻止山脉魔兽大军深入大陆，长期的和平与富裕建立在帝国治理和边防之上。
+
+御临风首次进入帝都以前，凌迟已经统合魔兽部族、攻破边关，使帝国内部面临直接入侵。原线后来才发生帝军收复关卡、向山脉远征、与龙族展开政治合作等变化。更晚的大地裂变又损坏边关补给站并重组山脉天险，使战线和通行条件再次改变。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=3; record_id=WRC_003
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=17; line_end=26
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=186; line_end=187
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=3; record_id=EMP_003
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; source_id=P3; jsonl_line=21; post_id=1046075; floor=70
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=25; post_id=823927; floor=324
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=1; post_id=922950; floor=0
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=3; post_id=922976; floor=2
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=49; line_end=49
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=117; line_end=119
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=150; line_end=151
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=163; line_end=169
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=27; post_id=914145; floor=276
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=28; post_id=914149; floor=277
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=29; post_id=914153; floor=278
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=31; post_id=914157; floor=280
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=32; post_id=914171; floor=281
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=33; post_id=914172; floor=282
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=34; post_id=914181; floor=283
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=37; post_id=914301; floor=286
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=43; post_id=914582; floor=292
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=44; post_id=914606; floor=293
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=22; post_id=960244; floor=721
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=23; post_id=960245; floor=722
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=24; post_id=960247; floor=723
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=27; post_id=960254; floor=726
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=28; post_id=960439; floor=727
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=30; post_id=960504; floor=729
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=31; post_id=960512; floor=730
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=33; post_id=960572; floor=732
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=37; post_id=960594; floor=736
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=39; post_id=960885; floor=738
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=6; post_id=964513; floor=755
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=8; post_id=964526; floor=757
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=10; post_id=966347; floor=759
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=50; post_id=974730; floor=849
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=46; post_id=962304; floor=745
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=47; post_id=962305; floor=746
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=4; post_id=963675; floor=753
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=5; post_id=963731; floor=754
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=28; post_id=985223; floor=877
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=29; post_id=985898; floor=878
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=30; post_id=986052; floor=879
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=38; post_id=987018; floor=887
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=39; post_id=987026; floor=888
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=40; post_id=987029; floor=889
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=19; post_id=1179677; floor=218
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=20; post_id=1182889; floor=219
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_003。适用时期：T0地域。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_003,EMP_003
+
+<a id="WORLD_WRC_004"></a>
+### 妄想山脉
+
+`WORLD_WRC_004` · confirmed · original_campaign
+
+妄想山脉是妄想大陆“四陆一脉”中的山脉，按四片大陆所在区域划分，各区域栖居的怪物不同。飘零大陆一侧有魔兽部族与龙族活动，帝国边境关卡曾把成军魔兽限制在山脉中；山脉最中央另有独立、隔绝而广阔的无法地带。山中还分布着部族居处、洞窟、地下通道、天险和多处秘境，原线行程中也出现兵工设施。
+
+有学者认为，山脉优越的环境使魔兽大量繁衍，而当地资源难以容纳过剩人口，因而推动魔兽向外扩张〔character_belief〕。原线后来发生的大地裂变毁伤边关补给站并改变旧有天险；裂变前的路线和地形认识不能直接代表此后的通行状况。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=4; record_id=WRC_004
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=18; line_end=19
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=37; line_end=49
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=61; line_end=64
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=13; record_id=WRS_013
+- [reading_p1_005_007.jsonl](<../work/replay_research/reading_p1_005_007.jsonl>)：jsonl_line=30; ERC_P1_0085; post_ids=824604,824621
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=36; post_id=824604; floor=335
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=37; post_id=824621; floor=336
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=8; ERC_P2_0208; post_ids=922821
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=34; post_id=922821; floor=433
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=44; ERC_P2_0244; post_ids=958884,958885,958896,958900,959037,959039,959104,959113,959199
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=42; post_id=958884; floor=691
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=43; post_id=958885; floor=692
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=44; post_id=958896; floor=693
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=45; post_id=958900; floor=694
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=46; post_id=959037; floor=695
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=47; post_id=959039; floor=696
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=48; post_id=959104; floor=697
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=49; post_id=959113; floor=698
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=50; post_id=959199; floor=699
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=61; ERC_P2_0461; post_ids=1031470,1031478,1032053
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=42; post_id=1031470; floor=1191
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=43; post_id=1031478; floor=1192
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=44; post_id=1032053; floor=1193
+- [faction_operations_dossier.jsonl](<../work/replay_research/faction_operations_dossier.jsonl>)：jsonl_line=7; record_id=FOP_007
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=37; line_end=44
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=180; line_end=182
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=37; line_end=44
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=180; line_end=182
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=25; post_id=968335; floor=74
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=43; post_id=923265; floor=442
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=44; post_id=923272; floor=443
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=45; post_id=923290; floor=444
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=7; post_id=971896; floor=806
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=8; post_id=971909; floor=807
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=9; post_id=971912; floor=808
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=10; post_id=971915; floor=809
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=1; post_id=959208; floor=700
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=2; post_id=959370; floor=701
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=4; post_id=959641; floor=703
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=5; post_id=959646; floor=704
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=6; post_id=959651; floor=705
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=9; post_id=959976; floor=708
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=11; post_id=959982; floor=710
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=14; post_id=960048; floor=713
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=16; post_id=960068; floor=715
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=17; post_id=960072; floor=716
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=18; post_id=960111; floor=717
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=38; post_id=846670; floor=1087
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=46; line_end=49
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=114; line_end=119
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=150; line_end=153
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=34; post_id=960576; floor=733
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=36; post_id=960586; floor=735
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=38; post_id=960881; floor=737
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=4; post_id=963675; floor=753
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=50; post_id=974730; floor=849
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=28; post_id=985223; floor=877
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=29; post_id=985898; floor=878
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=30; post_id=986052; floor=879
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=38; post_id=987018; floor=887
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=39; post_id=987026; floor=888
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=40; post_id=987029; floor=889
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=48; post_id=987233; floor=897
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=49; post_id=987234; floor=898
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=50; post_id=987239; floor=899
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=27; post_id=914145; floor=276
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=28; post_id=914149; floor=277
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=29; post_id=914153; floor=278
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=31; post_id=914157; floor=280
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=32; post_id=914171; floor=281
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=33; post_id=914172; floor=282
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=34; post_id=914181; floor=283
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=37; post_id=914301; floor=286
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=43; post_id=914582; floor=292
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=44; post_id=914606; floor=293
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=22; post_id=960244; floor=721
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=23; post_id=960245; floor=722
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=24; post_id=960247; floor=723
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=27; post_id=960254; floor=726
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=28; post_id=960439; floor=727
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=30; post_id=960504; floor=729
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=31; post_id=960512; floor=730
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=33; post_id=960572; floor=732
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=37; post_id=960594; floor=736
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=39; post_id=960885; floor=738
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=6; post_id=964513; floor=755
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=8; post_id=964526; floor=757
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=10; post_id=966347; floor=759
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=46; post_id=962304; floor=745
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=47; post_id=962305; floor=746
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=5; post_id=963731; floor=754
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=19; post_id=1179677; floor=218
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=20; post_id=1182889; floor=219
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=115; line_end=115
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=2; record_id=WRS_002
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_004。适用时期：地理分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_004,WRS_013,FOP_007
+
+<a id="WORLD_WRC_015"></a>
+### 无法地带
+
+`WORLD_WRC_015` · confirmed · original_campaign
+
+无法地带位于妄想山脉最中央，是一片独立、隔绝而广阔的区域，其中有一座巨大的主城。当地奉行实力主义，只以最低限度的规则保障人权和生命权。
+
+主城最大的三个组织是狂信者、无法组织和高等评议会。狂信者统合当地宗教，无法组织囊括各类黑帮，高等评议会执行最低限度的法律。三者中，无法组织人数最多，狂信者次之，高等评议会最少；不加入任何组织的普通居民，在整体人口中反而占最多数，他们的基本生存尤其依赖高等评议会维持的最低保障。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=15; record_id=WRC_015
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=61; line_end=64
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_015。适用时期：既存区域。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_015 本轮正文整理：现有来源未给完整地图、全部制度及与帝国的行政关系，不将其写作帝国普通行政区。
+
+<a id="WORLD_WRC_019"></a>
+### 帝都
+
+`WORLD_WRC_019` · confirmed · original_campaign
+
+帝都是帝与朝廷所在的城市，也是帝国中央办理军政事务的重要地点。城内有通向宫廷的道路、圣庙、商业街区、民居和贫民区；公共澡堂使用热水，居民也会沿水渠、河畔洗衣。普通商店出售木铁用品等生活物资，宫前节市和学校活动在节庆期间带来额外的人流与交易。
+
+右近承担帝都防务、朝会和民愿事务，曾委托哈克等人代听居民请求，处理疏通下水道、修桥修路、屋顶和邻里争执。军情也可经守卫、办公室和队长接报，但原线初入城时的报告曾受到达卡斯所报消息及官员关系影响，接报本身不等于内容已经核实。
+
+御临风首次入城时，贫民区仍是帝都生活的一部分。原线后来，在飘零祭结束近一个月、临近新年时，帝国新政才废除最后的贫民区，为多数无职者安排工作并扩建城区。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=19; record_id=WRC_019
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=43; line_end=44
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=94; line_end=108
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=117; line_end=118
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=153; line_end=153
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=4; record_id=EMP_004
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=2; post_id=817173; floor=151
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=4; post_id=817210; floor=153
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=7; post_id=817395; floor=156
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=8; post_id=817429; floor=157
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=9; post_id=817432; floor=158
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=11; post_id=817447; floor=160
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=35; post_id=817699; floor=184
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=13; post_id=817453; floor=162
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=15; post_id=817473; floor=164
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=17; post_id=817479; floor=166
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=18; post_id=817481; floor=167
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=20; post_id=817492; floor=169
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=36; post_id=816817; floor=135
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=40; post_id=816879; floor=139
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=33; post_id=845797; floor=982
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=34; post_id=845814; floor=983
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=35; post_id=845826; floor=984
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=36; post_id=845834; floor=985
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=42; post_id=845973; floor=991
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=43; post_id=845975; floor=992
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：jsonl_line=5; post_id=864692; floor=104
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：jsonl_line=7; post_id=864704; floor=106
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=21; line_end=26
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：source_id=P1_P002; jsonl_line=33; post_id=816651; floor=82
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=42; post_id=817008; floor=141
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：jsonl_line=20; post_id=818410; floor=219
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：document_id=MUTOU_PAGE_01; source_id=MUTOU; jsonl_line=33; post_id=846685; floor=32
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：document_id=MUTOU_PAGE_01; source_id=MUTOU; jsonl_line=39; post_id=846736; floor=38
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：document_id=MUTOU_PAGE_02; source_id=MUTOU; jsonl_line=27; post_id=848743; floor=76
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=35; post_id=864341; floor=184
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=39; post_id=864444; floor=188
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=36; post_id=989666; floor=85
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=39; post_id=990702; floor=88
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=41; post_id=992345; floor=90
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=43; post_id=993920; floor=92
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：document_id=MUTOU_PAGE_02; source_id=MUTOU; jsonl_line=5; post_id=847638; floor=54
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=25; post_id=968335; floor=74
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=41; record_id=WRS_041
+- [reading_p1_001_004.jsonl](<../work/replay_research/reading_p1_001_004.jsonl>)：jsonl_line=42; ERC_P1_0042; post_ids=817173,817210,817395,817429,817432,817447,817699
+- [reading_p1_001_004.jsonl](<../work/replay_research/reading_p1_001_004.jsonl>)：jsonl_line=43; ERC_P1_0043; post_ids=817453,817473,817479,817481,817492
+- [reading_p1_001_004.jsonl](<../work/replay_research/reading_p1_001_004.jsonl>)：jsonl_line=37; ERC_P1_0037; post_ids=816817,816879
+- [reading_p1_017_020.jsonl](<../work/replay_research/reading_p1_017_020.jsonl>)：jsonl_line=34; ERC_P1_0334; post_ids=845797,845814,845826,845834,845973,845975
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=18; ERC_P2_0018; post_ids=864692,864704
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=1; ERC_P3_0001; post_ids=1033317
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl>)：document_id=P3_P001; jsonl_line=1; post_id=1033317; floor=
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_019。适用时期：T0生活；新政分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_019,EMP_004,WRS_041 本轮正文整理：城市生活场景不足以建立完整比例地图；后期新政不回填首次入都。
+
+<a id="WORLD_WRC_020"></a>
+### 边境关卡
+
+`WORLD_WRC_020` · confirmed · original_campaign
+
+边境关卡是帝国面向妄想山脉的军事防线，过去长期阻止成军魔兽深入飘零大陆。御临风首次进入帝都前，凌迟已经利用制空、空投和多兵种协同攻破关卡，真达卡斯及边关三军统领阵亡，魔兽势力由此打开通往帝国内部的道路。
+
+原线后来，雷光率帝军收复关卡。攻城部队大量使用预制魔法卷轴，普通士兵也能撕开卷轴，造成土墙、斜路、支撑点与护盾等既定效果；上下层工程通路、分三路行动的空军和袭击司令部的Silence部队互相配合。守军失去指挥后，帝军夺回关卡，集合休整、清点人员，再向山脉进攻。
+
+更晚的大地裂变使边关补给站崩塌，并改变周围天险。关卡收复后的控制情况、裂变后的补给与通行条件是不同阶段；现有记录没有确认关城整体随裂变消失。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=20; record_id=WRC_020
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=19; line_end=19
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=40; line_end=44
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=180; line_end=182
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=13; record_id=WRS_013
+- [reading_p1_005_007.jsonl](<../work/replay_research/reading_p1_005_007.jsonl>)：jsonl_line=30; ERC_P1_0085; post_ids=824604,824621
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=36; post_id=824604; floor=335
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=37; post_id=824621; floor=336
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=8; ERC_P2_0208; post_ids=922821
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=34; post_id=922821; floor=433
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=44; ERC_P2_0244; post_ids=958884,958885,958896,958900,959037,959039,959104,959113,959199
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=42; post_id=958884; floor=691
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=43; post_id=958885; floor=692
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=44; post_id=958896; floor=693
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=45; post_id=958900; floor=694
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=46; post_id=959037; floor=695
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=47; post_id=959039; floor=696
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=48; post_id=959104; floor=697
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=49; post_id=959113; floor=698
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=50; post_id=959199; floor=699
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=61; ERC_P2_0461; post_ids=1031470,1031478,1032053
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=42; post_id=1031470; floor=1191
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=43; post_id=1031478; floor=1192
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=44; post_id=1032053; floor=1193
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=5; record_id=EMP_005
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=38; post_id=846670; floor=1087
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=17; post_id=846047; floor=1016
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=19; post_id=846054; floor=1018
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=22; post_id=846061; floor=1021
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=3; post_id=846217; floor=1052
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=15; post_id=921465; floor=414
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=6; post_id=987507; floor=905
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=7; post_id=987509; floor=906
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=8; post_id=987519; floor=907
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=9; post_id=987590; floor=908
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=10; post_id=987703; floor=909
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=12; post_id=987706; floor=911
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=13; post_id=987709; floor=912
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=14; post_id=987710; floor=913
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=16; post_id=987712; floor=915
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=18; post_id=987714; floor=917
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=19; post_id=987715; floor=918
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=49; post_id=989174; floor=948
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=19; post_id=1179677; floor=218
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=20; post_id=1182889; floor=219
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_020。适用时期：失陷→收复→裂变。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_020,WRS_013,EMP_005 本轮正文整理：收关、远征与地裂各按发生时期使用。原线战果不预定重玩战果。
+
+<a id="WORLD_WRC_021"></a>
+### 帝都近郊峡谷
+
+`WORLD_WRC_021` · confirmed · original_campaign
+
+帝都近郊峡谷是原线峡谷战的发生地。凌迟冒用边关步兵统领达卡斯的身份进入帝都，试图利用空间龙召来魔兽大军，计划败露后在这里遭到帝军包围，并最终惨败。
+
+战斗期间，御临风等人在峡谷侦察、破坏布设的法阵并救援同伴。峡壁与对岸栈道为法师提供隐蔽位置；御临风从法阵构造认出其属于传奇魔法，却未能据此确定具体用途。帝军另有包围和封印的后手。战后右近才向御临风解释让敌我先行消耗、以结界封印及使用七曜石后手的安排〔character_belief〕。凌迟随后的处刑及对伤亡责任的处理，发生在峡谷战之后。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=21; record_id=WRC_021
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=43; line_end=44
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=76; line_end=86
+- [campaign_event_dependencies.jsonl](<../work/replay_research/campaign_event_dependencies.jsonl>)：jsonl_line=2; record_id=DEP_002
+- [reading_p1_005_007.jsonl](<../work/replay_research/reading_p1_005_007.jsonl>)：jsonl_line=24
+- [reading_p1_005_007.jsonl](<../work/replay_research/reading_p1_005_007.jsonl>)：jsonl_line=25
+- [reading_p1_005_007.jsonl](<../work/replay_research/reading_p1_005_007.jsonl>)：jsonl_line=28
+- [reading_p1_014_016.jsonl](<../work/replay_research/reading_p1_014_016.jsonl>)：jsonl_line=25
+- [reading_p1_017_020.jsonl](<../work/replay_research/reading_p1_017_020.jsonl>)：jsonl_line=20
+- [reading_p1_017_020.jsonl](<../work/replay_research/reading_p1_017_020.jsonl>)：jsonl_line=21
+- [reading_p1_017_020.jsonl](<../work/replay_research/reading_p1_017_020.jsonl>)：jsonl_line=23
+- [reading_p1_017_020.jsonl](<../work/replay_research/reading_p1_017_020.jsonl>)：jsonl_line=24
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=2
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=37; post_id=820769; floor=286
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=25; post_id=823927; floor=324
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=26; post_id=823928; floor=325
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=27; post_id=824139; floor=326
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=28; post_id=824168; floor=327
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=29; post_id=824326; floor=328
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=30; post_id=824464; floor=329
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=31; post_id=824492; floor=330
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=34; post_id=824573; floor=333
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=35; post_id=824602; floor=334
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=37; post_id=824621; floor=336
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=24; post_id=843567; floor=773
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=26; post_id=843602; floor=775
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=27; post_id=843605; floor=776
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=29; post_id=843621; floor=778
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=41; post_id=843915; floor=790
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=42; post_id=843924; floor=791
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=50; post_id=843978; floor=799
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=1; post_id=845039; floor=900
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=4; post_id=845068; floor=903
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=5; post_id=845076; floor=904
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=6; post_id=845079; floor=905
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=7; post_id=845080; floor=906
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=9; post_id=845089; floor=908
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=10; post_id=845112; floor=909
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=11; post_id=845204; floor=910
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=12; post_id=845207; floor=911
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=14; post_id=845212; floor=913
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=23; post_id=845258; floor=922
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=24; post_id=845260; floor=923
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=25; post_id=845263; floor=924
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=26; post_id=845265; floor=925
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=27; post_id=845268; floor=926
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=33; post_id=845370; floor=932
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=34; post_id=845380; floor=933
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=35; post_id=845382; floor=934
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=17; post_id=846047; floor=1016
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=19; post_id=846054; floor=1018
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=22; post_id=846061; floor=1021
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=3; post_id=846217; floor=1052
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_021。适用时期：原线战事地点。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_021,DEP_002 本轮正文整理：正文只保留峡谷用途及影响行动的地形、知识条件；七曜石后手解释的获知时间在战后，不能作为侦察阶段的预先知识。698名册还含此前达卡斯所害者，不等于峡谷战纯阵亡数。
+
+<a id="WORLD_WRC_022"></a>
+### 九雪医馆
+
+`WORLD_WRC_022` · confirmed · original_campaign
+
+九雪医馆位于帝都，馆主与雪老交好。雪老在边关服役期间，孙女露露缇耶寄居于此；后来久远与馆主一见如故，哈克、久远等人也受到邀请而寄居。医馆有可供泡澡的大浴汤，但在久远入住时，因医馆已废置一段时间而暂时无法使用。
+
+九雪医馆同时是一处私人照护与医术转荐的入口。村医称馆主是自己的同门师兄，并以推荐信为御临风提供前往求学的机会。原线御临风初到时医馆关闭，峡谷战后才获得客房、洗浴及衣物等接待；递交推荐信和请求学医尚不等于已经完成拜师。护送悠悠前，雪老又曾提供药物，托尔金借出装备并要求归还，这些支持来自具体人物关系和当次安排。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=22; record_id=WRC_022
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=83; line_end=85
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=97; line_end=108
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=14; record_id=WRS_014
+- [reading_p1_001_004.jsonl](<../work/replay_research/reading_p1_001_004.jsonl>)：jsonl_line=28; ERC_P1_0028; post_ids=816141,816246,816583,816699,816704
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=35; post_id=816141; floor=34
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=43; post_id=816246; floor=42
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：jsonl_line=29; post_id=816583; floor=78
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=1; post_id=816699; floor=100
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=3; post_id=816704; floor=102
+- [reading_p1_017_020.jsonl](<../work/replay_research/reading_p1_017_020.jsonl>)：jsonl_line=33; ERC_P1_0333; post_ids=845704,845706,845709,845724,845755,845757,845759
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=12; post_id=845704; floor=961
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=14; post_id=845706; floor=963
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=15; post_id=845709; floor=964
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=16; post_id=845724; floor=965
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=26; post_id=845755; floor=975
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=27; post_id=845757; floor=976
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=28; post_id=845759; floor=977
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=59; ERC_P2_0059; post_ids=920841,920856,920892,920911,920912,920924,920927,920932,920935,920939,920942,920961,920971,920973,920981,920983,920988,920989,921016,921071
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=31; post_id=920841; floor=380
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=32; post_id=920856; floor=381
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=33; post_id=920892; floor=382
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=34; post_id=920911; floor=383
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=35; post_id=920912; floor=384
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=36; post_id=920924; floor=385
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=37; post_id=920927; floor=386
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=38; post_id=920932; floor=387
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=39; post_id=920935; floor=388
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=40; post_id=920939; floor=389
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=41; post_id=920942; floor=390
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=42; post_id=920961; floor=391
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=43; post_id=920971; floor=392
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=44; post_id=920973; floor=393
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=45; post_id=920981; floor=394
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=46; post_id=920983; floor=395
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=47; post_id=920988; floor=396
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=48; post_id=920989; floor=397
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=49; post_id=921016; floor=398
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=50; post_id=921071; floor=399
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_022。适用时期：开闭寄居分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_022,WRS_014 本轮正文整理：住宿、求医、递信、请求学医与收徒分别记录；私人赠药、借装不构成面向所有人的免费供给制度。
+
+<a id="WORLD_WRC_023"></a>
+### 九重里
+
+`WORLD_WRC_023` · confirmed · original_campaign
+
+九重里是北方的一处地域。久远在九重里的雪地中救下失去记忆、无法独自生存的哈克，并为他取了“哈克”这个名字；此后两人一起踏上旅途。现有本团资料未给出九重里的完整疆域与政体。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=23; record_id=WRC_023
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=101; line_end=107
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_023。适用时期：既往地点。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_023 本轮正文整理：不自动引入原型作品同名地域的历史、地理及政体。
+
+<a id="WORLD_WRC_024"></a>
+### 空间龙秘境
+
+`WORLD_WRC_024` · confirmed · original_campaign
+
+空间龙秘境位于妄想山脉边缘，是悠悠原先生活的故乡。悠悠的母亲救下遭追杀的凌迟后，追击他的人类部队发现了秘境位置，并发动奇袭，屠杀其中的空间龙。该秘境的空间龙仅悠悠幸存，凌迟不是屠族者。
+
+关于歼灭入侵人类部队的经过，设定记空间龙族长牺牲生命与敌人同归于尽，谢尔伦则提到凌迟杀死入侵者；双方行动的具体先后和分工仍有缺口〔uncertain〕。这处旧秘境与悠悠后来被护送前往的龙族中央聚居秘境是两个地方，前者的惨剧早在御临风首次进入帝都以前已经发生。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=24; record_id=WRC_024
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=114; line_end=119
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=27; record_id=WRS_027
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=31; ERC_P1_0431; post_ids=848689,848738
+- [posts.jsonl](<../extracted-first/24/posts.jsonl>)：jsonl_line=37; post_id=848689; floor=1186
+- [posts.jsonl](<../extracted-first/24/posts.jsonl>)：jsonl_line=38; post_id=848738; floor=1187
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=1; ERC_P2_0401; post_ids=971889,971895,971896
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=5; post_id=971889; floor=804
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=6; post_id=971895; floor=805
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=7; post_id=971896; floor=806
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=115; line_end=115
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=5; record_id=UCL_20261003_004
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=114; line_end=114
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=116; line_end=116
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=117; line_end=117
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=119; line_end=119
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_024。适用时期：T0前惨剧。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_024,WRS_027,UCL_20261003_004 本轮正文整理：与后来中央龙族秘境分开；不把后期取根基、毁境和撤离倒填到旧故乡惨剧。
+
+<a id="WORLD_WRC_025"></a>
+### 龙族秘境
+
+`WORLD_WRC_025` · confirmed · original_campaign
+
+龙族秘境是御临风后来护送悠悠抵达的龙族中央聚居地，与悠悠遭屠毁的空间龙故乡不同。悠悠称这里是龙族最繁荣、人口最多、类似首都的秘境〔character_belief〕。队伍实际见到境内四季如春，浮空宫殿与崖壁建筑并存，街道、塔楼和钟声构成聚居区的日常景象，其中还有名为“受荣之道”的场所。
+
+外界可通过空间通道进入秘境，谢尔伦曾开启通道，后来记录中的外部入口位置也有变化。谢尔伦称圣地由空间龙创造；泰蕾斯则解释，秘境根基是维持结界的基础，一旦被毁，虚无就会吞噬秘境〔character_belief〕。按泰蕾斯的这一解释，根基的安全直接关系到内部居民和建筑能否存续。
+
+原线后来，秘境先后承接悠悠的姓名传承、帝国与龙族的政治仪式及驻军合作，继而遭遇龙王内乱和死亡之翼袭击。原线记录止于白魔在根基洞穴取石，并声称离开后将毁掉秘境；未见完整毁境及居民撤离的结果。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=25; record_id=WRC_025
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=118; line_end=119
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=29; record_id=WRS_029
+- [reading_p1_017_020.jsonl](<../work/replay_research/reading_p1_017_020.jsonl>)：jsonl_line=27; ERC_P1_0327; post_ids=845598,845599,845600,845604
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=44; post_id=845598; floor=943
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=45; post_id=845599; floor=944
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=46; post_id=845600; floor=945
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=47; post_id=845604; floor=946
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=2; ERC_P1_0402; post_ids=846047,846054,846061,846217
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=17; post_id=846047; floor=1016
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=19; post_id=846054; floor=1018
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=22; post_id=846061; floor=1021
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=3; post_id=846217; floor=1052
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=8; ERC_P1_0408; post_ids=846107,846109,846113,846114,846115,846116,846119,846120,846530,846531
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=38; post_id=846107; floor=1037
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=39; post_id=846109; floor=1038
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=40; post_id=846113; floor=1039
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=41; post_id=846114; floor=1040
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=42; post_id=846115; floor=1041
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=43; post_id=846116; floor=1042
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=44; post_id=846119; floor=1043
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=45; post_id=846120; floor=1044
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=24; post_id=846530; floor=1073
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=25; post_id=846531; floor=1074
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=34; ERC_P1_0534; post_ids=862100
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=30; post_id=862100; floor=1379
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=32; record_id=WRS_032
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=25; ERC_P1_0425; post_ids=846884
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：jsonl_line=11; post_id=846884; floor=1110
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=21; ERC_P2_0421; post_ids=987498,987503,987507,987509
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=4; post_id=987498; floor=903
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=5; post_id=987503; floor=904
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=6; post_id=987507; floor=905
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=7; post_id=987509; floor=906
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=15; record_id=WRS_015
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=51; record_id=WRS_051
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_025。适用时期：护送所见；后期分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_025,WRS_029,WRS_032 本轮正文整理：原录与过渡层边界按AGENTS保留；本条未抄写current_state。初次入口不是永久唯一入口，悠悠的繁荣与人口评价保留其说话者。 毁境与撤离的完整结果属于另行约定的过渡正典，不作为原团已经演完的事件。
+
+<a id="WORLD_WRC_026"></a>
+### 监狱塔
+
+`WORLD_WRC_026` · confirmed · original_campaign
+
+监狱塔曾囚禁白色魔法使等魔物，白色魔法使过去被关押在塔顶，沐透曾在塔中担任守卫。帝为何保留这些囚犯的性命并将其囚禁，至今没有明确答案。
+
+边关被攻破时，高塔同时遭到魔物之潮与魔兽之潮冲击。白色魔法使利用袭击，并在沐透协助下逃出监狱塔；帝都篇开始前，他已经脱困。受袭、求援、地方上报和帝都获知并非同时完成：原线有破塔求援的军报，也有沐透事后向地方报告逃犯的行动，后来雷光掌握了白魔从塔顶囚犯转为在外活动者的情报。高塔完整结构、囚犯名单及所有逃亡者去向仍未明确。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=26; record_id=WRC_026
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=123; line_end=130
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=5; record_id=UCL_20261003_004
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=114; line_end=114
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=115; line_end=115
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=116; line_end=116
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=117; line_end=117
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=119; line_end=119
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=10; record_id=WMPR_010
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=43; line_end=50
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=125; line_end=125
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：jsonl_line=11; post_id=846884; floor=1110
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=39; post_id=864444; floor=188
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=4; post_id=987498; floor=903
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=21; post_id=1186459; floor=220
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=25; post_id=1247358; floor=224
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=29; post_id=1334073; floor=228
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=30; post_id=1334089; floor=229
+- [current_state.md](<../current_state.md>)：source_id=STATE_CONTINUATION_D3; line_start=8; line_end=24
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=36; line_end=62
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 243–246
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_026。适用时期：囚禁→双潮脱逃。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_026,UCL_20261003_004,WMPR_010 本轮正文整理：双潮已由用户确认。旧材料各自强调魔物潮或魔兽潮的用字仍留在来源，不再作二选一冲突，也不合并两潮概念。 本轮用户澄清已采用：白魔在边关失守与双潮出现时已脱困，早于帝都T0。
+
+<a id="WORLD_WRC_027"></a>
+### 帝都图书馆
+
+`WORLD_WRC_027` · confirmed · original_campaign
+
+帝都图书馆是一座高达数十层的圆形建筑，馆内各层以书架环绕中间座位，楼层之间靠楼梯通行。进入图书馆需要入门卡，原线所示价格为二十金币；管理员以探知魔法查验卡片后放行。御临风曾向哈克借用卡片查资料，并须在用后归还。
+
+馆藏按楼层与主题分类，异世界相关书籍位于第二十三层，再按各世界名称排列。目录标明存放区域，并以类似字母加数字的编号帮助寻找书架。馆内有关于异界物种、神系和神术的研究，也包含作者猜想，读到书中记载仍需辨明其证据性质。馆长菲利普能够提供专业查阅与鉴定意见。谢尔伦年轻时乔装在帝国游历、读完图书馆初期藏书的经历，至今作为馆内佳话与传说流传〔rumor〕。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=27; record_id=WRC_027
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=150; line_end=153
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=15; record_id=WRS_015
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=50; ERC_P2_0250; post_ids=960111,960117,960242,960439,960442,960504
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=18; post_id=960111; floor=717
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=19; post_id=960117; floor=718
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=20; post_id=960242; floor=719
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=28; post_id=960439; floor=727
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=29; post_id=960442; floor=728
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=30; post_id=960504; floor=729
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=56; ERC_P2_0256; post_ids=960512,964513,964526,966347,967530
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=31; post_id=960512; floor=730
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=6; post_id=964513; floor=755
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=8; post_id=964526; floor=757
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=10; post_id=966347; floor=759
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=12; post_id=967530; floor=761
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=15; ERC_P2_0415; post_ids=985223,985898,986052,987018,987026,987029
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=28; post_id=985223; floor=877
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=29; post_id=985898; floor=878
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=30; post_id=986052; floor=879
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=38; post_id=987018; floor=887
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=39; post_id=987026; floor=888
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=40; post_id=987029; floor=889
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=4; ERC_P3_0204; post_ids=1061737,1062189,1062586,1066096,1066993
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：jsonl_line=13; post_id=1061737; floor=112
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：jsonl_line=15; post_id=1062189; floor=114
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：jsonl_line=17; post_id=1062586; floor=116
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：jsonl_line=25; post_id=1066096; floor=124
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：jsonl_line=27; post_id=1066993; floor=126
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=24; ERC_P3_0024; post_ids=1046075
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=21; post_id=1046075; floor=70
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=25; ERC_P3_0225; post_ids=1186459,1206254,1247358
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=21; post_id=1186459; floor=220
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=25; post_id=1247358; floor=224
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=28; ERC_P3_0228; post_ids=1334089
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=30; post_id=1334089; floor=229
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=14; record_id=ERC_P2_0014
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=9; post_id=863472; floor=58
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=11; post_id=863825; floor=60
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=12; post_id=863834; floor=61
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=13; post_id=863839; floor=62
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=16; post_id=863899; floor=65
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=17; post_id=863928; floor=66
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=19; post_id=863955; floor=68
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=20; post_id=863989; floor=69
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=46; record_id=ERC_P2_0046
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=13; post_id=914101; floor=262
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=14; post_id=914102; floor=263
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=15; post_id=914104; floor=264
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=16; post_id=914105; floor=265
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=17; post_id=914106; floor=266
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=19; post_id=914111; floor=268
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=20; post_id=914114; floor=269
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=21; post_id=914116; floor=270
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=22; post_id=914117; floor=271
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=23; post_id=914129; floor=272
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=24; post_id=914133; floor=273
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=25; post_id=914137; floor=274
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=26; post_id=914139; floor=275
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=27; post_id=914145; floor=276
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_027。适用时期：既存机构；查阅分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_027,WRS_015 本轮正文整理：补读第二部第2页的准入和检索场景，旧来源全部保留。百万藏书仅为御临风粗算，未作为确定馆藏数。馆藏、推荐和个人读书不自动成为世界真相或全员知识。
+
+<a id="WORLD_WRC_028"></a>
+### 永恒之井
+
+`WORLD_WRC_028` · confirmed · original_campaign
+
+永恒之井是古代高等精灵大量汲取魔法能量的来源。高等精灵权贵沉迷井中能量并无节制地滥用魔法，又试图利用北海巨妖称霸世界，最终导致永恒之井崩塌；大部分高等精灵随灾变沉入海底，受永久诅咒而成为娜迦。
+
+克拉肯关于高等精灵受古神迷惑、首都沉海以及精灵王以腰带参与战争的讲述，为这段古史提供了另一份证言〔character_belief〕。永恒之井的具体结构、崩塌年代，以及灾变和各场战争的完整先后关系仍不明确。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=28; record_id=WRC_028
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=51; line_end=54
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=41; record_id=WRC_041
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=11; record_id=SWU_PWR_001
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=25; post_id=948659; floor=324
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=27; post_id=948754; floor=326
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_028。适用时期：古代地点。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_028,WRC_041,SWU_PWR_001 本轮正文整理：不从外部同名设定补充井的地理、构造、古神身份或战争因果。
+
+<a id="WORLD_WRC_029"></a>
+### 尼伯龙根
+
+`WORLD_WRC_029` · rumor · original_campaign
+
+尼伯龙根是关于帝的民间传说中提及的异世界。有人说帝是一位魔法师，曾前往尼伯龙根并在那里获得永生；这一说法没有得到证实，其真假无人知晓〔rumor〕。现有资料没有提供通往尼伯龙根的方式、位置，或能够证实帝永生的记录。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=29; record_id=WRC_029
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=72; line_end=79
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_029。适用时期：传说。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_029 本轮正文整理：本条仅确认永生传说的流传；不据此确认帝永生或其必胜能力，也不引入其他作品同名地理。
+
+<a id="WORLD_WRC_070"></a>
+### 受荣之道
+
+`WORLD_WRC_070` · confirmed · original_campaign
+
+受荣之道位于龙族中心秘境，是举行成人礼及其他重要仪式的道路。龙族称道路由古代流传的龙晶铺成，死者的一部分灵魂寄居其中〔character_belief〕。族人会在这里接受仪式与试炼，但不同场合的试炼形式并不固定为原线婚约仪式的安排。
+原线第三部，受荣之道实际出现了灵魂火焰，御临风与泰蕾斯在此相见。泰蕾斯说明自己对未来所见有限，随后把最后的力量交给悠悠，自身消散；悠悠后来显现多条有条件的未来，并承认自己是必须活下去的最后一道封印。这次传承是后期发生的具体事件，没有证明每块龙晶都能由任意来者召出灵魂。
+
+<details>
+<summary>来源</summary>
+
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=46; record_id=WRS_046
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=59; ERC_P2_0259; post_ids=963048,968330,969258
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=2; post_id=963048; floor=751
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=16; post_id=968330; floor=765
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=18; post_id=969258; floor=767
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=18; ERC_P3_0018; post_ids=1043595,1043613,1049727
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=13; post_id=1043595; floor=62
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=15; post_id=1043613; floor=64
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=31; post_id=1049727; floor=80
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=25; ERC_P3_0025; post_ids=1044388,1046075,1049727
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=19; post_id=1044388; floor=68
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=21; post_id=1046075; floor=70
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=27; ERC_P3_0027; post_ids=1046125,1046129,1046861
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=23; post_id=1046125; floor=72
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=24; post_id=1046129; floor=73
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=25; post_id=1046861; floor=74
+- [campaign_event_dependencies.jsonl](<../work/replay_research/campaign_event_dependencies.jsonl>)：jsonl_line=10; record_id=DEP_010
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=12
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=13
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=16
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=17
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=18
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=25
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=27
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=30
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl>)：document_id=P3_P001; jsonl_line=41; post_id=1042360; floor=40
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl>)：document_id=P3_P001; jsonl_line=43; post_id=1042446; floor=42
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl>)：document_id=P3_P001; jsonl_line=45; post_id=1042470; floor=44
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=1; post_id=1042498; floor=50
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=3; post_id=1042798; floor=52
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=2; post_id=1042499; floor=51
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=49; post_id=1057851; floor=98
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=4; post_id=1042846; floor=53
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=8; post_id=1043197; floor=57
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=10; post_id=1043395; floor=59
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=50; post_id=1057980; floor=99
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=7; post_id=1043193; floor=56
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=6; post_id=1043183; floor=55
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=11; post_id=1043413; floor=60
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=39; post_id=1051711; floor=88
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=43; post_id=1052966; floor=92
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=37; post_id=1051563; floor=86
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=41; post_id=1052872; floor=90
+- [event_causality_main_late.jsonl](<../work/replay_research/event_causality_main_late.jsonl>)：jsonl_line=3; record_id=ELATE_003
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_070。适用时期：仪式与后期显现。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRS_046,DEP_010 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_RESEARCH_INSTITUTE"></a>
+### 帝都博士研究所
+
+`WORLD_RESEARCH_INSTITUTE` · confirmed · original_campaign
+
+帝都博士研究所是沐透为研究腰带与魔法戒指而前往的专业研究地点，设有保安、文献资料和魔法实验工具。沐透先经游击士协会代传约见，再由维尔提供拉塞尔博士的身份与地址，最终找到研究者。维尔称博士兼任协会名誉博士和学院教师；博士则说明，大部分研究经费来自军方，继续开展相关项目需要正式官方委托〔character_belief〕。
+
+研究先从实物和演示开始。博士探测腰带、观察魔法戒指，认为戒指结构与本地魔导器近似，但所用宝石不同于七曜石，替代材料需要实验〔character_belief〕。他后来完成腰带图纸、归还装具并召集专家。对于逆转Phantom化，博士提出可参考解除诅咒和魔兽化研究，但需要时间、材料与实际样本；沐透提出的人偶容器、灵魂置换等方案尚无成功实验。博士还称保存和操作人类灵魂属于严禁领域〔character_belief〕，这成为相关研究所面对的限制。
+
+沐透随后向军方报告，王骑准许他暂住并承诺发出正式研究委托，劳霖负责记录。现有剧情停在研究推进与授权承诺阶段，未显示委托文书送达、制造出新戒指或完成逆Phantom化。
+
+<details>
+<summary>来源</summary>
+
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=8; record_id=SWU_SOC_005
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=25; post_id=1042442; floor=424
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=33; post_id=1043390; floor=432
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=35; post_id=1043686; floor=434
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=37; post_id=1044477; floor=436
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=39; post_id=1044705; floor=438
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=27; post_id=1042494; floor=426
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=43; post_id=1046862; floor=442
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=21; record_id=SWU_FAC_004
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=23; post_id=1042344; floor=422
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=31; post_id=1043190; floor=430
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=41; post_id=1046096; floor=440
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=3; post_id=1049842; floor=452
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=5; post_id=1051559; floor=454
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=9; post_id=1052875; floor=458
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=11; post_id=1055378; floor=460
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=12; post_id=1055963; floor=461
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=13; post_id=1056638; floor=462
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=14; post_id=1068640; floor=463
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=15; post_id=1069865; floor=464
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=19; post_id=1090503; floor=468
+- [event_causality_sides.jsonl](<../work/replay_research/event_causality_sides.jsonl>)：jsonl_line=5; record_id=ESIDE_005
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=25; post_id=1042442; floor=424; source_html_line=2551
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=33; post_id=1043390; floor=432; source_html_line=3287
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=41; post_id=1046096; floor=440; source_html_line=4023
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; jsonl_line=3; post_id=1049842; floor=452; source_html_line=526
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; jsonl_line=5; post_id=1051559; floor=454; source_html_line=710
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=39; post_id=1044705; floor=438; source_html_line=3839
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=49; post_id=1047852; floor=448; source_html_line=4759
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; jsonl_line=9; post_id=1052875; floor=458; source_html_line=1078
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; jsonl_line=11; post_id=1055378; floor=460; source_html_line=1262
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; jsonl_line=12; post_id=1055963; floor=461; source_html_line=1355
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; jsonl_line=13; post_id=1056638; floor=462; source_html_line=1446
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; jsonl_line=14; post_id=1068640; floor=463; source_html_line=1539
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; jsonl_line=15; post_id=1069865; floor=464; source_html_line=1630
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=43; post_id=1046862; floor=442; source_html_line=4207
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=42; line_end=58
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=14; record_id=SWU_PWR_004
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=39; post_id=1044705; floor=438
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=41; post_id=1046096; floor=440
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=43; post_id=1046862; floor=442
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_10; jsonl_line=3; post_id=1049842; floor=452
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_10; jsonl_line=5; post_id=1051559; floor=454
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=48; post_id=1047768; floor=447
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=49; post_id=1047852; floor=448
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=45; post_id=1047210; floor=444
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=47; post_id=1047660; floor=446
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=127; line_end=127
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=37; post_id=1044477; floor=436
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应RESEARCH_INSTITUTE。适用时期：沐透返都阶段；T0项目未启。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：SWU_SOC_005,SWU_FAC_004,ESIDE_005 本轮正文整理：标题是地点描述，机构正式名称未给。连续场景中的博士存在拉塞尔、塞拉尔等称呼变化，沿原帖保留，不凭近名并入其他博士。经费及灵魂禁令为博士证言，不补全国完整法典或统一科研审批制度；沐透报告的推断被记录不等于军方已核实。
+
+## 概念（39条）
+
+<a id="WORLD_WRC_002"></a>
+### 大陆法则限制
+
+`WORLD_WRC_002` · confirmed · original_campaign
+
+大陆法则限制是不同大陆之间对器物与力量运行的约束。科技大陆的手枪在飘零大陆不能生效；采用魔导技术制造、外形近似手枪的器物，因为运行原理不同，可以在飘零使用。技能和技巧本身不受这一类限制，因此跨大陆后是否可用，要区别器物或力量的作用原理与使用者掌握的技艺。
+
+极强者可以突破这种法则约束。真正的剑仙能够在飘零大陆施展炎黄大陆的剑气，普通剑客则不能。御临风所用剑气兼具斗气与剑气的性质，处在两者之间，因此可以在飘零发挥作用。具体失效环节、突破法则所需的实力门槛与代价仍未明确。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=2; record_id=WRC_002
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=17; line_end=18
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=186; line_end=187
+- [power_rules_dossier.jsonl](<../work/replay_research/power_rules_dossier.jsonl>)：jsonl_line=1; record_id=PWRM_001
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：document_id=REF_USER_CLARIFICATIONS; line_start=14; line_end=14
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：document_id=REF_USER_CLARIFICATIONS; line_start=15; line_end=15
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：document_id=REF_USER_CLARIFICATIONS; line_start=16; line_end=16
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=1; record_id=UCL_20261002_001
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_002。适用时期：T0法则。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_002,PWRM_001,UCL_20261002_001 本轮正文整理：用户对法则的明确补充优先；御临风可用混合剑气不授予其剑仙身份，也不建立所有混合力量的通用豁免。
+
+<a id="WORLD_WRC_013"></a>
+### 古代精灵社会
+
+`WORLD_WRC_013` · confirmed · original_campaign
+
+古代精灵社会中，高等精灵属于贵族与权贵阶层。精灵王与传说级魔法驱动器“腰带”的制造有关：腰带以魔法戒指施法，并让使用者通过契约调用其中强大生物的力量。随着古代精灵内乱、精灵王陨落，相关制造技术失传。高等精灵滥用永恒之井、遭遇灾变并有大部分化为娜迦，是另一项明确记载的古代变故；这些事件的完整年代和相互次序尚未统一。
+
+泰蕾斯讲述过部分高等精灵受蛊惑、精灵流亡，以及早期人类在帝与假面帮助下立足并接纳流亡者的历史。维尔心灵世界中的克拉肯则称，高等精灵曾受古神迷惑，首都沉海；精灵王为平息战争造出强大而难控的腰带，亲自使用后与古神同灭〔character_belief〕。这些证言提供不同人物所知的古史，仍不足以确定一套涵盖内乱、灾变、战争与技术失落全部因果的统一年代史。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=13; record_id=WRC_013
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=51; line_end=54
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=171; line_end=174
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=26; record_id=WRS_026
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=19; ERC_P2_0419; post_ids=987233,987234,987239
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=48; post_id=987233; floor=897
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=49; post_id=987234; floor=898
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=50; post_id=987239; floor=899
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=19; ERC_P3_0019; post_ids=1044045,1044388,1044048,1044560
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=17; post_id=1044045; floor=66
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=19; post_id=1044388; floor=68
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=18; post_id=1044048; floor=67
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=20; post_id=1044560; floor=69
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=61; ERC_P2_0461; post_ids=1031470,1031478,1032053
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=42; post_id=1031470; floor=1191
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=43; post_id=1031478; floor=1192
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=44; post_id=1032053; floor=1193
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=24; ERC_P3_0224; post_ids=1179677,1182889,1206254
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=19; post_id=1179677; floor=218
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=20; post_id=1182889; floor=219
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=11; record_id=SWU_PWR_001
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=25; post_id=948659; floor=324
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=27; post_id=948754; floor=326
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_07; jsonl_line=25; post_id=948659; floor=324
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_07; jsonl_line=27; post_id=948754; floor=326
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=1; record_id=SWU_ROOT_001
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=15; line_end=26
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=17; line_end=19
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=37; line_end=64
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; document_id=P3_P002; jsonl_line=21; post_id=1046075; floor=70
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_013。适用时期：古史证言。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_013,WRS_026,SWU_PWR_001 本轮正文整理：作者设定、泰蕾斯证言和克拉肯证言分层保留，不引入外部原型补齐古史。
+
+<a id="WORLD_WRC_030"></a>
+### YGGDRASIL
+
+`WORLD_WRC_030` · confirmed · original_campaign
+
+YGGDRASIL又称“世界树”，是飞鼠、公会安兹·乌尔·恭及纳萨力克地下大坟墓原先所在的游戏世界。飞鼠珍视在游戏中与公会成员建立的友情，公会成员创造的NPC和据点也成为他重视的遗产。
+
+游戏停止运营的最后一天，飞鼠留在据点等待系统注销，却意外与纳萨力克一同迁入异世界。据点中的NPC随之拥有自我意识，飞鼠保有原来的能力与法术，并改名为安兹·乌尔·恭。迁入是已经发生的原乡历史，但造成穿越以及游戏造物获得生命的完整机制仍未解释。
+
+别名：世界树
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=30; record_id=WRC_030
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=136; line_end=142
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=50; record_id=WRC_050
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=58; line_end=59
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=138; line_end=141
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_030。适用时期：原乡历史。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_030,WRC_050 本轮正文整理：YGGDRASIL不是飘零大陆地名；原乡游戏参数不自动成为本土居民共用数值体系。
+
+<a id="WORLD_WRC_031"></a>
+### 帝赐假面
+
+`WORLD_WRC_031` · confirmed · original_campaign
+
+帝赐假面是帝授予受选者的力量装具，佩戴者还须取得帝的允许，才能解放其中的力量。假面大幅增强身体能力和自我治愈能力；进一步解放时，佩戴者可以脱离人形，化为具有超常力量的巨大形态。使用过程中，假面持续剥夺佩戴者的生命力，解放的力量越强，代价越大；若因过度使用而死，身体会化为同质的盐分。
+不同假面具有不同能力。奥修特尔持水神假面，宗近持土神假面，武赖持火神假面，左近持雷神假面。原线后期，帝又将另一种假面交付龙族，其能力与四位武将所持者不同；这次授予属于龙族外交进程。瑟坦特后来被悠悠唤醒，却拒绝把假面借给御临风，随后自行参战。
+克拉肯把假面与腰带都解释为取得可控力量的古代技术，并称人类王仍保有假面之力〔character_belief〕。这份古史证言没有说明假面的完整制作过程，也没有给出每次解放消耗多少寿命、可安全维持多久的统一数值。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=31; record_id=WRC_031
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=24; line_end=24
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=159; line_end=169
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=2; record_id=EMP_002
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=24; line_end=26
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=161; line_end=169
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=29; post_id=843621; floor=778
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=44; line_end=44
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：jsonl_line=11; post_id=846884; floor=1110
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=119; line_end=119
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=37; post_id=820769; floor=286
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=25; post_id=823927; floor=324
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=17; post_id=846047; floor=1016
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=19; post_id=846054; floor=1018
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=22; post_id=846061; floor=1021
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=3; post_id=846217; floor=1052
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=12; post_id=967530; floor=761
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=28; post_id=985223; floor=877
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=29; post_id=985898; floor=878
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=30; post_id=986052; floor=879
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=38; post_id=987018; floor=887
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=39; post_id=987026; floor=888
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=40; post_id=987029; floor=889
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=11; record_id=SWU_PWR_001
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=25; post_id=948659; floor=324
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=27; post_id=948754; floor=326
+- [power_rules_dossier.jsonl](<../work/replay_research/power_rules_dossier.jsonl>)：jsonl_line=8; record_id=PWRM_008
+- [event_causality_main_late.jsonl](<../work/replay_research/event_causality_main_late.jsonl>)：jsonl_line=1; record_id=ELATE_001
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_031。适用时期：技术与授予分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_031,EMP_002,SWU_PWR_001 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_032"></a>
+### 古代精灵腰带技术
+
+`WORLD_WRC_032` · confirmed · original_campaign
+
+古代精灵腰带技术以魔法驱动器和魔法戒指组成独立的施法体系。戒指由魔宝石等材料制成，使用者借它发动腰带中的力量，无须咏唱。腰带内部封印或寄生着强大的魔兽、魔法生物乃至神话生物，使用者通过契约借用这些存在及装置蕴藏的力量，因此它被列为足以与假面抗衡的传说级物品。古代精灵内乱、精灵王陨落后，相关技术失传；不过，异界来客白色魔法师仍掌握制造知识，并曾把Wizard驱动器交给沐透。
+沐透的Wizard必须由已戴上的戒指接触驱动器感应装置才能生效。变身消耗3点魔力和一个标准动作，变身瞬间不能被打断；变换属性只需迅捷动作，却没有这层保护。变身铠甲占据原有铠甲位置，其防护不能与变身前铠甲叠加。另一个古代装具Faer则表现出对宿主供魔和意志控制的要求。
+关于腰带的旧传说称，过度使用会腐蚀心智，甚至可能是精灵内乱的原因之一〔rumor〕；现存各装具的具体契约、供能方式与控制风险仍各不相同。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=32; record_id=WRC_032
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=125; line_end=127
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=171; line_end=174
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=11; record_id=SWU_PWR_001
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=25; post_id=948659; floor=324
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=27; post_id=948754; floor=326
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=12; record_id=SWU_PWR_002
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=11; post_id=931036; floor=310
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=15; post_id=931924; floor=314
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=19; post_id=939232; floor=318
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=45; post_id=893857; floor=244
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=47; post_id=893869; floor=246
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=49; post_id=893930; floor=248
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=27; post_id=1042494; floor=426
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=28; post_id=1042503; floor=427
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=29; post_id=1042800; floor=428
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=7; record_id=WMPR_007
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=1016; line_end=1024
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=1054; line_end=1069
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=39; post_id=1044705; floor=438
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=41; post_id=1046096; floor=440
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=43; post_id=1046862; floor=442
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=3; post_id=1049842; floor=452
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=5; post_id=1051559; floor=454
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=14; line_end=14
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=1016; line_end=1025
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_032。适用时期：古代技术；装具分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_032,SWU_PWR_001,SWU_PWR_002,WMPR_007 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_033"></a>
+### 魔宝石与魔法戒指制作
+
+`WORLD_WRC_033` · confirmed · original_campaign
+
+魔宝石与魔法戒指制作是腰带施法体系的核心工艺：魔宝石等材料制成戒指，戒指再作为驱动器发动魔法的媒介。白色魔法师已经掌握魔宝石和戒指的制造方法；掌握这项技术的人员在当地仍然稀少。
+原线沐透旁线中，阿伊达提供高阶七曜石碎片、魔核及魔法宝石，沐透把材料、戒指和腰带交给研究所博士检查，并演示魔法。博士认为戒指结构与导力器类似，但其中宝石并非普通七曜石；普通七曜石或魔核能否替代，需要实际试验〔character_belief〕。博士已探测腰带、绘出图纸、归还样品并召集专家，研究因而具备了样本、材料和参与技师。
+博士要求军方正式委托来支持工作；王骑答应提供研究委托并允许沐透暂住，但文书送达及后续验收尚未见于记录。截至该旁线终点，没有新戒指制造成功或量产完成的结果，替代材料是否可用也仍未确定。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=33; record_id=WRC_033
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=126; line_end=127
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=171; line_end=173
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=7; record_id=WMPR_007
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=1016; line_end=1024
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=1054; line_end=1069
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=39; post_id=1044705; floor=438
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=41; post_id=1046096; floor=440
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=43; post_id=1046862; floor=442
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=3; post_id=1049842; floor=452
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=5; post_id=1051559; floor=454
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=14; line_end=14
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=14; record_id=SWU_PWR_004
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=48; post_id=1047768; floor=447
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=49; post_id=1047852; floor=448
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=45; post_id=1047210; floor=444
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=47; post_id=1047660; floor=446
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=127; line_end=127
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=37; post_id=1044477; floor=436
+- [power_rules_dossier.jsonl](<../work/replay_research/power_rules_dossier.jsonl>)：jsonl_line=4; record_id=PWRM_004
+- [event_causality_sides.jsonl](<../work/replay_research/event_causality_sides.jsonl>)：jsonl_line=5; record_id=ESIDE_005
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_033。适用时期：技术研发分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_033,WMPR_007,SWU_PWR_004 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_034"></a>
+### 贤者之石
+
+`WORLD_WRC_034` · confirmed · original_campaign
+
+贤者之石是一种特殊魔宝石，被称为万能的炼金材料；白色魔法师懂得它的炼成方法。现有知识没有列出它能处理的全部材料、炼成所需资源及限制，也没有证明它能不受条件地实现任意愿望。
+原线沐透旁线中，研究所博士称飘零大陆尚无贤者之石的相关发现，这是他的专业知识范围〔character_belief〕；白魔掌握炼成技术则另有明确记载。沐透提出以贤者之石作为魔偶核心、回收灵魂后重新注魔使人复原的方案，但方案仍停留在研究阶段〔character_belief〕。
+原线末期，卡珊德拉告诉御临风，持有贤者之石的白魔才是本体，其余个体只有第二阶力量〔character_belief〕。这提供了一条辨识线索，但当时并未完成对每个白魔个体的核验。龙族秘境根基中的魔宝石与贤者之石是否为同一类物品，也没有得到确认〔uncertain〕。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=34; record_id=WRC_034
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=125; line_end=127
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=1; record_id=WMPR_001
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=125; line_end=127
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=18; post_id=996028; floor=967
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=20; post_id=997651; floor=969
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=128; line_end=128
+- https://www.kamen-rider-official.com/zukan/characters/3163：东映官方图鉴 笛木奏; 人物说明，读取行28–59
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=14; record_id=SWU_PWR_004
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=39; post_id=1044705; floor=438
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=41; post_id=1046096; floor=440
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=43; post_id=1046862; floor=442
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=3; post_id=1049842; floor=452
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=5; post_id=1051559; floor=454
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=48; post_id=1047768; floor=447
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=49; post_id=1047852; floor=448
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=45; post_id=1047210; floor=444
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=47; post_id=1047660; floor=446
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=127; line_end=127
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=37; post_id=1044477; floor=436
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=2; record_id=WMPR_002
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=8; record_id=WMPR_008
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_034。适用时期：技术与知识分层。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_034,WMPR_001,SWU_PWR_004 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_035"></a>
+### 厌魔石
+
+`WORLD_WRC_035` · confirmed · original_campaign
+
+厌魔石是极其稀少的特殊矿石，其矿脉由帝国掌握，并作为限制物品管理，极少流入平民或其他组织手中。矿石能够免疫绝大多数A级及以下的魔力或能量打击；以它制成的特制锁链还具有使施法及能量使用无条件失败的效果。矿物自身的抗击能力与加工成束缚器具后的禁能效果是不同用途。
+原线第一部，悠悠曾被厌魔石器具拘押。御临风检查一副内侧刻有特殊符文的手铐时，只是手持接触，感到部分魔力被排斥，尚未达到无法施法的程度。这次接触没有演示佩戴锁闭后的完整效果。艾利后来称某些传送魔法难以穿过厌魔石等物质〔character_belief〕。
+沐透旁线中的水手使用暗青之月替身，该能力被明确判定为消耗体力的精神力量，并非自走型。守卫不知道厌魔石能否压制它，于是以锁链与睡眠魔法押送昏迷的水手；厌魔石对此能力的适用性仍为uncertain。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=35; record_id=WRC_035
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=176; line_end=178
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=9; record_id=WMPR_009
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=88; line_end=88
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=114; line_end=124
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=39; post_id=864444; floor=188
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=41; post_id=864574; floor=190
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=50; post_id=864917; floor=199
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：document_id=MUTOU_PAGE_08; source_id=MUTOU; jsonl_line=37; post_id=957923; floor=386
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=36; post_id=1044064; floor=435
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=14; post_id=1068640; floor=463
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=15; post_id=1069865; floor=464
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：source_id=P2; jsonl_line=6; post_id=918970; floor=355
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; jsonl_line=6; post_id=895365; floor=255
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：source_id=P2; jsonl_line=8; post_id=919057; floor=357
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=25; post_id=911872; floor=224
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=27; post_id=912206; floor=226
+- [power_rules_dossier.jsonl](<../work/replay_research/power_rules_dossier.jsonl>)：jsonl_line=4; record_id=PWRM_004
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=29; post_id=846089; floor=1028
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=31; post_id=846093; floor=1030
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=32; post_id=846094; floor=1031
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=33; post_id=846096; floor=1032
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=34; post_id=846097; floor=1033
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=36; post_id=846103; floor=1035
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=37; post_id=846104; floor=1036
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=10; post_id=846370; floor=1059
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=19; post_id=846466; floor=1068
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=40; post_id=846695; floor=1089
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=41; post_id=846698; floor=1090
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=42; post_id=846701; floor=1091
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=50; post_id=846748; floor=1099
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：jsonl_line=48; post_id=847479; floor=1147
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=6; post_id=895365; floor=255
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=7; post_id=895386; floor=256
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=41; post_id=1046096; floor=440
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=43; post_id=1046862; floor=442
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=3; post_id=1049842; floor=452
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=5; post_id=1051559; floor=454
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=39; post_id=1044705; floor=438
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=45; post_id=1047210; floor=444
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=37; post_id=1044477; floor=436
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=9; post_id=1052875; floor=458
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=11; post_id=1055378; floor=460
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=50; post_id=917628; floor=349
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=2; post_id=917765; floor=351
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=3; post_id=917773; floor=352
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=4; post_id=917950; floor=353
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=5; post_id=917961; floor=354
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=6; post_id=918970; floor=355
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=38; post_id=970655; floor=787
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=42; post_id=970664; floor=791
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=44; post_id=970669; floor=793
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=45; post_id=970670; floor=794
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=46; post_id=970671; floor=795
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=47; post_id=970677; floor=796
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=48; post_id=971183; floor=797
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=49; post_id=971184; floor=798
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=50; post_id=971255; floor=799
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=9; post_id=1039814; floor=408
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=11; post_id=1040025; floor=410
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=15; record_id=SWU_PWR_005
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=4; post_id=991804; floor=403
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_035。适用时期：矿物器具分开。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_035,WMPR_009,PWRM_004,SWU_PWR_005 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_036"></a>
+### 魔兽之潮
+
+`WORLD_WRC_036` · confirmed · original_campaign
+
+魔兽之潮是妄想山脉本土魔兽势力定期进攻帝国边关的军事行动。过去的攻势规模不一，兼有消耗过剩人口和训练士兵的目的，战绩败多胜少，魔兽大军此前未能由此深入帝国内部。
+凌迟掌握军权、统合部族后改变了作战方式：他争夺制空权、大规模空投兵种，并把史莱姆等不擅正面作战的生物编入执行特殊任务的部队。原线的第一次魔兽大侵攻由此突破边境关卡，使山脉势力能够向帝国纵深推进；帝国随后组织夺关和全面远征，周期性的攻边发展成全面战争。战争也推动地方重新武装和征兵。
+关于这场战争结束后魔兽之潮将发生巨大改变、或随一方败亡而消失的说法，仍是对未来的判断〔uncertain〕。原线后期的局部胜利并未构成魔兽之潮已永久终止的证据。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=36; record_id=WRC_036
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=19; line_end=19
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=40; line_end=44
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=180; line_end=182
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=2; record_id=SWU_ROOT_002
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=37; line_end=44
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=180; line_end=182
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=25; post_id=968335; floor=74
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=125; line_end=125
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：document_id=MUTOU_PAGE_01; source_id=MUTOU; jsonl_line=30; post_id=846491; floor=29
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：document_id=MUTOU_PAGE_01; source_id=MUTOU; jsonl_line=1; post_id=845702; floor=0
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=115; line_end=115
+- [faction_operations_dossier.jsonl](<../work/replay_research/faction_operations_dossier.jsonl>)：jsonl_line=7; record_id=FOP_007
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=37; line_end=44
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=43; post_id=923265; floor=442
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=44; post_id=923272; floor=443
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=45; post_id=923290; floor=444
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=7; post_id=971896; floor=806
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=8; post_id=971909; floor=807
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=9; post_id=971912; floor=808
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=10; post_id=971915; floor=809
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=1; post_id=959208; floor=700
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=2; post_id=959370; floor=701
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=4; post_id=959641; floor=703
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=5; post_id=959646; floor=704
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=6; post_id=959651; floor=705
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=9; post_id=959976; floor=708
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=11; post_id=959982; floor=710
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=14; post_id=960048; floor=713
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=16; post_id=960068; floor=715
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=17; post_id=960072; floor=716
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=18; post_id=960111; floor=717
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=50; post_id=959199; floor=699
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=36; post_id=824604; floor=335
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=37; post_id=824621; floor=336
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=38; post_id=846670; floor=1087
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=46; line_end=49
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=114; line_end=119
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=150; line_end=153
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=34; post_id=960576; floor=733
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=36; post_id=960586; floor=735
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=38; post_id=960881; floor=737
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=4; post_id=963675; floor=753
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=50; post_id=974730; floor=849
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=28; post_id=985223; floor=877
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=29; post_id=985898; floor=878
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=30; post_id=986052; floor=879
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=38; post_id=987018; floor=887
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=39; post_id=987026; floor=888
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=40; post_id=987029; floor=889
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=48; post_id=987233; floor=897
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=49; post_id=987234; floor=898
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=50; post_id=987239; floor=899
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=27; post_id=914145; floor=276
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=28; post_id=914149; floor=277
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=29; post_id=914153; floor=278
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=31; post_id=914157; floor=280
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=32; post_id=914171; floor=281
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=33; post_id=914172; floor=282
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=34; post_id=914181; floor=283
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=37; post_id=914301; floor=286
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=43; post_id=914582; floor=292
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=44; post_id=914606; floor=293
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=22; post_id=960244; floor=721
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=23; post_id=960245; floor=722
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=24; post_id=960247; floor=723
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=27; post_id=960254; floor=726
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=28; post_id=960439; floor=727
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=30; post_id=960504; floor=729
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=31; post_id=960512; floor=730
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=33; post_id=960572; floor=732
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=37; post_id=960594; floor=736
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=39; post_id=960885; floor=738
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=6; post_id=964513; floor=755
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=8; post_id=964526; floor=757
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=10; post_id=966347; floor=759
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=46; post_id=962304; floor=745
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=47; post_id=962305; floor=746
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=5; post_id=963731; floor=754
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=19; post_id=1179677; floor=218
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=20; post_id=1182889; floor=219
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=42; post_id=1031470; floor=1191
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=43; post_id=1031478; floor=1192
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=44; post_id=1032053; floor=1193
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_036。适用时期：周期→全面战争。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_036,SWU_ROOT_002,FOP_007 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_037"></a>
+### 魔物之潮
+
+`WORLD_WRC_037` · confirmed · original_campaign
+
+魔物之潮会把大批具有敌意的异界来客，或受异世界影响而诞生的产物带到飘零大陆。早期人们首先从这些灾害认识异界来客，因而以带贬义的“魔物”称呼他们；随着独自行旅及友善穿越者得到确认，学术定义才逐渐转为较中性的“异世界来客或异世界产物”，日常称呼却仍保留偏见。
+异界来客带来的知识曾推动魔法武技体系改革、魔法卷轴工厂化、人才培养军事化和统一管理，但知识能否应用仍受飘零大陆法则、本地材料与技术理解限制。魔物之潮在发生当时造成的灾害通常远大于即时收益，其技术影响可能在后世才逐渐显现。
+魔物之潮没有已知的统一周期或指挥系统，也不等于本土魔兽势力的魔兽之潮，或白魔催生Phantom的行为。原线监狱塔遭受两种潮的共同冲击，白魔借机脱逃，这是两种现象在同一事件中的交汇。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=37; record_id=WRC_037
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=184; line_end=187
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=3; record_id=SWU_ROOT_003
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=184; line_end=187
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=186; line_end=187
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=39; post_id=1044705; floor=438
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=41; post_id=1046096; floor=440
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=3; post_id=1049842; floor=452
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=5; post_id=1051559; floor=454
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=5; record_id=UCL_20261003_004
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=114; line_end=114
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=115; line_end=115
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=116; line_end=116
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=117; line_end=117
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=119; line_end=119
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_037。适用时期：异界输入知识吸收。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_037,SWU_ROOT_003,UCL_20261003_004 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_038"></a>
+### 龙族灭族预言
+
+`WORLD_WRC_038` · confirmed · original_campaign
+
+龙族灭族预言是龙族长期传承的危机预告，促使龙族向帝国寻求协助，帝也允诺帮助龙族解困。原线第二部，肯达把祖传龙语预言译给御临风，并称其出自黑龙族曾诞生的一头纯白龙；关于出处与龙语的解释属于肯达的证言〔character_belief〕。
+肯达的译文并列了受祝福与受诅咒的诞生、受喜爱与受厌恶的存在、带来和平与混乱的死亡，又对照“降生”后的繁荣与“重临”后的大地撕裂、全族带咒而亡。御临风据此联想到两条龙、光暗双子和内部背叛，这些释义没有被确认为预言的唯一答案〔character_belief〕。
+原线第三部，泰蕾斯说明自己只能看见未来的一条道路，并因担心干预而克制行动；悠悠获得传承后则显现过多条有条件的未来。已经出现的预见仍有被行动改变的可能。帝也曾明确表示，耶各所示末世天启与龙族预言的关系尚不清楚〔uncertain〕。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=38; record_id=WRC_038
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=46; line_end=49
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=22; record_id=WRS_022
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=7; ERC_P2_0407; post_ids=973143,973252,973257,973291,973864,974262,974316,974318
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=29; post_id=973143; floor=828
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=30; post_id=973252; floor=829
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=31; post_id=973257; floor=830
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=32; post_id=973291; floor=831
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=33; post_id=973864; floor=832
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=34; post_id=974262; floor=833
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=35; post_id=974316; floor=834
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=36; post_id=974318; floor=835
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=18; ERC_P3_0018; post_ids=1043595,1043613,1049727
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=13; post_id=1043595; floor=62
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=15; post_id=1043613; floor=64
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=31; post_id=1049727; floor=80
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=25; ERC_P3_0025; post_ids=1044388,1046075,1049727
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=19; post_id=1044388; floor=68
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=21; post_id=1046075; floor=70
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=18; ERC_P3_0218; post_ids=1078852,1078855
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=39; post_id=1078852; floor=188
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=40; post_id=1078855; floor=189
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=47; ERC_P2_0047; post_ids=914145,914149,914153,914157,914171,914172,914181,914301,914582,914606
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=27; post_id=914145; floor=276
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=28; post_id=914149; floor=277
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=29; post_id=914153; floor=278
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=31; post_id=914157; floor=280
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=32; post_id=914171; floor=281
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=33; post_id=914172; floor=282
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=34; post_id=914181; floor=283
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=37; post_id=914301; floor=286
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=43; post_id=914582; floor=292
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=44; post_id=914606; floor=293
+- [power_rules_dossier.jsonl](<../work/replay_research/power_rules_dossier.jsonl>)：jsonl_line=7; record_id=PWRM_007
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=408; line_end=410
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=20; post_id=863989; floor=69
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=25; post_id=864078; floor=74
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=28; post_id=864087; floor=77
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=29; post_id=864293; floor=78
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=30; post_id=864296; floor=79
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=32; post_id=864309; floor=81
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=34; post_id=864361; floor=83
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=36; post_id=864393; floor=85
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=38; post_id=864397; floor=87
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=40; post_id=864401; floor=89
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=42; post_id=864404; floor=91
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=44; post_id=864437; floor=93
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=45; post_id=864462; floor=94
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=47; post_id=864610; floor=96
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=23; post_id=1046125; floor=72
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=24; post_id=1046129; floor=73
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=25; post_id=1046861; floor=74
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=37; post_id=1051563; floor=86
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=39; post_id=1051711; floor=88
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=43; post_id=1052966; floor=92
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=25; post_id=968335; floor=74
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=35; post_id=988116; floor=84
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=7; post_id=954760; floor=56
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=1655; line_end=1693
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=1723; line_end=1727
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_038。适用时期：预言与成事分开。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_038,WRS_022,PWRM_007 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_039"></a>
+### 凌迟与悠悠涉及的诅咒
+
+`WORLD_WRC_039` · confirmed · original_campaign
+
+凌迟与悠悠涉及的诅咒分别见于空间龙旧事及原线第一部，但两人诅咒的同源关系和完整传染过程尚不明确〔uncertain〕。凌迟被悠悠父母救下时已经身受诅咒，呈半人半魔兽状态；悠悠后来也承受了侵蚀身体的咒术。
+威廉检查悠悠时判断，诅咒以寿命换取庞大魔力，同时明确承认自己不能完全读透它〔character_belief〕。泽尔里奇后提出，自己不能直接解咒，却可让另一生命自愿接过诅咒，承受者以人类、精灵、矮人等类人为宜。御临风自愿承担后，泽尔里奇、威廉和慕少艾借魔法阵、宝石及液瓶中的黑水完成转移，悠悠脱离此次承受，临风获得魔力体质和魔力池，同时感染名为“耶各”的诅咒。
+转移后的使用条件已经明确：动用现有魔力及让魔力自然恢复不会额外加重诅咒，向它索求更多魔力会加剧侵蚀；一旦失去抵抗诅咒的意愿，便会暴走。第二部复生会面中，自称耶各者又告诫临风，诅咒是两者唯一联系，解除便会重新死亡〔character_belief〕；这是神约建立后的告诫。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=39; record_id=WRC_039
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=114; line_end=119
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=23; record_id=WRS_023
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=19; ERC_P1_0419; post_ids=846744,846748,846753
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=49; post_id=846744; floor=1098
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=50; post_id=846748; floor=1099
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：jsonl_line=1; post_id=846753; floor=1100
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=20; ERC_P1_0520; post_ids=858359,858985
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：jsonl_line=14; post_id=858359; floor=1313
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：jsonl_line=17; post_id=858985; floor=1316
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=22; ERC_P1_0522; post_ids=859077
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：jsonl_line=20; post_id=859077; floor=1319
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=33; ERC_P1_0533; post_ids=860741,862100
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=20; post_id=860741; floor=1369
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=30; post_id=862100; floor=1379
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=38; ERC_P1_0538; post_ids=862302,862306,862337
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=40; post_id=862302; floor=1389
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=41; post_id=862306; floor=1390
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=43; post_id=862337; floor=1392
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=44; ERC_P2_0044; post_ids=913719,913724,913726,913730,913731
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=50; post_id=913719; floor=249
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=1; post_id=913724; floor=250
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=2; post_id=913726; floor=251
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=3; post_id=913730; floor=252
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=4; post_id=913731; floor=253
+- [power_rules_dossier.jsonl](<../work/replay_research/power_rules_dossier.jsonl>)：jsonl_line=6; record_id=PWRM_006
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：source_id=P1; jsonl_line=49; post_id=846744; floor=1098
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：source_id=P1; jsonl_line=50; post_id=846748; floor=1099
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：source_id=P1; jsonl_line=1; post_id=846753; floor=1100
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=38; post_id=913439; floor=237
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=40; post_id=913449; floor=239
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=41; post_id=913450; floor=240
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=42; post_id=913492; floor=241
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=43; post_id=913501; floor=242
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=45; post_id=913595; floor=244
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=46; post_id=913665; floor=245
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=47; post_id=913700; floor=246
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=48; post_id=913709; floor=247
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=49; post_id=913717; floor=248
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=5; post_id=913733; floor=254
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=7; post_id=913736; floor=256
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=8; post_id=913739; floor=257
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=21; post_id=1046075; floor=70
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=22; post_id=1046114; floor=71
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=29; post_id=846552; floor=1078
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=33; post_id=846643; floor=1082
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=35; post_id=846651; floor=1084
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=36; post_id=846653; floor=1085
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=38; post_id=846670; floor=1087
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=45; post_id=846708; floor=1094
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=47; post_id=1047660; floor=446
+- [campaign_event_dependencies.jsonl](<../work/replay_research/campaign_event_dependencies.jsonl>)：jsonl_line=5; record_id=DEP_005
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=20
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=21
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=22
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=23
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=32
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=33
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=34
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=38
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：jsonl_line=21; post_id=859084; floor=1320
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：jsonl_line=22; post_id=859087; floor=1321
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：jsonl_line=23; post_id=859089; floor=1322
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=24; post_id=861484; floor=1373
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=23; post_id=861478; floor=1372
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=26; post_id=861774; floor=1375
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=27; post_id=861777; floor=1376
+- [event_causality_capital.jsonl](<../work/replay_research/event_causality_capital.jsonl>)：jsonl_line=5; record_id=ECAP_005
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_039。适用时期：患咒→原线转移→神约后效。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_039,WRS_023,PWRM_006,DEP_005 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_040"></a>
+### Phantom
+
+`WORLD_WRC_040` · confirmed · original_campaign
+
+Phantom是白色魔法师在飘零大陆大量催生的存在，与被称为Gate的宿主及绝望转化有关。雷光在原线第二部告诉御临风，白魔一类施法者能够把Gate转变为Phantom，并可借小型夜宴使一片区域内的Gate陷入绝望、批量催生〔character_belief〕。本团尚未给出判定Gate资质或转化完成的统一阈值。
+已经确认诞生的成员包括卡珊德拉、古雷姆林、由魔法师A对应的巴力西卜，以及由欧吉尔德对应的未知名Phantom；美杜莎也是Phantom，并忠于白魔。欧吉尔德在庄园见到爱人的头颅后曾出现紫色裂痕，但该幕没有完整演示现实化过程，后期名单也未补出准确完成时刻。
+大墓地旁线中，一个具有埃弗纳斯养父样貌的男子称，美杜莎释放了其内在Phantom，自己仍有人类记忆，可以继续以父亲身份相处〔character_belief〕；这些说辞同时附带服从和引见救助者的要求。保留样貌与记忆，尚不足以确认养父原有意识完整存续。沐透另向军方报告普通武器不能伤害Phantom、需要魔法攻击〔character_belief〕。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=40; record_id=WRC_040
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=123; line_end=130
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=3; record_id=WMPR_003
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=130; line_end=130
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=146; line_end=146
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=49; post_id=1000177; floor=98
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_03; source_id=GREAT_TOMB; jsonl_line=5; post_id=1022610; floor=104
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_03; source_id=GREAT_TOMB; jsonl_line=12; post_id=1081976; floor=111
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=9; post_id=865910; floor=208
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=11; post_id=866075; floor=210
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=15; post_id=867048; floor=214
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=29; post_id=1334073; floor=228
+- https://www.kamen-rider-official.com/zukan/characters/3160：东映官方图鉴 ミサ; 人物说明，读取行28–48
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=4; record_id=WMPR_004
+- https://www.kamen-rider-official.com/dictionaries/works_search?initial=%E3%81%AF&search_dictionaries_form%5Bicon%5D=6&search_dictionaries_form%5Bkamen_rider_id%5D=14&utf8=%E2%9C%93：东映官方Wizard用语辞典 ファントム; ファントム条目，读取行42–50
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=4; post_id=987498; floor=903
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=12; post_id=1055963; floor=461
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=13; post_id=1056638; floor=462
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=603; line_end=604
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=5; record_id=WMPR_005
+- https://www.kamen-rider-official.com/zukan/phantoms/1414：东映官方图鉴 グレムリン; 说明正文，读取行44
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_03; source_id=GREAT_TOMB; jsonl_line=3; post_id=1016053; floor=102
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=6; record_id=UCL_20261003_005
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=147; line_end=147
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=9; record_id=WMPR_009
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_040。适用时期：名单与转化时间分开。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_040,WMPR_003,WMPR_004,WMPR_005,UCL_20261003_005 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。 原型补充候选：Wizard的Phantom可使用宿主记忆与人类外貌；古雷姆林保留滝川空意识是原型个案，不能直接赋予本团所有Phantom或证明原人格连续。
+
+<a id="WORLD_WRC_051"></a>
+### 主神式任务机制
+
+`WORLD_WRC_051` · confirmed · original_campaign
+
+主神式任务机制曾支配御临风等现代人最初的异界经历：主神将他们带到异世界，经幻剑说明情况后，要求他们以士兵身份守卫帝国边关七天，失败则遭抹杀。边关投放、早期任务及由此形成的师承、军籍和人物关系，均属于已经发生的前史。
+从村庄阶段开始，原团软重启，主神与幻剑机制直接移除。此后不再运行主神任务发布、任务结算兑换或幻剑引导；此前发生的经历仍然保留。这是运行机制的阶段变化，现有历史没有另行发生一场“主神失踪”或“幻剑死亡”的事件。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=51; record_id=WRC_051
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=3; line_end=17
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=25; line_end=27
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=114; line_end=123
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=149; line_end=168
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=8; record_id=UCL_20261003_007
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=186; line_end=186
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=187; line_end=187
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_051。适用时期：投放前史；村庄起机制移除。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_051,UCL_20261003_007 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_054"></a>
+### 弃风剑
+
+`WORLD_WRC_054` · confirmed · original_campaign
+
+弃风剑是御临风在边关前史中取得并长期使用的武器；他在人物自述中记载，逸冷把剑交给自己并教他持剑。入都前，御临风已经借弃风施展狂岚，原线村庄救援也确实救到了村医，但没有因此消除他自身的重伤。
+原线第一部入都后，托尔金修剑需要高阶风属性材料，悠悠提供了风七曜石。修复过程中出现失控，悠悠救剑造成严重损伤，雪老为求援伤及双腿；剑在稳定后才形成新版能力。修复后的弃风是一柄6L传奇级长剑，具有破魔2、破甲2；挥剑本身可获3DP速度加值，白刃达到5时还能掀起风雷，使对手防御承受3点环境减值。
+新版剑内有上限10点的风属性能量池，持有人可调用，八小时后自动恢复至满值。剑身符文同时稳定风元素；用剑格挡时，持有人获得额外2/2立场防御与2点全能量吸收。这些是原线修复后的效力，旧剑的使用阶段没有这整组新增规则。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=54; record_id=WRC_054
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=74; line_end=78
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=234; line_end=237
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=249; line_end=254
+- [power_rules_dossier.jsonl](<../work/replay_research/power_rules_dossier.jsonl>)：jsonl_line=4; record_id=PWRM_004
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=29; post_id=846089; floor=1028
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=31; post_id=846093; floor=1030
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=32; post_id=846094; floor=1031
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=33; post_id=846096; floor=1032
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=34; post_id=846097; floor=1033
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=36; post_id=846103; floor=1035
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=37; post_id=846104; floor=1036
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=10; post_id=846370; floor=1059
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=19; post_id=846466; floor=1068
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=40; post_id=846695; floor=1089
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=41; post_id=846698; floor=1090
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=42; post_id=846701; floor=1091
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=50; post_id=846748; floor=1099
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：jsonl_line=48; post_id=847479; floor=1147
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=6; post_id=895365; floor=255
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=7; post_id=895386; floor=256
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=41; post_id=1046096; floor=440
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=43; post_id=1046862; floor=442
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=3; post_id=1049842; floor=452
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=5; post_id=1051559; floor=454
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=39; post_id=1044705; floor=438
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=45; post_id=1047210; floor=444
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=37; post_id=1044477; floor=436
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=9; post_id=1052875; floor=458
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=11; post_id=1055378; floor=460
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=50; post_id=917628; floor=349
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=2; post_id=917765; floor=351
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=3; post_id=917773; floor=352
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=4; post_id=917950; floor=353
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=5; post_id=917961; floor=354
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：jsonl_line=6; post_id=918970; floor=355
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=38; post_id=970655; floor=787
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=42; post_id=970664; floor=791
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=44; post_id=970669; floor=793
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=45; post_id=970670; floor=794
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=46; post_id=970671; floor=795
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=47; post_id=970677; floor=796
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=48; post_id=971183; floor=797
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=49; post_id=971184; floor=798
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=50; post_id=971255; floor=799
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=9; post_id=1039814; floor=408
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=11; post_id=1040025; floor=410
+- [campaign_event_dependencies.jsonl](<../work/replay_research/campaign_event_dependencies.jsonl>)：jsonl_line=3; record_id=DEP_003
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=14
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=15
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=16
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=17
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=18
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=29; post_id=846552; floor=1078
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=33; post_id=846643; floor=1082
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=35; post_id=846651; floor=1084
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=36; post_id=846653; floor=1085
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=38; post_id=846670; floor=1087
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=45; post_id=846708; floor=1094
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=46; post_id=846710; floor=1095
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=39; post_id=846688; floor=1088
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=43; post_id=846705; floor=1092
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=44; post_id=846706; floor=1093
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=47; post_id=846714; floor=1096
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=49; post_id=846744; floor=1098
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=35; record_id=WRS_035
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=247; line_end=247
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_054。适用时期：旧剑→原线修复新版。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_054,PWRM_004,DEP_003 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_061"></a>
+### 耶各相关死亡秩序
+
+`WORLD_WRC_061` · character_belief · original_campaign
+
+耶各相关死亡秩序主要通过御临风在原线第二部的一次死亡与复生经历显现。御临风追踪Phantom失败、昏倒并失去生命征后，与自称耶各的存在达成交易，随后复生，获得代行者知识与能力；回到医馆时，披风和手套也以实物出现。这次会面有主世界的复生与物品结果，不能只视为没有后效的普通梦。
+会面者称本界没有所属神明，本界信仰不能给自己提供力量，自己也无法直接涉足此处；据其当时所知，御临风是唯一代行者，双方也没有稳定的主动联络办法〔character_belief〕。他告诫御临风，诅咒是两者唯一联系，解除诅咒便会回到死亡〔character_belief〕。这项告诫发生于复生契约之后。
+御临风得到的相关知识支持死后世界存在，但灵魂如何进入、是否因法则而消失仍不明确；复活极难，并非已证绝无可能。代行者施展神术仍须满足动作、能量、范围与判定条件，复生个案没有建立人人可调用的无代价救命程序。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=61; record_id=WRC_061
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=186; line_end=215
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=37; record_id=WRS_037
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=40; ERC_P2_0040; post_ids=913439,913449,913450,913492,913501,913595,913665
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=38; post_id=913439; floor=237
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=40; post_id=913449; floor=239
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=41; post_id=913450; floor=240
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=42; post_id=913492; floor=241
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=43; post_id=913501; floor=242
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=45; post_id=913595; floor=244
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=46; post_id=913665; floor=245
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=41; ERC_P2_0041; post_ids=913665,913700,913709
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=47; post_id=913700; floor=246
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=48; post_id=913709; floor=247
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=43; ERC_P2_0043; post_ids=913700,913709,913717,913733,913736,913739
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=49; post_id=913717; floor=248
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=5; post_id=913733; floor=254
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=7; post_id=913736; floor=256
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=8; post_id=913739; floor=257
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=44; ERC_P2_0044; post_ids=913719,913724,913726,913730,913731
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=50; post_id=913719; floor=249
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=1; post_id=913724; floor=250
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=2; post_id=913726; floor=251
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=3; post_id=913730; floor=252
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=4; post_id=913731; floor=253
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=48; ERC_P2_0048; post_ids=914149,914153
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=28; post_id=914149; floor=277
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=29; post_id=914153; floor=278
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=42; ERC_P2_0042; post_ids=913700
+- [power_rules_dossier.jsonl](<../work/replay_research/power_rules_dossier.jsonl>)：jsonl_line=6; record_id=PWRM_006
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：source_id=P1; jsonl_line=49; post_id=846744; floor=1098
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：source_id=P1; jsonl_line=50; post_id=846748; floor=1099
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：source_id=P1; jsonl_line=1; post_id=846753; floor=1100
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=49; post_id=846744; floor=1098
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=50; post_id=846748; floor=1099
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：jsonl_line=1; post_id=846753; floor=1100
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：jsonl_line=14; post_id=858359; floor=1313
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：jsonl_line=17; post_id=858985; floor=1316
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：jsonl_line=20; post_id=859077; floor=1319
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=20; post_id=860741; floor=1369
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=30; post_id=862100; floor=1379
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=40; post_id=862302; floor=1389
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=41; post_id=862306; floor=1390
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=43; post_id=862337; floor=1392
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=21; post_id=1046075; floor=70
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=22; post_id=1046114; floor=71
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=29; post_id=846552; floor=1078
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=33; post_id=846643; floor=1082
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=35; post_id=846651; floor=1084
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=36; post_id=846653; floor=1085
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=38; post_id=846670; floor=1087
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=45; post_id=846708; floor=1094
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=47; post_id=1047660; floor=446
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_061。适用时期：复生后主世界后效。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_061,WRS_037,PWRM_006 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_062"></a>
+### 飘零祭
+
+`WORLD_WRC_062` · confirmed · original_campaign
+
+飘零祭是飘零大陆纪念夏去冬来的年度节庆。每年冬初，帝在城外点燃第一堆祭火，为来年祈求庇佑；居民生活中的相关活动包括宫前摊位、学校庆祝、游戏以及圣庙祭坛。帝国不提倡宗教，节庆中的祈愿习俗本身仍然存在。
+原线第一部入都初期，一名军官告诉队伍“两天后”将过飘零祭，这是相对于该次谈话的日期。军武演习与御前擂台当时只以“听说”的节目消息出现〔rumor〕，不能由预告确定节目已经举行。到原线第三部开篇，本届飘零祭已经过去近一个月，帝都开始准备新年。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=62; record_id=WRC_062
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：source_id=P1_P002; jsonl_line=47; post_id=816684; floor=96
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=38; record_id=WRS_038
+- [reading_p1_017_020.jsonl](<../work/replay_research/reading_p1_017_020.jsonl>)：jsonl_line=34; ERC_P1_0334; post_ids=845797,845814,845826,845834,845973,845975
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=33; post_id=845797; floor=982
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=34; post_id=845814; floor=983
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=35; post_id=845826; floor=984
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=36; post_id=845834; floor=985
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=42; post_id=845973; floor=991
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=43; post_id=845975; floor=992
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=24; ERC_P2_0024; post_ids=874508,874647,878056,899931,900199
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=22; post_id=874508; floor=171
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=23; post_id=874647; floor=172
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=25; post_id=878056; floor=174
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=46; post_id=899931; floor=195
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=48; post_id=900199; floor=197
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=1; ERC_P3_0001; post_ids=1033317
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl>)：document_id=P3_P001; jsonl_line=1; post_id=1033317; floor=
+- [event_causality_capital.jsonl](<../work/replay_research/event_causality_capital.jsonl>)：jsonl_line=8; record_id=ECAP_008
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=214; line_end=234; record_id=UCL_20261003_009
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_062。适用时期：年度节庆；本届活动分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_062,WRS_038 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_063"></a>
+### 帝国教育与知识传播
+
+`WORLD_WRC_063` · confirmed · original_campaign
+
+帝国已有通过教材、学校、图书馆和专业人士传播知识的渠道。市面可以买到国文、数学、历史、地理、武技与基础魔法教材；初级数学内容包括四则运算、九九乘法、面积及圆周率3.14。教材把许多基础理论归于帝及后世数学家，这反映教材所记的知识传承。
+
+学城具有类似大学的教学与学术活动，教师可以任职、出版专业著作，学校也在飘零祭举办活动。识字、熟悉本地文字与理解专业内容是不同门槛：黄泉不熟本世界文字，诺斯莉阅读魔法专业内容感到吃力，久远则能阅读有关魔法的书籍。
+
+原线后来，雪拉报告已将帝赠送的教材送到城旁孤儿院。哈克还曾转述，猫音上学时免费领书，原应回收，因她继续考学士而未收回〔character_belief〕。这些实例说明存在赠书及学校供书的安排，尚不足以确认全国普及免费义务教育。协会、学院和研究所之间也有人际转介：协会可代传约见，熟悉研究者的人提供身份与地址，使求助者能够找到具备资料和设备的专业机构。
+
+<details>
+<summary>来源</summary>
+
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=39; record_id=WRS_039
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=8; ERC_P2_0008; post_ids=863001,863002,863005,863009
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=31; post_id=863001; floor=30
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=32; post_id=863002; floor=31
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=33; post_id=863005; floor=32
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=35; post_id=863009; floor=34
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=13; ERC_P2_0013; post_ids=863462,863468,863469,863470,863472
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=4; post_id=863462; floor=53
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=6; post_id=863468; floor=55
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=7; post_id=863469; floor=56
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=8; post_id=863470; floor=57
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=9; post_id=863472; floor=58
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=24; ERC_P2_0024; post_ids=874508,874647,878056,899931,900199
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=22; post_id=874508; floor=171
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=23; post_id=874647; floor=172
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=25; post_id=878056; floor=174
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=46; post_id=899931; floor=195
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=48; post_id=900199; floor=197
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=13; ERC_P1_0513; post_ids=851837,852222
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：jsonl_line=50; post_id=851837; floor=1249
+- [posts.jsonl](<../extracted-first/26/posts.jsonl>)：jsonl_line=9; post_id=852222; floor=1258
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=7; record_id=EMP_007
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=30; post_id=816127; floor=29
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=32; post_id=816130; floor=31
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=33; post_id=816133; floor=32
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=34; post_id=816137; floor=33
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=35; post_id=816141; floor=34
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=38; post_id=816170; floor=37
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=41; post_id=816201; floor=40
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=43; post_id=816246; floor=42
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=47; post_id=816280; floor=46
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：jsonl_line=29; post_id=816583; floor=78
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=1; post_id=816699; floor=100
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=3; post_id=816704; floor=102
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=23; post_id=915324; floor=322
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=31; post_id=915456; floor=330
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=32; post_id=915502; floor=331
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=35; post_id=915755; floor=334
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=38; post_id=915989; floor=337
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=39; post_id=916086; floor=338
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=1; post_id=819306; floor=250
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=2; post_id=819320; floor=251
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=3; post_id=819325; floor=252
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=4; post_id=819333; floor=253
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=29; post_id=846089; floor=1028
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=31; post_id=846093; floor=1030
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=32; post_id=846094; floor=1031
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=33; post_id=846096; floor=1032
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=34; post_id=846097; floor=1033
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=36; post_id=846103; floor=1035
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=37; post_id=846104; floor=1036
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=10; post_id=846370; floor=1059
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=19; post_id=846466; floor=1068
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=36; post_id=845834; floor=985
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=37; post_id=845835; floor=986
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=38; post_id=845836; floor=987
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=39; post_id=845880; floor=988
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=40; post_id=845914; floor=989
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=41; post_id=845931; floor=990
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=44; post_id=845976; floor=993
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=45; post_id=845977; floor=994
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=46; post_id=845982; floor=995
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=47; post_id=845983; floor=996
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=48; post_id=845985; floor=997
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=49; post_id=845988; floor=998
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=5; post_id=819466; floor=254
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=6; post_id=819483; floor=255
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=7; post_id=819493; floor=256
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=8; post_id=819499; floor=257
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=30; post_id=820363; floor=279
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=25; line_end=25
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=33; line_end=35
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=10; post_id=816720; floor=109
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=11; post_id=816721; floor=110
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=15; post_id=816726; floor=114
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=50; post_id=845994; floor=999
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：jsonl_line=40; post_id=851625; floor=1239
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：jsonl_line=44; post_id=851773; floor=1243
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=25; post_id=816745; floor=124
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=27; post_id=816778; floor=126
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=6; post_id=817368; floor=155
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=11; post_id=817447; floor=160
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=22; post_id=817537; floor=171
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=24; post_id=817616; floor=173
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=42; post_id=863173; floor=41
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=43; post_id=863343; floor=42
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=50; post_id=863417; floor=49
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=2; post_id=863435; floor=51
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=3; post_id=863447; floor=52
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=38; post_id=846107; floor=1037
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=39; post_id=846109; floor=1038
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=40; post_id=846113; floor=1039
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=41; post_id=846114; floor=1040
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=42; post_id=846115; floor=1041
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=43; post_id=846116; floor=1042
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=44; post_id=846119; floor=1043
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=45; post_id=846120; floor=1044
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=24; post_id=846530; floor=1073
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=25; post_id=846531; floor=1074
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=25; post_id=1042442; floor=424
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=33; post_id=1043390; floor=432
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=35; post_id=1043686; floor=434
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=37; post_id=1044477; floor=436
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=39; post_id=1044705; floor=438
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=6; post_id=895365; floor=255
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=7; post_id=895386; floor=256
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=41; post_id=1046096; floor=440
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=43; post_id=1046862; floor=442
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=3; post_id=1049842; floor=452
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=5; post_id=1051559; floor=454
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=45; post_id=1047210; floor=444
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=47; post_id=1047660; floor=446
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=49; post_id=1047852; floor=448
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=8; record_id=SWU_SOC_005
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=25; post_id=1042442; floor=424
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=33; post_id=1043390; floor=432
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=35; post_id=1043686; floor=434
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=37; post_id=1044477; floor=436
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=39; post_id=1044705; floor=438
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=27; post_id=1042494; floor=426
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=43; post_id=1046862; floor=442
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_063。适用时期：既有渠道；个案分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRS_039,EMP_007 本轮正文整理：教材对理论作者的归属只作为书中记述，不升为全知数学史；免费领书与孤儿院赠书不外推全国义教。
+
+<a id="WORLD_WRC_064"></a>
+### 帝国医疗与药理
+
+`WORLD_WRC_064` · confirmed · original_campaign
+
+帝国的救治由药师、医师、治疗法师和军方医疗人员等承担，各人的能力与所需条件不同。村医能够阅读研究稿、配制解药，并通过同门关系推荐求学者前往帝都医馆；医术学习需要长期积累，获得住宿或递交推荐信尚不等于已经拜师。
+
+御临风入都前取得的疗伤药，明文效果为恢复一点严重伤或两点冲击伤，每天只能生效一次；培元丹则要等到下一次长休或睡眠后，才移除与耐力值相同的伤害，多颗不叠加。即时疗伤与休养后恢复有不同使用条件。原线曼吉曾以魔法恢复沐透三点严重伤，仍建议配药休养；洛在另一场救治中只能暂时抑制毒性，次日小队医生到达后，才与镇诊所逐个治疗伤者。艾利的范围治疗也受范围、次数与施术后的耗竭限制，需要同伴保护。
+
+持续供魔另有专门需求。维尔与其父转述，宫廷检查认为腰带长期离体可能危及维尔生命，因而安排他进入法师塔学习、定期检查并服用慕少艾提供的供魔药水〔character_belief〕。这项危险装具使用者的个别安排并非普遍治疗法。原线战后仍需尸检、法师与家属确认身份，以及殡仪处置；现有医药和治疗魔法不能使所有损伤即时消失，也未构成普遍复活手段。
+
+<details>
+<summary>来源</summary>
+
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=40; record_id=WRS_040
+- [reading_p1_001_004.jsonl](<../work/replay_research/reading_p1_001_004.jsonl>)：jsonl_line=13; ERC_P1_0013; post_ids=816127,816130,816133,816137,816141,816170
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=30; post_id=816127; floor=29
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=32; post_id=816130; floor=31
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=33; post_id=816133; floor=32
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=34; post_id=816137; floor=33
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=35; post_id=816141; floor=34
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=38; post_id=816170; floor=37
+- [reading_p1_001_004.jsonl](<../work/replay_research/reading_p1_001_004.jsonl>)：jsonl_line=15; ERC_P1_0015; post_ids=816170,816201,816246,816280
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=41; post_id=816201; floor=40
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=43; post_id=816246; floor=42
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=47; post_id=816280; floor=46
+- [reading_p1_001_004.jsonl](<../work/replay_research/reading_p1_001_004.jsonl>)：jsonl_line=28; ERC_P1_0028; post_ids=816141,816246,816583,816699,816704
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：jsonl_line=29; post_id=816583; floor=78
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=1; post_id=816699; floor=100
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=3; post_id=816704; floor=102
+- [reading_p1_001_004.jsonl](<../work/replay_research/reading_p1_001_004.jsonl>)：jsonl_line=16; ERC_P1_0016; post_ids=816201
+- [reading_p1_005_007.jsonl](<../work/replay_research/reading_p1_005_007.jsonl>)：jsonl_line=18; ERC_P1_0073; post_ids=820309,820410,820809,820811,820815,821913,822094
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=25; post_id=820309; floor=274
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=31; post_id=820410; floor=280
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=39; post_id=820809; floor=288
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=40; post_id=820811; floor=289
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=41; post_id=820815; floor=290
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=2; post_id=821913; floor=301
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=4; post_id=822094; floor=303
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=51; ERC_P2_0051; post_ids=915324,915456,915502,915755,915989,916086
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=23; post_id=915324; floor=322
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=31; post_id=915456; floor=330
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=32; post_id=915502; floor=331
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=35; post_id=915755; floor=334
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=38; post_id=915989; floor=337
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=39; post_id=916086; floor=338
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=6; record_id=SWU_SOC_003
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=7; post_id=862103; floor=156
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=37; post_id=864394; floor=186
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=39; post_id=864444; floor=188
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=13; post_id=1040709; floor=412
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=17; post_id=1041251; floor=416
+- [power_rules_dossier.jsonl](<../work/replay_research/power_rules_dossier.jsonl>)：jsonl_line=5; record_id=PWRM_005
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=408; line_end=414
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_04; jsonl_line=7; post_id=862103; floor=156
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_04; jsonl_line=37; post_id=864394; floor=186
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_04; jsonl_line=39; post_id=864444; floor=188
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=12; record_id=SWU_PWR_002
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_07; jsonl_line=11; post_id=931036; floor=310
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_07; jsonl_line=15; post_id=931924; floor=314
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_07; jsonl_line=19; post_id=939232; floor=318
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_05; jsonl_line=45; post_id=893857; floor=244
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_05; jsonl_line=47; post_id=893869; floor=246
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_05; jsonl_line=49; post_id=893930; floor=248
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_07; jsonl_line=25; post_id=948659; floor=324
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=27; post_id=1042494; floor=426
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=28; post_id=1042503; floor=427
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=29; post_id=1042800; floor=428
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_064。适用时期：专业与救治分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRS_040,SWU_SOC_003,PWRM_005 本轮正文整理：药品采用入都前明确规则版本，不补持有数量、库存或全部适用药品。休养、抑毒、伤害恢复与供魔各保自身条件，不把血魂红鳗等疗效描述升为真正复活；维尔安排限其危险腰带个案。
+
+<a id="WORLD_WRC_065"></a>
+### 帝都市政与公共生活
+
+`WORLD_WRC_065` · confirmed · original_campaign
+
+帝都有公共热水澡堂、排水水渠和河畔洗衣处，也有普通民居、商店、圣庙与宫前节市。居民会提出排水、桥路、屋顶维修及邻里争执等请求；右近曾将代听民愿和处理这些事务的工作交给哈克等人，市政因此有具体的接待与办理者。
+
+原线战争发展后，通往帝都的道路上可见运送补给的军队和支援前线的游击士。后方增加兵工厂投入，动用国库刺激市场，并进行贫民窟改造，过冬商品也变得更容易购买。到了飘零祭后近一个月、临近新年时，新政才废除帝都最后的贫民区，为多数无职者安排工作并继续扩城。首次入都时仍存在的贫困居住条件，与后来战争动员及改革形成前后不同的城市面貌。
+
+<details>
+<summary>来源</summary>
+
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=41; record_id=WRS_041
+- [reading_p1_001_004.jsonl](<../work/replay_research/reading_p1_001_004.jsonl>)：jsonl_line=42; ERC_P1_0042; post_ids=817173,817210,817395,817429,817432,817447,817699
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=2; post_id=817173; floor=151
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=4; post_id=817210; floor=153
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=7; post_id=817395; floor=156
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=8; post_id=817429; floor=157
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=9; post_id=817432; floor=158
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=11; post_id=817447; floor=160
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=35; post_id=817699; floor=184
+- [reading_p1_001_004.jsonl](<../work/replay_research/reading_p1_001_004.jsonl>)：jsonl_line=43; ERC_P1_0043; post_ids=817453,817473,817479,817481,817492
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=13; post_id=817453; floor=162
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=15; post_id=817473; floor=164
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=17; post_id=817479; floor=166
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=18; post_id=817481; floor=167
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=20; post_id=817492; floor=169
+- [reading_p1_001_004.jsonl](<../work/replay_research/reading_p1_001_004.jsonl>)：jsonl_line=37; ERC_P1_0037; post_ids=816817,816879
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=36; post_id=816817; floor=135
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=40; post_id=816879; floor=139
+- [reading_p1_017_020.jsonl](<../work/replay_research/reading_p1_017_020.jsonl>)：jsonl_line=34; ERC_P1_0334; post_ids=845797,845814,845826,845834,845973,845975
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=33; post_id=845797; floor=982
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=34; post_id=845814; floor=983
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=35; post_id=845826; floor=984
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=36; post_id=845834; floor=985
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=42; post_id=845973; floor=991
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=43; post_id=845975; floor=992
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=18; ERC_P2_0018; post_ids=864692,864704
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：jsonl_line=5; post_id=864692; floor=104
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：jsonl_line=7; post_id=864704; floor=106
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=1; ERC_P3_0001; post_ids=1033317
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl>)：document_id=P3_P001; jsonl_line=1; post_id=1033317; floor=
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=4; record_id=EMP_004
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=21; line_end=26
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：source_id=P1_P002; jsonl_line=33; post_id=816651; floor=82
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=42; post_id=817008; floor=141
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：jsonl_line=20; post_id=818410; floor=219
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：document_id=MUTOU_PAGE_01; source_id=MUTOU; jsonl_line=33; post_id=846685; floor=32
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：document_id=MUTOU_PAGE_01; source_id=MUTOU; jsonl_line=39; post_id=846736; floor=38
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：document_id=MUTOU_PAGE_02; source_id=MUTOU; jsonl_line=27; post_id=848743; floor=76
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=35; post_id=864341; floor=184
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=39; post_id=864444; floor=188
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=36; post_id=989666; floor=85
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=39; post_id=990702; floor=88
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=41; post_id=992345; floor=90
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=43; post_id=993920; floor=92
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：document_id=MUTOU_PAGE_02; source_id=MUTOU; jsonl_line=5; post_id=847638; floor=54
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=25; post_id=968335; floor=74
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=8; record_id=EMP_008
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=184; line_end=187
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=23; post_id=1042344; floor=422
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=46; post_id=962304; floor=745
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=47; post_id=962305; floor=746
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=4; post_id=963675; floor=753
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=5; post_id=963731; floor=754
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=28; post_id=985223; floor=877
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=29; post_id=985898; floor=878
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=30; post_id=986052; floor=879
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=38; post_id=987018; floor=887
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=39; post_id=987026; floor=888
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=40; post_id=987029; floor=889
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=19; post_id=1179677; floor=218
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=20; post_id=1182889; floor=219
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=42; post_id=1031470; floor=1191
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=43; post_id=1031478; floor=1192
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=44; post_id=1032053; floor=1193
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=42; line_end=42
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=43; line_end=43
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_065。适用时期：T0市政；P3改革。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRS_041,EMP_004,EMP_008 本轮正文整理：战争供给和后期新政有时序，不能删除首次入都时的贫民生活。
+
+<a id="WORLD_WRC_066"></a>
+### 帝国军令与情报渠道
+
+`WORLD_WRC_066` · confirmed · original_campaign
+
+帝国军令与情报通过直属上报、专门部门、朝会、密谈和战地通信等渠道传递。雪老曾要求御临风先向直属的右近报告军情；地方报告经部门上达，朝会再由有权处理的官员和帝作出决定。战场上使用通信卷轴，地方也可借助驻镇法师发送消息，不同地点的接报、核实、下令和人员抵达会有时间差。
+
+保密任务有额外的信息保护。雷光的指挥处能够隔绝侦知魔法；他要求御临风本人报告，阅完笔记后归还，并告诫其保密。这些安排控制接触情报的人员和传播范围。雷光另有自己的秘密情报部门，帝则直接掌控兄弟会，两者有不同的归属。
+
+正式渠道也可能受错误情报和私人关系影响。原线初入帝都时，接报队长依据达卡斯的报告扣押来报者，后来又出现在达卡斯设局追捕的现场。右近解释，全军协助抓捕来自帝的命令，但达卡斯并未控制全部城卫，守军中另有攀附他的人〔character_belief〕。协会搜查、截信，以及双方关于眼线和伪造证据的说法，进一步显示传讯渠道与消息真伪是两回事；有关军中排查的后续报告也未逐名说明每人的责任。
+
+<details>
+<summary>来源</summary>
+
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=42; record_id=WRS_042
+- [reading_p1_001_004.jsonl](<../work/replay_research/reading_p1_001_004.jsonl>)：jsonl_line=38; ERC_P1_0038; post_ids=817008,817022,817026,817134,817157,817167
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=42; post_id=817008; floor=141
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=43; post_id=817022; floor=142
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=44; post_id=817026; floor=143
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=45; post_id=817134; floor=144
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=46; post_id=817157; floor=145
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=50; post_id=817167; floor=149
+- [reading_p1_005_007.jsonl](<../work/replay_research/reading_p1_005_007.jsonl>)：jsonl_line=2; ERC_P1_0057; post_ids=818345,818410,822923,822961,823045,823132
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：jsonl_line=9; post_id=818345; floor=208
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：jsonl_line=20; post_id=818410; floor=219
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=16; post_id=822923; floor=315
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=17; post_id=822961; floor=316
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=18; post_id=823045; floor=317
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=19; post_id=823132; floor=318
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=3; ERC_P1_0403; post_ids=846061,846068,846070
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=22; post_id=846061; floor=1021
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=24; post_id=846068; floor=1023
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=25; post_id=846070; floor=1024
+- [reading_p1_001_004.jsonl](<../work/replay_research/reading_p1_001_004.jsonl>)：jsonl_line=44; ERC_P1_0044; post_ids=817368,817447,817537,817616
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=6; post_id=817368; floor=155
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=11; post_id=817447; floor=160
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=22; post_id=817537; floor=171
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=24; post_id=817616; floor=173
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=52; ERC_P2_0052; post_ids=915370,915381,915402,915409,915414,915419,915502,915504,915755,915862
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=25; post_id=915370; floor=324
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=26; post_id=915381; floor=325
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=27; post_id=915402; floor=326
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=28; post_id=915409; floor=327
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=29; post_id=915414; floor=328
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=30; post_id=915419; floor=329
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=32; post_id=915502; floor=331
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=33; post_id=915504; floor=332
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=35; post_id=915755; floor=334
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=36; post_id=915862; floor=335
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=44; ERC_P2_0244; post_ids=958884,958885,958896,958900,959037,959039,959104,959113,959199
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=42; post_id=958884; floor=691
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=43; post_id=958885; floor=692
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=44; post_id=958896; floor=693
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=45; post_id=958900; floor=694
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=46; post_id=959037; floor=695
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=47; post_id=959039; floor=696
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=48; post_id=959104; floor=697
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=49; post_id=959113; floor=698
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=50; post_id=959199; floor=699
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=16; ERC_P2_0416; post_ids=987029,987031,987032,987209
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=40; post_id=987029; floor=889
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=41; post_id=987031; floor=890
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=42; post_id=987032; floor=891
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=44; post_id=987209; floor=893
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=6; record_id=EMP_006
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=28; line_end=31
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=83; line_end=86
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=68; line_end=72
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=5; post_id=921264; floor=404
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=6; post_id=921305; floor=405
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=7; post_id=921321; floor=406
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=8; post_id=921322; floor=407
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=9; post_id=921323; floor=408
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=10; post_id=921324; floor=409
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=11; post_id=921325; floor=410
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=12; post_id=921328; floor=411
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=13; post_id=921329; floor=412
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=114; line_end=114
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=4; post_id=987498; floor=903
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=5; post_id=987503; floor=904
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=6; post_id=987507; floor=905
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=7; post_id=987509; floor=906
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=88; line_end=88
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=39; post_id=864444; floor=188
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=41; post_id=864574; floor=190
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=49; post_id=864800; floor=198
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=50; post_id=864917; floor=199
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：document_id=MUTOU_PAGE_08; source_id=MUTOU; jsonl_line=37; post_id=957923; floor=386
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=36; post_id=1044064; floor=435
+- [faction_operations_dossier.jsonl](<../work/replay_research/faction_operations_dossier.jsonl>)：jsonl_line=4; record_id=FOP_004
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：source_id=P1_P002; jsonl_line=33; post_id=816651; floor=82
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=35; post_id=817699; floor=184
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=37; post_id=820769; floor=286
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=25; post_id=823927; floor=324
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=28; post_id=817627; floor=177
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=31; post_id=817654; floor=180
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：jsonl_line=25; post_id=818431; floor=224
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：jsonl_line=26; post_id=818456; floor=225
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：jsonl_line=27; post_id=818459; floor=226
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=5; post_id=822181; floor=304
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=6; post_id=822686; floor=305
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=50; post_id=821604; floor=299
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=1; post_id=821907; floor=300
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=2; post_id=821913; floor=301
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=4; post_id=822094; floor=303
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_066。适用时期：既存渠道；消息分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRS_042,EMP_006,FOP_004 本轮正文整理：守城队长与达卡斯有现场联系已证，但是否受催眠、何时知假身份及完整效忠动机未定；后续排查不逐名洗清或定罪。后台情报不自动广播给全军和玩家角色。
+
+<a id="WORLD_WRC_067"></a>
+### 帝国工坊与装备交易
+
+`WORLD_WRC_067` · confirmed · original_campaign
+
+帝国的矮人工坊提供锻造、装备买卖和维修服务，现场可见炉具、工具及成品装备。工坊也依赖储存的材料，灾后曾抢救材料并转移到仓库。托尔金修复御临风的弃风剑时，需要高阶风属性材料，并不接受来者提出的价格，说明修复要同时满足工艺、材料与交易条件。
+
+帝国已经吸收异界知识，发展出魔法卷轴工厂化等生产方式，但复杂魔法器具仍需专门研究。帝都博士认为，常见魔偶的精细动作有限，又消耗昂贵魔核，因此主要用于战场；能够制作近似真人魔偶的宝石翁、维克托和泰德勒属于少数专家〔character_belief〕。博士也指出，陌生魔法戒指虽与本地魔导器结构相近，其宝石仍不同于常见七曜石，能否用其他材料替代须做实验〔character_belief〕。
+
+装备品质、税和价格受帝国限制，是原线一名路人的解释〔rumor〕；克德取世界树枝制作苍穹弓也以传闻流传〔rumor〕。求见宝石翁的镇上聚集着大量等待者，沿街店铺为他们提供服务，同类食宿价格明显高于沐透此前经过的地方；不同地点的报价并不统一。
+
+<details>
+<summary>来源</summary>
+
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=43; record_id=WRS_043
+- [reading_p1_005_007.jsonl](<../work/replay_research/reading_p1_005_007.jsonl>)：jsonl_line=12; ERC_P1_0067; post_ids=819306,819320,819325,819333
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=1; post_id=819306; floor=250
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=2; post_id=819320; floor=251
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=3; post_id=819325; floor=252
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=4; post_id=819333; floor=253
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=4; ERC_P1_0404; post_ids=846089,846093,846094,846096,846097,846103,846104,846370,846466
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=29; post_id=846089; floor=1028
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=31; post_id=846093; floor=1030
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=32; post_id=846094; floor=1031
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=33; post_id=846096; floor=1032
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=34; post_id=846097; floor=1033
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=36; post_id=846103; floor=1035
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=37; post_id=846104; floor=1036
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=10; post_id=846370; floor=1059
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=19; post_id=846466; floor=1068
+- [reading_p1_017_020.jsonl](<../work/replay_research/reading_p1_017_020.jsonl>)：jsonl_line=36; ERC_P1_0336; post_ids=845834,845835,845836,845880,845914,845931,845976,845977,845982,845983,845985,845988
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=36; post_id=845834; floor=985
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=37; post_id=845835; floor=986
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=38; post_id=845836; floor=987
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=39; post_id=845880; floor=988
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=40; post_id=845914; floor=989
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=41; post_id=845931; floor=990
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=44; post_id=845976; floor=993
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=45; post_id=845977; floor=994
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=46; post_id=845982; floor=995
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=47; post_id=845983; floor=996
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=48; post_id=845985; floor=997
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=49; post_id=845988; floor=998
+- [reading_p1_005_007.jsonl](<../work/replay_research/reading_p1_005_007.jsonl>)：jsonl_line=13; ERC_P1_0068; post_ids=819466,819483,819493,819499,820363
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=5; post_id=819466; floor=254
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=6; post_id=819483; floor=255
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=7; post_id=819493; floor=256
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=8; post_id=819499; floor=257
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=30; post_id=820363; floor=279
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=7; record_id=EMP_007
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=31; post_id=863001; floor=30
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=32; post_id=863002; floor=31
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=33; post_id=863005; floor=32
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=35; post_id=863009; floor=34
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=4; post_id=863462; floor=53
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=6; post_id=863468; floor=55
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=7; post_id=863469; floor=56
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=8; post_id=863470; floor=57
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=9; post_id=863472; floor=58
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=22; post_id=874508; floor=171
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=23; post_id=874647; floor=172
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=25; post_id=878056; floor=174
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=46; post_id=899931; floor=195
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=48; post_id=900199; floor=197
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：jsonl_line=50; post_id=851837; floor=1249
+- [posts.jsonl](<../extracted-first/26/posts.jsonl>)：jsonl_line=9; post_id=852222; floor=1258
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=30; post_id=816127; floor=29
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=32; post_id=816130; floor=31
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=33; post_id=816133; floor=32
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=34; post_id=816137; floor=33
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=35; post_id=816141; floor=34
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=38; post_id=816170; floor=37
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=41; post_id=816201; floor=40
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=43; post_id=816246; floor=42
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=47; post_id=816280; floor=46
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：jsonl_line=29; post_id=816583; floor=78
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=1; post_id=816699; floor=100
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=3; post_id=816704; floor=102
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=23; post_id=915324; floor=322
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=31; post_id=915456; floor=330
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=32; post_id=915502; floor=331
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=35; post_id=915755; floor=334
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=38; post_id=915989; floor=337
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=39; post_id=916086; floor=338
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=25; line_end=25
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=33; line_end=35
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=10; post_id=816720; floor=109
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=11; post_id=816721; floor=110
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=15; post_id=816726; floor=114
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=50; post_id=845994; floor=999
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：jsonl_line=40; post_id=851625; floor=1239
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：jsonl_line=44; post_id=851773; floor=1243
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=25; post_id=816745; floor=124
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=27; post_id=816778; floor=126
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=6; post_id=817368; floor=155
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=11; post_id=817447; floor=160
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=22; post_id=817537; floor=171
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=24; post_id=817616; floor=173
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=42; post_id=863173; floor=41
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=43; post_id=863343; floor=42
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=50; post_id=863417; floor=49
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=2; post_id=863435; floor=51
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=3; post_id=863447; floor=52
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=38; post_id=846107; floor=1037
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=39; post_id=846109; floor=1038
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=40; post_id=846113; floor=1039
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=41; post_id=846114; floor=1040
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=42; post_id=846115; floor=1041
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=43; post_id=846116; floor=1042
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=44; post_id=846119; floor=1043
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=45; post_id=846120; floor=1044
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=24; post_id=846530; floor=1073
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=25; post_id=846531; floor=1074
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=25; post_id=1042442; floor=424
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=33; post_id=1043390; floor=432
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=35; post_id=1043686; floor=434
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=37; post_id=1044477; floor=436
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=39; post_id=1044705; floor=438
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=6; post_id=895365; floor=255
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=7; post_id=895386; floor=256
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=41; post_id=1046096; floor=440
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=43; post_id=1046862; floor=442
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=3; post_id=1049842; floor=452
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=5; post_id=1051559; floor=454
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=45; post_id=1047210; floor=444
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=47; post_id=1047660; floor=446
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=49; post_id=1047852; floor=448
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=10; record_id=SWU_SOC_007
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=23; post_id=1042344; floor=422
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：document_id=MUTOU_PAGE_08; source_id=MUTOU; jsonl_line=33; post_id=956361; floor=382
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：document_id=MUTOU_PAGE_08; source_id=MUTOU; jsonl_line=37; post_id=957923; floor=386
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=17; post_id=867911; floor=216
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=25; post_id=869062; floor=224
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=9; record_id=SWU_SOC_006
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_06; jsonl_line=6; post_id=895365; floor=255
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_06; jsonl_line=7; post_id=895386; floor=256
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=41; post_id=1046096; floor=440
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=43; post_id=1046862; floor=442
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_10; jsonl_line=3; post_id=1049842; floor=452
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_10; jsonl_line=5; post_id=1051559; floor=454
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=39; post_id=1044705; floor=438
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=45; post_id=1047210; floor=444
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=47; post_id=1047660; floor=446
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=49; post_id=1047852; floor=448
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=23; post_id=1042344; floor=422
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_08; jsonl_line=33; post_id=956361; floor=382
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_08; jsonl_line=37; post_id=957923; floor=386
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_05; jsonl_line=17; post_id=867911; floor=216
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_05; jsonl_line=25; post_id=869062; floor=224
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=14; record_id=SWU_PWR_004
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=48; post_id=1047768; floor=447
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=127; line_end=127
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; document_id=MUTOU_PAGE_09; jsonl_line=37; post_id=1044477; floor=436
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=184; line_end=187
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_067。适用时期：工艺与场景价格。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRS_043,EMP_007,SWU_SOC_007 本轮正文整理：工坊报价不建立全国价目表；装备税价限制和苍穹弓来历保留传闻。托尔金与克德不得凭工艺或近名合并；魔法工业不表示任意异界技术均可直接复制。
+
+<a id="WORLD_WRC_068"></a>
+### 帝都丧葬与死灵防范
+
+`WORLD_WRC_068` · confirmed · original_campaign
+
+帝都的遗体处置与防范死灵术有关。威廉曾解释，帝要求死者火葬后入公墓，以免遗体被死灵术利用〔character_belief〕。原线灾后实际发生的处置流程，包括由法师和家属确认身份、统一火化，再送往殡仪处。
+
+墓地同时承担纪念与责任落实的用途。峡谷战后，帝与御临风曾承担一份六百九十八人名册的挖墓、刻碑及向家属致歉义务；名册还包括此前达卡斯所害者。记录只显示这项劳动已经开始，未记全部完成。帝国不提倡宗教。
+
+<details>
+<summary>来源</summary>
+
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=44; record_id=WRS_044
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=11; ERC_P2_0011; post_ids=863173,863343,863417,863435,863447
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=42; post_id=863173; floor=41
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=43; post_id=863343; floor=42
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=50; post_id=863417; floor=49
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=2; post_id=863435; floor=51
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=3; post_id=863447; floor=52
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=51; ERC_P2_0051; post_ids=915324,915456,915502,915755,915989,916086
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=23; post_id=915324; floor=322
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=31; post_id=915456; floor=330
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=32; post_id=915502; floor=331
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=35; post_id=915755; floor=334
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=38; post_id=915989; floor=337
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=39; post_id=916086; floor=338
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=8; ERC_P1_0408; post_ids=846107,846109,846113,846114,846115,846116,846119,846120,846530,846531
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=38; post_id=846107; floor=1037
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=39; post_id=846109; floor=1038
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=40; post_id=846113; floor=1039
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=41; post_id=846114; floor=1040
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=42; post_id=846115; floor=1041
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=43; post_id=846116; floor=1042
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=44; post_id=846119; floor=1043
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=45; post_id=846120; floor=1044
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=24; post_id=846530; floor=1073
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=25; post_id=846531; floor=1074
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=7; record_id=EMP_007
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=31; post_id=863001; floor=30
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=32; post_id=863002; floor=31
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=33; post_id=863005; floor=32
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：jsonl_line=35; post_id=863009; floor=34
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=4; post_id=863462; floor=53
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=6; post_id=863468; floor=55
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=7; post_id=863469; floor=56
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=8; post_id=863470; floor=57
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=9; post_id=863472; floor=58
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=22; post_id=874508; floor=171
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=23; post_id=874647; floor=172
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=25; post_id=878056; floor=174
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=46; post_id=899931; floor=195
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：jsonl_line=48; post_id=900199; floor=197
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：jsonl_line=50; post_id=851837; floor=1249
+- [posts.jsonl](<../extracted-first/26/posts.jsonl>)：jsonl_line=9; post_id=852222; floor=1258
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=30; post_id=816127; floor=29
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=32; post_id=816130; floor=31
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=33; post_id=816133; floor=32
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=34; post_id=816137; floor=33
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=35; post_id=816141; floor=34
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=38; post_id=816170; floor=37
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=41; post_id=816201; floor=40
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=43; post_id=816246; floor=42
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=47; post_id=816280; floor=46
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：jsonl_line=29; post_id=816583; floor=78
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=1; post_id=816699; floor=100
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=3; post_id=816704; floor=102
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=1; post_id=819306; floor=250
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=2; post_id=819320; floor=251
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=3; post_id=819325; floor=252
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=4; post_id=819333; floor=253
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=29; post_id=846089; floor=1028
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=31; post_id=846093; floor=1030
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=32; post_id=846094; floor=1031
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=33; post_id=846096; floor=1032
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=34; post_id=846097; floor=1033
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=36; post_id=846103; floor=1035
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=37; post_id=846104; floor=1036
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=10; post_id=846370; floor=1059
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=19; post_id=846466; floor=1068
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=36; post_id=845834; floor=985
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=37; post_id=845835; floor=986
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=38; post_id=845836; floor=987
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=39; post_id=845880; floor=988
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=40; post_id=845914; floor=989
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=41; post_id=845931; floor=990
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=44; post_id=845976; floor=993
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=45; post_id=845977; floor=994
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=46; post_id=845982; floor=995
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=47; post_id=845983; floor=996
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=48; post_id=845985; floor=997
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=49; post_id=845988; floor=998
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=5; post_id=819466; floor=254
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=6; post_id=819483; floor=255
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=7; post_id=819493; floor=256
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=8; post_id=819499; floor=257
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=30; post_id=820363; floor=279
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=25; line_end=25
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=33; line_end=35
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=10; post_id=816720; floor=109
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=11; post_id=816721; floor=110
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=15; post_id=816726; floor=114
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=50; post_id=845994; floor=999
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：jsonl_line=40; post_id=851625; floor=1239
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：jsonl_line=44; post_id=851773; floor=1243
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=25; post_id=816745; floor=124
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=27; post_id=816778; floor=126
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=6; post_id=817368; floor=155
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=11; post_id=817447; floor=160
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=22; post_id=817537; floor=171
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=24; post_id=817616; floor=173
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=25; post_id=1042442; floor=424
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=33; post_id=1043390; floor=432
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=35; post_id=1043686; floor=434
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=37; post_id=1044477; floor=436
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=39; post_id=1044705; floor=438
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=6; post_id=895365; floor=255
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=7; post_id=895386; floor=256
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=41; post_id=1046096; floor=440
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=43; post_id=1046862; floor=442
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=3; post_id=1049842; floor=452
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=5; post_id=1051559; floor=454
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=45; post_id=1047210; floor=444
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=47; post_id=1047660; floor=446
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=49; post_id=1047852; floor=448
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：line 221; UCL_20261003_009
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应WRC_068。适用时期：处置与纪念分开。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRS_044,EMP_007 本轮正文整理：防死灵术理由保留威廉的说明归属；纪念墓碑不等于遗体未经火化，也不能写698项义务全部完成。 墓地、殡仪与纪念义务不单独证明由某一宗教主持。
+
+<a id="WORLD_WRC_071"></a>
+### 恐惧圆环
+
+`WORLD_WRC_071` · confirmed · original_campaign
+
+恐惧圆环是一件分为七片碎片的物品，原线曾出现其中一片，并用于杨接受名与力量的仪式。一名匿名少女逼迫杨在接受命运与死亡之间选择；杨向碎片宣誓成为魔兽的剑与盾，接受“智者”“前锋”“大地之基”的名与力，同时奉献身体和灵魂，随后被白光笼罩。
+匿名少女可能是魔兽山脉五巨头之一，或与五巨头有关的人员，但具体身份尚未确认〔uncertain〕。仪式已经进行到白光显现，然而圆环赋予杨的完整能力、对其身心的控制程度及其余六片碎片的去向均不明确。
+
+<details>
+<summary>来源</summary>
+
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=47; record_id=WRS_047
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=57; ERC_P2_0257; post_ids=967530
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=12; post_id=967530; floor=761
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：line 220; UCL_20261003_009
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=214; line_end=234; record_id=UCL_20261003_009
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_071。适用时期：杨仪式原线记录。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRS_047 五巨头关联只为身份推测，未新增少女的确认姓名或别名。 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_072"></a>
+### 魔物之盒
+
+`WORLD_WRC_072` · confirmed · original_campaign
+
+魔物之盒是一件可释放魔眼、实现其能力范围内愿望的容器，御临风等人在原线第一部的主世界洞穴中实际取得它，随后带路的罗盘失去动力。
+魔物之盒的沉睡值为3。打开时每轮减少1点，关闭时每日恢复1点；沉睡值降为零后，魔眼从盒中获释。魔眼可以实现能力范围内的愿望，但实现方式可能扭曲愿望本意，或采用暴力、粗暴的手段，许愿者无法仅凭愿望措辞保证理想过程与结果。若提出“不合理的愿望”，魔眼会被迫杀死解放者，并返回盒中；若愿望完成，魔眼便获得自由。现有规则没有给出所有愿望是否合理的完整判准，也没有说明魔眼能力的全部上限。
+
+<details>
+<summary>来源</summary>
+
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=48; record_id=WRS_048
+- [reading_p1_014_016.jsonl](<../work/replay_research/reading_p1_014_016.jsonl>)：jsonl_line=21; ERC_P1_0221; post_ids=843565,843567,843568
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=23; post_id=843565; floor=772
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=24; post_id=843567; floor=773
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=25; post_id=843568; floor=774
+- [reading_p1_014_016.jsonl](<../work/replay_research/reading_p1_014_016.jsonl>)：jsonl_line=23; ERC_P1_0223; post_ids=843565,843623
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=30; post_id=843623; floor=779
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：line 222; UCL_20261003_009
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=214; line_end=234; record_id=UCL_20261003_009
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_072。适用时期：主世界取得后；梦不载入。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRS_048 用户允许参考《传颂之物》的愿望机制；本次仅采用用户明确补充，不额外引入原作事件。 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。 梦中履历与现代特殊梦均不加载；只承接主世界实取盒子及当场规则。愿望可能扭曲的补充不意味着自动导入传颂之物全部神话。 盒子与先前梦中经历之间的具体联系仍属uncertain；正文只载主世界取得及器物规则。
+
+<a id="WORLD_WRC_073"></a>
+### 外神与旧日支配者
+
+`WORLD_WRC_073` · character_belief · original_campaign
+
+外神与旧日支配者是泰蕾斯讲述古代灾难时使用的称呼。她说两者是同一类存在的不同名字，却承认自己不知道它们的真实面目；她把精灵堕落、死亡之翼受到感染，以及外界力量渗入飘零大陆的过程与它们联系起来〔character_belief〕。
+依泰蕾斯的解释，飘零法则阻止神明从外部直接施加影响，但异乡人带来了建立联系的方法，外神力量因而仍能通过联系有限渗透〔character_belief〕。自称耶各者也说自己不能直接涉足本界，这只是另一份来自特定会面者的证言，尚不足以建立所有神明共用的完整规则。
+原线末期对死亡之翼的战斗中确有未知男子化为黑雾进入龙体、黑雾发出宣言的场面；但这些表现没有给出外神的完整谱系、阵营、姓名，也未确认它们与前史主神的关系。
+
+<details>
+<summary>来源</summary>
+
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=49; record_id=WRS_049
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=20; ERC_P3_0020; post_ids=1044388,1044048,1044560
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=19; post_id=1044388; floor=68
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=18; post_id=1044048; floor=67
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=20; post_id=1044560; floor=69
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=21; ERC_P3_0021; post_ids=1046075,1046114
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=21; post_id=1046075; floor=70
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=22; post_id=1046114; floor=71
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=19; ERC_P3_0019; post_ids=1044045,1044388,1044048,1044560
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=17; post_id=1044045; floor=66
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=23; ERC_P3_0223; post_ids=1148584,1165704,1166498
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=15; post_id=1148584; floor=214
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=17; post_id=1165704; floor=216
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=18; post_id=1166498; floor=217
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=24; ERC_P3_0224; post_ids=1179677,1182889,1206254
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=19; post_id=1179677; floor=218
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=20; post_id=1182889; floor=219
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+- [power_rules_dossier.jsonl](<../work/replay_research/power_rules_dossier.jsonl>)：jsonl_line=6; record_id=PWRM_006
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：source_id=P1; jsonl_line=49; post_id=846744; floor=1098
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：source_id=P1; jsonl_line=50; post_id=846748; floor=1099
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：source_id=P1; jsonl_line=1; post_id=846753; floor=1100
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=49; post_id=846744; floor=1098
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=50; post_id=846748; floor=1099
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：jsonl_line=1; post_id=846753; floor=1100
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：jsonl_line=14; post_id=858359; floor=1313
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：jsonl_line=17; post_id=858985; floor=1316
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：jsonl_line=20; post_id=859077; floor=1319
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=20; post_id=860741; floor=1369
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=30; post_id=862100; floor=1379
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=40; post_id=862302; floor=1389
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=41; post_id=862306; floor=1390
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=43; post_id=862337; floor=1392
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=38; post_id=913439; floor=237
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=40; post_id=913449; floor=239
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=41; post_id=913450; floor=240
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=42; post_id=913492; floor=241
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=43; post_id=913501; floor=242
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=45; post_id=913595; floor=244
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=46; post_id=913665; floor=245
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=47; post_id=913700; floor=246
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=48; post_id=913709; floor=247
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=49; post_id=913717; floor=248
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=5; post_id=913733; floor=254
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=7; post_id=913736; floor=256
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=8; post_id=913739; floor=257
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=50; post_id=913719; floor=249
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=1; post_id=913724; floor=250
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=2; post_id=913726; floor=251
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=3; post_id=913730; floor=252
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=4; post_id=913731; floor=253
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=29; post_id=846552; floor=1078
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=33; post_id=846643; floor=1082
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=35; post_id=846651; floor=1084
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=36; post_id=846653; floor=1085
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=38; post_id=846670; floor=1087
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=45; post_id=846708; floor=1094
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=47; post_id=1047660; floor=446
+- [event_causality_main_late.jsonl](<../work/replay_research/event_causality_main_late.jsonl>)：jsonl_line=6; record_id=ELATE_006
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_073。适用时期：古史与后期证言。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRS_049,PWRM_006 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_074"></a>
+### 预言、神谕与可能未来
+
+`WORLD_WRC_074` · confirmed · original_campaign
+
+预言、神谕与可能未来在原线中有多种来源：耶各展示的末世天启、御临风经视野和手套接收的讯息、泰蕾斯看到的一条未来，以及悠悠继承力量后传来的多条条件路径。接收者确实经历过这些显现，但其中描述的未来尚未因被看见而成为事实。
+泰蕾斯认为自己只能提供龙族尚有未来的一条道路，担心介入会使它偏离，因此长期避免行动〔character_belief〕。悠悠后来既可感到强烈危险，也能传递不同未来，却并不知道每项危险的具体细节。原线中御临风见到过改变前的旧未来、另一未来和当下视野，后来又在悠悠给出的路径间作出选择；这些经历体现了预示所附的条件和可变性。
+改变旧未来会增强御临风印记的说法有当次情境依据，尚不能推广成所有预言通用的奖励机制。白魔关于“命定”“运变”“异数”和天意补剂的解释，仍是他提出的理论〔character_belief〕；帝此前也未确定龙族预言与耶各天启是否同源。
+
+<details>
+<summary>来源</summary>
+
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=50; record_id=WRS_050
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=40; ERC_P2_0040; post_ids=913439,913449,913450,913492,913501,913595,913665
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=38; post_id=913439; floor=237
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=40; post_id=913449; floor=239
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=41; post_id=913450; floor=240
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=42; post_id=913492; floor=241
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=43; post_id=913501; floor=242
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=45; post_id=913595; floor=244
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=46; post_id=913665; floor=245
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=64; ERC_P2_0464; post_ids=1033262,1033271,1033311,1033315,1033318
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=50; post_id=1033262; floor=1199
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl>)：jsonl_line=1; post_id=1033271; floor=1200
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl>)：jsonl_line=2; post_id=1033311; floor=1201
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl>)：jsonl_line=3; post_id=1033315; floor=1202
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl>)：jsonl_line=4; post_id=1033318; floor=1203
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=18; ERC_P3_0018; post_ids=1043595,1043613,1049727
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=13; post_id=1043595; floor=62
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=15; post_id=1043613; floor=64
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=31; post_id=1049727; floor=80
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=10; ERC_P3_0210; post_ids=1068639
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：jsonl_line=43; post_id=1068639; floor=142
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=18; ERC_P3_0218; post_ids=1078852,1078855
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=39; post_id=1078852; floor=188
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=40; post_id=1078855; floor=189
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=27; ERC_P3_0227; post_ids=1334073
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=29; post_id=1334073; floor=228
+- [power_rules_dossier.jsonl](<../work/replay_research/power_rules_dossier.jsonl>)：jsonl_line=7; record_id=PWRM_007
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=408; line_end=410
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=20; post_id=863989; floor=69
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=25; post_id=864078; floor=74
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=28; post_id=864087; floor=77
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=29; post_id=864293; floor=78
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=30; post_id=864296; floor=79
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=32; post_id=864309; floor=81
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=34; post_id=864361; floor=83
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=36; post_id=864393; floor=85
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=38; post_id=864397; floor=87
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=40; post_id=864401; floor=89
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=42; post_id=864404; floor=91
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=44; post_id=864437; floor=93
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=45; post_id=864462; floor=94
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=47; post_id=864610; floor=96
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=29; post_id=973143; floor=828
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=30; post_id=973252; floor=829
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=31; post_id=973257; floor=830
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=32; post_id=973291; floor=831
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=33; post_id=973864; floor=832
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=34; post_id=974262; floor=833
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=35; post_id=974316; floor=834
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=36; post_id=974318; floor=835
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=19; post_id=1044388; floor=68
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=21; post_id=1046075; floor=70
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=27; post_id=914145; floor=276
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=28; post_id=914149; floor=277
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=29; post_id=914153; floor=278
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=31; post_id=914157; floor=280
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=32; post_id=914171; floor=281
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=33; post_id=914172; floor=282
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=34; post_id=914181; floor=283
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=37; post_id=914301; floor=286
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=43; post_id=914582; floor=292
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=44; post_id=914606; floor=293
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=23; post_id=1046125; floor=72
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=24; post_id=1046129; floor=73
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=25; post_id=1046861; floor=74
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=37; post_id=1051563; floor=86
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=39; post_id=1051711; floor=88
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=43; post_id=1052966; floor=92
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=25; post_id=968335; floor=74
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=35; post_id=988116; floor=84
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=7; post_id=954760; floor=56
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=1655; line_end=1693
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=1723; line_end=1727
+- [event_causality_main_late.jsonl](<../work/replay_research/event_causality_main_late.jsonl>)：jsonl_line=4; record_id=ELATE_004
+- [event_causality_main_late.jsonl](<../work/replay_research/event_causality_main_late.jsonl>)：jsonl_line=7; record_id=ELATE_007
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_074。适用时期：体验与结果分开。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRS_050,PWRM_007 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_078"></a>
+### 大魔女夜宴
+
+`WORLD_WRC_078` · character_belief · original_campaign
+
+大魔女夜宴是白色魔法师相关的大范围仪式，原线第二部雷光的军情将它分成两种用途。小型夜宴使一定区域的Gate陷入绝望，以批量催生Phantom；大型夜宴则使用四名同种魔法使作为人柱和阵眼，把阵内的生物炼化为魔力。以上说明来自雷光掌握的情报，他也承认发动条件尚不清楚〔character_belief〕。
+沐透在旁线向王骑报告时说，需要四个或更多魔法使作为阵眼，记载中的规模至少可覆盖城市；增加阵眼会怎样扩大范围，相关记载并未说明〔character_belief〕。四人与四人以上的说法没有在本团中完成统一验证。
+白魔称Phantom并非他的最终所求；卡珊德拉则称他想创造新世界和新神、重建家人与故乡，因此需要巨大的根基能源〔character_belief〕。这些目的口供没有直接补足夜宴的全部配方、受害者数量或发动进度。
+
+<details>
+<summary>来源</summary>
+
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=54; record_id=WRS_054
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=21; ERC_P2_0421; post_ids=987498,987503,987507,987509
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=4; post_id=987498; floor=903
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=5; post_id=987503; floor=904
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=6; post_id=987507; floor=905
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=7; post_id=987509; floor=906
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=3; ERC_P3_0203; post_ids=1059916,1059924
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：jsonl_line=9; post_id=1059916; floor=108
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：jsonl_line=12; post_id=1059924; floor=111
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=9; ERC_P3_0209; post_ids=1068182,1068185,1068230
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：jsonl_line=39; post_id=1068182; floor=138
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：jsonl_line=40; post_id=1068185; floor=139
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：jsonl_line=41; post_id=1068230; floor=140
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=34; ERC_P2_0234; post_ids=955878,955892,956159,956235
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 13/posts.jsonl>)：jsonl_line=42; post_id=955878; floor=641
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 13/posts.jsonl>)：jsonl_line=43; post_id=955892; floor=642
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 13/posts.jsonl>)：jsonl_line=44; post_id=956159; floor=643
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 13/posts.jsonl>)：jsonl_line=45; post_id=956235; floor=644
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=4; record_id=WMPR_004
+- https://www.kamen-rider-official.com/dictionaries/works_search?initial=%E3%81%AF&search_dictionaries_form%5Bicon%5D=6&search_dictionaries_form%5Bkamen_rider_id%5D=14&utf8=%E2%9C%93：东映官方Wizard用语辞典 ファントム; ファントム条目，读取行42–50
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=12; post_id=1055963; floor=461
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=13; post_id=1056638; floor=462
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=603; line_end=604
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=9; record_id=WMPR_009
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=88; line_end=88
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=114; line_end=124
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=39; post_id=864444; floor=188
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=41; post_id=864574; floor=190
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=50; post_id=864917; floor=199
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：document_id=MUTOU_PAGE_08; source_id=MUTOU; jsonl_line=37; post_id=957923; floor=386
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=36; post_id=1044064; floor=435
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=14; post_id=1068640; floor=463
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=15; post_id=1069865; floor=464
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：source_id=P2; jsonl_line=6; post_id=918970; floor=355
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; jsonl_line=6; post_id=895365; floor=255
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：source_id=P2; jsonl_line=8; post_id=919057; floor=357
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=25; post_id=911872; floor=224
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=27; post_id=912206; floor=226
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_078。适用时期：原线后期军情。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRS_054,WMPR_004,WMPR_009 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_EMPIRE_COURT"></a>
+### 帝国朝会与常务办理
+
+`WORLD_EMPIRE_COURT` · confirmed · original_campaign
+
+帝国朝会与常务办理分别承接重大判断和日常事务。帝下设常务机构，由八柱将、其直系下属和其他官员处理每日事件，旁听专员把结果向帝报告；只有被认为需要帝判断的事项，才进一步交朝堂处理。设定记述时，沃西斯与雷光是主要经办者。
+
+帝国每周有数次固定朝会，朝堂中文武分列，官员按官阶站位，八柱将居前。地方报告由专门部门上达，因此地方事件可以经常设渠道进入中央决策。特殊危机还会启动紧急朝会，历史上百头龙复活及严冬撤民曾作为应急先例被提及。帝可在朝会上决定出兵及人员随行，执行者仍须兼顾原有职责，例如右近受帝都防务和朝会责任约束，不能随意离岗。
+
+朝会中的统计与评估也有特定时点。原线远征阶段，官员曾报告人口二十亿、可用于远征的常备军一千万，并预计征召及协会加入后能动员四千万人；官员还把长期储粮与新魔法结合，判断其可支撑多年停农〔character_belief〕。这些数字分别是当时的统计口径和动员预估，并非同一战场已经集结的实兵。
+
+<details>
+<summary>来源</summary>
+
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=1; record_id=EMP_001
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=21; line_end=26
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：source_id=P1_P002; jsonl_line=33; post_id=816651; floor=82
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=37; post_id=820769; floor=286
+- [faction_operations_dossier.jsonl](<../work/replay_research/faction_operations_dossier.jsonl>)：jsonl_line=1; record_id=FOP_001
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=1; post_id=922950; floor=0
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=3; post_id=922976; floor=2
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=24; line_end=26
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=161; line_end=169
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=25; post_id=823927; floor=324
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=15; post_id=921465; floor=414
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=17; post_id=846047; floor=1016
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=19; post_id=846054; floor=1018
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=22; post_id=846061; floor=1021
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=3; post_id=846217; floor=1052
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=12; post_id=967530; floor=761
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=28; post_id=985223; floor=877
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=29; post_id=985898; floor=878
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=30; post_id=986052; floor=879
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=38; post_id=987018; floor=887
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=39; post_id=987026; floor=888
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=40; post_id=987029; floor=889
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=44; line_end=44
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：jsonl_line=11; post_id=846884; floor=1110
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=119; line_end=119
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=3; record_id=WRS_003
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应EMPIRE_COURT。适用时期：T0制度；应急史按原记。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：EMP_001,FOP_001 本轮正文整理：沃西斯、雷光主要经办来自持续更新设定，不替每个历史阶段配同一内阁；百头龙和严冬先例未补年代、伤亡及全部处置细节。统计和预计动员口径分开。
+
+<a id="WORLD_LOCAL_ADMINISTRATION"></a>
+### 帝国地方受理与通信
+
+`WORLD_LOCAL_ADMINISTRATION` · confirmed · original_campaign
+
+帝国地方官署能够受理敌情、登记警戒，协调守备、法师和医师，并向帝都或附近驻军请求支援。地方获得消息后，要经过接报、判断、传信及后续执行，援助不会因报告送出便立刻到场。
+
+沐透报告监狱塔逃犯后，雅莱佩联系驻镇法师曼吉。曼吉把魔法信化成丝线，缠在鸽腿上放飞；当地次日收到帝都回应，援军在后来实际抵达，并与镇诊所合作救治。雅莱佩当时解释，本地通信不发达，需要等到次日才会有帝都消息〔character_belief〕。
+
+另一座小镇的办事员登记敌情后，镇长欧登与守备队长科斯雷商议应对：科斯雷由原拟出动改为守镇，欧登命令少量侦察、联络附近军队并寻找游击士。局势恶化后，贝克护送镇长撤离并求援，但该线尚未展示援军到场。原线还有战讯至少滞后一两天才传到偏远小镇的明确情况，说明不同地方的获讯与响应速度并不一致。
+
+<details>
+<summary>来源</summary>
+
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=5; record_id=SWU_SOC_002
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：document_id=MUTOU_PAGE_01; source_id=MUTOU; jsonl_line=33; post_id=846685; floor=32
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：document_id=MUTOU_PAGE_01; source_id=MUTOU; jsonl_line=39; post_id=846736; floor=38
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：document_id=MUTOU_PAGE_02; source_id=MUTOU; jsonl_line=27; post_id=848743; floor=76
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=35; post_id=864341; floor=184
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=39; post_id=864444; floor=188
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=36; post_id=989666; floor=85
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=39; post_id=990702; floor=88
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=41; post_id=992345; floor=90
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=43; post_id=993920; floor=92
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：document_id=MUTOU_PAGE_02; source_id=MUTOU; jsonl_line=5; post_id=847638; floor=54
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=25; post_id=968335; floor=74
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=7; post_id=954760; floor=56
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=4; record_id=EMP_004
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=2; post_id=817173; floor=151
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=4; post_id=817210; floor=153
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=7; post_id=817395; floor=156
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=8; post_id=817429; floor=157
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=9; post_id=817432; floor=158
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=11; post_id=817447; floor=160
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=35; post_id=817699; floor=184
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=13; post_id=817453; floor=162
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=15; post_id=817473; floor=164
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=17; post_id=817479; floor=166
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=18; post_id=817481; floor=167
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=20; post_id=817492; floor=169
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=36; post_id=816817; floor=135
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=40; post_id=816879; floor=139
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=33; post_id=845797; floor=982
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=34; post_id=845814; floor=983
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=35; post_id=845826; floor=984
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=36; post_id=845834; floor=985
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=42; post_id=845973; floor=991
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=43; post_id=845975; floor=992
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：jsonl_line=5; post_id=864692; floor=104
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：jsonl_line=7; post_id=864704; floor=106
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=21; line_end=26
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：source_id=P1_P002; jsonl_line=33; post_id=816651; floor=82
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=42; post_id=817008; floor=141
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：jsonl_line=20; post_id=818410; floor=219
+- [event_causality_sides.jsonl](<../work/replay_research/event_causality_sides.jsonl>)：jsonl_line=1; record_id=ESIDE_001
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=42; line_end=58
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：source_id=MUTOU; jsonl_line=30; post_id=846491; floor=29; source_html_line=3011
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：source_id=MUTOU; jsonl_line=33; post_id=846685; floor=32; source_html_line=3286
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：source_id=MUTOU; jsonl_line=39; post_id=846736; floor=38; source_html_line=3838
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：source_id=MUTOU; jsonl_line=27; post_id=848743; floor=76; source_html_line=2746
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：source_id=MUTOU; jsonl_line=37; post_id=864394; floor=186; source_html_line=3666
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：source_id=MUTOU; jsonl_line=39; post_id=864444; floor=188; source_html_line=3850
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：source_id=MUTOU; jsonl_line=45; post_id=864656; floor=194; source_html_line=4402
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：source_id=MUTOU; jsonl_line=47; post_id=864765; floor=196; source_html_line=4586
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：source_id=MUTOU; jsonl_line=49; post_id=864800; floor=198; source_html_line=4770
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：source_id=MUTOU; jsonl_line=50; post_id=864917; floor=199; source_html_line=4863
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=88; line_end=88
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=41; post_id=864574; floor=190
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：document_id=MUTOU_PAGE_08; source_id=MUTOU; jsonl_line=37; post_id=957923; floor=386
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=36; post_id=1044064; floor=435
+- [event_causality_sides.jsonl](<../work/replay_research/event_causality_sides.jsonl>)：jsonl_line=7; record_id=ESIDE_007
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=9; post_id=923284; floor=8; source_html_line=1086
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=11; post_id=923288; floor=10; source_html_line=1272
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=13; post_id=923404; floor=12; source_html_line=1458
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=23; post_id=962500; floor=72; source_html_line=2389
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=36; post_id=989666; floor=85; source_html_line=3597
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=37; post_id=989836; floor=86; source_html_line=3691
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=39; post_id=990702; floor=88; source_html_line=3877
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=41; post_id=992345; floor=90; source_html_line=4063
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=43; post_id=993920; floor=92; source_html_line=4249
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=5; post_id=954706; floor=54; source_html_line=715
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=9; post_id=955110; floor=58; source_html_line=1087
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=11; post_id=955517; floor=60; source_html_line=1273
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=13; post_id=955598; floor=62; source_html_line=1459
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=15; post_id=955870; floor=64; source_html_line=1645
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=7; post_id=954760; floor=56; source_html_line=901
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=38; post_id=990696; floor=87; source_html_line=3783
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=2; post_id=1015970; floor=101; source_html_line=434
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=3; post_id=1016053; floor=102; source_html_line=528
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=12; post_id=1081976; floor=111; source_html_line=1364
+
+</details>
+
+备注：F1正文返修稿，本轮逐条待审；对应LOCAL_ADMINISTRATION。适用时期：既存渠道；响应逐案。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：SWU_SOC_002,EMP_004,ESIDE_001,ESIDE_007 本轮正文整理：原线两座小镇的求援分别记结果；一地成功回应不代表其他求援全部完成，也不建立全国统一办理时限。
+
+<a id="WORLD_MAGICAL_AUTOMATA"></a>
+### 魔偶制造与灵魂研究
+
+`WORLD_MAGICAL_AUTOMATA` · character_belief · original_campaign
+
+魔偶制造与灵魂研究在帝国已有专业知识和制造基础，但工艺、成本与研究权限都构成限制。沐透旁线中的研究所博士说，普通魔偶受精细动作能力和昂贵魔核制约，多用于战场；宝石翁、维克托、泰德勒等少数专家能够制造近似真人的精密魔偶。这是他的行业见闻，并非帝国所有制造者的完整名单〔character_belief〕。
+沐透提出用贤者之石作魔偶核心、收回灵魂并注魔使Phantom恢复成人的方案。博士愿意研究，并认为这与解除诅咒及魔兽化有关，但要求大量时间、材料和实际Phantom样本〔character_belief〕。现阶段尚未出现可执行的通用逆转流程或成功成品。
+博士还说，保存和操作人类灵魂属于被严禁的法术，慕少艾的一名弟子曾为此研究、叛逃并被诛〔character_belief〕。陈萍生确是慕少艾之徒，也是御临风开局阶段制裁的魔法师；具体罪由仍以上述证言为限，现有资料没有完整法条、管辖范围或例外程序。
+
+<details>
+<summary>来源</summary>
+
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=9; record_id=SWU_SOC_006
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=6; post_id=895365; floor=255
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=7; post_id=895386; floor=256
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=41; post_id=1046096; floor=440
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=43; post_id=1046862; floor=442
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=3; post_id=1049842; floor=452
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=5; post_id=1051559; floor=454
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=39; post_id=1044705; floor=438
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=45; post_id=1047210; floor=444
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=47; post_id=1047660; floor=446
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=49; post_id=1047852; floor=448
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=14; record_id=SWU_PWR_004
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=48; post_id=1047768; floor=447
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=127; line_end=127
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=37; post_id=1044477; floor=436
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=8; record_id=WMPR_008
+- https://www.kamen-rider-official.com/dictionaries/works_search?search_dictionaries_form%5Bicon%5D=6&search_dictionaries_form%5Bkamen_rider_id%5D=14&utf8=%E2%9C%93：东映官方Wizard用语辞典 アンダーワールド; アンダーワールド条目，读取行31–40
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=1081; line_end=1091
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=31; post_id=1043190; floor=430
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=5; record_id=UCL_20261003_004
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=114; line_end=114
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=115; line_end=115
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=116; line_end=116
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=117; line_end=117
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=119; line_end=119
+- [power_rules_dossier.jsonl](<../work/replay_research/power_rules_dossier.jsonl>)：jsonl_line=4; record_id=PWRM_004
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应MAGICAL_AUTOMATA。适用时期：专业见闻与研究目标。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：SWU_SOC_006,SWU_PWR_004,WMPR_008,UCL_20261003_004 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_GATE"></a>
+### Gate
+
+`WORLD_GATE` · character_belief · original_campaign
+
+Gate是白色魔法师催生Phantom时寻找的宿主对象。原线第二部，雷光称白魔一类施法者能令Gate因绝望而转化，小型夜宴可同时使大范围Gate绝望，从而批量制造Phantom〔character_belief〕。沐透后来向帝国军方提交的报告也把Gate、绝望和夜宴相联系，但本团尚未给出可直接测量的资质阈值、绝望程度或完整启动条件。
+原线人物情报记载，魔法师A的家人与未婚妻遭古雷姆林虐杀，A随后成为巴力西卜；这份经过属于御临风后期掌握的情报〔character_belief〕。欧吉尔德在庄园见到爱人头颅后身体出现紫色裂痕，是另一处实际变化迹象，后期名单才确认其对应的Phantom已经诞生，准确完成时刻仍不明确。
+
+<details>
+<summary>来源</summary>
+
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=4; record_id=WMPR_004
+- https://www.kamen-rider-official.com/dictionaries/works_search?initial=%E3%81%AF&search_dictionaries_form%5Bicon%5D=6&search_dictionaries_form%5Bkamen_rider_id%5D=14&utf8=%E2%9C%93：东映官方Wizard用语辞典 ファントム; ファントム条目，读取行42–50
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=4; post_id=987498; floor=903
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=12; post_id=1055963; floor=461
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=13; post_id=1056638; floor=462
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=603; line_end=604
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=9; record_id=UCL_20261003_008
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=205; line_end=205
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=5; record_id=WMPR_005
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应GATE。适用时期：后期军情；原型可参考。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WMPR_004,UCL_20261003_008 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。 原型补充候选：Wizard资料把Gate定义为高魔力人类，Phantom先在其精神世界诞生，完全绝望后夺走宿主生命而现实化。此机制可供后续采用审阅，未视为本团全部个案已证的过程。
+
+<a id="WORLD_PHANTOM_RESCUE"></a>
+### Phantom救援与逆转研究
+
+`WORLD_PHANTOM_RESCUE` · confirmed · original_campaign
+
+Phantom救援与逆转研究在原线沐透旁线中有一个已知的精神世界入口，以及尚未完成的恢复方案。沐透的Engage戒指能够使施术者进入指环佩戴者的Underworld，耗时一轮，魔力消耗为0。进入精神世界本身并不等于已经消除内在威胁，更没有验证现实化后的Phantom可以借同一步骤恢复。Sleep戒指另需1点魔力和一个标准动作，佩戴者可以进行DC4的意志对抗；催眠与进入Underworld是两个不同效果。
+沐透向研究所博士提出，以贤者之石作魔偶核心，夺回灵魂、重新注魔，最后使对象恢复成人。博士认为值得联系解除诅咒与魔兽化研究，但需要大量时间、材料及实际Phantom样本，并提醒人类灵魂的保存与操作属于严禁领域〔character_belief〕。研究所已接受样品、检查腰带并召集专家，军部也允诺支持，但逆转成果尚未出现。
+维尔另转述商人二十多年前的旧闻，称有变成怪物的人曾被“权杖博士”复原〔rumor〕。已知许多变成怪物者死亡或逃走，恢复人形者极少；旧闻没有留下可照做的治疗流程，也未证明恢复外貌必定等于原人格完整归来。
+
+<details>
+<summary>来源</summary>
+
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=8; record_id=WMPR_008
+- https://www.kamen-rider-official.com/dictionaries/works_search?search_dictionaries_form%5Bicon%5D=6&search_dictionaries_form%5Bkamen_rider_id%5D=14&utf8=%E2%9C%93：东映官方Wizard用语辞典 アンダーワールド; アンダーワールド条目，读取行31–40
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=1081; line_end=1091
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=47; post_id=1047660; floor=446
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=48; post_id=1047768; floor=447
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=49; post_id=1047852; floor=448
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=31; post_id=1043190; floor=430
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=14; record_id=SWU_PWR_004
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=39; post_id=1044705; floor=438
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=41; post_id=1046096; floor=440
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=43; post_id=1046862; floor=442
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=3; post_id=1049842; floor=452
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=5; post_id=1051559; floor=454
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=45; post_id=1047210; floor=444
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=127; line_end=127
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=37; post_id=1044477; floor=436
+- [event_causality_sides.jsonl](<../work/replay_research/event_causality_sides.jsonl>)：jsonl_line=5; record_id=ESIDE_005
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=25; post_id=1042442; floor=424; source_html_line=2551
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=33; post_id=1043390; floor=432; source_html_line=3287
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=41; post_id=1046096; floor=440; source_html_line=4023
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; jsonl_line=3; post_id=1049842; floor=452; source_html_line=526
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; jsonl_line=5; post_id=1051559; floor=454; source_html_line=710
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=39; post_id=1044705; floor=438; source_html_line=3839
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=49; post_id=1047852; floor=448; source_html_line=4759
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; jsonl_line=9; post_id=1052875; floor=458; source_html_line=1078
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; jsonl_line=11; post_id=1055378; floor=460; source_html_line=1262
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; jsonl_line=12; post_id=1055963; floor=461; source_html_line=1355
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; jsonl_line=13; post_id=1056638; floor=462; source_html_line=1446
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; jsonl_line=14; post_id=1068640; floor=463; source_html_line=1539
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：source_id=MUTOU; jsonl_line=15; post_id=1069865; floor=464; source_html_line=1630
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=43; post_id=1046862; floor=442; source_html_line=4207
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=42; line_end=58
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应PHANTOM_RESCUE。适用时期：本团入口；后期研究未成。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WMPR_008,SWU_PWR_004,ESIDE_005 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。 原型补充候选：Wizard可在Gate现实化转化完成前进入精神世界，击败内在Phantom以救人。本团Engage只确认进入Underworld的入口，尚未验证这一救援流程，更未验证现实化后的普适逆转。
+
+<a id="WORLD_ARTIFICIAL_PHANTOM"></a>
+### 人工Phantom与供魔路径
+
+`WORLD_ARTIFICIAL_PHANTOM` · character_belief · original_campaign
+
+人工Phantom与供魔路径是沐透调查白色魔法师时提出的技术解释。沐透向军方报告，笛木奏并非Gate，而是制造了卡邦克鲁和新的装置来取得力量；关于多个个体及其与白魔同时存在的关系，他自己也只作疑似判断〔character_belief〕。本团尚未实际演示制造卡邦克鲁、植入人体或分体供能的完整过程。
+沐透自身的经历另有背景记载：他在心灵深处见到百首黄金龙这一内在Phantom，随后要求白魔履行承诺，取得Wizard驱动器，成为指环魔法使。Faer宿主维尔则经腰带与戒指接入，与克拉肯发生契约和供魔关系。两种经历显示内在存在、契约及装具均可能参与力量取得，但目前没有共同魔力池或统一换算规则。
+
+<details>
+<summary>来源</summary>
+
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=6; record_id=WMPR_006
+- https://www.kamen-rider-official.com/dictionaries/works_search?initial=%E3%81%BE&search_dictionaries_form%5Bicon%5D=6&search_dictionaries_form%5Bkamen_rider_id%5D=14&utf8=%E2%9C%93：东映官方Wizard用语辞典 魔法使い; 魔法使い条目，读取行57–66
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=916; line_end=925
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=12; post_id=1055963; floor=461
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=48; post_id=1047768; floor=447
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; jsonl_line=6; post_id=895365; floor=255
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=1; record_id=WMPR_001
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=125; line_end=127
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=18; post_id=996028; floor=967
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=20; post_id=997651; floor=969
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=128; line_end=128
+- https://www.kamen-rider-official.com/zukan/characters/3163：东映官方图鉴 笛木奏; 人物说明，读取行28–59
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应ARTIFICIAL_PHANTOM。适用时期：报告与原型参考。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WMPR_006,WMPR_001 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。 原型补充候选：Wizard资料中，克服绝望并压制内在Phantom的Gate可借其供魔；笛木奏则制造并植入人工Phantom卡邦克鲁取得力量。这些原型过程不代替本团制造、植入及多体关系的验证。
+
+<a id="WORLD_FAER"></a>
+### Faer
+
+`WORLD_FAER` · confirmed · original_campaign
+
+Faer是克拉肯给维尔所接入的古代魔法装具所用的名称。沐透曾以Beast、Rogue类比它，克拉肯明确否定，并称精灵王以古神为原型制造此装具，王亲自使用后与古神同灭；这段制造和战争史来自克拉肯的证言〔character_belief〕。
+接入前，维尔日益长久地昏睡，心灵中的克拉肯自称因饥饿而虚弱，缺少联系外界的媒介，必须取回腰带与戒指。沐透夺回装具并给昏睡的维尔使用后，装具实际解除石化、附着于他并发动变身。力量随即追杀娜迦，维尔在意识争执后解除变身并昏迷。
+克拉肯后来称契约已经成立，但维尔必须学会控制魔力，并以足够强的意志抵抗驱动器追杀娜迦的本能〔character_belief〕。返都后，阿伊达转述宫廷检查结果：腰带长期离体可能危及维尔生命，沃西斯已安排学习，慕少艾提供暂时补充魔力的药水；维尔也自述吃饱仍饥饿、能感到腰带渴求魔力〔character_belief〕。截至该旁线末段，完全控制、解除依赖以及克拉肯外出都没有完成。
+
+<details>
+<summary>来源</summary>
+
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=11; record_id=SWU_PWR_001
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=25; post_id=948659; floor=324
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=27; post_id=948754; floor=326
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=12; record_id=SWU_PWR_002
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=11; post_id=931036; floor=310
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=15; post_id=931924; floor=314
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=19; post_id=939232; floor=318
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=45; post_id=893857; floor=244
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=47; post_id=893869; floor=246
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=49; post_id=893930; floor=248
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=27; post_id=1042494; floor=426
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=28; post_id=1042503; floor=427
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=29; post_id=1042800; floor=428
+- [event_causality_sides.jsonl](<../work/replay_research/event_causality_sides.jsonl>)：jsonl_line=3; record_id=ESIDE_003
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; jsonl_line=7; post_id=895386; floor=256; source_html_line=895
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; jsonl_line=47; post_id=918376; floor=296; source_html_line=4575
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：source_id=MUTOU; jsonl_line=10; post_id=929554; floor=309; source_html_line=1172
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：source_id=MUTOU; jsonl_line=11; post_id=931036; floor=310; source_html_line=1263
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：source_id=MUTOU; jsonl_line=19; post_id=939232; floor=318; source_html_line=1999
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：source_id=MUTOU; jsonl_line=25; post_id=948659; floor=324; source_html_line=2551
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：source_id=MUTOU; jsonl_line=45; post_id=950844; floor=344; source_html_line=4391
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=27; post_id=1042494; floor=426; source_html_line=2735
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=28; post_id=1042503; floor=427; source_html_line=2828
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=29; post_id=1042800; floor=428; source_html_line=2919
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=43; post_id=1046862; floor=442; source_html_line=4207
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=70; line_end=80
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：source_id=MUTOU; jsonl_line=27; post_id=948754; floor=326; source_html_line=2735
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=21; post_id=1046075; floor=70
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=42; line_end=58
+- [power_rules_dossier.jsonl](<../work/replay_research/power_rules_dossier.jsonl>)：jsonl_line=8; record_id=PWRM_008
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应FAER。适用时期：古史证言；维尔实际接入。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：SWU_PWR_001,SWU_PWR_002,ESIDE_003 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_MAGIC_SEA"></a>
+### 魔力之海
+
+`WORLD_MAGIC_SEA` · character_belief · original_campaign
+
+魔力之海是沐透对心灵世界深处魔力来源的解释与研究设想。沐透向阿伊达说，心灵世界之下存在魔力之海，饥饿虚弱的克拉肯或许能够借它恢复；后来他又把调用其中魔力列入救回重要之人的方案〔character_belief〕。
+这些说法提供了沐透探索内在世界和供魔问题的方向，但本团没有演示从魔力之海稳定取用无限能源，也没有借它完成Phantom逆转。接入方法、可抽取量、代价和维持条件仍不明确，不能据此认为沐透或维尔已经摆脱自身魔力与装具供能限制。
+
+<details>
+<summary>来源</summary>
+
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=6; record_id=WMPR_006
+- https://www.kamen-rider-official.com/dictionaries/works_search?initial=%E3%81%BE&search_dictionaries_form%5Bicon%5D=6&search_dictionaries_form%5Bkamen_rider_id%5D=14&utf8=%E2%9C%93：东映官方Wizard用语辞典 魔法使い; 魔法使い条目，读取行57–66
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=916; line_end=925
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：document_id=MUTOU_PAGE_10; source_id=MUTOU; jsonl_line=12; post_id=1055963; floor=461
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=48; post_id=1047768; floor=447
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; jsonl_line=6; post_id=895365; floor=255
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=8; record_id=WMPR_008
+- https://www.kamen-rider-official.com/dictionaries/works_search?search_dictionaries_form%5Bicon%5D=6&search_dictionaries_form%5Bkamen_rider_id%5D=14&utf8=%E2%9C%93：东映官方Wizard用语辞典 アンダーワールド; アンダーワールド条目，读取行31–40
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=1081; line_end=1091
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=47; post_id=1047660; floor=446
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=49; post_id=1047852; floor=448
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=31; post_id=1043190; floor=430
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应MAGIC_SEA。适用时期：沐透判断与救援设想。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WMPR_006,WMPR_008 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_BLOODLINE_MAGIC"></a>
+### 魔力体质与持续供能
+
+`WORLD_BLOODLINE_MAGIC` · confirmed · original_campaign
+
+魔力体质与持续供能共同决定施法者能否取得、感知及维持魔法力量，但获得体质不等于已经学会法术。大墓地旁线中，埃弗纳斯喝下安兹提供的药水后，实际开启了血统、魔力池与魔力体质，并能控制身上纹路明灭；同场获赠的成长项圈是另一件物品。安兹把纹路称为魔力回路，认为本地魔力与自己的经验不同，建议另寻教师〔character_belief〕。
+魔力体质允许使用魔力启动相应物品，并在限定范围内感到施法和魔法物品启用造成的波动。暴露在外、未放入次元收纳器的魔法物品，其常态波动比启用时低两级；不加掩饰的施法者也会发出比自身最高魔法相关强化等级低三级的波动。感到异常仍须进一步鉴别，不能直接得知身份、用途和意图。适用的通用魔力池可经四小时睡眠恢复，按实际睡眠分钟累计，每日睡眠恢复量不超过池上限；也可每小时作一次感知加智力判定，按成功数恢复，冥想恢复不计入该上限。
+持续效果还依赖具体供能者。沐透的Garuda侦察耗尽魔力后返回，他补魔后才重新收回戒指；原线另有飞马因供能者重伤昏迷、失去魔力源而滑降的案例。这两个事件分别说明各自的维持条件，并没有建立所有使魔、骑乘物与装具通用的供能结构。
+
+<details>
+<summary>来源</summary>
+
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=16; record_id=SWU_PWR_006
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=3; post_id=954561; floor=52
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=4; post_id=954685; floor=53
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=5; post_id=954706; floor=54
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=7; post_id=954760; floor=56
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：document_id=MUTOU_PAGE_02; source_id=MUTOU; jsonl_line=39; post_id=850005; floor=88
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：document_id=MUTOU_PAGE_02; source_id=MUTOU; jsonl_line=40; post_id=850638; floor=89
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=1; post_id=861002; floor=150
+- [power_rules_dossier.jsonl](<../work/replay_research/power_rules_dossier.jsonl>)：jsonl_line=2; record_id=PWRM_002
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=36; line_end=68
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=104; line_end=114
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=160; line_end=167
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=136; line_end=158
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=186; line_end=195
+- [power_rules_dossier.jsonl](<../work/replay_research/power_rules_dossier.jsonl>)：jsonl_line=7; record_id=PWRM_007
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=408; line_end=410
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=20; post_id=863989; floor=69
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=25; post_id=864078; floor=74
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=28; post_id=864087; floor=77
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=29; post_id=864293; floor=78
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=30; post_id=864296; floor=79
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=32; post_id=864309; floor=81
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=34; post_id=864361; floor=83
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=36; post_id=864393; floor=85
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=38; post_id=864397; floor=87
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=40; post_id=864401; floor=89
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=42; post_id=864404; floor=91
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=44; post_id=864437; floor=93
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=45; post_id=864462; floor=94
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=47; post_id=864610; floor=96
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=29; post_id=973143; floor=828
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=30; post_id=973252; floor=829
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=31; post_id=973257; floor=830
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=32; post_id=973291; floor=831
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=33; post_id=973864; floor=832
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=34; post_id=974262; floor=833
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=35; post_id=974316; floor=834
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=36; post_id=974318; floor=835
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=13; post_id=1043595; floor=62
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=15; post_id=1043613; floor=64
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=31; post_id=1049727; floor=80
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=19; post_id=1044388; floor=68
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=21; post_id=1046075; floor=70
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=39; post_id=1078852; floor=188
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=40; post_id=1078855; floor=189
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=27; post_id=914145; floor=276
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=28; post_id=914149; floor=277
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=29; post_id=914153; floor=278
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=31; post_id=914157; floor=280
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=32; post_id=914171; floor=281
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=33; post_id=914172; floor=282
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=34; post_id=914181; floor=283
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=37; post_id=914301; floor=286
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=43; post_id=914582; floor=292
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=44; post_id=914606; floor=293
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=23; post_id=1046125; floor=72
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=24; post_id=1046129; floor=73
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=25; post_id=1046861; floor=74
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=37; post_id=1051563; floor=86
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=39; post_id=1051711; floor=88
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=43; post_id=1052966; floor=92
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=25; post_id=968335; floor=74
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=35; post_id=988116; floor=84
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=1655; line_end=1693
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=1723; line_end=1727
+- [power_rules_dossier.jsonl](<../work/replay_research/power_rules_dossier.jsonl>)：jsonl_line=5; record_id=PWRM_005
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=408; line_end=414
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应BLOODLINE_MAGIC。适用时期：具体开启感知维持。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：SWU_PWR_006,PWRM_002,PWRM_007 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。 原卡感知范围原文为“（每感知点数＋每魔法能量波动等级）11米”；保留原写法，未自行换算等级。无梦影响恢复列为可选规则，本稿未新增启用条件。沐透旁线骑乘飞马的美杜莎与大墓地新命名Phantom的同名关系不得仅凭名字合并。
+
+<a id="WORLD_SPACE_MAGIC"></a>
+### 空间传送与龙族空间能力
+
+`WORLD_SPACE_MAGIC` · confirmed · original_campaign
+
+空间传送与龙族空间能力受到目标、距离、动作和魔力条件限制。悠悠使用的下位与上位传送有以下具体条件，这些能力并不使她能够无限制地运输人员。
+下位传送消耗1点魔力，需要语言、动作和一整轮施法，可把自己传到没有视野阻挡、最远50米的位置。携带物体积达到2时，需作DC2施法判定，此后每增加1体积，DC和魔力消耗各加1。该法术也可作用于施法范围1米内自愿或无意识的生物，但传送距离减半；目标体积超过5的部分，另依携物规则增加判定和消耗。
+上位传送的基础消耗为9魔力，只能前往施术者曾经到达且仍有印象的地点，不能跨越位面或世界。基础距离为1000米，需进行DC100、每分钟一次的长时间施法判定；每增加1000米，DC增加100、魔力消耗增加1。失败时返还一半魔力，向下取整。
+原线第三部，悠悠另说，即使有充分施术时间并用尽魔力，也只能送走自己加一人，或单独送走御临风〔character_belief〕。这次全力传送的说明没有提供一次撤走整支军队的能力。
+
+<details>
+<summary>来源</summary>
+
+- [power_rules_dossier.jsonl](<../work/replay_research/power_rules_dossier.jsonl>)：jsonl_line=3; record_id=PWRM_003
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=398; line_end=403
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=1655; line_end=1693
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=1723; line_end=1727
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=176; line_end=178
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：jsonl_line=23; post_id=816554; floor=72
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：jsonl_line=25; post_id=816557; floor=74
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=393; line_end=396
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=1; post_id=816001; floor=
+- [power_rules_dossier.jsonl](<../work/replay_research/power_rules_dossier.jsonl>)：jsonl_line=7; record_id=PWRM_007
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：source_id=REF_CHARACTERS; line_start=408; line_end=410
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=20; post_id=863989; floor=69
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=25; post_id=864078; floor=74
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=28; post_id=864087; floor=77
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=29; post_id=864293; floor=78
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=30; post_id=864296; floor=79
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=32; post_id=864309; floor=81
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=34; post_id=864361; floor=83
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=36; post_id=864393; floor=85
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=38; post_id=864397; floor=87
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=40; post_id=864401; floor=89
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=42; post_id=864404; floor=91
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=44; post_id=864437; floor=93
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=45; post_id=864462; floor=94
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl>)：jsonl_line=47; post_id=864610; floor=96
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=29; post_id=973143; floor=828
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=30; post_id=973252; floor=829
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=31; post_id=973257; floor=830
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=32; post_id=973291; floor=831
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=33; post_id=973864; floor=832
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=34; post_id=974262; floor=833
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=35; post_id=974316; floor=834
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=36; post_id=974318; floor=835
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=13; post_id=1043595; floor=62
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=15; post_id=1043613; floor=64
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=31; post_id=1049727; floor=80
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=19; post_id=1044388; floor=68
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=21; post_id=1046075; floor=70
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=39; post_id=1078852; floor=188
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=40; post_id=1078855; floor=189
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=27; post_id=914145; floor=276
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=28; post_id=914149; floor=277
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=29; post_id=914153; floor=278
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=31; post_id=914157; floor=280
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=32; post_id=914171; floor=281
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=33; post_id=914172; floor=282
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=34; post_id=914181; floor=283
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=37; post_id=914301; floor=286
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=43; post_id=914582; floor=292
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=44; post_id=914606; floor=293
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=23; post_id=1046125; floor=72
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=24; post_id=1046129; floor=73
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=25; post_id=1046861; floor=74
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=37; post_id=1051563; floor=86
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=39; post_id=1051711; floor=88
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=43; post_id=1052966; floor=92
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=25; post_id=968335; floor=74
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=35; post_id=988116; floor=84
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=7; post_id=954760; floor=56
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应SPACE_MAGIC。适用时期：具体条文；后期表现分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：PWRM_003,PWRM_007 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。 个体模板及装备分存：悠悠幼年空间龙血统的额外20点魔力池、变形/飞行/龙炎与维文短杖的增距10米、每影片一次下位瞬发，均有本条既挂人物卡来源；不在此推广为所有空间龙能力，交人物能力/装备档案按时期使用。
+
+<a id="WORLD_FOREIGN_DRAGON"></a>
+### 异乡之龙
+
+`WORLD_FOREIGN_DRAGON` · confirmed · original_campaign
+
+异乡之龙是本团对“华夏人都是龙的传人”的血脉解释，御临风已有的龙血与这一共同来源相连。它描述的是既有出身，但没有给出所有华夏人相同的血统浓度或能力，也没有赋予每人同一套龙族能力。
+原线第二部，御临风在龙族石台检测中显出五爪东方神龙形象，谢尔伦解释他具有极微量龙血；第三部，泰蕾斯再将其称为经过多代稀释的异乡之龙血脉〔character_belief〕。检测显现与两位龙族的解释发生在后期，御临风首次入都时尚未取得这些仪式知识。这一出身与他后来承受悠悠诅咒、成为耶各代行者是不同关系。
+
+<details>
+<summary>来源</summary>
+
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=7; record_id=UCL_20261003_006
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=172; line_end=172
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应FOREIGN_DRAGON。适用时期：T0前出身解释。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：UCL_20261003_006 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+## 历史事件（26条）
+
+<a id="WORLD_WRC_041"></a>
+### 古代精灵灾变
+
+`WORLD_WRC_041` · confirmed · original_campaign
+
+古代精灵灾变发生于高等精灵滥用永恒之井力量的时代。高等精灵试图迷惑并利用北海巨妖，随后永恒之井崩塌，大批精灵随陆地沉入海中，受到诅咒而变成娜迦；当代娜迦族群的来历与这场灾难相连。
+原线后期，泰蕾斯把精灵堕落与外神诱导联系起来；克拉肯则在沐透旁线中讲述，高等精灵受古神迷惑、首都沉海，娜迦形成后战争继续扩展〔character_belief〕。这些证言补充了古史的参与者和战争背景，但准确年代、不同战场的先后，以及它与精灵王陨落和内乱的关系仍未确定〔uncertain〕。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=41; record_id=WRC_041
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=51; line_end=54
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=28; record_id=WRC_028
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=26; record_id=WRS_026
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=19; ERC_P2_0419; post_ids=987233,987234,987239
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=48; post_id=987233; floor=897
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=49; post_id=987234; floor=898
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=50; post_id=987239; floor=899
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=19; ERC_P3_0019; post_ids=1044045,1044388,1044048,1044560
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=17; post_id=1044045; floor=66
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=19; post_id=1044388; floor=68
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=18; post_id=1044048; floor=67
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=20; post_id=1044560; floor=69
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=61; ERC_P2_0461; post_ids=1031470,1031478,1032053
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=42; post_id=1031470; floor=1191
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=43; post_id=1031478; floor=1192
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=44; post_id=1032053; floor=1193
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=24; ERC_P3_0224; post_ids=1179677,1182889,1206254
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=19; post_id=1179677; floor=218
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=20; post_id=1182889; floor=219
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+- [integrated_timeline.jsonl](<../work/replay_research/integrated_timeline.jsonl>)：jsonl_line=2; record_id=TML_002
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_041。适用时期：T0前古史。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_041,WRC_028,WRS_026 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_042"></a>
+### 古代精灵内乱
+
+`WORLD_WRC_042` · confirmed · original_campaign
+
+古代精灵内乱导致精灵王陨落，腰带相关技术也随之失传。腰带原本是精灵王创造的强力魔法驱动器，内乱后的完整传承经过没有留下明确记载。旧传说称，过度使用腰带会腐蚀心智，内乱可能部分由此引起〔rumor〕，但没有完整的起兵、阵营或责任记录。
+克拉肯在沐透旁线中另述，精灵王为平息与古神有关的战争，制造了以古神为原型、力量强大却难以控制的腰带，并亲自使用，最终与古神同归于尽〔character_belief〕。这份证言与内乱、永恒之井崩塌之间的准确对应尚不明确〔uncertain〕。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=42; record_id=WRC_042
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=171; line_end=174
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=11; record_id=SWU_PWR_001
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=25; post_id=948659; floor=324
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=27; post_id=948754; floor=326
+- [integrated_timeline.jsonl](<../work/replay_research/integrated_timeline.jsonl>)：jsonl_line=2; record_id=TML_002
+- [power_rules_dossier.jsonl](<../work/replay_research/power_rules_dossier.jsonl>)：jsonl_line=8; record_id=PWRM_008
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_042。适用时期：T0前古史。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_042,SWU_PWR_001 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_044"></a>
+### 空间龙部族覆灭
+
+`WORLD_WRC_044` · confirmed · original_campaign
+
+空间龙部族覆灭发生在御临风首次抵达帝都之前。悠悠的父母救下了身受诅咒、遭到追杀的凌迟；追击凌迟的人类部队因此发现空间龙秘境，并发动奇袭，造成部族覆灭。实施灭族袭击的是人类追兵，凌迟不是这场屠杀的加害者。该秘境的空间龙只有悠悠幸存，她本名芬尔德·特兰希尔。
+关于击退入侵者的经过，旧设定记载族长牺牲，与敌人同归于尽；谢尔伦在后来的讲述中则称，凌迟杀死了入侵者。两份资料对反击终局的记述不同，族长与凌迟参战的具体先后仍不清楚〔uncertain〕。惨剧使悠悠失去原有的家庭和部族依托，也成为此后护送、庇护与龙族外交的重要背景。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=44; record_id=WRC_044
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=114; line_end=119
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=27; record_id=WRS_027
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=31; ERC_P1_0431; post_ids=848689,848738
+- [posts.jsonl](<../extracted-first/24/posts.jsonl>)：jsonl_line=37; post_id=848689; floor=1186
+- [posts.jsonl](<../extracted-first/24/posts.jsonl>)：jsonl_line=38; post_id=848738; floor=1187
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=1; ERC_P2_0401; post_ids=971889,971895,971896
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=5; post_id=971889; floor=804
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=6; post_id=971895; floor=805
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=7; post_id=971896; floor=806
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=115; line_end=115
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=5; record_id=UCL_20261003_004
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=114; line_end=114
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=116; line_end=116
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=117; line_end=117
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=119; line_end=119
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：line 225; UCL_20261003_009
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=214; line_end=234; record_id=UCL_20261003_009
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_044。适用时期：T0前既定惨剧。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_044,WRS_027,UCL_20261003_004 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_045"></a>
+### 第一次魔兽大侵攻
+
+`WORLD_WRC_045` · confirmed · original_campaign
+
+第一次魔兽大侵攻是凌迟统合魔兽部族后攻破帝国边关的战役，发生在御临风首次入都之前。凌迟改变了过去以地面冲击关卡的打法，通过空运越过城墙，再让盾阵、萨满强化、反魔咒箭与扰乱骑兵的部队相互配合，破坏守军原有防御。
+真达卡斯和三军统领在战役中阵亡，边关失陷使魔兽大军首次打开通向帝国纵深的道路，帝国与山脉势力由周期性攻边转入全面战争。雪老曾作为亲历者向队伍回述这些战术；御临风在原线第一部后段恢复记忆时，才重新想起凌迟率军破关和将领阵亡的完整经历。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=45; record_id=WRC_045
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=40; line_end=44
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=180; line_end=182
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=28; record_id=WRS_028
+- [reading_p1_005_007.jsonl](<../work/replay_research/reading_p1_005_007.jsonl>)：jsonl_line=30; ERC_P1_0085; post_ids=824604,824621
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=36; post_id=824604; floor=335
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=37; post_id=824621; floor=336
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=15; ERC_P1_0415; post_ids=846670
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=38; post_id=846670; floor=1087
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=5; record_id=EMP_005
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=19; line_end=19
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=17; post_id=846047; floor=1016
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=19; post_id=846054; floor=1018
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=22; post_id=846061; floor=1021
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=3; post_id=846217; floor=1052
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=15; post_id=921465; floor=414
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=34; post_id=922821; floor=433
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=6; post_id=987507; floor=905
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=7; post_id=987509; floor=906
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=8; post_id=987519; floor=907
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=9; post_id=987590; floor=908
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=10; post_id=987703; floor=909
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=12; post_id=987706; floor=911
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=13; post_id=987709; floor=912
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=14; post_id=987710; floor=913
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=16; post_id=987712; floor=915
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=18; post_id=987714; floor=917
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=19; post_id=987715; floor=918
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=49; post_id=989174; floor=948
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=42; post_id=1031470; floor=1191
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=43; post_id=1031478; floor=1192
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=44; post_id=1032053; floor=1193
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=19; post_id=1179677; floor=218
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=20; post_id=1182889; floor=219
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_045。适用时期：T0前军事旧史。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_045,WRS_028,EMP_005 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_046"></a>
+### 峡谷战
+
+`WORLD_WRC_046` · confirmed · original_campaign
+
+峡谷战发生在原线第一部入都之后，是凌迟冒充达卡斯计划败露后的决战。凌迟以边关将领身份赴都，企图借空间龙和传送阵引入军队；帝令其率千人出征，右近因留守帝都而委托御临风等人暗中侦察。队伍在峡谷毁去两座阵式，御临风重伤，并救出雪老逃往湖中。
+帝国军队随后以七曜石构成的包围后手压制敌军，凌迟一方惨败，凌迟被生擒。阵式用途、帝军部署及后手的来由，是战后解释时才向队伍逐渐揭露的。翌日，凌迟在皇宫刑场被公开斩首，尸体随即遭高级焚烧魔法处理。
+战后，帝与御临风面对牺牲者，承担了纪念和致歉的责任。名册记有698人，其中包括此次峡谷战以前已经牺牲的人，不能据此认定峡谷当场死亡698人。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=46; record_id=WRC_046
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=41; line_end=44
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=76; line_end=86
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=94; line_end=96
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=117; line_end=118
+- [campaign_event_dependencies.jsonl](<../work/replay_research/campaign_event_dependencies.jsonl>)：jsonl_line=2; record_id=DEP_002
+- [reading_p1_005_007.jsonl](<../work/replay_research/reading_p1_005_007.jsonl>)：jsonl_line=24
+- [reading_p1_005_007.jsonl](<../work/replay_research/reading_p1_005_007.jsonl>)：jsonl_line=25
+- [reading_p1_005_007.jsonl](<../work/replay_research/reading_p1_005_007.jsonl>)：jsonl_line=28
+- [reading_p1_014_016.jsonl](<../work/replay_research/reading_p1_014_016.jsonl>)：jsonl_line=25
+- [reading_p1_017_020.jsonl](<../work/replay_research/reading_p1_017_020.jsonl>)：jsonl_line=20
+- [reading_p1_017_020.jsonl](<../work/replay_research/reading_p1_017_020.jsonl>)：jsonl_line=21
+- [reading_p1_017_020.jsonl](<../work/replay_research/reading_p1_017_020.jsonl>)：jsonl_line=23
+- [reading_p1_017_020.jsonl](<../work/replay_research/reading_p1_017_020.jsonl>)：jsonl_line=24
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=2
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=37; post_id=820769; floor=286
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=25; post_id=823927; floor=324
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=26; post_id=823928; floor=325
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=27; post_id=824139; floor=326
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=28; post_id=824168; floor=327
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=29; post_id=824326; floor=328
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=30; post_id=824464; floor=329
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=31; post_id=824492; floor=330
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=34; post_id=824573; floor=333
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=35; post_id=824602; floor=334
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=37; post_id=824621; floor=336
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=24; post_id=843567; floor=773
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=26; post_id=843602; floor=775
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=27; post_id=843605; floor=776
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=29; post_id=843621; floor=778
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=41; post_id=843915; floor=790
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=42; post_id=843924; floor=791
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：document_id=P1_P016; jsonl_line=50; post_id=843978; floor=799
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=1; post_id=845039; floor=900
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=4; post_id=845068; floor=903
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=5; post_id=845076; floor=904
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=6; post_id=845079; floor=905
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=7; post_id=845080; floor=906
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=9; post_id=845089; floor=908
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=10; post_id=845112; floor=909
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=11; post_id=845204; floor=910
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=12; post_id=845207; floor=911
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=14; post_id=845212; floor=913
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=23; post_id=845258; floor=922
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=24; post_id=845260; floor=923
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=25; post_id=845263; floor=924
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=26; post_id=845265; floor=925
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=27; post_id=845268; floor=926
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=33; post_id=845370; floor=932
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=34; post_id=845380; floor=933
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：jsonl_line=35; post_id=845382; floor=934
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=17; post_id=846047; floor=1016
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=19; post_id=846054; floor=1018
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=22; post_id=846061; floor=1021
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=3; post_id=846217; floor=1052
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=11; record_id=WRS_011
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=49; ERC_P2_0249; post_ids=959984,959986,960048,960111
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=12; post_id=959984; floor=711
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=13; post_id=959986; floor=712
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=14; post_id=960048; floor=713
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=18; post_id=960111; floor=717
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=58; ERC_P2_0258; post_ids=967530
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=12; post_id=967530; floor=761
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=13; ERC_P3_0213; post_ids=1072134,1072771,1072826,1073337,1073342,1073364
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=3; post_id=1072134; floor=152
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=5; post_id=1072771; floor=154
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=8; post_id=1072826; floor=157
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=9; post_id=1073337; floor=158
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=10; post_id=1073342; floor=159
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=11; post_id=1073364; floor=160
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=14; ERC_P3_0214; post_ids=1073378,1073384,1077728,1090502
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=13; post_id=1073378; floor=162
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=15; post_id=1073384; floor=164
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=35; post_id=1077728; floor=184
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=1; post_id=1090502; floor=200
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=15; ERC_P3_0215; post_ids=1073385,1073563,1073566,1074136
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=16; post_id=1073385; floor=165
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=17; post_id=1073563; floor=166
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=20; post_id=1073566; floor=169
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=21; post_id=1074136; floor=170
+- [event_causality_capital.jsonl](<../work/replay_research/event_causality_capital.jsonl>)：jsonl_line=2; record_id=ECAP_002
+- [integrated_timeline.jsonl](<../work/replay_research/integrated_timeline.jsonl>)：jsonl_line=16; record_id=TML_016
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_046。适用时期：原线入都后历史参考。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_046,DEP_002,WRS_011 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_047"></a>
+### 帝国与龙族结盟
+
+`WORLD_WRC_047` · confirmed · original_campaign
+
+帝国与龙族结盟是原线第二部至第三部逐步推进的外交过程。空间龙旧秘境惨剧与灭族预言使龙族寻求外援，帝希望借庇护悠悠取得龙族信任，并把龙族纳入共同防御；帝与谢尔伦在幕后推动，肯达承担明面的联络。护送队依罗伯指路、悠悠辨认接头者，并使用一次性道具通过险地，与谢尔伦会合后进入中心秘境。
+原线随后实际发生了假面交付、公开仪式、驻军协作及共同迎战。悠悠把帝赐假面带给龙族，本多授予她族长名并公开宣布婚约；军事援助的部署还与帝国收复边关等战况相连，盟约的不同部分并非同一时刻全部生效。
+御临风与谢尔伦私下谈定暂以婚约替悠悠挡住旧约压力，并保留她长大后的选择。原线中两人已有亲近、心动和羞涩的表现，但公开未婚夫身份并不等于婚礼已经完成。现有记录未给出结盟全部条款或龙族的长期处置安排，共同作战的事实也没有证明全体龙族已被帝国吞并。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=47; record_id=WRC_047
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=49; line_end=49
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=117; line_end=119
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=150; line_end=151
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=163; line_end=169
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=3; record_id=EMP_003
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=17; line_end=26
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=186; line_end=187
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; source_id=P3; jsonl_line=21; post_id=1046075; floor=70
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=25; post_id=823927; floor=324
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=1; post_id=922950; floor=0
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=3; post_id=922976; floor=2
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=27; post_id=914145; floor=276
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=28; post_id=914149; floor=277
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=29; post_id=914153; floor=278
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=31; post_id=914157; floor=280
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=32; post_id=914171; floor=281
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=33; post_id=914172; floor=282
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=34; post_id=914181; floor=283
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=37; post_id=914301; floor=286
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=43; post_id=914582; floor=292
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=44; post_id=914606; floor=293
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=22; post_id=960244; floor=721
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=23; post_id=960245; floor=722
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=24; post_id=960247; floor=723
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=27; post_id=960254; floor=726
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=28; post_id=960439; floor=727
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=30; post_id=960504; floor=729
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=31; post_id=960512; floor=730
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=33; post_id=960572; floor=732
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=37; post_id=960594; floor=736
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=39; post_id=960885; floor=738
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=6; post_id=964513; floor=755
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=8; post_id=964526; floor=757
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=10; post_id=966347; floor=759
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=50; post_id=974730; floor=849
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=46; post_id=962304; floor=745
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=47; post_id=962305; floor=746
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=4; post_id=963675; floor=753
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=5; post_id=963731; floor=754
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=28; post_id=985223; floor=877
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=29; post_id=985898; floor=878
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=30; post_id=986052; floor=879
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=38; post_id=987018; floor=887
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=39; post_id=987026; floor=888
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=40; post_id=987029; floor=889
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=19; post_id=1179677; floor=218
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=20; post_id=1182889; floor=219
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+- [campaign_event_dependencies.jsonl](<../work/replay_research/campaign_event_dependencies.jsonl>)：jsonl_line=7; record_id=DEP_007
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=47
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=1
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=2
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=50
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=51
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=53
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=1; post_id=921122; floor=400
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=3; post_id=921153; floor=402
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=5; post_id=921264; floor=404
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=15; post_id=921465; floor=414
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=6; post_id=921305; floor=405
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=7; post_id=921321; floor=406
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=8; post_id=921322; floor=407
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=9; post_id=921323; floor=408
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=10; post_id=921324; floor=409
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=11; post_id=921325; floor=410
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=12; post_id=921328; floor=411
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=13; post_id=921329; floor=412
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=18; post_id=960111; floor=717
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=19; post_id=960117; floor=718
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=20; post_id=960242; floor=719
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=29; post_id=960442; floor=728
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=34; post_id=960576; floor=733
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=36; post_id=960586; floor=735
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=38; post_id=960881; floor=737
+- [campaign_event_dependencies.jsonl](<../work/replay_research/campaign_event_dependencies.jsonl>)：jsonl_line=8; record_id=DEP_008
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=54
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=6
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=10
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=13
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=28
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=29
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=2; post_id=971563; floor=801
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=24; post_id=972967; floor=823
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=25; post_id=972969; floor=824
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=26; post_id=973134; floor=825
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=27; post_id=973135; floor=826
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=28; post_id=973141; floor=827
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：jsonl_line=29; post_id=973143; floor=828
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=12; post_id=984619; floor=861
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=13; post_id=984621; floor=862
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=14; post_id=984622; floor=863
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=16; post_id=984624; floor=865
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=17; post_id=984625; floor=866
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=18; post_id=984626; floor=867
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=19; post_id=984627; floor=868
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=20; post_id=984764; floor=869
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=32; post_id=986060; floor=881
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=33; post_id=986066; floor=882
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=9; post_id=1043386; floor=58
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=29; post_id=1047655; floor=78
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=31; post_id=1049727; floor=80
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=27; post_id=1047252; floor=76
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=30; post_id=1047661; floor=79
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=32; post_id=1049735; floor=81
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=33; post_id=1049839; floor=82
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=35; post_id=1050484; floor=84
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=37; post_id=1051563; floor=86
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=34; post_id=1049864; floor=83
+- [event_causality_capital.jsonl](<../work/replay_research/event_causality_capital.jsonl>)：jsonl_line=7; record_id=ECAP_007
+- [event_causality_main_late.jsonl](<../work/replay_research/event_causality_main_late.jsonl>)：jsonl_line=1; record_id=ELATE_001
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_047。适用时期：原线后期外交过程。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_047,EMP_003,DEP_007,DEP_008 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_048"></a>
+### 帝国远征军与边境战争
+
+`WORLD_WRC_048` · confirmed · original_campaign
+
+帝国远征军与边境战争始于凌迟破关后的帝国反击，并在原线第二部发展为全面扫平山脉的远征。帝调遣八柱将领军，沃西斯和雷光组织筹备；夺关时，雷光大量使用魔法卷轴构筑土墙、斜路和护盾支撑，让普通士兵也能通过撕开卷轴调用预制效果。空军分三路行动，Silence攻击敌方司令部，帝军收复边关后休整，再向山脉深入。
+远征还包含地下都市作战和内应协同。后来的地裂、雪崩与死亡之翼现身使旧地形失效，部队出现撤退和溃散，通讯卷轴也受到噪音干扰；红月影响远距施法是当时法师的推测〔character_belief〕。接应命令下达并不等于部队已经抵达。
+关于帝国约20亿人口、可用于远征的常备兵1000万及预计动员4000万人的数字，来自特定官员的报告与规划〔character_belief〕；预计动员兵并非已经集结的现成兵力。原线的夺关和龙族战场阶段性胜利，没有结束所有边境战争。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=48; record_id=WRC_048
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=43; line_end=44
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=180; line_end=182
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=5; record_id=EMP_005
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=19; line_end=19
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=40; line_end=44
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=36; post_id=824604; floor=335
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=37; post_id=824621; floor=336
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=38; post_id=846670; floor=1087
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=17; post_id=846047; floor=1016
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=19; post_id=846054; floor=1018
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=22; post_id=846061; floor=1021
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=3; post_id=846217; floor=1052
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=15; post_id=921465; floor=414
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=34; post_id=922821; floor=433
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=6; post_id=987507; floor=905
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=7; post_id=987509; floor=906
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=8; post_id=987519; floor=907
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=9; post_id=987590; floor=908
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=10; post_id=987703; floor=909
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=12; post_id=987706; floor=911
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=13; post_id=987709; floor=912
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=14; post_id=987710; floor=913
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=16; post_id=987712; floor=915
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=18; post_id=987714; floor=917
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=19; post_id=987715; floor=918
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=49; post_id=989174; floor=948
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=42; post_id=1031470; floor=1191
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=43; post_id=1031478; floor=1192
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=44; post_id=1032053; floor=1193
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=19; post_id=1179677; floor=218
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=20; post_id=1182889; floor=219
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+- [campaign_event_dependencies.jsonl](<../work/replay_research/campaign_event_dependencies.jsonl>)：jsonl_line=9; record_id=DEP_009
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=4
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=8
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=45
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=25
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=61
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=62
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=63
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=64
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 14/posts.jsonl>)：jsonl_line=50; post_id=959199; floor=699
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=38; post_id=988114; floor=937
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=39; post_id=988124; floor=938
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=40; post_id=988157; floor=939
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=45; post_id=1032055; floor=1194
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=46; post_id=1032480; floor=1195
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=47; post_id=1032502; floor=1196
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=48; post_id=1032913; floor=1197
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=50; post_id=1033262; floor=1199
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl>)：jsonl_line=1; post_id=1033271; floor=1200
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl>)：jsonl_line=2; post_id=1033311; floor=1201
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl>)：jsonl_line=3; post_id=1033315; floor=1202
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl>)：jsonl_line=4; post_id=1033318; floor=1203
+- [event_causality_main_late.jsonl](<../work/replay_research/event_causality_main_late.jsonl>)：jsonl_line=2; record_id=ELATE_002
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_048。适用时期：原线后期军史参考。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_048,EMP_005,DEP_009 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_049"></a>
+### 监狱塔脱逃
+
+`WORLD_WRC_049` · confirmed · original_campaign
+
+监狱塔脱逃发生于边关被攻破时，早于首次入帝都；白色魔法师利用高塔遭袭逃离囚禁。高塔同时受到魔物之潮与魔兽之潮冲击，白魔在袭击中得到沐透协助，成功离开塔顶监牢。白魔此前已经在大陆各地酿成惨剧，被捕后才遭关押；帝为何留下其性命收监仍不明确。
+原线第一部的后台已有高塔被攻破的军报和派援行动。沐透后来向地方报告塔袭发生于四天前，地方以鸽子携带魔法信件求援并收到回复；霞、洛和小队医生随后到场，先抑制毒性，再与镇上诊所共同治疗伤者。原线第二部，雷光才向御临风透露Gate与夜宴的相关情报。破塔、报告、援军行动及不同人物获知消息各有时间，完整日历尚无法统一。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=49; record_id=WRC_049
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=123; line_end=130
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=2; record_id=UCL_20261003_001
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=42; line_end=42
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=43; line_end=43
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=44; line_end=44
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=45; line_end=45
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=5; record_id=UCL_20261003_004
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=114; line_end=114
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=115; line_end=115
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=116; line_end=116
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=117; line_end=117
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=119; line_end=119
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=10; record_id=WMPR_010
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=43; line_end=50
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=125; line_end=125
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：jsonl_line=11; post_id=846884; floor=1110
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=39; post_id=864444; floor=188
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=4; post_id=987498; floor=903
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=21; post_id=1186459; floor=220
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=25; post_id=1247358; floor=224
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=29; post_id=1334073; floor=228
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=30; post_id=1334089; floor=229
+- [current_state.md](<../current_state.md>)：source_id=STATE_CONTINUATION_D3; line_start=8; line_end=24
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=36; line_end=62
+- [event_causality_sides.jsonl](<../work/replay_research/event_causality_sides.jsonl>)：jsonl_line=1; record_id=ESIDE_001
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 243–246
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_049。适用时期：独立敌方行动；获知分期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_049,UCL_20261003_001,UCL_20261003_004,WMPR_010 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。 本轮用户澄清已采用：白魔在边关失守与双潮出现时已脱困，早于帝都T0。
+
+<a id="WORLD_WRC_050"></a>
+### 纳萨力克异界迁入
+
+`WORLD_WRC_050` · confirmed · original_campaign
+
+纳萨力克异界迁入发生于YGGDRASIL停止运营、飞鼠等候系统注销之际。飞鼠连同据点来到异世界，原有NPC获得自我意识；飞鼠仍保有角色能力，后来使用“安兹·乌尔·恭”之名，其不死生物身体也使生理反应和情绪受到变化。迁入方式尚未被解释，与御临风首次入都之间的准确日期也不明确〔uncertain〕。
+大墓地旁线中，皮奇向埃弗纳斯讲述四十位创造者离去，并以自身不足解释他们的离开，这是她的认知和自责〔character_belief〕。迁入后的纳萨力克开始接触本地人、招募代理并调查外界；代理活动有其后续执行过程，不能据迁入本身断定安兹已经掌握帝国全部情况。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=50; record_id=WRC_050
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=58; line_end=59
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=138; line_end=141
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=30; record_id=WRC_030
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=136; line_end=142
+- [faction_operations_dossier.jsonl](<../work/replay_research/faction_operations_dossier.jsonl>)：jsonl_line=6; record_id=FOP_006
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=56; line_end=59
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=89; line_end=89
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=6; post_id=923247; floor=5
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=7; post_id=923262; floor=6
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=8; post_id=923275; floor=7
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=9; post_id=923284; floor=8
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=13; post_id=923404; floor=12
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=5; post_id=954706; floor=54
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=9; post_id=955110; floor=58
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=7; post_id=954760; floor=56
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_03; source_id=GREAT_TOMB; jsonl_line=12; post_id=1081976; floor=111
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=10; post_id=923287; floor=9
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=11; post_id=955517; floor=60
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=13; post_id=955598; floor=62
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=15; post_id=955870; floor=64
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=38; post_id=990696; floor=87
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_03; source_id=GREAT_TOMB; jsonl_line=2; post_id=1015970; floor=101
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_03; source_id=GREAT_TOMB; jsonl_line=3; post_id=1016053; floor=102
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=15; post_id=923436; floor=14
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=29; post_id=928408; floor=28
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=41; post_id=939231; floor=40
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=12; post_id=959984; floor=711
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=13; post_id=959986; floor=712
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=14; post_id=960048; floor=713
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=18; post_id=960111; floor=717
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=12; post_id=967530; floor=761
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=3; post_id=1072134; floor=152
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=5; post_id=1072771; floor=154
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=8; post_id=1072826; floor=157
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=9; post_id=1073337; floor=158
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=10; post_id=1073342; floor=159
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=11; post_id=1073364; floor=160
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=13; post_id=1073378; floor=162
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=15; post_id=1073384; floor=164
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=35; post_id=1077728; floor=184
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=1; post_id=1090502; floor=200
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=16; post_id=1073385; floor=165
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=17; post_id=1073563; floor=166
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=20; post_id=1073566; floor=169
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=21; post_id=1074136; floor=170
+- [integrated_timeline.jsonl](<../work/replay_research/integrated_timeline.jsonl>)：jsonl_line=6; record_id=TML_006
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_050。适用时期：停运后迁入；相对T0未定。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_050,WRC_030,FOP_006 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_052"></a>
+### 边关七日任务
+
+`WORLD_WRC_052` · confirmed · original_campaign
+
+边关七日任务是御临风、黄泉、姜子尤及另外三名现代人被主神带到异界后承担的首次任务。幻剑向他们说明处境，六人被迫以士兵身份参与帝国边关防务，任务要求守关七天，失败将被抹杀。众人从陌生人开始互相认识，在守备和军事任务中寻找成长机会。
+御临风在这一阶段拜逸冷为师、加入兄弟会、取得弃风剑，并与雪老共同执行任务；第一次军事任务中获贞子救命，第二次濒死时又与第八号当铺交易。这些经历构成了他后来入都前的人际与能力基础。现存前史没有提供完整的七日逐日战斗和任务结算明细；村庄阶段软重启后，主神任务机制已停止运行。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=52; record_id=WRC_052
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=19; line_end=29
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=45; line_end=56
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=104; line_end=123
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=8; record_id=UCL_20261003_007
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=186; line_end=186
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=187; line_end=187
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_052。适用时期：T0前投放守关。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_052,UCL_20261003_007 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_055"></a>
+### 贞子首次救命
+
+`WORLD_WRC_055` · confirmed · original_campaign
+
+贞子首次救命发生在御临风的边关七日前史中。御临风第一次执行军事任务时濒临死亡，被在魔兽山脉飘荡的女鬼贞子救下，由此建立了两人的救命关系。御临风与雪老共同执行军事任务的经历也属于这一时期，但现有资料没有恢复各次任务的完整分工与战斗经过。
+原线第一部后段，御临风恢复了有关贞子的记忆，重新认识到这段早于入都的关系。首次救援之后，贞子还在破关逃亡阶段以索命形式再次救他，并与最终封锁记忆的经过相连；后一次事件的动机与代价不能当作首次救援已经发生的内容。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=55; record_id=WRC_055
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=80; line_end=92
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=249; line_end=253
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=31; record_id=WRS_031
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=2; ERC_P1_0402; post_ids=846047,846054,846061,846217
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=17; post_id=846047; floor=1016
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=19; post_id=846054; floor=1018
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=22; post_id=846061; floor=1021
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=3; post_id=846217; floor=1052
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=4; ERC_P2_0204; post_ids=921465
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=15; post_id=921465; floor=414
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=8; ERC_P2_0208; post_ids=922821
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=34; post_id=922821; floor=433
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=22; ERC_P2_0422; post_ids=987507,987509,987519,987590,987703,987706,987709,987710,987712,987714,987715,989174
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=6; post_id=987507; floor=905
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=7; post_id=987509; floor=906
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=8; post_id=987519; floor=907
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=9; post_id=987590; floor=908
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=10; post_id=987703; floor=909
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=12; post_id=987706; floor=911
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=13; post_id=987709; floor=912
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=14; post_id=987710; floor=913
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=16; post_id=987712; floor=915
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=18; post_id=987714; floor=917
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=19; post_id=987715; floor=918
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=49; post_id=989174; floor=948
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=61; ERC_P2_0461; post_ids=1031470,1031478,1032053
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=42; post_id=1031470; floor=1191
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=43; post_id=1031478; floor=1192
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=44; post_id=1032053; floor=1193
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=24; ERC_P3_0224; post_ids=1179677,1182889,1206254
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=19; post_id=1179677; floor=218
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=20; post_id=1182889; floor=219
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+- [integrated_timeline.jsonl](<../work/replay_research/integrated_timeline.jsonl>)：jsonl_line=8; record_id=TML_008
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_055。适用时期：T0前救命旧史。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_055,WRS_031 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_056"></a>
+### 第八号当铺交易
+
+`WORLD_WRC_056` · confirmed · original_campaign
+
+第八号当铺交易发生在御临风边关时期的第二次军事任务中，他濒死时以自己的正面情感为筹码，向掌柜换取活下去的机会。关于当时直接想保住谁的性命，口述前史记为御临风自身活命；御临风后来向威廉陈述时，则称自己是为保住雪老，与名为韩诺的男子交换了感情。两份叙述的侧重点不同，完整交易现场尚未恢复〔uncertain〕。
+原线第一部入都后，帝召来威廉检查御临风。威廉从他手上的纹路认出交换契约并施术，使他的感情与记忆恢复。旧交易因此是入都以前的既定经历，恢复则是入都后的实际结果；这一次成功处理没有提供解除所有当铺契约的通用条件或代价。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=56; record_id=WRC_056
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=94; line_end=102
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=242; line_end=254
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=2; record_id=UCL_20261003_001
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=42; line_end=42
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=43; line_end=43
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=44; line_end=44
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=45; line_end=45
+- [campaign_event_dependencies.jsonl](<../work/replay_research/campaign_event_dependencies.jsonl>)：jsonl_line=3; record_id=DEP_003
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=14
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=15
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=16
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=17
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=18
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=29; post_id=846552; floor=1078
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=33; post_id=846643; floor=1082
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=35; post_id=846651; floor=1084
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=36; post_id=846653; floor=1085
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=38; post_id=846670; floor=1087
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=45; post_id=846708; floor=1094
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=40; post_id=846695; floor=1089
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=46; post_id=846710; floor=1095
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=41; post_id=846698; floor=1090
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=42; post_id=846701; floor=1091
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=50; post_id=846748; floor=1099
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：jsonl_line=48; post_id=847479; floor=1147
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=39; post_id=846688; floor=1088
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=43; post_id=846705; floor=1092
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=44; post_id=846706; floor=1093
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=47; post_id=846714; floor=1096
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=49; post_id=846744; floor=1098
+- [event_causality_capital.jsonl](<../work/replay_research/event_causality_capital.jsonl>)：jsonl_line=3; record_id=ECAP_003
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_056。适用时期：T0前固定经历；解约后期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_056,UCL_20261003_001,DEP_003 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_057"></a>
+### 边关破后失散
+
+`WORLD_WRC_057` · confirmed · original_campaign
+
+边关破后失散发生在凌迟攻陷关卡之后。原先被投放的现代人陆续清醒、失散，并有人遭到追杀；御临风离开失陷的边关进入逃亡，随后接上村庄阶段的经历。真达卡斯及三军统领已经在破关战中阵亡，这段败亡旧事后来才随御临风恢复记忆而再次显现。
+村庄阶段也是原团软重启的起点，主神与幻剑的运行机制由此移除，早先的投放、任务、成长和关系仍然成立。现有资料没有把失散原因解释为另一轮主神任务，也没有提供所有投放者破关后的完整路线。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=57; record_id=WRC_057
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=104; line_end=123
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=224; line_end=240
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=8; record_id=UCL_20261003_007
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=186; line_end=186
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=187; line_end=187
+- [integrated_timeline.jsonl](<../work/replay_research/integrated_timeline.jsonl>)：jsonl_line=9; record_id=TML_009
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_057。适用时期：T0前；机制变更另记。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_057,UCL_20261003_007 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_058"></a>
+### 御临风追杀与记忆封锁
+
+`WORLD_WRC_058` · confirmed · original_campaign
+
+御临风在边关失陷后的逃亡中遭黄祸龙狼追杀，贞子以索命形式再次救下了他，并与其记忆被封锁的经历相连。原线第一部后段恢复出的往事显示，贞子救人后已受重创，又以自身的一切换取御临风活命，要求韩诺抹去他的相关记忆并送走他。贞子灵魂最终的去向没有独立演出〔uncertain〕。
+首次入都时，御临风已经知道边关失守，也保有此前师承和部分旧人关系，但尚未完整记起破关败亡、追杀及贞子最后交易的经过。威廉后来恢复感情与记忆，才使这些失落经历重新进入他的认知。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=58; record_id=WRC_058
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=125; line_end=137
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=255; line_end=257
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=31; record_id=WRS_031
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=2; ERC_P1_0402; post_ids=846047,846054,846061,846217
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=17; post_id=846047; floor=1016
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=19; post_id=846054; floor=1018
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=22; post_id=846061; floor=1021
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=3; post_id=846217; floor=1052
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=4; ERC_P2_0204; post_ids=921465
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=15; post_id=921465; floor=414
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=8; ERC_P2_0208; post_ids=922821
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=34; post_id=922821; floor=433
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=22; ERC_P2_0422; post_ids=987507,987509,987519,987590,987703,987706,987709,987710,987712,987714,987715,989174
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=6; post_id=987507; floor=905
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=7; post_id=987509; floor=906
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=8; post_id=987519; floor=907
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=9; post_id=987590; floor=908
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=10; post_id=987703; floor=909
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=12; post_id=987706; floor=911
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=13; post_id=987709; floor=912
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=14; post_id=987710; floor=913
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=16; post_id=987712; floor=915
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=18; post_id=987714; floor=917
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=19; post_id=987715; floor=918
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=49; post_id=989174; floor=948
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=61; ERC_P2_0461; post_ids=1031470,1031478,1032053
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=42; post_id=1031470; floor=1191
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=43; post_id=1031478; floor=1192
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=44; post_id=1032053; floor=1193
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=24; ERC_P3_0224; post_ids=1179677,1182889,1206254
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=19; post_id=1179677; floor=218
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=20; post_id=1182889; floor=219
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+- [campaign_event_dependencies.jsonl](<../work/replay_research/campaign_event_dependencies.jsonl>)：jsonl_line=3; record_id=DEP_003
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=14
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=15
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=16
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=17
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=18
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=29; post_id=846552; floor=1078
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=33; post_id=846643; floor=1082
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=35; post_id=846651; floor=1084
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=36; post_id=846653; floor=1085
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=38; post_id=846670; floor=1087
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=45; post_id=846708; floor=1094
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=40; post_id=846695; floor=1089
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=46; post_id=846710; floor=1095
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=41; post_id=846698; floor=1090
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=42; post_id=846701; floor=1091
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=50; post_id=846748; floor=1099
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：jsonl_line=48; post_id=847479; floor=1147
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=39; post_id=846688; floor=1088
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=43; post_id=846705; floor=1092
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=44; post_id=846706; floor=1093
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=47; post_id=846714; floor=1096
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=49; post_id=846744; floor=1098
+- [integrated_timeline.jsonl](<../work/replay_research/integrated_timeline.jsonl>)：jsonl_line=9; record_id=TML_009
+- [event_causality_capital.jsonl](<../work/replay_research/event_causality_capital.jsonl>)：jsonl_line=3; record_id=ECAP_003
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_058。适用时期：T0前；记忆后来恢复。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_058,WRS_031,DEP_003 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_059"></a>
+### 雅儿商队与山寨庙事件
+
+`WORLD_WRC_059` · confirmed · original_campaign
+
+雅儿商队与山寨庙事件发生在御临风逃离边关之后、第一部现存正式记录之前。御临风在逃亡途中听到边关失守的消息，结识了遭山贼打劫的雅儿商队，随后卷入并瓦解山寨庙事件。这段经历把边关逃亡与后来的村庄调养、前往帝都报信连接起来，也留下了他与雅儿商队的既有关系。现存前史没有保存完整的敌人名单、作战经过和路线，幕后组织及额外战果仍无从确定。
+
+<details>
+<summary>来源</summary>
+
+- [world_candidates.jsonl](<../work/replay_research/world_candidates.jsonl>)：jsonl_line=59; record_id=WRC_059
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：source_id=PRE; line_start=139; line_end=147
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_059。适用时期：第一部正式记录前。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRC_059 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WRC_075"></a>
+### 死亡之翼重临与龙族秘境大战
+
+`WORLD_WRC_075` · confirmed · original_campaign
+
+死亡之翼重临与龙族秘境大战发生在原线第二部末至第三部。死亡之翼从地下现身时，地裂、雪崩与红月同时出现，原有地形和远军通信受到严重影响。秘境内部也陷入动乱；谢尔伦报告诺顿、南希叛变及白魔率军入境，并说明肯达曾以命传讯，这些具体内乱经过属于他的战况证言〔character_belief〕。
+卡珊德拉引见后，御临风向安兹求援，安兹亲自进入战场，把百余具死去黑龙转化后投入战斗，并救援伤龙。御临风借飞行项链诱使死亡之翼分神，谢尔伦负责牵制与保护；御临风随后进入龙躯伤口出剑，本轮龙躯崩解，战场上的黑龙也随之倒下，谢尔伦把他救出并公开宣布讨伐者。帝军与龙族取得阶段性胜利。
+这次胜利击溃的是死亡之翼本轮肉身，尚未解决全部复起疑问或结束所有战争。随后，安兹与御临风又发现白魔在根基洞穴控制两位龙王，进入取石与放人的交涉。原线记录止于交涉及取石动作尚有差异的阶段，完整毁境与撤离没有在原帖中演完。
+
+<details>
+<summary>来源</summary>
+
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=51; record_id=WRS_051
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=61; ERC_P2_0461; post_ids=1031470,1031478,1032053
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=42; post_id=1031470; floor=1191
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=43; post_id=1031478; floor=1192
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=44; post_id=1032053; floor=1193
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=16; ERC_P3_0016; post_ids=1043193,1043183,1043197
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=7; post_id=1043193; floor=56
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=6; post_id=1043183; floor=55
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=8; post_id=1043197; floor=57
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=14; ERC_P3_0214; post_ids=1073378,1073384,1077728,1090502
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=13; post_id=1073378; floor=162
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=15; post_id=1073384; floor=164
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=35; post_id=1077728; floor=184
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=1; post_id=1090502; floor=200
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=24; ERC_P3_0224; post_ids=1179677,1182889,1206254
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=19; post_id=1179677; floor=218
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=20; post_id=1182889; floor=219
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=25; ERC_P3_0225; post_ids=1186459,1206254,1247358
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=21; post_id=1186459; floor=220
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=25; post_id=1247358; floor=224
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=28; ERC_P3_0228; post_ids=1334089
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=30; post_id=1334089; floor=229
+- [campaign_event_dependencies.jsonl](<../work/replay_research/campaign_event_dependencies.jsonl>)：jsonl_line=13; record_id=DEP_013
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=20
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=21
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=22
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=23
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=24
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=2; post_id=1092592; floor=201
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=4; post_id=1094626; floor=203
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=5; post_id=1097734; floor=204
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=3; post_id=1093547; floor=202
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=7; post_id=1097891; floor=206
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=9; post_id=1107820; floor=208
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=11; post_id=1122379; floor=210
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=12; post_id=1122429; floor=211
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=13; post_id=1135701; floor=212
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=15; post_id=1148584; floor=214
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=17; post_id=1165704; floor=216
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=18; post_id=1166498; floor=217
+- [campaign_event_dependencies.jsonl](<../work/replay_research/campaign_event_dependencies.jsonl>)：jsonl_line=14; record_id=DEP_014
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=25
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=26
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=27
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=28
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=31
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=35
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=18
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=26; post_id=1333535; floor=225
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=27; post_id=1333705; floor=226
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=28; post_id=1333706; floor=227
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=29; post_id=1334073; floor=228
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=17; post_id=994593; floor=966
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=18; post_id=996028; floor=967
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=19; post_id=996035; floor=968
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=20; post_id=997651; floor=969
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=21; post_id=997687; floor=970
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=22; post_id=998481; floor=971
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=35; post_id=862279; floor=1384
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=48; post_id=987233; floor=897
+- [event_causality_main_late.jsonl](<../work/replay_research/event_causality_main_late.jsonl>)：jsonl_line=2; record_id=ELATE_002
+- [event_causality_main_late.jsonl](<../work/replay_research/event_causality_main_late.jsonl>)：jsonl_line=3; record_id=ELATE_003
+- [event_causality_main_late.jsonl](<../work/replay_research/event_causality_main_late.jsonl>)：jsonl_line=5; record_id=ELATE_005
+- [event_causality_main_late.jsonl](<../work/replay_research/event_causality_main_late.jsonl>)：jsonl_line=6; record_id=ELATE_006
+- [event_causality_main_late.jsonl](<../work/replay_research/event_causality_main_late.jsonl>)：jsonl_line=7; record_id=ELATE_007
+- [event_causality_main_late.jsonl](<../work/replay_research/event_causality_main_late.jsonl>)：jsonl_line=8; record_id=ELATE_008
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_075。适用时期：原线末期；毁境过渡另存。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRS_051,DEP_013,DEP_014 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。 毁境撤离的最小过渡另存于current_state.md；此处只载原线已演历史，不固定首次入都重玩的未来。
+
+<a id="WORLD_WRC_077"></a>
+### 帝都法师塔区域灾难
+
+`WORLD_WRC_077` · confirmed · original_campaign
+
+帝都法师塔区域灾难发生于原线第二部的Phantom追捕期间。不同分队在城中交战：A超额消耗生命施术波及民众，武赖随后发动的火柱也造成破坏。宗近处的调查报告称，找到的尸体超过2900具，计入已焚毁者后估约3000人死亡，其中法师110余名；治疗系法师的损失超过帝都魔法大学一年的毕业人数。
+报告观察到尸体以A为中心向外分布，因而不能简单描述成只针对法师塔的攻击。大量死亡既造成善后、辨认遗体与殡仪负担，也削弱了当地治疗资源。沃西斯后来把姜子尤相关行动、严重伤亡及魔兽联系并提，是军方的情报与责任判断〔uncertain〕；现有统计没有证明姜子尤独自造成所有死者。
+
+<details>
+<summary>来源</summary>
+
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=53; record_id=WRS_053
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=51; ERC_P2_0051; post_ids=915324,915456,915502,915755,915989,916086
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=23; post_id=915324; floor=322
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=31; post_id=915456; floor=330
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=32; post_id=915502; floor=331
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=35; post_id=915755; floor=334
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=38; post_id=915989; floor=337
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：jsonl_line=39; post_id=916086; floor=338
+- [reading_p2_009_016.jsonl](<../work/replay_research/reading_p2_009_016.jsonl>)：jsonl_line=3; ERC_P2_0203; post_ids=921264,921305,921329,921330,921465
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=5; post_id=921264; floor=404
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=6; post_id=921305; floor=405
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=13; post_id=921329; floor=412
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=14; post_id=921330; floor=413
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：jsonl_line=15; post_id=921465; floor=414
+- [campaign_event_dependencies.jsonl](<../work/replay_research/campaign_event_dependencies.jsonl>)：jsonl_line=6; record_id=DEP_006
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=32
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=34
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=35
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=36
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=38
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=39
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=40
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=41
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=43
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=44
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=13; post_id=908892; floor=212
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=30; post_id=914156; floor=279
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=18; post_id=909383; floor=217
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=20; post_id=909828; floor=219
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=21; post_id=909970; floor=220
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=22; post_id=909981; floor=221
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=23; post_id=910285; floor=222
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=24; post_id=911522; floor=223
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=25; post_id=911872; floor=224
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=26; post_id=912200; floor=225
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=27; post_id=912206; floor=226
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=28; post_id=912247; floor=227
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=29; post_id=912252; floor=228
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=30; post_id=912436; floor=229
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=32; post_id=912586; floor=231
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=34; post_id=913039; floor=233
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=36; post_id=913283; floor=235
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=38; post_id=913439; floor=237
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=31; post_id=912566; floor=230
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=35; post_id=913052; floor=234
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=36; post_id=914271; floor=285
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=37; post_id=914301; floor=286
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=38; post_id=914306; floor=287
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=40; post_id=914330; floor=289
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=42; post_id=914561; floor=291
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=44; post_id=914606; floor=293
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=45; post_id=914608; floor=294
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=46; post_id=914611; floor=295
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=48; post_id=914791; floor=297
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=49; post_id=914796; floor=298
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=50; post_id=914868; floor=299
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=40; post_id=913449; floor=239
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=41; post_id=913450; floor=240
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=42; post_id=913492; floor=241
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=43; post_id=913501; floor=242
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=45; post_id=913595; floor=244
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=46; post_id=913665; floor=245
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=47; post_id=913700; floor=246
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=48; post_id=913709; floor=247
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=49; post_id=913717; floor=248
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=5; post_id=913733; floor=254
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=7; post_id=913736; floor=256
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=8; post_id=913739; floor=257
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=50; post_id=913719; floor=249
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=1; post_id=913724; floor=250
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=2; post_id=913726; floor=251
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=3; post_id=913730; floor=252
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=4; post_id=913731; floor=253
+- [event_causality_capital.jsonl](<../work/replay_research/event_causality_capital.jsonl>)：jsonl_line=6; record_id=ECAP_006
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WRC_077。适用时期：原线中期；统计为报告。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WRS_053,DEP_006 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_WHITE_MAGE_HOSTAGES"></a>
+### 龙族根基洞穴交涉
+
+`WORLD_WHITE_MAGE_HOSTAGES` · confirmed · original_campaign
+
+龙族根基洞穴交涉发生在原线第三部死亡之翼本轮龙躯被击溃之后。两位龙王失联，御临风与安兹返回洞穴，发现三个白魔个体控制本多，并把昏迷的元素龙王束缚起来研究其假面。白魔以人质及秘境根基中的魔宝石为筹码交涉；安兹发出威胁后，白魔实际释放了两位龙王。
+白魔称自己所做的一切为了家人的幸福，愿与能帮助自己的人合作，并许诺此后低调行事；他还称肯达是多名合作者之一。这些是白魔的目的口供和未来承诺〔character_belief〕，没有等同于交涉双方已经建立长期互信。
+白魔取石的先后有不同记述〔uncertain〕。可以确认的是他挟持两王、就魔宝石进行交涉并实际放人；完整取走魔宝石、离开、秘境毁灭与全员撤离的经过尚不能确认。
+
+<details>
+<summary>来源</summary>
+
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=2; record_id=WMPR_002
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=20; post_id=997651; floor=969
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=22; post_id=998481; floor=971
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：jsonl_line=39; post_id=1068182; floor=138
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：jsonl_line=41; post_id=1068230; floor=140
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=27; post_id=1333705; floor=226
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=29; post_id=1334073; floor=228
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=21; post_id=1186459; floor=220
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=25; post_id=1247358; floor=224
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=10; record_id=WMPR_010
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=43; line_end=50
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=125; line_end=125
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：jsonl_line=11; post_id=846884; floor=1110
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=39; post_id=864444; floor=188
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：jsonl_line=4; post_id=987498; floor=903
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=30; post_id=1334089; floor=229
+- [current_state.md](<../current_state.md>)：source_id=STATE_CONTINUATION_D3; line_start=8; line_end=24
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=36; line_end=62
+- [campaign_event_dependencies.jsonl](<../work/replay_research/campaign_event_dependencies.jsonl>)：jsonl_line=14; record_id=DEP_014
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=25
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=26
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=27
+- [reading_p3_003_005.jsonl](<../work/replay_research/reading_p3_003_005.jsonl>)：jsonl_line=28
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=31
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=35
+- [reading_p2_017_025.jsonl](<../work/replay_research/reading_p2_017_025.jsonl>)：jsonl_line=18
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=26; post_id=1333535; floor=225
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=28; post_id=1333706; floor=227
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=17; post_id=994593; floor=966
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=18; post_id=996028; floor=967
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=19; post_id=996035; floor=968
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：jsonl_line=21; post_id=997687; floor=970
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=35; post_id=862279; floor=1384
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=48; post_id=987233; floor=897
+- [event_causality_main_late.jsonl](<../work/replay_research/event_causality_main_late.jsonl>)：jsonl_line=7; record_id=ELATE_007
+- [event_causality_main_late.jsonl](<../work/replay_research/event_causality_main_late.jsonl>)：jsonl_line=8; record_id=ELATE_008
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应WHITE_MAGE_HOSTAGES。适用时期：原线末场；毁境未实演。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：WMPR_002,WMPR_010,DEP_014 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。 原线取石文字差异完整保留；current_state.md中的最终取走、D1毁境撤离与D3续跑锚属于另存的最小过渡，不补写成本条Original Campaign已演全的事实。 字面考据：P3第224帖写拿出魔宝石，同时说彻底取出前秘境不会崩坏；第228帖结尾又写准备伸手取石。差异不作静默消解。
+
+<a id="WORLD_CAPITAL_PURSUIT"></a>
+### 帝都报信与达卡斯栽赃追捕
+
+`WORLD_CAPITAL_PURSUIT` · confirmed · original_campaign
+
+帝都报信与达卡斯栽赃追捕发生于原线第一部首次入都之后。御临风一行带来边关失陷的消息，却与冒名达卡斯此前报送的军情相冲突；走访九雪医馆时，他们又发现医馆关闭，并从邻人处听到逮捕消息。达卡斯随后以自己的报告为依据构陷队伍，入城时的守城队长也出现在设局现场。
+右近听到关卡失守的说法后，派快骑秘密查证。他告诉队伍，自己受到帝命协助追捕，但达卡斯并不能直接控制全部城卫〔character_belief〕；此后右近转而提供隐蔽保护，并与队伍合作调查。原线还发生了搜查协会、截获原信及工坊救雪老等后续行动，队伍为逃亡和救援付出了伤势与消耗。
+追捕过程中出现的怪眼队长、黑袍人及十二名追兵各有自己的出场证据；催眠排查没有逐一证明所有军官的忠诚、无辜或受控情况，不能把全城守卫当成已经确认的同一阴谋成员。
+
+<details>
+<summary>来源</summary>
+
+- [campaign_event_dependencies.jsonl](<../work/replay_research/campaign_event_dependencies.jsonl>)：jsonl_line=1; record_id=DEP_001
+- [reading_p1_001_004.jsonl](<../work/replay_research/reading_p1_001_004.jsonl>)：jsonl_line=28
+- [reading_p1_001_004.jsonl](<../work/replay_research/reading_p1_001_004.jsonl>)：jsonl_line=44
+- [reading_p1_005_007.jsonl](<../work/replay_research/reading_p1_005_007.jsonl>)：jsonl_line=1
+- [reading_p1_005_007.jsonl](<../work/replay_research/reading_p1_005_007.jsonl>)：jsonl_line=6
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=3
+- [reading_p1_001_004.jsonl](<../work/replay_research/reading_p1_001_004.jsonl>)：jsonl_line=38
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=35; post_id=816141; floor=34
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：jsonl_line=43; post_id=816246; floor=42
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：jsonl_line=29; post_id=816583; floor=78
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=1; post_id=816699; floor=100
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=3; post_id=816704; floor=102
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=6; post_id=817368; floor=155
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=11; post_id=817447; floor=160
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=22; post_id=817537; floor=171
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=24; post_id=817616; floor=173
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：jsonl_line=1; post_id=818236; floor=200
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：jsonl_line=2; post_id=818238; floor=201
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：jsonl_line=4; post_id=818243; floor=203
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：jsonl_line=5; post_id=818244; floor=204
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：jsonl_line=6; post_id=818253; floor=205
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：jsonl_line=7; post_id=818254; floor=206
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：jsonl_line=27; post_id=818459; floor=226
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=22; post_id=846061; floor=1021
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=24; post_id=846068; floor=1023
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：jsonl_line=25; post_id=846070; floor=1024
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=42; post_id=817008; floor=141
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=43; post_id=817022; floor=142
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=44; post_id=817026; floor=143
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=45; post_id=817134; floor=144
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=46; post_id=817157; floor=145
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=50; post_id=817167; floor=149
+- [faction_operations_dossier.jsonl](<../work/replay_research/faction_operations_dossier.jsonl>)：jsonl_line=4; record_id=FOP_004
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：source_id=P1_P002; jsonl_line=33; post_id=816651; floor=82
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：jsonl_line=20; post_id=818410; floor=219
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=35; post_id=817699; floor=184
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=37; post_id=820769; floor=286
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=25; post_id=823927; floor=324
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：jsonl_line=9; post_id=818345; floor=208
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=16; post_id=822923; floor=315
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=17; post_id=822961; floor=316
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=18; post_id=823045; floor=317
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=19; post_id=823132; floor=318
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=28; post_id=817627; floor=177
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=31; post_id=817654; floor=180
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：jsonl_line=25; post_id=818431; floor=224
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：jsonl_line=26; post_id=818456; floor=225
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=5; post_id=822181; floor=304
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=6; post_id=822686; floor=305
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：jsonl_line=50; post_id=821604; floor=299
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=1; post_id=821907; floor=300
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=2; post_id=821913; floor=301
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：jsonl_line=4; post_id=822094; floor=303
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=4; record_id=EMP_004
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=2; post_id=817173; floor=151
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=4; post_id=817210; floor=153
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=7; post_id=817395; floor=156
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=8; post_id=817429; floor=157
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=9; post_id=817432; floor=158
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=13; post_id=817453; floor=162
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=15; post_id=817473; floor=164
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=17; post_id=817479; floor=166
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=18; post_id=817481; floor=167
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=20; post_id=817492; floor=169
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=36; post_id=816817; floor=135
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=40; post_id=816879; floor=139
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=33; post_id=845797; floor=982
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=34; post_id=845814; floor=983
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=35; post_id=845826; floor=984
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=36; post_id=845834; floor=985
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=42; post_id=845973; floor=991
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=43; post_id=845975; floor=992
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：jsonl_line=5; post_id=864692; floor=104
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：jsonl_line=7; post_id=864704; floor=106
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=21; line_end=26
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：document_id=MUTOU_PAGE_01; source_id=MUTOU; jsonl_line=33; post_id=846685; floor=32
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：document_id=MUTOU_PAGE_01; source_id=MUTOU; jsonl_line=39; post_id=846736; floor=38
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：document_id=MUTOU_PAGE_02; source_id=MUTOU; jsonl_line=27; post_id=848743; floor=76
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=35; post_id=864341; floor=184
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=39; post_id=864444; floor=188
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=36; post_id=989666; floor=85
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=39; post_id=990702; floor=88
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=41; post_id=992345; floor=90
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=43; post_id=993920; floor=92
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：document_id=MUTOU_PAGE_02; source_id=MUTOU; jsonl_line=5; post_id=847638; floor=54
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=25; post_id=968335; floor=74
+- [event_causality_capital.jsonl](<../work/replay_research/event_causality_capital.jsonl>)：jsonl_line=1; record_id=ECAP_001
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应CAPITAL_PURSUIT。适用时期：原线入都后。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：DEP_001,FOP_004,EMP_004 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_CURSE_TRANSFER"></a>
+### 悠悠诅咒转移
+
+`WORLD_CURSE_TRANSFER` · confirmed · original_campaign
+
+悠悠诅咒转移发生在原线第一部末段，由御临风自愿承接悠悠所受的咒术。泽尔里奇解释，自己无法直接解除它，却能将其转给另一条自愿承担的生命，承受者优先为人类或其他类人种族。御临风选择承担，是当时的个人决定；没有自愿承受者和施术资源，仪式便不具备原线成功的条件。
+泽尔里奇绘制魔法阵，慕少艾带来大量优质宝石，威廉备好液瓶并唤出天眼孔雀。三人共同施术，让悠悠身上的黑色能量经阵式与宝石导流，再与瓶中释放的黑水一同进入御临风体内。临风经历剧痛、左眼流出黑血，身上出现与悠悠原咒文不同的图案，并获得可自行调用的魔力、魔力体质和A级基础魔力池，同时感染超则S级诅咒“耶各”。
+转移后的规则明确区分了正常使用与继续索求：已有魔力及自然恢复不会加剧诅咒，额外索要魔力会增强侵蚀，失去抵抗意愿会导致暴走。悠悠此前死亡触发的特殊能力是否仍保留、咒纹为何改变，当时都有人追问，但没有得到完整回答。
+
+<details>
+<summary>来源</summary>
+
+- [campaign_event_dependencies.jsonl](<../work/replay_research/campaign_event_dependencies.jsonl>)：jsonl_line=5; record_id=DEP_005
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=20
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=21
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=22
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=23
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=32
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=33
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=34
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=38
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：jsonl_line=14; post_id=858359; floor=1313
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：jsonl_line=17; post_id=858985; floor=1316
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：jsonl_line=20; post_id=859077; floor=1319
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：jsonl_line=21; post_id=859084; floor=1320
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：jsonl_line=22; post_id=859087; floor=1321
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：jsonl_line=23; post_id=859089; floor=1322
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=24; post_id=861484; floor=1373
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=23; post_id=861478; floor=1372
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=26; post_id=861774; floor=1375
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=27; post_id=861777; floor=1376
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=20; post_id=860741; floor=1369
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=30; post_id=862100; floor=1379
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=40; post_id=862302; floor=1389
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=41; post_id=862306; floor=1390
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：jsonl_line=43; post_id=862337; floor=1392
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=23; record_id=WRS_023
+- [reading_p1_021_024.jsonl](<../work/replay_research/reading_p1_021_024.jsonl>)：jsonl_line=19; ERC_P1_0419; post_ids=846744,846748,846753
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=49; post_id=846744; floor=1098
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=50; post_id=846748; floor=1099
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：jsonl_line=1; post_id=846753; floor=1100
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=20; ERC_P1_0520; post_ids=858359,858985
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=22; ERC_P1_0522; post_ids=859077
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=33; ERC_P1_0533; post_ids=860741,862100
+- [reading_p1_025_028.jsonl](<../work/replay_research/reading_p1_025_028.jsonl>)：jsonl_line=38; ERC_P1_0538; post_ids=862302,862306,862337
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=44; ERC_P2_0044; post_ids=913719,913724,913726,913730,913731
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=50; post_id=913719; floor=249
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=1; post_id=913724; floor=250
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=2; post_id=913726; floor=251
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=3; post_id=913730; floor=252
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=4; post_id=913731; floor=253
+- [power_rules_dossier.jsonl](<../work/replay_research/power_rules_dossier.jsonl>)：jsonl_line=6; record_id=PWRM_006
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：source_id=P1; jsonl_line=49; post_id=846744; floor=1098
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：source_id=P1; jsonl_line=50; post_id=846748; floor=1099
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：source_id=P1; jsonl_line=1; post_id=846753; floor=1100
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=38; post_id=913439; floor=237
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=40; post_id=913449; floor=239
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=41; post_id=913450; floor=240
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=42; post_id=913492; floor=241
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=43; post_id=913501; floor=242
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=45; post_id=913595; floor=244
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=46; post_id=913665; floor=245
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=47; post_id=913700; floor=246
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=48; post_id=913709; floor=247
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：jsonl_line=49; post_id=913717; floor=248
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=5; post_id=913733; floor=254
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=7; post_id=913736; floor=256
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：jsonl_line=8; post_id=913739; floor=257
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=21; post_id=1046075; floor=70
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：document_id=P3_P002; jsonl_line=22; post_id=1046114; floor=71
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=29; post_id=846552; floor=1078
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=33; post_id=846643; floor=1082
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=35; post_id=846651; floor=1084
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=36; post_id=846653; floor=1085
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=38; post_id=846670; floor=1087
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：jsonl_line=45; post_id=846708; floor=1094
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=47; post_id=1047660; floor=446
+- [event_causality_capital.jsonl](<../work/replay_research/event_causality_capital.jsonl>)：jsonl_line=5; record_id=ECAP_005
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应CURSE_TRANSFER。适用时期：原线中期；T0未发生。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：DEP_005,WRS_023,PWRM_006 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_VIEL_FAER_CONTRACT"></a>
+### 维尔Faer装具接入
+
+`WORLD_VIEL_FAER_CONTRACT` · confirmed · original_campaign
+
+维尔Faer装具接入发生于原线沐透旁线。维尔长时间昏睡，阿伊达为救儿子提供材料并在遗迹引开敌人，沐透最终夺回腰带与戒指，在维尔醒来前为他使用。装具随即解除石化、附着并发动变身，维尔追杀娜迦，又在意识冲突后解除变身、陷入昏迷。
+克拉肯事后告诉沐透，契约已经成立，但维尔还须学会供应和控制魔力，并以强大意志抗衡驱动器追杀娜迦的本能〔character_belief〕。这次接入取得了力量，却没有解决稳定控制的问题。
+返都后，阿伊达转述宫廷检查认为腰带长期离体可能危及儿子生命；沃西斯安排学习，慕少艾提供供魔药水，维尔还须定期检查。维尔自述曾经吃饱仍极度饥饿，后来能够感到腰带对魔力的渴求〔character_belief〕。他并未因此接受成为国家战士的完整使命；沐透请求解除帮助克拉肯外出的义务时，他只答应转达，尚无克拉肯同意或契约解除的结果。
+
+<details>
+<summary>来源</summary>
+
+- [event_causality_sides.jsonl](<../work/replay_research/event_causality_sides.jsonl>)：jsonl_line=3; record_id=ESIDE_003
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; jsonl_line=7; post_id=895386; floor=256; source_html_line=895
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：source_id=MUTOU; jsonl_line=47; post_id=918376; floor=296; source_html_line=4575
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：source_id=MUTOU; jsonl_line=10; post_id=929554; floor=309; source_html_line=1172
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：source_id=MUTOU; jsonl_line=11; post_id=931036; floor=310; source_html_line=1263
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：source_id=MUTOU; jsonl_line=19; post_id=939232; floor=318; source_html_line=1999
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：source_id=MUTOU; jsonl_line=25; post_id=948659; floor=324; source_html_line=2551
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：source_id=MUTOU; jsonl_line=45; post_id=950844; floor=344; source_html_line=4391
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=27; post_id=1042494; floor=426; source_html_line=2735
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=28; post_id=1042503; floor=427; source_html_line=2828
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=29; post_id=1042800; floor=428; source_html_line=2919
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=43; post_id=1046862; floor=442; source_html_line=4207
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=70; line_end=80
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：source_id=MUTOU; jsonl_line=27; post_id=948754; floor=326; source_html_line=2735
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：source_id=P3; jsonl_line=21; post_id=1046075; floor=70
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=42; line_end=58
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=12; record_id=SWU_PWR_002
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=11; post_id=931036; floor=310
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=15; post_id=931924; floor=314
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=19; post_id=939232; floor=318
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=45; post_id=893857; floor=244
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=47; post_id=893869; floor=246
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=49; post_id=893930; floor=248
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：document_id=MUTOU_PAGE_07; source_id=MUTOU; jsonl_line=25; post_id=948659; floor=324
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=27; post_id=1042494; floor=426
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=28; post_id=1042503; floor=427
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=29; post_id=1042800; floor=428
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应VIEL_FAER_CONTRACT。适用时期：沐透旁线。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：ESIDE_003,SWU_PWR_002 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_MUTOU_STONE_TRANSFER"></a>
+### 欧吉尔德交石与庄园变化
+
+`WORLD_MUTOU_STONE_TRANSFER` · confirmed · original_campaign
+
+欧吉尔德交石与庄园变化发生于原线沐透旁线。沐透依博恩提供的线索追上欧吉尔德，接过从他胸内取出的红宝石。欧吉尔德只说到了目的地会有人收取，声称不知道对方身份；沐透随后改变行程，向北前进。
+沐透离开后的后台场景显示，欧吉尔德失去了宝石之心的源供，解散商队回到庄园；庄园已经空了，他见到卡珊德拉手持爱人的头颅，跪倒后身体出现紫色裂痕。另有小粘液人向卡珊德拉致谢，获得交易报偿的许诺。后期名单确认欧吉尔德已有对应的Phantom，但该幕没有展示准确的现实化完成时刻。
+原定收石者、报偿如何兑现及全部幕后安排仍未明确。沐透没有亲眼见到庄园后台，交石经历本身也没有使他或帝国自动获知后面的转化和交易。
+
+<details>
+<summary>来源</summary>
+
+- [event_causality_sides.jsonl](<../work/replay_research/event_causality_sides.jsonl>)：jsonl_line=2; record_id=ESIDE_002
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：source_id=MUTOU; jsonl_line=1; post_id=865053; floor=200; source_html_line=343
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：source_id=MUTOU; jsonl_line=7; post_id=865860; floor=206; source_html_line=895
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：source_id=MUTOU; jsonl_line=9; post_id=865910; floor=208; source_html_line=1079
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：source_id=MUTOU; jsonl_line=11; post_id=866075; floor=210; source_html_line=1263
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：source_id=MUTOU; jsonl_line=13; post_id=866833; floor=212; source_html_line=1447
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：source_id=MUTOU; jsonl_line=15; post_id=867048; floor=214; source_html_line=1631
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=130; line_end=130
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=42; line_end=58
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=23; record_id=SWU_FAC_006
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=19; post_id=862968; floor=168
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=21; post_id=863008; floor=170
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=23; post_id=863110; floor=172
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=29; post_id=864080; floor=178
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=31; post_id=864186; floor=180
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=33; post_id=864233; floor=182
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=9; post_id=865910; floor=208
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=11; post_id=866075; floor=210
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=13; post_id=866833; floor=212
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=15; post_id=867048; floor=214
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_03; source_id=GREAT_TOMB; jsonl_line=3; post_id=1016053; floor=102
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=49; post_id=1000177; floor=98
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_03; source_id=GREAT_TOMB; jsonl_line=5; post_id=1022610; floor=104
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=146; line_end=146
+- [white_mage_phantom_dossier.jsonl](<../work/replay_research/white_mage_phantom_dossier.jsonl>)：jsonl_line=5; record_id=WMPR_005
+- https://www.kamen-rider-official.com/dictionaries/works_search?initial=%E3%81%AF&search_dictionaries_form%5Bicon%5D=6&search_dictionaries_form%5Bkamen_rider_id%5D=14&utf8=%E2%9C%93：东映官方Wizard用语辞典 ファントム; ファントム条目，读取行42–50
+- https://www.kamen-rider-official.com/zukan/phantoms/1414：东映官方图鉴 グレムリン; 说明正文，读取行44
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应MUTOU_STONE_TRANSFER。适用时期：旁线；后台不传播。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：ESIDE_002,SWU_FAC_006,WMPR_005 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_MUTOU_NAGA_RECOVERY"></a>
+### 娜迦遗迹夺回装具与水手拘押
+
+`WORLD_MUTOU_NAGA_RECOVERY` · confirmed · original_campaign
+
+娜迦遗迹夺回装具与水手拘押发生于原线沐透旁线，先后包含遗迹救援、取回维尔所需装具及返程后的战斗。阿伊达协助引敌，沐透夺走石化的腰带和戒指，使现场施法被打断，并救出部分镇民。关于娜迦意图复活古神的解释仍属角色判断〔character_belief〕；已救出的人、发现的士兵尸体以及被掳者数量，并没有构成全镇获救的证明。
+一名水手随后索取装具并发动攻击。沐透最终把他击昏，没有补杀；水手失去意识后，暗青之月替身消散，主持明确该替身依靠体力维持，是精神力量而非自走型。劳霖参与照护和协查，地方驻军接手，以锁链加睡眠魔法押送。
+守卫当时不知道厌魔石能否抑制替身〔uncertain〕。本次昏迷拘押成功，但送达帝都、最终审判、全部上报及部分交战者的终局均尚未演出。
+
+<details>
+<summary>来源</summary>
+
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=22; record_id=SWU_FAC_005
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=21; post_id=899698; floor=270
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=23; post_id=900259; floor=272
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=27; post_id=904858; floor=276
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=29; post_id=908013; floor=278
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=39; post_id=914896; floor=288
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=31; post_id=909398; floor=280
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=45; post_id=915859; floor=294
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：document_id=MUTOU_PAGE_06; source_id=MUTOU; jsonl_line=47; post_id=918376; floor=296
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：document_id=MUTOU_PAGE_08; source_id=MUTOU; jsonl_line=13; post_id=954394; floor=362
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=21; post_id=1042094; floor=420
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：document_id=MUTOU_PAGE_08; source_id=MUTOU; jsonl_line=17; post_id=955329; floor=366
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：document_id=MUTOU_PAGE_08; source_id=MUTOU; jsonl_line=21; post_id=955484; floor=370
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=4; post_id=991804; floor=403
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=9; post_id=1039814; floor=408
+- [event_causality_sides.jsonl](<../work/replay_research/event_causality_sides.jsonl>)：jsonl_line=4; record_id=ESIDE_004
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：source_id=MUTOU; jsonl_line=25; post_id=955864; floor=374; source_html_line=2551
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：source_id=MUTOU; jsonl_line=27; post_id=956163; floor=376; source_html_line=2735
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：source_id=MUTOU; jsonl_line=43; post_id=959973; floor=392; source_html_line=4207
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=9; post_id=1039814; floor=408; source_html_line=1080
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=10; post_id=1039862; floor=409; source_html_line=1173
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=11; post_id=1040025; floor=410; source_html_line=1264
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：source_id=MUTOU; jsonl_line=35; post_id=957028; floor=384; source_html_line=3471
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：source_id=MUTOU; jsonl_line=23; post_id=1042344; floor=422; source_html_line=2367
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=42; line_end=58
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=15; record_id=SWU_PWR_005
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=11; post_id=1040025; floor=410
+- [event_causality_sides.jsonl](<../work/replay_research/event_causality_sides.jsonl>)：jsonl_line=3; record_id=ESIDE_003
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应MUTOU_NAGA_RECOVERY。适用时期：旁线救援后果。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：SWU_FAC_005,ESIDE_004,SWU_PWR_005 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_GREAT_TOMB_COERCION"></a>
+### 美杜莎与养父样貌者的镇中胁迫
+
+`WORLD_GREAT_TOMB_COERCION` · confirmed · original_campaign
+
+美杜莎与养父样貌者的镇中胁迫发生于原线大墓地旁线，埃弗纳斯向小镇报告村袭之后。具有他养父样貌的男子以父子关系和人质施压，声称美杜莎已经释放其内在Phantom，自己仍保有人类记忆，可以按要求继续作为父亲相处〔character_belief〕。这些身份说辞附带服从条件，并没有证明养父原人格完整存续。
+美杜莎把商人妻子的尸体带入房间并锁门，首肯了要求埃弗纳斯引见救助者的计划。男子先答应释放商人，随后仍将其杀死；埃弗纳斯在胁迫下只透露迪米乌哥斯的名字，没有交出安兹的基地位置或完整归属。男子和美杜莎共同带他离开，这不是自愿加入白魔阵营。
+贝克拦下匕首、保护镇长撤离并要求求援；末段埃弗纳斯仍在肩头被压制的状态下外行。援军是否到达、他能否回报安兹，以及对方是否最终进入纳萨力克，都没有在该线末帖结算。
+
+<details>
+<summary>来源</summary>
+
+- [event_causality_sides.jsonl](<../work/replay_research/event_causality_sides.jsonl>)：jsonl_line=8; record_id=ESIDE_008
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=49; post_id=1000177; floor=98; source_html_line=4807
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=1; post_id=1008821; floor=100; source_html_line=342
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=3; post_id=1016053; floor=102; source_html_line=528
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=5; post_id=1022610; floor=104; source_html_line=714
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=2; post_id=1015970; floor=101; source_html_line=434
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=38; post_id=990696; floor=87; source_html_line=3783
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=12; post_id=1081976; floor=111; source_html_line=1364
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=9; post_id=1055352; floor=108; source_html_line=1086
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=11; post_id=1058086; floor=110; source_html_line=1272
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=5; post_id=954706; floor=54; source_html_line=715
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=9; post_id=955110; floor=58; source_html_line=1087
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=11; post_id=955517; floor=60; source_html_line=1273
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=13; post_id=955598; floor=62; source_html_line=1459
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=15; post_id=955870; floor=64; source_html_line=1645
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=7; post_id=954760; floor=56; source_html_line=901
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=42; line_end=58
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=23; record_id=SWU_FAC_006
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=19; post_id=862968; floor=168
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=21; post_id=863008; floor=170
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=23; post_id=863110; floor=172
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=29; post_id=864080; floor=178
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=31; post_id=864186; floor=180
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：document_id=MUTOU_PAGE_04; source_id=MUTOU; jsonl_line=33; post_id=864233; floor=182
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=9; post_id=865910; floor=208
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=11; post_id=866075; floor=210
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=13; post_id=866833; floor=212
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=15; post_id=867048; floor=214
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_03; source_id=GREAT_TOMB; jsonl_line=3; post_id=1016053; floor=102
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=49; post_id=1000177; floor=98
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_03; source_id=GREAT_TOMB; jsonl_line=5; post_id=1022610; floor=104
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=REF_SETTING; line_start=130; line_end=130
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=146; line_end=146
+- [user_clarifications.jsonl](<../work/replay_research/user_clarifications.jsonl>)：jsonl_line=6; record_id=UCL_20261003_005
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=147; line_end=147
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应GREAT_TOMB_COERCION。适用时期：大墓地旁线。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：ESIDE_008,SWU_FAC_006,UCL_20261003_005 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_GREAT_TOMB_AGENT"></a>
+### 纳萨力克本地代理招募
+
+`WORLD_GREAT_TOMB_AGENT` · confirmed · original_campaign
+
+纳萨力克本地代理招募发生于原线大墓地旁线，埃弗纳斯从村袭后苏醒、受到安兹接待之时。埃弗纳斯同意为安兹效力，却拒绝杀害无辜；安兹说先前要求属于试探，继续招揽。清除记忆后放走他只是谈话中的备选，没有实际执行。
+安兹要求埃弗纳斯隐藏纳萨力克归属，在本地做出成绩，并查探潜在势力对纳萨力克的态度。这与纳萨力克采用非敌意方式调查帝国的活动相连。出发前，他得到符合当地工艺的武装、马匹、物资及通信工具，以便进入地方生活。
+通信分为两种渠道：定期报告写在特制本子上，烧掉纸页即可把内容送往附近情报室；紧急情况另用卷轴直接联系安兹。埃弗纳斯后来向官署报告村袭时隐去了大墓地经历，但直到旁线终点尚未实际送出完整回报。安兹因此没有自动获知镇中胁迫等后续遭遇。
+
+<details>
+<summary>来源</summary>
+
+- [event_causality_sides.jsonl](<../work/replay_research/event_causality_sides.jsonl>)：jsonl_line=6; record_id=ESIDE_006
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=6; post_id=923247; floor=5; source_html_line=806
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=7; post_id=923262; floor=6; source_html_line=900
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=8; post_id=923275; floor=7; source_html_line=992
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=9; post_id=923284; floor=8; source_html_line=1086
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=3; post_id=922976; floor=2; source_html_line=528
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=13; post_id=923404; floor=12; source_html_line=1458
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=5; post_id=954706; floor=54; source_html_line=715
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=9; post_id=955110; floor=58; source_html_line=1087
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=11; post_id=955517; floor=60; source_html_line=1273
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=13; post_id=955598; floor=62; source_html_line=1459
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=15; post_id=955870; floor=64; source_html_line=1645
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=7; post_id=954760; floor=56; source_html_line=901
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=38; post_id=990696; floor=87; source_html_line=3783
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=2; post_id=1015970; floor=101; source_html_line=434
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=3; post_id=1016053; floor=102; source_html_line=528
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：source_id=GREAT_TOMB; jsonl_line=12; post_id=1081976; floor=111; source_html_line=1364
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=42; line_end=58
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=89; line_end=89
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=19; record_id=SWU_FAC_002
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=6; post_id=923247; floor=5
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=7; post_id=923262; floor=6
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=8; post_id=923275; floor=7
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=9; post_id=923284; floor=8
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=13; post_id=923404; floor=12
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=5; post_id=954706; floor=54
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=9; post_id=955110; floor=58
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=7; post_id=954760; floor=56
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_03; source_id=GREAT_TOMB; jsonl_line=12; post_id=1081976; floor=111
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=10; post_id=923287; floor=9
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=11; post_id=955517; floor=60
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=13; post_id=955598; floor=62
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=15; post_id=955870; floor=64
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_02; source_id=GREAT_TOMB; jsonl_line=38; post_id=990696; floor=87
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_03; source_id=GREAT_TOMB; jsonl_line=2; post_id=1015970; floor=101
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_03; source_id=GREAT_TOMB; jsonl_line=3; post_id=1016053; floor=102
+- [faction_operations_dossier.jsonl](<../work/replay_research/faction_operations_dossier.jsonl>)：jsonl_line=6; record_id=FOP_006
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=56; line_end=59
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=136; line_end=142
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=15; post_id=923436; floor=14
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=29; post_id=928408; floor=28
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：document_id=GREAT_TOMB_PAGE_01; source_id=GREAT_TOMB; jsonl_line=41; post_id=939231; floor=40
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=12; post_id=959984; floor=711
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=13; post_id=959986; floor=712
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=14; post_id=960048; floor=713
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=18; post_id=960111; floor=717
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=12; post_id=967530; floor=761
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=3; post_id=1072134; floor=152
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=5; post_id=1072771; floor=154
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=8; post_id=1072826; floor=157
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=9; post_id=1073337; floor=158
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=10; post_id=1073342; floor=159
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=11; post_id=1073364; floor=160
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=13; post_id=1073378; floor=162
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=15; post_id=1073384; floor=164
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=35; post_id=1077728; floor=184
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=1; post_id=1090502; floor=200
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=16; post_id=1073385; floor=165
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=17; post_id=1073563; floor=166
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=20; post_id=1073566; floor=169
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：jsonl_line=21; post_id=1074136; floor=170
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应GREAT_TOMB_AGENT。适用时期：迁入后；T0不预置。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：ESIDE_006,SWU_FAC_002,FOP_006 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+<a id="WORLD_CITY_REFORM"></a>
+### 帝都战时生产与新政改革
+
+`WORLD_CITY_REFORM` · confirmed · original_campaign
+
+帝都战时生产与新政改革发生于原线帝国动员、远征及其后的城市治理阶段。兵工厂扩大生产，国库资金带动市场，运补队伍和沿途支援游击士的补给活动增多，过冬物资也更容易购得；游击士协会因派出人员支援前线，一度显得冷清。
+到原线第三部开篇，飘零祭已过去近一个月，新年将至。新政废除了帝都最后的贫民区，为多数无职者安排工作，并扩建城市。这些是战争期实际发生的生产与治理变化，其成果形成于原线后期；现有记录没有证明所有人处境相同，或每一项改革的长期效果已经完成评估。
+
+<details>
+<summary>来源</summary>
+
+- [empire_dossier.jsonl](<../work/replay_research/empire_dossier.jsonl>)：jsonl_line=8; record_id=EMP_008
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：source_id=SET; line_start=184; line_end=187
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl>)：document_id=P3_P001; jsonl_line=1; post_id=1033317; floor=
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：document_id=MUTOU_PAGE_09; source_id=MUTOU; jsonl_line=23; post_id=1042344; floor=422
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=46; post_id=962304; floor=745
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：jsonl_line=47; post_id=962305; floor=746
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=4; post_id=963675; floor=753
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：jsonl_line=5; post_id=963731; floor=754
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=28; post_id=985223; floor=877
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=29; post_id=985898; floor=878
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=30; post_id=986052; floor=879
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=38; post_id=987018; floor=887
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=39; post_id=987026; floor=888
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：jsonl_line=40; post_id=987029; floor=889
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=19; post_id=1179677; floor=218
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=20; post_id=1182889; floor=219
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：jsonl_line=23; post_id=1206254; floor=222
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=42; post_id=1031470; floor=1191
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=43; post_id=1031478; floor=1192
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：jsonl_line=44; post_id=1032053; floor=1193
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=42; line_end=42
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：source_id=REF_USER_CLARIFICATIONS; line_start=43; line_end=43
+- [world_evidence_supplement.jsonl](<../work/replay_research/world_evidence_supplement.jsonl>)：jsonl_line=41; record_id=WRS_041
+- [reading_p1_001_004.jsonl](<../work/replay_research/reading_p1_001_004.jsonl>)：jsonl_line=42; ERC_P1_0042; post_ids=817173,817210,817395,817429,817432,817447,817699
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=2; post_id=817173; floor=151
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=4; post_id=817210; floor=153
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=7; post_id=817395; floor=156
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=8; post_id=817429; floor=157
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=9; post_id=817432; floor=158
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=11; post_id=817447; floor=160
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=35; post_id=817699; floor=184
+- [reading_p1_001_004.jsonl](<../work/replay_research/reading_p1_001_004.jsonl>)：jsonl_line=43; ERC_P1_0043; post_ids=817453,817473,817479,817481,817492
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=13; post_id=817453; floor=162
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=15; post_id=817473; floor=164
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=17; post_id=817479; floor=166
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=18; post_id=817481; floor=167
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：jsonl_line=20; post_id=817492; floor=169
+- [reading_p1_001_004.jsonl](<../work/replay_research/reading_p1_001_004.jsonl>)：jsonl_line=37; ERC_P1_0037; post_ids=816817,816879
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=36; post_id=816817; floor=135
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：jsonl_line=40; post_id=816879; floor=139
+- [reading_p1_017_020.jsonl](<../work/replay_research/reading_p1_017_020.jsonl>)：jsonl_line=34; ERC_P1_0334; post_ids=845797,845814,845826,845834,845973,845975
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=33; post_id=845797; floor=982
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=34; post_id=845814; floor=983
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=35; post_id=845826; floor=984
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=36; post_id=845834; floor=985
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=42; post_id=845973; floor=991
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：jsonl_line=43; post_id=845975; floor=992
+- [reading_p2_001_008.jsonl](<../work/replay_research/reading_p2_001_008.jsonl>)：jsonl_line=18; ERC_P2_0018; post_ids=864692,864704
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：jsonl_line=5; post_id=864692; floor=104
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：jsonl_line=7; post_id=864704; floor=106
+- [reading_p3_001_002.jsonl](<../work/replay_research/reading_p3_001_002.jsonl>)：jsonl_line=1; ERC_P3_0001; post_ids=1033317
+- [world_side_evidence.jsonl](<../work/replay_research/world_side_evidence.jsonl>)：jsonl_line=10; record_id=SWU_SOC_007
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：document_id=MUTOU_PAGE_08; source_id=MUTOU; jsonl_line=33; post_id=956361; floor=382
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：document_id=MUTOU_PAGE_08; source_id=MUTOU; jsonl_line=37; post_id=957923; floor=386
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=17; post_id=867911; floor=216
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：document_id=MUTOU_PAGE_05; source_id=MUTOU; jsonl_line=25; post_id=869062; floor=224
+- [event_causality_sides.jsonl](<../work/replay_research/event_causality_sides.jsonl>)：jsonl_line=9; record_id=ESIDE_009
+
+</details>
+
+备注：F1正文返修v2，逐条待审；对应CITY_REFORM。适用时期：原线后期。作者资料不自动给予角色知识，原线后期历史不预设重玩未来。研究依据：EMP_008,WRS_041,SWU_SOC_007 通用编写边界：原线事件不预定重玩结果，人物知情按实际见闻传播；未写明的数值、动机和因果不补造。
+
+## 人物（83条）
+
+<a id="CHARACTER_CRC_001"></a>
+### 御临风
+
+`CHARACTER_CRC_001` · confirmed · original_campaign
+
+御临风是由主神带到异世界的中国汉族少年，原与黄泉、姜子尤等现代人一同出现在帝国边关，成为魔兽边关步兵第九大队士兵。他在入帝都前已拜逸冷为师，获赠弃风剑，并经引荐加入兄弟会。雪老曾在他失去感情后救助他，幽灵伙伴贞子也数次救命，最后以自身参与韩诺的当铺交易救他。御临风曾交易正面情感，部分败亡与追杀经历又遭封忆；首次抵达帝都时，他知道边关失守，却尚未完整恢复相关经过。村庄阶段之后，主神与幻剑的任务机制停止运作，先前经历仍已发生。
+
+原线入都后，御临风与黄泉、布莱特共同经历边军调查，后来由帝升职并改隶右近。他结识悠悠，承接她身上的诅咒，随后与耶各缔结神约、成为代行者；又受命护送悠悠前往龙族秘境。在谢尔伦提出的保护安排中，他私下答应暂作婚约挡箭牌、让悠悠长大后自选，公开则以未婚夫身份出席龙族宴会。后来的仪式检测显露其极稀薄的异乡龙血；这一血脉属于本团“华夏人都是龙的传人”的共同背景。
+
+<details>
+<summary>来源</summary>
+
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 235–239
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：lines 21–29
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 186
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：lines 113–124
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 187
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 247–249
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：lines 62–77
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 7; msg818254 / #206
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 6; msg921305 / #405
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：JSONL line 42; msg846115 / #1041
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：JSONL line 40; msg859118 / #1339
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 248–254
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：lines 79–103
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：lines 126–140
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 254–259
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 47; msg913700 / #246
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 19; msg960117 / #718
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 39; msg960885 / #738
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：JSONL line 2; msg975143 / #851
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 21; msg1046075 / #70
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：JSONL line 3; msg975157 / #852
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 172
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 29; msg816583 / #78
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 30; msg816591 / #79
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 31; msg816647 / #80
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 32; msg816648 / #81
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 70
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 23; msg816554 / #72
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 25; msg816557 / #74
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 33; msg816651 / #82
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 393–396
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 16
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 40; msg846695 / #1089
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：JSONL line 24; msg816119 / #23
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：lines 19–27
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：lines 62–92
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 38; msg846670 / #1087
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：lines 94–102
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 36; msg846653 / #1085
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 38; msg816665 / #87
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：JSONL line 43; msg816246 / #42
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 42–45
+- [yulinfeng_period_dossier.md](<../work/replay_research/yulinfeng_period_dossier.md>)：lines 7–62
+- [jiang_yoyo_period_dossiers.md](<../work/replay_research/jiang_yoyo_period_dossiers.md>)：lines 37–39
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_001；人物作者档案与运行卡另存。原线后期身份、行为及关系仅按注明时期使用；不得提前成为T0现状或知情。御临风的新行动、对白、内心和成长由用户控制。 后期称号、编制、神约和公开婚约按原线时期使用；其新行动、对白、内心与成长仍由用户控制。前史保留，主神与幻剑停用属于村庄软重启的编务变更，不补世界内失踪原因。
+
+<a id="CHARACTER_CRC_002"></a>
+### 姜子尤
+
+`CHARACTER_CRC_002` · confirmed · original_campaign
+
+姜子尤是由主神带到异世界、最初在帝国边关服役的现代人之一，与御临风、黄泉有共同前史，以近身格斗为主要专长。他未与御临风、黄泉、布莱特一同首次抵达帝都，后来又与队伍会合、共同办案。法师馆追捕魔法师A时，他在平民可能受伤的情况下坚持擒敌；A透支生命扩大杀伤、武赖发动火柱则是另外两人的行动。
+
+姜子尤在法师馆事件后离队。随后沃西斯报告他失踪，并提出他可能与魔兽有关；这仍是沃西斯提供的情报和怀疑，去向未获独立确认。肯达、黄祸龙狼与姜子尤相貌相似的线索，也未证明他们是同一人。
+
+<details>
+<summary>来源</summary>
+
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 22–228
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：lines 21–23
+- [posts.jsonl](<../extracted-first/15/posts.jsonl>)：JSONL line 34; msg842664 / #733
+- [posts.jsonl](<../extracted-first/15/posts.jsonl>)：JSONL line 38; msg842714 / #737
+- [posts.jsonl](<../extracted-first/15/posts.jsonl>)：JSONL line 42; msg842719 / #741
+- [posts.jsonl](<../extracted-first/15/posts.jsonl>)：JSONL line 44; msg842737 / #743
+- [posts.jsonl](<../extracted-first/15/posts.jsonl>)：JSONL line 45; msg842801 / #744
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：JSONL line 21; msg843508 / #770
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：JSONL line 23; msg843565 / #772
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 15; msg846379 / #1064
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 19; msg846466 / #1068
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 4; msg904928 / #203
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 5; msg904970 / #204
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 7; msg907291 / #206
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 9; msg908573 / #208
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 11; msg908888 / #210
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 42; msg914561 / #291
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 44; msg914606 / #293
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 45; msg914608 / #294
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 46; msg914611 / #295
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 48; msg914791 / #297
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 49; msg914796 / #298
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 50; msg914868 / #299
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 5; msg921264 / #404
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 6; msg921305 / #405
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 13; msg921329 / #412
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 14; msg921330 / #413
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 15; msg921465 / #414
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 22; msg960244 / #721
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 24; msg960247 / #723
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 26; msg960252 / #725
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 38; msg960881 / #737
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 39; msg960885 / #738
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 40; msg960886 / #739
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 41; msg960891 / #740
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 42; msg960967 / #741
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 43; msg961078 / #742
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 44; msg961651 / #743
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 45; msg961999 / #744
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 22–24
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 86–95
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 69–72
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 36–68
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 104–114
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 160–167
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 136–158
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 186–195
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 26–68
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 97–102
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 168–184
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 210–227
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 199–208
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 2
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 15
+- [character_reference_completion.jsonl](<../work/replay_research/character_reference_completion.jsonl>)：JSONL line 1
+- [jiang_yoyo_period_dossiers.md](<../work/replay_research/jiang_yoyo_period_dossiers.md>)：lines 5–22
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 180–198
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 64–81
+- [jiang_yoyo_period_dossiers.md](<../work/replay_research/jiang_yoyo_period_dossiers.md>)：lines 5–21
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_002；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_003"></a>
+### 谏山黄泉
+
+`CHARACTER_CRC_003` · confirmed · original_campaign
+
+谏山黄泉是来自日本的除灵师。她在原乡被谏山家主谏山奈落收养并接受训练；土宫神乐是她穿越前的一名朋友。后来奈落被杀、家业遭夺，黄泉本人重伤，与饭纲纪之的婚约也被取消；这些是她来到飘零大陆前的原乡关系与变故。
+
+黄泉与御临风经历了帝国边关和村庄阶段，随后与御临风、布莱特一同首次抵达帝都。原线中，她持续参与队伍的救援和帝都刑案战斗；后来才获得并解封狮子王，与剑中的灵兽乱红莲建立契约。
+
+别名：黄泉
+
+<details>
+<summary>来源</summary>
+
+- [review_decisions.json](<../config/review_decisions.json>)：lines 13–18
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 638–662
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 703–864
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：JSONL line 45; msg816267 / #44
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：JSONL line 49; msg816286 / #48
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：JSONL line 50; msg816289 / #49
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：JSONL line 22; msg816736 / #121
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：JSONL line 32; msg816803 / #131
+- [posts.jsonl](<../extracted-first/3/posts.jsonl>)：JSONL line 37; msg816821 / #136
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：JSONL line 29; msg817630 / #178
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：JSONL line 31; msg817654 / #180
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：JSONL line 32; msg817655 / #181
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：JSONL line 35; msg817699 / #184
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：JSONL line 38; msg817738 / #187
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：JSONL line 41; msg817800 / #190
+- [posts.jsonl](<../extracted-first/15/posts.jsonl>)：JSONL line 47; msg842855 / #746
+- [posts.jsonl](<../extracted-first/15/posts.jsonl>)：JSONL line 49; msg842900 / #748
+- [posts.jsonl](<../extracted-first/15/posts.jsonl>)：JSONL line 50; msg843021 / #749
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：JSONL line 1; msg843040 / #750
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：JSONL line 2; msg843045 / #751
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：JSONL line 32; msg843781 / #781
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 19; msg846466 / #1068
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 26; msg846538 / #1075
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 30; msg912436 / #229
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 33; msg912987 / #232
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 34; msg913039 / #233
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 37; msg913317 / #236
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 38; msg913439 / #237
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 636–662
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 751–836
+- [companion_period_dossiers.md](<../work/replay_research/companion_period_dossiers.md>)：lines 21–40
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 3
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 13
+- [companion_period_dossiers.md](<../work/replay_research/companion_period_dossiers.md>)：lines 9–42
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 64–81
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 243–246
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_003；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 谏山家及神乐等原乡关系不据此成为飘零大陆现存势力。 本轮用户澄清已采用：神乐只是穿越前的普通朋友。
+
+<a id="CHARACTER_CRC_004"></a>
+### 沐透
+
+`CHARACTER_CRC_004` · confirmed · original_campaign
+
+沐透是来自中国的异乡人，曾任监狱塔守卫。他为重要之人介入白魔事件，帮助白色魔法使脱逃并得到驱动器，成为指环魔法使；此后又追查白魔及逃犯，并不因此效忠白魔。影魔寄居他的戒指，双方在追逃、求生和取得力量的过程中合作，也各有诉求。
+
+在原线旁线中，沐透与阿伊达合作救治其子维尔，接触帝国研究机构，并与雷光麾下专门处理白魔的小队建立合作。他最初对招募有异议，后来已获徽章并以队员身份行动。到这段旁线末尾，他尚未与御临风会面。
+
+<details>
+<summary>来源</summary>
+
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 865–927
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 979–1098
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 125–130
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 39; msg864444 / #188
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 40; msg864457 / #189
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 869–927
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：JSONL line 2; msg845717 / #1
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：JSONL line 24; msg848570 / #73
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：JSONL line 24; msg900327 / #273
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：JSONL line 10; msg929554 / #309
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：JSONL line 42; msg959382 / #391
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 10; msg1039862 / #409
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 48; msg1047768 / #447
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 19; msg862968 / #168
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 33; msg864233 / #182
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 47; msg864765 / #196
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 49; msg864800 / #198
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 50; msg864917 / #199
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 9; msg865910 / #208
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 11; msg866075 / #210
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 38; msg880013 / #237
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：JSONL line 6; msg895365 / #255
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 27; msg1042494 / #426
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：JSONL line 23; msg1160997 / #472
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 88
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 41; msg864574 / #190
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：JSONL line 37; msg957923 / #386
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 36; msg1044064 / #435
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：JSONL line 39; msg850005 / #88
+- [posts.jsonl](<../extracted-mutou/page-03/posts.jsonl>)：JSONL line 48; msg860744 / #147
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 31; msg864186 / #180
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 36; msg864364 / #185
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 16; msg867120 / #215
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 17; msg867911 / #216
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：JSONL line 25; msg955864 / #374
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 928–1098
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 15; msg867048 / #214
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：JSONL line 13; msg1056638 / #462
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：JSONL line 17; msg1083375 / #466
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：JSONL line 20; msg1122424 / #469
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 865–1099
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 4
+- [character_side_evidence.jsonl](<../work/replay_research/character_side_evidence.jsonl>)：JSONL line 1
+- [mutou_character_dossiers.md](<../work/replay_research/mutou_character_dossiers.md>)：lines 1–30
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 82–107
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 108–139
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_004；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 沐透、欧基、欧吉尔德是三个不同人物。
+
+<a id="CHARACTER_CRC_005"></a>
+### 卡西乌斯·布莱特
+
+`CHARACTER_CRC_005` · confirmed · original_campaign
+
+卡西乌斯·布莱特是失明的猎人、赏金猎人和游击士。布莱特自述曾有平静家庭，灭村后追查凶手，误追精灵并在偷袭龙裔后失明，后来在荣耀城孤儿院重建生活。关照孤儿院是其持续牵挂，原线中多次通过照料、捐款和嘱托落实。
+
+布莱特与御临风、黄泉首次抵达帝都时同行，当时为C级游击士，峡谷战后才获升B级。
+
+别名：布莱特、雪漫之袭
+
+<details>
+<summary>来源</summary>
+
+- [review_decisions.json](<../config/review_decisions.json>)：lines 5–10
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1129–1135
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1100–1136
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1195–1294
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：JSONL line 39; msg817751 / #188
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：JSONL line 41; msg817800 / #190
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：JSONL line 42; msg817810 / #191
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：JSONL line 44; msg817946 / #193
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：JSONL line 47; msg818026 / #196
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：JSONL line 49; msg818197 / #198
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 38; msg824661 / #337
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 39; msg824689 / #338
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 40; msg824716 / #339
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 42; msg824837 / #341
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 43; msg825205 / #342
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 47; msg845983 / #996
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 49; msg845988 / #998
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 50; msg845994 / #999
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 4; msg904928 / #203
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 5; msg904970 / #204
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 7; msg907291 / #206
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 9; msg908573 / #208
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 11; msg908888 / #210
+- [posts.jsonl](<../extracted-first/15/posts.jsonl>)：JSONL line 39; msg842715 / #738
+- [posts.jsonl](<../extracted-first/15/posts.jsonl>)：JSONL line 40; msg842717 / #739
+- [posts.jsonl](<../extracted-first/15/posts.jsonl>)：JSONL line 41; msg842718 / #740
+- [posts.jsonl](<../extracted-first/15/posts.jsonl>)：JSONL line 43; msg842721 / #742
+- [posts.jsonl](<../extracted-first/15/posts.jsonl>)：JSONL line 48; msg842871 / #747
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：JSONL line 23; msg843565 / #772
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl>)：JSONL line 41; msg1042360 / #40
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl>)：JSONL line 43; msg1042446 / #42
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl>)：JSONL line 45; msg1042470 / #44
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 1; msg1042498 / #50
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 3; msg1042798 / #52
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 2; msg1042499 / #51
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 49; msg1057851 / #98
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 4; msg1042846 / #53
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 8; msg1043197 / #57
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 10; msg1043395 / #59
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 50; msg1057980 / #99
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.jsonl>)：JSONL line 7; msg923476 / #456
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.jsonl>)：JSONL line 8; msg923569 / #457
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.jsonl>)：JSONL line 9; msg923573 / #458
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.jsonl>)：JSONL line 10; msg923577 / #459
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.jsonl>)：JSONL line 11; msg923580 / #460
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.jsonl>)：JSONL line 12; msg923607 / #461
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.jsonl>)：JSONL line 13; msg923660 / #462
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.jsonl>)：JSONL line 14; msg923674 / #463
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.jsonl>)：JSONL line 15; msg923949 / #464
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.jsonl>)：JSONL line 16; msg923994 / #465
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1100–1135
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1211–1280
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 31; msg816647
+- [companion_period_dossiers.md](<../work/replay_research/companion_period_dossiers.md>)：lines 65–79
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 5
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 14
+- [companion_period_dossiers.md](<../work/replay_research/companion_period_dossiers.md>)：lines 44–79
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 36–63
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 64–81
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 201–211
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 243–246
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_005；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 本轮用户澄清已采用：具体终局仅留作者历史，不在人物简传或默认运行内容中列出。
+
+<a id="CHARACTER_CRC_006"></a>
+### 帝
+
+`CHARACTER_CRC_006` · confirmed · original_campaign
+
+帝是长期统治飘零大陆人类帝国的君主，授权常务机构处理日常政务，重大事项交朝堂议处，另掌握秘密组织兄弟会。他公开呈现为白发苍老、背脊笔直的统治者；真名与年龄未公开，永生与绝世武艺属于传说。帝是哈克的兄长，亲缘早已存在，哈克却到原线后来私谈时才获知；帝曾问他是否愿意继位，尚无继位完成的事实。
+
+原线朝见中，帝承认尘雪旧任务造成的家庭损失，批准其退役、保留职位，并升迁三名边军、改隶右近。后来他试图通过保护悠悠、解决龙族灭亡预言来取信龙族，命御临风秘密护送悠悠，又安排大军后发，希望将龙族纳入帝国统合体系。这是当时的政治计划，不能据此认定统合已完成。
+
+<details>
+<summary>来源</summary>
+
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 23–31
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 70–79
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：JSONL line 19; msg846054 / #1018
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：JSONL line 38; msg846107 / #1037
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：JSONL line 50; msg846202 / #1049
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 1; msg846204 / #1050
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 2; msg846209 / #1051
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 3; msg846217 / #1052
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 49; msg846744 / #1098
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 50; msg846748 / #1099
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：JSONL line 1; msg846753 / #1100
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：JSONL line 11; msg846884 / #1110
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：JSONL line 28; msg859104 / #1327
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：JSONL line 29; msg859105 / #1328
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：JSONL line 29; msg843621 / #778
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 27; msg914145 / #276
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 28; msg914149 / #277
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 29; msg914153 / #278
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 31; msg914157 / #280
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 32; msg914171 / #281
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 33; msg914172 / #282
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 34; msg914181 / #283
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 37; msg914301 / #286
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 43; msg914582 / #292
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 44; msg914606 / #293
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 70–75
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 44
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 94–96
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 26
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 28–31
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 6
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 6
+- [empire_character_dossiers.jsonl](<../work/replay_research/empire_character_dossiers.jsonl>)：JSONL line 1
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 87–98
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 36–63
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 108–139
+- [empire_character_dossiers.md](<../work/replay_research/empire_character_dossiers.md>)：lines 7–13
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_006；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_007"></a>
+### 雪老
+
+`CHARACTER_CRC_007` · confirmed · original_campaign
+
+雪老本名尘雪，长期为帝国与兄弟会执行任务，与御临风在边关已有旧交，曾在御临风失去感情后救助他。露露缇耶是他的孙女，曾寄居九雪医馆。帝后来向御临风讲述，尘雪追查内奸时家人遭掳，他擅自赴会，帝赶到时见其儿子、儿媳的致命伤来自尘雪的剑；尘雪则报告家人遭人控制。原线更晚的谈话又披露儿子求死、尘雪亲手处理的经过，这些证言并未还原旧案所有细节。
+
+据帝讲述，尘雪在旧战后经脉尽毁，经他救治才恢复常人状态，随后多年苦练。原线帝都阶段，他多次负伤、获救，也接受退到后方陪伴孙女的安排；帝准他退役、赐宅与勋章，同时保留职位。布莱特后来赠予生命珍珠，他接受并记下人情。
+
+<details>
+<summary>来源</summary>
+
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 81–86
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 247–249
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：lines 80–90
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：JSONL line 19; msg846054 / #1018
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：JSONL line 38; msg846107 / #1037
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：JSONL line 50; msg846202 / #1049
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 1; msg846204 / #1050
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 2; msg846209 / #1051
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 3; msg846217 / #1052
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：JSONL line 18; msg846984 / #1117
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：JSONL line 24; msg847032 / #1123
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：JSONL line 25; msg847040 / #1124
+- [posts.jsonl](<../extracted-first/17/posts.jsonl>)：JSONL line 21; msg844094 / #820
+- [posts.jsonl](<../extracted-first/17/posts.jsonl>)：JSONL line 27; msg844160 / #826
+- [posts.jsonl](<../extracted-first/18/posts.jsonl>)：JSONL line 13; msg844690 / #862
+- [posts.jsonl](<../extracted-first/18/posts.jsonl>)：JSONL line 15; msg844705 / #864
+- [posts.jsonl](<../extracted-first/18/posts.jsonl>)：JSONL line 33; msg844907 / #882
+- [posts.jsonl](<../extracted-first/18/posts.jsonl>)：JSONL line 34; msg844909 / #883
+- [posts.jsonl](<../extracted-first/18/posts.jsonl>)：JSONL line 35; msg844919 / #884
+- [posts.jsonl](<../extracted-first/18/posts.jsonl>)：JSONL line 36; msg844922 / #885
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：JSONL line 27; msg845268 / #926
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 10; msg845670 / #959
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 11; msg845699 / #960
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 12; msg845704 / #961
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 29; msg845762 / #978
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 30; msg845765 / #979
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 32; msg845782 / #981
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：JSONL line 1; msg849061 / #1200
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：JSONL line 2; msg849062 / #1201
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：JSONL line 4; msg849066 / #1203
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 50; msg914868 / #299
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 1; msg914889 / #300
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 2; msg914891 / #301
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 3; msg914895 / #302
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 4; msg914897 / #303
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 5; msg914899 / #304
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 6; msg914900 / #305
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 7; msg914902 / #306
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 8; msg914904 / #307
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 9; msg914905 / #308
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 10; msg914906 / #309
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 11; msg914907 / #310
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 12; msg914908 / #311
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 14; msg914925 / #313
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 15; msg915001 / #314
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 17; msg915072 / #316
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 18; msg915076 / #317
+- [posts.jsonl](<../extracted-first/26/posts.jsonl>)：JSONL line 14; msg852568 / #1263
+- [posts.jsonl](<../extracted-first/26/posts.jsonl>)：JSONL line 19; msg852740 / #1268
+- [posts.jsonl](<../extracted-first/26/posts.jsonl>)：JSONL line 20; msg852881 / #1269
+- [posts.jsonl](<../extracted-first/26/posts.jsonl>)：JSONL line 22; msg853008 / #1271
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：JSONL line 30; msg843623 / #779
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：JSONL line 31; msg843673 / #780
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：JSONL line 33; msg843806 / #782
+- [posts.jsonl](<../extracted-first/16/posts.jsonl>)：JSONL line 34; msg843830 / #783
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 7
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 3
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 45–58
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 45–57
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_007；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_008"></a>
+### 哈克
+
+`CHARACTER_CRC_008` · confirmed · original_campaign
+
+哈克是失去旧日记忆的旅人，被久远在雪地救起、照料并取名。他以智谋协助右近应对魔兽，随后与久远受邀进入右近旗下；欧基也是他的同伴。他与帝原本就是兄弟，但自己直到原线峡谷战后的私谈才得知亲缘。帝向他谈及继承时，哈克迟疑并否认自己足以治国，未有正式继位的结果。
+
+原线在帝都，哈克曾代右近听取民愿，处理通渠、修桥和民间争执等事务；刑案中则辅助欧基、诺斯莉调查，参与搜索与撤队判断。他的调查意见是基于当时线索的推断，也曾因放走敌人而承认责任。
+
+<details>
+<summary>来源</summary>
+
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 90–97
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：JSONL line 11; msg846884 / #1110
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：JSONL line 5; msg864692 / #104
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：JSONL line 7; msg864704 / #106
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 92–93
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 103–107
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 93–97
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 44
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：JSONL line 45; msg868729 / #144
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：JSONL line 46; msg868733 / #145
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：JSONL line 47; msg868741 / #146
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：JSONL line 49; msg868749 / #148
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：JSONL line 50; msg868766 / #149
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 1; msg868902 / #150
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 6; msg918970 / #355
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 7; msg919053 / #356
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 8; msg919057 / #357
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 9; msg919205 / #358
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 10; msg919273 / #359
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 11; msg919377 / #360
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 12; msg919421 / #361
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 13; msg920356 / #362
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 14; msg920421 / #363
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 17; msg920445 / #366
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 18; msg920490 / #367
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 19; msg920718 / #368
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 20; msg920732 / #369
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 21; msg920742 / #370
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 22; msg920788 / #371
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 23; msg920791 / #372
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 24; msg920827 / #373
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 25; msg920828 / #374
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 26; msg920833 / #375
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 8
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 17
+- [empire_character_dossiers.jsonl](<../work/replay_research/empire_character_dossiers.jsonl>)：JSONL line 2
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 36–63
+- [empire_character_dossiers.md](<../work/replay_research/empire_character_dossiers.md>)：lines 17–23
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_008；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_009"></a>
+### 久远
+
+`CHARACTER_CRC_009` · confirmed · original_campaign
+
+久远是离乡旅行的年轻药师，通晓药物与道具制作。她在雪地救起失忆的哈克，为他取名，发现他不适合体力工作而长于脑力，因担心他无法独自生活而以监护者身份同行。两人帮助右近应对巨大魔物后进入其旗下。
+
+原线帝都阶段，久远与九雪医馆主人相投，后来迁居医馆，并在诊疗、药物制作和照顾同行者方面提供帮助。她也制作过闪光弹、强化暴风弹等实用物，并参与学城调查。
+
+<details>
+<summary>来源</summary>
+
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 101–108
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 101–107
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 106–108
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 22; msg874508 / #171
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 23; msg874647 / #172
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 25; msg878056 / #174
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 46; msg899931 / #195
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 48; msg900199 / #197
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 9
+- [empire_character_dossiers.jsonl](<../work/replay_research/empire_character_dossiers.jsonl>)：JSONL line 4
+- [empire_character_dossiers.md](<../work/replay_research/empire_character_dossiers.md>)：lines 37–43
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_009；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 本条不采用未获本团确认的原型王族、神裔及完整家谱。
+
+<a id="CHARACTER_CRC_010"></a>
+### 悠悠
+
+`CHARACTER_CRC_010` · confirmed · original_campaign
+
+悠悠本名芬尔德·特兰希尔，人物资料记为11岁，是旧空间龙秘境惨剧中唯一幸存的空间龙。毁掉旧秘境的是追击凌迟的人类部队，凌迟并非灭族凶手；她的父母一家曾救助凌迟，后来凌迟在坟前向她道歉并请求借用她的生命，悠悠答应了。她认为自己的责任是完成凌迟的托付，到达帝都后等待身上的诅咒爆发；她曾向御临风表示这样能让大家幸福。等待是她理解的托付内容，幸福效果则是她的信念，并非咒文真实效果的确认。威廉在拘押后的鉴识中确认她为四分之一精灵、四分之三龙族的空间龙变种，并判断咒文以寿命换取庞大魔力，但未完全读透术式。
+
+原线中，悠悠与御临风相识并成为朋友，探监时曾因御临风的激烈施压受到伤害；后来御临风承接诅咒，受命护送她回龙族秘境。谢尔伦是她称作“爷爷”的保护者，奥希拉被她称作“叔叔”，两种称呼尚未给出明确血缘。谢尔伦为保护她提出帝国婚约，御临风答应暂作挡箭牌、尊重她长大后的选择，宴会上公开称自己是未婚夫；悠悠当时尚未完整说出自己的婚约意见。
+
+在原线护送抵达龙族秘境后的仪式上，本多宣布悠悠继任空间龙族长、继承先祖之字，自此姓名为芬尔德·琳·特兰希尔。后来她获得泰蕾斯最后的力量，并在秘境危机中承认自己是最后的封印、需要活下去。她能向御临风展示条件不同的未来图景，但这不是已经发生的结果，也不是对一切危险细节的全知。
+
+别名：芬尔德·特兰希尔、芬尔德·琳·特兰希尔
+
+<details>
+<summary>来源</summary>
+
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 538–541
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 119
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 112–119
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1587–1606
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1655–1735
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 534–541
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：JSONL line 48; msg845610 / #947
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：JSONL line 49; msg845612 / #948
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 1; msg845627 / #950
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 2; msg845639 / #951
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 4; msg845648 / #953
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 5; msg845649 / #954
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 6; msg845652 / #955
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 7; msg845659 / #956
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 8; msg845660 / #957
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 49; msg846744 / #1098
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 50; msg846748 / #1099
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：JSONL line 1; msg846753 / #1100
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 16; msg845724 / #965
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 17; msg845726 / #966
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 18; msg845727 / #967
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 19; msg845728 / #968
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 20; msg845729 / #969
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 21; msg845732 / #970
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 22; msg845735 / #971
+- [posts.jsonl](<../extracted-first/24/posts.jsonl>)：JSONL line 28; msg847998 / #1177
+- [posts.jsonl](<../extracted-first/24/posts.jsonl>)：JSONL line 29; msg848012 / #1178
+- [posts.jsonl](<../extracted-first/24/posts.jsonl>)：JSONL line 30; msg848016 / #1179
+- [posts.jsonl](<../extracted-first/24/posts.jsonl>)：JSONL line 36; msg848663 / #1185
+- [posts.jsonl](<../extracted-first/24/posts.jsonl>)：JSONL line 37; msg848689 / #1186
+- [posts.jsonl](<../extracted-first/24/posts.jsonl>)：JSONL line 38; msg848738 / #1187
+- [posts.jsonl](<../extracted-first/24/posts.jsonl>)：JSONL line 39; msg848740 / #1188
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 50; msg914868 / #299
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 1; msg914889 / #300
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 2; msg914891 / #301
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 3; msg914895 / #302
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 4; msg914897 / #303
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 5; msg914899 / #304
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 6; msg914900 / #305
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 7; msg914902 / #306
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 8; msg914904 / #307
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 9; msg914905 / #308
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 10; msg914906 / #309
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 11; msg914907 / #310
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 12; msg914908 / #311
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 14; msg914925 / #313
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 15; msg915001 / #314
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 17; msg915072 / #316
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 18; msg915076 / #317
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 20; msg1044560 / #69
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 26; msg1046884 / #75
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 27; msg1047252 / #76
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 43; msg1052966 / #92
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 46; msg1056048 / #95
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 47; msg1057021 / #96
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 48; msg1057602 / #97
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 23; msg1046125 / #72
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 24; msg1046129 / #73
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 25; msg1046861 / #74
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 39; msg1051711 / #88
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 37; msg1051563 / #86
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 41; msg1052872 / #90
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 39; msg1078852 / #188
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 40; msg1078855 / #189
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 22; msg960244 / #721
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 23; msg960245 / #722
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 24; msg960247 / #723
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 27; msg960254 / #726
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 28; msg960439 / #727
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 30; msg960504 / #729
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 31; msg960512 / #730
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 33; msg960572 / #732
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 37; msg960594 / #736
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 39; msg960885 / #738
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 6; msg964513 / #755
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 8; msg964526 / #757
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 10; msg966347 / #759
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 46; msg962304 / #745
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 47; msg962305 / #746
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 4; msg963675 / #753
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 5; msg963731 / #754
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1655–1670
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 115
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1601
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 114
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1599–1606
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1655–1693
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1723–1727
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1643–1651
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1695–1699
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1703–1735
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 10
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 1
+- [character_reference_completion.jsonl](<../work/replay_research/character_reference_completion.jsonl>)：JSONL line 2
+- [jiang_yoyo_period_dossiers.md](<../work/replay_research/jiang_yoyo_period_dossiers.md>)：lines 23–40
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 11–28
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 108–139
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：line 226; UCL_20261003_009
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 50; msg974730 / #849
+- [jiang_yoyo_period_dossiers.md](<../work/replay_research/jiang_yoyo_period_dossiers.md>)：lines 23–39
+- [relationship_matrix.md](<../work/replay_research/relationship_matrix.md>)：lines 566–584
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 223–234
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 243–246
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_010；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 最新用户确认旧空间龙秘境毁于追击凌迟的人类部队，凌迟非凶手；空间龙唯一幸存者为悠悠。“琳”与族长身份仅从后期继承起生效。婚约公开身份不替代双方感情与婚姻意愿。 本轮用户澄清已采用：责任为赴帝都等待诅咒爆发；保留character_belief归属。
+
+<a id="CHARACTER_CRC_011"></a>
+### 白色魔法使
+
+`CHARACTER_CRC_011` · confirmed · original_campaign
+
+白色魔法使亦称白魔、笛木奏，是曾被监禁在监狱塔的异界魔法师。边关被攻破时，监狱塔受到魔物之潮与魔兽之潮的双重冲击，沐透协助他脱逃；帝都篇开始前他已脱困，此后与沐透建立驱动器交易。白魔参与Phantom、驱动器和宝石魔法道具的研究，忠于他的美杜莎是Phantom；其他Phantom与他的具体关系各不相同。
+
+原线后期，白魔以人质、攻击和交易向御临风施压，却自称并不想杀他、Phantom也不是最终目的。他说自己为家人的幸福而行动，可与任何能提供帮助的人合作，并明确称肯达只是多名合作者之一；卡珊德拉另称他想建立新世界与新神、重建家人和故乡，这些动机仍分别属于本人供述与他人情报。在龙族秘境根基洞穴，白魔的多个个体挟持本多并研究瑟坦特的假面，受到安兹威胁后放人，继续取用根基之石；当时取石仍在交涉中，离去与毁境是否完成尚未确认。
+
+别名：白魔、笛木奏
+
+<details>
+<summary>来源</summary>
+
+- [review_decisions.json](<../config/review_decisions.json>)：lines 37–42
+- [review_decisions.json](<../config/review_decisions.json>)：lines 45–50
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 123–130
+- [review_decisions.json](<../config/review_decisions.json>)：lines 37–50
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：JSONL line 17; msg994593 / #966
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：JSONL line 18; msg996028 / #967
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：JSONL line 19; msg996035 / #968
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：JSONL line 20; msg997651 / #969
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：JSONL line 21; msg997687 / #970
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：JSONL line 22; msg998481 / #971
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：JSONL line 9; msg1059916 / #108
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：JSONL line 12; msg1059924 / #111
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：JSONL line 39; msg1068182 / #138
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：JSONL line 40; msg1068185 / #139
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：JSONL line 41; msg1068230 / #140
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：JSONL line 26; msg1333535 / #225
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：JSONL line 27; msg1333705 / #226
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：JSONL line 28; msg1333706 / #227
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：JSONL line 29; msg1334073 / #228
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：JSONL line 30; msg1334089 / #229
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 11
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 10
+- [white_mage_phantom_dossier.md](<../work/replay_research/white_mage_phantom_dossier.md>)：lines 5–64
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 139–156
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 36–63
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 82–107
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 108–139
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 140–164
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 199–212
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 139–155
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 243–246
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_011；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 监狱塔脱逃为用户确认的独立历史节点；最小毁境衔接另属Transition Canon，本条未将其冒记为原帖已完整结算。 本轮用户澄清已采用：白魔在边关失守与双潮出现时已脱困，早于帝都T0。
+
+<a id="CHARACTER_CRC_012"></a>
+### 安兹·乌尔·恭
+
+`CHARACTER_CRC_012` · confirmed · original_campaign
+
+安兹·乌尔·恭原为铃木悟，以飞鼠之名留在纳萨力克，来到异世界后成为纳萨力克的统治者。公会旧友及遗物、地下大坟墓与守护者构成其持续身份背景。旁线中，他救助并招募村灾幸存者埃弗纳斯为对外代理，要求保密与报告，隐蔽查探帝国；调查目前不带敌意，双方尚未因此建立正式同盟。
+
+原线后期，卡珊德拉引介御临风与安兹会面。御临风提出建国和外交方案，安兹感兴趣并决定救援龙族秘境，实际开启传送门入场，以亡灵魔法运用战死黑龙、阻挡攻击，并安排伤龙及悠悠接受治疗。他曾宣布代表帝国救龙，但御临风的提案并未得到完整外交授权，建国承认与条约是否落实仍未见结果。
+
+别名：飞鼠、铃木悟
+
+<details>
+<summary>来源</summary>
+
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 138
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 58–59
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 136–142
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1297–1301
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 3; msg1072134 / #152
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 5; msg1072771 / #154
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 8; msg1072826 / #157
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 9; msg1073337 / #158
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 10; msg1073342 / #159
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 11; msg1073364 / #160
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 13; msg1073378 / #162
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 15; msg1073384 / #164
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 35; msg1077728 / #184
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：JSONL line 1; msg1090502 / #200
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 16; msg1073385 / #165
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 17; msg1073563 / #166
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 20; msg1073566 / #169
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 21; msg1074136 / #170
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 23; msg1074554 / #172
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 24; msg1074556 / #173
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 26; msg1074889 / #175
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 28; msg1074920 / #177
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 29; msg1074923 / #178
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 30; msg1074925 / #179
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 32; msg1075819 / #181
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 34; msg1075821 / #183
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 12; msg959984 / #711
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 13; msg959986 / #712
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 14; msg960048 / #713
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 18; msg960111 / #717
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 12; msg967530 / #761
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 136–141
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 139–141
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 3; msg922976 / #2
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 8; msg923275 / #7
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 9; msg923284 / #8
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 10; msg923287 / #9
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 13; msg923404 / #12
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 14; msg923423 / #13
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 5; msg954706 / #54
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 9; msg955110 / #58
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 89
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 3; msg954561 / #52
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 7; msg954760 / #56
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 13; msg955598 / #62
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 15; msg955870 / #64
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 12
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 12
+- [character_side_evidence.jsonl](<../work/replay_research/character_side_evidence.jsonl>)：JSONL line 20
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 171–188
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 82–107
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 171–187
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_012；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_013"></a>
+### 奥修特尔
+
+`CHARACTER_CRC_013` · confirmed · original_campaign
+
+奥修特尔以右近之名活动，是帝国八柱将之一、帝的部属，持有水神假面。他赏识并招纳哈克与久远，也有佐间、阿德莱德等隐秘部下。原线御临风初到帝都时，右近隐装提供援助，同时声明若达卡斯没有问题仍须依法抓人；得知边关失守后，他秘密派快骑核查军情，随后参与庇护、救援与追捕。
+
+原线后来，帝升迁三名边军并将他们特别编入右近麾下，御临风至此才成为其直属部下。右近既承担保卫帝都的职责，也处理修桥、通渠及民间争执；帝的任命和军令限制他自行改派人员。湖战中，他曾开启水之假面的力量，以水蓝斗气抗衡黑龙并护住御临风，假面的力量仍以生命与魂魄为代价。
+
+别名：右近
+
+<details>
+<summary>来源</summary>
+
+- [posts.md](<../extracted-first/21/posts.md>)：lines 174–178
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1521–1536
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 93
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 165
+- [posts.md](<../extracted-first/21/posts.md>)：lines 168–180
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：JSONL line 19; msg846054 / #1018
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：JSONL line 38; msg846107 / #1037
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：JSONL line 50; msg846202 / #1049
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 1; msg846204 / #1050
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 2; msg846209 / #1051
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 3; msg846217 / #1052
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：JSONL line 35; msg817699 / #184
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：JSONL line 44; msg817946 / #193
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：JSONL line 46; msg818025 / #195
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：JSONL line 49; msg818197 / #198
+- [posts.jsonl](<../extracted-first/4/posts.jsonl>)：JSONL line 50; msg818231 / #199
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 1; msg818236 / #200
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 2; msg818238 / #201
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 4; msg818243 / #203
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 5; msg818244 / #204
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 6; msg818253 / #205
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 7; msg818254 / #206
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：JSONL line 11; msg857846 / #1310
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：JSONL line 14; msg858359 / #1313
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：JSONL line 38; msg859116 / #1337
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：JSONL line 40; msg859118 / #1339
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：JSONL line 42; msg859122 / #1341
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：JSONL line 46; msg859136 / #1345
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：JSONL line 5; msg864692 / #104
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：JSONL line 7; msg864704 / #106
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：JSONL line 44; msg845598 / #943
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：JSONL line 48; msg845610 / #947
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 1; msg845627 / #950
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 6; msg845652 / #955
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 27; msg818459 / #226
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 119
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 107
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1540–1585
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 161–165
+- [capital_npc_period_dossiers.md](<../work/replay_research/capital_npc_period_dossiers.md>)：lines 23–37
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 13
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 2
+- [empire_character_dossiers.jsonl](<../work/replay_research/empire_character_dossiers.jsonl>)：JSONL line 5
+- [capital_npc_period_dossiers.md](<../work/replay_research/capital_npc_period_dossiers.md>)：lines 5–40
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 29–44
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 108–139
+- [empire_character_dossiers.md](<../work/replay_research/empire_character_dossiers.md>)：lines 47–53
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_013；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 本团以奥修特尔替代原型八柱将中的德考波姆；不再另立同时存在的德考波姆。
+
+<a id="CHARACTER_CRC_014"></a>
+### 艾利
+
+`CHARACTER_CRC_014` · confirmed · original_campaign
+
+艾利是帝国女性魔法师，人物参考记26岁，专长为治疗与炼金研究。她原在阿德莱德的队伍中，参与右近一方的救援；阿德莱德曾追求她，她却明确把他视作哥哥，并未接受这段追求。帝都工坊战中，艾利连续救治同伴，因耗魔和受击而负伤；她后来也参与悠悠的诅咒研究，但承认仅凭表面符文无法读透术式。
+
+原线后来，艾利获得右近同意加入御临风的护送队，条件是享有所得魔法物品的研究权，并在无人特别需要时优先分配给她。她说明原队虽安全，却少有研究和外出机会，这次同行是双方接受条件后形成的合作。沃西斯与罗伯揭开忠诚测试时，她也说明同组安排与此有关，显示她与兄弟会有联系，但具体职级未明。
+
+<details>
+<summary>来源</summary>
+
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1737–1756
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1804–1966
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.md>)：lines 14–18
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 25; msg820309 / #274
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 31; msg820410 / #280
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 39; msg820809 / #288
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 40; msg820811 / #289
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 41; msg820815 / #290
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 2; msg821913 / #301
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 4; msg822094 / #303
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 24; msg911522 / #223
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 25; msg911872 / #224
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 26; msg912200 / #225
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 27; msg912206 / #226
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 28; msg912247 / #227
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：JSONL line 9; msg849145 / #1208
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：JSONL line 11; msg849149 / #1210
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 36; msg895214 / #185
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 37; msg895388 / #186
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 38; msg895549 / #187
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 39; msg896706 / #188
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 40; msg897616 / #189
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 41; msg898939 / #190
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 42; msg898946 / #191
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 14; msg920421 / #363
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 15; msg920422 / #364
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 16; msg920424 / #365
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 17; msg920445 / #366
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 27; msg920835 / #376
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 28; msg920836 / #377
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 29; msg920839 / #378
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 30; msg920840 / #379
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 32; msg920856 / #381
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 14; msg972166 / #813
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 15; msg972178 / #814
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 18; msg972184 / #817
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 19; msg972186 / #818
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 20; msg972320 / #819
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 21; msg972331 / #820
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 22; msg972516 / #821
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 23; msg972552 / #822
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 41; msg974324 / #840
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 42; msg974325 / #841
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 43; msg974328 / #842
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 44; msg974330 / #843
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 1; msg921122 / #400
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 3; msg921153 / #402
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 5; msg921264 / #404
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 15; msg921465 / #414
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 6; msg921305 / #405
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 7; msg921321 / #406
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 8; msg921322 / #407
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 9; msg921323 / #408
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 10; msg921324 / #409
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 11; msg921325 / #410
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 12; msg921328 / #411
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 13; msg921329 / #412
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 14; msg921330 / #413
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 1806–1964
+- [capital_npc_period_dossiers.md](<../work/replay_research/capital_npc_period_dossiers.md>)：lines 44–81
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 14
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 5
+- [capital_npc_period_dossiers.md](<../work/replay_research/capital_npc_period_dossiers.md>)：lines 42–82
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 71–86
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 71–85
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_014；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_015"></a>
+### 谢尔伦·冯·吉尔科德
+
+`CHARACTER_CRC_015` · confirmed · original_campaign
+
+谢尔伦·冯·吉尔科德是冰霜龙王，为六龙王中年长者，曾参与对抗死亡之翼及黑龙一族的古老战争，与帝长期往来。原线中，他接引御临风一行进入龙族秘境，照护悠悠，并提出用帝国婚约阻挡肯达依据父辈旧约迎娶悠悠的保护办法：御临风暂作挡箭牌，悠悠长大后仍可自行选择。这项私下安排并未完整告知悠悠；她称谢尔伦为爷爷，血缘关系却尚未明确。
+
+秘境危机中，谢尔伦负伤救走御临风，仍返回战场，后来与御临风共同讨伐死亡之翼。他向御临风报告诺顿与南希偷袭杀死赫伯特、自己与本多杀死诺顿、奥希拉及黑龙被控制，又称肯达以命传来叛变消息，使他改观。这些战况与评价保留为谢尔伦的证言，并未消除肯达后来被白魔指为合作者的疑点。
+
+别名：冰霜龙王
+
+<details>
+<summary>来源</summary>
+
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 150
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 148–153
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 5; msg971889 / #804
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 6; msg971895 / #805
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 7; msg971896 / #806
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 5; msg1043170 / #54
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 7; msg1043193 / #56
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 9; msg1043386 / #58
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 11; msg1043413 / #60
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 13; msg1043595 / #62
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 12; msg1043421 / #61
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：JSONL line 3; msg1093547 / #202
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：JSONL line 7; msg1097891 / #206
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：JSONL line 9; msg1107820 / #208
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：JSONL line 11; msg1122379 / #210
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 6; msg1043183 / #55
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 8; msg1043197 / #57
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 18; msg960111 / #717
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 19; msg960117 / #718
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 20; msg960242 / #719
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 28; msg960439 / #727
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 29; msg960442 / #728
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 30; msg960504 / #729
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 22; msg960244 / #721
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 23; msg960245 / #722
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 24; msg960247 / #723
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 27; msg960254 / #726
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 31; msg960512 / #730
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 33; msg960572 / #732
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 37; msg960594 / #736
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 39; msg960885 / #738
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 6; msg964513 / #755
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 8; msg964526 / #757
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 10; msg966347 / #759
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 38; msg970655 / #787
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 42; msg970664 / #791
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 44; msg970669 / #793
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 45; msg970670 / #794
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 46; msg970671 / #795
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 47; msg970677 / #796
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 48; msg971183 / #797
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 49; msg971184 / #798
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 50; msg971255 / #799
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 15
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 8
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 111–126
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 111–125
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_015；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_016"></a>
+### 慕少艾
+
+`CHARACTER_CRC_016` · confirmed · original_campaign
+
+慕少艾是与右近往来的药师，陈萍生是他的徒弟。原线开局前被御临风制裁的魔法师正是陈萍生；慕少艾后来到右近府自报身份，称作恶者为逐出的孽徒，由右近担保，并为徒弟造成的损害致歉、补偿。
+
+慕少艾用治疗法阵救治黄泉和布莱特，曾试探御临风被封锁的记忆，却因双方剧痛、自己吐血而中止；后来又以烟竹治疗御临风旧伤。他与威廉、宝石翁共同处理悠悠的诅咒及向御临风转移诅咒的仪式，并根据查证把耶各解释为异界死神。有关耶各职责的说明是慕少艾的知识与判断，不等于他掌握一切契约和死亡机制。
+
+<details>
+<summary>来源</summary>
+
+- [posts.md](<../extracted-first/5/posts.md>)：lines 163–250
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.md>)：lines 83–91
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 20; msg818410 / #219
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 21; msg818412 / #220
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 22; msg818413 / #221
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 23; msg818415 / #222
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 24; msg818416 / #223
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 25; msg818431 / #224
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 28; msg818463 / #227
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 29; msg818465 / #228
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 27; msg818459 / #226
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 37; msg818572 / #236
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 38; msg818578 / #237
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 39; msg818585 / #238
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：JSONL line 31; msg859108 / #1330
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：JSONL line 32; msg859109 / #1331
+- [posts.jsonl](<../extracted-first/27/posts.jsonl>)：JSONL line 44; msg859124 / #1343
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 16
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 4
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 59–70
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 108–139
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 59–69
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_016；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 陈萍生对应及师徒关系遵从用户纠正；早期二五仔括注、李／陈异写保留为来源差异，不能据此判慕少艾已死。
+
+<a id="CHARACTER_CRC_017"></a>
+### 沃西斯
+
+`CHARACTER_CRC_017` · confirmed · original_campaign
+
+沃西斯是帝国八柱将之一，与雷光承担常务机构的重要工作。原线接待悠悠护送队时，他安排任务、核验身份，支开悠悠后追问御临风等人军籍记录中的异常；后来与罗伯合演虚假处决以测试忠诚，揭局后说明理由、向布莱特道歉并邀请其加入兄弟会。邀请本身未证明布莱特已经入会。
+
+沃西斯称姜子尤失踪及可能与魔兽有关的情报并非测试的一部分，但该说法仍待独立核实。原线后台还记载他与雷光长期筹备远征，处理战略纵深、民生与军备；他们并未完全看透凌迟的布局。
+
+<details>
+<summary>来源</summary>
+
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 26
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.md>)：lines 3–100
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 5; msg921264 / #404
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 6; msg921305 / #405
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 7; msg921321 / #406
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 8; msg921322 / #407
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 9; msg921323 / #408
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 10; msg921324 / #409
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 11; msg921325 / #410
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 12; msg921328 / #411
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 13; msg921329 / #412
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 14; msg921330 / #413
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 15; msg921465 / #414
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 17
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 18
+- [empire_character_dossiers.jsonl](<../work/replay_research/empire_character_dossiers.jsonl>)：JSONL line 8
+- [empire_character_dossiers.md](<../work/replay_research/empire_character_dossiers.md>)：lines 77–83
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_017；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_018"></a>
+### 雷光
+
+`CHARACTER_CRC_018` · confirmed · original_campaign
+
+雷光是帝国八柱将之一，称“圣贤”，原线另有“雷公”写法，与沃西斯共同承担常务机构工作。他是唯一拥有自己秘密情报部门的人；帝直属的兄弟会则是另一机构。雷光麾下另有专门处理白魔的小队，逆羽·霞任队长、幻翎·洛任副队，沐透后来领取了小队铁牌，并以正式队员身份活动。
+
+原线战争中，雷光根据沙盘和情报分析战线，统筹通信法师与军令，筹划远征及消耗战，并安排奥斯卡贝接应御临风。通信团队和秘密部门为他提供资源，但他对敌军意图的分析仍是当时的判断，并不自动获知尚未上报的事件。
+
+别名：圣贤
+
+<details>
+<summary>来源</summary>
+
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.md>)：lines 169
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 26
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.md>)：lines 169–218
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：JSONL line 44; msg1032053 / #1193
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：JSONL line 50; msg1033262 / #1199
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl>)：JSONL line 1; msg1033271 / #1200
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl>)：JSONL line 2; msg1033311 / #1201
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl>)：JSONL line 3; msg1033315 / #1202
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl>)：JSONL line 4; msg1033318 / #1203
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 114
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 88
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 18
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 19
+- [empire_character_dossiers.jsonl](<../work/replay_research/empire_character_dossiers.jsonl>)：JSONL line 7
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 82–107
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 108–139
+- [empire_character_dossiers.md](<../work/replay_research/empire_character_dossiers.md>)：lines 67–73
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_018；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_019"></a>
+### 死亡之翼
+
+`CHARACTER_CRC_019` · confirmed · original_campaign
+
+死亡之翼是古史中的黑龙强敌，谢尔伦曾参与对抗他与黑龙一族的战争。原线后期龙族秘境危机中，一头巨大的披甲黑龙伴随地裂现身，其名为死亡之翼，同场诺顿与帝国军令又称其为耐萨里奥；他的出现迫使帝国与龙族调整战局。
+
+原线秘境讨伐战末段，御临风与谢尔伦共同攻击死亡之翼，其熔岩与铁骨构成的身躯最终崩溃，战场黑龙随之倒下，魔物与帝军溃退，谢尔伦公开宣布两人完成讨伐。有关外来寄生、地脉和再次复归的机制，仍分别来自泰蕾斯、白魔等人的解释；这一战的躯体崩解既未证明永久死亡，也未证明无限再生。
+
+<details>
+<summary>来源</summary>
+
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 152
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 574–597
+- D:/备份文件/901记录/战报/901第三部分_全页源文顺读版战报/00_顺读场景卡.md：lines 57–70
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：JSONL line 42; msg1031470 / #1191
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：JSONL line 43; msg1031478 / #1192
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：JSONL line 44; msg1032053 / #1193
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：JSONL line 50; msg1033262 / #1199
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl>)：JSONL line 1; msg1033271 / #1200
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl>)：JSONL line 2; msg1033311 / #1201
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl>)：JSONL line 3; msg1033315 / #1202
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl>)：JSONL line 4; msg1033318 / #1203
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 19
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 20
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 259–259
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：JSONL line 19; msg1179677 / #218
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：JSONL line 20; msg1182889 / #219
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：JSONL line 23; msg1206254 / #222
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_019；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_020"></a>
+### 肯达·凯·弗格斯
+
+`CHARACTER_CRC_020` · confirmed · original_campaign
+
+肯达·凯·弗格斯是龙族与帝国交涉的牵线人。谢尔伦介绍他曾被龙族驱逐，此次因促成双方接触而获准返回；谢尔伦又称肯达与悠悠早由双方父亲指腹为婚，并指控他曾害死姐姐，这些旧事与指控属于谢尔伦的证言。谢尔伦因此让御临风公开充当悠悠的未婚夫，以阻挡旧婚约。
+
+原线在秘境中，肯达与御临风谈判，要求他在比赛中认输、放弃婚约，自称这是为避开预言，并怀疑帝国高层或龙王中有叛徒，自己的计划则不愿公开。危机后，谢尔伦称肯达以性命传来叛变消息，因而改变对他的看法；白魔后来却承认肯达是自己的多名合作者之一。两种证言并存，肯达参与了哪些计划、实际死因及完整责任仍不明确。
+
+<details>
+<summary>来源</summary>
+
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 151
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 584–595
+- D:/备份文件/901记录/战报/901第二部分_16-25页源文顺读版战报/00_顺读场景卡.md：lines 11–20
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 22; msg960244 / #721
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 24; msg960247 / #723
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 26; msg960252 / #725
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 38; msg960881 / #737
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 39; msg960885 / #738
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 40; msg960886 / #739
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 41; msg960891 / #740
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 42; msg960967 / #741
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 43; msg961078 / #742
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 44; msg961651 / #743
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 45; msg961999 / #744
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 2; msg971563 / #801
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 24; msg972967 / #823
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 25; msg972969 / #824
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 26; msg973134 / #825
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 27; msg973135 / #826
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 28; msg973141 / #827
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 29; msg973143 / #828
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 30; msg973252 / #829
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 31; msg973257 / #830
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 32; msg973291 / #831
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 33; msg973864 / #832
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 34; msg974262 / #833
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 35; msg974316 / #834
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 36; msg974318 / #835
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 11; msg1043413 / #60
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：JSONL line 29; msg1334073 / #228
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：JSONL line 48; msg987233 / #897
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 20
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 11
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 157–170
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 157–169
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_020；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_021"></a>
+### 卡珊德拉
+
+`CHARACTER_CRC_021` · confirmed · original_campaign
+
+卡珊德拉是已诞生的Phantom，参与宝石与情报交易。原线中，她曾私下与未具名黑影讨论预言、催促灭除火种；黑影身份并未确认。秘境危机后，她向御临风提供白魔本体、贤者之石及重建家人的情报，又把他作为帝的使者和异乡人引介给安兹，促成会面与救援交涉。
+
+卡珊德拉后来承认曾请安兹用药使御临风入睡。她确实提供帮助，也主动控制过御临风获得信息和行动的条件；其对白魔目的与预言的解释仍是她的说法，最终目的和预言可靠性未完全揭示。
+
+<details>
+<summary>来源</summary>
+
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 130
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 595–605
+- D:/备份文件/901记录/战报/901第三部分_全页源文顺读版战报/00_顺读场景卡.md：lines 41–55
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：JSONL line 48; msg987233 / #897
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：JSONL line 37; msg1068038 / #136
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：JSONL line 41; msg1068230 / #140
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：JSONL line 42; msg1068233 / #141
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 17; msg1073563 / #166
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：JSONL line 39; msg1068182 / #138
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 3/posts.jsonl>)：JSONL line 40; msg1068185 / #139
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 3; msg1072134 / #152
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 5; msg1072771 / #154
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 8; msg1072826 / #157
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 9; msg1073337 / #158
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 10; msg1073342 / #159
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 4/posts.jsonl>)：JSONL line 11; msg1073364 / #160
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 12; msg862359 / #161
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 15; msg867048 / #214
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 16; msg867120 / #215
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 48; msg1047768 / #447
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 21
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 24
+- [character_side_evidence.jsonl](<../work/replay_research/character_side_evidence.jsonl>)：JSONL line 11
+- [relationship_matrix.md](<../work/replay_research/relationship_matrix.md>)：lines 455–475
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_021；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_022"></a>
+### 耶各
+
+`CHARACTER_CRC_022` · confirmed · original_campaign
+
+耶各是原线后期与御临风接触、缔结神约的异界存在；慕少艾根据查证称其为异界死神，负责亡魂归宿与死亡秩序。御临风在死亡后与他相遇，成为耶各代行者，获赠披风和手套，随后在主世界医馆复生，所赠物品亦在身旁。
+
+耶各告诫御临风，身上的诅咒是双方唯一联系，解除就会使他回到死亡；现有魔力已不再伤害他，但盲目向深渊索求会令他逐渐远离人类。双方没有稳定的主动联络方式，只可能通过神启接触。耶各对本界信仰与其他代行者的说明也带有自身所知范围，这段神约不能据以推出任意死者都可无代价复生。
+
+<details>
+<summary>来源</summary>
+
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 437–469
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.md>)：lines 83–91
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 22
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 47; msg913700 / #246
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 48; msg913709 / #247
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 49; msg913717 / #248
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 5; msg913733 / #254
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 7; msg913736 / #256
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 8; msg913739 / #257
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 50; msg913719 / #249
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 1; msg913724 / #250
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 2; msg913726 / #251
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 3; msg913730 / #252
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 4; msg913731 / #253
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_022；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_023"></a>
+### 贞子
+
+`CHARACTER_CRC_023` · confirmed · original_campaign
+
+贞子是御临风在魔兽山脉结识的幽灵伙伴，曾在他首次军事任务濒死时救下他，并在后来的追杀中再次救命。前史及御临风回忆记载，她最终以自身与韩诺交易来挽救御临风，这次救援还伴随着相关记忆的封锁；御临风将她视为难以偿还的救命者，后来仍寻找解救她的办法。原线出现过复生或挽回她的设想，尚不能据此认定交易已解除、贞子已返回。
+
+<details>
+<summary>来源</summary>
+
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：lines 86–92
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：lines 125–137
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 247–254
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 23
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 36–63
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_023；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 幽灵前史与梦中贞子影像分层；不移入其他作品的同名人物规则。
+
+<a id="CHARACTER_CRC_024"></a>
+### 托尔金
+
+`CHARACTER_CRC_024` · confirmed · original_campaign
+
+托尔金是帝都的矮人工匠，经营工坊，承接武器修复和魔法装备制作。原线中，御临风向他委托修复弃风，他参与修剑及风属性过载的处置；后续又为护送准备提供器具。双方关系由实际委托与交付积累，制作成果取决于材料、工艺和当次约定。
+
+<details>
+<summary>来源</summary>
+
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.md>)：lines 43–125
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 24
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_024；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_025"></a>
+### 本多·凯·弗格斯
+
+`CHARACTER_CRC_025` · confirmed · original_campaign
+
+本多·凯·弗格斯是赤炎龙王，六龙王中的主要掌权者。原线龙族秘境接待中，他与妻子共同出席宴会、欢迎帝国来客，收下悠悠携来的白色假面，并与其他龙王、肯达和罗伯闭门议事；后来又主持宣布悠悠继任空间龙族长、继承先祖之字。
+
+秘境内乱后，谢尔伦报告自己与本多合力杀死诺顿，本多留下拖延敌军。更晚在根基洞穴，御临风与安兹亲见本多被白魔个体挟持、以笛剑抵胸；白魔受到安兹威胁后放开人质。本多的这些战况与受救发生在原线后期。
+
+别名：赤炎龙王
+
+<details>
+<summary>来源</summary>
+
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.md>)：lines 788–791
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.md>)：lines 779–806
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 577–585
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 25
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 34; msg960576 / #733
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 36; msg960586 / #735
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 38; msg960881 / #737
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 4; msg963675 / #753
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 46; msg962304 / #745
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 47; msg962305 / #746
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 5; msg963731 / #754
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 7; msg1043193 / #56
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 6; msg1043183 / #55
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 8; msg1043197 / #57
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：JSONL line 21; msg1186459 / #220
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：JSONL line 23; msg1206254 / #222
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：JSONL line 25; msg1247358 / #224
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_025；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_026"></a>
+### 古雷姆林
+
+`CHARACTER_CRC_026` · confirmed · original_campaign
+
+古雷姆林是已诞生的Phantom，更新设定明确将他与魔法师A的老师对应。帝都刑案中，他利用人质与人体变异制造威胁，向追捕者透露部分Phantom和贤者之石信息，并在厌魔石手铐未能完全阻止行动的情况下遁入地下逃脱；其对自身目标和实验的解释仍属自述。
+
+原线后期，古雷姆林掳走并吸收布莱特，吞下心脏与半成品宝石后获得更强力量。布莱特的面相在其侧颈显现，仍阻碍本体并协助御临风进攻；古雷姆林最终被御临风斩杀，布莱特也随之死去。一只盲眼幼黑龙随后从古雷姆林体内破出，幼龙与两人的身份关系未获证实。
+
+<details>
+<summary>来源</summary>
+
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 130
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 603
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 26
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 207–211
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl>)：JSONL line 41; msg1042360 / #40
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl>)：JSONL line 43; msg1042446 / #42
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl>)：JSONL line 45; msg1042470 / #44
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 1; msg1042498 / #50
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 3; msg1042798 / #52
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 2; msg1042499 / #51
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 49; msg1057851 / #98
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 4; msg1042846 / #53
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 8; msg1043197 / #57
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 10; msg1043395 / #59
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 50; msg1057980 / #99
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_026；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_027"></a>
+### 诺斯莉
+
+`CHARACTER_CRC_027` · confirmed · original_campaign
+
+诺斯莉是欧基的姐姐，与哈克等人相识。原线帝都刑案中，她与欧基主责调查、哈克辅助；她曾主动提出自己担当诱饵，营救人质时以弓箭配合黄泉攻击，又追赶逃敌、沿途留箭作标记。追踪在过河后失去连续线索，她后来接受治疗休息。
+
+<details>
+<summary>来源</summary>
+
+- [phase3c_inventory.md](<../sources/legacy_evidence/work/phase3c_inventory.md>)：lines 30
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 1; msg868902 / #150
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 3; msg868912 / #152
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 5; msg869204 / #154
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 8; msg869311 / #157
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 9; msg869322 / #158
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 10; msg869348 / #159
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 11; msg869366 / #160
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 12; msg869474 / #161
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 14; msg869512 / #163
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 16; msg870831 / #165
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 18; msg871863 / #167
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 22; msg874508 / #171
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 23; msg874647 / #172
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 25; msg878056 / #174
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 46; msg899931 / #195
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 48; msg900199 / #197
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 26; msg912200 / #225
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 27; msg912206 / #226
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 28; msg912247 / #227
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 29; msg912252 / #228
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 30; msg912436 / #229
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 32; msg912586 / #231
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 34; msg913039 / #233
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 36; msg913283 / #235
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 38; msg913439 / #237
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 50; msg917628 / #349
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 2; msg917765 / #351
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 3; msg917773 / #352
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 4; msg917950 / #353
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 5; msg917961 / #354
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 6; msg918970 / #355
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 27
+- [empire_character_dossiers.jsonl](<../work/replay_research/empire_character_dossiers.jsonl>)：JSONL line 6
+- [empire_character_dossiers.md](<../work/replay_research/empire_character_dossiers.md>)：lines 57–63
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_027；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_028"></a>
+### 奥希拉
+
+`CHARACTER_CRC_028` · confirmed · original_campaign
+
+奥希拉是黑龙族长，参与龙族秘境事务，悠悠称他为叔叔。原线宴会中，他与悠悠熟识，却说明因自己的身份与内部原因必须避嫌，表示愿意帮助而未完整解释缘由；这一称谓尚未证明血缘关系。
+
+秘境危机后，谢尔伦向御临风报告奥希拉与黑龙一族遭到控制。该状态属于谢尔伦的战况证言；奥希拉身为黑龙并不证明他一直自愿效忠死亡之翼。
+
+别名：黑龙族长
+
+<details>
+<summary>来源</summary>
+
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.md>)：lines 1041–1044
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.md>)：lines 1032–1070
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 583–597
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 48; msg962310 / #747
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 49; msg962329 / #748
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 50; msg962331 / #749
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 2; msg963048 / #751
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 3; msg963103 / #752
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 4; msg963675 / #753
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 5; msg963731 / #754
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 7; msg1043193 / #56
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 6; msg1043183 / #55
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 8; msg1043197 / #57
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 28
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 25
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 264–264
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_028；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_029"></a>
+### 武赖
+
+`CHARACTER_CRC_029` · confirmed · original_campaign
+
+武赖是帝国八柱将之一，持有火神假面。原线帝都追捕魔法师A的过程中，他发动大范围火柱，给周边造成严重损害。宗近赶到后当面批评他以自身能力本可在不毁掉周围的情况下除敌；武赖随后离开，宗近接手救援与伤亡确认。
+
+<details>
+<summary>来源</summary>
+
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 163–168
+- [phase3c_inventory.md](<../sources/legacy_evidence/work/phase3c_inventory.md>)：lines 32
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 29
+- [empire_character_dossiers.md](<../work/replay_research/empire_character_dossiers.md>)：lines 87–93
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_029；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_030"></a>
+### 凌迟
+
+`CHARACTER_CRC_030` · confirmed · original_campaign
+
+凌迟原是人类，被魔兽俘获后自愿化魔，继承传说力量并统合魔兽部族、推动军事化，后来攻破帝国边关。他又冒用边关步兵统领达卡斯的身份率队进入帝都，真正的达卡斯是另一名人物。
+
+凌迟曾受悠悠的父母一家救助。追击他的人类部队毁掉旧空间龙秘境，悠悠成为其中唯一幸存的空间龙，凌迟不是灭族凶手。惨剧后，他在坟前向悠悠道歉、请求借命，悠悠答应；她后来转述凌迟要她死在帝都，好让大家幸福，但这一“幸福”效果只是她的理解。原线中，凌迟利用空间龙召来军队的计划失败，峡谷战败后被捕，随后在宫中处斩。
+
+<details>
+<summary>来源</summary>
+
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 40–44
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 30
+- [relationship_matrix.md](<../work/replay_research/relationship_matrix.md>)：lines 566–584
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 223–234
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_030；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 旧秘境毁灭的责任采用本轮用户确认：追击凌迟的人类部队为凶手；凌迟自责不构成亲手灭族证据。
+
+<a id="CHARACTER_CRC_031"></a>
+### 露露缇耶
+
+`CHARACTER_CRC_031` · confirmed · original_campaign
+
+露露缇耶是雪老尘雪的孙女。父母在尘雪过去的秘密任务中身亡后，她寄居祖父好友的九雪医馆；尘雪因愧疚远赴边关，起初每年才回来看她。原线后来尘雪获准退役，家人在右近府得到安置，祖孙长期分离的生活随之改变。
+
+露露缇耶曾应祖父请求照看悠悠，两人共同料理、嬉闹。锻造失控时，她按雪老安排去通知守卫撤离，承担了同伴生活照护与危险时的联络工作。
+
+<details>
+<summary>来源</summary>
+
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 84–86
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.md>)：lines 43–100
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 83–85
+- [posts.jsonl](<../extracted-first/21/posts.jsonl>)：JSONL line 36; msg846103 / #1035
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 16; msg846381 / #1065
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 38; msg846670 / #1087
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 40; msg846695 / #1089
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 46; msg846710 / #1095
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 31
+- [empire_character_dossiers.jsonl](<../work/replay_research/empire_character_dossiers.jsonl>)：JSONL line 10
+- [empire_character_dossiers.md](<../work/replay_research/empire_character_dossiers.md>)：lines 97–103
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_031；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_032"></a>
+### 威廉
+
+`CHARACTER_CRC_032` · confirmed · original_campaign
+
+威廉曾自报全名威廉信长，是帝都参与医治、工艺及帝国高层事务的人物。原线中，他检查御临风手纹、辨识交换契约，以天眼孔雀等法印恢复御临风被封锁的记忆与感情；御临风失控时，他又夺剑、绑缚并用冷水使其清醒。他也治疗过雪老的腿伤和悠悠的肉身。
+
+威廉在诊治悠悠后向帝报告她的混血空间龙身份与诅咒，下令拘押并主张将她与冒名达卡斯一同处刑，帝则将意见交朝议。他承认不能完全读透咒文，天眼孔雀也有当日能量耗尽的限制；后来与慕少艾、宝石翁协作完成向御临风转移诅咒的仪式。
+
+<details>
+<summary>来源</summary>
+
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.md>)：lines 83–91
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 254
+- [phase3c_inventory.md](<../sources/legacy_evidence/work/phase3c_inventory.md>)：lines 35
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 29; msg846552 / #1078
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 33; msg846643 / #1082
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 35; msg846651 / #1084
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 36; msg846653 / #1085
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 38; msg846670 / #1087
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 45; msg846708 / #1094
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 39; msg846688 / #1088
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 40; msg846695 / #1089
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 41; msg846698 / #1090
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 42; msg846701 / #1091
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 43; msg846705 / #1092
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 44; msg846706 / #1093
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 47; msg846714 / #1096
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 49; msg846744 / #1098
+- [posts.jsonl](<../extracted-first/22/posts.jsonl>)：JSONL line 50; msg846748 / #1099
+- [posts.jsonl](<../extracted-first/23/posts.jsonl>)：JSONL line 1; msg846753 / #1100
+- [posts.jsonl](<../extracted-first/26/posts.jsonl>)：JSONL line 27; msg853234 / #1276
+- [posts.jsonl](<../extracted-first/26/posts.jsonl>)：JSONL line 28; msg853239 / #1277
+- [posts.jsonl](<../extracted-first/26/posts.jsonl>)：JSONL line 29; msg853332 / #1278
+- [posts.jsonl](<../extracted-first/26/posts.jsonl>)：JSONL line 31; msg853339 / #1280
+- [posts.jsonl](<../extracted-first/26/posts.jsonl>)：JSONL line 34; msg853693 / #1283
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：JSONL line 28; msg849428 / #1227
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：JSONL line 29; msg849964 / #1228
+- [posts.jsonl](<../extracted-first/25/posts.jsonl>)：JSONL line 30; msg850003 / #1229
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 32
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 7
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 99–110
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 99–109
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：JSONL line 20; msg860741 / #1369
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：JSONL line 30; msg862100 / #1379
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_032；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_033"></a>
+### 宝石翁
+
+`CHARACTER_CRC_033` · confirmed · original_campaign
+
+宝石翁是与帝国高层及研究者往来的魔法专家。原线中，他与威廉、慕少艾共同研究悠悠的诅咒，参与以宝石法阵等手段将诅咒转移到御临风身上的仪式；仪式后也参与向御临风说明情况，并把部分处理交由帝负责。
+
+<details>
+<summary>来源</summary>
+
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.md>)：lines 83–91
+- [phase3c_inventory.md](<../sources/legacy_evidence/work/phase3c_inventory.md>)：lines 36
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：JSONL line 41; msg846797 / #40
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 23; msg868539 / #222
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 47; msg1047660 / #446
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 33
+- [character_side_evidence.jsonl](<../work/replay_research/character_side_evidence.jsonl>)：JSONL line 13
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：JSONL line 20; msg860741 / #1369
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：JSONL line 30; msg862100 / #1379
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_033；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 旁人转述的长名与性情未完成核定；不由宝石翁称号直接加入原型真名和能力。
+
+<a id="CHARACTER_CRC_034"></a>
+### 瑟坦特·卢·优尔兰
+
+`CHARACTER_CRC_034` · confirmed · original_campaign
+
+瑟坦特·卢·优尔兰是元素龙王，原线在龙族秘境与御临风相见时自报身份。秘境危机中，他被选为新假面的使用者；谢尔伦解释这是因为他年轻善战，悠悠则解释他本能抗拒假面吞噬生命与魂魄，因而陷入沉睡。后来假面发动，瑟坦特醒来，力量震飞御临风与悠悠，又将两人托住。
+
+瑟坦特拒绝御临风借用假面的方案，称只相信自己，随后亲自冲入战场，杀死另一名叛变龙王，改变战势；遇害龙王的姓名尚不明确。原线更晚，他在根基洞穴被白魔捆缚、处于昏迷，白魔正研究其假面。
+
+<details>
+<summary>来源</summary>
+
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 582
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.md>)：lines 797
+- D:/备份文件/901记录/战报/901第三部分_全页源文顺读版战报/00_顺读场景卡.md：lines 27–30
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：JSONL line 28; msg985223 / #877
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：JSONL line 29; msg985898 / #878
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：JSONL line 30; msg986052 / #879
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：JSONL line 38; msg987018 / #887
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：JSONL line 39; msg987026 / #888
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 18/posts.jsonl>)：JSONL line 40; msg987029 / #889
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 9; msg1043386 / #58
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 29; msg1047655 / #78
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 31; msg1049727 / #80
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 27; msg1047252 / #76
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 30; msg1047661 / #79
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 32; msg1049735 / #81
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 33; msg1049839 / #82
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 35; msg1050484 / #84
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 37; msg1051563 / #86
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 34; msg1049864 / #83
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 34
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 9
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 127–138
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 127–137
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：JSONL line 21; msg1186459 / #220
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：JSONL line 23; msg1206254 / #222
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 5/posts.jsonl>)：JSONL line 25; msg1247358 / #224
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_034；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_037"></a>
+### 海森·罗伯
+
+`CHARACTER_CRC_037` · confirmed · original_campaign
+
+海森·罗伯是雪月狼族长，曾带族人离开山地，与帝国存在任务合作。原线中，帝将他引介给御临风，沃西斯又让他配合虚假处决测试忠诚；揭局后，罗伯与御临风等人组成悠悠护送队，保管身份文书，担任向导、驾驶物资车并协调行程，后来在谢尔伦面前自报族长身份。
+
+罗伯向御临风说明旧空间龙秘境和族群处境时，明确自己的见闻有时间限制，也不掌握全部空间龙研究；关于当前局势的估计和援军到达时间，属于当时的情报。
+
+别名：罗伯
+
+<details>
+<summary>来源</summary>
+
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.md>)：lines 14–20
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.md>)：lines 13–18
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.md>)：lines 25–38
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 549–550
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 1; msg921122 / #400
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 3; msg921153 / #402
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 5; msg921264 / #404
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 15; msg921465 / #414
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 43; msg923265 / #442
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 44; msg923272 / #443
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 45; msg923290 / #444
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 46; msg923293 / #445
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 47; msg923294 / #446
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 48; msg923299 / #447
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 49; msg923301 / #448
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 50; msg923303 / #449
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 18; msg960111 / #717
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 19; msg960117 / #718
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 20; msg960242 / #719
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 28; msg960439 / #727
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 29; msg960442 / #728
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 30; msg960504 / #729
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 6; msg921305 / #405
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 7; msg921321 / #406
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 8; msg921322 / #407
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 9; msg921323 / #408
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 10; msg921324 / #409
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 11; msg921325 / #410
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 12; msg921328 / #411
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl>)：JSONL line 13; msg921329 / #412
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.jsonl>)：JSONL line 7; msg923476 / #456
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.jsonl>)：JSONL line 8; msg923569 / #457
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.jsonl>)：JSONL line 9; msg923573 / #458
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.jsonl>)：JSONL line 10; msg923577 / #459
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.jsonl>)：JSONL line 11; msg923580 / #460
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.jsonl>)：JSONL line 12; msg923607 / #461
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.jsonl>)：JSONL line 13; msg923660 / #462
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.jsonl>)：JSONL line 14; msg923674 / #463
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.jsonl>)：JSONL line 15; msg923949 / #464
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 10/posts.jsonl>)：JSONL line 16; msg923994 / #465
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 37
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 21
+- [relationship_matrix.md](<../work/replay_research/relationship_matrix.md>)：lines 433–453
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_037；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_038"></a>
+### 杨
+
+`CHARACTER_CRC_038` · confirmed · original_campaign
+
+杨是会说话的史莱姆，与一名未实名的哥布林结伴。原线地下相遇时，杨向御临风等人分析局势，自称曾用计击退不死者、因此被选入边关参谋，又怀疑自己见过的强大不死者是幕后人物，甚至不确定那次经历是否为梦。他对安兹力量和政治意图的恐惧属于自己的判断，并未得到独立验证。
+
+杨与哥布林相互照应，与来客在求生、誓言和道具交涉中寻求合作；有关誓言与戒指的全部约束效果，未因当场承诺而获得完整验证。
+
+<details>
+<summary>来源</summary>
+
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.md>)：lines 84–125
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.md>)：lines 200–218
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 12; msg959984 / #711
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 13; msg959986 / #712
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 14; msg960048 / #713
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 18; msg960111 / #717
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 12; msg967530 / #761
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 38
+- [character_evidence_supplement.jsonl](<../work/replay_research/character_evidence_supplement.jsonl>)：JSONL line 22
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 261–261
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_038；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_040"></a>
+### 左近
+
+`CHARACTER_CRC_040` · confirmed · original_campaign
+
+左近是帝国八柱将之一，持有雷神假面，承担军务，原线后期参与龙族秘境相关军事部署。
+
+<details>
+<summary>来源</summary>
+
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 168
+- [unresolved_character_labels.md](<../sources/legacy_evidence/work/phase3d_r2b/reports/unresolved_character_labels.md>)：lines 22
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 40
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_040；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 私人履历与完整军权资料有限；与雷光的原型亲缘未获本团确认，不在正文补造。
+
+<a id="CHARACTER_CRC_041"></a>
+### 宗近
+
+`CHARACTER_CRC_041` · confirmed · original_campaign
+
+宗近是帝国土神假面的持有者，原线称其为“最强之盾”，曾站在帝身后担任护卫。帝国军中有巡逻班长自报隶属宗近步兵第二大队第四小队，说明宗近拥有具名的步兵部属。
+
+原线帝都火柱事件后，宗近当面批评武赖造成不必要的周边破坏，随后组织士兵救援、统计伤亡，并听取布莱特报告、准许搜救。
+
+<details>
+<summary>来源</summary>
+
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 166
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.md>)：lines 9–22
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 30; msg912436 / #229
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 33; msg912987 / #232
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 34; msg913039 / #233
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 37; msg913317 / #236
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 38; msg913439 / #237
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 42; msg914561 / #291
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 44; msg914606 / #293
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 45; msg914608 / #294
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 46; msg914611 / #295
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 48; msg914791 / #297
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 49; msg914796 / #298
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 50; msg914868 / #299
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 30; msg914156 / #279
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 31; msg914157 / #280
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 35; msg914189 / #284
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 37; msg914301 / #286
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 41; msg914490 / #290
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 16; msg915027 / #315
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 19; msg915172 / #318
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 21; msg915186 / #320
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 23; msg915324 / #322
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 41
+- [empire_character_dossiers.jsonl](<../work/replay_research/empire_character_dossiers.jsonl>)：JSONL line 9
+- [empire_character_dossiers.md](<../work/replay_research/empire_character_dossiers.md>)：lines 87–93
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_041；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 已知具名部属不扩为统辖全国步兵；称号不等于无限防御。
+
+<a id="CHARACTER_CRC_042"></a>
+### 雅儿
+
+`CHARACTER_CRC_042` · confirmed · original_campaign
+
+雅儿是御临风早期村庄经历中获救的商队女子。她曾中毒昏迷，后被老村医配出的解药唤醒；村庄火灾后又随车队准备撤离。陈萍生在受刑时供称，雅儿不喜欢他且已与别人订婚，车队此次贸易还兼为送她去附近镇上成婚，他因想带走她而借山贼之手策划袭击。婚约、送嫁和袭击动机来自陈萍生的口供。
+
+<details>
+<summary>来源</summary>
+
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：lines 139–147
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：JSONL line 38; msg816170 / #37
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：JSONL line 41; msg816201 / #40
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：JSONL line 43; msg816246 / #42
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：JSONL line 47; msg816280 / #46
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 8; msg816387 / #57
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 9; msg816389 / #58
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 13; msg816542 / #62
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 14; msg816543 / #63
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 16; msg816546 / #65
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 19; msg816550 / #68
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_042；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 村庄获救时虚弱再睡属于当时状态，不设持续昏迷或自动随队入都。
+
+<a id="CHARACTER_CRC_046"></a>
+### 佐间
+
+`CHARACTER_CRC_046` · confirmed · original_campaign
+
+佐间是右近派遣的隐秘部下，黑发黑瞳的男性浪人，与阿德莱德、艾利协作。原线帝都救援中，他的任务是救出雪老等人，随后参与工坊战斗、搬运伤者和撤退；峡谷围攻时又与黄泉等人共同攻击卡泽。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 42; msg818657 / #241
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 43; msg818682 / #242
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 44; msg818702 / #243
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 50; msg819205 / #249
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 45; msg818707 / #244
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 46; msg818709 / #245
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 47; msg818816 / #246
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 48; msg819084 / #247
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 49; msg819176 / #248
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 1; msg819306 / #250
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 2; msg819320 / #251
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 3; msg819325 / #252
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 4; msg819333 / #253
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 12; msg819760 / #261
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 17; msg820018 / #266
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 18; msg820040 / #267
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 19; msg820091 / #268
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 20; msg820092 / #269
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 27; msg820317 / #276
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 29; msg820344 / #278
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 6; msg822686 / #305
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 7; msg822700 / #306
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 8; msg822705 / #307
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 9; msg822706 / #308
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 10; msg822823 / #309
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 11; msg822844 / #310
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 12; msg822845 / #311
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 13; msg822907 / #312
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 14; msg822908 / #313
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 15; msg822916 / #314
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_046；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_047"></a>
+### 阿德莱德
+
+`CHARACTER_CRC_047` · confirmed · original_campaign
+
+阿德莱德是右近的隐秘部下，金发碧眼、使用双刀的男性游侠，与佐间、艾利协作，特鲁是他的召唤伙伴。原线帝都救援中，他提供烟雾弹并指定钟塔会合点，对外否认与右近的关系以掩护身份；后来参与围攻卡泽并救护受伤的艾利。阿德莱德曾追求艾利，艾利则明确把他当作哥哥，并未接受这段追求。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 42; msg818657 / #241
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 43; msg818682 / #242
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 44; msg818702 / #243
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 50; msg819205 / #249
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 45; msg818707 / #244
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 46; msg818709 / #245
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 47; msg818816 / #246
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 48; msg819084 / #247
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 49; msg819176 / #248
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 17; msg820018 / #266
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 25; msg820309 / #274
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 31; msg820410 / #280
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 39; msg820809 / #288
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 4; msg822094 / #303
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 6; msg822686 / #305
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 7; msg822700 / #306
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 8; msg822705 / #307
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 9; msg822706 / #308
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 10; msg822823 / #309
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 11; msg822844 / #310
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 12; msg822845 / #311
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 13; msg822907 / #312
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 14; msg822908 / #313
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 15; msg822916 / #314
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 79–83
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_047；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_048"></a>
+### 卡泽
+
+`CHARACTER_CRC_048` · uncertain · original_campaign
+
+卡泽是原线冒名达卡斯一方战斗中与黄泉、布莱特及右近部下交手的敌人。他能吸血恢复、以血重造断腿，并化作黑影移到他人身旁；围攻中曾袭击艾利，藉此恢复残缺身体。最后众人击穿其心脏、头颅并斩开躯体，卡泽体内又显现一只不知名怪物，随后两者一同化尘消散。怪物与卡泽的实体关系、这是否意味着永久死亡，原叙述均未确认。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：JSONL line 47; msg845604 / #946
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：JSONL line 48; msg845610 / #947
+- [posts.jsonl](<../extracted-first/19/posts.jsonl>)：JSONL line 50; msg845621 / #949
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 1; msg845627 / #950
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 13; msg845705 / #962
+- [posts.jsonl](<../extracted-first/20/posts.jsonl>)：JSONL line 47; msg845983 / #996
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_048；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_050"></a>
+### 黄祸龙狼
+
+`CHARACTER_CRC_050` · confirmed · original_campaign
+
+黄祸龙狼是魔兽军中的人物，曾在御临风的前史中追杀并重创他，贞子为此再次救下御临风。原线帝都朝堂曾得到黄祸龙狼率军威胁帝都的情报；凌迟败亡前后的隐蔽行动又显示他执行凌迟命令、藏入军队准备复仇。他与姜子尤相貌相似，但两者未被证实为同一人。
+
+<details>
+<summary>来源</summary>
+
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：lines 125–137
+- [posts.jsonl](<../extracted-first/6/posts.jsonl>)：JSONL line 37; msg820769 / #286
+- [posts.jsonl](<../extracted-first/7/posts.jsonl>)：JSONL line 25; msg823927 / #324
+- [posts.jsonl](<../extracted-first/17/posts.jsonl>)：JSONL line 18; msg844039 / #817
+- [posts.jsonl](<../extracted-first/28/posts.jsonl>)：JSONL line 30; msg862100 / #1379
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 7; msg971896 / #806
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 8; msg971909 / #807
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 9; msg971912 / #808
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 17/posts.jsonl>)：JSONL line 10; msg971915 / #809
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_050；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_052"></a>
+### 奥斯卡贝
+
+`CHARACTER_CRC_052` · confirmed · original_campaign
+
+奥斯卡贝承担帝国军方的追踪、接应与护送任务。原线监狱塔遭袭后，他带领法师追查白魔留下的魔法痕迹；后来奉雷光命令接应御临风，对其进行幻术检查，并带骑兵穿过战线，将他送到龙族秘境入口，随后另赴任务。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：JSONL line 46; msg989075 / #945
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：JSONL line 47; msg989077 / #946
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：JSONL line 48; msg989082 / #947
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：JSONL line 49; msg989174 / #948
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 19/posts.jsonl>)：JSONL line 50; msg989838 / #949
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：JSONL line 1; msg989912 / #950
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：JSONL line 2; msg991036 / #951
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：JSONL line 3; msg991037 / #952
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：JSONL line 4; msg992010 / #953
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：JSONL line 5; msg992012 / #954
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：JSONL line 22; msg998481 / #971
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：JSONL line 23; msg998486 / #972
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：JSONL line 24; msg999675 / #973
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：JSONL line 25; msg999679 / #974
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 20/posts.jsonl>)：JSONL line 26; msg1000174 / #975
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：JSONL line 50; msg1033262 / #1199
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl>)：JSONL line 1; msg1033271 / #1200
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl>)：JSONL line 2; msg1033311 / #1201
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl>)：JSONL line 3; msg1033315 / #1202
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 25/posts.jsonl>)：JSONL line 4; msg1033318 / #1203
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl>)：JSONL line 23; msg1040710 / #22
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl>)：JSONL line 25; msg1041203 / #24
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl>)：JSONL line 27; msg1041248 / #26
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 30; msg1047661 / #79
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_052；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_053"></a>
+### 泰蕾斯
+
+`CHARACTER_CRC_053` · confirmed · original_campaign
+
+泰蕾斯是预言之龙，在原线后期受荣之道中以披白纱的女性形象出现。她向御临风解释自己的旧伤与黑龙战争，并说只看见一条龙族未来道路，担心干预会使事情偏离，因而未阻止若干事件；这些古史、未来与动机说明属于她的证言。
+
+泰蕾斯将最后的力量传给悠悠，形体化为光芒消散，悠悠的继承在当场得到确认。她所见的未来并未因此成为无条件必然发生的结果。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 15; msg1043613 / #64
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 31; msg1049727 / #80
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 19; msg1044388 / #68
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 21; msg1046075 / #70
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_053；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_055"></a>
+### 陈萍生
+
+`CHARACTER_CRC_055` · confirmed · original_campaign
+
+陈萍生是慕少艾的徒弟，也是御临风首次抵达帝都前在村庄中制裁的魔法师，早期被称作“二五仔”。被捕受审时，他供称雅儿已有婚约且不喜欢自己，因此与莫兹努合作、借山贼袭击商队来带走她，并觊觎作为宝藏线索的钥匙。村庄事件的末尾，他自爆引发火灾，村长家大半焚毁，陈萍生本人灰飞烟灭。
+
+后来慕少艾到右近府时称他为逐出的孽徒，并为其作恶致歉、补偿。
+
+别名：二五仔
+
+<details>
+<summary>来源</summary>
+
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 251
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：JSONL line 8; msg816033 / #7
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：JSONL line 12; msg816048 / #11
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：JSONL line 14; msg816052 / #13
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：JSONL line 16; msg816062 / #15
+- [posts.jsonl](<../extracted-first/1/posts.jsonl>)：JSONL line 22; msg816111 / #21
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 8; msg816387 / #57
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 9; msg816389 / #58
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 13; msg816542 / #62
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 14; msg816543 / #63
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 16; msg816546 / #65
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 19; msg816550 / #68
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 22; msg816553 / #71
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 23; msg816554 / #72
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 25; msg816557 / #74
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 26; msg816560 / #75
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 27; msg816563 / #76
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 28; msg816564 / #77
+- [posts.jsonl](<../extracted-first/2/posts.jsonl>)：JSONL line 29; msg816583 / #78
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 20; msg818410 / #219
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 21; msg818412 / #220
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 22; msg818413 / #221
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 23; msg818415 / #222
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 24; msg818416 / #223
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 25; msg818431 / #224
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 28; msg818463 / #227
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 29; msg818465 / #228
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 116
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_055；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 对应采用用户纠正；李萍生／陈萍生及二五仔括注差异留在来源层，梦中同名人物不并。
+
+<a id="CHARACTER_CRC_056"></a>
+### 达卡斯
+
+`CHARACTER_CRC_056` · confirmed · original_campaign
+
+达卡斯是帝国边境关卡的步兵统领，身份后来遭凌迟冒用。凌迟以“达卡斯”名义率队进入帝都并实施召军计划；这些行动属于冒名者，真正达卡斯此后的具体经历与生死尚不明确。
+
+<details>
+<summary>来源</summary>
+
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 43
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 557
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_056；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_058"></a>
+### 巴力西卜
+
+`CHARACTER_CRC_058` · confirmed · original_campaign
+
+巴力西卜是魔法师A转化后的Phantom，A与被称作古雷姆林的老师有师徒关系。仍以人类学徒身份活动时，A曾和队伍探索洞穴，破解法阵、提供护盾，并自称不擅长攻击魔法。
+
+原线后来，转化后的A在法师馆与姜子尤冲突，被擒后透支生命扩大精神控制，造成大规模平民死亡。武赖随后介入，以火柱吞没A并毁坏周围一带，宗近组织善后。A的人类经历与巴力西卜阶段属于同一人物的不同历史时期。
+
+别名：巴力西卜、魔法师Ａ、A、魔法师A
+
+<details>
+<summary>来源</summary>
+
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 130
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 604
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：JSONL line 1; msg862378 / #
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：JSONL line 12; msg862675 / #11
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：JSONL line 19; msg862721 / #18
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：JSONL line 26; msg862964 / #25
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.jsonl>)：JSONL line 29; msg862989 / #28
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 4; msg904928 / #203
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 5; msg904970 / #204
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 7; msg907291 / #206
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 9; msg908573 / #208
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.jsonl>)：JSONL line 11; msg908888 / #210
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 42; msg914561 / #291
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 44; msg914606 / #293
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 45; msg914608 / #294
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 46; msg914611 / #295
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 48; msg914791 / #297
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 49; msg914796 / #298
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl>)：JSONL line 50; msg914868 / #299
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_058；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_059"></a>
+### 欧基
+
+`CHARACTER_CRC_059` · confirmed · original_campaign
+
+欧基是哈克的同伴、诺斯莉的弟弟。原线帝都刑案中，他与姐姐主责调查、哈克辅助，联系工兵挖回箱子、分析受害者剪发痕迹，又请艾利申请厌魔石，之后将制成的手铐交付御临风。诺斯莉主动提出当诱饵时，他以赞美劝阻，并提出让御临风伪装的方案。
+
+追捕古雷姆林时，欧基试图挥刀阻止敌人遁入地下，仍未能拦下。
+
+<details>
+<summary>来源</summary>
+
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 257
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.md>)：lines 594–595
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 117
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 1; msg868902 / #150
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 3; msg868912 / #152
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：JSONL line 45; msg868729 / #144
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：JSONL line 46; msg868733 / #145
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：JSONL line 47; msg868741 / #146
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：JSONL line 49; msg868749 / #148
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 3/posts.jsonl>)：JSONL line 50; msg868766 / #149
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 5; msg869204 / #154
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 8; msg869311 / #157
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 9; msg869322 / #158
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 10; msg869348 / #159
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 11; msg869366 / #160
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 12; msg869474 / #161
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 14; msg869512 / #163
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 16; msg870831 / #165
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl>)：JSONL line 18; msg871863 / #167
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.jsonl>)：JSONL line 50; msg917628 / #349
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 2; msg917765 / #351
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 3; msg917773 / #352
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 4; msg917950 / #353
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 5; msg917961 / #354
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 6; msg918970 / #355
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 17; msg920445 / #366
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 18; msg920490 / #367
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 19; msg920718 / #368
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 20; msg920732 / #369
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 21; msg920742 / #370
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 22; msg920788 / #371
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 23; msg920791 / #372
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 24; msg920827 / #373
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 25; msg920828 / #374
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 8/posts.jsonl>)：JSONL line 26; msg920833 / #375
+- [character_register.jsonl](<../work/replay_research/character_register.jsonl>)：JSONL line 59
+- [empire_character_dossiers.jsonl](<../work/replay_research/empire_character_dossiers.jsonl>)：JSONL line 3
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 108–139
+- [empire_character_dossiers.md](<../work/replay_research/empire_character_dossiers.md>)：lines 27–33
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_059；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 与欧吉尔德、沐透明确为不同人物。
+
+<a id="CHARACTER_CRC_060"></a>
+### 欧吉尔德
+
+`CHARACTER_CRC_060` · confirmed · original_campaign
+
+欧吉尔德是沐透遇见的商队头领。他曾承认以心脏进行石心交换，并警告沐透逃离；数日后又从胸口取出红宝石交给沐透。原线随后另有他的供给来源中断、解散商队返回庄园以及失去爱人的经历。欧吉尔德的Phantom身份见于后期记载，具体转化时间与个体名未明。
+
+<details>
+<summary>来源</summary>
+
+- [妄想大陆设定集_检索版.md](<../sources/references/设定 人物/妄想大陆设定集_检索版.md>)：lines 130
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：JSONL line 17; msg848003 / #66
+- [posts.jsonl](<../extracted-mutou/page-03/posts.jsonl>)：JSONL line 7; msg854948 / #106
+- [posts.jsonl](<../extracted-mutou/page-03/posts.jsonl>)：JSONL line 11; msg855523 / #110
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 9; msg865910 / #208
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 11; msg866075 / #210
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 15; msg867048 / #214
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 117
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_060；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 欧吉尔德、欧基、沐透为不同人物；后期Phantom名单不反填初见即已完成转化。
+
+<a id="CHARACTER_CRC_063"></a>
+### 逸冷
+
+`CHARACTER_CRC_063` · confirmed · original_campaign
+
+逸冷是御临风在边关前史中拜认的师父，赠给他弃风剑并教导持剑，还引荐他加入兄弟会。这些师承与组织联系在御临风首次抵达帝都前已成立。逸冷此后的去向和生死尚未确证；谢尔伦不认识他，对他可能战死的说法只是猜测。
+
+<details>
+<summary>来源</summary>
+
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：lines 62–66
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 247
+- [posts.jsonl](<../extracted-first/5/posts.jsonl>)：JSONL line 7; msg818254 / #206
+- [npc_portraits.md](<../work/replay_research/npc_portraits.md>)：lines 113–125
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_063；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 具体门派、官职与后续去向资料不足，不补出仍在某处等待或已死亡。
+
+<a id="CHARACTER_CRC_064"></a>
+### 韩诺
+
+`CHARACTER_CRC_064` · confirmed · original_campaign
+
+韩诺是御临风前史中第八号当铺交易的对象。御临风曾以正面情感与他交易，造成后来一度缺失感情的状态；贞子也曾以自身与韩诺交易，救回被黄祸龙狼重创的御临风。御临风后来恢复感情与记忆，并不等于贞子的交易已解除。
+
+<details>
+<summary>来源</summary>
+
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 248–254
+- [901前史与设定备忘录.md](<../sources/references/战报/901前史与设定备忘录.md>)：lines 94–102
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 45
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_064；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 本条不补当铺完整契约体系与地点；首次情感交易目的的活命／救雪老来源差异保留在专门前史档案。
+
+<a id="CHARACTER_CRC_067"></a>
+### 赫伯特·金·墨菲
+
+`CHARACTER_CRC_067` · confirmed · original_campaign
+
+赫伯特·金·墨菲是剧毒龙王，原线在龙族秘境宴会上与其他龙王一道接待御临风等帝国来客，并亲自报出姓名与称号。秘境危机后，谢尔伦向御临风报告赫伯特遭诺顿与南希偷袭杀害；其死亡信息由这份战况证言传出。
+
+别名：剧毒龙王
+
+<details>
+<summary>来源</summary>
+
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.md>)：lines 788–807
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 34; msg960576 / #733
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 36; msg960586 / #735
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 7; msg1043193 / #56
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_067；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 主世界龙王与伦敦梦境同名医生分开；不引入梦中处方履历。
+
+<a id="CHARACTER_CRC_068"></a>
+### 诺顿·由谢夫·崔斯福特
+
+`CHARACTER_CRC_068` · confirmed · original_campaign
+
+诺顿·由谢夫·崔斯福特是青铜龙王，原线在秘境宴会上与御临风谈论悠悠的婚约。地裂发生时，他向赫伯特报告耐萨里奥出现，并在赫伯特背后露出笑意。秘境危机后，谢尔伦向御临风报告诺顿与南希偷袭杀害赫伯特，随后自己与本多杀死诺顿；叛变经过与诺顿死讯在此均来自谢尔伦的证言。
+
+别名：青铜龙王
+
+<details>
+<summary>来源</summary>
+
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.md>)：lines 788–807
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 34; msg960576 / #733
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 36; msg960586 / #735
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 24/posts.jsonl>)：JSONL line 42; msg1031470 / #1191
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 7; msg1043193 / #56
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_068；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 主世界龙王与伦敦梦境同名园艺工分开；不引入梦中犯罪动机。
+
+<a id="CHARACTER_CRC_069"></a>
+### 南希·夏·缪拉
+
+`CHARACTER_CRC_069` · confirmed · original_campaign
+
+南希·夏·缪拉是幽影龙王，原线在龙族秘境宴会上接待御临风，提醒他迎娶龙族女子会面对考验。秘境危机后，谢尔伦称她与诺顿共同偷袭杀害赫伯特。后来瑟坦特杀死“另一名叛变龙王”，但当场叙述没有直接写出南希的姓名，因此她的最终生死尚不能仅凭这句话确认。
+
+别名：幽影龙王
+
+<details>
+<summary>来源</summary>
+
+- [posts.md](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.md>)：lines 788–807
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 34; msg960576 / #733
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 36; msg960586 / #735
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 7; msg1043193 / #56
+- [posts.jsonl](<../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。 - 页 2/posts.jsonl>)：JSONL line 37; msg1051563 / #86
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_069；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_092"></a>
+### 土宫神乐
+
+`CHARACTER_CRC_092` · confirmed · original_campaign
+
+土宫神乐是谏山黄泉在日本原乡的重要伙伴。神乐丧母后，黄泉主动请求养父让她到谏山家共同生活，随后在除灵工作中担任她的引领者；这段同住与保护关系是黄泉原乡经历的一部分。
+
+<details>
+<summary>来源</summary>
+
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 649–657
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 653–660
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_092；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 仅有黄泉原乡背景依据，没有飘零大陆出场或穿越证据。
+
+<a id="CHARACTER_CRC_093"></a>
+### 谏山奈落
+
+`CHARACTER_CRC_093` · confirmed · original_campaign
+
+谏山奈落是谏山家家主、谏山黄泉的养父。他收养幼年失去父母的黄泉，安排她接受除灵训练，也接纳土宫神乐同住。黄泉的人物参考记载，奈落后来被受杀生石影响的谏山冥杀害，由此引发家主位置与狮子王的争夺。
+
+<details>
+<summary>来源</summary>
+
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 654–659
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 653–660
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_093；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 谏山家为黄泉原乡关系，未建立为帝国势力；此处记录人物参考明确给出的背景。
+
+<a id="CHARACTER_CRC_094"></a>
+### 饭纲纪之
+
+`CHARACTER_CRC_094` · confirmed · original_campaign
+
+饭纲纪之是谏山黄泉在日本原乡曾订有婚约的对象。黄泉的人物参考记载，谏山家变故后，她被三途河重伤，饭纲家主在此时取消了双方婚约；这段婚约及其解除属于黄泉的原乡背景，并未确立饭纲纪之为她后来的伴侣。
+
+<details>
+<summary>来源</summary>
+
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 649–660
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 653–660
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_094；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 婚约不自动证明双方爱情，具体个人意愿未给；无飘零大陆出场依据。
+
+<a id="CHARACTER_CRC_095"></a>
+### 谏山冥
+
+`CHARACTER_CRC_095` · confirmed · original_campaign
+
+谏山冥是谏山幽之女，属于谏山黄泉在日本原乡的家族关系。黄泉的人物参考记载，三途河将杀生石植入冥的胸前，使她迷失心智；冥随后杀害谏山奈落，夺取家主位置与宝刀狮子王。她后来引黄泉外出，最终被黄泉杀死，三途河随即袭击并重伤黄泉。
+
+<details>
+<summary>来源</summary>
+
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 658–659
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 653–660
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_095；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 生死采用原人物参考658–660行明确经过，修正旧研究薄档的未核表述；没有飘零大陆出场依据。
+
+<a id="CHARACTER_CRC_096"></a>
+### 三途河
+
+`CHARACTER_CRC_096` · confirmed · original_campaign
+
+三途河是谏山黄泉原乡变故中的袭击者，持有大块未封印的杀生石。黄泉的人物参考记载，他先将一块杀生石植入谏山冥胸前，使她迷失心智；黄泉杀死冥后，他又以飞镖重伤黄泉。后来他以杀生石治愈黄泉，准备把石头植入她体内；是否完成向黄泉植入杀生石尚未明确。
+
+<details>
+<summary>来源</summary>
+
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 658–660
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 653–660
+
+</details>
+
+备注：F1人物简传返修稿待用户审核。对应CRC_096；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 完整身世未给，不补原型履历或使其自动成为飘零大陆敌人。
+
+<a id="CHARACTER_CRC_097"></a>
+### 影魔
+
+`CHARACTER_CRC_097` · confirmed · original_campaign
+
+影魔是寄居在沐透戒指中的存在，与沐透维持合作关系，曾向他索取恶人的灵魂。它自称监狱塔最后的守门人，洛掌握的资料却将它列作犯人；它在塔中的身份与遭到收押的经过仍有分歧〔uncertain〕。洛曾强制唤出影魔，询问其身份和职责，并以收押相威胁。
+
+影魔曾在危险中提醒、援护沐透，也会拒绝应答或休眠。它在水手相关冲突中出手后失去回应，此后状态未明，不能据此确认它已经死亡。
+
+<details>
+<summary>来源</summary>
+
+- [人物卡资料集_检索版.md](<../sources/references/设定 人物/人物卡资料集_检索版.md>)：lines 916–927
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：JSONL line 3; msg845721 / #2
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：JSONL line 5; msg845760 / #4
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：JSONL line 7; msg845764 / #6
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：JSONL line 7; msg847669 / #56
+- [posts.jsonl](<../extracted-mutou/page-03/posts.jsonl>)：JSONL line 35; msg859330 / #134
+- [posts.jsonl](<../extracted-mutou/page-03/posts.jsonl>)：JSONL line 39; msg859850 / #138
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 19; msg862968 / #168
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 33; msg864233 / #182
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：JSONL line 21; msg955484 / #370
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 41; msg864574 / #190
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 42; msg864576 / #191
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 45; msg864656 / #194
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：JSONL line 13; msg846011 / #12
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：JSONL line 9; msg847750 / #58
+- [posts.jsonl](<../extracted-mutou/page-03/posts.jsonl>)：JSONL line 45; msg860735 / #144
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 20; msg863006 / #169
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 35; msg864341 / #184
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 69; entity_id=CRC_097; author_sections and source_refs
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_097；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_102"></a>
+### 阿伊达
+
+`CHARACTER_CRC_102` · confirmed · original_campaign
+
+阿伊达是退隐后育有一子的传奇流浪士兵，维尔是他的儿子。维尔在考古探险后患上怪病，阿伊达为此求医，并与沐透合作寻找、夺回有关器物。他为救子提供材料和协助，事后承认欠沐透恩情，双方由此建立互助关系。
+
+阿伊达后来向沐透表示，自己已经正式注册为游击士，并会留在帝都。他能参与危险行动，但自述更擅长对付少量目标，不擅长指挥；儿子的病是否完全治愈，当时仍未确认。
+
+别名：阿依达
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 23; msg868539 / #222
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 31; msg878868 / #230
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 25; msg1042442 / #424
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 43; msg881995 / #242
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：JSONL line 6; msg895365 / #255
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：JSONL line 33; msg912204 / #282
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：JSONL line 47; msg950942 / #346
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 47; msg893869 / #246
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：JSONL line 24; msg900327 / #273
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 27; msg1042494 / #426
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：JSONL line 23; msg1160997 / #472
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：JSONL line 35; msg913705 / #284
+- [posts.jsonl](<../extracted-mutou/page-06/posts.jsonl>)：JSONL line 37; msg914004 / #286
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 27; msg869475 / #226
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 39; msg880017 / #238
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 71; entity_id=CRC_102; author_sections and source_refs
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_102；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_103"></a>
+### 维尔
+
+`CHARACTER_CRC_103` · confirmed · original_campaign
+
+维尔是阿伊达的儿子，也是一名考古学徒。他在一次探险后出现睡眠、清醒周期异常的怪病。原线中，沐透在维尔未清醒时为他装上Faer；装具激活后，他一度失控并攻击娜迦。
+
+维尔醒来后害怕再受装具支配，希望将它上缴国家。此后他接受检查，并获得插班学习的安排。他自述出现了新的魔力与水元素亲和，但当时尚未完全控制Faer；相关力量的出现也没有证明他的怪病已经根治。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 29; msg869542 / #228
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 31; msg878868 / #230
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 37; msg880010 / #236
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：JSONL line 45; msg950844 / #344
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：JSONL line 10; msg929554 / #309
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：JSONL line 11; msg931036 / #310
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：JSONL line 15; msg931924 / #314
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：JSONL line 19; msg939232 / #318
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 27; msg1042494 / #426
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：JSONL line 25; msg948659 / #324
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 43; msg1046862 / #442
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 72; entity_id=CRC_103; author_sections and source_refs
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_103；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_104"></a>
+### 拉塞尔博士
+
+`CHARACTER_CRC_104` · confirmed · original_campaign
+
+拉塞尔博士是帝都研究所中接待沐透与维尔的研究者，并将维尔认作新来的插班生。面对陌生的宝石魔法与腰带，他先探测器物、绘制结构图，再归还样本并召集专家研议。
+
+博士愿意考虑新的研究委托，但说明实验需要正式委托、材料、实际样本和时间。他对魔偶、魔核与宝石技术有研究经验，也承认制造成本和材料适配方面的限制。沐透提出逆转Phantom的设想时，他尚未完成对应器具或验证成功流程。
+
+别名：拉塞尔、塞拉尔、赛博尔
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 33; msg1043390 / #432
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 39; msg1044705 / #438
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 43; msg1046862 / #442
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 41; msg1046096 / #440
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：JSONL line 3; msg1049842 / #452
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：JSONL line 5; msg1051559 / #454
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 45; msg1047210 / #444
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 49; msg1047852 / #448
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 40; msg1044891 / #439
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 48; msg1047768 / #447
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：JSONL line 13; msg1056638 / #462
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 47; msg1047660 / #446
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 73; entity_id=CRC_104; author_sections and source_refs
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_104；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 同场“拉塞尔、塞拉尔、赛博尔”异写留作姓名考据；与主线博士是否同一人仍未确认。
+
+<a id="CHARACTER_CRC_105"></a>
+### 逆羽·霞
+
+`CHARACTER_CRC_105` · confirmed · original_campaign
+
+逆羽·霞是雷光直属第一大队第二小队的队长，这支小队专门处理白色魔法师相关事务。她与副队长幻翎·洛救援沐透，听取他的经历与情报，并因他同白魔的渊源邀请他加入。
+
+沐透最初对招募有异议，后来领取了小队铁牌，并以队员身份活动。霞曾赠送羽毛，并说明可以借此定位；羽毛的完整作用范围尚未明确。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 35; msg864341 / #184
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 39; msg864444 / #188
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 41; msg864574 / #190
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 45; msg864656 / #194
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 49; msg864800 / #198
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 88
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：JSONL line 37; msg957923 / #386
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 36; msg1044064 / #435
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 74; entity_id=CRC_105; author_sections and source_refs
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_105；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_106"></a>
+### 幻翎·洛
+
+`CHARACTER_CRC_106` · confirmed · original_campaign
+
+幻翎·洛是雷光直属第一大队第二小队的副队长，与队长逆羽·霞共同处理白色魔法师相关事务。他救护沐透，核查军籍与异常能量，并强制唤出戒指中的影魔，询问它与监狱塔的关系。
+
+洛在听取白魔情报后，基于共同目标邀请沐透合作，安排活动资金、交通与医疗支援，后来还处理活俘运送。他曾用金羽暂时抑制毒素，并与其他医护人员接续救治；暂时抑毒并不意味着已经完成治疗。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 37; msg864394 / #186
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 39; msg864444 / #188
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 41; msg864574 / #190
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 45; msg864656 / #194
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 47; msg864765 / #196
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 88
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 75; entity_id=CRC_106; author_sections and source_refs
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_106；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_107"></a>
+### 劳霖
+
+`CHARACTER_CRC_107` · confirmed · original_campaign
+
+劳霖自称帝国边关步兵第九大队的士兵，奉逆羽·霞与幻翎·洛的命令协查。他照护昏迷的沐透近一周，之后随同行动，参与救援、赴宫和记录报告。
+
+劳霖称自己与御临风是老朋友，托沐透代为问候；现存经历尚未记到两人重逢或口信送达。他猜测御临风去了山脉，这只是劳霖当时的判断〔character_belief〕。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：JSONL line 25; msg955864 / #374
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：JSONL line 29; msg956231 / #378
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：JSONL line 31; msg956348 / #380
+- [posts.jsonl](<../extracted-mutou/page-08/posts.jsonl>)：JSONL line 35; msg957028 / #384
+- [posts.jsonl](<../extracted-mutou/page-09/posts.jsonl>)：JSONL line 23; msg1042344 / #422
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：JSONL line 17; msg1083375 / #466
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：JSONL line 23; msg1160997 / #472
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 76; entity_id=CRC_107; author_sections and source_refs
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_107；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_108"></a>
+### 王骑
+
+`CHARACTER_CRC_108` · confirmed · original_campaign
+
+王骑在军方会面中自报为“雷公”直属第一大队的大队长之一。他听取沐透关于白色魔法师的情报，批准暂住安排，并承诺为相关研究提供正式委托。
+
+这次会面使沐透获得了军方支持与联络渠道，但当时尚未见正式委托文书送达研究所，也未出现研究完成的结果。王骑的完整职权范围未明。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：JSONL line 9; msg1052875 / #458
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：JSONL line 11; msg1055378 / #460
+- [posts.jsonl](<../extracted-mutou/page-10/posts.jsonl>)：JSONL line 13; msg1056638 / #462
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 77; entity_id=CRC_108; author_sections and source_refs
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_108；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_109"></a>
+### 克拉肯
+
+`CHARACTER_CRC_109` · character_belief · original_campaign
+
+克拉肯自称北海巨妖，寄于维尔的心灵世界，并通过Faer相关器物与外界沟通。他向沐透、阿伊达等人解释装具的休眠、契约和供魔条件，也讲述自己与精灵王及古代历史的联系；这些古史内容属于他的陈述〔character_belief〕。
+
+克拉肯表示，维尔必须学习掌握魔力，并以意志抑制装具追杀娜迦的本能。他后来宣称契约已经成立，但这没有消除维尔此前的失控，也不代表维尔已经熟练控制Faer。
+
+别名：Kraken、北海巨妖
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 45; msg893857 / #244
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 47; msg893869 / #246
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 49; msg893930 / #248
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：JSONL line 25; msg948659 / #324
+- [posts.jsonl](<../extracted-mutou/page-07/posts.jsonl>)：JSONL line 27; msg948754 / #326
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 78; entity_id=CRC_109; author_sections and source_refs
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_109；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_110"></a>
+### 曼吉
+
+`CHARACTER_CRC_110` · confirmed · original_campaign
+
+曼吉是驻镇法师，参与当地石化异常的调查与处置。他听取沐透关于炼石的推测后决定疏散，并曾为沐透治疗伤势，建议继续配药休养。
+
+曼吉在镇长宴会上受袭、中毒倒下，后来接受外来医疗救援。他与皮谢及地方行政共同调查异常，但当时并不知道结界的全部用途。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：JSONL line 39; msg846736 / #38
+- [posts.jsonl](<../extracted-mutou/page-03/posts.jsonl>)：JSONL line 15; msg855949 / #114
+- [posts.jsonl](<../extracted-mutou/page-03/posts.jsonl>)：JSONL line 29; msg857328 / #128
+- [posts.jsonl](<../extracted-mutou/page-03/posts.jsonl>)：JSONL line 31; msg859081 / #130
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 7; msg862103 / #156
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 79; entity_id=CRC_110; author_sections and source_refs
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_110；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_111"></a>
+### 皮谢
+
+`CHARACTER_CRC_111` · confirmed · original_campaign
+
+皮谢是镇守卫队长。他认出石像中的失踪部下后组织挖掘、寻找法师，并与曼吉及沐透协作调查。起初，他依据镇长过去的政绩信任对方；宴会上遭毒刺袭击、获救后，才知道镇长身份遭到冒用，并为自己未能识破而自责。
+
+皮谢提供了有关商队朝帝都方向行进的线索，但没有掌握商队的完整路线与后续去向。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：JSONL line 31; msg849060 / #80
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：JSONL line 33; msg849140 / #82
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：JSONL line 45; msg852225 / #94
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：JSONL line 47; msg852561 / #96
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 21; msg863008 / #170
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 5; msg865501 / #204
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 80; entity_id=CRC_111; author_sections and source_refs
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_111；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_112"></a>
+### 雅莱佩
+
+`CHARACTER_CRC_112` · confirmed · original_campaign
+
+雅莱佩是当地行政庭的前台办事人员，承担接报、内部联络和向来访者反馈消息的工作。沐透报告异常后，她联系镇长与法师，转达商队调查和帝都回信的情况，并为沐透带路。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：JSONL line 27; msg846449 / #26
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：JSONL line 33; msg846685 / #32
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：JSONL line 37; msg846712 / #36
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：JSONL line 49; msg847456 / #48
+- [posts.jsonl](<../extracted-mutou/page-02/posts.jsonl>)：JSONL line 27; msg848743 / #76
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 81; entity_id=CRC_112; author_sections and source_refs
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_112；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_113"></a>
+### 夏洛克·査丁
+
+`CHARACTER_CRC_113` · confirmed · original_campaign
+
+夏洛克·査丁是当地镇长，居民对他过去的治理有良好评价。沐透参与调查期间，宴会上以镇长外貌出现的人投毒，随后蜕变为粘液魔物；这名冒用身份者声称真正的镇长已经死亡。
+
+真镇长的死亡当时只有魔物口供，尚无独立确认〔character_belief〕。居民对旧日善政的评价属于真人的过往声誉，宴会中的投毒和袭击则是冒名者的行为。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-mutou/page-01/posts.jsonl>)：JSONL line 29; msg846483 / #28
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 21; msg863008 / #170
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 23; msg863110 / #172
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 82; entity_id=CRC_113; author_sections and source_refs
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_113；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_114"></a>
+### 博恩婆婆
+
+`CHARACTER_CRC_114` · confirmed · original_campaign
+
+博恩婆婆在当地管理文书。镇长宴会上，她没有饮杯，曾暗中扯动沐透的衣物以示警，随后离席。
+
+事后，博恩婆婆向沐透讲述儿子失踪的情况，并称自己亲眼看见镇长向酒茶中投放东西。她也说曾把宝石送给欧吉尔德，但并不掌握全部交货地点。儿子的下落和所投物质的具体性质当时仍未明确。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 15; msg862637 / #164
+- [posts.jsonl](<../extracted-mutou/page-04/posts.jsonl>)：JSONL line 17; msg862763 / #166
+- [posts.jsonl](<../extracted-mutou/page-05/posts.jsonl>)：JSONL line 1; msg865053 / #200
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 83; entity_id=CRC_114; author_sections and source_refs
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_114；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_116"></a>
+### 埃弗纳斯
+
+`CHARACTER_CRC_116` · confirmed · original_campaign
+
+埃弗纳斯是科普卢村灾难的幸存者，称艾鲁尔为养父，萨米尔与珊蒂斯为好友。他获纳萨力克救助后，愿意报恩并调查村灾真相，但明确拒绝杀害无辜者。
+
+埃弗纳斯随后接受了保密和报告要求，服药开启魔力池，戴上项圈并领取行旅物资，成为纳萨力克在外活动的本地代理。他当时尚未完成魔法训练。离开后，他又在镇上受到美杜莎与养父外貌男子的胁迫；这段同行并非自愿合作，男子是否延续了养父原有的人格仍未确认。
+
+别名：埃佛纳斯
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 1; msg922950 / #0
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 10; msg923287 / #9
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 47; msg949503 / #46
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 6; msg923247 / #5
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 8; msg923275 / #7
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 14; msg923423 / #13
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 49; msg952746 / #48
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 50; msg954249 / #49
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 1; msg954393 / #50
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 3; msg954561 / #52
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 4; msg954685 / #53
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 5; msg954706 / #54
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 9; msg923284 / #8
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 7; msg954760 / #56
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 9; msg955110 / #58
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 13; msg955598 / #62
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 15; msg955870 / #64
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 38; msg990696 / #87
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：JSONL line 2; msg1015970 / #101
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：JSONL line 11; msg1058086 / #110
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：JSONL line 12; msg1081976 / #111
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 85; entity_id=CRC_116; author_sections and source_refs
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_116；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_117"></a>
+### 雅儿贝德
+
+`CHARACTER_CRC_117` · confirmed · original_campaign
+
+雅儿贝德是安兹的下属，在他身侧接待来客并执行传令工作。她曾呈交战地图、报告与资料，安兹认可她与迪米乌哥斯共同取得的情报，并命她传召守护者。
+
+雅儿贝德对安兹表现出强烈的主从敬意。来客失礼时，她曾发怒，但在安兹解释情况后立即收起追究，服从他的处置。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 1; msg922950 / #0
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 3; msg922976 / #2
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 15/posts.jsonl>)：JSONL line 12; msg959984 / #711
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 12; msg967530 / #761
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 86; entity_id=CRC_117; author_sections and source_refs
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_117；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_118"></a>
+### 迪米乌哥斯
+
+`CHARACTER_CRC_118` · confirmed · original_campaign
+
+迪米乌哥斯自报为纳萨力克第七阶层守护者，种族为恶魔。他接待埃弗纳斯、解释误会，带他去见安兹，并奉命护送、交付装备和指引道路。
+
+迪米乌哥斯与亚乌菈协作准备行旅安排，也与雅儿贝德共同取得情报，得到安兹认可。安兹曾说他不精通魔法；他的内部联络和通行权限已有实际用途，完整战斗能力尚未展示。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 47; msg949503 / #46
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 49; msg952746 / #48
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 1; msg954393 / #50
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 3; msg954561 / #52
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 9; msg955110 / #58
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 13; msg955598 / #62
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 17; msg956355 / #66
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 19; msg957027 / #68
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 7; msg954760 / #56
+- [posts.jsonl](<../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 16/posts.jsonl>)：JSONL line 12; msg967530 / #761
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：JSONL line 2; msg1015970 / #101
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：JSONL line 3; msg1016053 / #102
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 87; entity_id=CRC_118; author_sections and source_refs
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_118；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_119"></a>
+### 亚乌菈·贝拉·菲欧拉
+
+`CHARACTER_CRC_119` · confirmed · original_campaign
+
+亚乌菈·贝拉·菲欧拉是纳萨力克第六阶层守护者，种族为纯正黑暗精灵。她接待埃弗纳斯，并按安兹的安排准备马匹和行旅物资。安兹称她为驯兽师；她也把马雷作为可以提供自然魔法帮助的人选介绍给来客，但当时尚未形成正式师徒关系。
+
+亚乌菈曾把埃弗纳斯称作“半个同胞”，这是她对来客种族的说法，未据此确定埃弗纳斯的完整血统。
+
+别名：亚乌菈
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 47; msg949503 / #46
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 49; msg952746 / #48
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 1; msg954393 / #50
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 9; msg955110 / #58
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 15; msg955870 / #64
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 17; msg956355 / #66
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 7; msg954760 / #56
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 88; entity_id=CRC_119; author_sections and source_refs
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_119；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_120"></a>
+### 皮奇
+
+`CHARACTER_CRC_120` · confirmed · original_campaign
+
+皮奇自报纳萨力克副料理长，在第九层为埃弗纳斯递菜单、推荐饮食、烹饪并上菜，这次接待没有收费。他也向来客说明纳萨力克的日常生活规则，以及其他至尊离去、安兹留守的情况。
+
+谈及离去者的下落时，皮奇承认自己并不知道答案。他对离去原因的解释包含猜测，尚不能视为已经确认的历史〔character_belief〕。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 27; msg927646 / #26
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 31; msg928618 / #30
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 33; msg929389 / #32
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 39; msg934724 / #38
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 41; msg939231 / #40
+- [posts.jsonl](<../extracted-great-tomb/page-01/posts.jsonl>)：JSONL line 29; msg928408 / #28
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 89; entity_id=CRC_120; author_sections and source_refs
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_120；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_122"></a>
+### 美杜莎
+
+`CHARACTER_CRC_122` · confirmed · original_campaign
+
+美杜莎是忠于白色魔法师的Phantom，以黑衣女性的形象出现在埃弗纳斯面前。她与一名具有埃弗纳斯养父外貌的男子同行；男子称她“大人”，并就后续行动向她请示。
+
+在镇中胁迫事件里，美杜莎将商人妻子的尸体拖进屋内、锁门，并首肯让埃弗纳斯带路引见救助者的要求。她听到迪米乌哥斯的名字时摇头示意不认识，这一表现不足以确定她内心的全部知情范围。当时一行人尚未抵达纳萨力克，也未完成交涉。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 29; msg978566 / #78
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 49; msg1000177 / #98
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：JSONL line 3; msg1016053 / #102
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：JSONL line 5; msg1022610 / #104
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：JSONL line 12; msg1081976 / #111
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 47; msg997679 / #96
+- [user_clarifications.md](<../work/replay_research/user_clarifications.md>)：lines 146
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 91; entity_id=CRC_122; author_sections and source_refs
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：JSONL line 7; msg1034858 / #106
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：JSONL line 9; msg1055352 / #108
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：JSONL line 11; msg1058086 / #110
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_122；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。 美杜莎的姓名、Phantom身份及对白魔忠诚采用用户确认；不合并沐透线同名飞马相关人物的能力。
+
+<a id="CHARACTER_CRC_123"></a>
+### 欧登
+
+`CHARACTER_CRC_123` · confirmed · original_campaign
+
+欧登是当地镇长，与守备队长科斯雷共同接待埃弗纳斯，听取科普卢村灾情。他们安排少量人员侦察、联系驻军，并通过文书寻找游击士等援手；欧登同时为报案者提供留宿。
+
+后来，欧登在镇上遇见埃弗纳斯与身后的美杜莎、养父外貌男子。冲突发生后，法师贝克带他撤离；此前求援是否收到响应，尚未见结果。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 39; msg990702 / #88
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 43; msg993920 / #92
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 38; msg990696 / #87
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：JSONL line 11; msg1058086 / #110
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 92; entity_id=CRC_123; author_sections and source_refs
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：JSONL line 3; msg1016053 / #102
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：JSONL line 7; msg1034858 / #106
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：JSONL line 9; msg1055352 / #108
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_123；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_124"></a>
+### 科斯雷
+
+`CHARACTER_CRC_124` · confirmed · original_campaign
+
+科斯雷是当地镇守备队长，与镇长欧登共同处理科普卢村灾情。他原本准备亲自前去调查，听取埃弗纳斯对敌方实力的担忧后，改为留在镇中组织防守，并与欧登商定侦察和求援安排。
+
+这次商议后的明确部署是科斯雷留守，现存经历尚未记到他亲自出城调查的结果。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 39; msg990702 / #88
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 41; msg992345 / #90
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 43; msg993920 / #92
+- [posts.jsonl](<../extracted-great-tomb/page-02/posts.jsonl>)：JSONL line 38; msg990696 / #87
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 93; entity_id=CRC_124; author_sections and source_refs
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_124；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+
+<a id="CHARACTER_CRC_125"></a>
+### 贝克
+
+`CHARACTER_CRC_125` · confirmed · original_campaign
+
+贝克是当地镇上的法师。欧登镇长遇见埃弗纳斯、美杜莎与养父外貌男子时，贝克阻止镇长贸然接近，并要求三人保持距离、不要行动。
+
+养父外貌男子随后掷出匕首袭击贝克，被他用魔法加持的法袍挡下。贝克随即带欧登撤离，警告周围居民避难，并开始施法呼叫援军；呼叫是否成功以及援军何时到达，当时尚未见结果。
+
+<details>
+<summary>来源</summary>
+
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：JSONL line 7; msg1034858 / #106
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：JSONL line 9; msg1055352 / #108
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：JSONL line 11; msg1058086 / #110
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：JSONL line 10; msg1056029 / #109
+- [author_profiles.jsonl](<../output/replay_f_review/v1/characters/author_profiles.jsonl>)：JSONL line 94; entity_id=CRC_125; author_sections and source_refs
+- [posts.jsonl](<../extracted-great-tomb/page-03/posts.jsonl>)：JSONL line 3; msg1016053 / #102
+
+</details>
+
+备注：F1人物条目第一版待用户审核。对应CRC_125；作者档案与运行卡另存，开局可用范围以opening字段为准。原线后期经历不是重玩未来承诺。
+

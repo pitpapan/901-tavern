@@ -66,7 +66,7 @@
 4. 世界书触发词只用正式名、常用简称和已确认别名；“禁魔石/厌魔石”对应关系保留待审；研究所同场的塞拉尔/拉塞尔/赛博尔按已确认文本异写处理，CRC_061/104作为可能重复标签归并。
 5. 人物私下计划和后台史不直接变成对玩家的叙述；模型能查询的资料与角色能说出的内容是两层。
 
-具体每轮推演、角色反应、事件条件与记忆保存见[剧情运行设计](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/docs/superpowers/specs/2026-10-02-tavern-story-runtime-design.md>)。这里没有执行推演或导入酒馆；正式编写仍在候选审核与明确第二阶段请求之后。
+具体每轮推演、角色反应、事件条件与记忆保存见[剧情运行设计](<../../sources/legacy_evidence/docs/superpowers/specs/2026-10-02-tavern-story-runtime-design.md>)。这里没有执行推演或导入酒馆；正式编写仍在候选审核与明确第二阶段请求之后。
 
 ## 旁线与后期人物资料怎样进入开局（2026-10-03）
 

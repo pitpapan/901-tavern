@@ -4,7 +4,7 @@
 
 本稿直接复用酒馆现有聊天、分支／检查点以及摘要和提示位置；它规定主持如何推进、摘要该保留什么，不要求另造角色设置、状态机或后台进程。事件 JSON 只供作者检索与后续选取，正常游玩无需每轮手工跑表。
 
-本稿沿用已经确认的运行设计：从三人将入帝都、尚未执行原线 #81 行动的 T0 开始。保留此前历史与已证关系，允许新选择自然改变后续；御临风的行动与成长由用户决定。梦境默认排除，主神与幻剑旧机制在 T0 已移除。设计依据见 [runtime design](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/docs/superpowers/specs/2026-10-02-tavern-story-runtime-design.md>)、[OPENR 开局整合](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/opening_state_consolidated.md:7>)、[UCL_20261003_007](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:197>)。此处是 F3 设计内容的补充，不新增实现步骤。
+本稿沿用已经确认的运行设计：从三人将入帝都、尚未执行原线 #81 行动的 T0 开始。保留此前历史与已证关系，允许新选择自然改变后续；御临风的行动与成长由用户决定。梦境默认排除，主神与幻剑旧机制在 T0 已移除。设计依据见 [runtime design](<../../../../sources/legacy_evidence/docs/superpowers/specs/2026-10-02-tavern-story-runtime-design.md>)、[OPENR 开局整合](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/opening_state_consolidated.md:7>)、[UCL_20261003_007](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/user_clarifications.md:197>)。此处是 F3 设计内容的补充，不新增实现步骤。
 
 ## 1. 事件怎样分类
 

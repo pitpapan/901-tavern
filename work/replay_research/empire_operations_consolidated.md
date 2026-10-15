@@ -81,15 +81,15 @@
 | --- | --- |
 | 多族治理与共同秩序 | [多族治理补充](user_clarifications.md:936) |
 | 官方结构与协会职责 | [设定集第25至35行](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md:25>)；[帝国专题](empire_dossier.md) |
-| 地方应急与治安协作 | [用户确认记录于讨论稿第59至71行](<D:/备份文件/901记录/TRPG outputs/docs/superpowers/specs/2026-10-04-empire-simple-operations-draft.md:59>) |
+| 地方应急与治安协作 | [用户确认记录于讨论稿第59至71行](<../../sources/legacy_evidence/docs/superpowers/specs/2026-10-04-empire-simple-operations-draft.md>) |
 | 协会赞助、知情与呈递 | [UCL_20261004_008](user_clarifications.md:482)、[009](user_clarifications.md:502)、[010](user_clarifications.md:523) |
 | 救助费用与会员响应 | [UCL_20261004_011](user_clarifications.md:545)、[012](user_clarifications.md:566) |
-| 兄弟会身份与见证 | [UCL_20261004_006](user_clarifications.md:439)；[自主行动、重联与支援的用户原话](<D:/备份文件/901记录/TRPG outputs/docs/superpowers/specs/2026-10-04-empire-simple-operations-draft.md:33>) |
+| 兄弟会身份与见证 | [UCL_20261004_006](user_clarifications.md:439)；[自主行动、重联与支援的用户原话](<../../sources/legacy_evidence/docs/superpowers/specs/2026-10-04-empire-simple-operations-draft.md>) |
 | 魔法通信 | [UCL_20261004_007](user_clarifications.md:463)；帝国专题 EMP_009 |
 | 货币名称与换算 | [UCL_20261004_013](user_clarifications.md:583)；帝国专题 EMP_010 |
 | 场景物价与币材 | [MUTOU #224/msg869062](../../extracted-mutou/page-05/posts.jsonl:25)；[P3 #22/msg1040710](<../../extracted-third/NO.901MurginMunalos，昼短苦夜长，人间正道是沧桑。/posts.jsonl:23>) |
 
-原帖事实、用户直接补充与本次重玩采用的约定在各来源中分别标注；本稿不把新约定追认为原线已经发生的办理过程。外部《空之轨迹》仅作参考，完整讨论及未采纳建议保留在[讨论稿](<D:/备份文件/901记录/TRPG outputs/docs/superpowers/specs/2026-10-04-empire-simple-operations-draft.md>)。
+原帖事实、用户直接补充与本次重玩采用的约定在各来源中分别标注；本稿不把新约定追认为原线已经发生的办理过程。外部《空之轨迹》仅作参考，完整讨论及未采纳建议保留在[讨论稿](<../../sources/legacy_evidence/docs/superpowers/specs/2026-10-04-empire-simple-operations-draft.md>)。
 
 ## 2026-10-07补充：民用通信与常见伤口治疗
 

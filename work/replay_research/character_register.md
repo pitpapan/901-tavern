@@ -517,7 +517,7 @@
 - 时期边界：来源可能跨多个原线时期；不把后期生死、联盟、关系和能力回填首次入帝都。
 - 待读：C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.md:L11-38、147-220；C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 5/posts.md:L381-487。
 - 粒度：具身份/持久关系的研究候选，尚非正式NPC卡
-- 来源：[phase3c_inventory.md:L30](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3c_inventory.md:30>)
+- 来源：[phase3c_inventory.md:L30](<../../sources/legacy_evidence/work/phase3c_inventory.md>)
 
 ### CRC_028 奥希拉
 
@@ -541,7 +541,7 @@
 - 时期边界：来源可能跨多个原线时期；不把后期生死、联盟、关系和能力回填首次入帝都。
 - 待读：C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.md:L487-516；C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 7/posts.md:L211-241。
 - 粒度：具身份/持久关系的研究候选，尚非正式NPC卡
-- 来源：[妄想大陆设定集_检索版.md:L163–168](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md:163>)；[phase3c_inventory.md:L32](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3c_inventory.md:32>)
+- 来源：[妄想大陆设定集_检索版.md:L163–168](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md:163>)；[phase3c_inventory.md:L32](<../../sources/legacy_evidence/work/phase3c_inventory.md>)
 
 ### CRC_030 凌迟
 
@@ -574,7 +574,7 @@
 - 时期边界：来源可能跨多个原线时期；不把后期生死、联盟、关系和能力回填首次入帝都。
 - 待读：C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-first/22/posts.md:L420-470；C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-first/28/posts.md:L266-377；C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.md:L93-134、419-448。
 - 粒度：具身份/持久关系的研究候选，尚非正式NPC卡
-- 来源：[posts.md:L83–91](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.md:83>)；[人物卡资料集_检索版.md:L254](<D:/备份文件/901记录/TRPG outputs/设定 人物/人物卡资料集_检索版.md:254>)；[phase3c_inventory.md:L35](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3c_inventory.md:35>)
+- 来源：[posts.md:L83–91](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.md:83>)；[人物卡资料集_检索版.md:L254](<D:/备份文件/901记录/TRPG outputs/设定 人物/人物卡资料集_检索版.md:254>)；[phase3c_inventory.md:L35](<../../sources/legacy_evidence/work/phase3c_inventory.md>)
 
 ### CRC_033 宝石翁
 
@@ -584,7 +584,7 @@
 - 原型〔confirmed；UCL_20261007_001〕：参考Fate系列。此前“未获外部作品参照授权”判断已由本次用户说明更新；简称泽尔里奇已有直接对应（P1 #1313/msg858359、#1321/msg859087）；全名另见曼吉转述（沐透#40/msg846797），仍保留说话者与知情范围。第二魔法等完整能力不因原型参照自动获确认。见[原型补充](prototype_reference_followup_20261007.md)。
 - 已读补齐：[本团直接表现与原型版本](prototype_reference_followup_20261007.md)，含调查、转咒条件、绘阵、材料检查及三人协作；均保留原团后期时期，不初始化T0相识与知情。
 - 粒度：具身份/持久关系的研究候选，尚非正式NPC卡
-- 来源：[posts.md:L83–91](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.md:83>)；[phase3c_inventory.md:L36](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3c_inventory.md:36>)
+- 来源：[posts.md:L83–91](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.md:83>)；[phase3c_inventory.md:L36](<../../sources/legacy_evidence/work/phase3c_inventory.md>)
 
 ### CRC_034 瑟坦特·卢·优尔兰
 
@@ -666,7 +666,7 @@
 - 时期边界：原线行动、生死与关系需按场景定时；不提前写进重玩开局。
 - 待读：在原团顺读时确认身份、称呼对应、原控制归属、台词及能力；不从目录推定完整人物。
 - 粒度：人物候选；深度随证据增加，暂不生成正式NPC卡
-- 来源：[妄想大陆设定集_检索版.md:L168](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md:168>)；[unresolved_character_labels.md:L22](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3d_r2b/reports/unresolved_character_labels.md:22>)
+- 来源：[妄想大陆设定集_检索版.md:L168](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md:168>)；[unresolved_character_labels.md:L22](<../../sources/legacy_evidence/work/phase3d_r2b/reports/unresolved_character_labels.md>)
 
 ### CRC_041 宗近
 
@@ -685,7 +685,7 @@
 - 时期边界：原线行动、生死与关系需按场景定时；不提前写进重玩开局。
 - 待读：在原团顺读时确认身份、称呼对应、原控制归属、台词及能力；不从目录推定完整人物。
 - 粒度：人物候选；深度随证据增加，暂不生成正式NPC卡
-- 来源：[unresolved_character_labels.md:L10](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3d_r2b/reports/unresolved_character_labels.md:10>)；[901前史与设定备忘录.md:L139–147](<D:/备份文件/901记录/战报/901前史与设定备忘录.md:139>)
+- 来源：[unresolved_character_labels.md:L10](<../../sources/legacy_evidence/work/phase3d_r2b/reports/unresolved_character_labels.md>)；[901前史与设定备忘录.md:L139–147](<D:/备份文件/901记录/战报/901前史与设定备忘录.md:139>)
 
 ### CRC_043 老村医
 
@@ -694,7 +694,7 @@
 - 时期边界：原线行动、生死与关系需按场景定时；不提前写进重玩开局。
 - 待读：在原团顺读时确认身份、称呼对应、原控制归属、台词及能力；不从目录推定完整人物。
 - 粒度：人物候选；深度随证据增加，暂不生成正式NPC卡
-- 来源：[unresolved_character_labels.md:L11](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3d_r2b/reports/unresolved_character_labels.md:11>)
+- 来源：[unresolved_character_labels.md:L11](<../../sources/legacy_evidence/work/phase3d_r2b/reports/unresolved_character_labels.md>)
 
 ### CRC_044 大妈
 
@@ -703,7 +703,7 @@
 - 时期边界：原线行动、生死与关系需按场景定时；不提前写进重玩开局。
 - 待读：在原团顺读时确认身份、称呼对应、原控制归属、台词及能力；不从目录推定完整人物。
 - 粒度：人物候选；深度随证据增加，暂不生成正式NPC卡
-- 来源：[unresolved_character_labels.md:L14](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3d_r2b/reports/unresolved_character_labels.md:14>)
+- 来源：[unresolved_character_labels.md:L14](<../../sources/legacy_evidence/work/phase3d_r2b/reports/unresolved_character_labels.md>)
 
 ### CRC_045 怪眼队长
 
@@ -712,7 +712,7 @@
 - 时期边界：原线行动、生死与关系需按场景定时；不提前写进重玩开局。
 - 待读：在原团顺读时确认身份、称呼对应、原控制归属、台词及能力；不从目录推定完整人物。
 - 粒度：人物候选；深度随证据增加，暂不生成正式NPC卡
-- 来源：[unresolved_character_labels.md:L15](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3d_r2b/reports/unresolved_character_labels.md:15>)
+- 来源：[unresolved_character_labels.md:L15](<../../sources/legacy_evidence/work/phase3d_r2b/reports/unresolved_character_labels.md>)
 
 ### CRC_046 佐间
 
@@ -721,7 +721,7 @@
 - 时期边界：原线行动、生死与关系需按场景定时；不提前写进重玩开局。
 - 待读：在原团顺读时确认身份、称呼对应、原控制归属、台词及能力；不从目录推定完整人物。
 - 粒度：人物候选；深度随证据增加，暂不生成正式NPC卡
-- 来源：[unresolved_character_labels.md:L17](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3d_r2b/reports/unresolved_character_labels.md:17>)
+- 来源：[unresolved_character_labels.md:L17](<../../sources/legacy_evidence/work/phase3d_r2b/reports/unresolved_character_labels.md>)
 
 ### CRC_047 阿德莱德
 
@@ -730,7 +730,7 @@
 - 时期边界：原线行动、生死与关系需按场景定时；不提前写进重玩开局。
 - 待读：在原团顺读时确认身份、称呼对应、原控制归属、台词及能力；不从目录推定完整人物。
 - 粒度：人物候选；深度随证据增加，暂不生成正式NPC卡
-- 来源：[unresolved_character_labels.md:L18](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3d_r2b/reports/unresolved_character_labels.md:18>)
+- 来源：[unresolved_character_labels.md:L18](<../../sources/legacy_evidence/work/phase3d_r2b/reports/unresolved_character_labels.md>)
 
 ### CRC_048 卡泽
 
@@ -739,7 +739,7 @@
 - 时期边界：原线行动、生死与关系需按场景定时；不提前写进重玩开局。
 - 待读：在原团顺读时确认身份、称呼对应、原控制归属、台词及能力；不从目录推定完整人物。
 - 粒度：人物候选；深度随证据增加，暂不生成正式NPC卡
-- 来源：[unresolved_character_labels.md:L24](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3d_r2b/reports/unresolved_character_labels.md:24>)
+- 来源：[unresolved_character_labels.md:L24](<../../sources/legacy_evidence/work/phase3d_r2b/reports/unresolved_character_labels.md>)
 
 ### CRC_049 携盒男子
 
@@ -748,7 +748,7 @@
 - 时期边界：原线行动、生死与关系需按场景定时；不提前写进重玩开局。
 - 待读：在原团顺读时确认身份、称呼对应、原控制归属、台词及能力；不从目录推定完整人物。
 - 粒度：人物候选；深度随证据增加，暂不生成正式NPC卡
-- 来源：[unresolved_character_labels.md:L27](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3d_r2b/reports/unresolved_character_labels.md:27>)
+- 来源：[unresolved_character_labels.md:L27](<../../sources/legacy_evidence/work/phase3d_r2b/reports/unresolved_character_labels.md>)
 
 ### CRC_050 黄祸龙狼
 
@@ -758,7 +758,7 @@
 - 问题：姜子尤同貌仅为导航线索，不能据此确认同一人；‘黄祸龙郎’异写待审。
 - 待读：在原团顺读时确认身份、称呼对应、原控制归属、台词及能力；不从目录推定完整人物。
 - 粒度：人物候选；深度随证据增加，暂不生成正式NPC卡
-- 来源：[unresolved_character_labels.md:L19](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3d_r2b/reports/unresolved_character_labels.md:19>)；[901前史与设定备忘录.md:L125–137](<D:/备份文件/901记录/战报/901前史与设定备忘录.md:125>)
+- 来源：[unresolved_character_labels.md:L19](<../../sources/legacy_evidence/work/phase3d_r2b/reports/unresolved_character_labels.md>)；[901前史与设定备忘录.md:L125–137](<D:/备份文件/901记录/战报/901前史与设定备忘录.md:125>)
 
 ### CRC_051 二五仔
 
@@ -768,7 +768,7 @@
 - 问题：二五仔／李萍生／陈萍生存在冲突与误认，分别保留研究记录。
 - 待读：在原团顺读时确认身份、称呼对应、原控制归属、台词及能力；不从目录推定完整人物。
 - 粒度：人物候选；深度随证据增加，暂不生成正式NPC卡
-- 来源：[unresolved_character_labels.md:L9](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3d_r2b/reports/unresolved_character_labels.md:9>)
+- 来源：[unresolved_character_labels.md:L9](<../../sources/legacy_evidence/work/phase3d_r2b/reports/unresolved_character_labels.md>)
 
 ### CRC_052 奥斯卡贝
 
@@ -777,7 +777,7 @@
 - 时期边界：原线行动、生死与关系需按场景定时；不提前写进重玩开局。
 - 待读：在原团顺读时确认身份、称呼对应、原控制归属、台词及能力；不从目录推定完整人物。
 - 粒度：人物候选；深度随证据增加，暂不生成正式NPC卡
-- 来源：[unresolved_character_labels.md:L36](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3d_r2b/reports/unresolved_character_labels.md:36>)；[00_顺读场景卡.md:L15–18](<D:/备份文件/901记录/战报/901第三部分_全页源文顺读版战报/00_顺读场景卡.md:15>)
+- 来源：[unresolved_character_labels.md:L36](<../../sources/legacy_evidence/work/phase3d_r2b/reports/unresolved_character_labels.md>)；[00_顺读场景卡.md:L15–18](<D:/备份文件/901记录/战报/901第三部分_全页源文顺读版战报/00_顺读场景卡.md:15>)
 
 ### CRC_053 泰蕾斯
 
@@ -787,7 +787,7 @@
 - 问题：泰蕾斯与佩莱丝或其他译名不因相似而合并；灵体证言不是所有宇宙论已证实。
 - 待读：在原团顺读时确认身份、称呼对应、原控制归属、台词及能力；不从目录推定完整人物。
 - 粒度：人物候选；深度随证据增加，暂不生成正式NPC卡
-- 来源：[unresolved_character_labels.md:L45](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3d_r2b/reports/unresolved_character_labels.md:45>)；[00_顺读场景卡.md:L20–24](<D:/备份文件/901记录/战报/901第三部分_全页源文顺读版战报/00_顺读场景卡.md:20>)
+- 来源：[unresolved_character_labels.md:L45](<../../sources/legacy_evidence/work/phase3d_r2b/reports/unresolved_character_labels.md>)；[00_顺读场景卡.md:L20–24](<D:/备份文件/901记录/战报/901第三部分_全页源文顺读版战报/00_顺读场景卡.md:20>)
 
 ### CRC_054 李萍生
 
@@ -830,7 +830,7 @@
 - 时期边界：原线行动、生死与关系需按场景定时；不提前写进重玩开局。
 - 待读：在原团顺读时确认身份、称呼对应、原控制归属、台词及能力；不从目录推定完整人物。
 - 粒度：人物候选；深度随证据增加，暂不生成正式NPC卡
-- 来源：[unresolved_character_labels.md:L29–30](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3d_r2b/reports/unresolved_character_labels.md:29>)；[posts.md:L66–79](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.md:66>)
+- 来源：[unresolved_character_labels.md:L29–30](<../../sources/legacy_evidence/work/phase3d_r2b/reports/unresolved_character_labels.md>)；[posts.md:L66–79](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.md:66>)
 
 ### CRC_058 魔法师A／巴力西卜
 
@@ -967,7 +967,7 @@
 - 时期边界：原线行动、生死与关系需按场景定时；不提前写进重玩开局。
 - 待读：在原团顺读时确认身份、称呼对应、原控制归属、台词及能力；不从目录推定完整人物。
 - 粒度：纯待核标签，尚不足以确定独立实体
-- 来源：[unresolved_identity_aliases.md:L7](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3d_r2/reports/unresolved_identity_aliases.md:7>)
+- 来源：[unresolved_identity_aliases.md:L7](<../../sources/legacy_evidence/work/phase3d_r2/reports/unresolved_identity_aliases.md>)
 
 ### CRC_071 凯多
 
@@ -976,7 +976,7 @@
 - 时期边界：原线行动、生死与关系需按场景定时；不提前写进重玩开局。
 - 待读：在原团顺读时确认身份、称呼对应、原控制归属、台词及能力；不从目录推定完整人物。
 - 粒度：纯待核标签，尚不足以确定独立实体
-- 来源：[unresolved_identity_aliases.md:L8](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3d_r2/reports/unresolved_identity_aliases.md:8>)
+- 来源：[unresolved_identity_aliases.md:L8](<../../sources/legacy_evidence/work/phase3d_r2/reports/unresolved_identity_aliases.md>)
 
 ### CRC_072 德雷克
 
@@ -1006,7 +1006,7 @@
 - 时期边界：不得跨梦境/主世界合并身份、知识、能力和人物状态；梦境资料传回须另有原团证据。
 - 待读：随相应场景顺读确认身份对应、必要粒度和直接原文，不采用其他作品资料。
 - 粒度：明确粒度待审；可能不应独立作character条目
-- 来源：[unresolved_character_labels.md:L20](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3d_r2b/reports/unresolved_character_labels.md:20>)
+- 来源：[unresolved_character_labels.md:L20](<../../sources/legacy_evidence/work/phase3d_r2b/reports/unresolved_character_labels.md>)
 
 ### CRC_075 尼克弗瑞
 

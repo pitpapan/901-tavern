@@ -6650,7 +6650,7 @@ F1人物简传返修稿待用户审核。对应CRC_027；作者档案与运行�
 
 ### 完整来源
 
-- [lines 30](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3c_inventory.md>)
+- [lines 30](<../../../../sources/legacy_evidence/work/phase3c_inventory.md>)
 - [JSONL line 1; msg868902 / #150](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl:1>)
 - [JSONL line 3; msg868912 / #152](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl:3>)
 - [JSONL line 5; msg869204 / #154](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 4/posts.jsonl:5>)
@@ -6724,7 +6724,7 @@ F1人物简传返修稿待用户审核。对应CRC_029；作者档案与运行�
 ### 完整来源
 
 - [lines 163–168](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md>)
-- [lines 32](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3c_inventory.md>)
+- [lines 32](<../../../../sources/legacy_evidence/work/phase3c_inventory.md>)
 - [JSONL line 29](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/character_register.jsonl:29>)
 - [lines 87–93](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/empire_character_dossiers.md>)
 
@@ -6777,7 +6777,7 @@ F1人物简传返修稿待用户审核。对应CRC_032；作者档案与运行�
 
 - [lines 83–91](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.md>)
 - [lines 254](<D:/备份文件/901记录/TRPG outputs/设定 人物/人物卡资料集_检索版.md>)
-- [lines 35](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3c_inventory.md>)
+- [lines 35](<../../../../sources/legacy_evidence/work/phase3c_inventory.md>)
 - [JSONL line 29; msg846552 / #1078](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-first/22/posts.jsonl:29>)
 - [JSONL line 33; msg846643 / #1082](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-first/22/posts.jsonl:33>)
 - [JSONL line 35; msg846651 / #1084](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-first/22/posts.jsonl:35>)
@@ -6820,7 +6820,7 @@ F1人物简传返修稿待用户审核。对应CRC_033；作者档案与运行�
 ### 完整来源
 
 - [lines 83–91](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！/posts.md>)
-- [lines 36](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3c_inventory.md>)
+- [lines 36](<../../../../sources/legacy_evidence/work/phase3c_inventory.md>)
 - [JSONL line 41; msg846797 / #40](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-mutou/page-01/posts.jsonl:41>)
 - [JSONL line 23; msg868539 / #222](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-mutou/page-05/posts.jsonl:23>)
 - [JSONL line 47; msg1047660 / #446](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-mutou/page-09/posts.jsonl:47>)
@@ -6952,7 +6952,7 @@ F1人物简传返修稿待用户审核。对应CRC_040；作者档案与运行�
 ### 完整来源
 
 - [lines 168](<D:/备份文件/901记录/TRPG outputs/设定 人物/妄想大陆设定集_检索版.md>)
-- [lines 22](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/phase3d_r2b/reports/unresolved_character_labels.md>)
+- [lines 22](<../../../../sources/legacy_evidence/work/phase3d_r2b/reports/unresolved_character_labels.md>)
 - [JSONL line 40](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/character_register.jsonl:40>)
 
 ## 宗近

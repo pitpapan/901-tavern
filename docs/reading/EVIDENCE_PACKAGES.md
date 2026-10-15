@@ -6,19 +6,19 @@
 
 | 范围 | 帖数 | 主题包 | 内容入口 |
 |---|---:|---:|---|
-| P1_P001–P1_P004 | 200 | 54 | [reading_p1_001_004.md](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p1_001_004.md>) |
-| P1_P005–P1_P007 | 150 | 32 | [reading_p1_005_007.md](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p1_005_007.md>) |
-| P1_P008–P1_P010 | 150 | 28 | [reading_p1_008_010.md](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p1_008_010.md>) |
-| P1_P011–P1_P013 | 150 | 30 | [reading_p1_011_013.md](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p1_011_013.md>) |
-| P1_P014–P1_P016 | 150 | 32 | [reading_p1_014_016.md](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p1_014_016.md>) |
-| P1_P017–P1_P020 | 200 | 38 | [reading_p1_017_020.md](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p1_017_020.md>) |
-| P1_P021–P1_P024 | 200 | 36 | [reading_p1_021_024.md](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p1_021_024.md>) |
-| P1_P025–P1_P028 | 194 | 38 | [reading_p1_025_028.md](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p1_025_028.md>) |
-| P2_P001–P2_P008 | 400 | 59 | [reading_p2_001_008.md](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p2_001_008.md>) |
-| P2_P009–P2_P016 | 400 | 61 | [reading_p2_009_016.md](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p2_009_016.md>) |
-| P2_P017–P2_P025 | 404 | 64 | [reading_p2_017_025.md](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p2_017_025.md>) |
-| P3_P001–P3_P002 | 100 | 32 | [reading_p3_001_002.md](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p3_001_002.md>) |
-| P3_P003–P3_P005 | 150 | 37 | [reading_p3_003_005.md](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/work/replay_research/reading_p3_003_005.md>) |
+| P1_P001–P1_P004 | 200 | 54 | [reading_p1_001_004.md](<../../work/replay_research/reading_p1_001_004.md>) |
+| P1_P005–P1_P007 | 150 | 32 | [reading_p1_005_007.md](<../../work/replay_research/reading_p1_005_007.md>) |
+| P1_P008–P1_P010 | 150 | 28 | [reading_p1_008_010.md](<../../work/replay_research/reading_p1_008_010.md>) |
+| P1_P011–P1_P013 | 150 | 30 | [reading_p1_011_013.md](<../../work/replay_research/reading_p1_011_013.md>) |
+| P1_P014–P1_P016 | 150 | 32 | [reading_p1_014_016.md](<../../work/replay_research/reading_p1_014_016.md>) |
+| P1_P017–P1_P020 | 200 | 38 | [reading_p1_017_020.md](<../../work/replay_research/reading_p1_017_020.md>) |
+| P1_P021–P1_P024 | 200 | 36 | [reading_p1_021_024.md](<../../work/replay_research/reading_p1_021_024.md>) |
+| P1_P025–P1_P028 | 194 | 38 | [reading_p1_025_028.md](<../../work/replay_research/reading_p1_025_028.md>) |
+| P2_P001–P2_P008 | 400 | 59 | [reading_p2_001_008.md](<../../work/replay_research/reading_p2_001_008.md>) |
+| P2_P009–P2_P016 | 400 | 61 | [reading_p2_009_016.md](<../../work/replay_research/reading_p2_009_016.md>) |
+| P2_P017–P2_P025 | 404 | 64 | [reading_p2_017_025.md](<../../work/replay_research/reading_p2_017_025.md>) |
+| P3_P001–P3_P002 | 100 | 32 | [reading_p3_001_002.md](<../../work/replay_research/reading_p3_001_002.md>) |
+| P3_P003–P3_P005 | 150 | 37 | [reading_p3_003_005.md](<../../work/replay_research/reading_p3_003_005.md>) |
 
 第一部1394帖、第二部1204帖、第三部250帖；各包交界和旧定点阅读已按msg去重。相同正文若出现在不同帖子，计两个读过的帖子，不自动记成两个历史事件。
 
@@ -28,8 +28,8 @@
 
 | 资料包 | 完整正文帖数 | 主题数 | 研究稿 |
 |---|---:|---:|---|
-| MUTOU 第1–5页 | 250 | 19 | [研究](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-mutou/research_pages_01_05.md>) |
-| MUTOU 第6–10页 | 223 | 18 | [研究](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-mutou/research_pages_06_10.md>) |
-| GREAT_TOMB 第1–3页 | 112 | 13 | [研究](<C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG outputs/extracted-great-tomb/research.md>) |
+| MUTOU 第1–5页 | 250 | 19 | [研究](<../../extracted-mutou/research_pages_01_05.md>) |
+| MUTOU 第6–10页 | 223 | 18 | [研究](<../../extracted-mutou/research_pages_06_10.md>) |
+| GREAT_TOMB 第1–3页 | 112 | 13 | [研究](<../../extracted-great-tomb/research.md>) |
 
 两旁线已进一步归入 [世界模型](../../work/replay_research/world_model.md)；24组更新的定位见 [世界增量索引](../../work/reading/world_side_evidence_locator.tsv)。该增量复用已读材料，不增加独立正文覆盖数。

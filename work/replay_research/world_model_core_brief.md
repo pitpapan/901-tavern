@@ -1,8 +1,10 @@
 # 世界框架速读：当前结论与资料入口
 
+2026-10-15阅读提示：本稿主体形成于10月8日。最新可读总览见[世界总览](../../world/overview.md)，采用范围见[主题索引](README.md)。下文关于旧暂停、贵族、信仰或运行截止点的描述须与后续明确采用分开；不以本稿撤销后续作者设定。
+
 更新：2026-10-08；作者设定截至[UCL_012](user_clarifications.jsonl:113)，本次收拢依据[UCL_008](user_clarifications.jsonl:109)。这是作者导航，以首次抵达帝都城外为T0，不整体常驻酒馆，也不重置实际聊天。
 
-**当前运行候选为M1_IMPORT_20261008_004，已同步五组确认至UCL_20261008_007。**见[手动入口](../../output/replay_tavern/README.md)、[同步范围](runtime_sync_20261008/manifest.json)。用户手动应用，实际加载未验收。[收拢评估](world_model_stage_review_20261008.md)中的五组待投影是同步前状态；旧速读见[历史快照](world_model_core_brief_history_20261008.md)。
+**当前运行候选为M1_IMPORT_20261008_004，已同步五组确认至UCL_20261008_007。**见[手动入口](../../output/replay_tavern/README.md)、[同步范围](runtime_sync_20261008/manifest.json)。用户手动应用，实际加载未验收。[收拢评估](world_model_stage_review_20261008.md)中的五组待投影是同步前状态；旧速读见[历史快照恢复入口](../maintenance/cleanup_20261015/README.md)。
 
 ## 世界、政治与力量
 
