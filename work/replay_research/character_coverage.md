@@ -346,3 +346,7 @@
 
 
 2026-10-12补充收拢（UCL_20261012_069）：后续成长支线已完成本轮采用保存，旧仓房除灵细案和猫音查书互动也已采用，详见[成长总方案最新收拢记录](capital_growth_sidequest_draft.md)。谢尔伦独立人物稿继续DRAFT，上述关键未定项仍留白；帝都阶段到此暂时收拢。
+
+## 2026-10-15：沐透采用与影魔简稿〔UCL_20261015_066〕
+
+[沐透CRC_004](../../output/replay_f_review/v1/characters/profiles/CRC_004.md)的065深化已全部采用；[影魔CRC_097](../../output/replay_f_review/v1/characters/profiles/CRC_097.md)新增欲望、搭档关系与相助边界简稿，DRAFT待采用。保留原团时期与知情边界，不扩更大布局，不更新运行导出。
