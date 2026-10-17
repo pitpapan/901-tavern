@@ -1,8 +1,9 @@
 # 901-Rules 工作读取建议
 
-1. 阅读 [INDEX.md](INDEX.md)，根据当前问题访问 `indices/PHB.md` 与 `indices/rules.md`，再读取对应规则正文。
-2. 仅需研究血统、改造、技艺、装备等兑换物时，转到 `indices/resources.md` 的相应分目录；特性另在 `indices/traits.md`。
-3. 研究怪物则查看 `indices/bestiary.md`，不要将怪物或能力参数直接定义为通用规则。
-4. 查到疑义时，从每篇 Markdown 头部链接打开 `source_html` 原始 HTML，特别是表格、数字和冲突规则。
-5. 合成 901 规则时，每项区分：PHB 原文、RE 原文、项目已确认村规、待选草案。不要将新书事实自动写成已采纳的 901 规则。
-6. 使用项目原有的「六属性／主技能与子技能／2.5 B-L-A 等」选择时，应回查项目确认记录；本资料库不会替你做这项融合。
+资源创作先到 [撰写入口](../work/character_builder/resource_authoring/README.md)，普通规则问题先看 [按问题索引](indices/mechanisms.md)，不需每次读全书。
+
+1. 本地已完整收录 PHB v0.3 16 页、RE v1.03先行版 964 页；不用另找分包或临时解 CHM。
+2. 找整类资料使用 [资源](indices/resources.md)、[特性](indices/traits.md)、[规则](indices/rules.md)、[怪物](indices/bestiary.md)；旧版、待重置、施工条目单列 [杂项](indices/misc.md)。
+3. 通常先用 `tools/library.py search` 返回至多 5 个片段，再 `read` 按行读取相关原文。命令示例与限制见 [README](README.md)。别名和关键词标签只作定位，不作规则判断。
+4. 每篇 Markdown 都链接原始 HTML；数字、表格、图片或转换疑问回看原页。新增转换以文本块保留内容，复杂表格不保证排版保真。
+5. 区分原书明文、901 已采用、样例惯例和待确认推断。完整收录、现行目录和引擎支持均不代表 901 已采用。
