@@ -16,7 +16,7 @@
 
 | 阅读需要 | 唯一当前入口 |
 |---|---|
-| 战斗决策与上下文精简 | [2026-10-20指引及接口核查](combat_decision_guidance_draft.md)、[短指导与正则补丁](../../output/replay_tavern/combat_context_20261020_candidate/README.md)：共用指导、三名同伴提醒、engine／MVU接入缺口及可导入历史计算过滤；未安装或模型试玩 |
+| 战斗决策与上下文精简 | [指引及接口核查](combat_decision_guidance_draft.md)、[短指导与正则补丁](../../output/replay_tavern/combat_context_20261020_candidate/README.md)、[2026-10-20实测](combat_context_test_20261020/README.md)：过滤与简单选招通过，动作记账仍不完整；全局《开拓者》干扰已定位，正式卡未安装 |
 | 恢复世界框架 | [世界速读](world_model_core_brief.md) |
 | 换窗口接续、操作边界 | [当前交接](handoff_20261004.md) |
 | 已完成什么、还缺什么 | [本次覆盖与缺口评估](world_model_stage_review_20261008.md) |
