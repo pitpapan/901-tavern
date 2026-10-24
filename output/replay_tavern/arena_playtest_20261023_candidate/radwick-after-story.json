@@ -1,0 +1,613 @@
+{
+  "chatId": "901 擂台 拉德维克 完整场实测 - 2026-10-23",
+  "revision": 11,
+  "mode": "story",
+  "round": 2,
+  "activeId": "player",
+  "status": "finished",
+  "resolution": {
+    "kind": "refereeStop",
+    "taskComplete": false,
+    "xpAwarded": 0,
+    "stoppedActorIds": [
+      "radwick"
+    ],
+    "text": "按本次隔离试赛预告的完好槽阈值或失能规则，裁判终止交锋；保留现有伤势与资源，不发XP。"
+  },
+  "actors": {
+    "player": {
+      "health": {
+        "intact": 11,
+        "B": 1,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "resources": {
+        "流风": {
+          "current": 20,
+          "max": 22
+        }
+      },
+      "will": {
+        "current": 3,
+        "max": 3
+      },
+      "xp": 0,
+      "position": [
+        0,
+        0
+      ],
+      "actions": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "buffs": {
+        "flow": 2
+      },
+      "combatCarry": {
+        "parameters": {
+          "flowMax": 22,
+          "flowAction": "free"
+        },
+        "durationCarry": {
+          "flow": {
+            "value": 2,
+            "remainingRounds": 9,
+            "needsHostTimeAccounting": true
+          }
+        },
+        "cooldownCarry": {},
+        "sceneInstanceId": "arena-playtest-radwick",
+        "used": {}
+      }
+    },
+    "radwick": {
+      "health": {
+        "intact": 0,
+        "B": 9,
+        "L": 7,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "resources": {
+        "斗气": {
+          "current": 3,
+          "max": 3
+        }
+      },
+      "will": {
+        "current": 8,
+        "max": 8
+      },
+      "xp": 0,
+      "position": [
+        1,
+        0
+      ],
+      "actions": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "buffs": {},
+      "combatCarry": {
+        "durationCarry": {},
+        "cooldownCarry": {},
+        "sceneInstanceId": "arena-playtest-radwick",
+        "used": {}
+      }
+    }
+  },
+  "operations": [
+    {
+      "id": "gm-runtime/901 擂台 拉德维克 完整场实测 - 2026-10-23/1/0/combat",
+      "revision": 1,
+      "command": {
+        "kind": "enter",
+        "encounterId": "arena-radwick"
+      },
+      "result": {
+        "actorId": "player",
+        "abilityId": "enter",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [
+          "进入战斗；沿用现有伤势与能量"
+        ]
+      }
+    },
+    {
+      "id": "declaration/901 擂台 拉德维克 完整场实测 - 2026-10-23/5/0/0",
+      "revision": 2,
+      "command": {
+        "abilityId": "flow",
+        "tier": 2,
+        "actorId": "player"
+      },
+      "result": {
+        "actorId": "player",
+        "abilityId": "flow",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "declaration/901 擂台 拉德维克 完整场实测 - 2026-10-23/5/0/1",
+      "revision": 3,
+      "command": {
+        "abilityId": "block",
+        "actorId": "player"
+      },
+      "result": {
+        "actorId": "player",
+        "abilityId": "block",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "declaration/901 擂台 拉德维克 完整场实测 - 2026-10-23/7/0/0",
+      "revision": 4,
+      "command": {
+        "abilityId": "strike",
+        "targetId": "radwick",
+        "actorId": "player"
+      },
+      "result": {
+        "actorId": "player",
+        "abilityId": "strike",
+        "round": 1,
+        "damage": [
+          {
+            "targetId": "radwick",
+            "kind": "physical",
+            "energyType": null,
+            "input": 9,
+            "inputSeverity": "B",
+            "severity": "B",
+            "actualDamage": 9
+          }
+        ],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [],
+        "responses": [
+          {
+            "targetId": "radwick",
+            "guarded": false
+          }
+        ],
+        "attack": {
+          "rawDP": 25,
+          "dp": 25,
+          "weapon": 6,
+          "cap": 14,
+          "fixed": 1,
+          "ap": 2,
+          "magic": 2,
+          "speed": 0,
+          "extra": 0,
+          "ignore": 0,
+          "aggravate": 0,
+          "electric": 0,
+          "reduction": 3,
+          "range": 1.5,
+          "explode": 10,
+          "defense": {
+            "total": 2,
+            "parts": {
+              "base": 1,
+              "natural": 0,
+              "armor": 1,
+              "dodge": 0,
+              "insight": 0,
+              "block": 0,
+              "cover": 0,
+              "shield": 0,
+              "cultivation": 0,
+              "force": 0,
+              "device": 0,
+              "luck": 0,
+              "morale": 0,
+              "enhancement": 0,
+              "holy": 0,
+              "technique": 0,
+              "performance": 0,
+              "intrinsic": 0,
+              "unnamed": 0
+            },
+            "remainingAP": 0,
+            "guarded": false,
+            "extraSuccesses": 0
+          },
+          "roll": {
+            "dp": 23,
+            "luck": false,
+            "dice": [
+              4,
+              1,
+              4,
+              8,
+              9,
+              6,
+              2,
+              4,
+              4,
+              3,
+              8,
+              8,
+              7,
+              2,
+              6,
+              9,
+              10,
+              3,
+              3,
+              8,
+              2,
+              5,
+              6,
+              9
+            ],
+            "used": 24,
+            "rolledSuccesses": 8,
+            "luckMishap": false
+          },
+          "amount": 9
+        }
+      }
+    },
+    {
+      "id": "declaration/901 擂台 拉德维克 完整场实测 - 2026-10-23/7/0/1",
+      "revision": 5,
+      "command": {
+        "abilityId": "end",
+        "actorId": "player"
+      },
+      "result": {
+        "actorId": "player",
+        "abilityId": "end",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "combat/7/0/5",
+      "revision": 6,
+      "command": {
+        "actorId": "radwick",
+        "abilityId": "strike",
+        "targetId": "player"
+      },
+      "result": {
+        "actorId": "radwick",
+        "abilityId": "strike",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [
+          "攻击已宣言，等待反应；尚未掷骰或扣除攻击资源"
+        ]
+      }
+    },
+    {
+      "id": "declaration/901 擂台 拉德维克 完整场实测 - 2026-10-23/9/0/0",
+      "revision": 7,
+      "command": {
+        "abilityId": "react",
+        "defense": "block",
+        "choice": "decline",
+        "actorId": "player"
+      },
+      "result": {
+        "actorId": "radwick",
+        "abilityId": "strike",
+        "round": 1,
+        "damage": [
+          {
+            "targetId": "player",
+            "kind": "physical",
+            "energyType": null,
+            "input": 1,
+            "inputSeverity": "B",
+            "severity": "B",
+            "actualDamage": 1
+          }
+        ],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [],
+        "responses": [
+          {
+            "targetId": "player",
+            "guarded": true
+          }
+        ],
+        "attack": {
+          "rawDP": 16,
+          "dp": 16,
+          "weapon": 2,
+          "cap": 16,
+          "fixed": 2,
+          "ap": 0,
+          "magic": 0,
+          "speed": 0,
+          "extra": 0,
+          "ignore": 0,
+          "aggravate": 0,
+          "electric": 0,
+          "reduction": 0,
+          "range": 1.5,
+          "explode": 10,
+          "defense": {
+            "total": 19,
+            "parts": {
+              "base": 4,
+              "natural": 0,
+              "armor": 3,
+              "dodge": 2,
+              "insight": 0,
+              "block": 8,
+              "cover": 0,
+              "deflection": 2,
+              "cultivation": 0,
+              "force": 0,
+              "device": 0,
+              "shield": 0,
+              "luck": 0,
+              "morale": 0,
+              "enhancement": 0,
+              "holy": 0,
+              "technique": 0,
+              "performance": 0,
+              "intrinsic": 0,
+              "unnamed": 0
+            },
+            "remainingAP": 0,
+            "guarded": true,
+            "extraSuccesses": 1
+          },
+          "roll": {
+            "dp": -3,
+            "luck": true,
+            "dice": [
+              2
+            ],
+            "used": 1,
+            "rolledSuccesses": 0,
+            "luckMishap": false
+          },
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "combat/9/0/7",
+      "revision": 8,
+      "command": {
+        "actorId": "radwick",
+        "abilityId": "end"
+      },
+      "result": {
+        "actorId": "radwick",
+        "abilityId": "end",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "declaration/901 擂台 拉德维克 完整场实测 - 2026-10-23/11/0/0",
+      "revision": 9,
+      "command": {
+        "abilityId": "block",
+        "actorId": "player"
+      },
+      "result": {
+        "actorId": "player",
+        "abilityId": "block",
+        "round": 2,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "declaration/901 擂台 拉德维克 完整场实测 - 2026-10-23/11/0/1",
+      "revision": 10,
+      "command": {
+        "abilityId": "strike",
+        "targetId": "radwick",
+        "actorId": "player"
+      },
+      "result": {
+        "actorId": "player",
+        "abilityId": "strike",
+        "round": 2,
+        "damage": [
+          {
+            "targetId": "radwick",
+            "kind": "physical",
+            "energyType": null,
+            "input": 14,
+            "inputSeverity": "B",
+            "severity": "B",
+            "actualDamage": 14
+          }
+        ],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [],
+        "responses": [
+          {
+            "targetId": "radwick",
+            "guarded": false
+          }
+        ],
+        "attack": {
+          "rawDP": 25,
+          "dp": 25,
+          "weapon": 6,
+          "cap": 14,
+          "fixed": 1,
+          "ap": 2,
+          "magic": 2,
+          "speed": 0,
+          "extra": 0,
+          "ignore": 0,
+          "aggravate": 0,
+          "electric": 0,
+          "reduction": 3,
+          "range": 1.5,
+          "explode": 10,
+          "defense": {
+            "total": 2,
+            "parts": {
+              "base": 1,
+              "natural": 0,
+              "armor": 1,
+              "dodge": 0,
+              "insight": 0,
+              "block": 0,
+              "cover": 0,
+              "shield": 0,
+              "cultivation": 0,
+              "force": 0,
+              "device": 0,
+              "luck": 0,
+              "morale": 0,
+              "enhancement": 0,
+              "holy": 0,
+              "technique": 0,
+              "performance": 0,
+              "intrinsic": 0,
+              "unnamed": 0
+            },
+            "remainingAP": 0,
+            "guarded": false,
+            "extraSuccesses": 0
+          },
+          "roll": {
+            "dp": 23,
+            "luck": false,
+            "dice": [
+              8,
+              2,
+              9,
+              8,
+              7,
+              3,
+              10,
+              1,
+              8,
+              5,
+              7,
+              6,
+              5,
+              7,
+              10,
+              8,
+              10,
+              5,
+              10,
+              2,
+              5,
+              10,
+              9,
+              4,
+              8,
+              10,
+              10,
+              1,
+              1,
+              6
+            ],
+            "used": 30,
+            "rolledSuccesses": 14,
+            "luckMishap": false
+          },
+          "amount": 14
+        }
+      }
+    },
+    {
+      "id": "leave/10",
+      "revision": 11,
+      "command": {
+        "kind": "leave"
+      },
+      "result": {
+        "actorId": "player",
+        "abilityId": "leave",
+        "round": 2,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [
+          "返回剧情；保留伤势、能量和恢复限制"
+        ]
+      }
+    }
+  ],
+  "lastMessages": [
+    {
+      "user": false,
+      "text": "御临风收束剑路，将等值缓冲练习长剑横于身前，护持自身，稳妥的防护准备在周身瞬息成立。紧接着，剑势顺着蓄势之势陡然前送，直取身前一米处的拉德维克。\n\n拉德维克依凭基础与被动防护迎上这一击，未及做出主动格挡。剑锋交错而过，练习长剑切入其防线，撞击在其体表与护具之间。拉德维克闷哼一声，在原地踉跄受创，随之颓然倒地，再无余力支撑。\n\n场边响起裁判的宣判声，随之行权终止了这场隔离试赛。拉德维克倒在原处，维持着现有的伤势。\n\n<StatusPlaceHolderImpl/>",
+      "extra": {
+        "901_narrative": {
+          "key": "901 擂台 拉德维克 完整场实测 - 2026-10-23/11/0",
+          "revision": 11
+        }
+      }
+    },
+    {
+      "user": true,
+      "text": "【隔离测试玩家声明】练习已经结束，我仍停在原地，不移动、不攻击、不治疗。我只对拉德维克说：“先停在这里，器械留着，伤势也照实记下。”随后安静看着他的可见状态。",
+      "extra": {
+        "isSmallSys": false
+      }
+    }
+  ]
+}

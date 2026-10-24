@@ -1,0 +1,773 @@
+{
+  "chatId": "901 黄泉乱红莲协同实测 - 2026-10-22",
+  "messages": 7,
+  "revision": 7,
+  "active": "player",
+  "round": 2,
+  "pending": null,
+  "actors": {
+    "huang": {
+      "health": {
+        "intact": 23,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {
+        "灵力": {
+          "current": 3,
+          "max": 6
+        }
+      },
+      "turn": {
+        "phase": "ended",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        1.5,
+        0
+      ]
+    },
+    "player": {
+      "health": {
+        "intact": 15,
+        "B": 0,
+        "L": 6,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {
+        "风池": {
+          "current": 10,
+          "max": 10
+        },
+        "魔力": {
+          "current": 106,
+          "max": 106
+        },
+        "流风": {
+          "current": 22,
+          "max": 22
+        }
+      },
+      "turn": {
+        "phase": "active",
+        "standard": 1,
+        "move": 1,
+        "swift": 1,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        0,
+        0
+      ]
+    },
+    "lotus": {
+      "health": {
+        "intact": 26,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {},
+      "turn": {
+        "phase": "ended",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        0,
+        1.5
+      ]
+    }
+  },
+  "operations": [
+    {
+      "id": "declaration/901 黄泉乱红莲协同实测 - 2026-10-22/1/0/0",
+      "revision": 1,
+      "command": {
+        "abilityId": "end",
+        "actorId": "player"
+      },
+      "damage": [],
+      "statuses": [],
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            1.5,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 21,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "lotus",
+          "health": {
+            "intact": 26,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            1.5
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "combat/1/0/1",
+      "revision": 2,
+      "command": {
+        "actorId": "huang",
+        "abilityId": "strike",
+        "targetId": "player"
+      },
+      "damage": [],
+      "statuses": [],
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            1.5,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 21,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "lotus",
+          "health": {
+            "intact": 26,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            1.5
+          ]
+        }
+      ],
+      "notes": [
+        "攻击已宣言，等待反应；尚未掷骰或扣除攻击资源"
+      ]
+    },
+    {
+      "id": "declaration/901 黄泉乱红莲协同实测 - 2026-10-22/3/0/0",
+      "revision": 3,
+      "command": {
+        "abilityId": "react",
+        "defense": "normal",
+        "choice": "decline",
+        "actorId": "player"
+      },
+      "damage": [
+        {
+          "targetId": "player",
+          "kind": "physical",
+          "energyType": null,
+          "input": 6,
+          "inputSeverity": "L",
+          "severity": "L",
+          "actualDamage": 6
+        }
+      ],
+      "statuses": [],
+      "attack": {
+        "rawDP": 37,
+        "dp": 37,
+        "weapon": 8,
+        "cap": 14,
+        "fixed": 3,
+        "ap": 8,
+        "magic": 8,
+        "speed": 0,
+        "extra": 0,
+        "ignore": 0,
+        "aggravate": 0,
+        "electric": 0,
+        "reduction": 0,
+        "range": 1.5,
+        "explode": 10,
+        "defense": {
+          "total": 9,
+          "parts": {
+            "base": 4,
+            "natural": 0,
+            "armor": 0,
+            "dodge": 3,
+            "insight": 0,
+            "block": 0,
+            "cover": 0,
+            "deflection": 2,
+            "force": 0,
+            "cultivation": 0,
+            "device": 0,
+            "shield": 0,
+            "luck": 0,
+            "morale": 0,
+            "enhancement": 0,
+            "holy": 0,
+            "technique": 0,
+            "performance": 0,
+            "intrinsic": 0,
+            "unnamed": 0
+          },
+          "remainingAP": 0,
+          "guarded": false,
+          "extraSuccesses": 1
+        },
+        "roll": {
+          "dp": 28,
+          "luck": false,
+          "dice": [
+            5,
+            5,
+            9,
+            5,
+            2,
+            3,
+            2,
+            5,
+            3,
+            10,
+            4,
+            5,
+            8,
+            3,
+            3,
+            8,
+            1,
+            1,
+            3,
+            4,
+            2,
+            5,
+            3,
+            6,
+            10,
+            1,
+            4,
+            4,
+            9,
+            4
+          ],
+          "used": 30,
+          "rolledSuccesses": 6,
+          "luckMishap": false
+        },
+        "amount": 8
+      },
+      "responses": [
+        {
+          "targetId": "player",
+          "guarded": false
+        }
+      ],
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            1.5,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 15,
+            "B": 0,
+            "L": 6,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "lotus",
+          "health": {
+            "intact": 26,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            1.5
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "combat/3/0/3",
+      "revision": 4,
+      "command": {
+        "actorId": "huang",
+        "abilityId": "end"
+      },
+      "damage": [],
+      "statuses": [],
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            1.5,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 15,
+            "B": 0,
+            "L": 6,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "lotus",
+          "health": {
+            "intact": 26,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            1.5
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "combat/3/0/4",
+      "revision": 5,
+      "command": {
+        "actorId": "lotus",
+        "abilityId": "strike",
+        "targetId": "player"
+      },
+      "damage": [],
+      "statuses": [],
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            1.5,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 15,
+            "B": 0,
+            "L": 6,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "lotus",
+          "health": {
+            "intact": 26,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            1.5
+          ]
+        }
+      ],
+      "notes": [
+        "攻击已宣言，等待反应；尚未掷骰或扣除攻击资源"
+      ]
+    },
+    {
+      "id": "declaration/901 黄泉乱红莲协同实测 - 2026-10-22/5/0/0",
+      "revision": 6,
+      "command": {
+        "abilityId": "react",
+        "defense": "normal",
+        "choice": "decline",
+        "actorId": "player"
+      },
+      "damage": [],
+      "statuses": [],
+      "attack": {
+        "rawDP": 20,
+        "dp": 20,
+        "weapon": 6,
+        "cap": 20,
+        "fixed": 2,
+        "ap": 4,
+        "magic": 4,
+        "speed": 0,
+        "extra": 0,
+        "ignore": 0,
+        "aggravate": 0,
+        "electric": 0,
+        "reduction": 0,
+        "range": 1.5,
+        "explode": 10,
+        "defense": {
+          "total": 13,
+          "parts": {
+            "base": 4,
+            "natural": 0,
+            "armor": 4,
+            "dodge": 3,
+            "insight": 0,
+            "block": 0,
+            "cover": 0,
+            "deflection": 2,
+            "force": 0,
+            "cultivation": 0,
+            "device": 0,
+            "shield": 0,
+            "luck": 0,
+            "morale": 0,
+            "enhancement": 0,
+            "holy": 0,
+            "technique": 0,
+            "performance": 0,
+            "intrinsic": 0,
+            "unnamed": 0
+          },
+          "remainingAP": 0,
+          "guarded": false,
+          "extraSuccesses": 1
+        },
+        "roll": {
+          "dp": 7,
+          "luck": false,
+          "dice": [
+            6,
+            4,
+            7,
+            3,
+            4,
+            9,
+            1
+          ],
+          "used": 7,
+          "rolledSuccesses": 1,
+          "luckMishap": false
+        },
+        "amount": 2
+      },
+      "responses": [
+        {
+          "targetId": "player",
+          "guarded": false
+        }
+      ],
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            1.5,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 15,
+            "B": 0,
+            "L": 6,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "lotus",
+          "health": {
+            "intact": 26,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            1.5
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "combat/5/0/6",
+      "revision": 7,
+      "command": {
+        "actorId": "lotus",
+        "abilityId": "end"
+      },
+      "damage": [],
+      "statuses": [],
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            1.5,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 15,
+            "B": 0,
+            "L": 6,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "lotus",
+          "health": {
+            "intact": 26,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            1.5
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "lastMessages": [
+    {
+      "user": true,
+      "text": "面对乱红莲这次爪击，我声明使用基础防御闪避，不主动格挡，也不使用伤害转换。",
+      "metadata": {
+        "text": "面对乱红莲这次爪击，我声明使用基础防御闪避，不主动格挡，也不使用伤害转换。",
+        "swipeId": 0,
+        "plan": {
+          "steps": [
+            {
+              "quote": "我声明使用基础防御闪避，不主动格挡，也不使用伤害转换",
+              "command": {
+                "abilityId": "react",
+                "defense": "normal",
+                "choice": "decline"
+              }
+            }
+          ],
+          "clarification": ""
+        },
+        "completed": {
+          "message": "乱红莲扑身欺近，双爪携着风声直取御临风面门。御临风脚下微撤，以身法避开锋芒锐处，任由护体真气自然流转，硬接下这扑击余波。爪风撕裂空气，拍在护身气劲上发出沉闷的钝响，劲力随即被尽数化解。乱红莲一击未中，落地时四爪在地面无声一搭，重新伏低身形。\n\n黄泉在一旁按刀而立，目光掠过交手处，并未多言。",
+          "revision": 7
+        }
+      }
+    },
+    {
+      "user": false,
+      "text": "乱红莲扑身欺近，双爪携着风声直取御临风面门。御临风脚下微撤，以身法避开锋芒锐处，任由护体真气自然流转，硬接下这扑击余波。爪风撕裂空气，拍在护身气劲上发出沉闷的钝响，劲力随即被尽数化解。乱红莲一击未中，落地时四爪在地面无声一搭，重新伏低身形。\n\n黄泉在一旁按刀而立，目光掠过交手处，并未多言。\n\n<StatusPlaceHolderImpl/>",
+      "metadata": {
+        "key": "901 黄泉乱红莲协同实测 - 2026-10-22/5/0",
+        "revision": 7
+      }
+    }
+  ]
+}

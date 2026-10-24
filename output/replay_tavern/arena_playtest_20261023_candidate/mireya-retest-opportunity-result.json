@@ -1,0 +1,621 @@
+{
+  "chatId": "901 擂台 米蕾娅 完整场复测 - 2026-10-23",
+  "revision": 12,
+  "mode": "story",
+  "round": 2,
+  "activeId": "mireya",
+  "status": "finished",
+  "resolution": {
+    "kind": "refereeStop",
+    "taskComplete": false,
+    "xpAwarded": 0,
+    "stoppedActorIds": [
+      "mireya"
+    ],
+    "text": "按本场预告的终止条件，练习结束；现有伤势与资源保留。"
+  },
+  "actors": {
+    "player": {
+      "health": {
+        "intact": 9,
+        "B": 3,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "resources": {
+        "流风": {
+          "current": 20,
+          "max": 22
+        }
+      },
+      "will": {
+        "current": 3,
+        "max": 3
+      },
+      "xp": 0,
+      "position": [
+        11,
+        0
+      ],
+      "actions": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "buffs": {
+        "flow": 2
+      },
+      "combatCarry": {
+        "parameters": {
+          "flowMax": 22,
+          "flowAction": "free"
+        },
+        "durationCarry": {
+          "flow": {
+            "value": 2,
+            "remainingRounds": 9,
+            "needsHostTimeAccounting": true
+          }
+        },
+        "cooldownCarry": {},
+        "sceneInstanceId": "arena-playtest-mireya",
+        "used": {}
+      }
+    },
+    "mireya": {
+      "health": {
+        "intact": 3,
+        "B": 9,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "resources": {},
+      "will": {
+        "current": 9,
+        "max": 9
+      },
+      "xp": 0,
+      "position": [
+        29,
+        0
+      ],
+      "actions": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "buffs": {},
+      "ammunition": 17,
+      "loaded": false,
+      "weaponMode": "bow",
+      "combatCarry": {
+        "ammunition": 17,
+        "loaded": false,
+        "weaponMode": "bow",
+        "durationCarry": {},
+        "cooldownCarry": {},
+        "sceneInstanceId": "arena-playtest-mireya",
+        "used": {}
+      }
+    }
+  },
+  "operations": [
+    {
+      "id": "gm-runtime/901 擂台 米蕾娅 完整场复测 - 2026-10-23/1/0/combat",
+      "revision": 1,
+      "command": {
+        "kind": "enter",
+        "encounterId": "arena-mireya"
+      },
+      "result": {
+        "actorId": "mireya",
+        "abilityId": "enter",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [
+          "进入战斗；沿用现有伤势与能量"
+        ]
+      }
+    },
+    {
+      "id": "combat/1/0/1",
+      "revision": 2,
+      "command": {
+        "actorId": "mireya",
+        "abilityId": "reload"
+      },
+      "result": {
+        "actorId": "mireya",
+        "abilityId": "reload",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "combat/1/0/2",
+      "revision": 3,
+      "command": {
+        "actorId": "mireya",
+        "abilityId": "strike",
+        "targetId": "player"
+      },
+      "result": {
+        "actorId": "mireya",
+        "abilityId": "strike",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [
+          "攻击已宣言，等待反应；尚未掷骰或扣除攻击资源"
+        ]
+      }
+    },
+    {
+      "id": "declaration/901 擂台 米蕾娅 完整场复测 - 2026-10-23/3/0/0",
+      "revision": 4,
+      "command": {
+        "abilityId": "react",
+        "defense": "normal",
+        "choice": "decline",
+        "actorId": "player"
+      },
+      "result": {
+        "actorId": "mireya",
+        "abilityId": "strike",
+        "round": 1,
+        "damage": [
+          {
+            "targetId": "player",
+            "kind": "physical",
+            "energyType": null,
+            "input": 3,
+            "inputSeverity": "B",
+            "severity": "B",
+            "actualDamage": 3
+          }
+        ],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [],
+        "responses": [
+          {
+            "targetId": "player",
+            "guarded": false
+          }
+        ],
+        "attack": {
+          "rawDP": 19,
+          "dp": 19,
+          "weapon": 3,
+          "cap": 20,
+          "fixed": 2,
+          "ap": 0,
+          "magic": 0,
+          "speed": 0,
+          "extra": 0,
+          "ignore": 0,
+          "aggravate": 0,
+          "electric": 0,
+          "reduction": 0,
+          "range": 160,
+          "explode": 10,
+          "defense": {
+            "total": 11,
+            "parts": {
+              "base": 4,
+              "natural": 0,
+              "armor": 3,
+              "dodge": 2,
+              "insight": 0,
+              "block": 0,
+              "cover": 0,
+              "deflection": 2,
+              "cultivation": 0,
+              "force": 0,
+              "device": 0,
+              "shield": 0,
+              "luck": 0,
+              "morale": 0,
+              "enhancement": 0,
+              "holy": 0,
+              "technique": 0,
+              "performance": 0,
+              "intrinsic": 0,
+              "unnamed": 0
+            },
+            "remainingAP": 0,
+            "guarded": false,
+            "extraSuccesses": 0
+          },
+          "roll": {
+            "dp": 8,
+            "luck": false,
+            "dice": [
+              5,
+              5,
+              8,
+              3,
+              6,
+              4,
+              6,
+              1
+            ],
+            "used": 8,
+            "rolledSuccesses": 1,
+            "luckMishap": false
+          },
+          "amount": 3
+        }
+      }
+    },
+    {
+      "id": "combat/3/0/4",
+      "revision": 5,
+      "command": {
+        "actorId": "mireya",
+        "abilityId": "end"
+      },
+      "result": {
+        "actorId": "mireya",
+        "abilityId": "end",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "declaration/901 擂台 米蕾娅 完整场复测 - 2026-10-23/5/0/0",
+      "revision": 6,
+      "command": {
+        "abilityId": "flow",
+        "tier": 2,
+        "actorId": "player"
+      },
+      "result": {
+        "actorId": "player",
+        "abilityId": "flow",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "declaration/901 擂台 米蕾娅 完整场复测 - 2026-10-23/5/0/1",
+      "revision": 7,
+      "command": {
+        "abilityId": "move",
+        "to": [
+          11,
+          0
+        ],
+        "actorId": "player"
+      },
+      "result": {
+        "actorId": "player",
+        "abilityId": "move",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [],
+        "movement": {
+          "from": [
+            0,
+            0
+          ],
+          "to": [
+            11,
+            0
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              11,
+              0
+            ]
+          ],
+          "length": 11,
+          "cost": 11
+        }
+      }
+    },
+    {
+      "id": "declaration/901 擂台 米蕾娅 完整场复测 - 2026-10-23/5/0/2",
+      "revision": 8,
+      "command": {
+        "abilityId": "block",
+        "actorId": "player"
+      },
+      "result": {
+        "actorId": "player",
+        "abilityId": "block",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "declaration/901 擂台 米蕾娅 完整场复测 - 2026-10-23/7/0/0",
+      "revision": 9,
+      "command": {
+        "abilityId": "end",
+        "actorId": "player"
+      },
+      "result": {
+        "actorId": "player",
+        "abilityId": "end",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "combat/7/0/9",
+      "revision": 10,
+      "command": {
+        "actorId": "mireya",
+        "abilityId": "move",
+        "to": [
+          29,
+          0
+        ]
+      },
+      "result": {
+        "actorId": "mireya",
+        "abilityId": "move",
+        "round": 2,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [
+          "等待玩家声明是否进行借机攻击；尚未移动"
+        ]
+      }
+    },
+    {
+      "id": "declaration/901 擂台 米蕾娅 完整场复测 - 2026-10-23/9/0/0",
+      "revision": 11,
+      "command": {
+        "abilityId": "opportunityReact",
+        "choice": "strike",
+        "actorId": "player"
+      },
+      "result": {
+        "actorId": "mireya",
+        "abilityId": "move",
+        "round": 2,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [],
+        "opportunities": [
+          {
+            "actorId": "player",
+            "abilityId": "strike",
+            "damage": [
+              {
+                "targetId": "mireya",
+                "kind": "physical",
+                "energyType": null,
+                "input": 9,
+                "inputSeverity": "B",
+                "severity": "B",
+                "actualDamage": 9
+              }
+            ],
+            "statuses": [],
+            "saves": [],
+            "responses": [
+              {
+                "targetId": "mireya",
+                "guarded": false
+              }
+            ],
+            "attack": {
+              "rawDP": 25,
+              "dp": 25,
+              "weapon": 6,
+              "cap": 14,
+              "fixed": 1,
+              "ap": 2,
+              "magic": 2,
+              "speed": 0,
+              "extra": 0,
+              "ignore": 0,
+              "aggravate": 0,
+              "electric": 0,
+              "reduction": 3,
+              "range": 1.5,
+              "explode": 10,
+              "defense": {
+                "total": 4,
+                "parts": {
+                  "base": 4,
+                  "natural": 0,
+                  "armor": 0,
+                  "dodge": 0,
+                  "insight": 0,
+                  "block": 0,
+                  "cover": 0,
+                  "cultivation": 0,
+                  "force": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 1,
+                "guarded": false,
+                "extraSuccesses": 0
+              },
+              "roll": {
+                "dp": 21,
+                "luck": false,
+                "dice": [
+                  2,
+                  6,
+                  9,
+                  3,
+                  9,
+                  8,
+                  6,
+                  5,
+                  10,
+                  3,
+                  7,
+                  7,
+                  10,
+                  4,
+                  8,
+                  6,
+                  4,
+                  1,
+                  10,
+                  4,
+                  4,
+                  3,
+                  9,
+                  3
+                ],
+                "used": 24,
+                "rolledSuccesses": 8,
+                "luckMishap": false
+              },
+              "amount": 9
+            }
+          }
+        ],
+        "movement": {
+          "from": [
+            12,
+            0
+          ],
+          "to": [
+            29,
+            0
+          ],
+          "path": [
+            [
+              12,
+              0
+            ],
+            [
+              29,
+              0
+            ]
+          ],
+          "length": 17,
+          "cost": 17
+        }
+      }
+    },
+    {
+      "id": "leave/11",
+      "revision": 12,
+      "command": {
+        "kind": "leave"
+      },
+      "result": {
+        "actorId": "mireya",
+        "abilityId": "leave",
+        "round": 2,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [
+          "返回剧情；保留伤势、能量和恢复限制"
+        ]
+      }
+    }
+  ],
+  "lastMessages": [
+    {
+      "user": true,
+      "text": "【隔离测试玩家声明】米蕾娅这一移动引发的借机攻击窗口，我明确选择出手，用手中缓冲练习长剑对她作一次普通借机攻击。我不替她决定接下来的防御或移动结果。",
+      "extra": {
+        "isSmallSys": false,
+        "901_narrative": {
+          "text": "【隔离测试玩家声明】米蕾娅这一移动引发的借机攻击窗口，我明确选择出手，用手中缓冲练习长剑对她作一次普通借机攻击。我不替她决定接下来的防御或移动结果。",
+          "swipeId": 0,
+          "plan": {
+            "steps": [
+              {
+                "quote": "用手中缓冲练习长剑对她作一次普通借机攻击",
+                "command": {
+                  "abilityId": "opportunityReact",
+                  "choice": "strike"
+                }
+              }
+            ],
+            "clarification": ""
+          },
+          "completed": {
+            "message": "米蕾娅转身向外退去，脚步刚一错开，御临风手中的等值缓冲练习长剑已顺势横切而至。剑锋带着破空声正中米蕾娅侧身，钝击的力道透体而入，迫使她闷哼一声，身形在向外撤开的途中猛地一晃。\n\n她强忍着痛楚拉开距离，退至十八米外站定，双手仍紧紧握着竞技弓，腰侧的短棍随着动作微微摇晃。\n\n练习场的边缘传出低微的蜂鸣，场地的红蓝光标随之消散。这场对练至此告一段落，两人身上留下的创伤与损耗并未消除。周围重新恢复了安静。",
+            "revision": 12
+          }
+        }
+      }
+    },
+    {
+      "user": false,
+      "text": "米蕾娅转身向外退去，脚步刚一错开，御临风手中的等值缓冲练习长剑已顺势横切而至。剑锋带着破空声正中米蕾娅侧身，钝击的力道透体而入，迫使她闷哼一声，身形在向外撤开的途中猛地一晃。\n\n她强忍着痛楚拉开距离，退至十八米外站定，双手仍紧紧握着竞技弓，腰侧的短棍随着动作微微摇晃。\n\n练习场的边缘传出低微的蜂鸣，场地的红蓝光标随之消散。这场对练至此告一段落，两人身上留下的创伤与损耗并未消除。周围重新恢复了安静。\n\n<StatusPlaceHolderImpl/>",
+      "extra": {
+        "901_narrative": {
+          "key": "901 擂台 米蕾娅 完整场复测 - 2026-10-23/9/0",
+          "revision": 12
+        }
+      }
+    }
+  ]
+}

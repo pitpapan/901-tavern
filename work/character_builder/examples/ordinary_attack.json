@@ -1,0 +1,33 @@
+{
+  "attacker": {
+    "id": "demo-attacker", "name": "测试攻击者", "period": "demo", "sources": ["work/rules_engine/mvu_poc/fixture.mjs"],
+    "size": 5,
+    "attributes": { "力量": 6, "敏捷": 3, "智力": 2, "感知": 3, "意志": 3, "风度": 2 },
+    "skills": {
+      "白刃": { "level": 5, "subs": { "长剑": { "level": 3, "scope": "普通长剑攻击" } } },
+      "运动": { "level": 0 }, "求生": { "level": 0 }
+    }
+  },
+  "target": {
+    "id": "demo-target", "name": "测试目标", "period": "demo", "sources": ["work/rules_engine/mvu_poc/fixture.mjs"],
+    "size": 5,
+    "attributes": { "力量": 4, "敏捷": 4, "智力": 2, "感知": 4, "意志": 3, "风度": 2 },
+    "skills": {
+      "白刃": { "level": 0, "subs": { "长剑": { "level": 0, "scope": "普通长剑攻击" } } },
+      "运动": { "level": 0 }, "求生": { "level": 0 }
+    },
+    "overrides": { "derived": {
+      "hpMax": { "mode": "final", "value": 9, "source": "work/rules_engine/mvu_poc/fixture.mjs: target test HP" },
+      "defense": { "mode": "final", "value": 4, "source": "work/rules_engine/mvu_poc/fixture.mjs: target test defense" }
+    } }
+  },
+  "initial": {
+    "attacker": { "health": "healthy", "willCurrent": 5, "xp": 0, "turn": "ready" },
+    "target": { "health": "healthy", "willCurrent": 5, "xp": 0, "turn": "ready" }
+  },
+  "attack": {
+    "weapon": { "type": "melee", "sub": "长剑", "damage": 2, "severity": "L" },
+    "dice": [8, 8, 8, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "defenses": [{ "id": "demo-physical-dr", "kind": "dr", "value": 2 }]
+  }
+}

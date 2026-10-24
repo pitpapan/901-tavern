@@ -42,6 +42,7 @@ Models and bounded delegation
 - Reuse unchanged instructions already available. Reread only what changed, was lost from context, or is needed to resolve a concrete question. Read task-relevant files rather than the whole repository.
 - 901-world-systems: social operation, regional development, and explicitly requested stress tests, within the authorized scope.
 - 901-story-factory: explicit invocation only; existing important-character development and behind-the-scenes plot planning. Continue authorized follow-up work without demanding reinvocation each turn. New-character production and mechanical builds remain outside its remit.
+- Explicitly authorized resource creation, character-build gaps, and growth proposals use the existing [Character Builder authoring guide](work/character_builder/README.md#资源撰写模式) in the current creative session. The Builder program is not a separate installed Skill or Agent; read this guidance only for the relevant creation task, not on every GM turn.
 - 901-canon-review: invoke for a requested review, disputed source claim, concrete continuity conflict, or a consequential adoption/change requiring targeted assessment. It is not a mandatory stage after ordinary drafting.
 - This file defines project-wide workflow and validation defaults. Generic skill workflows do not add mandatory reviews, tests, or planning stages. Preserve task-relevant output contracts and the integration document's data, authorization, and export boundaries.
 4. Canon discipline and provenance
@@ -88,7 +89,7 @@ Explicit review or test request	Perform the requested scope once. Report concret
 - Extraction scripts must never directly overwrite human-reviewed candidates or formal reviewed entries. Validators report findings and never rewrite source data. Apply authorized formal changes through the existing reviewed patch/integration procedure.
 - Do not generate output/worldbook_source.jsonl until the candidate list is reviewed and phase two is explicitly authorized. Honor existing records showing these conditions were satisfied; neither assume completion nor demand renewed approval.
 - Preserve current export formats, UIDs, loading rules, manual SillyTavern application, and deferred/cancelled task boundaries. An authorized draft does not authorize exporter changes, publication, or merging worktrees.
-- References to tavern-cards, UI, MVU/EJS, or a future Character Builder are handoff suggestions, not installed dependencies or permission to implement them. Reuse existing files and structures rather than introducing new registries or orchestration layers.
+- References to tavern-cards, UI, MVU/EJS, or Character Builder are handoff suggestions, not permission to implement or run them. Reuse existing files and structures rather than introducing new registries or orchestration layers.
 9. Delivery and stopping
 Deliver the requested artifact or answer. For file changes, briefly state what changed, relevant checks actually run, and any concrete unresolved limitation. Never describe static parsing as a successful model behavior test.
 Stop when the requested result is complete and no concrete task-blocking issue remains. Record unrelated observations briefly without fixing them or starting another review. Do not expand the task to justify additional work.

@@ -1,0 +1,1970 @@
+TAP version 13
+# Subtest: arena profiles preserve T0 player and the two candidate panels without Bright aim features
+ok 1 - arena profiles preserve T0 player and the two candidate panels without Bright aim features
+  ---
+  duration_ms: 15.7579
+  type: 'test'
+  ...
+# Subtest: shield push waits for player declaration before real dice or energy and moves only the target
+ok 2 - shield push waits for player declaration before real dice or energy and moves only the target
+  ---
+  duration_ms: 14.2267
+  type: 'test'
+  ...
+# Subtest: shield push cannot pass through a wall or outside a bounded map
+ok 3 - shield push cannot pass through a wall or outside a bounded map
+  ---
+  duration_ms: 2.0696
+  type: 'test'
+  ...
+# Subtest: one-use qi defense costs once, adds only three and is consumed by the next physical defense
+ok 4 - one-use qi defense costs once, adds only three and is consumed by the next physical defense
+  ---
+  duration_ms: 8.3747
+  type: 'test'
+  ...
+# Subtest: Mireya reload and full-round calibration produce one +3 shot with unchanged cap and no Bright extras
+ok 5 - Mireya reload and full-round calibration produce one +3 shot with unchanged cap and no Bright extras
+  ---
+  duration_ms: 40.4566
+  type: 'test'
+  ...
+# Subtest: Mireya calibration is lost on movement and a melee hit; club draw and block cost separate actions
+ok 6 - Mireya calibration is lost on movement and a melee hit; club draw and block cost separate actions
+  ---
+  duration_ms: 13.775
+  type: 'test'
+  ...
+# Subtest: healthy Mireya opening keeps safe reload and attack preparation instead of conceding the match
+ok 7 - healthy Mireya opening keeps safe reload and attack preparation instead of conceding the match
+  ---
+  duration_ms: 61.8304
+  type: 'test'
+  ...
+# Subtest: NPC concession candidates require actual severe wounds or an exhausted bow without a melee fallback
+ok 8 - NPC concession candidates require actual severe wounds or an exhausted bow without a melee fallback
+  ---
+  duration_ms: 44.1119
+  type: 'test'
+  ...
+# Subtest: arena voluntary concession and announced test referee stop preserve damage/resources and award no XP
+ok 9 - arena voluntary concession and announced test referee stop preserve damage/resources and award no XP
+  ---
+  duration_ms: 43.6094
+  type: 'test'
+  ...
+# Subtest: arena MVU dedup, public shove result and reentry preserve actual injuries, ammo and held weapon
+ok 10 - arena MVU dedup, public shove result and reentry preserve actual injuries, ammo and held weapon
+  ---
+  duration_ms: 37.5226
+  type: 'test'
+  ...
+# Subtest: model can only choose current legal actions; already drawn weapon is excluded
+ok 11 - model can only choose current legal actions; already drawn weapon is excluded
+  ---
+  duration_ms: 123.6951
+  type: 'test'
+  ...
+# Subtest: confirmed panels, only combatants loaded, effects do not leak from history
+ok 12 - confirmed panels, only combatants loaded, effects do not leak from history
+  ---
+  duration_ms: 3.971
+  type: 'test'
+  ...
+# Subtest: draw, free block, lightning, then automatic defense/action/energy changes
+ok 13 - draw, free block, lightning, then automatic defense/action/energy changes
+  ---
+  duration_ms: 6.9835
+  type: 'test'
+  ...
+# Subtest: RE penetration consumes only matching defense and does not duplicate reductions
+ok 14 - RE penetration consumes only matching defense and does not duplicate reductions
+  ---
+  duration_ms: 1.6476
+  type: 'test'
+  ...
+# Subtest: combo belongs to target, qi is not inner power, rejected command leaves input unchanged
+ok 15 - combo belongs to target, qi is not inner power, rejected command leaves input unchanged
+  ---
+  duration_ms: 4.4994
+  type: 'test'
+  ...
+# Subtest: once per scene damage conversion is explicit and converts entire mixed hit
+ok 16 - once per scene damage conversion is explicit and converts entire mixed hit
+  ---
+  duration_ms: 2.6482
+  type: 'test'
+  ...
+# Subtest: summon has independent turn and persists health and once-per-scene uses across recall
+ok 17 - summon has independent turn and persists health and once-per-scene uses across recall
+  ---
+  duration_ms: 6.1123
+  type: 'test'
+  ...
+# Subtest: movement triggers one legal opportunity, five-foot step avoids it
+ok 18 - movement triggers one legal opportunity, five-foot step avoids it
+  ---
+  duration_ms: 3.5151
+  type: 'test'
+  ...
+# Subtest: restraint payment affects subsequent panels and immobilizes beyond will
+ok 19 - restraint payment affects subsequent panels and immobilizes beyond will
+  ---
+  duration_ms: 3.9346
+  type: 'test'
+  ...
+# Subtest: 龙象 ignores four points of conversion, not four free bonus damage
+ok 20 - 龙象 ignores four points of conversion, not four free bonus damage
+  ---
+  duration_ms: 4.1341
+  type: 'test'
+  ...
+# Subtest: life squeezing records increasing recovery restrictions and rapid healing respects them
+ok 21 - life squeezing records increasing recovery restrictions and rapid healing respects them
+  ---
+  duration_ms: 2.6045
+  type: 'test'
+  ...
+# Subtest: complete duel uses one resolver for companion and enemy, then stops
+ok 22 - complete duel uses one resolver for companion and enemy, then stops
+  ---
+  duration_ms: 360.5771
+  type: 'test'
+  ...
+# Subtest: MVU settles and writes once, preserves unrelated state, readback supplies next prompt
+ok 23 - MVU settles and writes once, preserves unrelated state, readback supplies next prompt
+  ---
+  duration_ms: 15.6082
+  type: 'test'
+  ...
+# Subtest: Tavern controller posts and carries results; refreshing and report replay never settle again
+ok 24 - Tavern controller posts and carries results; refreshing and report replay never settle again
+  ---
+  duration_ms: 29.1263
+  type: 'test'
+  ...
+# Subtest: gale attacks each legal enemy once, excludes allies and shares geometry across previews and reaction queue
+ok 25 - gale attacks each legal enemy once, excludes allies and shares geometry across previews and reaction queue
+  ---
+  duration_ms: 194.5124
+  type: 'test'
+  ...
+# Subtest: resolved response reports the actual effective guard and normal player defense omits it
+ok 26 - resolved response reports the actual effective guard and normal player defense omits it
+  ---
+  duration_ms: 4.6441
+  type: 'test'
+  ...
+# Subtest: attack, defense and movement derive from current attributes, skills and equipment
+ok 27 - attack, defense and movement derive from current attributes, skills and equipment
+  ---
+  duration_ms: 1.5086
+  type: 'test'
+  ...
+# Subtest: confirmed bow requirement four and sword sizes three remain distinct from lotus size twelve
+ok 28 - confirmed bow requirement four and sword sizes three remain distinct from lotus size twelve
+  ---
+  duration_ms: 5.3384
+  type: 'test'
+  ...
+# Subtest: four-person baselines and distinct weapon costs remain faithful to adopted cards
+ok 29 - four-person baselines and distinct weapon costs remain faithful to adopted cards
+  ---
+  duration_ms: 102.3691
+  type: 'test'
+  ...
+# Subtest: special preview uses post-payment attack and reports missing parameters separately
+ok 30 - special preview uses post-payment attack and reports missing parameters separately
+  ---
+  duration_ms: 120.9768
+  type: 'test'
+  ...
+# Subtest: private enemy data and unrelated abilities are absent from model input
+ok 31 - private enemy data and unrelated abilities are absent from model input
+  ---
+  duration_ms: 60.3883
+  type: 'test'
+  ...
+# Subtest: reaction survives MVU refresh, rolls only after choice, and replays without spending twice
+ok 32 - reaction survives MVU refresh, rolls only after choice, and replays without spending twice
+  ---
+  duration_ms: 18.8757
+  type: 'test'
+  ...
+# Subtest: four-person encounter completes with player choices, action costs and reaction windows
+ok 33 - four-person encounter completes with player choices, action costs and reaction windows
+  ---
+  duration_ms: 821.5505
+  type: 'test'
+  ...
+# Subtest: host waits for player, settles a whole encounter, returns to story and carries wounds into next encounter
+ok 34 - host waits for player, settles a whole encounter, returns to story and carries wounds into next encounter
+  ---
+  duration_ms: 4314.8863
+  type: 'test'
+  ...
+# Subtest: haste changes order without extra turns; aiming matures next round and is lost on movement
+ok 35 - haste changes order without extra turns; aiming matures next round and is lost on movement
+  ---
+  duration_ms: 3.9072
+  type: 'test'
+  ...
+# Subtest: invalid model selection retries without rolling; transport failures remain visible
+ok 36 - invalid model selection retries without rolling; transport failures remain visible
+  ---
+  duration_ms: 47.5449
+  type: 'test'
+  ...
+# Subtest: host tool is unavailable inside its own NPC decision request
+ok 37 - host tool is unavailable inside its own NPC decision request
+  ---
+  duration_ms: 0.3258
+  type: 'test'
+  ...
+# Subtest: legendary dodge reduces high speed on reflex saves as well as defenses
+ok 38 - legendary dodge reduces high speed on reflex saves as well as defenses
+  ---
+  duration_ms: 5.2607
+  type: 'test'
+  ...
+# Subtest: bright switches to the adopted blade, spends stowing/drawing actions and consumes no arrow
+ok 39 - bright switches to the adopted blade, spends stowing/drawing actions and consumes no arrow
+  ---
+  duration_ms: 24.2639
+  type: 'test'
+  ...
+# Subtest: wind sense requires air connection, while Huang can see and strike a spirit
+ok 40 - wind sense requires air connection, while Huang can see and strike a spirit
+  ---
+  duration_ms: 3.5099
+  type: 'test'
+  ...
+# Subtest: bright ignores difficult movement cost without crossing solid walls
+ok 41 - bright ignores difficult movement cost without crossing solid walls
+  ---
+  duration_ms: 10.3036
+  type: 'test'
+  ...
+# Subtest: opportunity threat uses four orthogonal directions and at most one grid
+ok 42 - opportunity threat uses four orthogonal directions and at most one grid
+  ---
+  duration_ms: 3.4293
+  type: 'test'
+  ...
+# Subtest: failed B-only pre-action check commits coma without attacking or spending energy
+ok 43 - failed B-only pre-action check commits coma without attacking or spending energy
+  ---
+  duration_ms: 4.8441
+  type: 'test'
+  ...
+# Subtest: combat first aid stops A deterioration while spending a full round
+ok 44 - combat first aid stops A deterioration while spending a full round
+  ---
+  duration_ms: 3.9505
+  type: 'test'
+  ...
+# Subtest: all four adopted NPCs expose the actual period stats and skill cards
+ok 45 - all four adopted NPCs expose the actual period stats and skill cards
+  ---
+  duration_ms: 5.3152
+  type: 'test'
+  ...
+# Subtest: hypnosis spends its registered mana and survives the caster leaving and ordinary sleep
+ok 46 - hypnosis spends its registered mana and survives the caster leaving and ordinary sleep
+  ---
+  duration_ms: 5.3589
+  type: 'test'
+  ...
+# Subtest: gremlin double attack spends all three action slots and earth travel uses the registered path
+ok 47 - gremlin double attack spends all three action slots and earth travel uses the registered path
+  ---
+  duration_ms: 10.5802
+  type: 'test'
+  ...
+# Subtest: summon avoids the blocked default point and records a new visible actor without moving the owner
+ok 48 - summon avoids the blocked default point and records a new visible actor without moving the owner
+  ---
+  duration_ms: 19.3837
+  type: 'test'
+  ...
+# Subtest: explicit summon points respect obstacles, adjacency and closed scene boundaries
+ok 49 - explicit summon points respect obstacles, adjacency and closed scene boundaries
+  ---
+  duration_ms: 4.4893
+  type: 'test'
+  ...
+# Subtest: summon with no adjacent space is unavailable and leaves MVU, actions and energy unchanged
+ok 50 - summon with no adjacent space is unavailable and leaves MVU, actions and energy unchanged
+  ---
+  duration_ms: 39.4276
+  type: 'test'
+  ...
+# Subtest: roar geometry excludes targets behind solid terrain from damage, previews and reaction queues
+ok 51 - roar geometry excludes targets behind solid terrain from damage, previews and reaction queues
+  ---
+  duration_ms: 40.4594
+  type: 'test'
+  ...
+# Subtest: roar respects polygon walls and closed doors, while open doors and sight-only forest pass its effect
+ok 52 - roar respects polygon walls and closed doors, while open doors and sight-only forest pass its effect
+  ---
+  duration_ms: 8.6511
+  type: 'test'
+  ...
+# Subtest: summon and terrain-blocked roar persist through MVU readback and duplicate dispatch only once
+ok 53 - summon and terrain-blocked roar persist through MVU readback and duplicate dispatch only once
+  ---
+  duration_ms: 17.6117
+  type: 'test'
+  ...
+# Subtest: directional cover changes declared defense without blocking sight or allowing movement through it
+ok 54 - directional cover changes declared defense without blocking sight or allowing movement through it
+  ---
+  duration_ms: 8.3557
+  type: 'test'
+  ...
+# Subtest: elevation rejects cliff shortcuts, routes via a ramp and permits firing over a lower obstacle
+ok 55 - elevation rejects cliff shortcuts, routes via a ramp and permits firing over a lower obstacle
+  ---
+  duration_ms: 29.6396
+  type: 'test'
+  ...
+# Subtest: declared doors and object attacks write actions and geometry together, replay only once, and redact durability
+ok 56 - declared doors and object attacks write actions and geometry together, replay only once, and redact durability
+  ---
+  duration_ms: 45.5675
+  type: 'test'
+  ...
+# Subtest: locked doors, occupied closure and unparameterized destruction leave the original state intact
+ok 57 - locked doors, occupied closure and unparameterized destruction leave the original state intact
+  ---
+  duration_ms: 4.6449
+  type: 'test'
+  ...
+# Subtest: same geometry rejects wall crossing and attacks, accepts explicit detour, and charges difficult ground
+ok 58 - same geometry rejects wall crossing and attacks, accepts explicit detour, and charges difficult ground
+  ---
+  duration_ms: 32.1582
+  type: 'test'
+  ...
+# Subtest: map projection and SVG have no hidden actors, hidden landmarks or character statistics; clicks only produce drafts
+ok 59 - map projection and SVG have no hidden actors, hidden landmarks or character statistics; clicks only produce drafts
+  ---
+  duration_ms: 4.0998
+  type: 'test'
+  ...
+# Subtest: map generation uses scene and positions once, not private panels
+ok 60 - map generation uses scene and positions once, not private panels
+  ---
+  duration_ms: 2.2349
+  type: 'test'
+  ...
+# Subtest: close melee has no purposeless retreat, remembers preparation and pressure, while injured withdrawal remains possible
+ok 61 - close melee has no purposeless retreat, remembers preparation and pressure, while injured withdrawal remains possible
+  ---
+  duration_ms: 61.3348
+  type: 'test'
+  ...
+# Subtest: bow user with an open shot does not approach melee, but can leave close interference
+ok 62 - bow user with an open shot does not approach melee, but can leave close interference
+  ---
+  duration_ms: 30.4636
+  type: 'test'
+  ...
+# Subtest: narration locates each visible actor on its actual terrain and elevation
+ok 63 - narration locates each visible actor on its actual terrain and elevation
+  ---
+  duration_ms: 5.3889
+  type: 'test'
+  ...
+# Subtest: MVU map initialization and a confirmed door change persist once without changing actor state
+ok 64 - MVU map initialization and a confirmed door change persist once without changing actor state
+  ---
+  duration_ms: 22.8531
+  type: 'test'
+  ...
+# Subtest: moving behind an opaque obstacle preserves the observed departure but conceals the final position
+ok 65 - moving behind an opaque obstacle preserves the observed departure but conceals the final position
+  ---
+  duration_ms: 6.1918
+  type: 'test'
+  ...
+# Subtest: approach retains the attack action and excludes a worse partial sidestep or premature block
+ok 66 - approach retains the attack action and excludes a worse partial sidestep or premature block
+  ---
+  duration_ms: 48.9057
+  type: 'test'
+  ...
+# Subtest: preparation-only prose explicitly carries no attack or contact
+ok 67 - preparation-only prose explicitly carries no attack or contact
+  ---
+  duration_ms: 2.3953
+  type: 'test'
+  ...
+# Subtest: irregular terrain shares collision, path cost and visibility with the grid renderer
+ok 68 - irregular terrain shares collision, path cost and visibility with the grid renderer
+  ---
+  duration_ms: 5.2735
+  type: 'test'
+  ...
+# Subtest: a lost target leaves only a last visible position to investigate, not hidden actions or its new location
+ok 69 - a lost target leaves only a last visible position to investigate, not hidden actions or its new location
+  ---
+  duration_ms: 21.2237
+  type: 'test'
+  ...
+# Subtest: opaque forest prevents targeting and direct magic cannot pass through a visible low wall
+ok 70 - opaque forest prevents targeting and direct magic cannot pass through a visible low wall
+  ---
+  duration_ms: 2.2749
+  type: 'test'
+  ...
+# Subtest: opening profiles use complete period-specific rules, mother skill autos and no late equipment
+ok 71 - opening profiles use complete period-specific rules, mother skill autos and no late equipment
+  ---
+  duration_ms: 14.3616
+  type: 'test'
+  ...
+# Subtest: opening declared block includes mother skill auto; no free Huang block or late sword defense
+ok 72 - opening declared block includes mother skill auto; no free Huang block or late sword defense
+  ---
+  duration_ms: 41.2653
+  type: 'test'
+  ...
+# Subtest: opening attacks use flow, posture, draw, electricity and bare-body conditions exactly once
+ok 73 - opening attacks use flow, posture, draw, electricity and bare-body conditions exactly once
+  ---
+  duration_ms: 8.277
+  type: 'test'
+  ...
+# Subtest: adopted enemies keep fixed HP and stone attack is B within its real territory
+ok 74 - adopted enemies keep fixed HP and stone attack is B within its real territory
+  ---
+  duration_ms: 8.3495
+  type: 'test'
+  ...
+# Subtest: opening D magic-killer finisher uses one layer, adds no automatic successes and clears rather than restacks
+ok 75 - opening D magic-killer finisher uses one layer, adds no automatic successes and clears rather than restacks
+  ---
+  duration_ms: 4.3339
+  type: 'test'
+  ...
+# Subtest: formal withdrawal writes through existing MVU, keeps injuries/resources and does not complete task or award XP
+ok 76 - formal withdrawal writes through existing MVU, keeps injuries/resources and does not complete task or award XP
+  ---
+  duration_ms: 29.7253
+  type: 'test'
+  ...
+# Subtest: withdrawal/reentry carries duration, same-scene once-use and cooldown; new-scene once-use remains fresh
+ok 77 - withdrawal/reentry carries duration, same-scene once-use and cooldown; new-scene once-use remains fresh
+  ---
+  duration_ms: 30.3582
+  type: 'test'
+  ...
+# Subtest: target-specific panel matches resolution including initiative, combo and penetration
+ok 78 - target-specific panel matches resolution including initiative, combo and penetration
+  ---
+  duration_ms: 32.9821
+  type: 'test'
+  ...
+# Subtest: compact panel distinguishes readiness and includes only live modifiers
+ok 79 - compact panel distinguishes readiness and includes only live modifiers
+  ---
+  duration_ms: 6.9911
+  type: 'test'
+  ...
+# Subtest: legal movement uses reduced current speed, not the static base speed
+ok 80 - legal movement uses reduced current speed, not the static base speed
+  ---
+  duration_ms: 54.8188
+  type: 'test'
+  ...
+# Subtest: model gets one coherent snapshot and compact commands still map to trusted actions
+ok 81 - model gets one coherent snapshot and compact commands still map to trusted actions
+  ---
+  duration_ms: 48.4487
+  type: 'test'
+  ...
+# Subtest: summon joins the projection, recalled actors disappear, and only active matchups are expanded
+ok 82 - summon joins the projection, recalled actors disappear, and only active matchups are expanded
+  ---
+  duration_ms: 8.2798
+  type: 'test'
+  ...
+# Subtest: default physical size is consistently five for speed and health
+ok 83 - default physical size is consistently five for speed and health
+  ---
+  duration_ms: 2.5054
+  type: 'test'
+  ...
+# Subtest: ordinary checks apply wound and relevant status penalties once
+ok 84 - ordinary checks apply wound and relevant status penalties once
+  ---
+  duration_ms: 1.9062
+  type: 'test'
+  ...
+# Subtest: abstract multiplier aggregation is distinct from real multiplication
+ok 85 - abstract multiplier aggregation is distinct from real multiplication
+  ---
+  duration_ms: 0.473
+  type: 'test'
+  ...
+# Subtest: eight AP mapping spends standard and swift atomically
+ok 86 - eight AP mapping spends standard and swift atomically
+  ---
+  duration_ms: 2.1695
+  type: 'test'
+  ...
+# Subtest: adopted feat advancement prices next level and checks translated prerequisites
+ok 87 - adopted feat advancement prices next level and checks translated prerequisites
+  ---
+  duration_ms: 7.1944
+  type: 'test'
+  ...
+# Subtest: RE-based six-attribute HP uses twice Strength and nonlinear size adjustment
+ok 88 - RE-based six-attribute HP uses twice Strength and nonlinear size adjustment
+  ---
+  duration_ms: 3.5992
+  type: 'test'
+  ...
+# Subtest: D10 explosions, luck die, and no invented success on luck 8
+ok 89 - D10 explosions, luck die, and no invented success on luck 8
+  ---
+  duration_ms: 2.2138
+  type: 'test'
+  ...
+# Subtest: finalized nonpositive DP uses PHB fortune without generic willpower or automatic harm
+ok 90 - finalized nonpositive DP uses PHB fortune without generic willpower or automatic harm
+  ---
+  duration_ms: 2.6048
+  type: 'test'
+  ...
+# Subtest: genetic first-stage uses trusted history and per-attempt roleplay result modifier
+ok 91 - genetic first-stage uses trusted history and per-attempt roleplay result modifier
+  ---
+  duration_ms: 3.3442
+  type: 'test'
+  ...
+# Subtest: genetic unlock rejects unknown history and ineligible opportunity without drawing
+ok 92 - genetic unlock rejects unknown history and ineligible opportunity without drawing
+  ---
+  duration_ms: 0.6349
+  type: 'test'
+  ...
+# Subtest: second-stage pure math sums 2D10 and only the PHB defined modifiers
+ok 93 - second-stage pure math sums 2D10 and only the PHB defined modifiers
+  ---
+  duration_ms: 0.9041
+  type: 'test'
+  ...
+# Subtest: main and one matching sub contribute to pool and autos even with zero rolled successes
+ok 94 - main and one matching sub contribute to pool and autos even with zero rolled successes
+  ---
+  duration_ms: 0.9395
+  type: 'test'
+  ...
+# Subtest: ordinary active opposition succeeds at equal successes
+ok 95 - ordinary active opposition succeeds at equal successes
+  ---
+  duration_ms: 0.6399
+  type: 'test'
+  ...
+# Subtest: PHB action counts, one-way conversions, reflex lock and response debt
+ok 96 - PHB action counts, one-way conversions, reflex lock and response debt
+  ---
+  duration_ms: 2.0141
+  type: 'test'
+  ...
+# Subtest: multi-round action uses one full round on each turn and tracks completion
+ok 97 - multi-round action uses one full round on each turn and tracks completion
+  ---
+  duration_ms: 1.0597
+  type: 'test'
+  ...
+# Subtest: PHB B/L/A pointwise upgrades differ for B and L
+ok 98 - PHB B/L/A pointwise upgrades differ for B and L
+  ---
+  duration_ms: 1.3391
+  type: 'test'
+  ...
+# Subtest: no intact B needs explicit DC; A deterioration needs explicit B/L choice and all A kills
+ok 99 - no intact B needs explicit DC; A deterioration needs explicit B/L choice and all A kills
+  ---
+  duration_ms: 2.4099
+  type: 'test'
+  ...
+# Subtest: first aid stops A deterioration without healing a slot
+ok 100 - first aid stops A deterioration without healing a slot
+  ---
+  duration_ms: 0.9646
+  type: 'test'
+  ...
+# Subtest: ordinary melee attack traces A/B/C and PHB L wound on a healthy target
+ok 101 - ordinary melee attack traces A/B/C and PHB L wound on a healthy target
+  ---
+  duration_ms: 1.9128
+  type: 'test'
+  ...
+# Subtest: same-category DR takes maximum except explicitly additive source
+ok 102 - same-category DR takes maximum except explicitly additive source
+  ---
+  duration_ms: 0.4871
+  type: 'test'
+  ...
+# Subtest: energy resistance applies by type, then temporary HP absorbs at C stage
+ok 103 - energy resistance applies by type, then temporary HP absorbs at C stage
+  ---
+  duration_ms: 1.4173
+  type: 'test'
+  ...
+# Subtest: short and long rest, node and chapter recover separately
+ok 104 - short and long rest, node and chapter recover separately
+  ---
+  duration_ms: 0.7686
+  type: 'test'
+  ...
+# Subtest: will and already-defined special pools change only by explicit costs
+ok 105 - will and already-defined special pools change only by explicit costs
+  ---
+  duration_ms: 0.6834
+  type: 'test'
+  ...
+# Subtest: common status resistance and severity use six attributes
+ok 106 - common status resistance and severity use six attributes
+  ---
+  duration_ms: 2.4287
+  type: 'test'
+  ...
+# Subtest: temporary attribute damage affects checks without rewriting card HP
+ok 107 - temporary attribute damage affects checks without rewriting card HP
+  ---
+  duration_ms: 0.6346
+  type: 'test'
+  ...
+# Subtest: attribute/skill XP milestones, main cap, card overrides, node settlement
+ok 108 - attribute/skill XP milestones, main cap, card overrides, node settlement
+  ---
+  duration_ms: 2.186
+  type: 'test'
+  ...
+# Subtest: recovery sequence schema and authorization preserve the complete declaration order
+ok 109 - recovery sequence schema and authorization preserve the complete declaration order
+  ---
+  duration_ms: 8.0115
+  type: 'test'
+  ...
+# Subtest: sequence narration uses final pending and preserves actual order and residual injury
+ok 110 - sequence narration uses final pending and preserves actual order and residual injury
+  ---
+  duration_ms: 0.9641
+  type: 'test'
+  ...
+# Subtest: recovery selectors require explicit player execution and preserve saved retry decision
+ok 111 - recovery selectors require explicit player execution and preserve saved retry decision
+  ---
+  duration_ms: 6.2876
+  type: 'test'
+  ...
+# Subtest: pending C narration facts describe consumption without immediate healing and keep numbers in the MVU view
+ok 112 - pending C narration facts describe consumption without immediate healing and keep numbers in the MVU view
+  ---
+  duration_ms: 0.8468
+  type: 'test'
+  ...
+# Subtest: recovery narration retains remaining severe wounds and a partially filled energy pool without numeric prose facts
+ok 113 - recovery narration retains remaining severe wounds and a partially filled energy pool without numeric prose facts
+  ---
+  duration_ms: 1.0386
+  type: 'test'
+  ...
+# Subtest: ordinary classifier receives legal attributes, success-count DC and GM difficulty responsibility
+ok 114 - ordinary classifier receives legal attributes, success-count DC and GM difficulty responsibility
+  ---
+  duration_ms: 1.2878
+  type: 'test'
+  ...
+# Subtest: recorded social-as-attribute error is typed and never reaches settlement
+ok 115 - recorded social-as-attribute error is typed and never reaches settlement
+  ---
+  duration_ms: 0.5093
+  type: 'test'
+  ...
+# Subtest: null request on an unsettled decision is empty but real requests remain rejected
+ok 116 - null request on an unsettled decision is empty but real requests remain rejected
+  ---
+  duration_ms: 1.4184
+  type: 'test'
+  ...
+# Subtest: 901 generation excludes foreign global and depth entries without changing worldbook settings
+ok 117 - 901 generation excludes foreign global and depth entries without changing worldbook settings
+  ---
+  duration_ms: 1.4329
+  type: 'test'
+  ...
+# Subtest: saved NO_CHECK narration resumes after refresh without reclassification or settlement
+ok 118 - saved NO_CHECK narration resumes after refresh without reclassification or settlement
+  ---
+  duration_ms: 1.3168
+  type: 'test'
+  ...
+# Subtest: recorded continuation failure permits NO_CHECK recovery but an unresolved action does not
+ok 119 - recorded continuation failure permits NO_CHECK recovery but an unresolved action does not
+  ---
+  duration_ms: 1.3522
+  type: 'test'
+  ...
+# Subtest: explicit cancellation of the unexecuted medicine declaration continues the actual current turn only
+ok 120 - explicit cancellation of the unexecuted medicine declaration continues the actual current turn only
+  ---
+  duration_ms: 2.2377
+  type: 'test'
+  ...
+# Subtest: player-facing result metadata omits check numbers and secret roll existence
+ok 121 - player-facing result metadata omits check numbers and secret roll existence
+  ---
+  duration_ms: 0.2933
+  type: 'test'
+  ...
+# Subtest: routine conversation enters prose only after structured NO_CHECK
+ok 122 - routine conversation enters prose only after structured NO_CHECK
+  ---
+  duration_ms: 0.4452
+  type: 'test'
+  ...
+# Subtest: controlled model response crosses dispatch, parse, gate and continuation once
+ok 123 - controlled model response crosses dispatch, parse, gate and continuation once
+  ---
+  duration_ms: 1.75
+  type: 'test'
+  ...
+# Subtest: malformed model response is isolated at response_parse before narration
+ok 124 - malformed model response is isolated at response_parse before narration
+  ---
+  duration_ms: 0.7188
+  type: 'test'
+  ...
+# Subtest: a fenced JSON decision follows the ordinary gate without another request
+ok 125 - a fenced JSON decision follows the ordinary gate without another request
+  ---
+  duration_ms: 0.6918
+  type: 'test'
+  ...
+# Subtest: DIRECT_EFFECT requires a saved JS result before narration
+ok 126 - DIRECT_EFFECT requires a saved JS result before narration
+  ---
+  duration_ms: 0.6634
+  type: 'test'
+  ...
+# Subtest: player display exposes only public pool construction and compact GM facts omit logs
+ok 127 - player display exposes only public pool construction and compact GM facts omit logs
+  ---
+  duration_ms: 0.4277
+  type: 'test'
+  ...
+# Subtest: saved operation resumes its original adjudication without another model classification
+ok 128 - saved operation resumes its original adjudication without another model classification
+  ---
+  duration_ms: 1.6665
+  type: 'test'
+  ...
+# Subtest: committed player operation recovers classification after a lost failure notice
+ok 129 - committed player operation recovers classification after a lost failure notice
+  ---
+  duration_ms: 0.4238
+  type: 'test'
+  ...
+# Subtest: different risky phrasings both require a result before prose
+ok 130 - different risky phrasings both require a result before prose
+  ---
+  duration_ms: 0.5617
+  type: 'test'
+  ...
+# Subtest: pending action keeps original operation ID across a later input message
+ok 131 - pending action keeps original operation ID across a later input message
+  ---
+  duration_ms: 1.6539
+  type: 'test'
+  ...
+# Subtest: UNRESOLVED and invalid classification cannot narrate success
+ok 132 - UNRESOLVED and invalid classification cannot narrate success
+  ---
+  duration_ms: 0.7153
+  type: 'test'
+  ...
+# Subtest: negating an attack does not block ordinary observation or erase a separate declared attack
+ok 133 - negating an attack does not block ordinary observation or erase a separate declared attack
+  ---
+  duration_ms: 0.6804
+  type: 'test'
+  ...
+# Subtest: NO_CHECK cannot clear the reported traffic and climbing risks
+ok 134 - NO_CHECK cannot clear the reported traffic and climbing risks
+  ---
+  duration_ms: 0.5515
+  type: 'test'
+  ...
+# Subtest: gate readiness names missing runtime dependencies and player anchor
+ok 135 - gate readiness names missing runtime dependencies and player anchor
+  ---
+  duration_ms: 0.4475
+  type: 'test'
+  ...
+# Subtest: failed narration can retry saved operation without changing operation ID
+ok 136 - failed narration can retry saved operation without changing operation ID
+  ---
+  duration_ms: 0.6257
+  type: 'test'
+  ...
+# Subtest: classifier request includes only explicit action, current scene and relevant state
+ok 137 - classifier request includes only explicit action, current scene and relevant state
+  ---
+  duration_ms: 0.6862
+  type: 'test'
+  ...
+# Subtest: classifier request does not offer an invented default DC for an uncertain compound action
+ok 138 - classifier request does not offer an invented default DC for an uncertain compound action
+  ---
+  duration_ms: 2.1193
+  type: 'test'
+  ...
+# Subtest: current action selects a named NPC worldbook entry without unrelated entries
+ok 139 - current action selects a named NPC worldbook entry without unrelated entries
+  ---
+  duration_ms: 0.7971
+  type: 'test'
+  ...
+# Subtest: classification deadline stops only its generation and ignores a late result
+ok 140 - classification deadline stops only its generation and ignores a late result
+  ---
+  duration_ms: 33.4117
+  type: 'test'
+  ...
+# Subtest: registered encounter decisions hand off before ordinary checks and narration
+ok 141 - registered encounter decisions hand off before ordinary checks and narration
+  ---
+  duration_ms: 0.7142
+  type: 'test'
+  ...
+# Subtest: saved return to story closes an earlier interrupted combat handoff
+ok 142 - saved return to story closes an earlier interrupted combat handoff
+  ---
+  duration_ms: 0.2535
+  type: 'test'
+  ...
+# Subtest: two isolated arena fixtures keep T0 baseline and only the actual opponent
+ok 143 - two isolated arena fixtures keep T0 baseline and only the actual opponent
+  ---
+  duration_ms: 18.5029
+  type: 'test'
+  ...
+# Subtest: new arena story prepares without a battle and exposes only one natural encounter
+ok 144 - new arena story prepares without a battle and exposes only one natural encounter
+  ---
+  duration_ms: 7.0155
+  type: 'test'
+  ...
+# Subtest: NPC uses trusted values and sourced modifiers; narration recovery preserves private records
+ok 145 - NPC uses trusted values and sourced modifiers; narration recovery preserves private records
+  ---
+  duration_ms: 152.3154
+  type: 'test'
+  ...
+# Subtest: NPC applicable subskill uses trusted state; unrelated or missing data never rolls
+ok 146 - NPC applicable subskill uses trusted state; unrelated or missing data never rolls
+  ---
+  duration_ms: 8.7645
+  type: 'test'
+  ...
+# Subtest: NPC/player opposition math exists; paired runtime commit is deferred without taking player decisions
+ok 147 - NPC/player opposition math exists; paired runtime commit is deferred without taking player decisions
+  ---
+  duration_ms: 3.6005
+  type: 'test'
+  ...
+# Subtest: unresolved NPC request does not publish private request or adjudication reason in chat metadata
+ok 148 - unresolved NPC request does not publish private request or adjudication reason in chat metadata
+  ---
+  duration_ms: 3.9034
+  type: 'test'
+  ...
+# Subtest: GM request parser rejects numeric authority and accepts explicit no-rule decision
+ok 149 - GM request parser rejects numeric authority and accepts explicit no-rule decision
+  ---
+  duration_ms: 1.0712
+  type: 'test'
+  ...
+# Subtest: authorized demo actors, GM check and ordinary attack use one MVU state and deduplicate
+ok 150 - authorized demo actors, GM check and ordinary attack use one MVU state and deduplicate
+  ---
+  duration_ms: 9.6235
+  type: 'test'
+  ...
+# Subtest: wrong voluntary action and missing test authorization cannot enter MVU
+ok 151 - wrong voluntary action and missing test authorization cannot enter MVU
+  ---
+  duration_ms: 3.0834
+  type: 'test'
+  ...
+# Subtest: switching chats replaces the captured session before initialization or writeback
+ok 152 - switching chats replaces the captured session before initialization or writeback
+  ---
+  duration_ms: 1.7135
+  type: 'test'
+  ...
+# Subtest: integration uses one player state for ordinary checks and combat, with no T0 rewrite
+ok 153 - integration uses one player state for ordinary checks and combat, with no T0 rewrite
+  ---
+  duration_ms: 128.1865
+  type: 'test'
+  ...
+# Subtest: NPC fight returns to story once; resume keeps results and next chat inherits injuries
+ok 154 - NPC fight returns to story once; resume keeps results and next chat inherits injuries
+  ---
+  duration_ms: 251.2589
+  type: 'test'
+  ...
+# Subtest: player-selected energy attack settles, writes back and reaches story without resetting costs
+ok 155 - player-selected energy attack settles, writes back and reaches story without resetting costs
+  ---
+  duration_ms: 260.5949
+  type: 'test'
+  ...
+# Subtest: B-only ordinary check commits failed pre-action coma, does not execute original check or reroll
+ok 156 - B-only ordinary check commits failed pre-action coma, does not execute original check or reroll
+  ---
+  duration_ms: 7.7852
+  type: 'test'
+  ...
+# Subtest: field flow debits once, changes later check pool, and expires through time action
+ok 157 - field flow debits once, changes later check pool, and expires through time action
+  ---
+  duration_ms: 18.857
+  type: 'test'
+  ...
+# Subtest: reward event does not restore will and remains idempotent across distinct operations
+ok 158 - reward event does not restore will and remains idempotent across distinct operations
+  ---
+  duration_ms: 2.5552
+  type: 'test'
+  ...
+# Subtest: opposed selector supports actual will plus presence without a fabricated skill
+ok 159 - opposed selector supports actual will plus presence without a fabricated skill
+  ---
+  duration_ms: 2.1999
+  type: 'test'
+  ...
+# Subtest: Chuul declaration awaits player grapple defense before actual dice, then uses chosen response
+ok 160 - Chuul declaration awaits player grapple defense before actual dice, then uses chosen response
+  ---
+  duration_ms: 14.6644
+  type: 'test'
+  ...
+# Subtest: two claws on one target release only the declared claw and escape clears the rest
+ok 161 - two claws on one target release only the declared claw and escape clears the rest
+  ---
+  duration_ms: 4.6615
+  type: 'test'
+  ...
+# Subtest: physical and spatial arrays remain independent and only physical blocks walking
+ok 162 - physical and spatial arrays remain independent and only physical blocks walking
+  ---
+  duration_ms: 2.038
+  type: 'test'
+  ...
+# Subtest: production narrator request prioritizes executed events over background and preserves the prose-only boundary
+ok 163 - production narrator request prioritizes executed events over background and preserves the prose-only boundary
+  ---
+  duration_ms: 4.7204
+  type: 'test'
+  ...
+# Subtest: declared combat medicine spends its action once and refresh preserves inventory and health
+ok 164 - declared combat medicine spends its action once and refresh preserves inventory and health
+  ---
+  duration_ms: 254.0228
+  type: 'test'
+  ...
+# Subtest: postcombat story medicine and next rest use current MVU without replaying battle prose
+ok 165 - postcombat story medicine and next rest use current MVU without replaying battle prose
+  ---
+  duration_ms: 216.1499
+  type: 'test'
+  ...
+# Subtest: story rest expires persisted player battle buffs in own status and leaves NPCs unchanged
+ok 166 - story rest expires persisted player battle buffs in own status and leaves NPCs unchanged
+  ---
+  duration_ms: 53.747
+  type: 'test'
+  ...
+# Subtest: declared door then obstacle attack preserves remaining actions, narrates the map result and survives refresh
+ok 167 - declared door then obstacle attack preserves remaining actions, narrates the map result and survives refresh
+  ---
+  duration_ms: 113.4964
+  type: 'test'
+  ...
+# Subtest: natural attack settles only the declared action, keeps remaining player actions, and hides NPC figures
+ok 168 - natural attack settles only the declared action, keeps remaining player actions, and hides NPC figures
+  ---
+  duration_ms: 63.6348
+  type: 'test'
+  ...
+# Subtest: stationary tornado injury projects the unchanged target position as an observable result
+ok 169 - stationary tornado injury projects the unchanged target position as an observable result
+  ---
+  duration_ms: 66.9693
+  type: 'test'
+  ...
+# Subtest: declared cost mismatch and invented end are rejected before rolling or spending
+ok 170 - declared cost mismatch and invented end are rejected before rolling or spending
+  ---
+  duration_ms: 49.2644
+  type: 'test'
+  ...
+# Subtest: failed narration resumes saved action without rerolling, including a new session/refresh
+ok 171 - failed narration resumes saved action without rerolling, including a new session/refresh
+  ---
+  duration_ms: 64.3835
+  type: 'test'
+  ...
+# Subtest: retrying committed guard narrates its execution without repeating prior damage or inventing another action
+ok 172 - retrying committed guard narrates its execution without repeating prior damage or inventing another action
+  ---
+  duration_ms: 97.9786
+  type: 'test'
+  ...
+# Subtest: explicit end advances to an actual player reaction; continuation preserves the same turn and resource costs
+ok 173 - explicit end advances to an actual player reaction; continuation preserves the same turn and resource costs
+  ---
+  duration_ms: 80.6434
+  type: 'test'
+  ...
+# Subtest: own consequence receipt lists only actual player damage and effective condition changes once
+ok 174 - own consequence receipt lists only actual player damage and effective condition changes once
+  ---
+  duration_ms: 0.8509
+  type: 'test'
+  ...
+# Subtest: every incoming player attack waits for a declared defense even after conversion is exhausted
+ok 175 - every incoming player attack waits for a declared defense even after conversion is exhausted
+  ---
+  duration_ms: 1.0669
+  type: 'test'
+  ...
+# Subtest: player defense has no total until a defense mode is declared; ready block is not silently added to normal defense
+ok 176 - player defense has no total until a defense mode is declared; ready block is not silently added to normal defense
+  ---
+  duration_ms: 0.5372
+  type: 'test'
+  ...
+# Subtest: an explicitly declared guard supplies defense for its existing duration without asking again on every attack
+ok 177 - an explicitly declared guard supplies defense for its existing duration without asking again on every attack
+  ---
+  duration_ms: 1.8332
+  type: 'test'
+  ...
+# Subtest: an enemy leaving reach cannot trigger an undeclared player opportunity attack
+ok 178 - an enemy leaving reach cannot trigger an undeclared player opportunity attack
+  ---
+  duration_ms: 3.5543
+  type: 'test'
+  ...
+# Subtest: compound movement and attack use player-declared coordinates, not an extra implicit turn
+ok 179 - compound movement and attack use player-declared coordinates, not an extra implicit turn
+  ---
+  duration_ms: 81.9781
+  type: 'test'
+  ...
+# Subtest: NPC duel writes back all private results but posts one public scene and allows story afterwards
+ok 180 - NPC duel writes back all private results but posts one public scene and allows story afterwards
+  ---
+  duration_ms: 61.62
+  type: 'test'
+  ...
+# Subtest: view-own-status opens only the UI before interpreting, narrating, rolling or adding an assistant floor
+ok 181 - view-own-status opens only the UI before interpreting, narrating, rolling or adding an assistant floor
+  ---
+  duration_ms: 26.3109
+  type: 'test'
+  ...
+# Subtest: player UI reads latest selected MVU snapshot across new floors and refresh without writing or trusting prose
+ok 182 - player UI reads latest selected MVU snapshot across new floors and refresh without writing or trusting prose
+  ---
+  duration_ms: 29.4255
+  type: 'test'
+  ...
+# Subtest: declared guard updates the player UI without ending the turn and survives refresh
+ok 183 - declared guard updates the player UI without ending the turn and survives refresh
+  ---
+  duration_ms: 58.5712
+  type: 'test'
+  ...
+# Subtest: legacy own-status caches are stripped on replay without losing the saved narrative
+ok 184 - legacy own-status caches are stripped on replay without losing the saved narrative
+  ---
+  duration_ms: 25.2212
+  type: 'test'
+  ...
+# Subtest: existing chat builds its map once, map viewing does not spend actions, and next declaration still executes
+ok 185 - existing chat builds its map once, map viewing does not spend actions, and next declaration still executes
+  ---
+  duration_ms: 79.9446
+  type: 'test'
+  ...
+# Subtest: actual player text grants only explicit single actions
+ok 186 - actual player text grants only explicit single actions
+  ---
+  duration_ms: 2.3297
+  type: 'test'
+  ...
+# Subtest: native GM tool settles a declared check and attack, rejects unsolicited attack
+ok 187 - native GM tool settles a declared check and attack, rejects unsolicited attack
+  ---
+  duration_ms: 60.7367
+  type: 'test'
+  ...
+# Subtest: saved native operation is returned after tool-message retry without a new roll
+ok 188 - saved native operation is returned after tool-message retry without a new roll
+  ---
+  duration_ms: 60.3803
+  type: 'test'
+  ...
+# Subtest: native invocation accepts SillyTavern provisional GM floor after the player message
+ok 189 - native invocation accepts SillyTavern provisional GM floor after the player message
+  ---
+  duration_ms: 21.427
+  type: 'test'
+  ...
+# Subtest: final GM message receives the saved JS operation even when MVU did not inherit it
+ok 190 - final GM message receives the saved JS operation even when MVU did not inherit it
+  ---
+  duration_ms: 29.6693
+  type: 'test'
+  ...
+# Subtest: a withdrawal paused for incoming opportunity defense stays at the original position in public facts
+ok 191 - a withdrawal paused for incoming opportunity defense stays at the original position in public facts
+  ---
+  duration_ms: 31.2521
+  type: 'test'
+  ...
+# Subtest: opening baseline passes the ordinary replay gate Builder contract
+ok 192 - opening baseline passes the ordinary replay gate Builder contract
+  ---
+  duration_ms: 7.5426
+  type: 'test'
+  ...
+# Subtest: natural binding uses only adopted templates and same-instance current positions on re-entry
+ok 193 - natural binding uses only adopted templates and same-instance current positions on re-entry
+  ---
+  duration_ms: 9.9355
+  type: 'test'
+  ...
+# Subtest: host scene registration persists in selected MVU, restores on refresh and feeds real narrative entry
+ok 194 - host scene registration persists in selected MVU, restores on refresh and feeds real narrative entry
+  ---
+  duration_ms: 386.2184
+  type: 'test'
+  ...
+# Subtest: player bar renders avatar and MVU values above input; explicit refresh updates guard and remaining actions
+ok 195 - player bar renders avatar and MVU values above input; explicit refresh updates guard and remaining actions
+  ---
+  duration_ms: 43.7507
+  type: 'test'
+  ...
+# Subtest: late state read cannot reveal the previous chat after switching chats
+ok 196 - late state read cannot reveal the previous chat after switching chats
+  ---
+  duration_ms: 61.8121
+  type: 'test'
+  ...
+# Subtest: status request opens the bar when an initial read is still pending; unrelated cards stay hidden
+ok 197 - status request opens the bar when an initial read is still pending; unrelated cards stay hidden
+  ---
+  duration_ms: 14.3392
+  type: 'test'
+  ...
+# Subtest: ordered recovery commits one operation and replays the complete saved medicine/rest/meditation sequence
+ok 198 - ordered recovery commits one operation and replays the complete saved medicine/rest/meditation sequence
+  ---
+  duration_ms: 40.8941
+  type: 'test'
+  ...
+# Subtest: a later missing choice or illegal rest leaves the entire MVU sequence untouched
+ok 199 - a later missing choice or illegal rest leaves the entire MVU sequence untouched
+  ---
+  duration_ms: 11.2544
+  type: 'test'
+  ...
+# Subtest: option-only clarification completes the original medicine/rest sequence once
+ok 200 - option-only clarification completes the original medicine/rest sequence once
+  ---
+  duration_ms: 11.7452
+  type: 'test'
+  ...
+# Subtest: source medicine settles atomically once and refresh reuses it before dice or debit
+ok 201 - source medicine settles atomically once and refresh reuses it before dice or debit
+  ---
+  duration_ms: 12.0579
+  type: 'test'
+  ...
+# Subtest: old T0 story snapshots get only approved recovery rules without resetting HP or stock
+ok 202 - old T0 story snapshots get only approved recovery rules without resetting HP or stock
+  ---
+  duration_ms: 11.4861
+  type: 'test'
+  ...
+# Subtest: public breakdown identifies the selected attribute, main skill and applicable subskill
+ok 203 - public breakdown identifies the selected attribute, main skill and applicable subskill
+  ---
+  duration_ms: 7.4697
+  type: 'test'
+  ...
+# Subtest: approved replay card settles an ordinary check once through MVU
+ok 204 - approved replay card settles an ordinary check once through MVU
+  ---
+  duration_ms: 11.5116
+  type: 'test'
+  ...
+# Subtest: unknown opening state cannot silently initialize or spend resources
+ok 205 - unknown opening state cannot silently initialize or spend resources
+  ---
+  duration_ms: 1.2028
+  type: 'test'
+  ...
+# Subtest: granted demo scene modifier applies automatically once on the matching check
+ok 206 - granted demo scene modifier applies automatically once on the matching check
+  ---
+  duration_ms: 11.9062
+  type: 'test'
+  ...
+# Subtest: ordinary check without choices rolls automatically and public basis omits hidden values
+ok 207 - ordinary check without choices rolls automatically and public basis omits hidden values
+  ---
+  duration_ms: 6.5667
+  type: 'test'
+  ...
+# Subtest: edited MVU effect value cannot become authoritative or appear in public pool
+ok 208 - edited MVU effect value cannot become authoritative or appear in public pool
+  ---
+  duration_ms: 5.6533
+  type: 'test'
+  ...
+# Subtest: runtime defers genetic unlock with unknown history before drawing
+ok 209 - runtime defers genetic unlock with unknown history before drawing
+  ---
+  duration_ms: 5.9512
+  type: 'test'
+  ...
+# Subtest: scripted fortune crosses the existing gate and recovers private continuation without rerolling
+ok 210 - scripted fortune crosses the existing gate and recovers private continuation without rerolling
+  ---
+  duration_ms: 11.9463
+  type: 'test'
+  ...
+# Subtest: gate rejects supplied fortune mechanics and runtime refuses untrusted or non-fortune opportunities
+ok 211 - gate rejects supplied fortune mechanics and runtime refuses untrusted or non-fortune opportunities
+  ---
+  duration_ms: 3.9415
+  type: 'test'
+  ...
+# Subtest: runtime scripted opportunity resolves once without leaking secret roll data
+ok 212 - runtime scripted opportunity resolves once without leaking secret roll data
+  ---
+  duration_ms: 7.457
+  type: 'test'
+  ...
+# Subtest: scripted opportunity requires explicit authorization and a satisfied current-branch trigger
+ok 213 - scripted opportunity requires explicit authorization and a satisfied current-branch trigger
+  ---
+  duration_ms: 12.4509
+  type: 'test'
+  ...
+# Subtest: runtime does not draw for an unspecified event chance
+ok 214 - runtime does not draw for an unspecified event chance
+  ---
+  duration_ms: 1.9699
+  type: 'test'
+  ...
+# Subtest: runtime refuses secret genetic and non-fortune event rolls before drawing
+ok 215 - runtime refuses secret genetic and non-fortune event rolls before drawing
+  ---
+  duration_ms: 2.4424
+  type: 'test'
+  ...
+# Subtest: explicit sourced history lets a new isolated runtime commit first unlock once
+ok 216 - explicit sourced history lets a new isolated runtime commit first unlock once
+  ---
+  duration_ms: 5.6441
+  type: 'test'
+  ...
+# Subtest: debug-disabled malformed recovery retains a precise failure without settling
+ok 217 - debug-disabled malformed recovery retains a precise failure without settling
+  ---
+  duration_ms: 156.8417
+  type: 'test'
+  ...
+# Subtest: debug-disabled invalid check attribute identifies model input failure without exposing DC
+ok 218 - debug-disabled invalid check attribute identifies model input failure without exposing DC
+  ---
+  duration_ms: 9.7908
+  type: 'test'
+  ...
+# Subtest: debug-disabled upstream quota failure is distinguished from invalid model output
+ok 219 - debug-disabled upstream quota failure is distinguished from invalid model output
+  ---
+  duration_ms: 8.2905
+  type: 'test'
+  ...
+# Subtest: explicit additional lorebooks reach classification and ordinary narration
+not ok 220 - explicit additional lorebooks reach classification and ordinary narration
+  ---
+  duration_ms: 14.8923
+  type: 'test'
+  location: 'C:\\Users\\pit\\.codex\\worktrees\\yulinfeng-tavern-plan\\TRPG outputs\\work\\rules_engine\\gm_runtime\\replay-gate-script.test.mjs:119:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'NARRATION_PENDING'
+    - 'NO_CHECK'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'NO_CHECK'
+  actual: 'NARRATION_PENDING'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/replay-gate-script.test.mjs:125:10)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: active combat handles the turn before ordinary classification or narration
+ok 221 - active combat handles the turn before ordinary classification or narration
+  ---
+  duration_ms: 5.0013
+  type: 'test'
+  ...
+# Subtest: host saved recovery survives failed narration and script reload without another debit
+ok 222 - host saved recovery survives failed narration and script reload without another debit
+  ---
+  duration_ms: 42.522
+  type: 'test'
+  ...
+# Subtest: host executes the exact compound declaration once and resumes final sequence narration after reload
+ok 223 - host executes the exact compound declaration once and resumes final sequence narration after reload
+  ---
+  duration_ms: 24.4009
+  type: 'test'
+  ...
+# Subtest: a completed pending medicine keeps its original operation across a later player floor and native regeneration
+ok 224 - a completed pending medicine keeps its original operation across a later player floor and native regeneration
+  ---
+  duration_ms: 38.173
+  type: 'test'
+  ...
+# Subtest: host classification passes a registered encounter to the player-bound combat entry
+ok 225 - host classification passes a registered encounter to the player-bound combat entry
+  ---
+  duration_ms: 12.2279
+  type: 'test'
+  ...
+# Subtest: integrated profile cannot grant the old demo scene bonus
+ok 226 - integrated profile cannot grant the old demo scene bonus
+  ---
+  duration_ms: 8.2525
+  type: 'test'
+  ...
+# Subtest: ordinary narration resolves current model options locally for each request
+not ok 227 - ordinary narration resolves current model options locally for each request
+  ---
+  duration_ms: 8.8684
+  type: 'test'
+  location: 'C:\\Users\\pit\\.codex\\worktrees\\yulinfeng-tavern-plan\\TRPG outputs\\work\\rules_engine\\gm_runtime\\replay-gate-script.test.mjs:245:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot read properties of undefined (reading 'ordered_prompts')"
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/replay-gate-script.test.mjs:256:51)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: controller persists failed NO_CHECK and recovers after reload with no new player input
+not ok 228 - controller persists failed NO_CHECK and recovers after reload with no new player input
+  ---
+  duration_ms: 11.7854
+  type: 'test'
+  location: 'C:\\Users\\pit\\.codex\\worktrees\\yulinfeng-tavern-plan\\TRPG outputs\\work\\rules_engine\\gm_runtime\\replay-gate-script.test.mjs:261:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    0 !== 2
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 2
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/replay-gate-script.test.mjs:275:10)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: host cancels only the unexecuted medicine pending and anchors the current dialogue
+not ok 229 - host cancels only the unexecuted medicine pending and anchors the current dialogue
+  ---
+  duration_ms: 12.9222
+  type: 'test'
+  location: 'C:\\Users\\pit\\.codex\\worktrees\\yulinfeng-tavern-plan\\TRPG outputs\\work\\rules_engine\\gm_runtime\\replay-gate-script.test.mjs:283:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'NARRATION_PENDING'
+    - 'NO_CHECK'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'NO_CHECK'
+  actual: 'NARRATION_PENDING'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/replay-gate-script.test.mjs:291:67)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: a cancellation declaration cannot undo a committed operation awaiting narration
+ok 230 - a cancellation declaration cannot undo a committed operation awaiting narration
+  ---
+  duration_ms: 10.6421
+  type: 'test'
+  ...
+# Subtest: regenerating a completed turn reuses its narration without model calls or another assistant message
+not ok 231 - regenerating a completed turn reuses its narration without model calls or another assistant message
+  ---
+  duration_ms: 6.7463
+  type: 'test'
+  location: 'C:\\Users\\pit\\.codex\\worktrees\\yulinfeng-tavern-plan\\TRPG outputs\\work\\rules_engine\\gm_runtime\\replay-gate-script.test.mjs:308:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    0 !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/replay-gate-script.test.mjs:313:10)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: regenerating a committed direct effect does not repeat classification, narration, or MVU writes
+ok 232 - regenerating a committed direct effect does not repeat classification, narration, or MVU writes
+  ---
+  duration_ms: 10.4826
+  type: 'test'
+  ...
+# Subtest: lost direct-effect failure notice resumes saved operation without reclassification
+ok 233 - lost direct-effect failure notice resumes saved operation without reclassification
+  ---
+  duration_ms: 9.2075
+  type: 'test'
+  ...
+# Subtest: a completed-looking assistant cannot bypass a missing JS operation
+ok 234 - a completed-looking assistant cannot bypass a missing JS operation
+  ---
+  duration_ms: 3.3869
+  type: 'test'
+  ...
+# Subtest: completed assistant with missing MVU projection restores state without model requests
+ok 235 - completed assistant with missing MVU projection restores state without model requests
+  ---
+  duration_ms: 6.7579
+  type: 'test'
+  ...
+# Subtest: ordinary opposed check uses actual two actors and active side wins ties
+ok 236 - ordinary opposed check uses actual two actors and active side wins ties
+  ---
+  duration_ms: 10.624
+  type: 'test'
+  ...
+# Subtest: will save uses will and presence rather than a fabricated survival skill
+ok 237 - will save uses will and presence rather than a fabricated survival skill
+  ---
+  duration_ms: 1.1238
+  type: 'test'
+  ...
+# Subtest: extended check persists cumulative successes and prevents a completed task reroll
+ok 238 - extended check persists cumulative successes and prevents a completed task reroll
+  ---
+  duration_ms: 3.3164
+  type: 'test'
+  ...
+# Subtest: attribute growth spends the existing XP and does not fill health or resources
+ok 239 - attribute growth spends the existing XP and does not fill health or resources
+  ---
+  duration_ms: 1.1147
+  type: 'test'
+  ...
+# Subtest: rule transaction saves both participants once and replay does not redraw
+ok 240 - rule transaction saves both participants once and replay does not redraw
+  ---
+  duration_ms: 3.3619
+  type: 'test'
+  ...
+# Subtest: requests cannot supply arbitrary states, rolls or awards through growth
+ok 241 - requests cannot supply arbitrary states, rolls or awards through growth
+  ---
+  duration_ms: 0.4012
+  type: 'test'
+  ...
+# Subtest: classifier always receives core rules and current subskills, independent of lore keywords
+ok 242 - classifier always receives core rules and current subskills, independent of lore keywords
+  ---
+  duration_ms: 1.8139
+  type: 'test'
+  ...
+# Subtest: rule request enters the same guarded transaction and can recover a committed decision
+ok 243 - rule request enters the same guarded transaction and can recover a committed decision
+  ---
+  duration_ms: 2.6116
+  type: 'test'
+  ...
+# Subtest: constant and explicitly named scene entries reach classification without enabling disabled lore
+ok 244 - constant and explicitly named scene entries reach classification without enabling disabled lore
+  ---
+  duration_ms: 0.9086
+  type: 'test'
+  ...
+# Subtest: opening runtime actually settles will saves and reuses them after reload
+ok 245 - opening runtime actually settles will saves and reuses them after reload
+  ---
+  duration_ms: 18.9337
+  type: 'test'
+  ...
+# Subtest: opening ordinary orientation uses the adopted +6 and keeps it through replay
+ok 246 - opening ordinary orientation uses the adopted +6 and keeps it through replay
+  ---
+  duration_ms: 15.1483
+  type: 'test'
+  ...
+# Subtest: two GM generations use compact JS facts and narration cannot alter MVU results
+ok 247 - two GM generations use compact JS facts and narration cannot alter MVU results
+  ---
+  duration_ms: 56.9036
+  type: 'test'
+  ...
+# Subtest: narration can resume after model rate limit without a second settlement
+ok 248 - narration can resume after model rate limit without a second settlement
+  ---
+  duration_ms: 55.878
+  type: 'test'
+  ...
+# Subtest: isolated capital card preserves the adopted 005 worldbook and opening without demo actors
+not ok 249 - isolated capital card preserves the adopted 005 worldbook and opening without demo actors
+  ---
+  duration_ms: 28.6384
+  type: 'test'
+  location: 'C:\\Users\\pit\\.codex\\worktrees\\yulinfeng-tavern-plan\\TRPG outputs\\work\\rules_engine\\gm_runtime\\world-runtime.test.mjs:8:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    ... Skipped lines
+    
+      '你是本团主持，负责世界、NPC与行动后果。御临风由用户扮演。\n' +
+        '\n' +
+        '你负责环境、NPC和行动后果；用户通过Persona扮演御临风，决定他的主动选择、对白、私人想法和成长方向。自然承接已经声明的动作，可以依据成立的条件裁定失败、受伤和阻碍；御临风下一步尚未声明的动作、对白和决定留给用户。 本轮中用于衔接场景的一句话或小动作也受这一边界约束：不替御临风新增对白、主动报信、回答追问、确认判断、回忆细节、承诺或接受带路。采用有限代办：玩家已授权告知或连续行动时，可在已明确的接收者、内容和行动范围内，用第三人称旁白概述完成，不必等待玩家逐字写出重复问答。新增具体对白仍由玩家写；概述不增加信息、立场、承诺或决定。事实已知、对方提问或关系友好都不单独构成本次告知授权，住宿与同伴识别信息也不自动算作无关紧要的接话。遇到新的披露范围、实质代价或决定时再停下。NPC提问、下令、邀请或开始带路，只成立其自身言行，不代表御临风回答、同意或跟随。三人、众人、一行人等集合主语包含御临风时，也必须有他参与这一行动的已有授权；需要他新的选择时，在发生之前自然停笔，不例行追加下一步询问。\n' +
+        '\n' +
+        '## 对白与内心的写法\n' +
+    ...
+        '\n' +
+    -   '## 未列明能力\n' +
+    -   '\n' +
+    -   '人物卡与资源库不穷尽人物能力；缺项不等于不会。GM可依据已确定的训练、专业、实践及能力范围，确认尚未登记的相关技艺。背景容许多种合理情况时，可在该范围内补全具体人物事实，供本分支使用，不声称原团已有记载；一般职业空白不必一律拒绝、保留未知或逐项询问。补全须能有有限实际作用，不限于辨认和讲解；普通用法不必先建立独立资源、XP价格或完整公式。\n' +
+    -   '\n' +
+    -   '职业称号、战力档和经验丰富不授予全部相关能力。依据须与效果相称；不得临时编造师承、秘密训练、神器或既往经历，不因玩家刚暴露策略补出恰好克制的能力。已有不会、硬性资格及明确限制继续有效，不能靠背景推断或提高DC绕过；隐含掌握不增加永久属性、技能等级、自动成功或专有资源加成，也不转借尚未授权资源的专有效果。现有DIRECT_EFFECT对有限临时效果的授权照旧。\n' +
+    -   '\n' +
+    -   '同等训练、相关能力和知情条件下，玩家与NPC有相同基本行动资格及效果边界；卡面详略和本次后果重要性不改变资格。会做不保证做成，必要检定沿用既有规则；成功使用不自动升级或复制全部相关效果。御临风的成长、XP支付、主动能力与行动意图仍由玩家决定。\n' +
+    -   '\n' +
+    -   '影响后续裁定的补全及简短依据，用当前分支既有记录保存，并区别原有事实与本次补全；之后不得按敌我反复改判、扩大效果或写回原团。明显错误沿既有纠错方式修正。需要机械结算时仍受现有接口限制，不输出长篇分析或秘密数值。\n' +
+    -   '\n' +
+        '## NPC怎样行动\n' +
+        '\n' +
+        'NPC根据当前职责或有证目标、自己相信的信息、性格关系、资源和眼前限制行动。可以主动交谈、提议、调查、求助、谈判、拒绝或撤退，不必等玩家逐一点名。性格提供倾向，具体手段可以随局势改变；不从一次行为补出永久执念或秘密动机。\n' +
+        '\n' +
+        '有依据且条件成立的离场行动继续发展。御临风离开某处，可以改变当面交涉、信息或介入机会，不会自动停止无关的势力行动。只维护当前有关的少数进展；时间或成果不明时保留未定，不为催促玩家临时制造倒计时。\n' +
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: |-
+    你是本团主持，负责世界、NPC与行动后果。御临风由用户扮演。
+    
+    你负责环境、NPC和行动后果；用户通过Persona扮演御临风，决定他的主动选择、对白、私人想法和成长方向。自然承接已经声明的动作，可以依据成立的条件裁定失败、受伤和阻碍；御临风下一步尚未声明的动作、对白和决定留给用户。 本轮中用于衔接场景的一句话或小动作也受这一边界约束：不替御临风新增对白、主动报信、回答追问、确认判断、回忆细节、承诺或接受带路。采用有限代办：玩家已授权告知或连续行动时，可在已明确的接收者、内容和行动范围内，用第三人称旁白概述完成，不必等待玩家逐字写出重复问答。新增具体对白仍由玩家写；概述不增加信息、立场、承诺或决定。事实已知、对方提问或关系友好都不单独构成本次告知授权，住宿与同伴识别信息也不自动算作无关紧要的接话。遇到新的披露范围、实质代价或决定时再停下。NPC提问、下令、邀请或开始带路，只成立其自身言行，不代表御临风回答、同意或跟随。三人、众人、一行人等集合主语包含御临风时，也必须有他参与这一行动的已有授权；需要他新的选择时，在发生之前自然停笔，不例行追加下一步询问。
+    
+    ## 对白与内心的写法
+    
+    在场景正文中，中文双引号“……”只包住实际说出口的话。店名、人名、术语、文字标注和叙述强调直接写，不加对白引号。告示、书信和招牌默认由旁白转述；确有必要逐字展示且已有明确原文时，先写告示内容或书信原文等标签，再独立列出文字，不套双引号。只有人物真的朗读时，读出的部分才按对白标注。玩家写的【……】只表示御临风未说出口的内心，不用于任务标题、告示或旁白强调；主持不补写御临风内心，也不输出NPC内心独白。
+    
+    读取玩家输入时，引号内的实际对白与引号外的行动、私人思考分开处理。即使没有【】包围，明确写为想到、猜测、意识到、在心中盘算等内容的段落仍是私人思考，不因采用第三人称、语气肯定或与对白相邻就变成说出口。引号外明确声明的可观察动作可以照常产生外界后果；它包含的动机和推理不会一起公开。玩家明确声明转告、朗读或展示文字时，只按其声明范围传播。清楚可辨的引号倒置或笔误可按该句语义理解，不向相邻思考段扩张；若某句是否公开确实无法判断且会影响重要互动，才作局部澄清，在此之前不默认公开。
+    
+    ## 依据当前局势推进
+    
+    使用本团已确认背景、适用时期的人物与力量资料、当前摘要，以及摘要之后实际保留的聊天。开局前的历史与既有关系保持；新选择只改变真正受影响的过程和结果。原线较晚才被角色获知的开局前事实仍属既定前史；具体日期未明，不等于事件未发生。原线未来不作为必须重演的台本，不用替身、巧合或临时能力恢复原结局。
+    
+    每次先理解用户实际做了什么或问了什么，再处理直接后果、相关NPC反应，以及这段世界内时间足以推进的外部行动。讨论方案不等于实施，桌外暂停不推进世界时间。对话条数、现实等待时间不直接换算为剧情时长。
+    
+    玩家已声明且无实质障碍的普通动作自然推进，只在其声明或明确授权范围内展开。有对抗或重要代价时，依据当前能力、手段、准备、位置与资源裁定；按已经采用的规则处理必要检定，不编造骰子结果。只有真正影响重大成败的数值或规则缺口才需一次局部约定，未知不自动当作零、满额、无限或不存在。
+    
+    ## 未列明能力
+    
+    人物卡与资源库不穷尽人物能力；缺项不等于不会。GM可依据已确定的训练、专业、实践及能力范围，确认尚未登记的相关技艺。背景容许多种合理情况时，可在该范围内补全具体人物事实，供本分支使用，不声称原团已有记载；一般职业空白不必一律拒绝、保留未知或逐项询问。补全须能有有限实际作用，不限于辨认和讲解；普通用法不必先建立独立资源、XP价格或完整公式。
+    
+    职业称号、战力档和经验丰富不授予全部相关能力。依据须与效果相称；不得临时编造师承、秘密训练、神器或既往经历，不因玩家刚暴露策略补出恰好克制的能力。已有不会、硬性资格及明确限制继续有效，不能靠背景推断或提高DC绕过；隐含掌握不增加永久属性、技能等级、自动成功或专有资源加成，也不转借尚未授权资源的专有效果。现有DIRECT_EFFECT对有限临时效果的授权照旧。
+    
+    同等训练、相关能力和知情条件下，玩家与NPC有相同基本行动资格及效果边界；卡面详略和本次后果重要性不改变资格。会做不保证做成，必要检定沿用既有规则；成功使用不自动升级或复制全部相关效果。御临风的成长、XP支付、主动能力与行动意图仍由玩家决定。
+    
+    影响后续裁定的补全及简短依据，用当前分支既有记录保存，并区别原有事实与本次补全；之后不得按敌我反复改判、扩大效果或写回原团。明显错误沿既有纠错方式修正。需要机械结算时仍受现有接口限制，不输出长篇分析或秘密数值。
+    
+    ## NPC怎样行动
+    
+    NPC根据当前职责或有证目标、自己相信的信息、性格关系、资源和眼前限制行动。可以主动交谈、提议、调查、求助、谈判、拒绝或撤退，不必等玩家逐一点名。性格提供倾向，具体手段可以随局势改变；不从一次行为补出永久执念或秘密动机。
+    
+    有依据且条件成立的离场行动继续发展。御临风离开某处，可以改变当面交涉、信息或介入机会，不会自动停止无关的势力行动。只维护当前有关的少数进展；时间或成果不明时保留未定，不为催促玩家临时制造倒计时。
+    
+    ## 信息怎样流动
+    
+    主持能读到整条玩家输入，不代表在场NPC获得了整条内容。回应前区分实际对白、可观察行动、私人思考与桌外说明，只把每个NPC实际听见、看见或通过已经成立的渠道取得的信息用于其回应。这个区分仅用于主持判断，正文不输出分类表或隐性推演。桌外说明给主持处理任务，不成为角色记忆；若用户明确在桌外修订设定，则按指示另行处理，不能通过NPC对话偷偷落实。
+    
+    人物依据亲历、获告及有依据的推断行动。同阵营、同处一室和主持掌握后台资料，都不使秘密自动共享。引号外明确的内心思考，即使未加【】也不会被同伴听到；可观察到的停顿、目光或其他已声明动作只提供实际可见的线索，不传出背后的完整推理。玩家明确转告、朗读或展示信息后，只有实际接收到的人取得相应内容；不替玩家补出说给大家听、共享计划或认可某个说法的动作。特殊获知能力也须有现成、当期有效的机制和实际使用依据，不能临时补造。
+    
+    NPC可以独立分析，但推断须来自自己的既有知识、亲历与实际获告，并保留证据不足的部分。不能因为主持刚读到玩家私密思路，就让NPC恰好复述它，或称赞自己没有听到的分析。只有本轮实际说出的部分或此前确已公开的信息，才能作为对方已经提出的观点回应；不同角色得出相近判断也不证明彼此共享过推理。
+    
+    玩家或NPC的猜测、担忧、谎言、计划和确信，均与世界已证事实分开。说出口只意味着听者收到这一说法；听者可以相信、质疑或据此行动，不因此证明内容为真。没有独立依据时，不把肯定语气写成旁白确认，不顺势补出组织归属、行政权限、秘密动机或行动已完成。已有独立证据确认的事实照常成立；新消息与调查可以改变角色相信的内容，也不倒改客观历史。
+    
+    呈现玩家可观察的行为、可听的对白与已经取得的线索。未揭示秘密不通过全知旁白、御临风的突然领悟或无根据的NPC解说泄露。只在本轮判断确实需要时使用相应后台资料，保留来源、谁知道、何时知道以及事实和推断的区别。
+    
+    ## 自然演出与资料空白
+    
+    重要互动、开场及首次到达重要地点要形成具体场面：交代所在位置、可见的空间层次，以及与当下有关的普通活动。已证建筑与人物关系作骨架，少量可撤销的行人、车马和声音使场景可感；不用状态清单替代演出，也不借丰富场面新增机构、制度、秘密或御临风的反应。普通行路与重复劳动可以概述。有明确连续行动指令时，按其范围处理过程和后果；提出方向或讨论方案不自动授权所有准备、转场与承诺。
+    
+    NPC依各自片段与当前关注行动，未被询问且没有独立内容时可以不接话。少言不等于固定等待玩家安排；已有职责或目标、且无需玩家许可的当下行为照常进行，不为证明存在而每轮补警戒、冷脸或期待的目光。说清自己的意思即可停止，不轮流补总结。
+    
+    当玩家本轮实际做的事、问题及其直接后果已经处理清楚，就在最后一个有意义的动作、话语或可观察景象处停笔。保留玩家的下一步选择，不需要宣布正在等他作选择；不在末尾追加路线菜单、下一步询问，也不换成尚未选择、全看你的安排，或NPC转头等待、目光催问等隐式交棒。不为凑收尾另造来人、危险和委托，不强迫每轮都以景物或动作结尾。御临风未授权的新动作、回应和决定留在尚未发生的位置，不代写，也不替他编造犹豫或等待。
+    
+    NPC出于当前职责、目标或交谈内容的问话可以保留，并可自然成为本轮结尾。若已声明行动的当前裁定确实缺少关键信息或授权，且无法在保留未定部分的情况下可靠处理，再局部澄清；仅仅存在几种后续去向或处理办法，不需要主动列选项。先处理已经清楚的部分，停在实际尚未发生的环节，让玩家自然接续；已有答复不重复确认。
+    
+    NPC的新对白和战术、路人与普通环境细节可以作为本分支内容生成，沿用本团已确认的帝国西方魔幻/JRPG表现方向与具体地点。普通细节不包括无依据的新行政机关、正式职衔、持久监牢专名、司法权限、拘捕程序或关押去向；不能借布告、路人传闻或NPC职业口吻把它们当作已证事实。未命名场所可按已有用途描述，重要调查答案没有依据时保留未定。未知古史、血缘、秘密忠诚、力量来源和恒常法则仍不补造。资料空白不要求暂停无关互动；已被指出错误的旧输出也不因写进摘要而自动成为事实，用户确已采纳的分支变化分别保存。
+    
+    ## 长期接续
+    
+    保留聊天中的实际变化进入当前分支摘要：地点时间、在场者、关键资源或伤势、关系和承诺、线索与人物获知、有关事件进度。提议不是同意，受命不是完成，寄出不是收到，传闻不是事实。只记真正保留的回复，弃稿不叠加消耗或关系；新分支不改写原团资料。 摘要或记忆中的线索要区分来源与知情者；仅由玩家私下思考提出的推测不能记成队内共识或世界事实。已经被明确指出的信息泄漏与无据断言不因反复引用获得证明，应按用户采纳的订正更新其状态。 已被指出未经授权、且未获玩家采纳的主角对白或主动选择，不作为其既成承诺、传讯或队伍行动写入后续记录。
+    
+    御临风开局后自行选择成长道路；同伴依据原有模板、经过时间和实际条件成长，不补无依据的升级速率或原线必得奖励。
+    
+    默认使用当前有关的世界书内容、人物片段、摘要和近期聊天。梦境资料及不适用的未来结局留在作者库。日常回复不附全表或隐藏推演草稿；关键变化和场景收束时再整理摘要。
+  actual: |-
+    你是本团主持，负责世界、NPC与行动后果。御临风由用户扮演。
+    
+    你负责环境、NPC和行动后果；用户通过Persona扮演御临风，决定他的主动选择、对白、私人想法和成长方向。自然承接已经声明的动作，可以依据成立的条件裁定失败、受伤和阻碍；御临风下一步尚未声明的动作、对白和决定留给用户。 本轮中用于衔接场景的一句话或小动作也受这一边界约束：不替御临风新增对白、主动报信、回答追问、确认判断、回忆细节、承诺或接受带路。采用有限代办：玩家已授权告知或连续行动时，可在已明确的接收者、内容和行动范围内，用第三人称旁白概述完成，不必等待玩家逐字写出重复问答。新增具体对白仍由玩家写；概述不增加信息、立场、承诺或决定。事实已知、对方提问或关系友好都不单独构成本次告知授权，住宿与同伴识别信息也不自动算作无关紧要的接话。遇到新的披露范围、实质代价或决定时再停下。NPC提问、下令、邀请或开始带路，只成立其自身言行，不代表御临风回答、同意或跟随。三人、众人、一行人等集合主语包含御临风时，也必须有他参与这一行动的已有授权；需要他新的选择时，在发生之前自然停笔，不例行追加下一步询问。
+    
+    ## 对白与内心的写法
+    
+    在场景正文中，中文双引号“……”只包住实际说出口的话。店名、人名、术语、文字标注和叙述强调直接写，不加对白引号。告示、书信和招牌默认由旁白转述；确有必要逐字展示且已有明确原文时，先写告示内容或书信原文等标签，再独立列出文字，不套双引号。只有人物真的朗读时，读出的部分才按对白标注。玩家写的【……】只表示御临风未说出口的内心，不用于任务标题、告示或旁白强调；主持不补写御临风内心，也不输出NPC内心独白。
+    
+    读取玩家输入时，引号内的实际对白与引号外的行动、私人思考分开处理。即使没有【】包围，明确写为想到、猜测、意识到、在心中盘算等内容的段落仍是私人思考，不因采用第三人称、语气肯定或与对白相邻就变成说出口。引号外明确声明的可观察动作可以照常产生外界后果；它包含的动机和推理不会一起公开。玩家明确声明转告、朗读或展示文字时，只按其声明范围传播。清楚可辨的引号倒置或笔误可按该句语义理解，不向相邻思考段扩张；若某句是否公开确实无法判断且会影响重要互动，才作局部澄清，在此之前不默认公开。
+    
+    ## 依据当前局势推进
+    
+    使用本团已确认背景、适用时期的人物与力量资料、当前摘要，以及摘要之后实际保留的聊天。开局前的历史与既有关系保持；新选择只改变真正受影响的过程和结果。原线较晚才被角色获知的开局前事实仍属既定前史；具体日期未明，不等于事件未发生。原线未来不作为必须重演的台本，不用替身、巧合或临时能力恢复原结局。
+    
+    每次先理解用户实际做了什么或问了什么，再处理直接后果、相关NPC反应，以及这段世界内时间足以推进的外部行动。讨论方案不等于实施，桌外暂停不推进世界时间。对话条数、现实等待时间不直接换算为剧情时长。
+    
+    玩家已声明且无实质障碍的普通动作自然推进，只在其声明或明确授权范围内展开。有对抗或重要代价时，依据当前能力、手段、准备、位置与资源裁定；按已经采用的规则处理必要检定，不编造骰子结果。只有真正影响重大成败的数值或规则缺口才需一次局部约定，未知不自动当作零、满额、无限或不存在。
+    
+    ## NPC怎样行动
+    
+    NPC根据当前职责或有证目标、自己相信的信息、性格关系、资源和眼前限制行动。可以主动交谈、提议、调查、求助、谈判、拒绝或撤退，不必等玩家逐一点名。性格提供倾向，具体手段可以随局势改变；不从一次行为补出永久执念或秘密动机。
+    
+    有依据且条件成立的离场行动继续发展。御临风离开某处，可以改变当面交涉、信息或介入机会，不会自动停止无关的势力行动。只维护当前有关的少数进展；时间或成果不明时保留未定，不为催促玩家临时制造倒计时。
+    
+    ## 信息怎样流动
+    
+    主持能读到整条玩家输入，不代表在场NPC获得了整条内容。回应前区分实际对白、可观察行动、私人思考与桌外说明，只把每个NPC实际听见、看见或通过已经成立的渠道取得的信息用于其回应。这个区分仅用于主持判断，正文不输出分类表或隐性推演。桌外说明给主持处理任务，不成为角色记忆；若用户明确在桌外修订设定，则按指示另行处理，不能通过NPC对话偷偷落实。
+    
+    人物依据亲历、获告及有依据的推断行动。同阵营、同处一室和主持掌握后台资料，都不使秘密自动共享。引号外明确的内心思考，即使未加【】也不会被同伴听到；可观察到的停顿、目光或其他已声明动作只提供实际可见的线索，不传出背后的完整推理。玩家明确转告、朗读或展示信息后，只有实际接收到的人取得相应内容；不替玩家补出说给大家听、共享计划或认可某个说法的动作。特殊获知能力也须有现成、当期有效的机制和实际使用依据，不能临时补造。
+    
+    NPC可以独立分析，但推断须来自自己的既有知识、亲历与实际获告，并保留证据不足的部分。不能因为主持刚读到玩家私密思路，就让NPC恰好复述它，或称赞自己没有听到的分析。只有本轮实际说出的部分或此前确已公开的信息，才能作为对方已经提出的观点回应；不同角色得出相近判断也不证明彼此共享过推理。
+    
+    玩家或NPC的猜测、担忧、谎言、计划和确信，均与世界已证事实分开。说出口只意味着听者收到这一说法；听者可以相信、质疑或据此行动，不因此证明内容为真。没有独立依据时，不把肯定语气写成旁白确认，不顺势补出组织归属、行政权限、秘密动机或行动已完成。已有独立证据确认的事实照常成立；新消息与调查可以改变角色相信的内容，也不倒改客观历史。
+    
+    呈现玩家可观察的行为、可听的对白与已经取得的线索。未揭示秘密不通过全知旁白、御临风的突然领悟或无根据的NPC解说泄露。只在本轮判断确实需要时使用相应后台资料，保留来源、谁知道、何时知道以及事实和推断的区别。
+    
+    ## 自然演出与资料空白
+    
+    重要互动、开场及首次到达重要地点要形成具体场面：交代所在位置、可见的空间层次，以及与当下有关的普通活动。已证建筑与人物关系作骨架，少量可撤销的行人、车马和声音使场景可感；不用状态清单替代演出，也不借丰富场面新增机构、制度、秘密或御临风的反应。普通行路与重复劳动可以概述。有明确连续行动指令时，按其范围处理过程和后果；提出方向或讨论方案不自动授权所有准备、转场与承诺。
+    
+    NPC依各自片段与当前关注行动，未被询问且没有独立内容时可以不接话。少言不等于固定等待玩家安排；已有职责或目标、且无需玩家许可的当下行为照常进行，不为证明存在而每轮补警戒、冷脸或期待的目光。说清自己的意思即可停止，不轮流补总结。
+    
+    当玩家本轮实际做的事、问题及其直接后果已经处理清楚，就在最后一个有意义的动作、话语或可观察景象处停笔。保留玩家的下一步选择，不需要宣布正在等他作选择；不在末尾追加路线菜单、下一步询问，也不换成尚未选择、全看你的安排，或NPC转头等待、目光催问等隐式交棒。不为凑收尾另造来人、危险和委托，不强迫每轮都以景物或动作结尾。御临风未授权的新动作、回应和决定留在尚未发生的位置，不代写，也不替他编造犹豫或等待。
+    
+    NPC出于当前职责、目标或交谈内容的问话可以保留，并可自然成为本轮结尾。若已声明行动的当前裁定确实缺少关键信息或授权，且无法在保留未定部分的情况下可靠处理，再局部澄清；仅仅存在几种后续去向或处理办法，不需要主动列选项。先处理已经清楚的部分，停在实际尚未发生的环节，让玩家自然接续；已有答复不重复确认。
+    
+    NPC的新对白和战术、路人与普通环境细节可以作为本分支内容生成，沿用本团已确认的帝国西方魔幻/JRPG表现方向与具体地点。普通细节不包括无依据的新行政机关、正式职衔、持久监牢专名、司法权限、拘捕程序或关押去向；不能借布告、路人传闻或NPC职业口吻把它们当作已证事实。未命名场所可按已有用途描述，重要调查答案没有依据时保留未定。未知古史、血缘、秘密忠诚、力量来源和恒常法则仍不补造。资料空白不要求暂停无关互动；已被指出错误的旧输出也不因写进摘要而自动成为事实，用户确已采纳的分支变化分别保存。
+    
+    ## 长期接续
+    
+    保留聊天中的实际变化进入当前分支摘要：地点时间、在场者、关键资源或伤势、关系和承诺、线索与人物获知、有关事件进度。提议不是同意，受命不是完成，寄出不是收到，传闻不是事实。只记真正保留的回复，弃稿不叠加消耗或关系；新分支不改写原团资料。 摘要或记忆中的线索要区分来源与知情者；仅由玩家私下思考提出的推测不能记成队内共识或世界事实。已经被明确指出的信息泄漏与无据断言不因反复引用获得证明，应按用户采纳的订正更新其状态。 已被指出未经授权、且未获玩家采纳的主角对白或主动选择，不作为其既成承诺、传讯或队伍行动写入后续记录。
+    
+    御临风开局后自行选择成长道路；同伴依据原有模板、经过时间和实际条件成长，不补无依据的升级速率或原线必得奖励。
+    
+    默认使用当前有关的世界书内容、人物片段、摘要和近期聊天。梦境资料及不适用的未来结局留在作者库。日常回复不附全表或隐藏推演草稿；关键变化和场景收束时再整理摘要。
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/world-runtime.test.mjs:12:10)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.start (node:internal/test_runner/test:1262:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: T0 world gate binds a rule request to the player floor and refuses demo numbers
+ok 250 - T0 world gate binds a rule request to the player floor and refuses demo numbers
+  ---
+  duration_ms: 1.6068
+  type: 'test'
+  ...
+# Subtest: ordinary dialogue narrates without rolling or asking for rule state
+ok 251 - ordinary dialogue narrates without rolling or asking for rule state
+  ---
+  duration_ms: 3.0918
+  type: 'test'
+  ...
+# Subtest: risky climb remains tied to player floor and never reaches prose model
+ok 252 - risky climb remains tied to player floor and never reaches prose model
+  ---
+  duration_ms: 2.3869
+  type: 'test'
+  ...
+# Subtest: no-rule declaration cannot bypass explicit dangerous traffic crossing
+ok 253 - no-rule declaration cannot bypass explicit dangerous traffic crossing
+  ---
+  duration_ms: 0.6437
+  type: 'test'
+  ...
+# Subtest: GM may not inject dice, damage or arbitrary no-rule basis
+ok 254 - GM may not inject dice, damage or arbitrary no-rule basis
+  ---
+  duration_ms: 1.0695
+  type: 'test'
+  ...
+# Subtest: changed player swipe or message rejects posting
+ok 255 - changed player swipe or message rejects posting
+  ---
+  duration_ms: 0.7748
+  type: 'test'
+  ...
+# Subtest: recovery commits inventory, effects and carry once; retry never reruns reducer
+ok 256 - recovery commits inventory, effects and carry once; retry never reruns reducer
+  ---
+  duration_ms: 9.3101
+  type: 'test'
+  ...
+# Subtest: carry initialized state without an operation across empty host floors
+ok 257 - carry initialized state without an operation across empty host floors
+  ---
+  duration_ms: 2.6859
+  type: 'test'
+  ...
+# Subtest: initialization and attack use core output, preserve unrelated data, and deduplicate
+ok 258 - initialization and attack use core output, preserve unrelated data, and deduplicate
+  ---
+  duration_ms: 5.9337
+  type: 'test'
+  ...
+# Subtest: reject missing state, version conflict, and failed save without reporting success
+ok 259 - reject missing state, version conflict, and failed save without reporting success
+  ---
+  duration_ms: 4.1366
+  type: 'test'
+  ...
+# Subtest: a copied next floor inherits state, while different swipe keeps its own copy in the mock
+ok 260 - a copied next floor inherits state, while different swipe keeps its own copy in the mock
+  ---
+  duration_ms: 2.5938
+  type: 'test'
+  ...
+# Subtest: a Builder state can be initialized and a check is saved once without changing the actor
+ok 261 - a Builder state can be initialized and a check is saved once without changing the actor
+  ---
+  duration_ms: 7.373
+  type: 'test'
+  ...
+# Subtest: committed genetic unlock increments trusted history once and recovery does not reroll
+ok 262 - committed genetic unlock increments trusted history once and recovery does not reroll
+  ---
+  duration_ms: 4.9323
+  type: 'test'
+  ...
+# Subtest: genetic unlock defaults public, rejects secret, and failure preserves history
+ok 263 - genetic unlock defaults public, rejects secret, and failure preserves history
+  ---
+  duration_ms: 2.1096
+  type: 'test'
+  ...
+# Subtest: scripted secret opportunities need explicit rules and cannot reroll across operation IDs
+ok 264 - scripted secret opportunities need explicit rules and cannot reroll across operation IDs
+  ---
+  duration_ms: 8.349
+  type: 'test'
+  ...
+# Subtest: non-demo environment and roleplay awards stay automatic even if marked player-activated
+ok 265 - non-demo environment and roleplay awards stay automatic even if marked player-activated
+  ---
+  duration_ms: 4.6866
+  type: 'test'
+  ...
+# Subtest: active marker alone cannot authorize a panel choice or settlement
+ok 266 - active marker alone cannot authorize a panel choice or settlement
+  ---
+  duration_ms: 2.1519
+  type: 'test'
+  ...
+# Subtest: test-only active sample waits for a decision and modifies DP before fortune selection
+ok 267 - test-only active sample waits for a decision and modifies DP before fortune selection
+  ---
+  duration_ms: 4.7091
+  type: 'test'
+  ...
+# Subtest: MVU ordinary check persists finalized fortune path and mishap without applying harm
+ok 268 - MVU ordinary check persists finalized fortune path and mishap without applying harm
+  ---
+  duration_ms: 3.3272
+  type: 'test'
+  ...
+# Subtest: phase ring preserves real items, limits weight, and uses different retrieval actions
+ok 269 - phase ring preserves real items, limits weight, and uses different retrieval actions
+  ---
+  duration_ms: 6.5218
+  type: 'test'
+  ...
+# Subtest: thunder potion requires real inventory and expires after five minutes
+ok 270 - thunder potion requires real inventory and expires after five minutes
+  ---
+  duration_ms: 5.373
+  type: 'test'
+  ...
+# Subtest: spirit ward consumes once and keeps protecting until ten minutes pass
+ok 271 - spirit ward consumes once and keeps protecting until ten minutes pass
+  ---
+  duration_ms: 2.0152
+  type: 'test'
+  ...
+# Subtest: box countdown releases at zero while the two arrays stay independent
+ok 272 - box countdown releases at zero while the two arrays stay independent
+  ---
+  duration_ms: 4.9194
+  type: 'test'
+  ...
+# Subtest: ordered recovery folds medicine then rest and reverse order retains the delayed dose
+ok 273 - ordered recovery folds medicine then rest and reverse order retains the delayed dose
+  ---
+  duration_ms: 9.1625
+  type: 'test'
+  ...
+# Subtest: unresolved later medicine choice rejects the whole sequence before drawing or mutating
+ok 274 - unresolved later medicine choice rejects the whole sequence before drawing or mutating
+  ---
+  duration_ms: 2.0087
+  type: 'test'
+  ...
+# Subtest: medicine needs player declaration, known stock, and preserves input on rejection
+ok 275 - medicine needs player declaration, known stock, and preserves input on rejection
+  ---
+  duration_ms: 1.9996
+  type: 'test'
+  ...
+# Subtest: B heals up to five L, debits one, and never heals A
+ok 276 - B heals up to five L, debits one, and never heals A
+  ---
+  duration_ms: 1.8811
+  type: 'test'
+  ...
+# Subtest: snow lotus restores physical long-rest recoverable flow by three; oriental bonus needs metadata
+ok 277 - snow lotus restores physical long-rest recoverable flow by three; oriental bonus needs metadata
+  ---
+  duration_ms: 2.611
+  type: 'test'
+  ...
+# Subtest: A and C remain pending until their declared rest and survive serialization
+ok 278 - A and C remain pending until their declared rest and survive serialization
+  ---
+  duration_ms: 2.0875
+  type: 'test'
+  ...
+# Subtest: C targets declared physical status and excludes mental and freezing effects
+ok 279 - C targets declared physical status and excludes mental and freezing effects
+  ---
+  duration_ms: 3.4671
+  type: 'test'
+  ...
+# Subtest: rest validates completion, restores B by elapsed intervals and longrest flow/will only as sourced
+ok 280 - rest validates completion, restores B by elapsed intervals and longrest flow/will only as sourced
+  ---
+  duration_ms: 1.9368
+  type: 'test'
+  ...
+# Subtest: declared rest advances finite buffs/cooldowns and only completed day thresholds heal L/A
+ok 281 - declared rest advances finite buffs/cooldowns and only completed day thresholds heal L/A
+  ---
+  duration_ms: 2.7105
+  type: 'test'
+  ...
+# Subtest: combat medicine spends source action cost; unavailable action does not debit
+ok 282 - combat medicine spends source action cost; unavailable action does not debit
+  ---
+  duration_ms: 2.4251
+  type: 'test'
+  ...
+# Subtest: 培元丹 heals A then L then B with one strength budget and multiple doses do not stack
+ok 283 - 培元丹 heals A then L then B with one strength budget and multiple doses do not stack
+  ---
+  duration_ms: 1.0393
+  type: 'test'
+  ...
+# Subtest: initial story actors keep trusted flow metadata and meditation rolls confirmed agility plus perception
+ok 284 - initial story actors keep trusted flow metadata and meditation rolls confirmed agility plus perception
+  ---
+  duration_ms: 0.8713
+  type: 'test'
+  ...
+# Subtest: self medicine needs consciousness and an actionable body; natural rest remains available
+ok 285 - self medicine needs consciousness and an actionable body; natural rest remains available
+  ---
+  duration_ms: 1.5731
+  type: 'test'
+  ...
+# Subtest: severe excitement prevents meditation without consuming elapsed time or dice
+ok 286 - severe excitement prevents meditation without consuming elapsed time or dice
+  ---
+  duration_ms: 0.6777
+  type: 'test'
+  ...
+# Subtest: combat legal medicine uses the existing atomic MVU operation and saved retries do not debit twice
+ok 287 - combat legal medicine uses the existing atomic MVU operation and saved retries do not debit twice
+  ---
+  duration_ms: 43.5637
+  type: 'test'
+  ...
+1..287
+# tests 287
+# suites 0
+# pass 281
+# fail 6
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4684.4887

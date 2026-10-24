@@ -13,3 +13,9 @@ output/replay_tavern/world_sync_20261008_candidate/** -text whitespace=cr-at-eol
 
 # The PHB/RE catalog hashes source bytes; preserve them across checkouts.
 901_rules_source_library/** -text
+
+# Preserve the byte hashes used by runtime snapshots and paired-resource plans.
+output/replay_tavern/** -text whitespace=cr-at-eol
+output/cloud_migration_20261024/** -text whitespace=cr-at-eol
+work/rules_engine/** -text whitespace=cr-at-eol
+work/replay_research/six_books_20261023/** -text whitespace=cr-at-eol

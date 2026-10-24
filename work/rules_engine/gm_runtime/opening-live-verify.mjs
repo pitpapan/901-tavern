@@ -1,0 +1,26 @@
+import {readFile,writeFile,readdir} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {resolve,relative} from 'node:path';
+const out=new URL('../../../output/replay_tavern/opening_combat_20261022_candidate/',import.meta.url);
+const rootFrom=async file=>{const rows=(await readFile(file,'utf8')).trim().split('\n').map(JSON.parse),floor=rows.findLast(r=>r.variables?.[r.swipe_id??0]?.stat_data?.['901_rules_poc']);return floor.variables[floor.swipe_id??0].stat_data['901_rules_poc'];};
+const saved=await rootFrom(new URL('live-final.jsonl',out)),refresh=await rootFrom(new URL('live-refresh.jsonl',out));
+assert.deepEqual(refresh,saved);
+assert.deepEqual(refresh,await rootFrom(new URL('live-after-story.jsonl',out)));
+assert.equal(saved.revision,10);assert.equal(Object.keys(saved.operations).length,10);assert.equal(saved.battle.mode,'story');assert.equal(saved.battle.pending,undefined);
+const a=saved.actors.player.state,b=saved.battle;
+assert.deepEqual([a.derived.hpMax,a.health.intact,a.health.B,a.health.L,a.health.A],[12,6,4,2,0]);
+assert.deepEqual(a.resources,{流风:{current:19,max:22}});assert.equal(a.will.current,3);assert.equal(a.xp,0);assert.deepEqual(a.statuses,[]);
+assert.deepEqual(b.actors.player.position,[8,0]);assert.deepEqual(b.actors['cave-entrance-stone:stone'].position,[2,0]);
+assert.equal(b.resolution.taskComplete,false);assert.equal(b.resolution.xpAwarded,0);assert.equal(b.actors.player.durationCarry.flow.remainingRounds,9);
+const operations=Object.values(saved.operations).map(o=>o.summary).filter(o=>o.result).sort((x,y)=>x.revision-y.revision);
+const end=operations.at(-1).result.after.participants;
+for(const p of end){assert.deepEqual(p.health,saved.actors[p.id].state.health);assert.deepEqual(p.energy,saved.actors[p.id].state.resources);assert.deepEqual(p.statuses,saved.actors[p.id].state.statuses);assert.deepEqual(p.position,b.actors[p.id].position);}
+const sourceCard=JSON.parse(await readFile(new URL('../flow_guidance_20261018_candidate/import/901_帝都主持.card.json',out),'utf8'));
+const card=JSON.parse(await readFile(new URL('import/901_帝都初始卡.card.json',out),'utf8'));
+assert.deepEqual(card.data.character_book.entries,sourceCard.data.character_book.entries);assert.equal(card.data.first_mes,sourceCard.data.first_mes);
+const publicDir=new URL('public/901-opening-combat/',out),deployed='D:/github/sillyTavern/public/901-opening-combat';let files=0;
+const walk=async(dir,prefix='')=>{for(const e of await readdir(dir,{withFileTypes:true})){const name=prefix+e.name;if(e.isDirectory())await walk(new URL(e.name+'/',dir),name+'/');else {const src=await readFile(new URL(e.name,dir)),dst=await readFile(resolve(deployed,name));assert.equal(createHash('sha256').update(src).digest('hex'),createHash('sha256').update(dst).digest('hex'),name);files++;}}};await walk(publicDir);
+const settings=JSON.parse(await readFile('D:/github/sillyTavern/data/default-user/settings.json','utf8')).oai_settings;assert.equal(settings.chat_completion_source,'makersuite');assert.equal(settings.google_model,'gemini-3.5-flash-lite');
+const result={revision:10,operations:10,refreshRootDeepEqual:true,beforeStoryRootEqualsRefresh:true,finalSnapshotMatchesMVU:true,player:{hp:'6/12',B:4,L:2,A:0,flow:'19/22',will:'3/3',xp:0,position:[8,0],flowRemainingRounds:9},stone:{hp:'14/14',position:[2,0]},taskComplete:false,xpAwarded:0,worldbookEntries:card.data.character_book.entries.length,worldbookEntriesUnchanged:true,firstMesUnchanged:true,deployedFilesHashEqual:files,model:settings.google_model};
+await writeFile(new URL('live-verification-result.json',out),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));

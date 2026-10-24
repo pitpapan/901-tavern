@@ -1,0 +1,17 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'self'">
+<title>901 offline acceptance — TEST ONLY</title>
+<style>body{font:16px system-ui;max-width:850px;margin:30px auto;background:#fafafa}button{margin:5px;padding:10px}pre{white-space:pre-wrap}dialog{border:1px solid #888;border-radius:8px}</style>
+<h1>901 offline browser acceptance — TEST ONLY</h1>
+<p>Actual replay script, gate, core and MVU adapter. Minimal host shim; sessionStorage only. Controlled classification and narration; no external model transport.</p>
+<button id="reset">Reset disposable fixture</button>
+<button data-case="no" disabled>NO_CHECK</button>
+<button data-case="check" disabled>CHECK_REQUIRED</button>
+<button data-case="sub" disabled>Subskill check</button>
+<button data-case="effect" disabled>DIRECT_EFFECT</button>
+<button id="retry" disabled>Regenerate / recover same player turn</button>
+<label><input id="fail" type="checkbox">Fail next test narration</label>
+<h2>Test instrumentation (not player UI)</h2><pre id="state"></pre>
+<h2>Chat</h2><div id="chat"></div>
+<script type="module" src="./offline-browser.mjs"></script>

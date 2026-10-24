@@ -1,0 +1,71 @@
+{
+  "scope": "独立非Canon合成场景；不写正式剧情、正式卡或正式绑定",
+  "designer": "Sol High",
+  "narrativeHost": "Gemini（父代理执行实际酒馆交互）",
+  "baseline": {
+    "factory": "work/rules_engine/gm_runtime/opening.mjs:createOpeningFixture().baseline",
+    "health": { "intact": 12, "B": 0, "L": 0, "A": 0, "temp": 0 },
+    "willCurrent": 3,
+    "flowCurrent": 22,
+    "warning": "不得复用minimal_test内药品恢复夹具的intact2/B1/L6/A3、will1、flow10；每个场景使用独立健康新聊天。"
+  },
+  "dicePolicy": "实际酒馆结算使用运行时crypto随机源；离线既有测试中的固定骰仅为单元测试向量，不冒充实测随机。",
+  "cases": [
+    {
+      "id": "dc-observation",
+      "title": "有明确难度依据的普通观察检定",
+      "scene": "这是非Canon测试场景。御临风健康、清醒，站在测试桌旁。桌上有一封标注为练习品的旧信，表面公开文字清楚可见，但边角有一枚很浅的暗记，需要专门辨认。测试主持已预先规定：主动查找暗记为感知＋洞察、DC2，无其他修正；失败就不能确定暗记内容，不给误导性线索、不受伤、不消耗资源。此DC是本测试的显式场景设定，不是通用默认难度。",
+      "action": "我仔细查看这封练习信的边角，辨认上面的暗记。",
+      "expected": {
+        "classification": "CHECK_REQUIRED",
+        "request": { "kind": "check", "attribute": "感知", "skill": "洞察", "dc": 2 },
+        "eligible": "只需普通观察，目标就在桌上且可见，不需要补造专门经历或超自然能力。",
+        "publicPool": "感知4＋洞察1＝5DP；无子技能、无额外修正，自动成功0。",
+        "settlement": "JS真实随机结算并保存一次操作；逐颗核对8—10成功与10爆骰，总成功数≥2即成功；刷新不重掷。",
+        "narration": "主持只依已保存success叙述能否辨出暗记，不自行增加骰、DC、资源或伤害；数值展示遵守现有玩家面板与旁白边界。"
+      }
+    },
+    {
+      "id": "status-resistance",
+      "title": "普通恐惧状态抵抗与入口阻断",
+      "scene": "这是非Canon规则测试题，不是正式能力或已发生事件。假设御临风健康清醒时受到一个仅用于隔离测试的恐惧来源，明确产生1点普通恐惧，按已采用的PHB普通状态抵抗骨架处理，无免疫、特殊豁免、额外DP或毁灭性后果。状态来源只是一条非Canon最小测试fixture，不对应任何正式NPC技能。本轮要求结算原本的状态抵抗，不能把它替换成意志＋求生对固定DC的普通检定。",
+      "action": "按这个隔离测试来源，对我受到的1点普通恐惧进行状态抵抗。",
+      "expected": {
+        "classification": "UNRESOLVED",
+        "reason": "当前酒馆check/gate没有通用applyStatus或save结算接口；应明确未接入并停止，不能因核心函数存在就宣称酒馆已结算。",
+        "coreSupport": "core.applyStatus支持普通恐惧：关键属性意志1＋求生1＝2DP，自动成功0；残留点数max(0,1－抵抗总成功数)。这是抵消点数机制，不是双方对抗，也不是普通固定DC检定。",
+        "runtime": "本轮不掷骰、不保存机械操作、不增加状态、不写伤势或资源；不得由主持口头决定抵抗成败。",
+        "narration": "仅报告当前入口不支持并保留未结算，不叙述恐惧已生效或已抵抗。"
+      }
+    },
+    {
+      "id": "active-opposition",
+      "title": "主动与被动普通对抗及入口阻断",
+      "scene": "这是非Canon隔离训练题。御临风健康清醒，与一个非Canon最小测试搭档进行一次无伤害、无资源消耗的并排短跑对抗。御临风为主动方，使用敏捷5＋运动1＝6DP；测试搭档为被动方，fixture仅定义敏捷2、运动1，无自动成功、子技能或修正，合计3DP。主动方胜利条件是成功数达到被动方成功数；平局主动方成功。本题没有固定DC，必须先结算被动方，再以其总成功数作为主动方目标，不得自填DC2替代。测试搭档不是正式Canon角色，不获得任何额外能力。",
+      "action": "我作为主动方与这个测试搭档进行一次上述短跑对抗。",
+      "expected": {
+        "classification": "UNRESOLVED",
+        "reason": "核心oppose支持主动对抗，但当前酒馆普通check没有双角色对抗请求；NPC分支还明确将opposed请求deferred。",
+        "coreSupport": "oppose先处理被动方，再处理主动方；active.total≥passive.total成功，margin=差值；不采用RE同值重投。",
+        "runtime": "不掷任一方的骰，不以固定DC冒充动态对抗，不新增战斗、不保存伪结算。",
+        "narration": "明确对抗入口尚未接入，不能口头宣布赛果。"
+      }
+    },
+    {
+      "id": "social-compound",
+      "title": "寒暄后要求改变决定的社交检定",
+      "scene": "这是非Canon测试场景。健康的御临风面对一个仅用于测试的门卫。门卫已明确决定暂不开放练习院门，但有权自行破例；请求为这次练习提前开门不是自动成功或绝对不可能，失败则继续等候，不触发敌对或其他机械后果。普通问候不需要投骰。测试主持预先规定：说服门卫改变这次开门决定使用风度＋社交、DC2，无其他修正。这个门卫没有正式Canon身份或特殊能力；DC2只是本测试的显式场景依据，不是社交检定统一难度。",
+      "action": "我先向门卫打个招呼，然后请他为这次练习破例，改变原先的决定，提前打开院门让我进去。",
+      "expected": {
+        "classification": "CHECK_REQUIRED",
+        "request": { "kind": "check", "attribute": "风度", "skill": "社交", "dc": 2 },
+        "eligible": "请求对象在场且有决定权限；普通社交2已明确，不能补造说服子技能、传奇风度或无来源情境加值。",
+        "publicPool": "风度2＋社交2＝4DP；无子技能、无额外修正，自动成功0。",
+        "settlement": "只为改变决定这一不确定子动作真实随机结算一次；问候不能把整条复合行动降为NO_CHECK。",
+        "narration": "按已保存JS结果叙述门卫是否同意提前开门；不替御临风补写台词、想法或新的行动，不另起对抗或战斗。"
+      }
+    }
+  ],
+  "offlineControls": "普通问候NO_CHECK、缺少DC依据NEEDS_INPUT、未知技能阻断等沿用现有离线测试；不增加真实模型请求。",
+  "verdictPolicy": "分别报告核心离线支持、酒馆入口支持、实际分类表现、JS持久化及Gemini旁白一致性；未接入后的正确阻断不计为该机制端到端已接通。"
+}

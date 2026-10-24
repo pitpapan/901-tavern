@@ -1,0 +1,1584 @@
+{
+  "chatId": "901 姜子尤对黄泉 结算演练 - 2026-10-20@15h50m35s964ms",
+  "testedAt": "2026-10-20",
+  "model": "gemini-3.5-flash-lite",
+  "revision": 9,
+  "battle": {
+    "version": 1,
+    "scenario": "完整人物卡RE比较配置：姜子尤对黄泉；隔离演练，非实际剧情",
+    "assumptions": [
+      "双方满生命、满能量，黄泉入场佩刀在鞘；距离1米，无掩蔽。",
+      "斯巴达未证实额外2DP分支不计；狮子王体积未定，威猛遇格挡时交主持补值。",
+      "训练场以一方失去行动能力为胜负，不继续补刀。"
+    ],
+    "round": 2,
+    "activeId": "huang",
+    "order": [
+      "huang",
+      "jiang"
+    ],
+    "actors": {
+      "huang": {
+        "id": "huang",
+        "name": "黄泉",
+        "kind": "huang",
+        "team": "敌人",
+        "controller": "model",
+        "present": true,
+        "position": [
+          0,
+          0
+        ],
+        "reach": 1.5,
+        "used": {},
+        "cooldowns": {},
+        "buffs": {
+          "drawnRound": 1,
+          "drawUsed": true
+        },
+        "combos": {},
+        "reactions": {
+          "damageConversion": false
+        },
+        "sheathed": false,
+        "weaponSize": null,
+        "abilities": [
+          "strike",
+          "block",
+          "draw",
+          "sheathe",
+          "thunder",
+          "cleaveRock",
+          "lightning",
+          "conduct",
+          "summon",
+          "recall",
+          "move",
+          "step",
+          "conversion",
+          "end"
+        ]
+      },
+      "jiang": {
+        "id": "jiang",
+        "name": "姜子尤",
+        "kind": "jiang",
+        "team": "同伴",
+        "controller": "model",
+        "present": true,
+        "position": [
+          1,
+          0
+        ],
+        "reach": 1.5,
+        "used": {},
+        "cooldowns": {},
+        "buffs": {
+          "fistQi": true,
+          "breakBody": true,
+          "block": true
+        },
+        "combos": {
+          "huang": 1
+        },
+        "reactions": {
+          "damageConversion": false
+        },
+        "spartanBonus": 0,
+        "squeezed": 0,
+        "abilities": [
+          "strike",
+          "block",
+          "fistQi",
+          "breakBody",
+          "restoreSwift",
+          "selfHeal",
+          "squeeze",
+          "move",
+          "step",
+          "conversion",
+          "end"
+        ]
+      }
+    },
+    "elapsedRounds": 1,
+    "summonRounds": 0,
+    "summonMinutes": 0,
+    "status": "finished",
+    "winner": "敌人"
+  },
+  "actors": {
+    "huang": {
+      "name": "黄泉",
+      "state": {
+        "name": "黄泉",
+        "attributes": {
+          "力量": 7,
+          "敏捷": 11,
+          "智力": 2,
+          "感知": 6,
+          "意志": 5,
+          "风度": 3
+        },
+        "size": 5,
+        "derived": {
+          "hpMax": 23,
+          "defense": 6,
+          "speed": 23,
+          "initiative": 26,
+          "willMax": 8,
+          "vision": 80
+        },
+        "skills": {
+          "白刃": {
+            "level": 5,
+            "subs": {
+              "太刀": {
+                "level": 1
+              }
+            }
+          },
+          "肉搏": {
+            "level": 1,
+            "subs": {}
+          },
+          "运动": {
+            "level": 2,
+            "subs": {}
+          },
+          "求生": {
+            "level": 1,
+            "subs": {}
+          }
+        },
+        "resources": {
+          "灵力": {
+            "current": 6,
+            "max": 6
+          }
+        },
+        "attributeAuto": {},
+        "derivedOverrides": [
+          "hpMax",
+          "speed",
+          "initiative",
+          "willMax"
+        ],
+        "health": {
+          "intact": 14,
+          "B": 0,
+          "L": 9,
+          "A": 0,
+          "temp": 0,
+          "coma": false,
+          "deteriorationStopped": false
+        },
+        "will": {
+          "current": 8,
+          "max": 8
+        },
+        "xp": 0,
+        "greatPowersAvailable": 0,
+        "statuses": [
+          {
+            "type": "晕眩",
+            "source": "龙象·沉劲震体",
+            "points": 3
+          }
+        ],
+        "attributeDamage": {},
+        "turn": {
+          "phase": "active",
+          "standard": 0,
+          "move": 1,
+          "swift": 1,
+          "reactionLock": false,
+          "reactionLockEnds": 0,
+          "responseDebt": false,
+          "opportunityUsed": false
+        },
+        "extendedActions": {}
+      }
+    },
+    "jiang": {
+      "name": "姜子尤",
+      "state": {
+        "name": "姜子尤",
+        "attributes": {
+          "力量": 11,
+          "敏捷": 3,
+          "智力": 2,
+          "感知": 3,
+          "意志": 3,
+          "风度": 3
+        },
+        "size": 5,
+        "derived": {
+          "hpMax": 35,
+          "defense": 3,
+          "speed": 41,
+          "initiative": 10,
+          "willMax": 16,
+          "vision": 30
+        },
+        "skills": {
+          "肉搏": {
+            "level": 5,
+            "subs": {
+              "拳击": {
+                "level": 3
+              }
+            }
+          },
+          "运动": {
+            "level": 4,
+            "subs": {
+              "自我保护": {
+                "level": 1
+              }
+            }
+          },
+          "求生": {
+            "level": 1,
+            "subs": {}
+          }
+        },
+        "resources": {
+          "气": {
+            "current": 1,
+            "max": 2
+          },
+          "斗气": {
+            "current": 2,
+            "max": 3
+          },
+          "内力": {
+            "current": 28,
+            "max": 28
+          }
+        },
+        "attributeAuto": {},
+        "derivedOverrides": [
+          "hpMax",
+          "speed",
+          "initiative",
+          "willMax"
+        ],
+        "health": {
+          "intact": 0,
+          "B": 0,
+          "L": 28,
+          "A": 7,
+          "temp": 0,
+          "coma": false,
+          "deteriorationStopped": false
+        },
+        "will": {
+          "current": 16,
+          "max": 16
+        },
+        "xp": 0,
+        "greatPowersAvailable": 0,
+        "statuses": [],
+        "attributeDamage": {},
+        "turn": {
+          "phase": "ended",
+          "standard": 0,
+          "move": 0,
+          "swift": 0,
+          "reactionLock": false,
+          "reactionLockEnds": 0,
+          "responseDebt": false,
+          "opportunityUsed": false
+        },
+        "extendedActions": {}
+      }
+    }
+  },
+  "operations": [
+    {
+      "status": "applied",
+      "operationId": "combat/0/0/0",
+      "revision": 1,
+      "messageId": 0,
+      "swipeId": 0,
+      "result": {
+        "actorId": "huang",
+        "abilityId": "draw",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [],
+        "after": {
+          "status": "active",
+          "winner": null,
+          "activeId": "huang",
+          "participants": [
+            {
+              "id": "huang",
+              "health": {
+                "intact": 23,
+                "B": 0,
+                "L": 0,
+                "A": 0,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "灵力": {
+                  "current": 6,
+                  "max": 6
+                }
+              },
+              "actions": {
+                "phase": "active",
+                "standard": 1,
+                "move": 0,
+                "swift": 1,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "jiang",
+              "health": {
+                "intact": 35,
+                "B": 0,
+                "L": 0,
+                "A": 0,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "气": {
+                  "current": 2,
+                  "max": 2
+                },
+                "斗气": {
+                  "current": 3,
+                  "max": 3
+                },
+                "内力": {
+                  "current": 28,
+                  "max": 28
+                }
+              },
+              "actions": {
+                "phase": "ready",
+                "standard": 0,
+                "move": 0,
+                "swift": 0,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "status": "applied",
+      "operationId": "combat/1/0/1",
+      "revision": 2,
+      "messageId": 1,
+      "swipeId": 0,
+      "result": {
+        "actorId": "huang",
+        "abilityId": "strike",
+        "round": 1,
+        "damage": [
+          {
+            "targetId": "jiang",
+            "kind": "physical",
+            "energyType": null,
+            "input": 2,
+            "inputSeverity": "A",
+            "severity": "A",
+            "actualDamage": 2
+          },
+          {
+            "targetId": "jiang",
+            "kind": "physical",
+            "energyType": null,
+            "input": 19,
+            "inputSeverity": "L",
+            "severity": "L",
+            "actualDamage": 19
+          }
+        ],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [],
+        "attack": {
+          "rawDP": 57,
+          "dp": 57,
+          "weapon": 16,
+          "cap": 22,
+          "fixed": 3,
+          "ap": 8,
+          "magic": 8,
+          "speed": 0,
+          "extra": 0,
+          "ignore": 0,
+          "aggravate": 2,
+          "electric": 0,
+          "defense": {
+            "total": 3,
+            "parts": {
+              "base": 3,
+              "natural": 0,
+              "armor": 0,
+              "block": 0,
+              "dodge": 0,
+              "insight": 0,
+              "cultivation": 0,
+              "cover": 0,
+              "force": 0,
+              "device": 0,
+              "shield": 0,
+              "luck": 0,
+              "morale": 0,
+              "enhancement": 0,
+              "holy": 0,
+              "technique": 0,
+              "performance": 0,
+              "intrinsic": 0,
+              "unnamed": 0
+            },
+            "remainingAP": 1,
+            "extraSuccesses": 0
+          },
+          "roll": {
+            "dp": 54,
+            "luck": false,
+            "dice": [
+              6,
+              4,
+              3,
+              2,
+              9,
+              9,
+              6,
+              8,
+              3,
+              7,
+              9,
+              3,
+              7,
+              9,
+              3,
+              9,
+              6,
+              5,
+              6,
+              4,
+              1,
+              4,
+              2,
+              3,
+              10,
+              3,
+              2,
+              4,
+              10,
+              4,
+              7,
+              9,
+              8,
+              9,
+              3,
+              2,
+              8,
+              7,
+              8,
+              10,
+              3,
+              10,
+              5,
+              5,
+              6,
+              5,
+              9,
+              6,
+              6,
+              1,
+              3,
+              7,
+              9,
+              1,
+              6,
+              8,
+              3,
+              4
+            ],
+            "used": 58,
+            "rolledSuccesses": 18,
+            "luckMishap": false
+          },
+          "amount": 21
+        },
+        "after": {
+          "status": "active",
+          "winner": null,
+          "activeId": "huang",
+          "participants": [
+            {
+              "id": "huang",
+              "health": {
+                "intact": 23,
+                "B": 0,
+                "L": 0,
+                "A": 0,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "灵力": {
+                  "current": 6,
+                  "max": 6
+                }
+              },
+              "actions": {
+                "phase": "active",
+                "standard": 0,
+                "move": 0,
+                "swift": 1,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                0,
+                0
+              ],
+              "statuses": []
+            },
+            {
+              "id": "jiang",
+              "health": {
+                "intact": 14,
+                "B": 0,
+                "L": 19,
+                "A": 2,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "气": {
+                  "current": 2,
+                  "max": 2
+                },
+                "斗气": {
+                  "current": 3,
+                  "max": 3
+                },
+                "内力": {
+                  "current": 28,
+                  "max": 28
+                }
+              },
+              "actions": {
+                "phase": "ready",
+                "standard": 0,
+                "move": 0,
+                "swift": 0,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                1,
+                0
+              ],
+              "statuses": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "status": "applied",
+      "operationId": "combat/2/0/2",
+      "revision": 3,
+      "messageId": 2,
+      "swipeId": 0,
+      "result": {
+        "actorId": "huang",
+        "abilityId": "end",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [],
+        "after": {
+          "status": "active",
+          "winner": null,
+          "activeId": "jiang",
+          "participants": [
+            {
+              "id": "huang",
+              "health": {
+                "intact": 23,
+                "B": 0,
+                "L": 0,
+                "A": 0,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "灵力": {
+                  "current": 6,
+                  "max": 6
+                }
+              },
+              "actions": {
+                "phase": "ended",
+                "standard": 0,
+                "move": 0,
+                "swift": 0,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                0,
+                0
+              ],
+              "statuses": []
+            },
+            {
+              "id": "jiang",
+              "health": {
+                "intact": 14,
+                "B": 0,
+                "L": 19,
+                "A": 2,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "气": {
+                  "current": 2,
+                  "max": 2
+                },
+                "斗气": {
+                  "current": 3,
+                  "max": 3
+                },
+                "内力": {
+                  "current": 28,
+                  "max": 28
+                }
+              },
+              "actions": {
+                "phase": "active",
+                "standard": 1,
+                "move": 1,
+                "swift": 1,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                1,
+                0
+              ],
+              "statuses": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "status": "applied",
+      "operationId": "combat/3/0/3",
+      "revision": 4,
+      "messageId": 3,
+      "swipeId": 0,
+      "result": {
+        "actorId": "jiang",
+        "abilityId": "strike",
+        "round": 1,
+        "damage": [
+          {
+            "targetId": "huang",
+            "kind": "physical",
+            "energyType": null,
+            "input": 7,
+            "inputSeverity": "L",
+            "severity": "L",
+            "actualDamage": 7
+          },
+          {
+            "targetId": "huang",
+            "kind": "physical",
+            "energyType": null,
+            "input": 2,
+            "inputSeverity": "L",
+            "severity": "L",
+            "actualDamage": 2
+          }
+        ],
+        "statuses": [
+          {
+            "targetId": "huang",
+            "type": "晕眩",
+            "points": 4,
+            "remaining": 3,
+            "save": {
+              "dp": 8,
+              "luck": false,
+              "dice": [
+                6,
+                3,
+                2,
+                2,
+                5,
+                6,
+                6,
+                6
+              ],
+              "used": 8,
+              "rolledSuccesses": 0,
+              "luckMishap": false,
+              "fixed": 1,
+              "total": 1,
+              "type": "fort"
+            }
+          }
+        ],
+        "saves": [],
+        "healing": [],
+        "notes": [],
+        "attack": {
+          "rawDP": 44,
+          "dp": 44,
+          "weapon": 7,
+          "cap": 26,
+          "fixed": 3,
+          "ap": 3,
+          "magic": 0,
+          "speed": 4,
+          "extra": 0,
+          "ignore": 4,
+          "aggravate": 0,
+          "electric": 0,
+          "defense": {
+            "total": 19,
+            "parts": {
+              "base": 5,
+              "dodge": 2,
+              "insight": 1,
+              "armor": 5,
+              "cultivation": 6,
+              "block": 0,
+              "natural": 0,
+              "cover": 0,
+              "force": 0,
+              "device": 0,
+              "shield": 0,
+              "luck": 0,
+              "morale": 0,
+              "enhancement": 0,
+              "holy": 0,
+              "technique": 0,
+              "performance": 0,
+              "intrinsic": 0,
+              "unnamed": 0
+            },
+            "remainingAP": 0,
+            "extraSuccesses": 3
+          },
+          "roll": {
+            "dp": 25,
+            "luck": false,
+            "dice": [
+              7,
+              9,
+              6,
+              7,
+              5,
+              5,
+              5,
+              2,
+              9,
+              5,
+              9,
+              3,
+              9,
+              2,
+              8,
+              8,
+              2,
+              2,
+              8,
+              6,
+              5,
+              7,
+              2,
+              4,
+              3
+            ],
+            "used": 25,
+            "rolledSuccesses": 7,
+            "luckMishap": false
+          },
+          "amount": 7
+        },
+        "after": {
+          "status": "active",
+          "winner": null,
+          "activeId": "jiang",
+          "participants": [
+            {
+              "id": "huang",
+              "health": {
+                "intact": 14,
+                "B": 0,
+                "L": 9,
+                "A": 0,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "灵力": {
+                  "current": 6,
+                  "max": 6
+                }
+              },
+              "actions": {
+                "phase": "ended",
+                "standard": 0,
+                "move": 0,
+                "swift": 0,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                0,
+                0
+              ],
+              "statuses": [
+                {
+                  "type": "晕眩",
+                  "source": "龙象·沉劲震体",
+                  "points": 3
+                }
+              ]
+            },
+            {
+              "id": "jiang",
+              "health": {
+                "intact": 14,
+                "B": 0,
+                "L": 19,
+                "A": 2,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "气": {
+                  "current": 2,
+                  "max": 2
+                },
+                "斗气": {
+                  "current": 3,
+                  "max": 3
+                },
+                "内力": {
+                  "current": 28,
+                  "max": 28
+                }
+              },
+              "actions": {
+                "phase": "active",
+                "standard": 0,
+                "move": 1,
+                "swift": 1,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                1,
+                0
+              ],
+              "statuses": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "status": "applied",
+      "operationId": "combat/4/0/4",
+      "revision": 5,
+      "messageId": 4,
+      "swipeId": 0,
+      "result": {
+        "actorId": "jiang",
+        "abilityId": "fistQi",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [],
+        "after": {
+          "status": "active",
+          "winner": null,
+          "activeId": "jiang",
+          "participants": [
+            {
+              "id": "huang",
+              "health": {
+                "intact": 14,
+                "B": 0,
+                "L": 9,
+                "A": 0,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "灵力": {
+                  "current": 6,
+                  "max": 6
+                }
+              },
+              "actions": {
+                "phase": "ended",
+                "standard": 0,
+                "move": 0,
+                "swift": 0,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                0,
+                0
+              ],
+              "statuses": [
+                {
+                  "type": "晕眩",
+                  "source": "龙象·沉劲震体",
+                  "points": 3
+                }
+              ]
+            },
+            {
+              "id": "jiang",
+              "health": {
+                "intact": 14,
+                "B": 0,
+                "L": 19,
+                "A": 2,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "气": {
+                  "current": 1,
+                  "max": 2
+                },
+                "斗气": {
+                  "current": 3,
+                  "max": 3
+                },
+                "内力": {
+                  "current": 28,
+                  "max": 28
+                }
+              },
+              "actions": {
+                "phase": "active",
+                "standard": 0,
+                "move": 1,
+                "swift": 0,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                1,
+                0
+              ],
+              "statuses": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "status": "applied",
+      "operationId": "combat/5/0/5",
+      "revision": 6,
+      "messageId": 5,
+      "swipeId": 0,
+      "result": {
+        "actorId": "jiang",
+        "abilityId": "breakBody",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [],
+        "after": {
+          "status": "active",
+          "winner": null,
+          "activeId": "jiang",
+          "participants": [
+            {
+              "id": "huang",
+              "health": {
+                "intact": 14,
+                "B": 0,
+                "L": 9,
+                "A": 0,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "灵力": {
+                  "current": 6,
+                  "max": 6
+                }
+              },
+              "actions": {
+                "phase": "ended",
+                "standard": 0,
+                "move": 0,
+                "swift": 0,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                0,
+                0
+              ],
+              "statuses": [
+                {
+                  "type": "晕眩",
+                  "source": "龙象·沉劲震体",
+                  "points": 3
+                }
+              ]
+            },
+            {
+              "id": "jiang",
+              "health": {
+                "intact": 14,
+                "B": 0,
+                "L": 19,
+                "A": 2,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "气": {
+                  "current": 1,
+                  "max": 2
+                },
+                "斗气": {
+                  "current": 2,
+                  "max": 3
+                },
+                "内力": {
+                  "current": 28,
+                  "max": 28
+                }
+              },
+              "actions": {
+                "phase": "active",
+                "standard": 0,
+                "move": 1,
+                "swift": 0,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                1,
+                0
+              ],
+              "statuses": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "status": "applied",
+      "operationId": "combat/6/0/6",
+      "revision": 7,
+      "messageId": 6,
+      "swipeId": 0,
+      "result": {
+        "actorId": "jiang",
+        "abilityId": "block",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [],
+        "after": {
+          "status": "active",
+          "winner": null,
+          "activeId": "jiang",
+          "participants": [
+            {
+              "id": "huang",
+              "health": {
+                "intact": 14,
+                "B": 0,
+                "L": 9,
+                "A": 0,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "灵力": {
+                  "current": 6,
+                  "max": 6
+                }
+              },
+              "actions": {
+                "phase": "ended",
+                "standard": 0,
+                "move": 0,
+                "swift": 0,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                0,
+                0
+              ],
+              "statuses": [
+                {
+                  "type": "晕眩",
+                  "source": "龙象·沉劲震体",
+                  "points": 3
+                }
+              ]
+            },
+            {
+              "id": "jiang",
+              "health": {
+                "intact": 14,
+                "B": 0,
+                "L": 19,
+                "A": 2,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "气": {
+                  "current": 1,
+                  "max": 2
+                },
+                "斗气": {
+                  "current": 2,
+                  "max": 3
+                },
+                "内力": {
+                  "current": 28,
+                  "max": 28
+                }
+              },
+              "actions": {
+                "phase": "active",
+                "standard": 0,
+                "move": 0,
+                "swift": 0,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                1,
+                0
+              ],
+              "statuses": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "status": "applied",
+      "operationId": "combat/7/0/7",
+      "revision": 8,
+      "messageId": 7,
+      "swipeId": 0,
+      "result": {
+        "actorId": "jiang",
+        "abilityId": "end",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [
+          {
+            "actorId": "jiang",
+            "severity": "L"
+          }
+        ],
+        "notes": [],
+        "after": {
+          "status": "active",
+          "winner": null,
+          "activeId": "huang",
+          "participants": [
+            {
+              "id": "huang",
+              "health": {
+                "intact": 14,
+                "B": 0,
+                "L": 9,
+                "A": 0,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "灵力": {
+                  "current": 6,
+                  "max": 6
+                }
+              },
+              "actions": {
+                "phase": "active",
+                "standard": 1,
+                "move": 1,
+                "swift": 1,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                0,
+                0
+              ],
+              "statuses": [
+                {
+                  "type": "晕眩",
+                  "source": "龙象·沉劲震体",
+                  "points": 3
+                }
+              ]
+            },
+            {
+              "id": "jiang",
+              "health": {
+                "intact": 15,
+                "B": 0,
+                "L": 18,
+                "A": 2,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "气": {
+                  "current": 1,
+                  "max": 2
+                },
+                "斗气": {
+                  "current": 2,
+                  "max": 3
+                },
+                "内力": {
+                  "current": 28,
+                  "max": 28
+                }
+              },
+              "actions": {
+                "phase": "ended",
+                "standard": 0,
+                "move": 0,
+                "swift": 0,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                1,
+                0
+              ],
+              "statuses": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "status": "applied",
+      "operationId": "combat/8/0/8",
+      "revision": 9,
+      "messageId": 8,
+      "swipeId": 0,
+      "result": {
+        "actorId": "huang",
+        "abilityId": "strike",
+        "round": 2,
+        "damage": [
+          {
+            "targetId": "jiang",
+            "kind": "physical",
+            "energyType": null,
+            "input": 20,
+            "inputSeverity": "L",
+            "severity": "L",
+            "actualDamage": 20
+          }
+        ],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [],
+        "attack": {
+          "rawDP": 51,
+          "dp": 51,
+          "weapon": 16,
+          "cap": 22,
+          "fixed": 3,
+          "ap": 8,
+          "magic": 8,
+          "speed": 0,
+          "extra": 0,
+          "ignore": 0,
+          "aggravate": 0,
+          "electric": 0,
+          "defense": {
+            "total": 11,
+            "parts": {
+              "base": 3,
+              "natural": 0,
+              "armor": 0,
+              "block": 8,
+              "dodge": 0,
+              "insight": 0,
+              "cultivation": 0,
+              "cover": 0,
+              "force": 0,
+              "device": 0,
+              "shield": 0,
+              "luck": 0,
+              "morale": 0,
+              "enhancement": 0,
+              "holy": 0,
+              "technique": 0,
+              "performance": 0,
+              "intrinsic": 0,
+              "unnamed": 0
+            },
+            "remainingAP": 1,
+            "extraSuccesses": 0
+          },
+          "roll": {
+            "dp": 40,
+            "luck": false,
+            "dice": [
+              7,
+              4,
+              5,
+              7,
+              2,
+              9,
+              7,
+              3,
+              10,
+              7,
+              10,
+              10,
+              7,
+              3,
+              7,
+              5,
+              2,
+              5,
+              5,
+              1,
+              8,
+              7,
+              7,
+              9,
+              4,
+              9,
+              7,
+              6,
+              10,
+              4,
+              8,
+              9,
+              6,
+              10,
+              1,
+              6,
+              8,
+              1,
+              3,
+              8,
+              10,
+              10,
+              9,
+              10,
+              1,
+              7,
+              4,
+              1
+            ],
+            "used": 48,
+            "rolledSuccesses": 17,
+            "luckMishap": false
+          },
+          "amount": 20
+        },
+        "after": {
+          "status": "finished",
+          "winner": "敌人",
+          "activeId": "huang",
+          "participants": [
+            {
+              "id": "huang",
+              "health": {
+                "intact": 14,
+                "B": 0,
+                "L": 9,
+                "A": 0,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "灵力": {
+                  "current": 6,
+                  "max": 6
+                }
+              },
+              "actions": {
+                "phase": "active",
+                "standard": 0,
+                "move": 1,
+                "swift": 1,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                0,
+                0
+              ],
+              "statuses": [
+                {
+                  "type": "晕眩",
+                  "source": "龙象·沉劲震体",
+                  "points": 3
+                }
+              ]
+            },
+            {
+              "id": "jiang",
+              "health": {
+                "intact": 0,
+                "B": 0,
+                "L": 28,
+                "A": 7,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "气": {
+                  "current": 1,
+                  "max": 2
+                },
+                "斗气": {
+                  "current": 2,
+                  "max": 3
+                },
+                "内力": {
+                  "current": 28,
+                  "max": 28
+                }
+              },
+              "actions": {
+                "phase": "ended",
+                "standard": 0,
+                "move": 0,
+                "swift": 0,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                1,
+                0
+              ],
+              "statuses": []
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "readback": {
+    "refreshed": true,
+    "reportReplayed": true,
+    "revision": 9,
+    "operations": 9,
+    "finished": true
+  }
+}

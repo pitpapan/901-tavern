@@ -1,0 +1,38 @@
+✔ B-only ordinary check commits failed pre-action coma, does not execute original check or reroll (3.019ms)
+✔ field flow debits once, changes later check pool, and expires through time action (6.651ms)
+✔ reward event does not restore will and remains idempotent across distinct operations (1.3792ms)
+✔ opposed selector supports actual will plus presence without a fabricated skill (0.7219ms)
+✖ Chuul declaration awaits player grapple defense before actual dice, then uses chosen response (6.8119ms)
+✔ two claws on one target release only the declared claw and escape clears the rest (1.7457ms)
+✔ physical and spatial arrays remain independent and only physical blocks walking (0.5635ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 6
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 175.2541
+
+✖ failing tests:
+
+test at work\rules_engine\gm_runtime\integration-audit.test.mjs:43:1
+✖ Chuul declaration awaits player grapple defense before actual dice, then uses chosen response (6.8119ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  4 !== 6
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/integration-audit.test.mjs:48:131)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 4,
+    expected: 6,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

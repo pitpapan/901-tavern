@@ -1,0 +1,281 @@
+{
+  "mode": "Real Gemini via local SillyTavern backend; actual runtime reducer with isolated file-backed MVU harness, not browser UI",
+  "results": [
+    {
+      "id": "opposed",
+      "model": "gemini-3.5-flash-lite",
+      "decision": {
+        "status": "CHECK_REQUIRED",
+        "reason": "玩家试图说服城卫放行，属于口头说服对抗。根据规则，使用风度＋社交，对抗城卫的意志＋社交。城卫意志为2，社交等级为1（无子技能），设定DC为城卫的意志点数加社交等级与当前阻挠强度的综合基准，此处对抗DC由城卫意志2加社交1等效折算为3成功数。",
+        "request": {
+          "kind": "rule",
+          "action": "opposed",
+          "active": {
+            "actorId": "player",
+            "attribute": "风度",
+            "skill": "社交"
+          },
+          "passive": {
+            "actorId": "guard",
+            "attribute": "意志",
+            "skill": "社交"
+          }
+        }
+      },
+      "result": {
+        "status": "applied",
+        "kind": "rule",
+        "operationId": "gm-runtime/audit-live-opposed/1/0",
+        "revision": 1,
+        "messageId": 1,
+        "swipeId": 0,
+        "result": {
+          "active": {
+            "eligible": true,
+            "dp": 4,
+            "luck": false,
+            "dice": [
+              1,
+              7,
+              9,
+              8
+            ],
+            "used": 4,
+            "rolledSuccesses": 2,
+            "luckMishap": false,
+            "skill": {
+              "level": 2,
+              "auto": 0,
+              "main": 2,
+              "sub": 0
+            },
+            "adjustments": {
+              "allowed": true,
+              "penalty": 0,
+              "entries": []
+            },
+            "autoSuccesses": 0,
+            "reExtraSuccesses": 0,
+            "total": 2
+          },
+          "passive": {
+            "eligible": true,
+            "dp": 3,
+            "luck": false,
+            "dice": [
+              7,
+              9,
+              5
+            ],
+            "used": 3,
+            "rolledSuccesses": 1,
+            "luckMishap": false,
+            "skill": {
+              "level": 1,
+              "auto": 0,
+              "main": 1,
+              "sub": 0
+            },
+            "adjustments": {
+              "allowed": true,
+              "penalty": 0,
+              "entries": []
+            },
+            "autoSuccesses": 0,
+            "reExtraSuccesses": 0,
+            "total": 1
+          },
+          "success": true,
+          "margin": 1,
+          "action": "opposed"
+        }
+      },
+      "repeat": "already_applied",
+      "draws": 2,
+      "narration": "御临风成功说服了眼前态度坚决的城卫，对方最终让步，放行他们通过封锁。",
+      "pass": true
+    },
+    {
+      "id": "save",
+      "model": "gemini-3.5-flash-lite",
+      "decision": {
+        "status": "CHECK_REQUIRED",
+        "reason": "玩家明确声明集中精神抵住侵入脑海的念头，根据场景已知条件，进行单次意志豁免检定。意志豁免类型使用意志属性与风度技能（或对应豁免规则），此处按系统设定的单次意志豁免DC3进行判定。",
+        "request": {
+          "kind": "rule",
+          "action": "save",
+          "actorId": "player",
+          "type": "will",
+          "dc": 3
+        }
+      },
+      "result": {
+        "status": "applied",
+        "kind": "rule",
+        "operationId": "gm-runtime/audit-live-save/1/0",
+        "revision": 1,
+        "messageId": 1,
+        "swipeId": 0,
+        "result": {
+          "eligible": true,
+          "dp": 5,
+          "luck": false,
+          "dice": [
+            6,
+            9,
+            8,
+            10,
+            1,
+            8
+          ],
+          "used": 6,
+          "rolledSuccesses": 4,
+          "luckMishap": false,
+          "skill": {
+            "level": 0,
+            "auto": 0,
+            "main": 0,
+            "sub": 0
+          },
+          "adjustments": {
+            "allowed": true,
+            "penalty": 0,
+            "entries": []
+          },
+          "autoSuccesses": 0,
+          "reExtraSuccesses": 0,
+          "total": 4,
+          "dc": 3,
+          "success": true,
+          "action": "save"
+        }
+      },
+      "repeat": "already_applied",
+      "draws": 1,
+      "narration": "你凝神屏息，成功将那股侵入脑海的杂念彻底驱散，守住了心神。",
+      "pass": true
+    },
+    {
+      "id": "extended",
+      "model": "gemini-3.5-flash-lite",
+      "decision": {
+        "status": "CHECK_REQUIRED",
+        "reason": "玩家明确声明花五分钟找出缺失的线索，根据最近已叙述场景，翻查损坏卷宗须进行感知＋洞察的延长检定（任务ID archive-search，累计目标8成功，每周期5分钟，已确认完成第一个周期，当前为第二个周期）。感知4＋洞察1，设定DC为3，理由是卷宗受损程度适中，线索虽有缺失但已有前序周期铺垫，符合每周期5分钟的延长检定规则。",
+        "request": {
+          "kind": "rule",
+          "action": "extended",
+          "actorId": "player",
+          "taskId": "archive-search",
+          "attribute": "感知",
+          "skill": "洞察",
+          "target": 8,
+          "periodMinutes": 5,
+          "maxPeriods": 3
+        }
+      },
+      "result": {
+        "status": "applied",
+        "kind": "rule",
+        "operationId": "gm-runtime/audit-live-extended/1/0",
+        "revision": 1,
+        "messageId": 1,
+        "swipeId": 0,
+        "result": {
+          "definition": {
+            "attribute": "感知",
+            "skill": "洞察",
+            "sub": null,
+            "target": 8,
+            "periodMinutes": 5,
+            "maxPeriods": 3
+          },
+          "accumulated": 3,
+          "periods": 1,
+          "complete": false,
+          "roll": {
+            "eligible": true,
+            "dp": 5,
+            "luck": false,
+            "dice": [
+              2,
+              9,
+              8,
+              10,
+              5,
+              3
+            ],
+            "used": 6,
+            "rolledSuccesses": 3,
+            "luckMishap": false,
+            "skill": {
+              "level": 1,
+              "auto": 0,
+              "main": 1,
+              "sub": 0
+            },
+            "adjustments": {
+              "allowed": true,
+              "penalty": 0,
+              "entries": []
+            },
+            "autoSuccesses": 0,
+            "reExtraSuccesses": 0,
+            "total": 3
+          },
+          "elapsedMinutes": 5,
+          "timeChanges": [],
+          "success": false,
+          "expired": false,
+          "action": "extended"
+        }
+      },
+      "repeat": "already_applied",
+      "draws": 1,
+      "narration": "你花了五分钟仔细翻阅损坏的卷宗，初步理清了部分纷乱的思绪，累计取得了3个成功。调查仍在继续。",
+      "pass": true
+    },
+    {
+      "id": "flow",
+      "model": "gemini-3.5-flash-lite",
+      "decision": {
+        "status": "CHECK_REQUIRED",
+        "reason": "玩家明确声明消耗2点流风启动流风加速（tier 2），符合已持有的能力调用规则，需要通过机械接口触发流风加速能力。",
+        "request": {
+          "kind": "rule",
+          "action": "ability",
+          "actorId": "player",
+          "abilityId": "flow",
+          "tier": 2
+        }
+      },
+      "result": {
+        "status": "applied",
+        "kind": "rule",
+        "operationId": "gm-runtime/audit-live-flow/1/0",
+        "revision": 1,
+        "messageId": 1,
+        "swipeId": 0,
+        "result": {
+          "abilityId": "flow",
+          "durationCarry": {
+            "flow": {
+              "value": 2,
+              "remainingRounds": 10
+            }
+          },
+          "resources": {
+            "流风": {
+              "current": 20,
+              "max": 22
+            }
+          },
+          "action": "ability"
+        }
+      },
+      "repeat": "already_applied",
+      "draws": 0,
+      "narration": "御临风消耗2点流风启动加速，当前流风剩余20点，流风加速状态已成功开启，持续10轮。",
+      "pass": true
+    }
+  ]
+}

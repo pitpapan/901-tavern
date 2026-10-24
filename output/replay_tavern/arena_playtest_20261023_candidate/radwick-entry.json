@@ -1,0 +1,218 @@
+{
+  "chatId": "901 擂台 拉德维克 完整场实测 - 2026-10-23",
+  "revision": 1,
+  "mode": "combat",
+  "round": 1,
+  "activeId": "player",
+  "status": "active",
+  "actors": {
+    "player": {
+      "health": {
+        "intact": 12,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "resources": {
+        "流风": {
+          "current": 22,
+          "max": 22
+        }
+      },
+      "will": {
+        "current": 3,
+        "max": 3
+      },
+      "xp": 0,
+      "position": [
+        0,
+        0
+      ],
+      "buffs": {},
+      "combatCarry": {
+        "parameters": {
+          "flowMax": 22,
+          "flowAction": "free"
+        },
+        "sceneInstanceId": "arena-playtest-radwick",
+        "used": {}
+      }
+    },
+    "radwick": {
+      "health": {
+        "intact": 16,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "resources": {
+        "斗气": {
+          "current": 3,
+          "max": 3
+        }
+      },
+      "will": {
+        "current": 8,
+        "max": 8
+      },
+      "xp": 0,
+      "position": [
+        1,
+        0
+      ],
+      "buffs": {},
+      "combatCarry": {
+        "sceneInstanceId": "arena-playtest-radwick",
+        "used": {}
+      }
+    }
+  },
+  "operations": [
+    {
+      "id": "gm-runtime/901 擂台 拉德维克 完整场实测 - 2026-10-23/1/0/combat",
+      "revision": 1,
+      "command": {
+        "kind": "enter",
+        "encounterId": "arena-radwick"
+      },
+      "result": {
+        "actorId": "player",
+        "abilityId": "enter",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [
+          "进入战斗；沿用现有伤势与能量"
+        ],
+        "after": {
+          "status": "active",
+          "winner": null,
+          "activeId": "player",
+          "visibleTo": {
+            "player": [
+              "player",
+              "radwick"
+            ],
+            "radwick": [
+              "player",
+              "radwick"
+            ]
+          },
+          "participants": [
+            {
+              "id": "player",
+              "name": "御临风",
+              "team": "同伴",
+              "health": {
+                "intact": 12,
+                "B": 0,
+                "L": 0,
+                "A": 0,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "流风": {
+                  "current": 22,
+                  "max": 22
+                }
+              },
+              "actions": {
+                "phase": "active",
+                "standard": 1,
+                "move": 1,
+                "swift": 1,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                0,
+                0
+              ],
+              "statuses": []
+            },
+            {
+              "id": "radwick",
+              "name": "拉德维克",
+              "team": "擂台对手",
+              "health": {
+                "intact": 16,
+                "B": 0,
+                "L": 0,
+                "A": 0,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "斗气": {
+                  "current": 3,
+                  "max": 3
+                }
+              },
+              "actions": {
+                "phase": "ready",
+                "standard": 0,
+                "move": 0,
+                "swift": 0,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                1,
+                0
+              ],
+              "statuses": []
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "lastMessages": [
+    {
+      "user": true,
+      "text": "【隔离测试玩家声明】我明确开始与拉德维克这一场对练，保持当前一米距离。先进入接战，动作等轮到我时再声明。",
+      "extra": {
+        "isSmallSys": false,
+        "901_combat_entry": {
+          "encounterId": "arena-radwick",
+          "operationId": "gm-runtime/901 擂台 拉德维克 完整场实测 - 2026-10-23/1/0/combat",
+          "playerText": "【隔离测试玩家声明】我明确开始与拉德维克这一场对练，保持当前一米距离。先进入接战，动作等轮到我时再声明。",
+          "swipeId": 0
+        },
+        "901_narrative": {
+          "text": "【隔离测试玩家声明】我明确开始与拉德维克这一场对练，保持当前一米距离。先进入接战，动作等轮到我时再声明。",
+          "swipeId": 0,
+          "completed": {
+            "message": "独立练习场内，等值缓冲练习长剑在手。御临风与拉德维克相距一米站定，双方维持着对峙的距离，并未抢先出招。空气中只有试探性的呼吸声，练习长剑与包毡竞技短棍各自垂在身侧。",
+            "revision": 1
+          }
+        }
+      }
+    },
+    {
+      "user": false,
+      "text": "独立练习场内，等值缓冲练习长剑在手。御临风与拉德维克相距一米站定，双方维持着对峙的距离，并未抢先出招。空气中只有试探性的呼吸声，练习长剑与包毡竞技短棍各自垂在身侧。\n\n<StatusPlaceHolderImpl/>",
+      "extra": {
+        "901_narrative": {
+          "key": "901 擂台 拉德维克 完整场实测 - 2026-10-23/1/0",
+          "revision": 1
+        }
+      }
+    }
+  ]
+}

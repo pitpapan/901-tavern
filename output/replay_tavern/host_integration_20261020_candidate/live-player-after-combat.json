@@ -1,0 +1,2581 @@
+{
+  "chatId": "901 主持整合测试 - 2026-10-20@20h14m14s923ms",
+  "root": {
+    "schemaVersion": 1,
+    "revision": 14,
+    "chatId": "901 主持整合测试 - 2026-10-20@20h14m14s923ms",
+    "operations": {
+      "gm-runtime/901 主持整合测试 - 2026-10-20@20h14m14s923ms/1/0/combat": {
+        "signature": "{\"kind\":\"enter\",\"encounterId\":\"yulin-jiang\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "gm-runtime/901 主持整合测试 - 2026-10-20@20h14m14s923ms/1/0/combat",
+          "revision": 1,
+          "messageId": 1,
+          "swipeId": 0,
+          "result": {
+            "actorId": "player",
+            "abilityId": "enter",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [
+              "进入战斗；沿用现有伤势与能量"
+            ],
+            "after": {
+              "status": "active",
+              "winner": null,
+              "activeId": "player",
+              "participants": [
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "对练方",
+                  "health": {
+                    "intact": 35,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 2,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 3,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "player",
+                  "name": "御临风",
+                  "team": "玩家方",
+                  "health": {
+                    "intact": 21,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 1,
+                    "move": 1,
+                    "swift": 1,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      },
+      "player/2/0/1": {
+        "signature": "{\"actorId\":\"player\",\"abilityId\":\"strike\",\"targetId\":\"jiang\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "player/2/0/1",
+          "revision": 2,
+          "messageId": 2,
+          "swipeId": 0,
+          "result": {
+            "actorId": "player",
+            "abilityId": "strike",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [
+              "攻击已宣言，等待反应；尚未掷骰或扣除攻击资源"
+            ],
+            "after": {
+              "status": "active",
+              "winner": null,
+              "activeId": "player",
+              "awaiting": "jiang",
+              "participants": [
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "对练方",
+                  "health": {
+                    "intact": 35,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 2,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 3,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "player",
+                  "name": "御临风",
+                  "team": "玩家方",
+                  "health": {
+                    "intact": 21,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 1,
+                    "move": 1,
+                    "swift": 1,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      },
+      "combat/3/0/2": {
+        "signature": "{\"actorId\":\"jiang\",\"abilityId\":\"react\",\"choice\":\"decline\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "combat/3/0/2",
+          "revision": 3,
+          "messageId": 3,
+          "swipeId": 0,
+          "result": {
+            "actorId": "player",
+            "abilityId": "strike",
+            "round": 1,
+            "damage": [
+              {
+                "targetId": "jiang",
+                "kind": "physical",
+                "energyType": null,
+                "input": 25,
+                "inputSeverity": "L",
+                "severity": "L",
+                "actualDamage": 25
+              }
+            ],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "attack": {
+              "rawDP": 61,
+              "dp": 61,
+              "weapon": 16,
+              "cap": 25,
+              "fixed": 2,
+              "ap": 8,
+              "magic": 8,
+              "speed": 0,
+              "extra": 0,
+              "ignore": 0,
+              "aggravate": 0,
+              "electric": 0,
+              "reduction": 3,
+              "range": 1.5,
+              "explode": 10,
+              "defense": {
+                "total": 0,
+                "parts": {
+                  "base": 0,
+                  "natural": 0,
+                  "armor": 0,
+                  "dodge": 0,
+                  "insight": 0,
+                  "block": 0,
+                  "cultivation": 0,
+                  "cover": 0,
+                  "force": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 1,
+                "extraSuccesses": 0
+              },
+              "roll": {
+                "dp": 61,
+                "luck": false,
+                "dice": [
+                  3,
+                  8,
+                  7,
+                  4,
+                  3,
+                  9,
+                  2,
+                  9,
+                  2,
+                  9,
+                  4,
+                  2,
+                  5,
+                  9,
+                  3,
+                  1,
+                  10,
+                  6,
+                  7,
+                  8,
+                  9,
+                  3,
+                  5,
+                  6,
+                  8,
+                  7,
+                  6,
+                  8,
+                  2,
+                  6,
+                  4,
+                  9,
+                  10,
+                  2,
+                  2,
+                  2,
+                  9,
+                  5,
+                  7,
+                  7,
+                  7,
+                  9,
+                  1,
+                  1,
+                  7,
+                  5,
+                  4,
+                  10,
+                  8,
+                  10,
+                  3,
+                  10,
+                  4,
+                  5,
+                  3,
+                  9,
+                  5,
+                  2,
+                  9,
+                  2,
+                  3,
+                  3,
+                  2,
+                  8,
+                  8,
+                  8
+                ],
+                "used": 66,
+                "rolledSuccesses": 23,
+                "luckMishap": false
+              },
+              "amount": 25
+            },
+            "after": {
+              "status": "active",
+              "winner": null,
+              "activeId": "player",
+              "participants": [
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "对练方",
+                  "health": {
+                    "intact": 10,
+                    "B": 0,
+                    "L": 25,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 2,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 3,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "player",
+                  "name": "御临风",
+                  "team": "玩家方",
+                  "health": {
+                    "intact": 21,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 0,
+                    "move": 1,
+                    "swift": 1,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      },
+      "player/4/0/3": {
+        "signature": "{\"actorId\":\"player\",\"abilityId\":\"block\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "player/4/0/3",
+          "revision": 4,
+          "messageId": 4,
+          "swipeId": 0,
+          "result": {
+            "actorId": "player",
+            "abilityId": "block",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "after": {
+              "status": "active",
+              "winner": null,
+              "activeId": "player",
+              "participants": [
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "对练方",
+                  "health": {
+                    "intact": 10,
+                    "B": 0,
+                    "L": 25,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 2,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 3,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "player",
+                  "name": "御临风",
+                  "team": "玩家方",
+                  "health": {
+                    "intact": 21,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 1,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      },
+      "player/5/0/4": {
+        "signature": "{\"actorId\":\"player\",\"abilityId\":\"end\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "player/5/0/4",
+          "revision": 5,
+          "messageId": 5,
+          "swipeId": 0,
+          "result": {
+            "actorId": "player",
+            "abilityId": "end",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "after": {
+              "status": "active",
+              "winner": null,
+              "activeId": "jiang",
+              "participants": [
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "对练方",
+                  "health": {
+                    "intact": 10,
+                    "B": 0,
+                    "L": 25,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 2,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 3,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 1,
+                    "move": 1,
+                    "swift": 1,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "player",
+                  "name": "御临风",
+                  "team": "玩家方",
+                  "health": {
+                    "intact": 21,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "ended",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      },
+      "combat/6/0/5": {
+        "signature": "{\"actorId\":\"jiang\",\"abilityId\":\"fistQi\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "combat/6/0/5",
+          "revision": 6,
+          "messageId": 6,
+          "swipeId": 0,
+          "result": {
+            "actorId": "jiang",
+            "abilityId": "fistQi",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "after": {
+              "status": "active",
+              "winner": null,
+              "activeId": "jiang",
+              "participants": [
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "对练方",
+                  "health": {
+                    "intact": 10,
+                    "B": 0,
+                    "L": 25,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 1,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 3,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 1,
+                    "move": 1,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "player",
+                  "name": "御临风",
+                  "team": "玩家方",
+                  "health": {
+                    "intact": 21,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "ended",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      },
+      "combat/7/0/6": {
+        "signature": "{\"actorId\":\"jiang\",\"abilityId\":\"breakBody\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "combat/7/0/6",
+          "revision": 7,
+          "messageId": 7,
+          "swipeId": 0,
+          "result": {
+            "actorId": "jiang",
+            "abilityId": "breakBody",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "after": {
+              "status": "active",
+              "winner": null,
+              "activeId": "jiang",
+              "participants": [
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "对练方",
+                  "health": {
+                    "intact": 10,
+                    "B": 0,
+                    "L": 25,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 1,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 2,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 1,
+                    "move": 1,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "player",
+                  "name": "御临风",
+                  "team": "玩家方",
+                  "health": {
+                    "intact": 21,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "ended",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      },
+      "combat/8/0/7": {
+        "signature": "{\"actorId\":\"jiang\",\"abilityId\":\"block\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "combat/8/0/7",
+          "revision": 8,
+          "messageId": 8,
+          "swipeId": 0,
+          "result": {
+            "actorId": "jiang",
+            "abilityId": "block",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "after": {
+              "status": "active",
+              "winner": null,
+              "activeId": "jiang",
+              "participants": [
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "对练方",
+                  "health": {
+                    "intact": 10,
+                    "B": 0,
+                    "L": 25,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 1,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 2,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 1,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "player",
+                  "name": "御临风",
+                  "team": "玩家方",
+                  "health": {
+                    "intact": 21,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "ended",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      },
+      "combat/9/0/8": {
+        "signature": "{\"actorId\":\"jiang\",\"abilityId\":\"strike\",\"targetId\":\"player\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "combat/9/0/8",
+          "revision": 9,
+          "messageId": 9,
+          "swipeId": 0,
+          "result": {
+            "actorId": "jiang",
+            "abilityId": "strike",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [
+              "攻击已宣言，等待反应；尚未掷骰或扣除攻击资源"
+            ],
+            "after": {
+              "status": "active",
+              "winner": null,
+              "activeId": "jiang",
+              "awaiting": "player",
+              "participants": [
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "对练方",
+                  "health": {
+                    "intact": 10,
+                    "B": 0,
+                    "L": 25,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 1,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 2,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 1,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "player",
+                  "name": "御临风",
+                  "team": "玩家方",
+                  "health": {
+                    "intact": 21,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "ended",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      },
+      "player/10/0/9": {
+        "signature": "{\"actorId\":\"player\",\"abilityId\":\"react\",\"choice\":\"decline\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "player/10/0/9",
+          "revision": 10,
+          "messageId": 10,
+          "swipeId": 0,
+          "result": {
+            "actorId": "jiang",
+            "abilityId": "strike",
+            "round": 1,
+            "damage": [
+              {
+                "targetId": "player",
+                "kind": "physical",
+                "energyType": null,
+                "input": 2,
+                "inputSeverity": "L",
+                "severity": "L",
+                "actualDamage": 2
+              },
+              {
+                "targetId": "player",
+                "kind": "physical",
+                "energyType": null,
+                "input": 2,
+                "inputSeverity": "L",
+                "severity": "L",
+                "actualDamage": 2
+              }
+            ],
+            "statuses": [
+              {
+                "targetId": "player",
+                "type": "晕眩",
+                "points": 4,
+                "remaining": 0,
+                "save": {
+                  "dp": 7,
+                  "luck": false,
+                  "dice": [
+                    6,
+                    5,
+                    2,
+                    9,
+                    9,
+                    10,
+                    4,
+                    10,
+                    4
+                  ],
+                  "used": 9,
+                  "rolledSuccesses": 4,
+                  "luckMishap": false,
+                  "fixed": 1,
+                  "extra": 0,
+                  "total": 5,
+                  "type": "fort"
+                }
+              }
+            ],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "attack": {
+              "rawDP": 46,
+              "dp": 46,
+              "weapon": 9,
+              "cap": 28,
+              "fixed": 3,
+              "ap": 4,
+              "magic": 0,
+              "speed": 4,
+              "extra": 0,
+              "ignore": 4,
+              "aggravate": 0,
+              "electric": 0,
+              "reduction": 0,
+              "range": 1.5,
+              "explode": 10,
+              "defense": {
+                "total": 47,
+                "parts": {
+                  "base": 4,
+                  "natural": 0,
+                  "armor": 5,
+                  "dodge": 3,
+                  "insight": 0,
+                  "block": 33,
+                  "deflection": 2,
+                  "force": 0,
+                  "cultivation": 0,
+                  "cover": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 0,
+                "extraSuccesses": 1
+              },
+              "roll": {
+                "dp": -1,
+                "luck": true,
+                "dice": [
+                  8
+                ],
+                "used": 1,
+                "rolledSuccesses": 0,
+                "luckMishap": false
+              },
+              "amount": 2
+            },
+            "after": {
+              "status": "active",
+              "winner": null,
+              "activeId": "jiang",
+              "participants": [
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "对练方",
+                  "health": {
+                    "intact": 10,
+                    "B": 0,
+                    "L": 25,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 1,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 2,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "player",
+                  "name": "御临风",
+                  "team": "玩家方",
+                  "health": {
+                    "intact": 17,
+                    "B": 0,
+                    "L": 4,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "ended",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      },
+      "combat/11/0/10": {
+        "signature": "{\"actorId\":\"jiang\",\"abilityId\":\"end\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "combat/11/0/10",
+          "revision": 11,
+          "messageId": 11,
+          "swipeId": 0,
+          "result": {
+            "actorId": "jiang",
+            "abilityId": "end",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [
+              {
+                "actorId": "jiang",
+                "severity": "L"
+              }
+            ],
+            "notes": [],
+            "after": {
+              "status": "active",
+              "winner": null,
+              "activeId": "player",
+              "participants": [
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "对练方",
+                  "health": {
+                    "intact": 11,
+                    "B": 0,
+                    "L": 24,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 1,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 2,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "ended",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "player",
+                  "name": "御临风",
+                  "team": "玩家方",
+                  "health": {
+                    "intact": 17,
+                    "B": 0,
+                    "L": 4,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 1,
+                    "move": 1,
+                    "swift": 1,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      },
+      "player/12/0/11": {
+        "signature": "{\"actorId\":\"player\",\"abilityId\":\"strike\",\"targetId\":\"jiang\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "player/12/0/11",
+          "revision": 12,
+          "messageId": 12,
+          "swipeId": 0,
+          "result": {
+            "actorId": "player",
+            "abilityId": "strike",
+            "round": 2,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [
+              "攻击已宣言，等待反应；尚未掷骰或扣除攻击资源"
+            ],
+            "after": {
+              "status": "active",
+              "winner": null,
+              "activeId": "player",
+              "awaiting": "jiang",
+              "participants": [
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "对练方",
+                  "health": {
+                    "intact": 11,
+                    "B": 0,
+                    "L": 24,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 1,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 2,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "ended",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "player",
+                  "name": "御临风",
+                  "team": "玩家方",
+                  "health": {
+                    "intact": 17,
+                    "B": 0,
+                    "L": 4,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 1,
+                    "move": 1,
+                    "swift": 1,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      },
+      "combat/13/0/12": {
+        "signature": "{\"actorId\":\"jiang\",\"abilityId\":\"react\",\"choice\":\"conversion\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "combat/13/0/12",
+          "revision": 13,
+          "messageId": 13,
+          "swipeId": 0,
+          "result": {
+            "actorId": "player",
+            "abilityId": "strike",
+            "round": 2,
+            "damage": [
+              {
+                "targetId": "jiang",
+                "kind": "physical",
+                "energyType": null,
+                "input": 21,
+                "inputSeverity": "L",
+                "severity": "B",
+                "actualDamage": 21
+              }
+            ],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "attack": {
+              "rawDP": 62,
+              "dp": 62,
+              "weapon": 16,
+              "cap": 25,
+              "fixed": 2,
+              "ap": 8,
+              "magic": 8,
+              "speed": 0,
+              "extra": 0,
+              "ignore": 0,
+              "aggravate": 0,
+              "electric": 0,
+              "reduction": 3,
+              "range": 1.5,
+              "explode": 10,
+              "defense": {
+                "total": 8,
+                "parts": {
+                  "base": 0,
+                  "natural": 0,
+                  "armor": 0,
+                  "dodge": 0,
+                  "insight": 0,
+                  "block": 8,
+                  "cultivation": 0,
+                  "cover": 0,
+                  "force": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 1,
+                "extraSuccesses": 0
+              },
+              "roll": {
+                "dp": 54,
+                "luck": false,
+                "dice": [
+                  7,
+                  6,
+                  6,
+                  7,
+                  10,
+                  5,
+                  4,
+                  8,
+                  3,
+                  5,
+                  4,
+                  9,
+                  9,
+                  5,
+                  1,
+                  2,
+                  9,
+                  3,
+                  2,
+                  5,
+                  6,
+                  2,
+                  7,
+                  9,
+                  2,
+                  2,
+                  3,
+                  8,
+                  4,
+                  3,
+                  3,
+                  2,
+                  7,
+                  7,
+                  8,
+                  5,
+                  10,
+                  5,
+                  5,
+                  9,
+                  3,
+                  8,
+                  10,
+                  9,
+                  1,
+                  3,
+                  10,
+                  7,
+                  10,
+                  10,
+                  8,
+                  9,
+                  4,
+                  6,
+                  4,
+                  10,
+                  3,
+                  6,
+                  3,
+                  3,
+                  4
+                ],
+                "used": 61,
+                "rolledSuccesses": 19,
+                "luckMishap": false
+              },
+              "amount": 21
+            },
+            "after": {
+              "status": "finished",
+              "winner": "玩家方",
+              "activeId": "player",
+              "participants": [
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "对练方",
+                  "health": {
+                    "intact": 0,
+                    "B": 1,
+                    "L": 34,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 1,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 2,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "ended",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "player",
+                  "name": "御临风",
+                  "team": "玩家方",
+                  "health": {
+                    "intact": 17,
+                    "B": 0,
+                    "L": 4,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 0,
+                    "move": 1,
+                    "swift": 1,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      },
+      "leave/13": {
+        "signature": "{\"kind\":\"leave\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "leave/13",
+          "revision": 14,
+          "messageId": 14,
+          "swipeId": 0,
+          "result": {
+            "actorId": "player",
+            "abilityId": "leave",
+            "round": 2,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [
+              "返回剧情；保留伤势、能量和恢复限制"
+            ],
+            "after": {
+              "status": "finished",
+              "winner": "玩家方",
+              "activeId": "player",
+              "participants": [
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "对练方",
+                  "health": {
+                    "intact": 0,
+                    "B": 1,
+                    "L": 34,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 1,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 2,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "player",
+                  "name": "御临风",
+                  "team": "玩家方",
+                  "health": {
+                    "intact": 17,
+                    "B": 0,
+                    "L": 4,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "actors": {
+      "huang": {
+        "name": "黄泉",
+        "state": {
+          "name": "黄泉",
+          "attributes": {
+            "力量": 7,
+            "敏捷": 11,
+            "智力": 2,
+            "感知": 6,
+            "意志": 5,
+            "风度": 3
+          },
+          "size": 5,
+          "derived": {
+            "hpMax": 23,
+            "defense": 6,
+            "speed": 23,
+            "initiative": 26,
+            "willMax": 8,
+            "vision": 80
+          },
+          "skills": {
+            "白刃": {
+              "level": 5,
+              "subs": {
+                "太刀": {
+                  "level": 1
+                }
+              }
+            },
+            "肉搏": {
+              "level": 1,
+              "subs": {}
+            },
+            "运动": {
+              "level": 2,
+              "subs": {}
+            },
+            "求生": {
+              "level": 1,
+              "subs": {}
+            }
+          },
+          "resources": {
+            "灵力": {
+              "current": 6,
+              "max": 6
+            }
+          },
+          "attributeAuto": {},
+          "derivedOverrides": [
+            "hpMax",
+            "speed",
+            "initiative",
+            "willMax"
+          ],
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "will": {
+            "current": 8,
+            "max": 8
+          },
+          "xp": 0,
+          "greatPowersAvailable": 0,
+          "statuses": [],
+          "attributeDamage": {},
+          "turn": {
+            "phase": "active",
+            "standard": 1,
+            "move": 1,
+            "swift": 1,
+            "reactionLock": false,
+            "reactionLockEnds": 0,
+            "responseDebt": false,
+            "opportunityUsed": false
+          },
+          "extendedActions": {}
+        }
+      },
+      "jiang": {
+        "name": "姜子尤",
+        "state": {
+          "name": "姜子尤",
+          "attributes": {
+            "力量": 11,
+            "敏捷": 3,
+            "智力": 2,
+            "感知": 3,
+            "意志": 3,
+            "风度": 3
+          },
+          "size": 5,
+          "derived": {
+            "hpMax": 35,
+            "defense": 3,
+            "speed": 41,
+            "initiative": 10,
+            "willMax": 16,
+            "vision": 30
+          },
+          "skills": {
+            "肉搏": {
+              "level": 5,
+              "subs": {
+                "拳击": {
+                  "level": 3
+                }
+              }
+            },
+            "运动": {
+              "level": 4,
+              "subs": {
+                "自我保护": {
+                  "level": 1
+                }
+              }
+            },
+            "求生": {
+              "level": 1,
+              "subs": {}
+            }
+          },
+          "resources": {
+            "气": {
+              "current": 1,
+              "max": 2
+            },
+            "斗气": {
+              "current": 2,
+              "max": 3
+            },
+            "内力": {
+              "current": 28,
+              "max": 28
+            }
+          },
+          "attributeAuto": {},
+          "derivedOverrides": [
+            "hpMax",
+            "speed",
+            "initiative",
+            "willMax"
+          ],
+          "health": {
+            "intact": 0,
+            "B": 1,
+            "L": 34,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "will": {
+            "current": 16,
+            "max": 16
+          },
+          "xp": 0,
+          "greatPowersAvailable": 0,
+          "statuses": [],
+          "attributeDamage": {},
+          "turn": {
+            "phase": "ready",
+            "standard": 0,
+            "move": 0,
+            "swift": 0,
+            "reactionLock": false,
+            "reactionLockEnds": 0,
+            "responseDebt": false,
+            "opportunityUsed": false
+          },
+          "extendedActions": {}
+        },
+        "combatCarry": {
+          "parameters": {},
+          "squeezed": 0
+        }
+      },
+      "bright": {
+        "name": "布莱特",
+        "state": {
+          "name": "布莱特",
+          "attributes": {
+            "力量": 6,
+            "敏捷": 7,
+            "智力": 2,
+            "感知": 9,
+            "意志": 2,
+            "风度": 1
+          },
+          "size": 5,
+          "derived": {
+            "hpMax": 20,
+            "defense": 7,
+            "speed": 42,
+            "initiative": 18,
+            "willMax": 8,
+            "vision": 110
+          },
+          "skills": {
+            "射击": {
+              "level": 2,
+              "subs": {
+                "长弓": {
+                  "level": 4
+                }
+              }
+            },
+            "运动": {
+              "level": 2,
+              "subs": {}
+            },
+            "求生": {
+              "level": 1,
+              "subs": {}
+            },
+            "肉搏": {
+              "level": 1,
+              "subs": {}
+            },
+            "白刃": {
+              "level": 1,
+              "subs": {}
+            },
+            "学识": {
+              "level": 1,
+              "subs": {}
+            }
+          },
+          "resources": {
+            "导力": {
+              "current": 5,
+              "max": 5
+            }
+          },
+          "attributeAuto": {},
+          "derivedOverrides": [
+            "hpMax",
+            "speed",
+            "initiative",
+            "willMax"
+          ],
+          "health": {
+            "intact": 20,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "will": {
+            "current": 8,
+            "max": 8
+          },
+          "xp": 0,
+          "greatPowersAvailable": 0,
+          "statuses": [],
+          "attributeDamage": {},
+          "turn": {
+            "phase": "ready",
+            "standard": 0,
+            "move": 0,
+            "swift": 0,
+            "reactionLock": false,
+            "reactionLockEnds": 0,
+            "responseDebt": false,
+            "opportunityUsed": false
+          },
+          "extendedActions": {}
+        }
+      },
+      "player": {
+        "name": "御临风",
+        "state": {
+          "name": "御临风",
+          "attributes": {
+            "力量": 6,
+            "敏捷": 7,
+            "智力": 6,
+            "感知": 5,
+            "意志": 5,
+            "风度": 4
+          },
+          "size": 5,
+          "derived": {
+            "hpMax": 21,
+            "defense": 5,
+            "speed": 28,
+            "initiative": 11,
+            "willMax": 9,
+            "vision": 50
+          },
+          "skills": {
+            "运动": {
+              "level": 1
+            },
+            "肉搏": {
+              "level": 0
+            },
+            "白刃": {
+              "level": 5,
+              "subs": {
+                "长剑": {
+                  "level": 4,
+                  "scope": "长剑",
+                  "scopeId": "weapon.long-sword"
+                }
+              }
+            },
+            "射击": {
+              "level": 0
+            },
+            "隐藏": {
+              "level": 1
+            },
+            "学识": {
+              "level": 4,
+              "subs": {
+                "死灵学": {
+                  "level": 2,
+                  "scope": "死灵学",
+                  "scopeId": "knowledge.necromancy"
+                }
+              }
+            },
+            "科学": {
+              "level": 0
+            },
+            "神秘": {
+              "level": 4,
+              "subs": {
+                "死灵学": {
+                  "level": 2,
+                  "scope": "死灵学",
+                  "scopeId": "occult.necromancy"
+                }
+              }
+            },
+            "洞察": {
+              "level": 1
+            },
+            "社交": {
+              "level": 2
+            },
+            "电脑": {
+              "level": 2
+            },
+            "驾驶": {
+              "level": 0
+            },
+            "求生": {
+              "level": 1
+            },
+            "医疗": {
+              "level": 2
+            }
+          },
+          "resources": {
+            "风池": {
+              "current": 10,
+              "max": 10
+            },
+            "魔力": {
+              "current": 106,
+              "max": 106
+            }
+          },
+          "attributeAuto": {},
+          "derivedOverrides": [
+            "hpMax",
+            "speed",
+            "initiative",
+            "willMax"
+          ],
+          "health": {
+            "intact": 17,
+            "B": 0,
+            "L": 4,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "will": {
+            "current": 9,
+            "max": 9
+          },
+          "xp": 0,
+          "greatPowersAvailable": 0,
+          "statuses": [],
+          "attributeDamage": {},
+          "turn": {
+            "phase": "ready",
+            "standard": 0,
+            "move": 0,
+            "swift": 0,
+            "reactionLock": false,
+            "reactionLockEnds": 0,
+            "responseDebt": false,
+            "opportunityUsed": false
+          },
+          "extendedActions": {}
+        },
+        "combatCarry": {
+          "parameters": {},
+          "knownWeaknesses": []
+        }
+      }
+    },
+    "battle": {
+      "version": 1,
+      "scenario": "完整人物卡隔离演练，不计入帝都T0或实际重玩事件。开场时四人在空旷场地，黄泉与姜子尤相距1米，御临风、布莱特在场边；后续以当前场景和存档为准。仅在明确开始时进行已登记演练，目标是对练至一方失去行动能力；不撤离场地，不对失去行动能力者补刀。旁边有供练习平衡的矮横木；敏捷＋运动DC1，一次失手只须落地重新站稳，不造成伤害。这个难度仅为本测试场景设定。",
+      "assumptions": [
+        "双方满生命、满能量，黄泉入场佩刀在鞘；距离1米，无掩蔽。",
+        "斯巴达未证实额外2DP分支不计；狮子王武器体积按用户2026-10-20确认值3。",
+        "训练场以一方失去行动能力为胜负，不继续补刀。"
+      ],
+      "round": 2,
+      "activeId": "player",
+      "order": [
+        "player",
+        "jiang"
+      ],
+      "actors": {
+        "jiang": {
+          "id": "jiang",
+          "name": "姜子尤",
+          "kind": "jiang",
+          "team": "对练方",
+          "controller": "model",
+          "present": true,
+          "position": [
+            1,
+            0
+          ],
+          "reach": 1.5,
+          "used": {
+            "damageConversion": true
+          },
+          "cooldowns": {},
+          "buffs": {},
+          "combos": {},
+          "reactions": {
+            "damageConversion": false
+          },
+          "spartanBonus": 0,
+          "squeezed": 0,
+          "abilities": [
+            "strike",
+            "block",
+            "fistQi",
+            "breakBody",
+            "restoreSwift",
+            "selfHeal",
+            "squeeze",
+            "move",
+            "step",
+            "conversion",
+            "end"
+          ],
+          "parameters": {}
+        },
+        "player": {
+          "id": "player",
+          "name": "御临风",
+          "kind": "yulin",
+          "team": "玩家方",
+          "controller": "player",
+          "present": true,
+          "position": [
+            0,
+            0
+          ],
+          "reach": 1.5,
+          "used": {},
+          "cooldowns": {},
+          "buffs": {},
+          "combos": {},
+          "reactions": {
+            "damageConversion": false
+          },
+          "sheathed": false,
+          "abilities": [
+            "strike",
+            "block",
+            "zheng",
+            "tengzhuan",
+            "flow",
+            "tornado",
+            "gale",
+            "perfectWarrior",
+            "guardAlly",
+            "necromancy",
+            "move",
+            "step",
+            "conversion",
+            "end"
+          ],
+          "missing": {
+            "flowMax": null,
+            "flowAction": null
+          },
+          "knownWeaknesses": [],
+          "parameters": {},
+          "attackedRound": 2
+        }
+      },
+      "elapsedRounds": 1,
+      "summonRounds": 0,
+      "summonMinutes": 0,
+      "status": "finished",
+      "winner": "玩家方",
+      "id": "yulin-jiang",
+      "mode": "story",
+      "reactionWindows": true,
+      "knowledge": {
+        "jiang": {
+          "player": {
+            "abilities": [
+              "strike",
+              "block",
+              "end"
+            ]
+          },
+          "jiang": {
+            "abilities": [
+              "fistQi",
+              "breakBody",
+              "block",
+              "strike",
+              "end"
+            ]
+          }
+        },
+        "player": {
+          "player": {
+            "abilities": [
+              "strike",
+              "block",
+              "end"
+            ]
+          },
+          "jiang": {
+            "abilities": [
+              "fistQi",
+              "breakBody",
+              "block",
+              "strike",
+              "end"
+            ]
+          }
+        }
+      },
+      "turnTaken": []
+    },
+    "lastResult": {
+      "status": "applied",
+      "operationId": "leave/13",
+      "revision": 14,
+      "messageId": 14,
+      "swipeId": 0,
+      "result": {
+        "actorId": "player",
+        "abilityId": "leave",
+        "round": 2,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [
+          "返回剧情；保留伤势、能量和恢复限制"
+        ],
+        "after": {
+          "status": "finished",
+          "winner": "玩家方",
+          "activeId": "player",
+          "participants": [
+            {
+              "id": "jiang",
+              "name": "姜子尤",
+              "team": "对练方",
+              "health": {
+                "intact": 0,
+                "B": 1,
+                "L": 34,
+                "A": 0,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "气": {
+                  "current": 1,
+                  "max": 2
+                },
+                "斗气": {
+                  "current": 2,
+                  "max": 3
+                },
+                "内力": {
+                  "current": 28,
+                  "max": 28
+                }
+              },
+              "actions": {
+                "phase": "ready",
+                "standard": 0,
+                "move": 0,
+                "swift": 0,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                1,
+                0
+              ],
+              "statuses": []
+            },
+            {
+              "id": "player",
+              "name": "御临风",
+              "team": "玩家方",
+              "health": {
+                "intact": 17,
+                "B": 0,
+                "L": 4,
+                "A": 0,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "风池": {
+                  "current": 10,
+                  "max": 10
+                },
+                "魔力": {
+                  "current": 106,
+                  "max": 106
+                }
+              },
+              "actions": {
+                "phase": "ready",
+                "standard": 0,
+                "move": 0,
+                "swift": 0,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                0,
+                0
+              ],
+              "statuses": []
+            }
+          ]
+        }
+      }
+    }
+  }
+}

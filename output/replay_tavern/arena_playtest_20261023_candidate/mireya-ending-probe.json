@@ -1,0 +1,80 @@
+{
+  "scope": "read-only narrationRequest of saved isolated fictional combat; no raw chat, MVU root, NPC numeric sheet, authentication or proxy fields",
+  "destination": "Google official generativelanguage.googleapis.com, via existing Tavern makersuite backend",
+  "model": "gemini-3.5-flash-lite",
+  "revision": 12,
+  "facts": {
+    "events": [
+      {
+        "actor": "米蕾娅",
+        "action": "移动",
+        "arms": "双手持竞技弓，未上箭，包毡短棍收在腰侧",
+        "status": "resolved",
+        "outcome": "已执行",
+        "affected": [
+          "米蕾娅"
+        ],
+        "consequence": "米蕾娅确实受伤，防御未完全化解伤害；必须写出受创，不得写成完全挡住或无伤。",
+        "travelMeters": 17,
+        "route": {
+          "around": [],
+          "through": []
+        },
+        "direction": "远离御临风",
+        "distanceToPlayer": 18,
+        "reactions": [
+          {
+            "actor": "御临风",
+            "action": "借机攻击",
+            "arms": "等值缓冲练习长剑在手（隔离测试器械）",
+            "timing": "离开近战范围之前，随后才完成移动",
+            "outcome": "造成伤势"
+          }
+        ]
+      }
+    ],
+    "setting": {
+      "name": "独立练习场·御临风对米蕾娅",
+      "nearbyLandmarks": [],
+      "nature": "实体练习场；终止是按约停手，不产生自动声光信号、光标或虚拟投影。"
+    },
+    "participants": [
+      {
+        "id": "player",
+        "name": "御临风",
+        "location": "你所在的位置",
+        "terrain": {
+          "elevation": 0,
+          "areas": []
+        },
+        "condition": "可见受伤",
+        "arms": "等值缓冲练习长剑在手（隔离测试器械）"
+      },
+      {
+        "id": "mireya",
+        "name": "米蕾娅",
+        "location": "与你相距18米",
+        "terrain": {
+          "elevation": 0,
+          "areas": []
+        },
+        "condition": "可见受伤",
+        "arms": "双手持竞技弓，未上箭，包毡短棍收在腰侧"
+      }
+    ],
+    "resolution": {
+      "kind": "refereeStop",
+      "taskComplete": false,
+      "xpAwarded": 0,
+      "stoppedActorIds": [
+        "mireya"
+      ],
+      "text": "按本场预告的终止条件，练习结束；现有伤势与资源保留。"
+    },
+    "phase": "战斗结束",
+    "winners": [
+      "御临风"
+    ]
+  },
+  "prose": "御临风手中的等值缓冲练习长剑先一步封住退路，剑锋未收，沉甸甸的撞击感已顺着剑柄传回。\n\n米蕾娅抽身后撤，双手仍握着竞技弓，腰侧的包毡短棍随着动作晃了一下。她借着这一记错身拉开距离，在离御临风十八米处站定，呼吸微促，衣甲间留下一处清晰的受创痕迹。\n\n练习场内没有多余的声光与提示，只有停手后的安静。这场切磋按原定条件终止，各自的伤势和器械维持原样。"
+}

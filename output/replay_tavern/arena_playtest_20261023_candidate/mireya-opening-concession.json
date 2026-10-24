@@ -1,0 +1,200 @@
+{
+  "chatId": "901 擂台 米蕾娅 完整场实测 - 2026-10-23",
+  "revision": 3,
+  "mode": "story",
+  "round": 1,
+  "activeId": "mireya",
+  "status": "finished",
+  "resolution": {
+    "kind": "concede",
+    "actorId": "mireya",
+    "taskComplete": false,
+    "xpAwarded": 0,
+    "text": "米蕾娅主动认输，本场停止交锋，保留伤势与资源，不发XP。"
+  },
+  "actors": {
+    "player": {
+      "health": {
+        "intact": 12,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "resources": {
+        "流风": {
+          "current": 22,
+          "max": 22
+        }
+      },
+      "will": {
+        "current": 3,
+        "max": 3
+      },
+      "xp": 0,
+      "position": [
+        0,
+        0
+      ],
+      "actions": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "buffs": {},
+      "combatCarry": {
+        "parameters": {
+          "flowMax": 22,
+          "flowAction": "free"
+        },
+        "durationCarry": {},
+        "cooldownCarry": {},
+        "sceneInstanceId": "arena-playtest-mireya",
+        "used": {}
+      }
+    },
+    "mireya": {
+      "health": {
+        "intact": 12,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "resources": {},
+      "will": {
+        "current": 9,
+        "max": 9
+      },
+      "xp": 0,
+      "position": [
+        12,
+        0
+      ],
+      "actions": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "buffs": {},
+      "ammunition": 18,
+      "loaded": false,
+      "weaponMode": "bow",
+      "combatCarry": {
+        "ammunition": 18,
+        "loaded": false,
+        "weaponMode": "bow",
+        "durationCarry": {},
+        "cooldownCarry": {},
+        "sceneInstanceId": "arena-playtest-mireya",
+        "used": {}
+      }
+    }
+  },
+  "operations": [
+    {
+      "id": "gm-runtime/901 擂台 米蕾娅 完整场实测 - 2026-10-23/1/0/combat",
+      "revision": 1,
+      "command": {
+        "kind": "enter",
+        "encounterId": "arena-mireya"
+      },
+      "result": {
+        "actorId": "mireya",
+        "abilityId": "enter",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [
+          "进入战斗；沿用现有伤势与能量"
+        ]
+      }
+    },
+    {
+      "id": "combat/1/0/1",
+      "revision": 2,
+      "command": {
+        "actorId": "mireya",
+        "abilityId": "concede"
+      },
+      "result": {
+        "actorId": "mireya",
+        "abilityId": "concede",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "leave/2",
+      "revision": 3,
+      "command": {
+        "kind": "leave"
+      },
+      "result": {
+        "actorId": "mireya",
+        "abilityId": "leave",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [
+          "返回剧情；保留伤势、能量和恢复限制"
+        ]
+      }
+    }
+  ],
+  "lastMessages": [
+    {
+      "user": true,
+      "text": "【隔离测试玩家声明】我明确开始与米蕾娅这一场对练，保持当前十二米距离，先进入接战。轮到我时再声明动作；任何来袭都先等我声明防御方式。",
+      "extra": {
+        "isSmallSys": false,
+        "901_combat_entry": {
+          "encounterId": "arena-mireya",
+          "operationId": "gm-runtime/901 擂台 米蕾娅 完整场实测 - 2026-10-23/1/0/combat",
+          "playerText": "【隔离测试玩家声明】我明确开始与米蕾娅这一场对练，保持当前十二米距离，先进入接战。轮到我时再声明动作；任何来袭都先等我声明防御方式。",
+          "swipeId": 0
+        },
+        "901_narrative": {
+          "text": "【隔离测试玩家声明】我明确开始与米蕾娅这一场对练，保持当前十二米距离，先进入接战。轮到我时再声明动作；任何来袭都先等我声明防御方式。",
+          "swipeId": 0,
+          "completed": {
+            "message": "米蕾娅将竞技弓放回身侧，双手垂下，略微调整了一下呼吸，向你点了点头：“好了，到此为止。多谢指教，御临风。”\n\n场边没有其他人出声。练习场的空气随之安静下来，隔离测试的器械嗡鸣了一声，逐渐归于平稳。",
+            "revision": 3
+          }
+        }
+      }
+    },
+    {
+      "user": false,
+      "text": "米蕾娅将竞技弓放回身侧，双手垂下，略微调整了一下呼吸，向你点了点头：“好了，到此为止。多谢指教，御临风。”\n\n场边没有其他人出声。练习场的空气随之安静下来，隔离测试的器械嗡鸣了一声，逐渐归于平稳。\n\n<StatusPlaceHolderImpl/>",
+      "extra": {
+        "901_narrative": {
+          "key": "901 擂台 米蕾娅 完整场实测 - 2026-10-23/1/0",
+          "revision": 3
+        }
+      }
+    }
+  ]
+}

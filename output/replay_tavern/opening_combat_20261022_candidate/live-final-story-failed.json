@@ -1,0 +1,424 @@
+{
+  "chatId": "901 初始卡石像撤离实测 - 2026-10-22",
+  "revision": 10,
+  "mode": "story",
+  "round": 2,
+  "status": "finished",
+  "resolution": {
+    "kind": "withdrawal",
+    "taskComplete": false,
+    "xpAwarded": 0,
+    "text": "已退出石像有效圈。石像仍在；洞穴任务与其他区域未完成，不自动授奖。"
+  },
+  "bindings": [
+    {
+      "id": "capital-stone",
+      "instanceId": "cave-entrance-stone",
+      "description": "御临风在试炼洞穴入口接战区域与一具石像魔偶对峙，石像魔偶相连地面阵纹有效圈半径六米，圈心为原点，御临风在圈心东侧四米，石像在东侧两米",
+      "scenario": "御临风在试炼洞穴入口接战区域与一具石像魔偶对峙，石像魔偶相连地面阵纹有效圈半径六米，圈心为原点，御临风在圈心东侧四米，石像在东侧两米",
+      "participants": [
+        "player"
+      ],
+      "enemies": [
+        {
+          "id": "cave-entrance-stone:stone",
+          "type": "stone"
+        }
+      ],
+      "positions": {
+        "player": [
+          4,
+          0
+        ],
+        "cave-entrance-stone:stone": [
+          2,
+          0
+        ]
+      },
+      "map": {
+        "title": "试炼洞穴入口",
+        "bounds": [
+          -2,
+          -9,
+          12,
+          9
+        ],
+        "ground": "rock",
+        "features": []
+      },
+      "objective": {
+        "kind": "exitRadius",
+        "actorIds": [
+          "player"
+        ],
+        "center": [
+          0,
+          0
+        ],
+        "radius": 6,
+        "resolutionKind": "withdrawal",
+        "label": "成功脱离接战",
+        "description": "已退出石像有效圈。石像仍在；洞穴任务与其他区域未完成，不自动授奖。"
+      },
+      "evidence": [
+        "当前仅御临风在洞口接战区域",
+        "洞口可见一具石像魔偶和与它相连的地面阵纹。已观察到阵纹的有效圈半径六米，圈心作为地图原点；御临风在圈心东侧四米，石像在东侧两米",
+        "东侧八米处通往洞外的退路畅通",
+        "我提着弃风与眼前这具石像接战，保持当前站位，暂不攻击"
+      ],
+      "territories": {
+        "cave-entrance-stone:stone": {
+          "center": [
+            0,
+            0
+          ],
+          "radius": 6
+        }
+      },
+      "entryOperationId": "gm-runtime/901 初始卡石像撤离实测 - 2026-10-22/1/0/combat"
+    }
+  ],
+  "actors": {
+    "player": {
+      "health": {
+        "intact": 6,
+        "B": 4,
+        "L": 2,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "resources": {
+        "流风": {
+          "current": 19,
+          "max": 22
+        }
+      },
+      "will": {
+        "current": 3,
+        "max": 3
+      },
+      "xp": 0,
+      "position": [
+        8,
+        0
+      ],
+      "buffs": {
+        "flow": 2
+      },
+      "durationCarry": {
+        "flow": {
+          "value": 2,
+          "remainingRounds": 9,
+          "needsHostTimeAccounting": true
+        }
+      }
+    },
+    "huang": {
+      "health": {
+        "intact": 12,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "resources": {
+        "灵力": {
+          "current": 5,
+          "max": 5
+        }
+      },
+      "will": {
+        "current": 6,
+        "max": 6
+      },
+      "xp": 0
+    },
+    "jiang": {
+      "health": {
+        "intact": 20,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "resources": {
+        "气": {
+          "current": 2,
+          "max": 2
+        },
+        "斗气": {
+          "current": 2,
+          "max": 2
+        }
+      },
+      "will": {
+        "current": 6,
+        "max": 6
+      },
+      "xp": 0
+    },
+    "bright": {
+      "health": {
+        "intact": 8,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "resources": {},
+      "will": {
+        "current": 5,
+        "max": 5
+      },
+      "xp": 0
+    },
+    "cave-entrance-stone:stone": {
+      "health": {
+        "intact": 14,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "resources": {},
+      "will": {
+        "current": 4,
+        "max": 4
+      },
+      "xp": 0,
+      "position": [
+        2,
+        0
+      ],
+      "buffs": {},
+      "durationCarry": {}
+    }
+  },
+  "operations": [
+    {
+      "id": "scene-binding/901 初始卡石像撤离实测 - 2026-10-22/3/0/1",
+      "revision": 1,
+      "command": {
+        "kind": "sceneBinding",
+        "binding": {
+          "id": "capital-stone",
+          "instanceId": "cave-entrance-stone",
+          "description": "御临风在试炼洞穴入口接战区域与一具石像魔偶对峙，石像魔偶相连地面阵纹有效圈半径六米，圈心为原点，御临风在圈心东侧四米，石像在东侧两米",
+          "scenario": "御临风在试炼洞穴入口接战区域与一具石像魔偶对峙，石像魔偶相连地面阵纹有效圈半径六米，圈心为原点，御临风在圈心东侧四米，石像在东侧两米",
+          "participants": [
+            "player"
+          ],
+          "enemies": [
+            {
+              "id": "cave-entrance-stone:stone",
+              "type": "stone"
+            }
+          ],
+          "positions": {
+            "player": [
+              4,
+              0
+            ],
+            "cave-entrance-stone:stone": [
+              2,
+              0
+            ]
+          },
+          "map": {
+            "title": "试炼洞穴入口",
+            "bounds": [
+              -2,
+              -9,
+              12,
+              9
+            ],
+            "ground": "rock",
+            "features": []
+          },
+          "objective": {
+            "kind": "exitRadius",
+            "actorIds": [
+              "player"
+            ],
+            "center": [
+              0,
+              0
+            ],
+            "radius": 6,
+            "resolutionKind": "withdrawal",
+            "label": "成功脱离接战",
+            "description": "已退出石像有效圈。石像仍在；洞穴任务与其他区域未完成，不自动授奖。"
+          },
+          "evidence": [
+            "当前仅御临风在洞口接战区域",
+            "洞口可见一具石像魔偶和与它相连的地面阵纹。已观察到阵纹的有效圈半径六米，圈心作为地图原点；御临风在圈心东侧四米，石像在东侧两米",
+            "东侧八米处通往洞外的退路畅通",
+            "我提着弃风与眼前这具石像接战，保持当前站位，暂不攻击"
+          ],
+          "territories": {
+            "cave-entrance-stone:stone": {
+              "center": [
+                0,
+                0
+              ],
+              "radius": 6
+            }
+          },
+          "entryOperationId": "gm-runtime/901 初始卡石像撤离实测 - 2026-10-22/1/0/combat"
+        }
+      }
+    },
+    {
+      "id": "gm-runtime/901 初始卡石像撤离实测 - 2026-10-22/1/0/combat",
+      "revision": 2,
+      "command": {
+        "kind": "enter",
+        "encounterId": "capital-stone"
+      },
+      "damage": []
+    },
+    {
+      "id": "declaration/901 初始卡石像撤离实测 - 2026-10-22/5/0/0",
+      "revision": 3,
+      "command": {
+        "abilityId": "flow",
+        "tier": 2,
+        "actorId": "player"
+      },
+      "damage": []
+    },
+    {
+      "id": "declaration/901 初始卡石像撤离实测 - 2026-10-22/5/0/1",
+      "revision": 4,
+      "command": {
+        "abilityId": "end",
+        "actorId": "player"
+      },
+      "damage": []
+    },
+    {
+      "id": "combat/5/0/4",
+      "revision": 5,
+      "command": {
+        "actorId": "cave-entrance-stone:stone",
+        "abilityId": "strike",
+        "targetId": "player"
+      },
+      "damage": []
+    },
+    {
+      "id": "declaration/901 初始卡石像撤离实测 - 2026-10-22/7/0/0",
+      "revision": 6,
+      "command": {
+        "abilityId": "react",
+        "defense": "normal",
+        "choice": "decline",
+        "actorId": "player"
+      },
+      "damage": [
+        {
+          "targetId": "player",
+          "kind": "physical",
+          "energyType": null,
+          "input": 2,
+          "inputSeverity": "B",
+          "severity": "B",
+          "actualDamage": 2
+        }
+      ],
+      "responses": [
+        {
+          "targetId": "player",
+          "guarded": false
+        }
+      ]
+    },
+    {
+      "id": "combat/7/0/6",
+      "revision": 7,
+      "command": {
+        "actorId": "cave-entrance-stone:stone",
+        "abilityId": "end"
+      },
+      "damage": []
+    },
+    {
+      "id": "declaration/901 初始卡石像撤离实测 - 2026-10-22/9/0/0",
+      "revision": 8,
+      "command": {
+        "abilityId": "move",
+        "to": [
+          8,
+          0
+        ],
+        "actorId": "player"
+      },
+      "damage": []
+    },
+    {
+      "id": "declaration/901 初始卡石像撤离实测 - 2026-10-22/11/0/0",
+      "revision": 9,
+      "command": {
+        "abilityId": "react",
+        "defense": "normal",
+        "choice": "decline",
+        "actorId": "player"
+      },
+      "damage": []
+    },
+    {
+      "id": "leave/9",
+      "revision": 10,
+      "command": {
+        "kind": "leave"
+      },
+      "damage": []
+    }
+  ],
+  "lastMessages": [
+    {
+      "user": true,
+      "text": "我仍留在原地，安静看着圈内的石像，不移动、不治疗、不攻击。",
+      "extra": {
+        "isSmallSys": false,
+        "901_replay_gate": {
+          "status": "NO_CHECK",
+          "operationId": "gm-runtime/901 初始卡石像撤离实测 - 2026-10-22/23/0",
+          "basis": "visible_fact",
+          "completed": {
+            "status": "NO_CHECK",
+            "operationId": "gm-runtime/901 初始卡石像撤离实测 - 2026-10-22/23/0",
+            "playerText": "我仍留在原地，安静看着圈内的石像，不移动、不治疗、不攻击。",
+            "message": "潮湿的岩壁上隐约渗出水珠，顺着粗糙的石面滑落，在寂静的洞穴中发出极轻的滴落声。\n\n石像魔偶依旧伫立在六米开外的阵圈中央，深灰色的身躯在微弱的光线下显得格外沉寂。方才交锋留下的裂痕静静横亘在它的石质臂膀上，没有新的光芒亮起，也没有任何多余的动作。\n\n黄泉没有说话，只是静静站在一旁，目光在石像和御临风之间停留了片刻，便重新投向洞道更深处的阴影。布莱特微微偏头，侧耳倾听着洞穴深处隐约回荡的风声，握着武器的手没有放松，但也保持着安静。",
+            "meta": {
+              "status": "NO_CHECK",
+              "operationId": "gm-runtime/901 初始卡石像撤离实测 - 2026-10-22/23/0",
+              "basis": "visible_fact"
+            }
+          }
+        }
+      }
+    },
+    {
+      "user": false,
+      "text": "潮湿的岩壁上隐约渗出水珠，顺着粗糙的石面滑落，在寂静的洞穴中发出极轻的滴落声。\n\n石像魔偶依旧伫立在六米开外的阵圈中央，深灰色的身躯在微弱的光线下显得格外沉寂。方才交锋留下的裂痕静静横亘在它的石质臂膀上，没有新的光芒亮起，也没有任何多余的动作。\n\n黄泉没有说话，只是静静站在一旁，目光在石像和御临风之间停留了片刻，便重新投向洞道更深处的阴影。布莱特微微偏头，侧耳倾听着洞穴深处隐约回荡的风声，握着武器的手没有放松，但也保持着安静。\n\n<StatusPlaceHolderImpl/>",
+      "extra": {
+        "901_replay_gate": {
+          "status": "NO_CHECK",
+          "operationId": "gm-runtime/901 初始卡石像撤离实测 - 2026-10-22/23/0",
+          "basis": "visible_fact"
+        }
+      }
+    }
+  ]
+}

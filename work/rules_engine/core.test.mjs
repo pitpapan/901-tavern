@@ -4,10 +4,21 @@ import {
   createCharacter, effectiveAttribute, rollPool, check, oppose, effectiveSkill, beginTurn, endTurn, spendAction, advanceMultiRoundAction,
   applyWounds, lifeStatus, advanceDeterioration, checkBeforeAction, firstAid, resolveAttack, resolveDamage,
   recover, applyStatus, spendWill, changeDefinedResource, upgradeAttribute, upgradeSkill, settleNode,
+  resolveGeneticUnlock,
 } from './core.mjs';
 
 const attrs = { 力量: 4, 敏捷: 3, 智力: 2, 感知: 3, 意志: 3, 风度: 2 };
 const person = overrides => createCharacter({ attributes: attrs, size: 5, ...overrides });
+
+test('RE-based six-attribute HP uses twice Strength and nonlinear size adjustment', () => {
+  const withStrength = (strength, size, hpBonus = 0) =>
+    person({ attributes: { ...attrs, 力量: strength }, size, hpBonus }).derived.hpMax;
+  assert.equal(withStrength(10, 5), 22);
+  assert.equal(withStrength(9, 8, 10), 32);
+  assert.equal(withStrength(15, 26, 30), 68);
+  assert.equal(withStrength(31, 7), 65);
+  assert.equal(withStrength(0, 4), 1);
+});
 
 test('D10 explosions, luck die, and no invented success on luck 8', () => {
   assert.deepEqual(rollPool(2, [10, 8, 10, 7]).dice, [10, 8, 10, 7]);
@@ -15,6 +26,64 @@ test('D10 explosions, luck die, and no invented success on luck 8', () => {
   assert.equal(rollPool(0, [8]).rolledSuccesses, 0);
   assert.equal(rollPool(-2, [10, 8]).rolledSuccesses, 2);
   assert.equal(rollPool(0, [1]).luckMishap, true);
+});
+
+test('finalized nonpositive DP uses PHB fortune without generic willpower or automatic harm', () => {
+  const c = person({ will: { current: 3, max: 5 } });
+  const zero = check(c, { poolBase: 0, modifier: 0, dice: [10, 8], dc: 2 });
+  assert.equal(zero.luck, true);
+  assert.equal(zero.success, true);
+  assert.equal(check(c, { poolBase: 0, modifier: -2, dice: [1], dc: 1 }).luckMishap, true);
+  assert.equal(check(c, { poolBase: 0, modifier: 1, dice: [8], dc: 1 }).luck, false);
+  assert.deepEqual(c.will, { current: 3, max: 5 });
+  assert.throws(() => check(c, { poolBase: 0, dice: [10], willpower: 1 }), /willpower/i);
+  assert.equal(check(c, { eligible: false, poolBase: 0, dice: [10] }).eligible, false);
+});
+
+test('genetic first-stage uses trusted history and per-attempt roleplay result modifier', () => {
+  const c = person({ geneticLock: { successfulUnlocks: { 1: 1 }, highestStage: 1, activeStage: 0 } });
+  const base = { stage: 1, opportunity: { id: 'crisis-1', source: 'scene', kind: 'qualifying_crisis' } };
+  assert.equal(resolveGeneticUnlock(c, { ...base, dice: [9] }).result.success, true);
+  assert.equal(resolveGeneticUnlock(c, { ...base, dice: [8] }).result.success, false);
+  const rewarded = resolveGeneticUnlock(c, { ...base, dice: [8],
+    roleplayModifier: { value: 1, source: 'GM', reason: 'Contextual sacrifice' } });
+  assert.equal(rewarded.result.success, true);
+  assert.equal(rewarded.result.total, 10);
+  assert.equal(rewarded.state.geneticLock.successfulUnlocks[1], 2);
+  assert.equal(c.geneticLock.successfulUnlocks[1], 1);
+  assert.equal(rewarded.state.geneticLock.activeStage, 1);
+  const sourced = resolveGeneticUnlock(c, { ...base, dice: [8], specialModifiers: [
+    { value: 1, source: 'adopted-rule', reason: 'Specific qualifying condition' }] });
+  assert.equal(sourced.result.success, true);
+  assert.equal(sourced.result.roleplayModifier, null);
+  assert.throws(() => resolveGeneticUnlock(c, { ...base, dice: [8],
+    roleplayModifier: { value: 1, source: 'GM' } }), /reason/);
+  assert.equal(resolveGeneticUnlock(person({ geneticLock: { successfulUnlocks: { 1: 0 }, highestStage: 0, activeStage: 0 } }),
+    { ...base, dice: [10] }).result.pendingNarrative.type, 'extraordinary_performance');
+  assert.equal(resolveGeneticUnlock(person({ geneticLock: { successfulUnlocks: { 1: 0 }, highestStage: 0, activeStage: 0 } }),
+    { ...base, dice: [9] }).result.success, false);
+});
+
+test('genetic unlock rejects unknown history and ineligible opportunity without drawing', () => {
+  const c = person();
+  assert.equal(resolveGeneticUnlock(c, { stage: 1, dice: [10],
+    opportunity: { id: 'x', source: 'scene', kind: 'qualifying_crisis' } }).status, 'needs_input');
+  const known = person({ geneticLock: { successfulUnlocks: { 1: 0 }, highestStage: 0, activeStage: 0 } });
+  assert.equal(resolveGeneticUnlock(known, { stage: 1, dice: [10],
+    opportunity: { id: 'x', source: 'scene', kind: 'generic_combat' } }).status, 'needs_input');
+  assert.equal(resolveGeneticUnlock(known, { stage: 1, mode: 'voluntary', dice: [10] }).status, 'needs_input');
+  assert.equal(resolveGeneticUnlock(known, { stage: 1, mode: 'unspecified', dice: [10] }).status, 'deferred');
+});
+
+test('second-stage sums 2D10 and commits only the PHB defined modifiers', () => {
+  const c = person({ geneticLock: { successfulUnlocks: { 1: 1, 2: 0 }, highestStage: 1,
+    activeStage: 1, active:{1:{rounds:0,limit:3,pain:0,damage:0}},freelyUnlockStage1: true } });
+  const input = { stage: 2,attribute:'敏捷', opportunity: { id: 'crisis-2', source: 'scene', kind: 'qualifying_crisis' } };
+  assert.equal(resolveGeneticUnlock(c, { ...input, dice: [9, 9] }).result.success, true);
+  assert.equal(resolveGeneticUnlock(c, { ...input, dice: [8, 9] }).result.success, false);
+  assert.equal(resolveGeneticUnlock(c, { ...input, dice: [8, 10] }).result.total, 20);
+  assert.equal(resolveGeneticUnlock(c, { ...input, dice: [9, 9] }).result.commitSupported, true);
+  assert.equal(resolveGeneticUnlock(c, { ...input, dice: [9, 9] }).state.geneticLock.successfulUnlocks[2],1);
 });
 
 test('main and one matching sub contribute to pool and autos even with zero rolled successes', () => {
@@ -193,7 +262,7 @@ test('common status resistance and severity use six attributes', () => {
 test('temporary attribute damage affects checks without rewriting card HP', () => {
   const c = person({ attributes: { ...attrs, 力量: 6 }, attributeDamage: { 力量: 1 } });
   assert.equal(effectiveAttribute(c, '力量'), 5);
-  assert.equal(c.derived.hpMax, 13);
+  assert.equal(c.derived.hpMax, 14);
   const result = check(c, { attribute: '力量', dice: [1, 1, 1, 1, 1] });
   assert.equal(result.dp, 5);
   assert.equal(result.autoSuccesses, 0);
@@ -206,7 +275,7 @@ test('attribute/skill XP milestones, main cap, card overrides, node settlement',
   const oldHP = c.derived.hpMax;
   let result = upgradeAttribute(c, '力量'); c = result.state;
   assert.deepEqual([result.result.cost, result.result.autoGained, result.result.greatPowerChoiceGained], [12, 1, 1]);
-  assert.equal(c.derived.hpMax, oldHP + 3);
+  assert.equal(c.derived.hpMax, oldHP + 2);
   result = upgradeSkill(c, '白刃'); c = result.state;
   assert.deepEqual([result.result.cost, result.result.autoGained], [9, 1]);
   assert.equal(upgradeSkill(c, '白刃').result.allowed, false);

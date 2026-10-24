@@ -1,0 +1,115 @@
+{
+  "spec": "chara_card_v2",
+  "spec_version": "2.0",
+  "data": {
+    "name": "901 四人战斗接口验收",
+    "description": "四人完整卡隔离演练，非帝都T0、非实际剧情，不计观澜法。御临风由玩家选择，其余人物由模型行动。测试专用补参：苍穹弓力量要求3、狮子王体积4、普通箭20；这些值不写入正式人物卡。初始化后继续，到玩家行动或受击反应会等待选择。",
+    "personality": "谨慎、公正，尊重玩家行动选择。",
+    "scenario": "四人完整卡隔离演练，非帝都T0、非实际剧情，不计观澜法。御临风由玩家选择，其余人物由模型行动。测试专用补参：苍穹弓力量要求3、狮子王体积4、普通箭20；这些值不写入正式人物卡。初始化后继续，到玩家行动或受击反应会等待选择。",
+    "first_mes": "四人完整卡隔离演练，非帝都T0、非实际剧情，不计观澜法。御临风由玩家选择，其余人物由模型行动。测试专用补参：苍穹弓力量要求3、狮子王体积4、普通箭20；这些值不写入正式人物卡。初始化后继续，到玩家行动或受击反应会等待选择。",
+    "mes_example": "",
+    "creator_notes": "四人完整卡隔离演练，非帝都T0、非实际剧情，不计观澜法。御临风由玩家选择，其余人物由模型行动。测试专用补参：苍穹弓力量要求3、狮子王体积4、普通箭20；这些值不写入正式人物卡。初始化后继续，到玩家行动或受击反应会等待选择。",
+    "system_prompt": "本卡只用于隔离演练。使用角色脚本运行，战斗状态由程序写入。",
+    "post_history_instructions": "",
+    "alternate_greetings": [],
+    "tags": [
+      "901",
+      "combat",
+      "non-canon"
+    ],
+    "creator": "901-Rules",
+    "character_version": "combat-2",
+    "extensions": {
+      "world": "",
+      "talkativeness": 0.5,
+      "depth_prompt": {
+        "prompt": "",
+        "depth": 4,
+        "role": "system"
+      },
+      "tavern_helper": {
+        "scripts": [
+          {
+            "type": "script",
+            "enabled": true,
+            "name": "901 MVU（测试卡）",
+            "id": "2def5697-d20c-45f8-b276-05fa5ce3297d",
+            "content": "import 'https://gcore.jsdelivr.net/gh/MagicalAstrogy/MagVarUpdate@master/artifact/bundle.js'",
+            "info": "隔离测试；不用于正式 901 聊天",
+            "button": {
+              "enabled": false,
+              "buttons": []
+            },
+            "data": {},
+            "export_with": {
+              "data": true,
+              "button": true
+            }
+          },
+          {
+            "type": "script",
+            "enabled": true,
+            "name": "901 四人战斗接口验收",
+            "id": "bf44cda5-34c4-41ba-99fc-787104f5a7fa",
+            "content": "await waitGlobalInitialized('Mvu');\nconst {createEncounter}=await import('/901-combat-runtime/work/rules_engine/combat/catalog.mjs');\nconst {createTavernCombat}=await import('/901-combat-runtime/work/rules_engine/combat/tavern.mjs');\nconst {installCombatHost}=await import('/901-combat-runtime/work/rules_engine/combat/host-ui.mjs');\nconst expectedChatId=SillyTavern.chatId||SillyTavern.getCurrentChatId?.();\n// These values are explicitly test fixtures, not missing historical facts.\nconst encounter=()=>createEncounter({id:'four-person-exercise',scenario:'四人完整卡隔离演练；测试补参R3、刀体积4、普通箭20，不写入正式人物卡',\n  participants:['huang','jiang','yulin','bright'],positions:{huang:[0,0],jiang:[1,0],yulin:[2,0],bright:[30,0]},\n  parameters:{bright:{bowStrength:3,ammunition:20},huang:{weaponSize:4}}});\nconst controller=createTavernCombat({mvu:Mvu,tavern:SillyTavern,generateRaw,createChatMessages,expectedChatId,battleFactory:encounter,\n  onProgress:value=>console.log('[901-COMBAT]',JSON.stringify({status:value.status,revision:value.revision}))});\nconst host=installCombatHost({controller,encounters:{'four-person-exercise':encounter},document:window.top.document,tavern:SillyTavern,\n  onError:error=>window.parent.toastr.error(error.message)});\nconst run=fn=>Promise.resolve().then(fn).catch(error=>window.parent.toastr.error(error.message));\neventOn(getButtonEvent('初始化四人演练'),()=>run(async()=>{await controller.initialize();window.parent.toastr.info('四人演练已初始化');}));\neventOn(getButtonEvent('继续战斗／玩家选择'),()=>run(()=>host.handleTurn()));\neventOn(getButtonEvent('查看当前面板'),()=>run(async()=>{\n  const state=await host.read();console.log('[901-COMBAT-PANEL]',JSON.stringify(state));\n  window.parent.toastr.info(`当前${state.mode}；修订${state.revision??'见存档'}`);\n}));\neventOn(getButtonEvent('主持补参'),()=>host.showParameters());\neventOn(getButtonEvent('补发已结算报告'),()=>run(()=>controller.resumeReport()));\neventOn(getButtonEvent('停止演练'),()=>controller.stop());\nwindow.addEventListener('pagehide',()=>host.dispose());\n",
+            "info": "隔离测试；不用于正式 901 聊天",
+            "button": {
+              "enabled": true,
+              "buttons": [
+                {
+                  "name": "初始化四人演练",
+                  "visible": true
+                },
+                {
+                  "name": "继续战斗／玩家选择",
+                  "visible": true
+                },
+                {
+                  "name": "查看当前面板",
+                  "visible": true
+                },
+                {
+                  "name": "主持补参",
+                  "visible": true
+                },
+                {
+                  "name": "补发已结算报告",
+                  "visible": true
+                },
+                {
+                  "name": "停止演练",
+                  "visible": true
+                }
+              ]
+            },
+            "data": {},
+            "export_with": {
+              "data": true,
+              "button": true
+            }
+          }
+        ],
+        "variables": {}
+      },
+      "regex_scripts": [
+        {
+          "id": "310b481e-252d-4725-8081-f0519c9b192c",
+          "scriptName": "901｜历史计算明细不送入模型",
+          "findRegex": "/^[\\t ]*<rules901_detail>[\\t ]*\\r?\\n[\\s\\S]*?^[\\t ]*<\\/rules901_detail>[\\t ]*(?:\\r?\\n|$)/gm",
+          "replaceString": "",
+          "trimStrings": [],
+          "placement": [
+            2
+          ],
+          "disabled": false,
+          "markdownOnly": false,
+          "promptOnly": true,
+          "runOnEdit": true,
+          "substituteRegex": 0,
+          "minDepth": 2,
+          "maxDepth": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "chatId": "901 狂岚友伤实测 - 2026-10-22",
+  "messages": 3,
+  "revision": 0,
+  "active": "player",
+  "round": 1,
+  "pending": null,
+  "actors": {
+    "huang": {
+      "health": {
+        "intact": 23,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {
+        "灵力": {
+          "current": 6,
+          "max": 6
+        }
+      },
+      "turn": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        4,
+        0
+      ]
+    },
+    "jiang": {
+      "health": {
+        "intact": 35,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {
+        "气": {
+          "current": 2,
+          "max": 2
+        },
+        "斗气": {
+          "current": 3,
+          "max": 3
+        },
+        "内力": {
+          "current": 28,
+          "max": 28
+        }
+      },
+      "turn": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        6,
+        0
+      ]
+    },
+    "player": {
+      "health": {
+        "intact": 21,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {
+        "风池": {
+          "current": 10,
+          "max": 10
+        },
+        "魔力": {
+          "current": 106,
+          "max": 106
+        },
+        "流风": {
+          "current": 22,
+          "max": 22
+        }
+      },
+      "turn": {
+        "phase": "active",
+        "standard": 1,
+        "move": 1,
+        "swift": 1,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        0,
+        0
+      ]
+    }
+  },
+  "operations": [],
+  "lastMessages": [
+    {
+      "user": true,
+      "text": "我向前移动到（1，0），使用1个移动动作，不结束回合。",
+      "metadata": {
+        "text": "我向前移动到（1，0），使用1个移动动作，不结束回合。",
+        "swipeId": 0,
+        "plan": {
+          "steps": [
+            {
+              "quote": "我向前移动到（1，0），使用1e个移动动作，不结束回合。",
+              "command": {
+                "abilityId": "move",
+                "to": [
+                  1,
+                  0
+                ]
+              },
+              "cost": {
+                "actions": {
+                  "move": 1
+                }
+              }
+            }
+          ]
+        },
+        "completed": {
+          "message": "没有找到对应的明确行动声明，请写明这次要执行的动作。",
+          "revision": 0
+        }
+      }
+    },
+    {
+      "user": false,
+      "text": "没有找到对应的明确行动声明，请写明这次要执行的动作。\n\n<StatusPlaceHolderImpl/>",
+      "metadata": {
+        "key": "901 狂岚友伤实测 - 2026-10-22/1/0",
+        "revision": 0
+      }
+    }
+  ]
+}

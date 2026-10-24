@@ -1,0 +1,20 @@
+```json
+{
+  "status": "CHECK_REQUIRED",
+  "reason": "玩家试图说服城卫放行，属于口头说服对抗。根据规则，使用风度＋社交，对抗城卫的意志＋社交。城卫意志为2，社交等级为1（无子技能），设定DC为城卫的意志点数加社交等级与当前阻挠强度的综合基准，此处对抗DC由城卫意志2加社交1等效折算为3成功数。",
+  "request": {
+    "kind": "rule",
+    "action": "opposed",
+    "active": {
+      "actorId": "player",
+      "attribute": "风度",
+      "skill": "社交"
+    },
+    "passive": {
+      "actorId": "guard",
+      "attribute": "意志",
+      "skill": "社交"
+    }
+  }
+}
+```

@@ -1,0 +1,141 @@
+{
+  "status": "pass",
+  "mode": "local JS + in-memory MVU with readback; no live Gemini or real character mutation",
+  "initialFixture": {
+    "strength": 4,
+    "xp": 30
+  },
+  "trace": [
+    {
+      "id": "closed",
+      "request": {
+        "kind": "rule",
+        "action": "growth",
+        "actorId": "player",
+        "attribute": "力量"
+      },
+      "declaration": "我把力量提升一级。",
+      "status": "needs_input",
+      "cost": 0,
+      "charged": 0,
+      "xpBefore": 30,
+      "xpAfter": 30,
+      "strengthBefore": 4,
+      "strengthAfter": 4,
+      "autoGained": 0,
+      "greatPowerChoiceGained": 0,
+      "reason": [
+        "当前尚未登记可强化节点／故事间隙"
+      ]
+    },
+    {
+      "id": "node",
+      "request": {
+        "kind": "rule",
+        "action": "node",
+        "actorId": "player",
+        "eventId": "break"
+      },
+      "declaration": "我把力量提升一级。",
+      "status": "applied",
+      "cost": 0,
+      "charged": 0,
+      "xpBefore": 30,
+      "xpAfter": 30,
+      "strengthBefore": 4,
+      "strengthAfter": 4,
+      "autoGained": 0,
+      "greatPowerChoiceGained": 0,
+      "reason": null
+    },
+    {
+      "id": "upgrade-one",
+      "request": {
+        "kind": "rule",
+        "action": "growth",
+        "actorId": "player",
+        "attribute": "力量"
+      },
+      "declaration": "我把力量提升一级。",
+      "status": "applied",
+      "cost": 6,
+      "charged": 6,
+      "xpBefore": 30,
+      "xpAfter": 24,
+      "strengthBefore": 4,
+      "strengthAfter": 5,
+      "autoGained": 0,
+      "greatPowerChoiceGained": 0,
+      "reason": null
+    },
+    {
+      "id": "upgrade-one",
+      "request": {
+        "kind": "rule",
+        "action": "growth",
+        "actorId": "player",
+        "attribute": "力量"
+      },
+      "declaration": "我把力量提升一级。",
+      "status": "already_applied",
+      "cost": 6,
+      "charged": 0,
+      "xpBefore": 24,
+      "xpAfter": 24,
+      "strengthBefore": 5,
+      "strengthAfter": 5,
+      "autoGained": 0,
+      "greatPowerChoiceGained": 0,
+      "reason": null
+    },
+    {
+      "id": "upgrade-two",
+      "request": {
+        "kind": "rule",
+        "action": "growth",
+        "actorId": "player",
+        "attribute": "力量"
+      },
+      "declaration": "我把力量提升一级。",
+      "status": "applied",
+      "cost": 12,
+      "charged": 12,
+      "xpBefore": 24,
+      "xpAfter": 12,
+      "strengthBefore": 5,
+      "strengthAfter": 6,
+      "autoGained": 1,
+      "greatPowerChoiceGained": 1,
+      "reason": null
+    },
+    {
+      "id": "insufficient",
+      "request": {
+        "kind": "rule",
+        "action": "growth",
+        "actorId": "player",
+        "attribute": "力量"
+      },
+      "declaration": "我把力量提升一级。",
+      "status": "needs_input",
+      "cost": 0,
+      "charged": 0,
+      "xpBefore": 5,
+      "xpAfter": 5,
+      "strengthBefore": 6,
+      "strengthAfter": 6,
+      "autoGained": 0,
+      "greatPowerChoiceGained": 0,
+      "reason": [
+        "Insufficient XP"
+      ]
+    }
+  ],
+  "after": {
+    "xp": 5,
+    "strength": 6,
+    "attributeAuto": 1,
+    "greatPowersAvailable": 1
+  },
+  "note": "余额不足用例单独把测试余额设为5；不是前两次强化额外扣除7XP。"
+}

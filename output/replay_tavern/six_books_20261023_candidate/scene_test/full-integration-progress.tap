@@ -1,0 +1,437 @@
+✔ JSON definitions produce core-compatible independent ordinary attack states (5.3167ms)
+✔ main skill is used without a matching subskill and defaults are derived (1.0233ms)
+✔ validation reports missing values and rejects main skill above five (0.3197ms)
+✔ final card override does not get resource bonus again; base override does (0.5789ms)
+✔ unsupported abilities stay visible and explicit wounds and pool balances persist (0.7538ms)
+✔ unknown derived skill and subskill scope are reported instead of assumed zero (0.1942ms)
+✔ core growth keeps a numeric resource bonus without freezing the base formula (0.5265ms)
+✔ explicit card automatic successes retain provenance without threshold double count (0.3619ms)
+✔ unadapted pool and nonnumeric special effect stay visible without inventing balances (0.2944ms)
+✔ core skill growth refreshes builder reflex and fortitude (0.4362ms)
+✔ malformed starting slots and action usage cannot enter core state (0.2098ms)
+✔ a seventh legacy attribute is rejected rather than silently carried into state (0.122ms)
+✔ GM card values survive construction and unsupported powers stay descriptive (6.3393ms)
+✔ ordinary survival check uses sourced skill and state fits MVU actor shape (2.4964ms)
+✔ approved replay strength uses one card and final overrides without additive duplication (4.1356ms)
+✔ ordinary insight check executes without unknown energy balances (2.8176ms)
+✔ approved replay card can exercise two narrow check resources in isolation (5.1351ms)
+✔ separate replay records authorize only the two confirmed +6DP resources (2.6223ms)
+✔ replay opening projects confirmed resources and recalculates base derived values (3.453ms)
+✔ T0 migration preserves confirmed growth but refuses unknown runtime values (1.9318ms)
+✔ confirmed AP prices translate 2/4/6/8 without executing a resource (2.8381ms)
+✔ catalog lookup keeps stable provenance separate from adoption and returns a copy (0.3555ms)
+✔ production cannot turn a per-call assertion or demo state into authorization (4.2034ms)
+✔ production requires separate adoption provenance and a character grant (2.6479ms)
+✔ isolated grant feeds Builder bonus once and stores only a resource reference (0.8484ms)
+✔ old skill prerequisite uses only an explicitly mapped matching subskill (0.5953ms)
+✔ weapon input uses trusted catalog numbers and current inventory state (2.1642ms)
+✔ ordinary throw works without a dart subskill; unrelated subskill is ignored (0.6607ms)
+✔ thrust reads catalog bonus and checks the same equipped weapon passed to core (1.3133ms)
+✔ unsupported RE item records unverified prior rank and never invents two attacks (1.3159ms)
+✔ arena profiles preserve T0 player and the two candidate panels without Bright aim features (11.6145ms)
+✔ shield push waits for player declaration before real dice or energy and moves only the target (9.4075ms)
+✔ shield push cannot pass through a wall or outside a bounded map (1.7214ms)
+✔ one-use qi defense costs once, adds only three and is consumed by the next physical defense (6.596ms)
+✔ Mireya reload and full-round calibration produce one +3 shot with unchanged cap and no Bright extras (28.8932ms)
+✔ Mireya calibration is lost on movement and a melee hit; club draw and block cost separate actions (9.7454ms)
+✔ healthy Mireya opening keeps safe reload and attack preparation instead of conceding the match (47.2181ms)
+✔ NPC concession candidates require actual severe wounds or an exhausted bow without a melee fallback (36.0761ms)
+✔ arena voluntary concession and announced test referee stop preserve damage/resources and award no XP (45.3096ms)
+✔ arena MVU dedup, public shove result and reentry preserve actual injuries, ammo and held weapon (33.2611ms)
+✔ model can only choose current legal actions; already drawn weapon is excluded (98.0205ms)
+✔ confirmed panels, only combatants loaded, effects do not leak from history (3.4526ms)
+✔ draw, free block, lightning, then automatic defense/action/energy changes (5.794ms)
+✔ RE penetration consumes only matching defense and does not duplicate reductions (1.635ms)
+✔ combo belongs to target, qi is not inner power, rejected command leaves input unchanged (4.1889ms)
+✔ once per scene damage conversion is explicit and converts entire mixed hit (2.1479ms)
+✔ summon has independent turn and persists health and once-per-scene uses across recall (4.269ms)
+✔ movement triggers one legal opportunity, five-foot step avoids it (3.667ms)
+✔ restraint payment affects subsequent panels and immobilizes beyond will (3.3107ms)
+✔ 龙象 ignores four points of conversion, not four free bonus damage (3.4237ms)
+✔ life squeezing records increasing recovery restrictions and rapid healing respects them (2.1671ms)
+✔ complete duel uses one resolver for companion and enemy, then stops (325.2554ms)
+✔ MVU settles and writes once, preserves unrelated state, readback supplies next prompt (14.4336ms)
+✔ Tavern controller posts and carries results; refreshing and report replay never settle again (25.315ms)
+✔ gale attacks each legal enemy once, excludes allies and shares geometry across previews and reaction queue (148.7216ms)
+✔ resolved response reports the actual effective guard and normal player defense omits it (3.9413ms)
+✔ attack, defense and movement derive from current attributes, skills and equipment (1.9892ms)
+✔ confirmed bow requirement four and sword sizes three remain distinct from lotus size twelve (7.3694ms)
+✔ four-person baselines and distinct weapon costs remain faithful to adopted cards (81.2767ms)
+✔ special preview uses post-payment attack and reports missing parameters separately (105.0566ms)
+✔ private enemy data and unrelated abilities are absent from model input (64.1177ms)
+✔ reaction survives MVU refresh, rolls only after choice, and replays without spending twice (21.9691ms)
+✖ four-person encounter completes with player choices, action costs and reaction windows (474.5299ms)
+✖ host waits for player, settles a whole encounter, returns to story and carries wounds into next encounter (1204.9724ms)
+✔ haste changes order without extra turns; aiming matures next round and is lost on movement (3.8053ms)
+✔ invalid model selection retries without rolling; transport failures remain visible (48.0847ms)
+✔ host tool is unavailable inside its own NPC decision request (0.3454ms)
+✔ legendary dodge reduces high speed on reflex saves as well as defenses (4.9615ms)
+✔ bright switches to the adopted blade, spends stowing/drawing actions and consumes no arrow (18.7163ms)
+✔ wind sense requires air connection, while Huang can see and strike a spirit (3.2475ms)
+✔ bright ignores difficult movement cost without crossing solid walls (9.4713ms)
+✔ opportunity threat uses four orthogonal directions and at most one grid (3.1625ms)
+✔ failed B-only pre-action check commits coma without attacking or spending energy (5.5769ms)
+✔ combat first aid stops A deterioration while spending a full round (3.5723ms)
+✔ all four adopted NPCs expose the actual period stats and skill cards (4.1182ms)
+✔ hypnosis spends its registered mana and survives the caster leaving and ordinary sleep (3.9398ms)
+✔ gremlin double attack spends all three action slots and earth travel uses the registered path (9.9536ms)
+✔ summon avoids the blocked default point and records a new visible actor without moving the owner (18.4584ms)
+✔ explicit summon points respect obstacles, adjacency and closed scene boundaries (3.7644ms)
+✔ summon with no adjacent space is unavailable and leaves MVU, actions and energy unchanged (30.0925ms)
+✔ roar geometry excludes targets behind solid terrain from damage, previews and reaction queues (27.2041ms)
+✔ roar respects polygon walls and closed doors, while open doors and sight-only forest pass its effect (7.379ms)
+✔ summon and terrain-blocked roar persist through MVU readback and duplicate dispatch only once (17.0059ms)
+✔ directional cover changes declared defense without blocking sight or allowing movement through it (7.4323ms)
+✔ elevation rejects cliff shortcuts, routes via a ramp and permits firing over a lower obstacle (22.4307ms)
+✔ declared doors and object attacks write actions and geometry together, replay only once, and redact durability (23.2444ms)
+✔ locked doors, occupied closure and unparameterized destruction leave the original state intact (3.5338ms)
+✔ same geometry rejects wall crossing and attacks, accepts explicit detour, and charges difficult ground (38.3997ms)
+✔ map projection and SVG have no hidden actors, hidden landmarks or character statistics; clicks only produce drafts (3.9833ms)
+✔ map generation uses scene and positions once, not private panels (2.2333ms)
+✔ close melee has no purposeless retreat, remembers preparation and pressure, while injured withdrawal remains possible (57.6432ms)
+✔ bow user with an open shot does not approach melee, but can leave close interference (26.1697ms)
+✔ narration locates each visible actor on its actual terrain and elevation (3.0694ms)
+✔ MVU map initialization and a confirmed door change persist once without changing actor state (11.0891ms)
+✔ moving behind an opaque obstacle preserves the observed departure but conceals the final position (4.4225ms)
+✔ approach retains the attack action and excludes a worse partial sidestep or premature block (37.0727ms)
+✔ preparation-only prose explicitly carries no attack or contact (1.9308ms)
+✔ irregular terrain shares collision, path cost and visibility with the grid renderer (3.5597ms)
+✔ a lost target leaves only a last visible position to investigate, not hidden actions or its new location (15.3609ms)
+✔ opaque forest prevents targeting and direct magic cannot pass through a visible low wall (1.9671ms)
+✔ opening profiles use complete period-specific rules, mother skill autos and no late equipment (17.5253ms)
+✔ opening declared block includes mother skill auto; no free Huang block or late sword defense (38.873ms)
+✔ opening attacks use flow, posture, draw, electricity and bare-body conditions exactly once (7.6528ms)
+✔ adopted enemies keep fixed HP and stone attack is B within its real territory (8.9811ms)
+✔ opening D magic-killer finisher uses one layer, adds no automatic successes and clears rather than restacks (4.3704ms)
+✔ formal withdrawal writes through existing MVU, keeps injuries/resources and does not complete task or award XP (28.6919ms)
+✔ withdrawal/reentry carries duration, same-scene once-use and cooldown; new-scene once-use remains fresh (31.3103ms)
+✔ target-specific panel matches resolution including initiative, combo and penetration (20.5298ms)
+✔ compact panel distinguishes readiness and includes only live modifiers (17.041ms)
+✔ legal movement uses reduced current speed, not the static base speed (40.8102ms)
+✔ model gets one coherent snapshot and compact commands still map to trusted actions (30.7309ms)
+✔ summon joins the projection, recalled actors disappear, and only active matchups are expanded (6.1796ms)
+✔ default physical size is consistently five for speed and health (2.3443ms)
+✔ ordinary checks apply wound and relevant status penalties once (1.8565ms)
+✔ abstract multiplier aggregation is distinct from real multiplication (0.4737ms)
+✔ eight AP mapping spends standard and swift atomically (2.208ms)
+✔ adopted feat advancement prices next level and checks translated prerequisites (1.4017ms)
+✔ RE-based six-attribute HP uses twice Strength and nonlinear size adjustment (2.9391ms)
+✔ D10 explosions, luck die, and no invented success on luck 8 (1.641ms)
+✔ finalized nonpositive DP uses PHB fortune without generic willpower or automatic harm (1.9533ms)
+✔ genetic first-stage uses trusted history and per-attempt roleplay result modifier (1.8063ms)
+✔ genetic unlock rejects unknown history and ineligible opportunity without drawing (5.0488ms)
+✔ second-stage pure math sums 2D10 and only the PHB defined modifiers (4.0125ms)
+✔ main and one matching sub contribute to pool and autos even with zero rolled successes (2.851ms)
+✔ ordinary active opposition succeeds at equal successes (0.8236ms)
+✔ PHB action counts, one-way conversions, reflex lock and response debt (2.7055ms)
+✔ multi-round action uses one full round on each turn and tracks completion (1.062ms)
+✔ PHB B/L/A pointwise upgrades differ for B and L (1.2937ms)
+✔ no intact B needs explicit DC; A deterioration needs explicit B/L choice and all A kills (2.2792ms)
+✔ first aid stops A deterioration without healing a slot (0.8943ms)
+✔ ordinary melee attack traces A/B/C and PHB L wound on a healthy target (1.767ms)
+✔ same-category DR takes maximum except explicitly additive source (0.4952ms)
+✔ energy resistance applies by type, then temporary HP absorbs at C stage (0.4632ms)
+✔ short and long rest, node and chapter recover separately (0.6793ms)
+✔ will and already-defined special pools change only by explicit costs (0.6505ms)
+✔ common status resistance and severity use six attributes (1.3046ms)
+✔ temporary attribute damage affects checks without rewriting card HP (0.5108ms)
+✔ attribute/skill XP milestones, main cap, card overrides, node settlement (1.7266ms)
+✔ recovery sequence schema and authorization preserve the complete declaration order (6.3536ms)
+✔ sequence narration uses final pending and preserves actual order and residual injury (0.953ms)
+✔ recovery selectors require explicit player execution and preserve saved retry decision (5.1615ms)
+✔ pending C narration facts describe consumption without immediate healing and keep numbers in the MVU view (0.6708ms)
+✔ recovery narration retains remaining severe wounds and a partially filled energy pool without numeric prose facts (0.5944ms)
+✔ ordinary classifier receives legal attributes, success-count DC and GM difficulty responsibility (0.8509ms)
+✔ recorded social-as-attribute error is typed and never reaches settlement (0.4586ms)
+✔ null request on an unsettled decision is empty but real requests remain rejected (0.7015ms)
+✔ 901 generation excludes foreign global and depth entries without changing worldbook settings (0.8904ms)
+✔ saved NO_CHECK narration resumes after refresh without reclassification or settlement (1.2071ms)
+✔ recorded continuation failure permits NO_CHECK recovery but an unresolved action does not (1.21ms)
+✔ explicit cancellation of the unexecuted medicine declaration continues the actual current turn only (1.9149ms)
+✔ player-facing result metadata omits check numbers and secret roll existence (0.2999ms)
+✔ routine conversation enters prose only after structured NO_CHECK (0.509ms)
+✔ controlled model response crosses dispatch, parse, gate and continuation once (1.4623ms)
+✔ malformed model response is isolated at response_parse before narration (0.6122ms)
+✔ a fenced JSON decision follows the ordinary gate without another request (0.4912ms)
+✔ DIRECT_EFFECT requires a saved JS result before narration (0.5372ms)
+✔ player display exposes only public pool construction and compact GM facts omit logs (0.3963ms)
+✔ saved operation resumes its original adjudication without another model classification (0.2534ms)
+✔ committed player operation recovers classification after a lost failure notice (0.4268ms)
+✔ different risky phrasings both require a result before prose (0.6252ms)
+✔ pending action keeps original operation ID across a later input message (0.5039ms)
+✔ UNRESOLVED and invalid classification cannot narrate success (0.5642ms)
+✔ negating an attack does not block ordinary observation or erase a separate declared attack (0.5384ms)
+✔ NO_CHECK cannot clear the reported traffic and climbing risks (0.4455ms)
+✔ gate readiness names missing runtime dependencies and player anchor (0.4451ms)
+✔ failed narration can retry saved operation without changing operation ID (0.7087ms)
+✔ classifier request includes only explicit action, current scene and relevant state (0.7218ms)
+✔ classifier request does not offer an invented default DC for an uncertain compound action (0.5273ms)
+✔ current action selects a named NPC worldbook entry without unrelated entries (0.5245ms)
+✔ classification deadline stops only its generation and ignores a late result (23.7662ms)
+✔ registered encounter decisions hand off before ordinary checks and narration (0.6523ms)
+✔ saved return to story closes an earlier interrupted combat handoff (0.2973ms)
+✔ two isolated arena fixtures keep T0 baseline and only the actual opponent (17.2292ms)
+✔ new arena story prepares without a battle and exposes only one natural encounter (8.7786ms)
+✔ NPC uses trusted values and sourced modifiers; narration recovery preserves private records (75.2123ms)
+✔ NPC applicable subskill uses trusted state; unrelated or missing data never rolls (10.267ms)
+✔ NPC/player opposition math exists; paired runtime commit is deferred without taking player decisions (5.1088ms)
+✔ unresolved NPC request does not publish private request or adjudication reason in chat metadata (3.0034ms)
+✔ GM request parser rejects numeric authority and accepts explicit no-rule decision (0.9391ms)
+✔ authorized demo actors, GM check and ordinary attack use one MVU state and deduplicate (11.1722ms)
+✔ wrong voluntary action and missing test authorization cannot enter MVU (2.9513ms)
+✔ switching chats replaces the captured session before initialization or writeback (1.828ms)
+✔ integration uses one player state for ordinary checks and combat, with no T0 rewrite (110.75ms)
+✔ NPC fight returns to story once; resume keeps results and next chat inherits injuries (183.7064ms)
+✔ player-selected energy attack settles, writes back and reaches story without resetting costs (186.0885ms)
+✔ production narrator request prioritizes executed events over background and preserves the prose-only boundary (4.0092ms)
+✔ declared combat medicine spends its action once and refresh preserves inventory and health (209.2254ms)
+✔ postcombat story medicine and next rest use current MVU without replaying battle prose (153.0606ms)
+✔ story rest expires persisted player battle buffs in own status and leaves NPCs unchanged (32.7564ms)
+✔ declared door then obstacle attack preserves remaining actions, narrates the map result and survives refresh (89.0864ms)
+✔ natural attack settles only the declared action, keeps remaining player actions, and hides NPC figures (55.147ms)
+✔ stationary tornado injury projects the unchanged target position as an observable result (58.1526ms)
+✔ declared cost mismatch and invented end are rejected before rolling or spending (39.8801ms)
+✔ failed narration resumes saved action without rerolling, including a new session/refresh (53.1132ms)
+✔ retrying committed guard narrates its execution without repeating prior damage or inventing another action (83.4801ms)
+✔ explicit end advances to an actual player reaction; continuation preserves the same turn and resource costs (72.0607ms)
+✔ own consequence receipt lists only actual player damage and effective condition changes once (0.7485ms)
+✔ every incoming player attack waits for a declared defense even after conversion is exhausted (0.9594ms)
+✔ player defense has no total until a defense mode is declared; ready block is not silently added to normal defense (0.4808ms)
+✔ an explicitly declared guard supplies defense for its existing duration without asking again on every attack (1.7362ms)
+✔ an enemy leaving reach cannot trigger an undeclared player opportunity attack (2.8725ms)
+✔ compound movement and attack use player-declared coordinates, not an extra implicit turn (69.0488ms)
+✔ NPC duel writes back all private results but posts one public scene and allows story afterwards (49.8975ms)
+✔ view-own-status opens only the UI before interpreting, narrating, rolling or adding an assistant floor (21.6519ms)
+✔ player UI reads latest selected MVU snapshot across new floors and refresh without writing or trusting prose (21.8087ms)
+✔ declared guard updates the player UI without ending the turn and survives refresh (46.3724ms)
+✔ legacy own-status caches are stripped on replay without losing the saved narrative (19.6571ms)
+✖ existing chat builds its map once, map viewing does not spend actions, and next declaration still executes (39.6391ms)
+✔ actual player text grants only explicit single actions (3.0231ms)
+✔ native GM tool settles a declared check and attack, rejects unsolicited attack (52.0118ms)
+✔ saved native operation is returned after tool-message retry without a new roll (52.5829ms)
+✔ native invocation accepts SillyTavern provisional GM floor after the player message (31.3184ms)
+✔ final GM message receives the saved JS operation even when MVU did not inherit it (18.8652ms)
+✖ a withdrawal paused for incoming opportunity defense stays at the original position in public facts (34.3552ms)
+✔ opening baseline passes the ordinary replay gate Builder contract (4.0592ms)
+✔ natural binding uses only adopted templates and same-instance current positions on re-entry (7.2801ms)
+✖ host scene registration persists in selected MVU, restores on refresh and feeds real narrative entry (7.6661ms)
+✔ player bar renders avatar and MVU values above input; explicit refresh updates guard and remaining actions (51.7537ms)
+✔ late state read cannot reveal the previous chat after switching chats (62.4859ms)
+✔ status request opens the bar when an initial read is still pending; unrelated cards stay hidden (11.7535ms)
+✔ ordered recovery commits one operation and replays the complete saved medicine/rest/meditation sequence (35.3655ms)
+✔ a later missing choice or illegal rest leaves the entire MVU sequence untouched (10.7123ms)
+✔ option-only clarification completes the original medicine/rest sequence once (9.2318ms)
+✔ source medicine settles atomically once and refresh reuses it before dice or debit (7.4033ms)
+✔ old T0 story snapshots get only approved recovery rules without resetting HP or stock (10.1446ms)
+✔ public breakdown identifies the selected attribute, main skill and applicable subskill (15.2618ms)
+✔ approved replay card settles an ordinary check once through MVU (7.7172ms)
+✔ unknown opening state cannot silently initialize or spend resources (1.726ms)
+✔ granted demo scene modifier applies automatically once on the matching check (9.7556ms)
+✔ ordinary check without choices rolls automatically and public basis omits hidden values (5.0183ms)
+✔ edited MVU effect value cannot become authoritative or appear in public pool (5.4789ms)
+✔ runtime defers genetic unlock with unknown history before drawing (3.0884ms)
+✔ scripted fortune crosses the existing gate and recovers private continuation without rerolling (9.1402ms)
+✔ gate rejects supplied fortune mechanics and runtime refuses untrusted or non-fortune opportunities (2.8505ms)
+✔ runtime scripted opportunity resolves once without leaking secret roll data (2.9509ms)
+✔ scripted opportunity requires explicit authorization and a satisfied current-branch trigger (7.459ms)
+✔ runtime does not draw for an unspecified event chance (1.5643ms)
+✔ runtime refuses secret genetic and non-fortune event rolls before drawing (1.836ms)
+✔ explicit sourced history lets a new isolated runtime commit first unlock once (5.86ms)
+✔ debug-disabled malformed recovery retains a precise failure without settling (72.3507ms)
+✔ debug-disabled invalid check attribute identifies model input failure without exposing DC (9.4ms)
+✔ debug-disabled upstream quota failure is distinguished from invalid model output (6.8251ms)
+✔ explicit additional lorebooks reach classification and ordinary narration (11.5504ms)
+✔ active combat handles the turn before ordinary classification or narration (3.8101ms)
+✔ host saved recovery survives failed narration and script reload without another debit (19.9272ms)
+✔ host executes the exact compound declaration once and resumes final sequence narration after reload (18.4143ms)
+✔ a completed pending medicine keeps its original operation across a later player floor and native regeneration (21.4688ms)
+✔ host classification passes a registered encounter to the player-bound combat entry (11.507ms)
+✔ integrated profile cannot grant the old demo scene bonus (6.4796ms)
+✔ ordinary narration resolves current model options locally for each request (7.9562ms)
+✔ controller persists failed NO_CHECK and recovers after reload with no new player input (9.5803ms)
+✔ host cancels only the unexecuted medicine pending and anchors the current dialogue (10.1231ms)
+✔ a cancellation declaration cannot undo a committed operation awaiting narration (13.4619ms)
+✔ regenerating a completed turn reuses its narration without model calls or another assistant message (8.6042ms)
+✔ regenerating a committed direct effect does not repeat classification, narration, or MVU writes (7.8606ms)
+✔ lost direct-effect failure notice resumes saved operation without reclassification (10.1824ms)
+✔ a completed-looking assistant cannot bypass a missing JS operation (2.484ms)
+✔ completed assistant with missing MVU projection restores state without model requests (6.043ms)
+✔ ordinary opposed check uses actual two actors and active side wins ties (13.1571ms)
+✔ will save uses will and presence rather than a fabricated survival skill (0.8804ms)
+✔ extended check persists cumulative successes and prevents a completed task reroll (3.2475ms)
+✔ attribute growth spends the existing XP and does not fill health or resources (1.2256ms)
+✔ rule transaction saves both participants once and replay does not redraw (3.0576ms)
+✔ requests cannot supply arbitrary states, rolls or awards through growth (0.3644ms)
+✔ classifier always receives core rules and current subskills, independent of lore keywords (1.1161ms)
+✔ rule request enters the same guarded transaction and can recover a committed decision (2.4296ms)
+✔ constant and explicitly named scene entries reach classification without enabling disabled lore (0.8111ms)
+✔ opening runtime actually settles will saves and reuses them after reload (16.1977ms)
+✔ opening ordinary orientation uses the adopted +6 and keeps it through replay (8.6615ms)
+✔ two GM generations use compact JS facts and narration cannot alter MVU results (42.4504ms)
+✔ narration can resume after model rate limit without a second settlement (28.4765ms)
+✖ isolated capital card preserves the adopted 005 worldbook and opening without demo actors (19.5571ms)
+✔ T0 world gate binds a rule request to the player floor and refuses demo numbers (1.4551ms)
+✔ ordinary dialogue narrates without rolling or asking for rule state (2.8204ms)
+✔ risky climb remains tied to player floor and never reaches prose model (2.1401ms)
+✔ no-rule declaration cannot bypass explicit dangerous traffic crossing (0.6253ms)
+✔ GM may not inject dice, damage or arbitrary no-rule basis (0.9123ms)
+✔ changed player swipe or message rejects posting (0.5133ms)
+✔ recovery commits inventory, effects and carry once; retry never reruns reducer (8.2212ms)
+✔ carry initialized state without an operation across empty host floors (2.4541ms)
+✔ initialization and attack use core output, preserve unrelated data, and deduplicate (5.2382ms)
+✔ reject missing state, version conflict, and failed save without reporting success (3.7659ms)
+✔ a copied next floor inherits state, while different swipe keeps its own copy in the mock (1.963ms)
+✔ a Builder state can be initialized and a check is saved once without changing the actor (5.2894ms)
+✔ committed genetic unlock increments trusted history once and recovery does not reroll (3.4323ms)
+✔ genetic unlock defaults public, rejects secret, and failure preserves history (1.7082ms)
+✔ scripted secret opportunities need explicit rules and cannot reroll across operation IDs (4.58ms)
+✔ non-demo environment and roleplay awards stay automatic even if marked player-activated (3.5834ms)
+✔ active marker alone cannot authorize a panel choice or settlement (1.4691ms)
+✔ test-only active sample waits for a decision and modifies DP before fortune selection (2.7093ms)
+✔ MVU ordinary check persists finalized fortune path and mishap without applying harm (3.0601ms)
+✔ ordered recovery folds medicine then rest and reverse order retains the delayed dose (7.1477ms)
+✔ unresolved later medicine choice rejects the whole sequence before drawing or mutating (1.1524ms)
+✔ medicine needs player declaration, known stock, and preserves input on rejection (0.9109ms)
+✔ B heals up to five L, debits one, and never heals A (1.2941ms)
+✔ snow lotus restores physical long-rest recoverable flow by three; oriental bonus needs metadata (1.133ms)
+✔ A and C remain pending until their declared rest and survive serialization (1.5853ms)
+✔ C targets declared physical status and excludes mental and freezing effects (2.8386ms)
+✔ rest validates completion, restores B by elapsed intervals and longrest flow/will only as sourced (1.1529ms)
+✔ declared rest advances finite buffs/cooldowns and only completed day thresholds heal L/A (3.9242ms)
+✔ combat medicine spends source action cost; unavailable action does not debit (1.7939ms)
+✔ 培元丹 heals A then L then B with one strength budget and multiple doses do not stack (0.9748ms)
+✔ initial story actors keep trusted flow metadata and meditation rolls confirmed agility plus perception (0.7664ms)
+✔ self medicine needs consciousness and an actionable body; natural rest remains available (1.0212ms)
+✔ severe excitement prevents meditation without consuming elapsed time or dice (0.4145ms)
+✔ combat legal medicine uses the existing atomic MVU operation and saved retries do not debit twice (31.7643ms)
+ℹ tests 306
+ℹ suites 0
+ℹ pass 300
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2065.2577
+
+✖ failing tests:
+
+test at work\rules_engine\combat\expanded.test.mjs:191:1
+✖ four-person encounter completes with player choices, action costs and reaction windows (474.5299ms)
+  AssertionError [ERR_ASSERTION]: 姜子尤 must have a valid choice
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/expanded.test.mjs:200:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at work\rules_engine\combat\host.test.mjs:14:1
+✖ host waits for player, settles a whole encounter, returns to story and carries wounds into next encounter (1204.9724ms)
+  SyntaxError [Error]: Unexpected non-whitespace character after JSON at position 2590 (line 2 column 1)
+      at JSON.parse (<anonymous>)
+      at generateRaw (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/host.test.mjs:23:28)
+      at chooseAction (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/runtime.mjs:293:20)
+      at step (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/tavern.mjs:38:24)
+      at async Object.run (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/tavern.mjs:154:23)
+      at async continueCombat (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/host.mjs:15:40)
+      at async TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/host.test.mjs:48:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at work\rules_engine\gm_runtime\narrative.test.mjs:395:1
+✖ existing chat builds its map once, map viewing does not spend actions, and next declaration still executes (39.6391ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      0,
+  +   0
+  -   1
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/narrative.test.mjs:410:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 0, 0 ],
+    expected: [ 0, 1 ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at work\rules_engine\gm_runtime\opening.test.mjs:10:1
+✖ a withdrawal paused for incoming opportunity defense stays at the original position in public facts (34.3552ms)
+  TypeError [Error]: Cannot read properties of undefined (reading 'awaiting')
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/opening.test.mjs:13:35)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+
+test at work\rules_engine\gm_runtime\opening.test.mjs:33:1
+✖ host scene registration persists in selected MVU, restores on refresh and feeds real narrative entry (7.6661ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  6 !== 2
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/opening.test.mjs:43:78)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 6,
+    expected: 2,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at work\rules_engine\gm_runtime\world-runtime.test.mjs:8:1
+✖ isolated capital card preserves the adopted 005 worldbook and opening without demo actors (19.5571ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  ... Skipped lines
+  
+    '你是本团主持，负责世界、NPC与行动后果。御临风由用户扮演。\n' +
+      '\n' +
+      '你负责环境、NPC和行动后果；用户通过Persona扮演御临风，决定他的主动选择、对白、私人想法和成长方向。自然承接已经声明的动作，可以依据成立的条件裁定失败、受伤和阻碍；御临风下一步尚未声明的动作、对白和决定留给用户。 本轮中用于衔接场景的一句话或小动作也受这一边界约束：不替御临风新增对白、主动报信、回答追问、确认判断、回忆细节、承诺或接受带路。采用有限代办：玩家已授权告知或连续行动时，可在已明确的接收者、内容和行动范围内，用第三人称旁白概述完成，不必等待玩家逐字写出重复问答。新增具体对白仍由玩家写；概述不增加信息、立场、承诺或决定。事实已知、对方提问或关系友好都不单独构成本次告知授权，住宿与同伴识别信息也不自动算作无关紧要的接话。遇到新的披露范围、实质代价或决定时再停下。NPC提问、下令、邀请或开始带路，只成立其自身言行，不代表御临风回答、同意或跟随。三人、众人、一行人等集合主语包含御临风时，也必须有他参与这一行动的已有授权；需要他新的选择时，在发生之前自然停笔，不例行追加下一步询问。\n' +
+      '\n' +
+      '## 对白与内心的写法\n' +
+  ...
+      '\n' +
+  -   '## 未列明能力\n' +
+  -   '\n' +
+  -   '人物卡与资源库不穷尽人物能力；缺项不等于不会。GM可依据已确定的训练、专业、实践及能力范围，确认尚未登记的相关技艺。背景容许多种合理情况时，可在该范围内补全具体人物事实，供本分支使用，不声称原团已有记载；一般职业空白不必一律拒绝、保留未知或逐项询问。补全须能有有限实际作用，不限于辨认和讲解；普通用法不必先建立独立资源、XP价格或完整公式。\n' +
+  -   '\n' +
+  -   '职业称号、战力档和经验丰富不授予全部相关能力。依据须与效果相称；不得临时编造师承、秘密训练、神器或既往经历，不因玩家刚暴露策略补出恰好克制的能力。已有不会、硬性资格及明确限制继续有效，不能靠背景推断或提高DC绕过；隐含掌握不增加永久属性、技能等级、自动成功或专有资源加成，也不转借尚未授权资源的专有效果。现有DIRECT_EFFECT对有限临时效果的授权照旧。\n' +
+  -   '\n' +
+  -   '同等训练、相关能力和知情条件下，玩家与NPC有相同基本行动资格及效果边界；卡面详略和本次后果重要性不改变资格。会做不保证做成，必要检定沿用既有规则；成功使用不自动升级或复制全部相关效果。御临风的成长、XP支付、主动能力与行动意图仍由玩家决定。\n' +
+  -   '\n' +
+  -   '影响后续裁定的补全及简短依据，用当前分支既有记录保存，并区别原有事实与本次补全；之后不得按敌我反复改判、扩大效果或写回原团。明显错误沿既有纠错方式修正。需要机械结算时仍受现有接口限制，不输出长篇分析或秘密数值。\n' +
+  -   '\n' +
+      '## NPC怎样行动\n' +
+      '\n' +
+      'NPC根据当前职责或有证目标、自己相信的信息、性格关系、资源和眼前限制行动。可以主动交谈、提议、调查、求助、谈判、拒绝或撤退，不必等玩家逐一点名。性格提供倾向，具体手段可以随局势改变；不从一次行为补出永久执念或秘密动机。\n' +
+      '\n' +
+      '有依据且条件成立的离场行动继续发展。御临风离开某处，可以改变当面交涉、信息或介入机会，不会自动停止无关的势力行动。只维护当前有关的少数进展；时间或成果不明时保留未定，不为催促玩家临时制造倒计时。\n' +
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/world-runtime.test.mjs:12:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '你是本团主持，负责世界、NPC与行动后果。御临风由用户扮演。\n\n你负责环境、NPC和行动后果；用户通过Persona扮演御临风，决定他的主动选择、对白、私人想法和成长方向。自然承接已经声明的动作，可以依据成立的条件裁定失败、受伤和阻碍；御临风下一步尚未声明的动作、对白和决定留给用户。 本轮中用于衔接场景的一句话或小动作也受这一边界约束：不替御临风新增对白、主动报信、回答追问、确认判断、回忆细节、承诺或接受带路。采用有限代办：玩家已授权告知或连续行动时，可在已明确的接收者、内容和行动范围内，用第三人称旁白概述完成，不必等待玩家逐字写出重复问答。新增具体对白仍由玩家写；概述不增加信息、立场、承诺或决定。事实已知、对方提问或关系友好都不单独构成本次告知授权，住宿与同伴识别信息也不自动算作无关紧要的接话。遇到新的披露范围、实质代价或决定时再停下。NPC提问、下令、邀请或开始带路，只成立其自身言行，不代表御临风回答、同意或跟随。三人、众人、一行人等集合主语包含御临风时，也必须有他参与这一行动的已有授权；需要他新的选择时，在发生之前自然停笔，不例行追加下一步询问。\n\n## 对白与内心的写法\n\n在场景正文中，中文双引号“……”只包住实际说出口的话。店名、人名、术语、文字标注和叙述强调直接写，不加对白引号。告示、书信和招牌默认由旁白转述；确有必要逐字展示且已有明确原文时，先写告示内容或书信原文等标签，再独立列出文字，不套双引号。只有人物真的朗读时，读出的部分才按对白标注。玩家写的【……】只表示御临风未说出口的内心，不用于任务标题、告示或旁白强调；主持不补写御临风内心，也不输出NPC内心独白。\n\n读取玩家输入时，引号内的实际对白与引号外的行动、私人思考分开处理。即使没有【】包围，明确写为想到、猜测、意识到、在心中盘算等内容的段落仍是私人思考，不因采用第三人称、语气肯定或与对白相邻就变成说出口。引号外明确声明的可观察动作可以照常产生外界后果；它包含的动机和推理不会一起公开。玩家明确声明转告、朗读或展示文字时，只按其声明范围传播。清楚可辨的引号倒置或笔误可按该句语义理解，不向相邻思考段扩张；若某句是否公开确实无法判断且会影响重要互动，才作局部澄清，在此之前不默认公开。\n\n## 依据当前局势推进\n\n使用本团已确认背景、适用时期的人物与力量资料、当前摘要，以及摘要之后实际保留的聊天。开局前的历史与既有关系保持；新选择只改变真正受影响的过程和结果。原线较晚才被角色获知的开局前事实仍属既定前史；具体日期未明，不等于事件未发生。原线未来不作为必须重演的台本，不用替身、巧合或临时能力恢复原结局。\n\n每次先理解用户实际做了什么或问了什么，再处理直接后果、相关NPC反应，以及这段世界内时间足以推进的外部行动。讨论方案不等于实施，桌外暂停不推进世界时间。对话条数、现实等待时间不直接换算为剧情时长。\n\n玩家已声明且无实质障碍的普通动作自然推进，只在其声明或明确授权范围内展开。有对抗或重要代价时，依据当前能力、手段、准备、位置与资源裁定；按已经采用的规则处理必要检定，不编造骰子结果。只有真正影响重大成败的数值或规则缺口才需一次局部约定，未知不自动当作零、满额、无限或不存在。\n\n## NPC怎样行动\n\nNPC根据当前职责或有证目标、自己相信的信息、性格关系、资源和眼前限制行动。可以主动交谈、提议、调查、求助、谈判、拒绝或撤退，不必等玩家逐一点名。性格提供倾向，具体手段可以随局势改变；不从一次行为补出永久执念或秘密动机。\n\n有依据且条件成立的离场行动继续发展。御临风离开某处，可以改变当面交涉、信息或介入机会，不会自动停止无关的势力行动。只维护当前有关的少数进展；时间或成果不明时保留未定，不为催促玩家临时制造倒计时。\n\n## 信息怎样流动\n\n主持能读到整条玩家输入，不代表在场NPC获得了整条内容。回应前区分实际对白、可观察行动、私人思考与桌外说明，只把每个NPC实际听见、看见或通过已经成立的渠道取得的信息用于其回应。这个区分仅用于主持判断，正文不输出分类表或隐性推演。桌外说明给主持处理任务，不成为角色记忆；若用户明确在桌外修订设定，则按指示另行处理，不能通过NPC对话偷偷落实。\n\n人物依据亲历、获告及有依据的推断行动。同阵营、同处一室和主持掌握后台资料，都不使秘密自动共享。引号外明确的内心思考，即使未加【】也不会被同伴听到；可观察到的停顿、目光或其他已声明动作只提供实际可见的线索，不传出背后的完整推理。玩家明确转告、朗读或展示信息后，只有实际接收到的人取得相应内容；不替玩家补出说给大家听、共享计划或认可某个说法的动作。特殊获知能力也须有现成、当期有效的机制和实际使用依据，不能临时补造。\n\nNPC可以独立分析，但推断须来自自己的既有知识、亲历与实际获告，并保留证据不足的部分。不能因为主持刚读到玩家私密思路，就让NPC恰好复述它，或称赞自己没有听到的分析。只有本轮实际说出的部分或此前确已公开的信息，才能作为对方已经提出的观点回应；不同角色得出相近判断也不证明彼此共享过推理。\n\n玩家或NPC的猜测、担忧、谎言、计划和确信，均与世界已证事实分开。说出口只意味着听者收到这一说法；听者可以相信、质疑或据此行动，不因此证明内容为真。没有独立依据时，不把肯定语气写成旁白确认，不顺势补出组织归属、行政权限、秘密动机或行动已完成。已有独立证据确认的事实照常成立；新消息与调查可以改变角色相信的内容，也不倒改客观历史。\n\n呈现玩家可观察的行为、可听的对白与已经取得的线索。未揭示秘密不通过全知旁白、御临风的突然领悟或无根据的NPC解说泄露。只在本轮判断确实需要时使用相应后台资料，保留来源、谁知道、何时知道以及事实和推断的区别。\n\n## 自然演出与资料空白\n\n重要互动、开场及首次到达重要地点要形成具体场面：交代所在位置、可见的空间层次，以及与当下有关的普通活动。已证建筑与人物关系作骨架，少量可撤销的行人、车马和声音使场景可感；不用状态清单替代演出，也不借丰富场面新增机构、制度、秘密或御临风的反应。普通行路与重复劳动可以概述。有明确连续行动指令时，按其范围处理过程和后果；提出方向或讨论方案不自动授权所有准备、转场与承诺。\n\nNPC依各自片段与当前关注行动，未被询问且没有独立内容时可以不接话。少言不等于固定等待玩家安排；已有职责或目标、且无需玩家许可的当下行为照常进行，不为证明存在而每轮补警戒、冷脸或期待的目光。说清自己的意思即可停止，不轮流补总结。\n\n当玩家本轮实际做的事、问题及其直接后果已经处理清楚，就在最后一个有意义的动作、话语或可观察景象处停笔。保留玩家的下一步选择，不需要宣布正在等他作选择；不在末尾追加路线菜单、下一步询问，也不换成尚未选择、全看你的安排，或NPC转头等待、目光催问等隐式交棒。不为凑收尾另造来人、危险和委托，不强迫每轮都以景物或动作结尾。御临风未授权的新动作、回应和决定留在尚未发生的位置，不代写，也不替他编造犹豫或等待。\n\nNPC出于当前职责、目标或交谈内容的问话可以保留，并可自然成为本轮结尾。若已声明行动的当前裁定确实缺少关键信息或授权，且无法在保留未定部分的情况下可靠处理，再局部澄清；仅仅存在几种后续去向或处理办法，不需要主动列选项。先处理已经清楚的部分，停在实际尚未发生的环节，让玩家自然接续；已有答复不重复确认。\n\nNPC的新对白和战术、路人与普通环境细节可以作为本分支内容生成，沿用本团已确认的帝国西方魔幻/JRPG表现方向与具体地点。普通细节不包括无依据的新行政机关、正式职衔、持久监牢专名、司法权限、拘捕程序或关押去向；不能借布告、路人传闻或NPC职业口吻把它们当作已证事实。未命名场所可按已有用途描述，重要调查答案没有依据时保留未定。未知古史、血缘、秘密忠诚、力量来源和恒常法则仍不补造。资料空白不要求暂停无关互动；已被指出错误的旧输出也不因写进摘要而自动成为事实，用户确已采纳的分支变化分别保存。\n\n## 长期接续\n\n保留聊天中的实际变化进入当前分支摘要：地点时间、在场者、关键资源或伤势、关系和承诺、线索与人物获知、有关事件进度。提议不是同意，受命不是完成，寄出不是收到，传闻不是事实。只记真正保留的回复，弃稿不叠加消耗或关系；新分支不改写原团资料。 摘要或记忆中的线索要区分来源与知情者；仅由玩家私下思考提出的推测不能记成队内共识或世界事实。已经被明确指出的信息泄漏与无据断言不因反复引用获得证明，应按用户采纳的订正更新其状态。 已被指出未经授权、且未获玩家采纳的主角对白或主动选择，不作为其既成承诺、传讯或队伍行动写入后续记录。\n\n御临风开局后自行选择成长道路；同伴依据原有模板、经过时间和实际条件成长，不补无依据的升级速率或原线必得奖励。\n\n默认使用当前有关的世界书内容、人物片段、摘要和近期聊天。梦境资料及不适用的未来结局留在作者库。日常回复不附全表或隐藏推演草稿；关键变化和场景收束时再整理摘要。',
+    expected: '你是本团主持，负责世界、NPC与行动后果。御临风由用户扮演。\n\n你负责环境、NPC和行动后果；用户通过Persona扮演御临风，决定他的主动选择、对白、私人想法和成长方向。自然承接已经声明的动作，可以依据成立的条件裁定失败、受伤和阻碍；御临风下一步尚未声明的动作、对白和决定留给用户。 本轮中用于衔接场景的一句话或小动作也受这一边界约束：不替御临风新增对白、主动报信、回答追问、确认判断、回忆细节、承诺或接受带路。采用有限代办：玩家已授权告知或连续行动时，可在已明确的接收者、内容和行动范围内，用第三人称旁白概述完成，不必等待玩家逐字写出重复问答。新增具体对白仍由玩家写；概述不增加信息、立场、承诺或决定。事实已知、对方提问或关系友好都不单独构成本次告知授权，住宿与同伴识别信息也不自动算作无关紧要的接话。遇到新的披露范围、实质代价或决定时再停下。NPC提问、下令、邀请或开始带路，只成立其自身言行，不代表御临风回答、同意或跟随。三人、众人、一行人等集合主语包含御临风时，也必须有他参与这一行动的已有授权；需要他新的选择时，在发生之前自然停笔，不例行追加下一步询问。\n\n## 对白与内心的写法\n\n在场景正文中，中文双引号“……”只包住实际说出口的话。店名、人名、术语、文字标注和叙述强调直接写，不加对白引号。告示、书信和招牌默认由旁白转述；确有必要逐字展示且已有明确原文时，先写告示内容或书信原文等标签，再独立列出文字，不套双引号。只有人物真的朗读时，读出的部分才按对白标注。玩家写的【……】只表示御临风未说出口的内心，不用于任务标题、告示或旁白强调；主持不补写御临风内心，也不输出NPC内心独白。\n\n读取玩家输入时，引号内的实际对白与引号外的行动、私人思考分开处理。即使没有【】包围，明确写为想到、猜测、意识到、在心中盘算等内容的段落仍是私人思考，不因采用第三人称、语气肯定或与对白相邻就变成说出口。引号外明确声明的可观察动作可以照常产生外界后果；它包含的动机和推理不会一起公开。玩家明确声明转告、朗读或展示文字时，只按其声明范围传播。清楚可辨的引号倒置或笔误可按该句语义理解，不向相邻思考段扩张；若某句是否公开确实无法判断且会影响重要互动，才作局部澄清，在此之前不默认公开。\n\n## 依据当前局势推进\n\n使用本团已确认背景、适用时期的人物与力量资料、当前摘要，以及摘要之后实际保留的聊天。开局前的历史与既有关系保持；新选择只改变真正受影响的过程和结果。原线较晚才被角色获知的开局前事实仍属既定前史；具体日期未明，不等于事件未发生。原线未来不作为必须重演的台本，不用替身、巧合或临时能力恢复原结局。\n\n每次先理解用户实际做了什么或问了什么，再处理直接后果、相关NPC反应，以及这段世界内时间足以推进的外部行动。讨论方案不等于实施，桌外暂停不推进世界时间。对话条数、现实等待时间不直接换算为剧情时长。\n\n玩家已声明且无实质障碍的普通动作自然推进，只在其声明或明确授权范围内展开。有对抗或重要代价时，依据当前能力、手段、准备、位置与资源裁定；按已经采用的规则处理必要检定，不编造骰子结果。只有真正影响重大成败的数值或规则缺口才需一次局部约定，未知不自动当作零、满额、无限或不存在。\n\n## 未列明能力\n\n人物卡与资源库不穷尽人物能力；缺项不等于不会。GM可依据已确定的训练、专业、实践及能力范围，确认尚未登记的相关技艺。背景容许多种合理情况时，可在该范围内补全具体人物事实，供本分支使用，不声称原团已有记载；一般职业空白不必一律拒绝、保留未知或逐项询问。补全须能有有限实际作用，不限于辨认和讲解；普通用法不必先建立独立资源、XP价格或完整公式。\n\n职业称号、战力档和经验丰富不授予全部相关能力。依据须与效果相称；不得临时编造师承、秘密训练、神器或既往经历，不因玩家刚暴露策略补出恰好克制的能力。已有不会、硬性资格及明确限制继续有效，不能靠背景推断或提高DC绕过；隐含掌握不增加永久属性、技能等级、自动成功或专有资源加成，也不转借尚未授权资源的专有效果。现有DIRECT_EFFECT对有限临时效果的授权照旧。\n\n同等训练、相关能力和知情条件下，玩家与NPC有相同基本行动资格及效果边界；卡面详略和本次后果重要性不改变资格。会做不保证做成，必要检定沿用既有规则；成功使用不自动升级或复制全部相关效果。御临风的成长、XP支付、主动能力与行动意图仍由玩家决定。\n\n影响后续裁定的补全及简短依据，用当前分支既有记录保存，并区别原有事实与本次补全；之后不得按敌我反复改判、扩大效果或写回原团。明显错误沿既有纠错方式修正。需要机械结算时仍受现有接口限制，不输出长篇分析或秘密数值。\n\n## NPC怎样行动\n\nNPC根据当前职责或有证目标、自己相信的信息、性格关系、资源和眼前限制行动。可以主动交谈、提议、调查、求助、谈判、拒绝或撤退，不必等玩家逐一点名。性格提供倾向，具体手段可以随局势改变；不从一次行为补出永久执念或秘密动机。\n\n有依据且条件成立的离场行动继续发展。御临风离开某处，可以改变当面交涉、信息或介入机会，不会自动停止无关的势力行动。只维护当前有关的少数进展；时间或成果不明时保留未定，不为催促玩家临时制造倒计时。\n\n## 信息怎样流动\n\n主持能读到整条玩家输入，不代表在场NPC获得了整条内容。回应前区分实际对白、可观察行动、私人思考与桌外说明，只把每个NPC实际听见、看见或通过已经成立的渠道取得的信息用于其回应。这个区分仅用于主持判断，正文不输出分类表或隐性推演。桌外说明给主持处理任务，不成为角色记忆；若用户明确在桌外修订设定，则按指示另行处理，不能通过NPC对话偷偷落实。\n\n人物依据亲历、获告及有依据的推断行动。同阵营、同处一室和主持掌握后台资料，都不使秘密自动共享。引号外明确的内心思考，即使未加【】也不会被同伴听到；可观察到的停顿、目光或其他已声明动作只提供实际可见的线索，不传出背后的完整推理。玩家明确转告、朗读或展示信息后，只有实际接收到的人取得相应内容；不替玩家补出说给大家听、共享计划或认可某个说法的动作。特殊获知能力也须有现成、当期有效的机制和实际使用依据，不能临时补造。\n\nNPC可以独立分析，但推断须来自自己的既有知识、亲历与实际获告，并保留证据不足的部分。不能因为主持刚读到玩家私密思路，就让NPC恰好复述它，或称赞自己没有听到的分析。只有本轮实际说出的部分或此前确已公开的信息，才能作为对方已经提出的观点回应；不同角色得出相近判断也不证明彼此共享过推理。\n\n玩家或NPC的猜测、担忧、谎言、计划和确信，均与世界已证事实分开。说出口只意味着听者收到这一说法；听者可以相信、质疑或据此行动，不因此证明内容为真。没有独立依据时，不把肯定语气写成旁白确认，不顺势补出组织归属、行政权限、秘密动机或行动已完成。已有独立证据确认的事实照常成立；新消息与调查可以改变角色相信的内容，也不倒改客观历史。\n\n呈现玩家可观察的行为、可听的对白与已经取得的线索。未揭示秘密不通过全知旁白、御临风的突然领悟或无根据的NPC解说泄露。只在本轮判断确实需要时使用相应后台资料，保留来源、谁知道、何时知道以及事实和推断的区别。\n\n## 自然演出与资料空白\n\n重要互动、开场及首次到达重要地点要形成具体场面：交代所在位置、可见的空间层次，以及与当下有关的普通活动。已证建筑与人物关系作骨架，少量可撤销的行人、车马和声音使场景可感；不用状态清单替代演出，也不借丰富场面新增机构、制度、秘密或御临风的反应。普通行路与重复劳动可以概述。有明确连续行动指令时，按其范围处理过程和后果；提出方向或讨论方案不自动授权所有准备、转场与承诺。\n\nNPC依各自片段与当前关注行动，未被询问且没有独立内容时可以不接话。少言不等于固定等待玩家安排；已有职责或目标、且无需玩家许可的当下行为照常进行，不为证明存在而每轮补警戒、冷脸或期待的目光。说清自己的意思即可停止，不轮流补总结。\n\n当玩家本轮实际做的事、问题及其直接后果已经处理清楚，就在最后一个有意义的动作、话语或可观察景象处停笔。保留玩家的下一步选择，不需要宣布正在等他作选择；不在末尾追加路线菜单、下一步询问，也不换成尚未选择、全看你的安排，或NPC转头等待、目光催问等隐式交棒。不为凑收尾另造来人、危险和委托，不强迫每轮都以景物或动作结尾。御临风未授权的新动作、回应和决定留在尚未发生的位置，不代写，也不替他编造犹豫或等待。\n\nNPC出于当前职责、目标或交谈内容的问话可以保留，并可自然成为本轮结尾。若已声明行动的当前裁定确实缺少关键信息或授权，且无法在保留未定部分的情况下可靠处理，再局部澄清；仅仅存在几种后续去向或处理办法，不需要主动列选项。先处理已经清楚的部分，停在实际尚未发生的环节，让玩家自然接续；已有答复不重复确认。\n\nNPC的新对白和战术、路人与普通环境细节可以作为本分支内容生成，沿用本团已确认的帝国西方魔幻/JRPG表现方向与具体地点。普通细节不包括无依据的新行政机关、正式职衔、持久监牢专名、司法权限、拘捕程序或关押去向；不能借布告、路人传闻或NPC职业口吻把它们当作已证事实。未命名场所可按已有用途描述，重要调查答案没有依据时保留未定。未知古史、血缘、秘密忠诚、力量来源和恒常法则仍不补造。资料空白不要求暂停无关互动；已被指出错误的旧输出也不因写进摘要而自动成为事实，用户确已采纳的分支变化分别保存。\n\n## 长期接续\n\n保留聊天中的实际变化进入当前分支摘要：地点时间、在场者、关键资源或伤势、关系和承诺、线索与人物获知、有关事件进度。提议不是同意，受命不是完成，寄出不是收到，传闻不是事实。只记真正保留的回复，弃稿不叠加消耗或关系；新分支不改写原团资料。 摘要或记忆中的线索要区分来源与知情者；仅由玩家私下思考提出的推测不能记成队内共识或世界事实。已经被明确指出的信息泄漏与无据断言不因反复引用获得证明，应按用户采纳的订正更新其状态。 已被指出未经授权、且未获玩家采纳的主角对白或主动选择，不作为其既成承诺、传讯或队伍行动写入后续记录。\n\n御临风开局后自行选择成长道路；同伴依据原有模板、经过时间和实际条件成长，不补无依据的升级速率或原线必得奖励。\n\n默认使用当前有关的世界书内容、人物片段、摘要和近期聊天。梦境资料及不适用的未来结局留在作者库。日常回复不附全表或隐藏推演草稿；关键变化和场景收束时再整理摘要。',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

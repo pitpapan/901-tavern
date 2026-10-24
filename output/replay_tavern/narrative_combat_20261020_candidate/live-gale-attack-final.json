@@ -1,0 +1,572 @@
+{
+  "chatId": "901 狂岚友伤实测 - 2026-10-22",
+  "messages": 6,
+  "revision": 4,
+  "active": "player",
+  "round": 1,
+  "pending": null,
+  "actors": {
+    "huang": {
+      "health": {
+        "intact": 4,
+        "B": 0,
+        "L": 19,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {
+        "灵力": {
+          "current": 6,
+          "max": 6
+        }
+      },
+      "turn": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        4,
+        0
+      ]
+    },
+    "jiang": {
+      "health": {
+        "intact": 13,
+        "B": 0,
+        "L": 22,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {
+        "气": {
+          "current": 2,
+          "max": 2
+        },
+        "斗气": {
+          "current": 3,
+          "max": 3
+        },
+        "内力": {
+          "current": 28,
+          "max": 28
+        }
+      },
+      "turn": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        6,
+        0
+      ]
+    },
+    "player": {
+      "health": {
+        "intact": 21,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {
+        "风池": {
+          "current": 9,
+          "max": 10
+        },
+        "魔力": {
+          "current": 106,
+          "max": 106
+        },
+        "流风": {
+          "current": 22,
+          "max": 22
+        }
+      },
+      "turn": {
+        "phase": "active",
+        "standard": 0,
+        "move": 0,
+        "swift": 1,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        1,
+        0
+      ]
+    }
+  },
+  "operations": [
+    {
+      "id": "declaration/901 狂岚友伤实测 - 2026-10-22/3/0/0",
+      "revision": 1,
+      "command": {
+        "abilityId": "move",
+        "to": [
+          1,
+          0
+        ],
+        "actorId": "player"
+      },
+      "damage": [],
+      "statuses": [],
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            4,
+            0
+          ]
+        },
+        {
+          "id": "jiang",
+          "health": {
+            "intact": 35,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            6,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 21,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            1,
+            0
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "declaration/901 狂岚友伤实测 - 2026-10-22/5/0/0",
+      "revision": 2,
+      "command": {
+        "abilityId": "gale",
+        "resource": "风池",
+        "actorId": "player"
+      },
+      "damage": [],
+      "statuses": [],
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            4,
+            0
+          ]
+        },
+        {
+          "id": "jiang",
+          "health": {
+            "intact": 35,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            6,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 21,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            1,
+            0
+          ]
+        }
+      ],
+      "notes": [
+        "攻击已宣言，等待反应；尚未掷骰或扣除攻击资源"
+      ]
+    },
+    {
+      "id": "combat/5/0/2",
+      "revision": 3,
+      "command": {
+        "actorId": "huang",
+        "abilityId": "react",
+        "choice": "decline"
+      },
+      "damage": [],
+      "statuses": [],
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            4,
+            0
+          ]
+        },
+        {
+          "id": "jiang",
+          "health": {
+            "intact": 35,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            6,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 21,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            1,
+            0
+          ]
+        }
+      ],
+      "notes": [
+        "等待下一名受击者反应"
+      ]
+    },
+    {
+      "id": "combat/5/0/3",
+      "revision": 4,
+      "command": {
+        "actorId": "jiang",
+        "abilityId": "react",
+        "choice": "decline"
+      },
+      "damage": [
+        {
+          "targetId": "huang",
+          "kind": "physical",
+          "energyType": null,
+          "input": 19,
+          "inputSeverity": "L",
+          "severity": "L",
+          "actualDamage": 19
+        },
+        {
+          "targetId": "jiang",
+          "kind": "physical",
+          "energyType": null,
+          "input": 22,
+          "inputSeverity": "L",
+          "severity": "L",
+          "actualDamage": 22
+        }
+      ],
+      "statuses": [],
+      "attack": {
+        "rawDP": 64,
+        "dp": 64,
+        "weapon": 16,
+        "cap": 25,
+        "fixed": 2,
+        "ap": 8,
+        "magic": 8,
+        "speed": 0,
+        "extra": 0,
+        "ignore": 0,
+        "aggravate": 0,
+        "electric": 0,
+        "reduction": 3,
+        "range": 20,
+        "explode": 10,
+        "defense": {
+          "total": 0,
+          "parts": {
+            "base": 0,
+            "natural": 0,
+            "armor": 0,
+            "dodge": 0,
+            "insight": 0,
+            "block": 0,
+            "cover": 0,
+            "cultivation": 0,
+            "force": 0,
+            "device": 0,
+            "shield": 0,
+            "luck": 0,
+            "morale": 0,
+            "enhancement": 0,
+            "holy": 0,
+            "technique": 0,
+            "performance": 0,
+            "intrinsic": 0,
+            "unnamed": 0
+          },
+          "remainingAP": 1,
+          "extraSuccesses": 0
+        },
+        "roll": {
+          "dp": 64,
+          "luck": false,
+          "dice": [
+            2,
+            4,
+            6,
+            6,
+            1,
+            6,
+            6,
+            1,
+            2,
+            3,
+            5,
+            2,
+            10,
+            3,
+            7,
+            6,
+            1,
+            9,
+            4,
+            2,
+            4,
+            9,
+            5,
+            2,
+            10,
+            10,
+            8,
+            9,
+            10,
+            6,
+            9,
+            5,
+            6,
+            3,
+            9,
+            7,
+            8,
+            3,
+            1,
+            3,
+            9,
+            10,
+            1,
+            3,
+            9,
+            10,
+            2,
+            4,
+            1,
+            7,
+            5,
+            4,
+            3,
+            7,
+            4,
+            6,
+            9,
+            9,
+            7,
+            4,
+            4,
+            9,
+            9,
+            5,
+            7,
+            7,
+            10,
+            4,
+            7,
+            6,
+            1
+          ],
+          "used": 71,
+          "rolledSuccesses": 20,
+          "luckMishap": false
+        },
+        "amount": 22
+      },
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 4,
+            "B": 0,
+            "L": 19,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            4,
+            0
+          ]
+        },
+        {
+          "id": "jiang",
+          "health": {
+            "intact": 13,
+            "B": 0,
+            "L": 22,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            6,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 21,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            1,
+            0
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "lastMessages": [
+    {
+      "user": false,
+      "text": "御临风将弃风长剑扣在掌中，向前踏出一步。\n\n鞋底与练习场的地面相触，靴尖刚过一米线，身形随之定住。黄泉仍在他身侧三米处静立，刀锋垂地；更远处，姜子尤赤手空拳站在五米开外，目光落在他收势的剑路上。\n\n<StatusPlaceHolderImpl/>",
+      "metadata": {
+        "key": "901 狂岚友伤实测 - 2026-10-22/3/0",
+        "revision": 1
+      }
+    },
+    {
+      "user": true,
+      "text": "我使用狂岚·群袭，消耗标准动作与1点风池，对二十米内除我以外所有合法目标逐一攻击，包含友军黄泉。不结束回合，保留迅捷动作。",
+      "metadata": {
+        "text": "我使用狂岚·群袭，消耗标准动作与1点风池，对二十米内除我以外所有合法目标逐一攻击，包含友军黄泉。不结束回合，保留迅捷动作。",
+        "swipeId": 0,
+        "plan": {
+          "steps": [
+            {
+              "quote": "我使用狂岚·群袭，消耗标准动作与1点风池",
+              "command": {
+                "abilityId": "gale",
+                "resource": "风池"
+              },
+              "cost": {
+                "actions": {
+                  "standard": 1
+                },
+                "energy": {
+                  "风池": 1
+                }
+              }
+            }
+          ],
+          "clarification": ""
+        }
+      }
+    }
+  ]
+}

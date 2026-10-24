@@ -1,0 +1,484 @@
+{
+  "scope": "实际酒馆：正十七守势迎击姜子尤，原模型自然决策与随机骰；非注入命令，未改写结果或重生成正文",
+  "beforeRevision": 23,
+  "afterRevision": 26,
+  "operationCount": 26,
+  "model": {
+    "source": "makersuite",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "readyDefense": {
+    "total": 54,
+    "parts": {
+      "base": 4,
+      "natural": 0,
+      "armor": 7,
+      "dodge": 3,
+      "insight": 0,
+      "block": 28,
+      "deflection": 10,
+      "force": 2,
+      "cultivation": 0,
+      "cover": 0,
+      "device": 0,
+      "shield": 0,
+      "luck": 0,
+      "morale": 0,
+      "enhancement": 0,
+      "holy": 0,
+      "technique": 0,
+      "performance": 0,
+      "intrinsic": 0,
+      "unnamed": 0
+    },
+    "remainingAP": 0,
+    "extraSuccesses": 1
+  },
+  "attack": {
+    "rawDP": 47,
+    "dp": 47,
+    "weapon": 9,
+    "cap": 28,
+    "fixed": 3,
+    "ap": 3,
+    "magic": 0,
+    "speed": 4,
+    "extra": 0,
+    "ignore": 4,
+    "aggravate": 0,
+    "electric": 0,
+    "reduction": 0,
+    "range": 1.5,
+    "explode": 10,
+    "defense": {
+      "total": 51,
+      "parts": {
+        "base": 4,
+        "natural": 0,
+        "armor": 6,
+        "dodge": 3,
+        "insight": 0,
+        "block": 28,
+        "deflection": 10,
+        "force": 0,
+        "cultivation": 0,
+        "cover": 0,
+        "device": 0,
+        "shield": 0,
+        "luck": 0,
+        "morale": 0,
+        "enhancement": 0,
+        "holy": 0,
+        "technique": 0,
+        "performance": 0,
+        "intrinsic": 0,
+        "unnamed": 0
+      },
+      "remainingAP": 0,
+      "extraSuccesses": 1
+    },
+    "roll": {
+      "dp": -4,
+      "luck": true,
+      "dice": [
+        1
+      ],
+      "used": 1,
+      "rolledSuccesses": 0,
+      "luckMishap": true
+    },
+    "amount": 2
+  },
+  "damage": [
+    {
+      "targetId": "player",
+      "kind": "physical",
+      "energyType": null,
+      "input": 2,
+      "inputSeverity": "L",
+      "severity": "L",
+      "actualDamage": 2
+    },
+    {
+      "targetId": "player",
+      "kind": "physical",
+      "energyType": null,
+      "input": 2,
+      "inputSeverity": "L",
+      "severity": "L",
+      "actualDamage": 2
+    }
+  ],
+  "statuses": [
+    {
+      "targetId": "player",
+      "type": "晕眩",
+      "points": 4,
+      "remaining": 0,
+      "save": {
+        "dp": 7,
+        "luck": false,
+        "dice": [
+          8,
+          7,
+          8,
+          9,
+          8,
+          4,
+          1
+        ],
+        "used": 7,
+        "rolledSuccesses": 4,
+        "luckMishap": false,
+        "fixed": 1,
+        "extra": 0,
+        "total": 5,
+        "type": "fort"
+      }
+    }
+  ],
+  "playerBefore": {
+    "name": "御临风",
+    "attributes": {
+      "力量": 6,
+      "敏捷": 7,
+      "智力": 6,
+      "感知": 5,
+      "意志": 5,
+      "风度": 4
+    },
+    "size": 5,
+    "derived": {
+      "hpMax": 21,
+      "defense": 5,
+      "speed": 28,
+      "initiative": 11,
+      "willMax": 9,
+      "vision": 50
+    },
+    "skills": {
+      "运动": {
+        "level": 1
+      },
+      "肉搏": {
+        "level": 0
+      },
+      "白刃": {
+        "level": 5,
+        "subs": {
+          "长剑": {
+            "level": 4,
+            "scope": "长剑",
+            "scopeId": "weapon.long-sword"
+          }
+        }
+      },
+      "射击": {
+        "level": 0
+      },
+      "隐藏": {
+        "level": 1
+      },
+      "学识": {
+        "level": 4,
+        "subs": {
+          "死灵学": {
+            "level": 2,
+            "scope": "死灵学",
+            "scopeId": "knowledge.necromancy"
+          }
+        }
+      },
+      "科学": {
+        "level": 0
+      },
+      "神秘": {
+        "level": 4,
+        "subs": {
+          "死灵学": {
+            "level": 2,
+            "scope": "死灵学",
+            "scopeId": "occult.necromancy"
+          }
+        }
+      },
+      "洞察": {
+        "level": 1
+      },
+      "社交": {
+        "level": 2
+      },
+      "电脑": {
+        "level": 2
+      },
+      "驾驶": {
+        "level": 0
+      },
+      "求生": {
+        "level": 1
+      },
+      "医疗": {
+        "level": 2
+      }
+    },
+    "resources": {
+      "风池": {
+        "current": 9,
+        "max": 10
+      },
+      "魔力": {
+        "current": 106,
+        "max": 106
+      }
+    },
+    "attributeAuto": {},
+    "derivedOverrides": [
+      "hpMax",
+      "speed",
+      "initiative",
+      "willMax"
+    ],
+    "health": {
+      "intact": 17,
+      "B": 0,
+      "L": 4,
+      "A": 0,
+      "temp": 0,
+      "coma": false,
+      "deteriorationStopped": false
+    },
+    "will": {
+      "current": 9,
+      "max": 9
+    },
+    "xp": 0,
+    "greatPowersAvailable": 0,
+    "statuses": [
+      {
+        "type": "晕眩",
+        "source": "龙象·沉劲震体",
+        "points": 2
+      }
+    ],
+    "attributeDamage": {},
+    "turn": {
+      "phase": "ended",
+      "standard": 0,
+      "move": 0,
+      "swift": 0,
+      "reactionLock": false,
+      "reactionLockEnds": 0,
+      "responseDebt": false,
+      "opportunityUsed": false
+    },
+    "extendedActions": {}
+  },
+  "playerAfter": {
+    "name": "御临风",
+    "attributes": {
+      "力量": 6,
+      "敏捷": 7,
+      "智力": 6,
+      "感知": 5,
+      "意志": 5,
+      "风度": 4
+    },
+    "size": 5,
+    "derived": {
+      "hpMax": 21,
+      "defense": 5,
+      "speed": 28,
+      "initiative": 11,
+      "willMax": 9,
+      "vision": 50
+    },
+    "skills": {
+      "运动": {
+        "level": 1
+      },
+      "肉搏": {
+        "level": 0
+      },
+      "白刃": {
+        "level": 5,
+        "subs": {
+          "长剑": {
+            "level": 4,
+            "scope": "长剑",
+            "scopeId": "weapon.long-sword"
+          }
+        }
+      },
+      "射击": {
+        "level": 0
+      },
+      "隐藏": {
+        "level": 1
+      },
+      "学识": {
+        "level": 4,
+        "subs": {
+          "死灵学": {
+            "level": 2,
+            "scope": "死灵学",
+            "scopeId": "knowledge.necromancy"
+          }
+        }
+      },
+      "科学": {
+        "level": 0
+      },
+      "神秘": {
+        "level": 4,
+        "subs": {
+          "死灵学": {
+            "level": 2,
+            "scope": "死灵学",
+            "scopeId": "occult.necromancy"
+          }
+        }
+      },
+      "洞察": {
+        "level": 1
+      },
+      "社交": {
+        "level": 2
+      },
+      "电脑": {
+        "level": 2
+      },
+      "驾驶": {
+        "level": 0
+      },
+      "求生": {
+        "level": 1
+      },
+      "医疗": {
+        "level": 2
+      }
+    },
+    "resources": {
+      "风池": {
+        "current": 9,
+        "max": 10
+      },
+      "魔力": {
+        "current": 106,
+        "max": 106
+      }
+    },
+    "attributeAuto": {},
+    "derivedOverrides": [
+      "hpMax",
+      "speed",
+      "initiative",
+      "willMax"
+    ],
+    "health": {
+      "intact": 13,
+      "B": 0,
+      "L": 8,
+      "A": 0,
+      "temp": 0,
+      "coma": false,
+      "deteriorationStopped": false
+    },
+    "will": {
+      "current": 9,
+      "max": 9
+    },
+    "xp": 0,
+    "greatPowersAvailable": 0,
+    "statuses": [
+      {
+        "type": "晕眩",
+        "source": "龙象·沉劲震体",
+        "points": 2
+      }
+    ],
+    "attributeDamage": {},
+    "turn": {
+      "phase": "active",
+      "standard": 1,
+      "move": 1,
+      "swift": 1,
+      "reactionLock": false,
+      "reactionLockEnds": 0,
+      "responseDebt": false,
+      "opportunityUsed": false
+    },
+    "extendedActions": {}
+  },
+  "publicFacts": {
+    "events": [
+      {
+        "actor": "姜子尤",
+        "action": "普通攻击",
+        "status": "resolved",
+        "target": "御临风",
+        "outcome": "造成伤势",
+        "affected": [
+          "御临风"
+        ],
+        "consequence": "御临风确实受伤，防御未完全化解伤害；必须写出受创，不得写成完全挡住或无伤。御临风此次受击时原地受创，站位未变。"
+      },
+      {
+        "actor": "姜子尤",
+        "action": "五尺快步",
+        "status": "resolved",
+        "outcome": "已执行",
+        "affected": [],
+        "position": [
+          46.5,
+          0
+        ],
+        "from": [
+          45,
+          0
+        ],
+        "direction": "远离御临风"
+      }
+    ],
+    "setting": "完整人物卡隔离演练，不计入帝都T0或实际重玩事件。开场时四人在空旷场地，黄泉与姜子尤相距1米，御临风、布莱特在场边；后续以当前场景和存档为准。仅在明确开始时进行已登记演练，目标是对练至一方失去行动能力；不撤离场地，不对失去行动能力者补刀。旁边有供练习平衡的矮横木；敏捷＋运动DC1，一次失手只须落地重新站稳，不造成伤害。这个难度仅为本测试场景设定。",
+    "participants": [
+      {
+        "id": "jiang",
+        "name": "姜子尤",
+        "position": [
+          46.5,
+          0
+        ],
+        "condition": "可见受伤",
+        "arms": "徒手，以拳掌应战"
+      },
+      {
+        "id": "player",
+        "name": "御临风",
+        "position": [
+          44,
+          0
+        ],
+        "condition": "可见受伤",
+        "arms": "弃风长剑在手"
+      }
+    ],
+    "phase": "等待玩家继续行动"
+  },
+  "narration": "姜子尤的拳风抢先逼近，指节裹挟着沉凝的劲力，直击御临风面门。御临风手中弃风长剑立时回转，剑路顺势收束，横腕护持身前，以正十七·守势迎上这一击。\n\n铮然闷响中，剑脊正撞上姜子尤的掌缘。刚猛的拳劲透剑而入，并未被剑势完全化解，余势重重撞击在御临风胸口。御临风身形猛地一晃，气息微窒，原地受创，足下却如钉在地般未退半步。\n\n一击既交，姜子尤借着反震之势向后翻身，足尖在地面擦出半步，退开至四十六点五米处，与御临风拉开距离。\n\n<StatusPlaceHolderImpl/>",
+  "checks": {
+    "recordedDiceReplayMatchesEveryOperation": true,
+    "actualRollCalls": 2,
+    "oneAttackResolution": true,
+    "noPlayerEnergyDebit": true,
+    "noExtraPlayerMovement": true,
+    "noNewStun": true,
+    "guardExpiresAtNextPlayerTurn": true,
+    "noStatusNumbersInNarration": true,
+    "refreshRootDeepEqual": true,
+    "refreshProseUnchanged": true,
+    "refreshUIDeepEqual": true,
+    "onlyOwnUI": true,
+    "avatarLoaded": true,
+    "noLegacyStatusBlocks": true
+  }
+}

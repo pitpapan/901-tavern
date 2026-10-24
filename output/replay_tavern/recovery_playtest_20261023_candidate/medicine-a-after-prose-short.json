@@ -1,0 +1,407 @@
+{
+  "chatId": "901 药品休息 药A实测 - 2026-10-23",
+  "revision": 3,
+  "health": {
+    "intact": 6,
+    "B": 0,
+    "L": 6,
+    "A": 0,
+    "temp": 0,
+    "coma": false,
+    "deteriorationStopped": false
+  },
+  "resources": {
+    "流风": {
+      "current": 22,
+      "max": 22
+    }
+  },
+  "will": {
+    "current": 2,
+    "max": 3
+  },
+  "inventory": [
+    {
+      "name": "雪莲子",
+      "quantity": 1,
+      "source": "原"
+    },
+    {
+      "name": "培元丹",
+      "quantity": 3,
+      "source": "原"
+    },
+    {
+      "name": "药A",
+      "quantity": 1,
+      "source": "原"
+    },
+    {
+      "name": "药B",
+      "quantity": 3,
+      "source": "原"
+    },
+    {
+      "name": "药C",
+      "quantity": 4,
+      "source": "原"
+    },
+    {
+      "name": "雷霆药剂",
+      "quantity": null,
+      "source": "原：数量未记"
+    },
+    {
+      "name": "恶灵提示符",
+      "quantity": null,
+      "source": "原：100为价格，非数量"
+    }
+  ],
+  "pendingRecoveryEffects": [],
+  "actorRecord": {
+    "name": "御临风",
+    "state": {
+      "name": "御临风",
+      "attributes": {
+        "力量": 5,
+        "敏捷": 5,
+        "智力": 4,
+        "感知": 4,
+        "意志": 1,
+        "风度": 2
+      },
+      "size": 5,
+      "hpBonus": 0,
+      "derived": {
+        "hpMax": 12,
+        "defense": 4,
+        "speed": 25,
+        "initiative": 7,
+        "willMax": 3,
+        "vision": 40
+      },
+      "skills": {
+        "运动": {
+          "level": 1,
+          "subs": {}
+        },
+        "肉搏": {
+          "level": 0,
+          "subs": {}
+        },
+        "白刃": {
+          "level": 5,
+          "subs": {
+            "长剑": {
+              "level": 3
+            }
+          }
+        },
+        "射击": {
+          "level": 0,
+          "subs": {}
+        },
+        "隐藏": {
+          "level": 1,
+          "subs": {}
+        },
+        "求生": {
+          "level": 1,
+          "subs": {}
+        },
+        "驾驶": {
+          "level": 0,
+          "subs": {}
+        },
+        "学识": {
+          "level": 2,
+          "subs": {}
+        },
+        "科学": {
+          "level": 0,
+          "subs": {}
+        },
+        "神秘": {
+          "level": 2,
+          "subs": {}
+        },
+        "电脑": {
+          "level": 2,
+          "subs": {}
+        },
+        "医疗": {
+          "level": 2,
+          "subs": {}
+        },
+        "洞察": {
+          "level": 1,
+          "subs": {}
+        },
+        "社交": {
+          "level": 2,
+          "subs": {}
+        }
+      },
+      "resources": {
+        "流风": {
+          "current": 22,
+          "max": 22
+        }
+      },
+      "attributeAuto": {},
+      "derivedOverrides": [
+        "hpMax",
+        "willMax",
+        "speed",
+        "initiative"
+      ],
+      "health": {
+        "intact": 6,
+        "B": 0,
+        "L": 6,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "will": {
+        "current": 2,
+        "max": 3
+      },
+      "xp": 0,
+      "greatPowersAvailable": 0,
+      "statuses": [],
+      "attributeDamage": {},
+      "turn": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "extendedActions": {},
+      "inventory": [
+        {
+          "name": "雪莲子",
+          "quantity": 1,
+          "source": "原"
+        },
+        {
+          "name": "培元丹",
+          "quantity": 3,
+          "source": "原"
+        },
+        {
+          "name": "药A",
+          "quantity": 1,
+          "source": "原"
+        },
+        {
+          "name": "药B",
+          "quantity": 3,
+          "source": "原"
+        },
+        {
+          "name": "药C",
+          "quantity": 4,
+          "source": "原"
+        },
+        {
+          "name": "雷霆药剂",
+          "quantity": null,
+          "source": "原：数量未记"
+        },
+        {
+          "name": "恶灵提示符",
+          "quantity": null,
+          "source": "原：100为价格，非数量"
+        }
+      ],
+      "unknownSkills": {
+        "制造": {
+          "level": null,
+          "subs": {
+            "炼药": {
+              "level": 2
+            }
+          }
+        }
+      },
+      "recoveryRules": {
+        "flow": {
+          "attributes": [
+            "敏捷",
+            "感知"
+          ],
+          "physical": true,
+          "longRest": true
+        },
+        "flowRecoveryCheck": {
+          "attributes": [
+            "敏捷",
+            "感知"
+          ],
+          "source": "用户2026-10-23确认"
+        }
+      },
+      "pendingRecoveryEffects": [],
+      "recoveryClock": {
+        "minutes": 495,
+        "longRests": 1,
+        "L": {
+          "minutes": 0,
+          "longRests": 0
+        },
+        "A": {
+          "minutes": 0,
+          "longRests": 0
+        }
+      }
+    },
+    "combatCarry": {}
+  },
+  "operations": [
+    {
+      "operationId": "gm-runtime/901 药品休息 药A实测 - 2026-10-23/1/0",
+      "signature": "{\"actorId\":\"player\",\"command\":{\"type\":\"medicine\",\"medicine\":\"药A\"}}",
+      "summary": {
+        "status": "applied",
+        "kind": "recovery",
+        "operationId": "gm-runtime/901 药品休息 药A实测 - 2026-10-23/1/0",
+        "revision": 1,
+        "messageId": 1,
+        "swipeId": 0,
+        "result": {
+          "kind": "recovery",
+          "type": "medicine",
+          "medicine": "药A",
+          "changes": [
+            {
+              "source": "药A",
+              "consumed": 1,
+              "remaining": 1
+            }
+          ],
+          "pending": [
+            {
+              "medicine": "药A"
+            }
+          ],
+          "life": {
+            "state": "awake",
+            "deteriorating": false,
+            "woundPenalty": 1
+          }
+        }
+      }
+    },
+    {
+      "operationId": "gm-runtime/901 药品休息 药A实测 - 2026-10-23/3/0",
+      "signature": "{\"actorId\":\"player\",\"command\":{\"type\":\"rest\",\"rest\":\"long\",\"minutes\":480}}",
+      "summary": {
+        "status": "applied",
+        "kind": "recovery",
+        "operationId": "gm-runtime/901 药品休息 药A实测 - 2026-10-23/3/0",
+        "revision": 2,
+        "messageId": 3,
+        "swipeId": 0,
+        "result": {
+          "kind": "recovery",
+          "type": "rest",
+          "rest": "long",
+          "minutes": 480,
+          "changes": [
+            {
+              "will": 1
+            },
+            {
+              "source": "自然短休间隔",
+              "severity": "B",
+              "healed": 1
+            },
+            {
+              "source": "长休",
+              "resource": "流风",
+              "restored": 12
+            },
+            {
+              "source": "药A",
+              "severity": "A",
+              "healed": 3
+            }
+          ],
+          "pending": [],
+          "life": {
+            "state": "awake",
+            "deteriorating": false,
+            "woundPenalty": 0
+          }
+        }
+      }
+    },
+    {
+      "operationId": "gm-runtime/901 药品休息 药A实测 - 2026-10-23/5/0",
+      "signature": "{\"actorId\":\"player\",\"command\":{\"type\":\"rest\",\"rest\":\"short\",\"minutes\":15}}",
+      "summary": {
+        "status": "applied",
+        "kind": "recovery",
+        "operationId": "gm-runtime/901 药品休息 药A实测 - 2026-10-23/5/0",
+        "revision": 3,
+        "messageId": 5,
+        "swipeId": 0,
+        "result": {
+          "kind": "recovery",
+          "type": "rest",
+          "rest": "short",
+          "minutes": 15,
+          "changes": [],
+          "pending": [],
+          "life": {
+            "state": "awake",
+            "deteriorating": false,
+            "woundPenalty": 0
+          }
+        }
+      }
+    }
+  ],
+  "lastMessages": [
+    {
+      "user": true,
+      "text": "我现在安静躺下，完整短休15分钟，期间不做其他行动。",
+      "extra": {
+        "isSmallSys": false,
+        "901_replay_gate": {
+          "status": "APPLIED",
+          "operationId": "gm-runtime/901 药品休息 药A实测 - 2026-10-23/5/0",
+          "kind": "recovery",
+          "completed": {
+            "status": "APPLIED",
+            "operationId": "gm-runtime/901 药品休息 药A实测 - 2026-10-23/5/0",
+            "playerText": "我现在安静躺下，完整短休15分钟，期间不做其他行动。",
+            "message": "御临风在床榻上闭目躺下，调整着呼吸。\n\n十五分钟的静养让紧绷的肌肉稍稍放松，四肢传来的沉重感有所减轻。屋内依旧安安静静，阳光透过窗棂照在木地板上，残存的伤痛并未完全退去，呼吸间仍能察觉到几处未愈的隐痛。",
+            "meta": {
+              "status": "APPLIED",
+              "operationId": "gm-runtime/901 药品休息 药A实测 - 2026-10-23/5/0",
+              "kind": "recovery"
+            }
+          }
+        }
+      }
+    },
+    {
+      "user": false,
+      "text": "御临风在床榻上闭目躺下，调整着呼吸。\n\n十五分钟的静养让紧绷的肌肉稍稍放松，四肢传来的沉重感有所减轻。屋内依旧安安静静，阳光透过窗棂照在木地板上，残存的伤痛并未完全退去，呼吸间仍能察觉到几处未愈的隐痛。\n\n<StatusPlaceHolderImpl/>",
+      "extra": {
+        "901_replay_gate": {
+          "status": "APPLIED",
+          "operationId": "gm-runtime/901 药品休息 药A实测 - 2026-10-23/5/0",
+          "kind": "recovery"
+        }
+      }
+    }
+  ]
+}

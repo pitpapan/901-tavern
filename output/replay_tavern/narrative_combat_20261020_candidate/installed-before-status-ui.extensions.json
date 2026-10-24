@@ -1,0 +1,114 @@
+{
+  "talkativeness": "0.5",
+  "fav": false,
+  "world": "901_叙事战斗测试_008_20261020",
+  "depth_prompt": {
+    "prompt": "",
+    "depth": 4,
+    "role": "system"
+  },
+  "tavern_helper": {
+    "scripts": [
+      {
+        "type": "script",
+        "enabled": true,
+        "name": "901 MVU（测试卡）",
+        "id": "da2245a0-3366-4bb6-b302-8b2d163944d5",
+        "content": "import 'https://gcore.jsdelivr.net/gh/MagicalAstrogy/MagVarUpdate@master/artifact/bundle.js'",
+        "info": "隔离测试；不用于正式 901 聊天",
+        "button": {
+          "enabled": false,
+          "buttons": [
+            {
+              "name": "重新处理变量",
+              "visible": false
+            },
+            {
+              "name": "重新读取初始变量",
+              "visible": false
+            },
+            {
+              "name": "快照楼层",
+              "visible": false
+            },
+            {
+              "name": "重演楼层",
+              "visible": false
+            },
+            {
+              "name": "重试额外模型解析",
+              "visible": false
+            },
+            {
+              "name": "增量校正额外模型解析",
+              "visible": false
+            },
+            {
+              "name": "清除旧楼层变量",
+              "visible": false
+            }
+          ]
+        },
+        "data": {},
+        "export_with": {
+          "data": true,
+          "button": true
+        }
+      },
+      {
+        "type": "script",
+        "enabled": true,
+        "name": "901 叙事战斗入口",
+        "id": "c2ac1964-10f5-489d-b770-dd57b00405fc",
+        "content": "const {registerReplayGate}=await import('/901-narrative-combat/work/rules_engine/gm_runtime/replay-gate-script.example.js');\nconst {createChatSessionAccess,INTEGRATION_SCENE}=await import('/901-narrative-combat/work/rules_engine/gm_runtime/integrated.mjs');\nconst {createNarrativeSession}=await import('/901-narrative-combat/work/rules_engine/gm_runtime/narrative.mjs');\nawait waitGlobalInitialized('Mvu');\nconst response=await fetch('/901-narrative-combat/work/character_builder/real_character/yulinfeng_replay_t0.baseline.json');\nif(!response.ok)throw Error('人物来源未安装');\nconst baseline=await response.json();\nconst style=await (await fetch('/901-narrative-combat/narrative-style.json')).json();\nconst narrationRules='你是901的主持，用原团的文字方式续写战斗。程序事实已经结算，不要再次裁定。'+\n  '把动作按先后写成连贯场面：出手手段、相对位置、对方如何应付、落定后的局面。用具体的剑路、拳势、脚下和环境反馈承载因果，避免报表、招式清单和每击都写决战。'+\n  '不要只用一句命中/受伤带过。少量事件写一至三段，整场旁观演练按关键攻防展开，保留转折。已经发生的事情才能写成事实。'+\n  '御临风的动作、话语和意图以玩家声明为限，不能替他补动作、台词和心理。对手的闪避、架挡、踉跄是既定结果的表现，不能凭描写追加一次攻击、移动、施法或消耗。'+\n  '尤其在等待御临风声明、或玩家明确说尚不行动时，不写他握剑、转腕、变换姿势、挪步、调息等新增动作；只描述对手和既有环境。不得把背景资料中的法师塔、城墙等补进这个开阔演练场。'+\n  'participants.position是米坐标，描述距离必须与之相符。没有移动事件就没有站位变化，受伤只能写躯干晃动、伤口等，不能写后退数步、突进、击飞；没有使用能力的事件也不能补写运气施法或新的招式。'+\n  '按events顺序描写，不能把攻击后的移动挪到攻击之前。consequence逐条成立，特别是御临风受伤时不能因玩家说了格挡就写成尽数挡下。只为participants中有事实支持的人描写本轮动作，不补场边人物的反应。'+\n  '等待玩家借机攻击声明时，对方只是准备离开威胁范围；不要先移动他，也不要替御临风发动借机攻击。'+\n  '仅写events和participants支持的结果。无新增事件时只承接对话与扮演，不发生新的机械行为。'+\n  '这是御临风的观察视角。队友和敌人的生命、能量、属性、攻防、技能预算、骰数和隐藏增益一律不可公开或猜测；只描述可见伤势与动作。'+\n  'phase为等待玩家继续行动时停在当下，剩余动作由玩家继续声明。phase为等待玩家受击反应时攻击尚未命中，停在来势上，等玩家声明如何防御；不得替他闪避、格挡或使用能力。'+\n  '战斗结束才写战后即时反应，不擅自恢复、授予奖励或推进下一幕。不输出选项菜单、规则表、变量或数值面板，程序会附上御临风自己的状态。';\nconst modelOptions={should_stream:false,should_silence:true,max_chat_history:6,\n  ordered_prompts:['world_info_before','char_description','scenario',\n    {role:'system',content:INTEGRATION_SCENE+'只公开御临风自己的数值；同伴和敌人仅有可观察表现。JS独占规则写回。'},\n    'world_info_after','chat_history','user_input']};\nconst getSession=createChatSessionAccess(()=>SillyTavern,tavern=>createNarrativeSession({\n  baseline,mvu:Mvu,tavern,generateRaw,createChatMessages,setChatMessages,\n  narrate:facts=>generateRaw({should_stream:false,should_silence:true,max_chat_history:0,\n    ordered_prompts:[{role:'system',content:style+'\\n\\n'+narrationRules},'user_input'],\n    user_input:JSON.stringify(facts)}),\n}));\nconst combat={\n  get busy(){return getSession().busy;},\n  get encounterOptions(){return getSession().encounterOptions;},\n  resumeEntry:p=>getSession().resumeEntry(p),\n  handleTurn:input=>getSession().handleTurn(input),\n  handleFailure:input=>getSession().handleFailure(input),\n  enterForPlayer:(id,p)=>getSession().enterForPlayer(id,p),\n};\nregisterReplayGate({getMvu:async()=>Mvu,combat,\n  profile:{debug:false,prepare:()=>getSession().prepare(),loadBaseline:async()=>getSession().baseline,directEffects:false,\n    sceneContext:INTEGRATION_SCENE,classificationTimeoutMs:60000,modelOptions,\n    narrationInstruction:'用原团式文字承接当前场景。只描述队友和敌人的可见表现，不公开其数值；不自动开战，不替御临风说话或决定。'}});\nwindow.addEventListener('pagehide',()=>{try{getSession().dispose();}catch{}});\n",
+        "info": "完整人物卡隔离测试，非帝都T0、非正式重玩存档。复用008世界书背景；测试场地、相距1米、矮横木敏捷＋运动DC1仅为验收夹具。用户2026-10-20确认：苍穹弓力量要求4，狮子王与弃风武器体积3，乱红莲体积12。流风池上限和启动动作留空，由主持补参。御临风不含观澜法。所有数值仅由程序结算与写回；模型不能调用工具替玩家选择。",
+        "button": {
+          "enabled": false,
+          "buttons": []
+        },
+        "data": {},
+        "export_with": {
+          "data": true,
+          "button": true
+        }
+      }
+    ],
+    "variables": {}
+  },
+  "regex_scripts": [
+    {
+      "id": "49425759-bfaa-4afd-825c-2229cd01d651",
+      "scriptName": "901｜历史计算明细不送入模型",
+      "findRegex": "/^[\\t ]*<rules901_detail>[\\t ]*\\r?\\n[\\s\\S]*?^[\\t ]*<\\/rules901_detail>[\\t ]*(?:\\r?\\n|$)/gm",
+      "replaceString": "",
+      "trimStrings": [],
+      "placement": [
+        2
+      ],
+      "disabled": false,
+      "markdownOnly": false,
+      "promptOnly": true,
+      "runOnEdit": true,
+      "substituteRegex": 0,
+      "minDepth": 2,
+      "maxDepth": null
+    },
+    {
+      "id": "1ad27848-64a5-442e-9785-91896ea35526",
+      "scriptName": "901｜自身状态不重复送入叙述",
+      "findRegex": "/<details><summary>御临风 · 自身状态<\\/summary>[\\s\\S]*?<\\/details>/g",
+      "replaceString": "",
+      "trimStrings": [],
+      "placement": [
+        2
+      ],
+      "disabled": false,
+      "markdownOnly": false,
+      "promptOnly": true,
+      "runOnEdit": true,
+      "substituteRegex": 0,
+      "minDepth": 0,
+      "maxDepth": null
+    }
+  ]
+}

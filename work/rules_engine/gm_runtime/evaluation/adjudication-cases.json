@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 1,
+  "scope": "hypothetical_non_canon_offline_evaluation_only",
+  "verdicts": ["NO_CHECK", "DIRECT_EFFECT", "CHECK_REQUIRED", "NEEDS_INPUT", "UNRESOLVED"],
+  "contractSources": ["../adjudication-gate.mjs", "../replay-check.mjs", "../NPC_ORDINARY_CHECKS.md", "../../README.md"],
+  "sharedConstraints": [
+    "场景、人物和授权仅属评估假设，不修改 Canon 或存档。expected 不输入待测模型。",
+    "NO_CHECK 仍可叙述确定成功或合理拒绝，但不写机械状态。",
+    "CHECK_REQUIRED 使用已有 check 请求；DC 由有依据的主持裁定，不设评估固定答案。缺少必填输入时不得伪造可执行 JSON。",
+    "普通检定先核对资格、应用合法投骰前修正，再由 JS 按最终 DP≤0 进入 PHB 机运路径；高难度或未知信息本身不是机运触发条件。实际机运骰不接受通用意志力加持。",
+    "环境及扮演加值自动适用；主动效果需可信模板中的已采用规则及使用条件或受支持代价，不能凭 activation 标记要求玩家确认。",
+    "仅机运骰允许秘密结算。普通 NPC 检定不公开数值，但仍走普通数学，不改称秘密机运事件。",
+    "玩家可核对自己的公开属性/主技能/适用子技能/修正；不展示 DC、骰值、成功数、NPC 数值或私密线索。",
+    "不得以措辞华丽程度直接换固定 RP 奖励、编造人物能力或自动消耗玩家资源。"
+  ],
+  "errorCategories": ["missed_required_check", "unnecessary_check", "unjustified_impossibility", "incorrect_direct_effect", "incorrect_fortune_selection", "hidden_information_error", "compound_action_error"],
+  "observationTemplate": {
+    "caseId": null,
+    "approach": null,
+    "modelAndVersion": null,
+    "promptVersion": null,
+    "inputSnapshot": null,
+    "settings": null,
+    "runState": "not_run",
+    "rawResponse": null,
+    "parsedDecision": null,
+    "proposedNarration": null,
+    "executionDisposition": null,
+    "actualModelCallCount": null,
+    "calls": [],
+    "providerInputTokens": null,
+    "providerOutputTokens": null,
+    "usageComplete": null,
+    "totalElapsedMs": null,
+    "transportFailures": null,
+    "timeouts": null,
+    "assessment": {"acceptable": null, "errorCategories": null, "evidence": null, "interfaceLimitations": null}
+  },
+  "callRecordTemplate": {
+    "purpose": null, "requestId": null, "elapsedMs": null,
+    "providerInputTokens": null, "providerOutputTokens": null,
+    "transportStatus": null, "timedOut": null
+  },
+  "cases": [
+    {
+      "id": "C01",
+      "title": "向友善熟人借普通物品",
+      "input": {
+        "action": {"actor": "player", "text": "借我一下那把备用扫帚，我扫完门口就还。"},
+        "sceneFacts": {"public": ["店主有闲置备用扫帚，门口清扫无危险。"], "gmOnly": ["没有隐藏代价、稀缺性或冲突。"]},
+        "npcMotivationsAndRelationships": ["店主与玩家互信，也希望门口整洁，愿意出借。"],
+        "knownCapabilities": ["玩家能正常交流并使用扫帚；不使用能力或资源。"],
+        "ruleConstraints": ["合理日常行为无实质不确定性，不自动要求社交检定。"]
+      },
+      "expected": {
+        "acceptable": [{"status": "NO_CHECK", "when": "按明确意愿出借并叙述交接，basis 可为 ordinary_dialogue 或 deterministic。"}],
+        "incorrect": ["因出现请求或NPC就强制说服检定。", "授予未声明的机械奖励。"],
+        "unavailableInformation": [],
+        "resolution": {"js": "不需要", "persistence": "无机械写入；可正常保存叙述", "rollType": "none"},
+        "currentInterface": "可用 NO_CHECK；不要求库存系统实际转移物品。"
+      }
+    },
+    {
+      "id": "C02",
+      "title": "向动机明确的不友善NPC借物",
+      "input": {
+        "action": {"actor": "player", "text": "把你的雨披借我一会儿。"},
+        "sceneFacts": {"public": ["NPC马上要冒雨赶路，只有一件雨披；玩家未提出交换或新理由。"], "gmOnly": []},
+        "npcMotivationsAndRelationships": ["NPC记恨此前争执；珍惜自用装备，不愿让自己淋雨。"],
+        "knownCapabilities": ["玩家可以提出请求，但没有读心、强制服从或借物特权。"],
+        "ruleConstraints": ["合理拒绝不等于玩家行动不合法；敌意也不自动触发骰子。"]
+      },
+      "expected": {
+        "acceptable": [{"status": "NO_CHECK", "when": "依据明确动机自然拒绝，不断言今后任何说服都不可能。"}],
+        "incorrect": ["为所有拒绝强行安排检定。", "忽略NPC自用需求直接成功。", "宣布不友善NPC永远无法说服。"],
+        "unavailableInformation": [],
+        "resolution": {"js": "不需要", "persistence": "无机械写入", "rollType": "none"},
+        "currentInterface": "NO_CHECK 可表达确定拒绝，不新增 verdict。"
+      }
+    },
+    {
+      "id": "C03",
+      "title": "有实际两难的说服尝试",
+      "input": {
+        "action": {"actor": "player", "text": "请守卫暂缓关门，让还在桥上的伤员进来；我愿意向队长说明责任。"},
+        "sceneFacts": {"public": ["伤员确实在桥上，延迟关门可能增加风险；守卫有短暂裁量权。"], "gmOnly": ["守卫尚未决定，结果影响伤员安全。"]},
+        "npcMotivationsAndRelationships": ["守卫同情伤员但怕违令，对玩家没有固定敌意或信任。"],
+        "knownCapabilities": ["玩家能被听见，理解规章；没有控制心智能力。可信角色卡有可用于交涉的主技能，具体采用条目需提供。"],
+        "ruleConstraints": ["存在合法且有后果的不确定尝试；检定不保证改变所有NPC底线。"]
+      },
+      "expected": {
+        "acceptable": [
+          {"status": "CHECK_REQUIRED", "when": "选用已提供卡面技能并说明情境难度依据；当前缺项补齐后才能提交 check。"},
+          {"status": "NEEDS_INPUT", "when": "明确指出缺少可执行技能映射或难度依据，不把角色数值凭空补齐。"}
+        ],
+        "incorrect": ["仅凭承诺直接判定说服成功。", "因风险很高断言不可能。", "把说服改成脚本秘密机运骰。"],
+        "unavailableInformation": ["该假想角色的可信主技能条目及必要数值尚未给出。", "未预定DC；需主持结合已知风险作有依据裁定。"],
+        "resolution": {"js": "输入齐备后需要普通检定", "persistence": "提交并去重检定；不自动扣除玩家资源", "rollType": "ordinary_check_then_final_DP_fallback_if_applicable"},
+        "currentInterface": "使用 check；本案不是对抗检定的授权样本。"
+      }
+    },
+    {
+      "id": "C04",
+      "title": "鼓励伴随具体线索提示",
+      "input": {
+        "action": {"actor": "gm", "text": "同伴鼓励玩家别慌，并指出路边两处可对照的压痕，帮助其继续观察。"},
+        "sceneFacts": {"public": ["同伴确实发现并指出可利用的压痕；玩家尚未检定。"], "gmOnly": ["本评估配置明确允许既有 demo.scene-cue 模板授予玩家；目前不存在同源效果。"]},
+        "npcMotivationsAndRelationships": ["同伴愿意协助玩家；没有欺骗或要求回报。"],
+        "knownCapabilities": ["玩家能够看见压痕；可信卡具备感知及洞察。"],
+        "ruleConstraints": ["只使用已有 demo.scene-cue：场景线索+1DP，下一次匹配感知＋洞察自动适用；这是现有隔离模板，不是新增RP奖励表。", "鼓励话语本身不等于治疗、士气光环或任意技能加值。"]
+      },
+      "expected": {
+        "acceptable": [{"status": "DIRECT_EFFECT", "when": "仅提交既有 direct_effect/effectId=demo.scene-cue，JS保存后叙述授予；无需为本次授予另投骰。"}],
+        "incorrect": ["NO_CHECK却在叙述中新增机械加值。", "把环境/扮演修正变成玩家可选消耗品。", "编造全军士气或其他可执行效果ID。"],
+        "unavailableInformation": [],
+        "resolution": {"js": "需要模板验证及无骰授予", "persistence": "同源去重，授予一次；不在本次顺便完成后续观察检定", "rollType": "none"},
+        "currentInterface": "DIRECT_EFFECT可执行，但现有独立分类提示只针对玩家声明；本案GM输入需如实记录为输入范围差异，不伪装成玩家说话。未提供模板的普通鼓励只可无数值叙述或暂缓拟议效果。"
+      }
+    },
+    {
+      "id": "C05",
+      "title": "以演说挽救濒溃军队",
+      "input": {
+        "action": {"actor": "player", "text": "我站到仍能听见我的队伍前，指出可守住的退路，号召他们重新集结。"},
+        "sceneFacts": {"public": ["队伍濒临溃散但未完全逃离；部分军官仍在组织，演说能被附近队伍听见。"], "gmOnly": ["恢复秩序有真实机会也有严重失败后果；并非预定成功。"]},
+        "npcMotivationsAndRelationships": ["士兵恐惧但仍关心同袍和退路；认可玩家曾经援助，无绝对服从义务。"],
+        "knownCapabilities": ["玩家有出众表达能力但无已采用的全军控制能力；声量及位置只覆盖附近部队。"],
+        "ruleConstraints": ["超高难度不取消合法尝试。", "个人交涉成功不能自动等于全军重整或战役胜利；当前无完整军队士气/规模转换规则。"]
+      },
+      "expected": {
+        "acceptable": [
+          {"status": "CHECK_REQUIRED", "when": "明确将范围限定为可接触部队的普通影响尝试，所需角色输入及难度依据齐备；不宣称已经结算全军士气。"},
+          {"status": "NEEDS_INPUT", "when": "询问影响范围、具体行动目标或可信技能条目，以区分局部影响与全军机制。"},
+          {"status": "UNRESOLVED", "when": "所要求结果是整支军队的数值士气变化，指出尚无受支持规则，保留局部合法尝试。"}
+        ],
+        "incorrect": ["演说优美就直接大幅恢复全军士气。", "普通人绝不可能影响溃军，因此不许尝试。", "难度太大所以无条件改投机运骰。"],
+        "unavailableInformation": ["全军士气转换规则未采用。", "具体角色技能、精确影响范围及情境DC尚未确定。"],
+        "resolution": {"js": "合法局部检定需要；未支持的军队效果不得执行", "persistence": "仅保存被授权的局部检定，不写全军奖励", "rollType": "ordinary_check_then_final_DP_fallback_if_applicable"},
+        "currentInterface": "无军队子系统；DIRECT_EFFECT现有模板不能用于全军鼓舞。"
+      }
+    },
+    {
+      "id": "C06",
+      "title": "听不见但看得见的非语言鼓舞",
+      "input": {
+        "action": {"actor": "player", "text": "我不喊话，举起约定的撤退旗号，亲自站到安全缺口，示意士兵跟上。"},
+        "sceneFacts": {"public": ["炮声使士兵听不见讲话，但视线通畅；缺口确实安全。"], "gmOnly": ["部分士兵看见了旗号，是否在恐惧中行动仍不确定。"]},
+        "npcMotivationsAndRelationships": ["士兵想撤离并信任玩家领路，已共同练习该旗号。"],
+        "knownCapabilities": ["玩家有旗、能举旗且处于视线内；不用声音传递信息。"],
+        "ruleConstraints": ["按实际声明的视觉机制判断，不能把听觉当作所有鼓舞的前提。", "旗号被理解不自动保证恐惧中的服从，也不自动授予士气数值。"]
+      },
+      "expected": {
+        "acceptable": [
+          {"status": "CHECK_REQUIRED", "when": "针对促成实际行动的不确定性采用适用普通检定，输入齐备；旗号送达部分不额外投骰。"},
+          {"status": "NEEDS_INPUT", "when": "需要可信技能映射或有依据的难度输入，不追问已经给出的可见性和旗号理解。"}
+        ],
+        "incorrect": ["士兵听不见，所以非语言鼓舞不可能。", "将视觉动作改成玩家未声明的喊话。", "直接授予未支持的士气加值。"],
+        "unavailableInformation": ["具体可信技能条目及难度裁定尚未给出。"],
+        "resolution": {"js": "输入齐备后普通检定", "persistence": "保存一次检定，不创造军队资源", "rollType": "ordinary_check_then_final_DP_fallback_if_applicable"},
+        "currentInterface": "现有check可承载普通尝试；不要求增加非语言专用骰制。"
+      }
+    },
+    {
+      "id": "C07",
+      "title": "明确不存在的必要身体机制",
+      "input": {
+        "action": {"actor": "player", "text": "我用双手同时按住两个必须手掌接触的开关。"},
+        "sceneFacts": {"public": ["两个开关的已确认机制要求同时接触；本案限定动作是用手掌触碰。"], "gmOnly": []},
+        "npcMotivationsAndRelationships": ["无相关NPC。"],
+        "knownCapabilities": ["该假想角色没有手，也没有义肢、替代肢体或可满足此机制的能力；未声明替代方案。"],
+        "ruleConstraints": ["行动前提不成立不能靠D10的10变合法；不要替玩家选择新动作。"]
+      },
+      "expected": {
+        "acceptable": [{"status": "NO_CHECK", "when": "basis=deterministic，说明这项特定动作无法执行，允许玩家另提方案，不判定所有替代方案都失败。"}],
+        "incorrect": ["以高DC或机运骰让不存在的手完成动作。", "未经声明自动使用念力/脚/同伴替代。", "把已明确不存在的手再列为未知输入。"],
+        "unavailableInformation": [],
+        "resolution": {"js": "不投骰；资格校验不可被跳过", "persistence": "无机械变更", "rollType": "none"},
+        "currentInterface": "NO_CHECK允许确定失败；不是新增IMPOSSIBLE verdict。"
+      }
+    },
+    {
+      "id": "C08",
+      "title": "身体超常但具备资格的力量壮举",
+      "input": {
+        "action": {"actor": "player", "text": "我利用现成支点撬动沉重石门，为同伴撑出通道。"},
+        "sceneFacts": {"public": ["石门可移动，支点可靠，动作空间足够；失败有被困风险。"], "gmOnly": ["重量和阻力需要据实际结构裁定，不能套用普通人的上限。"]},
+        "npcMotivationsAndRelationships": ["同伴等待通道，不替玩家支付资源。"],
+        "knownCapabilities": ["可信人物能力已确认足以合法尝试超常力量行为；有适用身体机制，具体力量/技能数值从卡读取。"],
+        "ruleConstraints": ["先确认资格并应用已合法确认的投骰前修正，再计算最终DP。", "不得因壮举超出常人就判不可能；也不得把非正DP当作资格不存在。"]
+      },
+      "expected": {
+        "acceptable": [
+          {"status": "CHECK_REQUIRED", "when": "有必要可信输入与结构难度依据时使用普通check；最终DP≤0才由JS进入机运，正DP仍普通骰池。"},
+          {"status": "NEEDS_INPUT", "when": "指出缺少实际阻力依据或可信卡面数值，仍承认尝试合法。"}
+        ],
+        "incorrect": ["常人做不到所以禁止已具备资格的角色尝试。", "默认超常行为都用机运骰。", "最终DP≤0却强制补成1DP普通检定，或在实际机运骰上加通用意志。"],
+        "unavailableInformation": ["精确结构阻力、可信卡数值和最终修正尚未给出，不预设DC或DP。"],
+        "resolution": {"js": "需要资格与最终骰池计算后结算", "persistence": "一次检定及已支持后果；未支持的伤害另行暂缓", "rollType": "ordinary_check_then_final_DP_fallback_if_applicable"},
+        "currentInterface": "机运回退仍是check内部路径，不让分类器伪造独立luck请求。"
+      }
+    },
+    {
+      "id": "C09",
+      "title": "被动注意与玩家未知信息",
+      "input": {
+        "action": {"actor": "player", "text": "我沿着院墙走向门口。"},
+        "sceneFacts": {"public": ["院墙附近安静，玩家没有声明主动搜查。"], "gmOnly": ["墙后有人移动，发出可能被听见的细响；身份与目的不可直接告诉玩家。"]},
+        "npcMotivationsAndRelationships": ["墙后人物暂时躲避相遇；玩家尚不知道其存在，不可按全知资料行动。"],
+        "knownCapabilities": ["玩家听觉正常，可信卡可提供感知/洞察；没有自动透视能力。"],
+        "ruleConstraints": ["信息未知不等于听见它不可能，也不等于已经发现。", "不可把普通感知改造成秘密机运骰；若触发普通检定，只显示玩家的公开依据，隐藏线索内容和DC。", "未安装普遍自动被动检定系统。"]
+      },
+      "expected": {
+        "acceptable": [
+          {"status": "CHECK_REQUIRED", "when": "GM明确采用这次可听见细响作为感知触发，补齐普通检定输入，不替玩家声明主动搜查。"},
+          {"status": "NEEDS_INPUT", "when": "需要主持确认触发与可感知性/难度，而非询问玩家墙后秘密。"},
+          {"status": "UNRESOLVED", "when": "指出当前尚无被采用的被动触发约定，暂缓发现裁定，不公布隐藏事实。"}
+        ],
+        "incorrect": ["直接告诉玩家墙后人物身份或动机。", "玩家不知道有谁所以不可能察觉声音。", "不经触发判断每回合重复暗骰，或把未知信息直接变成fortune。"],
+        "unavailableInformation": ["本次被动感知触发是否获主持采用，以及具体难度/可信技能输入。"],
+        "resolution": {"js": "采用触发后需要；否则不投骰", "persistence": "提交一次受支持的检定；不得反复重投直到发现", "rollType": "ordinary_check_then_final_DP_fallback_if_applicable"},
+        "currentInterface": "没有自动被动检定监听器；评估应把触发授权缺口与模型泄密分开记录。"
+      }
+    },
+    {
+      "id": "C10",
+      "title": "有明确授权的秘密机运机会",
+      "input": {
+        "action": {"actor": "gm", "text": "在当前触发窗口结算已授权的秘密机会，仅在结果允许时叙述玩家能感知的后果。"},
+        "sceneFacts": {"public": ["玩家正经过废弃岗亭，尚未发现任何特殊机会。"], "gmOnly": ["评估宿主已明确授权此一次性规则：机会的PHB机运结果至少1个投骰成功才出现可观察线索；无额外伤害、奖励或未采用概率。此规则只属于测试假设。", "可信spec: sourceId=test-only/authorized-opportunity, opportunityId=window-1, visibility=secret, rollType=phb_fortune, successCondition={minimum:1}, resolved=false。"]},
+        "npcMotivationsAndRelationships": ["无须模拟场外NPC行为。"],
+        "knownCapabilities": ["不依赖虚构人物属性；本案是已授权事件机会，不是普通属性检定或基因锁。"],
+        "ruleConstraints": ["由可信spec指定PHB机运，首骰仅10成功并保留后续加骰；实际机运骰不得通用意志加持。", "同source/opportunity只能结算一次；秘密结果不公告是否投过骰。"]
+      },
+      "expected": {
+        "acceptable": [{"status": "CHECK_REQUIRED", "when": "选择可信宿主已授权的机会ID，request仅包含kind=scripted_fortune和opportunityId；由现有运行时结算，保留秘密过滤及机会去重。"}],
+        "incorrect": ["NO_CHECK并自行宣布线索出现。", "把事件强塞成普通check或genetic_unlock绕过白名单。", "公告暗骰结果/存在，重复机会重投，或编造遭遇概率。"],
+        "unavailableInformation": [],
+        "resolution": {"js": "需要；通过既有CHECK_REQUIRED门禁进入可信运行时", "persistence": "按source/opportunity及operation ID去重并保存秘密结果", "rollType": "scripted_fortune:phb_fortune"},
+        "currentInterface": "接入缺口已补齐：CHECK_REQUIRED接受仅带机会ID的scripted_fortune。规则、概率、可见性来自可信宿主，非模型请求。宿主未授权或规则不完整时仍暂缓且不公开秘密失败提示。"
+      }
+    },
+    {
+      "id": "C11",
+      "title": "预定结局的场外NPC冲突",
+      "input": {
+        "action": {"actor": "gm", "text": "推进场外两支巡队的冲突，沿用已定计划：乙队撤离，甲队占住渡口。"},
+        "sceneFacts": {"public": ["玩家远离渡口，没有干预或获得现场消息。"], "gmOnly": ["该非Canon场景已有明确计划结局，触发条件未被玩家改变。"]},
+        "npcMotivationsAndRelationships": ["乙队以保全人为首要目标；甲队只求控制渡口，不追击。"],
+        "knownCapabilities": ["本案不需要新建NPC机械卡，也不假设玩家知晓场外行动。"],
+        "ruleConstraints": ["沿用Story Factory式已定场外结果，不启动每个NPC动作的背景模拟。", "叙事世界事实记录不等于MVU伤害、资源或战役数值结算。"]
+      },
+      "expected": {
+        "acceptable": [{"status": "NO_CHECK", "when": "basis=deterministic，保留已定结果与知情边界，不主动把场外秘密播报给玩家。"}],
+        "incorrect": ["给双方补造属性再对抗。", "每轮机运骰试图改变既定结局。", "在玩家文本中泄露尚未得知的冲突详情。"],
+        "unavailableInformation": [],
+        "resolution": {"js": "不需要规则投骰", "persistence": "本任务不写世界事实；无MVU机械变更", "rollType": "none"},
+        "currentInterface": "现有独立提示限定玩家行动，GM-only案例需记录输入范围差异；不能为可调用而伪造玩家干预。"
+      }
+    },
+    {
+      "id": "C12",
+      "title": "寒暄与危险攀爬组成的复合行动",
+      "input": {
+        "action": {"actor": "player", "text": "我先向同伴道谢，然后攀上湿滑的外墙去查看墙顶。"},
+        "sceneFacts": {"public": ["同伴听得见致谢；外墙有可用抓点但湿滑，坠落有真实风险。"], "gmOnly": ["墙顶情况尚未被玩家看见，不提前揭示。"]},
+        "npcMotivationsAndRelationships": ["同伴接受致谢，不自动替玩家攀爬或支付资源。"],
+        "knownCapabilities": ["玩家有四肢，具备合法攀爬资格；可信卡含相关身体属性与运动，具体数值待读取。"],
+        "ruleConstraints": ["不能用开头的普通寒暄把整条行动归入NO_CHECK。", "当前门禁每个锚点只有一个操作；不新造复合verdict或自动拆出多次结算。", "致谢不需骰子；攀爬未结算前不叙述登顶或看见墙顶秘密。"]
+      },
+      "expected": {
+        "acceptable": [
+          {"status": "CHECK_REQUIRED", "when": "整条请求被危险子动作门控，check只针对攀爬；说明致谢无需检定，待输入齐备后结算。"},
+          {"status": "NEEDS_INPUT", "when": "缺少高度、坠落后果处理或必要卡面/难度依据，保留原攀爬动作，不假定已经登顶。"}
+        ],
+        "incorrect": ["整条NO_CHECK并叙述攀爬成功。", "让致谢单独投骰，或把整个句子重复结算。", "擅自增加侦察、战斗、资源消费或提前泄露墙顶情报。"],
+        "unavailableInformation": ["墙高、失败后果的受支持处理、可信卡面数值及情境难度尚未给出。"],
+        "resolution": {"js": "对危险子动作需要；寒暄不需要", "persistence": "同一原行动操作去重；未支持后果不得用叙述补写", "rollType": "ordinary_check_then_final_DP_fallback_if_applicable"},
+        "currentInterface": "已有湿滑外墙风险守卫会拒绝整条NO_CHECK；未新增动作拆分器。"
+      }
+    }
+  ]
+}

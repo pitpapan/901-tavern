@@ -1,0 +1,262 @@
+{
+  "chatId": "901 药品休息 主链实测 - 2026-10-23",
+  "revision": 0,
+  "health": {
+    "intact": 2,
+    "B": 1,
+    "L": 6,
+    "A": 3,
+    "temp": 0,
+    "coma": false,
+    "deteriorationStopped": false
+  },
+  "resources": {
+    "流风": {
+      "current": 10,
+      "max": 22
+    }
+  },
+  "will": {
+    "current": 1,
+    "max": 3
+  },
+  "inventory": [
+    {
+      "name": "雪莲子",
+      "quantity": 1,
+      "source": "原"
+    },
+    {
+      "name": "培元丹",
+      "quantity": 3,
+      "source": "原"
+    },
+    {
+      "name": "药A",
+      "quantity": 2,
+      "source": "原"
+    },
+    {
+      "name": "药B",
+      "quantity": 3,
+      "source": "原"
+    },
+    {
+      "name": "药C",
+      "quantity": 4,
+      "source": "原"
+    },
+    {
+      "name": "雷霆药剂",
+      "quantity": null,
+      "source": "原：数量未记"
+    },
+    {
+      "name": "恶灵提示符",
+      "quantity": null,
+      "source": "原：100为价格，非数量"
+    }
+  ],
+  "actorRecord": {
+    "name": "御临风",
+    "state": {
+      "name": "御临风",
+      "attributes": {
+        "力量": 5,
+        "敏捷": 5,
+        "智力": 4,
+        "感知": 4,
+        "意志": 1,
+        "风度": 2
+      },
+      "size": 5,
+      "hpBonus": 0,
+      "derived": {
+        "hpMax": 12,
+        "defense": 4,
+        "speed": 25,
+        "initiative": 7,
+        "willMax": 3,
+        "vision": 40
+      },
+      "skills": {
+        "运动": {
+          "level": 1,
+          "subs": {}
+        },
+        "肉搏": {
+          "level": 0,
+          "subs": {}
+        },
+        "白刃": {
+          "level": 5,
+          "subs": {
+            "长剑": {
+              "level": 3
+            }
+          }
+        },
+        "射击": {
+          "level": 0,
+          "subs": {}
+        },
+        "隐藏": {
+          "level": 1,
+          "subs": {}
+        },
+        "求生": {
+          "level": 1,
+          "subs": {}
+        },
+        "驾驶": {
+          "level": 0,
+          "subs": {}
+        },
+        "学识": {
+          "level": 2,
+          "subs": {}
+        },
+        "科学": {
+          "level": 0,
+          "subs": {}
+        },
+        "神秘": {
+          "level": 2,
+          "subs": {}
+        },
+        "电脑": {
+          "level": 2,
+          "subs": {}
+        },
+        "医疗": {
+          "level": 2,
+          "subs": {}
+        },
+        "洞察": {
+          "level": 1,
+          "subs": {}
+        },
+        "社交": {
+          "level": 2,
+          "subs": {}
+        }
+      },
+      "resources": {
+        "流风": {
+          "current": 10,
+          "max": 22
+        }
+      },
+      "attributeAuto": {},
+      "derivedOverrides": [
+        "hpMax",
+        "willMax",
+        "speed",
+        "initiative"
+      ],
+      "health": {
+        "intact": 2,
+        "B": 1,
+        "L": 6,
+        "A": 3,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "will": {
+        "current": 1,
+        "max": 3
+      },
+      "xp": 0,
+      "greatPowersAvailable": 0,
+      "statuses": [],
+      "attributeDamage": {},
+      "turn": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "extendedActions": {},
+      "inventory": [
+        {
+          "name": "雪莲子",
+          "quantity": 1,
+          "source": "原"
+        },
+        {
+          "name": "培元丹",
+          "quantity": 3,
+          "source": "原"
+        },
+        {
+          "name": "药A",
+          "quantity": 2,
+          "source": "原"
+        },
+        {
+          "name": "药B",
+          "quantity": 3,
+          "source": "原"
+        },
+        {
+          "name": "药C",
+          "quantity": 4,
+          "source": "原"
+        },
+        {
+          "name": "雷霆药剂",
+          "quantity": null,
+          "source": "原：数量未记"
+        },
+        {
+          "name": "恶灵提示符",
+          "quantity": null,
+          "source": "原：100为价格，非数量"
+        }
+      ],
+      "unknownSkills": {
+        "制造": {
+          "level": null,
+          "subs": {
+            "炼药": {
+              "level": 2
+            }
+          }
+        }
+      },
+      "recoveryRules": {
+        "flow": {
+          "attributes": [
+            "敏捷",
+            "感知"
+          ],
+          "physical": true,
+          "longRest": true
+        },
+        "flowRecoveryCheck": {
+          "attributes": [
+            "敏捷",
+            "感知"
+          ],
+          "source": "用户2026-10-23确认"
+        }
+      }
+    }
+  },
+  "operations": [],
+  "lastMessages": [
+    {},
+    {
+      "user": false,
+      "text": "【独立药品与休息接口验收】\n\n安静的休息室里只有御临风，床铺与清水就在手边，可以安全休息。\n\n本聊天的合成验收初值为：完好2、冲击1、严重6、恶性3；流风10/22，意志1/3。它们只用于验证恢复接口，不计入正式剧情。药品沿初始卡原库存，尚未服用或休息。",
+      "extra": {
+        "extra": {}
+      }
+    }
+  ]
+}

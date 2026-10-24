@@ -1,0 +1,50 @@
+{
+  "scope": "real model prose probe; no chat, dice or MVU mutation",
+  "model": "gemini-3.5-flash-lite",
+  "revision": 8,
+  "facts": {
+    "events": [
+      {
+        "actor": "御临风",
+        "action": "移动",
+        "arms": "弃风长剑在手",
+        "status": "pending",
+        "execution": "准备离开近战威胁范围，移动被待处理的借机反应暂停",
+        "outcome": "仍在原站位，尚未移动；借机攻击的命中与伤害未定，等待玩家声明如何防御",
+        "affected": []
+      }
+    ],
+    "interaction": "本段含尚未结算的行动；只展开已经显现的准备或来势，停在所列等待处，不预写其移动、命中或伤害结果。",
+    "setting": {
+      "name": "试炼洞穴入口",
+      "nearbyLandmarks": []
+    },
+    "participants": [
+      {
+        "id": "player",
+        "name": "御临风",
+        "location": "你所在的位置",
+        "terrain": {
+          "elevation": 0,
+          "areas": []
+        },
+        "condition": "可见受伤",
+        "arms": "弃风长剑在手"
+      },
+      {
+        "id": "cave-entrance-stone:stone",
+        "name": "石像魔偶",
+        "location": "与你相距2米",
+        "terrain": {
+          "elevation": 0,
+          "areas": []
+        },
+        "condition": "未见伤势",
+        "arms": "石质拳臂"
+      }
+    ],
+    "phase": "等待玩家受击反应",
+    "declaration": "我用移动动作沿东侧退路退出六米阵纹有效圈。"
+  },
+  "prose": "石像魔偶沉重的石质拳臂带着风声当胸砸至，封死了东侧退路。\n\n御临风弃风长剑在手，脚下正要依势转折，身形才将将错开半步，那尊魔偶的重击已裹挟着劲风逼在眼前。\n\n（等待玩家声明如何防御）"
+}

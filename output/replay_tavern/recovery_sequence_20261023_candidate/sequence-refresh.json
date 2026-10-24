@@ -1,0 +1,230 @@
+{
+  "chatId": "901 药品休息 复合声明实测 - 2026-10-23",
+  "revision": 1,
+  "health": {
+    "intact": 8,
+    "B": 0,
+    "L": 4,
+    "A": 0,
+    "temp": 0,
+    "coma": false,
+    "deteriorationStopped": false
+  },
+  "resources": {
+    "流风": {
+      "current": 22,
+      "max": 22
+    }
+  },
+  "will": {
+    "current": 2,
+    "max": 3
+  },
+  "inventory": [
+    {
+      "name": "雪莲子",
+      "quantity": 1,
+      "source": "原"
+    },
+    {
+      "name": "培元丹",
+      "quantity": 2,
+      "source": "原"
+    },
+    {
+      "name": "药A",
+      "quantity": 2,
+      "source": "原"
+    },
+    {
+      "name": "药B",
+      "quantity": 3,
+      "source": "原"
+    },
+    {
+      "name": "药C",
+      "quantity": 4,
+      "source": "原"
+    },
+    {
+      "name": "雷霆药剂",
+      "quantity": null,
+      "source": "原：数量未记"
+    },
+    {
+      "name": "恶灵提示符",
+      "quantity": null,
+      "source": "原：100为价格，非数量"
+    }
+  ],
+  "pendingRecoveryEffects": [],
+  "recoveryClock": {
+    "minutes": 480,
+    "longRests": 1,
+    "L": {
+      "minutes": 0,
+      "longRests": 0
+    },
+    "A": {
+      "minutes": 0,
+      "longRests": 0
+    }
+  },
+  "operations": {
+    "gm-runtime/901 药品休息 复合声明实测 - 2026-10-23/1/0": {
+      "signature": "{\"actorId\":\"player\",\"command\":{\"type\":\"sequence\",\"steps\":[{\"type\":\"medicine\",\"medicine\":\"培元丹\"},{\"type\":\"rest\",\"rest\":\"long\",\"minutes\":480}]}}",
+      "summary": {
+        "status": "applied",
+        "kind": "recovery",
+        "operationId": "gm-runtime/901 药品休息 复合声明实测 - 2026-10-23/1/0",
+        "revision": 1,
+        "messageId": 1,
+        "swipeId": 0,
+        "result": {
+          "kind": "recovery",
+          "type": "sequence",
+          "steps": [
+            {
+              "kind": "recovery",
+              "type": "medicine",
+              "medicine": "培元丹",
+              "changes": [
+                {
+                  "source": "培元丹",
+                  "consumed": 1,
+                  "remaining": 2
+                }
+              ],
+              "pending": [
+                {
+                  "medicine": "培元丹"
+                }
+              ],
+              "life": {
+                "state": "awake",
+                "deteriorating": false,
+                "woundPenalty": 1
+              }
+            },
+            {
+              "kind": "recovery",
+              "type": "rest",
+              "rest": "long",
+              "minutes": 480,
+              "changes": [
+                {
+                  "will": 1
+                },
+                {
+                  "source": "自然短休间隔",
+                  "severity": "B",
+                  "healed": 1
+                },
+                {
+                  "source": "长休",
+                  "resource": "流风",
+                  "restored": 12
+                },
+                {
+                  "source": "培元丹",
+                  "severity": "A",
+                  "healed": 3
+                },
+                {
+                  "source": "培元丹",
+                  "severity": "L",
+                  "healed": 2
+                }
+              ],
+              "pending": [],
+              "life": {
+                "state": "awake",
+                "deteriorating": false,
+                "woundPenalty": 0
+              }
+            }
+          ],
+          "changes": [
+            {
+              "source": "培元丹",
+              "consumed": 1,
+              "remaining": 2
+            },
+            {
+              "will": 1
+            },
+            {
+              "source": "自然短休间隔",
+              "severity": "B",
+              "healed": 1
+            },
+            {
+              "source": "长休",
+              "resource": "流风",
+              "restored": 12
+            },
+            {
+              "source": "培元丹",
+              "severity": "A",
+              "healed": 3
+            },
+            {
+              "source": "培元丹",
+              "severity": "L",
+              "healed": 2
+            }
+          ],
+          "pending": [],
+          "life": {
+            "state": "awake",
+            "deteriorating": false,
+            "woundPenalty": 0
+          }
+        }
+      }
+    }
+  },
+  "messages": [
+    {
+      "user": false,
+      "text": "【药品与休息复合声明独立验收】\n\n安全、安静的休息室里只有御临风，可以正常睡眠。初始卡和库存沿已确认来源；完好2、冲击1、严重6、恶性3，流风10/22、意志1/3为本聊天专用合成测试缺口，不计正式剧情。尚未服药或休息。",
+      "extra": {
+        "extra": {}
+      }
+    },
+    {
+      "user": true,
+      "text": "服下培元丹，然后长休八小时",
+      "extra": {
+        "isSmallSys": false,
+        "901_replay_gate": {
+          "status": "APPLIED",
+          "operationId": "gm-runtime/901 药品休息 复合声明实测 - 2026-10-23/1/0",
+          "kind": "recovery",
+          "completed": {
+            "status": "APPLIED",
+            "operationId": "gm-runtime/901 药品休息 复合声明实测 - 2026-10-23/1/0",
+            "playerText": "服下培元丹，然后长休八小时",
+            "message": "药丸触及舌面，微苦的草木香气随即在口中化开，顺着喉咙沉入胸腹。御临风盘膝在静室的榻上，随着平稳的呼吸，药力与八小时的沉睡将体内翻涌的滞涩一点点抚平。\n\n当他睁开眼时，窗外的光线已从暗夜转为清晨的微白。流转的内息在经脉间重新充盈，胸腹间的沉重感虽有所减轻，但深处的创痛仍未彻底平复。",
+            "meta": {
+              "status": "APPLIED",
+              "operationId": "gm-runtime/901 药品休息 复合声明实测 - 2026-10-23/1/0",
+              "kind": "recovery"
+            }
+          }
+        }
+      }
+    },
+    {
+      "user": false,
+      "text": "药丸触及舌面，微苦的草木香气随即在口中化开，顺着喉咙沉入胸腹。御临风盘膝在静室的榻上，随着平稳的呼吸，药力与八小时的沉睡将体内翻涌的滞涩一点点抚平。\n\n当他睁开眼时，窗外的光线已从暗夜转为清晨的微白。流转的内息在经脉间重新充盈，胸腹间的沉重感虽有所减轻，但深处的创痛仍未彻底平复。\n\n<StatusPlaceHolderImpl/>",
+      "extra": {
+        "901_replay_gate": {
+          "status": "APPLIED",
+          "operationId": "gm-runtime/901 药品休息 复合声明实测 - 2026-10-23/1/0",
+          "kind": "recovery"
+        }
+      }
+    }
+  ]
+}

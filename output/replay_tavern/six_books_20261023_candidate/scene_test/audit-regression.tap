@@ -1,0 +1,166 @@
+TAP version 13
+# Subtest: B-only ordinary check commits failed pre-action coma, does not execute original check or reroll
+ok 1 - B-only ordinary check commits failed pre-action coma, does not execute original check or reroll
+  ---
+  duration_ms: 3.1496
+  type: 'test'
+  ...
+# Subtest: field flow debits once, changes later check pool, and expires through time action
+ok 2 - field flow debits once, changes later check pool, and expires through time action
+  ---
+  duration_ms: 7.4207
+  type: 'test'
+  ...
+# Subtest: reward event does not restore will and remains idempotent across distinct operations
+ok 3 - reward event does not restore will and remains idempotent across distinct operations
+  ---
+  duration_ms: 1.1116
+  type: 'test'
+  ...
+# Subtest: opposed selector supports actual will plus presence without a fabricated skill
+ok 4 - opposed selector supports actual will plus presence without a fabricated skill
+  ---
+  duration_ms: 0.7862
+  type: 'test'
+  ...
+# Subtest: Chuul declaration awaits player grapple defense before actual dice, then uses chosen response
+ok 5 - Chuul declaration awaits player grapple defense before actual dice, then uses chosen response
+  ---
+  duration_ms: 6.7981
+  type: 'test'
+  ...
+# Subtest: two claws on one target release only the declared claw and escape clears the rest
+ok 6 - two claws on one target release only the declared claw and escape clears the rest
+  ---
+  duration_ms: 2.1676
+  type: 'test'
+  ...
+# Subtest: physical and spatial arrays remain independent and only physical blocks walking
+ok 7 - physical and spatial arrays remain independent and only physical blocks walking
+  ---
+  duration_ms: 0.652
+  type: 'test'
+  ...
+# Subtest: debug-disabled malformed recovery retains a precise failure without settling
+ok 8 - debug-disabled malformed recovery retains a precise failure without settling
+  ---
+  duration_ms: 58.2883
+  type: 'test'
+  ...
+# Subtest: debug-disabled invalid check attribute identifies model input failure without exposing DC
+ok 9 - debug-disabled invalid check attribute identifies model input failure without exposing DC
+  ---
+  duration_ms: 4.5198
+  type: 'test'
+  ...
+# Subtest: debug-disabled upstream quota failure is distinguished from invalid model output
+ok 10 - debug-disabled upstream quota failure is distinguished from invalid model output
+  ---
+  duration_ms: 3.374
+  type: 'test'
+  ...
+# Subtest: explicit additional lorebooks reach classification and ordinary narration
+ok 11 - explicit additional lorebooks reach classification and ordinary narration
+  ---
+  duration_ms: 5.5065
+  type: 'test'
+  ...
+# Subtest: active combat handles the turn before ordinary classification or narration
+ok 12 - active combat handles the turn before ordinary classification or narration
+  ---
+  duration_ms: 1.5626
+  type: 'test'
+  ...
+# Subtest: host saved recovery survives failed narration and script reload without another debit
+ok 13 - host saved recovery survives failed narration and script reload without another debit
+  ---
+  duration_ms: 8.6687
+  type: 'test'
+  ...
+# Subtest: host executes the exact compound declaration once and resumes final sequence narration after reload
+ok 14 - host executes the exact compound declaration once and resumes final sequence narration after reload
+  ---
+  duration_ms: 8.8909
+  type: 'test'
+  ...
+# Subtest: a completed pending medicine keeps its original operation across a later player floor and native regeneration
+ok 15 - a completed pending medicine keeps its original operation across a later player floor and native regeneration
+  ---
+  duration_ms: 9.9181
+  type: 'test'
+  ...
+# Subtest: host classification passes a registered encounter to the player-bound combat entry
+ok 16 - host classification passes a registered encounter to the player-bound combat entry
+  ---
+  duration_ms: 3.0345
+  type: 'test'
+  ...
+# Subtest: integrated profile cannot grant the old demo scene bonus
+ok 17 - integrated profile cannot grant the old demo scene bonus
+  ---
+  duration_ms: 2.8263
+  type: 'test'
+  ...
+# Subtest: ordinary narration resolves current model options locally for each request
+ok 18 - ordinary narration resolves current model options locally for each request
+  ---
+  duration_ms: 3.732
+  type: 'test'
+  ...
+# Subtest: controller persists failed NO_CHECK and recovers after reload with no new player input
+ok 19 - controller persists failed NO_CHECK and recovers after reload with no new player input
+  ---
+  duration_ms: 4.3394
+  type: 'test'
+  ...
+# Subtest: host cancels only the unexecuted medicine pending and anchors the current dialogue
+ok 20 - host cancels only the unexecuted medicine pending and anchors the current dialogue
+  ---
+  duration_ms: 5.851
+  type: 'test'
+  ...
+# Subtest: a cancellation declaration cannot undo a committed operation awaiting narration
+ok 21 - a cancellation declaration cannot undo a committed operation awaiting narration
+  ---
+  duration_ms: 5.4631
+  type: 'test'
+  ...
+# Subtest: regenerating a completed turn reuses its narration without model calls or another assistant message
+ok 22 - regenerating a completed turn reuses its narration without model calls or another assistant message
+  ---
+  duration_ms: 4.2927
+  type: 'test'
+  ...
+# Subtest: regenerating a committed direct effect does not repeat classification, narration, or MVU writes
+ok 23 - regenerating a committed direct effect does not repeat classification, narration, or MVU writes
+  ---
+  duration_ms: 4.4162
+  type: 'test'
+  ...
+# Subtest: lost direct-effect failure notice resumes saved operation without reclassification
+ok 24 - lost direct-effect failure notice resumes saved operation without reclassification
+  ---
+  duration_ms: 4.3688
+  type: 'test'
+  ...
+# Subtest: a completed-looking assistant cannot bypass a missing JS operation
+ok 25 - a completed-looking assistant cannot bypass a missing JS operation
+  ---
+  duration_ms: 1.6777
+  type: 'test'
+  ...
+# Subtest: completed assistant with missing MVU projection restores state without model requests
+ok 26 - completed assistant with missing MVU projection restores state without model requests
+  ---
+  duration_ms: 4.0798
+  type: 'test'
+  ...
+1..26
+# tests 26
+# suites 0
+# pass 26
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 280.2427

@@ -1,0 +1,221 @@
+{
+  "report_id": "REVIEW_006_CONSISTENCY_R1",
+  "subject": "006主持卡、世界书与文风冲突复查",
+  "reviewed_at": "2026-10-18",
+  "method": "901-canon-review; root scoped text review, no independent agent",
+  "scope": {
+    "worldbook_entries_scanned": 130,
+    "focused_reading": "ability, adjudication, numeric and scene outcome passages; full host/style and other card prompts",
+    "timeline_cut_source": "existing replay T0; no state migration",
+    "approved_canon_locations": [
+      "work/replay_research/user_clarifications.md#UCL_20261018_001",
+      "work/replay_research/user_clarifications.md#UCL_20261018_002"
+    ]
+  },
+  "claims": [
+    {
+      "claim_id": "R1",
+      "claim": "人物清单不应否定已授权能力补全",
+      "source_class": "APPROVED_901",
+      "timeline_scope": "NEW_TIMELINE",
+      "time_ref": "重玩T0及后续实际分支；仅主持方法",
+      "content_state_before": "authorized_host_policy_with_conflicting_wording",
+      "content_state_after": "authorized_host_policy_consistent_after_repair",
+      "evidence": [
+        {
+          "location": "work/replay_research/user_clarifications.md#UCL_20261018_001–003",
+          "evidence_kind": "user_authorization"
+        },
+        {
+          "location": "work/replay_research/runtime_sync_20261018/consistency_proposed.diff",
+          "evidence_kind": "before_after_text",
+          "excerpt": "具体招式、层级和消耗只按当下已确认的能力处理"
+        }
+      ],
+      "worldbook_uids": [
+        71756156,
+        216568469,
+        164655858,
+        196551092,
+        50804080
+      ],
+      "conflict_with": [
+        "006 host policy: NPC can supplement within system; narrative resolution allowed"
+      ],
+      "review_decision_before": "REVISE",
+      "review_decision": "PASS",
+      "missing_source": null,
+      "repair_status": "applied",
+      "proposed_change": "见consistency_review.md对应行及consistency_proposed.diff；无新增人物能力事实"
+    },
+    {
+      "claim_id": "R2",
+      "claim": "NPC必要参数与PC永久成长须分别约束",
+      "source_class": "APPROVED_901",
+      "timeline_scope": "NEW_TIMELINE",
+      "time_ref": "重玩T0及后续实际分支；仅主持方法",
+      "content_state_before": "authorized_host_policy_with_conflicting_wording",
+      "content_state_after": "authorized_host_policy_consistent_after_repair",
+      "evidence": [
+        {
+          "location": "work/replay_research/user_clarifications.md#UCL_20261018_001–003",
+          "evidence_kind": "user_authorization"
+        },
+        {
+          "location": "work/replay_research/runtime_sync_20261018/consistency_proposed.diff",
+          "evidence_kind": "before_after_text",
+          "excerpt": "隐含掌握不增加永久属性、技能等级、自动成功或专有资源加成"
+        }
+      ],
+      "worldbook_uids": [
+        79768996
+      ],
+      "conflict_with": [
+        "006 host policy: NPC can supplement within system; narrative resolution allowed"
+      ],
+      "review_decision_before": "REVISE",
+      "review_decision": "PASS",
+      "missing_source": null,
+      "repair_status": "applied",
+      "proposed_change": "见consistency_review.md对应行及consistency_proposed.diff；无新增人物能力事实"
+    },
+    {
+      "claim_id": "R3",
+      "claim": "文风的未知边界不能冻结合理能力补全",
+      "source_class": "APPROVED_901",
+      "timeline_scope": "NEW_TIMELINE",
+      "time_ref": "重玩T0及后续实际分支；仅主持方法",
+      "content_state_before": "authorized_host_policy_with_conflicting_wording",
+      "content_state_after": "authorized_host_policy_consistent_after_repair",
+      "evidence": [
+        {
+          "location": "work/replay_research/user_clarifications.md#UCL_20261018_001–003",
+          "evidence_kind": "user_authorization"
+        },
+        {
+          "location": "work/replay_research/runtime_sync_20261018/consistency_proposed.diff",
+          "evidence_kind": "before_after_text",
+          "excerpt": "影响重要选择的持久设定缺口保持未定"
+        }
+      ],
+      "worldbook_uids": [],
+      "conflict_with": [
+        "006 host policy: NPC can supplement within system; narrative resolution allowed"
+      ],
+      "review_decision_before": "REVISE",
+      "review_decision": "PASS",
+      "missing_source": null,
+      "repair_status": "applied",
+      "proposed_change": "见consistency_review.md对应行及consistency_proposed.diff；无新增人物能力事实"
+    },
+    {
+      "claim_id": "R4",
+      "claim": "详细术式流程不强制覆盖剧情向模式",
+      "source_class": "APPROVED_901",
+      "timeline_scope": "NEW_TIMELINE",
+      "time_ref": "重玩T0及后续实际分支；仅主持方法",
+      "content_state_before": "authorized_host_policy_with_conflicting_wording",
+      "content_state_after": "authorized_host_policy_consistent_after_repair",
+      "evidence": [
+        {
+          "location": "work/replay_research/user_clarifications.md#UCL_20261018_001–003",
+          "evidence_kind": "user_authorization"
+        },
+        {
+          "location": "work/replay_research/runtime_sync_20261018/consistency_proposed.diff",
+          "evidence_kind": "before_after_text",
+          "excerpt": "必要检定沿用既有规则"
+        }
+      ],
+      "worldbook_uids": [
+        174980132,
+        79768996
+      ],
+      "conflict_with": [
+        "006 host policy: NPC can supplement within system; narrative resolution allowed"
+      ],
+      "review_decision_before": "REVISE",
+      "review_decision": "PASS",
+      "missing_source": null,
+      "repair_status": "applied",
+      "proposed_change": "见consistency_review.md对应行及consistency_proposed.diff；无新增人物能力事实"
+    },
+    {
+      "claim_id": "R5",
+      "claim": "保留既成后果不等于禁止后续有效修复",
+      "source_class": "APPROVED_901",
+      "timeline_scope": "NEW_TIMELINE",
+      "time_ref": "重玩T0及后续实际分支；仅主持方法",
+      "content_state_before": "authorized_host_policy_with_conflicting_wording",
+      "content_state_after": "authorized_host_policy_consistent_after_repair",
+      "evidence": [
+        {
+          "location": "work/replay_research/user_clarifications.md#UCL_20261018_001–003",
+          "evidence_kind": "user_authorization"
+        },
+        {
+          "location": "work/replay_research/runtime_sync_20261018/consistency_proposed.diff",
+          "evidence_kind": "before_after_text",
+          "excerpt": "合理新能力不能补回已被破坏的阵势、封死的退路"
+        }
+      ],
+      "worldbook_uids": [
+        182558169
+      ],
+      "conflict_with": [
+        "006 host policy: NPC can supplement within system; narrative resolution allowed"
+      ],
+      "review_decision_before": "REVISE",
+      "review_decision": "PASS",
+      "missing_source": null,
+      "repair_status": "applied",
+      "proposed_change": "见consistency_review.md对应行及consistency_proposed.diff；无新增人物能力事实"
+    },
+    {
+      "claim_id": "R6",
+      "claim": "连续行动概述与客观损害不同于代选主动牺牲",
+      "source_class": "APPROVED_901",
+      "timeline_scope": "NEW_TIMELINE",
+      "time_ref": "重玩T0及后续实际分支；仅主持方法",
+      "content_state_before": "authorized_host_policy_with_conflicting_wording",
+      "content_state_after": "authorized_host_policy_consistent_after_repair",
+      "evidence": [
+        {
+          "location": "work/replay_research/user_clarifications.md#UCL_20261018_001–003",
+          "evidence_kind": "user_authorization"
+        },
+        {
+          "location": "work/replay_research/runtime_sync_20261018/consistency_proposed.diff",
+          "evidence_kind": "before_after_text",
+          "excerpt": "简化不替御临风选打法、付出未声明的重大牺牲"
+        }
+      ],
+      "worldbook_uids": [],
+      "conflict_with": [
+        "006 host policy: NPC can supplement within system; narrative resolution allowed"
+      ],
+      "review_decision_before": "REVISE",
+      "review_decision": "PASS",
+      "missing_source": null,
+      "repair_status": "applied",
+      "proposed_change": "见consistency_review.md对应行及consistency_proposed.diff；无新增人物能力事实"
+    }
+  ],
+  "required_approval": null,
+  "authorization": "prior UCL_20261018_002 implementation scope plus current UCL_20261018_003 review request",
+  "unreviewed_scope": [
+    "external presets and other installed worldbooks",
+    "actual model behavior",
+    "general migration of post-005 author material and T0 numerical baseline"
+  ],
+  "notes": [
+    "Review PASS is not new canon adoption. No new named ability or player outcome created.",
+    "Source/code format verification is separate from semantic review."
+  ],
+  "reviewed_artifact_sha256": {
+    "import/901_剧情向主持_M1_20261018.json": "47d8e66501c7f1900ec62bbe4f16cb2f500f14a17e8ba87c3a5ff3b872052a8c",
+    "import/901_帝都主持.card.json": "0176d60aa1cee30e1090c786848b3ab7bb6c8df855be0c2edd8e37938adb666d",
+    "import/901_御临风.persona.json": "06a141ab55cdc34d28cc2264a755d43224927e52a2c4af52aaa2bce27c6ee463",
+    "import/文风_prompt.json": "b9ac2bb04e05785d722288cb9ca3087b1f09c84d0221fd790e6e048e8c81b71d"
+  }
+}

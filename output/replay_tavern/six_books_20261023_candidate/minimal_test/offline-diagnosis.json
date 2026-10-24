@@ -1,0 +1,104 @@
+{
+  "scope": "Saved state replay, model responses and transport errors are explicitly synthetic; not a reconstruction of the lost raw response.",
+  "results": [
+    {
+      "mode": "valid-decision",
+      "stage": "state_persistence",
+      "error": null,
+      "requestSurvivesParsing": true,
+      "writes": 1,
+      "narrations": 1,
+      "revision": 1,
+      "operationCount": 1,
+      "health": {
+        "intact": 7,
+        "B": 1,
+        "L": 1,
+        "A": 3,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "medicineB": 2,
+      "otherNamespacesUnchanged": true
+    },
+    {
+      "mode": "missing-reason",
+      "stage": "response_parse",
+      "error": {
+        "name": "Error",
+        "message": "Invalid structured decision",
+        "code": "INVALID_DECISION_REASON",
+        "status": null
+      },
+      "requestSurvivesParsing": true,
+      "writes": 0,
+      "narrations": 0,
+      "revision": 0,
+      "operationCount": 0,
+      "health": {
+        "intact": 2,
+        "B": 1,
+        "L": 6,
+        "A": 3,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "medicineB": 3,
+      "otherNamespacesUnchanged": true
+    },
+    {
+      "mode": "classification-http-429",
+      "stage": "classification",
+      "error": {
+        "name": "Error",
+        "message": "Synthetic API quota rejection",
+        "code": null,
+        "status": 429
+      },
+      "requestSurvivesParsing": false,
+      "writes": 0,
+      "narrations": 0,
+      "revision": 0,
+      "operationCount": 0,
+      "health": {
+        "intact": 2,
+        "B": 1,
+        "L": 6,
+        "A": 3,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "medicineB": 3,
+      "otherNamespacesUnchanged": true
+    },
+    {
+      "mode": "local-save-rejected",
+      "stage": "settlement",
+      "error": {
+        "name": "Error",
+        "message": "Synthetic local MVU write rejected",
+        "code": null,
+        "status": null
+      },
+      "requestSurvivesParsing": true,
+      "writes": 0,
+      "narrations": 0,
+      "revision": 0,
+      "operationCount": 0,
+      "health": {
+        "intact": 2,
+        "B": 1,
+        "L": 6,
+        "A": 3,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "medicineB": 3,
+      "otherNamespacesUnchanged": true
+    }
+  ]
+}

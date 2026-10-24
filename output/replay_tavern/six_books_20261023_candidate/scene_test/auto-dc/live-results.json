@@ -1,0 +1,529 @@
+[
+  {
+    "id": "auto-dc-observation",
+    "chatId": "901 自动难度 auto-dc-observation - 2026-10-23",
+    "messageCount": 3,
+    "gate": {
+      "status": "APPLIED",
+      "operationId": "gm-runtime/901 自动难度 auto-dc-observation - 2026-10-23/1/0",
+      "kind": "check",
+      "diagnostic": {
+        "stage": "state_persistence",
+        "operationId": "gm-runtime/901 自动难度 auto-dc-observation - 2026-10-23/1/0",
+        "classificationRequests": 1,
+        "narrationRequests": 1,
+        "elapsedMs": 29421,
+        "generationId": "901-classify-1792765327006-begfkjp9zsd",
+        "explicitRequestBytes": 6629,
+        "finalMessageCount": 2,
+        "finalMessageBytes": 6492,
+        "classificationDecision": {
+          "status": "CHECK_REQUIRED",
+          "basis": "check_required",
+          "reason": "玩家试图仔细辨认信纸右下角浅压痕边缘极细微的刻纹朝向，现场光线充足但无放大镜辅助，且信纸即将被收走、无法无限次尝试，存在明确的失败可能与不确定性，需要进行洞察或相关技能检定来判定结果。",
+          "request": {
+            "kind": "check",
+            "attribute": "感知",
+            "skill": "洞察",
+            "dc": 4
+          }
+        },
+        "narrationResponseType": "string",
+        "narrationResponseBytes": 736,
+        "narrationEmpty": false,
+        "narrationContainsVariableMarkup": false
+      }
+    },
+    "revision": 1,
+    "operationCount": 1,
+    "operations": [
+      {
+        "summary": {
+          "status": "applied",
+          "kind": "check",
+          "operationId": "gm-runtime/901 自动难度 auto-dc-observation - 2026-10-23/1/0",
+          "revision": 1,
+          "messageId": 1,
+          "swipeId": 0,
+          "actorId": "player",
+          "dp": 5,
+          "rolledSuccesses": 1,
+          "total": 1,
+          "dc": 4,
+          "success": false,
+          "fortune": false,
+          "possibleMishap": false
+        },
+        "request": {
+          "attribute": "感知",
+          "skill": "洞察",
+          "dc": 4
+        },
+        "consumedDice": [
+          8,
+          6,
+          3,
+          4,
+          5
+        ],
+        "auditedRolledSuccesses": 1
+      }
+    ],
+    "playerState": {
+      "name": "御临风",
+      "attributes": {
+        "力量": 5,
+        "敏捷": 5,
+        "智力": 4,
+        "感知": 4,
+        "意志": 1,
+        "风度": 2
+      },
+      "size": 5,
+      "hpBonus": 0,
+      "derived": {
+        "hpMax": 12,
+        "defense": 4,
+        "speed": 25,
+        "initiative": 7,
+        "willMax": 3,
+        "vision": 40
+      },
+      "skills": {
+        "运动": {
+          "level": 1,
+          "subs": {}
+        },
+        "肉搏": {
+          "level": 0,
+          "subs": {}
+        },
+        "白刃": {
+          "level": 5,
+          "subs": {
+            "长剑": {
+              "level": 3
+            }
+          }
+        },
+        "射击": {
+          "level": 0,
+          "subs": {}
+        },
+        "隐藏": {
+          "level": 1,
+          "subs": {}
+        },
+        "求生": {
+          "level": 1,
+          "subs": {}
+        },
+        "驾驶": {
+          "level": 0,
+          "subs": {}
+        },
+        "学识": {
+          "level": 2,
+          "subs": {}
+        },
+        "科学": {
+          "level": 0,
+          "subs": {}
+        },
+        "神秘": {
+          "level": 2,
+          "subs": {}
+        },
+        "电脑": {
+          "level": 2,
+          "subs": {}
+        },
+        "医疗": {
+          "level": 2,
+          "subs": {}
+        },
+        "洞察": {
+          "level": 1,
+          "subs": {}
+        },
+        "社交": {
+          "level": 2,
+          "subs": {}
+        }
+      },
+      "resources": {
+        "流风": {
+          "current": 22,
+          "max": 22
+        }
+      },
+      "attributeAuto": {},
+      "derivedOverrides": [
+        "hpMax",
+        "willMax",
+        "speed",
+        "initiative"
+      ],
+      "health": {
+        "intact": 12,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "will": {
+        "current": 3,
+        "max": 3
+      },
+      "xp": 0,
+      "greatPowersAvailable": 0,
+      "statuses": [],
+      "attributeDamage": {},
+      "turn": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "extendedActions": {},
+      "inventory": [
+        {
+          "name": "雪莲子",
+          "quantity": 1,
+          "source": "原"
+        },
+        {
+          "name": "培元丹",
+          "quantity": 3,
+          "source": "原"
+        },
+        {
+          "name": "药A",
+          "quantity": 2,
+          "source": "原"
+        },
+        {
+          "name": "药B",
+          "quantity": 3,
+          "source": "原"
+        },
+        {
+          "name": "药C",
+          "quantity": 4,
+          "source": "原"
+        },
+        {
+          "name": "雷霆药剂",
+          "quantity": null,
+          "source": "原：数量未记"
+        },
+        {
+          "name": "恶灵提示符",
+          "quantity": null,
+          "source": "原：100为价格，非数量"
+        }
+      ],
+      "unknownSkills": {
+        "制造": {
+          "level": null,
+          "subs": {
+            "炼药": {
+              "level": 2
+            }
+          }
+        }
+      },
+      "recoveryRules": {
+        "flow": {
+          "attributes": [
+            "敏捷",
+            "感知"
+          ],
+          "physical": true,
+          "longRest": true
+        },
+        "flowRecoveryCheck": {
+          "attributes": [
+            "敏捷",
+            "感知"
+          ],
+          "source": "用户2026-10-23确认"
+        }
+      }
+    },
+    "messages": [
+      {
+        "is_user": false,
+        "mes": "【辨认练习旧信上的浅压痕｜独立非Canon测试】\n这是独立非Canon测试场景。御临风健康清醒，面前窗边的桌上放着一封练习用旧信，距离足够近，日光充足且稳定。信纸没有污物遮挡，也没有魔法或特殊语言。右下角有一道很浅的环形压痕，与纸张自然起伏混在一起；边缘只有一小段刻纹还保留着，粗看难以分清刻纹朝向，需要集中注意仔细辨认。御临风可以拿起并转动信纸，但现场没有放大镜或其他辅助工具。送信员正在旁边收拾东西，稍后便会收走信件，不能无限次反复尝试。若没能辨清，就只能报告这次看不清，不能确认刻纹朝向；没有受伤、资源消耗或其他后果。\n\n<StatusPlaceHolderImpl/>"
+      },
+      {
+        "is_user": true,
+        "mes": "我把信纸拿到窗边的光下，仔细辨认右下角压痕边缘的刻纹是朝内还是朝外。"
+      },
+      {
+        "is_user": false,
+        "mes": "御临风将信纸从桌上拿起，移至窗前正对日光的地方。午后的强光顺着纸面倾泻而下，将粗糙的纤维纹理照得纤毫毕现。\n\n他微微倾斜纸页，试图捕捉右下角那道极浅的环形压痕。然而，由于压痕实在太浅，且与纸张本身的起伏融为一体，边缘仅存的那段刻纹在强光下反而显得有些模糊。当他转动角度时，光影在纸面上来回晃动，那一小段刻纹的凹凸走向始终在视觉上不断交错，无法彻底看清它究竟是向内凹陷还是向外凸起。\n\n一旁的送信员见状，一边将桌上其余的杂物归拢进皮质行囊，一边出声提醒：“客官，差不多得收起来了，下一趟还要赶路。”\n\n<StatusPlaceHolderImpl/>"
+      }
+    ]
+  },
+  {
+    "id": "auto-dc-social",
+    "chatId": "901 自动难度 auto-dc-social - 2026-10-23",
+    "messageCount": 3,
+    "gate": {
+      "status": "UNRESOLVED",
+      "operationId": "gm-runtime/901 自动难度 auto-dc-social - 2026-10-23/1/0",
+      "pending": {
+        "original": {
+          "chatId": "901 自动难度 auto-dc-social - 2026-10-23",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "我向门卫打个招呼，说明水壶就在靠门的长凳上，我拿到后马上出来，请他为这次取物暂时开一下门。"
+        },
+        "operationId": "gm-runtime/901 自动难度 auto-dc-social - 2026-10-23/1/0",
+        "request": {
+          "kind": "check",
+          "attribute": "社交",
+          "skill": "社交",
+          "dc": 5
+        }
+      },
+      "diagnostic": {
+        "stage": "blocked",
+        "operationId": "gm-runtime/901 自动难度 auto-dc-social - 2026-10-23/1/0",
+        "classificationRequests": 1,
+        "narrationRequests": 0,
+        "elapsedMs": 23136,
+        "generationId": "901-classify-1792765425957-n02766zdemb",
+        "explicitRequestBytes": 6816,
+        "finalMessageCount": 2,
+        "finalMessageBytes": 6679,
+        "classificationDecision": {
+          "status": "CHECK_REQUIRED",
+          "basis": "check_required",
+          "reason": "玩家试图说服门卫暂时开锁以取回水壶，虽然门卫拥有权限且不产生敌对后果，但门卫当前不愿因普通遗失物而等待，这构成了具有不确定结果和社交对抗的目标，因此需要通过社交技能进行检定。",
+          "request": {
+            "kind": "check",
+            "attribute": "社交",
+            "skill": "社交",
+            "dc": 5
+          }
+        },
+        "failureStage": "response_parse",
+        "reason": "invalid_model_response",
+        "httpStatus": null
+      }
+    },
+    "revision": 0,
+    "operationCount": 0,
+    "operations": [],
+    "playerState": {
+      "name": "御临风",
+      "attributes": {
+        "力量": 5,
+        "敏捷": 5,
+        "智力": 4,
+        "感知": 4,
+        "意志": 1,
+        "风度": 2
+      },
+      "size": 5,
+      "hpBonus": 0,
+      "derived": {
+        "hpMax": 12,
+        "defense": 4,
+        "speed": 25,
+        "initiative": 7,
+        "willMax": 3,
+        "vision": 40
+      },
+      "skills": {
+        "运动": {
+          "level": 1,
+          "subs": {}
+        },
+        "肉搏": {
+          "level": 0,
+          "subs": {}
+        },
+        "白刃": {
+          "level": 5,
+          "subs": {
+            "长剑": {
+              "level": 3
+            }
+          }
+        },
+        "射击": {
+          "level": 0,
+          "subs": {}
+        },
+        "隐藏": {
+          "level": 1,
+          "subs": {}
+        },
+        "求生": {
+          "level": 1,
+          "subs": {}
+        },
+        "驾驶": {
+          "level": 0,
+          "subs": {}
+        },
+        "学识": {
+          "level": 2,
+          "subs": {}
+        },
+        "科学": {
+          "level": 0,
+          "subs": {}
+        },
+        "神秘": {
+          "level": 2,
+          "subs": {}
+        },
+        "电脑": {
+          "level": 2,
+          "subs": {}
+        },
+        "医疗": {
+          "level": 2,
+          "subs": {}
+        },
+        "洞察": {
+          "level": 1,
+          "subs": {}
+        },
+        "社交": {
+          "level": 2,
+          "subs": {}
+        }
+      },
+      "resources": {
+        "流风": {
+          "current": 22,
+          "max": 22
+        }
+      },
+      "attributeAuto": {},
+      "derivedOverrides": [
+        "hpMax",
+        "willMax",
+        "speed",
+        "initiative"
+      ],
+      "health": {
+        "intact": 12,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "will": {
+        "current": 3,
+        "max": 3
+      },
+      "xp": 0,
+      "greatPowersAvailable": 0,
+      "statuses": [],
+      "attributeDamage": {},
+      "turn": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "extendedActions": {},
+      "inventory": [
+        {
+          "name": "雪莲子",
+          "quantity": 1,
+          "source": "原"
+        },
+        {
+          "name": "培元丹",
+          "quantity": 3,
+          "source": "原"
+        },
+        {
+          "name": "药A",
+          "quantity": 2,
+          "source": "原"
+        },
+        {
+          "name": "药B",
+          "quantity": 3,
+          "source": "原"
+        },
+        {
+          "name": "药C",
+          "quantity": 4,
+          "source": "原"
+        },
+        {
+          "name": "雷霆药剂",
+          "quantity": null,
+          "source": "原：数量未记"
+        },
+        {
+          "name": "恶灵提示符",
+          "quantity": null,
+          "source": "原：100为价格，非数量"
+        }
+      ],
+      "unknownSkills": {
+        "制造": {
+          "level": null,
+          "subs": {
+            "炼药": {
+              "level": 2
+            }
+          }
+        }
+      },
+      "recoveryRules": {
+        "flow": {
+          "attributes": [
+            "敏捷",
+            "感知"
+          ],
+          "physical": true,
+          "longRest": true
+        },
+        "flowRecoveryCheck": {
+          "attributes": [
+            "敏捷",
+            "感知"
+          ],
+          "source": "用户2026-10-23确认"
+        }
+      }
+    },
+    "messages": [
+      {
+        "is_user": false,
+        "mes": "【说服门卫暂时开放已关的练习院｜独立非Canon测试】\n这是独立非Canon测试场景。御临风健康清醒，来到一处已经结束练习的院门前。门卫刚刚锁好院门，已当面说过今天不再放人进去。御临风的普通水壶确实落在院里靠门的长凳上，从门口能看见；取回只需进去片刻，没有其他任务。门卫拥有临时开门并在门边看守的权限，不受绝对禁令或上级命令约束，但他想早点结束值守，不愿为普通遗失物再开锁等候。现在没有争执、威胁、贿赂或紧急危险；门卫尚未被说服，也没有承诺会答应。若请求失败，门卫会保持原决定，御临风只能等下次开放再取，不产生敌对或其他机械后果。门卫只是本场景的非Canon普通人物，没有特殊能力。\n\n<StatusPlaceHolderImpl/>"
+      },
+      {
+        "is_user": true,
+        "mes": "我向门卫打个招呼，说明水壶就在靠门的长凳上，我拿到后马上出来，请他为这次取物暂时开一下门。"
+      },
+      {
+        "is_user": false,
+        "mes": "行动判断或规则输入未完成；本次行动尚未裁定，没有确定成败。\n【隔离诊断：response_parse / invalid_model_response】\n\n<StatusPlaceHolderImpl/>"
+      }
+    ]
+  }
+]

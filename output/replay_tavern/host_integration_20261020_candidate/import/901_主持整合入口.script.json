@@ -1,0 +1,38 @@
+{
+  "type": "script",
+  "enabled": true,
+  "name": "901 主持整合入口",
+  "id": "dbd229a2-cf1d-4202-a261-5357803d033f",
+  "content": "const {registerReplayGate}=await import('/901-host-integration/work/rules_engine/gm_runtime/replay-gate-script.example.js');\nconst {createIntegratedSession,createChatSessionAccess,INTEGRATION_SCENE}=await import('/901-host-integration/work/rules_engine/gm_runtime/integrated.mjs');\nconst {installCombatHost}=await import('/901-host-integration/work/rules_engine/combat/host-ui.mjs');\nconst {withReplayLorebook}=await import('/901-host-integration/work/rules_engine/gm_runtime/adjudication-gate.mjs');\nawait waitGlobalInitialized('Mvu');\nconst response=await fetch('/901-host-integration/work/character_builder/real_character/yulinfeng_replay_t0.baseline.json');\nif(!response.ok)throw Error('整合测试人物来源未安装');\nconst baseline=await response.json();\nconst report=text=>{\n  const doc=window.top.document;\n  let el=doc.getElementById('901-integration-progress');\n  if(!el){el=doc.createElement('div');el.id='901-integration-progress';el.setAttribute('role','status');\n    el.style.cssText='padding:4px 8px;font-size:0.85em;white-space:pre-wrap';doc.getElementById('send_form').prepend(el);}\n  el.textContent=text;\n};\nconst showError=error=>{report(`已停止：${error.message}；已保存的结算保留，可继续恢复。`);window.parent.toastr.error(error.message);};\nconst modelOptions={should_stream:false,should_silence:true,max_chat_history:6,\n  ordered_prompts:['world_info_before','char_description','scenario',\n    {role:'system',content:INTEGRATION_SCENE+'仅主持当前隔离分支；JS独占数值写回。不得把原团未来事件视为已经发生，不替御临风作出选择。'},\n    'world_info_after','chat_history','user_input']};\nconst getSession=createChatSessionAccess(()=>SillyTavern,tavern=>createIntegratedSession({baseline,mvu:Mvu,tavern,generateRaw,createChatMessages,setChatMessages,\n  makeHost:options=>installCombatHost({...options,document:window.top.document,tavern,registerTool:false,\n    onError:showError}),\n  narrateReturn:facts=>withReplayLorebook({book:getCurrentCharPrimaryLorebook(),\n    eventOn,event:tavern_events.WORLDINFO_ENTRIES_LOADED,\n    generate:()=>generateRaw({...modelOptions,max_chat_history:0,\n      ordered_prompts:modelOptions.ordered_prompts.filter(x=>x!=='chat_history'),\n      user_input:`战斗程序已完成结算并保存，以下是战后可见事实：${JSON.stringify(facts)}。写一小段即时反馈即可，不复述结算表。`})}),\n  onProgress:value=>{report(value.status==='saved'?`已保存修订 ${value.revision}。`:`行动未执行：${value.reason??value.status}`);\n    console.log('[901-INTEGRATION]',JSON.stringify({status:value.status,revision:value.revision}));},\n}));\nconst combat={\n  get busy(){return getSession().busy;},\n  get encounterOptions(){return getSession().encounterOptions;},\n  resumeEntry:player=>getSession().resumeEntry(player),\n  handleTurn:input=>getSession().handleTurn(input),\n  enterForPlayer:(id,player)=>getSession().enterForPlayer(id,player),\n};\nregisterReplayGate({getMvu:async()=>Mvu,combat,\n  profile:{prepare:()=>getSession().prepare(),loadBaseline:async()=>getSession().baseline,directEffects:false,\n    sceneContext:INTEGRATION_SCENE,classificationTimeoutMs:60000,modelOptions,\n    narrationInstruction:'简短叙述当前隔离演练场景的即时反馈；这里不是帝都入城开场，演练尚未开始时不让任何人自动进攻。'}});\nconst run=async fn=>{report('正在处理，请等待当前操作完成。');try{const r=await fn();report(r?.status==='awaiting_player'?'等待玩家选择。':r?.status==='story'?'战斗已结束，回到剧情。':'操作完成。');return r;}catch(error){showError(error);}};\neventOn(getButtonEvent('继续战斗／玩家选择'),()=>run(()=>getSession().handleTurn()));\neventOn(getButtonEvent('查看当前状态'),()=>run(async()=>{\n  const state=await getSession().currentState();\n  const doc=window.top.document;\n  doc.getElementById('901-integration-status')?.remove();\n  const panel=doc.createElement('dialog');panel.id='901-integration-status';panel.setAttribute('aria-label','901 当前存档');\n  panel.style.cssText='max-width:42rem;max-height:80vh;overflow:auto;background:#202329;color:white;padding:1rem';\n  const text=doc.createElement('pre');text.style.whiteSpace='pre-wrap';\n  text.textContent=`模式：${state.mode}；修订：${state.revision}\\n`+Object.values(state.actors).map(a=>\n    `${a.name}：生命 ${a.state.health.intact}/${a.state.derived.hpMax}；B ${a.state.health.B} / L ${a.state.health.L} / A ${a.state.health.A}\\n`+\n    `能量：${Object.entries(a.state.resources).map(([k,v])=>`${k} ${v.current}/${v.max}`).join('、')||'无'}`\n  ).join('\\n\\n');\n  const close=doc.createElement('button');close.textContent='关闭当前存档';\n  close.addEventListener('click',()=>panel.remove());panel.append(text,close);doc.body.append(panel);panel.showModal();\n  console.log('[901-INTEGRATION-STATE]',JSON.stringify(state));\n}));\neventOn(getButtonEvent('主持补参'),()=>run(()=>getSession().showParameters()));\neventOn(getButtonEvent('补发已结算报告'),()=>run(()=>getSession().controller.resumeReport()));\neventOn(getButtonEvent('停止自动推进'),()=>getSession().controller.stop());\nwindow.addEventListener('pagehide',()=>{try{getSession().dispose();}catch{}window.top.document.getElementById('901-integration-status')?.remove();window.top.document.getElementById('901-integration-progress')?.remove();});\nconsole.log('[901-INTEGRATION] READY',SillyTavern.chatId||SillyTavern.getCurrentChatId?.());\nreport('主持接口已就绪。');\n",
+  "info": "完整人物卡隔离测试，非帝都T0、非正式重玩存档。复用008世界书背景；测试场地、相距1米、矮横木敏捷＋运动DC1仅为验收夹具。用户2026-10-20确认：苍穹弓力量要求4，狮子王与弃风武器体积3，乱红莲体积12。流风池上限和启动动作留空，由主持补参。御临风不含观澜法。所有数值仅由程序结算与写回；模型不能调用工具替玩家选择。",
+  "button": {
+    "enabled": true,
+    "buttons": [
+      {
+        "name": "继续战斗／玩家选择",
+        "visible": true
+      },
+      {
+        "name": "查看当前状态",
+        "visible": true
+      },
+      {
+        "name": "主持补参",
+        "visible": true
+      },
+      {
+        "name": "补发已结算报告",
+        "visible": true
+      },
+      {
+        "name": "停止自动推进",
+        "visible": true
+      }
+    ]
+  },
+  "data": {},
+  "export_with": {
+    "data": true,
+    "button": true
+  }
+}

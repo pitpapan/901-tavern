@@ -1,0 +1,2413 @@
+{
+  "date": "2026-10-20",
+  "test": "四人实测停在玩家选择；未代选御临风行动",
+  "root": {
+    "schemaVersion": 1,
+    "revision": 8,
+    "chatId": "901 四人战斗接口验收 - 2026-10-20@17h19m24s548ms",
+    "operations": {
+      "combat/0/0/0": {
+        "signature": "{\"actorId\":\"huang\",\"abilityId\":\"draw\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "combat/0/0/0",
+          "revision": 1,
+          "messageId": 0,
+          "swipeId": 0,
+          "result": {
+            "actorId": "huang",
+            "abilityId": "draw",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "after": {
+              "status": "active",
+              "winner": null,
+              "activeId": "huang",
+              "participants": [
+                {
+                  "id": "huang",
+                  "name": "黄泉",
+                  "team": "敌人",
+                  "health": {
+                    "intact": 23,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "灵力": {
+                      "current": 6,
+                      "max": 6
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 1,
+                    "move": 0,
+                    "swift": 1,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "同伴",
+                  "health": {
+                    "intact": 35,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 2,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 3,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "yulin",
+                  "name": "御临风",
+                  "team": "同伴",
+                  "health": {
+                    "intact": 21,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    2,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "bright",
+                  "name": "布莱特",
+                  "team": "敌人",
+                  "health": {
+                    "intact": 20,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "导力": {
+                      "current": 5,
+                      "max": 5
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    30,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      },
+      "combat/1/0/1": {
+        "signature": "{\"actorId\":\"huang\",\"abilityId\":\"strike\",\"targetId\":\"jiang\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "combat/1/0/1",
+          "revision": 2,
+          "messageId": 1,
+          "swipeId": 0,
+          "result": {
+            "actorId": "huang",
+            "abilityId": "strike",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [
+              "攻击已宣言，等待反应；尚未掷骰或扣除攻击资源"
+            ],
+            "after": {
+              "status": "active",
+              "winner": null,
+              "activeId": "huang",
+              "awaiting": "jiang",
+              "participants": [
+                {
+                  "id": "huang",
+                  "name": "黄泉",
+                  "team": "敌人",
+                  "health": {
+                    "intact": 23,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "灵力": {
+                      "current": 6,
+                      "max": 6
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 1,
+                    "move": 0,
+                    "swift": 1,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "同伴",
+                  "health": {
+                    "intact": 35,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 2,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 3,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "yulin",
+                  "name": "御临风",
+                  "team": "同伴",
+                  "health": {
+                    "intact": 21,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    2,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "bright",
+                  "name": "布莱特",
+                  "team": "敌人",
+                  "health": {
+                    "intact": 20,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "导力": {
+                      "current": 5,
+                      "max": 5
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    30,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      },
+      "combat/2/0/2": {
+        "signature": "{\"actorId\":\"jiang\",\"abilityId\":\"react\",\"choice\":\"decline\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "combat/2/0/2",
+          "revision": 3,
+          "messageId": 2,
+          "swipeId": 0,
+          "result": {
+            "actorId": "huang",
+            "abilityId": "strike",
+            "round": 1,
+            "damage": [
+              {
+                "targetId": "jiang",
+                "kind": "physical",
+                "energyType": null,
+                "input": 2,
+                "inputSeverity": "A",
+                "severity": "A",
+                "actualDamage": 2
+              },
+              {
+                "targetId": "jiang",
+                "kind": "physical",
+                "energyType": null,
+                "input": 16,
+                "inputSeverity": "L",
+                "severity": "L",
+                "actualDamage": 16
+              }
+            ],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "attack": {
+              "rawDP": 57,
+              "dp": 57,
+              "weapon": 16,
+              "cap": 22,
+              "fixed": 3,
+              "ap": 8,
+              "magic": 8,
+              "speed": 0,
+              "extra": 0,
+              "ignore": 0,
+              "aggravate": 2,
+              "electric": 0,
+              "reduction": 0,
+              "range": 1.5,
+              "explode": 10,
+              "defense": {
+                "total": 3,
+                "parts": {
+                  "base": 3,
+                  "natural": 0,
+                  "armor": 0,
+                  "dodge": 0,
+                  "insight": 0,
+                  "block": 0,
+                  "cultivation": 0,
+                  "cover": 0,
+                  "force": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 1,
+                "extraSuccesses": 0
+              },
+              "roll": {
+                "dp": 54,
+                "luck": false,
+                "dice": [
+                  2,
+                  10,
+                  4,
+                  4,
+                  10,
+                  1,
+                  3,
+                  2,
+                  1,
+                  9,
+                  7,
+                  7,
+                  5,
+                  3,
+                  6,
+                  7,
+                  8,
+                  5,
+                  2,
+                  7,
+                  8,
+                  5,
+                  3,
+                  6,
+                  7,
+                  4,
+                  1,
+                  10,
+                  6,
+                  8,
+                  2,
+                  8,
+                  4,
+                  7,
+                  5,
+                  8,
+                  1,
+                  4,
+                  4,
+                  1,
+                  2,
+                  7,
+                  7,
+                  3,
+                  4,
+                  1,
+                  1,
+                  10,
+                  2,
+                  10,
+                  2,
+                  10,
+                  5,
+                  3,
+                  7,
+                  9,
+                  4,
+                  5,
+                  10,
+                  1,
+                  10,
+                  3
+                ],
+                "used": 62,
+                "rolledSuccesses": 15,
+                "luckMishap": false
+              },
+              "amount": 18
+            },
+            "after": {
+              "status": "active",
+              "winner": null,
+              "activeId": "huang",
+              "participants": [
+                {
+                  "id": "huang",
+                  "name": "黄泉",
+                  "team": "敌人",
+                  "health": {
+                    "intact": 23,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "灵力": {
+                      "current": 6,
+                      "max": 6
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 1,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "同伴",
+                  "health": {
+                    "intact": 17,
+                    "B": 0,
+                    "L": 16,
+                    "A": 2,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 2,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 3,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "yulin",
+                  "name": "御临风",
+                  "team": "同伴",
+                  "health": {
+                    "intact": 21,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    2,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "bright",
+                  "name": "布莱特",
+                  "team": "敌人",
+                  "health": {
+                    "intact": 20,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "导力": {
+                      "current": 5,
+                      "max": 5
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    30,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      },
+      "combat/3/0/3": {
+        "signature": "{\"actorId\":\"huang\",\"abilityId\":\"block\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "combat/3/0/3",
+          "revision": 4,
+          "messageId": 3,
+          "swipeId": 0,
+          "result": {
+            "actorId": "huang",
+            "abilityId": "block",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "after": {
+              "status": "active",
+              "winner": null,
+              "activeId": "huang",
+              "participants": [
+                {
+                  "id": "huang",
+                  "name": "黄泉",
+                  "team": "敌人",
+                  "health": {
+                    "intact": 23,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "灵力": {
+                      "current": 6,
+                      "max": 6
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 1,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "同伴",
+                  "health": {
+                    "intact": 17,
+                    "B": 0,
+                    "L": 16,
+                    "A": 2,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 2,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 3,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "yulin",
+                  "name": "御临风",
+                  "team": "同伴",
+                  "health": {
+                    "intact": 21,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    2,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "bright",
+                  "name": "布莱特",
+                  "team": "敌人",
+                  "health": {
+                    "intact": 20,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "导力": {
+                      "current": 5,
+                      "max": 5
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    30,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      },
+      "combat/4/0/4": {
+        "signature": "{\"actorId\":\"huang\",\"abilityId\":\"end\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "combat/4/0/4",
+          "revision": 5,
+          "messageId": 4,
+          "swipeId": 0,
+          "result": {
+            "actorId": "huang",
+            "abilityId": "end",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "after": {
+              "status": "active",
+              "winner": null,
+              "activeId": "bright",
+              "participants": [
+                {
+                  "id": "huang",
+                  "name": "黄泉",
+                  "team": "敌人",
+                  "health": {
+                    "intact": 23,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "灵力": {
+                      "current": 6,
+                      "max": 6
+                    }
+                  },
+                  "actions": {
+                    "phase": "ended",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "同伴",
+                  "health": {
+                    "intact": 17,
+                    "B": 0,
+                    "L": 16,
+                    "A": 2,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 2,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 3,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "yulin",
+                  "name": "御临风",
+                  "team": "同伴",
+                  "health": {
+                    "intact": 21,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    2,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "bright",
+                  "name": "布莱特",
+                  "team": "敌人",
+                  "health": {
+                    "intact": 20,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "导力": {
+                      "current": 5,
+                      "max": 5
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 1,
+                    "move": 1,
+                    "swift": 1,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    30,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      },
+      "combat/5/0/5": {
+        "signature": "{\"actorId\":\"bright\",\"abilityId\":\"aim\",\"targetId\":\"jiang\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "combat/5/0/5",
+          "revision": 6,
+          "messageId": 5,
+          "swipeId": 0,
+          "result": {
+            "actorId": "bright",
+            "abilityId": "aim",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "after": {
+              "status": "active",
+              "winner": null,
+              "activeId": "bright",
+              "participants": [
+                {
+                  "id": "huang",
+                  "name": "黄泉",
+                  "team": "敌人",
+                  "health": {
+                    "intact": 23,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "灵力": {
+                      "current": 6,
+                      "max": 6
+                    }
+                  },
+                  "actions": {
+                    "phase": "ended",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "同伴",
+                  "health": {
+                    "intact": 17,
+                    "B": 0,
+                    "L": 16,
+                    "A": 2,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 2,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 3,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "yulin",
+                  "name": "御临风",
+                  "team": "同伴",
+                  "health": {
+                    "intact": 21,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    2,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "bright",
+                  "name": "布莱特",
+                  "team": "敌人",
+                  "health": {
+                    "intact": 20,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "导力": {
+                      "current": 5,
+                      "max": 5
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 0,
+                    "move": 1,
+                    "swift": 1,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    30,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      },
+      "combat/6/0/6": {
+        "signature": "{\"actorId\":\"bright\",\"abilityId\":\"step\",\"to\":[31.5,0]}",
+        "summary": {
+          "status": "applied",
+          "operationId": "combat/6/0/6",
+          "revision": 7,
+          "messageId": 6,
+          "swipeId": 0,
+          "result": {
+            "actorId": "bright",
+            "abilityId": "step",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "after": {
+              "status": "active",
+              "winner": null,
+              "activeId": "bright",
+              "participants": [
+                {
+                  "id": "huang",
+                  "name": "黄泉",
+                  "team": "敌人",
+                  "health": {
+                    "intact": 23,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "灵力": {
+                      "current": 6,
+                      "max": 6
+                    }
+                  },
+                  "actions": {
+                    "phase": "ended",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "同伴",
+                  "health": {
+                    "intact": 17,
+                    "B": 0,
+                    "L": 16,
+                    "A": 2,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 2,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 3,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "yulin",
+                  "name": "御临风",
+                  "team": "同伴",
+                  "health": {
+                    "intact": 21,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    2,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "bright",
+                  "name": "布莱特",
+                  "team": "敌人",
+                  "health": {
+                    "intact": 20,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "导力": {
+                      "current": 5,
+                      "max": 5
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 1,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    31.5,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      },
+      "combat/7/0/7": {
+        "signature": "{\"actorId\":\"bright\",\"abilityId\":\"end\"}",
+        "summary": {
+          "status": "applied",
+          "operationId": "combat/7/0/7",
+          "revision": 8,
+          "messageId": 7,
+          "swipeId": 0,
+          "result": {
+            "actorId": "bright",
+            "abilityId": "end",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "after": {
+              "status": "active",
+              "winner": null,
+              "activeId": "yulin",
+              "participants": [
+                {
+                  "id": "huang",
+                  "name": "黄泉",
+                  "team": "敌人",
+                  "health": {
+                    "intact": 23,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "灵力": {
+                      "current": 6,
+                      "max": 6
+                    }
+                  },
+                  "actions": {
+                    "phase": "ended",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "jiang",
+                  "name": "姜子尤",
+                  "team": "同伴",
+                  "health": {
+                    "intact": 17,
+                    "B": 0,
+                    "L": 16,
+                    "A": 2,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "气": {
+                      "current": 2,
+                      "max": 2
+                    },
+                    "斗气": {
+                      "current": 3,
+                      "max": 3
+                    },
+                    "内力": {
+                      "current": 28,
+                      "max": 28
+                    }
+                  },
+                  "actions": {
+                    "phase": "ready",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    1,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "yulin",
+                  "name": "御临风",
+                  "team": "同伴",
+                  "health": {
+                    "intact": 21,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "风池": {
+                      "current": 10,
+                      "max": 10
+                    },
+                    "魔力": {
+                      "current": 106,
+                      "max": 106
+                    }
+                  },
+                  "actions": {
+                    "phase": "active",
+                    "standard": 1,
+                    "move": 1,
+                    "swift": 1,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    2,
+                    0
+                  ],
+                  "statuses": []
+                },
+                {
+                  "id": "bright",
+                  "name": "布莱特",
+                  "team": "敌人",
+                  "health": {
+                    "intact": 20,
+                    "B": 0,
+                    "L": 0,
+                    "A": 0,
+                    "temp": 0,
+                    "coma": false,
+                    "deteriorationStopped": false
+                  },
+                  "energy": {
+                    "导力": {
+                      "current": 5,
+                      "max": 5
+                    }
+                  },
+                  "actions": {
+                    "phase": "ended",
+                    "standard": 0,
+                    "move": 0,
+                    "swift": 0,
+                    "reactionLock": false,
+                    "reactionLockEnds": 0,
+                    "responseDebt": false,
+                    "opportunityUsed": false
+                  },
+                  "position": [
+                    31.5,
+                    0
+                  ],
+                  "statuses": []
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "actors": {
+      "huang": {
+        "name": "黄泉",
+        "state": {
+          "name": "黄泉",
+          "attributes": {
+            "力量": 7,
+            "敏捷": 11,
+            "智力": 2,
+            "感知": 6,
+            "意志": 5,
+            "风度": 3
+          },
+          "size": 5,
+          "derived": {
+            "hpMax": 23,
+            "defense": 6,
+            "speed": 23,
+            "initiative": 26,
+            "willMax": 8,
+            "vision": 80
+          },
+          "skills": {
+            "白刃": {
+              "level": 5,
+              "subs": {
+                "太刀": {
+                  "level": 1
+                }
+              }
+            },
+            "肉搏": {
+              "level": 1,
+              "subs": {}
+            },
+            "运动": {
+              "level": 2,
+              "subs": {}
+            },
+            "求生": {
+              "level": 1,
+              "subs": {}
+            }
+          },
+          "resources": {
+            "灵力": {
+              "current": 6,
+              "max": 6
+            }
+          },
+          "attributeAuto": {},
+          "derivedOverrides": [
+            "hpMax",
+            "speed",
+            "initiative",
+            "willMax"
+          ],
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "will": {
+            "current": 8,
+            "max": 8
+          },
+          "xp": 0,
+          "greatPowersAvailable": 0,
+          "statuses": [],
+          "attributeDamage": {},
+          "turn": {
+            "phase": "ended",
+            "standard": 0,
+            "move": 0,
+            "swift": 0,
+            "reactionLock": false,
+            "reactionLockEnds": 0,
+            "responseDebt": false,
+            "opportunityUsed": false
+          },
+          "extendedActions": {}
+        },
+        "combatCarry": {
+          "parameters": {
+            "weaponSize": 4
+          },
+          "weaponSize": 4
+        }
+      },
+      "jiang": {
+        "name": "姜子尤",
+        "state": {
+          "name": "姜子尤",
+          "attributes": {
+            "力量": 11,
+            "敏捷": 3,
+            "智力": 2,
+            "感知": 3,
+            "意志": 3,
+            "风度": 3
+          },
+          "size": 5,
+          "derived": {
+            "hpMax": 35,
+            "defense": 3,
+            "speed": 41,
+            "initiative": 10,
+            "willMax": 16,
+            "vision": 30
+          },
+          "skills": {
+            "肉搏": {
+              "level": 5,
+              "subs": {
+                "拳击": {
+                  "level": 3
+                }
+              }
+            },
+            "运动": {
+              "level": 4,
+              "subs": {
+                "自我保护": {
+                  "level": 1
+                }
+              }
+            },
+            "求生": {
+              "level": 1,
+              "subs": {}
+            }
+          },
+          "resources": {
+            "气": {
+              "current": 2,
+              "max": 2
+            },
+            "斗气": {
+              "current": 3,
+              "max": 3
+            },
+            "内力": {
+              "current": 28,
+              "max": 28
+            }
+          },
+          "attributeAuto": {},
+          "derivedOverrides": [
+            "hpMax",
+            "speed",
+            "initiative",
+            "willMax"
+          ],
+          "health": {
+            "intact": 17,
+            "B": 0,
+            "L": 16,
+            "A": 2,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "will": {
+            "current": 16,
+            "max": 16
+          },
+          "xp": 0,
+          "greatPowersAvailable": 0,
+          "statuses": [],
+          "attributeDamage": {},
+          "turn": {
+            "phase": "ready",
+            "standard": 0,
+            "move": 0,
+            "swift": 0,
+            "reactionLock": false,
+            "reactionLockEnds": 0,
+            "responseDebt": false,
+            "opportunityUsed": false
+          },
+          "extendedActions": {}
+        },
+        "combatCarry": {
+          "parameters": {},
+          "squeezed": 0
+        }
+      },
+      "yulin": {
+        "name": "御临风",
+        "state": {
+          "name": "御临风",
+          "attributes": {
+            "力量": 6,
+            "敏捷": 7,
+            "智力": 6,
+            "感知": 5,
+            "意志": 5,
+            "风度": 4
+          },
+          "size": 5,
+          "derived": {
+            "hpMax": 21,
+            "defense": 5,
+            "speed": 28,
+            "initiative": 11,
+            "willMax": 9,
+            "vision": 50
+          },
+          "skills": {
+            "白刃": {
+              "level": 5,
+              "subs": {
+                "长剑": {
+                  "level": 4
+                }
+              }
+            },
+            "学识": {
+              "level": 4,
+              "subs": {}
+            },
+            "运动": {
+              "level": 1,
+              "subs": {}
+            },
+            "求生": {
+              "level": 1,
+              "subs": {}
+            },
+            "神秘": {
+              "level": 4,
+              "subs": {}
+            }
+          },
+          "resources": {
+            "风池": {
+              "current": 10,
+              "max": 10
+            },
+            "魔力": {
+              "current": 106,
+              "max": 106
+            }
+          },
+          "attributeAuto": {},
+          "derivedOverrides": [
+            "hpMax",
+            "speed",
+            "initiative",
+            "willMax"
+          ],
+          "health": {
+            "intact": 21,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "will": {
+            "current": 8,
+            "max": 9
+          },
+          "xp": 0,
+          "greatPowersAvailable": 0,
+          "statuses": [],
+          "attributeDamage": {},
+          "turn": {
+            "phase": "active",
+            "standard": 1,
+            "move": 1,
+            "swift": 1,
+            "reactionLock": false,
+            "reactionLockEnds": 0,
+            "responseDebt": false,
+            "opportunityUsed": false
+          },
+          "extendedActions": {}
+        },
+        "combatCarry": {
+          "parameters": {},
+          "knownWeaknesses": []
+        }
+      },
+      "bright": {
+        "name": "布莱特",
+        "state": {
+          "name": "布莱特",
+          "attributes": {
+            "力量": 6,
+            "敏捷": 7,
+            "智力": 2,
+            "感知": 9,
+            "意志": 2,
+            "风度": 1
+          },
+          "size": 5,
+          "derived": {
+            "hpMax": 20,
+            "defense": 7,
+            "speed": 42,
+            "initiative": 18,
+            "willMax": 3,
+            "vision": 110
+          },
+          "skills": {
+            "射击": {
+              "level": 2,
+              "subs": {
+                "长弓": {
+                  "level": 4
+                }
+              }
+            },
+            "运动": {
+              "level": 2,
+              "subs": {}
+            },
+            "求生": {
+              "level": 1,
+              "subs": {}
+            },
+            "肉搏": {
+              "level": 1,
+              "subs": {}
+            },
+            "白刃": {
+              "level": 1,
+              "subs": {}
+            },
+            "学识": {
+              "level": 1,
+              "subs": {}
+            }
+          },
+          "resources": {
+            "导力": {
+              "current": 5,
+              "max": 5
+            }
+          },
+          "attributeAuto": {},
+          "derivedOverrides": [
+            "hpMax",
+            "speed",
+            "initiative",
+            "willMax"
+          ],
+          "health": {
+            "intact": 20,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "will": {
+            "current": 3,
+            "max": 3
+          },
+          "xp": 0,
+          "greatPowersAvailable": 0,
+          "statuses": [],
+          "attributeDamage": {},
+          "turn": {
+            "phase": "ended",
+            "standard": 0,
+            "move": 0,
+            "swift": 0,
+            "reactionLock": false,
+            "reactionLockEnds": 0,
+            "responseDebt": false,
+            "opportunityUsed": false
+          },
+          "extendedActions": {}
+        },
+        "combatCarry": {
+          "parameters": {
+            "bowStrength": 3,
+            "ammunition": 20
+          },
+          "ammunition": 20,
+          "knownWeaknesses": []
+        }
+      }
+    },
+    "battle": {
+      "version": 1,
+      "scenario": "四人完整卡隔离演练；测试补参R3、刀体积4、普通箭20，不写入正式人物卡",
+      "assumptions": [
+        "双方满生命、满能量，黄泉入场佩刀在鞘；距离1米，无掩蔽。",
+        "斯巴达未证实额外2DP分支不计；狮子王体积未定，威猛遇格挡时交主持补值。",
+        "训练场以一方失去行动能力为胜负，不继续补刀。"
+      ],
+      "round": 1,
+      "activeId": "yulin",
+      "order": [
+        "huang",
+        "bright",
+        "yulin",
+        "jiang"
+      ],
+      "actors": {
+        "huang": {
+          "id": "huang",
+          "name": "黄泉",
+          "kind": "huang",
+          "team": "敌人",
+          "controller": "model",
+          "present": true,
+          "position": [
+            0,
+            0
+          ],
+          "reach": 1.5,
+          "used": {},
+          "cooldowns": {},
+          "buffs": {
+            "drawnRound": 1,
+            "drawUsed": true,
+            "iaiPenalty": true,
+            "block": true
+          },
+          "combos": {},
+          "reactions": {
+            "damageConversion": false
+          },
+          "sheathed": false,
+          "weaponSize": 4,
+          "abilities": [
+            "strike",
+            "block",
+            "draw",
+            "sheathe",
+            "thunder",
+            "cleaveRock",
+            "lightning",
+            "conduct",
+            "summon",
+            "recall",
+            "move",
+            "step",
+            "conversion",
+            "end"
+          ],
+          "parameters": {
+            "weaponSize": 4
+          }
+        },
+        "jiang": {
+          "id": "jiang",
+          "name": "姜子尤",
+          "kind": "jiang",
+          "team": "同伴",
+          "controller": "model",
+          "present": true,
+          "position": [
+            1,
+            0
+          ],
+          "reach": 1.5,
+          "used": {},
+          "cooldowns": {},
+          "buffs": {},
+          "combos": {},
+          "reactions": {
+            "damageConversion": false
+          },
+          "spartanBonus": 0,
+          "squeezed": 0,
+          "abilities": [
+            "strike",
+            "block",
+            "fistQi",
+            "breakBody",
+            "restoreSwift",
+            "selfHeal",
+            "squeeze",
+            "move",
+            "step",
+            "conversion",
+            "end"
+          ],
+          "parameters": {}
+        },
+        "yulin": {
+          "id": "yulin",
+          "name": "御临风",
+          "kind": "yulin",
+          "team": "同伴",
+          "controller": "player",
+          "present": true,
+          "position": [
+            2,
+            0
+          ],
+          "reach": 1.5,
+          "used": {},
+          "cooldowns": {},
+          "buffs": {},
+          "combos": {},
+          "reactions": {
+            "damageConversion": false
+          },
+          "sheathed": false,
+          "abilities": [
+            "strike",
+            "block",
+            "zheng",
+            "tengzhuan",
+            "flow",
+            "tornado",
+            "gale",
+            "perfectWarrior",
+            "guardAlly",
+            "necromancy",
+            "move",
+            "step",
+            "conversion",
+            "end"
+          ],
+          "missing": {
+            "flowMax": null,
+            "flowAction": null
+          },
+          "knownWeaknesses": [],
+          "parameters": {}
+        },
+        "bright": {
+          "id": "bright",
+          "name": "布莱特",
+          "kind": "bright",
+          "team": "敌人",
+          "controller": "model",
+          "present": true,
+          "position": [
+            31.5,
+            0
+          ],
+          "reach": 1.5,
+          "used": {},
+          "cooldowns": {},
+          "buffs": {},
+          "combos": {},
+          "reactions": {
+            "damageConversion": false
+          },
+          "loaded": false,
+          "ammunition": 20,
+          "knownWeaknesses": [],
+          "abilities": [
+            "strike",
+            "reload",
+            "aim",
+            "timeBolt",
+            "timeHaste",
+            "block",
+            "move",
+            "step",
+            "conversion",
+            "end"
+          ],
+          "parameters": {
+            "bowStrength": 3,
+            "ammunition": 20
+          }
+        }
+      },
+      "elapsedRounds": 0,
+      "summonRounds": 0,
+      "summonMinutes": 0,
+      "status": "active",
+      "winner": null,
+      "id": "four-person-exercise",
+      "mode": "combat",
+      "reactionWindows": true,
+      "knowledge": {
+        "huang": {
+          "huang": {
+            "abilities": [
+              "draw",
+              "strike",
+              "block",
+              "end"
+            ]
+          },
+          "bright": {
+            "abilities": [
+              "aim",
+              "step",
+              "end"
+            ]
+          }
+        },
+        "jiang": {
+          "huang": {
+            "abilities": [
+              "draw",
+              "strike",
+              "block",
+              "end"
+            ]
+          },
+          "bright": {
+            "abilities": [
+              "aim",
+              "step",
+              "end"
+            ]
+          }
+        },
+        "yulin": {
+          "huang": {
+            "abilities": [
+              "draw",
+              "strike",
+              "block",
+              "end"
+            ]
+          },
+          "bright": {
+            "abilities": [
+              "aim",
+              "step",
+              "end"
+            ]
+          }
+        },
+        "bright": {
+          "huang": {
+            "abilities": [
+              "draw",
+              "strike",
+              "block",
+              "end"
+            ]
+          },
+          "bright": {
+            "abilities": [
+              "aim",
+              "step",
+              "end"
+            ]
+          }
+        }
+      },
+      "turnTaken": [
+        "huang",
+        "bright"
+      ]
+    },
+    "lastResult": {
+      "status": "applied",
+      "operationId": "combat/7/0/7",
+      "revision": 8,
+      "messageId": 7,
+      "swipeId": 0,
+      "result": {
+        "actorId": "bright",
+        "abilityId": "end",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [],
+        "after": {
+          "status": "active",
+          "winner": null,
+          "activeId": "yulin",
+          "participants": [
+            {
+              "id": "huang",
+              "name": "黄泉",
+              "team": "敌人",
+              "health": {
+                "intact": 23,
+                "B": 0,
+                "L": 0,
+                "A": 0,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "灵力": {
+                  "current": 6,
+                  "max": 6
+                }
+              },
+              "actions": {
+                "phase": "ended",
+                "standard": 0,
+                "move": 0,
+                "swift": 0,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                0,
+                0
+              ],
+              "statuses": []
+            },
+            {
+              "id": "jiang",
+              "name": "姜子尤",
+              "team": "同伴",
+              "health": {
+                "intact": 17,
+                "B": 0,
+                "L": 16,
+                "A": 2,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "气": {
+                  "current": 2,
+                  "max": 2
+                },
+                "斗气": {
+                  "current": 3,
+                  "max": 3
+                },
+                "内力": {
+                  "current": 28,
+                  "max": 28
+                }
+              },
+              "actions": {
+                "phase": "ready",
+                "standard": 0,
+                "move": 0,
+                "swift": 0,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                1,
+                0
+              ],
+              "statuses": []
+            },
+            {
+              "id": "yulin",
+              "name": "御临风",
+              "team": "同伴",
+              "health": {
+                "intact": 21,
+                "B": 0,
+                "L": 0,
+                "A": 0,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "风池": {
+                  "current": 10,
+                  "max": 10
+                },
+                "魔力": {
+                  "current": 106,
+                  "max": 106
+                }
+              },
+              "actions": {
+                "phase": "active",
+                "standard": 1,
+                "move": 1,
+                "swift": 1,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                2,
+                0
+              ],
+              "statuses": []
+            },
+            {
+              "id": "bright",
+              "name": "布莱特",
+              "team": "敌人",
+              "health": {
+                "intact": 20,
+                "B": 0,
+                "L": 0,
+                "A": 0,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "导力": {
+                  "current": 5,
+                  "max": 5
+                }
+              },
+              "actions": {
+                "phase": "ended",
+                "standard": 0,
+                "move": 0,
+                "swift": 0,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                31.5,
+                0
+              ],
+              "statuses": []
+            }
+          ]
+        }
+      }
+    }
+  }
+}

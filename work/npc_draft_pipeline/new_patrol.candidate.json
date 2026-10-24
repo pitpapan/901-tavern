@@ -1,0 +1,15 @@
+{
+  "size": 5,
+  "attributes": { "力量": 2, "敏捷": 3, "智力": 2, "感知": 3, "意志": 2, "风度": 2 },
+  "skills": {
+    "运动": { "level": 1 },
+    "求生": { "level": 1 },
+    "洞察": { "level": 2 },
+    "白刃": { "level": 2, "subs": { "长剑": { "level": 1, "scope": "训练长剑", "scopeId": "weapon.long_sword" } } }
+  },
+  "equipment": [
+    { "id": "demo.training-sword", "name": "训练木剑", "status": "PROPOSED" }
+  ],
+  "resourceIds": ["phb03.feat.swift-foot.1"],
+  "initial": { "health": "healthy", "willCurrent": 4, "turn": "ready" }
+}

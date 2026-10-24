@@ -1,0 +1,60 @@
+{
+  "scope": "read-only narrationRequest of saved isolated fictional combat; no raw chat, MVU root, NPC numeric sheet, authentication or proxy fields",
+  "destination": "Google official generativelanguage.googleapis.com, via existing Tavern makersuite backend",
+  "model": "gemini-3.5-flash-lite",
+  "revision": 5,
+  "facts": {
+    "events": [
+      {
+        "actor": "米蕾娅",
+        "action": "普通攻击",
+        "arms": "本次攻击使用的长弓与箭矢",
+        "status": "resolved",
+        "target": "御临风",
+        "outcome": "造成伤势",
+        "execution": "松弦放箭，箭矢沿本次射击路线飞向目标",
+        "affected": [
+          "御临风"
+        ],
+        "consequence": "御临风确实受伤，防御未完全化解伤害；必须写出受创，不得写成完全挡住或无伤。御临风此次受击时原地受创，站位未变。",
+        "responses": [
+          {
+            "actor": "御临风",
+            "method": "本击仅使用基础及被动防护，没有使用主动格挡"
+          }
+        ]
+      }
+    ],
+    "setting": {
+      "name": "独立练习场·御临风对米蕾娅",
+      "nearbyLandmarks": [],
+      "nature": "实体练习场；终止是按约停手，不产生自动声光信号、光标或虚拟投影。"
+    },
+    "participants": [
+      {
+        "id": "player",
+        "name": "御临风",
+        "location": "你所在的位置",
+        "terrain": {
+          "elevation": 0,
+          "areas": []
+        },
+        "condition": "可见受伤",
+        "arms": "等值缓冲练习长剑在手（隔离测试器械）"
+      },
+      {
+        "id": "mireya",
+        "name": "米蕾娅",
+        "location": "与你相距12米",
+        "terrain": {
+          "elevation": 0,
+          "areas": []
+        },
+        "condition": "未见伤势",
+        "arms": "双手持竞技弓，未上箭，包毡短棍收在腰侧"
+      }
+    ],
+    "phase": "等待玩家继续行动"
+  },
+  "prose": "弓弦震颤的余音尚在练习场内回荡。米蕾娅松弦放箭，那支箭矢没有因距离而减弱势头，破空之声紧贴着地面切过，笔直射向御临风。\n\n御临风持剑立于原处，未及抬剑招架。箭矢已穿透护身气劲，正中其身。剧烈的痛感自受击处扩散开来，御临风的躯干因创痛而猛地一晃，脚下站位未曾移开半步。\n\n对面十二米外，米蕾娅保持着放箭后的姿态，手中竞技弓的弦犹在微微嗡鸣，箭矢既出，弓上已空无一箭，她腰侧的短棍仍安稳收在原处。练习场内恢复了安静。"
+}

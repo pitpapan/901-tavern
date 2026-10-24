@@ -1,0 +1,38 @@
+✔ ordinary opposed check uses actual two actors and active side wins ties (3.4477ms)
+✔ will save uses will and presence rather than a fabricated survival skill (0.4514ms)
+✔ extended check persists cumulative successes and prevents a completed task reroll (1.1855ms)
+✔ attribute growth spends the existing XP and does not fill health or resources (0.4528ms)
+✔ rule transaction saves both participants once and replay does not redraw (1.2337ms)
+✔ requests cannot supply arbitrary states, rolls or awards through growth (0.1373ms)
+✔ classifier always receives core rules and current subskills, independent of lore keywords (0.5585ms)
+✔ rule request enters the same guarded transaction and can recover a committed decision (0.9803ms)
+✔ constant and explicitly named scene entries reach classification without enabling disabled lore (0.2898ms)
+✔ opening runtime actually settles will saves and reuses them after reload (7.048ms)
+✔ opening ordinary orientation uses the adopted +6 and keeps it through replay (4.8399ms)
+✔ phase ring preserves real items, limits weight, and uses different retrieval actions (2.6839ms)
+✔ thunder potion requires real inventory and expires after five minutes (2.168ms)
+✔ spirit ward consumes once and keeps protecting until ten minutes pass (0.7708ms)
+✔ box countdown releases at zero while the two arrays stay independent (1.5395ms)
+✔ ordered recovery folds medicine then rest and reverse order retains the delayed dose (6.5417ms)
+✔ unresolved later medicine choice rejects the whole sequence before drawing or mutating (1.1804ms)
+✔ medicine needs player declaration, known stock, and preserves input on rejection (0.8189ms)
+✔ B heals up to five L, debits one, and never heals A (1.1346ms)
+✔ snow lotus restores physical long-rest recoverable flow by three; oriental bonus needs metadata (0.8073ms)
+✔ A and C remain pending until their declared rest and survive serialization (1.2654ms)
+✔ C targets declared physical status and excludes mental and freezing effects (2.6513ms)
+✔ rest validates completion, restores B by elapsed intervals and longrest flow/will only as sourced (0.9781ms)
+✔ declared rest advances finite buffs/cooldowns and only completed day thresholds heal L/A (1.8489ms)
+✔ combat medicine spends source action cost; unavailable action does not debit (1.2543ms)
+✔ 培元丹 heals A then L then B with one strength budget and multiple doses do not stack (0.7269ms)
+✔ initial story actors keep trusted flow metadata and meditation rolls confirmed agility plus perception (0.6139ms)
+✔ self medicine needs consciousness and an actionable body; natural rest remains available (0.8846ms)
+✔ severe excitement prevents meditation without consuming elapsed time or dice (0.4012ms)
+✔ combat legal medicine uses the existing atomic MVU operation and saved retries do not debit twice (25.1471ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 216.4489

@@ -1,0 +1,15 @@
+{
+  "status": "CHECK_REQUIRED",
+  "reason": "玩家明确声明花五分钟找出缺失的线索，根据最近已叙述场景，翻查损坏卷宗须进行感知＋洞察的延长检定（任务ID archive-search，累计目标8成功，每周期5分钟，已确认完成第一个周期，当前为第二个周期）。感知4＋洞察1，设定DC为3，理由是卷宗受损程度适中，线索虽有缺失但已有前序周期铺垫，符合每周期5分钟的延长检定规则。",
+  "request": {
+    "kind": "rule",
+    "action": "extended",
+    "actorId": "player",
+    "taskId": "archive-search",
+    "attribute": "感知",
+    "skill": "洞察",
+    "target": 8,
+    "periodMinutes": 5,
+    "maxPeriods": 3
+  }
+}

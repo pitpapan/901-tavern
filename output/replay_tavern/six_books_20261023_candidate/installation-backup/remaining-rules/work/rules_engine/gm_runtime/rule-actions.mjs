@@ -1,0 +1,186 @@
+import {act} from '../combat/engine.mjs';
+import {createOpeningEncounter} from '../combat/opening.mjs';
+import {ATTRIBUTES,check,oppose,upgradeAttribute,upgradeSkill,firstAid,applyStatus,
+  spendAction,actionEligibility,checkBeforeAction,advanceDeterioration,settleNode,recover,beginTurn,upgradeFeat} from '../core.mjs';
+import {saveProfile} from '../combat/mechanics.mjs';
+import {requireKnownSkill} from '../../character_builder/builder.mjs';
+import {advanceTime} from '../recovery.mjs';
+import {ringTransfer} from '../possessions.mjs';
+import {actorCheckRules} from './actor-rules.mjs';
+import {runSceneMechanism,advanceSceneTime} from './scene-rules.mjs';
+
+const record=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
+const text=x=>typeof x==='string'&&x.trim().length>0;
+const natural=x=>Number.isSafeInteger(x)&&x>=0;
+const fields={
+  check:['actorId','attribute','skill','sub','dc'],
+  save:['actorId','type','dc','sourceQuote'],
+  opposed:['active','passive','sourceQuote'],
+  extended:['actorId','taskId','attribute','skill','sub','target','periodMinutes','maxPeriods','sourceQuote'],
+  growth:['actorId','attribute','skill','sub'],
+  feat:['actorId','featId'],
+  first_aid:['actorId','targetId'],
+  status:['actorId','type','points','sourceQuote'],
+  deterioration:['actorId','from','sourceQuote'],
+  node:['actorId','eventId'],
+  chapter:['actorId','eventId'],
+  reward:['actorId','eventId'],
+  inventory:['actorId','operation','itemId'],
+  time:['actorId','minutes','sourceQuote'],
+  mechanism:['actorId','objectId','operation','part'],
+  ability:['actorId','abilityId','tier','weapon'],
+  hypnosis_resist:['actorId','statusSource','eventId'],
+};
+const selector=x=>record(x)&&Object.keys(x).every(k=>['actorId','attribute','attributes','skill','sub'].includes(k))&&
+  text(x.actorId)&&(ATTRIBUTES.includes(x.attribute)&&x.attributes===undefined||x.attribute===undefined&&Array.isArray(x.attributes)&&x.attributes.length>0&&new Set(x.attributes).size===x.attributes.length&&x.attributes.every(n=>ATTRIBUTES.includes(n)))&&(x.skill===undefined||text(x.skill))&&(x.sub===undefined||text(x.skill)&&text(x.sub));
+export function ruleRequestValid(r) {
+  if(!record(r)||r.kind!=='rule'||!fields[r.action]||Object.keys(r).some(k=>!['kind','action',...fields[r.action],'preActionDC'].includes(k)))return false;
+  if(r.preActionDC!==undefined&&(!Number.isSafeInteger(r.preActionDC)||r.preActionDC<1))return false;
+  if(r.sourceQuote!==undefined&&!text(r.sourceQuote))return false;
+  if(r.action==='opposed')return selector(r.active)&&selector(r.passive)&&r.active.actorId!==r.passive.actorId;
+  if(!text(r.actorId))return false;
+  switch(r.action) {
+    case 'check':return selector(Object.fromEntries(['actorId','attribute','skill','sub'].filter(k=>r[k]!==undefined).map(k=>[k,r[k]])))&&natural(r.dc);
+    case 'save':return ['will','reflex','fort'].includes(r.type)&&natural(r.dc);
+    case 'extended':return selector(Object.fromEntries(['actorId','attribute','skill','sub'].filter(k=>r[k]!==undefined).map(k=>[k,r[k]])))&&
+      text(r.taskId)&&natural(r.target)&&r.target>0&&natural(r.periodMinutes)&&r.periodMinutes>0&&natural(r.maxPeriods)&&r.maxPeriods>0;
+    case 'growth':return (ATTRIBUTES.includes(r.attribute)&&r.skill===undefined&&r.sub===undefined)||
+      (r.attribute===undefined&&text(r.skill)&&(r.sub===undefined||text(r.sub)));
+    case 'first_aid':return text(r.targetId);
+    case 'ability':return ['flow','tengzhuan','draw','sheathe','stowWeapon','readyWeapon','reload'].includes(r.abilityId)&&(r.abilityId==='flow'?[1,2].includes(r.tier):r.tier===undefined)&&(r.weapon===undefined||['bow','longknife','dagger'].includes(r.weapon));
+    case 'hypnosis_resist':return text(r.statusSource)&&text(r.eventId);
+    case 'feat':return text(r.featId);
+    case 'status':return text(r.type)&&natural(r.points)&&text(r.sourceQuote);
+    case 'deterioration':return r.from===undefined||['B','L'].includes(r.from);
+    case 'node':case 'chapter':case 'reward':return text(r.eventId);
+    case 'inventory':return ['store','retrieve'].includes(r.operation)&&text(r.itemId);
+    case 'time':return Number.isFinite(r.minutes)&&r.minutes>0&&text(r.sourceQuote);
+    case 'mechanism':return text(r.objectId)&&text(r.operation)&&(r.part===undefined||text(r.part));
+    default:return false;
+  }
+}
+
+// This reducer only receives validated selectors. Host-owned templates/events
+// determine resource numbers; the classifier cannot submit an actor or patch.
+export function reduceRuleAction(input,request,{drawDice,actorTemplates={},events={},feats={}}={}) {
+  if(!ruleRequestValid(request))throw Error('无效规则请求');
+  const next=structuredClone(input),r=request;
+  events={...events,...next.ruleScene?.events};feats={...feats,...next.ruleScene?.feats};
+  const actor=id=>{if(!next.actors?.[id]?.state)throw Error(`缺少当前人物：${id}`);return next.actors[id];};
+  const dice=()=>{if(typeof drawDice!=='function')throw Error('缺少可信骰源');return drawDice();};
+  const opts=spec=>{
+    const s=actor(spec.actorId).state;if(spec.skill)requireKnownSkill(s,spec.skill,spec.sub);
+    const derived=actorCheckRules({...actorTemplates[spec.actorId],...actor(spec.actorId).combatCarry,state:s},spec);
+    return {...(spec.attributes?{attributes:spec.attributes}:{attribute:spec.attribute}),...(spec.skill?{skill:spec.skill}:{}),...(spec.sub?{sub:spec.sub}:{}),modifier:derived.modifier,context:derived.context,dice:dice()};
+  };
+  let result;
+  const activeId=r.action==='opposed'?r.active.actorId:r.actorId;
+  let preActionCheck;
+  if(['check','opposed','extended','first_aid','inventory','mechanism'].includes(r.action)){
+    const a=actor(activeId),e=actionEligibility(a.state,'free');if(!e.allowed)throw Error(e.reason);
+    if(e.requiresBCheck){if(r.preActionDC===undefined)throw Error('B伤满格须提供行动前力量检定preActionDC');const pre=checkBeforeAction(a.state,{dc:r.preActionDC,dice:dice()});a.state=pre.state;preActionCheck=pre.result;
+      if(!pre.result.allowed)return {...next,result:{action:r.action,prevented:true,preActionCheck}};
+    }
+  }
+  if(r.action==='opposed') {
+    const active=actor(r.active.actorId),passive=actor(r.passive.actorId);
+    result=oppose(active.state,passive.state,opts(r.active),opts(r.passive));
+  } else {
+    const a=actor(r.actorId),s=a.state;
+    switch(r.action) {
+      case 'ability': {
+        const template=actorTemplates[r.actorId];if(!template?.abilities.includes(r.abilityId))throw Error('当前人物没有这项已登记能力');
+        const temp=createOpeningEncounter({id:'field-action',scenario:'场外自身能力内部计算',participants:[r.actorId],positions:{[r.actorId]:[0,0]}});
+        const full={...structuredClone(template),...structuredClone(a.combatCarry??{}),state:beginTurn(s).state};
+        full.buffs={...full.buffs};full.expires={};
+        for(const [key,e]of Object.entries(full.durationCarry??{}))if(e.remainingRounds>0){full.buffs[key]=e.value;full.expires[key]=1+e.remainingRounds;}
+        temp.actors[r.actorId]=full;temp.activeId=r.actorId;
+        const out=act(temp,{actorId:r.actorId,abilityId:r.abilityId,...(r.tier?{tier:r.tier}:{}),...(r.weapon?{weapon:r.weapon}:{}),...(r.preActionDC?{preActionDC:r.preActionDC}:{})},{drawDice:dice,playerAuthorized:true});
+        const updated=out.battle.actors[r.actorId];a.state={...updated.state,turn:s.turn};a.combatCarry??={};
+        for(const key of ['buffs','weaponMode','sheathed','loaded','ammunition'])if(updated[key]!==undefined)a.combatCarry[key]=updated[key];
+        a.combatCarry.durationCarry=Object.fromEntries(Object.entries(updated.expires??{}).filter(([,end])=>end>1).map(([key,end])=>[key,{value:updated.buffs[key],remainingRounds:end-1}]));
+        result={abilityId:r.abilityId,...(out.result.preActionCheck?{preActionCheck:out.result.preActionCheck,prevented:!out.result.preActionCheck.allowed}:{}),durationCarry:a.combatCarry.durationCarry,resources:a.state.resources};break;
+      }
+      case 'hypnosis_resist': {
+        const e=events[r.eventId],status=s.statuses.find(x=>x.source===r.statusSource&&x.type==='魅惑'&&x.controllerName==='达卡斯');
+        if(!status||e?.type!=='hypnosisOrder'||!e.actorIds?.includes(r.actorId)||!['suicidal','moralViolation'].includes(e.reason))throw Error('须已确认的明显送死或完全违背道德指示事件');
+        if(s.ruleEvents?.includes(r.eventId))throw Error('这条指示的额外抵抗已结算');
+        const roll=check(s,{attribute:s.attributes.意志<=s.attributes.风度?'意志':'风度',skill:'求生',dice:dice()});
+        status.points=Math.max(0,status.points-roll.total);s.statuses=s.statuses.filter(x=>x.points>0);(s.ruleEvents??=[]).push(r.eventId);result={remaining:status.points,resistance:roll};break;
+      }
+      case 'mechanism':result=runSceneMechanism(next,r);break;
+      case 'inventory': {
+        const out=ringTransfer(a,r);a.state=out.actor.state;result=out.result;
+        if(out.result.elapsedMinutes)advanceTime(a,out.result.elapsedMinutes);break;
+      }
+      case 'time': {
+        const changes=[];for(const [id,record]of Object.entries(next.actors)) {
+          const full={...structuredClone(actorTemplates[id]??{}),...structuredClone(record.combatCarry??{}),state:record.state};advanceTime(full,r.minutes,changes);
+          if(record.combatCarry)for(const key of ['durationCarry','cooldownCarry','buffs','cooldowns'])if(full[key])record.combatCarry[key]=full[key];
+        }
+        result={minutes:r.minutes,changes,sceneChanges:advanceSceneTime(next.ruleScene,r.minutes)};break;
+      }
+      case 'check':result=check(s,{...opts(r),dc:r.dc});break;
+      case 'save': {
+        const template=next.battle?.actors?.[r.actorId]??actorTemplates[r.actorId];
+        if(template) {
+          const full={...structuredClone(template),...structuredClone(a.combatCarry??{}),state:s};
+          const p=saveProfile(full,r.type);
+          result=check(s,{poolBase:p.dp,attributeAutoOverride:p.fixed,reExtraSuccesses:p.extra,dc:r.dc,dice:dice(),
+            context:{willResistance:r.type==='will',physical:r.type!=='will',motion:r.type==='reflex',reflex:r.type==='reflex'}});
+        } else result=check(s,{...(r.type==='will'?{attributes:['意志','风度']}:
+          {attribute:r.type==='fort'?'力量':'敏捷',skill:r.type==='fort'?'求生':'运动'}),dc:r.dc,dice:dice()});
+        break;
+      }
+      case 'extended': {
+        const definition={attribute:r.attribute,skill:r.skill,sub:r.sub??null,target:r.target,periodMinutes:r.periodMinutes,maxPeriods:r.maxPeriods};
+        s.extendedChecks??={};const progress=s.extendedChecks[r.taskId]??{definition,accumulated:0,periods:0};
+        if(JSON.stringify(progress.definition)!==JSON.stringify(definition))throw Error('同一延长行动的目标、周期和技能不可中途更换');
+        if(progress.complete)throw Error('延长行动已完成');
+        if(progress.periods>=r.maxPeriods)throw Error('延长行动已超过期限');
+        const roll=check(s,{...opts(r),context:{...actorCheckRules({...actorTemplates[r.actorId],state:s},r).context,extended:true,periodMinutes:r.periodMinutes}});
+        if(!roll.eligible)throw Error(roll.reason);progress.accumulated+=roll.total;progress.periods++;
+        progress.complete=progress.accumulated>=r.target;s.extendedChecks[r.taskId]=progress;
+        const changes=[];
+        for(const [id,record]of Object.entries(next.actors)){const full={...structuredClone(actorTemplates[id]??{}),...structuredClone(record.combatCarry??{}),state:record.state};advanceTime(full,r.periodMinutes,changes);
+          if(record.combatCarry)for(const key of ['durationCarry','cooldownCarry','buffs','cooldowns'])if(full[key])record.combatCarry[key]=full[key];}
+        advanceSceneTime(next.ruleScene,r.periodMinutes);
+        result={...progress,roll,elapsedMinutes:r.periodMinutes,timeChanges:changes,success:progress.complete,expired:!progress.complete&&progress.periods>=r.maxPeriods};break;
+      }
+      case 'growth': {
+        if(r.skill)requireKnownSkill(s,r.skill,r.sub);
+        const out=r.attribute?upgradeAttribute(s,r.attribute):upgradeSkill(s,r.skill,r.sub);
+        if(!out.result.allowed)throw Error(out.result.reason);a.state=out.state;result=out.result;break;
+      }
+      case 'first_aid': {
+        if(r.actorId===r.targetId)throw Error('PHB急救须由另一人进行');
+        const target=actor(r.targetId),healer=beginTurn(s).state;
+        const proxy=structuredClone(healer);if(preActionCheck?.allowed)proxy.health.intact=1;
+        const paid=spendAction(proxy,'full');if(!paid.result.allowed)throw Error(paid.result.reason);healer.turn=paid.state.turn;
+        const out=firstAid(healer,target.state,{dice:dice(),actionAlreadySpent:true});
+        if(!out.result.allowed)throw Error(out.result.reason);
+        a.state={...out.healer,turn:structuredClone(s.turn)};target.state=out.patient;result=out.result;break;
+      }
+      case 'feat': {
+        const out=upgradeFeat(s,feats[r.featId]);if(!out.result.allowed)throw Error(out.result.reason);
+        a.state=out.state;result=out.result;break;
+      }
+      case 'status': {
+        const out=applyStatus(s,{type:r.type,source:r.sourceQuote,points:r.points,dice:dice()});
+        a.state=out.state;result=out.result;break;
+      }
+      case 'deterioration': {
+        const out=advanceDeterioration(s,{from:r.from});a.state=out.state;result=out.result;break;
+      }
+      case 'node':case 'chapter':case 'reward': {
+        const e=events[r.eventId];if(!e||e.type!==r.action||!e.actorIds?.includes(r.actorId))throw Error('缺少已确认的节点／章节事件');
+        if(s.ruleEvents?.includes(r.eventId))throw Error('该事件已结算');
+        const out=r.action==='reward'?{state:{...s,xp:s.xp+e.xp},result:{xp:e.xp,source:e.source}}:r.action==='node'?settleNode(s,{id:r.eventId,xp:e.xp,settlement:e.settlement}):recover(s,{type:'chapter'});
+        (out.state.ruleEvents??=[]).push(r.eventId);
+        a.state=out.state;result=out.result;break;
+      }
+    }
+  }
+  if(result?.eligible===false)throw Error(result.reason);
+  return {...next,result:{...result,...(preActionCheck?{preActionCheck}:{}),action:r.action}};
+}

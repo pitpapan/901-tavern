@@ -1,0 +1,46 @@
+✔ gale attacks each legal enemy once, excludes allies and shares geometry across previews and reaction queue (137.4565ms)
+✔ resolved response reports the actual effective guard and normal player defense omits it (3.3807ms)
+✔ attack, defense and movement derive from current attributes, skills and equipment (1.9338ms)
+✔ confirmed bow requirement four and sword sizes three remain distinct from lotus size twelve (6.7469ms)
+✔ four-person baselines and distinct weapon costs remain faithful to adopted cards (48.3841ms)
+✔ special preview uses post-payment attack and reports missing parameters separately (69.375ms)
+✔ private enemy data and unrelated abilities are absent from model input (39.4001ms)
+✔ reaction survives MVU refresh, rolls only after choice, and replays without spending twice (12.9595ms)
+✔ four-person encounter completes with player choices, action costs and reaction windows (529.1623ms)
+✔ summon avoids the blocked default point and records a new visible actor without moving the owner (15.9381ms)
+✔ explicit summon points respect obstacles, adjacency and closed scene boundaries (4.8282ms)
+✔ summon with no adjacent space is unavailable and leaves MVU, actions and energy unchanged (24.8852ms)
+✔ roar geometry excludes targets behind solid terrain from damage, previews and reaction queues (24.6345ms)
+✔ roar respects polygon walls and closed doors, while open doors and sight-only forest pass its effect (6.1013ms)
+✔ summon and terrain-blocked roar persist through MVU readback and duplicate dispatch only once (13.4296ms)
+✔ production narrator request prioritizes executed events over background and preserves the prose-only boundary (3.8053ms)
+✔ declared door then obstacle attack preserves remaining actions, narrates the map result and survives refresh (200.4837ms)
+✔ natural attack settles only the declared action, keeps remaining player actions, and hides NPC figures (116.8234ms)
+✔ stationary tornado injury projects the unchanged target position as an observable result (103.0941ms)
+✔ declared cost mismatch and invented end are rejected before rolling or spending (78.822ms)
+✔ failed narration resumes saved action without rerolling, including a new session/refresh (105.1179ms)
+✔ retrying committed guard narrates its execution without repeating prior damage or inventing another action (152.2775ms)
+✔ explicit end advances to an actual player reaction; continuation preserves the same turn and resource costs (149.6492ms)
+✔ own consequence receipt lists only actual player damage and effective condition changes once (2.2196ms)
+✔ every incoming player attack waits for a declared defense even after conversion is exhausted (2.5473ms)
+✔ player defense has no total until a defense mode is declared; ready block is not silently added to normal defense (1.0199ms)
+✔ an explicitly declared guard supplies defense for its existing duration without asking again on every attack (3.0837ms)
+✔ an enemy leaving reach cannot trigger an undeclared player opportunity attack (5.3276ms)
+✔ compound movement and attack use player-declared coordinates, not an extra implicit turn (137.5574ms)
+✔ NPC duel writes back all private results but posts one public scene and allows story afterwards (102.8023ms)
+✔ view-own-status opens only the UI before interpreting, narrating, rolling or adding an assistant floor (45.4785ms)
+✔ player UI reads latest selected MVU snapshot across new floors and refresh without writing or trusting prose (42.8897ms)
+✔ declared guard updates the player UI without ending the turn and survives refresh (94.2451ms)
+✔ legacy own-status caches are stripped on replay without losing the saved narrative (50.5153ms)
+✔ existing chat builds its map once, map viewing does not spend actions, and next declaration still executes (106.9492ms)
+✔ player bar renders avatar and MVU values above input; explicit refresh updates guard and remaining actions (26.6932ms)
+✔ late state read cannot reveal the previous chat after switching chats (60.145ms)
+✔ status request opens the bar when an initial read is still pending; unrelated cards stay hidden (14.7196ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 38
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1911.6097

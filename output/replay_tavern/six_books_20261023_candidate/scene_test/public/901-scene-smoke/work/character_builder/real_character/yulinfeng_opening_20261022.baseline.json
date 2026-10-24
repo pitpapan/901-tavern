@@ -1,0 +1,151 @@
+{
+  "baselineStatus": "APPROVED_REPLAY_BASELINE",
+  "baselineMeaning": "2026-10-22用户授权的新初始卡；与旧完整卡隔离，不迁移既有存档。",
+  "cardSource": "work/character_builder/real_character/御临风_初始卡_20261021.txt（数值区；排除履历、垃圾桶和成长账）",
+  "definition": {
+    "id": "PC_YULINFENG_OPENING_20261022",
+    "name": "御临风",
+    "period": "replay/T0/帝都初至",
+    "sources": [
+      "work/character_builder/real_character/御临风_初始卡_20261021.txt（数值区；排除履历、垃圾桶和成长账）",
+      "work/character_builder/real_character/同伴初始卡_初稿_20261021.md（用户已授权接入；原/推/补标签保留）",
+      "work/replay_research/capital_enemy_builds_rewards_draft.md（UCL_20261018_006）"
+    ],
+    "size": 5,
+    "attributes": {
+      "力量": 5,
+      "敏捷": 5,
+      "智力": 4,
+      "感知": 4,
+      "意志": 1,
+      "风度": 2
+    },
+    "skills": {
+      "运动": {
+        "level": 1,
+        "subs": {}
+      },
+      "肉搏": {
+        "level": 0,
+        "subs": {}
+      },
+      "白刃": {
+        "level": 5,
+        "subs": {
+          "长剑": {
+            "level": 3,
+            "scope": "长剑",
+            "scopeId": "weapon.long-sword"
+          }
+        }
+      },
+      "射击": {
+        "level": 0,
+        "subs": {}
+      },
+      "隐藏": {
+        "level": 1,
+        "subs": {}
+      },
+      "求生": {
+        "level": 1,
+        "subs": {}
+      },
+      "驾驶": {
+        "level": 0,
+        "subs": {}
+      },
+      "学识": {
+        "level": 2,
+        "subs": {}
+      },
+      "科学": {
+        "level": 0,
+        "subs": {}
+      },
+      "神秘": {
+        "level": 2,
+        "subs": {}
+      },
+      "电脑": {
+        "level": 2,
+        "subs": {}
+      },
+      "医疗": {
+        "level": 2,
+        "subs": {}
+      },
+      "洞察": {
+        "level": 1,
+        "subs": {}
+      },
+      "社交": {
+        "level": 2,
+        "subs": {}
+      }
+    },
+    "equipment": [],
+    "abilities": [],
+    "overrides": {
+      "derived": {
+        "hpMax": {
+          "mode": "final",
+          "value": 12,
+          "source": "work/character_builder/real_character/御临风_初始卡_20261021.txt（数值区；排除履历、垃圾桶和成长账）"
+        },
+        "defense": {
+          "mode": "final",
+          "value": 11,
+          "source": "work/character_builder/real_character/御临风_初始卡_20261021.txt（数值区；排除履历、垃圾桶和成长账）"
+        },
+        "speed": {
+          "mode": "final",
+          "value": 25,
+          "source": "work/character_builder/real_character/御临风_初始卡_20261021.txt（数值区；排除履历、垃圾桶和成长账）"
+        },
+        "initiative": {
+          "mode": "final",
+          "value": 7,
+          "source": "work/character_builder/real_character/御临风_初始卡_20261021.txt（数值区；排除履历、垃圾桶和成长账）"
+        },
+        "willMax": {
+          "mode": "final",
+          "value": 3,
+          "source": "work/character_builder/real_character/御临风_初始卡_20261021.txt（数值区；排除履历、垃圾桶和成长账）"
+        },
+        "vision": {
+          "mode": "final",
+          "value": 40,
+          "source": "work/character_builder/real_character/御临风_初始卡_20261021.txt（数值区；排除履历、垃圾桶和成长账）"
+        }
+      }
+    }
+  },
+  "openingState": {
+    "isolatedTestInitial": {
+      "health": "healthy",
+      "willCurrent": 3,
+      "turn": "ready",
+      "xp": 0
+    },
+    "resourceBoundary": {
+      "present": [
+        "流风22",
+        "风迹（白刃赠级已计）"
+      ],
+      "absent": [
+        "剑风池",
+        "魔力",
+        "正十七",
+        "辟邪",
+        "完美战士",
+        "死灵",
+        "观澜"
+      ]
+    },
+    "note": "仅无存档新聊天采用建卡初值；已有存档伤势、资源与次数沿用，不回满。"
+  },
+  "unmappedCardFields": {
+    "制造主技能": "原卡母技能空白；炼药2。当前未知，不按0。"
+  }
+}

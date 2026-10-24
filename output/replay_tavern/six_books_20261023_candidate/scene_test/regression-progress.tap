@@ -1,0 +1,48 @@
+✔ gale attacks each legal enemy once, excludes allies and shares geometry across previews and reaction queue (65.9296ms)
+✔ resolved response reports the actual effective guard and normal player defense omits it (1.4843ms)
+✔ attack, defense and movement derive from current attributes, skills and equipment (0.6397ms)
+✔ confirmed bow requirement four and sword sizes three remain distinct from lotus size twelve (2.495ms)
+✔ four-person baselines and distinct weapon costs remain faithful to adopted cards (29.186ms)
+✔ special preview uses post-payment attack and reports missing parameters separately (37.4938ms)
+✔ private enemy data and unrelated abilities are absent from model input (24.085ms)
+✔ reaction survives MVU refresh, rolls only after choice, and replays without spending twice (7.6431ms)
+✔ four-person encounter completes with player choices, action costs and reaction windows (304.5817ms)
+✔ host waits for player, settles a whole encounter, returns to story and carries wounds into next encounter (3008.4752ms)
+✔ haste changes order without extra turns; aiming matures next round and is lost on movement (4.7315ms)
+✔ invalid model selection retries without rolling; transport failures remain visible (54.0417ms)
+✔ host tool is unavailable inside its own NPC decision request (0.3398ms)
+✔ production narrator request prioritizes executed events over background and preserves the prose-only boundary (1.9953ms)
+✔ declared combat medicine spends its action once and refresh preserves inventory and health (96.3558ms)
+✔ postcombat story medicine and next rest use current MVU without replaying battle prose (98.6218ms)
+✔ story rest expires persisted player battle buffs in own status and leaves NPCs unchanged (29.9423ms)
+✔ declared door then obstacle attack preserves remaining actions, narrates the map result and survives refresh (75.6204ms)
+✔ natural attack settles only the declared action, keeps remaining player actions, and hides NPC figures (54.7479ms)
+✔ stationary tornado injury projects the unchanged target position as an observable result (55.3408ms)
+✔ declared cost mismatch and invented end are rejected before rolling or spending (40.308ms)
+✔ failed narration resumes saved action without rerolling, including a new session/refresh (53.0797ms)
+✔ retrying committed guard narrates its execution without repeating prior damage or inventing another action (82.369ms)
+✔ explicit end advances to an actual player reaction; continuation preserves the same turn and resource costs (72.8651ms)
+✔ own consequence receipt lists only actual player damage and effective condition changes once (0.9024ms)
+✔ every incoming player attack waits for a declared defense even after conversion is exhausted (0.8712ms)
+✔ player defense has no total until a defense mode is declared; ready block is not silently added to normal defense (0.48ms)
+✔ an explicitly declared guard supplies defense for its existing duration without asking again on every attack (1.6633ms)
+✔ an enemy leaving reach cannot trigger an undeclared player opportunity attack (3.0371ms)
+✔ compound movement and attack use player-declared coordinates, not an extra implicit turn (67.096ms)
+✔ NPC duel writes back all private results but posts one public scene and allows story afterwards (51.9468ms)
+✔ view-own-status opens only the UI before interpreting, narrating, rolling or adding an assistant floor (21.7785ms)
+✔ player UI reads latest selected MVU snapshot across new floors and refresh without writing or trusting prose (21.4919ms)
+✔ declared guard updates the player UI without ending the turn and survives refresh (48.3136ms)
+✔ legacy own-status caches are stripped on replay without losing the saved narrative (21.2246ms)
+✔ existing chat builds its map once, map viewing does not spend actions, and next declaration still executes (81.1634ms)
+✔ a withdrawal paused for incoming opportunity defense stays at the original position in public facts (15.3352ms)
+✔ opening baseline passes the ordinary replay gate Builder contract (2.0248ms)
+✔ natural binding uses only adopted templates and same-instance current positions on re-entry (2.8803ms)
+✔ host scene registration persists in selected MVU, restores on refresh and feeds real narrative entry (179.8626ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 40
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3251.1689

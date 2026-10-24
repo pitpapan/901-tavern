@@ -1,0 +1,19 @@
+[
+  {
+    "id": "db72eca2-a27c-4b33-ba45-a97fe9ef8479",
+    "scriptName": "901｜历史计算明细不送入模型",
+    "findRegex": "/^[\\t ]*<rules901_detail>[\\t ]*\\r?\\n[\\s\\S]*?^[\\t ]*<\\/rules901_detail>[\\t ]*(?:\\r?\\n|$)/gm",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+      2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 2,
+    "maxDepth": null
+  }
+]

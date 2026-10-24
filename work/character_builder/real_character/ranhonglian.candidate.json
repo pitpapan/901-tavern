@@ -1,0 +1,80 @@
+{
+  "candidateStatus": "migration_only_not_canon",
+  "primarySource": "extracted-first/22/posts.md#1068 (GM 剑, 2017-04-11 13:24:59, lines 195-219)",
+  "corroboratingSource": "D:/备份文件/901记录/TRPG outputs/设定 人物/人物卡资料集_检索版.md:733-750",
+  "fieldEvidence": {
+    "identityAndPeriod": { "status": "CONFIRMED_AT_SOURCE_TIME", "source": "extracted-first/22/posts.md#1068:195-203" },
+    "size": { "status": "CONFIRMED", "source": "extracted-first/22/posts.md#1068:203" },
+    "sixAttributes": { "status": "CONFIRMED", "source": "extracted-first/22/posts.md#1068:204-205" },
+    "mainAndSubskills": { "status": "CONFIRMED", "source": "extracted-first/22/posts.md#1068:206-209" },
+    "cardFinals": { "status": "CONFIRMED_FINAL_VALUES", "source": "extracted-first/22/posts.md#1068:211-212" },
+    "cardAttack": { "status": "PARTIALLY_RECONCILED_UNADAPTED", "source": "extracted-first/22/posts.md#1068:210" },
+    "featsAndPowers": { "status": "SOURCE_CONFIRMED_ENGINE_UNSUPPORTED", "source": "extracted-first/22/posts.md#1068:213-219" },
+    "equipmentOwnedByThisNpc": { "status": "UNKNOWN_NOT_ASSUMED", "source": "extracted-first/22/posts.md#1068:201-202" },
+    "currentHealthWillAndTurn": { "status": "UNKNOWN_DEMO_ASSUMPTION", "source": "extracted-first/22/posts.md#1068:203-219" }
+  },
+  "definition": {
+    "id": "NPC_RANHONGLIAN",
+    "name": "乱红莲",
+    "period": "original_campaign/P1#1068/狮子王解封后",
+    "sources": [
+      "extracted-first/22/posts.md#1068:201-219",
+      "D:/备份文件/901记录/TRPG outputs/设定 人物/人物卡资料集_检索版.md:733-750"
+    ],
+    "size": 12,
+    "attributes": { "力量": 8, "敏捷": 6, "智力": 2, "感知": 4, "意志": 3, "风度": 2 },
+    "skills": {
+      "隐藏": { "level": 1 },
+      "运动": { "level": 2 },
+      "求生": { "level": 3 },
+      "肉搏": {
+        "level": 4,
+        "subs": {
+          "爪": { "level": 3, "scope": "乱红莲的爪", "scopeId": "natural.claw" },
+          "牙": { "level": 3, "scope": "乱红莲的牙", "scopeId": "natural.bite" },
+          "擒拿": { "level": 4, "scope": "擒拿", "scopeId": "grapple" }
+        }
+      }
+    },
+    "equipment": [],
+    "overrides": {
+      "derived": {
+        "hpMax": { "mode": "final", "value": 20, "source": "extracted-first/22/posts.md#1068:212" },
+        "defense": { "mode": "final", "value": 10, "source": "extracted-first/22/posts.md#1068:211" },
+        "speed": { "mode": "final", "value": 26, "source": "extracted-first/22/posts.md#1068:212" }
+      }
+    },
+    "abilities": [
+      { "id": "ranhonglian.toughness", "name": "死硬 2", "source": "extracted-first/22/posts.md#1068:213", "summary": "卡面列为死硬 2；具体触发与数值规则未接入。", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "ranhonglian.sixth-sense", "name": "灵异第六感 2", "source": "extracted-first/22/posts.md#1068:213", "summary": "卡面列为灵异第六感 2；感知效果未接入。", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "ranhonglian.spiritual-erosion", "name": "灵力侵蚀", "source": "extracted-first/22/posts.md#1068:215", "summary": "每存在 1 分钟使持剑者进行意志检定，首个 DC 2，后续累计增加，并产生灵力疲劳；未接入计时、持剑者及灵力疲劳。", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "ranhonglian.bond", "name": "主从契约", "source": "extracted-first/22/posts.md#1068:216", "summary": "听从任意狮子王持有者命令；持有者关联未接入。", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "ranhonglian.nue", "name": "鵺", "source": "extracted-first/22/posts.md#1068:217", "summary": "可飞行，机动性良好；攻击的神圣或亵渎属性取决于持有者善恶，当时标为神圣。飞行和属性伤害未接入。", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "ranhonglian.spirit", "name": "灵兽／灵体", "source": "extracted-first/22/posts.md#1068:218", "summary": "普通武器通常难伤，魔法或幽冥可生效；回剑恢复、死亡休眠和召回动作有专门规则，均未接入。", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "ranhonglian.roar-wave", "name": "咆哮波", "source": "extracted-first/22/posts.md#1068:219", "summary": "每场景一次整轮动作，10L，射程 100 米、宽 2 米，范围内生物可用反射豁免，意志自动成功另增伤；范围与豁免结算未接入。", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "ranhonglian.natural-defense", "name": "天生防御 6", "source": "extracted-first/22/posts.md#1068:211", "summary": "卡面防御 10 已以最终值保存；天生防御的通用叠加和其他防御交互未接入。", "engineSupportStatus": "CARD_FINAL_ONLY" },
+      { "id": "ranhonglian.natural-weapon", "name": "天生武器 4L", "source": "extracted-first/22/posts.md#1068:210", "summary": "攻击栏提及爪或牙和 4L 天生武器；15 DP 可由力量 8、肉搏 4、子技能 3 得出，但卡面 2 自动成功的来源未核明，因此未生成攻击输入。", "engineSupportStatus": "UNSUPPORTED" }
+    ]
+  },
+  "catalogResourceIds": [],
+  "resourceAudit": {
+    "sourceResourceNames": ["狮子王", "天生武器"],
+    "characterAcquisition": "乱红莲由狮子王召唤；卡面没有写它持有狮子王或任何装备。",
+    "catalogMatch": "现有四项 PHB/RE 适配样本没有狮子王或乱红莲的天生武器。",
+    "adoption901": "未找到针对这两项的独立 901 资源采用记录；不创建 grant。",
+    "engineSupport": "无可由现有 Resource Adapter 执行的本人物资源。"
+  },
+  "cardOnly": {
+    "attack": { "dp": 15, "autoSuccesses": 2, "naturalWeaponDamage": "4L", "text": "力量8+肉搏4+爪（牙）3+天生武器4L", "status": "PARTIALLY_RECONCILED_UNADAPTED" },
+    "baseDefense": 4,
+    "naturalDefense": 6,
+    "linkedItem": "狮子王由持剑者使用，标准动作召唤乱红莲；此项不作为乱红莲自身装备。",
+    "currentAlignmentDamageAtCardTime": "神圣"
+  },
+  "demoInitial": {
+    "health": "healthy",
+    "willCurrent": 5,
+    "turn": "ready"
+  },
+  "demoInitialStatus": "SIMULATION_ASSUMPTION: 健康、意志满值与未行动只用于独立演示，不是 #1068 记录的当前持久状态；意志上限 5 由 core 公式计算，原卡未列。"
+}

@@ -1,0 +1,1033 @@
+[
+  {
+    "id": "dc-observation",
+    "chatId": "901 判定场景 dc-observation - 2026-10-23",
+    "messageCount": 3,
+    "gate": {
+      "status": "APPLIED",
+      "operationId": "gm-runtime/901 判定场景 dc-observation - 2026-10-23/1/0",
+      "kind": "check",
+      "diagnostic": {
+        "stage": "state_persistence",
+        "operationId": "gm-runtime/901 判定场景 dc-observation - 2026-10-23/1/0",
+        "classificationRequests": 1,
+        "narrationRequests": 1,
+        "elapsedMs": 61013,
+        "generationId": "901-classify-1792764124318-efmvxtjx7gh",
+        "explicitRequestBytes": 6135,
+        "finalMessageCount": 2,
+        "finalMessageBytes": 5998,
+        "classificationDecision": {
+          "status": "CHECK_REQUIRED",
+          "basis": "ordinary_check",
+          "reason": "玩家主动查看练习信边角并辨认暗记，场景已明确指定此动作需要进行感知加洞察检定，且测试主持已规定DC为2，输入齐备。",
+          "request": {
+            "kind": "check",
+            "attribute": "感知",
+            "skill": "洞察",
+            "dc": 2
+          }
+        },
+        "narrationResponseType": "string",
+        "narrationResponseBytes": 339,
+        "narrationEmpty": false,
+        "narrationContainsVariableMarkup": false
+      }
+    },
+    "revision": 1,
+    "operationCount": 1,
+    "operations": [
+      {
+        "summary": {
+          "status": "applied",
+          "kind": "check",
+          "operationId": "gm-runtime/901 判定场景 dc-observation - 2026-10-23/1/0",
+          "revision": 1,
+          "messageId": 1,
+          "swipeId": 0,
+          "actorId": "player",
+          "dp": 5,
+          "rolledSuccesses": 2,
+          "total": 2,
+          "dc": 2,
+          "success": true,
+          "fortune": false,
+          "possibleMishap": false
+        },
+        "request": {
+          "attribute": "感知",
+          "skill": "洞察",
+          "dc": 2
+        },
+        "consumedDice": [
+          8,
+          4,
+          7,
+          9,
+          1
+        ],
+        "auditedRolledSuccesses": 2
+      }
+    ],
+    "playerState": {
+      "name": "御临风",
+      "attributes": {
+        "力量": 5,
+        "敏捷": 5,
+        "智力": 4,
+        "感知": 4,
+        "意志": 1,
+        "风度": 2
+      },
+      "size": 5,
+      "hpBonus": 0,
+      "derived": {
+        "hpMax": 12,
+        "defense": 4,
+        "speed": 25,
+        "initiative": 7,
+        "willMax": 3,
+        "vision": 40
+      },
+      "skills": {
+        "运动": {
+          "level": 1,
+          "subs": {}
+        },
+        "肉搏": {
+          "level": 0,
+          "subs": {}
+        },
+        "白刃": {
+          "level": 5,
+          "subs": {
+            "长剑": {
+              "level": 3
+            }
+          }
+        },
+        "射击": {
+          "level": 0,
+          "subs": {}
+        },
+        "隐藏": {
+          "level": 1,
+          "subs": {}
+        },
+        "求生": {
+          "level": 1,
+          "subs": {}
+        },
+        "驾驶": {
+          "level": 0,
+          "subs": {}
+        },
+        "学识": {
+          "level": 2,
+          "subs": {}
+        },
+        "科学": {
+          "level": 0,
+          "subs": {}
+        },
+        "神秘": {
+          "level": 2,
+          "subs": {}
+        },
+        "电脑": {
+          "level": 2,
+          "subs": {}
+        },
+        "医疗": {
+          "level": 2,
+          "subs": {}
+        },
+        "洞察": {
+          "level": 1,
+          "subs": {}
+        },
+        "社交": {
+          "level": 2,
+          "subs": {}
+        }
+      },
+      "resources": {
+        "流风": {
+          "current": 22,
+          "max": 22
+        }
+      },
+      "attributeAuto": {},
+      "derivedOverrides": [
+        "hpMax",
+        "willMax",
+        "speed",
+        "initiative"
+      ],
+      "health": {
+        "intact": 12,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "will": {
+        "current": 3,
+        "max": 3
+      },
+      "xp": 0,
+      "greatPowersAvailable": 0,
+      "statuses": [],
+      "attributeDamage": {},
+      "turn": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "extendedActions": {},
+      "inventory": [
+        {
+          "name": "雪莲子",
+          "quantity": 1,
+          "source": "原"
+        },
+        {
+          "name": "培元丹",
+          "quantity": 3,
+          "source": "原"
+        },
+        {
+          "name": "药A",
+          "quantity": 2,
+          "source": "原"
+        },
+        {
+          "name": "药B",
+          "quantity": 3,
+          "source": "原"
+        },
+        {
+          "name": "药C",
+          "quantity": 4,
+          "source": "原"
+        },
+        {
+          "name": "雷霆药剂",
+          "quantity": null,
+          "source": "原：数量未记"
+        },
+        {
+          "name": "恶灵提示符",
+          "quantity": null,
+          "source": "原：100为价格，非数量"
+        }
+      ],
+      "unknownSkills": {
+        "制造": {
+          "level": null,
+          "subs": {
+            "炼药": {
+              "level": 2
+            }
+          }
+        }
+      },
+      "recoveryRules": {
+        "flow": {
+          "attributes": [
+            "敏捷",
+            "感知"
+          ],
+          "physical": true,
+          "longRest": true
+        },
+        "flowRecoveryCheck": {
+          "attributes": [
+            "敏捷",
+            "感知"
+          ],
+          "source": "用户2026-10-23确认"
+        }
+      }
+    },
+    "messages": [
+      {
+        "is_user": false,
+        "mes": "【有明确难度依据的普通观察检定｜独立非Canon测试】\n这是非Canon测试场景。御临风健康、清醒，站在测试桌旁。桌上有一封标注为练习品的旧信，表面公开文字清楚可见，但边角有一枚很浅的暗记，需要专门辨认。测试主持已预先规定：主动查找暗记为感知＋洞察、DC2，无其他修正；失败就不能确定暗记内容，不给误导性线索、不受伤、不消耗资源。此DC是本测试的显式场景设定，不是通用默认难度。\n\n<StatusPlaceHolderImpl/>"
+      },
+      {
+        "is_user": true,
+        "mes": "我仔细查看这封练习信的边角，辨认上面的暗记。"
+      },
+      {
+        "is_user": false,
+        "mes": "御临风微微俯身，目光落在桌上那封练习信的边缘。信件的纸质略显粗糙，泛着陈旧的微黄，表面墨迹清晰。随着视线移向右下角折角处，那道极浅的、几乎与纸纹融为一体的压痕逐渐显现出来——那是一个规整的环形暗记，边缘隐约带着半圈向内的刻纹。\n\n<StatusPlaceHolderImpl/>"
+      }
+    ]
+  },
+  {
+    "id": "status-resistance",
+    "chatId": "901 判定场景 status-resistance - 2026-10-23",
+    "messageCount": 3,
+    "gate": {
+      "status": "UNRESOLVED",
+      "operationId": "gm-runtime/901 判定场景 status-resistance - 2026-10-23/1/0",
+      "pending": {
+        "original": {
+          "chatId": "901 判定场景 status-resistance - 2026-10-23",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "按这个隔离测试来源，对我受到的1点普通恐惧进行状态抵抗。"
+        },
+        "operationId": "gm-runtime/901 判定场景 status-resistance - 2026-10-23/1/0",
+        "request": null
+      },
+      "missing": [
+        "玩家请求进行非Canon的隔离测试状态抵抗结算，但当前规则状态摘要中并未包含针对普通恐惧的机械结算接口、对应属性及固有DC定义，属于缺少受支持的机械结算接口。"
+      ],
+      "diagnostic": {
+        "stage": "state_persistence",
+        "operationId": "gm-runtime/901 判定场景 status-resistance - 2026-10-23/1/0",
+        "classificationRequests": 1,
+        "narrationRequests": 0,
+        "elapsedMs": 12573,
+        "generationId": "901-classify-1792764056256-zxibpekjhi",
+        "explicitRequestBytes": 6187,
+        "finalMessageCount": 2,
+        "finalMessageBytes": 6050,
+        "classificationDecision": {
+          "status": "UNRESOLVED",
+          "reason": "玩家请求进行非Canon的隔离测试状态抵抗结算，但当前规则状态摘要中并未包含针对普通恐惧的机械结算接口、对应属性及固有DC定义，属于缺少受支持的机械结算接口。"
+        }
+      }
+    },
+    "revision": 0,
+    "operationCount": 0,
+    "operations": [],
+    "playerState": {
+      "name": "御临风",
+      "attributes": {
+        "力量": 5,
+        "敏捷": 5,
+        "智力": 4,
+        "感知": 4,
+        "意志": 1,
+        "风度": 2
+      },
+      "size": 5,
+      "hpBonus": 0,
+      "derived": {
+        "hpMax": 12,
+        "defense": 4,
+        "speed": 25,
+        "initiative": 7,
+        "willMax": 3,
+        "vision": 40
+      },
+      "skills": {
+        "运动": {
+          "level": 1,
+          "subs": {}
+        },
+        "肉搏": {
+          "level": 0,
+          "subs": {}
+        },
+        "白刃": {
+          "level": 5,
+          "subs": {
+            "长剑": {
+              "level": 3
+            }
+          }
+        },
+        "射击": {
+          "level": 0,
+          "subs": {}
+        },
+        "隐藏": {
+          "level": 1,
+          "subs": {}
+        },
+        "求生": {
+          "level": 1,
+          "subs": {}
+        },
+        "驾驶": {
+          "level": 0,
+          "subs": {}
+        },
+        "学识": {
+          "level": 2,
+          "subs": {}
+        },
+        "科学": {
+          "level": 0,
+          "subs": {}
+        },
+        "神秘": {
+          "level": 2,
+          "subs": {}
+        },
+        "电脑": {
+          "level": 2,
+          "subs": {}
+        },
+        "医疗": {
+          "level": 2,
+          "subs": {}
+        },
+        "洞察": {
+          "level": 1,
+          "subs": {}
+        },
+        "社交": {
+          "level": 2,
+          "subs": {}
+        }
+      },
+      "resources": {
+        "流风": {
+          "current": 22,
+          "max": 22
+        }
+      },
+      "attributeAuto": {},
+      "derivedOverrides": [
+        "hpMax",
+        "willMax",
+        "speed",
+        "initiative"
+      ],
+      "health": {
+        "intact": 12,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "will": {
+        "current": 3,
+        "max": 3
+      },
+      "xp": 0,
+      "greatPowersAvailable": 0,
+      "statuses": [],
+      "attributeDamage": {},
+      "turn": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "extendedActions": {},
+      "inventory": [
+        {
+          "name": "雪莲子",
+          "quantity": 1,
+          "source": "原"
+        },
+        {
+          "name": "培元丹",
+          "quantity": 3,
+          "source": "原"
+        },
+        {
+          "name": "药A",
+          "quantity": 2,
+          "source": "原"
+        },
+        {
+          "name": "药B",
+          "quantity": 3,
+          "source": "原"
+        },
+        {
+          "name": "药C",
+          "quantity": 4,
+          "source": "原"
+        },
+        {
+          "name": "雷霆药剂",
+          "quantity": null,
+          "source": "原：数量未记"
+        },
+        {
+          "name": "恶灵提示符",
+          "quantity": null,
+          "source": "原：100为价格，非数量"
+        }
+      ],
+      "unknownSkills": {
+        "制造": {
+          "level": null,
+          "subs": {
+            "炼药": {
+              "level": 2
+            }
+          }
+        }
+      },
+      "recoveryRules": {
+        "flow": {
+          "attributes": [
+            "敏捷",
+            "感知"
+          ],
+          "physical": true,
+          "longRest": true
+        },
+        "flowRecoveryCheck": {
+          "attributes": [
+            "敏捷",
+            "感知"
+          ],
+          "source": "用户2026-10-23确认"
+        }
+      }
+    },
+    "messages": [
+      {
+        "is_user": false,
+        "mes": "【普通恐惧状态抵抗与入口阻断｜独立非Canon测试】\n这是非Canon规则测试题，不是正式能力或已发生事件。假设御临风健康清醒时受到一个仅用于隔离测试的恐惧来源，明确产生1点普通恐惧，按已采用的PHB普通状态抵抗骨架处理，无免疫、特殊豁免、额外DP或毁灭性后果。状态来源只是一条非Canon最小测试fixture，不对应任何正式NPC技能。本轮要求结算原本的状态抵抗，不能把它替换成意志＋求生对固定DC的普通检定。\n\n<StatusPlaceHolderImpl/>"
+      },
+      {
+        "is_user": true,
+        "mes": "按这个隔离测试来源，对我受到的1点普通恐惧进行状态抵抗。"
+      },
+      {
+        "is_user": false,
+        "mes": "这项行动尚未裁定；没有确定成功、失败或机械后果。请补齐必要信息。\n\n<StatusPlaceHolderImpl/>"
+      }
+    ]
+  },
+  {
+    "id": "active-opposition",
+    "chatId": "901 判定场景 active-opposition - 2026-10-23",
+    "messageCount": 3,
+    "gate": {
+      "status": "UNRESOLVED",
+      "operationId": "gm-runtime/901 判定场景 active-opposition - 2026-10-23/1/0",
+      "pending": {
+        "original": {
+          "chatId": "901 判定场景 active-opposition - 2026-10-23",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "我作为主动方与这个测试搭档进行一次上述短跑对抗。"
+        },
+        "operationId": "gm-runtime/901 判定场景 active-opposition - 2026-10-23/1/0",
+        "request": null
+      },
+      "diagnostic": {
+        "stage": "blocked",
+        "operationId": "gm-runtime/901 判定场景 active-opposition - 2026-10-23/1/0",
+        "classificationRequests": 1,
+        "narrationRequests": 0,
+        "elapsedMs": 10139,
+        "generationId": "901-classify-1792763971611-rzjsq7vneo",
+        "explicitRequestBytes": 6405,
+        "finalMessageCount": 2,
+        "finalMessageBytes": 6268,
+        "classificationDecision": {
+          "status": "UNRESOLVED",
+          "reason": "玩家声明与搭档进行短跑对抗，但依据场景规则需先结算被动方（测试搭档）的总成功数作为主动方目标，而系统当前无法自动运行NPC的检定结算，需主持人介入判定对抗流程。",
+          "request": null
+        },
+        "failureStage": "response_parse",
+        "reason": "invalid_model_response",
+        "httpStatus": null
+      }
+    },
+    "revision": 0,
+    "operationCount": 0,
+    "operations": [],
+    "playerState": {
+      "name": "御临风",
+      "attributes": {
+        "力量": 5,
+        "敏捷": 5,
+        "智力": 4,
+        "感知": 4,
+        "意志": 1,
+        "风度": 2
+      },
+      "size": 5,
+      "hpBonus": 0,
+      "derived": {
+        "hpMax": 12,
+        "defense": 4,
+        "speed": 25,
+        "initiative": 7,
+        "willMax": 3,
+        "vision": 40
+      },
+      "skills": {
+        "运动": {
+          "level": 1,
+          "subs": {}
+        },
+        "肉搏": {
+          "level": 0,
+          "subs": {}
+        },
+        "白刃": {
+          "level": 5,
+          "subs": {
+            "长剑": {
+              "level": 3
+            }
+          }
+        },
+        "射击": {
+          "level": 0,
+          "subs": {}
+        },
+        "隐藏": {
+          "level": 1,
+          "subs": {}
+        },
+        "求生": {
+          "level": 1,
+          "subs": {}
+        },
+        "驾驶": {
+          "level": 0,
+          "subs": {}
+        },
+        "学识": {
+          "level": 2,
+          "subs": {}
+        },
+        "科学": {
+          "level": 0,
+          "subs": {}
+        },
+        "神秘": {
+          "level": 2,
+          "subs": {}
+        },
+        "电脑": {
+          "level": 2,
+          "subs": {}
+        },
+        "医疗": {
+          "level": 2,
+          "subs": {}
+        },
+        "洞察": {
+          "level": 1,
+          "subs": {}
+        },
+        "社交": {
+          "level": 2,
+          "subs": {}
+        }
+      },
+      "resources": {
+        "流风": {
+          "current": 22,
+          "max": 22
+        }
+      },
+      "attributeAuto": {},
+      "derivedOverrides": [
+        "hpMax",
+        "willMax",
+        "speed",
+        "initiative"
+      ],
+      "health": {
+        "intact": 12,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "will": {
+        "current": 3,
+        "max": 3
+      },
+      "xp": 0,
+      "greatPowersAvailable": 0,
+      "statuses": [],
+      "attributeDamage": {},
+      "turn": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "extendedActions": {},
+      "inventory": [
+        {
+          "name": "雪莲子",
+          "quantity": 1,
+          "source": "原"
+        },
+        {
+          "name": "培元丹",
+          "quantity": 3,
+          "source": "原"
+        },
+        {
+          "name": "药A",
+          "quantity": 2,
+          "source": "原"
+        },
+        {
+          "name": "药B",
+          "quantity": 3,
+          "source": "原"
+        },
+        {
+          "name": "药C",
+          "quantity": 4,
+          "source": "原"
+        },
+        {
+          "name": "雷霆药剂",
+          "quantity": null,
+          "source": "原：数量未记"
+        },
+        {
+          "name": "恶灵提示符",
+          "quantity": null,
+          "source": "原：100为价格，非数量"
+        }
+      ],
+      "unknownSkills": {
+        "制造": {
+          "level": null,
+          "subs": {
+            "炼药": {
+              "level": 2
+            }
+          }
+        }
+      },
+      "recoveryRules": {
+        "flow": {
+          "attributes": [
+            "敏捷",
+            "感知"
+          ],
+          "physical": true,
+          "longRest": true
+        },
+        "flowRecoveryCheck": {
+          "attributes": [
+            "敏捷",
+            "感知"
+          ],
+          "source": "用户2026-10-23确认"
+        }
+      }
+    },
+    "messages": [
+      {
+        "is_user": false,
+        "mes": "【主动与被动普通对抗及入口阻断｜独立非Canon测试】\n这是非Canon隔离训练题。御临风健康清醒，与一个非Canon最小测试搭档进行一次无伤害、无资源消耗的并排短跑对抗。御临风为主动方，使用敏捷5＋运动1＝6DP；测试搭档为被动方，fixture仅定义敏捷2、运动1，无自动成功、子技能或修正，合计3DP。主动方胜利条件是成功数达到被动方成功数；平局主动方成功。本题没有固定DC，必须先结算被动方，再以其总成功数作为主动方目标，不得自填DC2替代。测试搭档不是正式Canon角色，不获得任何额外能力。\n\n<StatusPlaceHolderImpl/>"
+      },
+      {
+        "is_user": true,
+        "mes": "我作为主动方与这个测试搭档进行一次上述短跑对抗。"
+      },
+      {
+        "is_user": false,
+        "mes": "行动判断或规则输入未完成；本次行动尚未裁定，没有确定成败。\n【隔离诊断：response_parse / invalid_model_response】\n\n<StatusPlaceHolderImpl/>"
+      }
+    ]
+  },
+  {
+    "id": "social-compound",
+    "chatId": "901 判定场景 social-compound - 2026-10-23",
+    "messageCount": 3,
+    "gate": {
+      "status": "APPLIED",
+      "operationId": "gm-runtime/901 判定场景 social-compound - 2026-10-23/1/0",
+      "kind": "check",
+      "diagnostic": {
+        "stage": "state_persistence",
+        "operationId": "gm-runtime/901 判定场景 social-compound - 2026-10-23/1/0",
+        "classificationRequests": 1,
+        "narrationRequests": 1,
+        "elapsedMs": 30757,
+        "generationId": "901-classify-1792763837887-0jf58pypqq6f",
+        "explicitRequestBytes": 6334,
+        "finalMessageCount": 2,
+        "finalMessageBytes": 6249,
+        "classificationDecision": {
+          "status": "CHECK_REQUIRED",
+          "basis": "check_required",
+          "reason": "玩家请求说服门卫改变原先决定提前开门，具有社交不确定性且场景已显式提供DC2与风度+社交的依据。",
+          "request": {
+            "kind": "check",
+            "attribute": "风度",
+            "skill": "社交",
+            "dc": 2
+          }
+        },
+        "narrationResponseType": "string",
+        "narrationResponseBytes": 452,
+        "narrationEmpty": false,
+        "narrationContainsVariableMarkup": false
+      }
+    },
+    "revision": 1,
+    "operationCount": 1,
+    "operations": [
+      {
+        "summary": {
+          "status": "applied",
+          "kind": "check",
+          "operationId": "gm-runtime/901 判定场景 social-compound - 2026-10-23/1/0",
+          "revision": 1,
+          "messageId": 1,
+          "swipeId": 0,
+          "actorId": "player",
+          "dp": 4,
+          "rolledSuccesses": 2,
+          "total": 2,
+          "dc": 2,
+          "success": true,
+          "fortune": false,
+          "possibleMishap": false
+        },
+        "request": {
+          "attribute": "风度",
+          "skill": "社交",
+          "dc": 2
+        },
+        "consumedDice": [
+          1,
+          3,
+          4,
+          10,
+          8
+        ],
+        "auditedRolledSuccesses": 2
+      }
+    ],
+    "playerState": {
+      "name": "御临风",
+      "attributes": {
+        "力量": 5,
+        "敏捷": 5,
+        "智力": 4,
+        "感知": 4,
+        "意志": 1,
+        "风度": 2
+      },
+      "size": 5,
+      "hpBonus": 0,
+      "derived": {
+        "hpMax": 12,
+        "defense": 4,
+        "speed": 25,
+        "initiative": 7,
+        "willMax": 3,
+        "vision": 40
+      },
+      "skills": {
+        "运动": {
+          "level": 1,
+          "subs": {}
+        },
+        "肉搏": {
+          "level": 0,
+          "subs": {}
+        },
+        "白刃": {
+          "level": 5,
+          "subs": {
+            "长剑": {
+              "level": 3
+            }
+          }
+        },
+        "射击": {
+          "level": 0,
+          "subs": {}
+        },
+        "隐藏": {
+          "level": 1,
+          "subs": {}
+        },
+        "求生": {
+          "level": 1,
+          "subs": {}
+        },
+        "驾驶": {
+          "level": 0,
+          "subs": {}
+        },
+        "学识": {
+          "level": 2,
+          "subs": {}
+        },
+        "科学": {
+          "level": 0,
+          "subs": {}
+        },
+        "神秘": {
+          "level": 2,
+          "subs": {}
+        },
+        "电脑": {
+          "level": 2,
+          "subs": {}
+        },
+        "医疗": {
+          "level": 2,
+          "subs": {}
+        },
+        "洞察": {
+          "level": 1,
+          "subs": {}
+        },
+        "社交": {
+          "level": 2,
+          "subs": {}
+        }
+      },
+      "resources": {
+        "流风": {
+          "current": 22,
+          "max": 22
+        }
+      },
+      "attributeAuto": {},
+      "derivedOverrides": [
+        "hpMax",
+        "willMax",
+        "speed",
+        "initiative"
+      ],
+      "health": {
+        "intact": 12,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "will": {
+        "current": 3,
+        "max": 3
+      },
+      "xp": 0,
+      "greatPowersAvailable": 0,
+      "statuses": [],
+      "attributeDamage": {},
+      "turn": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "extendedActions": {},
+      "inventory": [
+        {
+          "name": "雪莲子",
+          "quantity": 1,
+          "source": "原"
+        },
+        {
+          "name": "培元丹",
+          "quantity": 3,
+          "source": "原"
+        },
+        {
+          "name": "药A",
+          "quantity": 2,
+          "source": "原"
+        },
+        {
+          "name": "药B",
+          "quantity": 3,
+          "source": "原"
+        },
+        {
+          "name": "药C",
+          "quantity": 4,
+          "source": "原"
+        },
+        {
+          "name": "雷霆药剂",
+          "quantity": null,
+          "source": "原：数量未记"
+        },
+        {
+          "name": "恶灵提示符",
+          "quantity": null,
+          "source": "原：100为价格，非数量"
+        }
+      ],
+      "unknownSkills": {
+        "制造": {
+          "level": null,
+          "subs": {
+            "炼药": {
+              "level": 2
+            }
+          }
+        }
+      },
+      "recoveryRules": {
+        "flow": {
+          "attributes": [
+            "敏捷",
+            "感知"
+          ],
+          "physical": true,
+          "longRest": true
+        },
+        "flowRecoveryCheck": {
+          "attributes": [
+            "敏捷",
+            "感知"
+          ],
+          "source": "用户2026-10-23确认"
+        }
+      }
+    },
+    "messages": [
+      {
+        "is_user": false,
+        "mes": "【寒暄后要求改变决定的社交检定｜独立非Canon测试】\n这是非Canon测试场景。健康的御临风面对一个仅用于测试的门卫。门卫已明确决定暂不开放练习院门，但有权自行破例；请求为这次练习提前开门不是自动成功或绝对不可能，失败则继续等候，不触发敌对或其他机械后果。普通问候不需要投骰。测试主持预先规定：说服门卫改变这次开门决定使用风度＋社交、DC2，无其他修正。这个门卫没有正式Canon身份或特殊能力；DC2只是本测试的显式场景依据，不是社交检定统一难度。"
+      },
+      {
+        "is_user": true,
+        "mes": "我先向门卫打个招呼，然后请他为这次练习破例，改变原先的决定，提前打开院门让我进去。"
+      },
+      {
+        "is_user": false,
+        "mes": "清晨的微风拂过练习院外灰白的石墙。身披轻甲的门卫正靠在厚重的木门旁，目光扫过空旷的街道。\n\n看见御临风走近，门卫微微点头回礼，听完对方的请求后，他打量了对方片刻，随后直起身体，伸手解下了挂在腰间的黄铜钥匙，将其插入沉重的铁锁中。随着一声沉闷的咔哒声，紧闭的院门被缓缓推开，露出了里面铺着青石板的宽敞场地。\n\n<StatusPlaceHolderImpl/>"
+      }
+    ]
+  }
+]

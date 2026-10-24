@@ -1,0 +1,172 @@
+{
+  "chatId": "901 擂台 拉德维克 完整场实测 - 2026-10-23",
+  "revision": 1,
+  "mode": "combat",
+  "round": 1,
+  "activeId": "player",
+  "status": "active",
+  "actors": {
+    "player": {
+      "health": {
+        "intact": 12,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "resources": {
+        "流风": {
+          "current": 22,
+          "max": 22
+        }
+      },
+      "will": {
+        "current": 3,
+        "max": 3
+      },
+      "xp": 0,
+      "position": [
+        0,
+        0
+      ],
+      "actions": {
+        "phase": "active",
+        "standard": 1,
+        "move": 1,
+        "swift": 1,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "buffs": {},
+      "combatCarry": {
+        "parameters": {
+          "flowMax": 22,
+          "flowAction": "free"
+        },
+        "sceneInstanceId": "arena-playtest-radwick",
+        "used": {}
+      }
+    },
+    "radwick": {
+      "health": {
+        "intact": 16,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "resources": {
+        "斗气": {
+          "current": 3,
+          "max": 3
+        }
+      },
+      "will": {
+        "current": 8,
+        "max": 8
+      },
+      "xp": 0,
+      "position": [
+        1,
+        0
+      ],
+      "actions": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "buffs": {},
+      "combatCarry": {
+        "sceneInstanceId": "arena-playtest-radwick",
+        "used": {}
+      }
+    }
+  },
+  "operations": [
+    {
+      "id": "gm-runtime/901 擂台 拉德维克 完整场实测 - 2026-10-23/1/0/combat",
+      "revision": 1,
+      "command": {
+        "kind": "enter",
+        "encounterId": "arena-radwick"
+      },
+      "result": {
+        "actorId": "player",
+        "abilityId": "enter",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [
+          "进入战斗；沿用现有伤势与能量"
+        ]
+      }
+    }
+  ],
+  "lastMessages": [
+    {
+      "user": true,
+      "text": "【隔离测试玩家声明】自由动作消耗2点流风，启动流风2；再用移动动作以练习长剑准备普通格挡。标准动作和迅捷动作都保留，先不结束回合。",
+      "extra": {
+        "isSmallSys": false,
+        "901_narrative": {
+          "text": "【隔离测试玩家声明】自由动作消耗2点流风，启动流风2；再用移动动作以练习长剑准备普通格挡。标准动作和迅捷动作都保留，先不结束回合。",
+          "swipeId": 0,
+          "plan": {
+            "steps": [
+              {
+                "quote": "自由动作消耗2点流风，启动流风2",
+                "command": {
+                  "abilityId": "flow"
+                },
+                "cost": {
+                  "energy": {
+                    "流风": 2
+                  }
+                }
+              },
+              {
+                "quote": "移动动作以练习长剑准备普通格挡",
+                "command": {
+                  "abilityId": "block"
+                },
+                "cost": {
+                  "actions": {
+                    "move": 1
+                  }
+                }
+              }
+            ],
+            "clarification": null
+          },
+          "completed": {
+            "message": "流风选择1或2点",
+            "revision": 1
+          }
+        }
+      }
+    },
+    {
+      "user": false,
+      "text": "流风选择1或2点\n\n<StatusPlaceHolderImpl/>",
+      "extra": {
+        "901_narrative": {
+          "key": "901 擂台 拉德维克 完整场实测 - 2026-10-23/3/0",
+          "revision": 1
+        }
+      }
+    }
+  ]
+}

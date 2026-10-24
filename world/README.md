@@ -2,6 +2,8 @@
 
 [返回首页](../README.md) · [世界总览](overview.md) · [182条世界书阅读版](worldbook.md)
 
+2026-10-18运行增量：[006剧情向主持包](../output/replay_tavern/story_guidance_20261018_candidate/README.md)。本轮同步ST指南适配的主持、文风及相关场景提示；本目录作者资料与182条阅读版不因此等同于006已加载内容。
+
 本目录把已有材料按阅读主题连接起来，不替各主题重新审批。引用的作者文件可能同时保存已采用方案和未采用候选，请以其中最新的逐项采用记录为准。精确来源见[来源入口](../sources/README.md)。
 
 ## 地理与地区
@@ -24,8 +26,10 @@
 | 主题 | 阅读内容 |
 | --- | --- |
 | 国家、官员与社会组织 | [帝国制度](../work/replay_research/empire_operations_consolidated.md)、[帝国专题](../work/replay_research/empire_dossier.md)、[组织分类](../work/replay_research/organization_options_20261008.md)；制度稿也含案件特例，不把特例推广为全国常态 |
-| 教育、语言和知识交流 | [语言与免费教育](../work/replay_research/language_education_reference_20261008.md) |
+| 公共消息与民间见识 | [消息主题PN01—PN06](../work/replay_research/information_consequences_reference_20261007.md#2026-10-15公共消息与民间见识pn新增作者层draft)：PN六项已采用为作者层DRAFT，公告、往来、地方消息单及城乡地域认识差异 |
+| 教育、语言和知识交流 | [语言与免费教育](../work/replay_research/language_education_reference_20261008.md)：修正后XS及XG已采用为作者层DRAFT，含高阶学术门槛、福利资助及长期公共支持；新增确认LB01公费国立图书馆通行证（二十金，较高入馆门槛）；XL01—XL06地方知识交流为新候选 |
 | 公共服务、住房与出行 | [服务渠道](../work/replay_research/town_services_working_draft_20261007.md)、[普通专业服务](../work/replay_research/ordinary_services_reference_20261007.md)、[长期居住](../work/replay_research/long_term_residence_reference_20261008.md) |
+| 共同节令与年度生活节奏 | [气候与节令YT01—YT06](../work/replay_research/capital_climate_festival.md#2026-10-15共同节令与年度生活节奏yt新增作者层draft)：YT六项已采用为作者层DRAFT，连接共同节点、地区物候、城乡忙闲和相聚，不定完整历法 |
 | 共同价值、家庭、故乡和文艺 | [日常生活与文化专题](../work/replay_research/everyday_life_reference_20261007.md)：CV、HT、AR、FL、CF等已采用范围；力量纠纷主题已收束，不沿DT旧稿继续展开 |
 | 神明态度、火化与纪念 | [信仰与纪念文化](../work/replay_research/divinity_belief_reference_20261007.md) |
 | 货币与普通收支 | [经济主题](../work/replay_research/economy_currency_working_draft_20261015.md)：MC、PV及IN已采用；SV储汇五项仍是候选。本主题暂时收束 |
@@ -60,4 +64,4 @@
 
 ## 当前暂存的后续方向
 
-用户对公共消息与民间见识、共同节令与生活节奏、邻里同乡与自愿结社感兴趣；先清理仓库，再决定具体建设。此记录不等于三项设定已经采用。经济货币暂不继续，也不自动开启审核、测试或全国模拟。
+清理已收束，公共消息PN01—PN06已采用；共同节令与年度生活节奏YT01—YT06也已全部采用；邻里同乡与自愿结社仍是用户感兴趣的后续方向。各项采用范围分别记录。经济货币暂不继续，也不自动开启审核、测试或全国模拟。

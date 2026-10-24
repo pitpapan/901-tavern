@@ -1,0 +1,13 @@
+{
+  "definition": {
+    "id": "demo-scholar", "name": "测试学者", "period": "demo", "sources": ["Character Builder v0.1 noncombat example"],
+    "size": 5,
+    "attributes": { "力量": 3, "敏捷": 4, "智力": 5, "感知": 3, "意志": 4, "风度": 2 },
+    "skills": {
+      "学识": { "level": 2, "subs": { "历史": { "level": 1, "scope": "历史知识" } } },
+      "运动": { "level": 0 }, "求生": { "level": 0 }
+    }
+  },
+  "initial": { "health": "healthy", "willCurrent": 4, "xp": 0, "turn": "ready" },
+  "check": { "attribute": "智力", "skill": "学识", "dice": [8, 1, 1, 1, 1, 1, 1] }
+}

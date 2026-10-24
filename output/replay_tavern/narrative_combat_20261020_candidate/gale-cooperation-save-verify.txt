@@ -1,0 +1,331 @@
+{
+  "galeSuperseded": {
+    "status": "SUPERSEDED: 用户最新纠正狂岚仅攻击敌人，此旧错误版友伤记录不能作为当前通过证据",
+    "revision": 4,
+    "refreshRootEqual": true,
+    "attackOperation": "combat/5/0/3",
+    "pendingRevision": 3,
+    "pendingCostsAndDamageUnchanged": true,
+    "huangActualGuard": 0,
+    "damage": [
+      {
+        "targetId": "huang",
+        "actualDamage": 19,
+        "severity": "L"
+      },
+      {
+        "targetId": "jiang",
+        "actualDamage": 22,
+        "severity": "L"
+      }
+    ],
+    "player": {
+      "intact": 21,
+      "B": 0,
+      "L": 0,
+      "A": 0,
+      "temp": 0,
+      "coma": false,
+      "deteriorationStopped": false
+    },
+    "flowPool": {
+      "current": 9,
+      "max": 10
+    },
+    "narrativeLimitation": "旧狂岚正文将黄泉无主动格挡写成了格挡，原文保留；新增逐目标防御事实在协同pending后实测。"
+  },
+  "cooperation": {
+    "revision": 7,
+    "pendingRefreshEqual": true,
+    "finalRefreshEqual": true,
+    "finalSnapshotMatchesMvu": true,
+    "player": {
+      "intact": 15,
+      "B": 0,
+      "L": 6,
+      "A": 0,
+      "temp": 0,
+      "coma": false,
+      "deteriorationStopped": false
+    },
+    "statuses": [],
+    "operations": [
+      {
+        "id": "declaration/901 黄泉乱红莲协同实测 - 2026-10-22/1/0/0",
+        "revision": 1,
+        "command": {
+          "abilityId": "end",
+          "actorId": "player"
+        },
+        "damage": []
+      },
+      {
+        "id": "combat/1/0/1",
+        "revision": 2,
+        "command": {
+          "actorId": "huang",
+          "abilityId": "strike",
+          "targetId": "player"
+        },
+        "damage": []
+      },
+      {
+        "id": "declaration/901 黄泉乱红莲协同实测 - 2026-10-22/3/0/0",
+        "revision": 3,
+        "command": {
+          "abilityId": "react",
+          "defense": "normal",
+          "choice": "decline",
+          "actorId": "player"
+        },
+        "damage": [
+          {
+            "targetId": "player",
+            "kind": "physical",
+            "energyType": null,
+            "input": 6,
+            "inputSeverity": "L",
+            "severity": "L",
+            "actualDamage": 6
+          }
+        ],
+        "responses": [
+          {
+            "targetId": "player",
+            "guarded": false
+          }
+        ]
+      },
+      {
+        "id": "combat/3/0/3",
+        "revision": 4,
+        "command": {
+          "actorId": "huang",
+          "abilityId": "end"
+        },
+        "damage": []
+      },
+      {
+        "id": "combat/3/0/4",
+        "revision": 5,
+        "command": {
+          "actorId": "lotus",
+          "abilityId": "strike",
+          "targetId": "player"
+        },
+        "damage": []
+      },
+      {
+        "id": "declaration/901 黄泉乱红莲协同实测 - 2026-10-22/5/0/0",
+        "revision": 6,
+        "command": {
+          "abilityId": "react",
+          "defense": "normal",
+          "choice": "decline",
+          "actorId": "player"
+        },
+        "damage": [],
+        "responses": [
+          {
+            "targetId": "player",
+            "guarded": false
+          }
+        ]
+      },
+      {
+        "id": "combat/5/0/6",
+        "revision": 7,
+        "command": {
+          "actorId": "lotus",
+          "abilityId": "end"
+        },
+        "damage": []
+      }
+    ],
+    "firstPendingRevision": 2,
+    "secondPendingRevision": 5
+  },
+  "galeCurrent": {
+    "status": "当前规则：仅合法敌人",
+    "revision": 2,
+    "refreshRootEqual": true,
+    "friendUnharmedAndNoReaction": true,
+    "attackOperation": "combat/3/0/1",
+    "damage": [
+      {
+        "targetId": "jiang",
+        "kind": "physical",
+        "energyType": null,
+        "input": 20,
+        "inputSeverity": "L",
+        "severity": "L",
+        "actualDamage": 20
+      }
+    ],
+    "responses": [
+      {
+        "targetId": "jiang",
+        "guarded": false
+      }
+    ],
+    "operations": [
+      {
+        "id": "declaration/901 狂岚敌我选择复测 - 2026-10-22/3/0/0",
+        "revision": 1,
+        "command": {
+          "abilityId": "gale",
+          "actorId": "player"
+        }
+      },
+      {
+        "id": "combat/3/0/1",
+        "revision": 2,
+        "command": {
+          "actorId": "jiang",
+          "abilityId": "react",
+          "choice": "decline"
+        }
+      }
+    ]
+  },
+  "roar": {
+    "selection": "本场明确约定的咆哮能力演示，真实模型调用合法咆哮/目标；不是自由战术选择",
+    "revision": 4,
+    "refreshRootEqual": true,
+    "pendingRevision": 2,
+    "pendingDamageUnchanged": true,
+    "finalSnapshotMatchesMvu": true,
+    "attackOperation": "declaration/901 乱红莲咆哮友伤实测 - 2026-10-22/3/0/0",
+    "saves": [
+      {
+        "targetId": "huang",
+        "dp": 19,
+        "luck": false,
+        "dice": [
+          7,
+          6,
+          4,
+          2,
+          3,
+          10,
+          4,
+          1,
+          10,
+          5,
+          5,
+          3,
+          5,
+          10,
+          4,
+          8,
+          10,
+          10,
+          4,
+          4,
+          2,
+          9,
+          4,
+          10,
+          2
+        ],
+        "used": 25,
+        "rolledSuccesses": 8,
+        "luckMishap": false,
+        "fixed": 2,
+        "extra": 0,
+        "total": 10,
+        "type": "reflex"
+      },
+      {
+        "targetId": "player",
+        "dp": 9,
+        "luck": false,
+        "dice": [
+          4,
+          7,
+          4,
+          9,
+          6,
+          7,
+          3,
+          6,
+          1
+        ],
+        "used": 9,
+        "rolledSuccesses": 1,
+        "luckMishap": false,
+        "fixed": 1,
+        "extra": 0,
+        "total": 2,
+        "type": "reflex"
+      }
+    ],
+    "damage": [
+      {
+        "targetId": "player",
+        "kind": "energy",
+        "energyType": "force",
+        "input": 5,
+        "inputSeverity": "L",
+        "severity": "L",
+        "actualDamage": 5
+      }
+    ],
+    "player": {
+      "intact": 16,
+      "B": 0,
+      "L": 5,
+      "A": 0,
+      "temp": 0,
+      "coma": false,
+      "deteriorationStopped": false
+    },
+    "friend": {
+      "intact": 23,
+      "B": 0,
+      "L": 0,
+      "A": 0,
+      "temp": 0,
+      "coma": false,
+      "deteriorationStopped": false
+    },
+    "operations": [
+      {
+        "id": "combat/1/0/0",
+        "revision": 1,
+        "command": {
+          "actorId": "lotus",
+          "abilityId": "roar",
+          "targetId": "player"
+        }
+      },
+      {
+        "id": "combat/1/0/1",
+        "revision": 2,
+        "command": {
+          "actorId": "huang",
+          "abilityId": "react",
+          "choice": "decline"
+        }
+      },
+      {
+        "id": "declaration/901 乱红莲咆哮友伤实测 - 2026-10-22/3/0/0",
+        "revision": 3,
+        "command": {
+          "abilityId": "react",
+          "defense": "normal",
+          "choice": "decline",
+          "actorId": "player"
+        }
+      },
+      {
+        "id": "combat/3/0/3",
+        "revision": 4,
+        "command": {
+          "actorId": "lotus",
+          "abilityId": "end"
+        }
+      }
+    ]
+  }
+}

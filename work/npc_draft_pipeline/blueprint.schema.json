@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "901 NPC Blueprint v0.1",
+  "type": "object",
+  "required": ["identity", "period", "narrativeRole", "combatProfile", "abilityConcepts", "sourceStatus"],
+  "additionalProperties": false,
+  "properties": {
+    "identity": {
+      "type": "object",
+      "required": ["id", "name"],
+      "additionalProperties": false,
+      "properties": { "id": { "type": "string", "minLength": 1, "pattern": "\\S" }, "name": { "type": "string", "minLength": 1, "pattern": "\\S" } }
+    },
+    "period": { "type": "string", "minLength": 1, "pattern": "\\S" },
+    "narrativeRole": { "type": "string", "minLength": 1, "pattern": "\\S" },
+    "combatProfile": {
+      "type": "object",
+      "required": ["style", "strengths", "weaknesses"],
+      "additionalProperties": false,
+      "properties": {
+        "style": { "type": "string", "minLength": 1, "pattern": "\\S" },
+        "strengths": { "type": "array", "items": { "type": "string", "pattern": "\\S" } },
+        "weaknesses": { "type": "array", "items": { "type": "string", "pattern": "\\S" } }
+      }
+    },
+    "powerReference": { "type": "string", "pattern": "^T[0-8]$" },
+    "abilityConcepts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "description"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "minLength": 1, "pattern": "\\S" },
+          "name": { "type": "string", "minLength": 1, "pattern": "\\S" },
+          "description": { "type": "string", "minLength": 1, "pattern": "\\S" }
+        }
+      }
+    },
+    "narrativeSources": {
+      "type": "object",
+      "required": ["narrativeRole", "combatProfile"],
+      "additionalProperties": false,
+      "properties": {
+        "narrativeRole": { "type": "string", "pattern": "\\S" },
+        "combatProfile": { "type": "string", "pattern": "\\S" },
+        "abilityConcepts": { "type": "string", "pattern": "\\S" }
+      }
+    },
+    "sourceStatus": { "enum": ["EXISTING_SOURCE", "PROPOSED"] }
+  },
+  "allOf": [
+    { "if": { "properties": { "sourceStatus": { "const": "EXISTING_SOURCE" } } },
+      "then": { "required": ["narrativeSources"] } },
+    { "if": { "properties": { "sourceStatus": { "const": "PROPOSED" } } },
+      "then": { "not": { "required": ["narrativeSources"] } } },
+    { "if": { "properties": { "sourceStatus": { "const": "EXISTING_SOURCE" },
+        "abilityConcepts": { "minItems": 1 } } },
+      "then": { "properties": { "narrativeSources": { "required": ["abilityConcepts"] } } } }
+  ]
+}

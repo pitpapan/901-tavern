@@ -1,0 +1,288 @@
+{
+  "chatId": "901 黄泉乱红莲协同实测 - 2026-10-22",
+  "messages": 3,
+  "revision": 2,
+  "active": "huang",
+  "round": 1,
+  "pending": {
+    "command": {
+      "actorId": "huang",
+      "abilityId": "strike",
+      "targetId": "player"
+    },
+    "queue": [
+      "player"
+    ],
+    "awaiting": "player",
+    "choices": {},
+    "playerAuthorized": false
+  },
+  "actors": {
+    "huang": {
+      "health": {
+        "intact": 23,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {
+        "灵力": {
+          "current": 3,
+          "max": 6
+        }
+      },
+      "turn": {
+        "phase": "active",
+        "standard": 1,
+        "move": 1,
+        "swift": 1,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        1.5,
+        0
+      ]
+    },
+    "player": {
+      "health": {
+        "intact": 21,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {
+        "风池": {
+          "current": 10,
+          "max": 10
+        },
+        "魔力": {
+          "current": 106,
+          "max": 106
+        },
+        "流风": {
+          "current": 22,
+          "max": 22
+        }
+      },
+      "turn": {
+        "phase": "ended",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        0,
+        0
+      ]
+    },
+    "lotus": {
+      "health": {
+        "intact": 26,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {},
+      "turn": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        0,
+        1.5
+      ]
+    }
+  },
+  "operations": [
+    {
+      "id": "declaration/901 黄泉乱红莲协同实测 - 2026-10-22/1/0/0",
+      "revision": 1,
+      "command": {
+        "abilityId": "end",
+        "actorId": "player"
+      },
+      "damage": [],
+      "statuses": [],
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            1.5,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 21,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "lotus",
+          "health": {
+            "intact": 26,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            1.5
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "combat/1/0/1",
+      "revision": 2,
+      "command": {
+        "actorId": "huang",
+        "abilityId": "strike",
+        "targetId": "player"
+      },
+      "damage": [],
+      "statuses": [],
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            1.5,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 21,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "lotus",
+          "health": {
+            "intact": 26,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            1.5
+          ]
+        }
+      ],
+      "notes": [
+        "攻击已宣言，等待反应；尚未掷骰或扣除攻击资源"
+      ]
+    }
+  ],
+  "lastMessages": [
+    {
+      "user": true,
+      "text": "结束我的回合，放弃剩余动作。",
+      "metadata": {
+        "text": "结束我的回合，放弃剩余动作。",
+        "swipeId": 0,
+        "plan": {
+          "steps": [
+            {
+              "quote": "结束我的回合，放弃剩余动作。",
+              "command": {
+                "abilityId": "end"
+              },
+              "cost": {}
+            }
+          ],
+          "clarification": ""
+        },
+        "completed": {
+          "message": "黄泉手腕轻翻，狮子王太刀已然出鞘半寸，雪亮的刀锋上映着练场昏暗的光。刀光未至，凛冽的锋寒已先一步逼向眉睫，空气中隐隐有雷鸣般的兽吼自旁侧压来——那是乱红莲庞大的身形在地面上投下的阴影。\n\n太刀的来势分明，距离相距一米半。",
+          "revision": 2
+        }
+      }
+    },
+    {
+      "user": false,
+      "text": "黄泉手腕轻翻，狮子王太刀已然出鞘半寸，雪亮的刀锋上映着练场昏暗的光。刀光未至，凛冽的锋寒已先一步逼向眉睫，空气中隐隐有雷鸣般的兽吼自旁侧压来——那是乱红莲庞大的身形在地面上投下的阴影。\n\n太刀的来势分明，距离相距一米半。\n\n<StatusPlaceHolderImpl/>",
+      "metadata": {
+        "key": "901 黄泉乱红莲协同实测 - 2026-10-22/1/0",
+        "revision": 2
+      }
+    }
+  ]
+}

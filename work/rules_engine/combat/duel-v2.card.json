@@ -1,0 +1,115 @@
+{
+  "spec": "chara_card_v2",
+  "spec_version": "2.0",
+  "data": {
+    "name": "901 姜黄反应与写回验收",
+    "description": "姜子尤与黄泉的隔离测试。初始化后运行，攻击先进入受击反应，模型选择后程序结算；战斗结束自动返回剧情，保存伤势与能量。",
+    "personality": "谨慎、公正，尊重玩家行动选择。",
+    "scenario": "姜子尤与黄泉的隔离测试。初始化后运行，攻击先进入受击反应，模型选择后程序结算；战斗结束自动返回剧情，保存伤势与能量。",
+    "first_mes": "姜子尤与黄泉的隔离测试。初始化后运行，攻击先进入受击反应，模型选择后程序结算；战斗结束自动返回剧情，保存伤势与能量。",
+    "mes_example": "",
+    "creator_notes": "姜子尤与黄泉的隔离测试。初始化后运行，攻击先进入受击反应，模型选择后程序结算；战斗结束自动返回剧情，保存伤势与能量。",
+    "system_prompt": "本卡只用于隔离演练。使用角色脚本运行，战斗状态由程序写入。",
+    "post_history_instructions": "",
+    "alternate_greetings": [],
+    "tags": [
+      "901",
+      "combat",
+      "non-canon"
+    ],
+    "creator": "901-Rules",
+    "character_version": "combat-2",
+    "extensions": {
+      "world": "",
+      "talkativeness": 0.5,
+      "depth_prompt": {
+        "prompt": "",
+        "depth": 4,
+        "role": "system"
+      },
+      "tavern_helper": {
+        "scripts": [
+          {
+            "type": "script",
+            "enabled": true,
+            "name": "901 MVU（测试卡）",
+            "id": "828d6592-54e3-4558-8b52-277ba13ea878",
+            "content": "import 'https://gcore.jsdelivr.net/gh/MagicalAstrogy/MagVarUpdate@master/artifact/bundle.js'",
+            "info": "隔离测试；不用于正式 901 聊天",
+            "button": {
+              "enabled": false,
+              "buttons": []
+            },
+            "data": {},
+            "export_with": {
+              "data": true,
+              "button": true
+            }
+          },
+          {
+            "type": "script",
+            "enabled": true,
+            "name": "901 姜黄反应与写回验收",
+            "id": "155982fd-87f3-4f89-89dc-51f6c512da9e",
+            "content": "await waitGlobalInitialized('Mvu');\nconst { createTavernCombat } = await import('/901-combat-runtime/work/rules_engine/combat/tavern.mjs');\nconst expectedChatId = SillyTavern.chatId || SillyTavern.getCurrentChatId?.();\nconst battle901 = createTavernCombat({mvu:Mvu,tavern:SillyTavern,generateRaw,createChatMessages,expectedChatId,\n  onProgress:value=>console.log('[901-COMBAT]',JSON.stringify(value))});\nasync function perform(mode) {\n  try {\n    const value = mode==='initialize' ? await battle901.initialize()\n      : mode==='read' ? battle901.read()\n      : mode==='resume' ? await battle901.resumeReport()\n      : await battle901.run({single:mode==='step'});\n    if(mode==='run'&&battle901.read().battle.status==='finished') await battle901.returnToStory();\n    console.log('[901-COMBAT]',JSON.stringify({mode,...value}));\n    window.parent.toastr.info(`901：${value.status??value.battle?.status??'已读取'}；修订${value.revision??'见聊天'}`);\n  } catch(error) {\n    console.error('[901-COMBAT]',error.message);\n    window.parent.toastr.error(`901：${error.message}`);\n  }\n}\neventOn(getButtonEvent('初始化演练'),()=>perform('initialize'));\neventOn(getButtonEvent('模型行动一次'),()=>perform('step'));\neventOn(getButtonEvent('运行至结束'),()=>perform('run'));\neventOn(getButtonEvent('读取存档'),()=>perform('read'));\neventOn(getButtonEvent('补发已结算报告'),()=>perform('resume'));\neventOn(getButtonEvent('停止演练'),()=>battle901.stop());\n",
+            "info": "隔离测试；不用于正式 901 聊天",
+            "button": {
+              "enabled": true,
+              "buttons": [
+                {
+                  "name": "初始化演练",
+                  "visible": true
+                },
+                {
+                  "name": "模型行动一次",
+                  "visible": true
+                },
+                {
+                  "name": "运行至结束",
+                  "visible": true
+                },
+                {
+                  "name": "读取存档",
+                  "visible": true
+                },
+                {
+                  "name": "补发已结算报告",
+                  "visible": true
+                },
+                {
+                  "name": "停止演练",
+                  "visible": true
+                }
+              ]
+            },
+            "data": {},
+            "export_with": {
+              "data": true,
+              "button": true
+            }
+          }
+        ],
+        "variables": {}
+      },
+      "regex_scripts": [
+        {
+          "id": "10db9875-1582-4bf9-8f52-76d289041610",
+          "scriptName": "901｜历史计算明细不送入模型",
+          "findRegex": "/^[\\t ]*<rules901_detail>[\\t ]*\\r?\\n[\\s\\S]*?^[\\t ]*<\\/rules901_detail>[\\t ]*(?:\\r?\\n|$)/gm",
+          "replaceString": "",
+          "trimStrings": [],
+          "placement": [
+            2
+          ],
+          "disabled": false,
+          "markdownOnly": false,
+          "promptOnly": true,
+          "runOnEdit": true,
+          "substituteRegex": 0,
+          "minDepth": 2,
+          "maxDepth": null
+        }
+      ]
+    }
+  }
+}

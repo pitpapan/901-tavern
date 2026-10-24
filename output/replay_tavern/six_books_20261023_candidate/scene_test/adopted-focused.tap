@@ -1,0 +1,43 @@
+✔ D1 resistance precedes effective cold/fire netting; weaker nonstacking sources do not sum (9.3411ms)
+✔ D2 actual six-legged anatomy defaults to half limbs while explicit examples remain (1.7163ms)
+✔ D3 Wizard bulletproof downgrades physical bullets, and full armor bypass removes it (21.7942ms)
+✔ D4 Wizard ends with swift and no extra mana, but cannot act while asleep (5.2487ms)
+✔ D5 rapid fire includes adjacent ally, one standard, no recursion or duplicate adjacent hit (5.3583ms)
+✔ D6 upper fractional km rounds up; size 6 lower target without cargo adds no fee (5.589ms)
+✔ D7 Engage leaves vulnerable body, blocks physical action, exits on wake or full action (3.5098ms)
+✔ D8 antiMagic defaults immune only for mineral and actual energy; sourced exceptions and chains (4.5138ms)
+✔ D9 rule check spends one will only on explicit selector and stacks stage 1/2 increments (3.8184ms)
+✔ D9 player attack/defense choice charges once after reaction, previews do not spend (65.7706ms)
+✔ D10 simultaneous unlock prechecks 21 XP; first failure stops, second failure charges only 14 (6.4957ms)
+✔ D11 losing temporary HP remaps wounds with overflow, never leaves pending shrink or heals wounds (0.5454ms)
+✔ D12 classifier receives actual adopted reference DCs and boundaries independent of world triggers (0.8019ms)
+✔ D13 multi-member group and weighted draw are exact including unequal sizes (3.7562ms)
+✔ D14 box move operation, cap 3 and sourced reseal reset (2.514ms)
+✔ XP full runtime chain: node opens window, selected 4→5→6 costs 6/12, duplicate and insufficient XP do not charge (16.7804ms)
+✔ XP skill and feat pricing uses current next level and registered learning scope (3.1577ms)
+✔ D9 single spell opt-in deducts one will; upper extended spell is ineligible (1.8818ms)
+✔ D7 and D10 adopted exit defaults are reachable in combat without extra ruling plans (20.2049ms)
+✖ D8 sourced mineral survives map normalization and energy hits while ordinary wearer does not inherit immunity (2.6784ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 19
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 533.7856
+
+✖ failing tests:
+
+test at work\rules_engine\gm_runtime\adopted-decisions.test.mjs:157:1
+✖ D8 sourced mineral survives map normalization and energy hits while ordinary wearer does not inherit immunity (2.6784ms)
+  Error: Energy damage needs energyType
+      at resolveDamage (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/core.mjs:555:61)
+      at damageEvent (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/engine.mjs:314:17)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/adopted-decisions.test.mjs:161:134)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

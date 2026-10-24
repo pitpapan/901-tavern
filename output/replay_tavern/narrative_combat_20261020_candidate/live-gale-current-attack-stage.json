@@ -1,0 +1,164 @@
+{
+  "chatId": "901 狂岚敌我选择复测 - 2026-10-22",
+  "messages": 3,
+  "revision": 0,
+  "active": "player",
+  "round": 1,
+  "pending": null,
+  "actors": {
+    "huang": {
+      "health": {
+        "intact": 23,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {
+        "灵力": {
+          "current": 6,
+          "max": 6
+        }
+      },
+      "turn": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        4,
+        0
+      ]
+    },
+    "jiang": {
+      "health": {
+        "intact": 35,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {
+        "气": {
+          "current": 2,
+          "max": 2
+        },
+        "斗气": {
+          "current": 3,
+          "max": 3
+        },
+        "内力": {
+          "current": 28,
+          "max": 28
+        }
+      },
+      "turn": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        6,
+        0
+      ]
+    },
+    "player": {
+      "health": {
+        "intact": 21,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {
+        "风池": {
+          "current": 10,
+          "max": 10
+        },
+        "魔力": {
+          "current": 106,
+          "max": 106
+        },
+        "流风": {
+          "current": 22,
+          "max": 22
+        }
+      },
+      "turn": {
+        "phase": "active",
+        "standard": 1,
+        "move": 1,
+        "swift": 1,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        0,
+        0
+      ]
+    }
+  },
+  "operations": [],
+  "lastMessages": [
+    {
+      "user": true,
+      "text": "我使用狂岚·群袭，消耗一个标准动作和一点风池，对二十米内每个合法敌人攻击。不结束回合，保留移动和迅捷动作。",
+      "metadata": {
+        "text": "我使用狂岚·群袭，消耗一个标准动作和一点风池，对二十米内每个合法敌人攻击。不结束回合，保留移动和迅捷动作。",
+        "swipeId": 0,
+        "plan": {
+          "steps": [
+            {
+              "quote": "我使用狂岚·群袭，消耗一个标准动作和一点风池，对二十米内每个合法敌人攻击。",
+              "command": {
+                "abilityId": "gale",
+                "cost": {
+                  "actions": {
+                    "standard": 1
+                  },
+                  "energy": {
+                    "风池": 1
+                  }
+                }
+              }
+            }
+          ],
+          "clarification": ""
+        },
+        "completed": {
+          "message": "请求只能选择能力、目标与合法选项，不能给出骰值或结算数值",
+          "revision": 0
+        }
+      }
+    },
+    {
+      "user": false,
+      "text": "请求只能选择能力、目标与合法选项，不能给出骰值或结算数值\n\n<StatusPlaceHolderImpl/>",
+      "metadata": {
+        "key": "901 狂岚敌我选择复测 - 2026-10-22/1/0",
+        "revision": 0
+      }
+    }
+  ]
+}

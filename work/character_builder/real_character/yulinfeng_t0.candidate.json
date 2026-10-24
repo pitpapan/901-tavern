@@ -1,0 +1,53 @@
+{
+  "candidateStatus": "RESEARCH_ONLY_NOT_APPROVED_FOR_REPLAY",
+  "periodBoundary": "replay/T0/帝都城门前；原团 P1 #78 结算并纳入 #79 成长，尚未执行 #81",
+  "definition": {
+    "id": "PC_YULINFENG_T0_CANDIDATE",
+    "name": "御临风",
+    "period": "replay/T0/帝都初至",
+    "sources": [
+      "extracted-first/2/posts.md#78-79:237-252",
+      "work/replay_research/opening_state_consolidated.md",
+      "D:/备份文件/901记录/TRPG outputs/设定 人物/人物卡资料集_检索版.md:229-635 (持续更新卡，非 T0 快照)"
+    ],
+    "size": null,
+    "attributes": {
+      "力量": null,
+      "敏捷": null,
+      "智力": null,
+      "感知": null,
+      "意志": null,
+      "风度": null
+    },
+    "skills": {
+      "运动": { "level": null },
+      "求生": { "level": null },
+      "医疗": { "level": 2 },
+      "制造": { "level": null, "subs": { "炼药": { "level": null, "scope": "制药／炼药", "scopeId": "craft.alchemy" } } }
+    },
+    "overrides": { "derived": {} },
+    "equipment": [
+      { "id": "yulinfeng.qifeng.pre-repair", "name": "弃风（修复前）", "source": "work/replay_research/opening_state_consolidated.md#御临风的早期装备与剑气", "status": "OWNED_AT_T0_PARAMETERS_UNKNOWN" },
+      { "id": "yulinfeng.imperial-light-armor.burned", "name": "烧损的帝国制式轻甲", "source": "work/replay_research/opening_state_consolidated.md#御临风的早期装备与剑气", "status": "OWNED_AT_T0_PROTECTION_UNKNOWN" }
+    ],
+    "abilities": [
+      { "id": "yulinfeng.kuanglan.early", "name": "启剑式·风·狂岚（早期版）", "source": "extracted-first/2/posts.compact.md#72-74; work/replay_research/yulinfeng_period_dossier.md:60-66", "summary": "入城前已使用；标准动作、1 能量，范围风或集束攻击。早期版与后期卡面的效果不合并。", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "yulinfeng.sword-qi.early", "name": "剑气／斗气性质", "source": "work/replay_research/opening_state_consolidated.md#御临风的早期装备与剑气", "summary": "用户确认在飘零大陆可生效，具体当期池上限与余额未定。", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "yulinfeng.language.common.2", "name": "妄想大陆通用语 2", "source": "extracted-first/2/posts.md#79:243-251", "summary": "节点花费 9 XP 学习 2 级；语言听说与读写范围另依用户后续修订。", "engineSupportStatus": "UNSUPPORTED" }
+    ]
+  },
+  "initial": {
+    "health": null,
+    "willCurrent": null,
+    "turn": "ready",
+    "xp": 2
+  },
+  "initialStatus": "伤势、意志和特殊能量余额未知；turn=ready 只表示新场景尚未进行战斗动作，不是原团伤势复原。禁止以 healthy 或满池填空。",
+  "cardOverridesStatus": "当前尚未找到可信 T0 卡面最终值；后期卡面值不作为开场覆盖值。",
+  "resourceAudit": {
+    "characterAcquisition": "弃风、烧损轻甲、早期狂岚有 T0 持有／使用依据；现有资源目录没有这些时期专属可执行条目。",
+    "adoption901": "当期叙事持有已确认；不等于后期机械参数获本分支采用。",
+    "engineSupport": "均仅保留来源与说明，不提供虚构的数值加值或可执行攻击。",
+    "excludedLater": ["修复后弃风 6L 与风池", "特兰希尔 HP／意志／防御奖励", "耶各诅咒与魔力体质", "辟邪长剑专业", "P2 腾转挪移和风迹升级", "侦探称号与后期装备"]
+  }
+}

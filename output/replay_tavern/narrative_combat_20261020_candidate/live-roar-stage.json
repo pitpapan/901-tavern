@@ -1,0 +1,269 @@
+{
+  "chatId": "901 乱红莲咆哮友伤实测 - 2026-10-22",
+  "messages": 2,
+  "revision": 2,
+  "active": "lotus",
+  "round": 1,
+  "pending": {
+    "command": {
+      "actorId": "lotus",
+      "abilityId": "roar",
+      "targetId": "player"
+    },
+    "queue": [
+      "player"
+    ],
+    "awaiting": "player",
+    "choices": {
+      "huang": "decline"
+    },
+    "playerAuthorized": false
+  },
+  "actors": {
+    "huang": {
+      "health": {
+        "intact": 23,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {
+        "灵力": {
+          "current": 3,
+          "max": 6
+        }
+      },
+      "turn": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        4,
+        0
+      ]
+    },
+    "player": {
+      "health": {
+        "intact": 21,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {
+        "风池": {
+          "current": 10,
+          "max": 10
+        },
+        "魔力": {
+          "current": 106,
+          "max": 106
+        },
+        "流风": {
+          "current": 22,
+          "max": 22
+        }
+      },
+      "turn": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        8,
+        0
+      ]
+    },
+    "lotus": {
+      "health": {
+        "intact": 26,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {},
+      "turn": {
+        "phase": "active",
+        "standard": 1,
+        "move": 1,
+        "swift": 1,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        0,
+        0
+      ]
+    }
+  },
+  "operations": [
+    {
+      "id": "combat/1/0/0",
+      "revision": 1,
+      "command": {
+        "actorId": "lotus",
+        "abilityId": "roar",
+        "targetId": "player"
+      },
+      "damage": [],
+      "statuses": [],
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            4,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 21,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            8,
+            0
+          ]
+        },
+        {
+          "id": "lotus",
+          "health": {
+            "intact": 26,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            0
+          ]
+        }
+      ],
+      "notes": [
+        "攻击已宣言，等待反应；尚未掷骰或扣除攻击资源"
+      ]
+    },
+    {
+      "id": "combat/1/0/1",
+      "revision": 2,
+      "command": {
+        "actorId": "huang",
+        "abilityId": "react",
+        "choice": "decline"
+      },
+      "damage": [],
+      "statuses": [],
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            4,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 21,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            8,
+            0
+          ]
+        },
+        {
+          "id": "lotus",
+          "health": {
+            "intact": 26,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            0
+          ]
+        }
+      ],
+      "notes": [
+        "等待下一名受击者反应"
+      ]
+    }
+  ],
+  "lastMessages": [
+    {
+      "user": false,
+      "text": "【独立咆哮能力用法实测】\n\n独立咆哮能力用法验收，非正式剧情。本场明确约定乱红莲演示一次咆哮，朝前方御临风的方向发动；黄泉是乱红莲同阵营主人，位于这条直线中间，因此也在无差别范围内。模型从实际合法动作选咆哮及目标，由程序掷骰结算。此为约定能力演示，不冒充自由战术选择。双方受击反应按正常规则分别选择，不改伤害、豁免或人物数值。\n\n乱红莲在西侧，黄泉在其前方四米，御临风在其前方八米；三者沿东西方向成一直线。\n\n轮到乱红莲，等待开始约定的能力演示。攻击、移动与防御由玩家明确声明。"
+    },
+    {
+      "user": true,
+      "text": "开始本场约定的乱红莲咆哮能力演示，朝御临风方向发动。"
+    }
+  ]
+}

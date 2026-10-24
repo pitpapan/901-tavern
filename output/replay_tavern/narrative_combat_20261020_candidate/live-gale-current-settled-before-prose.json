@@ -1,0 +1,433 @@
+{
+  "chatId": "901 狂岚敌我选择复测 - 2026-10-22",
+  "messages": 4,
+  "revision": 2,
+  "active": "player",
+  "round": 1,
+  "pending": null,
+  "actors": {
+    "huang": {
+      "health": {
+        "intact": 23,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {
+        "灵力": {
+          "current": 6,
+          "max": 6
+        }
+      },
+      "turn": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        4,
+        0
+      ]
+    },
+    "jiang": {
+      "health": {
+        "intact": 15,
+        "B": 0,
+        "L": 20,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {
+        "气": {
+          "current": 2,
+          "max": 2
+        },
+        "斗气": {
+          "current": 3,
+          "max": 3
+        },
+        "内力": {
+          "current": 28,
+          "max": 28
+        }
+      },
+      "turn": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        6,
+        0
+      ]
+    },
+    "player": {
+      "health": {
+        "intact": 21,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {
+        "风池": {
+          "current": 9,
+          "max": 10
+        },
+        "魔力": {
+          "current": 106,
+          "max": 106
+        },
+        "流风": {
+          "current": 22,
+          "max": 22
+        }
+      },
+      "turn": {
+        "phase": "active",
+        "standard": 0,
+        "move": 1,
+        "swift": 1,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        0,
+        0
+      ]
+    }
+  },
+  "operations": [
+    {
+      "id": "declaration/901 狂岚敌我选择复测 - 2026-10-22/3/0/0",
+      "revision": 1,
+      "command": {
+        "abilityId": "gale",
+        "actorId": "player"
+      },
+      "damage": [],
+      "statuses": [],
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            4,
+            0
+          ]
+        },
+        {
+          "id": "jiang",
+          "health": {
+            "intact": 35,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            6,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 21,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            0
+          ]
+        }
+      ],
+      "notes": [
+        "攻击已宣言，等待反应；尚未掷骰或扣除攻击资源"
+      ]
+    },
+    {
+      "id": "combat/3/0/1",
+      "revision": 2,
+      "command": {
+        "actorId": "jiang",
+        "abilityId": "react",
+        "choice": "decline"
+      },
+      "damage": [
+        {
+          "targetId": "jiang",
+          "kind": "physical",
+          "energyType": null,
+          "input": 20,
+          "inputSeverity": "L",
+          "severity": "L",
+          "actualDamage": 20
+        }
+      ],
+      "statuses": [],
+      "attack": {
+        "rawDP": 64,
+        "dp": 64,
+        "weapon": 16,
+        "cap": 25,
+        "fixed": 2,
+        "ap": 8,
+        "magic": 8,
+        "speed": 0,
+        "extra": 0,
+        "ignore": 0,
+        "aggravate": 0,
+        "electric": 0,
+        "reduction": 3,
+        "range": 20,
+        "explode": 10,
+        "defense": {
+          "total": 0,
+          "parts": {
+            "base": 0,
+            "natural": 0,
+            "armor": 0,
+            "dodge": 0,
+            "insight": 0,
+            "block": 0,
+            "cover": 0,
+            "cultivation": 0,
+            "force": 0,
+            "device": 0,
+            "shield": 0,
+            "luck": 0,
+            "morale": 0,
+            "enhancement": 0,
+            "holy": 0,
+            "technique": 0,
+            "performance": 0,
+            "intrinsic": 0,
+            "unnamed": 0
+          },
+          "remainingAP": 1,
+          "guarded": false,
+          "extraSuccesses": 0
+        },
+        "roll": {
+          "dp": 64,
+          "luck": false,
+          "dice": [
+            3,
+            8,
+            10,
+            2,
+            3,
+            2,
+            10,
+            6,
+            9,
+            6,
+            8,
+            4,
+            8,
+            4,
+            4,
+            1,
+            6,
+            7,
+            3,
+            6,
+            1,
+            5,
+            3,
+            7,
+            7,
+            10,
+            1,
+            9,
+            5,
+            3,
+            4,
+            8,
+            6,
+            7,
+            2,
+            10,
+            5,
+            1,
+            5,
+            4,
+            8,
+            4,
+            3,
+            4,
+            10,
+            9,
+            8,
+            4,
+            2,
+            5,
+            3,
+            5,
+            4,
+            2,
+            7,
+            7,
+            4,
+            6,
+            10,
+            4,
+            10,
+            9,
+            2,
+            4,
+            4,
+            4,
+            6,
+            4,
+            9,
+            7,
+            4
+          ],
+          "used": 71,
+          "rolledSuccesses": 18,
+          "luckMishap": false
+        },
+        "amount": 20
+      },
+      "responses": [
+        {
+          "targetId": "jiang",
+          "guarded": false
+        }
+      ],
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            4,
+            0
+          ]
+        },
+        {
+          "id": "jiang",
+          "health": {
+            "intact": 15,
+            "B": 0,
+            "L": 20,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            6,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 21,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            0
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "lastMessages": [
+    {
+      "user": false,
+      "text": "请求只能选择能力、目标与合法选项，不能给出骰值或结算数值\n\n<StatusPlaceHolderImpl/>",
+      "metadata": {
+        "key": "901 狂岚敌我选择复测 - 2026-10-22/1/0",
+        "revision": 0
+      }
+    },
+    {
+      "user": true,
+      "text": "我发动狂岚·群袭，以风池支付。不结束回合。",
+      "metadata": {
+        "text": "我发动狂岚·群袭，以风池支付。不结束回合。",
+        "swipeId": 0,
+        "plan": {
+          "steps": [
+            {
+              "quote": "我发动狂岚·群袭，以风池支付。",
+              "command": {
+                "abilityId": "gale"
+              },
+              "cost": {
+                "actions": {
+                  "standard": 1
+                },
+                "energy": {
+                  "风池": 1
+                }
+              }
+            }
+          ],
+          "clarification": null
+        }
+      }
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # 诅咒求治主持稿：共同诊治、龙方合作与转咒取舍
 
+**病情与治疗进展更新〔UCL_20261015_032，已采用〕：**当前征兆、暂稳效果、研究成果及解除门槛参照[求治进展](capital_yoyo_treatment_progress_draft.md)；普通情绪、玩家离场及镜头切换不自动推进病情，无固定死亡倒计时，未预设疗效与转咒。
+
 - mode：plot-design；plot_id：STORY_T0_CURSE_SCENES_DRAFT；status：ADOPTED_AUTHOR_DESIGN，2026-10-15，按UCL_20261015_010整版采用。UCL_20261015_009为起草授权；下文DRAFT保留原创来源，不再表示待采用，不将求治、合作、转移或解除记成已发生。
 - scope／premise：细化已采用STORY_T0_CURSE_009，承接[悠悠主持稿](capital_yoyo_playable_draft.md)的实际诊断与照护；可与调查、收网及日常并行。现有患者可能仍为悠悠，也可能已经发生转咒，不能重置病人、旧关系或既得诊断。
 - source_files：[母稿CURSE_009](capital_event_dependencies.md)按UCL_20261012_044采用的联合解咒可能与各方取舍；[World](empire_operations_consolidated.md)死亡传送查明后的处置、资源冲突与应急；[咒术分期](curse_progression_evidence_20261004.md)。人物按最新已采用[悠悠CRC_010](../../output/replay_f_review/v1/characters/profiles/CRC_010.md)、[帝CRC_006](../../output/replay_f_review/v1/characters/profiles/CRC_006.md)、[慕少艾CRC_016](../../output/replay_f_review/v1/characters/profiles/CRC_016.md)、[威廉CRC_032](../../output/replay_f_review/v1/characters/profiles/CRC_032.md)、[宝石翁CRC_033](../../output/replay_f_review/v1/characters/profiles/CRC_033.md)及右近CRC_013使用。[谢尔伦CRC_015](../../output/replay_f_review/v1/characters/profiles/CRC_015.md)只用已证身份、帝的旧交及已采用CURSE_009合作范围，独立人物深化继续DRAFT。
@@ -102,3 +104,21 @@
 - unknowns：精确余命、完整术式及数值、龙方资料具体内容和到达时间、当期研究成果、移咒后后手去向、实际疗效与损伤、个人决定继续依分支成立。不得借未知把非转咒路线暗设必败，也不保证无限维持。
 - role_requirements：无新增具名NPC、特殊资源或完整引擎；不展开谢尔伦未采用人物深化、龙族秘境与婚约。
 - handoff：本稿按UCL_20261015_010整版采用。后续[古雷姆林案件主持稿](capital_gremlin_playable_draft.md)已按UCL_20261015_011整版采用。前段悠悠主持稿按UCL_20261015_009采用；母稿CURSE_009与人物原有采用范围不变。仅更新作者入口和确认记录，不修改人物profiles、World、正式世界书、运行包或实际分支状态。
+
+## 2026-10-18：诅咒求治与转咒取舍的剧情向主持
+
+依据UCL_20261018_001—002，采用[场景共通原则](capital_event_dependencies.md#2026-10-18st指南融入后的场景使用原则)。以下是本稿的演出与裁定方式；原有初始条件、知情边界及后果继续有效，不预定玩家路线。
+
+**现场与人物。** 让诊断落在当事人听得懂的风险、可做的事和需要等待的进展上；通过专家不同关注、实际施术动作及病人反应形成场面，不替御临风作牺牲宣言。
+
+**节奏与简化。** 重复实验、常规照护和无分歧的联络可概述，研究有真实条件时允许推进；是否承咒、采用何种风险与获知关键新结论必须保留互动。
+
+**能力运用。** 允许专家发展同体系的新解法，沿本稿已采用的真正解除可能性推进；效果与研究、施术条件相称，既有自愿条件和已知代价不凭口号取消。
+
+**奖励依据。** 促成合作、找到有效治疗路线、实际缓解或解除危险可形成节点与挑战XP；不把自我牺牲、原线神约或固定结局设成得奖条件。 数额由主持按实际难度与成长节奏明确，同一贡献不重复发放。
+
+## 2026-10-18：按需讲解、反馈与相称后果〔008已采用〕
+
+依据UCL_20261018_007，沿[场景共通补充](capital_event_dependencies.md#2026-10-18按需讲解反馈与相称后果008已采用)。
+
+在选择会影响代价和风险时简短说明已查明的治疗条件与未知项，不将说明变成推荐承咒路线。按反馈压缩已授权的重复联络和资料核对，不跳过治疗同意。一次研究无结论、未收到回信或拒绝转咒不自动宣告治疗全部失败；既有稳定与研究成果保留，真实恶化也不靠必然神约救援抹去。

@@ -1,0 +1,19 @@
+✔ ordinary opposed check uses actual two actors and active side wins ties (3.251ms)
+✔ will save uses will and presence rather than a fabricated survival skill (0.3337ms)
+✔ extended check persists cumulative successes and prevents a completed task reroll (1.0418ms)
+✔ attribute growth spends the existing XP and does not fill health or resources (0.4263ms)
+✔ rule transaction saves both participants once and replay does not redraw (1.1631ms)
+✔ requests cannot supply arbitrary states, rolls or awards through growth (0.1433ms)
+✔ classifier always receives core rules and current subskills, independent of lore keywords (0.519ms)
+✔ rule request enters the same guarded transaction and can recover a committed decision (0.9242ms)
+✔ constant and explicitly named scene entries reach classification without enabling disabled lore (0.2834ms)
+✔ opening runtime actually settles will saves and reuses them after reload (6.7545ms)
+✔ opening ordinary orientation uses the adopted +6 and keeps it through replay (3.6621ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 148.0239

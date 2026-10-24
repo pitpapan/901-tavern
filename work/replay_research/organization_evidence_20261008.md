@@ -26,8 +26,8 @@
 | 来源 | 已有职能／身份 | 证据等级及限制 |
 |---|---|---|
 | [P2#266/msg914106](<../../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl:17>) | 帝都国立图书馆馆长菲利普 | confirmed身份；当时在宫中是该时点信息 |
-| [P2#62/msg863839](<../../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl:13>) | 工作人员以探知魔法查阅卡片后放行，馆内按层组织书架及阅览空间 | confirmed，当次查验与现场布局；不补统一收费或无限开放 |
-| [P2#69/msg863989](<../../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl:20>) | 以异世界名称分类、配目录编号的研究馆藏 | confirmed书籍和分类存在，研究中的猜想不能升级成宇宙事实 |
+| [P2#62/msg863839](<../../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl:13>) | 哈克自述相关费用为公费，工作人员以探知魔法查卡后放行，馆内按层组织书架及阅览空间 | 公费保留人物说明范围；当次查验与现场布局为confirmed，不补无限开放 |
+| [P2#69/msg863989](<../../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl:20>) | 主持明确最大图书馆入门卡价值二十金；另有以异世界名称分类、配目录编号的研究馆藏 | confirmed原团价格、书籍和分类；卡片期限与其他权限未说明，研究中的猜想不能升级成宇宙事实 |
 | [P2#96/msg864610](<../../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 2/posts.jsonl:47>) | 女性管理员称老人为馆长并传达宫中召见 | confirmed工作人员与当次传令；不据此授予菲利普常设宫廷顾问职务 |
 | [P2#276/msg914145](<../../extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 6/posts.jsonl:27>) | 菲利普对照记载鉴定代行者套装，并限定“在我所认知的范围内”；宝石翁后来继续检查 | confirmed鉴定过程，意见character_belief；知识专家能力有范围 |
 

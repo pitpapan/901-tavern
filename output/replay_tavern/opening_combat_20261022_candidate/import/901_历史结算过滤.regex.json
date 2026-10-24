@@ -1,0 +1,36 @@
+[
+  {
+    "id": "b0481c48-8d57-4af8-9d86-e00f4e9bfd7d",
+    "scriptName": "901｜历史计算明细不送入模型",
+    "findRegex": "/^[\\t ]*<rules901_detail>[\\t ]*\\r?\\n[\\s\\S]*?^[\\t ]*<\\/rules901_detail>[\\t ]*(?:\\r?\\n|$)/gm",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+      2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 2,
+    "maxDepth": null
+  },
+  {
+    "id": "71efb1cb-e5ff-4fa9-944e-2c0cc131bf20",
+    "scriptName": "901｜旧自身状态迁移至独立状态栏",
+    "findRegex": "/<details>\\s*<summary>[^<]* · 自身状态<\\/summary>[\\s\\S]*?<\\/details>/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+      2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 0,
+    "maxDepth": null
+  }
+]

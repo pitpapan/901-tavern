@@ -1,0 +1,419 @@
+{
+  "chatId": "901 乱红莲咆哮友伤实测 - 2026-10-22",
+  "messages": 5,
+  "revision": 4,
+  "active": "player",
+  "round": 1,
+  "pending": null,
+  "actors": {
+    "huang": {
+      "health": {
+        "intact": 23,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {
+        "灵力": {
+          "current": 3,
+          "max": 6
+        }
+      },
+      "turn": {
+        "phase": "ready",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        4,
+        0
+      ]
+    },
+    "player": {
+      "health": {
+        "intact": 16,
+        "B": 0,
+        "L": 5,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {
+        "风池": {
+          "current": 10,
+          "max": 10
+        },
+        "魔力": {
+          "current": 106,
+          "max": 106
+        },
+        "流风": {
+          "current": 22,
+          "max": 22
+        }
+      },
+      "turn": {
+        "phase": "active",
+        "standard": 1,
+        "move": 1,
+        "swift": 1,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        8,
+        0
+      ]
+    },
+    "lotus": {
+      "health": {
+        "intact": 26,
+        "B": 0,
+        "L": 0,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "statuses": [],
+      "resources": {},
+      "turn": {
+        "phase": "ended",
+        "standard": 0,
+        "move": 0,
+        "swift": 0,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "position": [
+        0,
+        0
+      ]
+    }
+  },
+  "operations": [
+    {
+      "id": "combat/1/0/0",
+      "revision": 1,
+      "command": {
+        "actorId": "lotus",
+        "abilityId": "roar",
+        "targetId": "player"
+      },
+      "damage": [],
+      "statuses": [],
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            4,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 21,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            8,
+            0
+          ]
+        },
+        {
+          "id": "lotus",
+          "health": {
+            "intact": 26,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            0
+          ]
+        }
+      ],
+      "notes": [
+        "攻击已宣言，等待反应；尚未掷骰或扣除攻击资源"
+      ]
+    },
+    {
+      "id": "combat/1/0/1",
+      "revision": 2,
+      "command": {
+        "actorId": "huang",
+        "abilityId": "react",
+        "choice": "decline"
+      },
+      "damage": [],
+      "statuses": [],
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            4,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 21,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            8,
+            0
+          ]
+        },
+        {
+          "id": "lotus",
+          "health": {
+            "intact": 26,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            0
+          ]
+        }
+      ],
+      "notes": [
+        "等待下一名受击者反应"
+      ]
+    },
+    {
+      "id": "declaration/901 乱红莲咆哮友伤实测 - 2026-10-22/3/0/0",
+      "revision": 3,
+      "command": {
+        "abilityId": "react",
+        "defense": "normal",
+        "choice": "decline",
+        "actorId": "player"
+      },
+      "damage": [
+        {
+          "targetId": "player",
+          "kind": "energy",
+          "energyType": "force",
+          "input": 5,
+          "inputSeverity": "L",
+          "severity": "L",
+          "actualDamage": 5
+        }
+      ],
+      "statuses": [],
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            4,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 16,
+            "B": 0,
+            "L": 5,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            8,
+            0
+          ]
+        },
+        {
+          "id": "lotus",
+          "health": {
+            "intact": 26,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            0
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "combat/3/0/3",
+      "revision": 4,
+      "command": {
+        "actorId": "lotus",
+        "abilityId": "end"
+      },
+      "damage": [],
+      "statuses": [],
+      "after": [
+        {
+          "id": "huang",
+          "health": {
+            "intact": 23,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            4,
+            0
+          ]
+        },
+        {
+          "id": "player",
+          "health": {
+            "intact": 16,
+            "B": 0,
+            "L": 5,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            8,
+            0
+          ]
+        },
+        {
+          "id": "lotus",
+          "health": {
+            "intact": 26,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "statuses": [],
+          "position": [
+            0,
+            0
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "lastMessages": [
+    {
+      "user": true,
+      "text": "面对这次咆哮，我声明使用基础防御闪避，不主动格挡，也不使用伤害转换。",
+      "metadata": {
+        "text": "面对这次咆哮，我声明使用基础防御闪避，不主动格挡，也不使用伤害转换。",
+        "swipeId": 0,
+        "plan": {
+          "steps": [
+            {
+              "quote": "我声明使用基础防御闪避，不主动格挡，也不使用伤害转换",
+              "command": {
+                "abilityId": "react",
+                "defense": "normal",
+                "choice": "decline"
+              }
+            }
+          ]
+        },
+        "completed": {
+          "message": "乱红莲前爪一扬，咆哮波裹挟着狂乱的灵力气浪迎面扑至。御临风本能地侧身避让，但冲击之势太快，护身真气未能全数卸去，劲风已然撕裂了肩头衣衫，震得他气血翻涌，在原地踉跄着受创。\n\n黄泉握着出鞘的狮子王太刀站在四米外，目光落在眼前的交手结果上，未置一词。\n\n（等待玩家继续行动）\n\n**御临风本次结算：** 受到5点严重伤害（5L）。",
+          "revision": 4
+        }
+      }
+    },
+    {
+      "user": false,
+      "text": "乱红莲前爪一扬，咆哮波裹挟着狂乱的灵力气浪迎面扑至。御临风本能地侧身避让，但冲击之势太快，护身真气未能全数卸去，劲风已然撕裂了肩头衣衫，震得他气血翻涌，在原地踉跄着受创。\n\n黄泉握着出鞘的狮子王太刀站在四米外，目光落在眼前的交手结果上，未置一词。\n\n（等待玩家继续行动）\n\n**御临风本次结算：** 受到5点严重伤害（5L）。\n\n<StatusPlaceHolderImpl/>",
+      "metadata": {
+        "key": "901 乱红莲咆哮友伤实测 - 2026-10-22/3/0",
+        "revision": 4
+      }
+    }
+  ]
+}

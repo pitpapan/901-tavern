@@ -1,0 +1,18 @@
+{
+  "size": 5,
+  "attributes": { "力量": 2, "敏捷": 3, "智力": 2, "感知": 3, "意志": 2, "风度": 1 },
+  "skills": {
+    "运动": { "level": 2, "subs": { "飞镖": { "level": 1, "scope": "便携飞镖投掷", "scopeId": "weapon.portable_dart" } } },
+    "求生": { "level": 2, "subs": { "荒地寻迹": { "level": 1, "scope": "边关荒地的兽迹辨认", "scopeId": "terrain.border_beast_tracks" } } },
+    "洞察": { "level": 2 },
+    "肉搏": { "level": 1 },
+    "白刃": { "level": 1 }
+  },
+  "equipment": [
+    { "id": "proposal.border_tracker.dart_bundle", "name": "便携飞镖", "description": "候选携行物；数量、实物取得和当前持握均未确认，不授予攻击效果。", "status": "PROPOSED" },
+    { "id": "proposal.border_tracker.signal_horn", "name": "示警号角", "description": "候选叙事装备，无规则效果。", "status": "PROPOSED" },
+    { "id": "proposal.border_tracker.field_notes", "name": "巡路记事布条", "description": "候选叙事装备，无规则效果。", "status": "PROPOSED" }
+  ],
+  "resourceIds": ["phb03.weapon.portable-dart"],
+  "initial": { "health": "healthy", "willCurrent": 3, "turn": "ready" }
+}

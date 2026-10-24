@@ -1,0 +1,825 @@
+{
+  "stat_data": {
+    "901_rules_poc": {
+      "schemaVersion": 1,
+      "revision": 1,
+      "chatId": "audit-live-save",
+      "operations": {
+        "gm-runtime/audit-live-save/1/0": {
+          "signature": "{\"request\":{\"kind\":\"rule\",\"action\":\"save\",\"actorId\":\"player\",\"type\":\"will\",\"dc\":3}}",
+          "summary": {
+            "status": "applied",
+            "kind": "rule",
+            "operationId": "gm-runtime/audit-live-save/1/0",
+            "revision": 1,
+            "messageId": 1,
+            "swipeId": 0,
+            "result": {
+              "eligible": true,
+              "dp": 5,
+              "luck": false,
+              "dice": [
+                6,
+                9,
+                8,
+                10,
+                1,
+                8
+              ],
+              "used": 6,
+              "rolledSuccesses": 4,
+              "luckMishap": false,
+              "skill": {
+                "level": 0,
+                "auto": 0,
+                "main": 0,
+                "sub": 0
+              },
+              "adjustments": {
+                "allowed": true,
+                "penalty": 0,
+                "entries": []
+              },
+              "autoSuccesses": 0,
+              "reExtraSuccesses": 0,
+              "total": 4,
+              "dc": 3,
+              "success": true,
+              "action": "save"
+            }
+          }
+        }
+      },
+      "actors": {
+        "player": {
+          "name": "御临风",
+          "state": {
+            "name": "御临风",
+            "attributes": {
+              "力量": 5,
+              "敏捷": 5,
+              "智力": 4,
+              "感知": 4,
+              "意志": 1,
+              "风度": 2
+            },
+            "size": 5,
+            "hpBonus": 0,
+            "derived": {
+              "hpMax": 12,
+              "defense": 4,
+              "speed": 25,
+              "initiative": 7,
+              "willMax": 3,
+              "vision": 40
+            },
+            "skills": {
+              "运动": {
+                "level": 1,
+                "subs": {}
+              },
+              "肉搏": {
+                "level": 0,
+                "subs": {}
+              },
+              "白刃": {
+                "level": 5,
+                "subs": {
+                  "长剑": {
+                    "level": 3
+                  }
+                }
+              },
+              "射击": {
+                "level": 0,
+                "subs": {}
+              },
+              "隐藏": {
+                "level": 1,
+                "subs": {}
+              },
+              "求生": {
+                "level": 1,
+                "subs": {}
+              },
+              "驾驶": {
+                "level": 0,
+                "subs": {}
+              },
+              "学识": {
+                "level": 2,
+                "subs": {}
+              },
+              "科学": {
+                "level": 0,
+                "subs": {}
+              },
+              "神秘": {
+                "level": 2,
+                "subs": {}
+              },
+              "电脑": {
+                "level": 2,
+                "subs": {}
+              },
+              "医疗": {
+                "level": 2,
+                "subs": {}
+              },
+              "洞察": {
+                "level": 1,
+                "subs": {}
+              },
+              "社交": {
+                "level": 2,
+                "subs": {}
+              }
+            },
+            "resources": {
+              "流风": {
+                "current": 22,
+                "max": 22
+              }
+            },
+            "attributeAuto": {},
+            "derivedOverrides": [
+              "hpMax",
+              "willMax",
+              "speed",
+              "initiative"
+            ],
+            "health": {
+              "intact": 12,
+              "B": 0,
+              "L": 0,
+              "A": 0,
+              "temp": 0,
+              "coma": false,
+              "deteriorationStopped": false
+            },
+            "will": {
+              "current": 3,
+              "max": 3
+            },
+            "xp": 0,
+            "greatPowersAvailable": 0,
+            "statuses": [],
+            "attributeDamage": {},
+            "turn": {
+              "phase": "ready",
+              "standard": 0,
+              "move": 0,
+              "swift": 0,
+              "reactionLock": false,
+              "reactionLockEnds": 0,
+              "responseDebt": false,
+              "opportunityUsed": false
+            },
+            "extendedActions": {},
+            "inventory": [
+              {
+                "name": "雪莲子",
+                "quantity": 1,
+                "source": "原"
+              },
+              {
+                "name": "培元丹",
+                "quantity": 3,
+                "source": "原"
+              },
+              {
+                "name": "药A",
+                "quantity": 2,
+                "source": "原"
+              },
+              {
+                "name": "药B",
+                "quantity": 3,
+                "source": "原"
+              },
+              {
+                "name": "药C",
+                "quantity": 4,
+                "source": "原"
+              },
+              {
+                "name": "雷霆药剂",
+                "quantity": null,
+                "source": "原：数量未记"
+              },
+              {
+                "name": "恶灵提示符",
+                "quantity": null,
+                "source": "原：100为价格，非数量"
+              }
+            ],
+            "unknownSkills": {
+              "制造": {
+                "level": null,
+                "subs": {
+                  "炼药": {
+                    "level": 2
+                  }
+                }
+              }
+            },
+            "recoveryRules": {
+              "flow": {
+                "attributes": [
+                  "敏捷",
+                  "感知"
+                ],
+                "physical": true,
+                "longRest": true
+              },
+              "flowRecoveryCheck": {
+                "attributes": [
+                  "敏捷",
+                  "感知"
+                ],
+                "source": "用户2026-10-23确认"
+              }
+            }
+          }
+        },
+        "huang": {
+          "name": "黄泉",
+          "state": {
+            "name": "黄泉",
+            "attributes": {
+              "力量": 5,
+              "敏捷": 6,
+              "智力": 2,
+              "感知": 5,
+              "意志": 3,
+              "风度": 3
+            },
+            "size": 5,
+            "hpBonus": 0,
+            "derived": {
+              "hpMax": 12,
+              "defense": 5,
+              "speed": 16,
+              "initiative": 13,
+              "willMax": 6,
+              "vision": 50
+            },
+            "skills": {
+              "运动": {
+                "level": 2,
+                "subs": {}
+              },
+              "肉搏": {
+                "level": 1,
+                "subs": {}
+              },
+              "白刃": {
+                "level": 5,
+                "subs": {
+                  "太刀": {
+                    "level": 1
+                  }
+                }
+              },
+              "射击": {
+                "level": 0,
+                "subs": {}
+              },
+              "隐藏": {
+                "level": 0,
+                "subs": {}
+              },
+              "求生": {
+                "level": 1,
+                "subs": {}
+              },
+              "驾驶": {
+                "level": 1,
+                "subs": {}
+              },
+              "学识": {
+                "level": 2,
+                "subs": {}
+              },
+              "科学": {
+                "level": 1,
+                "subs": {}
+              },
+              "神秘": {
+                "level": 1,
+                "subs": {
+                  "除灵": {
+                    "level": 1
+                  }
+                }
+              },
+              "调查": {
+                "level": 1,
+                "subs": {}
+              },
+              "洞察": {
+                "level": 1,
+                "subs": {}
+              },
+              "社交": {
+                "level": 1,
+                "subs": {
+                  "感受": {
+                    "level": 1
+                  },
+                  "表达": {
+                    "level": 1
+                  },
+                  "说服": {
+                    "level": 1
+                  }
+                }
+              },
+              "电脑": {
+                "level": 1,
+                "subs": {}
+              },
+              "医疗": {
+                "level": 0,
+                "subs": {}
+              },
+              "制造": {
+                "level": 0,
+                "subs": {}
+              }
+            },
+            "resources": {
+              "灵力": {
+                "current": 5,
+                "max": 5
+              }
+            },
+            "attributeAuto": {},
+            "derivedOverrides": [
+              "hpMax",
+              "willMax",
+              "speed",
+              "initiative"
+            ],
+            "health": {
+              "intact": 12,
+              "B": 0,
+              "L": 0,
+              "A": 0,
+              "temp": 0,
+              "coma": false,
+              "deteriorationStopped": false
+            },
+            "will": {
+              "current": 6,
+              "max": 6
+            },
+            "xp": 0,
+            "greatPowersAvailable": 0,
+            "statuses": [],
+            "attributeDamage": {},
+            "turn": {
+              "phase": "ready",
+              "standard": 0,
+              "move": 0,
+              "swift": 0,
+              "reactionLock": false,
+              "reactionLockEnds": 0,
+              "responseDebt": false,
+              "opportunityUsed": false
+            },
+            "extendedActions": {}
+          }
+        },
+        "jiang": {
+          "name": "姜子尤",
+          "state": {
+            "name": "姜子尤",
+            "attributes": {
+              "力量": 8,
+              "敏捷": 2,
+              "智力": 2,
+              "感知": 3,
+              "意志": 3,
+              "风度": 3
+            },
+            "size": 5,
+            "hpBonus": 2,
+            "derived": {
+              "hpMax": 20,
+              "defense": 2,
+              "speed": 25,
+              "initiative": 6,
+              "willMax": 6,
+              "vision": 30
+            },
+            "skills": {
+              "运动": {
+                "level": 3,
+                "subs": {}
+              },
+              "肉搏": {
+                "level": 5,
+                "subs": {
+                  "拳击": {
+                    "level": 2
+                  }
+                }
+              },
+              "白刃": {
+                "level": 1,
+                "subs": {}
+              },
+              "射击": {
+                "level": 0,
+                "subs": {}
+              },
+              "隐藏": {
+                "level": 1,
+                "subs": {}
+              },
+              "求生": {
+                "level": 1,
+                "subs": {}
+              },
+              "驾驶": {
+                "level": 2,
+                "subs": {}
+              },
+              "学识": {
+                "level": 1,
+                "subs": {}
+              },
+              "科学": {
+                "level": 0,
+                "subs": {}
+              },
+              "神秘": {
+                "level": 0,
+                "subs": {}
+              },
+              "调查": {
+                "level": 0,
+                "subs": {}
+              },
+              "洞察": {
+                "level": 2,
+                "subs": {}
+              },
+              "社交": {
+                "level": 1,
+                "subs": {
+                  "威逼": {
+                    "level": 2
+                  },
+                  "街头智慧": {
+                    "level": 1
+                  },
+                  "沟通": {
+                    "level": 1
+                  }
+                }
+              },
+              "电脑": {
+                "level": 1,
+                "subs": {}
+              },
+              "医疗": {
+                "level": 0,
+                "subs": {}
+              },
+              "制造": {
+                "level": 0,
+                "subs": {}
+              }
+            },
+            "resources": {
+              "气": {
+                "current": 2,
+                "max": 2
+              },
+              "斗气": {
+                "current": 2,
+                "max": 2
+              }
+            },
+            "attributeAuto": {},
+            "derivedOverrides": [
+              "hpMax",
+              "willMax",
+              "speed",
+              "initiative"
+            ],
+            "health": {
+              "intact": 20,
+              "B": 0,
+              "L": 0,
+              "A": 0,
+              "temp": 0,
+              "coma": false,
+              "deteriorationStopped": false
+            },
+            "will": {
+              "current": 6,
+              "max": 6
+            },
+            "xp": 0,
+            "greatPowersAvailable": 0,
+            "statuses": [],
+            "attributeDamage": {},
+            "turn": {
+              "phase": "ready",
+              "standard": 0,
+              "move": 0,
+              "swift": 0,
+              "reactionLock": false,
+              "reactionLockEnds": 0,
+              "responseDebt": false,
+              "opportunityUsed": false
+            },
+            "extendedActions": {}
+          }
+        },
+        "bright": {
+          "name": "布莱特",
+          "state": {
+            "name": "布莱特",
+            "attributes": {
+              "力量": 3,
+              "敏捷": 4,
+              "智力": 2,
+              "感知": 4,
+              "意志": 2,
+              "风度": 1
+            },
+            "size": 5,
+            "hpBonus": 0,
+            "derived": {
+              "hpMax": 8,
+              "defense": 4,
+              "speed": 22,
+              "initiative": 9,
+              "willMax": 5,
+              "vision": 40
+            },
+            "skills": {
+              "运动": {
+                "level": 2,
+                "subs": {}
+              },
+              "肉搏": {
+                "level": 1,
+                "subs": {}
+              },
+              "白刃": {
+                "level": 1,
+                "subs": {}
+              },
+              "射击": {
+                "level": 1,
+                "subs": {
+                  "长弓": {
+                    "level": 4
+                  }
+                }
+              },
+              "隐藏": {
+                "level": 2,
+                "subs": {}
+              },
+              "求生": {
+                "level": 1,
+                "subs": {}
+              },
+              "驾驶": {
+                "level": 0,
+                "subs": {}
+              },
+              "学识": {
+                "level": 1,
+                "subs": {}
+              },
+              "科学": {
+                "level": 1,
+                "subs": {}
+              },
+              "神秘": {
+                "level": 1,
+                "subs": {}
+              },
+              "调查": {
+                "level": 2,
+                "subs": {
+                  "搜索": {
+                    "level": 1
+                  }
+                }
+              },
+              "洞察": {
+                "level": 2,
+                "subs": {
+                  "追踪": {
+                    "level": 1
+                  }
+                }
+              },
+              "社交": {
+                "level": 1,
+                "subs": {
+                  "动物沟通": {
+                    "level": 1
+                  },
+                  "感受": {
+                    "level": 1
+                  },
+                  "唬骗": {
+                    "level": 1
+                  },
+                  "说服": {
+                    "level": 1
+                  }
+                }
+              },
+              "电脑": {
+                "level": 0,
+                "subs": {}
+              },
+              "医疗": {
+                "level": 1,
+                "subs": {}
+              },
+              "制造": {
+                "level": 0,
+                "subs": {
+                  "淬毒": {
+                    "level": 2
+                  }
+                }
+              }
+            },
+            "resources": {},
+            "attributeAuto": {},
+            "derivedOverrides": [
+              "hpMax",
+              "willMax",
+              "speed",
+              "initiative"
+            ],
+            "health": {
+              "intact": 8,
+              "B": 0,
+              "L": 0,
+              "A": 0,
+              "temp": 0,
+              "coma": false,
+              "deteriorationStopped": false
+            },
+            "will": {
+              "current": 5,
+              "max": 5
+            },
+            "xp": 0,
+            "greatPowersAvailable": 0,
+            "statuses": [],
+            "attributeDamage": {},
+            "turn": {
+              "phase": "ready",
+              "standard": 0,
+              "move": 0,
+              "swift": 0,
+              "reactionLock": false,
+              "reactionLockEnds": 0,
+              "responseDebt": false,
+              "opportunityUsed": false
+            },
+            "extendedActions": {}
+          }
+        },
+        "guard": {
+          "name": "隔离测试城卫",
+          "state": {
+            "name": "城卫",
+            "attributes": {
+              "力量": 3,
+              "敏捷": 3,
+              "智力": 2,
+              "感知": 2,
+              "意志": 2,
+              "风度": 2
+            },
+            "size": 5,
+            "hpBonus": 0,
+            "derived": {
+              "hpMax": 8,
+              "defense": 2,
+              "speed": 11,
+              "initiative": 5,
+              "willMax": 4,
+              "vision": 20
+            },
+            "skills": {
+              "白刃": {
+                "level": 2,
+                "subs": {
+                  "常用攻击": {
+                    "level": 1
+                  }
+                }
+              },
+              "运动": {
+                "level": 2,
+                "subs": {}
+              },
+              "求生": {
+                "level": 1,
+                "subs": {}
+              },
+              "社交": {
+                "level": 1,
+                "subs": {}
+              }
+            },
+            "resources": {},
+            "attributeAuto": {},
+            "derivedOverrides": [
+              "hpMax",
+              "willMax",
+              "speed",
+              "initiative"
+            ],
+            "health": {
+              "intact": 8,
+              "B": 0,
+              "L": 0,
+              "A": 0,
+              "temp": 0,
+              "coma": false,
+              "deteriorationStopped": false
+            },
+            "will": {
+              "current": 4,
+              "max": 4
+            },
+            "xp": 0,
+            "greatPowersAvailable": 0,
+            "statuses": [],
+            "attributeDamage": {},
+            "turn": {
+              "phase": "ready",
+              "standard": 0,
+              "move": 0,
+              "swift": 0,
+              "reactionLock": false,
+              "reactionLockEnds": 0,
+              "responseDebt": false,
+              "opportunityUsed": false
+            },
+            "extendedActions": {}
+          }
+        }
+      },
+      "ruleScene": {},
+      "lastResult": {
+        "status": "applied",
+        "kind": "rule",
+        "operationId": "gm-runtime/audit-live-save/1/0",
+        "revision": 1,
+        "messageId": 1,
+        "swipeId": 0,
+        "result": {
+          "eligible": true,
+          "dp": 5,
+          "luck": false,
+          "dice": [
+            6,
+            9,
+            8,
+            10,
+            1,
+            8
+          ],
+          "used": 6,
+          "rolledSuccesses": 4,
+          "luckMishap": false,
+          "skill": {
+            "level": 0,
+            "auto": 0,
+            "main": 0,
+            "sub": 0
+          },
+          "adjustments": {
+            "allowed": true,
+            "penalty": 0,
+            "entries": []
+          },
+          "autoSuccesses": 0,
+          "reExtraSuccesses": 0,
+          "total": 4,
+          "dc": 3,
+          "success": true,
+          "action": "save"
+        }
+      }
+    }
+  }
+}

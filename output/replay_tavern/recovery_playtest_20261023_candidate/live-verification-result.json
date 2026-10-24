@@ -1,0 +1,107 @@
+{
+  "scope": "isolated medicine/rest live chat; scenario effects verified from operation snapshots",
+  "revision": 7,
+  "operations": 7,
+  "refreshFullRootEqual": true,
+  "sameFloorRegenerateFullRootEqual": true,
+  "sourceEffectsVerified": [
+    "药C跨楼确认及短休延迟",
+    "药B立即恢复5L",
+    "培元丹长休恢复A3",
+    "雪莲子恢复流风3",
+    "打坐15分钟按实际成功数恢复",
+    "长休意志+1与流风回满",
+    "药A独立长休恢复A3且保留L6"
+  ],
+  "meditation": {
+    "successes": 4,
+    "minutes": 15,
+    "before": 13,
+    "after": 17
+  },
+  "medicineA": {
+    "revision": 2,
+    "operations": 2,
+    "health": {
+      "intact": 6,
+      "B": 0,
+      "L": 6,
+      "A": 0,
+      "temp": 0,
+      "coma": false,
+      "deteriorationStopped": false
+    },
+    "stock": 1,
+    "proseShort": {
+      "revision": 3,
+      "minutes": 15,
+      "healthUnchanged": true,
+      "remainingInjuryExplicit": true,
+      "text": "御临风在床榻上闭目躺下，调整着呼吸。\n\n十五分钟的静养让紧绷的肌肉稍稍放松，四肢传来的沉重感有所减轻。屋内依旧安安静静，阳光透过窗棂照在木地板上，残存的伤痛并未完全退去，呼吸间仍能察觉到几处未愈的隐痛。\n\n<StatusPlaceHolderImpl/>"
+    }
+  },
+  "health": {
+    "intact": 12,
+    "B": 0,
+    "L": 0,
+    "A": 0,
+    "temp": 0,
+    "coma": false,
+    "deteriorationStopped": false
+  },
+  "will": {
+    "current": 2,
+    "max": 3
+  },
+  "resources": {
+    "流风": {
+      "current": 22,
+      "max": 22
+    }
+  },
+  "inventory": [
+    {
+      "name": "雪莲子",
+      "quantity": 0,
+      "source": "原"
+    },
+    {
+      "name": "培元丹",
+      "quantity": 2,
+      "source": "原"
+    },
+    {
+      "name": "药A",
+      "quantity": 2,
+      "source": "原"
+    },
+    {
+      "name": "药B",
+      "quantity": 2,
+      "source": "原"
+    },
+    {
+      "name": "药C",
+      "quantity": 3,
+      "source": "原"
+    },
+    {
+      "name": "雷霆药剂",
+      "quantity": null,
+      "source": "原：数量未记"
+    },
+    {
+      "name": "恶灵提示符",
+      "quantity": null,
+      "source": "原：100为价格，非数量"
+    }
+  ],
+  "worldbookEntries": 136,
+  "worldbookEntriesUnchanged": true,
+  "deployedFilesHashEqual": 32,
+  "modelRestored": true,
+  "model": {
+    "source": "makersuite",
+    "model": "gemini-3.5-flash-lite"
+  }
+}

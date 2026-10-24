@@ -1,0 +1,37 @@
+✔ same geometry rejects wall crossing and attacks, accepts explicit detour, and charges difficult ground (7.9598ms)
+✔ map projection and SVG have no hidden actors, hidden landmarks or character statistics; clicks only produce drafts (2.0688ms)
+✔ map generation uses scene and positions once, not private panels (0.8748ms)
+✔ close melee has no purposeless retreat, remembers preparation and pressure, while injured withdrawal remains possible (17.2534ms)
+✔ MVU map initialization and a confirmed door change persist once without changing actor state (4.5389ms)
+✔ moving behind an opaque obstacle preserves the observed departure but conceals the final position (1.7484ms)
+✔ approach retains the attack action and excludes a worse partial sidestep or premature block (8.938ms)
+✔ preparation-only prose explicitly carries no attack or contact (0.5793ms)
+✔ irregular terrain shares collision, path cost and visibility with the grid renderer (1.0576ms)
+✔ a lost target leaves only a last visible position to investigate, not hidden actions or its new location (4.9237ms)
+✔ opaque forest prevents targeting and direct magic cannot pass through a visible low wall (1.0162ms)
+✔ production narrator request prioritizes executed events over background and preserves the prose-only boundary (1.8088ms)
+✔ natural attack settles only the declared action, keeps remaining player actions, and hides NPC figures (67.6756ms)
+✔ stationary tornado injury projects the unchanged target position as an observable result (46.176ms)
+✔ declared cost mismatch and invented end are rejected before rolling or spending (33.443ms)
+✔ failed narration resumes saved action without rerolling, including a new session/refresh (45.6897ms)
+✔ retrying committed guard narrates its execution without repeating prior damage or inventing another action (65.3178ms)
+✔ explicit end advances to an actual player reaction; continuation preserves the same turn and resource costs (64.4354ms)
+✔ every incoming player attack waits for a declared defense even after conversion is exhausted (0.9161ms)
+✔ player defense has no total until a defense mode is declared; ready block is not silently added to normal defense (0.5172ms)
+✔ an explicitly declared guard supplies defense for its existing duration without asking again on every attack (2.0657ms)
+✔ an enemy leaving reach cannot trigger an undeclared player opportunity attack (2.3478ms)
+✔ compound movement and attack use player-declared coordinates, not an extra implicit turn (57.6103ms)
+✔ NPC duel writes back all private results but posts one public scene and allows story afterwards (47.6599ms)
+✔ view-own-status opens only the UI before interpreting, narrating, rolling or adding an assistant floor (20.6935ms)
+✔ player UI reads latest selected MVU snapshot across new floors and refresh without writing or trusting prose (18.8792ms)
+✔ declared guard updates the player UI without ending the turn and survives refresh (41.211ms)
+✔ legacy own-status caches are stripped on replay without losing the saved narrative (17.173ms)
+✔ existing chat builds its map once, map viewing does not spend actions, and next declaration still executes (48.61ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 731.403
