@@ -6,6 +6,7 @@ import {resolveDefense,damageEvent} from '../combat/engine.mjs';
 import {clearLine,spatialDistance,canObserve} from '../combat/map.mjs';
 import {resourceCapability} from '../resource-lifecycle.mjs';
 import {healWounds} from '../healing.mjs';
+import {configureProgramPolicy,policyPool,validateProgramTargets,validateHealOrder} from './resource-program-policy.mjs';
 
 const need=(message,field)=>{throw new RuleInputError(message,field);};
 const requireFact=(condition,message)=>{if(!condition)throw new IllegalAction(message);};
@@ -38,10 +39,14 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
  }
  const learned=s.learnedResources[object.resourceId],rank=plan.grade??learned.grade??definition.grade;
  requireFact((learned.versions??[learned.grade??definition.grade]).includes(rank),'没有学会或已舍弃所选法术版本');
- requireFact(['D','C'].includes(rank),'该法术仅有D/C已编写版本');
- requireFact(definition.grade!=='C'||rank==='C','原生C术不能降作未定义的D版');
- vars.rank=rank==='C'?2:1;vars.P=rank==='C'?6:3;
- vars.P=Math.min(rank==='C'?8:4,vars.P+resourceBonus(s,'spellPower',{schools:definition.schools,sourceId:object.resourceId}));
+ if(program.executionPolicy)configureProgramPolicy(definition,program,s,learned,plan,vars,rank);
+ else {
+  requireFact(['D','C'].includes(rank),'该法术仅有D/C已编写版本');
+  requireFact(definition.grade!=='C'||rank==='C','原生C术不能降作未定义的D版');
+  vars.rank=rank==='C'?2:1;vars.P=rank==='C'?6:3;
+  vars.P=Math.min(rank==='C'?8:4,vars.P+resourceBonus(s,'spellPower',{schools:definition.schools,sourceId:object.resourceId}));
+ }
+ if(program.executionPolicy)validateHealOrder(program,plan);
  const val=x=>effectValue(x,s,vars);
  if(program.area){
   if(combat){
@@ -61,9 +66,11 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
  if(sub&&definition.subskills?.length&&!definition.subskills.includes(sub))throw new IllegalAction('施法子技能不属于本术专业');
  if(program.casting){
   const caster=s.casting?.imperial??s.guanlan?.caster;
+  if(program.executionPolicy?.requiresCaster!==false){
   if(!caster?.grade)need('缺少已保存的等级施法职能','casting.grade');
   requireFact(['D','C','B','A','S'].includes(caster.grade)&&(['C','B','A','S'].includes(caster.grade)||rank==='D'),'缺少对应等级施法职能');
   vars.casterLevel=caster.level??(['D','C','B','A','S'].indexOf(caster.grade)+1);
+  }
   // A single school uses the main skill when its subskill is absent. Explicit
   // dual-school qualification is a learning prerequisite, not a second DP sum.
   if(definition.requiresAllSchools)for(const required of definition.subskills??[])requireFact((s.skills?.神秘?.subs?.[required]?.level??0)>=1||learned.qualifications?.includes(required),'缺少法术要求的专业资格：'+required);
@@ -78,6 +85,8 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
  }
  for(const id of targetIds){
   const target=root.actors[id];if(!target)need('目标尚无实际状态：'+id,'resource.target');
+  const touchRange=validateProgramTargets(program,actor,target,id,plan);
+  if(touchRange!==undefined&&id!==r.actorId){const distance=combat?spatialDistance(root.map,actor.position,target.position):plan.distances?.[id]??plan.distance;requireFact(finite(distance,'distance')<=touchRange,'目标超出实际触及距离');}
   if(program.area?.team==='enemy')requireFact(target.team!==undefined&&actor.team!==undefined&&target.team!==actor.team,'敌方范围效果不能纳入友方或阵营未知目标');
   if(program.area?.team==='ally')requireFact(target.team!==undefined&&target.team===actor.team,'友方范围效果须核对实际阵营');
   if(program.willing&&id!==r.actorId)requireFact(plan.willingTargets?.includes(id),'本术须接触自愿目标');
@@ -92,8 +101,9 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
   }
  }
  if(s.resourceCooldowns?.[object.resourceId]>0)throw new IllegalAction('资源仍在冷却');
- const cost=val(program.cost??(rank==='C'?3:1))+val(program.repetition?.extraCost??0)*Math.max(0,targetIds.length-1),pool=plan.pool??s.casting?.imperial?.pool;
- if(cost){
+ const cost=val(program.cost??(rank==='C'?3:1))+val(program.repetition?.extraCost??0)*Math.max(0,targetIds.length-1);
+ const selectedPool=policyPool(program,s,learned,plan,cost),pool=selectedPool??plan.pool??s.casting?.imperial?.pool;
+ if(cost&&!program.executionPolicy?.pool){
   const energy=s.resources?.[pool];if(!energy)need('须选择实际施法能量池','resource.pool');
   if(definition.tree==='guanlan')requireFact(energy.generic===true&&!energy.special,'此技艺须单个非特殊通用能量池');
   else requireFact(pool===s.casting?.imperial?.pool,'法术须使用本职施法池');
