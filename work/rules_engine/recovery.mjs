@@ -3,7 +3,7 @@ import {expireResourceEffects} from './resource-lifecycle.mjs';
 import {healWounds} from './healing.mjs';
 import {advanceResourcePeriods} from './gm_runtime/resource-program.mjs';
 import {ATTRIBUTES,check,effectiveAttribute,attrAuto,lifeStatus,recover,spendAction,actionEligibility,statusLevel,applyStatus,rollPool,advanceGeneticLock} from './core.mjs';
-import {RuleInputError,IllegalAction,saveProfile} from './combat/mechanics.mjs';
+import {RuleInputError,IllegalAction,saveProfile,refreshDerived} from './combat/mechanics.mjs';
 
 // Period-specific card rules; no inventory or post-growth values are inferred.
 export const RECOVERY_SOURCES={
@@ -122,7 +122,9 @@ export function advanceTime(actor,minutes,changes=[],{combatTick=false,drawDice}
     return clock;
   }
   if(!combatTick)changes.push(...advanceResourcePeriods(actor,minutes,{drawDice}));
-  for(const id of expireResourceEffects(actor.state,{minutes,rounds:minutes*10}))changes.push({expired:id});
+  const expired=expireResourceEffects(actor.state,{minutes,rounds:minutes*10});
+  for(const id of expired)changes.push({expired:id});
+  if(expired.length&&(actor.combatProfile||actor.kind))refreshDerived(actor);
   if(!combatTick&&actor.state.geneticLock?.active?.[1]){
     const total=(actor.state.geneticLock.roundRemainder??0)+minutes*10,whole=Math.floor(total+1e-9);
     actor.state.geneticLock.roundRemainder=total-whole;

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createOpeningRoster,createOpeningEncounter} from '../combat/opening.mjs';
-import {check,statusLevel,applyStatus} from '../core.mjs';
+import {check,statusLevel,applyStatus,applyWounds} from '../core.mjs';
 import {RESOURCE_CATALOG} from '../resource-catalog.mjs';
 import {RESOURCE_DEFINITIONS} from '../resource-definitions.mjs';
 import {stackEffects} from '../resource-effects.mjs';
@@ -29,6 +29,10 @@ test('group penalties remain effective; same-kind bonuses and penalties each tak
 test('spell casts spend the actual tier cost once without mutating the input or T0',()=>{
  for(const grade of ['D','C']){const x=scene('魔法飞弹',grade),before=structuredClone(x.root);const out=reduceRuleAction(x.root,x.q,{drawDice:dice});assert.equal(out.actors.player.state.resources['测试魔力'].current,20-(grade==='D'?1:3));assert.deepEqual(x.root,before);assert.ok(out.result.targets[0].steps.some(x=>x.op==='damage'));}
  assert.equal(createOpeningRoster().player.state.casting,undefined);
+});
+test('an incomplete saved caster is missing input rather than permission to cast a D spell',()=>{
+ const x=scene('疗伤');delete x.root.actors.player.state.casting.imperial.grade;
+ const before=structuredClone(x.root);assert.throws(()=>reduceRuleAction(x.root,x.q,{drawDice:dice}),/等级施法职能/);assert.deepEqual(x.root,before);
 });
 test('timed check bonuses participate in ordinary JS checks and expire with scene time',()=>{
  const x=scene('侦测潜行');x.plan.targetIds=['player'];const out=reduceRuleAction(x.root,x.q,{drawDice:dice}),a=out.actors.player;
@@ -98,4 +102,106 @@ test('a healing spell respects natural-only wounds and spends four healing point
  target.state.health.L=3;target.state.health.intact-=3;target.recoveryLocks=[{severity:'L',count:1,recovery:'naturalOnly'},{severity:'L',count:1,recovery:'aggravated'}];
  const out=reduceRuleAction(x.root,x.q,{drawDice:dice});assert.equal(out.actors.huang.state.health.L,1);
  assert.deepEqual(out.actors.huang.recoveryLocks,[{severity:'L',count:1,recovery:'naturalOnly'}]);
+});
+test('fear howl affects only the actual enemies in its complete field area',()=>{
+ const x=scene('恐惧嚎叫','C');x.root.actors.huang.team='enemy';x.plan.areaComplete=true;
+ const out=reduceRuleAction(x.root,x.q,{drawDice:dice});
+ assert.equal(out.actors.player.state.resources['测试魔力'].current,17);
+ assert.equal(out.actors.huang.state.statuses.find(s=>s.type==='恐惧').scene,true);
+ x.plan.targetIds=['player'];assert.throws(()=>reduceRuleAction(x.root,x.q,{drawDice:dice}),/敌方|阵营/);
+});
+test('Thoth hymn fixes the selected main skill and shares same-source recast policy',()=>{
+ const x=scene('透特之咏');x.plan.targetIds=['player'];x.q.operation='castLore';
+ let out=reduceRuleAction(x.root,x.q,{drawDice:dice});
+ const get=(s,skill)=>check(s,{attribute:'智力',skill,dice:dice()}).dp;
+ assert.equal(get(out.actors.player.state,'学识')-get(x.root.actors.player.state,'学识'),9);
+ assert.equal(get(out.actors.player.state,'神秘'),get(x.root.actors.player.state,'神秘'));
+ out=reduceRuleAction(out,{...x.q,operation:'cast'},{drawDice:dice});
+ assert.equal(get(out.actors.player.state,'学识'),get(x.root.actors.player.state,'学识'));
+ assert.equal(get(out.actors.player.state,'神秘')-get(x.root.actors.player.state,'神秘'),9);
+});
+test('Bane applies declared lucky attack/save penalties after a successful opposed spell',()=>{
+ const x=scene('灾祸术');x.root.actors.huang.state.attributes.意志=0;x.root.actors.huang.state.attributes.风度=0;
+ const out=reduceRuleAction(x.root,x.q,{drawDice:dice});
+ const effects=out.actors.huang.state.activeResourceEffects[0].effects;
+ assert.deepEqual(effects.map(e=>e.value),[-6,-6]);
+ assert.equal(effects[0].group,'luck');
+});
+test('Troublemaker fire pays once and resolves every selected target separately',()=>{
+ const x=scene('惹事人烈焰','C');x.plan.targetIds=['huang','jiang'];x.plan.distances={huang:1,jiang:1};
+ const out=reduceRuleAction(x.root,x.q,{drawDice:dice});
+ assert.equal(out.result.targets.length,2);assert.equal(out.actors.player.state.resources['测试魔力'].current,17);
+ assert.ok(out.result.targets.every(t=>t.steps.some(s=>s.op==='attack')));
+});
+test('Searing Pain selection is a registered variant with no free-form numeric status',()=>{
+ const x=scene('灼热之痛');x.q.operation='castHatred';
+ const out=reduceRuleAction(x.root,x.q,{drawDice:dice});
+ assert.ok(out.result.targets[0].steps.some(s=>s.op==='attack'));
+ assert.equal(out.actors.player.state.resources['测试魔力'].current,19);
+ assert.ok(!out.actors.huang.state.statuses.some(s=>s.type==='剧痛'));
+});
+test('resistance analysis bypasses resistance and its reduction stays scoped to the actual caster',()=>{
+ const x=scene('解析抗力'),missile=scene('魔法飞弹').id;
+ x.root.actors.huang.state.activeResourceEffects=[{sourceId:'test',effects:[{stat:'spellResistance',value:5}]}];
+ let out=reduceRuleAction(x.root,x.q,{drawDice:dice});
+ assert.equal(out.result.targets[0].steps.find(s=>s.op==='inspect').value,5);
+ out.actors.player.state.learnedResources[missile]={learned:true,grade:'D',source};
+ out.ruleScene.objects.spell.resourceId=missile;
+ out.actors.second=structuredClone(out.actors.player);out.actors.second.id='second';
+ out.ruleScene.objects.spell.actorIds.push('second');
+ const own=reduceRuleAction(out,x.q,{drawDice:dice});
+ assert.equal(own.result.targets[0].effectivePower,3); // never 3 + an unused reduction
+ const other=reduceRuleAction(out,{...x.q,actorId:'second'},{drawDice:dice});
+ assert.equal(other.result.targets[0].effectivePower,0);
+ assert.equal(other.result.targets[0].steps.length,0);
+});
+test('school resistance requires an authored enum choice and only resists that school after reload',()=>{
+ const x=scene('法术抵御','C');const before=structuredClone(x.root);
+ assert.throws(()=>reduceRuleAction(x.root,x.q,{drawDice:dice}),/专业|specialization/);assert.deepEqual(x.root,before);
+ x.plan.inputs={specialization:'塑能'};
+ const out=JSON.parse(JSON.stringify(reduceRuleAction(x.root,x.q,{drawDice:dice})));
+ const s=out.actors.huang.state;
+ const effect=s.activeResourceEffects[0].effects[0];assert.equal(effect.value,21);
+ assert.equal(effect.when.right,'塑能');
+ const other=scene('魔法飞弹');other.root.actors.huang.state=s;
+ assert.equal(reduceRuleAction(other.root,other.q,{drawDice:dice}).result.targets[0].effectivePower,0);
+ other.plan.inputs={specialization:'任意数值'};
+ assert.equal(out.actors.player.state.resources['测试魔力'].current,17);
+ x.plan.inputs.specialization='任意数值';assert.throws(()=>reduceRuleAction(x.root,x.q,{drawDice:dice}),/专业|specialization/);
+});
+test('declarative repetitions charge extra projectiles once and may repeat an actual target',()=>{
+ const x=scene('魔法飞弹','C');x.plan.targetIds=['huang','huang'];
+ const before=structuredClone(x.root),out=reduceRuleAction(x.root,x.q,{drawDice:dice});
+ assert.equal(out.result.targets.length,2);assert.equal(out.result.cost,5);
+ assert.equal(out.actors.player.state.resources['测试魔力'].current,15);assert.deepEqual(x.root,before);
+ x.plan.targetIds.push('huang');assert.throws(()=>reduceRuleAction(x.root,x.q,{drawDice:dice}),/次数|枚数/);
+});
+test('Chandra double projectile checks free hands and pays for every independently rolled fireball',()=>{
+ const x=scene('茜卓的旋炎咒','C');x.plan.targetIds=['huang','huang'];
+ assert.throws(()=>reduceRuleAction(x.root,x.q,{drawDice:dice}),/双手|前提/);
+ x.plan.inputs={handsFree:true};const out=reduceRuleAction(x.root,x.q,{drawDice:dice});
+ assert.equal(out.result.cost,6);assert.equal(out.result.targets.length,2);
+ assert.ok(out.result.targets.every(t=>t.steps.some(s=>s.op==='attack')));
+});
+test('Eldritch blast has exactly spell-rank attacks with a single casting cost',()=>{
+ const x=scene('魔能爆','C');x.plan.targetIds=['huang','huang'];
+ const out=reduceRuleAction(x.root,x.q,{drawDice:dice});assert.equal(out.result.cost,3);
+ assert.equal(out.result.targets.length,2);
+ x.plan.targetIds=['huang'];assert.throws(()=>reduceRuleAction(x.root,x.q,{drawDice:dice}),/次数|枚数/);
+});
+test('temporary strength resizes actual slots and expiry converts overflow without healing or resetting the save',()=>{
+ const x=scene('大地之力');x.plan.willingTargets=['huang'];
+ const original=x.root.actors.huang.state.derived.hpMax;
+ const out=reduceRuleAction(x.root,x.q,{drawDice:dice}),target=out.actors.huang;
+ assert.equal(target.state.derived.hpMax,original+8);
+ assert.equal(target.state.health.intact,original+8);
+ target.state=applyWounds(target.state,{L:original+4}).state;
+ const saved={xp:target.state.xp,resources:structuredClone(target.state.resources)};
+ advanceTime(target,1,[],{drawDice:dice}); // a scene effect does not end with a minute
+ assert.equal(target.state.derived.hpMax,original+8);
+ target.state.activeResourceEffects[0].remainingMinutes=1;
+ advanceTime(target,1,[],{drawDice:dice});
+ assert.equal(target.state.derived.hpMax,original);
+ assert.equal(target.state.health.intact,0);assert.equal(target.state.health.L,original-4);assert.equal(target.state.health.A,4);
+ assert.equal(target.state.xp,saved.xp);assert.deepEqual(target.state.resources,saved.resources);
 });

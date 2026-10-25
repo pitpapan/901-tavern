@@ -8,7 +8,11 @@ import {claimLearningGrant} from '../resource-acquisition.mjs';
 
 export function kitReferences(topics='',actors=[]){
  const owned=new Set(actors.flatMap(a=>Object.keys(a.learnedResources??{})));
- return Object.values(RESOURCE_CATALOG).filter(x=>topics.includes(x.name)||owned.has(x.id)).map(x=>({id:x.id,name:x.name,kind:x.kind,period:x.period,prohibited:x.prohibited,source:x.source+':'+x.line,rules:x.body}));
+ return Object.values(RESOURCE_CATALOG).filter(x=>topics.includes(x.name)||owned.has(x.id)).map(x=>{
+  const contract=RESOURCE_DEFINITIONS[x.id];
+  return {id:x.id,name:x.name,kind:x.kind,period:x.period,prohibited:x.prohibited,source:x.source+':'+x.line,rules:x.body,
+   version:contract?.contractVersion,reading:contract?.reading,verification:contract?.verification};
+ });
 }
 export function runKitMechanism(root,r,{combat=false,preActionCleared=false,drawDice,actorTemplates}={}){
  const o=root.ruleScene?.objects?.[r.objectId];if(o?.type!=='kitResource')return null;

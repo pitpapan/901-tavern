@@ -1,3 +1,5 @@
+import {kitAttribute} from './kit-state.mjs';
+import {resourceBonus} from './resource-definitions.mjs';
 import {growthPrice} from './growth-pricing.mjs';
 // 901 Core Rules v0.1, P0 only. All public operations return new JSON-safe state.
 import {wizardAttribute,wizardCheck} from './wizard-rules.mjs';
@@ -9,6 +11,7 @@ const STATUS_ATTRIBUTES = {
   精神束缚: ['意志'], 恐惧: ['意志'], 沮丧: ['意志'], 亢奋: ['意志'],
   纠缠: ['力量', '敏捷'], 冻结: ['力量', '敏捷'], 疲乏: ['力量'],
   魅惑: ['意志', '风度'], 肢体妨害: ['力量', '敏捷'],
+  欲眠:['意志'],失速:['力量','敏捷'],
 };
 
 function integer(value, name, minimum = 0) {
@@ -30,7 +33,7 @@ export function baseHealthCapacity(strength, size = 5, bonus = 0) {
 }
 function baseAttribute(state, name) { requireAttribute(name); return state.attributes[name] ?? 0; }
 export function effectiveAttribute(state, name) {
-  return Math.max(0, baseAttribute(state, name) - (state.attributeDamage?.[name] ?? 0)+wizardAttribute(state,name)+(state.geneticLock?.active?.[2]?.attribute===name?5:0));
+  return Math.max(0, baseAttribute(state, name) + kitAttribute(state,name) - (state.attributeDamage?.[name] ?? 0)+wizardAttribute(state,name)+(state.geneticLock?.active?.[2]?.attribute===name?5:0));
 }
 function attrValue(state, name) { return effectiveAttribute(state, name); }
 function baseAuto(state, name) { return state.attributeAuto?.[name] ?? autoForLevel(baseAttribute(state, name)); }
@@ -133,13 +136,13 @@ export function check(state, options) {
   const wizard=wizardCheck(state,{...options,attributes});
   const skill = effectiveSkill(state, options.skill, options.sub);
   const baseDP = (options.poolBase ?? attributes.reduce((n, name) => n + attrValue(state, name), 0))
-    + skill.level + (options.modifier ?? 0) + (adjustments.bonus??0) + wizard.dp + geneticCheckBonus(state,options.context) - (options.penaltiesIncluded?0:adjustments.penalty);
+    + skill.level + (options.modifier ?? 0) + (adjustments.bonus??0) + wizard.dp + resourceBonus(state,'check',{...options.context,skill:options.skill,sub:options.sub,attribute:options.attribute}) + geneticCheckBonus(state,options.context) - (options.penaltiesIncluded?0:adjustments.penalty);
   if(options.willpower&&baseDP-(geneticCheckBonus(state,context)-geneticCheckBonus(state,{...context,willSpent:false}))<=0)return {eligible:false,success:false,reason:'机运骰不能用意志增强'};
-  const dp=baseDP+(options.willpower?3:0);
+  const dp=baseDP+(options.willpower?3+resourceBonus(state,'willEnhancement'):0);
   const roll = rollPool(dp, options.dice);
   const autoSuccesses = (options.attributeAutoOverride ?? attributes.reduce((n, name) => n + attrAuto(state, name), 0))
     + skill.auto + (options.autoBonus ?? 0)+wizard.auto+geneticWillAuto(state,options.context);
-  const reExtraSuccesses = roll.rolledSuccesses > 0 ? (options.reExtraSuccesses ?? 0) : 0;
+  const reExtraSuccesses = roll.rolledSuccesses > 0 ? (options.reExtraSuccesses ?? 0)+resourceBonus(state,'extraSuccess',{...context,skill:options.skill,sub:options.sub}) : 0;
   const sleepingPerception=state.sleeping&&(options.context?.perception||["洞察","调查","侦查","聆听"].includes(options.skill));
   const total = Math.max(0,roll.rolledSuccesses + autoSuccesses + reExtraSuccesses-(sleepingPerception&&options.context?.opposed?1:0));
   return { eligible: true, willCost:options.willpower?1:0, ...roll, skill, adjustments, autoSuccesses, reExtraSuccesses, total,
@@ -220,14 +223,24 @@ export function geneticWillAuto(state,{willEligible=false,willSpent=false}={}) {
 }
 function syncGeneticCapacity(s){
   const wanted=s.geneticLock.active?.[2]?.attribute==='力量'?10:0,old=s.geneticLock.hpBonus??0,delta=wanted-old;
-  if(delta<0){
-    const wounds={B:s.health.B,L:s.health.L,A:s.health.A};
-    s.derived.hpMax=Math.max(1,s.derived.hpMax+delta);
-    s.health={...s.health,intact:s.derived.hpMax,B:0,L:0,A:0};
-    s.health=applyWounds(s,wounds).state.health;
-    if(['unconscious','dead'].includes(lifeStatus(s).state))s.health.coma=true;
-  }else{s.health.intact+=delta;s.derived.hpMax+=delta;}
+  Object.assign(s,resizeHealthCapacity(s,Math.max(1,s.derived.hpMax+delta)));
   s.geneticLock.hpBonus=wanted;delete s.geneticLock.pendingHpShrink;
+}
+// PHB slot overflow, shared by temporary attributes and genetic capacity.
+// Added slots are intact; removing them reapplies existing wounds in B/L/A
+// order and converts overflow. No XP, pool balance or inventory is reset.
+export function resizeHealthCapacity(state,capacity){
+ integer(capacity,'health.capacity',1);
+ const next=clone(state),delta=capacity-next.derived.hpMax;
+ next.derived.hpMax=capacity;
+ if(delta>=0)next.health.intact+=delta;
+ else {
+  const wounds={B:next.health.B,L:next.health.L,A:next.health.A};
+  next.health={...next.health,intact:capacity,B:0,L:0,A:0};
+  next.health=applyWounds(next,wounds).state.health;
+  if(['unconscious','dead'].includes(lifeStatus(next).state))next.health.coma=true;
+ }
+ return next;
 }
 function geneticPain(s,points){
   if(!points)return;
@@ -308,6 +321,7 @@ export function lifeStatus(state) {
 
 function statusPoints(state, type) {
   const entries = state.statuses.filter(s => s.type === type);
+  if(entries.some(s=>s.stacking==='add'))return entries.filter(s=>s.stacking==='add').reduce((n,s)=>n+s.points,0)+Math.max(0,...entries.filter(s=>s.stacking!=='add').map(s=>s.points));
   return type === '疲乏' ? entries.reduce((n, s) => n + s.points, 0)
     : Math.max(0, ...entries.map(s => s.points));
 }
@@ -325,7 +339,7 @@ export function statusLevel(state, type) {
   const names = STATUS_ATTRIBUTES[type];
   if (!names) return { points, severe: false, catastrophicThreshold: false, sourceSpecific: true };
   const threshold = Math.max(...names.map(name => attrValue(state, name)));
-  return { points, severe: points > threshold, catastrophicThreshold: points > 2 * threshold,
+  return { points, severe: points > threshold, catastrophicThreshold: !['欲眠','失速'].includes(type)&&points > 2 * threshold,
     excess: Math.max(0, points - 2 * threshold) };
 }
 
@@ -341,6 +355,7 @@ export function checkModifiers(state,options={}) {
   const wound=lifeStatus(state).woundPenalty;if(wound)entries.push({source:'伤势',value:wound});
   add('恶心',c.attack||c.specialAbility||c.mentalPower);
   add('疲乏',physical);for(const type of ['麻痹','精神束缚','纠缠','冻结'])add(type,motion);
+  add('欲眠',physical||perception);
   add('晕眩',c.attack||c.reflex||options.skill==='运动'||perception);
   add('剧痛',social||perception||c.craft||c.willResistance||c.mentalPower);
   add('耳鸣',c.listening);add('目眩',!statusLevel(state,'目眩').severe&&(c.visual||c.attack||c.precision),c.precision ? .5 : 1);
@@ -376,7 +391,7 @@ export function actionEligibility(state, action, context={}) {
   if(state.geneticLock?.pendingPainDamage||state.geneticLock?.pendingHpShrink)return {allowed:false,reason:'须先完成基因锁反噬属性伤害分配或临时HP缩减裁定'};
   const life = lifeStatus(state).state;
   if (life === 'dead' || life === 'unconscious') return { allowed: false, reason: life };
-  if(state.sleeping)return {allowed:false,reason:'睡眠期间不能主动行动或进行反射/响应动作'};
+  if(state.sleeping||statusLevel(state,'欲眠').severe)return {allowed:false,reason:'睡眠期间不能主动行动或进行反射/响应动作'};
   if(state.permanentConditions?.some(c=>c.kind==='nauseaCollapse'))return {allowed:false,reason:'恶心毁灭性后果使人物失去全部动作'};
   if(statusLevel(state,'沮丧').severe&&!context.compelled)return {allowed:false,reason:'重度沮丧无法主动行动；强制命令须有明确规则来源'};
   if (statusLevel(state, '剧痛').severe || statusLevel(state, '晕眩').severe || statusPoints(state, '震慑'))
@@ -386,6 +401,7 @@ export function actionEligibility(state, action, context={}) {
   if (['attack', 'move', 'charge', 'fiveFootStep'].includes(action)
       && (statusLevel(state, '麻痹').severe || statusLevel(state, '纠缠').severe || statusLevel(state, '冻结').severe || statusLevel(state,'精神束缚').severe))
     return { allowed: false, reason: 'Immobilized' };
+  if(['move','charge','fiveFootStep'].includes(action)&&statusLevel(state,'失速').severe)return {allowed:false,reason:'重度失速无法移动'};
   if (action === 'charge' && statusLevel(state, '疲乏').points > 0)
     return { allowed: false, reason: 'Fatigue prevents charge' };
   return { allowed: true, requiresBCheck: life === 'B-check' };
@@ -577,6 +593,7 @@ export function resolveDamage(target, damage, sources = []) {
   trace.push({ phase: 'C', step: 'downgrade', from: damage.severity, to: finalSeverity });
   const wounds = applyWounds(next, { [finalSeverity]: remaining });
   if(causedDamage&&wounds.state.sleeping)delete wounds.state.sleeping;
+  if(causedDamage){let remaining=wounds.result.changes.length;for(const s of wounds.state.statuses.filter(s=>s.type==='欲眠')){const removed=Math.min(s.points,remaining);s.points-=removed;if(s.stacking==='add')remaining-=removed;}wounds.state.statuses=wounds.state.statuses.filter(s=>s.points>0);}
   return { state: wounds.state, result: { causedDamage, actualDamage: wounds.result.changes.length,
     finalSeverity, wounds: wounds.result, trace } };
 }
@@ -584,7 +601,7 @@ export function resolveDamage(target, damage, sources = []) {
 const WEAPON_SKILL = { natural: '肉搏', melee: '白刃', thrown: '运动', bow: '弓箭', gun: '枪械' };
 export function resolveAttack(attacker, target, input) {
   for(const [state,chosen]of [[attacker,input.willpower],[target,input.defenseWillpower]])if(chosen){const w=willEnhancement(state);if(!w.allowed)return {attacker,target,result:{allowed:false,reason:w.reason}};}
-  const defenseWill=input.defenseWillpower?3+geneticCheckBonus(target,{willEligible:true,willSpent:true})-geneticCheckBonus(target,{willEligible:true}):0;
+  const defenseWill=input.defenseWillpower?3+resourceBonus(target,'willEnhancement')+geneticCheckBonus(target,{willEligible:true,willSpent:true})-geneticCheckBonus(target,{willEligible:true}):0;
   const weapon = input.weapon;
   if (!WEAPON_SKILL[weapon.type]) throw new RangeError('Unsupported ordinary weapon type');
   const action = spendAction(attacker, input.action ?? 'attack', { behavior: 'attack', ...input.actionContext });
@@ -596,7 +613,7 @@ export function resolveAttack(attacker, target, input) {
     ? target.derived.defense : Math.min(attrValue(target, '敏捷'), attrValue(target, '感知'));
   const defense = (input.targetDefense ?? Math.max(0, baseDefense+geneticCheckBonus(target,{willEligible:true}) - lifeStatus(target).woundPenalty))+defenseWill;
   const distancePenalty = input.distancePenalty ?? 0;
-  const dp = attrValue(attacker, attribute) + skill.level + weapon.damage +geneticCheckBonus(attacker,{willEligible:true,willSpent:input.willpower===true})+(input.willpower?3:0)- defense
+  const dp = attrValue(attacker, attribute) + skill.level + weapon.damage +geneticCheckBonus(attacker,{willEligible:true,willSpent:input.willpower===true})+(input.willpower?3+resourceBonus(attacker,'willEnhancement'):0)- defense
     - distancePenalty + (input.modifier ?? 0) - checkModifiers(attacker,{attribute,skill:main,
       context:{attack:true,targetId:input.targetId}}).penalty;
   let cap;
@@ -641,7 +658,7 @@ export function counteractTemperature(state) {
 }
 
 export function applyStatus(state, { type, source, points, dice, sub, eligible = true,
-  catastrophicAllowed = false, attributeDamageAllocation } = {}) {
+  catastrophicAllowed = false, attributeDamageAllocation, properties = {}, sourceActorId } = {}) {
   if (!eligible) return { state, result: { applied: false, reason: 'Source ineligible or immune' } };
   // PHB 生存状态:293–295: once icebound, new freezing is unresisted cold L.
   // Constitution translates to Strength for the special resistance only.
@@ -657,7 +674,7 @@ export function applyStatus(state, { type, source, points, dice, sub, eligible =
   const remaining = Math.max(0, integer(points, 'status points') - resistance.total);
   const priorExcess = statusLevel(state, type).excess ?? 0;
   const next = clone(state);
-  if (remaining) next.statuses.push({ type, source, points: remaining });
+  if (remaining) next.statuses.push({ ...properties, type, source, ...(sourceActorId?{sourceActorId}:{}), points: remaining });
   if(type==='冻结')counteractTemperature(next);
   const level = statusLevel(next, type);
   const newAttributeDamage = catastrophicAllowed&&['剧痛','疲乏'].includes(type) ? Math.max(0, (level.excess ?? 0) - priorExcess) : 0;

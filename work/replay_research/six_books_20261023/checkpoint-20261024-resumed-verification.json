@@ -1,0 +1,1957 @@
+{
+  "date": "2026-10-24",
+  "overallStatus": "incomplete-development-checkpoint",
+  "deployed": false,
+  "externalModelCalls": 0,
+  "materialPublished": false,
+  "repositories": [
+    {
+      "name": "901-tavern",
+      "branch": "codex/yulinfeng-tavern-plan",
+      "baseCommit": "30ccdfc"
+    },
+    {
+      "name": "901-resource-authoring-kit",
+      "branch": "main",
+      "baseCommit": "6682b0b"
+    }
+  ],
+  "counts": {
+    "contracts": 269,
+    "legalSpells": 208,
+    "prohibitedSpells": 7,
+    "spellsWithBasePrograms": 51,
+    "registeredProgramsIncludingVariants": 54,
+    "registeredActions": 70,
+    "fullyVerified": 0,
+    "contractStatuses": {
+      "partial": 71,
+      "pending": 198
+    },
+    "worldbookEntries": 442
+  },
+  "verification": {
+    "javascript": {
+      "testFiles": 45,
+      "tests": 462,
+      "pass": 462,
+      "fail": 0,
+      "skipped": 0,
+      "logSha256": "4648d9df15b1e5554e4115d43324f637087ab9275004ca2eb01100e23551bd3b"
+    },
+    "pythonRegressionTests": 4,
+    "schemaValidatedContracts": 269,
+    "sourceValidatedContracts": 269,
+    "kitCliChecks": 8,
+    "sixBooksStaticVerification": {
+      "status": "pass",
+      "checks": [
+        "全部已记录输入／保护文件哈希保持不变",
+        "六书442个UID唯一；原173条保留并追加全部资源合同；135个原世界书UID保留，136个来源均有去向",
+        "606个来源段落／行都有一次明确分配；443份正文与规划哈希一致；未授权字段与原来源扩展保持",
+        "原9条禁用与原173条加载策略保持；后期模板全部手动禁用；每项合同版本、正文哈希与执行状态一致",
+        "敌人短卡全部数值逐次保留；仅分割的两行之外，原句完整存在于目标正文",
+        "主持卡内嵌41条基础书一致；入口脚本仅增加显式六书名单，正则、开场及执行提示保持；完整运行时依赖哈希一致",
+        "已确认人口、弃风和YGGDRASIL触发修正存在，旧待定剑数值语句已移除",
+        "5组字面触发探针符合目标；禁用剧情没有因关键词自动启用",
+        "包内Markdown文件链接均指向存在的文件"
+      ],
+      "counts": {
+        "books": 6,
+        "entries": 442,
+        "resource_contracts": 269,
+        "fullyVerified": 0,
+        "host_anchor": 1,
+        "loading": {
+          "constant": 3,
+          "keyword": 417,
+          "disabled": 22
+        },
+        "source_entries": 136,
+        "source_units": 606
+      },
+      "literal_trigger_probes": [
+        {
+          "text": "我到九雪医馆寻找久远。",
+          "matched": [
+            "901已采用核心裁定规则",
+            "久远与哈克的医馆寄居条件",
+            "九雪医馆",
+            "九雪医馆查封与接触基线",
+            "人物·久远",
+            "大陆法则限制",
+            "妄想大陆",
+            "药物、治疗魔法与休息恢复"
+          ],
+          "status": "pass"
+        },
+        {
+          "text": "古雷姆林出现在眼前。",
+          "matched": [
+            "901已采用核心裁定规则",
+            "901短卡计算约定",
+            "人物·古雷姆林",
+            "古雷姆林常态战斗能力",
+            "大陆法则限制",
+            "妄想大陆",
+            "帝都挑战与个人XP参照",
+            "战力阶梯与短卡适用边界"
+          ],
+          "status": "pass"
+        },
+        {
+          "text": "远处这株世界树有什么来历？",
+          "matched": [
+            "901已采用核心裁定规则",
+            "大陆法则限制",
+            "妄想大陆"
+          ],
+          "status": "pass"
+        },
+        {
+          "text": "讨论帝都近郊峡谷的施工。",
+          "matched": [
+            "901已采用核心裁定规则",
+            "901短卡计算约定",
+            "大陆法则限制",
+            "妄想大陆",
+            "峡谷结界与空间封印运行",
+            "帝国人口与聚落规模",
+            "帝国公共消息与民间见识",
+            "帝都",
+            "帝都入城接报与公开战报",
+            "帝都腹地供给与公费农作施术",
+            "帝都近郊峡谷",
+            "法阵安装者"
+          ],
+          "status": "pass"
+        },
+        {
+          "text": "使用弃风剑。",
+          "matched": [
+            "901已采用核心裁定规则",
+            "大陆法则限制",
+            "妄想大陆",
+            "弃风剑",
+            "资源·弃风"
+          ],
+          "status": "pass"
+        }
+      ],
+      "constant_body_chars_before": 6964,
+      "constant_body_chars_after": 2161,
+      "limits": [
+        "本验证器只运行静态检查；本轮未调用外部模型",
+        "字面匹配不模拟预算、其他世界书、全局设置与实际Prompt组装",
+        "当前书分期优先关系是提示词约束，未新增程序化门控",
+        "合同同步不代表每项全部可执行；候选包未部署"
+      ]
+    },
+    "protectedT0AndInstalledSnapshotDiff": "unchanged"
+  },
+  "implemented": [
+    "新增10项法术基础程序，所有合同与生成器保留实现状态",
+    "通用受控选择、施术时快照、重复施放、逐枚计费与防护、施术者作用域减抗",
+    "修复外树资源冒充观澜以减费/支付悟法XP；修复重复本体购买及施法职能降级",
+    "修复双专业/或选专业声明、付费与授术资格、原生C和D升C限制",
+    "修复成熟比较面板中钢铁意志、精通先攻和岛田速度的重复叠加",
+    "临时属性写入/到期重算与PHB生命缩容溢出，保留实际资源/XP/伤势",
+    "六书442条开发候选保留原173条并投影269合同；三张后期模板禁用",
+    "历史卡描述与可恢复原提交精确核对，固定哈希及完整相等断言保留"
+  ],
+  "knownRuleQuestions": [
+    {
+      "resourceId": "zheng-shiqi",
+      "parameter": "learningPrice",
+      "basis": "resources/zheng-shiqi.md:3：独立技艺，暂定C级25XP。",
+      "impact": "25XP不能默认为已经确认的付费取得价；不影响已取得者使用。",
+      "recommendation": "沿用C级25XP作为推荐候选价，实际学习报价保留明确采用来源。"
+    },
+    {
+      "resourceId": "kuanglan",
+      "parameter": "learningPrice",
+      "basis": "resources/kuanglan.md:3：独立技艺，暂定C级25XP。",
+      "impact": "25XP不能默认为已经确认的付费取得价；不影响已取得者的本击效果。",
+      "recommendation": "沿用C级25XP作为推荐候选价，实际学习报价保留明确采用来源。"
+    },
+    {
+      "resourceId": "kuanglan",
+      "parameter": "defenseReductionInteractions",
+      "basis": "resources/kuanglan.md:10：单体减8的类型未另指定；混合来源减防、免疫及同类叠加交互待定。",
+      "impact": "涉及特定减防免疫或同类叠加时不能把整体减值推为无视防御。",
+      "recommendation": "单体整体减防8、群袭整体减防3各只对本击扣一次；不拆份额、不另赠免疫穿透，特殊免疫交互另行确认。"
+    },
+    {
+      "resourceId": "chengxin-xuanjian",
+      "parameter": "learningPrice",
+      "basis": "resources/chengxin-xuanjian-notes.md:7,45：候选实投6D，原树下模板5D，完整取得价格未定。",
+      "impact": "完整付费学习报价不能自动生成；已持有者的明确效果仍可执行。",
+      "recommendation": "保留当前效果和6D核算，不擅加动作代价或补正费；单独确定完整价格后再登记采用报价。"
+    },
+    {
+      "resourceId": "guanlan-fa",
+      "parameter": "bodyLearningPrice",
+      "basis": "resources/guanlan-fa-notes.md:5,29：26XP仅为候选整体取得价，且须通过剧情形成。",
+      "impact": "不自动开放本体付费取得；不影响已确认持有者的减费与悟法XP。",
+      "recommendation": "采用26XP作为候选报价，实际取得须有已采用的报价和剧情来源；不得重收或重置旧收益。"
+    }
+  ],
+  "missingSavedFacts": [
+    {
+      "basis": "outputs/同伴RE资源调整/姜子尤.md:49",
+      "fact": "新格拳精熟的实际完整掌握技艺清单",
+      "policy": "未给出时不启用精熟，不改为编程缺参"
+    },
+    {
+      "basis": "outputs/同伴RE资源调整/姜子尤.md:73",
+      "fact": "天然完美初次取得前的力量基本值及原分支",
+      "policy": "不重发旧收益，不从后期模板推定"
+    },
+    {
+      "basis": "authoring/executable-resources.md 人物卡与T0",
+      "fact": "实际取得、持有、能量余额、库存、现场目标及条件",
+      "policy": "只在相关动作需要时读取存档/实际输入，模板不补齐"
+    }
+  ],
+  "implementationWorkStillRequired": [
+    "157项合法法术基础程序",
+    "现有51项程序的剩余变体、特殊关键词、物件、投射物、反射与持续区域",
+    "同伴主动武技、灵力代付、乱红莲、导力器/导力魔法、箭术资格和内力/气恢复",
+    "通用战中拔取/穿戴、成熟比较配置的其余属性与所有状态/周期路径"
+  ],
+  "legalSpellsWithoutBaseProgram": [
+    {
+      "id": "imperial-magic:C:万叶冥响",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "万叶冥响"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:书页锁身",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "书页锁身"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:云散",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "云散"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:伤痛抑制",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "伤痛抑制"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:使魔使役",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "使魔使役"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:倍速反弹",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "倍速反弹"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:元素武器",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "元素武器"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:元素诅咒",
+      "reading": {
+        "path": "resources/imperial-magic/06-预言与诅咒.md",
+        "sha256": "9605c98875816313e985071ed8520755ae1ebcb4285b088f0b9c66c79a28dc3a",
+        "heading": "元素诅咒"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:冰墙术",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "冰墙术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:冰锥术",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "冰锥术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:冰雾神域",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "冰雾神域"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:刺目光箭",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "刺目光箭"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:加速术",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "加速术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:双方休战",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "双方休战"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:启蒙术",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "启蒙术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:呼神护卫",
+      "reading": {
+        "path": "resources/imperial-magic/05-精神与幻术.md",
+        "sha256": "2e78ec6f3234a34d82cb62296e232f59e5b6f0db2c16bc235a9d544e38c6dcf4",
+        "heading": "呼神护卫"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:和平之歌",
+      "reading": {
+        "path": "resources/imperial-magic/05-精神与幻术.md",
+        "sha256": "2e78ec6f3234a34d82cb62296e232f59e5b6f0db2c16bc235a9d544e38c6dcf4",
+        "heading": "和平之歌"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:咒法回响",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "咒法回响"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:圣言",
+      "reading": {
+        "path": "resources/imperial-magic/05-精神与幻术.md",
+        "sha256": "2e78ec6f3234a34d82cb62296e232f59e5b6f0db2c16bc235a9d544e38c6dcf4",
+        "heading": "圣言"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:塑石术",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "塑石术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:多重观察",
+      "reading": {
+        "path": "resources/imperial-magic/06-预言与诅咒.md",
+        "sha256": "9605c98875816313e985071ed8520755ae1ebcb4285b088f0b9c66c79a28dc3a",
+        "heading": "多重观察"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:天堂之盾",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "天堂之盾"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:失效",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "失效"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:奥术冲击",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "奥术冲击"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:寒冰护体",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "寒冰护体"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:山怒涛",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "山怒涛"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:幻影面纱",
+      "reading": {
+        "path": "resources/imperial-magic/05-精神与幻术.md",
+        "sha256": "2e78ec6f3234a34d82cb62296e232f59e5b6f0db2c16bc235a9d544e38c6dcf4",
+        "heading": "幻影面纱"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:废酸溶解",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "废酸溶解"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:心灵视界",
+      "reading": {
+        "path": "resources/imperial-magic/05-精神与幻术.md",
+        "sha256": "2e78ec6f3234a34d82cb62296e232f59e5b6f0db2c16bc235a9d544e38c6dcf4",
+        "heading": "心灵视界"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:恐惧之眼",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "恐惧之眼"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:惊惧斩",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "惊惧斩"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:战术传送",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "战术传送"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:抑制鼓动",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "抑制鼓动"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:护壁粉碎",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "护壁粉碎"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:报偿",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "报偿"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:抵抗能量伤害",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "抵抗能量伤害"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:拉瑞心灵联结",
+      "reading": {
+        "path": "resources/imperial-magic/06-预言与诅咒.md",
+        "sha256": "9605c98875816313e985071ed8520755ae1ebcb4285b088f0b9c66c79a28dc3a",
+        "heading": "拉瑞心灵联结"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:振奋",
+      "reading": {
+        "path": "resources/imperial-magic/05-精神与幻术.md",
+        "sha256": "2e78ec6f3234a34d82cb62296e232f59e5b6f0db2c16bc235a9d544e38c6dcf4",
+        "heading": "振奋"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:摄魂取念",
+      "reading": {
+        "path": "resources/imperial-magic/05-精神与幻术.md",
+        "sha256": "2e78ec6f3234a34d82cb62296e232f59e5b6f0db2c16bc235a9d544e38c6dcf4",
+        "heading": "摄魂取念"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:操控天气",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "操控天气"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:放逐斩",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "放逐斩"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:放逐术",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "放逐术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:时间魔术",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "时间魔术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:昼明术",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "昼明术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:暗夜之型",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "暗夜之型"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:梓弓",
+      "reading": {
+        "path": "resources/imperial-magic/05-精神与幻术.md",
+        "sha256": "2e78ec6f3234a34d82cb62296e232f59e5b6f0db2c16bc235a9d544e38c6dcf4",
+        "heading": "梓弓"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:次元锚",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "次元锚"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:死黑天使",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "死黑天使"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:殉难",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "殉难"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:法术增效",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "法术增效"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:法术抑制",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "法术抑制"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:海市蜃楼",
+      "reading": {
+        "path": "resources/imperial-magic/05-精神与幻术.md",
+        "sha256": "2e78ec6f3234a34d82cb62296e232f59e5b6f0db2c16bc235a9d544e38c6dcf4",
+        "heading": "海市蜃楼"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:炽炎神域",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "炽炎神域"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:炽焰法球",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "炽焰法球"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:烈火断层",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "烈火断层"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:熔岩护甲",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "熔岩护甲"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:狂战士之魂",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "狂战士之魂"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:痛苦无常",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "痛苦无常"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:翔空星道",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "翔空星道"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:腐蚀之种",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "腐蚀之种"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:触手召唤术",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "触手召唤术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:语言诅咒",
+      "reading": {
+        "path": "resources/imperial-magic/06-预言与诅咒.md",
+        "sha256": "9605c98875816313e985071ed8520755ae1ebcb4285b088f0b9c66c79a28dc3a",
+        "heading": "语言诅咒"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:过去视",
+      "reading": {
+        "path": "resources/imperial-magic/06-预言与诅咒.md",
+        "sha256": "9605c98875816313e985071ed8520755ae1ebcb4285b088f0b9c66c79a28dc3a",
+        "heading": "过去视"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:造餐术",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "造餐术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:遥视术",
+      "reading": {
+        "path": "resources/imperial-magic/06-预言与诅咒.md",
+        "sha256": "9605c98875816313e985071ed8520755ae1ebcb4285b088f0b9c66c79a28dc3a",
+        "heading": "遥视术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:镜枪水箭",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "镜枪水箭"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:防护",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "防护"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:防死结界",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "防死结界"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:隆重据斥",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "隆重据斥"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:雷云",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "雷云"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:预置幻影",
+      "reading": {
+        "path": "resources/imperial-magic/05-精神与幻术.md",
+        "sha256": "2e78ec6f3234a34d82cb62296e232f59e5b6f0db2c16bc235a9d544e38c6dcf4",
+        "heading": "预置幻影"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:预言术",
+      "reading": {
+        "path": "resources/imperial-magic/06-预言与诅咒.md",
+        "sha256": "9605c98875816313e985071ed8520755ae1ebcb4285b088f0b9c66c79a28dc3a",
+        "heading": "预言术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:飞行术",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "飞行术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:魔弹射手",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "魔弹射手"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:鹰眼术",
+      "reading": {
+        "path": "resources/imperial-magic/06-预言与诅咒.md",
+        "sha256": "9605c98875816313e985071ed8520755ae1ebcb4285b088f0b9c66c79a28dc3a",
+        "heading": "鹰眼术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:黑暗术",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "黑暗术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:龙息术",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "龙息术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:C:龙翔术",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "龙翔术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:传送术",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "传送术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:侦测思想",
+      "reading": {
+        "path": "resources/imperial-magic/06-预言与诅咒.md",
+        "sha256": "9605c98875816313e985071ed8520755ae1ebcb4285b088f0b9c66c79a28dc3a",
+        "heading": "侦测思想"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:侦测敌意",
+      "reading": {
+        "path": "resources/imperial-magic/05-精神与幻术.md",
+        "sha256": "2e78ec6f3234a34d82cb62296e232f59e5b6f0db2c16bc235a9d544e38c6dcf4",
+        "heading": "侦测敌意"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:动物信使",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "动物信使"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:印记斩",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "印记斩"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:压制栓链",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "压制栓链"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:反噬漩涡",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "反噬漩涡"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:召雷",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "召雷"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:听风",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "听风"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:吸取生命",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "吸取生命"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:吸取魔力",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "吸取魔力"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:唤醒灵性",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "唤醒灵性"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:嗅识",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "嗅识"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:圣域术",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "圣域术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:天使之赐福",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "天使之赐福"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:天使之障壁",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "天使之障壁"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:奥术光辉",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "奥术光辉"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:安定心神",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "安定心神"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:导向射击",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "导向射击"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:幻身咒",
+      "reading": {
+        "path": "resources/imperial-magic/05-精神与幻术.md",
+        "sha256": "2e78ec6f3234a34d82cb62296e232f59e5b6f0db2c16bc235a9d544e38c6dcf4",
+        "heading": "幻身咒"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:幻雾术",
+      "reading": {
+        "path": "resources/imperial-magic/05-精神与幻术.md",
+        "sha256": "2e78ec6f3234a34d82cb62296e232f59e5b6f0db2c16bc235a9d544e38c6dcf4",
+        "heading": "幻雾术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:强化术",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "强化术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:护盾",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "护盾"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:收纳术",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "收纳术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:改变体积",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "改变体积"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:斩铁",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "斩铁"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:暗示术",
+      "reading": {
+        "path": "resources/imperial-magic/05-精神与幻术.md",
+        "sha256": "2e78ec6f3234a34d82cb62296e232f59e5b6f0db2c16bc235a9d544e38c6dcf4",
+        "heading": "暗示术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:杰斯的幻象",
+      "reading": {
+        "path": "resources/imperial-magic/05-精神与幻术.md",
+        "sha256": "2e78ec6f3234a34d82cb62296e232f59e5b6f0db2c16bc235a9d544e38c6dcf4",
+        "heading": "杰斯的幻象"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:杰斯的觅灵影",
+      "reading": {
+        "path": "resources/imperial-magic/05-精神与幻术.md",
+        "sha256": "2e78ec6f3234a34d82cb62296e232f59e5b6f0db2c16bc235a9d544e38c6dcf4",
+        "heading": "杰斯的觅灵影"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:武具生成",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "武具生成"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:武器变形",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "武器变形"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:法力护盾",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "法力护盾"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:法师护甲",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "法师护甲"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:流电弧",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "流电弧"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:混沌晶壁",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "混沌晶壁"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:火焰围圈",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "火焰围圈"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:火狩",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "火狩"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:炼制祝圣水（天使之泪）",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "炼制祝圣水（天使之泪）"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:焚化",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "焚化"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:狮之冲锋",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "狮之冲锋"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:猎人印记",
+      "reading": {
+        "path": "resources/imperial-magic/06-预言与诅咒.md",
+        "sha256": "9605c98875816313e985071ed8520755ae1ebcb4285b088f0b9c66c79a28dc3a",
+        "heading": "猎人印记"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:生命分流",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "生命分流"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:痛苦诅咒",
+      "reading": {
+        "path": "resources/imperial-magic/06-预言与诅咒.md",
+        "sha256": "9605c98875816313e985071ed8520755ae1ebcb4285b088f0b9c66c79a28dc3a",
+        "heading": "痛苦诅咒"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:短讯术",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "短讯术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:祝福术",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "祝福术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:祝福术（英雄无敌4生命系）",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "祝福术（英雄无敌4生命系）"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:神炎祝圣",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "神炎祝圣"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:篡取之手",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "篡取之手"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:胡因之眼",
+      "reading": {
+        "path": "resources/imperial-magic/06-预言与诅咒.md",
+        "sha256": "9605c98875816313e985071ed8520755ae1ebcb4285b088f0b9c66c79a28dc3a",
+        "heading": "胡因之眼"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:脆弱诅咒",
+      "reading": {
+        "path": "resources/imperial-magic/06-预言与诅咒.md",
+        "sha256": "9605c98875816313e985071ed8520755ae1ebcb4285b088f0b9c66c79a28dc3a",
+        "heading": "脆弱诅咒"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:英灵附体",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "英灵附体"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:虚假幻象",
+      "reading": {
+        "path": "resources/imperial-magic/05-精神与幻术.md",
+        "sha256": "2e78ec6f3234a34d82cb62296e232f59e5b6f0db2c16bc235a9d544e38c6dcf4",
+        "heading": "虚假幻象"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:解析弱点",
+      "reading": {
+        "path": "resources/imperial-magic/06-预言与诅咒.md",
+        "sha256": "9605c98875816313e985071ed8520755ae1ebcb4285b088f0b9c66c79a28dc3a",
+        "heading": "解析弱点"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:警报术",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "警报术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:迅枪驱动",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "迅枪驱动"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:透光奇点",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "透光奇点"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:遗体防腐",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "遗体防腐"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:邪甲术",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "邪甲术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:锋锐之手",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "锋锐之手"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:镜像",
+      "reading": {
+        "path": "resources/imperial-magic/05-精神与幻术.md",
+        "sha256": "2e78ec6f3234a34d82cb62296e232f59e5b6f0db2c16bc235a9d544e38c6dcf4",
+        "heading": "镜像"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:闪现",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "闪现"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:防护能量结界",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "防护能量结界"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:防护邪恶/善良",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "防护邪恶/善良"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:阿撒托斯的恐怖诅咒",
+      "reading": {
+        "path": "resources/imperial-magic/06-预言与诅咒.md",
+        "sha256": "9605c98875816313e985071ed8520755ae1ebcb4285b088f0b9c66c79a28dc3a",
+        "heading": "阿撒托斯的恐怖诅咒"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:除你武器",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "除你武器"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:陨石术",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "陨石术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:隐形术",
+      "reading": {
+        "path": "resources/imperial-magic/05-精神与幻术.md",
+        "sha256": "2e78ec6f3234a34d82cb62296e232f59e5b6f0db2c16bc235a9d544e38c6dcf4",
+        "heading": "隐形术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:零动量之壁",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "零动量之壁"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:雷鸣斩",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "雷鸣斩"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:风花·武装解除",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "风花·武装解除"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:飞檐走壁",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "飞檐走壁"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:驱逐麻瓜",
+      "reading": {
+        "path": "resources/imperial-magic/04-结界与召唤.md",
+        "sha256": "dc2c01ebd19c5cea1610fe4cfc2433805eaf289a2ad461fbc0cfa4df59167b80",
+        "heading": "驱逐麻瓜"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:驱魔",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "驱魔"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:高频刃",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "高频刃"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:魅惑人类",
+      "reading": {
+        "path": "resources/imperial-magic/05-精神与幻术.md",
+        "sha256": "2e78ec6f3234a34d82cb62296e232f59e5b6f0db2c16bc235a9d544e38c6dcf4",
+        "heading": "魅惑人类"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:魔息术",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "魔息术"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:魔法刺青",
+      "reading": {
+        "path": "resources/imperial-magic/02-咒法与附魔.md",
+        "sha256": "983f6224aea67dcd4e9b29c450a3516367bc89c71b0e249b767383143d93e216",
+        "heading": "魔法刺青"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:魔法射手",
+      "reading": {
+        "path": "resources/imperial-magic/01-塑能.md",
+        "sha256": "59608609417e520c2328fd4593a42d9da86064c47b1e226911f670bb0dd636eb",
+        "heading": "魔法射手"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    },
+    {
+      "id": "imperial-magic:D:魔眼工程",
+      "reading": {
+        "path": "resources/imperial-magic/03-变化与创造.md",
+        "sha256": "8d0986298b0d6cecdf1275819ea60ab47d2f8c29d4e24c47f117f1dee6d7b192",
+        "heading": "魔眼工程"
+      },
+      "implementationGaps": [
+        "结构化逐条效果与运行接口尚须完成；属于实现工作，不是待裁定"
+      ]
+    }
+  ],
+  "limits": [
+    "本地测试通过不证明所有合同完整可执行",
+    "生成的六书与浏览器补丁是开发候选，未安装到实际运行环境",
+    "本轮未进行浏览器或外部模型端到端验证",
+    "未读取work/replay_research/special_dream_01_gm_draft.md"
+  ]
+}

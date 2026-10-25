@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {createCharacter,upgradeAttribute,upgradeSkill,upgradeFeat} from '../core.mjs';
 import {reduceRuleAction,ruleRequestValid} from './rule-actions.mjs';
 import {growthPrice} from '../growth-pricing.mjs';
+import {applyKitAcquisition} from '../kit-state.mjs';
 import {createReplayCheckRuntime} from './replay-check.mjs';
 import {createOpeningFixture} from './opening.mjs';
 import {ruleActionInstructions} from './rule-reference.mjs';
@@ -48,9 +49,18 @@ test('Guanlan D technique categories share exactly one discount, floor one, free
 });
 test('Guanlan acquisition, evolution, higher grade, other tree and other resources never discount',()=>{
  for(const extra of [{kind:'acquisition',resourceId:'guanlan'},{kind:'evolution'},{grade:'C'},{tree:'other'},{kind:'other'}]){
-  const r=root();r.ruleScene.learningOffers.art=offer(extra);assert.equal(learn(r).result.cost,8);
+  const r=root();if(extra.resourceId==='guanlan')delete r.actors.player.state.guanlan;
+  r.ruleScene.learningOffers.art=offer(extra);assert.equal(learn(r).result.cost,8);
  }
  const s=state();assert.equal(growthPrice(s,3,{kind:'skill',skill:'社交',sub:'白刃'}).cost,3);
+});
+test('a registered external resource cannot be relabelled as Guanlan for discount or Wufa payment',()=>{
+ for(const resourceId of ['imperial-magic:D:魔法飞弹','huang.iai','imperial-mage']){
+  const r=root();r.ruleScene.learningOffers.art=offer({resourceId,baseCost:resourceId==='imperial-mage'?15:10,payments:{insight:{xp:0,wufaXP:resourceId==='imperial-mage'?14:9}}});
+  const before=structuredClone(r);
+  assert.equal(growthPrice(r.actors.player.state,r.ruleScene.learningOffers.art.baseCost,r.ruleScene.learningOffers.art).discount,0);
+  assert.throws(()=>learn(r,{paymentId:'insight'}),/所属树|归类/);assert.deepEqual(r,before);
+ }
 });
 test('Guanlan ownership is actor-specific and absent on initial character; no global discount',()=>{
  const r=root(),before=structuredClone(r.actors.other);r.ruleScene.learningOffers.art=offer();
@@ -116,6 +126,13 @@ test('Acquiring Guanlan charges full body price and enables only subsequent elig
  const r=root();delete r.actors.player.state.guanlan;r.ruleScene.learningOffers.art=offer({resourceId:'guanlan',kind:'acquisition',grantsGuanlan:true});
  const out=learn(r);assert.equal(out.result.cost,8);assert.equal(out.actors.player.state.guanlan.wufaXP,0);
  assert.equal(upgradeAttribute(out.actors.player.state,'力量').result.cost,5);
+});
+test('canonical Guanlan body cannot be purchased twice or downgrade a saved caster',()=>{
+ const r=root();r.actors.player.state.guanlan.caster={grade:'C',level:2,power:6};
+ r.ruleScene.learningOffers.art=offer({resourceId:'guanlan-fa',kind:'acquisition',tree:null,baseCost:26});
+ const before=structuredClone(r);assert.throws(()=>learn(r),/已经取得观澜/);assert.deepEqual(r,before);
+ const s=structuredClone(r.actors.player.state);applyKitAcquisition(s,'guanlan-fa',{source});
+ assert.deepEqual(s.guanlan.caster,{grade:'C',level:2,power:6});
 });
 test('Runtime/MVU persists full Wufa payment and duplicate operation after reload; explicit Wufa required',async()=>{
  const baseline=createOpeningFixture().baseline,anchor={chatId:'guanlan-test',messageId:0,swipeId:0};let data={stat_data:{}};

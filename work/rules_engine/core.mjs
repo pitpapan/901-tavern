@@ -223,14 +223,24 @@ export function geneticWillAuto(state,{willEligible=false,willSpent=false}={}) {
 }
 function syncGeneticCapacity(s){
   const wanted=s.geneticLock.active?.[2]?.attribute==='力量'?10:0,old=s.geneticLock.hpBonus??0,delta=wanted-old;
-  if(delta<0){
-    const wounds={B:s.health.B,L:s.health.L,A:s.health.A};
-    s.derived.hpMax=Math.max(1,s.derived.hpMax+delta);
-    s.health={...s.health,intact:s.derived.hpMax,B:0,L:0,A:0};
-    s.health=applyWounds(s,wounds).state.health;
-    if(['unconscious','dead'].includes(lifeStatus(s).state))s.health.coma=true;
-  }else{s.health.intact+=delta;s.derived.hpMax+=delta;}
+  Object.assign(s,resizeHealthCapacity(s,Math.max(1,s.derived.hpMax+delta)));
   s.geneticLock.hpBonus=wanted;delete s.geneticLock.pendingHpShrink;
+}
+// PHB slot overflow, shared by temporary attributes and genetic capacity.
+// Added slots are intact; removing them reapplies existing wounds in B/L/A
+// order and converts overflow. No XP, pool balance or inventory is reset.
+export function resizeHealthCapacity(state,capacity){
+ integer(capacity,'health.capacity',1);
+ const next=clone(state),delta=capacity-next.derived.hpMax;
+ next.derived.hpMax=capacity;
+ if(delta>=0)next.health.intact+=delta;
+ else {
+  const wounds={B:next.health.B,L:next.health.L,A:next.health.A};
+  next.health={...next.health,intact:capacity,B:0,L:0,A:0};
+  next.health=applyWounds(next,wounds).state.health;
+  if(['unconscious','dead'].includes(lifeStatus(next).state))next.health.coma=true;
+ }
+ return next;
 }
 function geneticPain(s,points){
   if(!points)return;

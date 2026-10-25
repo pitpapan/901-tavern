@@ -1,13 +1,14 @@
+import {settleGuanlanAdventure} from '../kit-state.mjs';
 import {purchaseLearning} from '../growth-pricing.mjs';
 import {act,damageEvent} from '../combat/engine.mjs';
 import {createOpeningEncounter} from '../combat/opening.mjs';
 import {ATTRIBUTES,check,oppose,upgradeAttribute,upgradeSkill,firstAid,applyStatus,
   spendAction,actionEligibility,checkBeforeAction,advanceDeterioration,settleNode,recover,beginTurn,upgradeFeat} from '../core.mjs';
-import {saveProfile} from '../combat/mechanics.mjs';
+import {saveProfile,refreshDerived} from '../combat/mechanics.mjs';
 import {requireKnownSkill} from '../../character_builder/builder.mjs';
 import {advanceTime} from '../recovery.mjs';
 import {ringTransfer} from '../possessions.mjs';
-import {actorCheckRules} from './actor-rules.mjs';
+import {actorCheckRules,CHECK_PURPOSES} from './actor-rules.mjs';
 import {runSceneMechanism,advanceSceneTime} from './scene-rules.mjs';
 import {statusEvent,statusActionPermission,burningDamage,limbEffects,completeStatusOrder} from '../status-rules.mjs';
 import {settleInterruptedTeleports,settleEngageReturns,assertEmbodied} from './conditional-resources.mjs';
@@ -45,7 +46,7 @@ export function ruleRequestValid(r) {
   if(r.sourceQuote!==undefined&&!text(r.sourceQuote))return false;
   if(r.limbIds!==undefined&&(!Array.isArray(r.limbIds)||!r.limbIds.length||!r.limbIds.every(text)))return false;
   if(r.targetId!==undefined&&!text(r.targetId))return false;
-  if(r.purpose!==undefined&&!['listen','visual','orientation','pursuit'].includes(r.purpose))return false;
+  if(r.purpose!==undefined&&!CHECK_PURPOSES.includes(r.purpose))return false;
   if(r.action==='opposed')return selector(r.active)&&selector(r.passive)&&r.active.actorId!==r.passive.actorId;
   if(!text(r.actorId))return false;
   switch(r.action) {
@@ -134,7 +135,8 @@ export function reduceRuleAction(input,request,{drawDice,actorTemplates={},event
         result=runSceneMechanism(next,r,{drawDice:dice,actorTemplates});
         if(result.elapsedMinutes){const changes=[];for(const [id,record]of Object.entries(next.actors)){
           const full={...structuredClone(actorTemplates[id]??{}),...structuredClone(record.combatCarry??{}),state:record.state};advanceTime(full,result.elapsedMinutes,changes,{drawDice:dice});
-          if(record.combatCarry)for(const key of ['durationCarry','cooldownCarry','buffs','cooldowns'])if(full[key])record.combatCarry[key]=full[key];
+          record.state=full.state;
+          if(record.combatCarry)for(const key of ['durationCarry','cooldownCarry','buffs','cooldowns','recoveryLocks'])if(full[key])record.combatCarry[key]=full[key];
         }result.timeChanges=changes;result.sceneChanges=advanceSceneTime(next.ruleScene,result.elapsedMinutes);}
         break;
       }
@@ -145,7 +147,8 @@ export function reduceRuleAction(input,request,{drawDice,actorTemplates={},event
       case 'time': {
         const changes=[];for(const [id,record]of Object.entries(next.actors)) {
           const full={...structuredClone(actorTemplates[id]??{}),...structuredClone(record.combatCarry??{}),state:record.state};advanceTime(full,r.minutes,changes,{drawDice:dice});
-          if(record.combatCarry)for(const key of ['durationCarry','cooldownCarry','buffs','cooldowns'])if(full[key])record.combatCarry[key]=full[key];
+          record.state=full.state;
+          if(record.combatCarry)for(const key of ['durationCarry','cooldownCarry','buffs','cooldowns','recoveryLocks'])if(full[key])record.combatCarry[key]=full[key];
         }
         result={minutes:r.minutes,changes,sceneChanges:advanceSceneTime(next.ruleScene,r.minutes)};break;
       }
@@ -173,7 +176,8 @@ export function reduceRuleAction(input,request,{drawDice,actorTemplates={},event
         progress.complete=progress.accumulated>=r.target;s.extendedChecks[r.taskId]=progress;
         const changes=[];
         for(const [id,record]of Object.entries(next.actors)){const full={...structuredClone(actorTemplates[id]??{}),...structuredClone(record.combatCarry??{}),state:record.state};advanceTime(full,r.periodMinutes,changes,{drawDice:dice});
-          if(record.combatCarry)for(const key of ['durationCarry','cooldownCarry','buffs','cooldowns'])if(full[key])record.combatCarry[key]=full[key];}
+          record.state=full.state;
+          if(record.combatCarry)for(const key of ['durationCarry','cooldownCarry','buffs','cooldowns','recoveryLocks'])if(full[key])record.combatCarry[key]=full[key];}
         advanceSceneTime(next.ruleScene,r.periodMinutes);
         result={...progress,roll,elapsedMinutes:r.periodMinutes,timeChanges:changes,success:progress.complete,expired:!progress.complete&&progress.periods>=r.maxPeriods};break;
       }
@@ -189,7 +193,7 @@ export function reduceRuleAction(input,request,{drawDice,actorTemplates={},event
       case 'resource': {
         requireGrowthWindow(next,r);
         const out=purchaseLearning(s,next.ruleScene?.learningOffers?.[r.offerId],r);
-        a.state=out.state;result={...out.result,xpBefore:s.xp,xpAfter:out.state.xp,nodeId:next.ruleScene.growthWindow.id};break;
+        a.state=out.state;if(actorTemplates[r.actorId])refreshDerived({...structuredClone(actorTemplates[r.actorId]),...a.combatCarry,state:a.state});result={...out.result,xpBefore:s.xp,xpAfter:out.state.xp,nodeId:next.ruleScene.growthWindow.id};break;
       }
       case 'first_aid': {
         if(r.actorId===r.targetId)throw Error('PHB急救须由另一人进行');
@@ -225,6 +229,7 @@ export function reduceRuleAction(input,request,{drawDice,actorTemplates={},event
         if(r.action==='node'&&e.growthAllowed!==undefined){
           next.ruleScene??={};next.ruleScene.growthWindow={id:r.eventId,source:e.source,open:e.growthAllowed,actorIds:e.actorIds,...(e.allowedChoices?{allowedChoices:structuredClone(e.allowedChoices)}:{})};
         }
+        if(e.completeAdventure===true)out.result.guanlan=settleGuanlanAdventure(out.state,r.eventId);
         (out.state.ruleEvents??=[]).push(r.eventId);
         a.state=out.state;result=out.result;break;
       }

@@ -1,5 +1,5 @@
 import {resourceBonus,RESOURCE_DEFINITIONS} from '../resource-definitions.mjs';
-import { effectiveAttribute, effectiveSkill,baseHealthCapacity,attrAuto } from '../core.mjs';
+import { effectiveAttribute, effectiveSkill,baseHealthCapacity,attrAuto,resizeHealthCapacity } from '../core.mjs';
 import {wizardWeapon} from '../wizard-rules.mjs';
 
 export class RuleInputError extends Error {
@@ -13,16 +13,16 @@ export const automatic=(a,key)=>attrAuto(a.state,key);
 export const skill=(a,main,sub)=>effectiveSkill(a.state,main,sub);
 // Fixed values here are resource bonuses, not copies of attributes or skills.
 export const PROFILES={
-  jiang:{hp:4,speed:22,initiative:4,will:10,main:'肉搏',sub:'拳击',natural:3,
+  jiang:{hp:4,speed:22,initiative:4,will:10,steelWill:6,main:'肉搏',sub:'拳击',natural:3,
     equipment:{weapon:{damage:7,attackBonus:0,blockBonus:0,ap:3,magic:0},armor:{defense:4}}},
   huang:{hp:2,speed:0,initiative:12,will:0,main:'白刃',sub:'太刀',natural:0,
     equipment:{weapon:{damage:8,attackBonus:3,blockBonus:3,ap:8,magic:8,size:3,willBonus:4},armor:{defense:8}}},
   lotus:{hp:0,speed:0,initiative:0,will:0,main:'肉搏',sub:'爪',natural:6,
     equipment:{weapon:{damage:6,attackBonus:0,blockBonus:0,ap:4,magic:4},armor:{defense:0}}},
-  yulin:{hp:2,speed:10,initiative:0,will:0,main:'白刃',sub:'长剑',natural:0,
+  yulin:{hp:2,speed:10,initiative:0,will:0,steelWill:2,main:'白刃',sub:'长剑',natural:0,
     equipment:{weapon:{damage:16,attackBonus:24,blockBonus:24,ap:8,magic:8,size:3,speedBonus:3,defenseReduction:3,force:2,energyAbsorb:2},
       armor:{defense:7,basePenalty:1,speedPenalty:2,dr:2,drBypass:'神兵',energyAbsorb:1}}},
-  bright:{hp:1,speed:24,initiative:8,will:0,main:'射击',sub:'长弓',natural:0,
+  bright:{hp:1,speed:24,initiative:8,will:0,steelWill:6,main:'射击',sub:'长弓',natural:0,
     equipment:{weapon:{damage:8,attackBonus:3,blockBonus:3,ap:0,magic:8,strengthRequirement:4,rangePerStrength:50},
       armor:{defense:4,dr:1,energyResistance:1,defenseAuto:1,reflexExtra:1}}},
 };
@@ -30,9 +30,10 @@ export function profile(a) {
   let p=a.combatProfile??PROFILES[a.kind];
   if(!p) throw new RuleInputError(`未配置${a.name}的战斗资源`,`${a.id}.profile`);
   for(const [id,owned]of Object.entries(a.state.learnedResources??{}))if(owned.learned){
-    const replacement=RESOURCE_DEFINITIONS[id]?.legacyProfile;
+    for(const replacement of [RESOURCE_DEFINITIONS[id]?.legacyProfile,...(RESOURCE_DEFINITIONS[id]?.legacyProfiles??[])]){
     if(replacement?.ruleset===a.ruleset&&replacement.kind===a.kind){
       p={...p,...replacement.set};for(const [key,n]of Object.entries(replacement.add??{}))p[key]=(p[key]??0)+n;
+    }
     }
   }
   return p;
@@ -72,9 +73,7 @@ export function derived(a) {
 export function refreshDerived(a) {
   const d=derived(a), old=a.state.derived.hpMax;
   if(d.hpMax!==old) {
-    const intact=a.state.health.intact+d.hpMax-old;
-    if(intact<0) throw new RuleInputError('生命上限下降超过完好槽，须裁定既有伤势如何处理',`${a.id}.health`);
-    a.state.health.intact=intact;
+    Object.assign(a.state,resizeHealthCapacity(a.state,d.hpMax));
   }
   a.state.derived={...a.state.derived,...d};
   a.state.will.max=d.willMax;
@@ -115,7 +114,7 @@ export function saveProfile(a,type,{recognizable=false,speed=0,mental=false}={})
     // 御临风的旧卡反射9已包含被动身法2，基础运动不再重复贡献。
     if(a.kind==='yulin') dp-=skill(a,'运动').level;
   } else {
-    dp=value(a,'意志')+value(a,'风度')+(a.kind==='huang'?(equipment(a).weapon.willBonus??0):({jiang:6,yulin:2,bright:6,lotus:0}[a.kind]));
+    dp=value(a,'意志')+value(a,'风度')+(a.kind==='huang'?(equipment(a).weapon.willBonus??0):(profile(a).steelWill??0));
     fixed=automatic(a,'意志')+automatic(a,'风度');
   }
   return {dp:resourceBonus(a.state,'save',{type,mental})+dp-(type==='reflex'?speed:0),fixed,extra};

@@ -1,6 +1,7 @@
 // Current opening resources. These are conditional adjustments, not new skills.
+export const CHECK_PURPOSES=['orientation','listen','visual','pursuit','wind_sense','detection','treatment','alchemyIdentification','magicIdentification','jump'];
 export function actorCheckRules(actor,request) {
-  const s=actor.state,mods=[],context={};
+  const s=actor.state,mods=[],context={purpose:request.purpose};
   const buffs={...actor.buffs};
   for(const [key,e]of Object.entries(actor.durationCarry??{}))if(e.remainingRounds>0)buffs[key]=e.value;
   const add=(source,value)=>{if(value)mods.push({source,value});};

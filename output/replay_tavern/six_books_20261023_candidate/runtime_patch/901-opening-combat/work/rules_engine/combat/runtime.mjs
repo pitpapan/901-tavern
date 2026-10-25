@@ -7,6 +7,7 @@ import { beginTurn, freshTurn,lifeStatus,willEnhancement } from '../core.mjs';
 import { RuleInputError, IllegalAction, refreshDerived, blockValue } from './mechanics.mjs';
 import {grappleMembers} from './grapple.mjs';
 import { resolveStep } from './transitions.mjs';
+import {resourceCapability} from '../resource-lifecycle.mjs';
 
 export function visibleTo(b,a,observer) {
   return canObserve(b,a,observer.id);
@@ -234,7 +235,7 @@ export function createCombatRuntime({mvu,getAnchor,expectedChatId,drawDice}) {
           }
           for(const [id,a]of Object.entries(next.observers??{}))if(root.actors[id]?.state)a.state=structuredClone(root.actors[id].state);
           for(const a of Object.values(next.actors)) refreshDerived(a);
-          next.order.sort((x,y)=>panel(next,y).initiative-panel(next,x).initiative);
+          next.order.sort((x,y)=>panel(next,y).initiative-panel(next,x).initiative||Number(!!resourceCapability(next.actors[y].state,'initiativeTiePriority'))-Number(!!resourceCapability(next.actors[x].state,'initiativeTiePriority')));
           next.activeId=next.order.find(id=>panel(next,id).life==='可行动');
           if(!next.activeId) throw new Error('没有可行动的参战者');
           next.actors[next.activeId].state=beginTurn(next.actors[next.activeId].state).state;

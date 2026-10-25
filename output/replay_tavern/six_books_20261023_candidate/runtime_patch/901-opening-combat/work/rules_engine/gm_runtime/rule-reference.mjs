@@ -1,3 +1,4 @@
+import {RESOURCE_ACTION_INDEX} from '../resource-action-index.mjs';
 import {GUANLAN_RULE} from '../growth-pricing.mjs';
 import {OPENING_QUALIFICATIONS} from './actor-rules.mjs';
 import {CONDITIONAL_RULES} from './scene-rules.mjs';
@@ -10,6 +11,9 @@ export function ruleActionInstructions({actors=[],events=[],genetic=[],feats=[],
   const references=Object.fromEntries(Object.entries(CONDITIONAL_RULES).filter(([id])=>keys[id].test(topics)||Object.values(objects).some(o=>o.type===id)));
   return `[${CORE_RULE_REFERENCE.title}] ${CORE_RULE_REFERENCE.content}\n来源：${CORE_RULE_REFERENCE.source}\n`+
     `当前已保存人物目录（仍须核实现场）：${JSON.stringify(actors)}\n`+OPENING_QUALIFICATIONS+'\n'+
+    `资源动作目录（仅实际持有且已登记计划可用）：${JSON.stringify(RESOURCE_ACTION_INDEX.filter(x=>topics.includes(x.name)||actors.some(a=>a.learnedResources?.[x.resourceId]?.learned)))}\n`+
+    '目录中的implementationGaps是实现缺口，不是缺规则或待玩家裁定；不得把这些效果叙述为已结算，不得通过普通状态或自填数值绕过。unresolvedRules才是来源缺参数；仅请求该动作实际依赖的参数。只调用actions中已登记操作，partial不表示整项资源全部可用。'+
+    'kitResource对象使用mechanism路由，operation与part只选已登记计划。观澜initialAttributes/accumulate/insight/sense，澄心observe/selectObservation/invalidateObservation/setConversion，化劲clearJin/spendJin。初始属性和积累方向必须由玩家选定；悟法XP须独立一次付足，不得混付或分期。未学资源不能调用。'+
     '以下均用外层CHECK_REQUIRED与reason包装request。'+
     `当前可强化窗口：${JSON.stringify(growthWindow)}；未开放不得结算成长。`+
     '玩家明确花1意志增强时，普通检定也改用kind:rule的check/save或opposed，在对应人物选择器加willpower:true；下位传送确需携物检定或Wizard Defend单次施法时mechanism也可带willpower:true；未明确选择不得添加。延长、基因锁开启骰和机运骰不得使用。受击意志选择走战斗反应选项。'+

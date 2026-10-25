@@ -41,6 +41,9 @@ function matchesRecoveryDeclaration(request,text,state={}) {
   const clauses=text.split(/[。！!；;\n，,]|但是|不过|但/).filter(s=>s.trim()&&
     !/[？?]|能否|可否|是否|能不能/.test(s)&&!negated.test(s));
   const positive=clauses.join('；');
+  if(request.resource){const escaped=request.resource.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+    if(new RegExp(`(?:${escaped}).{0,8}(?:不|别|勿|暂缓|取消).{0,4}(?:恢复|回满|回补)|(?:不|别|勿|暂缓|取消).{0,8}(?:恢复|回满|回补).{0,4}${escaped}`).test(text))return false;
+  }
   const asNumber=value=>{
     if(/^\d+$/.test(value))return Number(value);
     const digits={零:0,一:1,二:2,两:2,三:3,四:4,五:5,六:6,七:7,八:8,九:9};

@@ -57,7 +57,7 @@ export const ABILITIES = {
 const skill = (level, subs = {}) => ({ level, subs: Object.fromEntries(Object.entries(subs).map(([k, v]) => [k, { level: v }])) });
 const pool = max => ({ current: max, max });
 const make = (id, name, values, hp, speed, initiative, skills, resources, rest) => ({
-  id, name, kind: id, team: id === 'jiang' ? '同伴' : '敌人', controller: 'model', present: true,
+  id, name, kind: id, ruleset:'comparison-20261020', team: id === 'jiang' ? '同伴' : '敌人', controller: 'model', present: true,
   position: id === 'jiang' ? [1, 0] : [0, 0], reach: 1.5,
   state: createCharacter({ name, attributes: Object.fromEntries(['力量','敏捷','智力','感知','意志','风度'].map((k,i) => [k,values[i]])),
     size: 5, derived: { hpMax: hp, speed, initiative, willMax: id === 'jiang' ? 16 : 8 },

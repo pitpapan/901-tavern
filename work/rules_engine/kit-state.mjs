@@ -18,7 +18,7 @@ export function applyKitAcquisition(s,id,{source,attributes,poolClassifications,
  if(id==='guanlan-fa'||id==='guanlan'){
   s.guanlan??={acquired:true,source,wufaXP:0};s.guanlan.acquired=true;s.guanlan.source??=source;
   s.guanlan.S??=0;s.guanlan.accumulation??={guanwei:0,hanyang:0,yingwu:0};
-  s.guanlan.caster={grade:'D',level:1,power:3};
+  s.guanlan.caster??={grade:'D',level:1,power:3};
   if(attributes)chooseGuanlanAttributes(s,attributes);
  }
  const def=RESOURCE_DEFINITIONS[id];

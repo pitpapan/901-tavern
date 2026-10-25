@@ -1,7 +1,7 @@
 import { buildCharacter, requireKnownSkill } from '../../character_builder/builder.mjs';
 import {reduceRuleAction,ruleRequestValid} from './rule-actions.mjs';
 import {createOpeningRoster} from '../combat/opening.mjs';
-import {actorCheckRules} from './actor-rules.mjs';
+import {actorCheckRules,CHECK_PURPOSES} from './actor-rules.mjs';
 import { effectiveAttribute, effectiveSkill, resolveGeneticUnlock, actionEligibility,checkModifiers } from '../core.mjs';
 import { reduceRecovery, OPENING_RECOVERY_RULES } from '../recovery.mjs';
 import { validRecoveryRequest, explicitRecoveryDeclaration, recoveryDeclarationOrderMatches } from './adjudication-gate.mjs';
@@ -22,7 +22,7 @@ const validCheck = request => record(request) && request.kind === 'check' &&
   Object.keys(request).every(k => ['kind', 'attribute', 'skill', 'sub', 'dc', 'purpose','preActionDC','limbIds'].includes(k)) &&
   (request.limbIds===undefined||Array.isArray(request.limbIds)&&request.limbIds.length>0&&request.limbIds.every(x=>typeof x==='string')) &&
   (request.preActionDC===undefined||Number.isSafeInteger(request.preActionDC)&&request.preActionDC>0) &&
-  (request.purpose === undefined || ['orientation','listen','visual'].includes(request.purpose)) &&
+  (request.purpose === undefined || CHECK_PURPOSES.includes(request.purpose)) &&
   ATTRIBUTES.has(request.attribute) && typeof request.skill === 'string' &&
   Number.isSafeInteger(request.dc) && request.dc >= 1;
 const matches = (effect, request) => effect.attribute === request.attribute &&
@@ -169,7 +169,7 @@ export function createReplayCheckRuntime({ baseline, mvu, getAnchor, expectedCha
       const scene=readTestSummary(opts).ruleScene;
       return {learningOffers:Object.values(scene.learningOffers??{}),growthWindow:scene.growthWindow??null,objects:scene.objects??{},actors:Object.entries(readTestSummary(opts).actors).map(([id,a])=>{
         const s=readTestActorState({...opts,actorId:id});
-        return {id,name:a.name,xp:s.xp,guanlan:s.guanlan,learnedResources:s.learnedResources,learningPurchases:s.learningPurchases,will:s.will,underworld:s.underworld,attributes:s.attributes,skills:s.skills,statuses:s.statuses,anatomy:s.anatomy,permanentConditions:s.permanentConditions,statusOrders:s.statusOrders,sleeping:s.sleeping,wizard:s.wizard,timedEffects:s.timedEffects,channeling:s.channeling,geneticLock:s.geneticLock,antiMagicRestraints:s.antiMagicRestraints,extendedChecks:s.extendedChecks??{},possessions:s.possessions,inventory:s.inventory};
+        return {id,name:a.name,xp:s.xp,guanlan:s.guanlan,learnedResources:s.learnedResources,learningPurchases:s.learningPurchases,resources:s.resources,casting:s.casting,learningGrants:s.learningGrants,equippedResources:s.equippedResources,activeResourceEffects:s.activeResourceEffects,resourceCapabilities:s.resourceCapabilities,resourceTriggers:s.resourceTriggers,resourceCooldowns:s.resourceCooldowns,will:s.will,underworld:s.underworld,attributes:s.attributes,skills:s.skills,statuses:s.statuses,anatomy:s.anatomy,permanentConditions:s.permanentConditions,statusOrders:s.statusOrders,sleeping:s.sleeping,wizard:s.wizard,timedEffects:s.timedEffects,channeling:s.channeling,geneticLock:s.geneticLock,antiMagicRestraints:s.antiMagicRestraints,extendedChecks:s.extendedChecks??{},possessions:s.possessions,inventory:s.inventory};
       }),events:Object.entries({...ruleEvents,...scene.events}).map(([id,e])=>({id,...e})),feats:Object.values({...ruleFeats,...scene.feats}),
       genetic:Object.entries({...geneticOpportunities,...readTestSummary(opts).ruleScene.geneticOpportunities}).map(([id,e])=>({id,stage:e.stage??1,condition:e.condition??e.source}))};
     },

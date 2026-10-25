@@ -4,6 +4,23 @@ This writes execution contracts, not generated runtime JS or reading text.
 from pathlib import Path
 import json,re
 ROOT=Path(__file__).resolve().parents[3];KIT=ROOT.parent/'901-resource-authoring-kit';DEST=KIT/'resources/execution'
+def parse_schools(text):
+ text=text.strip().rstrip('。')
+ # Explicit 神秘 names describe the skill used by a dual-profession spell;
+ # the following “or ... most fitting” selects ONE roll, not one qualification.
+ explicit=re.findall(r'神秘[·・]([^，。；、／\s＋+或]+)',text)
+ if explicit:subs=[re.split(r'取最贴切|双专业',s)[0] for s in explicit]
+ else:
+  head=re.split(r'[；，。]',text)[0]
+  if '／' in head:
+   left,right=head.split('／',1)
+   head=left if any(x in right for x in ['相应子技能','两子技能']) else right
+  head=re.split(r'双专业|两子技能',head)[0]
+  subs=re.split(r'[＋+]|或(?:者)?',head)
+ subs=list(dict.fromkeys(s.strip() for s in subs if s.strip()))
+ head=re.split(r'[；，。]',text)[0]
+ both=len(subs)>1 and ('＋' in head or '+' in head)
+ return subs,both,'学习时选定' in text
 P={'context':'P'};I={'context':'INT'};E={'context':'E'};CAST={'context':'cast'};SAVE={'context':'save'};DAMAGE={'context':'damage'};ACTUAL={'context':'actualDamage'}
 def expr(op,*args):return dict(op=op,args=list(args))
 def n(x):return expr('mul',x,P)
@@ -75,9 +92,37 @@ PROGRAMS['水之抚慰']['willing']=True
 PROGRAMS['水之抚慰']['steps'].append(dict(op='removeStatus',amount=P,allocate=True,exclude=['欲眠','恐惧','魅惑','沮丧','亢奋','精神束缚']))
 PROGRAMS['疗伤']['steps'].append(dict(op='removeStatus',amount=P,types=['流血']))
 
+# These selectors are authored rule variants, not classifier-provided formulas.
+PROGRAMS['恐惧术']['steps'][-1]['properties']['scene']=True
+PROGRAMS['恐惧嚎叫']=program([save('will'),status('恐惧',expr('min',minus(CAST,SAVE),n(3)),resistance='none',properties={'decayPerRound':1,'scene':True})],check=True,cooldown=1,target='area',area={'center':'self','radius':S,'team':'enemy'},precise=False,effectTypes=['mind'],effectGradeBonus=1)
+PROGRAMS['恐惧嚎叫']['check']['modifier']=P
+PROGRAMS['灾祸术']=program([save('will'),dict(op='effect',effects=[bonus('attack',n(-2),'luck'),bonus('save',n(-2),'luck')],scene=True,when={'test':'gte','left':CAST,'right':SAVE})],check=True)
+PROGRAMS['灾祸术']['check']['modifier']=P
+def hymn(skill):
+ return program([effect([bonus('check',expr('add',3,n(2)),'luck',isctx('skill',skill))])],target='self')
+PROGRAMS['透特之咏']=hymn('神秘')
+VARIANTS={'透特之咏':{'castLore':('学识',hymn('学识')),'castScience':('科学',hymn('科学'))}}
+def fireball():
+ return attack(n(2),'fire',after=[status('燃烧',expr('min',ACTUAL,n(2)),resistance='none',properties={'fireKind':'magic','tickBoundary':'turn','stacking':'add'})])
+PROGRAMS['惹事人烈焰']=program(fireball(),target='multiple',cooldown=2)
+PROGRAMS['茜卓的旋炎咒']=program(fireball(),cooldown=3)
+PROGRAMS['魔法飞弹'].update(target='multiple',repetition={'maximum':{'context':'casterLevel'},'extraCost':2})
+PROGRAMS['茜卓的旋炎咒'].update(target='multiple',repetition={'maximum':2,'extraCost':3,'extraCondition':isctx('handsFree',True)})
+PROGRAMS['魔能爆']=program(attack(frac(5,2),'force',energyWeapon=False),target='multiple',cooldown=1,repetition={'count':{'context':'rank'}})
+def searing(type):
+ return program(attack(frac(5,2),'fire')+[dict(op='save',type='will',when={'test':'gte','left':ACTUAL,'right':1}),dict(op='status',type=type,points=minus(ACTUAL,SAVE),resistance='none',when={'test':'gte','left':ACTUAL,'right':1})],cooldown=1)
+PROGRAMS['灼热之痛']=searing('剧痛')
+VARIANTS['灼热之痛']={'castHatred':('仇恨',searing('仇恨'))}
+PROGRAMS['燃尽']=program([save('fort'),damage(minus(n(2),SAVE),'fire')],action='move',cooldown=1)
+PROGRAMS['解析抗力']=program([dict(op='inspect',stat='spellResistance'),effect([bonus('spellResistance',n(-3),'resistanceAnalysis',{'test':'eq','left':{'context':'casterId'},'right':{'snapshot':'casterId'}})])],action='free',ignoreSpellResistance=True,effectTypes=['divination'],effectGradeBonus=1)
+PROFESSIONS=sorted({s for p in (KIT/'resources/imperial-magic').glob('*.md') for field in re.findall(r'\*\*(?:法系／子技能|学系／子技能)：\*\*(.+)',p.read_text(encoding='utf-8')) for s in parse_schools(field)[0]})
+PROGRAMS['法术抵御']=program([effect([bonus('spellResistance',frac(7,2),'spellResistance',{'test':'contains','left':{'context':'schools'},'right':{'snapshot':'specialization'}})])],cooldown=1,choices={'specialization':{'values':PROFESSIONS}})
+
 # Every remaining clause remains an implementation item, never a missing rule.
 EXTRA_GAPS={
- '魔法飞弹':['多枚、悬浮与穿透进化需专用声明和投射物事件'],
+ '魔能爆':['苦痛、长枪、位移、怠惰及吻的进化声明和关键词须继续接入'],
+ '燃尽':['可选消耗单个可移除燃烧来源的完整点数并加伤尚须接入'],
+ '魔法飞弹':['独立物体、反射拦截、悬浮与穿透进化须继续接入物体和投射物事件'],
  '阳炎炮':['贯穿链的逐目标预算'],
  '物理盾':['反射施放及激发后的单次吸收替换'],
  '识破隐形':['感官范围与地图定位联动'],
@@ -94,32 +139,35 @@ def main():
  count=0
  for path in DEST.glob('*.rule.json'):
   doc=json.loads(path.read_text(encoding='utf-8'));name=doc['identity']['name']
+  before=json.dumps(doc,ensure_ascii=False,sort_keys=True)
   if doc['identity']['category']!='spell':continue
   source=(KIT/doc['reading']['path']).read_text(encoding='utf-8')
   start=source.index('### '+name);body=source[start:];body=re.split(r'\n###? ',body,maxsplit=1)[0]
   field=re.search(r'\*\*(?:法系／子技能|学系／子技能)：\*\*(.+)',body)
-  subs=[]
+  subs=[];both=False;choice=False
   if field:
-   text=field.group(1).strip().rstrip('。');subs=re.findall(r'神秘[·・]([^，。；、／\s]+)',text)
-   if not subs and '／' in text:
-    left=text.split('／')[0];right=text.split('／')[-1].split('；')[0].strip()
-    subs=re.split('[＋+]',left if '两子技能' in right else right)
-   subs=[x.strip().rstrip('。') for x in subs]
+   subs,both,choice=parse_schools(field.group(1))
   doc['definition']['subskills']=subs
-  doc['definition']['requiresAllSchools']=len(subs)>1
+  doc['definition']['requiresAllSchools']=both
+  if choice:doc['definition']['schoolChoiceAtLearning']=True
   doc['definition']['schools']=subs
   if name in PROGRAMS:
-   doc['definition']['programs']={'cast':PROGRAMS[name]};doc['definition']['schools']=subs
+   doc['definition']['programs']={'cast':PROGRAMS[name],**{op:spec for op,(_,spec) in VARIANTS.get(name,{}).items()}};doc['definition']['schools']=subs
    # The section's explicit components override the common default. Focus is
    # a common casting constraint even where only posture/language are listed.
    components=re.search(r'\*\*(?:消耗／成分|成分)：\*\*(.+)',body)
    if components:
     text=components.group(1);doc['definition']['programs']['cast']['components']=[key for label,key in [('姿势','posture'),('语言','language')] if label in text]+['focus']
-   doc['actions']=[{'id':'cast','name':name,'operation':'cast','actionCost':PROGRAMS[name]['action'],'requiredChoice':'actual-targets','requestFields':['actorId','objectId','operation','part'],'allowsModelNumericEffects':False,'route':'mechanism','objectType':'kitResource'}]
+   for spec in doc['definition']['programs'].values():spec['components']=doc['definition']['programs']['cast']['components']
+   labels={'cast':name,**{op:name+'·'+label for op,(label,_) in VARIANTS.get(name,{}).items()}}
+   doc['actions']=[{'id':op,'name':labels[op],'operation':op,'actionCost':spec['action'],'requiredChoice':'actual-targets','requestFields':['actorId','objectId','operation','part'],'allowsModelNumericEffects':False,'route':'mechanism','objectType':'kitResource'} for op,spec in doc['definition']['programs'].items()]
    doc['inputs']=[{'id':k,'type':t,'provider':p,'requiredFor':'cast','missingPolicy':'require_input_for_dependent_action'} for k,t,p in [('ownership','object','saved-state'),('casting','object','saved-state'),('targetIds','array','player'),('components','object','host'),('pool','string','player')]]
+   for key,choice in PROGRAMS[name].get('choices',{}).items():doc['inputs'].append({'id':key,'type':'string','provider':'player','requiredFor':'cast','missingPolicy':'require_input_for_dependent_action','values':choice['values']})
+   if name=='茜卓的旋炎咒':doc['inputs'].append({'id':'handsFree','type':'boolean','provider':'host','requiredFor':'double-projectile','missingPolicy':'require_input_for_dependent_action'})
    doc['clauses'][0]['status']='partial';doc['verification']['status']='partial'
    doc['implementationGaps']=EXTRA_GAPS.get(name,[])+['需执行级完整验证，检查等级/特殊关键词/版本变体；不可仅凭程序存在标记完成']
    count+=1
-  path.write_text(json.dumps(doc,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+  if json.dumps(doc,ensure_ascii=False,sort_keys=True)!=before:doc['version']='2026-10-24.1'
+  path.write_text(json.dumps(doc,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\r\n' if b'\r\n' in path.read_bytes() else '\n')
  print(json.dumps({'authoredPrograms':count}))
 if __name__=='__main__':main()

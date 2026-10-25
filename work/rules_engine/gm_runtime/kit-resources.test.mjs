@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createOpeningRoster,createOpeningEncounter} from '../combat/opening.mjs';
+import {createRoster} from '../combat/catalog.mjs';
 import {effectiveAttribute,attrAuto,effectiveSkill} from '../core.mjs';
 import {applyKitAcquisition,chooseGuanlanAccumulation,guanlanInsight,settleGuanlanAdventure} from '../kit-state.mjs';
 import {attackProfile,resolveDefense,damageEvent} from '../combat/engine.mjs';
@@ -9,6 +10,23 @@ import {reduceRecovery} from '../recovery.mjs';
 import {RESOURCE_CATALOG} from '../resource-catalog.mjs';
 import {reduceRuleAction} from './rule-actions.mjs';
 const source='隔离测试／resources正式正文',dice=()=>Array(100).fill(8);
+test('registering an already-included comparison passive replaces its legacy bonus once',()=>{
+ const a=createRoster().jiang,will=saveProfile(a,'will').dp,max=derived(a).willMax;
+ (a.state.learnedResources??={})['jiang.iron_will']={learned:true,source};
+ assert.equal(saveProfile(a,'will').dp,will);
+ assert.equal(derived(a).willMax,max);
+ assert.equal(saveProfile(a,'will',{mental:true}).dp,will+6);
+});
+test('comparison initiative and movement bonuses are not granted twice on resource registration',()=>{
+ for(const id of ['huang','bright','jiang']){
+  const a=createRoster()[id],before=derived(a).initiative;
+  (a.state.learnedResources??={})[id+'.improved_initiative']={learned:true,source};
+  assert.equal(derived(a).initiative,before,id);
+ }
+ const a=createRoster().bright,speed=derived(a).speed;
+ a.state.learnedResources={'bright.shimada_twins':{learned:true,source}};
+ assert.equal(derived(a).speed,speed);
+});
 function own(s,id,choices={}){(s.learnedResources??={})[id]={learned:true,source,kind:'technique',grade:'D',tree:'guanlan'};applyKitAcquisition(s,id,{source,...choices});}
 function actor(){const a=createOpeningRoster().player;own(a.state,'guanlan-fa',{attributes:{感知:2},poolClassifications:{流风:'generic'}});return a;}
 test('All current spells are catalogued once; catalog loading leaves T0 untouched',()=>{

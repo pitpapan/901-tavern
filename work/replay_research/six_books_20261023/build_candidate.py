@@ -4,7 +4,7 @@ No forge round trip, live installation, source mutation, or state initialization
 Run --plan, inspect 创作规划.yaml, then --export. JSON syntax is valid YAML 1.2.
 """
 from pathlib import Path
-import argparse, copy, hashlib, json, re, shutil, subprocess
+import argparse, copy, hashlib, json, re, shutil, subprocess, sys
 from collections import Counter
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -23,7 +23,7 @@ def read(p): return json.loads(p.read_text(encoding='utf-8'))
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(p, data):
     p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(data.rstrip()+'\n', encoding='utf-8')
+    p.write_text(data.rstrip()+'\n', encoding='utf-8', newline='\r\n' if p.exists() and b'\r\n' in p.read_bytes() else '\n')
 def dump(p, data): write(p, json.dumps(data, ensure_ascii=False, indent=2))
 def ref(path, line=1): return {'path':path, 'line':line}
 
@@ -228,15 +228,35 @@ records['xp']['native']['key']=list(dict.fromkeys(records['xp']['native']['key']
 
 # Maintained resource library. Definitions never grant ownership or reset T0.
 kit_inventory=read(STAGE/'kit-inventory.json')
+KIT=ROOT.parent/'901-resource-authoring-kit'
+sys.path.insert(0,str(KIT/'tools'))
+from compile_resources import load_contracts
+contracts={d['id']:d for d in load_contracts()}
+contract_paths={read(p)['id']:p for p in (KIT/'resources/execution').glob('*.rule.json')}
+assert {item['id'] for item in kit_inventory['entries']}==set(contracts), '资源目录与执行合同集合不同'
 for item in kit_inventory['entries']:
+    contract=contracts[item['id']]
+    assert item['sourceHash']==contract['reading']['sha256'], '目录正文已变化，先运行kit_catalog.py'
+    assert item['source']=='../901-resource-authoring-kit/'+contract['reading']['path']
     later=item.get('period')=='later-optional'
     template=item['kind']=='character-template'
     key=add('kit:'+item['id'],('后期模板·' if template else '资源·')+item['name'],BOOKS[5] if template else BOOKS[3],123,'concept',keys=[item['name']],manual=template)
     records[key]['native'].update(disable=template,constant=template,excludeRecursion=True,preventRecursion=True)
+    meta={'id':contract['id'],'version':contract['version'],'reading':contract['reading'],
+          'path':'../901-resource-authoring-kit/'+contract_paths[item['id']].relative_to(KIT).as_posix(),
+          'sha256':sha(contract_paths[item['id']]),'verification':contract['verification'],
+          'actions':contract['actions'],'implementationGaps':contract['implementationGaps'],
+          'unresolvedRules':contract['unresolvedRules']}
+    records[key]['resourceContract']=meta
+    records[key]['native']['extensions']['901_resource_contract']=meta
     warning='资源定义不表示任何人物已经取得；实际资格、持有、能量、冷却、XP只认当前JS/MVU。'
     if later:warning+='后期可选成长资料，不能覆盖入都T0；须实际取得各项后逐项启用，不导入整张成熟面板。'
     if item.get('prohibited'):warning+='帝国禁用条目，不列入帝国法师合法学习目录；资料存在不构成开放许可。'
-    extra(key,warning+'\n\n'+item['body'],[ref(item['source'],item['line'])])
+    status=contract['verification']
+    execution=f"执行合同：{contract['id']} @ {contract['version']}；覆盖状态：{status['status']}；完整执行验证：{'是' if status['runtimeFullyVerified'] else '否'}。索引或正文存在不代表全部条款可自动结算。"
+    gaps='\n'.join('实现缺口：'+x for x in contract['implementationGaps'])
+    unresolved='\n'.join('规则缺参：'+x['parameter']+'；依据：'+x['basis']+'；推荐：'+x['recommendation'] for x in contract['unresolvedRules'])
+    extra(key,warning+'\n\n'+execution+'\n'+gaps+'\n'+unresolved+'\n\n'+item['body'],[ref(item['source'],item['line']),ref(meta['path'])])
     records[key]['revisions'].append({'source':'kit-inventory.json','reason':'用户明确要求完整盘点并接入现有六书；定义、后期模板与当前持有分离。'})
 
 # Final source/manifest projection. The plan contains paths and content hashes, not competing inline bodies.
@@ -288,7 +308,8 @@ def plan_record(r):
         'position':'after_char','order':n['order'],'scan_depth':n['scanDepth'],'recursive':False,
         'state_owner':'主持方法' if r['book']=='主持卡' else '条件式方案或有时期的基线' if r['book']==BOOKS[5] else '背景定义；不写入运行状态',
         'source_uids':[sources[i]['uid'] for i in r['source_indices']], 'source_refs':r['refs'],
-        'revisions':r['revisions'],'content_sha256':hashlib.sha256(r['content'].encode()).hexdigest()}
+        'revisions':r['revisions'],'content_sha256':hashlib.sha256(r['content'].encode()).hexdigest(),
+        **({'resourceContract':r['resourceContract']} if 'resourceContract' in r else {})}
 
 plan={
  'project':{'name':'901 六本世界书迁移','form':'existing-native-worldbooks','mvu':'reuse-existing-no-schema-change','ejs':False,'ui_mode':'none','revision':REV},

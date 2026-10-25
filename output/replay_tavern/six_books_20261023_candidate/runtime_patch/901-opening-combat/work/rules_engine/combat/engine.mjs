@@ -1,3 +1,7 @@
+import {resourceBonus,resourceEffects,observationContext,RESOURCE_DEFINITIONS} from '../resource-definitions.mjs';
+import {convertIncomingDamage,stackEffects} from '../resource-effects.mjs';
+import {resourceCapability} from '../resource-lifecycle.mjs';
+import {fireResourceTriggers} from '../gm_runtime/resource-program.mjs';
 import {pathFeatures} from './map.mjs';
 import { beginTurn, endTurn, spendAction, actionEligibility, lifeStatus, statusLevel, rollPool, resolveDamage,checkBeforeAction,advanceDeterioration,firstAid,checkModifiers,check,applyStatus,advanceGeneticLock,geneticCheckBonus,geneticWillAuto,willEnhancement,counteractTemperature } from '../core.mjs';
 import {measurePath,clearLine,canObserve,blocking,contains,terrainCover,nearestPoint,spatialDistance,elevationAt,earthPath} from './map.mjs';
@@ -104,11 +108,11 @@ export function attackProfile(b, id, c = {}) {
       if(c.empowered)requireThat(false,'初始卡没有强化一击');
     }
     if(a.kind==='bright'&&(!a.weaponMode||a.weaponMode==='bow')) {
-      const unit=w.rangeUnit??40,located=target&&spatialDistance(b.map,a.position,target.position)<=40;
+      const unit=w.rangePerStrength!==undefined?str*w.rangePerStrength:w.rangeUnit??40,located=target&&spatialDistance(b.map,a.position,target.position)<=40;
       const aimed=Math.min(3,(located?1:0)+(a.aim&&a.aim.targetId===c.targetId?a.aim.rounds??0:0));
       rawDP+=aimed+(aimed>=2?2:0);cap=weapon*2+sk.level+w.strengthRequirement;
       if(target)rawDP-=Math.max(0,Math.ceil(spatialDistance(b.map,a.position,target.position)/unit)-1)*2;
-      range=unit*8;aggravate=aimed>=3?1:0;extra=aimed>=3?1:0;
+      range=unit*(w.rangeUnits??8);explode=w.explode??10;aggravate=aimed>=3?1:0;extra=aimed>=3?1:0;
     }
     if(a.kind==='mireya'&&a.weaponMode!=='club') {
       const unit=w.rangeUnit;
@@ -167,18 +171,21 @@ export function attackProfile(b, id, c = {}) {
   const wizardChoice=wizardWeapon(a.state)?a.state.wizard.weaponSkills?.[a.state.wizard.weaponMode]:null;
   const single=!c.rapidFire&&!c.rapidSecondary&&!c.adjacentTargetIds?.length&&!['doubleStrike','gale'].includes(type);
   rawDP+=geneticCheckBonus(a.state,{willEligible:single,willSpent:c.willpower===true});
-  if(c.willpower){rawDP+=3;fixed+=geneticWillAuto(a.state,{willEligible:true,willSpent:true});}
+  if(c.willpower){rawDP+=3+resourceBonus(a.state,'willEnhancement');fixed+=geneticWillAuto(a.state,{willEligible:true,willSpent:true});}
   if(c.rapidFire)rawDP+=3-(c.adjacentTargetIds?.length??0);
   if(c.rapidSecondary)rawDP-=c.rapidPenalty;
   rawDP+=wizardCheck(a.state,{skill:wizardChoice?.main??profile(a).main,sub:wizardChoice?.sub??profile(a).sub,context:{gun:a.state.wizard?.weaponMode==='gun'}}).dp;
   if(wizardWeapon(a.state)){range=a.state.wizard.weaponMode==='gun'?100:a.reach;cap=weapon+sk.level+(a.state.wizard.weaponMode==='gun'?0:str);}
   if(a.state.wizard?.form==='earth'&&wizardWeapon(a.state))ignore=Math.max(ignore,3);
+  const observedTarget=b.actors[c.targetId];
+  rawDP+=resourceBonus(a.state,'attack',observationContext(a.state,c.targetId,observedTarget?canObserve(b,observedTarget,a.id):false));
+  if(['白刃','肉搏'].includes(profile(a).main))rawDP+=a.state.huaJin?.nextAttack??0;
   rawDP-=checkModifiers(a.state,{context:{attack:true,physical:true,visual:!a.windSense&&!a.spiritSight,targetId:c.targetId,limbIds:c.limbIds??a.state.anatomy?.attackLimbs}}).penalty;
   if(type==='doubleStrike')rawDP-=2;
   if(a.state.timedEffects?.thunderPotion?.remainingMinutes>0)rawDP+=4;
   rawDP-=a.state.grapple?.margin??0;
   if (a.diehard && a.state.health.intact===0) rawDP+=a.state.health.A?3:a.state.health.L?2:1;
-  return { rawDP, dp:rawDP, weapon, cap, fixed, ap, magic, speed, extra, ignore, aggravate, electric, reduction, range, explode,magical:w.magical===true,ranged:w.range>0||['射击','枪械','弓箭'].includes(wizardChoice?.main??profile(a).main),ballistic:w.ballistic===true||wizardWeapon(a.state)&&a.state.wizard.weaponMode==='gun',energyWeapon:w.energyWeapon===true,grade:w.grade,hardnessIgnore:a.state.wizard?.form==='earth'&&wizardWeapon(a.state)?6:ignore,spiritEligible:a.spiritStrike===true||magic>0 };
+  return { rawDP, dp:rawDP, weapon, cap, fixed, ap, magic, speed, extra, ignore, aggravate, electric, reduction, range, explode,magical:w.magical===true||resourceBonus(a.state,'weaponMagical')>0,ranged:w.range>0||['射击','枪械','弓箭'].includes(wizardChoice?.main??profile(a).main),ballistic:w.ballistic===true||wizardWeapon(a.state)&&a.state.wizard.weaponMode==='gun',energyWeapon:w.energyWeapon===true,grade:w.grade,hardnessIgnore:a.state.wizard?.form==='earth'&&wizardWeapon(a.state)?6:ignore,spiritEligible:a.spiritStrike===true||w.spiritStrike===true||magic>0||resourceBonus(a.state,'weaponSpirit')>0 };
 }
 
 function initiative(b,a) { const n=a.initiativeOverride??derived(a).initiative-points(a,'亢奋');return statusLevel(a.state,'耳鸣').severe?Math.floor(n/2):n; }
@@ -189,6 +196,7 @@ export function resolveDefense(b, id, attackerId, attack = {}) {
   if(b.playerDefenseDeclarations&&source.controller==='player'&&!defenseMode)return {pending:true};
   const a=b.playerDefenseDeclarations&&source.controller==='player'&&defenseMode==='normal'
     ?{...source,buffs:{...source.buffs,block:false,zheng:false}}:source;
+  const kitContext=observationContext(a.state,attackerId,attacker?canObserve(b,attacker,a.id):false);
   const eq=equipment(a), base=Math.max(0,Math.min(value(a,'敏捷'),value(a,'感知'))-(eq.armor.basePenalty??0));
   let p={base:base+geneticCheckBonus(a.state,{willEligible:true}),natural:profile(a).natural,armor:eq.armor.defense,
     dodge:auto(a,'敏捷'),insight:auto(a,'感知'),block:a.buffs.block&&!a.sheathed?blockValue(a):0};
@@ -202,7 +210,7 @@ export function resolveDefense(b, id, attackerId, attack = {}) {
   p.dodge+=a.dodgeBonus??0;
   if(eq.armor.shield)p.shield=eq.armor.shield;
   if(a.kind==='radwick'&&a.buffs.brace&&!attack.nonphysical)p.enhancement=3;
-  if(['huang','bright'].includes(a.kind)&&attacker&&initiative(b,a)>initiative(b,attacker)) p.base+=a.ruleset==='opening-20261022'?profile(a).initiativeDefense??0:5;
+  if(attacker&&initiative(b,a)>initiative(b,attacker))p.base+=Math.max(resourceBonus(a.state,'initiativeDefense'),['huang','bright'].includes(a.kind)?a.ruleset==='opening-20261022'?profile(a).initiativeDefense??0:5:0);
   if(a.kind==='huang'&&a.ruleset!=='opening-20261022') p.cultivation=a.sheathed?0:6;
   if(a.kind==='jiang'||a.kind==='lotus') { p.dodge=0;p.insight=0; }
   if(a.kind==='yulin') {
@@ -210,14 +218,20 @@ export function resolveDefense(b, id, attackerId, attack = {}) {
     p.deflection=a.buffs.zheng?attackSkill(a).level+auto(a,'智力'):a.state.possessions?.phaseRing?.worn===false?0:2;
     if(a.ruleset!=='opening-20261022')p.force=Math.max(p.force??0,a.buffs.block?Math.max(1,eq.weapon.force??0):1);
   }
+  const defenseRows=resourceEffects(a.state,'defense',kitContext),categories=['armor','natural','force','cover','shield','luck','morale','enhancement','holy','technique','performance','intrinsic','unnamed'];
+  for(const category of categories){const rows=defenseRows.filter(e=>e.group===category);if(rows.length)p[category]=(p[category]??0)+stackEffects(rows,{[category]:p[category]??0}).value;}
+  p.natural+=resourceBonus(a.state,'naturalDefense',kitContext,{natural:p.natural});
+  const kitDefense=stackEffects(defenseRows.filter(e=>!categories.includes(e.group)),{training:p.cultivation??0,insight:p.insight??0}).value;
+  if(kitDefense)p.kitInsight=kitDefense;
   if (frozen(a) || unconscious(a)) { p.base=0; p.dodge=0; p.block=0; }
+  if(attack.flatFootedLevel!==undefined&&(resourceCapability(a.state,'flatFootedImmunity')?.level??-1)<attack.flatFootedLevel){p.base=0;p.dodge=0;p.block=0;}
   if(statusLevel(a.state,'沮丧').severe){p.dodge=0;p.block=0;}
   if(a.state.sleeping||a.state.underworld){p.dodge=0;p.block=0;}
   if(a.state.permanentConditions?.some(x=>x.kind==='nauseaCollapse'))p.base=0;
   if(a.state.grapple?.pressed){p.base=0;p.dodge=0;p.block=0;}
   if(attacker&&(a.state.grapple&&a.state.grapple.holderId!==attackerId||a.claws?.some(id=>id&&id!==attackerId)))p.base=0;
   const eat=(keys,n) => { for(const k of keys) { const v=Math.min(p[k]??0,n); p[k]=(p[k]??0)-v; n-=v; } return n; };
-  const restraint=points(a,'精神束缚')+points(a,'麻痹')+points(a,'纠缠')+points(a,'冻结')+points(a,'剧痛');
+  const restraint=points(a,'精神束缚')+points(a,'麻痹')+points(a,'纠缠')+points(a,'冻结')+points(a,'剧痛')+points(a,'欲眠');
   eat(['base','dodge','block'],restraint+lifeStatus(a.state).woundPenalty);
   const fears=a.state.statuses.filter(s=>s.type==='恐惧'&&s.sourceActorId!==attackerId);
   if(fears.length)eat(['base','dodge','block'],Math.max(...fears.map(s=>s.points)));
@@ -227,15 +241,15 @@ export function resolveDefense(b, id, attackerId, attack = {}) {
   eat(['base','dodge','block'],Math.max(0,terrainPenalty-(a.kind==='yulin'&&a.buffs.tengzhuan?5:0))+points(a,'亢奋'));
   if (a.buffs.iaiPenalty) eat(['base','dodge','block','insight','cultivation','armor','natural'],2);
   if (attack.contact) { p.armor=0; p.natural=0; }
-  eat(['base','dodge','block','insight','cultivation'],Math.max(0,(attack.speed??0)-(a.kind==='yulin'?(a.buffs.bulletTime?8:5):0)));
+  eat(['base','dodge','block','insight','cultivation'],Math.max(0,(attack.speed??0)-Math.max(resourceBonus(a.state,'ignoreSpeed'),a.kind==='yulin'?(a.buffs.bulletTime?8:5):0)));
   const protectedDeflection=a.buffs.zheng?p.deflection:0;
   if(attack.reduction===8) eat(['base','dodge','block','insight','cultivation','armor','natural','force',...(protectedDeflection?[]:['deflection'])],8);
   else eat(['base','dodge','block'],attack.reduction??0);
-  if(a.willDefenseReady)p.will=3+geneticCheckBonus(a.state,{willEligible:true,willSpent:true})-geneticCheckBonus(a.state,{willEligible:true});
+  if(a.willDefenseReady)p.will=3+resourceBonus(a.state,'willEnhancement')+geneticCheckBonus(a.state,{willEligible:true,willSpent:true})-geneticCheckBonus(a.state,{willEligible:true});
   const remainingAP=eat(['cover','force','device','shield','armor','natural'],attack.ap??0);
   eat(['luck','morale','enhancement','holy','technique','performance','intrinsic','unnamed'],attack.magic??0);
   return { total:sum(p), parts:p, remainingAP,guarded:Boolean(a.buffs.block&&!a.sheathed&&!frozen(a)&&!unconscious(a)),
-    extraSuccesses:frozen(a)||unconscious(a)?0:(a.willDefenseReady?geneticWillAuto(a.state,{willEligible:true,willSpent:true}):0)+(a.ruleset==='opening-20261022'?(p.block? (a.kind==='bright'?skill(a,'白刃').auto:attackSkill(a).auto):0):auto(a,'敏捷')+auto(a,'感知')+(eq.armor.defenseAuto??0)) };
+    extraSuccesses:frozen(a)||unconscious(a)?0:(a.willDefenseReady?geneticWillAuto(a.state,{willEligible:true,willSpent:true}):0)+(eq.armor.defenseExtra??0)+(a.ruleset==='opening-20261022'?(p.block? (a.kind==='bright'?skill(a,'白刃').auto:attackSkill(a).auto):0):auto(a,'敏捷')+auto(a,'感知')+(eq.armor.defenseAuto??0)) };
 }
 
 export function panel(b,id,attackerId) {
@@ -245,6 +259,7 @@ export function panel(b,id,attackerId) {
   let speed=(points(a,'纠缠')?Math.floor(d.speed/2):d.speed)-penalty(a)+lifeStatus(s).woundPenalty;
   if(statusLevel(s,'目眩').severe&&!a.windSense)speed-=Math.ceil(d.speed/2);
   if (statusLevel(s,'疲乏').severe) speed-=Math.ceil(d.speed/2);
+  speed=statusLevel(s,'失速').severe?0:Math.max(0,speed-points(a,'失速')*20);
   if (frozen(a)||unconscious(a)) speed=0;
   else if(a.state.timedEffects?.thunderPotion?.remainingMinutes>0)speed+=10;
   if(a.landMultiplier)speed*=a.landMultiplier;
@@ -264,7 +279,7 @@ function saveRoll(a,type,drawDice,{ recognizable=false, speed=0, cover=0 }={}) {
   if(a.state.sleeping&&type==='reflex')return {dp:0,dice:[],used:0,rolledSuccesses:0,fixed:0,extra:0,total:0,type};
   const {dp:base,fixed,extra}=saveProfile(a,type,{recognizable,speed});
   const elected=a.willDefenseReady===true;
-  const dp=base+(elected?3:0)+geneticCheckBonus(a.state,{willEligible:true,willSpent:elected})+(type==='reflex'?cover:0)+wizardCheck(a.state).dp-checkModifiers(a.state,{context:{willResistance:type==='will',physical:type!=='will',motion:type==='reflex',reflex:type==='reflex'}}).penalty;
+  const dp=base+(elected?3+resourceBonus(a.state,'willEnhancement'):0)+geneticCheckBonus(a.state,{willEligible:true,willSpent:elected})+(type==='reflex'?cover:0)+wizardCheck(a.state).dp-checkModifiers(a.state,{context:{willResistance:type==='will',physical:type!=='will',motion:type==='reflex',reflex:type==='reflex'}}).penalty;
   const bonus=geneticWillAuto(a.state,{willEligible:true,willSpent:elected});
   const r=rollPool(dp,drawDice());if(elected){a.state.will.current--;delete a.willDefenseReady;}
   return { ...r, fixed:fixed+bonus,willCost:elected?1:0,extra:r.rolledSuccesses>0?extra:0,total:r.rolledSuccesses+fixed+bonus+(r.rolledSuccesses>0?extra:0), type };
@@ -280,17 +295,21 @@ function inflictStatus(a,type,count,source,drawDice) {
 
 export function damageEvent(a, segments, conversion, result, bypass={conversion:0}) {
   let n=0;
+  const conversionPolicy=a.state.learnedResources?.['chengxin-xuanjian']?.learned?RESOURCE_DEFINITIONS['chengxin-xuanjian'].conversion:null;
+  let captureBudget=conversionPolicy&&a.state.huaJin?.current===0?a.state.huaJin.acceptNext??0:0;
+  if(a.state.huaJin)delete a.state.huaJin.acceptNext;
   const armor=equipment(a).armor, weapon=equipment(a).weapon;
   const protection=bypass.protection??(bypass.protection={
-    absorb:(a.buffs.zheng?1:0)+(a.state.wizard?.form==='earth'?3:0),dr:armor.dr??0,
+    absorb:(a.buffs.zheng?auto(a,'智力'):0)+(a.state.wizard?.form==='earth'?3:0)+resourceBonus(a.state,'absorb'),dr:(armor.dr??0)+resourceBonus(a.state,'dr'),
     energy:Math.max(armor.energyAbsorb??0,a.buffs.block?(weapon.energyAbsorb??0):0),
-    resistance:armor.energyResistance??0,
+    resistance:(armor.energyResistance??0)+resourceBonus(a.state,'energyResistance'),
   });
   const magicTotal=segments.filter(s=>s.magical).reduce((n,s)=>n+s.amount,0);
   let waterReduction=a.state.timedEffects?.wizardDefend?.form==='water'?(magicTotal<=4?magicTotal:3):0;
-  let hardness=armor.hardness??0;
+  let hardness=(armor.hardness??0)+resourceBonus(a.state,'hardness');
   for (const segment of segments) {
     if (!segment.amount) continue;
+    if(!segment.magical&&resourceCapability(a.state,'nonmagicalDamageImmunity'))continue;
     if(a.material==='antiMagicRock'&&(segment.kind==='energy'||segment.magical)){
       if(!['D','C','B','A','S'].includes(segment.grade))throw new RuleInputError('厌魔石打击须有实际等级','damage.grade');
       if(segment.grade!=='S'&&!segment.exceptionSource)continue;
@@ -298,7 +317,7 @@ export function damageEvent(a, segments, conversion, result, bypass={conversion:
     if(a.state.wizard?.form==='fire'&&segment.energyType==='fire'||a.state.wizard?.form==='wind'&&segment.energyType==='fall')continue;
     let amount=segment.amount;
     if(segment.magical){const n=Math.min(waterReduction,amount);amount-=n;waterReduction-=n;}
-    const stopped=Math.min(hardness,amount);amount-=stopped;hardness-=stopped;
+    const stopped=['mental','poison'].includes(segment.energyType)?0:Math.min(hardness,amount);amount-=stopped;hardness-=stopped;
     for(const key of ['absorb',...(segment.kind==='physical'?['dr']:['energy','resistance'])]) {
       if(key==='dr'&&segment.tags?.includes(armor.drBypass)) continue;
       const ignored=Math.min(protection[key],bypass.defenses??0); bypass.defenses=Math.max(0,(bypass.defenses??0)-ignored);
@@ -311,7 +330,10 @@ export function damageEvent(a, segments, conversion, result, bypass={conversion:
     bypass.conversion-=bypassed;
     for(const piece of [{amount:bypassed,convert:false},{amount:amount-bypassed,convert:conversion}]) {
       if(!piece.amount) continue;
-      const out=resolveDamage(a.state,{...segment,amount:piece.amount},[...(piece.convert?[{kind:'downgrade',steps:1}]:[]),...(bypass.wizardBulletproof&&segment.kind==='physical'?[{kind:'downgrade',steps:1}]:[])]);
+      const downgrade=(piece.convert?1:0)+(bypass.wizardBulletproof&&segment.kind==='physical'?1:0);
+      let damage={...segment,amount:piece.amount,severity:['B','L','A'][Math.max(0,['B','L','A'].indexOf(segment.severity)-downgrade)]};
+      if(captureBudget>0){const captured=convertIncomingDamage(a.state,damage,conversionPolicy,captureBudget);damage=captured.damage;captureBudget-=captured.converted;(result.conversions??=[]).push({targetId:a.id,counter:conversionPolicy.counter,amount:captured.converted});}
+      const out=resolveDamage(a.state,damage);
       a.state=out.state; n+=out.result.actualDamage;
       result.damage.push({ targetId:a.id, kind:segment.kind, energyType:segment.energyType??null,
         input:piece.amount, inputSeverity:segment.severity, severity:out.result.finalSeverity, actualDamage:out.result.actualDamage });
@@ -347,6 +369,9 @@ function strike(b,a,t,c,result,drawDice,{opportunity=false,freeResponse=false,ac
   }
   if(c.finisher) requireThat(a.kind==='jiang'&&(a.combos[t.id]??0)===(a.ruleset==='opening-20261022'?1:5),a.ruleset==='opening-20261022'?'D级终结需要该目标1层':'终结技需要该目标5层');
   const p=attackProfile(b,a.id,c);
+  const actualWeapon=equipment(a).weapon;
+  if(actualWeapon.resourceId&&actualWeapon.strengthRequirement!==undefined)requireThat(value(a,'力量')>=actualWeapon.strengthRequirement,'未满足实际装备的力量要求');
+  if(['白刃','肉搏'].includes(profile(a).main)&&a.state.huaJin)delete a.state.huaJin.nextAttack;
   const reflects=!feature&&t.state.timedEffects?.wizardDefend?.form==='wind'&&p.ranged&&!p.energyWeapon&&p.rawDP<12;
   requireThat(!t.spirit||p.spiritEligible,'当前武器没有攻击灵体的资格');
   requireThat(wizardWeapon(a.state)||!(a.kind==='bright'&&a.weaponMode==='empty'),'须先取出已持有的武器');
@@ -446,7 +471,7 @@ function strike(b,a,t,c,result,drawDice,{opportunity=false,freeResponse=false,ac
     result.statuses.push({targetId:t.id,...inflictStatus(t,'麻痹',c.tier*4,'御雷·导电',drawDice)}); return;
   }
   let aggravated=Math.min(amount,p.aggravate);
-  if(p.energyWeapon&&!wizardArmor)aggravated=amount;
+  if(p.energyWeapon&&!wizardArmor)aggravated=Math.max(aggravated,Math.min(amount,Math.floor(p.weapon/2)));
   if(a.kind==='jiang'&&a.ruleset!=='opening-20261022' && !d.parts.armor) aggravated=Math.min(amount,Math.floor(p.weapon/2),5);
   const electric=a.ruleset==='opening-20261022'?Math.min(amount,p.electric):Math.floor(amount*p.electric);
   // Allocate the worsened points to the electrical part first. No duplicate damage:
@@ -463,6 +488,7 @@ function strike(b,a,t,c,result,drawDice,{opportunity=false,freeResponse=false,ac
     {amount:amount-electric-pa,severity,kind:'physical'},
   ];
   const inflicted=damageEvent(t,segments.map(s=>({...s,tags:equipment(a).weapon.tags,magical:s.magical??p.magical})),converted,result,bypass);
+  if(inflicted>0)(result.resourceTriggers??=[]).push(...fireResourceTriggers(b,a.id,'hit',{targetId:t.id,context:{melee:!p.ranged,skill:profile(a).main,actualDamage:inflicted},drawDice}));
   if(c.abilityId==='thunder') {
     const actualElectric=result.damage.slice(before).filter(x=>x.energyType==='electric').reduce((n,x)=>n+x.actualDamage,0);
     if(actualElectric) result.statuses.push({targetId:t.id,...inflictStatus(t,'麻痹',actualElectric,'雷鸣剑',drawDice)});
@@ -498,7 +524,9 @@ function finishIfNeeded(b) {
 }
 
 function advance(b,result,choices={},drawDice=randomDice) {
-  const old=b.actors[b.activeId];const genetic=advanceGeneticLock(old.state,{drawDice});old.state=genetic.state;if(genetic.result)result.genetic=genetic.result;burningDamage(old,'turn',amount=>damageEvent(old,[{amount,severity:'L',kind:'energy',energyType:'fire'}],false,result));old.state=endTurn(old.state).state;
+  const bleeding=b.actors[b.activeId],bleed=points(bleeding,'流血');
+  if(bleed)damageEvent(bleeding,[{amount:bleed,severity:'L',kind:'physical'}],false,result);
+  const old=b.actors[b.activeId];if(old.state.huaJin)delete old.state.huaJin.nextAttack;const genetic=advanceGeneticLock(old.state,{drawDice});old.state=genetic.state;if(genetic.result)result.genetic=genetic.result;burningDamage(old,'turn',amount=>damageEvent(old,[{amount,severity:'L',kind:'energy',energyType:'fire'}],false,result));old.state=endTurn(old.state).state;
   for(const s of old.state.statuses.filter(s=>s.roundResistance==='chuul')) {
     const key=value(old,'力量')<=value(old,'意志')?'力量':'意志',res=check(old.state,{attribute:key,skill:'求生',dice:drawDice()});
     s.points=Math.max(0,s.points-res.total);result.saves.push({targetId:old.id,status:s.type,...res});
@@ -549,6 +577,7 @@ function advance(b,result,choices={},drawDice=randomDice) {
     const a=b.actors[id];
     if(b.turnTaken.includes(id)||!a.present||unconscious(a)) continue;
     b.activeId=a.id;
+    (result.resourceTriggers??=[]).push(...fireResourceTriggers(b,a.id,'turnStart',{drawDice}));
     for(const other of Object.values(b.actors)){for(const [key,e]of Object.entries(other.state.timedEffects??{}))if(e.clockActorId===a.id){e.remainingTurns=Math.max(0,e.remainingTurns-1);e.remainingMinutes=e.remainingTurns/10;if(!e.remainingTurns)delete other.state.timedEffects[key];}for(const e of other.state.statuses)if(e.clockActorId===a.id){e.remainingTurns=Math.max(0,e.remainingTurns-1);e.remainingMinutes=e.remainingTurns/10;}other.state.statuses=other.state.statuses.filter(e=>e.remainingMinutes!==0);}
     if(b.map)b.map.features=b.map.features.filter(f=>!f.wizardOwner||b.actors[f.wizardOwner]?.state.timedEffects?.wizardDefend?.form==='earth');
     delete a.buffs.block; delete a.buffs.zheng; delete a.buffs.iaiPenalty;

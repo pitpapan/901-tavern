@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { worldRuleGate } from './native-tool.mjs';
 
 const json = path => JSON.parse(readFileSync(new URL(path, import.meta.url), 'utf8'));
@@ -8,8 +9,14 @@ const json = path => JSON.parse(readFileSync(new URL(path, import.meta.url), 'ut
 test('isolated capital card preserves the adopted 005 worldbook and opening without demo actors', () => {
   const source = json('../../../output/replay_tavern/capital_entry_20261012_candidate/import/901_帝都主持.card.json').data;
   const candidate = json('../../../output/replay_tavern/world_runtime_20261014_candidate/import/901_帝都T0_隔离运行.card.json').data;
+  // This candidate preserves 005 at creation, not later edits of the source
+  // card. The exact archived text is independently recoverable at this commit.
+  const archived = json('./fixtures/capital-005-description.json');
+  assert.equal(archived.commit, '32129c72a7aff9829daf87e9dfd7c6f500d77880');
+  assert.equal(createHash('sha256').update(archived.description).digest('hex'),
+    '528a50dc1e3102d2ba227b04708205b4565643600acd59f21ceaffb7baae0fa0');
   assert.deepEqual(candidate.character_book, source.character_book);
-  assert.equal(candidate.description, source.description);
+  assert.equal(candidate.description, archived.description);
   assert.equal(candidate.scenario, source.scenario);
   assert.equal(candidate.first_mes, source.first_mes);
   assert.match(candidate.system_prompt, /current_state\.md.*D3/);

@@ -1,3 +1,4 @@
+import {runKitMechanism} from './kit-runtime.mjs';
 import {RuleInputError,IllegalAction} from '../combat/mechanics.mjs';
 import {spendAction} from '../core.mjs';
 import {runConditionalResource} from './conditional-resources.mjs';
@@ -18,6 +19,7 @@ export function runSceneMechanism(root,r,{combat=false,preActionCleared=false,dr
   if(!o?.source||!a)throw new RuleInputError('当前场景未登记这个实际对象及来源','ruleScene.objects');
   if(!o.actorIds?.includes(r.actorId))throw new IllegalAction('当前角色无法接触该对象或没有操作资格');
   if(!['demonBox','arrays'].includes(o.type)){
+    const kit=runKitMechanism(root,r,{combat,preActionCleared,drawDice,actorTemplates});if(kit)return kit;
     const resolved=runConditionalResource(root,r,{combat,preActionCleared,drawDice,actorTemplates});if(resolved)return resolved;
   }
   let action, result;

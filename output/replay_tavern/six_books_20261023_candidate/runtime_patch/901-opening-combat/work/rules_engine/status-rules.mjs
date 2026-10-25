@@ -1,6 +1,7 @@
 // PHB 生存状态 143, 246–302; adopted six-attribute mapping in 901 core §6.
 import {applyStatus,check,effectiveAttribute,statusLevel,resolveDamage,spendAction,actionEligibility,counteractTemperature} from './core.mjs';
 import {RuleInputError,IllegalAction} from './combat/mechanics.mjs';
+import {expireResourceEffects} from './resource-lifecycle.mjs';
 const need=(s,k)=>{throw new RuleInputError(s,k);};
 const fail=s=>{throw new IllegalAction(s);};
 const copy=x=>structuredClone(x);
@@ -78,6 +79,9 @@ export function statusEvent(root,r,{drawDice,combat=false,preActionCleared=false
    if(e.looking){if(!box.open)fail('盒子尚未打开，没有这次投影暴露');if(!existing)s.statuses.push({type:'恐惧',source:key,points:5,perceived:true,demonBoxId:e.objectId,gazeRounds:0,...(e.escapeActions?{escapeActions:copy(e.escapeActions)}:{})});}
    result={looking:e.looking,points:e.looking?(existing?.points??5):0,unresisted:true};
  }else if(e.type==='sceneEnd'){
+   for(const record of Object.values(root.actors)){expireResourceEffects(record.state,{scene:true});record.state.statuses=record.state.statuses.filter(x=>!x.scene);}
+   if(s.huaJin){s.huaJin.current=0;delete s.huaJin.nextAttack;delete s.huaJin.acceptNext;}
+   if(s.chengxin)s.chengxin={observations:{},attempts:[]};
    result={removed:[]};for(const [id,record]of Object.entries(root.actors))if(record.sceneBound&&record.present){record.present=false;result.removed.push(id);}
  }else if(e.type==='channelFailure'){
    const object=root.ruleScene.objects?.[e.objectId];if(!object?.channels?.[r.actorId])fail('没有这项正在进行的累计施法');

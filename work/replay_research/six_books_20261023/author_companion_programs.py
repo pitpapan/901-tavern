@@ -11,14 +11,17 @@ for actor,old in [('huang',4),('bright',3),('jiang',1)]:
  PASSIVES[actor+'.improved_initiative']={'effects':[effect('initiative',4)]+([effect('initiativeDefense',5)] if actor!='jiang' else []),
   'legacyProfile':{'ruleset':'opening-20261022','kind':actor,'add':{'initiative':-old},'set':{'initiativeDefense':0}},
   'capabilities':[{'id':'initiativeTiePriority','level':1}] if actor!='jiang' else []}
+ PASSIVES[actor+'.improved_initiative']['legacyProfiles']=[{'ruleset':'comparison-20261020','kind':actor,'add':{'initiative':-4}}]
 for actor in ['bright','jiang']:
  effects=[effect('save',6,when=ctx('type','will')),effect('willEnhancement',2)]
  if actor=='jiang':effects += [effect('save',12,when={'all':[ctx('type','will'),ctx('mental',True)]}),effect('willMax',10),effect('willPerHour',1),effect('mindStatusReduction',4,'mindTraining')]
  PASSIVES[actor+'.iron_will']={'effects':effects,'legacyProfile':{'ruleset':'opening-20261022','kind':actor,'set':{'steelWill':0}}}
+ PASSIVES[actor+'.iron_will']['legacyProfiles']=[{'ruleset':'comparison-20261020','kind':actor,'set':{'steelWill':0,**({'will':0} if actor=='jiang' else {})}}]
 PASSIVES['bright.alertness']={'capabilities':[{'id':'flatFootedImmunity','level':1,'grade':'D'}]}
 PASSIVES['huang.spirit_strike']={'effects':[effect('weaponMagical',1,'qualification'),effect('weaponSpirit',1,'qualification')]}
 PASSIVES['bright.shimada_twins']={'effects':[effect('speed',20,'bodyMethod'),effect('terrainFreedom',1,'movement')],
- 'legacyProfile':{'ruleset':'opening-20261022','kind':'bright','add':{'speed':-10}}}
+ 'legacyProfile':{'ruleset':'opening-20261022','kind':'bright','add':{'speed':-10}},
+ 'legacyProfiles':[{'ruleset':'comparison-20261020','kind':'bright','add':{'speed':-20}}]}
 ITEMS={
  'later:弃风':{'slot':'weapon','weapon':{'damage':16,'severity':'L','size':3,'ap':8,'magic':8,'magical':True,'grade':'B','attackBonus':24,'blockBonus':24,'speedBonus':3,'defenseReduction':3,'force':2,'energyAbsorb':2,'skill':'白刃','sub':'长剑'}},
  'later:狮子王':{'slot':'weapon','weapon':{'damage':8,'severity':'L','size':3,'ap':8,'magic':8,'magical':True,'grade':'C','spiritStrike':True,'nether':True,'attackBonus':3,'blockBonus':3,'willBonus':4,'skill':'白刃','sub':'太刀'}},
@@ -28,6 +31,7 @@ ITEMS={
 refs={actor:list(rows.values())+(['later:狮子王','later:乱红莲'] if actor=='黄泉' else ['later:龙象般若功'] if actor=='姜子尤' else []) for actor,rows in COMPANION_RESOURCES.items()}
 for path in DEST.glob('*.rule.json'):
  d=json.loads(path.read_text(encoding='utf-8'));id=d['id']
+ before=json.dumps(d,ensure_ascii=False,sort_keys=True)
  if id in PASSIVES:
   d['definition'].update(PASSIVES[id]);d['verification']['status']='partial'
   d['implementationGaps']=['被动运行效果已接入，取得前提及所有相关动作路径仍须完整验证']
@@ -45,4 +49,5 @@ for path in DEST.glob('*.rule.json'):
   d['implementationGaps']=['装备实例与战斗关键词完整验证']+(['风池8小时充能及实际余额接口'] if id=='later:弃风' else [])+(['灵兽凭依另由乱红莲执行条目处理'] if id=='later:狮子王' else [])
   for clause in d['clauses']:clause['status']='partial'
   if id=='bright.mithril_chain':d['definition']['effects']=[effect('extraSuccess',1,'equipment',{'all':[eq('equippedResources.armor',id),ctx('skill','运动')]})]
- path.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+ if json.dumps(d,ensure_ascii=False,sort_keys=True)!=before:d['version']='2026-10-24.1'
+ path.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\r\n' if b'\r\n' in path.read_bytes() else '\n')
