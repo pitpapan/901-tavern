@@ -79,6 +79,7 @@ export function statusEvent(root,r,{drawDice,combat=false,preActionCleared=false
    if(e.looking){if(!box.open)fail('盒子尚未打开，没有这次投影暴露');if(!existing)s.statuses.push({type:'恐惧',source:key,points:5,perceived:true,demonBoxId:e.objectId,gazeRounds:0,...(e.escapeActions?{escapeActions:copy(e.escapeActions)}:{})});}
    result={looking:e.looking,points:e.looking?(existing?.points??5):0,unresisted:true};
  }else if(e.type==='sceneEnd'){
+   for(const o of Object.values(root.ruleScene?.objects??{}))if(o.type==='physicalObject'&&o.state)expireResourceEffects(o.state,{scene:true});
    for(const record of Object.values(root.actors)){expireResourceEffects(record.state,{scene:true});record.state.statuses=record.state.statuses.filter(x=>!x.scene);}
    if(s.huaJin){s.huaJin.current=0;delete s.huaJin.nextAttack;delete s.huaJin.acceptNext;}
    if(s.chengxin)s.chengxin={observations:{},attempts:[]};

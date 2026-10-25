@@ -1,3 +1,4 @@
+import {resourceCapability} from './resource-lifecycle.mjs';
 import {kitAttribute} from './kit-state.mjs';
 import {resourceBonus} from './resource-definitions.mjs';
 import {growthPrice} from './growth-pricing.mjs';
@@ -314,8 +315,9 @@ export function lifeStatus(state) {
   if (total > 0 && h.A === total) return { state: 'dead', deteriorating: false, woundPenalty: 3 };
   const woundPenalty = Math.max(0, 3 - h.intact);
   if (h.intact > 0) return { state: 'awake', deteriorating: false, woundPenalty };
+  if(resourceCapability(state,'woundConsciousness'))return {state:'awake',deteriorating:h.A>0&&!h.deteriorationStopped,woundPenalty};
   if (h.A > 0) return { state: 'unconscious', deteriorating: !h.deteriorationStopped, woundPenalty };
-  if (h.L > 0 || h.coma) return { state: 'unconscious', deteriorating: false, woundPenalty };
+  if (h.L > 0 || h.coma&&!resourceCapability(state,'woundConsciousness')) return { state: 'unconscious', deteriorating: false, woundPenalty };
   return { state: 'B-check', deteriorating: false, woundPenalty };
 }
 
@@ -530,6 +532,15 @@ export function advanceDeterioration(state, { from } = {}) {
   const next = clone(state);
   next.health[selected]--; next.health.A++;
   return { state: next, result: { changed: true, from: selected, to: 'A', life: lifeStatus(next) } };
+}
+
+export function stabilizeWounds(state,{sourceId,casterId,rounds}={}){
+ integer(rounds,'stabilization rounds',1);
+ if(lifeStatus(state).state==='dead')throw Error('已死亡目标不能稳定伤势');
+ const next=clone(state);next.health.deteriorationStopped=true;
+ const sequence=next.resourceCastSequence=(next.resourceCastSequence??0)+1;
+ (next.resourceCapabilities??={})['woundConsciousness/'+sourceId+'/'+casterId+'/'+sequence]={id:'woundConsciousness',source:sourceId,casterId,level:0,remainingRounds:rounds};
+ return {state:next,result:{deteriorationStopped:true,rounds,life:lifeStatus(next)}};
 }
 
 export function firstAid(healer, patient, { dice, eligible = true, preActionCheck, actionAlreadySpent=false } = {}) {

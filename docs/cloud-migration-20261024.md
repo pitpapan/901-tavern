@@ -32,7 +32,7 @@ git checkout 06bde939fb1e9c4c8d8641d810f0a916b5bce127
 npm ci
 ```
 
-两个 901 仓库必须同级，资源库目录名保留 `901-resource-authoring-kit`；当前编译／盘点脚本按这个相对路径定位，不依赖原来的 C 盘。`TRPG outputs` 带空格，命令中必须加引号。历史安装脚本中的 `D:/github/sillyTavern` 不可在 Linux 原样运行。
+两个 901 仓库必须同级，资源库目录名保留 `901-resource-authoring-kit`；当前编译／盘点脚本按这个相对路径定位，不依赖原来的 C 盘。 技艺候选的本地验证还使用同级名称 `901-tavern`；新克隆可直接使用此名称。若沿上面历史布局把主库命名为 `TRPG outputs`，在 `/srv/901` 执行 `ln -s 'TRPG outputs' 901-tavern` 提供同级别名，勿另克隆第二份工作树。证明中的执行器路径使用资源库相对路径，代码与来源仍逐项校验SHA-256。`TRPG outputs` 带空格，命令中必须加引号。历史安装脚本中的 `D:/github/sillyTavern` 不可在 Linux 原样运行。
 
 作者环境（可选，不是酒馆启动前置）：
 
@@ -42,8 +42,16 @@ python3 -m venv .venv
 . .venv/bin/activate
 python -m pip install -r docs/requirements-authoring.txt
 # 只在继续开发资源时运行；生成目标是开发目录，不是实际安装快照。
-python ../901-resource-authoring-kit/tools/compile_resources.py --runtime-output work/rules_engine
+python ../901-resource-authoring-kit/tools/compile_resources.py \
+  --runtime-output work/rules_engine \
+  --candidate-package ../901-resource-authoring-kit/outputs/技艺适配-20261025
+python work/replay_research/six_books_20261023/kit_catalog.py \
+  --candidate-package ../901-resource-authoring-kit/outputs/技艺适配-20261025
+python work/replay_research/six_books_20261023/build_candidate.py --plan
+python work/replay_research/six_books_20261023/build_candidate.py --runtime
 ```
+
+这里显式选择候选包：只导出当前执行证明有效的操作和学习政策，保留候选身份；只验证了被动片段的资源不能购买整套能力。证明／来源已过期则停止生成，须先完成相应本地测试并重建证明，不修改数值绕过检查。六书中的新增候选默认手动禁用，生成开发产物不表示已采用、已取得或已安装。省略 `--candidate-package` 只生成正式资源部分，会移除开发输出中的候选，因此含候选的本轮开发包须一致使用上述参数。
 
 资源阅读原文位于资源库 `resources/` 与 `outputs/同伴RE资源调整/`，执行版为 `resources/execution/*.rule.json`。本次把此前被 outputs 忽略规则漏掉的人物卡原文纳入 Git。不要只迁移生成的 resource-data.mjs 而丢失阅读原文。
 
@@ -97,8 +105,8 @@ ssh -L 8000:127.0.0.1:8000 USER@CLOUD_HOST
 
 ## 开发状态与接续
 
-见 [本次开发存档及接续结果](../work/replay_research/six_books_20261023/checkpoint-20261024.md)。最初存档为269份合同、41份法术基础程序。接续开发现有51项法术基础程序、70个登记动作，六书开发候选442条；仍有157项合法法术缺基础程序，fullyVerified仍为0。开发候选已重新投影，未安装到实际环境，不是全资源可执行发布版；上述实际安装快照保持原样。
+见 [本次开发存档及接续结果](../work/replay_research/six_books_20261023/checkpoint-20261024.md)。最初存档为269份合同、41份法术基础程序。正式资源现有269份合同、51项法术基础程序、70个登记动作；另显式接入10份经过局部执行验证的技艺候选（直感被动片段及9个法术），含9个施法动作和9项学习事务。六书开发候选现为452条，新增候选均默认手动禁用。正式目录仍有157项合法法术缺基础程序；技艺候选另有942个未完整执行单元、481条阻止执行的动作意图，fullyVerified仍为0。这些数字分别统计，不能把候选新术直接从正式缺口扣除。开发候选已重新投影，未安装到实际环境；上述实际安装快照保持原样。
 
-原停止存档时没有继续测试：当时425项中424通过、1项历史卡片description漂移失败，原日志保留。用户本次明确授权本地测试后，已定位其历史来源版本并保留完整相等检查；接续完整扫描work下45个JS测试文件，462项通过，另有合同、来源和六书检查。接续日志见检查点；未调用外部模型，云端部署和新浏览器端到端仍未验证。
+原停止存档时没有继续测试：当时425项中424通过、1项历史卡片description漂移失败，原日志保留。用户本次明确授权本地测试后，已定位其历史来源版本并保留完整相等检查；最新完整扫描work下51个JS测试文件，515项通过、0失败、0跳过，另有合同、来源和六书检查。接续日志见检查点；未调用外部模型，云端部署和新浏览器端到端仍未验证。
 
 项目技能在 `.agents/skills/`，包括 tavern-cards 和 901 项目技能。它们供作者工作使用，不是运行酒馆的服务依赖；Codex／Sol 账号与云端工作工具另行配置。续做时阅读 AGENTS.md 与上述开发存档，保持 T0／D3、阅读定义／实际持有的边界。

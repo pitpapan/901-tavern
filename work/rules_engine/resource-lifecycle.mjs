@@ -4,13 +4,13 @@ import {RESOURCE_DEFINITIONS} from './resource-definitions.mjs';
 export function resourceCapability(state,id){
  const rows=Object.values(state.resourceCapabilities??{}).filter(x=>x.id===id&&!x.suspended&&x.remainingRounds!==0&&x.remainingMinutes!==0);
  for(const [resourceId,owned]of Object.entries(state.learnedResources??{}))if(owned.learned)for(const c of RESOURCE_DEFINITIONS[resourceId]?.capabilities??[])if(c.id===id)rows.push({...c,source:resourceId});
- return rows.sort((a,b)=>(b.level??0)-(a.level??0))[0]??null;
+ return rows.sort((a,b)=>(b.level??0)-(a.level??0)||(b.range??0)-(a.range??0))[0]??null;
 }
 export function expireResourceEffects(state,{minutes=0,rounds=0,scene=false}={}){
  const expired=[],tick=x=>{
   if(scene&&x.scene)return false;
-  if(x.remainingMinutes!==undefined)x.remainingMinutes=Math.max(0,x.remainingMinutes-minutes);
-  if(x.remainingRounds!==undefined)x.remainingRounds=Math.max(0,x.remainingRounds-rounds);
+  if(x.remainingMinutes!==undefined){const n=x.remainingMinutes-minutes;x.remainingMinutes=n<=1e-9?0:n;}
+  if(x.remainingRounds!==undefined){const n=x.remainingRounds-rounds;x.remainingRounds=n<=1e-9?0:n;}
   return x.remainingRounds!==0&&x.remainingMinutes!==0;
  };
  state.activeResourceEffects=(state.activeResourceEffects??[]).filter(x=>{const keep=tick(x);if(!keep)expired.push(x.id);return keep;});

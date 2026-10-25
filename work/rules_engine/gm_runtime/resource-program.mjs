@@ -1,4 +1,4 @@
-import {check,spendAction,effectiveAttribute,effectiveSkill,attrAuto,applyStatus,lifeStatus,counteractTemperature,statusLevel} from '../core.mjs';
+import {check,spendAction,effectiveAttribute,effectiveSkill,attrAuto,applyStatus,lifeStatus,counteractTemperature,statusLevel,stabilizeWounds} from '../core.mjs';
 import {effectValue,effectMatches} from '../resource-effects.mjs';
 import {resourceBonus,RESOURCE_DEFINITIONS} from '../resource-definitions.mjs';
 import {saveProfile,equipment,RuleInputError,IllegalAction,refreshDerived} from '../combat/mechanics.mjs';
@@ -6,6 +6,7 @@ import {resolveDefense,damageEvent} from '../combat/engine.mjs';
 import {clearLine,spatialDistance,canObserve} from '../combat/map.mjs';
 import {resourceCapability} from '../resource-lifecycle.mjs';
 import {healWounds} from '../healing.mjs';
+import {programTarget,prepareProgramFacts,validateObjectProgram,applyObjectOperation,objectAttackDefense,damageProgramObject} from './resource-object-program.mjs';
 import {configureProgramPolicy,policyPool,validateProgramTargets,validateHealOrder} from './resource-program-policy.mjs';
 
 const need=(message,field)=>{throw new RuleInputError(message,field);};
@@ -47,6 +48,7 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
   vars.P=Math.min(rank==='C'?8:4,vars.P+resourceBonus(s,'spellPower',{schools:definition.schools,sourceId:object.resourceId}));
  }
  if(program.executionPolicy)validateHealOrder(program,plan);
+ prepareProgramFacts(program,plan,vars);
  const val=x=>effectValue(x,s,vars);
  if(program.area){
   if(combat){
@@ -73,7 +75,7 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
   }
   // A single school uses the main skill when its subskill is absent. Explicit
   // dual-school qualification is a learning prerequisite, not a second DP sum.
-  if(definition.requiresAllSchools)for(const required of definition.subskills??[])requireFact((s.skills?.神秘?.subs?.[required]?.level??0)>=1||learned.qualifications?.includes(required),'缺少法术要求的专业资格：'+required);
+  if(definition.requiresAllSchools)for(const required of definition.subskills??[])requireFact((s.skills?.神秘?.subs?.[required]?.level??0)>=1||(Array.isArray(learned.qualifications)?learned.qualifications.includes(required):learned.qualifications?.subskills?.includes(required)),'缺少法术要求的专业资格：'+required);
   for(const component of program.components??['posture','language','focus'])if(plan.components?.[component]!==true)need('须确认施法成分：'+component,'resource.components.'+component);
   if(program.components?.includes('posture'))requireFact(!['麻痹','精神束缚','纠缠','冻结'].some(t=>statusLevel(s,t).severe),'定身阻止有姿势成分的施法');
  }
@@ -84,7 +86,8 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
   if(count>1&&spec.extraCondition)requireFact(effectMatches(spec.extraCondition,s,vars),'多枚施放的双手或其他前提尚未满足');
  }
  for(const id of targetIds){
-  const target=root.actors[id];if(!target)need('目标尚无实际状态：'+id,'resource.target');
+  const target=programTarget(root,id,program);if(!target)need('目标尚无实际状态：'+id,'resource.target');
+  validateObjectProgram(program,target,s,vars,root);
   const touchRange=validateProgramTargets(program,actor,target,id,plan);
   if(touchRange!==undefined&&id!==r.actorId){const distance=combat?spatialDistance(root.map,actor.position,target.position):plan.distances?.[id]??plan.distance;requireFact(finite(distance,'distance')<=touchRange,'目标超出实际触及距离');}
   if(program.area?.team==='enemy')requireFact(target.team!==undefined&&actor.team!==undefined&&target.team!==actor.team,'敌方范围效果不能纳入友方或阵营未知目标');
@@ -97,7 +100,7 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
   if(program.lineOfEffect!==false&&id!==r.actorId){
    const line=combat?clearLine(root.map,actor.position,target.position):plan.effectLine;
    requireFact(line===true,'目标没有已确认的效果线');
-   if(program.precise!==false)requireFact(combat?canObserve(root,target,r.actorId):plan.precise===true,'单体施法须精确定位目标');
+   if(program.precise!==false)requireFact(combat?(target.objectRecord?plan.precise===true:canObserve(root,target,r.actorId)):plan.precise===true,'单体施法须精确定位目标');
   }
  }
  if(s.resourceCooldowns?.[object.resourceId]>0)throw new IllegalAction('资源仍在冷却');
@@ -113,7 +116,7 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
  // spendAction clones the state; all subsequent operations use the new state.
  const state=actor.state;if(cost)state.resources[pool].current-=cost;
  const result={resourceId:object.resourceId,operation:r.operation,cost,pool,targets:[],damage:[]};
- if(program.cooldown)(state.resourceCooldowns??={})[object.resourceId]=val(program.cooldown)+1;
+ if(program.cooldown)(state.resourceCooldowns??={})[object.resourceId]=val(program.cooldown)+(program.cooldownPolicy?.clock==='elapsed-rounds'?0:1);
  if(program.casting&&program.components?.includes('posture')&&['medium','heavy'].includes(state.equippedArmorClass)){
   const die=drawDice()[0];if(die<=(state.equippedArmorClass==='heavy'?3:1))return {...result,armorFailure:true,die};
  }
@@ -127,7 +130,7 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
  }
  if(program.check){const roll=check(state,{attribute:program.check.attribute??'智力',skill,sub,modifier:val(program.check.modifier??0),dice:drawDice(),context:{casting:true,mentalPower:true,somatic:program.components.includes('posture'),schools:definition.schools}});requireFact(roll.eligible,roll.reason);vars.cast=roll.total;result.casting=roll;}
  for(const targetId of targetIds){
-  const target=root.actors[targetId],local={...vars,targetId};let lastDamage=0;
+  const target=programTarget(root,targetId,program),local={...vars,targetId,target:target.state};let lastDamage=0;
   const resistance=Math.max(0,resourceBonus(target.state,'spellResistance',{casterId:r.actorId,sourceId:object.resourceId,schools:definition.schools}));
   local.P=program.ignoreSpellResistance?vars.P:Math.max(0,vars.P-resistance);
   const value=x=>effectValue(x,state,local),out={targetId,effectivePower:local.P,steps:[]};
@@ -144,20 +147,28 @@ function resolveProgramSteps({root,r,object,definition,program,plan,state,target
  const value=x=>effectValue(x,state,local),targetId=target.id??local.targetId;let lastDamage=0;
   for(const op of program.steps){
    if(!effectMatches(op.when,state,local))continue;
-   if(op.op==='inspect'){
+   const objectResult=applyObjectOperation(op,{root,target,state,local,object,r,plan});
+   if(objectResult){out.steps.push(objectResult);
+   }else if(op.op==='inspect'){
     out.steps.push({op:'inspect',stat:op.stat,value:Math.max(0,resourceBonus(target.state,op.stat,{casterId:r.actorId,sourceId:object.resourceId,schools:definition.schools}))});
    }else if(op.op==='save'){
     const p=saveProfile(target,op.type,{mental:program.effectTypes?.includes('mind')||op.mental===true});const rolled=check(target.state,{poolBase:p.dp-value(op.penalty??0),attributeAutoOverride:p.fixed,reExtraSuccesses:p.extra,dice:drawDice(),context:{willResistance:op.type==='will',reflex:op.type==='reflex',physical:op.type!=='will'}});
     local[op.as??'save']=rolled.total;out.steps.push({op:'save',...rolled});
    }else if(op.op==='attack'){
-    const weapon=value(op.weapon),defense=resolveDefense(root,targetId,r.actorId,{ranged:true,contact:op.contact===true,...(op.energyWeapon?{flatFootedLevel:1}:{}),ap:value(op.ap??0),magic:value(op.magic??0),speed:value(op.speed??0),defenseMode:plan.defenseModes?.[targetId]});
+    const weapon=value(op.weapon),defense=objectAttackDefense(target)??resolveDefense(root,targetId,r.actorId,{ranged:true,contact:op.contact===true,...(op.energyWeapon?{flatFootedLevel:1}:{}),ap:value(op.ap??0),magic:value(op.magic??0),speed:value(op.speed??0),defenseMode:plan.defenseModes?.[targetId]});
     if(defense.pending)need('须目标声明防御方式','resource.defense');
     const roll=check(state,{attribute:'智力',skill,sub,modifier:weapon+value(op.modifier??0)+resourceBonus(state,'attack',{targetId,schools:definition.schools})-defense.total,dice:drawDice(),context:{attack:true,casting:true,mentalPower:true,somatic:program.components.includes('posture'),schools:definition.schools,targetId}});
     local.hit=Math.max(0,roll.total-(defense.extraSuccesses??0));local.damage=Math.min(local.hit,value(op.cap??{op:'add',args:[{op:'mul',args:[4,{context:'P'}]},{context:'E'}]}));
     out.steps.push({op:'attack',weapon,defense,roll,damage:local.damage});
+   }else if(op.op==='stabilize'){
+    const stable=stabilizeWounds(target.state,{sourceId:object.resourceId,casterId:r.actorId,rounds:value(op.rounds)});target.state=stable.state;out.steps.push({op:'stabilize',...stable.result});
    }else if(op.op==='damage'){
     const amount=Math.max(0,Math.floor(value(op.amount))),severity=op.severity??'L';
-    const segments=[{amount,severity,kind:op.kind??'energy',energyType:op.energy,magical:program.casting===true,grade:rank}];
+    const profile=op.profile?program.damageProfiles?.[value(op.profile)]:{kind:op.kind??'energy',energyType:op.energy};
+    if(!profile)need('须选择已登记伤害类型','resource.damageProfile');
+    const structure=damageProgramObject(root,target,amount,{...profile,magical:program.casting===true,grade:rank});
+    if(structure){lastDamage=structure.structuralDamage;local.actualDamage=lastDamage;out.steps.push({op:'damage',...structure});continue;}
+    const segments=[{amount,severity,...profile,magical:program.casting===true,grade:rank}];
     if(op.energyWeapon&&amount){const aggravated=Math.min(amount,Math.floor(value(op.weapon??0)/2));if(aggravated&&!equipment(target).armor.energyWeaponProof){segments[0].amount-=aggravated;segments.push({...segments[0],amount:aggravated,severity:'A'});}}
     lastDamage=damageEvent(target,segments,false,result);local.actualDamage=lastDamage;out.steps.push({op:'damage',actualDamage:lastDamage});
    }else if(op.op==='status'){
@@ -199,7 +210,9 @@ function resolveProgramSteps({root,r,object,definition,program,plan,state,target
     (target.state.resourceTriggers??={})[key]=trigger;out.steps.push({op:'trigger',event:op.event});
    }else if(op.op==='capability'){
     const capability={...op,source:object.resourceId,casterId:r.actorId,grade:rank,level:local.rank+(op.gradeBonus??0),...(op.range!==undefined?{range:value(op.range)}:{}),...(op.minutes!==undefined?{remainingMinutes:value(op.minutes)}:{}),...(op.rounds!==undefined?{remainingRounds:value(op.rounds)}:{})};
-    const key=op.id+'/'+object.resourceId+'/'+r.actorId,prior=target.state.resourceCapabilities?.[key];
+    const base=op.id+'/'+object.resourceId+'/'+r.actorId;
+    const sequence=op.lifetimePolicy==='independent'?(target.state.resourceCastSequence=(target.state.resourceCastSequence??0)+1):undefined;
+    const key=sequence===undefined?base:base+'/'+sequence,prior=target.state.resourceCapabilities?.[key];
     if(prior){capability.level=Math.max(capability.level,prior.level);if(prior.level>local.rank+(op.gradeBonus??0))capability.grade=prior.grade;if(capability.range!==undefined)capability.range=Math.max(capability.range,prior.range??0);}
     (target.state.resourceCapabilities??={})[key]=capability;out.steps.push({op:'capability',capability});
    }else throw new Error('执行器未接入操作（实现缺口，非待裁定）：'+op.op);

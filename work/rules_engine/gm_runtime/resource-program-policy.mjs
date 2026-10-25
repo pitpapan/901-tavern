@@ -55,10 +55,10 @@ export function policyPool(program,state,learned,plan,cost){
 }
 export function validateProgramTargets(program,actor,target,id,plan){
  const policy=program.targetPolicy;if(!policy)return;
- if(policy.living){
+ if(policy.living||policy.notDead){
   const kind=target.state.lifeType??plan.targetKinds?.[id];
-  if(kind===undefined)need('须有实际目标生命类别','resource.targetKinds');
-  requireFact(kind==='living','本术只对活物生效');
+  if(policy.living&&kind===undefined)need('须有实际目标生命类别','resource.targetKinds');
+  if(policy.living)requireFact(kind==='living','本术只对活物生效');
   const h=target.state.health,max=target.state.derived?.hpMax;
   if(!h||!Number.isFinite(max)||!Number.isFinite(h.A))need('须有目标实际生命与伤势','resource.target.health');
   requireFact(h.A<max,'已死亡目标不能接受活物治疗');

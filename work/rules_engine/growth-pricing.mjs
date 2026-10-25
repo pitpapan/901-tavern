@@ -23,6 +23,7 @@ export function validateLearningOffer(o,id){
  for(const p of Object.values(o.payments??{}))if(!xpAmount(p.xp)||!Number.isSafeInteger(p.wufaXP??0)||(p.wufaXP??0)<0||p.xp+(p.wufaXP??0)<=0)throw Error('分次付款须登记明确的普通XP与悟法XP金额');
  const rule=RESOURCE_DEFINITIONS[o.resourceId]?.learning;
  const definition=RESOURCE_DEFINITIONS[o.resourceId],policy=rule?.policy;
+ if(definition?.identity?.adoptionStatus==='candidate'&&(!policy||rule.transactionImplemented!==true))throw Error('候选取得事务尚未接入');
  if(policy){
   if(policy.requireContractVersion&&o.contractVersion!==definition.contractVersion)throw Error('学习报价须匹配当前合同版本');
   if(!policy.grades?.includes(o.grade)||o.versionMode!==undefined)throw Error('学习报价等级未由本政策定义');

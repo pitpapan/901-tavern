@@ -56,17 +56,23 @@ disabled=[e['uid'] for e in base if e['disable']]
 assert len(disabled)==9 and all(by_uid[u]['disable'] for u in disabled)
 loads=Counter('disabled' if e['disable'] else 'constant' if e['constant'] else 'keyword' for e in entries)
 templates=sum(bool(ctx['contracts'][r['resourceContract']['id']]['definition'].get('template')) for r in resource_records)
-assert loads=={'disabled':19+templates,'constant':3,'keyword':151+len(resource_records)-templates}
+candidates=len(ctx['candidate_contracts'])
+assert loads=={'disabled':19+templates+candidates,'constant':3,'keyword':151+len(resource_records)-templates-candidates}
 for r in resource_records:
     meta=r['resourceContract'];contract=ctx['contracts'][meta['id']]
     assert by_uid[r['uid']]['extensions']['901_resource_contract']==meta
     assert meta['version']==contract['version'] and meta['reading']==contract['reading']
     assert meta['verification']==contract['verification']
     assert meta['sha256']==sha(ROOT/meta['path'])
+    if meta['id'] in ctx['candidate_contracts']:
+        assert meta['adoptionStatus']=='candidate' and r['native']['disable']
+        assert meta['verifiedOperations']==ctx['candidate_runtime'][meta['id']]['operations']
+        assert meta['learning']==ctx['candidate_actions'].get(meta['id'],{}).get('learning')
+        assert '默认手动禁用' in r['content'] and '实际取得记录' in r['content']
     if contract['definition'].get('template'):
         assert r['native']['disable'] and '不能覆盖入都T0' in r['content']
         assert contract['definition']['template']['allowSnapshotOverwrite'] is False
-checks.append('原9条禁用与原173条加载策略保持；后期模板全部手动禁用；每项合同版本、正文哈希与执行状态一致')
+checks.append('原9条禁用与原173条加载策略保持；后期模板及新增候选全部手动禁用；每项合同版本、正文哈希与执行状态一致')
 
 # Every numeral in the seven original enemy short cards survives exactly once in their projected pieces.
 old_enemy='\n'.join(ctx['sources'][n]['content'] for n in range(131,137))
@@ -136,7 +142,7 @@ for p in OUT.rglob('*.md'):
         if resolved==OUT/'verification.json':continue
         assert resolved.exists(),(str(p),target)
 checks.append('包内Markdown文件链接均指向存在的文件')
-result={'status':'pass','checks':checks,'counts':{'books':6,'entries':expected_count,'resource_contracts':len(resource_records),'fullyVerified':sum(d['verification']['runtimeFullyVerified'] for d in ctx['contracts'].values()),'host_anchor':1,'loading':dict(loads),'source_entries':136,'source_units':606},'literal_trigger_probes':probes,'constant_body_chars_before':sum(len(e['content']) for e in base if e['constant'] and not e['disable']),'constant_body_chars_after':sum(len(e['content']) for e in entries if e['constant'] and not e['disable']),'limits':['本验证器只运行静态检查；本轮未调用外部模型','字面匹配不模拟预算、其他世界书、全局设置与实际Prompt组装','当前书分期优先关系是提示词约束，未新增程序化门控','合同同步不代表每项全部可执行；候选包未部署']}
+result={'status':'pass','checks':checks,'counts':{'books':6,'entries':expected_count,'resource_contracts':len(resource_records),'maintained_contracts':len(resource_records)-candidates,'candidate_contracts':candidates,'fullyVerified':sum(d['verification']['runtimeFullyVerified'] for d in ctx['contracts'].values()),'host_anchor':1,'loading':dict(loads),'source_entries':136,'source_units':606},'literal_trigger_probes':probes,'constant_body_chars_before':sum(len(e['content']) for e in base if e['constant'] and not e['disable']),'constant_body_chars_after':sum(len(e['content']) for e in entries if e['constant'] and not e['disable']),'limits':['本验证器只运行静态检查；本轮未调用外部模型','字面匹配不模拟预算、其他世界书、全局设置与实际Prompt组装','当前书分期优先关系是提示词约束，未新增程序化门控','合同同步不代表每项全部可执行；候选包未部署']}
 (OUT/'verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 assert (OUT/'verification.json').exists()
 print(json.dumps(result,ensure_ascii=False,indent=2))

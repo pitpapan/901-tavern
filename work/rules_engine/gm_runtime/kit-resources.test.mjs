@@ -30,7 +30,7 @@ test('comparison initiative and movement bonuses are not granted twice on resour
 function own(s,id,choices={}){(s.learnedResources??={})[id]={learned:true,source,kind:'technique',grade:'D',tree:'guanlan'};applyKitAcquisition(s,id,{source,...choices});}
 function actor(){const a=createOpeningRoster().player;own(a.state,'guanlan-fa',{attributes:{感知:2},poolClassifications:{流风:'generic'}});return a;}
 test('All current spells are catalogued once; catalog loading leaves T0 untouched',()=>{
- const before=createOpeningRoster();assert.equal(Object.values(RESOURCE_CATALOG).filter(x=>x.kind==='spell'&&!x.prohibited).length,208);
+ const before=createOpeningRoster();assert.equal(Object.values(RESOURCE_CATALOG).filter(x=>x.kind==='spell'&&!x.prohibited&&x.adoptionStatus!=='candidate').length,208);
  assert.equal(Object.values(RESOURCE_CATALOG).filter(x=>x.prohibited).length,7);
  assert.deepEqual(createOpeningRoster(),before);assert.equal(before.player.state.guanlan,undefined);
  assert.equal(before.player.combatProfile.equipment.weapon.damage,6);

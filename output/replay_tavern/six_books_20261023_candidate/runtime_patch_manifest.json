@@ -22,9 +22,9 @@
     },
     {
       "source": "work/rules_engine/combat/engine.mjs",
-      "source_sha256": "af3a103cfc0b99700ca5dc6df34c5075f6d5ae62589194942bcecd8260db3e06",
+      "source_sha256": "669df703c2c8bcbd98161126e580cbfef8a553696010419fcaea494ca307b577",
       "destination": "runtime_patch/901-opening-combat/work/rules_engine/combat/engine.mjs",
-      "sha256": "af3a103cfc0b99700ca5dc6df34c5075f6d5ae62589194942bcecd8260db3e06"
+      "sha256": "669df703c2c8bcbd98161126e580cbfef8a553696010419fcaea494ca307b577"
     },
     {
       "source": "work/rules_engine/combat/grapple.mjs",
@@ -40,9 +40,9 @@
     },
     {
       "source": "work/rules_engine/combat/map.mjs",
-      "source_sha256": "d3b5cc93af668e51dd11bf4487f615579c52217181008259e9f9b38cd600e69c",
+      "source_sha256": "2f54fd13cfdc3fd170efcd5b2923bead37c4ded3375d77dbbc7632bf57618c00",
       "destination": "runtime_patch/901-opening-combat/work/rules_engine/combat/map.mjs",
-      "sha256": "d3b5cc93af668e51dd11bf4487f615579c52217181008259e9f9b38cd600e69c"
+      "sha256": "2f54fd13cfdc3fd170efcd5b2923bead37c4ded3375d77dbbc7632bf57618c00"
     },
     {
       "source": "work/rules_engine/combat/mechanics.mjs",
@@ -88,9 +88,9 @@
     },
     {
       "source": "work/rules_engine/core.mjs",
-      "source_sha256": "c1ae8be1b6369fb283277cc564e5d8c4e45ddc334c19d847c0c3c5cf44e3c9bf",
+      "source_sha256": "d407a4f8938c2db145ce1e3f302a401405ae05f9bb064582862238967e62edd7",
       "destination": "runtime_patch/901-opening-combat/work/rules_engine/core.mjs",
-      "sha256": "c1ae8be1b6369fb283277cc564e5d8c4e45ddc334c19d847c0c3c5cf44e3c9bf"
+      "sha256": "d407a4f8938c2db145ce1e3f302a401405ae05f9bb064582862238967e62edd7"
     },
     {
       "source": "work/rules_engine/gm_runtime/actor-rules.mjs",
@@ -129,6 +129,12 @@
       "sha256": "049c4c52550a0e31711c4fb875298174d9afeec0f7ff49baa4b44dcf2db9d413"
     },
     {
+      "source": "work/rules_engine/gm_runtime/object-use.mjs",
+      "source_sha256": "5546a9a277329af298c8a3f76a4be69332aff6c01d9fcb2a7776f9ff263e2d0a",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/object-use.mjs",
+      "sha256": "5546a9a277329af298c8a3f76a4be69332aff6c01d9fcb2a7776f9ff263e2d0a"
+    },
+    {
       "source": "work/rules_engine/gm_runtime/opening-binding.mjs",
       "source_sha256": "eb10104ba583c9711c0991e08dfc8453202de5aca30764275508d3ca89c5847d",
       "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/opening-binding.mjs",
@@ -148,9 +154,9 @@
     },
     {
       "source": "work/rules_engine/gm_runtime/replay-check.mjs",
-      "source_sha256": "2f6099ce46f3203e885c2787d1694e517d4a5359665f5227dd1d3aba2253d709",
+      "source_sha256": "872857a8ca73a38861c57184a95b9cd35cbc35dc0ee29255cc4d31a4f8fd6c4d",
       "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/replay-check.mjs",
-      "sha256": "2f6099ce46f3203e885c2787d1694e517d4a5359665f5227dd1d3aba2253d709"
+      "sha256": "872857a8ca73a38861c57184a95b9cd35cbc35dc0ee29255cc4d31a4f8fd6c4d"
     },
     {
       "source": "work/rules_engine/gm_runtime/replay-gate-script.example.js",
@@ -159,16 +165,22 @@
       "sha256": "6f9b49b7f9eb89505397a3a7c90b7e8798b5ad9c9b261b864fe57cb59e45313e"
     },
     {
+      "source": "work/rules_engine/gm_runtime/resource-object-program.mjs",
+      "source_sha256": "b01238ae4300f375dabbeb7b6dafcea60b86266c45bf811d0c91c8ce4d977305",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/resource-object-program.mjs",
+      "sha256": "b01238ae4300f375dabbeb7b6dafcea60b86266c45bf811d0c91c8ce4d977305"
+    },
+    {
       "source": "work/rules_engine/gm_runtime/resource-program-policy.mjs",
-      "source_sha256": "a96b329107e8245fb0566f2f3924a506cb311d0ea403926acdf9bf16f8848d8a",
+      "source_sha256": "81777001750a8b9f2cbd5a6ac2587c12a25b8522d394247222a0e2429b46aacb",
       "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/resource-program-policy.mjs",
-      "sha256": "a96b329107e8245fb0566f2f3924a506cb311d0ea403926acdf9bf16f8848d8a"
+      "sha256": "81777001750a8b9f2cbd5a6ac2587c12a25b8522d394247222a0e2429b46aacb"
     },
     {
       "source": "work/rules_engine/gm_runtime/resource-program.mjs",
-      "source_sha256": "0d01105976a074666bced910c87bd070661b5aff36d6c16a359dfe44bf14552e",
+      "source_sha256": "793cb434b13932abda05e98aaf4bd888cc417c80e10b5f1334de69db65790605",
       "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/resource-program.mjs",
-      "sha256": "b90e2bb5f1d4530aa305a62813adf52789c7575feb799f10a4521ba7ad511b4c"
+      "sha256": "002dffa8b5e63b0d67107e83697e5dcfe690e0913b6980183c41b4bbf33078bc"
     },
     {
       "source": "work/rules_engine/gm_runtime/rule-actions.mjs",
@@ -178,15 +190,15 @@
     },
     {
       "source": "work/rules_engine/gm_runtime/rule-reference.mjs",
-      "source_sha256": "f3ecf630141ad68f6b39c86ae021291c82b0a70aa295173e283298512612c9ca",
+      "source_sha256": "c1c3ae2819f3feb505e62c8c04bf9a32133ac319fb124907ea460339bdaf9b95",
       "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/rule-reference.mjs",
-      "sha256": "f3ecf630141ad68f6b39c86ae021291c82b0a70aa295173e283298512612c9ca"
+      "sha256": "c1c3ae2819f3feb505e62c8c04bf9a32133ac319fb124907ea460339bdaf9b95"
     },
     {
       "source": "work/rules_engine/gm_runtime/scene-rules.mjs",
-      "source_sha256": "ad509d03c6f146ae061d874059d5280448d6e71fb2ea7ec240a742dd948ba103",
+      "source_sha256": "1885fd6078213b063d333efe818c45a69729a4d300f78f8edc23584bb7d199db",
       "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/scene-rules.mjs",
-      "sha256": "ad509d03c6f146ae061d874059d5280448d6e71fb2ea7ec240a742dd948ba103"
+      "sha256": "1885fd6078213b063d333efe818c45a69729a4d300f78f8edc23584bb7d199db"
     },
     {
       "source": "work/rules_engine/gm_runtime/wizard-host.mjs",
@@ -196,9 +208,9 @@
     },
     {
       "source": "work/rules_engine/growth-pricing.mjs",
-      "source_sha256": "006baa31f43ac19988b4bd0583c8e5e5259c1e745ecf6090119c6b0393902edb",
+      "source_sha256": "c800cbb8c0f768e632f1567b0295eaf9f59a14bfe76e577a9a9199d569332636",
       "destination": "runtime_patch/901-opening-combat/work/rules_engine/growth-pricing.mjs",
-      "sha256": "006baa31f43ac19988b4bd0583c8e5e5259c1e745ecf6090119c6b0393902edb"
+      "sha256": "c800cbb8c0f768e632f1567b0295eaf9f59a14bfe76e577a9a9199d569332636"
     },
     {
       "source": "work/rules_engine/healing.mjs",
@@ -244,21 +256,21 @@
     },
     {
       "source": "work/rules_engine/resource-action-index.mjs",
-      "source_sha256": "b39f5ce16c2f8b423e4dfbaef407ba2f9e9d3c558c1d7642464bd7ecee95027a",
+      "source_sha256": "cc4a97e551248c8d5a2327b843581a03d56f78f396efd9cddb2ca48a32ad90d3",
       "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-action-index.mjs",
-      "sha256": "c253dc8159ec522c3de73dca9d35e95fdb6322d4211437be08e810e0acc2e637"
+      "sha256": "90c0e0d83c8087d61ac768a47d5c95bf0549a1ce4b537f69785b90022aa400c3"
     },
     {
       "source": "work/rules_engine/resource-catalog.mjs",
-      "source_sha256": "8a87a331c196e48b6b06c02e631b59a6556a91c9aa700ecd454044a8dd887db0",
+      "source_sha256": "aa8ea8cea820503188be0bb6726af53d947a2361147e7c9ebce05e5393739cb6",
       "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-catalog.mjs",
-      "sha256": "70ce905faa2bb8324f629670fdc58ecb82cb8bb5fc2b4541f6b5ed9dd8915e7e"
+      "sha256": "99d2771e71b51c627c5eb532c598958948fcf822d3f3d1385008d5a077343cb4"
     },
     {
       "source": "work/rules_engine/resource-data.mjs",
-      "source_sha256": "93b777df1737bd8d1691d44539a00f491246e0433ba00cc2e596455053b9cb35",
+      "source_sha256": "b0c5febfbd6a0960087dc49dbe584bc92f473daa8846adf143a30b62b8b798a9",
       "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-data.mjs",
-      "sha256": "ff1c00e5aed32cc26583fbb987d76fcf1269ce5e46e83661c1dd85e5b466b5be"
+      "sha256": "710c63c4391677d6daa394cf62488299b9a70a3669f4c0e38fbb556560cb2240"
     },
     {
       "source": "work/rules_engine/resource-definitions.mjs",
@@ -274,15 +286,21 @@
     },
     {
       "source": "work/rules_engine/resource-lifecycle.mjs",
-      "source_sha256": "3bdb8f20d209d33f97cc8c74b5c8e2b59405e95f82237f5631ab6a066451dd1a",
+      "source_sha256": "8656b74f563af5be81fef96a2a24034bf531273512f05b685b30a8994efc2e88",
       "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-lifecycle.mjs",
-      "sha256": "3bdb8f20d209d33f97cc8c74b5c8e2b59405e95f82237f5631ab6a066451dd1a"
+      "sha256": "8656b74f563af5be81fef96a2a24034bf531273512f05b685b30a8994efc2e88"
     },
     {
       "source": "work/rules_engine/status-rules.mjs",
-      "source_sha256": "da3291428b7245909e151238384a53d171275ab6bcde5e8fe4d466df6928637c",
+      "source_sha256": "9fd1e9170b0b489d2982d709241ce9eb4a97fbd2a82740b85772a525216aa261",
       "destination": "runtime_patch/901-opening-combat/work/rules_engine/status-rules.mjs",
-      "sha256": "da3291428b7245909e151238384a53d171275ab6bcde5e8fe4d466df6928637c"
+      "sha256": "9fd1e9170b0b489d2982d709241ce9eb4a97fbd2a82740b85772a525216aa261"
+    },
+    {
+      "source": "work/rules_engine/structural-damage.mjs",
+      "source_sha256": "f653c73c674927effbe506b7a7f6b908631d189b32837efee4b11a54644aa3ce",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/structural-damage.mjs",
+      "sha256": "f653c73c674927effbe506b7a7f6b908631d189b32837efee4b11a54644aa3ce"
     },
     {
       "source": "work/rules_engine/wizard-rules.mjs",

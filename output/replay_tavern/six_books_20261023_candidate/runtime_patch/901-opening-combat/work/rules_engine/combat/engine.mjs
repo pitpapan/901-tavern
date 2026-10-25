@@ -1,3 +1,4 @@
+import {applyStructuralDamage} from '../structural-damage.mjs';
 import {resourceBonus,resourceEffects,observationContext,RESOURCE_DEFINITIONS} from '../resource-definitions.mjs';
 import {convertIncomingDamage,stackEffects} from '../resource-effects.mjs';
 import {resourceCapability} from '../resource-lifecycle.mjs';
@@ -311,7 +312,7 @@ export function damageEvent(a, segments, conversion, result, bypass={conversion:
     if (!segment.amount) continue;
     if(!segment.magical&&resourceCapability(a.state,'nonmagicalDamageImmunity'))continue;
     if(a.material==='antiMagicRock'&&(segment.kind==='energy'||segment.magical)){
-      if(!['D','C','B','A','S'].includes(segment.grade))throw new RuleInputError('厌魔石打击须有实际等级','damage.grade');
+      if(!['ungraded','D','C','B','A','S'].includes(segment.grade))throw new RuleInputError('厌魔石打击须有实际等级','damage.grade');
       if(segment.grade!=='S'&&!segment.exceptionSource)continue;
     }
     if(a.state.wizard?.form==='fire'&&segment.energyType==='fire'||a.state.wizard?.form==='wind'&&segment.energyType==='fall')continue;
@@ -449,12 +450,8 @@ function strike(b,a,t,c,result,drawDice,{opportunity=false,freeResponse=false,ac
   if(feature) {
     // Use the same normal weapon roll, cap, ammo and attack action. Structural
     // damage cannot inflict living-target ailments or pass through to a second target.
-    const hardness=Math.max(0,feature.durability.hardness-(p.hardnessIgnore??p.ignore)),before=feature.durability.current;
     if(feature.material==='antiMagicRock'&&(p.magical||p.energyWeapon)&&!p.grade)throw new RuleInputError('厌魔石须确认打击等级','attack.grade');
-    const mineralImmune=feature.material==='antiMagicRock'&&(p.magical||p.energyWeapon)&&['D','C','B','A'].includes(p.grade)&&!feature.energyException?.source;
-    const structuralDamage=mineralImmune?0:Math.min(before,Math.max(0,amount-hardness));
-    feature.durability.current-=structuralDamage;
-    if(feature.durability.current===0)feature.destroyed=true;
+    const {structuralDamage}=applyStructuralDamage(feature,amount,{ignoreHardness:p.hardnessIgnore??p.ignore,magical:p.magical||p.energyWeapon,grade:p.grade});
     result.terrain={featureId:feature.id,label:feature.label,kind:'damage',structuralDamage,
       destroyed:feature.destroyed===true,outcome:feature.destroyed?'障碍所标记的这一段已被破坏，通路打开':structuralDamage?(feature.kind==='door'&&feature.open?'打开的门扇受损，通路仍然开放':'障碍受损，仍然阻挡通行'):'这一击未能破坏障碍'};
     return;

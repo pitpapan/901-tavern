@@ -1,3 +1,5 @@
+import {runPhysicalObjectUse} from './object-use.mjs';
+import {expireResourceEffects} from '../resource-lifecycle.mjs';
 import {runKitMechanism} from './kit-runtime.mjs';
 import {RuleInputError,IllegalAction} from '../combat/mechanics.mjs';
 import {spendAction} from '../core.mjs';
@@ -18,6 +20,7 @@ export function runSceneMechanism(root,r,{combat=false,preActionCleared=false,dr
   const o=root.ruleScene?.objects?.[r.objectId],a=root.actors?.[r.actorId];
   if(!o?.source||!a)throw new RuleInputError('当前场景未登记这个实际对象及来源','ruleScene.objects');
   if(!o.actorIds?.includes(r.actorId))throw new IllegalAction('当前角色无法接触该对象或没有操作资格');
+  const physical=runPhysicalObjectUse(root,r,{combat,preActionCleared,drawDice});if(physical)return physical;
   if(!['demonBox','arrays'].includes(o.type)){
     const kit=runKitMechanism(root,r,{combat,preActionCleared,drawDice,actorTemplates});if(kit)return kit;
     const resolved=runConditionalResource(root,r,{combat,preActionCleared,drawDice,actorTemplates});if(resolved)return resolved;
@@ -67,6 +70,7 @@ export function sceneBarriers(scene) {
 }
 export function advanceSceneTime(scene,minutes) {
   const changes=[];
+  for(const [id,o]of Object.entries(scene?.objects??{}))if(o.type==='physicalObject'&&o.state)for(const expired of expireResourceEffects(o.state,{minutes,rounds:minutes*10}))changes.push({objectId:id,expired});
   for(const [id,o]of Object.entries(scene?.objects??{}))if(o.type==='demonBox'&&!o.released) {
     if(!Number.isInteger(o.sleep)||typeof o.open!=='boolean')throw new RuleInputError('盒子的当前睡眠值与开关状态未记录',id);
     if(o.open) {

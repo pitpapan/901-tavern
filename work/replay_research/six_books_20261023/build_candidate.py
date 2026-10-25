@@ -230,9 +230,18 @@ records['xp']['native']['key']=list(dict.fromkeys(records['xp']['native']['key']
 kit_inventory=read(STAGE/'kit-inventory.json')
 KIT=ROOT.parent/'901-resource-authoring-kit'
 sys.path.insert(0,str(KIT/'tools'))
-from compile_resources import load_contracts
+from compile_resources import load_contracts,load_candidate_package
 contracts={d['id']:d for d in load_contracts()}
 contract_paths={read(p)['id']:p for p in (KIT/'resources/execution').glob('*.rule.json')}
+candidate_contracts={};candidate_runtime={};candidate_actions={}
+for relative in kit_inventory.get('candidatePackages',[]):
+    package=KIT/relative
+    definitions,actions,selected,_=load_candidate_package(package)
+    assert not set(contracts)&set(selected), '候选不能覆盖正式合同身份'
+    contracts.update(selected);candidate_contracts.update(selected)
+    candidate_runtime.update(definitions);candidate_actions.update({row["resourceId"]:row for row in actions})
+    paths={read(p)['id']:p for p in (package/'execution/contracts').glob('*.rule.json')}
+    contract_paths.update({id:paths[id] for id in selected})
 assert {item['id'] for item in kit_inventory['entries']}==set(contracts), '资源目录与执行合同集合不同'
 for item in kit_inventory['entries']:
     contract=contracts[item['id']]
@@ -240,20 +249,29 @@ for item in kit_inventory['entries']:
     assert item['source']=='../901-resource-authoring-kit/'+contract['reading']['path']
     later=item.get('period')=='later-optional'
     template=item['kind']=='character-template'
-    key=add('kit:'+item['id'],('后期模板·' if template else '资源·')+item['name'],BOOKS[5] if template else BOOKS[3],123,'concept',keys=[item['name']],manual=template)
-    records[key]['native'].update(disable=template,constant=template,excludeRecursion=True,preventRecursion=True)
+    candidate=item.get('adoptionStatus')=='candidate'
+    assert candidate==(item['id'] in candidate_contracts), '候选目录身份不一致'
+    key=add('kit:'+item['id'],('后期模板·' if template else '候选资源·' if candidate else '资源·')+item['name'],BOOKS[5] if template else BOOKS[3],123,'concept',keys=[item['name']],manual=template or candidate)
+    records[key]['native'].update(disable=template or candidate,constant=template or candidate,excludeRecursion=True,preventRecursion=True)
     meta={'id':contract['id'],'version':contract['version'],'reading':contract['reading'],
           'path':'../901-resource-authoring-kit/'+contract_paths[item['id']].relative_to(KIT).as_posix(),
           'sha256':sha(contract_paths[item['id']]),'verification':contract['verification'],
           'actions':contract['actions'],'implementationGaps':contract['implementationGaps'],
           'unresolvedRules':contract['unresolvedRules']}
+    if candidate:
+        runtime=candidate_runtime[item['id']];action=candidate_actions.get(item['id'],{})
+        meta.update(adoptionStatus='candidate',verifiedOperations=runtime['operations'],
+                    runtimeProjectionVerification=runtime['verification'],learning=action.get('learning'))
     records[key]['resourceContract']=meta
     records[key]['native']['extensions']['901_resource_contract']=meta
     warning='资源定义不表示任何人物已经取得；实际资格、持有、能量、冷却、XP只认当前JS/MVU。'
+    if candidate:warning+='本批适配候选，默认手动禁用；执行证明只覆盖已列操作，须有该角色的已采用学习报价和实际取得记录才能使用，不自动加入帝国课程。'
     if later:warning+='后期可选成长资料，不能覆盖入都T0；须实际取得各项后逐项启用，不导入整张成熟面板。'
     if item.get('prohibited'):warning+='帝国禁用条目，不列入帝国法师合法学习目录；资料存在不构成开放许可。'
     status=contract['verification']
     execution=f"执行合同：{contract['id']} @ {contract['version']}；覆盖状态：{status['status']}；完整执行验证：{'是' if status['runtimeFullyVerified'] else '否'}。索引或正文存在不代表全部条款可自动结算。"
+    if candidate:
+        execution+=' 已验证操作：'+('、'.join(meta['verifiedOperations']) or '仅部分被动效果')+'；学习事务：'+('已验证，须逐项登记采用报价' if meta['learning'] else '未接入，不能购买汇编总开关')+'。'
     gaps='\n'.join('实现缺口：'+x for x in contract['implementationGaps'])
     unresolved='\n'.join('规则缺参：'+x['parameter']+'；依据：'+x['basis']+'；推荐：'+x['recommendation'] for x in contract['unresolvedRules'])
     extra(key,warning+'\n\n'+execution+'\n'+gaps+'\n'+unresolved+'\n\n'+item['body'],[ref(item['source'],item['line']),ref(meta['path'])])

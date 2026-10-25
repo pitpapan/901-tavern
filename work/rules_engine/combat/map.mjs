@@ -1,3 +1,4 @@
+import {resourceCapability} from '../resource-lifecycle.mjs';
 import {statusLevel} from '../core.mjs';
 // Metres in the rules save; the view only receives the observer's projection.
 export const distance=(a,b)=>Math.hypot(a[0]-b[0],a[1]-b[1]);
@@ -114,6 +115,13 @@ export function nearestPoint(p,f) {
     if(!best||distance(p,q)<distance(p,best))best=q;}
   return best;
 }
+export function sceneIlluminates(b,position){
+ return Object.values(b.ruleScene?.objects??{}).some(o=>{
+  const light=o.type==='physicalObject'&&resourceCapability(o.state??{},'illumination');if(!light)return false;
+  const source=o.state.object?.holderId?b.actors[o.state.object.holderId]?.position:o.position;
+  return point(source)&&point(position)&&spatialDistance(b.map,source,position)<=light.range&&clearLine(b.map,source,position,{sight:true});
+ });
+}
 export function canObserve(b,a,observerId) {
   const observer=b.actors[observerId]??b.observers?.[observerId];
   if(!a||!observer)return false;
@@ -124,7 +132,7 @@ export function canObserve(b,a,observerId) {
     const crossed=(b.map?.features??[]).filter(f=>active(f)&&insideFraction(observer.position,a.position,f)>0);
     if(observer.windSense&&(b.map?.airflow===false||!clearLine(b.map,observer.position,a.position)||crossed.some(f=>f.airSealed)))return false;
     if(a.spirit&&observer.spiritSight&&crossed.some(f=>f.smoke||f.supernaturalDarkness))return false;
-    if(b.map?.darkness&&!observer.windSense&&!(observer.darkvision&&spatialDistance(b.map,observer.position,a.position)<=observer.darkvision)&&!(a.spirit&&observer.spiritSight))return false;
+    if(b.map?.darkness&&!sceneIlluminates(b,a.position)&&!observer.windSense&&!(observer.darkvision&&spatialDistance(b.map,observer.position,a.position)<=observer.darkvision)&&!(a.spirit&&observer.spiritSight))return false;
   }
   return a.present&&!a.hiddenFrom?.includes(observerId)&&(!observer||a.id===observerId||
     (observer.perceptionRange===undefined||spatialDistance(b.map,observer.position,a.position)<=observer.perceptionRange)&&clearLine(b.map,observer.position,a.position,{sight:true}));
