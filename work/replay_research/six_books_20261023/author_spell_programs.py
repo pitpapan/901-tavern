@@ -163,6 +163,23 @@ VARIANTS={'天堂之盾':{'castReflex':dict(copy.deepcopy(PROGRAMS['天堂之盾
 VARIANTS['防护能量结界']={'castReflex':dict(copy.deepcopy(PROGRAMS['防护能量结界']),action='reflex',counterCosts=[{'path':'will.current','amount':expr('sub',expr('mul',4,{'context':'rank'}),2),'maximumPath':'will.max'}])}
 VARIANTS['物理盾']={'castReflex':dict(copy.deepcopy(PROGRAMS['物理盾']),action='reflex',counterCosts=[{'path':'will.current','amount':expr('mul',2,{'context':'rank'}),'maximumPath':'will.max'}])}
 
+# Preserve registered legacy selectors as fixed, contract-declared choices.
+def fixed_choice(value,key,selected):
+ if isinstance(value,dict):
+  if value in ({'choice':key},{'context':key}):return selected
+  return {k:fixed_choice(v,key,selected) for k,v in value.items()}
+ if isinstance(value,list):return [fixed_choice(v,key,selected) for v in value]
+ return value
+for name,key,choices in [('透特之咏','chosenSkill',{'castLore':'学识','castScience':'科学'}),('灼热之痛','chosenStatus',{'castHatred':'仇恨'})]:
+ for operation,selected in choices.items():
+  variant=fixed_choice(copy.deepcopy(PROGRAMS[name]),key,selected)
+  variant.get('choices',{}).pop(key,None)
+  variant['label']=name+'·'+selected
+  VARIANTS.setdefault(name,{})[operation]=variant
+
+# The reading text permits extra missiles per actual caster level, paid separately.
+PROGRAMS['魔法飞弹'].update(target='sequence',repetition={'maximum':{'context':'casterLevel'},'extraCost':2})
+
 # Every remaining clause remains an implementation item, never a missing rule.
 # Shared resistance receipts replace hand-written subtraction and accidental
 # second PHB status saves. These clauses explicitly compare one casting roll
@@ -233,7 +250,7 @@ EXTRA_GAPS={
  '致盲斩':['物件目标及特殊免判定攻击的附魔事件仍须接入；普通人物攻击已覆盖落空和防护挡尽'],
  '激愤斩':['物件目标及特殊免判定攻击的附魔事件仍须接入；普通人物攻击已覆盖落空和防护挡尽'],
  '魔能爆':['另购进化的苦痛、长枪、斥力、拉近、减速和爆炸条款尚未接入；基础D/C独立多次攻击已实现'],
- '魔法飞弹':['多枚、悬浮与穿透进化需专用声明和投射物事件'],
+ '魔法飞弹':['独立物体、反射拦截、悬浮与穿透进化仍需验证或接入'],
  '阳炎炮':['贯穿链的逐目标预算'],
  '惊惧斩':['物件目标及特殊免判定攻击的附魔事件仍须接入；普通人物攻击与下一次行动损失已接通'],
  '脆弱诅咒':['普通武器与通用法术来源已分类；旧状态聚合和其余骰伤来源仍须逐项标注damageNature，不能把未分类伤害默认当攻击'],
@@ -277,6 +294,7 @@ def main():
  count=0
  for path in DEST.glob('*.rule.json'):
   doc=json.loads(path.read_text(encoding='utf-8'));name=doc['identity']['name']
+  before=json.dumps(doc,ensure_ascii=False,sort_keys=True)
   if doc['identity']['category']!='spell':continue
   if doc.get('authoring',{}).get('executionSource')=='contract':continue # Explicit handoff: never overwrite canonical contracts.
   source=(KIT/doc['reading']['path']).read_text(encoding='utf-8')
@@ -291,6 +309,7 @@ def main():
    if ref not in refs:refs.append(ref)
   doc['definition']['subskills']=subs
   doc['definition']['requiresAllSchools']=both
+  if field and '学习时选定' in field.group(1):doc['definition']['schoolChoiceAtLearning']=True
   doc['definition']['schools']=subs
   if name in PROGRAMS:
    doc['definition']['programs']={'cast':PROGRAMS[name]};doc['definition']['schools']=subs

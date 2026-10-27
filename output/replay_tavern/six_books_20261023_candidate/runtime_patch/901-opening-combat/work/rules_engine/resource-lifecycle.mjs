@@ -13,7 +13,7 @@ import {RESOURCE_DEFINITIONS} from './resource-definitions.mjs';
 export function resourceCapabilityRows(state,id){
  const rows=Object.entries(state.resourceCapabilities??{}).map(([instanceId,x])=>({...x,instanceId})).filter(x=>x.id===id&&!x.suspended&&x.remainingRounds!==0&&x.remainingMinutes!==0);
  for(const [resourceId,owned]of Object.entries(state.learnedResources??{}))if(owned.learned)for(const c of RESOURCE_DEFINITIONS[resourceId]?.capabilities??[])if(c.id===id)rows.push({...c,source:resourceId,instanceId:'definition/'+resourceId+'/'+id});
- return rows.filter(x=>!x.applicability||evaluateApplicability(x.applicability,collectImmunities(state,RESOURCE_DEFINITIONS)).status!=='blocked').sort((a,b)=>(b.level??0)-(a.level??0));
+ return rows.filter(x=>!x.applicability||evaluateApplicability(x.applicability,collectImmunities(state,RESOURCE_DEFINITIONS)).status!=='blocked').sort((a,b)=>(b.level??0)-(a.level??0)||(b.range??0)-(a.range??0));
 }
 export const resourceCapability=(state,id)=>resourceCapabilityRows(state,id)[0]??null;
 export function expireResourceEffects(state,{minutes=0,rounds=0,scene=false,drawDice}={}){
@@ -28,8 +28,8 @@ export function expireResourceEffects(state,{minutes=0,rounds=0,scene=false,draw
  if(scene){delete state.resourceSensoryCues;delete state.resourceTurnSerial;delete state.resourcePendingPerceptions;delete state.resourceDiscoveries;delete state.resourceLocationClues;delete state.resourceMovementHistory;delete state.resourceMovementSerial;delete state.resourceDetectionContests;for(const [key,row]of Object.entries(state.resourceProgressions??{}))if(row.scope==='scene')delete state.resourceProgressions[key];delete state.resourceSceneUsage;delete state.resourceTurnOrder;}
  const expired=[],tick=x=>{
   if(scene&&x.scene)return false;
-  if(x.remainingMinutes!==undefined)x.remainingMinutes=Math.max(0,x.remainingMinutes-minutes);
-  if(x.remainingRounds!==undefined)x.remainingRounds=Math.max(0,x.remainingRounds-rounds);
+  if(x.remainingMinutes!==undefined){const n=x.remainingMinutes-minutes;x.remainingMinutes=n<=1e-9?0:n;}
+  if(x.remainingRounds!==undefined){const n=x.remainingRounds-rounds;x.remainingRounds=n<=1e-9?0:n;}
   return x.remainingRounds!==0&&x.remainingMinutes!==0;
  };
  const ending=(state.activeResourceEffects??[]).filter(x=>!tick(x));

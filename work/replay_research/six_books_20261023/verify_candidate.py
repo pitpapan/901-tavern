@@ -1,10 +1,10 @@
 """Focused checks of six-book projection; no live model or game state access."""
 from pathlib import Path
-import json, hashlib, re, runpy
+import json, hashlib, re, runpy, os
 from collections import Counter
 
 ROOT=Path(__file__).resolve().parents[3]
-OUT=ROOT/'output/replay_tavern/six_books_20261023_candidate'
+OUT=Path(os.environ.get('SIX_BOOKS_VERIFY_OUT',str(ROOT/'output/replay_tavern/six_books_20261023_candidate'))).resolve()
 read=lambda p:json.loads(p.read_text(encoding='utf-8'))
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 ctx=runpy.run_path(str(Path(__file__).with_name('build_candidate.py')))
@@ -26,11 +26,11 @@ assert len(entries)==len({e['uid'] for e in entries})
 assert len(resource_entries)==len(ctx['contracts'])
 assert {e['extensions']['901_resource']['id'] for e in resource_entries}==set(ctx['contracts'])
 for e in resource_entries:
-    execution=e['extensions']['901_resource'];contract,path=ctx['contracts'][execution['id']]
+    execution=e['extensions']['901_resource'];contract=ctx['contracts'][execution['id']];path=ctx['contract_paths'][execution['id']]
     assert execution['contract_sha256']==sha(path)
     assert execution['version']==contract['version'] and execution['reading']==contract['reading']
     for field in ['verification','clauses','actions','consumerCoverage','implementationGaps','unresolvedRules']:
-        assert execution[field]==contract[field],(execution['id'],field)
+        assert execution[field]==contract.get(field,{'effects':[]}) if field=='consumerCoverage' else execution[field]==contract[field],(execution['id'],field)
     assert execution['programSources']=={op:p['compilation'] for op,p in contract['definition'].get('programs',{}).items() if p.get('compilation')}
     assert execution['deployment']=='candidate_not_installed'
     if contract['definition'].get('template'):assert e['disable'] and e['constant'] and not e['key']
@@ -64,6 +64,16 @@ checks.append(f'606个来源段落／行都有一次明确分配；{len(ctx["rec
 disabled=[e['uid'] for e in base if e['disable']]
 assert len(disabled)==9 and all(by_uid[u]['disable'] for u in disabled)
 loads=Counter('disabled' if e['disable'] else 'constant' if e['constant'] else 'keyword' for e in entries)
+for r in (r for r in ctx['records'].values() if 'resourceContract' in r):
+    meta=r['resourceContract'];contract=ctx['contracts'][meta['id']]
+    assert by_uid[r['uid']]['extensions']['901_resource_contract']==meta
+    assert meta['version']==contract['version'] and meta['reading']==contract['reading']
+    assert meta['verification']==contract['verification'] and meta['sha256']==sha(ROOT/meta['path'])
+    if meta['id'] in ctx['candidate_contracts']:
+        assert meta['adoptionStatus']=='candidate' and r['native']['disable']
+        assert meta['verifiedOperations']==ctx['candidate_runtime'][meta['id']]['operations']
+        assert meta['learning']==ctx['candidate_actions'].get(meta['id'],{}).get('learning')
+        assert '默认手动禁用' in r['content'] and '实际取得记录' in r['content']
 resource_loads=Counter('disabled' if e['disable'] else 'constant' if e['constant'] else 'keyword' for e in resource_entries)
 assert loads==Counter({'disabled':19,'constant':3,'keyword':151})+resource_loads
 assert resource_loads['constant']==0

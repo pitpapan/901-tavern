@@ -46,8 +46,28 @@ test('mana meditation and full long rest use acquired pool rules without adding 
 test('D spell upgrade has distinct retain/replace XP and keeps the original acquisition record immutable',()=>{
  const id=Object.keys(RESOURCE_DEFINITIONS).find(id=>id.endsWith(':魔法飞弹'));
  for(const [versionMode,price]of [['retain',25],['replace',15]]){
-  const s=createOpeningRoster().player.state;s.xp=50;s.learnedResources={[id]:{learned:true,grade:'D',source}};
+  const s=createOpeningRoster().player.state;s.xp=50;s.casting={imperial:{grade:'C'}};s.learnedResources={[id]:{learned:true,grade:'D',source}};
   const out=purchaseLearning(s,{id:'upgrade',resourceId:id,name:'魔法飞弹C',grade:'C',kind:'evolution',baseCost:price,versionMode,adopted:true,source,actorIds:['player'],requirementsMet:true},{actorId:'player'});
   assert.equal(out.state.xp,50-price);assert.deepEqual(out.state.learnedResources[id].versions,versionMode==='retain'?['D','C']:['C']);assert.equal(s.learnedResources[id].grade,'D');
  }
+});
+test('dual-school prerequisites apply to paid and granted spells without spending XP or slots on failure',()=>{
+ const id='imperial-magic:C:狂战士之魂',s=learn('幻术');
+ s.casting.imperial.grade='C';
+ s.skills.神秘={level:4,subs:{变化:{level:1},幻术:{level:1}}};
+ const q={id:'dual',resourceId:id,name:'狂战士之魂',grade:'C',kind:'technique',baseCost:25,adopted:true,source,actorIds:['player'],requirementsMet:true};
+ const before=structuredClone(s);assert.throws(()=>purchaseLearning(s,q,{actorId:'player'}),/专业资格/);assert.deepEqual(s,before);
+ s.skills.神秘.subs.诅咒={level:1};assert.equal(purchaseLearning(s,q,{actorId:'player'}).result.charged,25);
+ const grant='imperial-mage/D/initial',illusion='imperial-magic:D:杰斯的幻象';
+ assert.throws(()=>claimLearningGrant(s,grant,[illusion],RESOURCE_DEFINITIONS,source),/专业资格/);
+ assert.deepEqual(s.learningGrants[grant].used,[]);
+ s.skills.神秘.subs.心灵={level:1};claimLearningGrant(s,grant,[illusion],RESOURCE_DEFINITIONS,source);
+ assert.deepEqual(s.learningGrants[grant].used,[illusion]);
+});
+test('learning cannot relabel native C as D or bypass the known D upgrade prerequisite',()=>{
+ const s=learn(),before=structuredClone(s);
+ const q={id:'spell',resourceId:'imperial-magic:C:阳炎炮',name:'阳炎炮',grade:'D',kind:'technique',baseCost:25,adopted:true,source,actorIds:['player'],requirementsMet:true};
+ assert.throws(()=>purchaseLearning(s,q,{actorId:'player'}),/原生C|对应等级/);assert.deepEqual(s,before);
+ s.casting.imperial.grade='C';
+ assert.throws(()=>purchaseLearning(s,{...q,resourceId:'imperial-magic:D:魔法飞弹',name:'魔法飞弹',grade:'C',baseCost:10},{actorId:'player'}),/先学D版/);
 });

@@ -7,6 +7,7 @@ import {detectionLimit} from '../resource-detection.mjs';
 import {perceptionDelay,recordPerception,deliveredPerceptions} from '../resource-perception.mjs';
 import {selectedOngoingEffects} from '../resource-ongoing.mjs';
 import {statusLevel,lifeStatus} from '../core.mjs';
+import {resourceCapability} from '../resource-lifecycle.mjs';
 // Metres in the rules save; the view only receives the observer's projection.
 export const distance=(a,b)=>Math.hypot(a[0]-b[0],a[1]-b[1]);
 const point=p=>Array.isArray(p)&&p.length===2&&p.every(Number.isFinite);
@@ -128,6 +129,13 @@ export function nearestPoint(p,f) {
     if(!best||distance(p,q)<distance(p,best))best=q;}
   return best;
 }
+export function sceneIlluminates(b,position){
+ return Object.values(b.ruleScene?.objects??{}).some(o=>{
+  const light=o.type==='physicalObject'&&resourceCapability(o.state??{},'illumination');if(!light)return false;
+  const source=o.state.object?.holderId?b.actors[o.state.object.holderId]?.position:o.position;
+  return point(source)&&point(position)&&spatialDistance(b.map,source,position)<=light.range&&clearLine(b.map,source,position,{sight:true});
+ });
+}
 function rawCanObserve(b,a,observerId) {
   const observer=b.actors[observerId]??b.observers?.[observerId];
   if(!a||!observer)return false;
@@ -138,7 +146,7 @@ function rawCanObserve(b,a,observerId) {
     const crossed=(b.map?.features??[]).filter(f=>active(f)&&insideFraction(observer.position,a.position,f)>0);
     if(observer.windSense&&(b.map?.airflow===false||!clearLine(b.map,observer.position,a.position)||crossed.some(f=>f.airSealed)))return false;
     if(a.spirit&&observer.spiritSight&&crossed.some(f=>f.smoke||f.supernaturalDarkness))return false;
-    if(b.map?.darkness&&!observer.windSense&&!(observer.darkvision&&spatialDistance(b.map,observer.position,a.position)<=observer.darkvision)&&!(a.spirit&&observer.spiritSight))return false;
+    if(b.map?.darkness&&!sceneIlluminates(b,a.position)&&!observer.windSense&&!(observer.darkvision&&spatialDistance(b.map,observer.position,a.position)<=observer.darkvision)&&!(a.spirit&&observer.spiritSight))return false;
   }
   return a.present&&!a.hiddenFrom?.includes(observerId)&&(!observer||a.id===observerId||
     (observer.perceptionRange===undefined||spatialDistance(b.map,observer.position,a.position)<=observer.perceptionRange)&&clearLine(b.map,observer.position,a.position,{sight:true,root:observer.windSense?undefined:b,observerId}));
@@ -155,7 +163,7 @@ export function observationChannels(b,a,observerId){
   if(!observer.state||['dead','unconscious'].includes(lifeStatus(observer.state).state)||observer.state.sleeping)continue;
   if(a.spirit&&!observer.spiritSight&&!sense.spiritSight||!!a.underground!==!!observer.underground&&!sense.underground)continue;
   if(sense.lineOfEffect&&!clearLine(b.map,observer.position,a.position))continue;
-  if(sense.visual&&(statusLevel(observer.state,'目眩').severe||!clearLine(b.map,observer.position,a.position,{sight:true,root:b,observerId})||b.map.darkness&&!(observer.darkvision>=spatialDistance(b.map,observer.position,a.position))))continue;
+  if(sense.visual&&(statusLevel(observer.state,'目眩').severe||!clearLine(b.map,observer.position,a.position,{sight:true,root:b,observerId})||b.map.darkness&&!sceneIlluminates(b,a.position)&&!(observer.darkvision>=spatialDistance(b.map,observer.position,a.position))))continue;
   if(!observer.state.resourceDetectionContests?.[observationKey(a.id,sense.source)]&&!sense.contest)continue;
   channels.push(structuredClone(sense));
  }

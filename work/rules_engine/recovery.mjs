@@ -13,7 +13,7 @@ import {expireResourceEffects} from './resource-lifecycle.mjs';
 import {healWounds} from './healing.mjs';
 import {advanceResourcePeriods,flushResourceTriggerEnds} from './gm_runtime/resource-program.mjs';
 import {ATTRIBUTES,check,effectiveAttribute,attrAuto,lifeStatus,recover,spendAction,actionEligibility,statusLevel,applyStatus,rollPool,advanceGeneticLock} from './core.mjs';
-import {RuleInputError,IllegalAction,saveProfile} from './combat/mechanics.mjs';
+import {RuleInputError,IllegalAction,saveProfile,refreshDerived} from './combat/mechanics.mjs';
 
 // Period-specific card rules; no inventory or post-growth values are inferred.
 export const RECOVERY_SOURCES={
@@ -174,7 +174,9 @@ export function advanceTime(actor,minutes,changes=[],{combatTick=false,drawDice,
   advancePerception(actor.state,{root,combat:combatTick,minutes});
   if(!combatTick)accrueRoundCosts(actor.state);
   if(actor.state.resourceEffectiveClock!==undefined||Object.values(actor.state.resourceTriggers??{}).some(t=>t.onDeath)){actor.state.resourceEffectiveClock=(actor.state.resourceEffectiveClock??actor.state.recoveryClock?.minutes??0)+minutes;const actual={...root,actors:{...root?.actors,[actor.id]:actor}};if(!combatTick)accrueEffectiveTriggerRounds(actual,actor.id);}
-  for(const id of expireResourceEffects(actor.state,{minutes,rounds:minutes*10,drawDice}))changes.push({expired:id});
+  const expired=expireResourceEffects(actor.state,{minutes,rounds:minutes*10,drawDice});
+  for(const id of expired)changes.push({expired:id});
+  if(expired.length&&(actor.combatProfile||actor.kind))refreshDerived(actor);
   if(actor.state.resourcePendingTriggerEnds?.length){const id=actor.id;changes.push(...flushResourceTriggerEnds({...root,actors:{...root?.actors,[id]:actor}},id,{drawDice,combat:combatTick}));}
   if(!combatTick)accrueRoundCosts(actor.state,{minutes});
   syncVerticalPosition(actor);

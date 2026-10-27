@@ -7,6 +7,8 @@ import {applyResourceActionLosses} from './resource-action-losses.mjs';
 import {consumeTemporaryHealth} from './resource-temporary-health.mjs';
 import {changeWill,hasCounterCondition} from './resource-counters.mjs';
 import {resourceBonus,resourceEffects} from './resource-definitions.mjs';
+import {resourceCapability} from './resource-lifecycle.mjs';
+import {kitAttribute} from './kit-state.mjs';
 import {growthPrice} from './growth-pricing.mjs';
 // 901 Core Rules v0.1, P0 only. All public operations return new JSON-safe state.
 import {wizardAttribute,wizardCheck} from './wizard-rules.mjs';
@@ -354,8 +356,9 @@ export function lifeStatus(state) {
   if(hasCounterCondition(state,'unconscious'))return {state:'unconscious',reason:'resource-condition',deteriorating:h.intact===0&&h.A>0&&!h.deteriorationStopped,woundPenalty};
   if(h.intact===0&&resourceBonus(state,'ignoreWoundUnconsciousness')>0)return {state:'awake',reason:'wound-suppression',deteriorating:h.A>0&&!h.deteriorationStopped,woundPenalty};
   if (h.intact > 0) return { state: 'awake', deteriorating: false, woundPenalty };
+  if(resourceCapability(state,'woundConsciousness'))return {state:'awake',deteriorating:h.A>0&&!h.deteriorationStopped,woundPenalty};
   if (h.A > 0) return { state: 'unconscious', deteriorating: !h.deteriorationStopped, woundPenalty };
-  if (h.L > 0 || h.coma) return { state: 'unconscious', deteriorating: false, woundPenalty };
+  if (h.L > 0 || h.coma&&!resourceCapability(state,'woundConsciousness')) return { state: 'unconscious', deteriorating: false, woundPenalty };
   return { state: 'B-check', deteriorating: false, woundPenalty };
 }
 
@@ -576,6 +579,15 @@ export function advanceDeterioration(state, { from,drawDice } = {}) {
   const woundSource=transitionWoundShare(next,selected,'A',{drawDice});
   next.health[selected]--; next.health.A++;
   return { state: next, result: { changed: true, from: selected, to: 'A',...(woundSource?{woundSource}:{}), life: lifeStatus(next) } };
+}
+
+export function stabilizeWounds(state,{sourceId,casterId,rounds}={}){
+ integer(rounds,'stabilization rounds',1);
+ if(lifeStatus(state).state==='dead')throw Error('已死亡目标不能稳定伤势');
+ const next=clone(state);next.health.deteriorationStopped=true;
+ const sequence=next.resourceCastSequence=(next.resourceCastSequence??0)+1;
+ (next.resourceCapabilities??={})['woundConsciousness/'+sourceId+'/'+casterId+'/'+sequence]={id:'woundConsciousness',source:sourceId,casterId,level:0,remainingRounds:rounds};
+ return {state:next,result:{deteriorationStopped:true,rounds,life:lifeStatus(next)}};
 }
 
 export function firstAid(healer, patient, { dice, eligible = true, preActionCheck, actionAlreadySpent=false } = {}) {

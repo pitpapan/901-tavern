@@ -32,21 +32,23 @@ import {hasResourceSource,endResourceSource,selectedTimedResource,endTimedResour
 import {weaponInstance,enchantWeapon} from '../resource-weapons.mjs';
 import {temporaryHealthChoice,registerTemporaryHealth} from '../resource-temporary-health.mjs';
 import {adjustCounter,addCounterCondition} from '../resource-counters.mjs';
-import {check,checkProfile,rollCheckProfile,spendAction,effectiveAttribute,effectiveSkill,attrAuto,applyStatus,lifeStatus,counteractTemperature,statusLevel,syncResourceHealth} from '../core.mjs';
+import {check,checkProfile,rollCheckProfile,spendAction,effectiveAttribute,effectiveSkill,attrAuto,applyStatus,lifeStatus,counteractTemperature,statusLevel,syncResourceHealth,stabilizeWounds} from '../core.mjs';
 import {effectValue,effectMatches,stackEffects,retainStrongerEffects,retainResourceGrade} from '../resource-effects.mjs';
 import {resourceBonus,resourceEffects,RESOURCE_DEFINITIONS} from '../resource-definitions.mjs';
-import {saveProfile,equipment,combatRuleContext,RuleInputError,IllegalAction} from '../combat/mechanics.mjs';
+import {saveProfile,equipment,combatRuleContext,RuleInputError,IllegalAction,refreshDerived} from '../combat/mechanics.mjs';
 import {resolveDefense,damageEvent} from '../combat/engine.mjs';
 import {clearLine,spatialDistance,canObserve} from '../combat/map.mjs';
 import {assertEffectUseAllowed} from '../resource-lifecycle.mjs';
 import {syncActorWounds} from '../resource-wounds.mjs';
 import {healWounds} from '../healing.mjs';
 import {registerResourceAura} from '../resource-auras.mjs';
+import {programTarget,prepareProgramFacts,validateObjectProgram,applyObjectOperation,objectAttackDefense,damageProgramObject} from './resource-object-program.mjs';
+import {configureProgramPolicy,policyPool,validateProgramTargets,validateHealOrder} from './resource-program-policy.mjs';
 
 const need=(message,field)=>{throw new RuleInputError(message,field);};
 const requireFact=(condition,message)=>{if(!condition)throw new IllegalAction(message);};
 const finite=(value,name)=>{if(!Number.isFinite(value))need('缺少实际数值：'+name,name);return value;};
-const freezeSource=(x,state,vars)=>Array.isArray(x)?x.map(v=>freezeSource(v,state,vars)):x&&typeof x==='object'?x.choice?vars[x.choice]:x.state?effectValue(x,state,vars):Object.fromEntries(Object.entries(x).map(([k,v])=>[k,freezeSource(v,state,vars)])):x;
+const freezeSource=(x,state,vars)=>Array.isArray(x)?x.map(v=>freezeSource(v,state,vars)):x&&typeof x==='object'?x.choice?vars[x.choice]:x.state?effectValue(x,state,vars):x.snapshot?effectValue({context:x.snapshot},state,vars):Object.fromEntries(Object.entries(x).map(([k,v])=>[k,freezeSource(v,state,vars)])):x;
 
 function componentSpec(program,op,rank){
  let spec;
@@ -135,13 +137,22 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
  const learned=s.learnedResources?.[object.resourceId]??{},rank=plan.grade??learned.grade??definition.grade;
  if(program.supportedGrades&&!program.supportedGrades.includes(rank)){const e=new Error('该实际等级的程序尚未实现：'+rank);e.code='UNSUPPORTED_OPERATION';throw e;}
  assertEffectUseAllowed(s,{families:program.effectFamilies??[],grade:rank});
+ for(const [key,choice]of Object.entries(program.choices??{})){
+  const allowed=Array.isArray(choice)?choice:choice.values;
+  const selected=plan.inputs?.[key]??(key==='chosenSchool'?plan.inputs?.specialization:undefined);
+  if(!allowed?.includes(selected))need('须选择合法的本程序已登记的专业/选项：'+key,'resource.inputs.'+key);
+  vars[key]=selected;
+ }
  if(program.casting){
  requireFact((learned.versions??[learned.grade??definition.grade]).includes(rank),'没有学会或已舍弃所选法术版本');
+ if(program.executionPolicy)configureProgramPolicy(definition,program,s,learned,plan,vars,rank);
+ else {
  requireFact(['D','C'].includes(rank),'该法术仅有D/C已编写版本');
  requireFact(definition.grade!=='C'||rank==='C','原生C术不能降作未定义的D版');
  vars.rank=rank==='C'?2:1;vars.P=rank==='C'?6:3;
  const powerRows=resourceEffects(s,'spellPower',{schools:definition.schools,sourceId:object.resourceId}).filter(e=>!program.permanentPowerOnly||e.value<0||e.origin==='definition'&&!RESOURCE_DEFINITIONS[e.source]?.equipment);
  vars.P=Math.min(rank==='C'?8:4,vars.P+stackEffects(powerRows).value);
+ }
  }else {vars.rank=0;vars.P=0;}
  if(program.channel==='maintain'){
   requireFact(rank===channel.grade,'维持不能更换法术版本');
@@ -149,6 +160,8 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
   Object.assign(vars,channel.variables,{round:root.round??0});
  }
  if(program.casting)requireFact(vars.P>0,'有效威力降到零，不能施展该术');
+ if(program.executionPolicy)validateHealOrder(program,plan);
+ prepareProgramFacts(program,plan,vars);
  const val=x=>effectValue(x,s,vars);
  let areaReceipt;
  if(program.area){
@@ -175,11 +188,12 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
    if(program.area.center!=='self'&&program.range!==undefined)requireFact(finite(plan.centerDistance,'centerDistance')<=val(program.range),'区域中心超出射程');
   }
  }
- requireFact((targetIds.length>0||program.area?.shape==='cone')&&(program.target==='sequence'||new Set(targetIds).size===targetIds.length),'须选择合法且不重复的目标');
- vars.targetCount=targetIds.length;vars.components=plan.components??{};
+ requireFact((targetIds.length>0||program.area?.shape==='cone')&&(program.target==='sequence'||program.repetition||new Set(targetIds).size===targetIds.length),'须选择合法且不重复的目标；敌方范围无符合阵营条件的目标');
+ vars.targetCount=targetIds.length;vars.components={...(plan.components??{})};
+ if(vars.components.freeHands===undefined&&plan.inputs?.handsFree===true)vars.components.freeHands=2;
  if(program.exactTargets!==undefined)requireFact(targetIds.length===val(program.exactTargets),'目标次数不符合本级程序');
  if(program.maxTargets!==undefined)requireFact(targetIds.length<=val(program.maxTargets),'超过本次施展的目标次数上限');
- for(const [key,choices]of Object.entries(program.choices??{}))requireFact(choices.includes(vars[key]),'须选择合法的 '+key);
+ for(const [key,choices]of Object.entries(program.choices??{}))requireFact((Array.isArray(choices)?choices:choices.values).includes(vars[key]),'须选择合法的 '+key);
  for(const requirement of program.requirements??[])requireFact(effectMatches(requirement.condition,s,vars),requirement.message);
  if(program.weaponTarget){
   requireFact(targetIds.length===1,'武器施法须唯一实际持有人');
@@ -194,17 +208,34 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
  if(sub&&definition.subskills?.length&&!definition.subskills.includes(sub))throw new IllegalAction('施法子技能不属于本术专业');
  if(program.casting){
   const caster=s.casting?.imperial??s.guanlan?.caster;
-  requireFact(caster&&(['C','B','A','S'].includes(caster.grade)||rank==='D'),'缺少对应等级施法职能');
+  if(program.executionPolicy?.requiresCaster!==false){
+  if(!caster?.grade)need('缺少已保存的等级施法职能','casting.grade');
+  requireFact(['D','C','B','A','S'].includes(caster.grade)&&(['C','B','A','S'].includes(caster.grade)||rank==='D'),'缺少对应等级施法职能');
+  vars.casterLevel=caster.level??(['D','C','B','A','S'].indexOf(caster.grade)+1);
+  }
   // A single school uses the main skill when its subskill is absent. Explicit
   // dual-school qualification is a learning prerequisite, not a second DP sum.
-  if(definition.requiresAllSchools)for(const required of definition.subskills??[])requireFact((s.skills?.神秘?.subs?.[required]?.level??0)>=1||learned.qualifications?.includes(required),'缺少法术要求的专业资格：'+required);
+  if(definition.requiresAllSchools)for(const required of definition.subskills??[])requireFact((s.skills?.神秘?.subs?.[required]?.level??0)>=1||(Array.isArray(learned.qualifications)?learned.qualifications.includes(required):learned.qualifications?.subskills?.includes(required)),'缺少法术要求的专业资格：'+required);
   for(const component of program.components??['posture','language','focus'])if(plan.components?.[component]!==true)need('须确认施法成分：'+component,'resource.components.'+component);
   if(program.components?.includes('posture'))requireFact(!['麻痹','精神束缚','纠缠','冻结'].some(t=>statusLevel(s,t).severe),'定身阻止有姿势成分的施法');
  }
  const recipientSaves={};
+ if(program.repetition){
+  const count=targetIds.length,spec=program.repetition;
+  const maximum=finite(val(spec.maximum??spec.count),'repetition.maximum');
+  requireFact(count<=maximum&&(spec.count===undefined||count===val(spec.count)),'本术攻击次数或飞弹枚数不符合已取得版本');
+  if(count>1&&spec.extraCondition)requireFact(effectMatches(spec.extraCondition,s,vars),'多枚施放的双手或其他前提尚未满足');
+ }
+
  for(const id of targetIds){
   for(const step of program.steps)if(step.op==='save'&&typeof step.type==='object')((recipientSaves[id]??={})[step.type.recipientChoice]=inspectRecipientSave(step.type,plan.saveChoices?.[id]?.[step.type.recipientChoice],id));
-  const target=root.actors[id];if(!target)need('目标尚无实际状态：'+id,'resource.target');
+  const target=programTarget(root,id,program);if(!target)need('目标尚无实际状态：'+id,'resource.target');
+  validateObjectProgram(program,target,s,vars,root);
+  const touchRange=validateProgramTargets(program,actor,target,id,plan);
+  if(touchRange!==undefined&&id!==r.actorId){const distance=combat?spatialDistance(root.map,actor.position,target.position):plan.distances?.[id]??plan.distance;requireFact(finite(distance,'distance')<=touchRange,'目标超出实际触及距离');}
+  if(program.area?.team==='enemy')requireFact(target.team!==undefined&&actor.team!==undefined&&target.team!==actor.team,'敌方范围效果不能纳入友方或阵营未知目标');
+  if(program.area?.team==='ally')requireFact(target.team!==undefined&&target.team===actor.team,'友方范围效果须核对实际阵营');
+  if(!target.objectRecord){
   for(const [key,spec]of Object.entries(program.targetFacts??{})){
    const facts=plan.targetFacts?.[id];
    if(!facts?.source||typeof facts[key]!==spec.type)need('须有来源的目标资格事实：'+key,'resource.targetFacts.'+id+'.'+key);
@@ -233,6 +264,7 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
    const total=effectValue(allocation.total,s,local),maximum=effectValue(allocation.maximum,s,local);
    requireFact(chosen&&typeof chosen==='object'&&!Array.isArray(chosen)&&Object.entries(chosen).every(([k,v])=>allocation.keys.includes(k)&&Number.isInteger(v)&&v>=0&&v<=maximum)&&Object.values(chosen).reduce((n,v)=>n+v,0)===total,'属性分配须使用六属性、整数、满足本次总额和单项上限');
   }
+  }
   if(program.willing&&id!==r.actorId)requireFact(plan.willingTargets?.includes(id),'本术须接触自愿目标');
   if(program.contact&&id!==r.actorId&&!Array.isArray(plan.willingTargets))need('接触目标须明确自愿名单；非自愿时明确空列表','resource.willingTargets');
   if(!program.area&&program.range!==undefined&&id!==r.actorId){
@@ -242,7 +274,7 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
   if(program.lineOfEffect!==false&&id!==r.actorId){
    const line=combat?clearLine(root.map,actor.position,target.position):plan.effectLine;
    requireFact(line===true,'目标没有已确认的效果线');
-   if(program.precise!==false)requireFact(combat?canObserve(root,target,r.actorId):plan.precise===true,'单体施法须精确定位目标');
+   if(program.precise!==false)requireFact(combat?(target.objectRecord?plan.precise===true:canObserve(root,target,r.actorId)):plan.precise===true,'单体施法须精确定位目标');
   }
  }
  const allocation=program.targetAllocation?inspectTargetAllocation(program.targetAllocation,targetIds,plan.targetAllocations,val):null;
@@ -254,8 +286,9 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
   if(op.projection)inspectProjectionCreation(root,r.actorId,op.projection,plan,val);
   if(op.op==='projectionControl')inspectProjectionControl(root,r.actorId,object.resourceId,plan,op.mode);
  }
- const cost=val(program.cost??(rank==='C'?3:1)),pool=plan.pool??s.casting?.imperial?.pool;
- if(cost){
+ const cost=val(program.cost??(rank==='C'?3:1))+val(program.repetition?.extraCost??0)*Math.max(0,targetIds.length-1);
+ const selectedPool=policyPool(program,s,learned,plan,cost),pool=selectedPool??plan.pool??s.casting?.imperial?.pool;
+ if(cost&&!program.executionPolicy?.pool){
   const energy=s.resources?.[pool];if(!energy)need('须选择实际施法能量池','resource.pool');
   if(definition.tree==='guanlan')requireFact(energy.generic===true&&!energy.special,'此技艺须单个非特殊通用能量池');
   else requireFact(pool===s.casting?.imperial?.pool,'法术须使用本职施法池');
@@ -270,7 +303,7 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
  const counterPayments=counterCosts.map(c=>adjustCounter(state,c.path,-c.amount,{maximumPath:c.maximumPath,strict:true}));
  const result={resourceId:object.resourceId,operation:r.operation,cost,pool,counterPayments,...(materialItems.length?{materialItems}:{}),targets:[],damage:[],...(areaReceipt?{area:areaReceipt}:{}),...(program.compilation?{programSource:structuredClone(program.compilation)}:{})};
  if(program.casting&&program.components?.includes('language')){recordSensoryCue(root,r.actorId,{source:object.resourceId,kind:'sound',suppression:'unavoidable'});const position=(root.map?root:root.ruleScene?.spatial)?.actors?.[r.actorId]?.position;if(position){const cues=dispatchProjectionCue(root,r.actorId,{kind:'casting',sourceId:object.resourceId,position,channel:'auditory'});if(cues.length)result.projectionCues=cues;}}
- if(program.cooldown)(state.resourceCooldowns??={})[object.resourceId]=val(program.cooldown)+1;
+ if(program.cooldown)(state.resourceCooldowns??={})[object.resourceId]=val(program.cooldown)+(program.cooldownPolicy?.clock==='elapsed-rounds'?0:1);
  if(program.cooldownAfterUses)result.resourceUse=recordResourceUse(state,{sourceId:object.resourceId,version:definition.contractVersion,maximum:val(program.cooldownAfterUses.uses),cooldown:program.cooldownAfterUses.rounds});
  if(program.casting&&program.components?.includes('posture')&&['medium','heavy'].includes(state.equippedArmorClass)){
   const die=drawDice()[0];if(die<=(state.equippedArmorClass==='heavy'?3:1))return {...result,armorFailure:true,die};
@@ -287,8 +320,8 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
  const fixedArea=program.area&&!program.steps.some(x=>x.op==='attack');
  const applyTargets=()=>{
  for(const targetId of targetIds){
-  const target=root.actors[targetId],local={...vars,targetId,targetFacts:structuredClone(plan.targetFacts?.[targetId]??{}),basePower:vars.P,combat,recipientSaves:recipientSaves[targetId]??{},resistanceReceipts:{}};let lastDamage=0;
-  local.P=Math.max(0,vars.P-targetResistance(target));
+  const target=programTarget(root,targetId,program),local={...vars,targetId,target:target.state,targetFacts:structuredClone(plan.targetFacts?.[targetId]??{}),basePower:vars.P,combat,recipientSaves:recipientSaves[targetId]??{},resistanceReceipts:{}};let lastDamage=0;
+  local.P=program.ignoreSpellResistance?vars.P:Math.max(0,vars.P-targetResistance(target));
   const value=x=>effectValue(x,state,local),out={targetId,effectivePower:local.P,steps:[]};
   if(allocation){const allocated=allocation.shares[targetId],resistance=vars.P-local.P;local[program.targetAllocation.as]=Math.max(0,allocated-resistance);out.allocation={allocated,resistance,effective:local[program.targetAllocation.as],refunded:0};}
   if(progression){commitTargetProgression(actor.state,progression);out.progression=structuredClone(progression);}
@@ -298,7 +331,7 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
   local.immunityFactor=applicability.factor;
   if(applicability.status==='blocked'){out.immune=applicability.blockedFamilies.join('+');result.targets.push(out);continue;}
   const targetMode=program.area?'area':program.target==='selected'?'multiple':'single';
-  if(program.steps.some(x=>x.op==='attack')||program.contact&&targetId!==r.actorId&&!plan.willingTargets.includes(targetId)){
+  if(!target.objectRecord&&(program.steps.some(x=>x.op==='attack')||program.contact&&targetId!==r.actorId&&!plan.willingTargets.includes(targetId))){
    const decoy=redirectDecoyAttack(root,{attackerId:r.actorId,targetId,drawDice,targetMode});
    if(decoy)out.decoy=decoy;
    if(decoy?.redirected){
@@ -348,7 +381,11 @@ function resolveProgramSteps({root,r,object,definition,program,plan,state,target
     if(op.op==='damage'){lastDamage=0;local.actualDamage=0;}
     out.steps.push({op:op.op,component:op.component,immune:true,...(op.id?{stepId:op.id}:{})});continue;
    }
-   if(op.op==='projectionControl'){out.steps.push(controlProjection(root,r.actorId,object.resourceId,plan,op.mode,{combat:local.combat,drawDice,preActionCleared:true}));
+   const objectResult=applyObjectOperation(op,{root,target,state,local,object,r,plan});
+   if(objectResult){out.steps.push(objectResult);
+   }else if(op.op==='inspect'){
+    out.steps.push({op:'inspect',stat:op.stat,value:Math.max(0,resourceBonus(target.state,op.stat,{casterId:r.actorId,sourceId:object.resourceId,schools:definition.schools}))});
+   }else if(op.op==='projectionControl'){out.steps.push(controlProjection(root,r.actorId,object.resourceId,plan,op.mode,{combat:local.combat,drawDice,preActionCleared:true}));
    }else if(op.op==='save'){
     const p=saveProfile(target,op.type,{areaAttack:!!program.area,mental:application.families.includes('mind')||op.mental===true});const rolled=check(target.state,{poolBase:p.dp-finite(value(op.penalty??0),'save.penalty'),attributeAutoOverride:p.fixed,reExtraSuccesses:p.extra,dice:drawDice(),context:{willResistance:op.type==='will',reflex:op.type==='reflex',physical:op.type!=='will'}});
     const name=op.as??'save',key=op.resultAs??name;
@@ -358,7 +395,7 @@ function resolveProgramSteps({root,r,object,definition,program,plan,state,target
     if(op.resultAs)local[op.resultAs]=resolution;
     (out.resistanceReceipts??={})[key]=structuredClone(receipt);out.steps.push({op:'save',profile:op.type,...rolled,resolution});
    }else if(op.op==='attack'){
-    const weapon=value(op.weapon),defense=resolveDefense(root,targetId,r.actorId,{ranged:true,contact:op.contact===true,...(op.energyWeapon?{flatFootedLevel:1}:{}),ap:value(op.ap??0),magic:value(op.magic??0),speed:value(op.speed??0),defenseMode:plan.defenseModes?.[targetId]});
+    const weapon=value(op.weapon),defense=objectAttackDefense(target)??resolveDefense(root,targetId,r.actorId,{ranged:true,contact:op.contact===true,...(op.energyWeapon?{flatFootedLevel:1}:{}),ap:value(op.ap??0),magic:value(op.magic??0),speed:value(op.speed??0),defenseMode:plan.defenseModes?.[targetId]});
     if(defense.pending)need('须目标声明防御方式','resource.defense');
     const roll=check(state,{attribute:'智力',skill,sub,modifier:weapon+value(op.modifier??0)+resourceBonus(state,'attack',initiativeContext(root,r.actorId,targetId))-defense.total,dice:drawDice(),context:{attack:true,casting:true,mentalPower:true,genericEnergySupported:local.genericEnergySupported,somatic:program.components.includes('posture'),schools:definition.schools,targetId}});
     local.attackRanged=op.contact!==true;
@@ -377,6 +414,8 @@ function resolveProgramSteps({root,r,object,definition,program,plan,state,target
     if(local.triggerEvent!=='attackDamageCaused'||!local.damageReceipt?.causedDamage)throw Error('追加伤害只能由真实防护后攻击回执驱动');
     const declaration={op:'additionalDamage',amount:Math.max(0,Math.floor(value(op.amount))),mode:op.mode,sourceId:object.resourceId,casterId:r.actorId,grade:rank,magical:program.casting===true};
     (result.additionalDamage??=[]).push(declaration);out.steps.push(declaration);
+   }else if(op.op==='stabilize'){
+    const stable=stabilizeWounds(target.state,{sourceId:object.resourceId,casterId:r.actorId,rounds:value(op.rounds)});target.state=stable.state;out.steps.push({op:'stabilize',...stable.result});
    }else if(op.op==='damage'){
     if(local.periodicSource&&!op.unavoidable){
      const tick=periodicDamageTick(target.state,local.periodicSource,{root,combat:local.combat,key:op.id??'step/'+stepIndex});
@@ -384,7 +423,11 @@ function resolveProgramSteps({root,r,object,definition,program,plan,state,target
      if(!tick.due){lastDamage=0;local.actualDamage=0;out.steps.push({op:'damage',actualDamage:0});continue;}
     }
     const amount=Math.max(0,Math.floor(resistedAmount(op,value(op.amount),local,targetId))),severity=op.severity??'L';
-    const segments=[{amount,severity,kind:op.kind??'energy',energyType:op.energy,magical:program.casting===true,grade:rank,sourceId:object.resourceId,...(op.deathRestriction?{deathRestriction:{maximumLevel:value(op.deathRestriction.maximumLevel)}}:{}),unavoidable:op.unavoidable===true,...(op.recovery?{recovery:op.recovery,sourceId:object.resourceId}:{})}];
+    const profile=op.profile?program.damageProfiles?.[value(op.profile)]:{kind:op.kind??'energy',energyType:op.energy};
+    if(!profile)need('须选择已登记伤害类型','resource.damageProfile');
+    const structure=damageProgramObject(root,target,amount,{...profile,magical:program.casting===true,grade:rank});
+    if(structure){lastDamage=structure.structuralDamage;local.actualDamage=lastDamage;out.steps.push({op:'damage',...structure});continue;}
+    const segments=[{amount,severity,...profile,magical:program.casting===true,grade:rank,sourceId:object.resourceId,...(op.deathRestriction?{deathRestriction:{maximumLevel:value(op.deathRestriction.maximumLevel)}}:{}),unavoidable:op.unavoidable===true,...(op.recovery?{recovery:op.recovery,sourceId:object.resourceId}:{})}];
     if(op.energyWeapon&&amount){const aggravated=Math.min(amount,Math.floor(value(op.weapon??0)/2));if(aggravated&&!equipment(target).armor.energyWeaponProof){segments[0].amount-=aggravated;segments.push({...segments[0],amount:aggravated,severity:'A'});}}
     lastDamage=damageEvent(target,segments,false,result,{conversion:0},{root,targetId,sourceActorId:op.noAttackSource?null:r.actorId,drawDice,additionalDamageOrder:plan.additionalDamageOrder,additionalDamageTypeOrder:plan.additionalDamageTypeOrder,targetMode:program.area?'area':program.target==='selected'?'multiple':'single',ranged:local.attackRanged===true,damageNature:program.damageNature??(program.steps.some(x=>x.op==='attack')?'attack':'fixed')});local.actualDamage=lastDamage;out.steps.push({op:'damage',actualDamage:lastDamage});
    }else if(op.op==='poolRestore'){
@@ -502,7 +545,8 @@ function resolveProgramSteps({root,r,object,definition,program,plan,state,target
     if(active.actionPrice&&prior?.actionPrice)active.actionPrice.discount=Math.max(active.actionPrice.discount,prior.actionPrice.discount);
     if(op.formulaTiming!=='live')retainStrongerEffects(active,prior);
     if(active.applicability)active.applicability.grade=active.grade;
-    target.state.activeResourceEffects=(target.state.activeResourceEffects??[]).filter(x=>x.id!==active.id);target.state.activeResourceEffects.push(assertOperationOutput('effect',active));syncResourceHealth(target.state);accrueRoundCosts(target.state,{root,combat:local.combat});out.steps.push({op:'effect',active});if(op.obscuration)observeResourceObscuration(root);
+    target.state.activeResourceEffects=(target.state.activeResourceEffects??[]).filter(x=>x.id!==active.id);target.state.activeResourceEffects.push(assertOperationOutput('effect',active));syncResourceHealth(target.state);accrueRoundCosts(target.state,{root,combat:local.combat});out.steps.push({op:'effect',active});
+    if(target.combatProfile||target.kind)refreshDerived(target);if(op.obscuration)observeResourceObscuration(root);
    }else if(op.op==='aura'){
     const aura=registerResourceAura(root,r.actorId,object.resourceId,op,{...local,P:local.basePower,schools:definition.schools},plan,{combat:local.combat,version:definition.contractVersion,
      ...(persistent?{applicability:application,immunityScaling:op.immunityScaling}:{}),
@@ -525,7 +569,9 @@ function resolveProgramSteps({root,r,object,definition,program,plan,state,target
    }else if(op.op==='capability'){
     const capability={...op,...(op.movement?{movement:{...op.movement,...(op.movement.speedBasis?{speedMultiplier:value(op.movement.speedMultiplier)}:{speed:value(op.movement.speed)})}}:{}),...(op.onEnd?{onEnd:{...op.onEnd,...(op.onEnd.kind==='descent'?{rounds:value(op.onEnd.rounds)}:{})}}:{}),...(persistent?{applicability:structuredClone(application)}:{}),source:object.resourceId,version:definition.contractVersion,casterId:r.actorId,grade:rank,level:local.rank+(op.gradeBonus??0),...(op.range!==undefined?{range:value(op.range)}:{}),...(op.minutes!==undefined?{remainingMinutes:value(op.minutes)}:{}),...(op.rounds!==undefined?{remainingRounds:value(op.rounds)}:{})};
     if(op.periodicDamage){capability.periodicDamage={...op.periodicDamage,multiplier:value(op.periodicDamage.multiplier)};capability.power=local.P;installPeriodicRate(target.state,capability,{root,combat:local.combat});}
-    const key=op.id+'/'+object.resourceId+'/'+r.actorId,prior=target.state.resourceCapabilities?.[key];
+    const base=op.id+'/'+object.resourceId+'/'+r.actorId;
+    const sequence=op.lifetimePolicy==='independent'?(target.state.resourceCastSequence=(target.state.resourceCastSequence??0)+1):undefined;
+    const key=sequence===undefined?base:base+'/'+sequence,prior=target.state.resourceCapabilities?.[key];
     if(prior){capability.level=Math.max(capability.level,prior.level);if(prior.level>local.rank+(op.gradeBonus??0))capability.grade=prior.grade;if(capability.range!==undefined)capability.range=Math.max(capability.range,prior.range??0);}
     (target.state.resourceCapabilities??={})[key]=capability;out.steps.push({op:'capability',capability});
    }else throw new Error('执行器未接入操作（实现缺口，非待裁定）：'+op.op);

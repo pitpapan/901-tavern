@@ -18,16 +18,16 @@ export const automatic=(a,key)=>attrAuto(a.state,key);
 export const skill=(a,main,sub)=>effectiveSkill(a.state,main,sub);
 // Fixed values here are resource bonuses, not copies of attributes or skills.
 export const PROFILES={
-  jiang:{hp:4,speed:22,initiative:4,will:10,main:'肉搏',sub:'拳击',natural:3,
+  jiang:{hp:4,speed:22,initiative:4,will:10,steelWill:6,main:'肉搏',sub:'拳击',natural:3,
     equipment:{weapon:{damage:7,attackBonus:0,blockBonus:0,ap:3,magic:0},armor:{defense:4}}},
   huang:{hp:2,speed:0,initiative:12,will:0,main:'白刃',sub:'太刀',natural:0,
     equipment:{weapon:{damage:8,attackBonus:3,blockBonus:3,ap:8,magic:8,size:3,willBonus:4},armor:{defense:8}}},
   lotus:{hp:0,speed:0,initiative:0,will:0,main:'肉搏',sub:'爪',natural:6,
     equipment:{weapon:{damage:6,attackBonus:0,blockBonus:0,ap:4,magic:4},armor:{defense:0}}},
-  yulin:{hp:2,speed:10,initiative:0,will:0,main:'白刃',sub:'长剑',natural:0,
+  yulin:{hp:2,speed:10,initiative:0,will:0,steelWill:2,main:'白刃',sub:'长剑',natural:0,
     equipment:{weapon:{damage:16,attackBonus:24,blockBonus:24,ap:8,magic:8,size:3,speedBonus:3,defenseReduction:3,force:2,energyAbsorb:2},
       armor:{defense:7,basePenalty:1,speedPenalty:2,dr:2,drBypass:'神兵',energyAbsorb:1}}},
-  bright:{hp:1,speed:24,initiative:8,will:0,main:'射击',sub:'长弓',natural:0,
+  bright:{hp:1,speed:24,initiative:8,will:0,steelWill:6,main:'射击',sub:'长弓',natural:0,
     equipment:{weapon:{type:'bow',damage:8,attackBonus:3,blockBonus:3,ap:0,magic:8,strengthRequirement:4,rangePerStrength:50},
       armor:{defense:4,dr:1,energyResistance:1,defenseAuto:1,reflexExtra:1}}},
 };
@@ -35,9 +35,10 @@ export function profile(a) {
   let p=a.combatProfile??PROFILES[a.kind];
   if(!p) throw new RuleInputError(`未配置${a.name}的战斗资源`,`${a.id}.profile`);
   for(const [id,owned]of Object.entries(a.state.learnedResources??{}))if(owned.learned){
-    const replacement=RESOURCE_DEFINITIONS[id]?.legacyProfile;
+    for(const replacement of [RESOURCE_DEFINITIONS[id]?.legacyProfile,...(RESOURCE_DEFINITIONS[id]?.legacyProfiles??[])]){
     if(replacement?.ruleset===a.ruleset&&replacement.kind===a.kind){
       p={...p,...replacement.set};for(const [key,n]of Object.entries(replacement.add??{}))p[key]=(p[key]??0)+n;
+    }
     }
   }
   return p;
@@ -129,7 +130,7 @@ export function saveProfile(a,type,{recognizable=false,speed=0,mental=false,area
     const key=type==='fort'?'力量':type==='reflex'?'敏捷':null;
     const arena=['radwick','mireya'].includes(a.kind);
     const sk=type==='fort'?skill(a,'求生',arena?'耐受':undefined):type==='reflex'?skill(a,'运动',arena?'自我保护':undefined):{level:0,auto:0};
-    dp=key?value(a,key)+sk.level:value(a,'意志')+value(a,'风度')+(profile(a).steelWill??0);
+    dp=key?value(a,key)+sk.level:value(a,'意志')+value(a,'风度')+(profile(a).steelWill??({jiang:6,yulin:2,bright:6,lotus:0}[a.kind]??0));
     if(type==='reflex'&&a.kind==='yulin')dp+=(a.buffs.tengzhuan?4:2)+(a.buffs.flow??0)*2;
     fixed=key?automatic(a,key)+sk.auto:automatic(a,'意志')+automatic(a,'风度');
     return {dp:bonus+dp-(type==='reflex'?speed:0)+(type==='will'?(equipment(a).weapon.willBonus??0):0),fixed,extra:type==='reflex'?equipment(a).armor.athleticsExtra??0:0};
@@ -146,7 +147,7 @@ export function saveProfile(a,type,{recognizable=false,speed=0,mental=false,area
     // 御临风的旧卡反射9已包含被动身法2，基础运动不再重复贡献。
     if(a.kind==='yulin') dp-=skill(a,'运动').level;
   } else {
-    dp=value(a,'意志')+value(a,'风度')+(a.kind==='huang'?(equipment(a).weapon.willBonus??0):({jiang:6,yulin:2,bright:6,lotus:0}[a.kind]));
+    dp=value(a,'意志')+value(a,'风度')+(a.kind==='huang'?(equipment(a).weapon.willBonus??0):(profile(a).steelWill??({jiang:6,yulin:2,bright:6,lotus:0}[a.kind]??0)));
     fixed=automatic(a,'意志')+automatic(a,'风度');
   }
   return {dp:bonus+dp-(type==='reflex'?speed:0),fixed,extra};
