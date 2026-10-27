@@ -1,0 +1,41 @@
+✔ group penalties remain effective; same-kind bonuses and penalties each take their strongest (2.280443ms)
+✔ spell casts spend the actual tier cost once without mutating the input or T0 (12.938553ms)
+✔ timed check bonuses participate in ordinary JS checks and expire with scene time (4.551175ms)
+✔ force defense enters the actual AP-removable defense category (5.358675ms)
+✔ declared absorption applies once across damage segments, then expires (2.133872ms)
+✔ spell resistance reduces target-effective power without draining extra energy or affecting other targets (1.206036ms)
+✔ periodic damage keeps cast-time power and consumes exactly ten events (5.314939ms)
+✔ a next-melee rider waits for a matching hit, fires once and does not create a second attack (1.580018ms)
+✔ field caster resolves through saved-state records plus actor templates, without importing their mature state (2.555416ms)
+✔ failed concentration loses the declared cast cost but cannot replace rolled successes with fixed autos (2.091297ms)
+✔ a lower-tier recast retains the stronger same-source bonus and refreshes its duration (3.865022ms)
+✔ resisted statuses preserve source actor and explicit stacking instead of losing the source rule (1.063841ms)
+✔ field elapsed time resolves corrosion before expiry and cannot postpone its ten ticks into later combat (4.367223ms)
+✔ a healing spell respects natural-only wounds and spends four healing points for a wound treated as aggravated (1.460518ms)
+✔ magic blast repeats independent attacks at C, including the same target, without energy-weapon conversion (8.026561ms)
+✔ searing pain chooses pain or hatred from actual inflicted damage and a separate will save (5.501961ms)
+✔ selected-target fire spell charges once; two-ball fire spell charges each and requires free hands (10.895078ms)
+✔ fear howl applies only to enemy area targets and never grants fear spell ownership (1.685827ms)
+✔ bane requires a lost opposed save and penalizes actual attacks and saves with no ordinary skill penalty (5.800089ms)
+✔ attack penalties from declared effects also enter spell attack rolls (4.329416ms)
+✔ blessing follows the caster, dynamically admits allies, suspends on exit, and survives a saved-state round trip (6.959715ms)
+✔ arcane brilliance retains the selected recipients and cast-time radius without recursive intelligence expansion (3.637936ms)
+✔ suppressing aura affects enemies only and refuses unknown field positions without charging (3.247748ms)
+✔ combat movement refreshes aura membership immediately, and scene expiry removes its projections (15.01577ms)
+✔ life drain maintains with a standard action but no repeated mana, healing only actual damage (7.147888ms)
+✔ maintained fire and ice areas consume mana only when first cast, and release removes the instance (6.03314ms)
+✔ new adverse status breaks failed concentration without using automatic successes or refunding mana (5.358215ms)
+✔ damage concentration evidence persists and is resolved before another action (2.627004ms)
+✔ a maintained spell cannot use a second standard action and stops when its next turn skips maintenance (5.120397ms)
+✔ Thoth chant binds its chosen main skill, including later casting checks, without granting ranks (2.686363ms)
+✔ fel armor ignores temporary power and cannot recast any tier while active (2.87675ms)
+✔ typed energy resistance filters damage and universal resistance shares one allowance across segments (2.998463ms)
+✔ non-willing contact effects require a touch hit and still pay for a miss (2.887656ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 202.855294

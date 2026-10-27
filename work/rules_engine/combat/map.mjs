@@ -1,4 +1,12 @@
-import {statusLevel} from '../core.mjs';
+import {projectionObscuresSight,projectionView,projectionAppearance} from '../resource-projections.mjs';
+import {obscuresSight} from '../resource-obscuration.mjs';
+import {actualSenses} from '../resource-senses.mjs';
+import {validLocationClue} from '../resource-discovery.mjs';
+import {observationKey,reusableObservation} from '../resource-observation-state.mjs';
+import {detectionLimit} from '../resource-detection.mjs';
+import {perceptionDelay,recordPerception,deliveredPerceptions} from '../resource-perception.mjs';
+import {selectedOngoingEffects} from '../resource-ongoing.mjs';
+import {statusLevel,lifeStatus} from '../core.mjs';
 // Metres in the rules save; the view only receives the observer's projection.
 export const distance=(a,b)=>Math.hypot(a[0]-b[0],a[1]-b[1]);
 const point=p=>Array.isArray(p)&&p.length===2&&p.every(Number.isFinite);
@@ -67,12 +75,13 @@ export function normalizeMap(input,battle) {
     ground:SURFACES.includes(input.ground)?input.ground:'plain',airflow:input.airflow!==false,darkness:input.darkness===true,
     ruleBarriers:structuredClone(input.ruleBarriers??[])};
   for(const a of Object.values(battle.actors).filter(a=>a.present)) {
-    if(!inside(a.position,map.bounds)||blocking(map).some(f=>insideFraction(a.position,a.position,f)>0))throw Error('地图不能移动人物或把人物嵌入障碍');
+    if(!inside(a.position,map.bounds)||blocking(map).some(f=>a.position.length===3?intersectsHeight(map,a.position,a.position,f,0):insideFraction(a.position,a.position,f)>0))throw Error('地图不能移动人物或把人物嵌入障碍');
   }
   return map;
 }
 export const blocking=map=>(map?.features??[]).filter(f=>active(f)&&(f.kind==='obstacle'||f.kind==='door'&&!f.open));
-export function elevationAt(map,p) {
+export const elevationAt=(map,p)=>Number.isFinite(p?.[2])?p[2]:groundElevationAt(map,p);
+export function groundElevationAt(map,p) {
   let z=0;
   for(const f of map?.features??[])if(active(f)&&contains(p,f)) {
     if(f.elevation!==undefined)z=f.elevation;
@@ -89,23 +98,28 @@ function intersectsHeight(map,a,b,f,offset) {
   const za=elevationAt(map,a)+offset,zb=elevationAt(map,b)+offset,cuts=cutsFor(a,b,f);
   for(let i=1;i<cuts.length;i++) {
     const lo=cuts[i-1],hi=cuts[i],mid=a.map((v,k)=>v+(b[k]-v)*(lo+hi)/2);
-    if(contains(mid,f,{boundary:false})&&Math.min(za+(zb-za)*lo,za+(zb-za)*hi)<elevationAt(map,mid)+f.height-1e-8)return true;
+    if(contains(mid,f,{boundary:false})&&Math.min(za+(zb-za)*lo,za+(zb-za)*hi)<groundElevationAt(map,mid)+f.height-1e-8)return true;
   }
   return false;
 }
 export function terrainCover(map,from,to) {
   return Math.max(0,...blocking(map).filter(f=>f.coverDegree&&intersectsHeight(map,from,to,f,0)).map(f=>COVER[f.coverDegree]));
 }
-export function clearLine(map,a,b,{sight=false,movement=false}={}) {
+export function clearLine(map,a,b,{sight=false,movement=false,root,observerId,spatial=root,ignoreObscurationId,ignoreProjectionId}={}) {
+  if(sight&&root&&projectionObscuresSight(root,observerId,a,b,{ignoreId:ignoreProjectionId}))return false;
+  if(sight&&root&&obscuresSight(root,observerId,a,b,{spatial,ignoreId:ignoreObscurationId}))return false;
+  const airborne=a.length===3||b.length===3;
+  if(airborne){a=[...a.slice(0,2),elevationAt(map,a)];b=[...b.slice(0,2),elevationAt(map,b)];}
   if(!sight&&(map?.ruleBarriers??[]).some(f=>f.type==='physical'&&rect(f.rect)&&
     (inside(a,f.rect)!==inside(b,f.rect)||!inside(a,f.rect)&&insideFraction(a,b,f)>0)))return false;
   const barriers=sight?(map?.features??[]).filter(f=>active(f)&&f.blocksSight&&!(f.kind==='door'&&f.open)):blocking(map);
-  if(movement)return !barriers.some(f=>insideFraction(a,b,f)>0);
+  if(movement&&!airborne)return !barriers.some(f=>insideFraction(a,b,f)>0);
+  if(movement&&barriers.some(f=>intersectsHeight(map,a,b,f,0)))return false;
   if(barriers.some(f=>!f.coverDegree&&intersectsHeight(map,a,b,f,1.5)))return false;
   // A raised platform is solid ground, not a transparent painted region.
   const cuts=[0,1,...(map?.features??[]).filter(f=>f.elevation!==undefined||f.ramp).flatMap(f=>cutsFor(a,b,f))].sort((x,y)=>x-y);
-  const za=elevationAt(map,a)+1.5,zb=elevationAt(map,b)+1.5;
-  return cuts.slice(1).every((hi,i)=>[cuts[i]+1e-7,(hi+cuts[i])/2,hi-1e-7].every(t=>elevationAt(map,a.map((v,k)=>v+(b[k]-v)*t))<=za+(zb-za)*t+1e-6));
+  const offset=movement?0:1.5,za=elevationAt(map,a)+offset,zb=elevationAt(map,b)+offset;
+  return cuts.slice(1).every((hi,i)=>[cuts[i]+1e-7,(hi+cuts[i])/2,hi-1e-7].every(t=>groundElevationAt(map,a.map((v,k)=>v+(b[k]-v)*t))<=za+(zb-za)*t+1e-6));
 }
 export function nearestPoint(p,f) {
   if(contains(p,f))return [...p];
@@ -114,7 +128,7 @@ export function nearestPoint(p,f) {
     if(!best||distance(p,q)<distance(p,best))best=q;}
   return best;
 }
-export function canObserve(b,a,observerId) {
+function rawCanObserve(b,a,observerId) {
   const observer=b.actors[observerId]??b.observers?.[observerId];
   if(!a||!observer)return false;
   if(observer&&a.id!==observerId) {
@@ -127,7 +141,68 @@ export function canObserve(b,a,observerId) {
     if(b.map?.darkness&&!observer.windSense&&!(observer.darkvision&&spatialDistance(b.map,observer.position,a.position)<=observer.darkvision)&&!(a.spirit&&observer.spiritSight))return false;
   }
   return a.present&&!a.hiddenFrom?.includes(observerId)&&(!observer||a.id===observerId||
-    (observer.perceptionRange===undefined||spatialDistance(b.map,observer.position,a.position)<=observer.perceptionRange)&&clearLine(b.map,observer.position,a.position,{sight:true}));
+    (observer.perceptionRange===undefined||spatialDistance(b.map,observer.position,a.position)<=observer.perceptionRange)&&clearLine(b.map,observer.position,a.position,{sight:true,root:observer.windSense?undefined:b,observerId}));
+}
+export function observationChannels(b,a,observerId){
+ const observer=b.actors[observerId]??b.observers?.[observerId];if(!observer)return [];
+ const senses=observer.state?actualSenses(observer,a):observer.senseSources??{};
+ const visual={...b,actors:{...b.actors,[observerId]:{...observer,windSense:false}}};
+ const channels=[];
+ if((!observer.windSense||observer.visionAvailable===true)&&rawCanObserve(visual,a,observerId))channels.push({...senses.vision,grade:senses.vision?.grade??'none',source:senses.vision?.source??(observer.spiritSight&&a.spirit?'actual-spirit-sight':'ordinary-vision'),visual:true});
+ if(observer.windSense&&rawCanObserve(b,a,observerId))channels.push({...senses.windSense,source:senses.windSense?.source??'actual-wind-sense',visual:false});
+ for(const [selector,sense]of Object.entries(senses)){
+  if(selector==='vision'||selector==='windSense'&&observer.windSense||!sense.source)continue;
+  if(!observer.state||['dead','unconscious'].includes(lifeStatus(observer.state).state)||observer.state.sleeping)continue;
+  if(a.spirit&&!observer.spiritSight&&!sense.spiritSight||!!a.underground!==!!observer.underground&&!sense.underground)continue;
+  if(sense.lineOfEffect&&!clearLine(b.map,observer.position,a.position))continue;
+  if(sense.visual&&(statusLevel(observer.state,'目眩').severe||!clearLine(b.map,observer.position,a.position,{sight:true,root:b,observerId})||b.map.darkness&&!(observer.darkvision>=spatialDistance(b.map,observer.position,a.position))))continue;
+  if(!observer.state.resourceDetectionContests?.[observationKey(a.id,sense.source)]&&!sense.contest)continue;
+  channels.push(structuredClone(sense));
+ }
+ return channels.filter(sense=>{
+  if(observer.state?.resourcePendingPerceptions?.[observationKey(a.id,sense.source)])return false;
+  const receipt=observer.state?.resourceDetectionContests?.[observationKey(a.id,sense.source)];
+  const range={...receipt?.sense,...sense},distance=spatialDistance(b.map,observer.position,a.position);
+  if(distance>Math.max(range.sensitiveRange,range.vagueRange??0))return false;
+  if(!receipt||sense.contest)return true;
+  sense.rangeBand=distance<=range.sensitiveRange?'sensitive':'vague';sense.evaluateContest=true;
+  if(!reusableObservation(b,observerId,a.id,sense,receipt,{combat:true})){
+   const e=new Error('须先结算当前实际被动感知事件');e.code='NEEDS_INPUT';e.field='perception.contest';throw e;
+  }
+  sense.contest=receipt.contest;return true;
+ });
+}
+export function locationPrecision(b,a,observerId){
+ if(!a)return 'none';
+ const channels=observationChannels(b,a,observerId);
+ if(a.id===observerId)return channels.length?'exact':'none';
+ let precision=validLocationClue(b,observerId,a.id)?'vague':'none';
+ for(const sense of channels){
+  if(!sense.visual&&perceptionDelay(b,{observerId,targetId:a.id,sense}))continue;
+  const current=detectionLimit(b,{observerId,targetId:a.id,sense}).precision;
+  if(current==='exact')return current;
+  if(current==='vague')precision=current;
+ }
+ return precision;
+}
+export function canObserve(b,a,observerId){return locationPrecision(b,a,observerId)==='exact';}
+export function samplePassivePerception(b){
+ if(!b.map)return;
+ for(const target of Object.values(b.actors)){
+  if(!selectedOngoingEffects(target.state).some(x=>x.detectionDelay))continue;
+  for(const observer of Object.values(b.actors)){
+   if(observer.id===target.id||!observer.present)continue;
+   const channels=observationChannels(b,target,observer.id);
+   if(channels.some(x=>x.visual))continue;
+   for(const sense of channels){
+    if(!perceptionDelay(b,{observerId:observer.id,targetId:target.id,sense}))continue;
+    const sampleKey=JSON.stringify([b.instanceId??b.id??'current',b.round,observer.id,sense.source,target.position]);
+    if((target.state.resourcePerceptionQueue??[]).some(x=>x.sampleKey===sampleKey))continue;
+    const result=recordPerception(b,{observerId:observer.id,targetId:target.id,sense,information:{position:[...target.position],precision:'exact',detected:true}},{combat:true});
+    if(result.pending)target.state.resourcePerceptionQueue.at(-1).sampleKey=sampleKey;
+   }
+  }
+ }
 }
 // Visibility changes along a movement at terrain edges or rays through their
 // vertices. Remember the last visible part, never the hidden destination.
@@ -230,12 +305,16 @@ export function truncateRoute(map,from,path,budget) {
 export function mapView(b,observerId='player') {
   if(!b?.map)return null;
   const observer=b.actors[observerId],features=b.map.features.filter(f=>known(f,observerId));
-  const seenActors=Object.values(b.actors).filter(a=>canObserve(b,a,observerId));
+  const seenActors=Object.values(b.actors).filter(a=>canObserve(b,a,observerId)),projections=projectionView(b,observerId);
+  const extent=[...seenActors,...projections];
   const [x,y,w,h]=b.map.bounds,margin=2;
-  const left=Math.min(x,...seenActors.map(a=>a.position[0]-margin)),top=Math.min(y,...seenActors.map(a=>a.position[1]-margin));
-  const right=Math.max(x+w,...seenActors.map(a=>a.position[0]+margin)),bottom=Math.max(y+h,...seenActors.map(a=>a.position[1]+margin));
+  const left=Math.min(x,...extent.map(a=>a.position[0]-margin)),top=Math.min(y,...extent.map(a=>a.position[1]-margin));
+  const right=Math.max(x+w,...extent.map(a=>a.position[0]+margin)),bottom=Math.max(y+h,...extent.map(a=>a.position[1]+margin));
   return {title:b.map.title,bounded:b.map.bounded,bounds:[left,top,right-left,bottom-top],ground:b.map.ground??'plain',gridSize:b.map.gridSize??1.5,gridOrigin:[x,y],features:structuredClone(features).map(({hiddenFrom,durability,locked,...f})=>({...f,...(durability?{destructible:true}: {})})),
-    actors:seenActors.map(a=>({id:a.id,name:a.name,position:[...a.position],
+    projections,
+    historicalObservations:deliveredPerceptions(b,observerId),
+    vagueObservations:Object.values(b.actors).filter(a=>a.id!==observerId&&locationPrecision(b,a,observerId)==='vague').map(a=>({position:[...a.position],precision:'vague'})),
+    actors:seenActors.map(a=>({id:a.id,name:projectionAppearance(b,a.id,observerId)?.name??a.name,position:[...a.position],
       relation:a.id===observerId?'self':observer&&a.team===observer.team?'ally':'other'})),
     ...(observer?{origin:[...observer.position]}:{})};
 }
@@ -252,3 +331,16 @@ export async function generateBattleMap(b,generateRaw) {
 }
 
 export function pathFeatures(map,path){return (map?.features??[]).filter(f=>active(f)&&path.some((p,i)=>i>0&&insideFraction(path[i-1],p,f)>0));}
+
+export function measureFlightPath(map,from,to,via=[]){
+ const valid=p=>Array.isArray(p)&&p.length===3&&p.every(Number.isFinite);
+ if(!valid(to)||!Array.isArray(via)||!via.every(valid))return {valid:false,reason:'飞行须声明实际三维目的地及途经点'};
+ const path=[[...from.slice(0,2),elevationAt(map,from)],...via,to];let length=0;
+ for(let i=1;i<path.length;i++){
+  const a=path[i-1],b=path[i];
+  if(map?.bounded&&!inside(b,map.bounds))return {valid:false,reason:'飞行目标超出场地边界'};
+  if(b[2]<groundElevationAt(map,b)-1e-8||!clearLine(map,a,b,{movement:true}))return {valid:false,reason:'飞行路线受地形阻挡；未知障碍高度不能默认穿越'};
+  length+=spatialDistance(map,a,b);
+ }
+ return {valid:true,path,length,cost:length};
+}

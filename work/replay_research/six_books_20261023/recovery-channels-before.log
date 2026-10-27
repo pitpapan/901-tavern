@@ -1,0 +1,74 @@
+✔ group penalties remain effective; same-kind bonuses and penalties each take their strongest (2.650022ms)
+✔ spell casts spend the actual tier cost once without mutating the input or T0 (14.565236ms)
+✔ timed check bonuses participate in ordinary JS checks and expire with scene time (3.822782ms)
+✔ force defense enters the actual AP-removable defense category (4.939713ms)
+✔ declared absorption applies once across damage segments, then expires (1.520989ms)
+✔ spell resistance reduces target-effective power without draining extra energy or affecting other targets (1.474939ms)
+✔ periodic damage keeps cast-time power and consumes exactly ten events (4.332879ms)
+✔ a next-melee rider waits for a matching hit, fires once and does not create a second attack (2.234933ms)
+✔ field caster resolves through saved-state records plus actor templates, without importing their mature state (3.24391ms)
+✔ failed concentration loses the declared cast cost but cannot replace rolled successes with fixed autos (1.613628ms)
+✔ a lower-tier recast retains the stronger same-source bonus and refreshes its duration (2.672561ms)
+✔ resisted statuses preserve source actor and explicit stacking instead of losing the source rule (1.785757ms)
+✔ field elapsed time resolves corrosion before expiry and cannot postpone its ten ticks into later combat (4.251828ms)
+✔ a healing spell respects natural-only wounds and spends four healing points for a wound treated as aggravated (1.077941ms)
+✔ magic blast repeats independent attacks at C, including the same target, without energy-weapon conversion (9.891079ms)
+✔ searing pain chooses pain or hatred from actual inflicted damage and a separate will save (7.565013ms)
+✔ selected-target fire spell charges once; two-ball fire spell charges each and requires free hands (11.020903ms)
+✔ fear howl applies only to enemy area targets and never grants fear spell ownership (1.559696ms)
+✔ bane requires a lost opposed save and penalizes actual attacks and saves with no ordinary skill penalty (6.630943ms)
+✔ attack penalties from declared effects also enter spell attack rolls (4.198597ms)
+✔ blessing follows the caster, dynamically admits allies, suspends on exit, and survives a saved-state round trip (4.89818ms)
+✔ arcane brilliance retains the selected recipients and cast-time radius without recursive intelligence expansion (2.191567ms)
+✔ suppressing aura affects enemies only and refuses unknown field positions without charging (3.045133ms)
+✔ combat movement refreshes aura membership immediately, and scene expiry removes its projections (10.67322ms)
+✖ life drain maintains with a standard action but no repeated mana, healing only actual damage (0.699763ms)
+✖ maintained fire and ice areas consume mana only when first cast, and release removes the instance (0.262555ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 24
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 166.640576
+
+✖ failing tests:
+
+test at work/rules_engine/gm_runtime/resource-program.test.mjs:217:1
+✖ life drain maintains with a standard action but no repeated mana, healing only actual damage (0.699763ms)
+  AssertionError [ERR_ASSERTION]: 吸取生命执行程序
+      at scene (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:17:28)
+      at TestContext.<anonymous> (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:218:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at work/rules_engine/gm_runtime/resource-program.test.mjs:230:1
+✖ maintained fire and ice areas consume mana only when first cast, and release removes the instance (0.262555ms)
+  AssertionError [ERR_ASSERTION]: 冰雾神域执行程序
+      at scene (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:17:28)
+      at TestContext.<anonymous> (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:232:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

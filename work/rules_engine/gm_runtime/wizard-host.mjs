@@ -1,3 +1,4 @@
+import {currentInitiative} from '../combat/initiative.mjs';
 import {createCharacter,beginTurn,check,rollPool,spendAction} from '../core.mjs';
 import {WIZARD_FORMS} from '../wizard-rules.mjs';
 import {RuleInputError,IllegalAction} from '../combat/mechanics.mjs';
@@ -33,11 +34,11 @@ export function runWizard(root,r,o,a,{combat,preActionCleared,drawDice,mana,cast
    if(!o.garudaId)need('须给本场使魔一个稳定实例ID','garudaId');if(root.actors[o.garudaId]?.present)fail('当前已有此使魔');
    if(combat&&!Number.isFinite(o.garudaInitiative))need('原条目未给使魔先攻，须登记本场采用值','garudaInitiative');
    action='standard';paid(a,action,combat,preActionCleared);mana(a,o,1);
-   const state=createCharacter({attributes:{力量:1,敏捷:4,智力:0,感知:0,意志:0,风度:0},size:1,skills:{},resources:{},health:{intact:15,B:0,L:0,A:0,temp:0}});state.derived.hpMax=15;
+   const state=createCharacter({attributes:{力量:1,敏捷:4,智力:0,感知:0,意志:0,风度:0},size:1,skills:{},resources:{},health:{intact:15,B:0,L:0,A:0,temp:0}});state.derived.hpMax=15;state.absentAttributes=['智力','感知','意志','风度'];
    const g={id:o.garudaId,name:'迦楼罗',kind:'garuda',ruleset:'opening-20261022',state:beginTurn(state).state,ownerId:r.actorId,team:a.team,controller:a.controller,present:true,position:[...(a.position??a.state.position??[0,0])],initiativeOverride:o.garudaInitiative,
      construct:true,sceneBound:true,flight:true,parameters:{garudaActions:structuredClone(o.garudaActions??{})},combatProfile:{hpFixed:15,speed:24,initiative:0,natural:9,main:'肉搏',cap:0,equipment:{weapon:{damage:0,ap:0,magic:0},armor:{defense:0,hardness:4}}},
      rangedNatural:12,abilities:['move','garudaScout','garudaHide','garudaInterfere','end'],buffs:{},expires:{},cooldowns:{},used:{},combos:{},reactions:{},reach:0};
-   root.actors[o.garudaId]=g;if(combat){root.order.push(g.id);root.order.sort((x,y)=>(root.actors[y].initiativeOverride??root.actors[y].state.derived.initiative)-(root.actors[x].initiativeOverride??root.actors[x].state.derived.initiative));}result={cost:1,summoned:g.id,sceneBound:true};
+   root.actors[o.garudaId]=g;if(combat){const index=root.order.findIndex(id=>currentInitiative(root.actors[id])<currentInitiative(g));root.order.splice(index<0?root.order.length:index,0,g.id);}result={cost:1,summoned:g.id,sceneBound:true};
  }else if(r.operation==='interceptItem'){
    if(a.state.timedEffects?.wizardDefend?.form!=='fire')fail('没有持续的火Defend');
    const p=o.plans?.[r.part],item=root.ruleScene?.objects?.[p?.itemId];if(!p?.source||p.approaching!==true||!item?.source||!Number.isFinite(item.hardness))need('须登记实际靠近火罩的物品及硬度','incomingItem');

@@ -20,7 +20,7 @@ export function createArenaRoster() {
   roster.radwick=opponent('radwick','拉德维克',[7,4,3,5,5,3],{main:'白刃',sub:'短兵盾术',equipment:{weapon:{damage:2,attackBonus:0,blockBonus:0,ap:0,magic:0},armor:{defense:2,shield:1}}},
     {白刃:[5,{短兵盾术:2}],肉搏:[4,{盾推:2}],运动:[3,{自我保护:1}],求生:[4,{耐受:1}],感受:[3,{察觉诱招:1}],调查:[2,{观察:1}]},
     {visibleArms:'配发的包毡竞技短棍与盾',abilities:['strike','block','shieldPush','brace','move','step','concede','end']});
-  roster.mireya=opponent('mireya','米蕾娅',[5,7,4,7,5,4],{main:'射击',sub:'弓箭',equipment:{weapon:{damage:3,attackBonus:0,blockBonus:0,ap:0,magic:0,strengthRequirement:5,rangeUnit:20},armor:{defense:1}}},
+  roster.mireya=opponent('mireya','米蕾娅',[5,7,4,7,5,4],{main:'射击',sub:'弓箭',equipment:{weapon:{type:'bow',damage:3,attackBonus:0,blockBonus:0,ap:0,magic:0,strengthRequirement:5,rangeUnit:20},armor:{defense:1}}},
     {射击:[5,{弓箭:4}],白刃:[3,{短棍:1}],运动:[4,{自我保护:2}],求生:[3,{耐受:1}],调查:[4,{进路观察:2}],感受:[3,{识破诱招:1}]},
     {loaded:false,ammunition:18,weaponMode:'bow',visibleArms:'配发的缓冲竞技弓箭，腰侧包毡短棍',abilities:['strike','reload','calibrate','drawClub','readyBow','block','move','step','concede','end']});
   return roster;

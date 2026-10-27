@@ -1,0 +1,188 @@
+✔ high frequency blade stays on one actual weapon through swapping and transfer, without global casting explosions (17.461129ms)
+✔ angel barrier preserves each allocated balance on exit/reentry and replaces recipients only on a new paid cast (15.08763ms)
+✔ a registered reflex spell can interrupt a pending attack, costs once, and preserves the pending declaration across reload (21.680629ms)
+✔ heaven shield uses one sourced balance and ends its hardness on exhaustion or scene expiry (4.687072ms)
+✔ Azathoth drains current will, not attributes or save DP, and its own zero condition ends on recovery (4.760823ms)
+✔ molten armor explodes only casting checks and retaliates once on a melee hit even when protection stops all wounds (10.943845ms)
+✔ school resistance uses the selected actual school and blocks matching effects without changing other schools (4.608003ms)
+✔ angel blessing validates the complete six-attribute allocation and preserves base stats through save and expiry (4.713322ms)
+✔ group penalties remain effective; same-kind bonuses and penalties each take their strongest (0.214182ms)
+✔ spell casts spend the actual tier cost once without mutating the input or T0 (4.509625ms)
+✔ timed check bonuses participate in ordinary JS checks and expire with scene time (2.528424ms)
+✔ force defense enters the actual AP-removable defense category (3.141076ms)
+✔ declared absorption applies once across damage segments, then expires (1.448569ms)
+✔ spell resistance reduces target-effective power without draining extra energy or affecting other targets (1.98022ms)
+✔ periodic damage keeps cast-time power and consumes exactly ten events (4.056313ms)
+✔ a next-melee rider ignores other weapon attacks, fires once and does not create a second attack (1.966999ms)
+✔ field caster resolves through saved-state records plus actor templates, without importing their mature state (2.881775ms)
+✔ failed concentration loses the declared cast cost but cannot replace rolled successes with fixed autos (3.051381ms)
+✔ a lower-tier recast retains the stronger same-source bonus and refreshes its duration (6.438838ms)
+✔ resisted statuses preserve source actor and explicit stacking instead of losing the source rule (1.485816ms)
+✔ field elapsed time resolves corrosion before expiry and cannot postpone its ten ticks into later combat (8.842443ms)
+✔ a healing spell respects natural-only wounds and spends four healing points for a wound treated as aggravated (2.043845ms)
+✔ magic blast repeats independent attacks at C, including the same target, without energy-weapon conversion (10.716253ms)
+✔ searing pain chooses pain or hatred from actual inflicted damage and a separate will save (9.218279ms)
+✔ selected-target fire spell charges once; two-ball fire spell charges each and requires free hands (9.324369ms)
+✔ fear howl applies only to enemy area targets and never grants fear spell ownership (1.563272ms)
+✔ enemy area selection filters allies and requires actual allegiance before payment (2.138968ms)
+✔ maintained spells end on wound unconsciousness or sleep even with no pending damage receipt (3.622821ms)
+✔ bane requires a lost opposed save and penalizes actual attacks and saves with no ordinary skill penalty (5.017521ms)
+✔ attack penalties from declared effects also enter spell attack rolls (3.548373ms)
+✔ blessing follows the caster, dynamically admits allies, suspends on exit, and survives a saved-state round trip (3.701915ms)
+✔ arcane brilliance retains the selected recipients and cast-time radius without recursive intelligence expansion (3.474312ms)
+✔ suppressing aura affects enemies only and refuses unknown field positions without charging (2.774818ms)
+✔ combat movement refreshes aura membership immediately, and scene expiry removes its projections (8.769396ms)
+✔ life drain maintains with a standard action but no repeated mana, healing only actual damage (5.503568ms)
+✔ maintained fire and ice areas consume mana only when first cast, and release removes the instance (7.498622ms)
+✔ new adverse status breaks failed concentration without using automatic successes or refunding mana (3.680071ms)
+✔ damage concentration evidence persists and is resolved before another action (3.231947ms)
+✔ a maintained spell cannot use a second standard action and stops when its next turn skips maintenance (5.31222ms)
+✔ Thoth chant binds its chosen main skill, including later casting checks, without granting ranks (1.641592ms)
+✔ fel armor ignores temporary power and cannot recast any tier while active (2.482308ms)
+✔ typed energy resistance filters damage and universal resistance shares one allowance across segments (3.872181ms)
+✔ non-willing contact effects require a touch hit and still pay for a miss (2.556811ms)
+✔ dispel requires the recipient choice and ends linked timed components across reload without removing ownership (5.467924ms)
+✔ dispel of one aura recipient survives refresh and reload, preserving other recipients until a paid recast (7.890932ms)
+✔ burnout consumes only the selected removable burning source after adding all its points (3.727172ms)
+✔ humanoid charm uses sourced target facts, hostility and spell grade immunity without a second save (10.396516ms)
+✔ spell empowerment locks the actual recipient against same-name recasts and ignores temporary power for itself (5.317667ms)
+✔ weaker recasts that retain stronger values also retain the stronger saved grade for dispelling (2.970683ms)
+✔ spell suppression combines typed immunities and blocks zero-power new casts without rewriting existing effects (7.191088ms)
+✔ physical shield reflex casting uses tiered will cost and one reaction lock without assuming discharge (3.536806ms)
+✔ morningstar cloak applies actual immunity and absorption without creating armor, and an unwilling contact must hit (3.158737ms)
+✔ next-melee spell is consumed on a miss and still deals its separate energy when physical damage is absorbed (7.001424ms)
+✔ dread strike spends its rider once, saves after actual damage, and persists next-turn action loss (4.406676ms)
+✔ dispel ends a sourced timed status without deleting permanent consequences or unrelated status rows (1.915124ms)
+✔ recompense reacts once to enemy actual life loss, excludes friendly/environmental/absorbed damage and cannot reflect reflection (7.249566ms)
+✔ a real spell damage operation carries its actual caster into sourced retaliation (4.500687ms)
+✔ recompense uses the shared original-event budget across additional segments, and a new event can trigger again (3.086839ms)
+✔ deferred damage reactions wait for all linked parts of the original event (2.43033ms)
+✔ ordinary combat attack settles the protected target damage before the sourced retaliation (6.482761ms)
+✔ explicit independent damage types each apply full resistance and emit their own life-loss event (5.552841ms)
+✔ frailty curse uses an actual round budget across reload and recast, and never chains from fixed or extra damage (6.465266ms)
+✔ adopted cross-caster damage sources settle independently and migrate old policy without resetting quotas (3.023123ms)
+✔ multiple independent damage subscriptions persist each quota even when an earlier subscription clones bearer state (2.188776ms)
+✔ dimensional anchor uses a ranged touch casting roll, spends on a miss and persists only on a hit (5.110726ms)
+✔ energy-only temporary health filters real damage types, preserves spent balances on reload, and uses the stronger remaining share on recast (4.063328ms)
+✔ energy ward reflex cost follows base mana, including C six will, and keeps the normal reflex lock (5.022493ms)
+✔ RE all-energy resistance excludes mental, force, poison and physical damage without changing unrelated legacy profiles (3.378548ms)
+✔ mage armor uses the armor maximum and one most favorable fallback per attack, without multiplying sources or granting damage protection (7.540706ms)
+✔ mage armor non-willing touch misses still cost mana and a restriction on space does not prevent unrelated spells (1.625758ms)
+✔ protection is configuration over the common stance and defense facts, with no separate spell combat implementation (7.393483ms)
+✔ adopted independent recompense sources retain caster provenance and each retaliate once without recursion (1.541611ms)
+✔ unavoidable life loss never spends damage-trigger quotas, including deferred shared events (1.60734ms)
+✔ mixed unavoidable and ordinary wounds expose only ordinary loss to reactions and concentration (1.398426ms)
+✔ declarative damage preserves its unavoidable policy at the shared damage boundary (1.505727ms)
+✔ mana drain keeps an unresolved daily adoption visible without charging either actor (1.803086ms)
+✔ the common pool-transfer program supports fresh maintenance choices, real days and saved cumulative recovery (3.16106ms)
+✖ fear and weakness use exactly their declared opposed save without a second status resistance (1.814843ms)
+✖ a mixed program immunizes only its mental component and skips that component save (1.931078ms)
+✖ charm consumes its declared save once, and preserves the exact status grade across JSON (1.417815ms)
+✖ a persistent typed effect remains as a source while immunity changes its current contribution (1.078985ms)
+✖ work/rules_engine/resource-applicability.test.mjs (0.052139ms)
+✖ work/rules_engine/resource-resistance.test.mjs (0.028653ms)
+ℹ tests 83
+ℹ suites 0
+ℹ pass 77
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 451.672042
+
+✖ failing tests:
+
+test at work/rules_engine/gm_runtime/resource-program.test.mjs:915:1
+✖ fear and weakness use exactly their declared opposed save without a second status resistance (1.814843ms)
+  AssertionError [ERR_ASSERTION]: 恐惧术 applies the result
+      at TestContext.<anonymous> (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:921:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at work/rules_engine/gm_runtime/resource-program.test.mjs:926:1
+✖ a mixed program immunizes only its mental component and skips that component save (1.931078ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:937:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at work/rules_engine/gm_runtime/resource-program.test.mjs:941:1
+✖ charm consumes its declared save once, and preserves the exact status grade across JSON (1.417815ms)
+  TypeError: Cannot read properties of undefined (reading 'save')
+      at TestContext.<anonymous> (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:944:79)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at work/rules_engine/gm_runtime/resource-program.test.mjs:949:1
+✖ a persistent typed effect remains as a source while immunity changes its current contribution (1.078985ms)
+  TypeError: Cannot read properties of undefined (reading 'some')
+      at TestContext.<anonymous> (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:953:82)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at work/rules_engine/resource-applicability.test.mjs:1:1
+✖ work/rules_engine/resource-applicability.test.mjs (0.052139ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspace/901-tavern/work/rules_engine/resource-applicability.mjs' imported from /workspace/901-tavern/work/rules_engine/resource-applicability.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:271:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:992:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:56)
+      at #resolve (node:internal/modules/esm/loader:683:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:603:35)
+      at ModuleJob.syncLink (node:internal/modules/esm/module_job:163:33)
+      at ModuleJob.link (node:internal/modules/esm/module_job:253:17) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspace/901-tavern/work/rules_engine/resource-applicability.mjs'
+  }
+
+test at work/rules_engine/resource-resistance.test.mjs:1:1
+✖ work/rules_engine/resource-resistance.test.mjs (0.028653ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspace/901-tavern/work/rules_engine/resource-resistance.mjs' imported from /workspace/901-tavern/work/rules_engine/resource-resistance.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:271:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:992:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:56)
+      at #resolve (node:internal/modules/esm/loader:683:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:603:35)
+      at ModuleJob.syncLink (node:internal/modules/esm/module_job:163:33)
+      at ModuleJob.link (node:internal/modules/esm/module_job:253:17) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspace/901-tavern/work/rules_engine/resource-resistance.mjs'
+  }

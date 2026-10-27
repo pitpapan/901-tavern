@@ -38,6 +38,8 @@ test('compact panel distinguishes readiness and includes only live modifiers', (
     { type: '麻痹', points: 1, source: 'c' }, { type: '麻痹', points: 2, source: 'd' },
   ];
   b.actors.jiang.squeezed = 6;
+  // The displayed restriction belongs to one actual L wound, not an empty slot.
+  b.actors.jiang.state.health.intact--;b.actors.jiang.state.health.L++;
   b.actors.jiang.recoveryLocks = [{ severity: 'L', count: 1, recovery: 'aggravated', source: '生命压榨' }];
   const c = currentContext(b), h = c.participants.find(a => a.id === 'huang');
   assert.equal(h.weaponReady, false);

@@ -1,0 +1,55 @@
+import {effectValue,effectMatches,applyAcquisitionEffects} from './resource-effects.mjs';
+// Acquisition is a transaction on one actor's state. Definition stages describe
+// legal choices and one-time grants, without importing a later character sheet.
+export function acquireDefinition(state,id,definition,choices,context){
+ const spec=definition?.acquisition;if(!spec)return;
+ const learned=state.learnedResources?.[id];if(!learned?.learned)throw Error('资源尚未实际取得');
+ const grade=learned.grade??spec.grades[0],index=spec.grades.indexOf(grade);
+ if(index<0)throw Error('资源未定义此取得等级');
+ const prior=learned.choices??{},selected={...prior,...choices};
+ for(const [key,rule]of Object.entries(spec.choices??{})){
+  if(selected[key]!==undefined&&rule.fromGrade&&index<spec.grades.indexOf(rule.fromGrade))throw Error('此等级尚不能选择：'+key);
+  if(rule.required&&selected[key]===undefined)throw Error('取得资源须明确选择：'+key);
+  if(selected[key]!==undefined&&selected[key]!==null&&!rule.values.includes(selected[key]))throw Error('不合法的取得选择：'+key);
+  if(prior[key]!==undefined&&prior[key]!==selected[key])throw Error('已经取得的选择不能被后期模板覆盖：'+key);
+  if(rule.distinctFrom&&selected[key]&&selected[key]===selected[rule.distinctFrom])throw Error('主副选择必须不同');
+ }
+ learned.choices=selected;
+ const vars={...context,...selected,grade,resourceId:id,resourceChoices:selected,resourceGrade:grade};
+ if(spec.pool){
+  if(typeof selected.pool!=='string'||!selected.pool.trim())throw Error('须选择实际施法能量池');
+  const pools=state.resources??={},existing=pools[selected.pool];
+  if(existing){if(existing.special||selected.sameSource!==true)throw Error('沿用池须确认同源且非特殊资源');}
+  else {
+   const max=effectValue(spec.pool.capacity,state,vars),current=selected.initialCurrent;
+   if(!Number.isInteger(current)||current<0||current>max)throw Error('新能量池须记录取得当时的实际余额，范围0至上限');
+   pools[selected.pool]={current,max,generic:true,special:false,origin:id};
+  }
+  (state.resourceRecovery??={})[selected.pool]={...spec.pool.recovery,source:id};
+ }
+ learned.appliedStages??=[];
+ for(const stage of spec.grades.slice(0,index+1)){
+  if(learned.appliedStages.includes(stage))continue;
+  const stageSpec=spec.stages[stage];
+  applyAcquisitionEffects(state,stageSpec.effects??[],{...vars,definitions:context.definitions});
+  for(const grant of stageSpec.learningGrants??[]){
+   if(!effectMatches(grant.when,state,vars))continue;
+   const key=id+'/'+stage+'/'+grant.id;
+   (state.learningGrants??={})[key]={...grant,source:context.source,resourceId:id,stage,used:[],school:grant.school??selected[grant.schoolChoice]};
+  }
+  learned.appliedStages.push(stage);
+ }
+ if(spec.casting){
+  (state.casting??={})[spec.casting]={source:id,grade,level:index+1,pool:selected.pool,primary:selected.primary,secondary:selected.secondary??null};
+ }
+}
+export function claimLearningGrant(state,grantId,resourceIds,definitions,source){
+ const grant=state.learningGrants?.[grantId];if(!grant||!source)throw Error('须实际授术名额与选定来源');
+ if(!Array.isArray(resourceIds)||new Set(resourceIds).size!==resourceIds.length||resourceIds.length>grant.count-grant.used.length)throw Error('授术选择超过剩余名额或重复');
+ for(const id of resourceIds){const d=definitions[id];
+  if(!d||d.prohibited||d.grade!=='D'||!d.learning||state.learnedResources?.[id]?.learned)throw Error('授术须合法、未学会的本职D级法术');
+  if(!d.schools?.includes(grant.school))throw Error('授术不属于此名额对应的专业');
+ }
+ for(const id of resourceIds){(state.learnedResources??={})[id]={learned:true,source,grade:'D',kind:'technique',tree:'imperial',grantedBy:grantId};grant.used.push(id);}
+ return {learned:[...resourceIds],remaining:grant.count-grant.used.length,chargedXP:0};
+}

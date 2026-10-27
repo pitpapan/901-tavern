@@ -1,3 +1,12 @@
+import {transitionWoundShare,assertWoundLedger} from './resource-wounds.mjs';
+import {healWounds} from './healing.mjs';
+import {remainingPenalty} from './resource-penalties.mjs';
+import {effectiveStatuses} from './resource-status-applicability.mjs';
+import {stackEffects,expireEffectsOnAction} from './resource-effects.mjs';
+import {applyResourceActionLosses} from './resource-action-losses.mjs';
+import {consumeTemporaryHealth} from './resource-temporary-health.mjs';
+import {changeWill,hasCounterCondition} from './resource-counters.mjs';
+import {resourceBonus,resourceEffects} from './resource-definitions.mjs';
 import {growthPrice} from './growth-pricing.mjs';
 // 901 Core Rules v0.1, P0 only. All public operations return new JSON-safe state.
 import {wizardAttribute,wizardCheck} from './wizard-rules.mjs';
@@ -6,9 +15,10 @@ export const SEVERITIES = ['B', 'L', 'A'];
 const STATUS_ATTRIBUTES = {
   恶心: ['力量', '意志'], 麻痹: ['力量', '意志'], 晕眩: ['力量', '意志'],
   耳鸣: ['力量', '感知'], 目眩: ['力量', '感知'],
-  精神束缚: ['意志'], 恐惧: ['意志'], 沮丧: ['意志'], 亢奋: ['意志'],
+  精神束缚: ['意志'], 恐惧: ['意志'], 沮丧: ['意志'], 亢奋: ['意志'], 仇恨:['意志'],
   纠缠: ['力量', '敏捷'], 冻结: ['力量', '敏捷'], 疲乏: ['力量'],
   魅惑: ['意志', '风度'], 肢体妨害: ['力量', '敏捷'],
+  欲眠:['意志'],失速:['力量','敏捷'],
 };
 
 function integer(value, name, minimum = 0) {
@@ -30,7 +40,7 @@ export function baseHealthCapacity(strength, size = 5, bonus = 0) {
 }
 function baseAttribute(state, name) { requireAttribute(name); return state.attributes[name] ?? 0; }
 export function effectiveAttribute(state, name) {
-  return Math.max(0, baseAttribute(state, name) - (state.attributeDamage?.[name] ?? 0)+wizardAttribute(state,name)+(state.geneticLock?.active?.[2]?.attribute===name?5:0));
+  return Math.max(0, baseAttribute(state, name) + resourceBonus(state,'attribute',{attribute:name}) - (state.attributeDamage?.[name] ?? 0)+wizardAttribute(state,name)+(state.geneticLock?.active?.[2]?.attribute===name?5:0));
 }
 function attrValue(state, name) { return effectiveAttribute(state, name); }
 function baseAuto(state, name) { return state.attributeAuto?.[name] ?? autoForLevel(baseAttribute(state, name)); }
@@ -94,7 +104,8 @@ export function effectiveSkill(state, main, sub) {
 }
 
 // Dice are supplied in actual draw order: initial pool first, then queued explosions.
-export function rollPool(dp, dice) {
+export function rollPool(dp, dice, explosionThreshold=10) {
+  if(![8,9,10].includes(explosionThreshold))throw new RangeError('加骰阈值须为8、9或10');
   if (!Number.isInteger(dp)) throw new TypeError('DP must be an integer');
   if (!Array.isArray(dice)) throw new TypeError('A deterministic dice array is required');
   const luck = dp <= 0;
@@ -107,7 +118,7 @@ export function rollPool(dp, dice) {
     if (die > 10) throw new RangeError('D10 result exceeds 10');
     used++;
     pending--;
-    if (die === 10) { successes++; pending++; }
+    if (die === 10 || !luck && die >= explosionThreshold) { successes++; pending++; }
     else if ((!luck || used > 1) && die >= 8) successes++;
   }
   return { dp, luck, dice: dice.slice(0, used), used, rolledSuccesses: successes,
@@ -120,7 +131,7 @@ export function willEnhancement(state,{extended=false,multiCheck=false,flatFoote
  if(state.will.current<1)return {allowed:false,reason:'意志不足'};
  return {allowed:true,cost:1,dp:3};
 }
-export function check(state, options) {
+export function checkProfile(state, options) {
   if (options.eligible === false) return { eligible: false, success: false, reason: options.reason ?? 'Ineligible action' };
   if(options.willpower!==undefined&&typeof options.willpower!=='boolean')throw Error('willpower须为玩家明确选择的布尔值');
   const context={willEligible:!options.context?.extended&&!options.context?.multiCheck,...options.context,...(options.willpower?{willSpent:true}:{})};
@@ -129,23 +140,33 @@ export function check(state, options) {
   const attributes = options.attributes ?? (options.attribute ? [options.attribute] : []);
   const adjustments=checkModifiers(state,{...options,attributes});
   if(!adjustments.allowed)return {eligible:false,success:false,reason:adjustments.reason};
-  if(state.sleeping&&options.context?.reflex)return {eligible:true,dp:0,dice:[],used:0,total:0,rolledSuccesses:0,autoSuccesses:0,...(options.dc!==undefined?{dc:options.dc,success:false}:{})};
+  if(state.sleeping&&options.context?.reflex)return {eligible:true,automaticZero:true,dp:0,...(options.dc!==undefined?{dc:options.dc}:{})};
   const wizard=wizardCheck(state,{...options,attributes});
   const skill = effectiveSkill(state, options.skill, options.sub);
+  const modifierGroups=options.modifierGroups??{};
+  if(!Object.values(modifierGroups).every(n=>Number.isFinite(n)&&n>=0))throw Error('检定类别基线须为非负有限数值');
+  const groupedModifier=Object.values(modifierGroups).reduce((a,b)=>a+b,0);
   const baseDP = (options.poolBase ?? attributes.reduce((n, name) => n + attrValue(state, name), 0))
-    + skill.level + (options.modifier ?? 0) + (adjustments.bonus??0) + wizard.dp + geneticCheckBonus(state,options.context) - (options.penaltiesIncluded?0:adjustments.penalty);
+    + skill.level + (options.modifier ?? 0) + groupedModifier + (adjustments.bonus??0) + wizard.dp + stackEffects(['check','attributeCheck'].flatMap(stat=>resourceEffects(state,stat,{...options.context,skill:options.skill,sub:options.sub,attribute:options.attribute,attributes})),modifierGroups).value + geneticCheckBonus(state,options.context) - (options.penaltiesIncluded?0:adjustments.penalty);
   if(options.willpower&&baseDP-(geneticCheckBonus(state,context)-geneticCheckBonus(state,{...context,willSpent:false}))<=0)return {eligible:false,success:false,reason:'机运骰不能用意志增强'};
-  const dp=baseDP+(options.willpower?3:0);
-  const roll = rollPool(dp, options.dice);
+  const dp=baseDP+(options.willpower?3+resourceBonus(state,'willEnhancement'):0);
+  const explode=10-Math.min(2,Math.max(0,resourceBonus(state,'explodeReduction',{...options.context,skill:options.skill,sub:options.sub})));
   const autoSuccesses = (options.attributeAutoOverride ?? attributes.reduce((n, name) => n + attrAuto(state, name), 0))
     + skill.auto + (options.autoBonus ?? 0)+wizard.auto+geneticWillAuto(state,options.context);
-  const reExtraSuccesses = roll.rolledSuccesses > 0 ? (options.reExtraSuccesses ?? 0) : 0;
+  const extraSuccesses=(options.reExtraSuccesses??0)+resourceBonus(state,'extraSuccess',{...context,skill:options.skill,sub:options.sub});
   const sleepingPerception=state.sleeping&&(options.context?.perception||["洞察","调查","侦查","聆听"].includes(options.skill));
-  const total = Math.max(0,roll.rolledSuccesses + autoSuccesses + reExtraSuccesses-(sleepingPerception&&options.context?.opposed?1:0));
-  return { eligible: true, willCost:options.willpower?1:0, ...roll, skill, adjustments, autoSuccesses, reExtraSuccesses, total,
-    ...(sleepingPerception?{targetHidden:true,sensitivePerception:Math.max(0,effectiveAttribute(state,"感知")-1)}:{}),
-    ...(options.dc === undefined ? {} : { dc: options.dc, success: total >= options.dc }) };
+  return {eligible:true,willCost:options.willpower?1:0,dp,explode,skill,adjustments,autoSuccesses,extraSuccesses,
+    ...(sleepingPerception?{targetHidden:true,sensitivePerception:Math.max(0,effectiveAttribute(state,"感知")-1),opposedPenalty:options.context?.opposed?1:0}:{}),
+    ...(options.dc===undefined?{}:{dc:options.dc})};
 }
+export function rollCheckProfile(profile,dice){
+ if(!profile.eligible)return profile;
+ if(profile.automaticZero)return {eligible:true,dp:0,dice:[],used:0,total:0,rolledSuccesses:0,autoSuccesses:0,...(profile.dc===undefined?{}:{dc:profile.dc,success:false})};
+ const {dp,explode,extraSuccesses,opposedPenalty,dc,...rest}=profile;
+ const roll=rollPool(dp,dice,explode),reExtraSuccesses=roll.rolledSuccesses>0?extraSuccesses:0,total=Math.max(0,roll.rolledSuccesses+profile.autoSuccesses+reExtraSuccesses-(opposedPenalty??0));
+ return {...rest,...roll,reExtraSuccesses,total,...(dc===undefined?{}:{dc,success:total>=dc})};
+}
+export function check(state,options){return rollCheckProfile(checkProfile(state,options),options.dice);}
 
 // PHB genetic-lock unlocking is a D10 total, separate from ordinary DP checks.
 // History must be supplied by the trusted character state; absent history is unknown.
@@ -218,15 +239,42 @@ export function geneticWillAuto(state,{willEligible=false,willSpent=false}={}) {
   if(!state.geneticLock?.active?.[2]||!willEligible||!willSpent)return 0;
   return attrAuto(state,attrValue(state,'感知')>=attrValue(state,'智力')?'感知':'智力');
 }
+// Adopted D11: replay existing wounds into reduced capacity; overflow upgrades
+// severity. Removing a temporary bonus never deletes wounds.
+export function resizeHealthCapacity(s,capacity,{drawDice}={}){
+ const wanted=Math.max(1,capacity),delta=wanted-s.derived.hpMax;
+ if(delta<0){
+  const wounds={B:s.health.B,L:s.health.L,A:s.health.A},ledger=s.woundLedger;
+  if(ledger)assertWoundLedger(s);
+  s.derived.hpMax=wanted;s.health={...s.health,intact:wanted,B:0,L:0,A:0};
+  if(ledger){
+   // Within each replayed severity, place ordinary shares first so legacy
+   // batch order cannot hide them behind special incoming shares.
+   const batches=structuredClone(ledger.batches).sort((a,b)=>Number(a.restrictions.length>0)-Number(b.restrictions.length>0));s.woundLedger={...ledger,batches:[]};
+   for(const severity of SEVERITIES)for(const batch of batches.filter(x=>x.severity===severity))for(let i=0;i<batch.count;i++){
+    const out=applyWounds(s,{[severity]:1},{origin:batch.origin,drawDice});s.health=out.state.health;s.woundLedger=out.state.woundLedger;
+    if(out.result.changes.length&&batch.restrictions.length){
+     // Preserve all restrictions on the actual receiving share, including upgrades.
+     const change=out.result.changes[0],last=s.woundLedger.batches.findLast(x=>x.severity===change.to&&JSON.stringify(x.origin)===JSON.stringify(batch.origin));
+     if(last.count>1){last.count--;s.woundLedger.batches.push({...structuredClone(last),id:'wound/'+s.woundLedger.nextId++,count:1,restrictions:[...last.restrictions,...batch.restrictions]});}
+     else last.restrictions.push(...batch.restrictions);
+    }
+   }
+  }else s.health=applyWounds(s,wounds).state.health;
+  if(['unconscious','dead'].includes(lifeStatus(s).state))s.health.coma=true;
+ }else{s.health.intact+=delta;s.derived.hpMax=wanted;}
+}
+export function activeResourceHealthBonus(s){
+ return 2*(resourceBonus(s,'attribute',{attribute:'力量'})-resourceBonus({...s,activeResourceEffects:[]},'attribute',{attribute:'力量'}));
+}
+export function syncResourceHealth(s){
+ const wanted=activeResourceHealthBonus(s),prior=s.resourceHealthBonus??0;
+ if(wanted!==prior)resizeHealthCapacity(s,s.derived.hpMax+wanted-prior);
+ if(wanted||prior||Object.hasOwn(s,'resourceHealthBonus'))s.resourceHealthBonus=wanted;
+}
 function syncGeneticCapacity(s){
   const wanted=s.geneticLock.active?.[2]?.attribute==='力量'?10:0,old=s.geneticLock.hpBonus??0,delta=wanted-old;
-  if(delta<0){
-    const wounds={B:s.health.B,L:s.health.L,A:s.health.A};
-    s.derived.hpMax=Math.max(1,s.derived.hpMax+delta);
-    s.health={...s.health,intact:s.derived.hpMax,B:0,L:0,A:0};
-    s.health=applyWounds(s,wounds).state.health;
-    if(['unconscious','dead'].includes(lifeStatus(s).state))s.health.coma=true;
-  }else{s.health.intact+=delta;s.derived.hpMax+=delta;}
+  resizeHealthCapacity(s,s.derived.hpMax+delta);
   s.geneticLock.hpBonus=wanted;delete s.geneticLock.pendingHpShrink;
 }
 function geneticPain(s,points){
@@ -277,13 +325,15 @@ export function beginTurn(state) {
   const old = next.turn ?? freshTurn();
   if (old.phase === 'active' || old.phase === 'skipped')
     return { state, result: { allowed: false, reason: 'Current turn has not ended' } };
+  next.resourceTurnSerial=(next.resourceTurnSerial??0)+1;
   const skipped = !!old.responseDebt;
   const severeNausea = statusLevel(state, '恶心').severe;
   const exhausted = statusLevel(state, '疲乏').severe;
   next.turn = { ...old, phase: skipped ? 'skipped' : 'active', standard: skipped || severeNausea ? 0 : 1,
     move: skipped || exhausted ? 0 : 1, swift: skipped || old.reactionLock || severeNausea ? 0 : 1,
     responseDebt: false, opportunityUsed: false };
-  return { state: next, result: { allowed: true, skipped, turn: next.turn } };
+  const resourceLosses=applyResourceActionLosses(next);
+  return { state: next, result: { allowed: true, skipped, turn: next.turn, resourceLosses } };
 }
 
 export function endTurn(state) {
@@ -295,11 +345,14 @@ export function endTurn(state) {
 }
 
 export function lifeStatus(state) {
+  if(state.health.dead)return {state:'dead',deteriorating:false,woundPenalty:3};
   const h = state.health;
   validateHealth(h);
   const total = h.intact + h.B + h.L + h.A;
   if (total > 0 && h.A === total) return { state: 'dead', deteriorating: false, woundPenalty: 3 };
   const woundPenalty = Math.max(0, 3 - h.intact);
+  if(hasCounterCondition(state,'unconscious'))return {state:'unconscious',reason:'resource-condition',deteriorating:h.intact===0&&h.A>0&&!h.deteriorationStopped,woundPenalty};
+  if(h.intact===0&&resourceBonus(state,'ignoreWoundUnconsciousness')>0)return {state:'awake',reason:'wound-suppression',deteriorating:h.A>0&&!h.deteriorationStopped,woundPenalty};
   if (h.intact > 0) return { state: 'awake', deteriorating: false, woundPenalty };
   if (h.A > 0) return { state: 'unconscious', deteriorating: !h.deteriorationStopped, woundPenalty };
   if (h.L > 0 || h.coma) return { state: 'unconscious', deteriorating: false, woundPenalty };
@@ -307,7 +360,8 @@ export function lifeStatus(state) {
 }
 
 function statusPoints(state, type) {
-  const entries = state.statuses.filter(s => s.type === type);
+  const entries = effectiveStatuses(state,type);
+  if(entries.some(s=>s.stacking==='add'))return entries.filter(s=>s.stacking==='add').reduce((n,s)=>n+s.points,0)+Math.max(0,...entries.filter(s=>s.stacking!=='add').map(s=>s.points));
   return type === '疲乏' ? entries.reduce((n, s) => n + s.points, 0)
     : Math.max(0, ...entries.map(s => s.points));
 }
@@ -325,31 +379,33 @@ export function statusLevel(state, type) {
   const names = STATUS_ATTRIBUTES[type];
   if (!names) return { points, severe: false, catastrophicThreshold: false, sourceSpecific: true };
   const threshold = Math.max(...names.map(name => attrValue(state, name)));
-  return { points, severe: points > threshold, catastrophicThreshold: points > 2 * threshold,
+  return { points, severe: points > threshold, catastrophicThreshold: !['欲眠','失速','仇恨'].includes(type)&&points > 2 * threshold,
     excess: Math.max(0, points - 2 * threshold) };
 }
 
 // PHB生存状态:216–286. Context describes the action, never numeric modifiers.
 // Source-specific saves can provide their already adjusted pool explicitly.
+export function statusPenaltyPoints(state,type,points=statusLevel(state,type).points){return remainingPenalty(state,'status',points,{status:type});}
 export function checkModifiers(state,options={}) {
   const c=options.context??{},attrs=options.attributes??(options.attribute?[options.attribute]:[]);
   const social=c.social||['社交','说服','交际','威逼','掩饰'].includes(options.skill);
   const perception=c.perception||['洞察','调查','侦查','聆听'].includes(options.skill);
   const physical=c.physical||attrs.some(n=>['力量','敏捷'].includes(n));
   const motion=c.attack||options.skill==='运动'||c.somatic||c.motion;
-  const entries=[];const add=(type,active,factor=1)=>{if(active){const n=statusLevel(state,type).points;if(n)entries.push({source:type,value:Math.trunc(n*factor)});}};
+  const entries=[];const add=(type,active,factor=1)=>{if(active){const n=statusPenaltyPoints(state,type);if(n)entries.push({source:type,value:Math.trunc(n*factor)});}};
   const wound=lifeStatus(state).woundPenalty;if(wound)entries.push({source:'伤势',value:wound});
   add('恶心',c.attack||c.specialAbility||c.mentalPower);
   add('疲乏',physical);for(const type of ['麻痹','精神束缚','纠缠','冻结'])add(type,motion);
+  add('欲眠',physical||perception);
   add('晕眩',c.attack||c.reflex||options.skill==='运动'||perception);
   add('剧痛',social||perception||c.craft||c.willResistance||c.mentalPower);
   add('耳鸣',c.listening);add('目眩',!statusLevel(state,'目眩').severe&&(c.visual||c.attack||c.precision),c.precision ? .5 : 1);
   add('沮丧',c.attack||Boolean(options.skill)||c.extended);add('亢奋',social||c.extended);
-  const linked=type=>Boolean(c.targetId)&&state.statuses.some(s=>s.type===type&&(s.targetId===c.targetId||s.sourceActorId===c.targetId));
+  const linked=type=>Boolean(c.targetId)&&effectiveStatuses(state,type).some(s=>(s.targetId===c.targetId||s.sourceActorId===c.targetId));
   add('恐惧',linked('恐惧')&&(c.attack||social)||c.mentalPower);
   add('魅惑',linked('魅惑')&&(social||c.willResistance));
-  const limbs=state.statuses.filter(s=>s.type==='肢体妨害'&&c.limbIds?.includes(s.limbId));
-  if(limbs.length)entries.push({source:'肢体妨害',value:Math.max(...limbs.map(s=>s.points))});
+  const limbs=effectiveStatuses(state,'肢体妨害').filter(s=>c.limbIds?.includes(s.limbId));
+  if(limbs.length){const n=statusPenaltyPoints(state,'肢体妨害',Math.max(...limbs.map(s=>s.points)));if(n)entries.push({source:'肢体妨害',value:n});}
   let reason;
   if(c.visual&&statusLevel(state,'目眩').severe)reason='目盲无法执行需要视觉的判定';
   if(c.listening&&statusLevel(state,'耳鸣').severe)reason='耳聋无法聆听';
@@ -366,27 +422,30 @@ export function combineRuleValue(base,{multipliers=[],addends=[],real=false}={})
 }
 
 export function spendAPAction(state,ap,options={}) {
-  const mapping={2:['swift'],4:['move'],6:['standard'],8:['standard','swift']};
-  if(!mapping[ap])throw Error('该AP价格尚无已采用换算');
-  let next=state;for(const kind of mapping[ap]){const out=spendAction(next,kind,options);if(!out.result.allowed)return {state,result:out.result};next=out.state;}
-  return {state:next,result:{allowed:true,actions:mapping[ap]}};
+  const mapping={2:['swift'],4:['move'],6:['standard'],8:['standard','swift'],10:['standard','move'],12:['standard','move','swift']};
+  if(!Number.isInteger(ap)||ap<1||ap>12)throw Error('该AP价格尚无已采用换算');
+  const price=2*Math.ceil(ap/2);
+  let next=state;for(const kind of mapping[price]){const out=spendAction(next,kind,options);if(!out.result.allowed)return {state,result:out.result};next=out.state;}
+  return {state:next,result:{allowed:true,actions:mapping[price]}};
 }
 
 export function actionEligibility(state, action, context={}) {
+  if(state.pendingFall)return {allowed:false,reason:'须先完成已发生的坠落结算'};
   if(state.geneticLock?.pendingPainDamage||state.geneticLock?.pendingHpShrink)return {allowed:false,reason:'须先完成基因锁反噬属性伤害分配或临时HP缩减裁定'};
   const life = lifeStatus(state).state;
   if (life === 'dead' || life === 'unconscious') return { allowed: false, reason: life };
-  if(state.sleeping)return {allowed:false,reason:'睡眠期间不能主动行动或进行反射/响应动作'};
+  if(state.sleeping||statusLevel(state,'欲眠').severe)return {allowed:false,reason:'睡眠期间不能主动行动或进行反射/响应动作'};
   if(state.permanentConditions?.some(c=>c.kind==='nauseaCollapse'))return {allowed:false,reason:'恶心毁灭性后果使人物失去全部动作'};
   if(statusLevel(state,'沮丧').severe&&!context.compelled)return {allowed:false,reason:'重度沮丧无法主动行动；强制命令须有明确规则来源'};
   if (statusLevel(state, '剧痛').severe || statusLevel(state, '晕眩').severe || statusPoints(state, '震慑'))
     return { allowed: false, reason: 'Status prevents action' };
   if (statusLevel(state, '恶心').severe && !['move', 'free'].includes(action))
     return { allowed: false, reason: 'Severe nausea permits move action only' };
-  if (['attack', 'move', 'charge', 'fiveFootStep'].includes(action)
+  if (!context.mentalAction && ['attack', 'move', 'charge', 'fiveFootStep'].includes(action)
       && (statusLevel(state, '麻痹').severe || statusLevel(state, '纠缠').severe || statusLevel(state, '冻结').severe || statusLevel(state,'精神束缚').severe))
     return { allowed: false, reason: 'Immobilized' };
-  if (action === 'charge' && statusLevel(state, '疲乏').points > 0)
+  if(!context.mentalAction&&['move','charge','fiveFootStep'].includes(action)&&statusLevel(state,'失速').severe&&!context.perfectFlight)return {allowed:false,reason:'重度失速无法移动'};
+  if (action === 'charge' && statusPenaltyPoints(state, '疲乏') > 0)
     return { allowed: false, reason: 'Fatigue prevents charge' };
   return { allowed: true, requiresBCheck: life === 'B-check' };
 }
@@ -445,7 +504,8 @@ export function spendAction(state, kind, options = {}) {
     } else throw new RangeError(`Unsupported PHB action: ${kind}`);
   }
   next.turn = turn;
-  return { state: next, result: { allowed: true, kind, turn,
+  const expiredEffects=expireEffectsOnAction(next,kind);
+  return { state: next, result: { allowed: true, kind, turn,expiredEffects,
     ...(preActionCheck ? { preActionCheck: preActionCheck.result } : {}) } };
 }
 
@@ -480,7 +540,7 @@ export function checkBeforeAction(state, { dc, dice } = {}) {
 function validateHealth(h) {
   for (const key of ['intact', 'B', 'L', 'A', 'temp']) integer(h[key] ?? 0, `health.${key}`);
 }
-export function applyWounds(state, wounds) {
+export function applyWounds(state, wounds, provenance={}) {
   const next = clone(state);
   validateHealth(next.health);
   const changes = [];
@@ -495,15 +555,16 @@ export function applyWounds(state, wounds) {
       else if (h.B) { from = 'B'; to = 'A'; }
       else if (h.L) { from = 'L'; to = 'A'; }
       else { unapplied++; continue; }
+      const woundSource=transitionWoundShare(next,from,to,provenance);
       h[from]--; h[to]++;
-      changes.push({ from, to, severity });
+      changes.push({ from, to, severity,...(woundSource?{woundSource}:{}) });
     }
   }
   if (changes.length && next.health.intact === 0 && next.health.A > 0) next.health.deteriorationStopped = false;
   return { state: next, result: { changes, unapplied, life: lifeStatus(next) } };
 }
 
-export function advanceDeterioration(state, { from } = {}) {
+export function advanceDeterioration(state, { from,drawDice } = {}) {
   const life = lifeStatus(state);
   if (!life.deteriorating) return { state, result: { changed: false, life } };
   const h = state.health;
@@ -512,8 +573,9 @@ export function advanceDeterioration(state, { from } = {}) {
   const selected = from ?? available[0];
   if (!available.includes(selected)) throw new RangeError('Selected non-A wound slot unavailable');
   const next = clone(state);
+  const woundSource=transitionWoundShare(next,selected,'A',{drawDice});
   next.health[selected]--; next.health.A++;
-  return { state: next, result: { changed: true, from: selected, to: 'A', life: lifeStatus(next) } };
+  return { state: next, result: { changed: true, from: selected, to: 'A',...(woundSource?{woundSource}:{}), life: lifeStatus(next) } };
 }
 
 export function firstAid(healer, patient, { dice, eligible = true, preActionCheck, actionAlreadySpent=false } = {}) {
@@ -549,12 +611,13 @@ function valueForStage(sources, kind, damage) {
 }
 
 // One ordinary damage segment. Special multi-segment, bypass, object rules are not inferred.
-export function resolveDamage(target, damage, sources = []) {
+export function resolveDamage(target, damage, sources = [], {drawDice}={}) {
   const amount = integer(damage.amount, 'damage amount');
   if (!SEVERITIES.includes(damage.severity)) throw new RangeError('Damage severity must be B, L or A');
   if (!['physical', 'energy'].includes(damage.kind)) throw new RangeError('P0 damage supports physical or energy only');
   if (damage.kind === 'energy' && !damage.energyType) throw new Error('Energy damage needs energyType');
   const trace = [];
+  if(damage.unavoidable)sources=[];
   const immune = sources.some(s => s.kind === 'immunity' && applies(s, damage));
   let remaining = immune ? 0 : amount;
   trace.push({ phase: 'B', step: 'immunity', before: amount, after: remaining });
@@ -566,25 +629,36 @@ export function resolveDamage(target, damage, sources = []) {
   }
   const causedDamage = remaining > 0;
   const next = clone(target);
-  const tempAbsorbed = Math.min(remaining, next.health.temp ?? 0);
-  next.health.temp -= tempAbsorbed;
+  const temporary=consumeTemporaryHealth(next,remaining,damage);
+  const tempAbsorbed=temporary.absorbed;
   remaining -= tempAbsorbed;
-  trace.push({ phase: 'C', step: 'temporaryHP', absorbed: tempAbsorbed, after: remaining });
+  trace.push({ phase: 'C', step: 'temporaryHP', absorbed: tempAbsorbed, sourceId:temporary.sourceId, after: remaining,...(temporary.depleted?{depleted:temporary.depleted}:{}) });
   const downgrade = sources.filter(s => s.kind === 'downgrade' && applies(s, damage));
   if (downgrade.length > 1) throw new Error('Multiple downgrade sources require item-specific rule');
   const index = Math.max(0, SEVERITIES.indexOf(damage.severity) - (downgrade[0]?.steps ?? 0));
   const finalSeverity = SEVERITIES[index];
   trace.push({ phase: 'C', step: 'downgrade', from: damage.severity, to: finalSeverity });
-  const wounds = applyWounds(next, { [finalSeverity]: remaining });
-  if(causedDamage&&wounds.state.sleeping)delete wounds.state.sleeping;
+  const wounds = applyWounds(next, { [finalSeverity]: remaining },{restriction:damage.recovery?{recovery:damage.recovery,source:damage.sourceId}:undefined,origin:damage.sourceId?{source:damage.sourceId}:undefined,drawDice});
+  // RE 规则术语解释: unavoidable costs cause wounds without damage reactions.
+  const reacts=causedDamage&&!damage.unavoidable;
+  if(reacts&&wounds.state.sleeping)delete wounds.state.sleeping;
+  if(reacts){let remaining=wounds.result.changes.length;for(const s of effectiveStatuses(wounds.state,'欲眠')){const removed=Math.min(s.points,remaining);s.points-=removed;if(s.stacking==='add')remaining-=removed;}wounds.state.statuses=wounds.state.statuses.filter(s=>s.points>0);}
+  if(reacts&&wounds.result.changes.length&&Object.keys(wounds.state.resourceChannels??{}).length)(wounds.state.resourceConcentration??=[]).push(wounds.result.changes.length);
   return { state: wounds.state, result: { causedDamage, actualDamage: wounds.result.changes.length,
-    finalSeverity, wounds: wounds.result, trace } };
+    finalSeverity, wounds: wounds.result, trace,...(temporary.depleted?{temporaryHealthDepleted:temporary.depleted}:{}) } };
 }
 
 const WEAPON_SKILL = { natural: '肉搏', melee: '白刃', thrown: '运动', bow: '弓箭', gun: '枪械' };
+export function weaponDamageCap(weapon,skillLevel,strength,attribute){
+ if(['natural','melee'].includes(weapon.type))return weapon.damage+skillLevel+(attribute==='力量'?strength:0);
+ if(weapon.type==='thrown')return weapon.damage+skillLevel+strength;
+ if(weapon.type==='bow')return weapon.damage*2+skillLevel+integer(weapon.strengthRequirement,'bow strengthRequirement');
+ if(['gun','firearm'].includes(weapon.type))return weapon.damage*2+skillLevel;
+ throw new RangeError('Unsupported ordinary weapon type');
+}
 export function resolveAttack(attacker, target, input) {
   for(const [state,chosen]of [[attacker,input.willpower],[target,input.defenseWillpower]])if(chosen){const w=willEnhancement(state);if(!w.allowed)return {attacker,target,result:{allowed:false,reason:w.reason}};}
-  const defenseWill=input.defenseWillpower?3+geneticCheckBonus(target,{willEligible:true,willSpent:true})-geneticCheckBonus(target,{willEligible:true}):0;
+  const defenseWill=input.defenseWillpower?3+resourceBonus(target,'willEnhancement')+geneticCheckBonus(target,{willEligible:true,willSpent:true})-geneticCheckBonus(target,{willEligible:true}):0;
   const weapon = input.weapon;
   if (!WEAPON_SKILL[weapon.type]) throw new RangeError('Unsupported ordinary weapon type');
   const action = spendAction(attacker, input.action ?? 'attack', { behavior: 'attack', ...input.actionContext });
@@ -596,19 +670,14 @@ export function resolveAttack(attacker, target, input) {
     ? target.derived.defense : Math.min(attrValue(target, '敏捷'), attrValue(target, '感知'));
   const defense = (input.targetDefense ?? Math.max(0, baseDefense+geneticCheckBonus(target,{willEligible:true}) - lifeStatus(target).woundPenalty))+defenseWill;
   const distancePenalty = input.distancePenalty ?? 0;
-  const dp = attrValue(attacker, attribute) + skill.level + weapon.damage +geneticCheckBonus(attacker,{willEligible:true,willSpent:input.willpower===true})+(input.willpower?3:0)- defense
-    - distancePenalty + (input.modifier ?? 0) - checkModifiers(attacker,{attribute,skill:main,
+  const dp = attrValue(attacker, attribute) + skill.level + weapon.damage +geneticCheckBonus(attacker,{willEligible:true,willSpent:input.willpower===true})+(input.willpower?3+resourceBonus(attacker,'willEnhancement'):0)- defense
+    - distancePenalty + (input.modifier ?? 0) + stackEffects([...resourceEffects(attacker,'attack',{...input.context,targetId:input.targetId}),...resourceEffects(attacker,'attributeCheck',{...input.context,attribute,attributes:[attribute],targetId:input.targetId})]).value - checkModifiers(attacker,{attribute,skill:main,
       context:{attack:true,targetId:input.targetId}}).penalty;
-  let cap;
-  if (weapon.type === 'natural' || weapon.type === 'melee')
-    cap = weapon.damage + skill.level + (attribute === '力量' ? attrValue(attacker, '力量') : 0);
-  else if (weapon.type === 'thrown') cap = weapon.damage + skill.level + attrValue(attacker, '力量');
-  else if (weapon.type === 'bow') cap = weapon.damage * 2 + skill.level + integer(weapon.strengthRequirement, 'bow strengthRequirement');
-  else cap = weapon.damage * 2 + skill.level;
+  const cap=weaponDamageCap(weapon,skill.level,attrValue(attacker,'力量'),attribute);
   // Weapon range and minimum-strength eligibility are supplied by the caller; no invented range tables.
   if (input.eligible === false) return { attacker, target, result: { allowed: false, reason: input.reason ?? 'Attack ineligible' } };
-  if(input.willpower)action.state.will.current--;
-  if(input.defenseWillpower){target=clone(target);target.will.current--;}
+  if(input.willpower)changeWill(action.state,-1);
+  if(input.defenseWillpower){target=clone(target);changeWill(target,-1);}
   const roll = rollPool(dp, input.dice);
   const autoSuccesses = attrAuto(attacker, attribute) + skill.auto + (input.autoBonus ?? 0)+geneticWillAuto(attacker,{willEligible:true,willSpent:input.willpower===true});
   const afterDefense = Math.max(0, roll.rolledSuccesses + autoSuccesses - (input.defenderExtraSuccesses ?? 0)-(input.defenseWillpower?geneticWillAuto(target,{willEligible:true,willSpent:true}):0));
@@ -635,13 +704,13 @@ export function resolveAttack(attacker, target, input) {
 export function counteractTemperature(state) {
  const cold=statusLevel(state,'冻结').points,fire=statusLevel(state,'燃烧').points;
  const cancelled=Math.min(cold,fire);
- if(cancelled)for(const s of state.statuses)if(['冻结','燃烧'].includes(s.type))s.points=Math.max(0,s.points-cancelled);
+ if(cancelled)for(const s of effectiveStatuses(state))if(['冻结','燃烧'].includes(s.type))s.points=Math.max(0,s.points-cancelled);
  state.statuses=state.statuses.filter(s=>s.points>0);
  return {cancelled,cold:Math.max(0,cold-fire),fire:Math.max(0,fire-cold)};
 }
 
 export function applyStatus(state, { type, source, points, dice, sub, eligible = true,
-  catastrophicAllowed = false, attributeDamageAllocation } = {}) {
+  catastrophicAllowed = false, attributeDamageAllocation, properties = {}, sourceActorId } = {}) {
   if (!eligible) return { state, result: { applied: false, reason: 'Source ineligible or immune' } };
   // PHB 生存状态:293–295: once icebound, new freezing is unresisted cold L.
   // Constitution translates to Strength for the special resistance only.
@@ -657,7 +726,7 @@ export function applyStatus(state, { type, source, points, dice, sub, eligible =
   const remaining = Math.max(0, integer(points, 'status points') - resistance.total);
   const priorExcess = statusLevel(state, type).excess ?? 0;
   const next = clone(state);
-  if (remaining) next.statuses.push({ type, source, points: remaining });
+  if (remaining) next.statuses.push({ ...properties, type, source, ...(sourceActorId?{sourceActorId}:{}), points: remaining });
   if(type==='冻结')counteractTemperature(next);
   const level = statusLevel(next, type);
   const newAttributeDamage = catastrophicAllowed&&['剧痛','疲乏'].includes(type) ? Math.max(0, (level.excess ?? 0) - priorExcess) : 0;
@@ -679,9 +748,11 @@ export function recover(state, event) {
   const next = clone(state);
   const changes = [];
   const heal = severity => {
-    if (next.health[severity] > 0) { next.health[severity]--; next.health.intact++; changes.push(`${severity}->intact`); }
+    if(event.skipWoundHealing)return;
+    const healed=healWounds({state:next},{budget:1,order:severity==='A'?['A','L','B']:[severity],mode:severity==='A'?'natural-A':'natural'});
+    for(const row of healed.changes)changes.push(`${row.severity}->intact`);
   };
-  const will = amount => { const before = next.will.current; next.will.current = Math.min(next.will.max, before + amount); changes.push({ will: next.will.current - before }); };
+  const will = amount => { const before = next.will.current; changeWill(next,amount); changes.push({ will: next.will.current - before }); };
   if (event.type === 'shortRest') {
     heal('B');
     if (event.statusIndex !== undefined) {
@@ -728,7 +799,7 @@ export function spendWill(state, cost) {
   integer(cost, 'will cost');
   if (state.will.current < cost) return { state, result: { allowed: false, reason: 'Insufficient will', cost } };
   const next = clone(state);
-  next.will.current -= cost;
+  changeWill(next,-cost);
   return { state: next, result: { allowed: true, cost, remaining: next.will.current } };
 }
 
@@ -834,7 +905,7 @@ export function settleNode(state, { id, xp = 0, settlement = false, legendaryInt
   const bonus = settlement ? LEGENDARY_INT_XP[level] : 0;
   next.xp += xp + bonus;
   const beforeWill = next.will.current;
-  next.will.current = Math.min(next.will.max, next.will.current + (settlement ? 0 : 1));
+  changeWill(next,settlement?0:1);
   next.nodeLedger.push({ id, xp, settlement, bonus });
   return { state: next, result: { applied: true, xp, bonus, willRecovered: next.will.current - beforeWill,
     total: xp + bonus } };

@@ -1,8 +1,13 @@
+import {flushAutomaticResourceEvents} from './resource-program.mjs';
+import {additionalDamageCandidates} from '../resource-additional-damage.mjs';
+import {socialResourceContext} from '../resource-social.mjs';
+import {effectiveStatuses} from '../resource-status-applicability.mjs';
+import {timedResourceInstances} from '../resource-instances.mjs';
 import { buildCharacter, requireKnownSkill } from '../../character_builder/builder.mjs';
 import {reduceRuleAction,ruleRequestValid} from './rule-actions.mjs';
 import {createOpeningRoster} from '../combat/opening.mjs';
 import {actorCheckRules,CHECK_PURPOSES} from './actor-rules.mjs';
-import { effectiveAttribute, effectiveSkill, resolveGeneticUnlock, actionEligibility,checkModifiers } from '../core.mjs';
+import { statusLevel,statusPenaltyPoints,effectiveAttribute, effectiveSkill, resolveGeneticUnlock, actionEligibility,checkModifiers } from '../core.mjs';
 import { reduceRecovery, OPENING_RECOVERY_RULES } from '../recovery.mjs';
 import { validRecoveryRequest, explicitRecoveryDeclaration, recoveryDeclarationOrderMatches } from './adjudication-gate.mjs';
 import { initializeTestState, readTestOperation, readTestSummary,
@@ -167,15 +172,18 @@ export function createReplayCheckRuntime({ baseline, mvu, getAnchor, expectedCha
     currentPlayer:()=>readTestActorState({...opts,actorId:'player'}),
     ruleContext() {
       const scene=readTestSummary(opts).ruleScene;
-      return {learningOffers:Object.values(scene.learningOffers??{}),growthWindow:scene.growthWindow??null,objects:scene.objects??{},actors:Object.entries(readTestSummary(opts).actors).map(([id,a])=>{
-        const s=readTestActorState({...opts,actorId:id});
-        return {id,name:a.name,xp:s.xp,guanlan:s.guanlan,learnedResources:s.learnedResources,learningPurchases:s.learningPurchases,resources:s.resources,casting:s.casting,learningGrants:s.learningGrants,equippedResources:s.equippedResources,activeResourceEffects:s.activeResourceEffects,resourceCapabilities:s.resourceCapabilities,resourceTriggers:s.resourceTriggers,resourceCooldowns:s.resourceCooldowns,will:s.will,underworld:s.underworld,attributes:s.attributes,skills:s.skills,statuses:s.statuses,anatomy:s.anatomy,permanentConditions:s.permanentConditions,statusOrders:s.statusOrders,sleeping:s.sleeping,wizard:s.wizard,timedEffects:s.timedEffects,channeling:s.channeling,geneticLock:s.geneticLock,antiMagicRestraints:s.antiMagicRestraints,extendedChecks:s.extendedChecks??{},possessions:s.possessions,inventory:s.inventory};
+      const actual={actors:Object.fromEntries(Object.keys(readTestSummary(opts).actors).map(id=>[id,{state:readTestActorState({...opts,actorId:id})}]))};
+      return {spatial:scene.spatial??null,learningOffers:Object.values(scene.learningOffers??{}),growthWindow:scene.growthWindow??null,objects:scene.objects??{},actors:Object.entries(readTestSummary(opts).actors).map(([id,a])=>{
+        const s=readTestActorState({...opts,actorId:id}),effective=new Set(effectiveStatuses(s));
+        const statusLevels=[...new Set(s.statuses.map(x=>x.type))].map(type=>({type,...statusLevel(s,type),penaltyPoints:statusPenaltyPoints(s,type)}));
+        const statusContributions=s.statuses.map((status,statusIndex)=>({statusIndex,active:effective.has(status),effectivePoints:effective.has(status)?status.points:0}));
+        return {id,name:a.name,socialConstraints:socialResourceContext(s),timedResourceInstances:timedResourceInstances(actual,id),xp:s.xp,guanlan:s.guanlan,learnedResources:s.learnedResources,learningPurchases:s.learningPurchases,resources:s.resources,casting:s.casting,learningGrants:s.learningGrants,equippedResources:s.equippedResources,equippedWeaponId:s.equippedWeaponId,activeResourceEffects:s.activeResourceEffects,resourceCapabilities:s.resourceCapabilities,resourceTriggers:s.resourceTriggers,additionalDamageSources:additionalDamageCandidates(s),resourcePendingTriggerEnds:s.resourcePendingTriggerEnds,resourceAutomaticEvents:s.resourceAutomaticEvents,resourceAutomaticSerial:s.resourceAutomaticSerial,resourceAutomaticClock:s.resourceAutomaticClock,resourceDeathHandled:s.resourceDeathHandled,resourceDeathRestrictions:s.resourceDeathRestrictions,resourceDeathCause:s.resourceDeathCause,resourceLastRecovery:s.resourceLastRecovery,resourceEffectiveClock:s.resourceEffectiveClock,temporaryHealthPools:s.temporaryHealthPools,temporaryHealthSource:s.temporaryHealthSource,resourceConditions:s.resourceConditions,verticalPosition:s.verticalPosition,physicalMotion:s.physicalMotion,paidMotion:s.paidMotion,flightKinematics:s.flightKinematics,resourceDescent:s.resourceDescent,pendingFall:s.pendingFall,resourceAccumulators:s.resourceAccumulators,woundLedger:s.woundLedger,resourceActionLosses:s.resourceActionLosses,resourceHealthBonus:s.resourceHealthBonus,resourceAuras:s.resourceAuras,resourceChannels:s.resourceChannels,resourceDailyUsage:s.resourceDailyUsage,resourceSceneUsage:s.resourceSceneUsage,resourceProgressions:s.resourceProgressions,resourceEffectSerial:s.resourceEffectSerial,resourceTimeEpoch:s.resourceTimeEpoch,resourceUpkeepClock:s.resourceUpkeepClock,resourceDetectionContests:s.resourceDetectionContests,resourcePendingPerceptions:s.resourcePendingPerceptions,resourceDiscoveries:s.resourceDiscoveries,resourceLocationClues:s.resourceLocationClues,resourceSensoryCues:s.resourceSensoryCues,resourceTurnSerial:s.resourceTurnSerial,resourceMovementSerial:s.resourceMovementSerial,resourceMovementHistory:s.resourceMovementHistory,resourcePerceptionClock:s.resourcePerceptionClock,resourcePerceptionSerial:s.resourcePerceptionSerial,resourcePerceptionQueue:s.resourcePerceptionQueue,resourceTurnOrder:s.resourceTurnOrder,resourceActionUsage:s.resourceActionUsage,resourceConcentration:s.resourceConcentration,resourceCooldowns:s.resourceCooldowns,resourceUseWindows:s.resourceUseWindows,will:s.will,underworld:s.underworld,attributes:s.attributes,skills:s.skills,statuses:s.statuses,statusContributions,statusLevels,anatomy:s.anatomy,permanentConditions:s.permanentConditions,statusOrders:s.statusOrders,sleeping:s.sleeping,wizard:s.wizard,timedEffects:s.timedEffects,channeling:s.channeling,geneticLock:s.geneticLock,antiMagicRestraints:s.antiMagicRestraints,extendedChecks:s.extendedChecks??{},possessions:s.possessions,inventory:s.inventory};
       }),events:Object.entries({...ruleEvents,...scene.events}).map(([id,e])=>({id,...e})),feats:Object.values({...ruleFeats,...scene.feats}),
       genetic:Object.entries({...geneticOpportunities,...readTestSummary(opts).ruleScene.geneticOpportunities}).map(([id,e])=>({id,stage:e.stage??1,condition:e.condition??e.source}))};
     },
     recoveryState() {
       const state=readTestActorState({...opts,actorId:'player'});
-      return Object.fromEntries(['health','inventory','pendingRecoveryEffects','statuses','resources']
+      return Object.fromEntries(['health','woundLedger','resourceAccumulators','resourceConditions','inventory','pendingRecoveryEffects','statuses','resources']
         .filter(key=>state[key]!==undefined).map(key=>[key,structuredClone(state[key])]));
     },
     scriptedOpportunityIds: () => Object.keys({...scriptedOpportunities,...readTestSummary(opts).ruleScene.scriptedOpportunities}).filter(id => {
@@ -274,12 +282,15 @@ export function createReplayCheckRuntime({ baseline, mvu, getAnchor, expectedCha
           return {status:'needs_input',missing:['需要玩家明确声明服用该药、恢复选项或完成相应时长的休息／打坐。']};
         try {
           return await settleRecovery({...opts,operationId,expectedRevision:readTestSummary(opts).revision,
-            command,playerAuthorized:true,reduce:(actor,input)=>{
+            command,playerAuthorized:true,reduce:(actor,input,root)=>{
               // Old opening snapshots predate recovery policy metadata. The
               // trusted baseline supplies rules only; saved stock/HP stay intact.
               if(baseline.definition.id==='PC_YULINFENG_OPENING_20261022'&&!actor.state.recoveryRules)
                 actor.state.recoveryRules=structuredClone(OPENING_RECOVERY_RULES);
-              return reduceRecovery(actor,input,{drawDice,playerAuthorized:true});
+              const scene={...root,actors:Object.fromEntries(Object.entries(root.actors).map(([id,row])=>[id,{...structuredClone(actorTemplates[id]??{}),...row,...structuredClone(row.combatCarry??{}),id,state:row.state}]))};
+              const outcome=reduceRecovery(actor,input,{drawDice,playerAuthorized:true,root:scene});scene.actors[actor.id]=outcome.actor;
+              const automaticEvents=flushAutomaticResourceEvents(scene,{drawDice});if(automaticEvents.length)outcome.result.automaticEvents=automaticEvents;
+              return {...outcome,actor:scene.actors[actor.id],affectedActors:scene.actors};
             }});
         }catch(error) {
           if(error.name==='IllegalAction'||error.name==='RuleInputError')return {status:'needs_input',missing:[error.message]};

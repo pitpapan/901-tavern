@@ -1,0 +1,28 @@
+✔ group penalties remain effective; same-kind bonuses and penalties each take their strongest (1.269811ms)
+✔ spell casts spend the actual tier cost once without mutating the input or T0 (11.773574ms)
+✔ timed check bonuses participate in ordinary JS checks and expire with scene time (3.804217ms)
+✔ force defense enters the actual AP-removable defense category (4.099632ms)
+✔ declared absorption applies once across damage segments, then expires (1.513989ms)
+✔ spell resistance reduces target-effective power without draining extra energy or affecting other targets (1.126045ms)
+✔ periodic damage keeps cast-time power and consumes exactly ten events (4.902741ms)
+✔ a next-melee rider waits for a matching hit, fires once and does not create a second attack (1.768061ms)
+✔ field caster resolves through saved-state records plus actor templates, without importing their mature state (3.782478ms)
+✔ failed concentration loses the declared cast cost but cannot replace rolled successes with fixed autos (1.909204ms)
+✔ a lower-tier recast retains the stronger same-source bonus and refreshes its duration (2.992585ms)
+✔ resisted statuses preserve source actor and explicit stacking instead of losing the source rule (2.153872ms)
+✔ field elapsed time resolves corrosion before expiry and cannot postpone its ten ticks into later combat (5.056261ms)
+✔ a healing spell respects natural-only wounds and spends four healing points for a wound treated as aggravated (1.154918ms)
+✔ magic blast repeats independent attacks at C, including the same target, without energy-weapon conversion (7.993783ms)
+✔ searing pain chooses pain or hatred from actual inflicted damage and a separate will save (5.589084ms)
+✔ selected-target fire spell charges once; two-ball fire spell charges each and requires free hands (9.730237ms)
+✔ fear howl applies only to enemy area targets and never grants fear spell ownership (1.593378ms)
+✔ bane requires a lost opposed save and penalizes actual attacks and saves with no ordinary skill penalty (4.389228ms)
+✔ attack penalties from declared effects also enter spell attack rolls (4.01239ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 122.506974

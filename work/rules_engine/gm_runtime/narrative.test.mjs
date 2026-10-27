@@ -401,6 +401,8 @@ test('existing chat builds its map once, map viewing does not spend actions, and
     tavern:{chat:f.chat,chatId:'narrative-test',saveChat:async()=>{}},
     createChatMessages:async ms=>{for(const m of ms)f.chat.push({mes:m.message,is_user:false,swipe_id:0,extra:m.extra??{}});},
     setChatMessages:async us=>{for(const u of us)f.chat[u.message_id].extra=structuredClone(u.extra);},
+    // Keep this map/reload regression deterministic: random opportunity damage can incapacitate and correctly cancel movement.
+    drawDice:()=>Array(1024).fill(1),
     mapGenerator:async()=>{generated++;return {version:1,title:'演练场',bounds:[-20,-20,80,80],features:[]};},onMapRequest:()=>{opened++;},
     interpret:async()=>declaration,narrate:async()=> '御临风移开一步，重新站稳。'});
   const before=structuredClone(f.root().actors);

@@ -228,7 +228,21 @@ records['xp']['native']['key']=list(dict.fromkeys(records['xp']['native']['key']
 
 # Maintained resource library. Definitions never grant ownership or reset T0.
 kit_inventory=read(STAGE/'kit-inventory.json')
+kit_root=ROOT.parent/'901-resource-authoring-kit'
+import sys
+sys.path.insert(0,str(kit_root/'tools'))
+from compile_resources import load_contracts
+normalized_contracts={d['id']:d for d in load_contracts()}
+contracts={}
+for path in sorted((kit_root/'resources/execution').glob('*.rule.json')):
+    contract=normalized_contracts[read(path)['id']]
+    assert contract['id'] not in contracts, contract['id']
+    assert sha(kit_root/contract['reading']['path'])==contract['reading']['sha256'], contract['id']
+    contracts[contract['id']]=(contract,path)
+assert set(contracts)=={item['id'] for item in kit_inventory['entries']}, '资源目录与执行契约必须一一对应'
 for item in kit_inventory['entries']:
+    contract,contract_path=contracts[item['id']]
+    assert item['sourceHash']==contract['reading']['sha256'], item['id']
     later=item.get('period')=='later-optional'
     template=item['kind']=='character-template'
     key=add('kit:'+item['id'],('后期模板·' if template else '资源·')+item['name'],BOOKS[5] if template else BOOKS[3],123,'concept',keys=[item['name']],manual=template)
@@ -236,7 +250,23 @@ for item in kit_inventory['entries']:
     warning='资源定义不表示任何人物已经取得；实际资格、持有、能量、冷却、XP只认当前JS/MVU。'
     if later:warning+='后期可选成长资料，不能覆盖入都T0；须实际取得各项后逐项启用，不导入整张成熟面板。'
     if item.get('prohibited'):warning+='帝国禁用条目，不列入帝国法师合法学习目录；资料存在不构成开放许可。'
-    extra(key,warning+'\n\n'+item['body'],[ref(item['source'],item['line'])])
+    execution={
+        'id':contract['id'],'version':contract['version'],
+        'contract_path':'../901-resource-authoring-kit/'+contract_path.relative_to(kit_root).as_posix(),
+        'contract_sha256':sha(contract_path),'reading':contract['reading'],
+        'verification':contract['verification'],'clauses':contract['clauses'],
+        'programSources':{op:p['compilation'] for op,p in contract['definition'].get('programs',{}).items() if p.get('compilation')},
+        'actions':contract['actions'],'consumerCoverage':contract['consumerCoverage'],'implementationGaps':contract['implementationGaps'],
+        'unresolvedRules':contract['unresolvedRules'],'deployment':'candidate_not_installed',
+    }
+    records[key]['native']['extensions']['901_resource']=execution
+    status=('全部执行验证通过' if contract['verification']['runtimeFullyVerified'] else '尚未完整执行验证')
+    execution_text=f"执行版：{contract['id']} @ {contract['version']}；{status}；当前为开发候选，生成不代表部署。"
+    if contract['implementationGaps']:execution_text+='\n实现缺口：'+'；'.join(contract['implementationGaps'])
+    missing_consumers=sorted({r['stat'] for r in contract['consumerCoverage']['effects'] if r['status']=='consumer-missing'})
+    if missing_consumers:execution_text+='\n未接通的效果消费者：'+'、'.join(missing_consumers)+'（工程缺口，不是缺规则）。'
+    if contract['unresolvedRules']:execution_text+='\n规则待定：'+json.dumps(contract['unresolvedRules'],ensure_ascii=False)
+    extra(key,warning+'\n\n'+item['body']+'\n\n'+execution_text,[ref(item['source'],item['line']),ref(execution['contract_path'])])
     records[key]['revisions'].append({'source':'kit-inventory.json','reason':'用户明确要求完整盘点并接入现有六书；定义、后期模板与当前持有分离。'})
 
 # Final source/manifest projection. The plan contains paths and content hashes, not competing inline bodies.
@@ -288,7 +318,8 @@ def plan_record(r):
         'position':'after_char','order':n['order'],'scan_depth':n['scanDepth'],'recursive':False,
         'state_owner':'主持方法' if r['book']=='主持卡' else '条件式方案或有时期的基线' if r['book']==BOOKS[5] else '背景定义；不写入运行状态',
         'source_uids':[sources[i]['uid'] for i in r['source_indices']], 'source_refs':r['refs'],
-        'revisions':r['revisions'],'content_sha256':hashlib.sha256(r['content'].encode()).hexdigest()}
+        'revisions':r['revisions'],'content_sha256':hashlib.sha256(r['content'].encode()).hexdigest(),
+        **({'execution':n['extensions']['901_resource']} if '901_resource' in n['extensions'] else {})}
 
 plan={
  'project':{'name':'901 六本世界书迁移','form':'existing-native-worldbooks','mvu':'reuse-existing-no-schema-change','ejs':False,'ui_mode':'none','revision':REV},
@@ -339,7 +370,9 @@ def integrate_runtime():
         dest=OUT/'runtime_patch/901-opening-combat'/src.relative_to(ROOT)
         write(dest,src.read_text(encoding='utf-8').replace('/901-rules-runtime/','/901-opening-combat/').replace('/901-combat-runtime/','/901-opening-combat/'))
         manifest.append({'source':str(src.relative_to(ROOT)),'source_sha256':sha(src),'destination':str(dest.relative_to(OUT)),'sha256':sha(dest)})
-    dump(OUT/'runtime_patch_manifest.json',{'profile_books':list(FILENAMES.values()),'modules':manifest})
+    dump(OUT/'runtime_patch_manifest.json',{'profile_books':list(FILENAMES.values()),'modules':manifest,
+        'deployment':'candidate_not_installed','resource_contracts':len(contracts),
+        'runtime_fully_verified':sum(c['verification']['runtimeFullyVerified'] for c,p in contracts.values())})
     rows=['# 六书条目与触发表','正文与规划同源；新增手动场景启用后临时常驻，用完关闭。原谢尔伦条目启用后仍按关键词，其余原手动条目沿原常驻方式。所有条目在角色描述后插入，扫描4层、不递归。','|书／UID|条目|触发方式|顺序|来源UID|','|---|---|---|---|---|']
     for p in plan['entries']:
         trigger=p['strategy']+('：'+ '、'.join(p['keywords']) if p['keywords'] else '')

@@ -1,3 +1,5 @@
+import {applyKitAcquisition} from '../kit-state.mjs';
+import {RESOURCE_CATALOG} from '../resource-catalog.mjs';
 import {validateLearningOffer} from '../growth-pricing.mjs';
 import {createRoster,createEncounter} from '../combat/catalog.mjs';
 import {createTavernCombat} from '../combat/tavern.mjs';
@@ -164,6 +166,13 @@ export function createIntegratedSession({baseline,mvu,tavern,generateRaw,createC
       if(!a||!g.source?.trim()||g.acquired!==true||!Number.isSafeInteger(g.wufaXP??0)||(g.wufaXP??0)<0)throw Error('观澜取得须有当前人物、实际来源和明确悟法XP余额');
       if(a.state.guanlan)throw Error('已有观澜记录，不能重置持有状态或悟法XP');
       a.state.guanlan={acquired:true,source:g.source,wufaXP:g.wufaXP??0};
+    }
+    for(const grant of config.resourceGrants??[]){
+      const a=saved.actors[grant.actorId],resource=RESOURCE_CATALOG[grant.resourceId];
+      if(!a||!resource||!grant.source?.trim()||resource.kind==='character-template'||resource.prohibited)throw Error('须实际人物、独立资源与取得来源，不能整卡授予或开放禁术');
+      if(a.state.learnedResources?.[grant.resourceId])throw Error('资源已有取得记录，不能重置');
+      (a.state.learnedResources??={})[grant.resourceId]={learned:true,name:resource.name,source:grant.source,kind:grant.kind??'acquisition',grade:grant.grade??resource.grade,tree:grant.tree};
+      applyKitAcquisition(a.state,grant.resourceId,{source:grant.source,...grant.choices});
     }
     for(const [id,plans]of Object.entries(config.mechanismPlans??{})){
       const object=scene.objects?.[id];if(!object)throw Error('须先登记实际物件');

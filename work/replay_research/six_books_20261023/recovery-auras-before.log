@@ -1,0 +1,90 @@
+✔ group penalties remain effective; same-kind bonuses and penalties each take their strongest (1.673981ms)
+✔ spell casts spend the actual tier cost once without mutating the input or T0 (13.636916ms)
+✔ timed check bonuses participate in ordinary JS checks and expire with scene time (3.645308ms)
+✔ force defense enters the actual AP-removable defense category (4.631081ms)
+✔ declared absorption applies once across damage segments, then expires (2.119954ms)
+✔ spell resistance reduces target-effective power without draining extra energy or affecting other targets (1.131516ms)
+✔ periodic damage keeps cast-time power and consumes exactly ten events (5.650353ms)
+✔ a next-melee rider waits for a matching hit, fires once and does not create a second attack (1.709683ms)
+✔ field caster resolves through saved-state records plus actor templates, without importing their mature state (2.992422ms)
+✔ failed concentration loses the declared cast cost but cannot replace rolled successes with fixed autos (2.23324ms)
+✔ a lower-tier recast retains the stronger same-source bonus and refreshes its duration (2.259488ms)
+✔ resisted statuses preserve source actor and explicit stacking instead of losing the source rule (1.253055ms)
+✔ field elapsed time resolves corrosion before expiry and cannot postpone its ten ticks into later combat (4.469334ms)
+✔ a healing spell respects natural-only wounds and spends four healing points for a wound treated as aggravated (1.11352ms)
+✔ magic blast repeats independent attacks at C, including the same target, without energy-weapon conversion (6.61107ms)
+✔ searing pain chooses pain or hatred from actual inflicted damage and a separate will save (4.982044ms)
+✔ selected-target fire spell charges once; two-ball fire spell charges each and requires free hands (13.68665ms)
+✔ fear howl applies only to enemy area targets and never grants fear spell ownership (1.432638ms)
+✔ bane requires a lost opposed save and penalizes actual attacks and saves with no ordinary skill penalty (4.777755ms)
+✔ attack penalties from declared effects also enter spell attack rolls (3.419707ms)
+✖ blessing follows the caster, dynamically admits allies, suspends on exit, and survives a saved-state round trip (0.699545ms)
+✖ arcane brilliance retains the selected recipients and cast-time radius without recursive intelligence expansion (0.164691ms)
+✖ suppressing aura affects enemies only and refuses unknown field positions without charging (0.137521ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 20
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 131.765693
+
+✖ failing tests:
+
+test at work/rules_engine/gm_runtime/resource-program.test.mjs:171:1
+✖ blessing follows the caster, dynamically admits allies, suspends on exit, and survives a saved-state round trip (0.699545ms)
+  AssertionError [ERR_ASSERTION]: 祝福术执行程序
+      at scene (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:16:28)
+      at TestContext.<anonymous> (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:172:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at work/rules_engine/gm_runtime/resource-program.test.mjs:182:1
+✖ arcane brilliance retains the selected recipients and cast-time radius without recursive intelligence expansion (0.164691ms)
+  AssertionError [ERR_ASSERTION]: 奥术光辉执行程序
+      at scene (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:16:28)
+      at TestContext.<anonymous> (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:183:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at work/rules_engine/gm_runtime/resource-program.test.mjs:192:1
+✖ suppressing aura affects enemies only and refuses unknown field positions without charging (0.137521ms)
+  AssertionError [ERR_ASSERTION]: 抑制鼓动执行程序
+      at scene (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:16:28)
+      at TestContext.<anonymous> (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:193:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

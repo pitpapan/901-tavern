@@ -1,3 +1,6 @@
+import {effectiveStatuses} from '../resource-status-applicability.mjs';
+import {effectUseRestriction,assertEffectUseAllowed} from '../resource-lifecycle.mjs';
+import {changeWill} from '../resource-counters.mjs';
 import {check,effectiveAttribute,spendAction,statusLevel,resolveGeneticUnlock,endGeneticLock,shiftGeneticLock,actionEligibility} from '../core.mjs';
 import {RuleInputError,IllegalAction,saveProfile} from '../combat/mechanics.mjs';
 import {runWizard} from './wizard-host.mjs';
@@ -15,7 +18,10 @@ const inside=(p,b)=>p&&p[0]>=b[0]&&p[0]<=b[0]+b[2]&&p[1]>=b[1]&&p[1]<=b[1]+b[3];
 export function settleInterruptedTeleports(root){
  const results=[];for(const [id,o]of Object.entries(root.ruleScene?.objects??{}))if(o.type==='teleport')for(const [actorId,ch]of Object.entries(o.channels??{})){
    const a=root.actors[actorId],s=a.state;
-   const unable=!actionEligibility(s,'free').allowed||['冻结','麻痹','纠缠','精神束缚'].some(t=>statusLevel(s,t).severe);
+   const proof=ch.effectGrade??o.effectGrades?.upper;
+   const restriction=effectUseRestriction(s,{families:['space'],grade:proof?.source?proof.grade:undefined});
+   if(restriction.needsGrade)ch.pendingEffectGrade=true;else delete ch.pendingEffectGrade;
+   const unable=restriction.blocked||!actionEligibility(s,'free').allowed||['冻结','麻痹','纠缠','精神束缚'].some(t=>statusLevel(s,t).severe);
    if(!unable)continue;
    const refund=Math.floor(ch.cost/2),pool=s.resources[o.manaResource];pool.current=Math.min(pool.max,pool.current+refund);
    delete o.channels[actorId];if(o.failures)delete o.failures[actorId];delete s.channeling;
@@ -49,7 +55,7 @@ export function runConditionalResource(root,r,{combat=false,preActionCleared=fal
  if(selectedWill&&!(o.type==='teleport'&&r.operation==='lower'||o.type==='ancientBelt'&&r.operation==='defend'))fail('本机制的意志选项只适用于单次施法检定');
  const castAction=(actor,item,dice,dc)=>{
    const roll=cast(actor,item,dice,dc,{willpower:selectedWill});
-   if(roll.eligible)actor.state.will.current-=roll.willCost??0;return roll;
+   if(roll.eligible)changeWill(actor.state,-(roll.willCost??0));return roll;
  };
  if(o.type==='geneticLock'){
    const p=r.operation==='end'&&!r.part?{source:o.source}:plan(o,r);
@@ -89,6 +95,7 @@ export function runConditionalResource(root,r,{combat=false,preActionCleared=fal
    const p=plan(o,r);if(p.languageAvailable!==true||p.gesturesAvailable!==true)need('传送需要实际可用的言语与动作成份','components');
    if(['冻结','麻痹','纠缠','精神束缚'].some(t=>statusLevel(a.state,t).severe))fail('当前定身妨碍实际施法动作成份');
    if(r.operation==='lower'){
+     const proof=o.effectGrades?.lower;assertEffectUseAllowed(a.state,{families:['space'],grade:proof?.source?proof.grade:undefined});
      const target=root.actors[p.targetId??r.actorId];if(!target)need('缺少实际传送目标','targetId');
      const other=target!==a,limit=other?25:50;
      if(other&&!(p.willing===true||p.unconscious===true))fail('目标须自愿或无意识');
@@ -113,7 +120,8 @@ export function runConditionalResource(root,r,{combat=false,preActionCleared=fal
        if(!channel||p.failureConfirmed!==true&&o.failures?.[r.actorId]?.source===undefined)need('须确认这次累计施法实际失败；中断不自动等于失败','failureConfirmed');
        const refund=Math.floor(channel.cost/2),pool=a.state.resources[o.manaResource];pool.current=Math.min(pool.max,pool.current+refund);delete o.channels[r.actorId];if(o.failures)delete o.failures[r.actorId];delete a.state.channeling;return {action:'free',refund,failed:true};
      }
-     if(!channel){const cost=8+steps;mana(a,o,cost);channel=o.channels[r.actorId]={signature,cost,target:100*steps,successes:0,periods:0,...(combat?{readyRound:root.round+10}:{})};}
+     const proof=channel?.effectGrade??o.effectGrades?.upper;assertEffectUseAllowed(a.state,{families:['space'],grade:proof?.source?proof.grade:undefined});
+     if(!channel){const cost=8+steps;mana(a,o,cost);channel=o.channels[r.actorId]={signature,cost,...(proof?.source?{effectGrade:structuredClone(proof)}:{}),target:100*steps,successes:0,periods:0,...(combat?{readyRound:root.round+10}:{})};}
      if(combat&&root.round<channel.readyRound){a.state.channeling={objectId:r.objectId,part:r.part,readyRound:channel.readyRound};return {action:'free',channeling:true,...channel};}
      const roll=cast(a,o,drawDice,undefined,{context:{extended:true}});if(!roll.eligible)fail(roll.reason);channel.successes+=roll.total;channel.periods++;
      const complete=channel.successes>=channel.target;result={...channel,roll,complete,...(!combat?{elapsedMinutes:1}:{})};
@@ -175,4 +183,4 @@ export function runConditionalResource(root,r,{combat=false,preActionCleared=fal
  }else return null;
  return {objectId:r.objectId,type:o.type,operation:r.operation,action,...result};
 }
-function statusSevere(s,t){return s.statuses.some(x=>x.type===t&&x.points>effectiveAttribute(s,'意志'));}
+function statusSevere(s,t){return effectiveStatuses(s,t).some(x=>x.points>effectiveAttribute(s,'意志'));}

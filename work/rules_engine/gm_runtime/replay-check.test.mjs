@@ -506,3 +506,22 @@ test('explicit sourced history lets a new isolated runtime commit first unlock o
   assert.equal(saved.stat_data['901_rules_poc'].actors.player.state.geneticLock.successfulUnlocks[1], 1);
   assert.equal(saved.stat_data['901_rules_poc'].actors.player.state.geneticLock.activeStage, 1);
 });
+
+test('classifier state distinguishes stored status points from current contributions without rewriting MVU',async()=>{
+ const fixture=createRecoveryFixture();let data={stat_data:{}},writes=0;
+ const anchor={chatId:'status-applicability-test',messageId:0,swipeId:0};
+ const rt=createReplayCheckRuntime({baseline:fixture.baseline,expectedChatId:anchor.chatId,getAnchor:()=>anchor,
+  mvu:{getMvuData:()=>structuredClone(data),replaceMvuData:async value=>{writes++;data=structuredClone(value);}}});
+ await rt.initialize({openingAssumption:true});
+ const s=data.stat_data['901_rules_poc'].actors.player.state;
+ s.statuses=[{type:'恐惧',source:'actual-fear',points:5,applicability:{families:['mind'],grade:'C'}}];
+ s.resourceCapabilities={ward:{id:'mindImmunity',source:'actual-ward',level:2}};
+ const saved=structuredClone(data),count=writes;
+ let actor=rt.ruleContext().actors.find(x=>x.id==='player');
+ assert.deepEqual(actor.statusContributions,[{statusIndex:0,active:false,effectivePoints:0}]);
+ assert.equal(actor.statuses[0].points,5);assert.deepEqual(data,saved);assert.equal(writes,count);
+ delete s.resourceCapabilities.ward;
+ actor=rt.ruleContext().actors.find(x=>x.id==='player');
+ assert.deepEqual(actor.statusContributions,[{statusIndex:0,active:true,effectivePoints:5}]);
+ assert.equal(writes,count);
+});

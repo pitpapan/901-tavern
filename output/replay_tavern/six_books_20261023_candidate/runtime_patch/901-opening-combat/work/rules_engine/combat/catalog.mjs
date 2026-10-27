@@ -1,9 +1,14 @@
+import {BASIC_ACTIONS} from '../resource-action-bindings.mjs';
 import { beginTurn, createCharacter } from '../core.mjs';
 
 // Adopted comparison configuration, NOT an overwrite of a campaign/T0 save.
 // Sources: outputs/同伴RE资源调整/{四人战斗面板对比,姜子尤,黄泉,龙象般若功,狮子王}.md
 // under the sibling 901-resource-authoring-kit. Existing 901 great powers retained.
 export const ABILITIES = {
+  search:{name:'主动侦查',action:'标准',text:'全部实际感官重新侦查感知范围内生物；胜出将定位提高一级，仍受反侦测与心灵免疫边界限制。'},
+  jump:{name:'跳跃',action:'移动',text:'选择实际起跳计划；力量＋运动·跳跃判定后占真实移动额度，未完成须付后续移动动作。'},
+  continueJump:{name:'续接跳跃',action:'移动',text:'续算保存的同一次跳跃，不重新投骰；跳高下降不另扣额度。'},
+  ...Object.fromEntries(Object.entries(BASIC_ACTIONS).map(([id,{name,action,text}])=>[id,{name,action,text}])),
   mechanism:{name:'操作规则物件',action:'按实际物件',text:'选择已登记的objectId、operation与part；动作、费用与效果由对应规则执行器计算。'},
   statusEvent:{name:'处理已确认状态事件',action:'按事件规则',text:'只选择已登记eventId；处理额外抵抗、灭火、实际感知条件等，不输入任意状态补丁。'},
   wake:{name:'唤醒睡眠者',action:'标准',text:'接触1.5米内实际睡眠者，以标准动作唤醒。'},

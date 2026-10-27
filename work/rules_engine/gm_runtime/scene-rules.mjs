@@ -37,7 +37,7 @@ export function runSceneMechanism(root,r,{combat=false,preActionCleared=false,dr
     }
     if(!['open','close'].includes(r.operation))throw new IllegalAction('盒子支持开关、感知或实际归盒');
     if(!Number.isSafeInteger(o.sleep)||o.sleep<0||typeof o.open!=='boolean'||o.released)throw new RuleInputError('缺少魔物之盒当前状态或释放后的采用规则','demonBox.state');
-    
+
     if(o.open===(r.operation==='open'))throw new IllegalAction('盒子已是该状态');
     action='move';o.open=r.operation==='open';o.closedMinutes=0;result={open:o.open,sleep:o.sleep};
     if(!o.open)for(const record of Object.values(root.actors))record.state.statuses=record.state.statuses.filter(s=>s.demonBoxId!==r.objectId);
@@ -66,6 +66,7 @@ export function sceneBarriers(scene) {
     Object.entries(o.arrays??{}).filter(([,a])=>a.active).map(([type])=>({id:`${id}/${type}`,type,rect:o.boundary,source:o.source})));
 }
 export function advanceSceneTime(scene,minutes) {
+  if(scene)scene.resourceClockMinutes=(scene.resourceClockMinutes??0)+minutes;
   const changes=[];
   for(const [id,o]of Object.entries(scene?.objects??{}))if(o.type==='demonBox'&&!o.released) {
     if(!Number.isInteger(o.sleep)||typeof o.open!=='boolean')throw new RuleInputError('盒子的当前睡眠值与开关状态未记录',id);

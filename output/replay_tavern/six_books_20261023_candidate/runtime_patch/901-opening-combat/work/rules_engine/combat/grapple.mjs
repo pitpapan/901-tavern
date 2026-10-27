@@ -1,3 +1,5 @@
+import {weightedDraw} from '../rule-random.mjs';
+import {changeWill} from '../resource-counters.mjs';
 import {actorCheckRules} from '../gm_runtime/actor-rules.mjs';
 import {check,effectiveAttribute,effectiveSkill} from '../core.mjs';
 import {RuleInputError,IllegalAction} from './mechanics.mjs';
@@ -13,12 +15,9 @@ export function grappleMembers(b,targetId,attackerId){
  return [...ids].map(id=>b.actors[id]).filter(a=>a?.present&&a.id!==attackerId&&!(excluded?.source&&excluded.excludedIds?.includes(a.id)));
 }
 export function weightedGrappleTarget(members,drawDice){
- const weights=members.map(a=>Math.max(1,a.state.size??5)),total=weights.reduce((a,b)=>a+b,0);
- const digits=Math.max(1,Math.ceil(Math.log10(total))),range=10**digits,limit=range-range%total;
- const dice=drawDice();let cursor=0,value;
- do{value=0;for(let i=0;i<digits;i++){if(cursor>=dice.length)throw new RuleInputError('命中权重抽签骰不足','grapple.dice');value=value*10+dice[cursor++]-1;}}while(value>=limit);
- let slot=value%total;const ticket=slot;let index=0;while(slot>=weights[index])slot-=weights[index++];
- return {target:members[index],weights,ticket,dice:dice.slice(0,cursor)};
+ const weights=members.map(a=>Math.max(1,a.state.size??5));
+ const {index,...receipt}=weightedDraw(weights,drawDice,{field:'grapple.dice'});
+ return {target:members[index],...receipt};
 }
 
 export function grappleChoice(a,declared) {
@@ -31,7 +30,7 @@ export function grappleContest(active,passive,{drawDice,defense,activeAgility=fa
   const roll=(a,attribute,skill,sub,sizePenalty)=>check(a.state,{attribute,...(skill?{skill}:{}),...(sub?{sub}:{}),modifier:actorCheckRules(a,{attribute,skill,sub}).modifier-sizePenalty+(a.willCheckReady||a.willDefenseReady?3:0),dice:drawDice(),context:{physical:true,motion:true,willSpent:a.willCheckReady===true||a.willDefenseReady===true}});
   const a=roll(active,activeAgility?'敏捷':'力量',drag?undefined:activeAgility?'运动':'肉搏',!drag&&active.kind==='chuul'?'螯钳':undefined,Math.max(0,sizeB-sizeA));
   const p=roll(passive,method==='agility'?'敏捷':'力量',drag?undefined:method==='agility'?'运动':'肉搏',!drag&&passive.kind==='chuul'&&method==='strength'?'螯钳':undefined,Math.max(0,sizeA-sizeB));
-  if(passive.willDefenseReady){passive.state.will.current--;delete passive.willDefenseReady;}
+  if(passive.willDefenseReady){changeWill(passive.state,-1);delete passive.willDefenseReady;}
   return {active:a,passive:p,success:a.total>=p.total,margin:Math.max(0,a.total-p.total)};
 }
 export function attachClaw(b,holder,target,{drawDice,defense,claw}={}) {

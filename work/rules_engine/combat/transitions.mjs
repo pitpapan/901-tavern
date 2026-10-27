@@ -1,16 +1,26 @@
-import { act, panel, stateResult, opportunityActors } from './engine.mjs';
+import {isReflexResource} from '../gm_runtime/resource-program.mjs';
+import { act, panel, stateResult, opportunityActors, resumePaidMovement } from './engine.mjs';
 import { potentialTargets } from './runtime.mjs';
 import { IllegalAction } from './mechanics.mjs';
 import {canObserve,lastVisiblePoint,distance} from './map.mjs';
 
+// History records only established information; an unperformed sensory check
+// cannot grant knowledge or prevent the event which performs that check.
+function establishedSight(b,target,observerId){
+ try{return canObserve(b,target,observerId);}catch(e){
+  if(e.code==='NEEDS_INPUT'&&/^(detection|perception)\./.test(e.field??''))return false;
+  throw e;
+ }
+}
 function remember(before,b,c,result) {
   b.knowledge??={};
   for(const observer of Object.values(b.actors).filter(a=>a.present)) {
     for(const target of Object.values(b.actors).filter(a=>a.present&&a.id!==observer.id)) {
       const wasSeen=Boolean(before.actors[observer.id]?.present&&before.actors[target.id]?.present&&
-        canObserve(before,before.actors[target.id],observer.id)),isSeen=canObserve(b,target,observer.id);
+        establishedSight(before,before.actors[target.id],observer.id)),isSeen=establishedSight(b,target,observer.id);
       const moving=target.id===c.actorId&&result.movement&&!target.hiddenFrom?.includes(observer.id);
-      const pathSeen=moving?lastVisiblePoint(b.map,before.actors[observer.id].position,result.movement.path):null;
+      const pathCandidate=moving?lastVisiblePoint(b.map,before.actors[observer.id].position,result.movement.path):null;
+      const pathSeen=pathCandidate&&establishedSight(b,{...target,position:pathCandidate},observer.id)?pathCandidate:null;
       const position=isSeen?target.position:pathSeen??(wasSeen?before.actors[target.id].position:null);
       const knowledge=b.knowledge[observer.id]??={};
       if(position) {
@@ -30,6 +40,13 @@ function remember(before,b,c,result) {
 // costs debited until all reactions are chosen; a refresh resumes this record.
 export function resolveStep(input,c,options={}) {
   const b=structuredClone(input);
+  if(c.abilityId==='resumeEffects'){const out=act(b,c,options);remember(b,out.battle,c,out.result);return out;}
+  if(b.pending&&c.actorId===b.pending.awaiting&&isReflexResource(b,c)){
+    const pending=b.pending;delete b.pending;
+    const out=act(b,c,options);out.battle.pending=pending;
+    remember(b,out.battle,c,out.result);return out;
+  }
+  if(b.pending?.kind==='paid-movement'){const out=resumePaidMovement(b,c,options);remember(b,out.battle,c,out.result);return out;}
   if(b.pending?.kind==='opportunity') {
     const p=b.pending;
     if(!options.playerAuthorized||c.actorId!==p.awaiting||c.abilityId!=='opportunityReact'||
@@ -83,6 +100,7 @@ export function resolveStep(input,c,options={}) {
     return out;
   }
   if(c.abilityId==='react') throw new IllegalAction('没有等待反应的攻击');
+  if(['jump','continueJump'].includes(c.abilityId)){const out=act(b,c,{...options,deferMovementReactions:b.reactionWindows});remember(b,out.battle,c,out.result);return out;}
   if(b.reactionWindows) {
     // Legality check uses disposable fixed dice, never the actual dice provider.
     act(b,c,{drawDice:()=>Array(1024).fill(1),playerAuthorized:options.playerAuthorized,deferPlayerDefense:true});

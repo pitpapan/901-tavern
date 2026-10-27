@@ -1,0 +1,70 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {weaponHandling} from './resource-weapons.mjs';
+import {createOpeningEncounter} from './combat/opening.mjs';
+import {attackProfile,act,currentContext} from './combat/engine.mjs';
+import {effectiveAttribute,effectiveSkill,beginTurn} from './core.mjs';
+const source='隔离规则测试：PHB武器力量不足与持握';
+test('weapon handling computes strength penalties from actual grip without banning understrength weapons',()=>{
+ const sword={type:'melee',strengthRequirement:5,hands:1,size:3};
+ assert.equal(weaponHandling(sword,{strength:3}).strengthPenalty,4);
+ assert.equal(weaponHandling({...sword,grip:{hands:2,source}},{strength:3}).strengthPenalty,2);
+ assert.equal(weaponHandling({...sword,hands:2,grip:{hands:1,source}},{strength:3}).strengthPenalty,6);
+ assert.throws(()=>weaponHandling({...sword,grip:{hands:2}},{strength:3}),e=>e.code==='NEEDS_INPUT');
+ assert.throws(()=>weaponHandling({...sword,hands:2,size:undefined,grip:{hands:1,source}},{strength:3}),e=>e.code==='NEEDS_INPUT');
+});
+test('each missing bow strength point reduces maximum range and increases excess-range penalties',()=>{
+ const bow={type:'bow',strengthRequirement:5};
+ const handling=weaponHandling(bow,{strength:3,rangeUnit:50,rangeUnits:8,distance:101});
+ assert.equal(handling.strengthPenalty,4);assert.equal(handling.range,300);assert.equal(handling.distancePenalty,8);
+ assert.throws(()=>weaponHandling({...bow,grip:{hands:1,source}},{strength:3}),e=>e.code==='UNAVAILABLE');
+});
+test('actual equipped bow pays the PHB penalty once, can still attack, and cannot inherit the old bow parameter',()=>{
+ const b=createOpeningEncounter({participants:['bright','huang'],positions:{bright:[0,0],huang:[5,0]}}),a=b.actors.bright;
+ b.activeId='bright';a.state=beginTurn(a.state).state;b.playerDefenseDeclarations=false;b.reactionWindows=false;a.loaded=true;a.ammunition=5;
+ const strength=effectiveAttribute(a.state,'力量');
+ a.state.possessions={items:[{id:'actual-bow',source,location:'carried',held:true,loaded:true,weapon:{type:'bow',skill:'射击',sub:'长弓',damage:3,ap:0,magic:0,attackBonus:0,strengthRequirement:strength+1,rangeUnit:40}}]};
+ a.state.equippedWeaponId='actual-bow';a.parameters={bowStrength:99};
+ const penalized=attackProfile(b,'bright',{targetId:'huang'});
+ assert.equal(penalized.handling.strengthPenalty,2);assert.equal(penalized.range,280);
+ const out=act(b,{actorId:'bright',abilityId:'strike',targetId:'huang'},{drawDice:()=>Array(1024).fill(8)});
+ assert.equal(out.battle.actors.bright.ammunition,4);
+ a.state.possessions.items[0].weapon.strengthRequirement=strength;
+ const normal=attackProfile(b,'bright',{targetId:'huang'});
+ assert.equal(normal.rawDP-penalized.rawDP,2);assert.equal(normal.range,320);
+ a.state.activeResourceEffects=[{sourceId:'other',effects:[{stat:'attack',group:'equipment',value:-4}]}];
+ a.state.possessions.items[0].weapon.strengthRequirement=strength+1;
+ assert.equal(attackProfile(b,'bright',{targetId:'huang'}).rawDP,normal.rawDP-4);
+});
+test('a real bow follows its weapon rules for a non-archer, requires actual ammunition, and loads the selected instance',()=>{
+ const b=createOpeningEncounter({participants:['player','huang'],positions:{player:[0,0],huang:[10,0]}}),a=b.actors.player;
+ b.activeId='player';a.team='party';b.actors.huang.team='enemy';b.playerDefenseDeclarations=false;b.reactionWindows=false;a.state=beginTurn(a.state).state;
+ a.state.possessions={items:[{id:'borrowed-bow',source,resourceId:'bright.sky_bow',location:'carried',held:true,loaded:false}]};a.state.equippedWeaponId='borrowed-bow';a.ammunition=3;
+ const p=attackProfile(b,'player',{targetId:'huang'}),str=effectiveAttribute(a.state,'力量');
+ assert.equal(p.ranged,true);assert.equal(p.cap,16+effectiveSkill(a.state,'射击','长弓').level+4);assert.equal(p.range,str*50*8);assert.equal(p.explode,9);
+ assert.throws(()=>act(b,{actorId:'player',abilityId:'strike',targetId:'huang'},{drawDice:()=>Array(1000).fill(8),playerAuthorized:true}),/上箭/);
+ const loaded=act(b,{actorId:'player',abilityId:'reload'},{drawDice:()=>Array(1000).fill(8),playerAuthorized:true}).battle;
+ const context=currentContext(loaded),shown=context.participants.find(x=>x.id==='player');
+ assert.equal(shown.weaponState.loaded,true);assert.equal(shown.weaponState.ammunition,3);assert.ok(context.abilities.reload);assert.ok(context.abilities.fullDefense);assert.deepEqual(context.passiveRules,{});
+ assert.equal(loaded.actors.player.state.possessions.items[0].loaded,true);assert.equal(loaded.actors.player.ammunition,3);
+ const shot=act(loaded,{actorId:'player',abilityId:'strike',targetId:'huang'},{drawDice:()=>Array(1000).fill(8),playerAuthorized:true}).battle;
+ assert.equal(shot.actors.player.ammunition,2);assert.equal(shot.actors.player.state.possessions.items[0].loaded,false);
+ assert.equal(shot.actors.player.state.learnedResources?.['bright.sky_bow'],undefined);
+});
+test('an archer wielding a real sword uses melee range, cap and severity and never spends arrows or inherits an old bow mode',()=>{
+ const b=createOpeningEncounter({participants:['bright','huang'],positions:{bright:[0,0],huang:[1,0]}}),a=b.actors.bright;
+ b.activeId='bright';b.playerDefenseDeclarations=false;b.reactionWindows=false;a.state=beginTurn(a.state).state;
+ a.state.possessions={items:[{id:'borrowed-sword',source,resourceId:'later:狮子王',location:'carried',held:true}]};a.state.equippedWeaponId='borrowed-sword';a.ammunition=0;a.loaded=false;a.weaponMode='bow';
+ const p=attackProfile(b,'bright',{targetId:'huang'});
+ assert.equal(p.ranged,false);assert.equal(p.range,a.reach);assert.equal(p.cap,8+effectiveAttribute(a.state,'力量')+effectiveSkill(a.state,'白刃','太刀').level);assert.equal(p.severity,'L');
+ const out=act(b,{actorId:'bright',abilityId:'strike',targetId:'huang'},{drawDice:()=>Array(1000).fill(8)});
+ assert.equal(out.battle.actors.bright.ammunition,0);
+});
+test('the real sword speed bonus is a typed shared modifier for any holder and does not add weapon damage or cap',()=>{
+ const b=createOpeningEncounter({participants:['bright','huang'],positions:{bright:[0,0],huang:[1,0]}}),a=b.actors.bright;
+ a.state.possessions={items:[{id:'qifeng',source,resourceId:'later:弃风',location:'carried',held:true}]};a.state.equippedWeaponId='qifeng';
+ const normal=attackProfile(b,'bright',{targetId:'huang'});
+ a.state.activeResourceEffects=[{sourceId:'other-speed',effects:[{stat:'attack',group:'speed',value:5}]}];
+ const improved=attackProfile(b,'bright',{targetId:'huang'});
+ assert.equal(improved.rawDP-normal.rawDP,2);assert.equal(improved.cap,normal.cap);assert.equal(improved.weapon,16);
+});

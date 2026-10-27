@@ -1,0 +1,53 @@
+✔ RE-based six-attribute HP uses twice Strength and nonlinear size adjustment (1.661241ms)
+✔ D10 explosions, luck die, and no invented success on luck 8 (1.017235ms)
+✔ finalized nonpositive DP uses PHB fortune without generic willpower or automatic harm (1.942123ms)
+✔ genetic first-stage uses trusted history and per-attempt roleplay result modifier (1.835242ms)
+✔ genetic unlock rejects unknown history and ineligible opportunity without drawing (0.230896ms)
+✔ second-stage sums 2D10 and commits only the PHB defined modifiers (1.378748ms)
+✔ main and one matching sub contribute to pool and autos even with zero rolled successes (12.658414ms)
+✔ ordinary active opposition succeeds at equal successes (1.324486ms)
+✔ PHB action counts, one-way conversions, reflex lock and response debt (1.282514ms)
+✔ multi-round action uses one full round on each turn and tracks completion (0.564737ms)
+✔ PHB B/L/A pointwise upgrades differ for B and L (0.84649ms)
+✔ no intact B needs explicit DC; A deterioration needs explicit B/L choice and all A kills (10.079306ms)
+✔ first aid stops A deterioration without healing a slot (0.598738ms)
+✔ ordinary melee attack traces A/B/C and PHB L wound on a healthy target (1.143565ms)
+✔ same-category DR takes maximum except explicitly additive source (0.252358ms)
+✔ energy resistance applies by type, then temporary HP absorbs at C stage (0.172709ms)
+✔ short and long rest, node and chapter recover separately (0.322634ms)
+✔ will and already-defined special pools change only by explicit costs (0.500992ms)
+✔ common status resistance and severity use six attributes (1.575813ms)
+✔ temporary attribute damage affects checks without rewriting card HP (0.266369ms)
+✔ attribute/skill XP milestones, main cap, card overrides, node settlement (1.005658ms)
+✖ ordinary attack applies declared attack modifiers once without altering skill or ownership (1.876064ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 21
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 66.631411
+
+✖ failing tests:
+
+test at work/rules_engine/core.test.mjs:295:1
+✖ ordinary attack applies declared attack modifiers once without altering skill or ownership (1.876064ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  3 !== -3
+  
+      at TestContext.<anonymous> (file:///workspace/901-tavern/work/rules_engine/core.test.mjs:301:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 3,
+    expected: -3,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -2,9 +2,9 @@
   "status": "pass",
   "checks": [
     "全部已记录输入／保护文件哈希保持不变",
-    "六书173个UID唯一；135个原世界书UID保留，原通用UID转主持锚点；136个来源均有去向",
-    "606个来源段落／行都有一次明确分配；174份正文与规划哈希一致；未授权字段与原来源扩展保持",
-    "原9条禁用保持；新默认为3常驻、151关键词、19手动；无单字触发或无键绿灯",
+    "六书443个UID唯一，保留173个既有条目及全部270份资源契约；135个原UID保留，136个来源均有去向；模板手动禁用",
+    "606个来源段落／行都有一次明确分配；444份正文与规划哈希一致；未授权字段与原来源扩展保持",
+    "原9条禁用保持；当前加载分布{'constant': 3, 'keyword': 418, 'disabled': 22}；资源不新增常驻，后期模板不默认启用；无单字触发或无键绿灯",
     "敌人短卡全部数值逐次保留；仅分割的两行之外，原句完整存在于目标正文",
     "主持卡内嵌41条基础书一致；入口脚本仅增加显式六书名单，正则、开场及执行提示保持；完整运行时依赖哈希一致",
     "已确认人口、弃风和YGGDRASIL触发修正存在，旧待定剑数值语句已移除",
@@ -13,12 +13,15 @@
   ],
   "counts": {
     "books": 6,
-    "entries": 173,
+    "entries": 443,
+    "resource_contracts": 270,
+    "runtime_fully_verified": 0,
+    "deployment": "candidate_not_installed",
     "host_anchor": 1,
     "loading": {
       "constant": 3,
-      "keyword": 151,
-      "disabled": 19
+      "keyword": 418,
+      "disabled": 22
     },
     "source_entries": 136,
     "source_units": 606
@@ -85,13 +88,14 @@
         "901已采用核心裁定规则",
         "大陆法则限制",
         "妄想大陆",
-        "弃风剑"
+        "弃风剑",
+        "资源·弃风"
       ],
       "status": "pass"
     }
   ],
   "constant_body_chars_before": 6964,
-  "constant_body_chars_after": 2145,
+  "constant_body_chars_after": 3796,
   "limits": [
     "本验证器只运行静态检查；真实模型测试另见minimal_test记录",
     "字面匹配不模拟预算、其他世界书、全局设置与实际Prompt组装",

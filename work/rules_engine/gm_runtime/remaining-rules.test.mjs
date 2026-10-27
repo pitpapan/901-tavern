@@ -12,6 +12,7 @@ import {advanceTime} from '../recovery.mjs';
 import {settleCombat,settleRuleAction} from '../mvu_poc/adapter.mjs';
 import {ruleActionInstructions} from './rule-reference.mjs';
 import {clearLine,canObserve} from '../combat/map.mjs';
+import {actualSenses} from '../resource-senses.mjs';
 import {settleInterruptedTeleports} from './conditional-resources.mjs';
 const ones=()=>Array(1024).fill(1),eights=()=>Array(1024).fill(8),source='隔离验收／人物卡资料集1016–1098、1676–1693';
 const object=(type,extra={})=>({type,source,actorIds:['player'],manaResource:'测试魔力',...extra});
@@ -83,7 +84,7 @@ test('wind adjacent attack consumes one standard action and all-check bonus reac
 });
 test('Garuda summon creates a runnable, fixed-stat combat participant and legal interference',()=>{
  const b=battle();const out=resolveStep(b,{actorId:'player',abilityId:'mechanism',objectId:'belt',operation:'garuda'},{playerAuthorized:true,drawDice:ones});
- const g=out.battle.actors.testGaruda;assert.equal(g.state.derived.hpMax,15);assert.equal(panel(out.battle,g.id).speed,30);assert.equal(resolveDefense(out.battle,g.id,'jiang',{ranged:true}).parts.natural,12);
+ const g=out.battle.actors.testGaruda;assert.equal(g.state.derived.hpMax,15);assert.equal(actualSenses(g).vision.sensitiveRange,undefined);assert.ok(g.state.absentAttributes.includes('感知'));assert.equal(panel(out.battle,g.id).speed,30);assert.equal(resolveDefense(out.battle,g.id,'jiang',{ranged:true}).parts.natural,12);
  out.battle.activeId=g.id;out.battle.actors.jiang.position=[1,0];const options=inspectCommands(out.battle);assert.ok(options.options.some(x=>x.command.abilityId==='garudaInterfere'));
  const interfered=act(out.battle,{actorId:g.id,abilityId:'garudaInterfere',targetId:'jiang'},{playerAuthorized:true,drawDice:ones});assert.equal(interfered.battle.actors.jiang.state.timedEffects.garudaInterference.points,1);
 });
@@ -178,4 +179,27 @@ test('original demon-box post: gaze is unresisted, escalates, does not reset, an
 test('original demon-box post: A-grade sense detects box and S-grade holder aura is not masked',()=>{
  const r=root({box:object('demonBox',{plans:{sense:plan({monsterSense:true,senseGrade:'A',holderAuraGrade:'S'})}})});
  const out=run(r,'box','sense','sense');assert.equal(out.result.boxDetected,true);assert.equal(out.result.holderMasked,false);
+});
+
+test('space use restriction gates the caster by sourced effect grade, including teleporting another creature',()=>{
+ const r=root({tele:object('teleport',{casting:{source,attribute:'智力',skill:'神秘学'},plans:{there:plan({languageAvailable:true,gesturesAvailable:true,distance:20,visible:true,unobstructed:true,carriedVolume:0,position:[20,0]})}})});
+ r.actors.player.state.resourceCapabilities={anchor:{id:'effectUseBlock:space',level:3,scene:true,source:'anchor'}};
+ const before=structuredClone(r);
+ assert.throws(()=>run(r,'tele','lower','there'),e=>e.code==='NEEDS_INPUT'&&/等级/.test(e.message));assert.deepEqual(r,before);
+ r.ruleScene.objects.tele.effectGrades={lower:{grade:'B',source}};
+ assert.throws(()=>run(r,'tele','lower','there'),/空间|space/);
+ r.ruleScene.objects.tele.plans.there.targetId='huang';r.ruleScene.objects.tele.plans.there.willing=true;r.ruleScene.objects.tele.plans.there.casterDistance=1;
+ assert.throws(()=>run(r,'tele','lower','there'),/空间|space/);
+ r.ruleScene.objects.tele.effectGrades.lower.grade='A';
+ let out=run(r,'tele','lower','there');assert.deepEqual(out.actors.huang.state.position,[20,0]);
+ assert.equal(out.actors.player.state.resources.测试魔力.current,59);
+ delete r.actors.player.state.resourceCapabilities;
+ assert.deepEqual(run(r,'tele','lower','there').actors.huang.state.position,[20,0]);
+});
+test('an anchored known-grade extended teleport fails with one refund, while unknown grade awaits real classification',()=>{
+ let r=root({tele:object('teleport',{effectGrades:{upper:{grade:'C',source}},casting:{source,attribute:'智力',skill:'神秘学'},plans:{there:plan({languageAvailable:true,gesturesAvailable:true,distance:1000,samePlane:true,visited:true,remembered:true,position:[1000,0]})}})});
+ r=run(r,'tele','upper','there');assert.equal(r.actors.player.state.resources.测试魔力.current,51);
+ r.actors.player.state.resourceCapabilities={anchor:{id:'effectUseBlock:space',level:3,source:'anchor',scene:true}};
+ r=JSON.parse(JSON.stringify(r));assert.equal(settleInterruptedTeleports(r)[0].refund,4);
+ assert.equal(r.actors.player.state.resources.测试魔力.current,55);assert.deepEqual(settleInterruptedTeleports(r),[]);
 });

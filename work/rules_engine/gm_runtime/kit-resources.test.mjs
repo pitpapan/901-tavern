@@ -1,3 +1,4 @@
+import {runKitMechanism} from './kit-runtime.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createOpeningRoster,createOpeningEncounter} from '../combat/opening.mjs';
@@ -72,4 +73,32 @@ test('Yingwu applies once to attack and saves, no weapon or damage cap inflation
  const attack=attackProfile(b,'player',{abilityId:'strike',targetId:'huang'}),save=saveProfile(a,'reflex').dp;
  own(a.state,'guanlan-fa');own(a.state,'test');chooseGuanlanAccumulation(a.state,'test','yingwu');
  const after=attackProfile(b,'player',{abilityId:'strike',targetId:'huang'});assert.equal(after.rawDP,attack.rawDP+1);assert.equal(after.cap,attack.cap);assert.equal(after.weapon,attack.weapon);assert.equal(saveProfile(a,'reflex').dp,save+1);
+});
+
+
+test('Guanlan insight rejects real resource unconsciousness and wounds without spending the opportunity or drawing',()=>{
+ for(const cause of ['resource','wounds','sleep']){
+  const a=actor(),s=a.state,p={source,sceneId:'actual-crisis',condition:'lethalSelf',qualified:true};
+  if(cause==='resource')s.resourceConditions={dark:{effect:'unconscious',remainingMinutes:480}};
+  if(cause==='wounds'){s.health.L=s.health.intact;s.health.intact=0;}
+  if(cause==='sleep')s.sleeping={source};
+  const before=structuredClone(s);
+  assert.throws(()=>guanlanInsight(s,p,10),/意识|清醒/);assert.deepEqual(s,before);
+  const root={actors:{player:a},ruleScene:{objects:{insight:{type:'kitResource',resourceId:'guanlan-fa',source,actorIds:['player'],plans:{actual:p}}}}};
+  let draws=0;
+  assert.throws(()=>runKitMechanism(root,{actorId:'player',objectId:'insight',operation:'insight',part:'actual'},{drawDice:()=>{draws++;return [10];}}),/意识|清醒/);
+  assert.equal(draws,0);assert.deepEqual(root.actors.player.state,before);
+ }
+});
+
+
+test('Guanlan insight uses the completed B-only consciousness check instead of requiring another roll',()=>{
+ const a=actor(),s=a.state,p={source,sceneId:'actual-B-crisis',condition:'lethalSelf',qualified:true};
+ s.health.B=s.health.intact;s.health.intact=0;
+ assert.throws(()=>guanlanInsight(s,p,10),e=>e.code==='NEEDS_INPUT'&&e.field==='health.consciousness');
+ const root={actors:{player:a},ruleScene:{objects:{insight:{type:'kitResource',resourceId:'guanlan-fa',source,actorIds:['player'],plans:{actual:p}}}}};
+ let draws=0;
+ const out=reduceRuleAction(root,{kind:'rule',action:'mechanism',actorId:'player',objectId:'insight',operation:'insight',part:'actual',preActionDC:1},{drawDice:()=>++draws===1?dice():[10]});
+ assert.equal(draws,2);assert.equal(out.actors.player.state.guanlan.wufaXP,1);
+ assert.equal(out.actors.player.state.guanlan.insightEvents.length,1);
 });

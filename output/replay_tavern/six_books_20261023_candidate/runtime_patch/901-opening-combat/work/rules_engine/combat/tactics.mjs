@@ -13,9 +13,9 @@ export function movementCandidates(b,a,abilityId,speed) {
   if(!visible.length)for(const t of lastSeenFoes(b,a))add(truncateRoute(b.map,a.position,routeTo(b.map,a.position,t.position),budget-.002));
   for(const t of visible) {
     const d=distance(a.position,t.position);if(!d)continue;
-    const u=t.position.map((v,i)=>(v-a.position[i])/d);
-    const toward=[1,.5,0].map(scale=>t.position.map((v,i)=>v-u[i]*Math.min(a.reach,d)*scale))
-      .find(p=>spatialDistance(b.map,p,t.position)<=a.reach+.001);
+    const horizontal=t.position.slice(0,2),u=horizontal.map((v,i)=>(v-a.position[i])/d);
+    const toward=[1,.5,0].map(scale=>horizontal.map((v,i)=>v-u[i]*Math.min(a.reach,d)*scale))
+      .find(p=>spatialDistance(b.map,p,t.position)<=a.reach+.001)??horizontal;
     add(truncateRoute(b.map,a.position,routeTo(b.map,a.position,toward),budget-.002));
     add([a.position.map((v,i)=>v-u[i]*budget)]);
     // A lateral route is useful around actual obstacles, not obligatory dance.
@@ -49,7 +49,7 @@ export function movementPurpose(b,c) {
   const needsApproach=!bow||(!clearBefore&&after>interference);
   const injury=a.state.health.intact/a.state.derived.hpMax,history=a.tactics?.recent??[];
   const justRetreated=history.some(x=>x.intent==='recover'&&x.round>=b.round-1);
-  const coverBefore=clearLine(b.map,a.position,target.position,{sight:true}),coverAfter=clearLine(b.map,c.to,target.position,{sight:true});
+  const coverBefore=clearLine(b.map,a.position,target.position,{sight:true,root:b,observerId:a.id}),coverAfter=clearLine(b.map,c.to,target.position,{sight:true,root:b,observerId:a.id});
   let intent='hold',reason='位置变化不改善攻击路线或生存，保留阵位',useful=false;
   if(needsApproach&&close&&(before>a.reach+.05||!clearBefore)&&clearAfter){intent='engage';reason='接近已知目标，建立后续攻击距离';useful=true;}
   else if(needsApproach&&close&&!clearAfter&&before>a.reach){intent='engage';reason='沿可通行路线绕过障碍接近';useful=true;}

@@ -1,4 +1,18 @@
-import {ATTRIBUTES,check,effectiveAttribute,lifeStatus,recover,spendAction,actionEligibility,statusLevel,applyStatus,rollPool,advanceGeneticLock} from './core.mjs';
+import {snapshotPeriodicSources} from './resource-periodic-clock.mjs';
+import {refreshResourceAuras} from './resource-auras.mjs';
+import {advancePhysicalMotion,motionTimeSlice,settleMotionImpacts,syncAutonomousFlight,materializeDescentFall} from './resource-motion.mjs';
+import {syncVerticalPosition} from './combat/movement-modes.mjs';
+import {resolvePendingFall} from './resource-falling.mjs';
+import {completeAccumulatorRest} from './resource-accumulators.mjs';
+import {changeWill} from './resource-counters.mjs';
+import {resourceBonus,resourceEffects,RESOURCE_DEFINITIONS} from './resource-definitions.mjs';
+import {advancePerception} from './resource-perception.mjs';
+import {accrueRoundCosts} from './resource-ongoing.mjs';
+import {settleResourceDeaths,accrueEffectiveTriggerRounds} from './resource-death.mjs';
+import {expireResourceEffects} from './resource-lifecycle.mjs';
+import {healWounds} from './healing.mjs';
+import {advanceResourcePeriods,flushResourceTriggerEnds} from './gm_runtime/resource-program.mjs';
+import {ATTRIBUTES,check,effectiveAttribute,attrAuto,lifeStatus,recover,spendAction,actionEligibility,statusLevel,applyStatus,rollPool,advanceGeneticLock} from './core.mjs';
 import {RuleInputError,IllegalAction,saveProfile} from './combat/mechanics.mjs';
 
 // Period-specific card rules; no inventory or post-growth values are inferred.
@@ -26,13 +40,9 @@ const reject=text=>{throw new IllegalAction(text);};
 const clean=state=>{state.statuses=state.statuses.filter(s=>s.points>0&&s.remainingMinutes!==0);if(state.health.intact>0){state.health.coma=false;state.health.deteriorationStopped=false;}};
 const integer=(n,name,min=0)=>{if(!Number.isInteger(n)||n<min)need(`${name}须为至少${min}的整数`,name);return n;};
 
-function heal(actor,severities,budget,changes,source) {
-  for(const severity of severities) {
-    const locked=(actor.recoveryLocks??[]).filter(x=>x.severity===severity).reduce((n,x)=>n+(x.count??0),0);
-    const amount=Math.min(budget,Math.max(0,actor.state.health[severity]-locked));
-    if(amount>0){actor.state.health[severity]-=amount;actor.state.health.intact+=amount;budget-=amount;changes.push({source,severity,healed:amount});}
-    if(!budget)break;
-  }
+function heal(actor,severities,budget,changes,source,mode='magical') {
+  const out=healWounds(actor,{budget,order:severities,ratios:{B:1,L:1,...(severities.includes('A')?{A:1}:{})},mode});
+  changes.push(...out.changes.map(({severity,amount,restriction})=>({source,severity,healed:amount,...(restriction?{restriction}:{})})));
 }
 function diceFor(options,meta) {
   if(!options.drawDice)need('该恢复检定需要骰源','drawDice');
@@ -45,6 +55,7 @@ function flowPolicy(actor) {
     ...(actor.parameters?.flowRecovery??{})};
 }
 function poolPolicy(actor,name) {
+  if(actor.state.resourceRecovery?.[name])return actor.state.resourceRecovery[name];
   if(name==='流风')return flowPolicy(actor);
   if(name==='魔力'&&actor.state.recoveryRules?.manaLongRestHours===8)return {longRest:true};
   return actor.parameters?.resourceRecovery?.[name]??null;
@@ -83,7 +94,8 @@ function medicine(actor,command,options,changes) {
     if(!['heal','status'].includes(command.choice))need('药C须选择恢复严重伤害或处理一项肉体异常','choice');
     effect={medicine:name,choice:command.choice,...(command.choice==='status'?{status:targetStatus(actor,command)}:{})};
   } else effect={medicine:name};
-  if(options.combat) {
+  if(options.combat&&options.payAction)options.payAction(actor,rule.action);
+  else if(options.combat) {
     const spent=spendAction(actor.state,rule.action,{behavior:rule.action,preActionCleared:options.preActionCleared});
     if(!spent.result.allowed)reject(spent.result.reason);
     actor.state=spent.state;
@@ -111,8 +123,64 @@ function medicine(actor,command,options,changes) {
     else pending.push(effect);
   }
 }
-export function advanceTime(actor,minutes,changes=[],{combatTick=false,drawDice}={}) {
+// When physical motion is present, advance all participants to the same
+// event boundary before refreshing spatial contributions and applying impact.
+// An aura must not depend on whether its caster appears first in an object.
+export function advanceActorsTime(actors,minutes,changes=[],{root,combatTick=false,drawDice}={}){
+ if(!Number.isFinite(minutes)||minutes<0)throw new RuleInputError('经过时间须为非负分钟数','minutes');
+ const entries=Object.entries(actors),scene={...root,actors};
+ for(const [,a]of entries)syncAutonomousFlight(a);
+ const moving=()=>entries.some(([,a])=>a.state.physicalMotion&&a.state.physicalMotion.phase!=='grounded'||a.state.resourceDescent||a.state.verticalPosition?.heightAboveGround>0);
+ let remaining=minutes*60;
+ do {
+  const periodicClock=!combatTick&&entries.some(([,a])=>Object.values(a.state.resourceCapabilities??{}).some(c=>c.id==='periodicDamageRate'&&c.remainingMinutes!==0&&c.remainingRounds!==0)||(a.state.activeResourceEffects??[]).some(x=>x.periodicDamage||x.endCost));
+  if(!moving()&&!periodicClock){
+   for(const [,a]of entries)advanceTime(a,remaining/60,changes,{combatTick,drawDice,root:scene});
+   break;
+  }
+  if(periodicClock)scene.periodicSourceImmunities=snapshotPeriodicSources(scene);else delete scene.periodicSourceImmunities;
+  let seconds=periodicClock?Math.min(remaining,6):remaining;
+  if(!combatTick&&entries.some(([,a])=>Object.values(a.state.resourceTriggers??{}).some(t=>t.event==='turnStart')))seconds=Math.min(seconds,6);
+  for(const [,a]of entries)seconds=Math.min(seconds,motionTimeSlice(a,seconds,{root:scene,combatTick}));
+  const pending=[];
+  for(const [,a]of entries)advanceTime(a,seconds/60,changes,{combatTick,drawDice,root:scene,_motionSegment:true,_deferContacts:pending});
+  for(const [id,a]of entries)if(a.state.verticalPosition&&a.position&&scene.ruleScene?.spatial?.actors?.[id])scene.ruleScene.spatial.actors[id].position=[...a.position];
+  refreshResourceAuras(scene,{combat:!!scene.map});
+  for(const {actor,contacts}of pending)changes.push(...settleMotionImpacts(actor,contacts,{root:scene,drawDice}));
+  remaining=Math.max(0,remaining-seconds);
+ }while(remaining>1e-8);
+ return changes;
+}
+export function advanceTime(actor,minutes,changes=[],{combatTick=false,drawDice,root,map,_motionSegment=false,_deferContacts}={}) {
   if(!Number.isFinite(minutes)||minutes<0)throw new RuleInputError('经过时间须为非负分钟数','minutes');
+  const hasPeriods=()=>Object.values(actor.state.resourceTriggers??{}).some(x=>x.event==='turnStart')||(actor.state.activeResourceEffects??[]).some(x=>x.endCost);
+  if(!_motionSegment&&!combatTick&&minutes>.100000001&&hasPeriods()){
+    let remaining=minutes,clock;
+    while(remaining>.100000001&&hasPeriods()){clock=advanceTime(actor,.1,changes,{drawDice,root,map});remaining-=.1;}
+    if(remaining>1e-9)clock=advanceTime(actor,remaining,changes,{drawDice,root,map});
+    return clock;
+  }
+  if(!_motionSegment){
+    let remaining=minutes*60,clock;
+    do {
+      const seconds=motionTimeSlice(actor,remaining,{root,map,combatTick});
+      clock=advanceTime(actor,seconds/60,changes,{combatTick,drawDice,root,map,_motionSegment:true});
+      remaining=Math.max(0,remaining-seconds);
+    }while(remaining>1e-8);
+    return clock;
+  }
+  const contacts=advancePhysicalMotion(actor,minutes*60,{drawDice,root,map,deferImpacts:true});
+  if(!combatTick)changes.push(...advanceResourcePeriods(actor,minutes,{drawDice,root}));
+  advancePerception(actor.state,{root,combat:combatTick,minutes});
+  if(!combatTick)accrueRoundCosts(actor.state);
+  if(actor.state.resourceEffectiveClock!==undefined||Object.values(actor.state.resourceTriggers??{}).some(t=>t.onDeath)){actor.state.resourceEffectiveClock=(actor.state.resourceEffectiveClock??actor.state.recoveryClock?.minutes??0)+minutes;const actual={...root,actors:{...root?.actors,[actor.id]:actor}};if(!combatTick)accrueEffectiveTriggerRounds(actual,actor.id);}
+  for(const id of expireResourceEffects(actor.state,{minutes,rounds:minutes*10,drawDice}))changes.push({expired:id});
+  if(actor.state.resourcePendingTriggerEnds?.length){const id=actor.id;changes.push(...flushResourceTriggerEnds({...root,actors:{...root?.actors,[id]:actor}},id,{drawDice,combat:combatTick}));}
+  if(!combatTick)accrueRoundCosts(actor.state,{minutes});
+  syncVerticalPosition(actor);
+  const deathRoot={...root,actors:{...root?.actors,[actor.id]:actor}};changes.push(...settleResourceDeaths(deathRoot));
+  const handoff=materializeDescentFall(actor,{map:map??root?.map??root?.ruleScene?.spatial?.map});if(handoff)changes.push({kind:'descent-handoff',...structuredClone(handoff)});
+  const fall=resolvePendingFall(actor,{drawDice,root});if(fall)changes.push(fall);syncVerticalPosition(actor);
   if(!combatTick&&actor.state.geneticLock?.active?.[1]){
     const total=(actor.state.geneticLock.roundRemainder??0)+minutes*10,whole=Math.floor(total+1e-9);
     actor.state.geneticLock.roundRemainder=total-whole;
@@ -137,6 +205,8 @@ export function advanceTime(actor,minutes,changes=[],{combatTick=false,drawDice}
   actor.state.statuses=actor.state.statuses.filter(s=>s.points>0&&s.remainingMinutes!==0);
   const clock=actor.state.recoveryClock??={minutes:0,longRests:0,L:{minutes:0,longRests:0},A:{minutes:0,longRests:0}};
   const prior=clock.minutes;clock.minutes+=minutes;
+  const willHours=Math.floor(clock.minutes/60)-Math.floor(prior/60),willGain=willHours*resourceBonus(actor.state,'willPerHour');
+  if(willGain){const before=actor.state.will.current;changeWill(actor.state,willGain);changes.push({source:'资源自然意志恢复',will:actor.state.will.current-before});}
   for(const [key,effect]of Object.entries(actor.durationCarry??{})) {
     effect.remainingRounds=Math.max(0,effect.remainingRounds-minutes*10);
     if(!effect.remainingRounds){delete actor.durationCarry[key];if(actor.buffs)delete actor.buffs[key];changes.push({expired:key});}
@@ -149,6 +219,9 @@ export function advanceTime(actor,minutes,changes=[],{combatTick=false,drawDice}
   // after this tracker began; never grant an assumed earlier daily recovery.
   const cycles=Math.floor(clock.minutes/1440)-Math.floor(prior/1440);
   if(cycles&&flowPolicy(actor)&&actor.state.resources.流风)gain(actor,'流风',cycles*2,changes,'次级能量强化（已记录时间）');
+  if(_deferContacts)_deferContacts.push({actor,contacts});
+  else changes.push(...settleMotionImpacts(actor,contacts,{root,drawDice}));
+  const lost=syncAutonomousFlight(actor);if(lost)changes.push({kind:'flight-loss',...structuredClone(lost)});
   return clock;
 }
 function settlePending(actor,restKind,options,changes) {
@@ -183,7 +256,7 @@ function declaredRest(actor,command,options,changes) {
   const minutes=integer(command.minutes,'minutes',kind==='short'?15:480);
   if(command.completed===false||command.interrupted===true)reject('休息尚未完整完成，不能结算恢复');
   if(command.attribute!==undefined&&!ATTRIBUTES.includes(command.attribute))need('请选择一项已有属性伤害','attribute');
-  const natural={type:kind==='short'?'shortRest':'longRest',attribute:command.attribute,statusIndex:command.statusIndex};
+  const natural={type:kind==='short'?'shortRest':'longRest',attribute:command.attribute,statusIndex:command.statusIndex,skipWoundHealing:true};
   if(command.statusIndex!==undefined&&kind==='short')natural.dice=diceFor(options,{kind:'restResistance',statusIndex:command.statusIndex});
   // Core handles one chosen status and long-rest will/attribute recovery. B is
   // separately accumulated by elapsed inactive intervals, without extra rolls.
@@ -194,16 +267,21 @@ function declaredRest(actor,command,options,changes) {
   changes.push(...recovered.result.changes.filter(x=>x!=='B->intact'));
   const coreB=beforeB-actor.state.health.B;
   if(coreB){actor.state.health.B+=coreB;actor.state.health.intact-=coreB;}
-  heal(actor,['B'],Math.floor(minutes/15),changes,'自然短休间隔');
+  const replacement=resourceBonus(actor.state,'shortRestB')>0;
+  heal(actor,['B'],replacement?actor.state.health.B:Math.floor(minutes/15),changes,'自然短休间隔','natural');
+  const shortL=resourceBonus(actor.state,'shortRestL');if(shortL)heal(actor,['L'],Math.floor(minutes/15)*shortL,changes,'资源短休恢复');
   const clock=advanceTime(actor,minutes,changes,options);
   if(kind==='long'&&!statusLevel(actor.state,'亢奋').severe) {
     clock.longRests++;
     for(const [name,pool]of Object.entries(actor.state.resources))if(poolPolicy(actor,name)?.longRest===true)gain(actor,name,pool.max-pool.current,changes,'长休');
   }
+  if(kind==='long')for(const key of completeAccumulatorRest(actor.state,minutes))changes.push({accumulatorReset:key});
   settlePending(actor,kind,options,changes);
-  for(const [severity,days,rests]of [['L',2,2],['A',7,7]]) {
+  const resourceRecovery=resourceEffects(actor.state,'shortRestL').map(e=>RESOURCE_DEFINITIONS[e.source]?.recovery).find(Boolean);
+  const intervals=resourceRecovery?.replaceOrdinary?[['A',resourceRecovery.A.days,resourceRecovery.A.longRests]]:[['L',2,2],['A',7,7]];
+  for(const [severity,days,rests]of intervals) {
     const last=clock[severity],count=Math.min(Math.floor((clock.minutes-last.minutes)/(days*1440)),Math.floor((clock.longRests-last.longRests)/rests));
-    if(count>0){heal(actor,[severity],count,changes,`${days}日自然恢复`);last.minutes+=count*days*1440;last.longRests+=count*rests;}
+    if(count>0){heal(actor,severity==='A'?['A','L','B']:[severity],count,changes,`${days}日自然恢复`,severity==='A'?'natural-A':'natural');last.minutes+=count*days*1440;last.longRests+=count*rests;}
   }
 }
 function meditate(actor,command,options,changes) {
@@ -212,6 +290,16 @@ function meditate(actor,command,options,changes) {
   if(!eligibility.allowed)reject(eligibility.reason);
   if(eligibility.requiresBCheck)need('全冲击伤势需要行动前力量检定与主持难度，尚不能开始打坐','preActionCheck');
   if(statusLevel(actor.state,'亢奋').severe)reject('重度亢奋阻止冥想与打坐恢复');
+  if(command.resource){
+   const recovery=poolPolicy(actor,command.resource)?.meditation;
+   if(!recovery||!actor.state.resources[command.resource])need('该池尚无已登记的冥想规则','resource');
+   if(command.completed===false||command.interrupted===true)reject('冥想尚未完成');
+   const count=Math.floor(minutes/recovery.intervalMinutes),amount=count*recovery.attributeAutos.reduce((n,k)=>n+attrAuto(actor.state,k),0);
+   gain(actor,command.resource,amount,changes,'本职冥想');
+   if(resourceBonus(actor.state,'shortRestB'))heal(actor,['B'],actor.state.health.B,changes,'兼容冥想的资源短休');
+   const shortL=resourceBonus(actor.state,'shortRestL');if(shortL)heal(actor,['L'],Math.floor(minutes/15)*shortL,changes,'兼容冥想的资源短休');
+   advanceTime(actor,minutes,changes,options);return;
+  }
   if(!policy||!actor.state.resources.流风)need('流风恢复规则尚未确定','resource');
   const configured=actor.state.recoveryRules?.flowRecoveryCheck??actor.parameters?.flowRecoveryCheck;
   if(!configured)need('流风敏捷/感知关键属性判定的合并方式尚未确定','flowRecoveryCheck');
@@ -221,6 +309,8 @@ function meditate(actor,command,options,changes) {
     const result=check(actor.state,{attributes:configured.attributes,dice:diceFor(options,{kind:'flowRecovery',attributes:configured.attributes,interval:i+1})});
     gain(actor,'流风',result.total,changes,'打坐');
     changes.push({source:'打坐',successes:result.total,interval:i+1});
+    if(resourceBonus(actor.state,'shortRestB'))heal(actor,['B'],actor.state.health.B,changes,'兼容打坐的资源短休');
+    const shortL=resourceBonus(actor.state,'shortRestL');if(shortL)heal(actor,['L'],shortL,changes,'兼容打坐的资源短休');
   }
   advanceTime(actor,minutes,changes,options);
 }
@@ -242,14 +332,16 @@ export function reduceRecovery(input,command,options={}) {
         if(step.choice==='status')targetStatus(input,step);
       }
     }
-    let actor=input;const steps=[];
+    let actor=input;const steps=[];let interrupted;
     for(const step of command.steps) {
       const outcome=reduceRecovery(actor,step,options);actor=outcome.actor;steps.push(outcome.result);
+      if(lifeStatus(actor.state).state==='dead'){interrupted='death';break;}
     }
-    return {actor,result:{kind:'recovery',type:'sequence',steps,changes:steps.flatMap(step=>step.changes),
+    return {actor,result:{kind:'recovery',type:'sequence',steps,...(interrupted?{interrupted}:{}),changes:steps.flatMap(step=>step.changes),
       pending:structuredClone(actor.state.pendingRecoveryEffects??[]),life:lifeStatus(actor.state)}};
   }
   const actor=structuredClone(input),changes=[];
+  if(options.root?.actors)options.root.actors[actor.id]=actor;
   if(lifeStatus(actor.state).state==='dead')reject('死亡角色不能通过用药或自然休息恢复');
   if(command.type==='medicine')medicine(actor,command,options,changes);
   else {
@@ -259,6 +351,7 @@ export function reduceRecovery(input,command,options={}) {
     else need('未知恢复操作','type');
   }
   clean(actor.state);
+  changes.push(...settleResourceDeaths({...options.root,actors:{...options.root?.actors,[actor.id]:actor}}));
   return {actor,result:{kind:'recovery',type:command.type,...(command.medicine?{medicine:command.medicine}:{}),
     ...(command.rest?{rest:command.rest}:{}),...(command.minutes!==undefined?{minutes:command.minutes}:{}),
     changes,pending:structuredClone(actor.state.pendingRecoveryEffects??[]),life:lifeStatus(actor.state)}};

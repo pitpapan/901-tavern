@@ -1,0 +1,152 @@
+✔ high frequency blade stays on one actual weapon through swapping and transfer, without global casting explosions (16.044665ms)
+✔ angel barrier preserves each allocated balance on exit/reentry and replaces recipients only on a new paid cast (15.623407ms)
+✔ a registered reflex spell can interrupt a pending attack, costs once, and preserves the pending declaration across reload (20.835064ms)
+✔ heaven shield uses one sourced balance and ends its hardness on exhaustion or scene expiry (5.143521ms)
+✔ Azathoth drains current will, not attributes or save DP, and its own zero condition ends on recovery (4.698711ms)
+✔ molten armor explodes only casting checks and retaliates once on a melee hit even when protection stops all wounds (10.902326ms)
+✔ school resistance uses the selected actual school and blocks matching effects without changing other schools (5.199856ms)
+✔ angel blessing validates the complete six-attribute allocation and preserves base stats through save and expiry (4.86414ms)
+✔ group penalties remain effective; same-kind bonuses and penalties each take their strongest (0.230597ms)
+✔ spell casts spend the actual tier cost once without mutating the input or T0 (4.824891ms)
+✔ timed check bonuses participate in ordinary JS checks and expire with scene time (2.090736ms)
+✔ force defense enters the actual AP-removable defense category (3.606157ms)
+✔ declared absorption applies once across damage segments, then expires (1.062429ms)
+✔ spell resistance reduces target-effective power without draining extra energy or affecting other targets (1.337603ms)
+✔ periodic damage keeps cast-time power and consumes exactly ten events (4.031567ms)
+✔ a next-melee rider ignores other weapon attacks, fires once and does not create a second attack (1.709052ms)
+✔ field caster resolves through saved-state records plus actor templates, without importing their mature state (2.562797ms)
+✔ failed concentration loses the declared cast cost but cannot replace rolled successes with fixed autos (2.276105ms)
+✔ a lower-tier recast retains the stronger same-source bonus and refreshes its duration (3.171232ms)
+✔ resisted statuses preserve source actor and explicit stacking instead of losing the source rule (1.807951ms)
+✔ field elapsed time resolves corrosion before expiry and cannot postpone its ten ticks into later combat (5.66093ms)
+✔ a healing spell respects natural-only wounds and spends four healing points for a wound treated as aggravated (4.849444ms)
+✔ magic blast repeats independent attacks at C, including the same target, without energy-weapon conversion (10.696857ms)
+✔ searing pain chooses pain or hatred from actual inflicted damage and a separate will save (7.230752ms)
+✔ selected-target fire spell charges once; two-ball fire spell charges each and requires free hands (10.318379ms)
+✔ fear howl applies only to enemy area targets and never grants fear spell ownership (1.952359ms)
+✔ enemy area selection filters allies and requires actual allegiance before payment (2.371839ms)
+✔ maintained spells end on wound unconsciousness or sleep even with no pending damage receipt (4.232569ms)
+✔ bane requires a lost opposed save and penalizes actual attacks and saves with no ordinary skill penalty (4.955857ms)
+✔ attack penalties from declared effects also enter spell attack rolls (3.472335ms)
+✔ blessing follows the caster, dynamically admits allies, suspends on exit, and survives a saved-state round trip (4.196616ms)
+✔ arcane brilliance retains the selected recipients and cast-time radius without recursive intelligence expansion (5.047485ms)
+✔ suppressing aura affects enemies only and refuses unknown field positions without charging (3.207697ms)
+✔ combat movement refreshes aura membership immediately, and scene expiry removes its projections (9.924215ms)
+✔ life drain maintains with a standard action but no repeated mana, healing only actual damage (5.334497ms)
+✔ maintained fire and ice areas consume mana only when first cast, and release removes the instance (8.647033ms)
+✔ new adverse status breaks failed concentration without using automatic successes or refunding mana (3.613779ms)
+✔ damage concentration evidence persists and is resolved before another action (3.304173ms)
+✔ a maintained spell cannot use a second standard action and stops when its next turn skips maintenance (5.521119ms)
+✔ Thoth chant binds its chosen main skill, including later casting checks, without granting ranks (1.752668ms)
+✔ fel armor ignores temporary power and cannot recast any tier while active (2.760995ms)
+✔ typed energy resistance filters damage and universal resistance shares one allowance across segments (3.132614ms)
+✔ non-willing contact effects require a touch hit and still pay for a miss (2.258789ms)
+✔ dispel requires the recipient choice and ends linked timed components across reload without removing ownership (4.194452ms)
+✔ dispel of one aura recipient survives refresh and reload, preserving other recipients until a paid recast (7.041868ms)
+✔ burnout consumes only the selected removable burning source after adding all its points (3.521019ms)
+✔ humanoid charm uses sourced target facts, hostility and spell grade immunity without a second save (7.790474ms)
+✔ spell empowerment locks the actual recipient against same-name recasts and ignores temporary power for itself (4.00057ms)
+✔ weaker recasts that retain stronger values also retain the stronger saved grade for dispelling (2.364388ms)
+✔ spell suppression combines typed immunities and blocks zero-power new casts without rewriting existing effects (9.395369ms)
+✔ physical shield reflex casting uses tiered will cost and one reaction lock without assuming discharge (3.771266ms)
+✔ morningstar cloak applies actual immunity and absorption without creating armor, and an unwilling contact must hit (3.817866ms)
+✔ next-melee spell is consumed on a miss and still deals its separate energy when physical damage is absorbed (8.07384ms)
+✔ dread strike spends its rider once, saves after actual damage, and persists next-turn action loss (3.445896ms)
+✔ dispel ends a sourced timed status without deleting permanent consequences or unrelated status rows (2.907125ms)
+✔ recompense reacts once to enemy actual life loss, excludes friendly/environmental/absorbed damage and cannot reflect reflection (7.453977ms)
+✔ a real spell damage operation carries its actual caster into sourced retaliation (3.04394ms)
+✔ recompense uses the shared original-event budget across additional segments, and a new event can trigger again (1.921662ms)
+✔ deferred damage reactions wait for all linked parts of the original event (1.562692ms)
+✔ ordinary combat attack settles the protected target damage before the sourced retaliation (4.485851ms)
+✔ explicit independent damage types each apply full resistance and emit their own life-loss event (3.508079ms)
+✔ frailty curse uses an actual round budget across reload and recast, and never chains from fixed or extra damage (5.254277ms)
+✔ adopted cross-caster damage sources settle independently and migrate old policy without resetting quotas (3.061597ms)
+✔ multiple independent damage subscriptions persist each quota even when an earlier subscription clones bearer state (1.862413ms)
+✔ dimensional anchor uses a ranged touch casting roll, spends on a miss and persists only on a hit (4.617348ms)
+✔ energy-only temporary health filters real damage types, preserves spent balances on reload, and uses the stronger remaining share on recast (3.933941ms)
+✔ energy ward reflex cost follows base mana, including C six will, and keeps the normal reflex lock (4.843138ms)
+✔ RE all-energy resistance excludes mental, force, poison and physical damage without changing unrelated legacy profiles (3.35566ms)
+✔ mage armor uses the armor maximum and one most favorable fallback per attack, without multiplying sources or granting damage protection (7.516832ms)
+✔ mage armor non-willing touch misses still cost mana and a restriction on space does not prevent unrelated spells (2.220822ms)
+✔ protection is configuration over the common stance and defense facts, with no separate spell combat implementation (7.460777ms)
+✔ adopted independent recompense sources retain caster provenance and each retaliate once without recursion (2.026239ms)
+✔ unavoidable life loss never spends damage-trigger quotas, including deferred shared events (2.207542ms)
+✔ mixed unavoidable and ordinary wounds expose only ordinary loss to reactions and concentration (1.910015ms)
+✔ declarative damage preserves its unavoidable policy at the shared damage boundary (1.366827ms)
+✔ mana drain keeps an unresolved daily adoption visible without charging either actor (1.627459ms)
+✔ the common pool-transfer program supports fresh maintenance choices, real days and saved cumulative recovery (3.234938ms)
+✔ fear and weakness use exactly their declared opposed save without a second status resistance (2.780364ms)
+✔ a mixed program immunizes only its mental component and skips that component save (1.282911ms)
+✔ charm consumes its declared save once, and preserves the exact status grade across JSON (1.828392ms)
+✔ a persistent typed effect remains as a source while immunity changes its current contribution (1.772056ms)
+✔ status-specific graded immunity blocks its component without treating increased power as a higher grade (1.901222ms)
+✔ area resistance receipts remain target-local and immunity skips only the affected target save (1.842393ms)
+✔ threshold save output selects a result branch without another roll or treating the target pool as DC (3.199304ms)
+✖ a curse suppressed at casting retains its source and resumes its numeric contribution without recasting (1.452265ms)
+✖ a latent frailty subscription keeps actual event usage across immunity changes, reload and recast (1.199855ms)
+✖ a morale field evaluates each recipient immunity and does not disappear when its caster is immune (2.661886ms)
+✖ suppressed periodic components consume scheduled pulses without replaying them when immunity ends (1.249921ms)
+ℹ tests 88
+ℹ suites 0
+ℹ pass 84
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 453.092496
+
+✖ failing tests:
+
+test at work/rules_engine/gm_runtime/resource-program.test.mjs:997:1
+✖ a curse suppressed at casting retains its source and resumes its numeric contribution without recasting (1.452265ms)
+  TypeError: Cannot read properties of undefined (reading 'filter')
+      at TestContext.<anonymous> (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:1000:80)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at work/rules_engine/gm_runtime/resource-program.test.mjs:1007:1
+✖ a latent frailty subscription keeps actual event usage across immunity changes, reload and recast (1.199855ms)
+  TypeError: Cannot read properties of undefined (reading 'imperial-magic:D:脆弱诅咒/player/afterLifeLoss')
+      at TestContext.<anonymous> (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:1011:51)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at work/rules_engine/gm_runtime/resource-program.test.mjs:1020:1
+✖ a morale field evaluates each recipient immunity and does not disappear when its caster is immune (2.661886ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  6 !== 0
+  
+      at TestContext.<anonymous> (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:1025:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 6,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at work/rules_engine/gm_runtime/resource-program.test.mjs:1036:1
+✖ suppressed periodic components consume scheduled pulses without replaying them when immunity ends (1.249921ms)
+  TypeError: Cannot read properties of undefined (reading 'imperial-magic:D:腐蚀术/player/turnStart')
+      at TestContext.<anonymous> (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:1045:52)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)

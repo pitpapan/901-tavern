@@ -21,6 +21,10 @@ def build():
         name=heading or body.splitlines()[0].lstrip('# ')
         item=dict(id=id,name=name,kind=kind,source='../901-resource-authoring-kit/'+path,line=line,body=body,sourceHash=digest(p),**extra)
         entries.append(item);return item
+    for contract in sorted((KIT/'resources/execution').glob('*.rule.json')):
+        d=json.loads(contract.read_text(encoding='utf-8'))
+        if d['identity']['category']=='basic-rule':add(d['id'],d['reading']['path'],d['reading'].get('heading'),kind='rules',period='available-definition')
+    spell_start=len(entries)
     coverage=json.loads((KIT/'resources/imperial-magic/校核/完整覆盖.json').read_text(encoding='utf-8'))
     seen=set()
     for row in coverage['records']:
@@ -28,8 +32,8 @@ def build():
         if key in seen: continue
         seen.add(key)
         add('imperial-magic:'+row['grade']+':'+row['heading'],row['output'],row['heading'],'spell',grade=row['grade'],prohibited=row['status']=='prohibited')
-    assert sum(not x['prohibited'] for x in entries)==208
-    assert sum(x['prohibited'] for x in entries)==7
+    assert sum(not x['prohibited'] for x in entries[spell_start:])==208
+    assert sum(x['prohibited'] for x in entries[spell_start:])==7
     for file in ['00-施法通则','07-状态与特殊机制','08-炼金配方']:
         add('imperial-magic:'+file,'resources/imperial-magic/'+file+'.md',kind='rules')
     for name in ['guanlan-fa','fengyou-sheshibu','chengxin-xuanjian','imperial-mage','imperial-military','kuanglan','zheng-shiqi']:

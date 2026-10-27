@@ -1,12 +1,18 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { worldRuleGate } from './native-tool.mjs';
 
 const json = path => JSON.parse(readFileSync(new URL(path, import.meta.url), 'utf8'));
 
 test('isolated capital card preserves the adopted 005 worldbook and opening without demo actors', () => {
-  const source = json('../../../output/replay_tavern/capital_entry_20261012_candidate/import/901_帝都主持.card.json').data;
+  // This is a historical artifact: compare all inherited fields with the exact
+  // source revision used then, not with later edits at the same source path.
+  const baseline = new URL('./fixtures/capital-entry-005.card.json', import.meta.url);
+  const provenance = json('./fixtures/capital-entry-005.provenance.json');
+  assert.equal(createHash('sha256').update(readFileSync(baseline)).digest('hex'), provenance.sha256);
+  const source = JSON.parse(readFileSync(baseline, 'utf8')).data;
   const candidate = json('../../../output/replay_tavern/world_runtime_20261014_candidate/import/901_帝都T0_隔离运行.card.json').data;
   assert.deepEqual(candidate.character_book, source.character_book);
   assert.equal(candidate.description, source.description);

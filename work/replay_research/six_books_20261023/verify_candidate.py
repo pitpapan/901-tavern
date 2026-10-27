@@ -20,7 +20,20 @@ for b in plan['books']:
     book_objects[b['name']]=obj
     for key,e in obj['entries'].items():assert key==str(e['uid'])
     entries.extend(obj['entries'].values())
-assert len(entries)==173 and len({e['uid'] for e in entries})==173
+resource_entries=[e for e in entries if '901_resource' in e['extensions']]
+assert len(entries)-len(resource_entries)==173
+assert len(entries)==len({e['uid'] for e in entries})
+assert len(resource_entries)==len(ctx['contracts'])
+assert {e['extensions']['901_resource']['id'] for e in resource_entries}==set(ctx['contracts'])
+for e in resource_entries:
+    execution=e['extensions']['901_resource'];contract,path=ctx['contracts'][execution['id']]
+    assert execution['contract_sha256']==sha(path)
+    assert execution['version']==contract['version'] and execution['reading']==contract['reading']
+    for field in ['verification','clauses','actions','consumerCoverage','implementationGaps','unresolvedRules']:
+        assert execution[field]==contract[field],(execution['id'],field)
+    assert execution['programSources']=={op:p['compilation'] for op,p in contract['definition'].get('programs',{}).items() if p.get('compilation')}
+    assert execution['deployment']=='candidate_not_installed'
+    if contract['definition'].get('template'):assert e['disable'] and e['constant'] and not e['key']
 by_uid={e['uid']:e for e in entries}
 base=ctx['original'];base_uids={e['uid'] for e in base}
 assert base_uids-{79768996}<=set(by_uid)
@@ -28,7 +41,7 @@ assert 79768996 not in by_uid
 mapping=read(OUT/'migration_map.json')
 assert len(mapping['source_coverage'])==136
 assert all(row['destinations'] for row in mapping['source_coverage'])
-checks.append('六书173个UID唯一；135个原世界书UID保留，原通用UID转主持锚点；136个来源均有去向')
+checks.append(f'六书{len(entries)}个UID唯一，保留173个既有条目及全部{len(resource_entries)}份资源契约；135个原UID保留，136个来源均有去向；模板手动禁用')
 seen=Counter()
 for r in ctx['records'].values():
     actual=(OUT/r['path']).read_text(encoding='utf-8').rstrip('\n')
@@ -47,12 +60,14 @@ for r in ctx['records'].values():
     assert all(len(k)>1 for k in e['key'])
     if not e['disable'] and not e['constant']:assert e['key']
 assert len(seen)==606 and set(seen.values())=={1}
-checks.append('606个来源段落／行都有一次明确分配；174份正文与规划哈希一致；未授权字段与原来源扩展保持')
+checks.append(f'606个来源段落／行都有一次明确分配；{len(ctx["records"])}份正文与规划哈希一致；未授权字段与原来源扩展保持')
 disabled=[e['uid'] for e in base if e['disable']]
 assert len(disabled)==9 and all(by_uid[u]['disable'] for u in disabled)
 loads=Counter('disabled' if e['disable'] else 'constant' if e['constant'] else 'keyword' for e in entries)
-assert loads=={'disabled':19,'constant':3,'keyword':151}
-checks.append('原9条禁用保持；新默认为3常驻、151关键词、19手动；无单字触发或无键绿灯')
+resource_loads=Counter('disabled' if e['disable'] else 'constant' if e['constant'] else 'keyword' for e in resource_entries)
+assert loads==Counter({'disabled':19,'constant':3,'keyword':151})+resource_loads
+assert resource_loads['constant']==0
+checks.append(f'原9条禁用保持；当前加载分布{dict(loads)}；资源不新增常驻，后期模板不默认启用；无单字触发或无键绿灯')
 
 # Every numeral in the seven original enemy short cards survives exactly once in their projected pieces.
 old_enemy='\n'.join(ctx['sources'][n]['content'] for n in range(131,137))
@@ -122,7 +137,7 @@ for p in OUT.rglob('*.md'):
         if resolved==OUT/'verification.json':continue
         assert resolved.exists(),(str(p),target)
 checks.append('包内Markdown文件链接均指向存在的文件')
-result={'status':'pass','checks':checks,'counts':{'books':6,'entries':173,'host_anchor':1,'loading':dict(loads),'source_entries':136,'source_units':606},'literal_trigger_probes':probes,'constant_body_chars_before':sum(len(e['content']) for e in base if e['constant'] and not e['disable']),'constant_body_chars_after':sum(len(e['content']) for e in entries if e['constant'] and not e['disable']),'limits':['本验证器只运行静态检查；真实模型测试另见minimal_test记录','字面匹配不模拟预算、其他世界书、全局设置与实际Prompt组装','当前书分期优先关系是提示词约束，未新增程序化门控','不宣称全量作者资料已同步']}
+result={'status':'pass','checks':checks,'counts':{'books':6,'entries':len(entries),'resource_contracts':len(resource_entries),'runtime_fully_verified':sum(e['extensions']['901_resource']['verification']['runtimeFullyVerified'] for e in resource_entries),'deployment':'candidate_not_installed','host_anchor':1,'loading':dict(loads),'source_entries':136,'source_units':606},'literal_trigger_probes':probes,'constant_body_chars_before':sum(len(e['content']) for e in base if e['constant'] and not e['disable']),'constant_body_chars_after':sum(len(e['content']) for e in entries if e['constant'] and not e['disable']),'limits':['本验证器只运行静态检查；真实模型测试另见minimal_test记录','字面匹配不模拟预算、其他世界书、全局设置与实际Prompt组装','当前书分期优先关系是提示词约束，未新增程序化门控','不宣称全量作者资料已同步']}
 (OUT/'verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 assert (OUT/'verification.json').exists()
 print(json.dumps(result,ensure_ascii=False,indent=2))

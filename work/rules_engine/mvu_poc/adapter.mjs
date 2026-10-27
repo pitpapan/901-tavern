@@ -1,3 +1,7 @@
+import {hydrateBattleActors} from '../combat/state-view.mjs';
+import {assertWoundLedger} from '../resource-wounds.mjs';
+import {environmentModifierTotal} from '../resource-penalties.mjs';
+import {changeWill} from '../resource-counters.mjs';
 import { ATTRIBUTES, actionEligibility, checkBeforeAction, check, effectiveAttribute, resolveAttack, resolveGeneticUnlock, rollPool } from '../core.mjs';
 import { requireKnownSkill } from '../../character_builder/builder.mjs';
 import { createTestRoot, NAMESPACE } from './fixture.mjs';
@@ -75,6 +79,7 @@ function actorOf(root, id) {
   if (['intact', 'B', 'L', 'A', 'temp'].some(name => !whole(h[name])) ||
       !whole(state.derived.hpMax) || h.intact + h.B + h.L + h.A !== state.derived.hpMax)
     throw new Error(`Invalid health slots: ${id}`);
+  assertWoundLedger(state);
   return actor;
 }
 
@@ -87,6 +92,7 @@ function summary(root, outcome, operationId, anchor) {
     rolledSuccesses: outcome.result.roll.rolledSuccesses,
     attackSuccesses: successes.value, cap: outcome.result.cap,
     actualDamage: outcome.result.actualDamage,
+    ...(outcome.result.damage?.temporaryHealthDepleted?{temporaryHealthDepleted:clone(outcome.result.damage.temporaryHealthDepleted)}:{}),
     severity: outcome.result.damage?.finalSeverity ?? null,
     targetHealth: clone(outcome.target.health),
     attackerTurn: clone(outcome.attacker.turn),
@@ -137,9 +143,8 @@ function combatMetadata(battle) {
 
 function combatState(root) {
   if (!root.battle) throw new Error('Combat not initialized');
-  const battle = clone(root.battle);
-  for (const [id, actor] of Object.entries(battle.actors)) actor.state = clone(actorOf(root, id).state);
-  return battle;
+  const records=Object.fromEntries(Object.keys(root.battle.actors).map(id=>[id,actorOf(root,id)]));
+  return hydrateBattleActors(root.battle,records);
 }
 
 export async function settleCombat({ mvu, getAnchor, expectedChatId, operationId,
@@ -166,9 +171,9 @@ export async function settleCombat({ mvu, getAnchor, expectedChatId, operationId
     nr.battle = combatMetadata(outcome.battle);
     nr.ruleScene=clone(outcome.battle.ruleScene??nr.ruleScene??{});
     nr.actors = {...nr.actors,...Object.fromEntries(Object.entries(outcome.battle.actors)
-      .map(([id, actor]) => [id, { ...nr.actors[id], name: actor.name, state: clone(actor.state),
+      .map(([id, actor]) => [id, { ...nr.actors[id], name: actor.name, state: clone(actor.state),...(actor.state.verticalPosition?{position:clone(actor.position)}:{}),
         ...(actor.sceneBound?{present:actor.present,sceneBound:true,ownerId:actor.ownerId,kind:actor.kind,combatProfile:clone(actor.combatProfile)}:{}),
-        combatCarry: Object.fromEntries(['equipment','parameters','ammunition','loaded','weaponMode','squeezed','recoveryLocks','knownWeaknesses','weaponSize','durationCarry','cooldownCarry','sceneInstanceId','used','claws','form','underground','weaponsAvailable']
+        combatCarry: Object.fromEntries(['senseSources','visionAvailable','equipment','parameters','ammunition','loaded','weaponMode','squeezed','recoveryLocks','knownWeaknesses','weaponSize','durationCarry','cooldownCarry','sceneInstanceId','used','claws','form','underground','weaponsAvailable',...(actor.state.verticalPosition?['position']:[])]
           .filter(key => actor[key] !== undefined).map(key => [key, clone(actor[key])])) }]))};
     for (const id of Object.keys(nr.actors)) actorOf(nr, id);
     nr.revision++;
@@ -214,14 +219,16 @@ export async function settleRecovery({mvu,getAnchor,expectedChatId,operationId,
     if(root.battle&&root.battle.mode!=='story')throw Error('Combat recovery must use the combat action budget');
     const actor=actorOf(root,actorId);
     const outcome=reduce({...clone(root.battle?.actors?.[actorId]??{}),id:actorId,name:actor.name,
-      ...clone(actor.combatCarry??{}),state:clone(actor.state)},clone(command));
+      ...clone(actor.combatCarry??{}),state:clone(actor.state)},clone(command),clone(root));
     if(!record(outcome?.actor?.state)||!record(outcome.result))throw Error('Trusted recovery result required');
     const next=clone(initial),nr=next.stat_data[NAMESPACE],target=nr.actors[actorId];
+    if(outcome.affectedActors)for(const [id,row]of Object.entries(outcome.affectedActors)){if(!nr.actors[id]||!record(row?.state))throw Error('恢复连锁只能更新现存人物的可信状态');nr.actors[id].state=clone(row.state);}
     target.state=clone(outcome.actor.state);
+    if(outcome.actor.state.verticalPosition&&outcome.actor.position){target.position=clone(outcome.actor.position);if(nr.ruleScene?.spatial?.actors?.[actorId])nr.ruleScene.spatial.actors[actorId].position=clone(outcome.actor.position);}
     target.combatCarry??={};
-    for(const name of ['durationCarry','cooldownCarry'])if(outcome.actor[name]!==undefined)
+    for(const name of ['durationCarry','cooldownCarry',...(outcome.actor.state.verticalPosition?['position']:[])])if(outcome.actor[name]!==undefined)
       target.combatCarry[name]=clone(outcome.actor[name]);
-    if(nr.battle?.actors?.[actorId])for(const name of ['buffs','cooldowns','durationCarry','cooldownCarry'])
+    if(nr.battle?.actors?.[actorId])for(const name of ['buffs','cooldowns','durationCarry','cooldownCarry',...(outcome.actor.state.verticalPosition?['position']:[])])
       if(outcome.actor[name]!==undefined)nr.battle.actors[actorId][name]=clone(outcome.actor[name]);
     actorOf(nr,actorId);
     nr.revision++;
@@ -311,8 +318,7 @@ export async function settleCheck({ mvu, getAnchor, expectedChatId, operationId,
       throw new Error('No active effect for this choice');
     if (active.length && choice !== 'skip' && choice !== active[0].id)
       throw new Error('Player choice does not match active effect');
-    const chosenModifier = matching.filter(effect => !active.includes(effect) || effect.id === choice)
-      .reduce((sum, effect) => sum + effect.value, 0);
+    const chosenModifier = environmentModifierTotal(actor.state,matching.filter(effect => !active.includes(effect) || effect.id === choice));
     const before=eligibility.requiresBCheck?checkBeforeAction(actor.state,{dc:checkInput.preActionDC,dice:checkInput.dice}):null;
     const prevented=before?.result.allowed===false;
     const outcome = prevented?before.result.check:check(before?.state??actor.state, { ...checkInput,
@@ -321,7 +327,7 @@ export async function settleCheck({ mvu, getAnchor, expectedChatId, operationId,
     const next = clone(initial);
     const nextRoot = next.stat_data[NAMESPACE];
     if(before)nextRoot.actors[actorId].state=before.state;
-    if(!prevented)nextRoot.actors[actorId].state.will.current-=outcome.willCost??0;
+    if(!prevented)changeWill(nextRoot.actors[actorId].state,-(outcome.willCost??0));
     let burning;
     if(!prevented){const record=nextRoot.actors[actorId];completeStatusOrder(record.state,permission);const full={...actorTemplate,...record.combatCarry,...record},log={damage:[]};burning=burningDamage(record,'turn',full.combatProfile||full.kind?amount=>{damageEvent(full,[{amount,severity:'L',kind:'energy',energyType:'fire'}],false,log);record.state=full.state;return log.damage;}:undefined);}
     if (!prevented && matching.length) nextRoot.actors[actorId].state.checkEffects =

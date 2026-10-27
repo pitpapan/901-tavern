@@ -1,7 +1,17 @@
+import {snapshotPeriodicSources} from './resource-periodic-clock.mjs';
+import {refreshResourceAuras} from './resource-auras.mjs';
+import {advancePhysicalMotion,motionTimeSlice,settleMotionImpacts,syncAutonomousFlight,materializeDescentFall} from './resource-motion.mjs';
+import {syncVerticalPosition} from './combat/movement-modes.mjs';
+import {resolvePendingFall} from './resource-falling.mjs';
+import {completeAccumulatorRest} from './resource-accumulators.mjs';
+import {changeWill} from './resource-counters.mjs';
 import {resourceBonus,resourceEffects,RESOURCE_DEFINITIONS} from './resource-definitions.mjs';
+import {advancePerception} from './resource-perception.mjs';
+import {accrueRoundCosts} from './resource-ongoing.mjs';
+import {settleResourceDeaths,accrueEffectiveTriggerRounds} from './resource-death.mjs';
 import {expireResourceEffects} from './resource-lifecycle.mjs';
 import {healWounds} from './healing.mjs';
-import {advanceResourcePeriods} from './gm_runtime/resource-program.mjs';
+import {advanceResourcePeriods,flushResourceTriggerEnds} from './gm_runtime/resource-program.mjs';
 import {ATTRIBUTES,check,effectiveAttribute,attrAuto,lifeStatus,recover,spendAction,actionEligibility,statusLevel,applyStatus,rollPool,advanceGeneticLock} from './core.mjs';
 import {RuleInputError,IllegalAction,saveProfile} from './combat/mechanics.mjs';
 
@@ -84,7 +94,8 @@ function medicine(actor,command,options,changes) {
     if(!['heal','status'].includes(command.choice))need('药C须选择恢复严重伤害或处理一项肉体异常','choice');
     effect={medicine:name,choice:command.choice,...(command.choice==='status'?{status:targetStatus(actor,command)}:{})};
   } else effect={medicine:name};
-  if(options.combat) {
+  if(options.combat&&options.payAction)options.payAction(actor,rule.action);
+  else if(options.combat) {
     const spent=spendAction(actor.state,rule.action,{behavior:rule.action,preActionCleared:options.preActionCleared});
     if(!spent.result.allowed)reject(spent.result.reason);
     actor.state=spent.state;
@@ -112,17 +123,64 @@ function medicine(actor,command,options,changes) {
     else pending.push(effect);
   }
 }
-export function advanceTime(actor,minutes,changes=[],{combatTick=false,drawDice}={}) {
+// When physical motion is present, advance all participants to the same
+// event boundary before refreshing spatial contributions and applying impact.
+// An aura must not depend on whether its caster appears first in an object.
+export function advanceActorsTime(actors,minutes,changes=[],{root,combatTick=false,drawDice}={}){
+ if(!Number.isFinite(minutes)||minutes<0)throw new RuleInputError('经过时间须为非负分钟数','minutes');
+ const entries=Object.entries(actors),scene={...root,actors};
+ for(const [,a]of entries)syncAutonomousFlight(a);
+ const moving=()=>entries.some(([,a])=>a.state.physicalMotion&&a.state.physicalMotion.phase!=='grounded'||a.state.resourceDescent||a.state.verticalPosition?.heightAboveGround>0);
+ let remaining=minutes*60;
+ do {
+  const periodicClock=!combatTick&&entries.some(([,a])=>Object.values(a.state.resourceCapabilities??{}).some(c=>c.id==='periodicDamageRate'&&c.remainingMinutes!==0&&c.remainingRounds!==0)||(a.state.activeResourceEffects??[]).some(x=>x.periodicDamage||x.endCost));
+  if(!moving()&&!periodicClock){
+   for(const [,a]of entries)advanceTime(a,remaining/60,changes,{combatTick,drawDice,root:scene});
+   break;
+  }
+  if(periodicClock)scene.periodicSourceImmunities=snapshotPeriodicSources(scene);else delete scene.periodicSourceImmunities;
+  let seconds=periodicClock?Math.min(remaining,6):remaining;
+  if(!combatTick&&entries.some(([,a])=>Object.values(a.state.resourceTriggers??{}).some(t=>t.event==='turnStart')))seconds=Math.min(seconds,6);
+  for(const [,a]of entries)seconds=Math.min(seconds,motionTimeSlice(a,seconds,{root:scene,combatTick}));
+  const pending=[];
+  for(const [,a]of entries)advanceTime(a,seconds/60,changes,{combatTick,drawDice,root:scene,_motionSegment:true,_deferContacts:pending});
+  for(const [id,a]of entries)if(a.state.verticalPosition&&a.position&&scene.ruleScene?.spatial?.actors?.[id])scene.ruleScene.spatial.actors[id].position=[...a.position];
+  refreshResourceAuras(scene,{combat:!!scene.map});
+  for(const {actor,contacts}of pending)changes.push(...settleMotionImpacts(actor,contacts,{root:scene,drawDice}));
+  remaining=Math.max(0,remaining-seconds);
+ }while(remaining>1e-8);
+ return changes;
+}
+export function advanceTime(actor,minutes,changes=[],{combatTick=false,drawDice,root,map,_motionSegment=false,_deferContacts}={}) {
   if(!Number.isFinite(minutes)||minutes<0)throw new RuleInputError('经过时间须为非负分钟数','minutes');
-  const hasPeriods=()=>Object.values(actor.state.resourceTriggers??{}).some(x=>x.event==='turnStart');
-  if(!combatTick&&minutes>.1&&hasPeriods()){
+  const hasPeriods=()=>Object.values(actor.state.resourceTriggers??{}).some(x=>x.event==='turnStart')||(actor.state.activeResourceEffects??[]).some(x=>x.endCost);
+  if(!_motionSegment&&!combatTick&&minutes>.100000001&&hasPeriods()){
     let remaining=minutes,clock;
-    while(remaining>.100000001&&hasPeriods()){clock=advanceTime(actor,.1,changes,{drawDice});remaining-=.1;}
-    if(remaining>1e-9)clock=advanceTime(actor,remaining,changes,{drawDice});
+    while(remaining>.100000001&&hasPeriods()){clock=advanceTime(actor,.1,changes,{drawDice,root,map});remaining-=.1;}
+    if(remaining>1e-9)clock=advanceTime(actor,remaining,changes,{drawDice,root,map});
     return clock;
   }
-  if(!combatTick)changes.push(...advanceResourcePeriods(actor,minutes,{drawDice}));
-  for(const id of expireResourceEffects(actor.state,{minutes,rounds:minutes*10}))changes.push({expired:id});
+  if(!_motionSegment){
+    let remaining=minutes*60,clock;
+    do {
+      const seconds=motionTimeSlice(actor,remaining,{root,map,combatTick});
+      clock=advanceTime(actor,seconds/60,changes,{combatTick,drawDice,root,map,_motionSegment:true});
+      remaining=Math.max(0,remaining-seconds);
+    }while(remaining>1e-8);
+    return clock;
+  }
+  const contacts=advancePhysicalMotion(actor,minutes*60,{drawDice,root,map,deferImpacts:true});
+  if(!combatTick)changes.push(...advanceResourcePeriods(actor,minutes,{drawDice,root}));
+  advancePerception(actor.state,{root,combat:combatTick,minutes});
+  if(!combatTick)accrueRoundCosts(actor.state);
+  if(actor.state.resourceEffectiveClock!==undefined||Object.values(actor.state.resourceTriggers??{}).some(t=>t.onDeath)){actor.state.resourceEffectiveClock=(actor.state.resourceEffectiveClock??actor.state.recoveryClock?.minutes??0)+minutes;const actual={...root,actors:{...root?.actors,[actor.id]:actor}};if(!combatTick)accrueEffectiveTriggerRounds(actual,actor.id);}
+  for(const id of expireResourceEffects(actor.state,{minutes,rounds:minutes*10,drawDice}))changes.push({expired:id});
+  if(actor.state.resourcePendingTriggerEnds?.length){const id=actor.id;changes.push(...flushResourceTriggerEnds({...root,actors:{...root?.actors,[id]:actor}},id,{drawDice,combat:combatTick}));}
+  if(!combatTick)accrueRoundCosts(actor.state,{minutes});
+  syncVerticalPosition(actor);
+  const deathRoot={...root,actors:{...root?.actors,[actor.id]:actor}};changes.push(...settleResourceDeaths(deathRoot));
+  const handoff=materializeDescentFall(actor,{map:map??root?.map??root?.ruleScene?.spatial?.map});if(handoff)changes.push({kind:'descent-handoff',...structuredClone(handoff)});
+  const fall=resolvePendingFall(actor,{drawDice,root});if(fall)changes.push(fall);syncVerticalPosition(actor);
   if(!combatTick&&actor.state.geneticLock?.active?.[1]){
     const total=(actor.state.geneticLock.roundRemainder??0)+minutes*10,whole=Math.floor(total+1e-9);
     actor.state.geneticLock.roundRemainder=total-whole;
@@ -148,7 +206,7 @@ export function advanceTime(actor,minutes,changes=[],{combatTick=false,drawDice}
   const clock=actor.state.recoveryClock??={minutes:0,longRests:0,L:{minutes:0,longRests:0},A:{minutes:0,longRests:0}};
   const prior=clock.minutes;clock.minutes+=minutes;
   const willHours=Math.floor(clock.minutes/60)-Math.floor(prior/60),willGain=willHours*resourceBonus(actor.state,'willPerHour');
-  if(willGain){const before=actor.state.will.current;actor.state.will.current=Math.min(actor.state.will.max,before+willGain);changes.push({source:'资源自然意志恢复',will:actor.state.will.current-before});}
+  if(willGain){const before=actor.state.will.current;changeWill(actor.state,willGain);changes.push({source:'资源自然意志恢复',will:actor.state.will.current-before});}
   for(const [key,effect]of Object.entries(actor.durationCarry??{})) {
     effect.remainingRounds=Math.max(0,effect.remainingRounds-minutes*10);
     if(!effect.remainingRounds){delete actor.durationCarry[key];if(actor.buffs)delete actor.buffs[key];changes.push({expired:key});}
@@ -161,6 +219,9 @@ export function advanceTime(actor,minutes,changes=[],{combatTick=false,drawDice}
   // after this tracker began; never grant an assumed earlier daily recovery.
   const cycles=Math.floor(clock.minutes/1440)-Math.floor(prior/1440);
   if(cycles&&flowPolicy(actor)&&actor.state.resources.流风)gain(actor,'流风',cycles*2,changes,'次级能量强化（已记录时间）');
+  if(_deferContacts)_deferContacts.push({actor,contacts});
+  else changes.push(...settleMotionImpacts(actor,contacts,{root,drawDice}));
+  const lost=syncAutonomousFlight(actor);if(lost)changes.push({kind:'flight-loss',...structuredClone(lost)});
   return clock;
 }
 function settlePending(actor,restKind,options,changes) {
@@ -195,7 +256,7 @@ function declaredRest(actor,command,options,changes) {
   const minutes=integer(command.minutes,'minutes',kind==='short'?15:480);
   if(command.completed===false||command.interrupted===true)reject('休息尚未完整完成，不能结算恢复');
   if(command.attribute!==undefined&&!ATTRIBUTES.includes(command.attribute))need('请选择一项已有属性伤害','attribute');
-  const natural={type:kind==='short'?'shortRest':'longRest',attribute:command.attribute,statusIndex:command.statusIndex};
+  const natural={type:kind==='short'?'shortRest':'longRest',attribute:command.attribute,statusIndex:command.statusIndex,skipWoundHealing:true};
   if(command.statusIndex!==undefined&&kind==='short')natural.dice=diceFor(options,{kind:'restResistance',statusIndex:command.statusIndex});
   // Core handles one chosen status and long-rest will/attribute recovery. B is
   // separately accumulated by elapsed inactive intervals, without extra rolls.
@@ -214,6 +275,7 @@ function declaredRest(actor,command,options,changes) {
     clock.longRests++;
     for(const [name,pool]of Object.entries(actor.state.resources))if(poolPolicy(actor,name)?.longRest===true)gain(actor,name,pool.max-pool.current,changes,'长休');
   }
+  if(kind==='long')for(const key of completeAccumulatorRest(actor.state,minutes))changes.push({accumulatorReset:key});
   settlePending(actor,kind,options,changes);
   const resourceRecovery=resourceEffects(actor.state,'shortRestL').map(e=>RESOURCE_DEFINITIONS[e.source]?.recovery).find(Boolean);
   const intervals=resourceRecovery?.replaceOrdinary?[['A',resourceRecovery.A.days,resourceRecovery.A.longRests]]:[['L',2,2],['A',7,7]];
@@ -270,14 +332,16 @@ export function reduceRecovery(input,command,options={}) {
         if(step.choice==='status')targetStatus(input,step);
       }
     }
-    let actor=input;const steps=[];
+    let actor=input;const steps=[];let interrupted;
     for(const step of command.steps) {
       const outcome=reduceRecovery(actor,step,options);actor=outcome.actor;steps.push(outcome.result);
+      if(lifeStatus(actor.state).state==='dead'){interrupted='death';break;}
     }
-    return {actor,result:{kind:'recovery',type:'sequence',steps,changes:steps.flatMap(step=>step.changes),
+    return {actor,result:{kind:'recovery',type:'sequence',steps,...(interrupted?{interrupted}:{}),changes:steps.flatMap(step=>step.changes),
       pending:structuredClone(actor.state.pendingRecoveryEffects??[]),life:lifeStatus(actor.state)}};
   }
   const actor=structuredClone(input),changes=[];
+  if(options.root?.actors)options.root.actors[actor.id]=actor;
   if(lifeStatus(actor.state).state==='dead')reject('死亡角色不能通过用药或自然休息恢复');
   if(command.type==='medicine')medicine(actor,command,options,changes);
   else {
@@ -287,6 +351,7 @@ export function reduceRecovery(input,command,options={}) {
     else need('未知恢复操作','type');
   }
   clean(actor.state);
+  changes.push(...settleResourceDeaths({...options.root,actors:{...options.root?.actors,[actor.id]:actor}}));
   return {actor,result:{kind:'recovery',type:command.type,...(command.medicine?{medicine:command.medicine}:{}),
     ...(command.rest?{rest:command.rest}:{}),...(command.minutes!==undefined?{minutes:command.minutes}:{}),
     changes,pending:structuredClone(actor.state.pendingRecoveryEffects??[]),life:lifeStatus(actor.state)}};

@@ -1,0 +1,119 @@
+✔ group penalties remain effective; same-kind bonuses and penalties each take their strongest (1.980313ms)
+✔ spell casts spend the actual tier cost once without mutating the input or T0 (12.583374ms)
+✔ timed check bonuses participate in ordinary JS checks and expire with scene time (4.128329ms)
+✔ force defense enters the actual AP-removable defense category (5.922994ms)
+✔ declared absorption applies once across damage segments, then expires (1.601673ms)
+✔ spell resistance reduces target-effective power without draining extra energy or affecting other targets (1.611367ms)
+✔ periodic damage keeps cast-time power and consumes exactly ten events (5.473056ms)
+✔ a next-melee rider waits for a matching hit, fires once and does not create a second attack (2.09728ms)
+✔ field caster resolves through saved-state records plus actor templates, without importing their mature state (2.955673ms)
+✔ failed concentration loses the declared cast cost but cannot replace rolled successes with fixed autos (1.655604ms)
+✔ a lower-tier recast retains the stronger same-source bonus and refreshes its duration (2.378293ms)
+✔ resisted statuses preserve source actor and explicit stacking instead of losing the source rule (1.857418ms)
+✔ field elapsed time resolves corrosion before expiry and cannot postpone its ten ticks into later combat (4.650606ms)
+✔ a healing spell respects natural-only wounds and spends four healing points for a wound treated as aggravated (1.144905ms)
+✔ magic blast repeats independent attacks at C, including the same target, without energy-weapon conversion (6.854117ms)
+✔ searing pain chooses pain or hatred from actual inflicted damage and a separate will save (6.160261ms)
+✔ selected-target fire spell charges once; two-ball fire spell charges each and requires free hands (12.267022ms)
+✔ fear howl applies only to enemy area targets and never grants fear spell ownership (1.494161ms)
+✔ bane requires a lost opposed save and penalizes actual attacks and saves with no ordinary skill penalty (7.361982ms)
+✔ attack penalties from declared effects also enter spell attack rolls (4.50037ms)
+✔ blessing follows the caster, dynamically admits allies, suspends on exit, and survives a saved-state round trip (5.400797ms)
+✔ arcane brilliance retains the selected recipients and cast-time radius without recursive intelligence expansion (2.910535ms)
+✔ suppressing aura affects enemies only and refuses unknown field positions without charging (2.571714ms)
+✔ combat movement refreshes aura membership immediately, and scene expiry removes its projections (13.137124ms)
+✔ life drain maintains with a standard action but no repeated mana, healing only actual damage (5.881196ms)
+✔ maintained fire and ice areas consume mana only when first cast, and release removes the instance (9.225279ms)
+✔ new adverse status breaks failed concentration without using automatic successes or refunding mana (4.058795ms)
+✔ damage concentration evidence persists and is resolved before another action (3.40491ms)
+✔ a maintained spell cannot use a second standard action and stops when its next turn skips maintenance (7.145706ms)
+✖ Thoth chant binds its chosen main skill, including later casting checks, without granting ranks (0.895169ms)
+✖ fel armor ignores temporary power and cannot recast any tier while active (0.543188ms)
+✖ typed energy resistance filters damage and universal resistance shares one allowance across segments (0.182885ms)
+✖ non-willing contact effects require a touch hit and still pay for a miss (0.137497ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 29
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 199.234686
+
+✖ failing tests:
+
+test at work/rules_engine/gm_runtime/resource-program.test.mjs:270:1
+✖ Thoth chant binds its chosen main skill, including later casting checks, without granting ranks (0.895169ms)
+  AssertionError [ERR_ASSERTION]: 透特之咏执行程序
+      at scene (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:17:28)
+      at TestContext.<anonymous> (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:271:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at work/rules_engine/gm_runtime/resource-program.test.mjs:276:1
+✖ fel armor ignores temporary power and cannot recast any tier while active (0.543188ms)
+  AssertionError [ERR_ASSERTION]: 邪甲术执行程序
+      at scene (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:17:28)
+      at TestContext.<anonymous> (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:277:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at work/rules_engine/gm_runtime/resource-program.test.mjs:283:1
+✖ typed energy resistance filters damage and universal resistance shares one allowance across segments (0.182885ms)
+  AssertionError [ERR_ASSERTION]: 抵抗能量伤害执行程序
+      at scene (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:17:28)
+      at TestContext.<anonymous> (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:285:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at work/rules_engine/gm_runtime/resource-program.test.mjs:293:1
+✖ non-willing contact effects require a touch hit and still pay for a miss (0.137497ms)
+  AssertionError [ERR_ASSERTION]: 抵抗能量伤害执行程序
+      at scene (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:17:28)
+      at TestContext.<anonymous> (file:///workspace/901-tavern/work/rules_engine/gm_runtime/resource-program.test.mjs:294:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

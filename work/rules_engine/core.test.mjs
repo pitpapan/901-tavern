@@ -291,3 +291,13 @@ test('attribute/skill XP milestones, main cap, card overrides, node settlement',
   const oldCard = person({ derived: { hpMax: 20, defense: 9 }, health: { intact: 20, B: 0, L: 0, A: 0 }, xp: 20 });
   assert.equal(upgradeAttribute(oldCard, '力量').state.derived.hpMax, 20);
 });
+
+test('ordinary attack applies declared attack modifiers once without altering skill or ownership', () => {
+  const attacker=beginTurn(person()).state,target=person();
+  const input={weapon:{type:'melee',damage:2,severity:'L'},dice:Array(100).fill(8)};
+  const clean=resolveAttack(attacker,target,input);
+  attacker.activeResourceEffects=[{id:'bane',sourceId:'test',effects:[{stat:'attack',value:-6,group:'luck'}]}];
+  const before=structuredClone(attacker),cursed=resolveAttack(attacker,target,input);
+  assert.equal(cursed.result.roll.dp,clean.result.roll.dp-6);
+  assert.deepEqual(attacker,before);
+});

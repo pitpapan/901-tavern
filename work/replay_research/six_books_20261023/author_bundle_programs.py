@@ -43,7 +43,9 @@ for path in (KIT/'resources/execution').glob('*.rule.json'):
  add('selfProtectionDefense',3,both(has('结界'),eq('selfProtectionSpell',True)),'protectionTraining')
  spec['effects']=effects
  d['actions']=[{'id':'claimLearning','name':'选择已获得的授术名额','operation':'claimLearning','actionCost':'none','requiredChoice':'resourceIds','requestFields':['actorId','objectId','operation','part'],'allowsModelNumericEffects':False,'route':'mechanism','objectType':'kitResource'}]
+ d['version']='2026-10-25.5'
+ d['verification']['testReferences']=['work/rules_engine/gm_runtime/resource-program.test.mjs: protection training / self-cast transformation walking']
  d['verification']['status']='partial'
- d['implementationGaps']=['NPC法系辨识与实际感官资格','幻术C瞬发动作预占','变化/预言/防护特性须与持续法术来源联动','专精取得与免费授术执行级验证']
+ d['implementationGaps']=['NPC法系辨识与实际感官资格','幻术C瞬发动作预占','变化运动判定与预言感知特性仍须持续来源联动；步法已接实际自施速度效果，沿墙/液面来源程序仍待接入','专精取得与免费授术执行级验证']
  for clause in d['clauses']:clause['status']='partial'
  path.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

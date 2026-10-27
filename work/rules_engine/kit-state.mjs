@@ -1,3 +1,4 @@
+import {lifeStatus} from './core.mjs';
 import {RESOURCE_DEFINITIONS,resourceBonus} from './resource-definitions.mjs';
 import {applyAcquisitionEffects} from './resource-effects.mjs';
 import {acquireDefinition} from './resource-acquisition.mjs';
@@ -54,14 +55,20 @@ export function settleGuanlanAdventure(s,eventId){
  g.adventures.push(eventId);s.xp+=3;if(g.firstInsight)g.S=Math.min(9,(g.S??0)+1);
  return {xp:3,S:g.S??0};
 }
-export function guanlanInsight(s,{sceneId,condition,qualified,source},die){
+export function validateGuanlanInsight(s,{sceneId,condition,qualified,source},{preActionCleared=false}={}){
  if(!guanlanOwned(s)||qualified!==true||!source||!sceneId)throw Error('须实际持有观澜与有来源的真实危境机会');
  if(!/^(filledA|lethalSelf|lethalAlly|urgent|status:[^:]+:(severe|destructive))$/.test(condition))throw Error('未定义的顿悟触发条件');
- if(s.health?.coma)throw Error('失去意识不能顿悟');
- const g=s.guanlan,key=sceneId+'/'+condition;g.insightEvents??=[];
- if(g.insightEvents.includes(key))throw Error('本场景该顿悟机会已判定');
+ const life=lifeStatus(s);
+ if(s.health?.coma||s.sleeping||['dead','unconscious'].includes(life.state))throw Error('失去意识不能顿悟');
+ if(life.state==='B-check'&&!preActionCleared){const e=new Error('须先完成实际B伤意识判定，确认仍清醒');e.code='NEEDS_INPUT';e.field='health.consciousness';throw e;}
+ const key=sceneId+'/'+condition;
+ if(s.guanlan.insightEvents?.includes(key))throw Error('本场景该顿悟机会已判定');
+ return key;
+}
+export function guanlanInsight(s,opportunity,die,options={}){
+ const key=validateGuanlanInsight(s,opportunity,options),g=s.guanlan;
  if(!Number.isInteger(die)||die<1||die>10)throw Error('顿悟需要一颗自然D10');
- const S=g.S??0,success=die+S>=10;g.insightEvents.push(key);
+ const S=g.S??0,success=die+S>=10;(g.insightEvents??=[]).push(key);
  if(success){g.wufaXP=(g.wufaXP??0)+1;g.S=Math.min(9,S+1);g.firstInsight=true;}
  return {die,S,success,wufaXP:success?1:0,nextS:g.S??0};
 }

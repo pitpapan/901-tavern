@@ -171,3 +171,9 @@ test('combat legal medicine uses the existing atomic MVU operation and saved ret
   assert.equal(publicScene(root).events.find(e=>e.action==='服用药B').outcome,'已完成本次用药的即时效果');
   assert.doesNotThrow(()=>ownImpactReport({...root,operations:{...root.operations,story:{summary:{revision:2,kind:'recovery',result:{kind:'recovery',changes:[]}}}}}));
 });
+
+test('fatal medicine commits its dose and death instead of rolling back when a declared later rest is no longer possible',()=>{
+ const a=player();a.state.attributes.力量=1;a.state.inventory=[{name:'雷霆药剂',quantity:1}];
+ const out=apply(a,sequence(dose('雷霆药剂'),rest('long',480)),{drawDice:()=>[1]});
+ assert.equal(out.result.steps.length,1);assert.equal(out.result.interrupted,'death');assert.equal(out.actor.state.inventory[0].quantity,0);assert.equal(out.actor.state.health.dead,true);assert.equal(out.actor.state.recoveryClock,undefined);
+});

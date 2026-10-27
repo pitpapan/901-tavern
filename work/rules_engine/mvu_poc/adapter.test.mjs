@@ -320,3 +320,59 @@ test('MVU ordinary check persists finalized fortune path and mishap without appl
       dc: 1, dice: [8] } });
   assert.equal(positive.fortune, false);
 });
+
+test('a trusted environmental penalty is reduced by the resource and the resulting saved check replays once',async()=>{
+ const h=harness(),options={mvu:h.mvu,getAnchor:h.getAnchor,expectedChatId:'isolated-test-chat'};
+ const effect={id:'test-only.environment-penalty',source:'test-only/environment',label:'TEST ONLY',category:'environment',activation:'automatic',
+  attribute:'力量',skill:'白刃',value:-8,duration:'nextMatchingCheck',visibility:'public'};
+ const root=createTestRoot('isolated-test-chat'),s=root.actors.attacker.state;
+ s.checkEffects=[effect];s.activeResourceEffects=[{sourceId:'isolated-suppression',effects:[{stat:'environmentPenaltyIgnore',value:6,group:'suppression'}]}];
+ await initializeTestState({...options,actors:root.actors});
+ const request={...options,operationId:'suppressed-environment',expectedRevision:0,actorId:'attacker',trustedEffects:{[effect.id]:effect},
+  checkInput:{attribute:'力量',skill:'白刃',dc:1,dice:Array(100).fill(8)}};
+ const out=await settleCheck(request);
+ assert.equal(out.dp,s.attributes.力量+s.skills.白刃.level-2);
+ const saved=structuredClone(h.floors.get(h.key()));
+ assert.equal((await settleCheck(request)).status,'already_applied');assert.deepEqual(h.floors.get(h.key()),saved);
+ assert.equal(saved.stat_data[NAMESPACE].actors.attacker.state.checkEffects.length,0);
+});
+
+test('scene resource quota and deferred initiative survive actual MVU carry without being replayed',async()=>{
+ const {recordSceneEffectUse,queueInitiativeChange}=await import('../resource-turn-order.mjs');
+ const root=createTestRoot();
+ recordSceneEffectUse(root.actors.target.state,{sourceId:'inspire-test',casterId:'attacker',maximum:1,version:'test/1'});
+ const battle={id:'test-battle',order:['attacker','target'],actors:root.actors};
+ queueInitiativeChange(battle,{targetId:'target',sourceId:'inspire-test',instanceId:'cast-1',applyAfterActorId:'attacker'});
+ root.actors.target.state.resourceProgressions={'test':{scope:'scene',uses:2,values:{baseDamage:19,manaCost:6}}};
+ root.actors.target.state.resourceEffectSerial=7;
+ root.actors.target.state.resourceTimeEpoch=3;
+ root.actors.target.state.resourceUpkeepClock=2;
+ root.actors.target.state.resourcePendingTriggerEnds=[{reason:'shortened',trigger:{id:'actual-pain/2',sourceId:'imperial-magic:D:痛苦诅咒',casterId:'attacker',elapsed:2,maximumOccurrences:6,endRecorded:true,endPolicy:'settle-remaining',variables:{P:3},steps:[]}}];
+ root.actors.target.state.activeResourceEffects=[{id:'haste/7',sourceId:'test-time',casterId:'target',scene:true,effects:[],selection:{group:'time',power:6,order:7},endCost:{amount:1,severity:'A',clock:'effective-round',unavoidable:true},accruedCost:{amount:2,lastRound:'combat/test/4'}}];
+ root.actors.target.state.resourcePerceptionQueue=[{id:1,sourceInstanceId:'slow/6',observerId:'attacker',targetId:'target',historical:true,information:{position:[1,2],precision:'exact'},dueRound:6,battleId:'test'}];
+ root.actors.target.state.statuses.push({type:'流血',source:'real recorded wound',sourceActorId:'attacker',points:1,periodicClocks:{'流血/turn':{progress:.5,epoch:3,battleId:'test-battle',lastRound:4}}});
+ const floors=[{},{}],anchor=id=>({chatId:'initiative-carry',messageId:id,swipeId:0});
+ const mvu={getMvuData:({message_id})=>JSON.parse(JSON.stringify(floors[message_id])),replaceMvuData:async(data,{message_id})=>{floors[message_id]=JSON.parse(JSON.stringify(data));}};
+ await initializeTestState({mvu,getAnchor:()=>anchor(0),expectedChatId:'initiative-carry',actors:root.actors});
+ const args={mvu,getSourceAnchor:()=>anchor(0),getAnchor:()=>anchor(1),expectedChatId:'initiative-carry'};
+ await carryTestState(args);await carryTestState(args);
+ const saved=floors[1].stat_data[NAMESPACE].actors.target.state;
+ assert.deepEqual(saved.resourceSceneUsage,root.actors.target.state.resourceSceneUsage);
+ assert.deepEqual(saved.resourceTurnOrder,root.actors.target.state.resourceTurnOrder);
+ assert.deepEqual(saved.resourceProgressions,root.actors.target.state.resourceProgressions);
+ assert.equal(saved.resourceEffectSerial,7);
+ assert.deepEqual(saved.activeResourceEffects,root.actors.target.state.activeResourceEffects);assert.equal(saved.resourceUpkeepClock,2);assert.deepEqual(saved.resourcePerceptionQueue,root.actors.target.state.resourcePerceptionQueue);
+ assert.deepEqual(saved.resourcePendingTriggerEnds,root.actors.target.state.resourcePendingTriggerEnds);
+ assert.equal(saved.resourceTimeEpoch,3);assert.deepEqual(saved.statuses,root.actors.target.state.statuses);
+});
+test('temporary-pool exhaustion is saved with the damage receipt and retry does not emit it again',async()=>{
+ const {registerTemporaryHealth}=await import('../resource-temporary-health.mjs');
+ const h=harness(),options={mvu:h.mvu,getAnchor:h.getAnchor,expectedChatId:'isolated-test-chat'},root=createTestRoot();
+ registerTemporaryHealth(root.actors.target.state,{id:'actual-pool',sourceId:'shield-source',casterId:'target',version:'test/1',grade:'C',capacity:2,remaining:2,scene:true});
+ await initializeTestState({...options,actors:root.actors});
+ const request={...options,operationId:'deplete/1',expectedRevision:0,...DEMO_ATTACK};
+ const first=await settleAttack(request);assert.equal(first.temporaryHealthDepleted.instanceId,'actual-pool');
+ const before=JSON.stringify(h.floors.get(h.key()));const retry=await settleAttack(request);
+ assert.equal(retry.status,'already_applied');assert.deepEqual(retry.temporaryHealthDepleted,first.temporaryHealthDepleted);assert.equal(JSON.stringify(h.floors.get(h.key())),before);
+ assert.equal(h.floors.get(h.key()).stat_data[NAMESPACE].actors.target.state.temporaryHealthPools['actual-pool'].remaining,0);
+});

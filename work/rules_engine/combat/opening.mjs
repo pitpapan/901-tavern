@@ -75,7 +75,7 @@ export function createOpeningRoster() {
       {运动:3,肉搏:[5,{拳击:2}],白刃:1,射击:0,隐藏:1,求生:1,驾驶:2,学识:1,科学:0,神秘:0,调查:0,洞察:2,社交:[1,{威逼:2,街头智慧:1,沟通:1}],电脑:1,医疗:0,制造:0},
       {气:2,斗气:2},{visibleArms:'徒手，以拳掌应战',abilities:['strike','block','move','step','conversion','end']}),
     bright:actor('bright','布莱特',[3,4,2,4,2,1],{main:'射击',sub:'长弓',natural:0,speed:10,initiative:3,initiativeAttribute:'意志',initiativeDefense:2,willOverride:5,steelWill:2,
-      equipment:{weapon:{damage:3,attackBonus:1,blockBonus:0,ap:0,magic:0,strengthRequirement:3,rangeUnit:40},armor:{defense:2}},
+      equipment:{weapon:{type:'bow',damage:3,attackBonus:1,blockBonus:0,ap:0,magic:0,strengthRequirement:3,rangeUnit:40},armor:{defense:2}},
       provenance:{attributes:'原/推/补：逐项见同伴初稿',willOverride:'原：早期分母5异式',弓力量要求:'补：3',箭:'用户补定20',射击:'补：母1子4；无技能自动成功',轻皮甲:'补'}},
       {运动:2,肉搏:1,白刃:1,射击:[1,{长弓:4}],隐藏:2,求生:1,驾驶:0,学识:1,科学:1,神秘:1,调查:[2,{搜索:1}],洞察:[2,{追踪:1}],社交:[1,{动物沟通:1,感受:1,唬骗:1,说服:1}],电脑:0,医疗:1,制造:[0,{淬毒:2}]},
       {},{loaded:false,ammunition:20,weaponMode:'bow',perceptionRange:40,windSense:true,ignoreDifficult:true,wallClimb:true,visibleArms:'旧长弓，另携精致长刀与缴获匕首',

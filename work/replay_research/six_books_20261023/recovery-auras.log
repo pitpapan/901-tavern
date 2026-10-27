@@ -1,0 +1,32 @@
+✔ group penalties remain effective; same-kind bonuses and penalties each take their strongest (1.477077ms)
+✔ spell casts spend the actual tier cost once without mutating the input or T0 (13.311173ms)
+✔ timed check bonuses participate in ordinary JS checks and expire with scene time (3.75216ms)
+✔ force defense enters the actual AP-removable defense category (4.293422ms)
+✔ declared absorption applies once across damage segments, then expires (2.02601ms)
+✔ spell resistance reduces target-effective power without draining extra energy or affecting other targets (1.173741ms)
+✔ periodic damage keeps cast-time power and consumes exactly ten events (5.591751ms)
+✔ a next-melee rider waits for a matching hit, fires once and does not create a second attack (1.801293ms)
+✔ field caster resolves through saved-state records plus actor templates, without importing their mature state (2.574072ms)
+✔ failed concentration loses the declared cast cost but cannot replace rolled successes with fixed autos (3.006922ms)
+✔ a lower-tier recast retains the stronger same-source bonus and refreshes its duration (2.325198ms)
+✔ resisted statuses preserve source actor and explicit stacking instead of losing the source rule (1.313201ms)
+✔ field elapsed time resolves corrosion before expiry and cannot postpone its ten ticks into later combat (5.110808ms)
+✔ a healing spell respects natural-only wounds and spends four healing points for a wound treated as aggravated (1.190115ms)
+✔ magic blast repeats independent attacks at C, including the same target, without energy-weapon conversion (10.260566ms)
+✔ searing pain chooses pain or hatred from actual inflicted damage and a separate will save (5.121635ms)
+✔ selected-target fire spell charges once; two-ball fire spell charges each and requires free hands (8.335507ms)
+✔ fear howl applies only to enemy area targets and never grants fear spell ownership (1.436826ms)
+✔ bane requires a lost opposed save and penalizes actual attacks and saves with no ordinary skill penalty (5.131591ms)
+✔ attack penalties from declared effects also enter spell attack rolls (4.2049ms)
+✔ blessing follows the caster, dynamically admits allies, suspends on exit, and survives a saved-state round trip (5.407374ms)
+✔ arcane brilliance retains the selected recipients and cast-time radius without recursive intelligence expansion (2.212539ms)
+✔ suppressing aura affects enemies only and refuses unknown field positions without charging (2.792891ms)
+✔ combat movement refreshes aura membership immediately, and scene expiry removes its projections (15.09539ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 149.566271

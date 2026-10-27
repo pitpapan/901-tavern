@@ -9,214 +9,637 @@
   ],
   "modules": [
     {
-      "source": "work\\character_builder\\builder.mjs",
-      "source_sha256": "9a8c81306d294a9bc886b0ef62c11b6a2a5b877297a0918964aa8d6142252ac5",
-      "destination": "runtime_patch\\901-opening-combat\\work\\character_builder\\builder.mjs",
-      "sha256": "9a8c81306d294a9bc886b0ef62c11b6a2a5b877297a0918964aa8d6142252ac5"
+      "source": "work/character_builder/builder.mjs",
+      "source_sha256": "58333a79d3945e5e0a74412dd3d36781055f8a69e2881849d8c722071e95a39c",
+      "destination": "runtime_patch/901-opening-combat/work/character_builder/builder.mjs",
+      "sha256": "58333a79d3945e5e0a74412dd3d36781055f8a69e2881849d8c722071e95a39c"
     },
     {
-      "source": "work\\rules_engine\\combat\\catalog.mjs",
-      "source_sha256": "5631671889bbff3ca3abb546aefdf99cf782f3c107d54c99d2fbcf713119dd62",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\combat\\catalog.mjs",
-      "sha256": "103b2aabee34a3f5cf806a67659a3a633f5b8160bae7323e06151274daaec294"
+      "source": "work/rules_engine/combat/action-prices.mjs",
+      "source_sha256": "df7c12ef037fe2085fed39c6557eaf6a125030ded3dcfb8cda6cc825f49d28e8",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/combat/action-prices.mjs",
+      "sha256": "df7c12ef037fe2085fed39c6557eaf6a125030ded3dcfb8cda6cc825f49d28e8"
     },
     {
-      "source": "work\\rules_engine\\combat\\engine.mjs",
-      "source_sha256": "fbb61d434839877361cc40aa1f04562e03e2ac99172a07f17349e46cd1d9b214",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\combat\\engine.mjs",
-      "sha256": "fbb61d434839877361cc40aa1f04562e03e2ac99172a07f17349e46cd1d9b214"
+      "source": "work/rules_engine/combat/ballistics.mjs",
+      "source_sha256": "7e722696eb3919a878783b97826a905f5857aa0e00740b7545c312d34804c08e",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/combat/ballistics.mjs",
+      "sha256": "7e722696eb3919a878783b97826a905f5857aa0e00740b7545c312d34804c08e"
     },
     {
-      "source": "work\\rules_engine\\combat\\grapple.mjs",
-      "source_sha256": "2a61fb3b0fac266b1524f5bcc4f37dd8eb536296b7939dbf37a5af231c4c4726",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\combat\\grapple.mjs",
-      "sha256": "2a61fb3b0fac266b1524f5bcc4f37dd8eb536296b7939dbf37a5af231c4c4726"
+      "source": "work/rules_engine/combat/catalog.mjs",
+      "source_sha256": "da2f5813ff70adb7085b4126bcfc9b2b26c6df7db450e212f3a4158d690b3b27",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/combat/catalog.mjs",
+      "sha256": "da2f5813ff70adb7085b4126bcfc9b2b26c6df7db450e212f3a4158d690b3b27"
     },
     {
-      "source": "work\\rules_engine\\combat\\host.mjs",
+      "source": "work/rules_engine/combat/engine.mjs",
+      "source_sha256": "a7dc93a682511204eaaf76a3a50c0b0b56938e750d57bf14f4d83c1f97cab215",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/combat/engine.mjs",
+      "sha256": "7bee8eee43ab6d1e81d6a45f77f9021bf8146b9006b8840555246087e1c1f7dc"
+    },
+    {
+      "source": "work/rules_engine/combat/grapple.mjs",
+      "source_sha256": "72633bb105383780c781f268ec1d468a5a1426aa00c2edd60921063d2ed89417",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/combat/grapple.mjs",
+      "sha256": "a2d76f3d116b6d65bd26b15ffea05b979ff608ecbef930bb9b5008f921c51eb9"
+    },
+    {
+      "source": "work/rules_engine/combat/host.mjs",
       "source_sha256": "3921533b33d8da8384f318931289f616130c927090a5a3d58441bce024e62483",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\combat\\host.mjs",
-      "sha256": "3921533b33d8da8384f318931289f616130c927090a5a3d58441bce024e62483"
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/combat/host.mjs",
+      "sha256": "7caa544357c4d9b056a5b53a885424efed63421e8a68532f162e9c5944429765"
     },
     {
-      "source": "work\\rules_engine\\combat\\map.mjs",
-      "source_sha256": "d3b5cc93af668e51dd11bf4487f615579c52217181008259e9f9b38cd600e69c",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\combat\\map.mjs",
-      "sha256": "d3b5cc93af668e51dd11bf4487f615579c52217181008259e9f9b38cd600e69c"
+      "source": "work/rules_engine/combat/initiative.mjs",
+      "source_sha256": "3f237985021f2b6c8cbf9ade504f6c15f12da476ad2500f337c8bbed9d0d5b62",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/combat/initiative.mjs",
+      "sha256": "3f237985021f2b6c8cbf9ade504f6c15f12da476ad2500f337c8bbed9d0d5b62"
     },
     {
-      "source": "work\\rules_engine\\combat\\mechanics.mjs",
-      "source_sha256": "272a7e0038e400164ae33fc4b30202e7425361bcdc2c638b81b7414168074cc9",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\combat\\mechanics.mjs",
-      "sha256": "b7be6cc33de3e2b5411703d6a9cb557acef002248368b3071d95354e180abe29"
+      "source": "work/rules_engine/combat/map.mjs",
+      "source_sha256": "49971442f84a9d54d33062c6996fd7581b32dac0849bddc0c6e181f5659ccb9f",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/combat/map.mjs",
+      "sha256": "b6f77044a3c90aa17ad1fdfdc57f28ab4b07e42d9103dc5212c4f522667e44ce"
     },
     {
-      "source": "work\\rules_engine\\combat\\opening.mjs",
-      "source_sha256": "7a22c91aacd311ea263f3b4a4b08479a50c1e51a32ca76bb9415b55780fd700c",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\combat\\opening.mjs",
-      "sha256": "7a22c91aacd311ea263f3b4a4b08479a50c1e51a32ca76bb9415b55780fd700c"
+      "source": "work/rules_engine/combat/mechanics.mjs",
+      "source_sha256": "213c3f80967af81b16b077951f9bcc8d7ac1ab9393794c12519757926fae1dbf",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/combat/mechanics.mjs",
+      "sha256": "22f046d3ef85dacd5b70b9ac974dd4f566d12c6c9649ae9cd756dd2c678a33e7"
     },
     {
-      "source": "work\\rules_engine\\combat\\presentation.mjs",
-      "source_sha256": "27cc309f723e66a5421456e9f22f1036ec2e3fd2546c4d4eedcef2bbbe954c57",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\combat\\presentation.mjs",
-      "sha256": "27cc309f723e66a5421456e9f22f1036ec2e3fd2546c4d4eedcef2bbbe954c57"
+      "source": "work/rules_engine/combat/movement-modes.mjs",
+      "source_sha256": "c3388a92b15f1b3564864f01ce85143f722cf1ed0c987b7def952e64a5bff7aa",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/combat/movement-modes.mjs",
+      "sha256": "c3388a92b15f1b3564864f01ce85143f722cf1ed0c987b7def952e64a5bff7aa"
     },
     {
-      "source": "work\\rules_engine\\combat\\runtime.mjs",
-      "source_sha256": "894ac1efe3f1ec2e24a9c75bddd70dff95af138ba33c9e8fe8050e082a269217",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\combat\\runtime.mjs",
-      "sha256": "894ac1efe3f1ec2e24a9c75bddd70dff95af138ba33c9e8fe8050e082a269217"
+      "source": "work/rules_engine/combat/opening.mjs",
+      "source_sha256": "0debb5af60e05719fab06d63a0d43a9f274505831c26c534248e82718bd1bcb7",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/combat/opening.mjs",
+      "sha256": "7394995f2ed708200fd0013c239debe6343b77f557fa04216c57355a5579849c"
     },
     {
-      "source": "work\\rules_engine\\combat\\tactics.mjs",
-      "source_sha256": "923a8b78a0b0ba83381f051f3ea301a7652ed6468559f1507bacd75cc925d1a9",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\combat\\tactics.mjs",
-      "sha256": "8b1a155143809aaa185693a4c077e3830c7f7e9d2ee1cb6a50484cf44ff671c5"
+      "source": "work/rules_engine/combat/paid-motion.mjs",
+      "source_sha256": "f616ce4052055999e9b7d07128e5ddac83422d895301578879db65e8c2b4d2f2",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/combat/paid-motion.mjs",
+      "sha256": "f616ce4052055999e9b7d07128e5ddac83422d895301578879db65e8c2b4d2f2"
     },
     {
-      "source": "work\\rules_engine\\combat\\tavern.mjs",
+      "source": "work/rules_engine/combat/presentation.mjs",
+      "source_sha256": "9ea835c636824e6064edd0fe0118c575c7e09be86df31b3182be8d861252702b",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/combat/presentation.mjs",
+      "sha256": "57d8d82e8f05df5a1871551376d869d0bdcc4c04fb24b58f3b50fecb781266b0"
+    },
+    {
+      "source": "work/rules_engine/combat/runtime.mjs",
+      "source_sha256": "b6c6f5dc9edf0602bdf0700a46574be3b59e847f87d2257f52b50d9880dbd46c",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/combat/runtime.mjs",
+      "sha256": "2900dfedf9f8fef0d70eb4ea4580f080d31fb4141a31f64e1187119bcc9b349f"
+    },
+    {
+      "source": "work/rules_engine/combat/state-view.mjs",
+      "source_sha256": "e6d043997e341998e3cbf6c386774a82c07f1a5a481783b21d7ce3015d502857",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/combat/state-view.mjs",
+      "sha256": "e6d043997e341998e3cbf6c386774a82c07f1a5a481783b21d7ce3015d502857"
+    },
+    {
+      "source": "work/rules_engine/combat/tactics.mjs",
+      "source_sha256": "8649895d48e35f2f8e9596efc7b9fd9fe5c0c798ed09b1fee3e787c9c0194ea5",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/combat/tactics.mjs",
+      "sha256": "8649895d48e35f2f8e9596efc7b9fd9fe5c0c798ed09b1fee3e787c9c0194ea5"
+    },
+    {
+      "source": "work/rules_engine/combat/tavern.mjs",
       "source_sha256": "a96f93d5fe1763f2b7ed6b86b9f61559245e3592c4045d10ba18eac53218bce2",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\combat\\tavern.mjs",
-      "sha256": "a96f93d5fe1763f2b7ed6b86b9f61559245e3592c4045d10ba18eac53218bce2"
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/combat/tavern.mjs",
+      "sha256": "5b6a8d12670e61f057723f980d16d998531f86ad8f68a2e8184d2b0f9706a782"
     },
     {
-      "source": "work\\rules_engine\\combat\\transitions.mjs",
-      "source_sha256": "29d5843b130ff7aa5bcece6f131ff7ee968bd990530c7533824fb043c1f4d3ad",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\combat\\transitions.mjs",
-      "sha256": "29d5843b130ff7aa5bcece6f131ff7ee968bd990530c7533824fb043c1f4d3ad"
+      "source": "work/rules_engine/combat/transitions.mjs",
+      "source_sha256": "3aa1adc44f77b3bf1397821e8db698bb0b509edefa2b6516e2d81e78a9042e3b",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/combat/transitions.mjs",
+      "sha256": "82d878104b79ee01d8f70acb60b4adccbb96a3f3023109220ae48de95c501aca"
     },
     {
-      "source": "work\\rules_engine\\core.mjs",
-      "source_sha256": "2dc3afb1fc09648c2fd91e518f3a93eb170d0d0dff9bf7d827c71b3084ced38a",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\core.mjs",
-      "sha256": "2dc3afb1fc09648c2fd91e518f3a93eb170d0d0dff9bf7d827c71b3084ced38a"
+      "source": "work/rules_engine/core.mjs",
+      "source_sha256": "fd077f98dbc3aa4f0575e1550b273683bd2318e1826ad8b4458a3e6e92d038a9",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/core.mjs",
+      "sha256": "3d75e85366d1d750fbf8462249aa5cf0c15acec1540fde1f48acaae9626e38b2"
     },
     {
-      "source": "work\\rules_engine\\gm_runtime\\actor-rules.mjs",
-      "source_sha256": "c73da3d22e92660352a287b4b5b64c88053159fb86efcc6b5ab9e3a94417249b",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\gm_runtime\\actor-rules.mjs",
-      "sha256": "8993b368b65c70d7112ede650bcfa31bdfbbe18482635a4791a6eefb94335081"
+      "source": "work/rules_engine/gm_runtime/actor-rules.mjs",
+      "source_sha256": "00da83e7921b56486f9dea9918ca12ba9d3d26c722769126b13924ff36500106",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/actor-rules.mjs",
+      "sha256": "00da83e7921b56486f9dea9918ca12ba9d3d26c722769126b13924ff36500106"
     },
     {
-      "source": "work\\rules_engine\\gm_runtime\\adjudication-gate.mjs",
-      "source_sha256": "297138b35e66529af10b680897fb822849700147c4380a5b1c3f57f013d820f1",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\gm_runtime\\adjudication-gate.mjs",
-      "sha256": "297138b35e66529af10b680897fb822849700147c4380a5b1c3f57f013d820f1"
+      "source": "work/rules_engine/gm_runtime/adjudication-gate.mjs",
+      "source_sha256": "ffb5f3fa7baee8e4659c7eaeca794b232074ba966ebacaa54c628926d8bf2378",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/adjudication-gate.mjs",
+      "sha256": "77f70759a60f995888f09515680cbae5d1d2a3defb8dcad2e83fd6ccd718442f"
     },
     {
-      "source": "work\\rules_engine\\gm_runtime\\conditional-resources.mjs",
-      "source_sha256": "3792cdad96f4cadcfde02915c5a112bc7069bad520acb6b539fd6b998cbdb165",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\gm_runtime\\conditional-resources.mjs",
-      "sha256": "3792cdad96f4cadcfde02915c5a112bc7069bad520acb6b539fd6b998cbdb165"
+      "source": "work/rules_engine/gm_runtime/conditional-resources.mjs",
+      "source_sha256": "4ceb1d8466defce18c7f2579431f44fe6fb9626743ec9907b44f0694c952469e",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/conditional-resources.mjs",
+      "sha256": "bb5d96db0fbda6cfef224121ac8777ff96ad7e4e97a48ce1586105fc1b430972"
     },
     {
-      "source": "work\\rules_engine\\gm_runtime\\integrated.mjs",
-      "source_sha256": "35e0d7b6c6dd978b878d42a4776e9b274c93c44770ce9528a4447d9fcaac3ac6",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\gm_runtime\\integrated.mjs",
-      "sha256": "35e0d7b6c6dd978b878d42a4776e9b274c93c44770ce9528a4447d9fcaac3ac6"
+      "source": "work/rules_engine/gm_runtime/integrated.mjs",
+      "source_sha256": "d83866d9da23b62708d2b673b78cc0298a2f8b5b85286c099dbe8ddffd06f977",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/integrated.mjs",
+      "sha256": "d9cac4a9bfe1a2c6223fa48f6e1d0b1f9c141289f7ecdcbf045ccf16aeb6648c"
     },
     {
-      "source": "work\\rules_engine\\gm_runtime\\narrative.mjs",
+      "source": "work/rules_engine/gm_runtime/kit-runtime.mjs",
+      "source_sha256": "c3f9ae13cf6bca5808ac5c4e98a8b7a78d5fa4827e63fa7431e1fc55bdf840d9",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/kit-runtime.mjs",
+      "sha256": "4f0c425bf2eecd43ff9a17004382c9a3c3b2e548aeced4b05da6dea26df45660"
+    },
+    {
+      "source": "work/rules_engine/gm_runtime/narrative.mjs",
       "source_sha256": "049c4c52550a0e31711c4fb875298174d9afeec0f7ff49baa4b44dcf2db9d413",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\gm_runtime\\narrative.mjs",
-      "sha256": "049c4c52550a0e31711c4fb875298174d9afeec0f7ff49baa4b44dcf2db9d413"
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/narrative.mjs",
+      "sha256": "a574a96384dc2c8c9b6f18c3465c195b59413f1de81b9055d341faed18c6a7b5"
     },
     {
-      "source": "work\\rules_engine\\gm_runtime\\opening-binding.mjs",
+      "source": "work/rules_engine/gm_runtime/opening-binding.mjs",
       "source_sha256": "eb10104ba583c9711c0991e08dfc8453202de5aca30764275508d3ca89c5847d",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\gm_runtime\\opening-binding.mjs",
-      "sha256": "eb10104ba583c9711c0991e08dfc8453202de5aca30764275508d3ca89c5847d"
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/opening-binding.mjs",
+      "sha256": "8659d6228467b35ae0ef1f412afe9ed09235f21dab0383e738c2505e6fd4161e"
     },
     {
-      "source": "work\\rules_engine\\gm_runtime\\opening-scene-ui.mjs",
+      "source": "work/rules_engine/gm_runtime/opening-scene-ui.mjs",
       "source_sha256": "1622c4fd68365d6740ef155033b0b63e58133cdb7b653b073412783c91c51689",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\gm_runtime\\opening-scene-ui.mjs",
-      "sha256": "110499c3a8c0341fb9b2021bc273c748171dbfe530cc0838a50698749c42f2e8"
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/opening-scene-ui.mjs",
+      "sha256": "1622c4fd68365d6740ef155033b0b63e58133cdb7b653b073412783c91c51689"
     },
     {
-      "source": "work\\rules_engine\\gm_runtime\\opening.mjs",
+      "source": "work/rules_engine/gm_runtime/opening.mjs",
       "source_sha256": "930cc995b9472ac1d08711537066016ff5b02b1ef1047ca6a4f2d2084c46fcda",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\gm_runtime\\opening.mjs",
-      "sha256": "53eb92fcaa38508b5cb0ccf139ae425fb7bd1d869be4702bd1346e0fa7bee15f"
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/opening.mjs",
+      "sha256": "930cc995b9472ac1d08711537066016ff5b02b1ef1047ca6a4f2d2084c46fcda"
     },
     {
-      "source": "work\\rules_engine\\gm_runtime\\replay-check.mjs",
-      "source_sha256": "f6b5e000206cd9c9f1f334afe08c547d0a41f3a4b65e3bdd99b189b1bdfd5aee",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\gm_runtime\\replay-check.mjs",
-      "sha256": "f6b5e000206cd9c9f1f334afe08c547d0a41f3a4b65e3bdd99b189b1bdfd5aee"
+      "source": "work/rules_engine/gm_runtime/replay-check.mjs",
+      "source_sha256": "6cb0c5995316edbca48f0cbe2c82a295efbb5de974b758db01f69f895bba7da7",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/replay-check.mjs",
+      "sha256": "f1b7a6c6d87dc0e5cb98389aabbe46b9584c7ef658cdb7e38555180f51d3ef39"
     },
     {
-      "source": "work\\rules_engine\\gm_runtime\\replay-gate-script.example.js",
+      "source": "work/rules_engine/gm_runtime/replay-gate-script.example.js",
       "source_sha256": "d5e3b541e31309cb70bdf6cb2e58e7464442d48f0483dcb783c3ea9e7178e067",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\gm_runtime\\replay-gate-script.example.js",
-      "sha256": "6f9b49b7f9eb89505397a3a7c90b7e8798b5ad9c9b261b864fe57cb59e45313e"
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/replay-gate-script.example.js",
+      "sha256": "dfd26b5afcc0fee1d3bcb6e26aa6027eef9dd615a03af82b87a04ef5b7f2b21f"
     },
     {
-      "source": "work\\rules_engine\\gm_runtime\\rule-actions.mjs",
-      "source_sha256": "40e12748c8baf5b5028e9fead1d60f286142deb6085270020854c7cbd205fb89",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\gm_runtime\\rule-actions.mjs",
-      "sha256": "40e12748c8baf5b5028e9fead1d60f286142deb6085270020854c7cbd205fb89"
+      "source": "work/rules_engine/gm_runtime/resource-program.mjs",
+      "source_sha256": "32b6081f8c9183e7e1e30f27666e9ded147dcfdf0faa52d4728c0bd8ecf335e0",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/resource-program.mjs",
+      "sha256": "b6cd88ccf88256409554ada4acc23aa2b2afeef454b897bd535bacefa98d292d"
     },
     {
-      "source": "work\\rules_engine\\gm_runtime\\rule-reference.mjs",
-      "source_sha256": "6f94a2683f69402b84d6902f5ea315169ede6a7c0798056636c1c6dc225d5c7a",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\gm_runtime\\rule-reference.mjs",
-      "sha256": "6f94a2683f69402b84d6902f5ea315169ede6a7c0798056636c1c6dc225d5c7a"
+      "source": "work/rules_engine/gm_runtime/rule-actions.mjs",
+      "source_sha256": "85bf4606befec7ee9de3009f5206cffad0e739a9f72a95c9953acce03db1ff21",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/rule-actions.mjs",
+      "sha256": "8ec20897767d5470d715b8a98f12b324e756cb369faa43f68adf3cd8ba7703f6"
     },
     {
-      "source": "work\\rules_engine\\gm_runtime\\scene-rules.mjs",
-      "source_sha256": "0e1448d7e9a82b8a2f05af1475f0c49b9f8a9d7af257a8151991ef3a6cb4ac37",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\gm_runtime\\scene-rules.mjs",
-      "sha256": "0e1448d7e9a82b8a2f05af1475f0c49b9f8a9d7af257a8151991ef3a6cb4ac37"
+      "source": "work/rules_engine/gm_runtime/rule-reference.mjs",
+      "source_sha256": "75a5d9efb07bcf62c8200341bab9cf58ec4d142b97d1a104aeec7e20e80c6aa3",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/rule-reference.mjs",
+      "sha256": "37b422547e021f1ac405b58b52ac0fa80dffbe1c393854216b5888a2c681f960"
     },
     {
-      "source": "work\\rules_engine\\gm_runtime\\wizard-host.mjs",
-      "source_sha256": "c2ebf28a541fd97a983e165390579867376dae3a2447d35f845cdc3697c80a5e",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\gm_runtime\\wizard-host.mjs",
-      "sha256": "c2ebf28a541fd97a983e165390579867376dae3a2447d35f845cdc3697c80a5e"
+      "source": "work/rules_engine/gm_runtime/scene-rules.mjs",
+      "source_sha256": "be696b8084287151ca5e3188f01996e630d8cd56668512e82562ae9e53f1e847",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/scene-rules.mjs",
+      "sha256": "2a8da3045c53450a3079ed15d14f454d957dc98edb697520cc59e19213883dbc"
     },
     {
-      "source": "work\\rules_engine\\growth-pricing.mjs",
-      "source_sha256": "7b5c11d3d5f7a8afc02b13f15a31d3b9322f604d547e6093ed1590574c13170d",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\growth-pricing.mjs",
-      "sha256": "4c94c41d7bb2725ebba715a071b60fc1b0971d3d72bd09c1b60cd73d73452400"
+      "source": "work/rules_engine/gm_runtime/wizard-host.mjs",
+      "source_sha256": "b06713544804a6952bd122d08dd56f5280b6beec1169ab29d546744e7b7ded59",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/wizard-host.mjs",
+      "sha256": "3b54dac5aa33c90d9fed15a0729970c5fb7562b52cb975c852961a8f505a4947"
     },
     {
-      "source": "work\\rules_engine\\mvu_poc\\adapter.mjs",
-      "source_sha256": "ecb83d3348113c6a645567869c4e671df5a8e9b6241d0c4d8be65a89aeff11a3",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\mvu_poc\\adapter.mjs",
-      "sha256": "ecb83d3348113c6a645567869c4e671df5a8e9b6241d0c4d8be65a89aeff11a3"
+      "source": "work/rules_engine/growth-pricing.mjs",
+      "source_sha256": "5d05f68ec7e56114bd90973d2d095ff4168645849a4d5812f00e4965a022abd2",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/growth-pricing.mjs",
+      "sha256": "8fb04f080a643c5e6e26ae6da6804d9ead5596abcbdc0e8f116c34ce40f9042b"
     },
     {
-      "source": "work\\rules_engine\\mvu_poc\\fixture.mjs",
+      "source": "work/rules_engine/healing.mjs",
+      "source_sha256": "3ce15dc9ee0c0d3cfafbe9e101f4eceeaefacf5a59b8b132a19cf75f90935dba",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/healing.mjs",
+      "sha256": "3ce15dc9ee0c0d3cfafbe9e101f4eceeaefacf5a59b8b132a19cf75f90935dba"
+    },
+    {
+      "source": "work/rules_engine/kit-state.mjs",
+      "source_sha256": "8b6b90e4740335db6c96b335df968de3ce54d7286eeb742726a182db2e48e7f5",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/kit-state.mjs",
+      "sha256": "db05b19912806b8f9bb21c28b9a7ffb7ddd8ca34657039cf24a0a4fa2a8772c5"
+    },
+    {
+      "source": "work/rules_engine/mvu_poc/adapter.mjs",
+      "source_sha256": "db6a85a595f8709319d85a617da0772499c3a7e379470ebfd1366b588105fd26",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/mvu_poc/adapter.mjs",
+      "sha256": "584c764be3e2c8d0c03b04a59f2ec3d3d6f0a1bb9d1dfead9bdff62d423a34c2"
+    },
+    {
+      "source": "work/rules_engine/mvu_poc/fixture.mjs",
       "source_sha256": "18f263b262826369fe0d9ce30da46d0d9751b9146cd5d0dfc91edd33a2183a2d",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\mvu_poc\\fixture.mjs",
-      "sha256": "cc4ce7c9c52782ecbe30b21d12a58ae4d3c82d45847883a47abe377692a3d739"
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/mvu_poc/fixture.mjs",
+      "sha256": "18f263b262826369fe0d9ce30da46d0d9751b9146cd5d0dfc91edd33a2183a2d"
     },
     {
-      "source": "work\\rules_engine\\possessions.mjs",
+      "source": "work/rules_engine/possessions.mjs",
       "source_sha256": "8482b7ff39703f2369d5f9ecfdb60b47628ce865063ed2f1b3c47fee92df8418",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\possessions.mjs",
-      "sha256": "8482b7ff39703f2369d5f9ecfdb60b47628ce865063ed2f1b3c47fee92df8418"
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/possessions.mjs",
+      "sha256": "9c39f4f839dbe0d3a62c6f63a3f37005adb2851c15613fb04389899a49bb8f2f"
     },
     {
-      "source": "work\\rules_engine\\recovery.mjs",
-      "source_sha256": "df84366c2795ea80a126ef12983e6850d8054a8fc8dedae2275eafaa648e0313",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\recovery.mjs",
-      "sha256": "df84366c2795ea80a126ef12983e6850d8054a8fc8dedae2275eafaa648e0313"
+      "source": "work/rules_engine/program-operators.mjs",
+      "source_sha256": "89d2492a29c6ec1c2681ab2eb17de25c9fcf950c9ca1f8c0335235a4dc148aac",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/program-operators.mjs",
+      "sha256": "89d2492a29c6ec1c2681ab2eb17de25c9fcf950c9ca1f8c0335235a4dc148aac"
     },
     {
-      "source": "work\\rules_engine\\status-rules.mjs",
-      "source_sha256": "3e40706a9af64baa46bb71c13816c0345b51538dd500555d546df47e34bfda36",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\status-rules.mjs",
-      "sha256": "3e40706a9af64baa46bb71c13816c0345b51538dd500555d546df47e34bfda36"
+      "source": "work/rules_engine/recovery.mjs",
+      "source_sha256": "1d6641dfa78df61184804ef2a9e06ac2f75191383165b249341e998332ea33ef",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/recovery.mjs",
+      "sha256": "16c2d87299b93adc4da0a859969e48d0f4304444bddc2e31397160c970ef02d1"
     },
     {
-      "source": "work\\rules_engine\\wizard-rules.mjs",
+      "source": "work/rules_engine/resource-accumulators.mjs",
+      "source_sha256": "8d894862d34a05ae6b6702d2a762141b60cdc98729efb26a593eb0c9e803cf3b",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-accumulators.mjs",
+      "sha256": "8d894862d34a05ae6b6702d2a762141b60cdc98729efb26a593eb0c9e803cf3b"
+    },
+    {
+      "source": "work/rules_engine/resource-acquisition.mjs",
+      "source_sha256": "188713253ac346e4ffdb7cc159861f7023291d5ec1076cba7aede44d199a067d",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-acquisition.mjs",
+      "sha256": "188713253ac346e4ffdb7cc159861f7023291d5ec1076cba7aede44d199a067d"
+    },
+    {
+      "source": "work/rules_engine/resource-action-bindings.mjs",
+      "source_sha256": "af3e3a4598b1fdd07834d72355a5bd8b9d31e443fba31c22ea363aecfa7d41cb",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-action-bindings.mjs",
+      "sha256": "af3e3a4598b1fdd07834d72355a5bd8b9d31e443fba31c22ea363aecfa7d41cb"
+    },
+    {
+      "source": "work/rules_engine/resource-action-index.mjs",
+      "source_sha256": "7092b5d903508bc57e8b53884bf36773a8dc8d373894c73c37d7ea73ce1cb6f6",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-action-index.mjs",
+      "sha256": "7092b5d903508bc57e8b53884bf36773a8dc8d373894c73c37d7ea73ce1cb6f6"
+    },
+    {
+      "source": "work/rules_engine/resource-action-losses.mjs",
+      "source_sha256": "cc38598bb4d81bb60e59c31d408e7b9e20b6e15ee2964d3a0e416551e682f4f5",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-action-losses.mjs",
+      "sha256": "cc38598bb4d81bb60e59c31d408e7b9e20b6e15ee2964d3a0e416551e682f4f5"
+    },
+    {
+      "source": "work/rules_engine/resource-action-pricing.mjs",
+      "source_sha256": "42c945ca5829758707d5f42b505ed592d66d37626bff35c40244ff5b53356aaa",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-action-pricing.mjs",
+      "sha256": "42c945ca5829758707d5f42b505ed592d66d37626bff35c40244ff5b53356aaa"
+    },
+    {
+      "source": "work/rules_engine/resource-additional-damage.mjs",
+      "source_sha256": "953c3214488ade039e5884bc613c297129a6e29e08d0c46861bcd533d2859f3f",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-additional-damage.mjs",
+      "sha256": "953c3214488ade039e5884bc613c297129a6e29e08d0c46861bcd533d2859f3f"
+    },
+    {
+      "source": "work/rules_engine/resource-applicability.mjs",
+      "source_sha256": "cb77262ea31c540f759592f69d4791ca8229d7424d6fcdae58a2693b0bf95e05",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-applicability.mjs",
+      "sha256": "cb77262ea31c540f759592f69d4791ca8229d7424d6fcdae58a2693b0bf95e05"
+    },
+    {
+      "source": "work/rules_engine/resource-auras.mjs",
+      "source_sha256": "7a31d8e1d58c84c8e9632601940833c7f71bfa06d89bcc34abb449d167199f7d",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-auras.mjs",
+      "sha256": "7a31d8e1d58c84c8e9632601940833c7f71bfa06d89bcc34abb449d167199f7d"
+    },
+    {
+      "source": "work/rules_engine/resource-automatic-events.mjs",
+      "source_sha256": "38c2878d6f8faa704c831d897efcbafce6664f81d742fc4f58142ee7d34d4198",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-automatic-events.mjs",
+      "sha256": "f950dddcb18adda7a7b29dbecab5ddd32e02daec6e3039d950676cd3f71f6c17"
+    },
+    {
+      "source": "work/rules_engine/resource-catalog.mjs",
+      "source_sha256": "881d74f73f4f67e84d3f576cceeede991a1182033a86f0682e0db1377975c1c5",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-catalog.mjs",
+      "sha256": "881d74f73f4f67e84d3f576cceeede991a1182033a86f0682e0db1377975c1c5"
+    },
+    {
+      "source": "work/rules_engine/resource-channeling.mjs",
+      "source_sha256": "5ae17c6656564fd71d95a3803b9662b743eae50a28f895f3b9ea0a17940332e2",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-channeling.mjs",
+      "sha256": "5ae17c6656564fd71d95a3803b9662b743eae50a28f895f3b9ea0a17940332e2"
+    },
+    {
+      "source": "work/rules_engine/resource-counters.mjs",
+      "source_sha256": "90e519508156601a923111b5e1ce16835488009bc179977f566e5ad07ff50e79",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-counters.mjs",
+      "sha256": "90e519508156601a923111b5e1ce16835488009bc179977f566e5ad07ff50e79"
+    },
+    {
+      "source": "work/rules_engine/resource-damage-modifiers.mjs",
+      "source_sha256": "2c8b4a927ea704b8605d853ed655b1e8b494b67b569368a7cde2481a6cd8f397",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-damage-modifiers.mjs",
+      "sha256": "2c8b4a927ea704b8605d853ed655b1e8b494b67b569368a7cde2481a6cd8f397"
+    },
+    {
+      "source": "work/rules_engine/resource-data.mjs",
+      "source_sha256": "79ab1781658ca627f2598aa3ae536da00d2a40f9c53c58a21cc94d5fe8acad15",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-data.mjs",
+      "sha256": "79ab1781658ca627f2598aa3ae536da00d2a40f9c53c58a21cc94d5fe8acad15"
+    },
+    {
+      "source": "work/rules_engine/resource-death.mjs",
+      "source_sha256": "08f8c0cd36d2e3638da68480d61d9aae53ad4825062a883a4ee53e1fdfd3e61e",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-death.mjs",
+      "sha256": "08f8c0cd36d2e3638da68480d61d9aae53ad4825062a883a4ee53e1fdfd3e61e"
+    },
+    {
+      "source": "work/rules_engine/resource-decoys.mjs",
+      "source_sha256": "901e731e40262ff4a6eda84fcbfcc2394531a3ea509c30732d36c6ee8723f093",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-decoys.mjs",
+      "sha256": "901e731e40262ff4a6eda84fcbfcc2394531a3ea509c30732d36c6ee8723f093"
+    },
+    {
+      "source": "work/rules_engine/resource-definitions.mjs",
+      "source_sha256": "47986bcc568ac603d2203d77b839e91f235b978190f87ecebcc71016960302c1",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-definitions.mjs",
+      "sha256": "79ee13150582365d2dc3da05a9d879339b1434b70e0b8f438778b93a9dea522a"
+    },
+    {
+      "source": "work/rules_engine/resource-descent.mjs",
+      "source_sha256": "c270c38b90dbb5b611c7e6ecd033f3171880496bd5193e4ef5997f501f200d0d",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-descent.mjs",
+      "sha256": "c270c38b90dbb5b611c7e6ecd033f3171880496bd5193e4ef5997f501f200d0d"
+    },
+    {
+      "source": "work/rules_engine/resource-detection.mjs",
+      "source_sha256": "6d74f76b2e7a2ef0e5973d98b0558f391b9859dafbdb5a71aed33732b5f30daa",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-detection.mjs",
+      "sha256": "6d74f76b2e7a2ef0e5973d98b0558f391b9859dafbdb5a71aed33732b5f30daa"
+    },
+    {
+      "source": "work/rules_engine/resource-discovery.mjs",
+      "source_sha256": "1dbf024a02c1de32ed12ecca705da4417e4258e1e54e4b6e72e229566a56d9ad",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-discovery.mjs",
+      "sha256": "771fe9a5f47d518357fbe21dbca1062702167b014781bb9175f3ae3e00954ded"
+    },
+    {
+      "source": "work/rules_engine/resource-effects.mjs",
+      "source_sha256": "660390d06a4bab610effa10e45f7ee736f8426d3144d37fb1f84da7e9208a77b",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-effects.mjs",
+      "sha256": "660390d06a4bab610effa10e45f7ee736f8426d3144d37fb1f84da7e9208a77b"
+    },
+    {
+      "source": "work/rules_engine/resource-falling.mjs",
+      "source_sha256": "ac4047c792bfd26ae18507fd5d71f276200769d6be6565d2bc41a9b29c99983b",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-falling.mjs",
+      "sha256": "ac4047c792bfd26ae18507fd5d71f276200769d6be6565d2bc41a9b29c99983b"
+    },
+    {
+      "source": "work/rules_engine/resource-instances.mjs",
+      "source_sha256": "85fe1db17fd211b9e34bfbb0451a358b9605248be5a6e0c285aabde93ae0ec1d",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-instances.mjs",
+      "sha256": "85fe1db17fd211b9e34bfbb0451a358b9605248be5a6e0c285aabde93ae0ec1d"
+    },
+    {
+      "source": "work/rules_engine/resource-jumping.mjs",
+      "source_sha256": "2533ae6f3ae45dcae1c8a2e26d66cb383b54005053f600755660d91482702184",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-jumping.mjs",
+      "sha256": "2533ae6f3ae45dcae1c8a2e26d66cb383b54005053f600755660d91482702184"
+    },
+    {
+      "source": "work/rules_engine/resource-lifecycle.mjs",
+      "source_sha256": "14324b7eee5c495c6148614d7aae078f720d11c1b6c48db3449cc521e5ae8a1b",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-lifecycle.mjs",
+      "sha256": "14324b7eee5c495c6148614d7aae078f720d11c1b6c48db3449cc521e5ae8a1b"
+    },
+    {
+      "source": "work/rules_engine/resource-materials.mjs",
+      "source_sha256": "e8f89050f479c6fe550c9b428ab8d77277a73154987f02860204ccfefa482b95",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-materials.mjs",
+      "sha256": "e8f89050f479c6fe550c9b428ab8d77277a73154987f02860204ccfefa482b95"
+    },
+    {
+      "source": "work/rules_engine/resource-motion.mjs",
+      "source_sha256": "44bcdac5da69adcebdeed27a5ec62a32143f3c0015b46d99115747e5a6fe1b23",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-motion.mjs",
+      "sha256": "44bcdac5da69adcebdeed27a5ec62a32143f3c0015b46d99115747e5a6fe1b23"
+    },
+    {
+      "source": "work/rules_engine/resource-obscuration.mjs",
+      "source_sha256": "7dde2b1a0f43b20fd85ec5dd22b8af26b8997d1235752a7ccc5340e350d2b223",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-obscuration.mjs",
+      "sha256": "7dde2b1a0f43b20fd85ec5dd22b8af26b8997d1235752a7ccc5340e350d2b223"
+    },
+    {
+      "source": "work/rules_engine/resource-observation-state.mjs",
+      "source_sha256": "dc1ee5c7b841e4c242010080168ed9334bc7b783aa2b6ce76a168d46a2a65460",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-observation-state.mjs",
+      "sha256": "dc1ee5c7b841e4c242010080168ed9334bc7b783aa2b6ce76a168d46a2a65460"
+    },
+    {
+      "source": "work/rules_engine/resource-observation.mjs",
+      "source_sha256": "c2e381997e8d6f950fa7489a5e88bc43e4324fa8e767145135b235646b62ad7a",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-observation.mjs",
+      "sha256": "c2e381997e8d6f950fa7489a5e88bc43e4324fa8e767145135b235646b62ad7a"
+    },
+    {
+      "source": "work/rules_engine/resource-ongoing.mjs",
+      "source_sha256": "7466b40b9a38b816f8af2f0a1c9d35b10c43f4ebe7924d82461c01091de7043b",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-ongoing.mjs",
+      "sha256": "7466b40b9a38b816f8af2f0a1c9d35b10c43f4ebe7924d82461c01091de7043b"
+    },
+    {
+      "source": "work/rules_engine/resource-penalties.mjs",
+      "source_sha256": "574405018a63240eef2be300df95e142e16b206b5fa3df3b5fed96648d042d06",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-penalties.mjs",
+      "sha256": "574405018a63240eef2be300df95e142e16b206b5fa3df3b5fed96648d042d06"
+    },
+    {
+      "source": "work/rules_engine/resource-perception-scheduler.mjs",
+      "source_sha256": "6b480b577388b332c61774f84002b6504c373988bf20998b27a0b12e767bb42c",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-perception-scheduler.mjs",
+      "sha256": "6b480b577388b332c61774f84002b6504c373988bf20998b27a0b12e767bb42c"
+    },
+    {
+      "source": "work/rules_engine/resource-perception.mjs",
+      "source_sha256": "43ce90fc09e25fd09505b1e8defb1ab3e6d00efb4d9775dd4088012b71f5f065",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-perception.mjs",
+      "sha256": "43ce90fc09e25fd09505b1e8defb1ab3e6d00efb4d9775dd4088012b71f5f065"
+    },
+    {
+      "source": "work/rules_engine/resource-periodic-clock.mjs",
+      "source_sha256": "d15fd9f1876a7853947a8a8825081edc8fbd8c36bb83558e6493a6f80a360e23",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-periodic-clock.mjs",
+      "sha256": "d15fd9f1876a7853947a8a8825081edc8fbd8c36bb83558e6493a6f80a360e23"
+    },
+    {
+      "source": "work/rules_engine/resource-pools.mjs",
+      "source_sha256": "9989bc9a997a02d1db75ed8f0ed4864abdd49ae8f567588297b20bd26e9d63d7",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-pools.mjs",
+      "sha256": "9989bc9a997a02d1db75ed8f0ed4864abdd49ae8f567588297b20bd26e9d63d7"
+    },
+    {
+      "source": "work/rules_engine/resource-projections.mjs",
+      "source_sha256": "5b428b1401fe3781f80d4ef20ba29be87d85f2911796b62dc647eacfb6b9b260",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-projections.mjs",
+      "sha256": "5b428b1401fe3781f80d4ef20ba29be87d85f2911796b62dc647eacfb6b9b260"
+    },
+    {
+      "source": "work/rules_engine/resource-resistance.mjs",
+      "source_sha256": "7d2639d8e41a8f81e2fdf4e41fb7595721b550060fb99183656e95d06ab84328",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-resistance.mjs",
+      "sha256": "7d2639d8e41a8f81e2fdf4e41fb7595721b550060fb99183656e95d06ab84328"
+    },
+    {
+      "source": "work/rules_engine/resource-senses.mjs",
+      "source_sha256": "1d238753eba581033e01f8ff1d41ea41d5810fbe43c31875ab8cc9753110f149",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-senses.mjs",
+      "sha256": "1d238753eba581033e01f8ff1d41ea41d5810fbe43c31875ab8cc9753110f149"
+    },
+    {
+      "source": "work/rules_engine/resource-social.mjs",
+      "source_sha256": "e041c06724b4f21a513cd1b889cf1740840a1dc8388a3bd0542d1b5a0244d9f5",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-social.mjs",
+      "sha256": "e041c06724b4f21a513cd1b889cf1740840a1dc8388a3bd0542d1b5a0244d9f5"
+    },
+    {
+      "source": "work/rules_engine/resource-specializations.mjs",
+      "source_sha256": "93c3cd958d72d7439bf521d09b48e8ec34c1eacc77ffcf969aaa89b2f3f1dc3d",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-specializations.mjs",
+      "sha256": "93c3cd958d72d7439bf521d09b48e8ec34c1eacc77ffcf969aaa89b2f3f1dc3d"
+    },
+    {
+      "source": "work/rules_engine/resource-spell-resistance.mjs",
+      "source_sha256": "81efa963cd671bee33336a5a8c055f88a0b26de24776512935c632bd12ce9a12",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-spell-resistance.mjs",
+      "sha256": "81efa963cd671bee33336a5a8c055f88a0b26de24776512935c632bd12ce9a12"
+    },
+    {
+      "source": "work/rules_engine/resource-status-applicability.mjs",
+      "source_sha256": "ce7790b6ee778d422233074212571416a0f6a7657d2270c48b1ec1e89d6719b2",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-status-applicability.mjs",
+      "sha256": "ce7790b6ee778d422233074212571416a0f6a7657d2270c48b1ec1e89d6719b2"
+    },
+    {
+      "source": "work/rules_engine/resource-status-budget.mjs",
+      "source_sha256": "62a772568cb0d1e1b7eaa706db3352bc140152ca589898cc739d462107c361d6",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-status-budget.mjs",
+      "sha256": "62a772568cb0d1e1b7eaa706db3352bc140152ca589898cc739d462107c361d6"
+    },
+    {
+      "source": "work/rules_engine/resource-status-sources.mjs",
+      "source_sha256": "8a89c12207b86050409fb3a681a8b17d9dc586b46e2dec05085871bd67887bb1",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-status-sources.mjs",
+      "sha256": "8a89c12207b86050409fb3a681a8b17d9dc586b46e2dec05085871bd67887bb1"
+    },
+    {
+      "source": "work/rules_engine/resource-target-budgets.mjs",
+      "source_sha256": "5161f88a1ef88b5b9c22306004aed9c487c6fbb9a24c17c2ef44fc21ed6d02c2",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-target-budgets.mjs",
+      "sha256": "5161f88a1ef88b5b9c22306004aed9c487c6fbb9a24c17c2ef44fc21ed6d02c2"
+    },
+    {
+      "source": "work/rules_engine/resource-targeting.mjs",
+      "source_sha256": "19f911348063b217a121fd36b57c3f8eb23c4c1408b571bf69b270eb293a1c36",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-targeting.mjs",
+      "sha256": "19f911348063b217a121fd36b57c3f8eb23c4c1408b571bf69b270eb293a1c36"
+    },
+    {
+      "source": "work/rules_engine/resource-temporary-health.mjs",
+      "source_sha256": "1cfb7096603af753582160f9f08fba58de44c0f5fe6d94b30a2f1f71d66d2217",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-temporary-health.mjs",
+      "sha256": "1cfb7096603af753582160f9f08fba58de44c0f5fe6d94b30a2f1f71d66d2217"
+    },
+    {
+      "source": "work/rules_engine/resource-trigger-lifecycle.mjs",
+      "source_sha256": "5fa35761b3d812fe29bd0a4b972500caf2f0880ebba8293e8ef49ea2e059e8f0",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-trigger-lifecycle.mjs",
+      "sha256": "5fa35761b3d812fe29bd0a4b972500caf2f0880ebba8293e8ef49ea2e059e8f0"
+    },
+    {
+      "source": "work/rules_engine/resource-turn-order.mjs",
+      "source_sha256": "7b0e788b31a893cb5760d29ee14abe69e638f94f929236e7c7ea3a7fcafb2640",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-turn-order.mjs",
+      "sha256": "7b0e788b31a893cb5760d29ee14abe69e638f94f929236e7c7ea3a7fcafb2640"
+    },
+    {
+      "source": "work/rules_engine/resource-use-cooldowns.mjs",
+      "source_sha256": "0e46ca7464ad1748c2b1227bfb386335df602a472b8a927a5ce0787e4f7d3dd3",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-use-cooldowns.mjs",
+      "sha256": "0e46ca7464ad1748c2b1227bfb386335df602a472b8a927a5ce0787e4f7d3dd3"
+    },
+    {
+      "source": "work/rules_engine/resource-visual-illusions.mjs",
+      "source_sha256": "c5d834c03f4bcdc985d28fc9789c5abd40c59649448e617d5c1740f676acb693",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-visual-illusions.mjs",
+      "sha256": "c5d834c03f4bcdc985d28fc9789c5abd40c59649448e617d5c1740f676acb693"
+    },
+    {
+      "source": "work/rules_engine/resource-weapons.mjs",
+      "source_sha256": "b13ed16efbabe8ca384a96826d1d91adda0d3f389493953b0bd932059f33b21e",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-weapons.mjs",
+      "sha256": "b13ed16efbabe8ca384a96826d1d91adda0d3f389493953b0bd932059f33b21e"
+    },
+    {
+      "source": "work/rules_engine/resource-wounds.mjs",
+      "source_sha256": "9e80376564a0fc8e6db9ac3b4ea907b44a1f6ee70e924726ebc0648460a2f796",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/resource-wounds.mjs",
+      "sha256": "9e80376564a0fc8e6db9ac3b4ea907b44a1f6ee70e924726ebc0648460a2f796"
+    },
+    {
+      "source": "work/rules_engine/rule-contracts.mjs",
+      "source_sha256": "b728a4908a435547a1f86289c9a65865917c0dd5bc9f2541fcbf3e5e32edea91",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/rule-contracts.mjs",
+      "sha256": "b728a4908a435547a1f86289c9a65865917c0dd5bc9f2541fcbf3e5e32edea91"
+    },
+    {
+      "source": "work/rules_engine/rule-expressions.mjs",
+      "source_sha256": "962df1dbcd1164d9354ebcb93af2c6b837c4fd945b21ff5e21d009ff25d09051",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/rule-expressions.mjs",
+      "sha256": "962df1dbcd1164d9354ebcb93af2c6b837c4fd945b21ff5e21d009ff25d09051"
+    },
+    {
+      "source": "work/rules_engine/rule-random.mjs",
+      "source_sha256": "f6b791318a282bd15ed226803a36b830c9c9b73a010abde6e38f0ae6b55965bc",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/rule-random.mjs",
+      "sha256": "f6b791318a282bd15ed226803a36b830c9c9b73a010abde6e38f0ae6b55965bc"
+    },
+    {
+      "source": "work/rules_engine/rule-schema.mjs",
+      "source_sha256": "2e452886734c05758d37bd126c8f0daffbccbf0385e596da78eab167776689d2",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/rule-schema.mjs",
+      "sha256": "2e452886734c05758d37bd126c8f0daffbccbf0385e596da78eab167776689d2"
+    },
+    {
+      "source": "work/rules_engine/status-rules.mjs",
+      "source_sha256": "511603750be9d749319a9ba5cc590ddf588ed24ad13a90df983679c01214eff2",
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/status-rules.mjs",
+      "sha256": "3b14089a65d74989a9a7101bc70be34232305c0627184d3af146cde46f94c816"
+    },
+    {
+      "source": "work/rules_engine/wizard-rules.mjs",
       "source_sha256": "1e0bf8dea06e0326ac131fd9eb8a18fa1eb5340fab1274fa87d77ed9f4fab6fb",
-      "destination": "runtime_patch\\901-opening-combat\\work\\rules_engine\\wizard-rules.mjs",
-      "sha256": "1e0bf8dea06e0326ac131fd9eb8a18fa1eb5340fab1274fa87d77ed9f4fab6fb"
+      "destination": "runtime_patch/901-opening-combat/work/rules_engine/wizard-rules.mjs",
+      "sha256": "5412caa501724feac27ab3676c9a78faf8de711f97b1533e3fb4ccf030a6f83c"
     }
-  ]
+  ],
+  "deployment": "candidate_not_installed",
+  "resource_contracts": 270,
+  "runtime_fully_verified": 0
 }

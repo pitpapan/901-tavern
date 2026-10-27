@@ -1,4 +1,6 @@
-import {canObserve,distance,vertices,contains,elevationAt} from './map.mjs';
+import {projectionView,projectionAppearance} from '../resource-projections.mjs';
+import {hydrateBattleActors} from './state-view.mjs';
+import {mapView,canObserve,distance,vertices,contains,elevationAt} from './map.mjs';
 import {ABILITIES} from './catalog.mjs';
 import {panel} from './engine.mjs';
 import {decisionContext} from './runtime.mjs';
@@ -70,7 +72,7 @@ const preparations={
 // This allowlist is the boundary between the private rules save and prose.
 // Do not send stateResult, decisionContext, or operation summaries to the narrator.
 export function publicScene(root,{afterRevision=0,playerId='player'}={}) {
-  const b=root.battle;
+  const b=hydrateBattleActors(root.battle,root.actors);
   const actors=Object.entries(b.actors).filter(([,a])=>canObserve(b,a,playerId));
   const operations=Object.values(root.operations).filter(o=>Array.isArray(o.summary?.result?.damage)&&o.summary.result.after?.participants)
     .sort((a,b)=>a.summary.revision-b.summary.revision);
@@ -167,7 +169,7 @@ export function publicScene(root,{afterRevision=0,playerId='player'}={}) {
   const terrain=a=>b.map?{terrain:{elevation:elevationAt(b.map,a.position),areas:b.map.features
     .filter(f=>!f.destroyed&&!f.hiddenFrom?.includes(playerId)&&contains(a.position,f)).map(f=>f.label)}}:{};
   const nearby=b.map?.features.filter(f=>!f.hiddenFrom?.includes(playerId)).map(f=>({f,d:origin?(contains(origin,f)?0:Math.min(...vertices(f).map(p=>distance(p,origin)))):Infinity})).filter(x=>x.d<=10).sort((a,b)=>a.d-b.d).slice(0,3).map(x=>x.f.label);
-  return {events,...(hasPending?{interaction:'本段含尚未结算的行动；只展开已经显现的准备或来势，停在所列等待处，不预写其移动、命中或伤害结果。'}:!hasAttack?{interaction:'本段仅发生已列出的移动、准备或恢复等行动，双方未发生攻击或挡接。'}:{}),setting:b.map?{name:b.map.title,nearbyLandmarks:nearby,...(b.arena?{nature:'实体练习场；终止是按约停手，不产生自动声光信号、光标或虚拟投影。'}:{})}:b.scenario,participants:actors.map(([id,a])=>({id,name:a.name,location:id===playerId?'你所在的位置':origin?`与你相距${Math.round(distance(a.position,origin)*10)/10}米`:'场上可见位置',...terrain(a),condition:condition(root.actors[id].state,a),arms:visibleArms(a)})),
+  return {events,projections:projectionView(b,playerId),vagueObservations:mapView(b,playerId)?.vagueObservations??[],...(hasPending?{interaction:'本段含尚未结算的行动；只展开已经显现的准备或来势，停在所列等待处，不预写其移动、命中或伤害结果。'}:!hasAttack?{interaction:'本段仅发生已列出的移动、准备或恢复等行动，双方未发生攻击或挡接。'}:{}),setting:b.map?{name:b.map.title,nearbyLandmarks:nearby,...(b.arena?{nature:'实体练习场；终止是按约停手，不产生自动声光信号、光标或虚拟投影。'}:{})}:b.scenario,participants:actors.map(([id,a])=>({id,name:projectionAppearance(b,id,playerId)?.name??a.name,location:id===playerId?'你所在的位置':origin?`与你相距${Math.round(distance(a.position,origin)*10)/10}米`:'场上可见位置',...terrain(a),...(projectionAppearance(b,id,playerId)?{appearance:projectionAppearance(b,id,playerId).description}:{condition:condition(root.actors[id].state,a),arms:visibleArms(a)})})),
     ...(b.resolution?{resolution:b.resolution.kind==='refereeStop'
       ?{...b.resolution,text:'按本场预告的终止条件，练习结束；现有伤势与资源保留。'}:b.resolution}:{}),
     phase:b.mode==='story'?'战斗结束':b.pending?.kind==='opportunity'?'等待玩家借机攻击声明':b.pending?.awaiting===playerId?'等待玩家受击反应':b.activeId===playerId?'等待玩家继续行动':'场上行动',
