@@ -5,6 +5,7 @@ import {resolve,dirname,relative,sep} from 'node:path';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import assert from 'node:assert/strict';
+import {isDeepStrictEqual} from 'node:util';
 const root=process.cwd(),base=resolve(root,'output/replay_tavern/six_books_20261023_candidate');
 const out=resolve(base,'formal-installation-20261028'),home='D:/github/sillyTavern';
 const privateBackup=resolve(root,'../world-install-backups/20261028-sixbooks');
@@ -55,7 +56,7 @@ async function prepare(){
   model:settings.oai_settings.google_model,privateBackup,patch};
  await save(resolve(out,'prepared.json'),plan);console.log(JSON.stringify({status:'prepared',avatar,books:plan.books.length,modules:plan.moduleCount,protectedFiles:Object.keys(beforeHashes).length,memory:plan.memory}));
 }
-async function verify(){
+async function verify(ui=false){
  const plan=await read(resolve(out,'prepared.json')),{manifest}=await inputs();
  for(const [p,h] of Object.entries(plan.sourceHashes))assert.equal(await sha(resolve(root,p)),h,'Candidate changed after prepare');
  const before=card(await readFile(resolve(privateBackup,'data/default-user/characters',avatar))),after=card(await readFile(cardPath));
@@ -66,14 +67,50 @@ async function verify(){
  const expectedSettings=structuredClone(beforeSettings),wi=expectedSettings.world_info_settings.world_info;
  wi.charLore??=[];let binding=wi.charLore.find(x=>x.name===avatar.slice(0,-4));if(!binding){binding={name:avatar.slice(0,-4),extraBooks:[]};wi.charLore.push(binding);}
  binding.extraBooks=[...new Set([...(binding.extraBooks??[]).filter(n=>!plan.books.includes(n)),...plan.books.slice(1)])];
- assert.deepEqual(settings,expectedSettings,'Settings outside formal book binding changed');
- const currentHashes=await protectedHashes();assert.deepEqual(currentHashes,plan.protectedHashes,'Chat or other character changed');
+ if(ui){assert.equal(settings.active_character,avatar);expectedSettings.active_character=avatar;}
+ assert(isDeepStrictEqual(settings,expectedSettings),'Settings outside formal book binding and explicit UI navigation changed');
+ const currentHashes=await protectedHashes();
+ assert.deepEqual(Object.keys(currentHashes).sort(),Object.keys(plan.protectedHashes).sort(),'Protected file set changed');
+ const changed=Object.keys(currentHashes).filter(p=>currentHashes[p]!==plan.protectedHashes[p]);
+ let uiMetadata=null;
+ if(changed.length){
+  assert(ui,'Chat or other character changed before UI readback');
+  const chatRel='data/default-user/chats/'+avatar.slice(0,-4)+'/'+before.chat+'.jsonl';
+  assert.deepEqual(changed,[chatRel],'Unexpected chat or character change');
+  const parse=b=>b.trim().split('\n').map(x=>JSON.parse(x));
+  const oldRows=parse(await readFile(resolve(privateBackup,chatRel),'utf8'));
+  const newRows=parse(await readFile(resolve(home,chatRel),'utf8'));
+  assert.equal(newRows.length,oldRows.length);
+  const original=oldRows.at(-1).variables[0],latest=newRows.at(-1).variables[0];
+  const registry=structuredClone(original.initialized_lorebooks);
+  for(const name of plan.books){assert(!(name in registry));registry[name]=[];}
+  assert.deepEqual(latest.initialized_lorebooks,registry,'MVU registration added values instead of empty book markers');
+  const additions=[];
+  function additive(a,b,path=''){
+   if(a&&typeof a==='object'&&!Array.isArray(a)){
+    assert(b&&typeof b==='object'&&!Array.isArray(b));
+    for(const k of Object.keys(a)){assert(k in b,'Schema field removed');additive(a[k],b[k],path+'/'+k);}
+    for(const k of Object.keys(b))if(!(k in a))additions.push(path+'/'+k);
+   }else assert.deepEqual(b,a,'Existing schema changed');
+  }
+  additive(original.schema,latest.schema);
+  assert.equal(additions.length,15,'Unexpected schema additions');
+  assert(additions.every(p=>p.startsWith('/properties/901_rules_poc/properties/')));
+  const normalized=structuredClone(newRows);
+  normalized.at(-1).variables[0].schema=original.schema;
+  normalized.at(-1).variables[0].initialized_lorebooks=original.initialized_lorebooks;
+  assert(isDeepStrictEqual(normalized,oldRows),'Chat text, swipes, memory or actual state changed');
+  uiMetadata={file:chatRel,emptyBookRegistrations:plan.books,addedSchemaPaths:additions,
+   messageCount:oldRows.length-1,allChatTextAndActualStateUnchanged:true,
+   reason:'MVU automatically registered newly attached books and derived schema on opening; no initialization action or generation was requested'};
+ }
  for(const name of plan.books)assert.deepEqual(await read(resolve(home,'data/default-user/worlds',name+'.json')),await read(resolve(base,'import',name+'.json')));
  for(const m of manifest.modules){const rel=relative(resolve(base,'runtime_patch/901-opening-combat'),resolve(base,m.destination));assert.equal(await sha(resolve(home,'public/901-opening-combat',rel)),m.sha256);}
  const result={status:'pass',avatar,books:plan.books.length,entries:580,embeddedEntries:after.data.character_book.entries.length,modules:manifest.modules.length,
-  protectedFilesUnchanged:Object.keys(currentHashes).length,chatFilesUnchanged:Object.keys(currentHashes).filter(p=>p.startsWith('data/default-user/chats/')).length,
+  protectedFilesByteUnchanged:Object.keys(currentHashes).length-changed.length,
+  chatFilesContentAndStatePreserved:Object.keys(currentHashes).filter(p=>p.startsWith('data/default-user/chats/')).length,uiMetadata,
   model:settings.oai_settings.google_model,memory:plan.memory,privateBackup,sourceCommit:await read(resolve(out,'installation.json')).then(x=>x.sourceCommit),
-  scope:'six books, known host entry and full runtime closure; existing chats/state preserved; no model request or initialization'};
+  scope:'six books, known host entry and full runtime closure; no model request or campaign reset; automatic MVU metadata changes reported separately'};
  await save(resolve(out,'verification.json'),result);console.log(JSON.stringify(result));
 }
 async function apply(){
@@ -98,4 +135,4 @@ async function apply(){
  await post('/api/settings/save',settings);await record('five extra book bindings');
  await verify();journal.status='installed-and-verified';await save(resolve(out,'installation.json'),journal);
 }
-if(process.argv.includes('--prepare'))await prepare();else if(process.argv.includes('--apply'))await apply();else if(process.argv.includes('--verify'))await verify();else throw Error('Use --prepare, --apply, or --verify');
+if(process.argv.includes('--prepare'))await prepare();else if(process.argv.includes('--apply'))await apply();else if(process.argv.includes('--verify'))await verify();else if(process.argv.includes('--verify-ui'))await verify(true);else throw Error('Use --prepare, --apply, --verify, or --verify-ui');

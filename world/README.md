@@ -1,5 +1,7 @@
 # 飘零大陆 · 世界阅读目录
 
+2026-10-28正式安装续记：已提交世界书本线`cace852`并正式安装六书及主持入口。原聊天与实际存档保留，112模块及六书读回一致；原数据库记忆方式不变。详见[安装核验与备份](../output/replay_tavern/six_books_20261023_candidate/formal-installation-20261028/README.md)。下列此前阶段中的“未部署”不再表示当前安装状态。
+
 [返回首页](../README.md) · [世界总览](overview.md) · [182条世界书阅读版](worldbook.md)
 
 世界书开发顺序见[统一计划W队列](../docs/unified-development-plan.md#世界书工作线与当前总顺序2026-10-28补正)：已采用内容对应核对、内容补齐、六书编排、触发加载及分支记忆分别记录。下列作者主题与运行投影分开计进度；当前六书开发候选见[交付入口](../output/replay_tavern/six_books_20261023_candidate/README.md)，不以旧运行增量的日期作为当前开发截止点。
