@@ -1,0 +1,39 @@
+[901-RESOURCE-COMBAT-NPC] {"allowed":["end"],"modelOption":0,"engineOption":3}
+inheritedCooldown { 'imperial-magic:D:魔能爆': 2 }
+[901-RESOURCE-COMBAT-NPC] {"allowed":["end"],"modelOption":0,"engineOption":3}
+[901-RESOURCE-COMBAT-NPC] {"allowed":["end"],"modelOption":0,"engineOption":3}
+{
+  "status": "pass",
+  "duplicate": "already_applied",
+  "rejectedNewRequestUnchanged": true,
+  "kind": "offline preflight only, synthetic dice",
+  "beforeRevision": 18,
+  "afterRevision": 19,
+  "option": {
+    "command": {
+      "actorId": "player",
+      "abilityId": "mechanism",
+      "objectId": "eldritchBlast",
+      "part": "DCombat",
+      "operation": "cast"
+    },
+    "preview": {
+      "actions": {
+        "standard": 1
+      },
+      "energy": {
+        "精神魔力": 1
+      }
+    }
+  },
+  "health": {
+    "intact": 5,
+    "B": 0,
+    "L": 7,
+    "A": 0,
+    "temp": 0,
+    "coma": false,
+    "deteriorationStopped": false
+  },
+  "active": "player"
+}

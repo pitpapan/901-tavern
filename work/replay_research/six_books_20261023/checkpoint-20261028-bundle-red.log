@@ -1,0 +1,97 @@
+✖ arcane D then C acquisition pays increments and preserves sources, wounds, current pools and T0 (6.3715ms)
+✖ bundle rejects skipped, repeated, unsupported, repriced and changed choices before mutation (4.1667ms)
+✖ bundle installments validate choices before charging, bind contract and grant only at completion (0.8159ms)
+✖ opening another sourced mental pool grants five capacity once and preserves other caster functions (1.2968ms)
+✖ each stage grants one legal matching spell without XP or replacing the D gift (0.8001ms)
+✖ arcane spell DP uses the actual damage type and acquired record; mental recovery uses actual time (0.6468ms)
+✖ granted spell executes using the new caster and pool, with arcane DP in the actual attack roll (0.7976ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 0
+ℹ fail 7
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 232.7251
+
+✖ failing tests:
+
+test at work\rules_engine\staged-bundle.test.mjs:19:1
+✖ arcane D then C acquisition pays increments and preserves sources, wounds, current pools and T0 (6.3715ms)
+  Error: 候选取得事务尚未接入
+      at validateLearningOffer (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/growth-pricing.mjs:26:109)
+      at purchaseLearning (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/growth-pricing.mjs:43:2)
+      at buy (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/staged-bundle.test.mjs:17:18)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/staged-bundle.test.mjs:20:50)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at work\rules_engine\staged-bundle.test.mjs:30:1
+✖ bundle rejects skipped, repeated, unsupported, repriced and changed choices before mutation (4.1667ms)
+  Error: 候选取得事务尚未接入
+      at validateLearningOffer (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/growth-pricing.mjs:26:109)
+      at purchaseLearning (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/growth-pricing.mjs:43:2)
+      at buy (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/staged-bundle.test.mjs:17:18)
+      at learned (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/staged-bundle.test.mjs:18:19)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/staged-bundle.test.mjs:34:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at work\rules_engine\staged-bundle.test.mjs:38:1
+✖ bundle installments validate choices before charging, bind contract and grant only at completion (0.8159ms)
+  Error: 候选取得事务尚未接入
+      at validateLearningOffer (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/growth-pricing.mjs:26:109)
+      at purchaseLearning (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/growth-pricing.mjs:43:2)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/staged-bundle.test.mjs:40:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at work\rules_engine\staged-bundle.test.mjs:46:1
+✖ opening another sourced mental pool grants five capacity once and preserves other caster functions (1.2968ms)
+  Error: 候选取得事务尚未接入
+      at validateLearningOffer (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/growth-pricing.mjs:26:109)
+      at purchaseLearning (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/growth-pricing.mjs:43:2)
+      at buy (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/staged-bundle.test.mjs:17:18)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/staged-bundle.test.mjs:49:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at work\rules_engine\staged-bundle.test.mjs:53:1
+✖ each stage grants one legal matching spell without XP or replacing the D gift (0.8001ms)
+  Error: 候选取得事务尚未接入
+      at validateLearningOffer (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/growth-pricing.mjs:26:109)
+      at purchaseLearning (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/growth-pricing.mjs:43:2)
+      at buy (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/staged-bundle.test.mjs:17:18)
+      at learned (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/staged-bundle.test.mjs:18:19)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/staged-bundle.test.mjs:54:8)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at work\rules_engine\staged-bundle.test.mjs:62:1
+✖ arcane spell DP uses the actual damage type and acquired record; mental recovery uses actual time (0.6468ms)
+  Error: 候选取得事务尚未接入
+      at validateLearningOffer (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/growth-pricing.mjs:26:109)
+      at purchaseLearning (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/growth-pricing.mjs:43:2)
+      at buy (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/staged-bundle.test.mjs:17:18)
+      at learned (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/staged-bundle.test.mjs:18:19)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/staged-bundle.test.mjs:63:8)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at work\rules_engine\staged-bundle.test.mjs:70:1
+✖ granted spell executes using the new caster and pool, with arcane DP in the actual attack roll (0.7976ms)
+  Error: 候选取得事务尚未接入
+      at validateLearningOffer (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/growth-pricing.mjs:26:109)
+      at purchaseLearning (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/growth-pricing.mjs:43:2)
+      at buy (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/staged-bundle.test.mjs:17:18)
+      at learned (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/staged-bundle.test.mjs:18:19)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/staged-bundle.test.mjs:71:39)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

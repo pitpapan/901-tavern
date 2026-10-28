@@ -7,7 +7,7 @@ import {createRecoveryFixture} from './recovery-fixture.mjs';
 // Run the browser controller itself; replace only host APIs and model transport.
 // Real Builder, gate and MVU adapter modules still execute.
 async function hostFixture({ action = '我向布莱特点头，说：“我们到了。”',
-  decision = { status: 'NO_CHECK', basis: 'ordinary_dialogue', reason: '普通问候' }, combat = null, profile = {}, lorebooks = {901:[]}, generationError = null } = {}) {
+  decision = { status: 'NO_CHECK', basis: 'ordinary_dialogue', reason: '普通问候' }, combat = null, profile = {}, lorebooks = {901:[]}, generationError = null, brokenListenerStop = false } = {}) {
   const root = new URL('../../../', import.meta.url);
   const source = (await readFile(new URL('./replay-gate-script.example.js', import.meta.url), 'utf8'))
     .replaceAll("'/901-rules-runtime/", `'${root.href}`)
@@ -19,6 +19,7 @@ async function hostFixture({ action = '我向布莱特点头，说：“我们�
   const stats = { classifications: 0, narrations: 0, saves: 0 };
   let fail = true;
   let hook;
+  const generationHooks=new Map();
   const mvu = {
     getMvuData: ({ message_id }) => structuredClone(floors[message_id] ?? { stat_data: {} }),
     replaceMvuData: async (value, { message_id }) => { floors[message_id] = structuredClone(value); },
@@ -27,9 +28,10 @@ async function hostFixture({ action = '我向布莱特点头，说：“我们�
     window: { top: { document: { getElementById: () => null } }, addEventListener() {} },
     console: { log() {}, info() {}, error() {} },
     SillyTavern: { chatId: 'host-test', chat, stopGeneration() {}, saveChat: async () => { stats.saves++; } },
-    tavern_events: { GENERATE_AFTER_DATA: 'generate', WORLDINFO_ENTRIES_LOADED: 'worlds' },
-    eventMakeFirst: (_event, listener) => { hook = listener; },
-    eventOn: (event, listener) => { listeners.set(event, listener); return { stop: () => listeners.delete(event) }; },
+    tavern_events: { GENERATION_STARTED:'start', GENERATE_AFTER_DATA: 'generate', WORLDINFO_ENTRIES_LOADED: 'worlds' },
+    eventMakeFirst: (event, listener) => { if(event==='generate')hook=listener;else generationHooks.set(event,listener); },
+    eventOn: (event, listener) => { listeners.set(event, listener); return { stop: () => { if(!brokenListenerStop)listeners.delete(event); } }; },
+    eventRemoveListener: (event, listener) => { if(listeners.get(event)===listener)listeners.delete(event); },
     stopGenerationById() {},
     getCurrentCharPrimaryLorebook: () => '901',
     getLorebookEntries: async book => { (stats.readBooks??=[]).push(book); return lorebooks[book]??[]; },
@@ -57,13 +59,25 @@ async function hostFixture({ action = '我向布莱特点头，说：“我们�
     },
     setChatMessages: async updates => {
       for (const update of updates) {
+        if(update.swipes){
+          const row=chat[update.message_id];
+          Object.assign(row,{swipe_id:update.swipe_id,swipes:structuredClone(update.swipes),variables:structuredClone(update.swipes_data),swipe_info:structuredClone(update.swipes_info),mes:update.swipes[update.swipe_id],extra:structuredClone(update.swipes_info[update.swipe_id])});
+          floors[update.message_id]=structuredClone(update.swipes_data[update.swipe_id]);
+          continue;
+        }
         assert.equal(update.message, chat[update.message_id].mes);
         chat[update.message_id].extra = structuredClone(update.extra);
       }
     },
+    getChatMessages: id => {
+      const row=chat[Number(id)];
+      return [{message_id:Number(id),name:row.name,role:row.is_user?'user':'assistant',is_hidden:!!row.is_system,swipe_id:row.swipe_id??0,
+        swipes:structuredClone(row.swipes??[row.mes]),swipes_data:structuredClone(row.variables??[floors[id]??{}]),swipes_info:structuredClone(row.swipe_info??[row.extra??{}])}];
+    },
     createChatMessages: async messages => {
       for (const message of messages) {
         assert.equal(message.role, 'assistant');
+        if(message.data)floors[chat.length]=structuredClone(message.data);
         chat.push({ is_user: false, mes: message.message, extra: structuredClone(message.extra), swipe_id: 0 });
       }
     },
@@ -71,11 +85,46 @@ async function hostFixture({ action = '我向布莱特点头，说：“我们�
   const load = async () => {
     const register = await new (Object.getPrototypeOf(async function() {}).constructor)(...Object.keys(host),
       source + '\nreturn registerReplayGate;')(...Object.values(host));
+    profile.readSavedChat??=async()=>[{},...chat.map((m,i)=>({...m,variables:m.variables??[structuredClone(floors[i]??{})]}))];
     register({ getMvu: async () => mvu, combat, profile });
   };
   await load();
-  return { chat, floors, stats, listeners, load, run: () => hook({}, false), succeed: () => { fail = false; } };
+  return { chat, floors, stats, listeners, load, start:(type='regenerate')=>generationHooks.get('start')?.(type,{},false),run: () => hook({}, false), succeed: () => { fail = false; } };
 }
+
+test('unconfirmed rule persistence blocks narration and reports memory-only settlement',async()=>{
+ const fixture=await hostFixture({action:'我完整长休八小时。',decision:{status:'RECOVERY_REQUIRED',reason:'完整长休',
+   request:{kind:'recovery',type:'rest',rest:'long',minutes:480}},profile:{readSavedChat:async()=>[{},{}]}});
+ await fixture.run();
+ assert.equal(fixture.stats.narrations,0);
+ assert.equal(fixture.floors[0].stat_data['901_rules_poc'].revision,1);
+ assert.match(fixture.chat.at(-1).mes,/内存中.*持久保存未确认/);
+ assert.doesNotMatch(fixture.chat.at(-1).mes,/规则结果已保存/);
+});
+
+test('native combat regeneration restores the deleted report and unique latest root before a cancelled menu',async()=>{
+  let seen;
+  const fixture=await hostFixture({combat:{handleTurn:async()=>{
+    seen=structuredClone(fixture.floors[fixture.chat.length-1]);
+    return {handled:true,status:'awaiting_player'};
+  }}});
+  const older={stat_data:{'901_rules_poc':{revision:18,battle:{mode:'combat'},operations:{old:{}}}}};
+  const latest={snapshot:true,stat_data:{'901_rules_poc':{revision:19,battle:{mode:'combat'},operations:{old:{},uniqueCast:{damage:3,energy:1}}}}};
+  fixture.floors[0]=structuredClone(older);
+  fixture.chat.push({is_user:false,name:'report',mes:'saved cast: 3L',extra:{combatReport:true},swipe_id:1,
+    swipes:['older alternate','saved cast: 3L'],variables:[older,latest],swipe_info:[{alternate:true},{combatReport:true}]});
+  fixture.floors[1]=structuredClone(latest);
+  await fixture.start();
+  fixture.chat.pop();delete fixture.floors[1]; // native Generate removes memory + DOM before the late hook
+  await fixture.run();
+  assert.deepEqual(seen,latest,'combat must never read the older floor as the current state');
+  assert.equal(fixture.chat.length,2);
+  assert.equal(fixture.chat[1].mes,'saved cast: 3L');
+  assert.equal(fixture.chat[1].swipe_id,1);
+  assert.deepEqual(fixture.chat[1].variables,[older,latest]);
+  assert.deepEqual(fixture.floors[0],older);
+  assert.equal(fixture.stats.classifications,0);assert.equal(fixture.stats.narrations,0);
+});
 
 test('debug-disabled malformed recovery retains a precise failure without settling',async()=>{
   const fixture=await hostFixture({action:'我服用药B',profile:{debug:false},
@@ -124,6 +173,15 @@ test('explicit additional lorebooks reach classification and ordinary narration'
   assert.match(JSON.stringify(fixture.stats.lastClassificationRequest),/削弱版弃风6L/);
   assert.equal(fixture.chat.at(-1).extra['901_replay_gate'].status,'NO_CHECK');
   assert.equal(fixture.listeners.size,0);
+});
+
+test('ordinary narration releases its lore filter even when host stop handle is broken',async()=>{
+  for(const fail of [false,true]){
+    const fixture=await hostFixture({brokenListenerStop:true});
+    if(!fail)fixture.succeed();
+    await fixture.run();
+    assert.equal(fixture.listeners.size,0,'finished or failed requests must not filter a later unrelated request');
+  }
 });
 
 test('active combat handles the turn before ordinary classification or narration',async()=>{

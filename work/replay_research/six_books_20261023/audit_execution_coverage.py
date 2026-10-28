@@ -1,5 +1,6 @@
 """Compare maintained contracts with runtime and classifier data, without APIs."""
 from pathlib import Path
+import argparse
 import hashlib
 import json
 import subprocess
@@ -9,10 +10,10 @@ ROOT = Path(__file__).resolve().parents[3]
 KIT = ROOT.parent / '901-resource-authoring-kit'
 STAGE = Path(__file__).resolve().parent
 sys.path.insert(0,str(KIT/'tools'))
-from compile_resources import load_contracts,ENGINE
+from compile_resources import load_contracts,load_candidate_package,ENGINE
 
 
-def audit():
+def audit(candidate_packages=(), output=STAGE / 'recovery-coverage.json'):
     compiled = json.loads(subprocess.check_output([
         'node', '--input-type=module', '-e',
         "import {RESOURCE_DATA as data,RESOURCE_ENGINE_ABI as abi} from './work/rules_engine/resource-data.mjs';"
@@ -21,13 +22,16 @@ def audit():
     ], cwd=ROOT, text=True))
     assert compiled['abi']==ENGINE['abi'],'resource data / capability artifact ABI mismatch'
     index = {row['resourceId']: row for row in compiled['index']}
+    assert len(index) == len(compiled['index']), 'duplicate runtime action index identity'
     normalized={d['id']:d for d in load_contracts()}
     rows = []
     for path in sorted((KIT / 'resources/execution').glob('*.rule.json')):
         raw = json.loads(path.read_text(encoding='utf-8'));d=normalized[raw['id']]
         source = KIT / d['reading']['path']
         assert hashlib.sha256(source.read_bytes()).hexdigest() == d['reading']['sha256'], d['id']
-        expected = dict(d['definition'], contractVersion=d['version'], readingHash=d['reading']['sha256'],
+        expected = dict(d['definition'], identity=d['identity'], tree=d['identity'].get('tree'),
+                        reading=d['reading'], verification=d['verification'],
+                        contractVersion=d['version'], readingHash=d['reading']['sha256'],
                         operations=[a['operation'] for a in d['actions']])
         assert compiled['data'][d['id']] == expected, d['id']
         for field, value in {'access':d['definition'].get('access','owned'),'adoptedDecisions':d.get('adoptedDecisions',[]),'version': d['version'], 'actions': d['actions'],
@@ -43,7 +47,30 @@ def audit():
                          actions=[a['operation'] for a in d['actions']],
                          consumerCoverage=d['consumerCoverage'],verification=d['verification'], implementationGaps=d['implementationGaps'],
                          unresolvedRules=d['unresolvedRules']))
-    assert {r['id'] for r in rows} == set(compiled['data']) == set(index)
+    candidate_definitions = {}
+    candidate_index = {}
+    candidate_rows = []
+    packages = []
+    for package in candidate_packages:
+        definitions, actions, selected, counts = load_candidate_package(package)
+        assert not (set(definitions) & (set(normalized) | set(candidate_definitions))), 'candidate identity collision'
+        candidate_definitions.update(definitions)
+        packages.append(dict(path=Path(package).resolve().relative_to(KIT.resolve()).as_posix(), counts=counts))
+        for row in actions:
+            rid = row['resourceId']
+            assert rid in definitions and rid not in candidate_index, 'candidate action identity mismatch'
+            candidate_index[rid] = row
+            assert index.get(rid) == row, ('candidate action projection differs', rid)
+        for rid, definition in definitions.items():
+            assert compiled['data'].get(rid) == definition, ('candidate runtime projection differs', rid)
+            doc = selected[rid]
+            candidate_rows.append(dict(id=rid, name=doc['identity']['name'], version=doc['version'],
+                reading=doc['reading'], adoptionStatus='candidate', operations=definition['operations'],
+                verification=definition['verification']))
+    # Passive candidate definitions need no classifier action; neither unknown
+    # definitions nor actions may be hidden by checking only the official subset.
+    assert set(normalized) | set(candidate_definitions) == set(compiled['data']), 'runtime definition set differs from declared packages'
+    assert set(normalized) | set(candidate_index) == set(index), 'runtime action set differs from declared packages'
     spells = [r for r in rows if r['category'] == 'spell']
     legal = [r for r in spells if not r['prohibited']]
     result = dict(status='source-contract-runtime-index-consistent', deployment='development_not_installed',
@@ -54,10 +81,18 @@ def audit():
                               fullyVerified=sum(r['verification']['runtimeFullyVerified'] for r in rows)),
                   limits=['基础程序存在不等于变体、关键词、全部路径已实现或验证。',
                           '世界书投影另由verify_candidate.py核验；实际运行环境不由生成文件推断。'],
-                  resources=rows)
-    (STAGE / 'recovery-coverage.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    print(json.dumps({'status': result['status'], 'counts': result['counts']}, ensure_ascii=False))
+                  resources=rows, candidatePackages=packages, candidates=candidate_rows,
+                  candidateCounts=dict(contracts=len(candidate_rows),
+                      actions=sum(len(r['actions']) for r in candidate_index.values()),
+                      fullyVerified=sum(r['verification']['runtimeFullyVerified'] for r in candidate_rows)))
+    Path(output).write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
+    print(json.dumps({'status': result['status'], 'counts': result['counts'], 'candidateCounts': result['candidateCounts']}, ensure_ascii=False))
+    return result
 
 
 if __name__ == '__main__':
-    audit()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--candidate-package', action='append', type=Path, default=[])
+    parser.add_argument('--output', type=Path, default=STAGE / 'recovery-coverage.json')
+    args = parser.parse_args()
+    audit(args.candidate_package, args.output)

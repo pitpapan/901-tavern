@@ -1,0 +1,13 @@
+diff --git a/work/rules_engine/combat/engine.mjs b/work/rules_engine/combat/engine.mjs
+index eecc456..333112b 100644
+--- a/work/rules_engine/combat/engine.mjs
++++ b/work/rules_engine/combat/engine.mjs
+@@ -1467,7 +1467,7 @@ export function renderResult(value) {
+   const name=id=>r.after.participants.find(a=>a.id===id)?.name??({huang:'黄泉',jiang:'姜子尤',lotus:'乱红莲'}[id]??id);
+   if(r.after.awaiting) return `${name(r.actorId)}宣言${ABILITIES[r.abilityId]?.name??r.abilityId}；等待${name(r.after.awaiting)}选择受击反应。尚未掷骰或扣除攻击资源。`;
+   if(['enter','leave','parameters'].includes(r.abilityId)) return r.notes.join('。')+'。';
+-  const changes=r.damage.map(x=>`${name(x.targetId)}承受${x.actualDamage}${x.severity}`).join('，')||'无新增伤害';
++  const changes=[...r.damage,...(r.mechanism?.damage??[])].map(x=>`${name(x.targetId)}承受${x.actualDamage}${x.severity}`).join('，')||'无新增伤害';
+   const state=r.after.participants.map(a=>`${name(a.id)}：完好${a.health.intact}/B${a.health.B}/L${a.health.L}/A${a.health.A}；能量${Object.entries(a.energy).map(([k,v])=>`${k}${v.current}`).join('、')||'无'}；动作${a.actions.standard}/${a.actions.move}/${a.actions.swift}；位置${a.position}；状态${a.statuses?.map(s=>`${s.type}${s.points}`).join('、')||'无'}`).join('\n\n');
+   const victor=r.after.participants.filter(a=>a.team===r.after.winner).map(a=>name(a.id)).join('、')||r.after.winner;
+   return `第${r.round}轮 · ${name(r.actorId)}使用${ABILITIES[r.abilityId]?.name??r.abilityId}：${changes}。\n\n${state}\n\n${r.after.status==='finished'?`演练结束，胜方：${victor}。`:`下一行动者：${name(r.after.activeId)}。`}\n\n<details><summary>结算明细（程序记录）</summary>\n\n<rules901_detail>\n\`\`\`json\n${JSON.stringify(r,null,2)}\n\`\`\`\n</rules901_detail>\n\n</details>`;

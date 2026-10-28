@@ -1,0 +1,29 @@
+✔ model can only choose current legal actions; already drawn weapon is excluded (1069.2125ms)
+✔ confirmed panels, only combatants loaded, effects do not leak from history (43.5168ms)
+✔ draw, free block, lightning, then automatic defense/action/energy changes (52.4319ms)
+✔ RE penetration consumes only matching defense and does not duplicate reductions (8.419ms)
+✔ combo belongs to target, qi is not inner power, rejected command leaves input unchanged (25.4163ms)
+✔ once per scene damage conversion is explicit and converts entire mixed hit (15.7256ms)
+✔ summon has independent turn and persists health and once-per-scene uses across recall (37.4995ms)
+✔ movement triggers one legal opportunity, five-foot step avoids it (28.515ms)
+✔ restraint payment affects subsequent panels and immobilizes beyond will (31.1437ms)
+✔ 龙象 ignores four points of conversion, not four free bonus damage (19.4508ms)
+✔ life squeezing records increasing recovery restrictions and rapid healing respects them (8.748ms)
+✔ complete duel uses one resolver for companion and enemy, then stops (4059.9535ms)
+✔ MVU settles and writes once, preserves unrelated state, readback supplies next prompt (64.9802ms)
+✔ Tavern controller posts and carries results; refreshing and report replay never settle again (212.6707ms)
+✔ combat report includes saved mechanism damage instead of claiming no new damage (2.6968ms)
+✔ host registers sourced temperature changes without resetting actor resources (7.2878ms)
+✔ switching chats replaces the captured session before initialization or writeback (0.3832ms)
+✔ integration uses one player state for ordinary checks and combat, with no T0 rewrite (700.3982ms)
+✔ NPC fight returns to story once; resume keeps results and next chat inherits injuries (1047.9654ms)
+✔ player-selected energy attack settles, writes back and reaches story without resetting costs (2774.7457ms)
+✔ host registers Guanlan acquisition and sourced learning offers without resetting XP (3.6501ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6060.9106

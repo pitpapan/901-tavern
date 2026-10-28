@@ -202,6 +202,7 @@ test('MVU settles and writes once, preserves unrelated state, readback supplies 
 test('Tavern controller posts and carries results; refreshing and report replay never settle again', async () => {
   const floors=[{stat_data:{world:{location:'演练场'}}}];
   const tavern={chatId:'browser-test',chat:[{mes:'开场',swipe_id:0}]};
+  tavern.saveChat=async()=>{};tavern.readSavedChat=async()=>[{},...tavern.chat.map((m,i)=>({...m,variables:[structuredClone(floors[i])]}))];
   let calls=0;
   const deps={
     tavern,expectedChatId:'browser-test',

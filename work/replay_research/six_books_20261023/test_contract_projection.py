@@ -8,6 +8,21 @@ STAGE = Path(__file__).resolve().parent
 ROOT = STAGE.parents[2]
 
 class ProjectionTest(unittest.TestCase):
+    def test_two_packages_keep_bundle_passive_separate_from_spell_learning(self):
+        context = runpy.run_path(str(STAGE / 'build_candidate.py'))
+        bundle = 'candidate-901-magic-bundle-de9b5c40b4fa2353'
+        self.assertIn(bundle, set(context['candidate_contracts']))
+        self.assertEqual(len(context['candidate_contracts']), 12)
+        runtime = context['candidate_runtime'][bundle]
+        self.assertEqual(runtime['operations'], [])
+        self.assertNotIn('learning', runtime)
+        self.assertNotIn(bundle, context['candidate_actions'])
+        self.assertEqual(len(context['candidate_actions']), 10)
+        record = next(r for r in context['records'].values() if r.get('resourceContract',{}).get('id') == bundle)
+        self.assertTrue(record['native']['disable'])
+        self.assertIsNone(record['resourceContract']['learning'])
+        self.assertIn('实际取得记录', record['content'])
+
     def test_every_catalog_item_projects_its_exact_execution_contract(self):
         context = runpy.run_path(str(STAGE / 'build_candidate.py'))
         contracts = {d['id']: d for p in (ROOT.parent/'901-resource-authoring-kit/resources/execution').glob('*.rule.json') for d in [json.loads(p.read_text())]}

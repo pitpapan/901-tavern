@@ -34,6 +34,7 @@ test('natural binding uses only adopted templates and same-instance current posi
 test('host scene registration persists in selected MVU, restores on refresh and feeds real narrative entry',async()=>{
   const chat=[{is_user:false,mes:'初至帝都',swipe_id:0}],floors={};
   const tavern={chat,chatId:'opening-entry-test',saveChat:async()=>{}};
+  tavern.readSavedChat=async()=>[{},...chat.map((m,i)=>({...m,variables:[structuredClone(floors[i])]}))];
   const mvu={getMvuData:({message_id})=>structuredClone(floors[message_id]??{stat_data:{}}),replaceMvuData:async(d,{message_id})=>{floors[message_id]=structuredClone(d);}};
   let plan={steps:[]};const facts=[];
   const options={baseline:createOpeningFixture().baseline,fixtureFactory:createOpeningFixture,mvu,tavern,

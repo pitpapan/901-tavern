@@ -2,7 +2,46 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createTestRoot, DEMO_ATTACK, NAMESPACE } from './fixture.mjs';
 import { initializeTestState, settleAttack, settleCheck, readDebugState, carryTestState,
-  settleGeneticUnlock, settleScriptedFortune, requiresEffectChoice, settleRecovery } from './adapter.mjs';
+  settleGeneticUnlock, settleScriptedFortune, requiresEffectChoice, settleRecovery, adoptNativeChatBranch, tavernAnchor, persistTavernRuleState, retainRuleSnapshot } from './adapter.mjs';
+
+test('checkpoint flag failure is detected even with an unchanged rule root, and retry retains it without resettling',async()=>{
+ let data={stat_data:{[NAMESPACE]:createTestRoot('checkpoint')}},disk=structuredClone(data),writes=0,fail=true;
+ const original=structuredClone(data.stat_data[NAMESPACE]);
+ const tavern={chatId:'checkpoint',chat:[{mes:'checkpoint',swipe_id:0}],saveChat:async()=>{if(!fail)disk=structuredClone(data);},readSavedChat:async()=>[{}, {mes:'checkpoint',swipe_id:0,variables:[disk]}]};
+ const mvu={getMvuData:()=>structuredClone(data),replaceMvuData:async value=>{writes++;data=structuredClone(value);}};
+ await assert.rejects(retainRuleSnapshot({mvu,tavern}),e=>e.code==='CHAT_PERSISTENCE_UNCONFIRMED');
+ assert.equal(data.snapshot,true);assert.equal(disk.snapshot,undefined);assert.deepEqual(data.stat_data[NAMESPACE],original);
+ fail=false;const retry=await retainRuleSnapshot({mvu,tavern});
+ assert.equal(retry.status,'checkpoint_saved');assert.equal(retry.alreadyRetained,true);assert.equal(disk.snapshot,true);assert.equal(writes,1);assert.deepEqual(disk.stat_data[NAMESPACE],original);
+});
+
+test('persistence acknowledgement reads disk after a host save that swallows failure',async()=>{
+ const current=createTestRoot('persist');current.revision=1;current.operations.debit={signature:'once',summary:{revision:1}};
+ const stale=structuredClone(current);stale.revision=0;stale.operations={};
+ let disk=stale,saves=0;
+ const tavern={chatId:'persist',chat:[{mes:'saved result',swipe_id:0}],saveChat:async()=>{saves++;}};
+ const mvu={getMvuData:()=>({snapshot:true,stat_data:{[NAMESPACE]:structuredClone(current)}}),replaceMvuData:async()=>{throw Error('read-back must not settle');}};
+ const readSavedChat=async()=>[{}, {mes:'saved result',swipe_id:0,variables:[{snapshot:true,stat_data:{[NAMESPACE]:disk}}]}];
+ await assert.rejects(persistTavernRuleState({mvu,tavern,readSavedChat}),e=>e.code==='CHAT_PERSISTENCE_UNCONFIRMED');
+ assert.equal(current.revision,1);assert.equal(saves,1);
+ tavern.saveChat=async()=>{saves++;disk=structuredClone(current);};
+ assert.equal((await persistTavernRuleState({mvu,tavern,readSavedChat})).status,'saved');assert.equal(saves,2);assert.equal(current.revision,1);
+});
+
+test('explicit native branch adoption preserves copied history and ledger, binds only the child tip, and retries once',async()=>{
+ const parent=createTestRoot('parent');parent.revision=1;parent.operations.old={signature:'old',summary:{revision:1}};
+ const floors=[{stat_data:{[NAMESPACE]:structuredClone(parent)}},{snapshot:true,stat_data:{keep:7,[NAMESPACE]:structuredClone(parent)}}];
+ const mvu={getMvuData:({message_id})=>structuredClone(floors[message_id]),replaceMvuData:async(data,{message_id})=>{floors[message_id]=structuredClone(data);}};
+ const tavern={chatId:'child',chat:[{swipe_id:0},{swipe_id:0}],chatMetadata:{main_chat:'parent',integrity:'native-child-integrity'}};
+ const args={mvu,tavern,expectedParentChatId:'parent',expectedRevision:1};
+ assert.throws(()=>readDebugState({mvu,getAnchor:()=>tavernAnchor(1,tavern)}),/identity mismatch/);
+ const before=structuredClone(floors),adopted=await adoptNativeChatBranch(args);
+ assert.equal(adopted.status,'adopted');assert.deepEqual(floors[0],before[0]);
+ const root=floors[1].stat_data[NAMESPACE];assert.equal(root.chatId,'child');assert.equal(root.revision,2);
+ assert.deepEqual(root.actors,parent.actors);assert.deepEqual(root.operations.old,parent.operations.old);assert.equal(floors[1].stat_data.keep,7);
+ const saved=structuredClone(floors);assert.equal((await adoptNativeChatBranch(args)).status,'already_adopted');assert.deepEqual(floors,saved);
+ tavern.chatMetadata.main_chat='unrelated';await assert.rejects(adoptNativeChatBranch(args),/native branch source/);assert.deepEqual(floors,saved);
+});
 
 test('recovery commits inventory, effects and carry once; retry never reruns reducer', async () => {
   const h = harness(), opts = { mvu:h.mvu,getAnchor:h.getAnchor,expectedChatId:'isolated-test-chat',actorId:'attacker' };
@@ -59,6 +98,32 @@ test('carry initialized state without an operation across empty host floors', as
   assert.deepEqual(floors[1].stat_data[NAMESPACE].operations, {});
   assert.equal((await carryTestState(args)).status, 'already_synced');
   await assert.rejects(carryTestState({ ...args, operationId: 'missing' }), /No saved source/);
+});
+
+test('an empty swipe inherits MVU metadata so cleanup does not replay an older floor over its saved state', async () => {
+  const schema={type:'object',properties:{},extensible:true};
+  const floors=[{schema,initialized_lorebooks:{test:[1]},stat_data:{}},{stat_data:{keep:'target'}}];
+  const mvu={getMvuData:({message_id})=>structuredClone(floors[message_id]),
+    replaceMvuData:async(data,{message_id})=>{floors[message_id]=structuredClone(data);}};
+  const anchor=messageId=>({chatId:'swipe-metadata',messageId,swipeId:messageId===1?1:0});
+  await initializeTestState({mvu,expectedChatId:'swipe-metadata',getAnchor:()=>anchor(0)});
+  const args={mvu,expectedChatId:'swipe-metadata',getSourceAnchor:()=>anchor(0),getAnchor:()=>anchor(1)};
+  await carryTestState(args);
+  const source=structuredClone(floors[0]);
+  floors[1].stat_data[NAMESPACE].revision=1;
+  // MVU 2026-10-19 treats a floor without stat_data OR schema as needing replay.
+  if(!floors[1].stat_data||!floors[1].schema)floors[1]=structuredClone(floors[0]);
+  assert.equal(floors[1].stat_data[NAMESPACE].revision,1);
+  assert.deepEqual(floors[1].schema,schema);
+  assert.deepEqual(floors[1].initialized_lorebooks,{test:[1]});
+  assert.equal(floors[1].stat_data.keep,'target');
+  assert.deepEqual(floors[0],source);
+  // Existing metadata belongs to the target; do not overwrite it during carry.
+  floors[1]={schema:{type:'object',properties:{target:{type:'string'}}},initialized_lorebooks:{target:[2]},stat_data:{}};
+  const metadata=structuredClone(floors[1]);
+  await carryTestState(args);
+  assert.deepEqual(floors[1].schema,metadata.schema);
+  assert.deepEqual(floors[1].initialized_lorebooks,metadata.initialized_lorebooks);
 });
 
 test('initialization and attack use core output, preserve unrelated data, and deduplicate', async () => {

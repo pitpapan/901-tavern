@@ -4,7 +4,7 @@ import {validateLearningOffer} from '../growth-pricing.mjs';
 import {createRoster,createEncounter} from '../combat/catalog.mjs';
 import {createTavernCombat} from '../combat/tavern.mjs';
 import {createCombatHost} from '../combat/host.mjs';
-import {initializeTestState,carryTestState,tavernAnchor} from '../mvu_poc/adapter.mjs';
+import {initializeTestState,carryTestState,tavernAnchor,retainRuleSnapshot} from '../mvu_poc/adapter.mjs';
 import {lifeStatus} from '../core.mjs';
 
 export const INTEGRATION_SCENE='完整人物卡隔离演练，不计入帝都T0或实际重玩事件。开场时四人在空旷场地，黄泉与姜子尤相距1米，御临风、布莱特在场边；后续以当前场景和存档为准。仅在明确开始时进行已登记演练，目标是对练至一方失去行动能力；不撤离场地，不对失去行动能力者补刀。旁边有供练习平衡的矮横木；敏捷＋运动DC1，一次失手只须落地重新站稳，不造成伤害。这个难度仅为本测试场景设定。';
@@ -230,6 +230,7 @@ export function createIntegratedSession({baseline,mvu,tavern,generateRaw,createC
     enterForPlayer,
     registerEncounter,
     registerRuleScene,
+    retainSnapshot:()=>retainRuleSnapshot({mvu,tavern}),
     async resumeEntry(player) {
       const entry=tavern.chat[player.messageId]?.extra?.['901_combat_entry'];
       if(!entry||entry.playerText!==player.text||entry.swipeId!==player.swipeId)return null;

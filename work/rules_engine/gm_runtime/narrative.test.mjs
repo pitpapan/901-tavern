@@ -29,6 +29,7 @@ test('production narrator request prioritizes executed events over background an
 function fixture(extra={}) {
   const chat=[{is_user:false,mes:'演练场',swipe_id:0}],floors={},facts=[];
   const tavern={chat,chatId:'narrative-test',saveChat:async()=>{}};
+  tavern.readSavedChat=async()=>[{},...chat.map((m,i)=>({...m,variables:[structuredClone(floors[i])]}))];
   const mvu={getMvuData:({message_id})=>structuredClone(floors[message_id]??{stat_data:{}}),
     replaceMvuData:async(data,{message_id})=>{floors[message_id]=structuredClone(data);}};
   let plan={steps:[]},fail=false,rolls=0,dice=8,opened=0,interpreted=0;
@@ -398,7 +399,7 @@ test('existing chat builds its map once, map viewing does not spend actions, and
   const f=fixture();await start(f);
   // Reload the existing MVU save with map generation enabled, as for installed older chats.
   let session=createNarrativeSession({baseline,mvu:{getMvuData:({message_id})=>structuredClone(f.floors[message_id]??{stat_data:{}}),replaceMvuData:async(d,{message_id})=>{f.floors[message_id]=structuredClone(d);}},
-    tavern:{chat:f.chat,chatId:'narrative-test',saveChat:async()=>{}},
+    tavern:{chat:f.chat,chatId:'narrative-test',saveChat:async()=>{},readSavedChat:async()=>[{},...f.chat.map((m,i)=>({...m,variables:[structuredClone(f.floors[i])]}))]},
     createChatMessages:async ms=>{for(const m of ms)f.chat.push({mes:m.message,is_user:false,swipe_id:0,extra:m.extra??{}});},
     setChatMessages:async us=>{for(const u of us)f.chat[u.message_id].extra=structuredClone(u.extra);},
     // Keep this map/reload regression deterministic: random opportunity damage can incapacitate and correctly cancel movement.

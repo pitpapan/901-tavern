@@ -1,0 +1,91 @@
+✔ model can only choose current legal actions; already drawn weapon is excluded (1114.1603ms)
+✔ confirmed panels, only combatants loaded, effects do not leak from history (43.6762ms)
+✔ draw, free block, lightning, then automatic defense/action/energy changes (44.4114ms)
+✔ RE penetration consumes only matching defense and does not duplicate reductions (8.6159ms)
+✔ combo belongs to target, qi is not inner power, rejected command leaves input unchanged (24.2456ms)
+✔ once per scene damage conversion is explicit and converts entire mixed hit (15.2402ms)
+✔ summon has independent turn and persists health and once-per-scene uses across recall (38.6833ms)
+✔ movement triggers one legal opportunity, five-foot step avoids it (27.6016ms)
+✔ restraint payment affects subsequent panels and immobilizes beyond will (30.3237ms)
+✔ 龙象 ignores four points of conversion, not four free bonus damage (18.4699ms)
+✔ life squeezing records increasing recovery restrictions and rapid healing respects them (8.3308ms)
+✔ complete duel uses one resolver for companion and enemy, then stops (4131.1192ms)
+✔ MVU settles and writes once, preserves unrelated state, readback supplies next prompt (79.6777ms)
+✔ Tavern controller posts and carries results; refreshing and report replay never settle again (218.7119ms)
+✔ host waits for player, settles a whole encounter, returns to story and carries wounds into next encounter (53808.0059ms)
+✔ haste changes order without extra turns; aiming matures next round and is lost on movement (76.8525ms)
+✔ invalid model selection retries without rolling; transport failures remain visible (1527.8383ms)
+✔ host tool is unavailable inside its own NPC decision request (0.3309ms)
+✔ host registers sourced temperature changes without resetting actor resources (7.5044ms)
+✔ switching chats replaces the captured session before initialization or writeback (0.2838ms)
+✔ integration uses one player state for ordinary checks and combat, with no T0 rewrite (726.9402ms)
+✔ NPC fight returns to story once; resume keeps results and next chat inherits injuries (1072.1175ms)
+✔ player-selected energy attack settles, writes back and reaches story without resetting costs (2803.9692ms)
+✔ host registers Guanlan acquisition and sourced learning offers without resetting XP (4.3629ms)
+✔ native combat regeneration restores the deleted report and unique latest root before a cancelled menu (202.4539ms)
+✔ debug-disabled malformed recovery retains a precise failure without settling (16.7998ms)
+✔ debug-disabled invalid check attribute identifies model input failure without exposing DC (10.3113ms)
+✔ debug-disabled upstream quota failure is distinguished from invalid model output (6.2065ms)
+✔ explicit additional lorebooks reach classification and ordinary narration (8.1907ms)
+✔ ordinary narration releases its lore filter even when host stop handle is broken (12.6618ms)
+✔ active combat handles the turn before ordinary classification or narration (4.4339ms)
+✔ host saved recovery survives failed narration and script reload without another debit (14.1698ms)
+✔ host executes the exact compound declaration once and resumes final sequence narration after reload (18.1748ms)
+✔ a completed pending medicine keeps its original operation across a later player floor and native regeneration (15.5409ms)
+✔ host classification passes a registered encounter to the player-bound combat entry (5.6019ms)
+✔ integrated profile cannot grant the old demo scene bonus (6.0042ms)
+✖ ordinary narration resolves current model options locally for each request (15.2313ms)
+✔ controller persists failed NO_CHECK and recovers after reload with no new player input (7.9561ms)
+✔ host cancels only the unexecuted medicine pending and anchors the current dialogue (8.2821ms)
+✔ a cancellation declaration cannot undo a committed operation awaiting narration (11.1263ms)
+✔ regenerating a completed turn reuses its narration without model calls or another assistant message (10.0943ms)
+✔ regenerating a committed direct effect does not repeat classification, narration, or MVU writes (7.5176ms)
+✔ lost direct-effect failure notice resumes saved operation without reclassification (7.6927ms)
+✔ a completed-looking assistant cannot bypass a missing JS operation (3.1132ms)
+✔ completed assistant with missing MVU projection restores state without model requests (6.841ms)
+✔ persistence acknowledgement reads disk after a host save that swallows failure (3.0746ms)
+✔ explicit native branch adoption preserves copied history and ledger, binds only the child tip, and retries once (3.3067ms)
+✔ recovery commits inventory, effects and carry once; retry never reruns reducer (1.9536ms)
+✔ carry initialized state without an operation across empty host floors (1.4779ms)
+✔ an empty swipe inherits MVU metadata so cleanup does not replay an older floor over its saved state (1.811ms)
+✔ initialization and attack use core output, preserve unrelated data, and deduplicate (5.7456ms)
+✔ reject missing state, version conflict, and failed save without reporting success (5.4377ms)
+✔ a copied next floor inherits state, while different swipe keeps its own copy in the mock (1.9186ms)
+✔ a Builder state can be initialized and a check is saved once without changing the actor (6.0931ms)
+✔ committed genetic unlock increments trusted history once and recovery does not reroll (3.8175ms)
+✔ genetic unlock defaults public, rejects secret, and failure preserves history (1.1675ms)
+✔ scripted secret opportunities need explicit rules and cannot reroll across operation IDs (2.1723ms)
+✔ non-demo environment and roleplay awards stay automatic even if marked player-activated (5.1052ms)
+✔ active marker alone cannot authorize a panel choice or settlement (0.9842ms)
+✔ test-only active sample waits for a decision and modifies DP before fortune selection (3.9085ms)
+✔ MVU ordinary check persists finalized fortune path and mishap without applying harm (3.876ms)
+✔ a trusted environmental penalty is reduced by the resource and the resulting saved check replays once (2.3637ms)
+✔ scene resource quota and deferred initiative survive actual MVU carry without being replayed (2.2262ms)
+✔ temporary-pool exhaustion is saved with the damage receipt and retry does not emit it again (4.144ms)
+ℹ tests 64
+ℹ suites 0
+ℹ pass 63
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 55836.6979
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\replay-gate-script.test.mjs:292:1
+✖ ordinary narration resolves current model options locally for each request (15.2313ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(fixture.stats.lastNarrationRequest.user_input.includes(scene))
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/replay-gate-script.test.mjs:304:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

@@ -1,0 +1,49 @@
+--- pinned-isolated-gate-before
++++ pinned-isolated-gate-after
+@@ -109,6 +109,22 @@
+ if (typeof getMvu !== 'function') throw new Error('MVU provider required');
+ if (typeof eventMakeFirst !== 'function' || !tavern_events?.GENERATE_AFTER_DATA)
+   throw new Error('Pre-narration hook unavailable');
++// Native regenerate removes the last assistant message before GENERATE_AFTER_DATA.
++// Keep its actual pages for this generation only: the report can own the sole
++// latest combat state. Never reconstruct that state from the preceding floor.
++let nativeCombatRegeneration=null;
++if(combat && tavern_events.GENERATION_STARTED && typeof getChatMessages==='function')
++  eventMakeFirst(tavern_events.GENERATION_STARTED,async(type,_options,dryRun)=>{
++    nativeCombatRegeneration=null;
++    if(type!=='regenerate'||dryRun||running||combat.busy)return;
++    const id=chatId(),messageId=SillyTavern.chat.length-1;
++    const last=SillyTavern.chat[messageId];
++    if(!id||!last||last.is_user||last.is_system)return;
++    const mvu=await getMvu();
++    if(mvu.getMvuData({type:'message',message_id:messageId})?.stat_data?.['901_rules_poc']?.battle?.mode!=='combat')return;
++    const message=getChatMessages(String(messageId),{include_swipes:true})[0];
++    nativeCombatRegeneration={chatId:id,message:structuredClone(message)};
++  });
+ const readinessOf = (mvu, player) => replayGateReadiness({ mvu, chatId: chatId(), player,
+   generateRaw: typeof generateRaw === 'function' ? generateRaw : null,
+   createChatMessages: typeof createChatMessages === 'function' ? createChatMessages : null,
+@@ -117,6 +133,8 @@
+   createRuleRuntime: createReplayCheckRuntime });
+ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
+   if (dryRun || running || combat?.busy || !chatId() || !SillyTavern.chat?.some(m => m?.is_user && !m?.is_system)) return;
++  const regeneration=nativeCombatRegeneration;
++  nativeCombatRegeneration=null;
+   running = true;
+   const player = playerFloor();
+   const expectedChatId = player.chatId;
+@@ -148,6 +166,14 @@
+   try {
+     mark('readiness');
+     mvu = await getMvu();
++    if(regeneration?.chatId===expectedChatId && SillyTavern.chat.length===regeneration.message.message_id){
++      const message=regeneration.message,swipe=message.swipe_id;
++      mark('combat_report_restore');
++      await createChatMessages([{role:message.role,name:message.name,is_hidden:message.is_hidden,
++        message:message.swipes[swipe],data:message.swipes_data[swipe],extra:message.swipes_info[swipe]}]);
++      await setChatMessages([message]);
++      await SillyTavern.saveChat();
++    }
+     await profile.prepare?.({mvu,player});
+     if(combat) {
+       const resumed=await combat.resumeEntry?.(player);

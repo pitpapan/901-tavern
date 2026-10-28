@@ -1,3 +1,4 @@
+import {acquireStagedBundle} from './staged-bundle.mjs';
 import {lifeStatus} from './core.mjs';
 import {RESOURCE_DEFINITIONS,resourceBonus} from './resource-definitions.mjs';
 import {applyAcquisitionEffects} from './resource-effects.mjs';
@@ -25,7 +26,9 @@ export function applyKitAcquisition(s,id,{source,attributes,poolClassifications,
  const def=RESOURCE_DEFINITIONS[id];
  for(const required of def?.requires?[].concat(def.requires):[])if(!ownsResource(s,required)&&!(required==='guanlan-fa'&&guanlanOwned(s)))throw Error('尚未取得前置资源：'+required);
  const attrs=Object.fromEntries(Object.entries(s.attributes).map(([name,n])=>[name,n+kitAttribute(s,name)-(s.attributeDamage?.[name]??0)]));
- acquireDefinition(s,id,def,choices,{source,INT:attrs.智力,PER:attrs.感知,STR:attrs.力量,WILL:attrs.意志,definitions:RESOURCE_DEFINITIONS});
+ const context={source,INT:attrs.智力,PER:attrs.感知,STR:attrs.力量,WILL:attrs.意志,definitions:RESOURCE_DEFINITIONS};
+ if(def?.acquisition?.mode==='staged-bundle')acquireStagedBundle(s,id,def,context);
+ else acquireDefinition(s,id,def,choices,context);
  if(!s.kitApplied?.[id])applyAcquisitionEffects(s,def?.acquire);
  (s.kitApplied??={})[id]={source};
 }

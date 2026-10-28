@@ -1,0 +1,4674 @@
+{
+  "status": "pass",
+  "phase": "final",
+  "messages": 33,
+  "revision": 32,
+  "rootSha256": "5f4e189b3829b063abbe117a0f233ca3f87f066fd4e905334709247f24c04e13",
+  "parentUnchanged": true,
+  "historicalPagesUnchanged": true,
+  "worldCopiesUnchanged": 6,
+  "operation": {
+    "signature": "{\"actorId\":\"player\",\"command\":{\"type\":\"rest\",\"rest\":\"long\",\"minutes\":480}}",
+    "summary": {
+      "status": "applied",
+      "kind": "recovery",
+      "operationId": "gm-runtime/901 资源取得隔离验收 20261028 - 2026-10-28@08h03m47s108ms - Branch #1/31/0",
+      "revision": 32,
+      "messageId": 31,
+      "swipeId": 0,
+      "result": {
+        "kind": "recovery",
+        "type": "rest",
+        "rest": "long",
+        "minutes": 480,
+        "changes": [
+          {
+            "will": 0
+          },
+          {
+            "source": "次级能量强化（已记录时间）",
+            "resource": "流风",
+            "restored": 0
+          },
+          {
+            "source": "长休",
+            "resource": "流风",
+            "restored": 0
+          },
+          {
+            "source": "长休",
+            "resource": "精神魔力",
+            "restored": 1
+          }
+        ],
+        "pending": [],
+        "life": {
+          "state": "awake",
+          "deteriorating": false,
+          "woundPenalty": 0
+        }
+      }
+    }
+  },
+  "gate": {
+    "status": "APPLIED",
+    "operationId": "gm-runtime/901 资源取得隔离验收 20261028 - 2026-10-28@08h03m47s108ms - Branch #1/31/0",
+    "kind": "recovery",
+    "diagnostic": {
+      "stage": "state_persistence",
+      "operationId": "gm-runtime/901 资源取得隔离验收 20261028 - 2026-10-28@08h03m47s108ms - Branch #1/31/0",
+      "classificationRequests": 1,
+      "narrationRequests": 1,
+      "elapsedMs": 23147,
+      "generationId": "901-classify-1793193389831-dvotxqrmumo",
+      "explicitRequestBytes": 82376,
+      "finalMessageCount": 2,
+      "finalMessageBytes": 82291,
+      "narrationResponseType": "string",
+      "narrationResponseBytes": 186,
+      "narrationEmpty": false,
+      "narrationContainsVariableMarkup": false
+    }
+  },
+  "response": "八小时的长休按规则结束。御临风完成休整，精神魔力与流风已恢复；黄泉等人保持既有伤势，未接受治疗。独立演练场内未发生其他行动。\n\n<StatusPlaceHolderImpl/>",
+  "settingsCaptureEvents": 3,
+  "classificationRequests": 1,
+  "outerNativePreparedButStoppedEvents": 1,
+  "actualNarrationRequests": 1,
+  "included": [
+    {
+      "world": "W4_20261028_901_01_世界基础设定_20261023",
+      "uid": 33383795,
+      "name": "大陆法则限制",
+      "count": 1,
+      "constant": true
+    },
+    {
+      "world": "W4_20261028_901_01_世界基础设定_20261023",
+      "uid": 180785880,
+      "name": "妄想大陆",
+      "count": 1,
+      "constant": true
+    },
+    {
+      "world": "W4_20261028_901_02_政治与势力_20261023",
+      "uid": 1487215806,
+      "name": "帝国异界来客处境",
+      "count": 1,
+      "constant": false
+    },
+    {
+      "world": "W4_20261028_901_03_人物资料库_20261023",
+      "uid": 68093225,
+      "name": "人物·卡西乌斯·布莱特",
+      "count": 1,
+      "constant": false
+    },
+    {
+      "world": "W4_20261028_901_03_人物资料库_20261023",
+      "uid": 71756156,
+      "name": "人物·姜子尤",
+      "count": 1,
+      "constant": false
+    },
+    {
+      "world": "W4_20261028_901_03_人物资料库_20261023",
+      "uid": 206761833,
+      "name": "人物·谏山黄泉",
+      "count": 1,
+      "constant": false
+    },
+    {
+      "world": "W4_20261028_901_04_能力与战力_20261023",
+      "uid": 1126757738,
+      "name": "资源·全力防御",
+      "count": 1,
+      "constant": false
+    },
+    {
+      "world": "W4_20261028_901_04_能力与战力_20261023",
+      "uid": 1424810427,
+      "name": "901已采用核心裁定规则",
+      "count": 1,
+      "constant": true
+    },
+    {
+      "world": "W4_20261028_901_04_能力与战力_20261023",
+      "uid": 1767138891,
+      "name": "主神遗留语言能力",
+      "count": 1,
+      "constant": false
+    },
+    {
+      "world": "W4_20261028_901_04_能力与战力_20261023",
+      "uid": 1951036339,
+      "name": "资源·魔能爆",
+      "count": 1,
+      "constant": false
+    },
+    {
+      "world": "W4_20261028_901_06_当前剧本与局势_20261023",
+      "uid": 1797877301,
+      "name": "入都同伴的时期基线",
+      "count": 1,
+      "constant": false
+    }
+  ],
+  "disabledIncluded": [],
+  "scans": [
+    {
+      "state": {
+        "current": 1,
+        "next": 0,
+        "loopCount": 1
+      },
+      "budget": {
+        "current": 1995904,
+        "overflowed": false
+      },
+      "matched": [
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 33383795,
+          "name": "大陆法则限制",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 105304581,
+          "name": "帝国",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 180785880,
+          "name": "妄想大陆",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 68093225,
+          "name": "人物·卡西乌斯·布莱特",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 206761833,
+          "name": "人物·谏山黄泉",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 33383795,
+          "name": "大陆法则限制",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 180785880,
+          "name": "妄想大陆",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1424810427,
+          "name": "901已采用核心裁定规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_06_当前剧本与局势_20261023",
+          "uid": 1797877301,
+          "name": "入都同伴的时期基线",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 206761833,
+          "name": "人物·谏山黄泉",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1126757738,
+          "name": "资源·全力防御",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1767138891,
+          "name": "主神遗留语言能力",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_02_政治与势力_20261023",
+          "uid": 1487215806,
+          "name": "帝国异界来客处境",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 14,
+          "name": "[mvu_update]变量更新规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 13,
+          "name": "变量列表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 888,
+          "name": "怪物图鉴索引",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 12,
+          "name": "[mvu_update]变量输出格式",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 5,
+          "name": "扮演准则：GM 主持心态",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 4,
+          "name": "扮演准则：内容分级与NSFW护栏",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 3,
+          "name": "扮演准则：数值与裁定纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 2,
+          "name": "扮演准则：叙述与文风",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1,
+          "name": "扮演准则：世界生成",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 0,
+          "name": "扮演准则：GM职责边界",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1102,
+          "name": "[日常]帝国日常",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1131,
+          "name": "[人物]皇帝",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1132,
+          "name": "[人物]教皇",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1105,
+          "name": "[结构]世界总说",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1106,
+          "name": "[结构]帝国骨架",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1134,
+          "name": "[约束]未定项与留白",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1152,
+          "name": "[约束]防全知",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1104,
+          "name": "[约束]审核与三防",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1139,
+          "name": "[约束]经验准则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1138,
+          "name": "[约束]文风",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1103,
+          "name": "[约束]写作纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1144,
+          "name": "[主线]圣骸蒙尘",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1097,
+          "name": "[规则]断联",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1098,
+          "name": "[规则]魔网与三条路",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1099,
+          "name": "[规则]帝国圣律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1100,
+          "name": "[规则]神系与漂移",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1101,
+          "name": "[规则]教会",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1140,
+          "name": "[规则]契约与司法",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1143,
+          "name": "[规则]神系名录",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1165,
+          "name": "[导航]主线时间表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1096,
+          "name": "[导航]条目速览",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 20,
+          "name": "技能：检定规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 19,
+          "name": "技能：总表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 17,
+          "name": "规则总纲：裁定纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 16,
+          "name": "规则总纲：属性与派生值",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 11,
+          "name": "规则激活器：派生值注入",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 10,
+          "name": "规则激活器：规则层加载",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 8,
+          "name": "阶段指导：队伍与人物",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 7,
+          "name": "阶段指导：检定掷骰",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 6,
+          "name": "阶段指导：主持总纲",
+          "constant": true,
+          "disabled": false
+        }
+      ],
+      "successful": [
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 33383795,
+          "name": "大陆法则限制",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 105304581,
+          "name": "帝国",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 180785880,
+          "name": "妄想大陆",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 68093225,
+          "name": "人物·卡西乌斯·布莱特",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 206761833,
+          "name": "人物·谏山黄泉",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 33383795,
+          "name": "大陆法则限制",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 180785880,
+          "name": "妄想大陆",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1424810427,
+          "name": "901已采用核心裁定规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_06_当前剧本与局势_20261023",
+          "uid": 1797877301,
+          "name": "入都同伴的时期基线",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 206761833,
+          "name": "人物·谏山黄泉",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1126757738,
+          "name": "资源·全力防御",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1767138891,
+          "name": "主神遗留语言能力",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_02_政治与势力_20261023",
+          "uid": 1487215806,
+          "name": "帝国异界来客处境",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 14,
+          "name": "[mvu_update]变量更新规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 13,
+          "name": "变量列表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 888,
+          "name": "怪物图鉴索引",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 12,
+          "name": "[mvu_update]变量输出格式",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 5,
+          "name": "扮演准则：GM 主持心态",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 4,
+          "name": "扮演准则：内容分级与NSFW护栏",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 3,
+          "name": "扮演准则：数值与裁定纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 2,
+          "name": "扮演准则：叙述与文风",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1,
+          "name": "扮演准则：世界生成",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 0,
+          "name": "扮演准则：GM职责边界",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1102,
+          "name": "[日常]帝国日常",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1131,
+          "name": "[人物]皇帝",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1132,
+          "name": "[人物]教皇",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1105,
+          "name": "[结构]世界总说",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1106,
+          "name": "[结构]帝国骨架",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1134,
+          "name": "[约束]未定项与留白",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1152,
+          "name": "[约束]防全知",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1104,
+          "name": "[约束]审核与三防",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1139,
+          "name": "[约束]经验准则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1138,
+          "name": "[约束]文风",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1103,
+          "name": "[约束]写作纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1144,
+          "name": "[主线]圣骸蒙尘",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1097,
+          "name": "[规则]断联",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1098,
+          "name": "[规则]魔网与三条路",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1099,
+          "name": "[规则]帝国圣律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1100,
+          "name": "[规则]神系与漂移",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1101,
+          "name": "[规则]教会",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1140,
+          "name": "[规则]契约与司法",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1143,
+          "name": "[规则]神系名录",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1165,
+          "name": "[导航]主线时间表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1096,
+          "name": "[导航]条目速览",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 20,
+          "name": "技能：检定规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 19,
+          "name": "技能：总表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 17,
+          "name": "规则总纲：裁定纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 16,
+          "name": "规则总纲：属性与派生值",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 11,
+          "name": "规则激活器：派生值注入",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 10,
+          "name": "规则激活器：规则层加载",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 8,
+          "name": "阶段指导：队伍与人物",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 7,
+          "name": "阶段指导：检定掷骰",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 6,
+          "name": "阶段指导：主持总纲",
+          "constant": true,
+          "disabled": false
+        }
+      ],
+      "activated": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ]
+    },
+    {
+      "state": {
+        "current": 1,
+        "next": 0,
+        "loopCount": 1
+      },
+      "budget": {
+        "current": 1995904,
+        "overflowed": false
+      },
+      "matched": [
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 33383795,
+          "name": "大陆法则限制",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 105304581,
+          "name": "帝国",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 180785880,
+          "name": "妄想大陆",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 68093225,
+          "name": "人物·卡西乌斯·布莱特",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 206761833,
+          "name": "人物·谏山黄泉",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 33383795,
+          "name": "大陆法则限制",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 180785880,
+          "name": "妄想大陆",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1424810427,
+          "name": "901已采用核心裁定规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_06_当前剧本与局势_20261023",
+          "uid": 1797877301,
+          "name": "入都同伴的时期基线",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 206761833,
+          "name": "人物·谏山黄泉",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1126757738,
+          "name": "资源·全力防御",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1767138891,
+          "name": "主神遗留语言能力",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1951036339,
+          "name": "资源·魔能爆",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_02_政治与势力_20261023",
+          "uid": 1487215806,
+          "name": "帝国异界来客处境",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 14,
+          "name": "[mvu_update]变量更新规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 13,
+          "name": "变量列表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 888,
+          "name": "怪物图鉴索引",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 12,
+          "name": "[mvu_update]变量输出格式",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 5,
+          "name": "扮演准则：GM 主持心态",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 4,
+          "name": "扮演准则：内容分级与NSFW护栏",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 3,
+          "name": "扮演准则：数值与裁定纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 2,
+          "name": "扮演准则：叙述与文风",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1,
+          "name": "扮演准则：世界生成",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 0,
+          "name": "扮演准则：GM职责边界",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1102,
+          "name": "[日常]帝国日常",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1131,
+          "name": "[人物]皇帝",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1132,
+          "name": "[人物]教皇",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1163,
+          "name": "[人物]可招募同伴·坎波",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1105,
+          "name": "[结构]世界总说",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1106,
+          "name": "[结构]帝国骨架",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1134,
+          "name": "[约束]未定项与留白",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1152,
+          "name": "[约束]防全知",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1104,
+          "name": "[约束]审核与三防",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1139,
+          "name": "[约束]经验准则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1138,
+          "name": "[约束]文风",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1103,
+          "name": "[约束]写作纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1144,
+          "name": "[主线]圣骸蒙尘",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1097,
+          "name": "[规则]断联",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1098,
+          "name": "[规则]魔网与三条路",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1099,
+          "name": "[规则]帝国圣律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1100,
+          "name": "[规则]神系与漂移",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1101,
+          "name": "[规则]教会",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1140,
+          "name": "[规则]契约与司法",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1143,
+          "name": "[规则]神系名录",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1165,
+          "name": "[导航]主线时间表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1096,
+          "name": "[导航]条目速览",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 20,
+          "name": "技能：检定规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 19,
+          "name": "技能：总表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 17,
+          "name": "规则总纲：裁定纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 16,
+          "name": "规则总纲：属性与派生值",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 11,
+          "name": "规则激活器：派生值注入",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 10,
+          "name": "规则激活器：规则层加载",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 8,
+          "name": "阶段指导：队伍与人物",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 7,
+          "name": "阶段指导：检定掷骰",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 6,
+          "name": "阶段指导：主持总纲",
+          "constant": true,
+          "disabled": false
+        }
+      ],
+      "successful": [
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 33383795,
+          "name": "大陆法则限制",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 105304581,
+          "name": "帝国",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 180785880,
+          "name": "妄想大陆",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 68093225,
+          "name": "人物·卡西乌斯·布莱特",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 206761833,
+          "name": "人物·谏山黄泉",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 33383795,
+          "name": "大陆法则限制",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 180785880,
+          "name": "妄想大陆",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1424810427,
+          "name": "901已采用核心裁定规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_06_当前剧本与局势_20261023",
+          "uid": 1797877301,
+          "name": "入都同伴的时期基线",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 206761833,
+          "name": "人物·谏山黄泉",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1126757738,
+          "name": "资源·全力防御",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1767138891,
+          "name": "主神遗留语言能力",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1951036339,
+          "name": "资源·魔能爆",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_02_政治与势力_20261023",
+          "uid": 1487215806,
+          "name": "帝国异界来客处境",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 14,
+          "name": "[mvu_update]变量更新规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 13,
+          "name": "变量列表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 888,
+          "name": "怪物图鉴索引",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 12,
+          "name": "[mvu_update]变量输出格式",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 5,
+          "name": "扮演准则：GM 主持心态",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 4,
+          "name": "扮演准则：内容分级与NSFW护栏",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 3,
+          "name": "扮演准则：数值与裁定纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 2,
+          "name": "扮演准则：叙述与文风",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1,
+          "name": "扮演准则：世界生成",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 0,
+          "name": "扮演准则：GM职责边界",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1102,
+          "name": "[日常]帝国日常",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1131,
+          "name": "[人物]皇帝",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1132,
+          "name": "[人物]教皇",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1163,
+          "name": "[人物]可招募同伴·坎波",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1105,
+          "name": "[结构]世界总说",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1106,
+          "name": "[结构]帝国骨架",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1134,
+          "name": "[约束]未定项与留白",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1152,
+          "name": "[约束]防全知",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1104,
+          "name": "[约束]审核与三防",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1139,
+          "name": "[约束]经验准则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1138,
+          "name": "[约束]文风",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1103,
+          "name": "[约束]写作纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1144,
+          "name": "[主线]圣骸蒙尘",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1097,
+          "name": "[规则]断联",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1098,
+          "name": "[规则]魔网与三条路",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1099,
+          "name": "[规则]帝国圣律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1100,
+          "name": "[规则]神系与漂移",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1101,
+          "name": "[规则]教会",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1140,
+          "name": "[规则]契约与司法",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1143,
+          "name": "[规则]神系名录",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1165,
+          "name": "[导航]主线时间表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1096,
+          "name": "[导航]条目速览",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 20,
+          "name": "技能：检定规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 19,
+          "name": "技能：总表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 17,
+          "name": "规则总纲：裁定纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 16,
+          "name": "规则总纲：属性与派生值",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 11,
+          "name": "规则激活器：派生值注入",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 10,
+          "name": "规则激活器：规则层加载",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 8,
+          "name": "阶段指导：队伍与人物",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 7,
+          "name": "阶段指导：检定掷骰",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 6,
+          "name": "阶段指导：主持总纲",
+          "constant": true,
+          "disabled": false
+        }
+      ],
+      "activated": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ]
+    },
+    {
+      "state": {
+        "current": 1,
+        "next": 0,
+        "loopCount": 1
+      },
+      "budget": {
+        "current": 1995904,
+        "overflowed": false
+      },
+      "matched": [
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 33383795,
+          "name": "大陆法则限制",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 105304581,
+          "name": "帝国",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 180785880,
+          "name": "妄想大陆",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 68093225,
+          "name": "人物·卡西乌斯·布莱特",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 206761833,
+          "name": "人物·谏山黄泉",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 71756156,
+          "name": "人物·姜子尤",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 131696829,
+          "name": "人物·雪老",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 144886838,
+          "name": "人物·沃西斯",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 232318205,
+          "name": "人物·宝石翁",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 2735859,
+          "name": "无法地带",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 81980241,
+          "name": "兄弟会",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 99699950,
+          "name": "帝都",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 101964920,
+          "name": "妄想山脉",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 110035046,
+          "name": "龙族",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 214748319,
+          "name": "飘零大陆",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 33383795,
+          "name": "大陆法则限制",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 180785880,
+          "name": "妄想大陆",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1424810427,
+          "name": "901已采用核心裁定规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_06_当前剧本与局势_20261023",
+          "uid": 1221650812,
+          "name": "破关后的道路与通行基线",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_06_当前剧本与局势_20261023",
+          "uid": 1235379370,
+          "name": "九雪医馆查封与接触基线",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_06_当前剧本与局势_20261023",
+          "uid": 1356416054,
+          "name": "帝都入城接报与公开战报",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_06_当前剧本与局势_20261023",
+          "uid": 1797877301,
+          "name": "入都同伴的时期基线",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 68093225,
+          "name": "人物·卡西乌斯·布莱特",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 71756156,
+          "name": "人物·姜子尤",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 131696829,
+          "name": "人物·雪老",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 144886838,
+          "name": "人物·沃西斯",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 206761833,
+          "name": "人物·谏山黄泉",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 232318205,
+          "name": "人物·宝石翁",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 1578015503,
+          "name": "人物·黄祸龙狼",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1028632246,
+          "name": "资源·安定心神",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1056079143,
+          "name": "资源·防死结界",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1056438337,
+          "name": "资源·龙翔术",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1113678500,
+          "name": "资源·奥术冲击",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1121454852,
+          "name": "资源·失效",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1126757738,
+          "name": "资源·全力防御",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1141484557,
+          "name": "资源·幻雾术",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1221564441,
+          "name": "资源·龙息术",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1269516345,
+          "name": "资源·镜像",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1281073627,
+          "name": "资源·猎人印记",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1284873671,
+          "name": "资源·防护",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1325907256,
+          "name": "资源·腐蚀之种",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1416694245,
+          "name": "资源·时间魔术",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1423419322,
+          "name": "资源·预置幻影",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1460047935,
+          "name": "资源·焚化",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1487089965,
+          "name": "资源·冰锥术",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1494321393,
+          "name": "资源·岛田双雄",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1585010854,
+          "name": "资源·虚假幻象",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1587195082,
+          "name": "帝都挑战与个人XP参照",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1681292036,
+          "name": "资源·飞行术",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1684759941,
+          "name": "资源·寒冰护体",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1700803028,
+          "name": "资源·印记斩",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1767138891,
+          "name": "主神遗留语言能力",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1817985286,
+          "name": "资源·镜枪水箭",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1873080325,
+          "name": "资源·元素诅咒",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1909388351,
+          "name": "药物、治疗魔法与休息恢复",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1911159913,
+          "name": "资源·苍穹弓",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1931246376,
+          "name": "资源·痛苦诅咒",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1951036339,
+          "name": "资源·魔能爆",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_02_政治与势力_20261023",
+          "uid": 81980241,
+          "name": "兄弟会",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_02_政治与势力_20261023",
+          "uid": 105304581,
+          "name": "帝国",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_02_政治与势力_20261023",
+          "uid": 1487215806,
+          "name": "帝国异界来客处境",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 2735859,
+          "name": "无法地带",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 99699950,
+          "name": "帝都",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 101964920,
+          "name": "妄想山脉",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 110035046,
+          "name": "龙族",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 214748319,
+          "name": "飘零大陆",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 1335811149,
+          "name": "帝国人口与聚落规模",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 14,
+          "name": "[mvu_update]变量更新规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 13,
+          "name": "变量列表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 888,
+          "name": "怪物图鉴索引",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 12,
+          "name": "[mvu_update]变量输出格式",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 5,
+          "name": "扮演准则：GM 主持心态",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 4,
+          "name": "扮演准则：内容分级与NSFW护栏",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 3,
+          "name": "扮演准则：数值与裁定纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 2,
+          "name": "扮演准则：叙述与文风",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1,
+          "name": "扮演准则：世界生成",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 0,
+          "name": "扮演准则：GM职责边界",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1151,
+          "name": "[日常]额外挑战",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1137,
+          "name": "[日常]罗韦雷托的活",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1135,
+          "name": "[日常]任务与悬赏",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1102,
+          "name": "[日常]帝国日常",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1124,
+          "name": "[人物]蛮人",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1131,
+          "name": "[人物]皇帝",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1132,
+          "name": "[人物]教皇",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1147,
+          "name": "[人物]宗-库山教长",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1150,
+          "name": "[人物]可招募同伴",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1163,
+          "name": "[人物]可招募同伴·坎波",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1164,
+          "name": "[人物]可招募同伴·缇尔",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1118,
+          "name": "[时间]纪年与断联",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1119,
+          "name": "[时间]不可考之世",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1120,
+          "name": "[时间]帝国纪年六期",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1141,
+          "name": "[地理]罗韦雷托周边",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1111,
+          "name": "[地理]北陆外围",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1113,
+          "name": "[地理]索兰托王国",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1105,
+          "name": "[结构]世界总说",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1106,
+          "name": "[结构]帝国骨架",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1134,
+          "name": "[约束]未定项与留白",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1152,
+          "name": "[约束]防全知",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1104,
+          "name": "[约束]审核与三防",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1139,
+          "name": "[约束]经验准则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1138,
+          "name": "[约束]文风",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1103,
+          "name": "[约束]写作纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1149,
+          "name": "[规则]角色生成器",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1144,
+          "name": "[主线]圣骸蒙尘",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1097,
+          "name": "[规则]断联",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1098,
+          "name": "[规则]魔网与三条路",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1099,
+          "name": "[规则]帝国圣律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1100,
+          "name": "[规则]神系与漂移",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1101,
+          "name": "[规则]教会",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1140,
+          "name": "[规则]契约与司法",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1143,
+          "name": "[规则]神系名录",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1165,
+          "name": "[导航]主线时间表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1096,
+          "name": "[导航]条目速览",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 20,
+          "name": "技能：检定规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 19,
+          "name": "技能：总表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 17,
+          "name": "规则总纲：裁定纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 16,
+          "name": "规则总纲：属性与派生值",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 11,
+          "name": "规则激活器：派生值注入",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 10,
+          "name": "规则激活器：规则层加载",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 8,
+          "name": "阶段指导：队伍与人物",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 7,
+          "name": "阶段指导：检定掷骰",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 6,
+          "name": "阶段指导：主持总纲",
+          "constant": true,
+          "disabled": false
+        }
+      ],
+      "successful": [
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 33383795,
+          "name": "大陆法则限制",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 105304581,
+          "name": "帝国",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 180785880,
+          "name": "妄想大陆",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 68093225,
+          "name": "人物·卡西乌斯·布莱特",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 206761833,
+          "name": "人物·谏山黄泉",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 71756156,
+          "name": "人物·姜子尤",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 131696829,
+          "name": "人物·雪老",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 144886838,
+          "name": "人物·沃西斯",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 232318205,
+          "name": "人物·宝石翁",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 2735859,
+          "name": "无法地带",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 81980241,
+          "name": "兄弟会",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 99699950,
+          "name": "帝都",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 101964920,
+          "name": "妄想山脉",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 110035046,
+          "name": "龙族",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 214748319,
+          "name": "飘零大陆",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 33383795,
+          "name": "大陆法则限制",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 180785880,
+          "name": "妄想大陆",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1424810427,
+          "name": "901已采用核心裁定规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_06_当前剧本与局势_20261023",
+          "uid": 1221650812,
+          "name": "破关后的道路与通行基线",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_06_当前剧本与局势_20261023",
+          "uid": 1235379370,
+          "name": "九雪医馆查封与接触基线",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_06_当前剧本与局势_20261023",
+          "uid": 1356416054,
+          "name": "帝都入城接报与公开战报",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_06_当前剧本与局势_20261023",
+          "uid": 1797877301,
+          "name": "入都同伴的时期基线",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 68093225,
+          "name": "人物·卡西乌斯·布莱特",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 71756156,
+          "name": "人物·姜子尤",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 131696829,
+          "name": "人物·雪老",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 144886838,
+          "name": "人物·沃西斯",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 206761833,
+          "name": "人物·谏山黄泉",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 232318205,
+          "name": "人物·宝石翁",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 1578015503,
+          "name": "人物·黄祸龙狼",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1028632246,
+          "name": "资源·安定心神",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1056079143,
+          "name": "资源·防死结界",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1056438337,
+          "name": "资源·龙翔术",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1113678500,
+          "name": "资源·奥术冲击",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1121454852,
+          "name": "资源·失效",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1126757738,
+          "name": "资源·全力防御",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1141484557,
+          "name": "资源·幻雾术",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1221564441,
+          "name": "资源·龙息术",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1269516345,
+          "name": "资源·镜像",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1281073627,
+          "name": "资源·猎人印记",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1284873671,
+          "name": "资源·防护",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1325907256,
+          "name": "资源·腐蚀之种",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1416694245,
+          "name": "资源·时间魔术",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1423419322,
+          "name": "资源·预置幻影",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1460047935,
+          "name": "资源·焚化",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1487089965,
+          "name": "资源·冰锥术",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1494321393,
+          "name": "资源·岛田双雄",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1585010854,
+          "name": "资源·虚假幻象",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1587195082,
+          "name": "帝都挑战与个人XP参照",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1681292036,
+          "name": "资源·飞行术",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1684759941,
+          "name": "资源·寒冰护体",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1700803028,
+          "name": "资源·印记斩",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1767138891,
+          "name": "主神遗留语言能力",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1817985286,
+          "name": "资源·镜枪水箭",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1873080325,
+          "name": "资源·元素诅咒",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1909388351,
+          "name": "药物、治疗魔法与休息恢复",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1911159913,
+          "name": "资源·苍穹弓",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1931246376,
+          "name": "资源·痛苦诅咒",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1951036339,
+          "name": "资源·魔能爆",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_02_政治与势力_20261023",
+          "uid": 81980241,
+          "name": "兄弟会",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_02_政治与势力_20261023",
+          "uid": 105304581,
+          "name": "帝国",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_02_政治与势力_20261023",
+          "uid": 1487215806,
+          "name": "帝国异界来客处境",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 2735859,
+          "name": "无法地带",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 99699950,
+          "name": "帝都",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 101964920,
+          "name": "妄想山脉",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 110035046,
+          "name": "龙族",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 214748319,
+          "name": "飘零大陆",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 1335811149,
+          "name": "帝国人口与聚落规模",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 14,
+          "name": "[mvu_update]变量更新规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 13,
+          "name": "变量列表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 888,
+          "name": "怪物图鉴索引",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 12,
+          "name": "[mvu_update]变量输出格式",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 5,
+          "name": "扮演准则：GM 主持心态",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 4,
+          "name": "扮演准则：内容分级与NSFW护栏",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 3,
+          "name": "扮演准则：数值与裁定纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 2,
+          "name": "扮演准则：叙述与文风",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1,
+          "name": "扮演准则：世界生成",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 0,
+          "name": "扮演准则：GM职责边界",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1151,
+          "name": "[日常]额外挑战",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1137,
+          "name": "[日常]罗韦雷托的活",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1135,
+          "name": "[日常]任务与悬赏",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1102,
+          "name": "[日常]帝国日常",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1124,
+          "name": "[人物]蛮人",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1131,
+          "name": "[人物]皇帝",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1132,
+          "name": "[人物]教皇",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1147,
+          "name": "[人物]宗-库山教长",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1150,
+          "name": "[人物]可招募同伴",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1163,
+          "name": "[人物]可招募同伴·坎波",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1164,
+          "name": "[人物]可招募同伴·缇尔",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1118,
+          "name": "[时间]纪年与断联",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1119,
+          "name": "[时间]不可考之世",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1120,
+          "name": "[时间]帝国纪年六期",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1141,
+          "name": "[地理]罗韦雷托周边",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1111,
+          "name": "[地理]北陆外围",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1113,
+          "name": "[地理]索兰托王国",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1105,
+          "name": "[结构]世界总说",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1106,
+          "name": "[结构]帝国骨架",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1134,
+          "name": "[约束]未定项与留白",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1152,
+          "name": "[约束]防全知",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1104,
+          "name": "[约束]审核与三防",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1139,
+          "name": "[约束]经验准则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1138,
+          "name": "[约束]文风",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1103,
+          "name": "[约束]写作纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1149,
+          "name": "[规则]角色生成器",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1144,
+          "name": "[主线]圣骸蒙尘",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1097,
+          "name": "[规则]断联",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1098,
+          "name": "[规则]魔网与三条路",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1099,
+          "name": "[规则]帝国圣律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1100,
+          "name": "[规则]神系与漂移",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1101,
+          "name": "[规则]教会",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1140,
+          "name": "[规则]契约与司法",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1143,
+          "name": "[规则]神系名录",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1165,
+          "name": "[导航]主线时间表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1096,
+          "name": "[导航]条目速览",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 20,
+          "name": "技能：检定规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 19,
+          "name": "技能：总表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 17,
+          "name": "规则总纲：裁定纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 16,
+          "name": "规则总纲：属性与派生值",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 11,
+          "name": "规则激活器：派生值注入",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 10,
+          "name": "规则激活器：规则层加载",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 8,
+          "name": "阶段指导：队伍与人物",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 7,
+          "name": "阶段指导：检定掷骰",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 6,
+          "name": "阶段指导：主持总纲",
+          "constant": true,
+          "disabled": false
+        }
+      ],
+      "activated": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ]
+    },
+    {
+      "state": {
+        "current": 1,
+        "next": 0,
+        "loopCount": 1
+      },
+      "budget": {
+        "current": 1995904,
+        "overflowed": false
+      },
+      "matched": [
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 33383795,
+          "name": "大陆法则限制",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 180785880,
+          "name": "妄想大陆",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1424810427,
+          "name": "901已采用核心裁定规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_06_当前剧本与局势_20261023",
+          "uid": 1797877301,
+          "name": "入都同伴的时期基线",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 68093225,
+          "name": "人物·卡西乌斯·布莱特",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 71756156,
+          "name": "人物·姜子尤",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 206761833,
+          "name": "人物·谏山黄泉",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1126757738,
+          "name": "资源·全力防御",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1767138891,
+          "name": "主神遗留语言能力",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1951036339,
+          "name": "资源·魔能爆",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_02_政治与势力_20261023",
+          "uid": 1487215806,
+          "name": "帝国异界来客处境",
+          "constant": false,
+          "disabled": false
+        }
+      ],
+      "successful": [
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 33383795,
+          "name": "大陆法则限制",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 180785880,
+          "name": "妄想大陆",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1424810427,
+          "name": "901已采用核心裁定规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_06_当前剧本与局势_20261023",
+          "uid": 1797877301,
+          "name": "入都同伴的时期基线",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 68093225,
+          "name": "人物·卡西乌斯·布莱特",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 71756156,
+          "name": "人物·姜子尤",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 206761833,
+          "name": "人物·谏山黄泉",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1126757738,
+          "name": "资源·全力防御",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1767138891,
+          "name": "主神遗留语言能力",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1951036339,
+          "name": "资源·魔能爆",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_02_政治与势力_20261023",
+          "uid": 1487215806,
+          "name": "帝国异界来客处境",
+          "constant": false,
+          "disabled": false
+        }
+      ],
+      "activated": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ]
+    },
+    {
+      "state": {
+        "current": 1,
+        "next": 0,
+        "loopCount": 1
+      },
+      "budget": {
+        "current": 1995904,
+        "overflowed": false
+      },
+      "matched": [
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 33383795,
+          "name": "大陆法则限制",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 105304581,
+          "name": "帝国",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 180785880,
+          "name": "妄想大陆",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 68093225,
+          "name": "人物·卡西乌斯·布莱特",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 206761833,
+          "name": "人物·谏山黄泉",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 33383795,
+          "name": "大陆法则限制",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 180785880,
+          "name": "妄想大陆",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1424810427,
+          "name": "901已采用核心裁定规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_06_当前剧本与局势_20261023",
+          "uid": 1797877301,
+          "name": "入都同伴的时期基线",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 206761833,
+          "name": "人物·谏山黄泉",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1767138891,
+          "name": "主神遗留语言能力",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1951036339,
+          "name": "资源·魔能爆",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_02_政治与势力_20261023",
+          "uid": 1487215806,
+          "name": "帝国异界来客处境",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 14,
+          "name": "[mvu_update]变量更新规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 13,
+          "name": "变量列表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 888,
+          "name": "怪物图鉴索引",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 12,
+          "name": "[mvu_update]变量输出格式",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 5,
+          "name": "扮演准则：GM 主持心态",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 4,
+          "name": "扮演准则：内容分级与NSFW护栏",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 3,
+          "name": "扮演准则：数值与裁定纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 2,
+          "name": "扮演准则：叙述与文风",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1,
+          "name": "扮演准则：世界生成",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 0,
+          "name": "扮演准则：GM职责边界",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1102,
+          "name": "[日常]帝国日常",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1131,
+          "name": "[人物]皇帝",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1132,
+          "name": "[人物]教皇",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1163,
+          "name": "[人物]可招募同伴·坎波",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1105,
+          "name": "[结构]世界总说",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1106,
+          "name": "[结构]帝国骨架",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1134,
+          "name": "[约束]未定项与留白",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1152,
+          "name": "[约束]防全知",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1104,
+          "name": "[约束]审核与三防",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1139,
+          "name": "[约束]经验准则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1138,
+          "name": "[约束]文风",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1103,
+          "name": "[约束]写作纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1144,
+          "name": "[主线]圣骸蒙尘",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1097,
+          "name": "[规则]断联",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1098,
+          "name": "[规则]魔网与三条路",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1099,
+          "name": "[规则]帝国圣律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1100,
+          "name": "[规则]神系与漂移",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1101,
+          "name": "[规则]教会",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1140,
+          "name": "[规则]契约与司法",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1143,
+          "name": "[规则]神系名录",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1165,
+          "name": "[导航]主线时间表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1096,
+          "name": "[导航]条目速览",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 20,
+          "name": "技能：检定规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 19,
+          "name": "技能：总表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 17,
+          "name": "规则总纲：裁定纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 16,
+          "name": "规则总纲：属性与派生值",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 11,
+          "name": "规则激活器：派生值注入",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 10,
+          "name": "规则激活器：规则层加载",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 8,
+          "name": "阶段指导：队伍与人物",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 7,
+          "name": "阶段指导：检定掷骰",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 6,
+          "name": "阶段指导：主持总纲",
+          "constant": true,
+          "disabled": false
+        }
+      ],
+      "successful": [
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 33383795,
+          "name": "大陆法则限制",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 105304581,
+          "name": "帝国",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 180785880,
+          "name": "妄想大陆",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 68093225,
+          "name": "人物·卡西乌斯·布莱特",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "901_帝都重玩_T0_v1",
+          "uid": 206761833,
+          "name": "人物·谏山黄泉",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 33383795,
+          "name": "大陆法则限制",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_01_世界基础设定_20261023",
+          "uid": 180785880,
+          "name": "妄想大陆",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1424810427,
+          "name": "901已采用核心裁定规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_06_当前剧本与局势_20261023",
+          "uid": 1797877301,
+          "name": "入都同伴的时期基线",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_03_人物资料库_20261023",
+          "uid": 206761833,
+          "name": "人物·谏山黄泉",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1767138891,
+          "name": "主神遗留语言能力",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_04_能力与战力_20261023",
+          "uid": 1951036339,
+          "name": "资源·魔能爆",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "W4_20261028_901_02_政治与势力_20261023",
+          "uid": 1487215806,
+          "name": "帝国异界来客处境",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 14,
+          "name": "[mvu_update]变量更新规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 13,
+          "name": "变量列表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 888,
+          "name": "怪物图鉴索引",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 12,
+          "name": "[mvu_update]变量输出格式",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 5,
+          "name": "扮演准则：GM 主持心态",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 4,
+          "name": "扮演准则：内容分级与NSFW护栏",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 3,
+          "name": "扮演准则：数值与裁定纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 2,
+          "name": "扮演准则：叙述与文风",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1,
+          "name": "扮演准则：世界生成",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 0,
+          "name": "扮演准则：GM职责边界",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1102,
+          "name": "[日常]帝国日常",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1131,
+          "name": "[人物]皇帝",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1132,
+          "name": "[人物]教皇",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1163,
+          "name": "[人物]可招募同伴·坎波",
+          "constant": false,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1105,
+          "name": "[结构]世界总说",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1106,
+          "name": "[结构]帝国骨架",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1134,
+          "name": "[约束]未定项与留白",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1152,
+          "name": "[约束]防全知",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1104,
+          "name": "[约束]审核与三防",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1139,
+          "name": "[约束]经验准则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1138,
+          "name": "[约束]文风",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1103,
+          "name": "[约束]写作纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1144,
+          "name": "[主线]圣骸蒙尘",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1097,
+          "name": "[规则]断联",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1098,
+          "name": "[规则]魔网与三条路",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1099,
+          "name": "[规则]帝国圣律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1100,
+          "name": "[规则]神系与漂移",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1101,
+          "name": "[规则]教会",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1140,
+          "name": "[规则]契约与司法",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1143,
+          "name": "[规则]神系名录",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1165,
+          "name": "[导航]主线时间表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 1096,
+          "name": "[导航]条目速览",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 20,
+          "name": "技能：检定规则",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 19,
+          "name": "技能：总表",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 17,
+          "name": "规则总纲：裁定纪律",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 16,
+          "name": "规则总纲：属性与派生值",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 11,
+          "name": "规则激活器：派生值注入",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 10,
+          "name": "规则激活器：规则层加载",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 8,
+          "name": "阶段指导：队伍与人物",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 7,
+          "name": "阶段指导：检定掷骰",
+          "constant": true,
+          "disabled": false
+        },
+        {
+          "world": "开拓者-失落之地V1.1-世界书",
+          "uid": 6,
+          "name": "阶段指导：主持总纲",
+          "constant": true,
+          "disabled": false
+        }
+      ],
+      "activated": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ]
+    }
+  ],
+  "model": "gemini-3.5-flash-lite",
+  "guidanceSha256": "90b5d7672e2fbb034b08ffa581a956efcbee8eadb506a4389897c5dce8cf4077",
+  "moduleHashesMatched": 112,
+  "protectedFilesUnchanged": 160
+}

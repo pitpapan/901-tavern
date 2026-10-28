@@ -1,0 +1,156 @@
+--- work/rules_engine/mvu_poc/adapter.mjs before
++++ work/rules_engine/mvu_poc/adapter.mjs after
+@@ -667,6 +667,56 @@
+   } finally { inFlight.delete(key); }
+ }
+ 
++// ST saveChat may resolve after an HTTP failure. A saved receipt therefore
++// requires a read-back of this operation's page, never just its MVU memory.
++export async function persistTavernRuleState({mvu,tavern,getAnchor,readSavedChat}) {
++  const context=tavern.getContext?.()??tavern;
++  readSavedChat??=context.readSavedChat;
++  getAnchor??=()=>tavernAnchor(context.chat.length-1,context);
++  const anchor=anchorOf(getAnchor),expected=read(mvu,anchor),expectedRoot=rootOf(expected,anchor.chatId);
++  const text=context.chat[anchor.messageId]?.mes;
++  const failure=()=>Object.assign(Error('规则状态仍在当前页面内存中，但聊天持久保存未确认；请保持页面并重试同一操作。'),{code:'CHAT_PERSISTENCE_UNCONFIRMED'});
++  await context.saveChat();
++  let saved;
++  try {
++    if(readSavedChat)saved=await readSavedChat(anchor.chatId);
++    else {
++      const avatar=context.characters?.[context.characterId]?.avatar;
++      if(!avatar||context.groupId||typeof context.getRequestHeaders!=='function')throw failure();
++      const response=await fetch('/api/chats/get',{method:'POST',cache:'no-store',headers:context.getRequestHeaders(),
++        body:JSON.stringify({avatar_url:avatar,file_name:anchor.chatId})});
++      if(!response.ok)throw failure();
++      saved=await response.json();
++    }
++  } catch {throw failure();}
++  ensureAnchor(getAnchor,anchor);
++  const message=saved?.[anchor.messageId+1],page=message?.variables?.[anchor.swipeId];
++  if(!message||message.mes!==text||(message.swipe_id??0)!==anchor.swipeId||
++      !same(page?.stat_data?.[NAMESPACE],expectedRoot)||page?.snapshot!==expected.snapshot)throw failure();
++  return {status:'saved',revision:expectedRoot.revision,messageId:anchor.messageId,swipeId:anchor.swipeId};
++}
++
++// Explicit host checkpoint: MVU owns retention; no rule revision or history
++// database is created. Retrying an unsaved flag still verifies persistence.
++export async function retainRuleSnapshot({mvu,tavern,readSavedChat}) {
++  const context=tavern.getContext?.()??tavern,getAnchor=()=>tavernAnchor(context.chat.length-1,context);
++  const anchor=anchorOf(getAnchor),key=operationKey(anchor);
++  if(inFlight.has(key))throw Error('MVU operation already in progress');
++  inFlight.add(key);
++  try {
++    const initial=read(mvu,anchor),root=rootOf(initial,anchor.chatId),alreadyRetained=initial.snapshot===true;
++    if(!alreadyRetained){
++      const next=clone(initial);next.snapshot=true;
++      ensureAnchor(getAnchor,anchor);
++      await mvu.replaceMvuData(next,{type:'message',message_id:anchor.messageId});
++      ensureAnchor(getAnchor,anchor);
++      if(!same(read(mvu,anchor),next))throw Error('MVU checkpoint was not confirmed by readback');
++    }
++    await persistTavernRuleState({mvu,tavern:context,getAnchor,readSavedChat});
++    return {status:'checkpoint_saved',revision:root.revision,messageId:anchor.messageId,swipeId:anchor.swipeId,alreadyRetained};
++  } finally {inFlight.delete(key);}
++}
++
+ // Explicitly accept ST's native branch copy at its selected tip. Old copied
+ // floors retain their parent identity; actor values and prior operations are
+ // inherited verbatim. Ordinary settlement still rejects cross-chat roots.
+--- work/rules_engine/combat/tavern.mjs before
++++ work/rules_engine/combat/tavern.mjs after
+@@ -1,7 +1,7 @@
+ import { createDuel } from './catalog.mjs';
+ import { createCombatRuntime, chooseAction, inspectCommands, decisionContext } from './runtime.mjs';
+ import { renderResult } from './engine.mjs';
+-import { carryTestState, tavernAnchor } from '../mvu_poc/adapter.mjs';
++import { carryTestState, tavernAnchor, persistTavernRuleState } from '../mvu_poc/adapter.mjs';
+ import { IllegalAction } from './mechanics.mjs';
+ 
+ // Bound once to this isolated card/chat by its role script. No global settings,
+@@ -24,7 +24,7 @@
+       getSourceAnchor:()=>sourceAnchor,getAnchor:()=>tavernAnchor(targetId,tavern)});
+     }
+     // Persist before requesting narration, including when no mechanical floor is posted.
+-    await tavern.saveChat?.();
++    await persistTavernRuleState({mvu,tavern});
+     onProgress({status:'saved',revision:value.revision,result:value.result});
+   }
+   async function step() {
+--- work/rules_engine/gm_runtime/integrated.mjs before
++++ work/rules_engine/gm_runtime/integrated.mjs after
+@@ -4,7 +4,7 @@
+ import {createRoster,createEncounter} from '../combat/catalog.mjs';
+ import {createTavernCombat} from '../combat/tavern.mjs';
+ import {createCombatHost} from '../combat/host.mjs';
+-import {initializeTestState,carryTestState,tavernAnchor} from '../mvu_poc/adapter.mjs';
++import {initializeTestState,carryTestState,tavernAnchor,retainRuleSnapshot} from '../mvu_poc/adapter.mjs';
+ import {lifeStatus} from '../core.mjs';
+ 
+ export const INTEGRATION_SCENE='完整人物卡隔离演练，不计入帝都T0或实际重玩事件。开场时四人在空旷场地，黄泉与姜子尤相距1米，御临风、布莱特在场边；后续以当前场景和存档为准。仅在明确开始时进行已登记演练，目标是对练至一方失去行动能力；不撤离场地，不对失去行动能力者补刀。旁边有供练习平衡的矮横木；敏捷＋运动DC1，一次失手只须落地重新站稳，不造成伤害。这个难度仅为本测试场景设定。';
+@@ -230,6 +230,7 @@
+     enterForPlayer,
+     registerEncounter,
+     registerRuleScene,
++    retainSnapshot:()=>retainRuleSnapshot({mvu,tavern}),
+     async resumeEntry(player) {
+       const entry=tavern.chat[player.messageId]?.extra?.['901_combat_entry'];
+       if(!entry||entry.playerText!==player.text||entry.swipeId!==player.swipeId)return null;
+--- work/rules_engine/gm_runtime/opening-scene-ui.mjs before
++++ work/rules_engine/gm_runtime/opening-scene-ui.mjs after
+@@ -10,7 +10,10 @@
+     const status=document.createElement('p'),save=document.createElement('button');save.textContent='确认实际现场并保存';
+     save.onclick=async()=>{try {const config=JSON.parse(input.value),result=await (config.kind==='ruleScene'?getSession().registerRuleScene(config):getSession().registerEncounter(config));status.textContent=`已保存：revision ${result.revision}。后续明确行动将使用这份场景资料。`;}catch(e){status.textContent=e.message;}};
+     const close=document.createElement('button');close.textContent='关闭';close.onclick=()=>{dialog.close();dialog.remove();};
+-    dialog.append(intro,input,save,close,status);document.body.append(dialog);dialog.showModal();
++    const checkpointInfo=document.createElement('p');checkpointInfo.textContent='规则检查点：确认场景、关键分支前或战斗结束后，可保留当前页。每张需要回滚的备用页须分别保留；普通历史楼仍受MVU清理窗口限制，已清理的旧页不会恢复。';
++    const checkpoint=document.createElement('button');checkpoint.textContent='保留当前页规则检查点';
++    checkpoint.onclick=async()=>{checkpoint.disabled=true;try{const r=await getSession().retainSnapshot();status.textContent=`检查点已保存：楼${r.messageId}／页${r.swipeId}，修订${r.revision}；规则状态未改变。`;}catch(e){status.textContent=e.message;}finally{checkpoint.disabled=false;}};
++    dialog.append(intro,input,save,checkpointInfo,checkpoint,close,status);document.body.append(dialog);dialog.showModal();
+   };
+   const win=document.defaultView;win.addEventListener('901-opening-host-register',open);
+   if(tavern?.SlashCommandParser&&tavern?.SlashCommand)tavern.SlashCommandParser.addCommandObject(tavern.SlashCommand.fromProps({name:'901-scene',callback:async()=>{open();return '';},helpString:'主持登记当前已确认遭遇（后台设置）。'}));
+--- work/rules_engine/gm_runtime/replay-gate-script.example.js before
++++ work/rules_engine/gm_runtime/replay-gate-script.example.js after
+@@ -9,7 +9,7 @@
+   relevantLorebookFacts, replayLorebookNames, withReplayLorebook,
+   replayPendingFromChat } = await import('/901-resource-acceptance-20261028/work/rules_engine/gm_runtime/adjudication-gate.mjs');
+ const { createReplayCheckRuntime } = await import('/901-resource-acceptance-20261028/work/rules_engine/gm_runtime/replay-check.mjs');
+-const { carryTestState, readTestOperation } = await import('/901-resource-acceptance-20261028/work/rules_engine/mvu_poc/adapter.mjs');
++const { carryTestState, readTestOperation, persistTavernRuleState } = await import('/901-resource-acceptance-20261028/work/rules_engine/mvu_poc/adapter.mjs');
+ let running = false;
+ // TavernHelper executes scripts in a zero-size iframe. Player UI belongs to
+ // the host document, as in the existing isolated diagnostic panel.
+@@ -391,6 +391,10 @@
+         return runtime.settle({ operationId, request, choiceId });
+       },
+       narrate: async (context, settled, decision) => {
++        if(settled){
++          mark('state_persistence');
++          await persistTavernRuleState({mvu,tavern:SillyTavern,getAnchor,readSavedChat:profile.readSavedChat});
++        }
+         if (decision.status === 'NO_CHECK') {
+           // Persist the validated decision on the player floor BEFORE generation:
+           // native regeneration may remove the failure notice, and refresh can
+@@ -454,7 +458,9 @@
+             },
+           } }], { refresh: 'none' });
+         }
+-        await SillyTavern.saveChat();
++        if(meta.status==='APPLIED'||meta.status==='NO_CHECK')
++          await persistTavernRuleState({mvu,tavern:SillyTavern,readSavedChat:profile.readSavedChat});
++        else await SillyTavern.saveChat();
+       } });
+     mark('complete');
+     console.log('[901-REPLAY-GATE]', result.status, result.operationId);
+@@ -475,7 +481,9 @@
+       operationId }); }
+     catch { /* no state on this branch */ }
+     const narrationPending = !!saved || !!pending?.narrationDecision;
+-    const message = saved
++    const message = error?.code==='CHAT_PERSISTENCE_UNCONFIRMED'
++      ? '规则状态仍在当前页面内存中，但聊天持久保存未确认；请保持页面并恢复本次操作，不要重复付费或重新投骰。'
++      : saved
+       ? '规则结果已保存，叙述尚未完成；请恢复本次操作，不要重新投骰。'
+       : pending?.narrationDecision ? '行动已判定无需检定，叙述尚未完成；重新生成本条回复即可恢复，无需重复发送行动。'
+       : error?.code === 'INVALID_CHECK_ATTRIBUTE' ? '主持模型生成的检定属性不合法，本次尚未掷骰或结算，需要纠正判定输入。'

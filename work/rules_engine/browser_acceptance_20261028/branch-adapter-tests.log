@@ -1,0 +1,27 @@
+✔ persistence acknowledgement reads disk after a host save that swallows failure (2.9959ms)
+✔ explicit native branch adoption preserves copied history and ledger, binds only the child tip, and retries once (2.9867ms)
+✔ recovery commits inventory, effects and carry once; retry never reruns reducer (1.6027ms)
+✔ carry initialized state without an operation across empty host floors (1.7766ms)
+✔ an empty swipe inherits MVU metadata so cleanup does not replay an older floor over its saved state (1.0623ms)
+✔ initialization and attack use core output, preserve unrelated data, and deduplicate (5.8227ms)
+✔ reject missing state, version conflict, and failed save without reporting success (4.2131ms)
+✔ a copied next floor inherits state, while different swipe keeps its own copy in the mock (1.6198ms)
+✔ a Builder state can be initialized and a check is saved once without changing the actor (4.8365ms)
+✔ committed genetic unlock increments trusted history once and recovery does not reroll (2.1691ms)
+✔ genetic unlock defaults public, rejects secret, and failure preserves history (0.7272ms)
+✔ scripted secret opportunities need explicit rules and cannot reroll across operation IDs (1.374ms)
+✔ non-demo environment and roleplay awards stay automatic even if marked player-activated (3.6728ms)
+✔ active marker alone cannot authorize a panel choice or settlement (0.7964ms)
+✔ test-only active sample waits for a decision and modifies DP before fortune selection (2.5739ms)
+✔ MVU ordinary check persists finalized fortune path and mishap without applying harm (2.7961ms)
+✔ a trusted environmental penalty is reduced by the resource and the resulting saved check replays once (1.7372ms)
+✔ scene resource quota and deferred initiative survive actual MVU carry without being replayed (1.7677ms)
+✔ temporary-pool exhaustion is saved with the damage receipt and retry does not emit it again (2.8513ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 341.6871

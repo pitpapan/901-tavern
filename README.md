@@ -1,6 +1,10 @@
 # 901 · 飘零大陆
 
-2026-10-24：[云端迁移 requirements 与启动步骤](docs/cloud-migration-20261024.md)；[双版本资源开发存档（尚未完成发布）](work/replay_research/six_books_20261023/checkpoint-20261024.md)。
+2026-10-28：[资源线固化交付](output/replay_tavern/resource_delivery_20261028/README.md)记录配对源码、冻结验收包与校验值；两库使用同名本地标签 `resource-acceptance-20261028`。正式安装、远端发布和世界书完整候选交付仍分别处理。
+
+2026-10-28：[战役库统一开发计划与执行顺序](docs/unified-development-plan.md)是当前进度入口。两条开发线已本地合并，尚未发布／安装；[云端迁移说明](docs/cloud-migration-20261024.md)和[历史开发检查点](work/replay_research/six_books_20261023/checkpoint-20261024.md)保留各自适用日期。
+
+后续按[世界书／资源引擎两线并行](docs/unified-development-plan.md#两条并行工作线2026-10-28)推进；世界书可在另一处独立继续，计划内附文件分工和可直接使用的交接说明。这里的两线是工作职责划分，均沿用合并后的当前内容。
 
 这里保存一个长期TRPG世界的世界书、地区与社会模型、人物资料、原团证据，以及帝都重玩的运行候选。世界中有多族帝国、魔法与武技、跨越漫长寿命的传承，以及仍然危险的山脉和遗迹。
 

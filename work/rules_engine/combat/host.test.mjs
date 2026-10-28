@@ -11,9 +11,25 @@ const encounter=()=>createEncounter({id:'host-test',scenario:'测试补参，不
   positions:{huang:[0,0],jiang:[1,0],yulin:[2,0],bright:[30,0]},
   parameters:{huang:{weaponSize:4},bright:{bowStrength:3,ammunition:20}}});
 
+test('combat never reports saved after swallowed disk failure and replay persists the same result',async()=>{
+ const floors=[{stat_data:{}}],chat=[{mes:'start',swipe_id:0}],progress=[];
+ let disk=[],calls=0,fail=true;
+ const tavern={chatId:'persist-combat',chat,saveChat:async()=>{if(!fail)disk=[{},...chat.map((m,i)=>({...m,variables:[structuredClone(floors[i])]}))];},readSavedChat:async()=>disk};
+ const c=createTavernCombat({tavern,expectedChatId:tavern.chatId,battleFactory:encounter,onProgress:x=>progress.push(x),
+   mvu:{getMvuData:({message_id})=>structuredClone(floors[message_id]??{stat_data:{}}),replaceMvuData:async(v,{message_id})=>{floors[message_id]=structuredClone(v);}},
+   createChatMessages:async ms=>{for(const m of ms)chat.push({mes:m.message,swipe_id:0});},
+   generateRaw:async req=>{calls++;const d=JSON.parse(req.user_input);return JSON.stringify({option:d.legalOptions.findIndex(o=>o.abilityId==='draw')});}});
+ await c.initialize();
+ await assert.rejects(c.run({single:true}),e=>e.code==='CHAT_PERSISTENCE_UNCONFIRMED');
+ assert.equal(progress.some(x=>x.status==='saved'),false);assert.equal(c.read().revision,1);
+ const committed=structuredClone(c.read());fail=false;await c.resumeReport();
+ assert.deepEqual(c.read(),committed);assert.equal(calls,1);assert.equal(progress.filter(x=>x.status==='saved').length,1);
+});
+
 test('host waits for player, settles a whole encounter, returns to story and carries wounds into next encounter',async()=>{
   const floors=[{stat_data:{world:{place:'练武场'}}}];
   const tavern={chatId:'host-test',chat:[{mes:'演练',swipe_id:0}]};
+  tavern.saveChat=async()=>{};tavern.readSavedChat=async()=>[{},...tavern.chat.map((m,i)=>({...m,variables:[structuredClone(floors[i])]}))];
   let seed=83,calls=0,choices=0,returned=0;
   const deps={tavern,expectedChatId:'host-test',battleFactory:encounter,
     mvu:{getMvuData:({message_id})=>structuredClone(floors[message_id]??{stat_data:{}}),
@@ -89,6 +105,7 @@ test('haste changes order without extra turns; aiming matures next round and is 
 test('invalid model selection retries without rolling; transport failures remain visible',async()=>{
   let data={stat_data:{}},calls=0,rolls=0;
   const tavern={chatId:'retry-test',chat:[{mes:'演练',swipe_id:0}]};
+  tavern.saveChat=async()=>{};tavern.readSavedChat=async()=>[{},...tavern.chat.map(m=>({...m,variables:[structuredClone(data)]}))];
   const deps={tavern,expectedChatId:'retry-test',battleFactory:encounter,
     mvu:{getMvuData:()=>structuredClone(data),replaceMvuData:async value=>{data=structuredClone(value);}},
     drawDice:()=>{rolls++;return Array(1024).fill(1);},

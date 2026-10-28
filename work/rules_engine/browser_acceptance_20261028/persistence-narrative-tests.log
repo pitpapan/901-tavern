@@ -1,0 +1,53 @@
+✔ production narrator request prioritizes executed events over background and preserves the prose-only boundary (1.8684ms)
+✔ declared combat medicine spends its action once and refresh preserves inventory and health (1319.2984ms)
+✔ postcombat story medicine and next rest use current MVU without replaying battle prose (1005.0034ms)
+✔ story rest expires persisted player battle buffs in own status and leaves NPCs unchanged (579.0023ms)
+✔ declared door then obstacle attack preserves remaining actions, narrates the map result and survives refresh (1863.7621ms)
+✔ natural attack settles only the declared action, keeps remaining player actions, and hides NPC figures (1512.9856ms)
+✔ stationary tornado injury projects the unchanged target position as an observable result (1429.9334ms)
+✔ declared cost mismatch and invented end are rejected before rolling or spending (1088.7173ms)
+✔ failed narration resumes saved action without rerolling, including a new session/refresh (1313.4418ms)
+✔ retrying committed guard narrates its execution without repeating prior damage or inventing another action (1892.6471ms)
+✔ explicit end advances to an actual player reaction; continuation preserves the same turn and resource costs (1864.3937ms)
+✔ own consequence receipt lists only actual player damage and effective condition changes once (1.1751ms)
+✔ every incoming player attack waits for a declared defense even after conversion is exhausted (10.5058ms)
+✔ player defense has no total until a defense mode is declared; ready block is not silently added to normal defense (5.2393ms)
+✔ an existing guard persists while a new attack offers the adopted optional will defense (37.8433ms)
+✔ an enemy leaving reach cannot trigger an undeclared player opportunity attack (50.5098ms)
+✔ compound movement and attack use player-declared coordinates, not an extra implicit turn (1702.3535ms)
+✔ NPC duel writes back all private results but posts one public scene and allows story afterwards (1016.5342ms)
+✔ view-own-status opens only the UI before interpreting, narrating, rolling or adding an assistant floor (537.5948ms)
+✔ player UI reads latest selected MVU snapshot across new floors and refresh without writing or trusting prose (560.5755ms)
+✔ declared guard updates the player UI without ending the turn and survives refresh (1391.3261ms)
+✔ legacy own-status caches are stripped on replay without losing the saved narrative (537.9314ms)
+✖ existing chat builds its map once, map viewing does not spend actions, and next declaration still executes (571.13ms)
+✔ a withdrawal paused for incoming opportunity defense stays at the original position in public facts (42.1002ms)
+✔ opening baseline passes the ordinary replay gate Builder contract (1.6181ms)
+✔ natural binding uses only adopted templates and same-instance current positions on re-entry (2.2309ms)
+✔ host scene registration persists in selected MVU, restores on refresh and feeds real narrative entry (1332.2625ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 26
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 20676.2856
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\narrative.test.mjs:396:1
+✖ existing chat builds its map once, map viewing does not spend actions, and next declaration still executes (571.13ms)
+  Error: 规则状态仍在当前页面内存中，但聊天持久保存未确认；请保持页面并重试同一操作。
+      at failure (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/mvu_poc/adapter.mjs:678:35)
+      at persistTavernRuleState (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/mvu_poc/adapter.mjs:691:18)
+      at async publish (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/tavern.mjs:27:5)
+      at async Object.installMap (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/tavern.mjs:131:9)
+      at async file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/narrative.mjs:112:7
+      at async ensureMap (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/narrative.mjs:113:5)
+      at async Object.handleTurn (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/narrative.mjs:165:71)
+      at async TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/narrative.test.mjs:410:3)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    code: 'CHAT_PERSISTENCE_UNCONFIRMED'
+  }

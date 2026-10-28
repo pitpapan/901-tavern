@@ -1,0 +1,89 @@
+TAP version 13
+# Subtest: development exports connect verified candidate definitions, catalog and classifier without changing maintained IDs
+ok 1 - development exports connect verified candidate definitions, catalog and classifier without changing maintained IDs
+  ---
+  duration_ms: 3.1713
+  type: 'test'
+  ...
+# Subtest: generated candidate can be learned and used through normal rule dispatch without registry injection
+ok 2 - generated candidate can be learned and used through normal rule dispatch without registry injection
+  ---
+  duration_ms: 24.594
+  type: 'test'
+  ...
+# Subtest: candidate passive fragments cannot be purchased as a completed parent resource
+ok 3 - candidate passive fragments cannot be purchased as a completed parent resource
+  ---
+  duration_ms: 2.7162
+  type: 'test'
+  ...
+# Subtest: arcane staged acquisition
+    # Subtest: arcane D then C acquisition pays increments and preserves sources, wounds, current pools and T0
+    ok 1 - arcane D then C acquisition pays increments and preserves sources, wounds, current pools and T0
+      ---
+      duration_ms: 7.7078
+      type: 'test'
+      ...
+    # Subtest: bundle rejects skipped, repeated, unsupported, repriced and changed choices before mutation
+    ok 2 - bundle rejects skipped, repeated, unsupported, repriced and changed choices before mutation
+      ---
+      duration_ms: 6.3158
+      type: 'test'
+      ...
+    # Subtest: bundle installments validate choices before charging, bind contract and grant only at completion
+    ok 3 - bundle installments validate choices before charging, bind contract and grant only at completion
+      ---
+      duration_ms: 5.7997
+      type: 'test'
+      ...
+    # Subtest: opening another sourced mental pool grants five capacity once and preserves other caster functions
+    ok 4 - opening another sourced mental pool grants five capacity once and preserves other caster functions
+      ---
+      duration_ms: 6.1112
+      type: 'test'
+      ...
+    # Subtest: each stage grants one legal matching spell without XP or replacing the D gift
+    ok 5 - each stage grants one legal matching spell without XP or replacing the D gift
+      ---
+      duration_ms: 4.7907
+      type: 'test'
+      ...
+    # Subtest: arcane spell DP uses the actual damage type and acquired record; mental recovery uses actual time
+    ok 6 - arcane spell DP uses the actual damage type and acquired record; mental recovery uses actual time
+      ---
+      duration_ms: 8.0712
+      type: 'test'
+      ...
+    # Subtest: C gift may upgrade the already granted D spell while retaining its original version and source
+    ok 7 - C gift may upgrade the already granted D spell while retaining its original version and source
+      ---
+      duration_ms: 4.2033
+      type: 'test'
+      ...
+    # Subtest: granted spell executes using the new caster and pool, with arcane DP in the actual attack roll
+    ok 8 - granted spell executes using the new caster and pool, with arcane DP in the actual attack roll
+      ---
+      duration_ms: 29.4224
+      type: 'test'
+      ...
+    # Subtest: registered D/C offers and gift choice survive MVU reload without duplicate charges or free ownership
+    ok 9 - registered D/C offers and gift choice survive MVU reload without duplicate charges or free ownership
+      ---
+      duration_ms: 29.5907
+      type: 'test'
+      ...
+    1..9
+ok 4 - arcane staged acquisition
+  ---
+  duration_ms: 103.1197
+  type: 'suite'
+  ...
+1..4
+# tests 12
+# suites 1
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 443.6456

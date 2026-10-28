@@ -29,6 +29,7 @@ function fixture() {
   const chat=[{is_user:false,mes:'隔离演练开场',swipe_id:0}];
   const floors={};
   const tavern={chat,chatId:'integration-test',saveChat:async()=>{}};
+  tavern.readSavedChat=async()=>[{},...chat.map((m,i)=>({...m,variables:[structuredClone(floors[i])]}))];
   const mvu={getMvuData:({message_id})=>structuredClone(floors[message_id]??{stat_data:{}}),
     replaceMvuData:async(data,{message_id})=>{floors[message_id]=structuredClone(data);}};
   const stats={narrations:0,choices:[]};

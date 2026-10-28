@@ -1,0 +1,27 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {carryTestState,tavernAnchor} from '../mvu_poc/adapter.mjs';
+import {createOpeningFixture} from '../gm_runtime/opening.mjs';
+import {createReplayCheckRuntime} from '../gm_runtime/replay-check.mjs';
+const evidence=new URL('../../../output/replay_tavern/six_books_20261023_candidate/scene_test/resource-acquisition-20261028/',import.meta.url);
+const chat=fs.readFileSync(new URL('retention-before.jsonl',evidence),'utf8').trim().split('\n').map(JSON.parse).slice(1);
+const chatId='901 资源取得隔离验收 20261028 - 2026-10-28@08h03m47s108ms';
+let saves=0;const c={chat,getCurrentChatId:()=>chatId,saveChat:async()=>{saves++;}},guard=()=>c;
+const Mvu={getMvuData:({message_id})=>structuredClone(chat[message_id].variables?.[chat[message_id].swipe_id??0]??{}),replaceMvuData:async(data,{message_id})=>{const m=chat[message_id];(m.variables??=[])[m.swipe_id??0]=structuredClone(data);}};
+const root=()=>Mvu.getMvuData({message_id:chat.length-1}).stat_data?.['901_rules_poc'];
+const baseline=structuredClone(root()),oldCleared=structuredClone(chat.slice(1,5));
+const createChatMessages=async messages=>{for(const m of messages)chat.push({mes:m.message,swipe_id:0,swipes:[m.message],variables:[{}],swipes_info:[{}],extra:m.extra});};
+const getChatMessages=i=>[{...chat[i],swipes_data:chat[i].variables}];
+const setChatMessages=async updates=>{for(const u of updates)Object.assign(chat[u.message_id],u,{variables:u.swipes_data});};
+const report=(action,result)=>({action,result});
+const settle=async(key,request,text)=>{const rt=createReplayCheckRuntime({baseline:createOpeningFixture().baseline,mvu:Mvu,expectedChatId:chatId,getAnchor:()=>tavernAnchor(chat.length-1,c)});return report(key,await rt.settle({operationId:'gm-runtime/'+chatId+'/ui-'+key,request,context:{latest:{text}}}));};
+const script=fs.readFileSync(new URL('live-script.js',import.meta.url),'utf8');const block=script.slice(script.indexOf('function retentionCheckpointPresent'),script.indexOf('const offer='));
+const api=new Function('guard','Mvu','root','createChatMessages','getChatMessages','setChatMessages','carryTestState','tavernAnchor','settle','report','testName','summary',block+';return {prepareRetention,addRetentionSwipe,restRetentionSwipe,appendRetentionWindow,inspectRetention};')(guard,Mvu,root,createChatMessages,getChatMessages,setChatMessages,carryTestState,tavernAnchor,settle,report,'isolated',{textContent:''});
+await api.prepareRetention();assert.deepEqual(root(),baseline);assert.equal(chat[25].variables[0].snapshot,true);
+await api.addRetentionSwipe();chat[25].swipe_id=1;chat[25].extra={};await api.restRetentionSwipe();
+assert.equal(root().revision,24);assert.equal(root().actors.player.state.resources.精神魔力.current,12);assert.equal(chat[25].variables[1].snapshot,true);
+assert.deepEqual(chat[25].variables[0].stat_data['901_rules_poc'],baseline);
+const alternate=structuredClone(root());await api.appendRetentionWindow();assert.equal(chat.length,50);
+for(let i=26;i<50;i++){assert.deepEqual(chat[i].variables[0].stat_data['901_rules_poc'],alternate);assert.notEqual(chat[i].variables[0].snapshot,true);}
+assert.deepEqual(chat.slice(1,5),oldCleared);assert.deepEqual(chat[25].variables[0].stat_data['901_rules_poc'],baseline);
+console.log(JSON.stringify({status:'pass',scope:'offline actual harness functions and real recovery; no native MVU cleanup simulated',floors:chat.length,saves,checkpointPages:api.inspectRetention().result.pages,oldClearedFloorsUntouched:true,neutralFloorsUnchanged:24}));

@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-28",
+  "status": "local_committed_delivery",
+  "pairedTag": "resource-acceptance-20261028",
+  "campaign": {
+    "directory": "TRPG outputs",
+    "branch": "codex/tavern-resource-reconciliation",
+    "revision": "refs/tags/resource-acceptance-20261028",
+    "baseCommit": "38aa395aeff8d072f2fecb77e3ba54c7305bb76b"
+  },
+  "resourceKit": {
+    "directory": "901-resource-authoring-kit",
+    "branch": "codex/resource-reconciliation",
+    "commit": "36debac366254f9b2b4b4c545c61b27526838c7d"
+  },
+  "artifact": {
+    "artifact": "resource-acceptance-20261028.zip",
+    "bytes": 18777543,
+    "sha256": "9a47b629e2ebc5e2a3b4de05ad129fd8a800fabdbbb7e848ca72e15142320b4d",
+    "files": 264,
+    "uncompressedBytes": 183551346,
+    "worldbookFixtures": 6,
+    "verification": "all archive entries decompressed and SHA-256 matched",
+    "scope": "isolated acceptance runtime, raw evidence and frozen worldbook fixtures; not a formal installation"
+  },
+  "verification": {
+    "runtimeRegression": {
+      "passed": 931,
+      "failed": 0,
+      "skipped": 0
+    },
+    "compilerTests": 26,
+    "validatedContracts": 270,
+    "validatedCandidates": 12,
+    "candidatePackages": "both PASS",
+    "liveReadback": "revision32; parent and historical pages unchanged; 112 modules and 160 protected files matched",
+    "logs": [
+      {
+        "path": "work/rules_engine/browser_acceptance_20261028/delivery-regression-20261028.log",
+        "sha256": "7936b8ec4afef616ab75cd7e5f8d962220fd140aca62a8e688335d9bf457fd61"
+      },
+      {
+        "path": "work/rules_engine/browser_acceptance_20261028/delivery-compiler-20261028.log",
+        "sha256": "af0098307a453f1bbc266cbd00a82b30465b0e9f8a1eb0f387b6540851609db9"
+      },
+      {
+        "path": "work/rules_engine/browser_acceptance_20261028/delivery-techniques-20261028.log",
+        "sha256": "36269d249d46d41d65ecfde982f96db4dd5b421739673e71f7b15b17c11beb9a"
+      },
+      {
+        "path": "work/rules_engine/browser_acceptance_20261028/delivery-magic-20261028.log",
+        "sha256": "08180f968fda92e6ece9c9f2ffea45d1b84111e419d342fb922d02c76333428b"
+      },
+      {
+        "path": "work/rules_engine/browser_acceptance_20261028/delivery-joint-20261028.log",
+        "sha256": "c120b2c7318c1d98c7fa0378d271daa0baf1095cf4a24575649a2eaab3de06d2"
+      }
+    ]
+  },
+  "deliveryBoundary": {
+    "pushed": false,
+    "formalInstalled": false,
+    "sharedFullWorldbookCandidateCommitted": false,
+    "independentTrpgEngineIncluded": false,
+    "worldbookFixtures": "frozen test inputs only; not latest canon release"
+  }
+}

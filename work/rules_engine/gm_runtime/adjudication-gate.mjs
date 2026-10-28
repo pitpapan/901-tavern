@@ -203,6 +203,19 @@ export function replayPendingFromChat(chat, player) {
 
 // Read one actual scene response. Gate notices carry no scene facts, and the
 // model's chat-history/scenario placeholders can bring unrelated injections.
+function replayNarrativeText(message) {
+  // Dream V5 stores prose, backstage scenes and author controls in one message.
+  // Read only scene prose, including older output whose body wrapper was removed.
+  const sideTags = 'dream_think|think|dream_after_thinking|simple_thinking|' +
+    'dream_after_format|dream_append_format|dream_parallel_event|dream_summary|' +
+    'dream_big_discuss|dream_discuss|dream_self_check|dream_option|dream_scene|UpdateVariable';
+  const prose = message.replace(new RegExp(
+    `<(${sideTags})\\b[^>]*>[\\s\\S]*?(?:<\\/\\1\\s*>|$)`, 'gi'), '');
+  const bodies = [...prose.matchAll(/<dream_body\b[^>]*>([\s\S]*?)(?:<\/dream_body\s*>|$)/gi)];
+  return (bodies.length ? bodies.map(match => match[1]).join('\n') : prose)
+    .replace(/<\/?dream_(?:plot|body)\b[^>]*>|<dream_done\s*\/>/gi, '').trim();
+}
+
 export function replaySceneFromChat(chat, beforeMessageId) {
   if (!Array.isArray(chat) || !Number.isInteger(beforeMessageId)) return '';
   for (let i = Math.min(beforeMessageId - 1, chat.length - 1); i >= 0; i--) {
@@ -210,7 +223,8 @@ export function replaySceneFromChat(chat, beforeMessageId) {
     if (entry?.is_user || entry?.is_system || typeof entry?.mes !== 'string') continue;
     if (['UNRESOLVED', 'NEEDS_INPUT', 'NARRATION_PENDING'].includes(
       entry.extra?.['901_replay_gate']?.status)) continue;
-    if (entry.mes.trim()) return entry.mes;
+    const scene = replayNarrativeText(entry.mes);
+    if (scene) return scene;
   }
   return '';
 }
@@ -244,7 +258,7 @@ export function playerCheckDisplay(basis) {
 
 export function compactNarrationFacts(result,currentState) {
   if(result?.prevented||result?.result?.prevented)return `行动前力量检定失败，人物陷入昏迷；原本声明的行动没有执行。不得把这次检定写成原行动的成败。`;
-  if(result?.kind==='rule')return `已由JS保存的规则结果：${JSON.stringify(result.result)}。只叙述已结算成败与实际后果，不公开骰值、DC、NPC数值或秘密，不追加玩家动作。`;
+  if(result?.kind==='rule')return `已由JS保存的规则结果：${JSON.stringify(result.result)}。伤型B表示钝击伤害，L表示严重伤害，A表示恶性伤害；不能把L称作轻度伤害或因演练而淡化伤势。只叙述已结算成败与实际后果，不公开骰值、DC、NPC数值或秘密，不追加玩家动作。`;
   if (!record(result)) return '无需规则数值结算。';
   if(result.kind==='recovery') {
     const recovery=result.result;
@@ -327,6 +341,9 @@ export function replayClassificationRequest({ context, scene = '', skills = {}, 
   const namedUnsupported = unsupported.filter(name => typeof name === 'string' &&
     name && action.includes(name));
   const system = '你是901行动分类器。分类玩家已声明的行动以及玩家明确要求启动的已登记事件；不要叙述成败或投骰。' +
+    '先区分资源执行与普通技能任务：施法即使涉及神秘技能，也不能用普通神秘检定或自定DC代替实际施法程序。' +
+    '玩家明确施放已持有且有登记计划的资源时，选择CHECK_REQUIRED，request={"kind":"rule","action":"mechanism","actorId":"player","objectId":"实际登记对象ID","operation":"cast","part":"实际登记计划ID"}；从当前objects及资源动作目录选择，不照抄占位符。' +
+    '费用、命中、伤害由资源执行器结算。缺目标或计划条件返回NEEDS_INPUT，缺执行接口返回UNRESOLVED；不能退化为普通检定并宣称施法成功。讨论、否定或未声明施放不触发资源执行；明确的普通魔法知识辨认等任务仍可用普通检定。' +
     `普通检定的attribute只能从这六个属性中选择：${CHECK_ATTRIBUTES.join('、')}。skill从下列普通技能中另选；社交是技能，不是属性，不能填写attribute:"社交"。` +
     '玩家的攻击、移动、防御、技能使用及判定，必须由玩家明确声明相应行动触发。不可把凝视、语气、站姿等扮演细节自行扩成侦察、威吓、备战或技能检定。' +
     (encounters.length ? '先判断是否要求启动已登记战斗，包括玩家旁观的NPC对战。明确开始演练即COMBAT_REQUIRED；“我不参加”仅排除玩家参战，不否定其他人开战，不能据此返回NO_CHECK。只有明确不让演练开始才不启动。' : '') +
@@ -362,7 +379,7 @@ export function replayClassificationRequest({ context, scene = '', skills = {}, 
     (context.pending ? '若本次补充明确取消或暂不执行此前未结算行动，改看本次补充的整条当前声明；仅当前整条无需结算时返回NO_CHECK，并加cancelPending字段，逐字引用最新声明中明确取消或暂不执行的原文片段。普通闲聊、问候不表示取消；不要取消已结算操作或待恢复旁白。' : '') +
     '普通对话、明确可见事实或依据已知条件能确定的成功／拒绝／前提不成立，可选NO_CHECK；说明具体依据，不得更改规则数值。' +
     '人物卡未列技艺不等于不会；已知训练与实践可支持有限普通操作，玩家与NPC同准，行动重要性不改变资格；不得补造经历、专有资源效果或数值。' +
-    '有失败后果或重要不确定性时优先识别普通检定；缺少目标、距离、角色输入或难度依据时选NEEDS_INPUT并指出真正缺项，不编造dc；缺少受支持的机械结算接口时选UNRESOLVED。' +
+    '有失败后果或重要不确定性时，先选与实际行动对应的资源、恢复或其他专门接口；仅普通技能任务使用普通检定。缺少目标、距离、角色输入或难度依据时选NEEDS_INPUT并指出真正缺项，不编造dc；缺少受支持的机械结算接口时选UNRESOLVED。' +
     '不可编造场景事实、投骰、伤害、XP或未列技能等级。';
   return { should_stream: false, should_silence: true,
     ordered_prompts: [{ role: 'system', content: system }, 'user_input'],

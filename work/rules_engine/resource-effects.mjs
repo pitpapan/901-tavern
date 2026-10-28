@@ -42,6 +42,7 @@ export function collectEffects(state,definitions,stat,context={}){
  for(const [id,definition]of Object.entries(definitions)){
   const owned=state.learnedResources?.[id]?.learned===true||definition.ownership&&effectMatches(definition.ownership,state,context);
   if(!owned)continue;
+  if(definition.acquisition?.mode==='staged-bundle'&&!(state.resources?.[state.learnedResources?.[id]?.choices?.pool]?.max>0))continue;
   const local={...context,resourceChoices:state.learnedResources?.[id]?.choices,resourceGrade:state.learnedResources?.[id]?.grade};
   for(const e of definition.effects??[])if(e.stat===stat&&effectMatches(e.when,state,local)){
    const value=effectValue(e.value,state,local);if(!Number.isFinite(value))throw Error(`${id}的${stat}缺少运行数值`);

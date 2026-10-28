@@ -5,6 +5,25 @@ import { runGuardedTurn, replayGateReadiness, replaySceneFromChat,
   compactNarrationFacts, savedDecisionForRecovery, playerFacingResult } from './adjudication-gate.mjs';
 import { relevantLorebookFacts } from './adjudication-gate.mjs';
 import * as gate from './adjudication-gate.mjs';
+test('resource narration preserves the engine damage severity vocabulary',()=>{
+ const facts=compactNarrationFacts({kind:'rule',result:{action:'mechanism',operation:'cast',damage:[{targetId:'huang',severity:'L',actualDamage:6}]}});
+ assert.match(facts,/L.*严重/);
+ assert.match(facts,/B.*钝击/);
+ assert.match(facts,/A.*恶性/);
+ assert.match(facts,/不能.*轻度/);
+});
+test('casting classification gives resource execution priority over ordinary skill checks',()=>{
+ const action=player('我对一米外的黄泉施放一次D阶魔能爆，不使用任何增幅。');
+ const request=replayClassificationRequest({context:{original:action,latest:action},ruleContext:{objects:{
+  eldritchBlast:{type:'kitResource',resourceId:'imperial-magic:D:魔能爆',plans:{D:{grade:'D',targetIds:['huang']}}}
+ }}});
+ const system=request.ordered_prompts[0].content;
+ assert.match(system,/施法.*不能.*普通.*检定/);
+ assert.match(system,/"action":"mechanism".*"operation":"cast"/);
+ assert.match(system,/未声明施放.*不触发/);
+ assert.match(request.user_input,/"eldritchBlast".*"D"/);
+ assert.doesNotMatch(request.user_input,/有失败后果或重要不确定性时优先识别普通检定/);
+});
 test('a positive meditation declaration cannot authorize an explicitly excluded pool',()=>{
  const r={kind:'recovery',type:'meditate',minutes:60,resource:'魔力'};
  assert.equal(gate.explicitRecoveryDeclaration(r,'我打坐60分钟，魔力池先不恢复'),false);
@@ -497,6 +516,32 @@ test('classifier request includes only explicit action, current scene and releva
   assert.match(request.user_input, /车马正在通行/);
   assert.doesNotMatch(JSON.stringify(request.ordered_prompts), /scenario|chat_history|world_info|char_description/);
   assert.doesNotMatch(request.user_input, /stat_data/);
+});
+
+test('dream side channels never become scene facts or trigger worldbook entries', () => {
+  const message = '<dream_think>秘密推演</dream_think><dream_plot><dream_body>' +
+    '<dream_scene><location>猜测地点</location></dream_scene>你站在广场。' +
+    '</dream_body><dream_after_format><dream_parallel_event>暗室守卫收到密令。</dream_parallel_event>' +
+    '<dream_big_discuss>考虑去王宫。</dream_big_discuss></dream_after_format></dream_plot>';
+  const scene = replaySceneFromChat([{ is_user: false, mes: message }], 1);
+  assert.equal(scene, '你站在广场。');
+  const facts = gate.relevantLorebookFacts([
+    { enabled: true, keys: ['暗室守卫'], content: '幕后资料' },
+    { enabled: true, keys: ['广场'], content: '广场资料' },
+  ], { action: '我继续等候。', scene });
+  assert.deepEqual(facts.map(f => f.content), ['广场资料']);
+});
+
+test('legacy unwrapped dream output keeps prose but excludes summaries and unfinished side blocks', () => {
+  const message = '同伴来到广场。<dream_summary>旧剧情</dream_summary>' +
+    '<dream_parallel_event>幕后人物行动中';
+  assert.equal(replaySceneFromChat([{ is_user: false, mes: message }], 1), '同伴来到广场。');
+});
+
+test('a supplementary-only reply does not replace the last actual scene', () => {
+  const chat = [{ is_user: false, mes: '你仍在广场。' },
+    { is_user: false, mes: '<dream_self_check>修文报告</dream_self_check><dream_option>下一步</dream_option>' }];
+  assert.equal(replaySceneFromChat(chat, 2), '你仍在广场。');
 });
 
 test('classifier request does not offer an invented default DC for an uncertain compound action', () => {
