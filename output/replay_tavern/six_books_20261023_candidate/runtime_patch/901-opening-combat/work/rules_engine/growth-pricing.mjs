@@ -1,3 +1,4 @@
+import {stagedBundleFacts} from './staged-bundle.mjs';
 import {applyKitAcquisition} from './kit-state.mjs';
 import {resourceEffects,RESOURCE_DEFINITIONS} from './resource-definitions.mjs';
 import {assertSpellQualifications,learningAcquisitionFacts} from './resource-acquisition.mjs';
@@ -27,7 +28,7 @@ export function validateLearningOffer(o,id){
  if(policy){
   if(policy.requireContractVersion&&o.contractVersion!==definition.contractVersion)throw Error('学习报价须匹配当前合同版本');
   if(!policy.grades?.includes(o.grade)||o.versionMode!==undefined)throw Error('学习报价等级未由本政策定义');
-  if(o.kind!=='technique')throw Error('学习政策须使用技艺取得类别');
+  if(o.kind!==(policy.kind==='staged-bundle'?'acquisition':'technique'))throw Error('学习报价的取得类别不符合政策');
  }
  const identity=definition?.identity;
  if(identity&&o.tree!==undefined&&o.tree!==identity.tree)throw Error('学习报价不能改写执行合同的所属树或资源归类');
@@ -45,14 +46,16 @@ export function purchaseLearning(state,offer,{actorId,paymentId}={}){
  const known=state.learnedResources?.[offer.resourceId],definition=RESOURCE_DEFINITIONS[offer.resourceId];
  if(definition?.template||definition?.prohibited)throw Error('完整后期人物模板或禁术不能作为可学习资源');
  assertSpellQualifications(state,offer.resourceId,definition,{grade:offer.grade??definition?.grade,versionMode:offer.versionMode});
- const acquisition=learningAcquisitionFacts(state,definition,offer);
- const upgrading=known?.learned&&known.grade==='D'&&offer.grade==='C'&&(definition?.learning?.byGrade?.C!==undefined||offer.versionMode&&definition?.learning?.upgradeC);
+ const staged=definition?.learning?.policy?.kind==='staged-bundle';
+ const acquisition=staged?stagedBundleFacts(state,offer.resourceId,definition,offer):learningAcquisitionFacts(state,definition,offer);
+ if(staged){const probe=structuredClone(state);(probe.learnedResources??={})[offer.resourceId]={...structuredClone(known??{}),...structuredClone(acquisition),learned:true,grade:offer.grade,version:definition.contractVersion,source:offer.source};applyKitAcquisition(probe,offer.resourceId,{source:offer.source});}
+ const upgrading=staged?!!known?.learned:known?.learned&&known.grade==='D'&&offer.grade==='C'&&(definition?.learning?.byGrade?.C!==undefined||offer.versionMode&&definition?.learning?.upgradeC);
  if(known?.learned&&!upgrading)throw Error('该资源已完整学习，不能再次计费');
  if(offer.versionMode&&!upgrading)throw Error('D术升阶须先实际学会D版');
  if(definition?.learning?.CRequiresD&&offer.grade==='C'&&!upgrading)throw Error('此能力组须先逐阶取得D级');
  if((offer.grantsGuanlan||['guanlan','guanlan-fa'].includes(offer.resourceId))&&hasGuanlan(state))throw Error('已经取得观澜法本体');
- const ledgerId=upgrading?offer.resourceId+'@C':offer.resourceId;
- const signature=JSON.stringify(definition?.learning?.policy?{offer,contract:{version:definition.contractVersion,learning:definition.learning,identity:definition.identity,grade:definition.grade,subskills:definition.subskills,requiresAllSchools:definition.requiresAllSchools}}:offer),old=state.learningPurchases?.[ledgerId];
+ const ledgerId=upgrading?offer.resourceId+'@'+offer.grade:offer.resourceId;
+ const signature=JSON.stringify(definition?.learning?.policy?{offer,contract:{version:definition.contractVersion,learning:definition.learning,acquisition:definition.acquisition,identity:definition.identity,grade:definition.grade,subskills:definition.subskills,requiresAllSchools:definition.requiresAllSchools}}:offer),old=state.learningPurchases?.[ledgerId];
  if(old&&old.signature!==signature)throw Error('分次学习中的条目、价格或付款条件不能更换');
  const category=definition?.identity;
  const classified=category?{...offer,tree:category.tree}:offer;
@@ -73,7 +76,7 @@ export function purchaseLearning(state,offer,{actorId,paymentId}={}){
  if(complete){
   (next.learnedResources??={})[offer.resourceId]={...structuredClone(known??{}),learned:true,name:offer.name,source:offer.source,kind:offer.kind,tree:classified.tree,grade:offer.grade,...(definition?.contractVersion?{version:definition.contractVersion}:{}),...(acquisition??{}),...(upgrading&&offer.versionMode?{versions:offer.versionMode==='retain'?['D','C']:['C']}:{})};
   if(offer.grantsGuanlan)next.guanlan={acquired:true,source:offer.source,wufaXP:0};
-  if(offer.resourceId==='guanlan'||RESOURCE_DEFINITIONS[offer.resourceId])applyKitAcquisition(next,offer.resourceId,{source:offer.source,...offer.acquisitionChoices});
+  if(offer.resourceId==='guanlan'||RESOURCE_DEFINITIONS[offer.resourceId])applyKitAcquisition(next,offer.resourceId,{source:offer.source,...(staged?{}:offer.acquisitionChoices)});
  }
  return {state:next,result:{allowed:true,...price,charged:xp,wufaCharged:wufaXP,paid:ledger.paid,remaining:price.cost-ledger.paid,complete,resourceId:offer.resourceId,offerId:offer.id}};
 }

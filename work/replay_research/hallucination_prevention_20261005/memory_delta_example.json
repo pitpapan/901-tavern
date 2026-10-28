@@ -62,5 +62,30 @@
     "text": "示例玩家输入：我把这次已保留的调查结果告诉雪老。",
     "sha256": "81f795bddfa056ad9807ecf06808df4aa9d3b861954d1c07262b45bed24cc563",
     "authorization": "允许向雪老转告该次已保留结果；两份AI候选共用同一授权。"
+  },
+  "isolated_runtime_followup_20261028": {
+    "scope": "实际失败的人工订正对照；仅W4隔离测试，不属于正式战役事件",
+    "source": "../six_books_20261023/loading_acceptance_20261028/README.md",
+    "rejected_reply": "洛汀河谷的水势与往来商旅如常。猫音身为帝国学士，在此处理日常文书与研习杂务，其学识与日常交往局限于公开的文脉与民间见识，并未持有白暮寒地或远西魔法林材等远方物资。御临风与猫音当前同处洛汀，周围仅有日常街景与行人，无多余库存或隐秘资源。",
+    "rejected_reply_sha256": "0869caa8fd57120bce3b3f928b5bae855f7253ecf6a7bf4df8cac169bb9779ef",
+    "reviewed_reply": "当前场景在洛汀，猫音在场。她已取得帝国学士资格。现有资料没有说明她此刻的具体事务，也没有记录个人持有物或店内库存；这些项目保持未确认。",
+    "reviewed_memory": "隔离验收W5人工采纳01（仅本测试分支）：当前在洛汀，猫音在场。她此刻的具体事务、个人持有物及店内库存未记录，不据此断言存在或不存在。未新增职业、专长、取得、交易、送信或知情传播。来源：本测试场景输入与人工订正后的保留回复；父记忆为空。",
+    "adopted_scene_facts": [
+      "洛汀",
+      "猫音在场"
+    ],
+    "stable_lore_not_new_event": "已取得帝国学士资格；不记为本轮取得",
+    "unrecorded": [
+      "当前具体事务",
+      "个人持有物",
+      "店内库存"
+    ],
+    "rejected_inferences": [
+      "资格推专长或当前事务",
+      "未提供库存推断无货"
+    ],
+    "new_mechanical_or_knowledge_events": [],
+    "automatic_adoption": false,
+    "real_campaign_memory_modified": false
   }
 }

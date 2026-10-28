@@ -1,0 +1,52 @@
+{
+  "status": "pass",
+  "scope": "共享六书重新规划、生成及静态验证；不代表旧预算题语义修复",
+  "after": {
+    "output/replay_tavern/six_books_20261023_candidate/import/901_01_世界基础设定_20261023.json": "d8ac1896c3f5701f5ace6dd5b35f43deb96ebc1ddae7286a50326a5ccc2eded0",
+    "output/replay_tavern/six_books_20261023_candidate/import/901_02_政治与势力_20261023.json": "64d730763a7bcb6201ec85151bcdbef8a3463fe0c447bf420cc3758e531a672b",
+    "output/replay_tavern/six_books_20261023_candidate/import/901_03_人物资料库_20261023.json": "43de3f2d6e94800f7b9257d6a3731efc6a9be2c871cb450d4ee480ecb7a5433a",
+    "output/replay_tavern/six_books_20261023_candidate/import/901_04_能力与战力_20261023.json": "165053d3d441c7a854537940eab641fdfdd20c924c87f564f21fa3dfa54b545b",
+    "output/replay_tavern/six_books_20261023_candidate/import/901_05_历史与事件_20261023.json": "83f6b08386f2e8672747db3bb376b7ca849017b112ae1841527641bd1ac3ea84",
+    "output/replay_tavern/six_books_20261023_candidate/import/901_06_当前剧本与局势_20261023.json": "502838a18f70af8ac2571267b997f80a57be6ce5e8f0f3f56716d97b700d6be8",
+    "output/replay_tavern/opening_combat_20261022_candidate/import/901_帝都初始卡.card.json": "307a379d3b198ea298329ba96cbbe9caf8ccd7f03806021fe63dff0db696ca44",
+    "output/replay_tavern/latest_release.json": "7e2054a337040b476440b9513d9aca10092756ccd562743e56a131ac5a130d28",
+    "current_state.md": "ebf6159bc248600be6371da29bc405bfb781de9e6eaccf700d3dab7e093ed43e"
+  },
+  "staticStatus": "pass",
+  "staticKeys": [
+    "status",
+    "checks",
+    "counts",
+    "literal_trigger_probes",
+    "constant_body_chars_before",
+    "constant_body_chars_after",
+    "limits"
+  ],
+  "moduleCount": 112,
+  "guidanceMatchesTestedAuthorParagraph": true,
+  "before": {
+    "output/replay_tavern/six_books_20261023_candidate/import/901_01_世界基础设定_20261023.json": "d8ac1896c3f5701f5ace6dd5b35f43deb96ebc1ddae7286a50326a5ccc2eded0",
+    "output/replay_tavern/six_books_20261023_candidate/import/901_02_政治与势力_20261023.json": "64d730763a7bcb6201ec85151bcdbef8a3463fe0c447bf420cc3758e531a672b",
+    "output/replay_tavern/six_books_20261023_candidate/import/901_03_人物资料库_20261023.json": "43de3f2d6e94800f7b9257d6a3731efc6a9be2c871cb450d4ee480ecb7a5433a",
+    "output/replay_tavern/six_books_20261023_candidate/import/901_04_能力与战力_20261023.json": "165053d3d441c7a854537940eab641fdfdd20c924c87f564f21fa3dfa54b545b",
+    "output/replay_tavern/six_books_20261023_candidate/import/901_05_历史与事件_20261023.json": "83f6b08386f2e8672747db3bb376b7ca849017b112ae1841527641bd1ac3ea84",
+    "output/replay_tavern/six_books_20261023_candidate/import/901_06_当前剧本与局势_20261023.json": "502838a18f70af8ac2571267b997f80a57be6ce5e8f0f3f56716d97b700d6be8",
+    "output/replay_tavern/opening_combat_20261022_candidate/import/901_帝都初始卡.card.json": "307a379d3b198ea298329ba96cbbe9caf8ccd7f03806021fe63dff0db696ca44",
+    "output/replay_tavern/latest_release.json": "7e2054a337040b476440b9513d9aca10092756ccd562743e56a131ac5a130d28",
+    "current_state.md": "ebf6159bc248600be6371da29bc405bfb781de9e6eaccf700d3dab7e093ed43e"
+  },
+  "changes": [],
+  "commands": [
+    "build_candidate.py --plan",
+    "build_candidate.py --runtime",
+    "verify_candidate.py",
+    "verify_joint.py final"
+  ],
+  "regressions": {
+    "authorProjection": 3,
+    "branchMemory": 3
+  },
+  "jointEvidence": "manual-merge-joint.log",
+  "jointScope": "复用资源线原真实长休请求并重新核对当前磁盘、书和模块；未重发模型请求",
+  "formalDeployment": false
+}

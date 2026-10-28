@@ -289,16 +289,35 @@ for item in kit_inventory['entries']:
     records[key]['revisions'].append({'source':'kit-inventory.json','reason':'用户明确要求完整盘点并接入现有六书；定义、后期模板与当前持有分离。'})
 
 # Final source/manifest projection. The plan contains paths and content hashes, not competing inline bodies.
-# Adopted current-period author material, reviewed in the comprehensive audit.
-for delta in read(STAGE/'adopted_author_delta.json'):
+# Adopted author material; replacement and manual segments retain explicit provenance.
+author_deltas = read(STAGE/'adopted_author_delta.json')
+for delta in author_deltas:
     if delta.get('target_uid'):
         keys=[k for k,r in records.items() if r['uid']==delta['target_uid']]
         assert len(keys)==1,delta['name']
         key=keys[0]
     else:
-        key=add(delta['key'],delta['name'],delta['book'],5,'concept',keys=delta['keywords'])
-    extra(key,delta['body'],delta['refs'])
-    records[key]['revisions'].append({'source':'adopted_author_delta.json','reason':'用户要求全面审查并接入；仅迁移明确已采用的当前期事实，不写入事件或人物运行状态。'})
+        key=add(delta['key'],delta['name'],delta['book'],5,delta.get('entry_type','concept'),keys=delta['keywords'],manual=delta.get('manual',False))
+    record=records[key]
+    if delta.get('update_keywords'):
+        record['native']['key']=delta['keywords']
+    mode=delta.get('mode','append')
+    assert mode in ('append','replace','edit'),delta['key']
+    if mode=='replace':
+        record['pieces']=[]
+        for unit in record['source_units']:unit['mode']='revised'
+    if delta.get('replacements'):
+        body='\n\n'.join(record['pieces'])
+        for change in delta['replacements']:
+            assert body.count(change['old'])==1,(delta['key'],change['old'])
+            body=body.replace(change['old'],change['new'])
+        record['pieces']=[body]
+        for unit in record['source_units']:unit['mode']='revised'
+    if delta.get('body'):extra(key,delta['body'],delta['refs'])
+    else:record['extra_refs'].extend(delta['refs'])
+    record['revisions'].append({'source':'adopted_author_delta.json','author_key':delta['key'],
+        'reason':delta.get('reason','用户要求全面审查并接入；仅迁移明确已采用内容，不写入事件或人物运行状态。'),
+        'mode':mode,**({'source_segments':delta['source_segments']} if delta.get('source_segments') else {})})
 
 protected={str(BASE.relative_to(ROOT)):sha(BASE),str(CARD.relative_to(ROOT)):sha(CARD),str((STAGE/'adopted_author_delta.json').relative_to(ROOT)):sha(STAGE/'adopted_author_delta.json')}
 for p in [ROOT/'output/worldbook_source.jsonl',ROOT/'output/replay_tavern/latest_release.json',ROOT/'current_state.md']:
@@ -341,11 +360,18 @@ def plan_record(r):
         **({'execution':n['extensions']['901_resource']} if '901_resource' in n['extensions'] else {}),
         **({'resourceContract':r['resourceContract']} if 'resourceContract' in r else {})}
 
+guidance_path = ROOT/'work/replay_research/knowledge_projection.md'
+guidance_source = guidance_path.read_text(encoding='utf-8')
+guidance_heading = '### W4续写入口：背景与现场\n\n'
+world_context_guidance = guidance_source.split(guidance_heading, 1)[1].split('\n\n', 1)[0].strip()
+protected[str(guidance_path.relative_to(ROOT))] = sha(guidance_path)
+
 plan={
  'project':{'name':'901 六本世界书迁移','form':'existing-native-worldbooks','mvu':'reuse-existing-no-schema-change','ejs':False,'ui_mode':'none','revision':REV},
  'adapter':'应用tavern-cards规划、条目与动态分工；原生JSON投影，非forge工程，不运行configure/pack。',
+ 'world_context_guidance':{'content':world_context_guidance,'source':ref(str(guidance_path.relative_to(ROOT)),guidance_source[:guidance_source.index(guidance_heading)].count('\n')+3)},
  'runtime_integration':{'profile_field':'lorebooks','books':list(FILENAMES.values()),'patch_modules':'完整浏览器ESM依赖闭包，见runtime_patch_manifest.json','mechanics':'用户2026-10-23全面接入授权：统一规则裁定、当前人物能力、已采用NPC及有完整参数的条件资源；核心规则同源常驻，存档不重置'},
- 'scope':{'runtime_baseline':str(BASE.relative_to(ROOT)),'source_entries':136,'latest_conditional_branches':3,'author_f_coverage':'已补11组当期已采用作者资料与2项人物差异；8条新增、5条补充。更广人物全档、未来时期和未采用候选不算T0已发生状态。'},
+ 'scope':{'runtime_baseline':str(BASE.relative_to(ROOT)),'source_entries':136,'latest_conditional_branches':3,'author_f_coverage':'合入2026-10-28已提交的24份主题交接、已采用人物增量；原型全档与未采用候选不投影，私密／后期及条件段手动禁用，不算T0已发生。'},
  'books':[{'name':b,'file':f'import/{FILENAMES[b]}.json','order':ORDER[b]} for b in BOOKS],
  'loading':{'always_on':['妄想大陆','大陆法则限制',core['title']],'changed_to_keyword':['帝国','人物·谏山黄泉','人物·卡西乌斯·布莱特'],'original_disabled':'九条维持禁用','scene_gates':'明确部署/遭遇/提前干预默认手动启用；关键词匹配不充当阶段判断','shared_budget':'六书共用实际SillyTavern预算；不假设每书各有5000。人物常驻改按名触发；手动场景关闭后不继续注入。'},
  'state_ownership':{'stable_lore':'六书条目','original_D3':'current_state.md仅原续团，不用于重玩','replay_present':'当前有效分支摘要、摘要后保留聊天、已确认运行存档','mechanics':'沿现有stat_data.901_rules_poc与JS写回，不新增或初始化MVU/EJS','phase':'按实际条件手动启用场景，不造自动变量门控','secrets':'资料加载不公开给NPC或玩家角色'},
@@ -361,6 +387,15 @@ def integrate_runtime():
     script=copy.deepcopy(original_script)
     assert script['content'].count('profile:{debug:false,')==1
     script['content']=script['content'].replace('profile:{debug:false,','profile:{lorebooks:'+json.dumps(list(FILENAMES.values()),ensure_ascii=False)+',debug:false,')
+    context_marker="{role:'system',content:currentSceneText(scene)+"
+    assert script['content'].count(context_marker)==1, 'Expected final continuation context'
+    script['content']=script['content'].replace(context_marker,
+        "{role:'system',content:"+json.dumps(world_context_guidance,ensure_ascii=False)+"+'\\n'+currentSceneText(scene)+")
+    script['content']="const {retainedBranchMemory}=await import('/901-opening-combat/work/replay_research/six_books_20261023/branch-memory.mjs');\n"+script['content']
+    memory_marker="      'world_info_after','chat_history',"
+    assert script['content'].count(memory_marker)==1, 'Expected continuation history slot'
+    script['content']=script['content'].replace(memory_marker,memory_marker+
+        "\n      ...(retainedBranchMemory(SillyTavern.chat)?[{role:'system',content:retainedBranchMemory(SillyTavern.chat)}]:[]),")
     card['data']['extensions']['tavern_helper']['scripts'][1]=script
     base_entries={e['id']:e for e in read(CARD)['data']['character_book']['entries']}
     entries=[]
@@ -375,6 +410,7 @@ def integrate_runtime():
     dump(OUT/'import/901_六书主持入口.script.json',script)
     manifest=[]
     pending=[ROOT/'work/rules_engine/gm_runtime'/name for name in ['replay-gate-script.example.js','narrative.mjs','integrated.mjs','opening.mjs','opening-binding.mjs','opening-scene-ui.mjs']]
+    pending.append(STAGE/'branch-memory.mjs')
     modules=set()
     while pending:
         src=pending.pop().resolve()

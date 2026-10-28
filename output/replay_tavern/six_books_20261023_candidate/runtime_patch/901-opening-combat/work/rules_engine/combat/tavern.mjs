@@ -1,7 +1,7 @@
 import { createDuel } from './catalog.mjs';
 import { createCombatRuntime, chooseAction, inspectCommands, decisionContext } from './runtime.mjs';
 import { renderResult } from './engine.mjs';
-import { carryTestState, tavernAnchor } from '../mvu_poc/adapter.mjs';
+import { carryTestState, tavernAnchor, persistTavernRuleState } from '../mvu_poc/adapter.mjs';
 import { IllegalAction } from './mechanics.mjs';
 
 // Bound once to this isolated card/chat by its role script. No global settings,
@@ -24,7 +24,7 @@ export function createTavernCombat({mvu,tavern,generateRaw,createChatMessages,ex
       getSourceAnchor:()=>sourceAnchor,getAnchor:()=>tavernAnchor(targetId,tavern)});
     }
     // Persist before requesting narration, including when no mechanical floor is posted.
-    await tavern.saveChat?.();
+    await persistTavernRuleState({mvu,tavern});
     onProgress({status:'saved',revision:value.revision,result:value.result});
   }
   async function step() {

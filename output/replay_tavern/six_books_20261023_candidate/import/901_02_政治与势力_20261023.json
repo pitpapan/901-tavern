@@ -957,7 +957,7 @@
       ],
       "keysecondary": [],
       "comment": "魔兽部族联合体",
-      "content": "魔兽部族联合体\n\n魔兽部族联合体指妄想山脉中经统合参与战争的魔兽势力。各大种族原本各自为政，通过带有寡头性质的长老议会协调；千百年来周期性进攻帝国边关，既练兵，也消耗山脉中过快增加的魔兽人口，过去未能让大军深入帝国内部。\n\n凌迟被魔兽俘获后自愿化魔，并因机缘继承魔兽传说中的力量，随后统合种族、实行军事化管理，把各族能力编入共同战术。他利用制空与空运、盾阵、萨满强化、反魔箭及特种部队的协同，发动第一次真正突破帝国防线的大规模侵攻，攻下边境关卡，使周期攻关转为全面战争。\n\n统合之下仍存在部族与个人的利益差异。罗伯所述自治社会限于其率族离山前的经验；谢尔伦称龙族通常不参与长老议会的决定；杨则不愿为上层送死，希望自己的部族生存〔character_belief〕。因此，统合记录所称“所有种族”不能用来判定每名山脉居民、每个部族在全部时期都服从同一战争目标，实际覆盖范围仍不完整。\n\n此前松散数千年的各族由凌迟在约半年内完成军事统合，尚未形成中央集权。各族内部事务仍有较多自治；共同作战，以及单独议和、撤军等重大军事行动受统一指挥约束。统一军令与部族、个人利益并存，具体自治权限和执行细目仍未明确。",
+      "content": "魔兽部族联合体\n\n魔兽部族联合体指妄想山脉中经统合参与战争的魔兽势力。各大种族原本各自为政，通过带有寡头性质的长老议会协调；千百年来周期性进攻帝国边关，既练兵，也消耗山脉中过快增加的魔兽人口，过去未能让大军深入帝国内部。\n\n凌迟被魔兽俘获后自愿化魔，并因机缘继承魔兽传说中的力量，随后统合种族、实行军事化管理，把各族能力编入共同战术。他利用制空与空运、盾阵、萨满强化、反魔箭及特种部队的协同，发动第一次真正突破帝国防线的大规模侵攻，攻下边境关卡，使周期攻关转为全面战争。\n\n统合之下仍存在部族与个人的利益差异。罗伯所述自治社会限于其率族离山前的经验；谢尔伦称龙族通常不参与长老议会的决定；杨则不愿为上层送死，希望自己的部族生存〔character_belief〕。因此，统合记录所称“所有种族”不能用来判定每名山脉居民、每个部族在全部时期都服从同一战争目标，实际覆盖范围仍不完整。\n\n此前松散数千年的各族由凌迟在约半年内完成军事统合，尚未形成中央集权。各族内部事务仍有较多自治；共同作战，以及单独议和、撤军等重大军事行动受统一指挥约束。统一军令与部族、个人利益并存，具体自治权限和执行细目仍未明确。\n\n凌迟的传奇力量与政治支持、军务动员相接，不是神性或心控所有部族。五大酋长推举、凌迟和黄祸龙狼的组织动员保持原证据，议事涉及具体利益协调，历史权限未定。空中控制、空投、史莱姆和不同战斗／非战斗群体需要真实协同与保留自主性，不能改写成弱小部族推翻强者的革命。",
       "constant": false,
       "selective": false,
       "selectiveLogic": 0,
@@ -1051,6 +1051,10 @@
             {
               "path": "output/replay_tavern/flow_guidance_20261018_candidate/import/901_主持体验补充_M1_20261018.json",
               "uid": 29005377
+            },
+            {
+              "path": "work/replay_research/settlements_wilderness_working_draft_20261015.md",
+              "line": 711
             }
           ],
           "baseline_source": {
@@ -1065,7 +1069,22 @@
               "period": "T0起可用的持续背景；人物知情依实际经历"
             }
           },
-          "revisions": [],
+          "revisions": [
+            {
+              "source": "adopted_author_delta.json",
+              "author_key": "w-coalition",
+              "reason": "2026-10-28已采用作者内容汇合；原文／采用／知情与实际分支分别保留。",
+              "mode": "append",
+              "source_segments": [
+                {
+                  "path": "work/replay_research/settlements_wilderness_working_draft_20261015.md",
+                  "line": 711,
+                  "end_line": 715,
+                  "sha256": "18c8f727ee1abae09c29cf84fc4523c8130686025702033654726cd4d31166a0"
+                }
+              ]
+            }
+          ],
           "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",
           "authorization": "用户：基于 tavern-cards 编排六本书的条目、触发和状态分工，再据此迁移内容。"
         }
@@ -1655,7 +1674,7 @@
       ],
       "keysecondary": [],
       "comment": "帝国教育与知识传播",
-      "content": "帝国教育与知识传播\n\n帝国主要使用大陆通用语，各族可有自己的语言。个人的口语、读写和专业理解分别记录，不按种族直接赋予每个人相同的语种能力。\n\n帝国已有通过教材、学校、图书馆和专业人士传播知识的渠道。市面可以买到国文、数学、历史、地理、武技与基础魔法教材；初级数学内容包括四则运算、九九乘法、面积及圆周率3.14。教材把许多基础理论归于帝及后世数学家，这反映教材所记的知识传承。\n\n学城具有类似大学的教学与学术活动，教师可以任职、出版专业著作，学校也在飘零祭举办活动。识字、熟悉本地文字与理解专业内容是不同门槛：原线中黄泉曾不熟本世界文字，诺斯莉阅读魔法专业内容感到吃力，久远则能阅读有关魔法的书籍。\n\n哈克关于猫音就学的讲述称，她在学校免费领书，原应回收，因继续考学士而未收回〔character_belief〕。帝国教育默认免费；录取、师承接受和知识传授范围仍各有条件，食宿器材等待遇分别判断，不据免费原则建立义务入学制度。协会、学院和研究所之间也有人际转介：协会可代传约见，熟悉研究者的人提供身份与地址，使求助者能够找到具备资料和设备的专业机构。\n\n已采用教育深化：公开通行的适用知识与法术，可经学校、专业者、工坊和地方经验双向传授；学习者可留城、往返或返乡，实际施法依资质和训练。学士是帝国认可的高阶学术资格，研究深度以研究生层次作作者理解；相关学术约4—5级是应考基础，仍须考核，不等于官职或法师等级。帝国提供基本生活、研习支持及具体研究所需的材料、器具和协作资助。学士可教学、研究并按专长提供公共服务，不因此自动获得私人传承。",
+      "content": "帝国教育与知识传播\n\n帝国主要使用大陆通用语，各族可有自己的语言。个人的口语、读写和专业理解分别记录，不按种族直接赋予每个人相同的语种能力。\n\n帝国已有通过教材、学校、图书馆和专业人士传播知识的渠道。市面可以买到国文、数学、历史、地理、武技与基础魔法教材；初级数学内容包括四则运算、九九乘法、面积及圆周率3.14。教材把许多基础理论归于帝及后世数学家，这反映教材所记的知识传承。\n\n学城具有类似大学的教学与学术活动，教师可以任职、出版专业著作，学校也在飘零祭举办活动。识字、熟悉本地文字与理解专业内容是不同门槛：原线中黄泉曾不熟本世界文字，诺斯莉阅读魔法专业内容感到吃力，久远则能阅读有关魔法的书籍。\n\n哈克关于猫音就学的讲述称，她在学校免费领书，原应回收，因继续考学士而未收回〔character_belief〕。帝国教育默认免费；录取、师承接受和知识传授范围仍各有条件，食宿器材等待遇分别判断，不据免费原则建立义务入学制度。协会、学院和研究所之间也有人际转介：协会可代传约见，熟悉研究者的人提供身份与地址，使求助者能够找到具备资料和设备的专业机构。\n\n过往异界来客的适用知识已被改写、传授并进入公共生产和生活，不是每位来客都从零发明一切。普通读写、计量、工具照护与专业学习可免费获得，公费农作施术另按真实法术与政府支出安排；学习不使农民归属法师，也不新立一类农业魔法职业。适用降雨、土石术的能力仍取决于天赋、知识与实际掌握。\n\n地方教学点可按生产、照护和行程分短课、分段学习，居民不必全离乡长期入城。农户、工匠和运输者的观察可经真实样件、记录、访学进入教材、图书馆与研究，也可纠正城市专家；实际收录和消息送达才产生相应知识，不存在全国实时共享。公开知识可传播，私人手艺与资料按愿意分享的范围。\n\n教师出行、材料与公共教学有相应支持，不能扩成所有私人旅行生活成本免费。求学者可返乡、留外或继续往返，不因受教而终身服务，也不自动得公职。地方与城市各有专长，生活经验不因没有学术头衔而失效。",
       "constant": false,
       "selective": false,
       "selectiveLogic": 0,
@@ -1797,6 +1816,10 @@
             {
               "path": "work/replay_research/language_education_reference_20261008.md",
               "line": 308
+            },
+            {
+              "path": "work/replay_research/language_education_reference_20261008.md",
+              "line": 557
             }
           ],
           "baseline_source": {
@@ -1846,7 +1869,17 @@
           "revisions": [
             {
               "source": "adopted_author_delta.json",
-              "reason": "用户要求全面审查并接入；仅迁移明确已采用的当前期事实，不写入事件或人物运行状态。"
+              "author_key": "author-education",
+              "reason": "2026-10-28已采用作者内容汇合；原文／采用／知情与实际分支分别保留。",
+              "mode": "append",
+              "source_segments": [
+                {
+                  "path": "work/replay_research/language_education_reference_20261008.md",
+                  "line": 557,
+                  "end_line": 563,
+                  "sha256": "cbef1be46ff122425980dc369fd8e7cc380686486539a2b75a1c1792ceb17faf"
+                }
+              ]
             }
           ],
           "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",
@@ -1861,7 +1894,7 @@
       ],
       "keysecondary": [],
       "comment": "帝国军令与情报渠道",
-      "content": "帝国军令与情报渠道\n\n帝国军令与情报通过直属上报、专门部门、朝会、密谈和战地通信等渠道传递。地方报告经部门上达，朝会再由有权处理的官员和帝作出决定；有明确直属职务者也有相应报告责任。战场上使用通信卷轴，地方可借助驻镇法师发送消息，不同地点的接报、核实、下令和人员抵达会有时间差。\n\n保密任务可限制接触者和传播范围。雷光的指挥处具备隔绝侦知魔法的条件，他有自己的秘密情报部门，帝则直接掌控兄弟会，两者归属不同。\n\n常规魔法通信与预制通信卷轴的条件分别处理。后期魔兽破解、伪装通信后促成的加密改革，不预设为T0前已完成；御临风后来实际使用的一次性加密卷轴也不自动成为开局通用装备。报告发出、接通、收到、认证及采取行动须各有实际依据。知道消息不等于相信全部内容，身份认证不替报告作事实核验；意向、承诺、命令、出发与实际执行各自记录，未观察到结果不自动算成功或失败。",
+      "content": "帝国军令与情报渠道\n\n帝国军令与情报通过直属上报、专门部门、朝会、密谈和战地通信等渠道传递。地方报告经部门上达，朝会再由有权处理的官员和帝作出决定；有明确直属职务者也有相应报告责任。战场上使用通信卷轴，地方可借助驻镇法师发送消息，不同地点的接报、核实、下令和人员抵达会有时间差。\n\n保密任务可限制接触者和传播范围。雷光的指挥处具备隔绝侦知魔法的条件，他有自己的秘密情报部门，帝则直接掌控兄弟会，两者归属不同。\n\n常规魔法通信与预制通信卷轴的条件分别处理。后期魔兽破解、伪装通信后促成的加密改革，不预设为T0前已完成；御临风后来实际使用的一次性加密卷轴也不自动成为开局通用装备。报告发出、接通、收到、认证及采取行动须各有实际依据。知道消息不等于相信全部内容，身份认证不替报告作事实核验；意向、承诺、命令、出发与实际执行各自记录，未观察到结果不自动算成功或失败。\n\n边关局部魔法通信干扰是本页采用的作者假设，不能扩成全国魔法通信瘫痪。距帝都约300公里的军队不等于边关距离；骑兵或魔法传话要有真实发出、传递和接收，帝私人掌握的情报不是所有下属现成证据。军令权源、内容、收到及执行分别存在，改变计划、计划受损和计划失败也不同。",
       "constant": false,
       "selective": false,
       "selectiveLogic": 0,
@@ -2003,6 +2036,10 @@
             {
               "path": "output/replay_tavern/flow_guidance_20261018_candidate/import/901_主持体验补充_M1_20261018.json",
               "uid": 98226191
+            },
+            {
+              "path": "work/replay_research/empire_operations_consolidated.md",
+              "line": 1169
             }
           ],
           "baseline_source": {
@@ -2071,7 +2108,22 @@
             "certainty_rule": "原有事实、采用设计与人物证言按正文分别有效；不初始化未来事件",
             "temporal_rule": "T0基线与条件式行动分开；当前分支按实际事件更新"
           },
-          "revisions": [],
+          "revisions": [
+            {
+              "source": "adopted_author_delta.json",
+              "author_key": "w-command-knowledge",
+              "reason": "2026-10-28已采用作者内容汇合；原文／采用／知情与实际分支分别保留。",
+              "mode": "append",
+              "source_segments": [
+                {
+                  "path": "work/replay_research/empire_operations_consolidated.md",
+                  "line": 1169,
+                  "end_line": 1177,
+                  "sha256": "8a08bdf449dbd854bd82c3a700fa633d993255bce7c6afeef059279231e1d22c"
+                }
+              ]
+            }
+          ],
           "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",
           "authorization": "用户：基于 tavern-cards 编排六本书的条目、触发和状态分工，再据此迁移内容。"
         }
@@ -2825,12 +2877,13 @@
     "1399227248": {
       "uid": 1399227248,
       "key": [
-        "帝国",
-        "八柱将"
+        "帝国军力与粮储基线",
+        "帝国军力",
+        "帝国粮储"
       ],
       "keysecondary": [],
       "comment": "帝国军力与粮储基线",
-      "content": "帝国军力与粮储基线\n\nT0背景中的可用于远征的常备军约一千万；综合动员后的预计远征总规模可达四千万。四千万包含前述常备基数，并非额外四千万或当前已集结兵力；三千万差额不能当作预备役人数，全帝国现役总额、留守额及独立预备役人数仍未定。国家粮储按即使停止全部农业生产也可支撑数十年的规模保留；国家总储备不等于各地现货、当下可调运量或民间领取权，魔法对粮储的具体作用未定。实际动员、调拨和角色知情沿当前分支推进，不把原线朝会、出征与后续战果预设为已发生。\n\n已采用地区军务：常规军属于帝国，地方守备、正规驻军、机动部队及八柱将直属军依任务与任命协作。五地区布局中，中央腹地由帝或受命八柱将直辖，南部军区与边关前沿责任分清；驻守和机动类型适应西部道路、北境寒地、东部水路丘陵、南部山前等环境。共同基础训练兼顾地区经验，轮换、补员和跨区抽调须保障必要留守。制度关系不表示T0已动员或派出某队；精确兵员配额、番号、指挥官和军需候选未定或未采用。",
+      "content": "帝国军力与粮储基线\n\nT0背景中的可用于远征的常备军约一千万；综合动员后的预计远征总规模可达四千万。四千万包含前述常备基数，并非额外四千万或当前已集结兵力；三千万差额不能当作预备役人数，全帝国现役总额、留守额及独立预备役人数仍未定。国家粮储按即使停止全部农业生产也可支撑数十年的规模保留；国家总储备不等于各地现货、当下可调运量或民间领取权，魔法对粮储的具体作用未定。实际动员、调拨和角色知情沿当前分支推进，不把原线朝会、出征与后续战果预设为已发生。\n\n士兵、士官、军官是不同序列，军官有四层框架；军衔、职务、个人力量互不等价，八柱将是特殊称号。什、百人、营、大队、兵种统领至边关元帅表达已采用组织方向，原候选8—12等确切编制人数不进入。普通部队与精选精锐小队不同，队员、副官、队长是实际任命，不能凭战力自动晋职。涅凤为边关元帅，达卡斯掌步兵、凯莱掌骑兵、利德华掌法师的范围按既有来源；“第九”只在步兵边界内使用，不扩为全国统一编号。",
       "constant": false,
       "selective": false,
       "selectiveLogic": 0,
@@ -3002,6 +3055,10 @@
             {
               "path": "work/replay_research/empire_military_strength_20261007.md",
               "line": 483
+            },
+            {
+              "path": "work/replay_research/empire_military_strength_20261007.md",
+              "line": 727
             }
           ],
           "baseline_source": {
@@ -3099,7 +3156,17 @@
           "revisions": [
             {
               "source": "adopted_author_delta.json",
-              "reason": "用户要求全面审查并接入；仅迁移明确已采用的当前期事实，不写入事件或人物运行状态。"
+              "author_key": "author-military",
+              "reason": "2026-10-28已采用作者内容汇合；原文／采用／知情与实际分支分别保留。",
+              "mode": "append",
+              "source_segments": [
+                {
+                  "path": "work/replay_research/empire_military_strength_20261007.md",
+                  "line": 727,
+                  "end_line": 729,
+                  "sha256": "124f4033e57c23d19d05820f0d6ccf235700fdd003ad8b33193ec171bade68a6"
+                }
+              ]
             }
           ],
           "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",
@@ -3112,12 +3179,12 @@
       "key": [
         "帝国公告",
         "地方消息单",
-        "帝都",
-        "帝国通信"
+        "帝国通信",
+        "帝国公共消息与民间见识"
       ],
       "keysecondary": [],
       "comment": "帝国公共消息与民间见识",
-      "content": "帝国公共消息与民间见识\n\n官署公告公开道路、工程、节庆、招募及已决定公布的战果等事项，公布范围与实际传播距离有限。商旅、家信、返乡者和既有交通代送使外地消息进入日常；帝都及主要商旅节点可有汇集公开通告、交通见闻和节庆的简短地方消息单。城乡和地区的渠道、兴趣各异，传闻会填补空白；已发、已送、已收、已信分别成立，人物不会因主持知情而自动知晓。发行量、刊期、统一报业及全国即时网络未定。",
+      "content": "帝国公共消息与民间见识\n\n帝国官署公告可公开道路、通航、工程、节庆、招募和决定公布的战果、表彰。居民在官署、集市或相关公共机构接触公告，也可听人带回乡里转述。帝与帝国的威信使正式公布对多数实际听闻者有分量；接受公开结论不等于知道幕后原因、部署或秘密，也不意味着全国同刻听闻。\n\n商旅、家信、学生、外出雇工及返乡者让远方成为亲友生活和具体见闻，村镇经验也随往来进入城市。熟人信用与反复往来有价值，但亲历诚实仍可能片面、过时或夸张，不把商人一概设成传谣者。车船商队可兼营代送；私人魔法通信取决于当地法师与实际条件，不保证即时送达。\n\n免费教育支持阅读、写信、记录和比较；人们也可为亲友解释文书、转述通用语消息或用本族语言讨论。围听可以出于忙碌、消遣或语言习惯，不据此认定村民不识字。帝都及主要商旅节点可有汇集公开通告、交通见闻、节庆和公开教学活动的地方消息单，随信件、教材或行李流转。刊名、刊期、发行量及复制工艺未定；不设统一报业或全国即时网络。\n\n城市接触不同来人的机会较多，个人仍依职业、关系和兴趣关注消息。干线集镇可能比少有往来的城市片区更早听闻某地消息，不能只按远近判断。村庄常通过赶集、交货、家信、返乡和教学联系远方，关心亲人、通路与下一季生活；外地知识少不抹除深入的本地土地、天气、路况和物候经验。\n\n地区关注有生活倾向：帝都与中央腹地常谈宫廷公开活动、工程和教学；佛萨罗伦与西部商路重路线、停留处与旅途人情；洛汀河谷重水情、通航、收成和沿河亲友；烬辉丘陵重材料、成品和工坊见闻；白暮北境重解冻、海冰、返程者及冬季生活，季节可影响消息集中抵达，有效魔法联系仍能传来个别急讯；风门山前重护运、公开战讯和服役亲友，不因此知道部署；远西经多族工坊、林湖和外出成员交流，银月城家族可从外派优秀成员获得深入而选择性的见闻。长寿便于比较今昔，也可能保留旧印象。这些不是人人一致的观点，知识并非只从帝都向外流动。\n\n传闻常填补未知原因和奇异力量的解释空白，转述可压缩时间、合并人物或把一次见闻说成常态，不必都出于欺骗。觉得可能、信任讲述者与确有证据分别成立；新亲历、家信和公开消息可改变认识，旧说也可持续。接受公开战果仍可对取胜原因各有猜想；古精灵覆亡等隐秘旧史不随普通奇闻自动公开。发送、送达、收到、采信与采取行动各依本分支证据，主持加载不使任何人物自动知情，也不生成船期、事故或新公告。",
       "constant": false,
       "selective": false,
       "selectiveLogic": 0,
@@ -3270,6 +3337,10 @@
             {
               "path": "work/replay_research/information_consequences_reference_20261007.md",
               "line": 73
+            },
+            {
+              "path": "work/replay_research/information_consequences_reference_20261007.md",
+              "line": 208
             }
           ],
           "baseline_source": {
@@ -3367,7 +3438,17 @@
           "revisions": [
             {
               "source": "adopted_author_delta.json",
-              "reason": "用户要求全面审查并接入；仅迁移明确已采用的当前期事实，不写入事件或人物运行状态。"
+              "author_key": "author-news",
+              "reason": "2026-10-28已采用作者内容汇合；原文／采用／知情与实际分支分别保留。",
+              "mode": "append",
+              "source_segments": [
+                {
+                  "path": "work/replay_research/information_consequences_reference_20261007.md",
+                  "line": 208,
+                  "end_line": 220,
+                  "sha256": "61f57f515c0243979da949e69e8e2075bdcd8ff87443e1818492ddb6a23256f7"
+                }
+              ]
             }
           ],
           "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",
@@ -3378,14 +3459,11 @@
     "1988853466": {
       "uid": 1988853466,
       "key": [
-        "帝国官员",
-        "帝国法师",
-        "游击士协会",
-        "帝国武者"
+        "帝国力量与社会位置"
       ],
       "keysecondary": [],
       "comment": "帝国力量与社会位置",
-      "content": "帝国力量与社会位置\n\n普通人可任行政官员，也可凭专业和可靠工作取得声望；武者、法师能服役、教学、受雇或经营，力量不自动等于官职、财富及私人信任。职务决定办理权限，专业意见、公共决定和个人威望各有分量；强者可能因尊敬帝而合作。纠纷按具体行为和证据求助、保护和处理，地方力量不足可经实际军政与协会渠道求援。声望不能定罪或免责，保护不等于案件已定；不从这些原则推出统一战力表或固定处置流程。",
+      "content": "帝国力量与社会位置\n\n普通人可凭专业与考核任行政官，农作、工艺、商业、医药、记账、教学等工作不以超常力量为前提；武者可服役、护运、探索、受雇和教学，也可另有职业，能战斗不等于会带队、保护或教人。法师可从事教学研究、工坊、军务、公费施术及私人委托，稀缺专长不等于全能，也不设私人领地或上贡。公开生产知识不因私人秘术存在而重新封闭，公共付费不将法师人身及私人劳动公有化。非施法者使用器具依器具真实条件。\n\n战力、财富、声望、专业权威与职权分别成立。地方熟练者可比陌生强者更受信任；名望带来邀请与求助，也可能使旁人不敢指出错误。官员依真实任职统筹，不必比协作者能打，也不能随意调遣不属其指挥的强者；专业者说明能力与限制，公共取舍由实际授权者承担。普通材料、记录、医者和地方经验同样支撑强者工作，贡献认可、报酬和继续任用分别成立。\n\n部分强者因尊敬帝的能力与作为而效力，可以领取报酬、提出异议并保留自己的判断；旁人不能以“为了帝国”取得无限调用权，敬意不是免责或免费劳动义务。分歧可只是资源、职责和方法不同，不自动演成忠诚与反叛。组织、上层力量、假面许可与受控材料提供实际约束，不能让一纸职权或厌魔石无条件压制一切力量。帝国无全国世袭贵族官阶，与北地高等精灵旧贵族身份及财产影响分开。\n\n长寿与延寿扩大积累但不保证财富、全知或永远最强；长期顾问、传艺者、项目负责人和日常经手者可分工，年轻成员凭作品、受任和合作独立发展，不等长辈死亡，也不新设统一退休年龄。能延寿、已延寿、身体状态和是否愿传授各自判断。",
       "constant": false,
       "selective": false,
       "selectiveLogic": 0,
@@ -3554,6 +3632,10 @@
             {
               "path": "work/replay_research/everyday_life_reference_20261007.md",
               "line": 664
+            },
+            {
+              "path": "work/replay_research/everyday_life_reference_20261007.md",
+              "line": 1460
             }
           ],
           "baseline_source": {
@@ -3651,7 +3733,17 @@
           "revisions": [
             {
               "source": "adopted_author_delta.json",
-              "reason": "用户要求全面审查并接入；仅迁移明确已采用的当前期事实，不写入事件或人物运行状态。"
+              "author_key": "author-social-power",
+              "reason": "2026-10-28已采用作者内容汇合；原文／采用／知情与实际分支分别保留。",
+              "mode": "append",
+              "source_segments": [
+                {
+                  "path": "work/replay_research/everyday_life_reference_20261007.md",
+                  "line": 1460,
+                  "end_line": 1468,
+                  "sha256": "16fc961e45bf09cf7216a32905c78189eee773e740e8269467d539747ce3a749"
+                }
+              ]
             }
           ],
           "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",
@@ -3669,7 +3761,7 @@
       ],
       "keysecondary": [],
       "comment": "帝国商运组织类型",
-      "content": "帝国商运组织类型\n\n商运公司、联合商会、车船联营是已采用的组织类型与经营协作方向，可承接既有客运、货运、书信及小包裹代送。现有考古队、阿伊达旧佣兵小队、国立图书馆属于原团实例，各依自身证据使用。未确认具体新商号名称、总部、成员、垄断权限或飞空艇普及程度；类型方向不等于T0已存在某家具体公司。ORG05—07未采用，地下交易网的范围仍不确定。",
+      "content": "帝国商运组织类型\n\n商运公司、联合商会、车船联营是已采用的组织类型与经营协作方向，可承接既有客运、货运、书信及小包裹代送。现有考古队、阿伊达旧佣兵小队、国立图书馆属于原团实例，各依自身证据使用。未确认具体新商号名称、总部、成员、垄断权限或飞空艇普及程度；类型方向不等于T0已存在某家具体公司。ORG05—07未采用，地下交易网的范围仍不确定。\n\n商运公司、联合商会与车船联营是已采用的经营协作类型，可承客货、信件和小包代送，尚未定具体名字、总部、数量或垄断权，也不普及飞空艇。阿伊达为传奇佣兵有原主持确认，早年队伍互补、智囊负责谋略等保留本人说法，队名、成员、规模与是否存续未定，后来入协会不前置T0。维尔所属考古队有学者、护卫、解析报告及临时营地，人数数十与使命说明各按父子自述、现场证据区分，正式名称、隶属和资助者留空；不补全国考古总会。\n\n追兵觊觎空间龙活体与尸材收益属于原团已证牟利袭击，买家和更大组织身份未明；旧空间龙秘境事件不得与P3龙之圣域灾难合并。原型里的商会、猎兵和犯罪组织仅作比较，不导入它们在901的历史与权限。",
       "constant": false,
       "selective": false,
       "selectiveLogic": 0,
@@ -3826,6 +3918,10 @@
             {
               "path": "work/replay_research/organization_options_20261008.md",
               "line": 11
+            },
+            {
+              "path": "work/replay_research/organization_options_20261008.md",
+              "line": 41
             }
           ],
           "baseline_source": {
@@ -3923,7 +4019,2743 @@
           "revisions": [
             {
               "source": "adopted_author_delta.json",
-              "reason": "用户要求全面审查并接入；仅迁移明确已采用的当前期事实，不写入事件或人物运行状态。"
+              "author_key": "author-merchants",
+              "reason": "2026-10-28已采用作者内容汇合；原文／采用／知情与实际分支分别保留。",
+              "mode": "append",
+              "source_segments": [
+                {
+                  "path": "work/replay_research/organization_options_20261008.md",
+                  "line": 41,
+                  "end_line": 46,
+                  "sha256": "104286e2ec894317fcb2fb5e9b9b1b3eca5fd419351146c433fbd8f05a4e8069"
+                }
+              ]
+            }
+          ],
+          "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",
+          "authorization": "用户：基于 tavern-cards 编排六本书的条目、触发和状态分工，再据此迁移内容。"
+        }
+      }
+    },
+    "1487215806": {
+      "uid": 1487215806,
+      "key": [
+        "异界来客",
+        "穿越者",
+        "御临风",
+        "宝石翁"
+      ],
+      "keysecondary": [],
+      "comment": "帝国异界来客处境",
+      "content": "帝国异界来客处境\n\n异界来客的能力、来意和处境各异。帝对穿越者较友好、有容忍度，官员态度不一；学习、谋生、被收纳、关押或流亡取决于具体行为、实力、技术、人物及场合。有见识者知道来客概念，但不能自动识别眼前人或相信自述。御临风及穿越同伴尽量隐藏身份，御临风的披露由玩家决定。普通法师未必辨明陌生体系，专家可辨更多，宝石翁一类强者可迅速识别本质，但不读心、不获得全部秘密。吸收的改革可融入日常，不推出全国统一安置制度。\n\n学术用“魔物”可有较广对象范围，日常敌意称呼不等于学术分类，更不直接决定人格、权利或敌我。沃西斯针对具体来客的试探是个案，不是所有穿越者统一入境审查法。过往来客曾促成知识和生活改进，未因此立出每一项发明的具名纪念史；专家可能辨出异界技术特征，不意味着能复制制造或反推出对方全部经历。实际身份说明、承诺和响应各保留时点。",
+      "constant": false,
+      "selective": false,
+      "selectiveLogic": 0,
+      "order": 120,
+      "position": 1,
+      "disable": false,
+      "addMemo": true,
+      "scanDepth": 4,
+      "caseSensitive": false,
+      "matchWholeWords": false,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "delayUntilRecursion": false,
+      "probability": 100,
+      "useProbability": true,
+      "vectorized": false,
+      "ignoreBudget": false,
+      "matchPersonaDescription": false,
+      "matchCharacterDescription": false,
+      "matchCharacterPersonality": false,
+      "matchCharacterDepthPrompt": false,
+      "matchScenario": false,
+      "matchCreatorNotes": false,
+      "sticky": 0,
+      "cooldown": 0,
+      "delay": 0,
+      "extensions": {
+        "position": 1,
+        "exclude_recursion": true,
+        "prevent_recursion": true,
+        "delay_until_recursion": false,
+        "probability": 100,
+        "useProbability": true,
+        "scan_depth": 4,
+        "case_sensitive": false,
+        "match_whole_words": false,
+        "vectorized": false,
+        "sticky": 0,
+        "cooldown": 0,
+        "delay": 0,
+        "ignore_budget": false,
+        "match_persona_description": false,
+        "match_character_description": false,
+        "match_character_personality": false,
+        "match_character_depth_prompt": false,
+        "match_scenario": false,
+        "match_creator_notes": false,
+        "901_replay": {
+          "source_id": "WORLD_WRC_005",
+          "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+          "source_line": 2,
+          "revision": "M1_IMPORT_20261008_004",
+          "status": "runtime_candidate_for_human_review",
+          "source_refs": [
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 92,
+              "id": "UCL_20261007_023"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 93,
+              "id": "UCL_20261007_024"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 95,
+              "id": "UCL_20261007_026"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 91,
+              "id": "UCL_20261007_022"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 100,
+              "id": "UCL_20261007_031"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 106,
+              "id": "UCL_20261008_005"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 107,
+              "id": "UCL_20261008_006"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 98,
+              "id": "UCL_20261007_029"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 104,
+              "id": "UCL_20261008_003"
+            },
+            {
+              "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+              "line": 15,
+              "id": "921465"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 108,
+              "id": "UCL_20261008_007"
+            }
+          ],
+          "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+          "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+            "source_line": 11,
+            "revision": "M1_IMPORT_20261007_003",
+            "source_refs": [
+              {
+                "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                "line": 5
+              }
+            ],
+            "certainty_rule": "各正文标注及来源等级分别有效",
+            "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+              "source_line": 5,
+              "candidate_projection": {
+                "status": "provisional_for_human_review",
+                "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                "line": 3,
+                "source_index": "author_entry_sources.json",
+                "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+              }
+            }
+          }
+        },
+        "901_six_books": {
+          "revision": "SIX_BOOKS_20261023_001",
+          "entry_type": "concept",
+          "book": "政治与势力",
+          "source_units": [],
+          "source_refs": [
+            {
+              "path": "work/replay_research/outsider_society_reference_20261008.md",
+              "line": 3
+            },
+            {
+              "path": "work/replay_research/outsider_society_reference_20261008.md",
+              "line": 5
+            },
+            {
+              "path": "work/replay_research/organization_options_20261008.md",
+              "line": 41
+            }
+          ],
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+            "source_line": 2,
+            "revision": "M1_IMPORT_20261008_004",
+            "status": "runtime_candidate_for_human_review",
+            "source_refs": [
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 92,
+                "id": "UCL_20261007_023"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 93,
+                "id": "UCL_20261007_024"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 95,
+                "id": "UCL_20261007_026"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 91,
+                "id": "UCL_20261007_022"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 100,
+                "id": "UCL_20261007_031"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 106,
+                "id": "UCL_20261008_005"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 107,
+                "id": "UCL_20261008_006"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 98,
+                "id": "UCL_20261007_029"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 104,
+                "id": "UCL_20261008_003"
+              },
+              {
+                "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+                "line": 15,
+                "id": "921465"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 108,
+                "id": "UCL_20261008_007"
+              }
+            ],
+            "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+            "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+              "source_line": 11,
+              "revision": "M1_IMPORT_20261007_003",
+              "source_refs": [
+                {
+                  "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                  "line": 5
+                }
+              ],
+              "certainty_rule": "各正文标注及来源等级分别有效",
+              "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+              "baseline_source": {
+                "source_id": "WORLD_WRC_005",
+                "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+                "source_line": 5,
+                "candidate_projection": {
+                  "status": "provisional_for_human_review",
+                  "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                  "line": 3,
+                  "source_index": "author_entry_sources.json",
+                  "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+                }
+              }
+            }
+          },
+          "revisions": [
+            {
+              "source": "adopted_author_delta.json",
+              "author_key": "author-outsiders",
+              "reason": "2026-10-28已采用作者内容汇合；原文／采用／知情与实际分支分别保留。",
+              "mode": "append",
+              "source_segments": [
+                {
+                  "path": "work/replay_research/organization_options_20261008.md",
+                  "line": 41,
+                  "end_line": 46,
+                  "sha256": "104286e2ec894317fcb2fb5e9b9b1b3eca5fd419351146c433fbd8f05a4e8069"
+                }
+              ]
+            }
+          ],
+          "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",
+          "authorization": "用户：基于 tavern-cards 编排六本书的条目、触发和状态分工，再据此迁移内容。"
+        }
+      }
+    },
+    "1898887733": {
+      "uid": 1898887733,
+      "key": [
+        "帝国日常纠纷与居民保护"
+      ],
+      "keysecondary": [],
+      "comment": "帝国日常纠纷与居民保护",
+      "content": "帝国日常纠纷与居民保护\n\n一般交付或邻里分歧可自愿商量或找可信经手者，出现威胁伤害可联系地方、城卫或协会，不必先找强者靠山、取得对方同意或备齐法术材料。眼前救助不先收费，具体危险可先有限保护再核问，保护不等于指控坐实。说法、见证、损伤、账据和真实约定分别核实，口头交易可说明；听取被指涉者回应，名望不定罪也不免责，不补全民读心测谎。\n\n制止依真实权限和能力；地方不足可及早求援，不先让守卫试打或让居民受伤证明必要。协会可救助、制止现行犯罪、暂控并移交，不能据此长期拘押、终审或任意调军。偏袒或拒接时可经协会监督及有权常务机构另行反映，协会自身也可能需受查；私人关系不等于同党，达卡斯案的少量记录与特殊宽处不普遍化。\n\n已成立的返还、治疗修复及可核实生计损失应落实到实际交付；支付、伤害恢复、行为处置和私人谅解各自成立。真实困难可经有权处理或自愿约定分期、实物或替代修复，不让赔偿变成私人依附，不因长寿无限拖延；处置财物或从应付报酬交付须有实际依据与权限。协会会员、雇主不能任意搜家扣钱，国家不普遍垫付全部损失。\n\n拒不履行、威胁经手者及借熟人逼迫改口按具体新增行为处理，合理异议、普通交易终止和疏远不是自动报复。保护针对危险接触并尽量维持受损者工作、学习和生活，行程住址只给必要经手人，不能保证无限守卫或绝对匿名。赔偿到账不证明危险消失，履行结束不强求友好或公开原谅。\n\n正规支援沿真实军政与协会关系联系，中央腹地由帝或受命八柱将直辖，协会不调令正规军。派适合任务且可到达的人，个人愿来、协会派遣、部队获令和跨区授权分开；发信、收到、派遣、到场和实际接手分别成立。当地在能力内保护、疏导及维持安全区服务，不因局部危险封闭全城、强征居民或让私人法师免费待命。国家粮储不是自动到户供给，路况运力与调拨仍需落实；危险下降后恢复实际生活。本条解释社会关系和生活后果，不是逐轮执行规程；DT不进入。",
+      "constant": false,
+      "selective": false,
+      "selectiveLogic": 0,
+      "order": 120,
+      "position": 1,
+      "disable": false,
+      "addMemo": true,
+      "scanDepth": 4,
+      "caseSensitive": false,
+      "matchWholeWords": false,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "delayUntilRecursion": false,
+      "probability": 100,
+      "useProbability": true,
+      "vectorized": false,
+      "ignoreBudget": false,
+      "matchPersonaDescription": false,
+      "matchCharacterDescription": false,
+      "matchCharacterPersonality": false,
+      "matchCharacterDepthPrompt": false,
+      "matchScenario": false,
+      "matchCreatorNotes": false,
+      "sticky": 0,
+      "cooldown": 0,
+      "delay": 0,
+      "extensions": {
+        "position": 1,
+        "exclude_recursion": true,
+        "prevent_recursion": true,
+        "delay_until_recursion": false,
+        "probability": 100,
+        "useProbability": true,
+        "scan_depth": 4,
+        "case_sensitive": false,
+        "match_whole_words": false,
+        "vectorized": false,
+        "sticky": 0,
+        "cooldown": 0,
+        "delay": 0,
+        "ignore_budget": false,
+        "match_persona_description": false,
+        "match_character_description": false,
+        "match_character_personality": false,
+        "match_character_depth_prompt": false,
+        "match_scenario": false,
+        "match_creator_notes": false,
+        "901_replay": {
+          "source_id": "WORLD_WRC_005",
+          "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+          "source_line": 2,
+          "revision": "M1_IMPORT_20261008_004",
+          "status": "runtime_candidate_for_human_review",
+          "source_refs": [
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 92,
+              "id": "UCL_20261007_023"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 93,
+              "id": "UCL_20261007_024"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 95,
+              "id": "UCL_20261007_026"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 91,
+              "id": "UCL_20261007_022"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 100,
+              "id": "UCL_20261007_031"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 106,
+              "id": "UCL_20261008_005"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 107,
+              "id": "UCL_20261008_006"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 98,
+              "id": "UCL_20261007_029"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 104,
+              "id": "UCL_20261008_003"
+            },
+            {
+              "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+              "line": 15,
+              "id": "921465"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 108,
+              "id": "UCL_20261008_007"
+            }
+          ],
+          "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+          "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+            "source_line": 11,
+            "revision": "M1_IMPORT_20261007_003",
+            "source_refs": [
+              {
+                "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                "line": 5
+              }
+            ],
+            "certainty_rule": "各正文标注及来源等级分别有效",
+            "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+              "source_line": 5,
+              "candidate_projection": {
+                "status": "provisional_for_human_review",
+                "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                "line": 3,
+                "source_index": "author_entry_sources.json",
+                "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+              }
+            }
+          }
+        },
+        "901_six_books": {
+          "revision": "SIX_BOOKS_20261023_001",
+          "entry_type": "concept",
+          "book": "政治与势力",
+          "source_units": [],
+          "source_refs": [
+            {
+              "path": "work/replay_research/everyday_life_reference_20261007.md",
+              "line": 1476
+            }
+          ],
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+            "source_line": 2,
+            "revision": "M1_IMPORT_20261008_004",
+            "status": "runtime_candidate_for_human_review",
+            "source_refs": [
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 92,
+                "id": "UCL_20261007_023"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 93,
+                "id": "UCL_20261007_024"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 95,
+                "id": "UCL_20261007_026"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 91,
+                "id": "UCL_20261007_022"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 100,
+                "id": "UCL_20261007_031"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 106,
+                "id": "UCL_20261008_005"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 107,
+                "id": "UCL_20261008_006"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 98,
+                "id": "UCL_20261007_029"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 104,
+                "id": "UCL_20261008_003"
+              },
+              {
+                "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+                "line": 15,
+                "id": "921465"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 108,
+                "id": "UCL_20261008_007"
+              }
+            ],
+            "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+            "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+              "source_line": 11,
+              "revision": "M1_IMPORT_20261007_003",
+              "source_refs": [
+                {
+                  "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                  "line": 5
+                }
+              ],
+              "certainty_rule": "各正文标注及来源等级分别有效",
+              "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+              "baseline_source": {
+                "source_id": "WORLD_WRC_005",
+                "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+                "source_line": 5,
+                "candidate_projection": {
+                  "status": "provisional_for_human_review",
+                  "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                  "line": 3,
+                  "source_index": "author_entry_sources.json",
+                  "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+                }
+              }
+            }
+          },
+          "revisions": [
+            {
+              "source": "adopted_author_delta.json",
+              "author_key": "w-disputes",
+              "reason": "2026-10-28已采用作者内容汇合；原文／采用／知情与实际分支分别保留。",
+              "mode": "append",
+              "source_segments": [
+                {
+                  "path": "work/replay_research/everyday_life_reference_20261007.md",
+                  "line": 1476,
+                  "end_line": 1486,
+                  "sha256": "cb500cdc53107604850a2ed1fa7ca65852fee46607157eb0482a9572955e9e08"
+                }
+              ]
+            }
+          ],
+          "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",
+          "authorization": "用户：基于 tavern-cards 编排六本书的条目、触发和状态分工，再据此迁移内容。"
+        }
+      }
+    },
+    "1879794373": {
+      "uid": 1879794373,
+      "key": [
+        "帝国学士与长期研习",
+        "帝国学士"
+      ],
+      "keysecondary": [],
+      "comment": "帝国学士与长期研习",
+      "content": "帝国学士与长期研习\n\n学士代表较深、能在相关领域独立研习的学术资格。“研究生层次”是作者理解的类比，不是世界内学制；相关学术4—5是资格门槛方向，不是达到数值就自动授予称号。资格受领域限制，不等同官职、法师阶位或掌握所有学问，熟练工匠和居民可在实际问题上更懂行。猫音T0前已取得帝国学士资格，此资格已经确认；哈克原来“好像”的转述仍按原出处保留，具体专业、考试名称和获资格日期未定，不能因旧转述重新撤销已确认资格。\n\n基本生活、食宿和资料条件与具体项目材料、空间、助手、旅费通信等支持分别成立。长期探索不必每年以重大突破证明价值，军方资助实例也不使所有研究归军方控制。学者可任教、改教材、做研究或专业工作，但不是人人同时承担全部角色；实际工作和成果贡献得到相应报酬与承认。\n\n理论、历史、语言和材料等研究可以累积，工匠与地方合作提供经验，公共咨询和反馈有价值。公共支持期待知识回到社会，却容许自己的兴趣和暂不直接售卖的探索；明确委托的任务另有承诺，私人家传与保密资料不因公费而全归国家。专业、资助额度、课题和岗位按实际决定，不新设统一科研编制。\n\n长寿学者与年轻、短寿同事及新方法共同发展，设备、课题与发言机会不能永久绑定一位长辈。年轻人可参与既有项目再以自己的问题取得支持，家人对学术生活的认可、普通生活与独立方向均可存在，不自动指派猫音、御临风任教或研究。\n\n学士福利含由帝国承担费用的国立图书馆普通入馆通行证。二十金是该馆较高门槛，受限资料另按权限，免费教育不等于所有研究资源免费开放；有效期和其他馆藏权限未补。某人具有福利资格、已领证与实际入馆仍是不同状态。",
+      "constant": false,
+      "selective": false,
+      "selectiveLogic": 0,
+      "order": 120,
+      "position": 1,
+      "disable": false,
+      "addMemo": true,
+      "scanDepth": 4,
+      "caseSensitive": false,
+      "matchWholeWords": false,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "delayUntilRecursion": false,
+      "probability": 100,
+      "useProbability": true,
+      "vectorized": false,
+      "ignoreBudget": false,
+      "matchPersonaDescription": false,
+      "matchCharacterDescription": false,
+      "matchCharacterPersonality": false,
+      "matchCharacterDepthPrompt": false,
+      "matchScenario": false,
+      "matchCreatorNotes": false,
+      "sticky": 0,
+      "cooldown": 0,
+      "delay": 0,
+      "extensions": {
+        "position": 1,
+        "exclude_recursion": true,
+        "prevent_recursion": true,
+        "delay_until_recursion": false,
+        "probability": 100,
+        "useProbability": true,
+        "scan_depth": 4,
+        "case_sensitive": false,
+        "match_whole_words": false,
+        "vectorized": false,
+        "sticky": 0,
+        "cooldown": 0,
+        "delay": 0,
+        "ignore_budget": false,
+        "match_persona_description": false,
+        "match_character_description": false,
+        "match_character_personality": false,
+        "match_character_depth_prompt": false,
+        "match_scenario": false,
+        "match_creator_notes": false,
+        "901_replay": {
+          "source_id": "WORLD_WRC_005",
+          "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+          "source_line": 2,
+          "revision": "M1_IMPORT_20261008_004",
+          "status": "runtime_candidate_for_human_review",
+          "source_refs": [
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 92,
+              "id": "UCL_20261007_023"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 93,
+              "id": "UCL_20261007_024"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 95,
+              "id": "UCL_20261007_026"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 91,
+              "id": "UCL_20261007_022"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 100,
+              "id": "UCL_20261007_031"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 106,
+              "id": "UCL_20261008_005"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 107,
+              "id": "UCL_20261008_006"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 98,
+              "id": "UCL_20261007_029"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 104,
+              "id": "UCL_20261008_003"
+            },
+            {
+              "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+              "line": 15,
+              "id": "921465"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 108,
+              "id": "UCL_20261008_007"
+            }
+          ],
+          "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+          "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+            "source_line": 11,
+            "revision": "M1_IMPORT_20261007_003",
+            "source_refs": [
+              {
+                "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                "line": 5
+              }
+            ],
+            "certainty_rule": "各正文标注及来源等级分别有效",
+            "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+              "source_line": 5,
+              "candidate_projection": {
+                "status": "provisional_for_human_review",
+                "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                "line": 3,
+                "source_index": "author_entry_sources.json",
+                "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+              }
+            }
+          }
+        },
+        "901_six_books": {
+          "revision": "SIX_BOOKS_20261023_001",
+          "entry_type": "concept",
+          "book": "政治与势力",
+          "source_units": [],
+          "source_refs": [
+            {
+              "path": "work/replay_research/language_education_reference_20261008.md",
+              "line": 565
+            }
+          ],
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+            "source_line": 2,
+            "revision": "M1_IMPORT_20261008_004",
+            "status": "runtime_candidate_for_human_review",
+            "source_refs": [
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 92,
+                "id": "UCL_20261007_023"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 93,
+                "id": "UCL_20261007_024"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 95,
+                "id": "UCL_20261007_026"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 91,
+                "id": "UCL_20261007_022"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 100,
+                "id": "UCL_20261007_031"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 106,
+                "id": "UCL_20261008_005"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 107,
+                "id": "UCL_20261008_006"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 98,
+                "id": "UCL_20261007_029"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 104,
+                "id": "UCL_20261008_003"
+              },
+              {
+                "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+                "line": 15,
+                "id": "921465"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 108,
+                "id": "UCL_20261008_007"
+              }
+            ],
+            "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+            "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+              "source_line": 11,
+              "revision": "M1_IMPORT_20261007_003",
+              "source_refs": [
+                {
+                  "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                  "line": 5
+                }
+              ],
+              "certainty_rule": "各正文标注及来源等级分别有效",
+              "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+              "baseline_source": {
+                "source_id": "WORLD_WRC_005",
+                "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+                "source_line": 5,
+                "candidate_projection": {
+                  "status": "provisional_for_human_review",
+                  "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                  "line": 3,
+                  "source_index": "author_entry_sources.json",
+                  "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+                }
+              }
+            }
+          },
+          "revisions": [
+            {
+              "source": "adopted_author_delta.json",
+              "author_key": "w-20261028-帝国学士与长期研习",
+              "reason": "2026-10-28已采用作者内容汇合；原文／采用／知情与实际分支分别保留。",
+              "mode": "append",
+              "source_segments": [
+                {
+                  "path": "work/replay_research/language_education_reference_20261008.md",
+                  "line": 565,
+                  "end_line": 575,
+                  "sha256": "a622b3187d90f2d9e83f5b5486c37b32b821f6f419a1059b88be630638c40b01"
+                }
+              ]
+            }
+          ],
+          "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",
+          "authorization": "用户：基于 tavern-cards 编排六本书的条目、触发和状态分工，再据此迁移内容。"
+        }
+      }
+    },
+    "1278755251": {
+      "uid": 1278755251,
+      "key": [
+        "东部矿段与社群资产经营"
+      ],
+      "keysecondary": [],
+      "comment": "东部矿段与社群资产经营",
+      "content": "东部矿段与社群资产经营\n\n传承社群共同维护的据点主体、公共设施、传承记录及认可共同矿段属于共同资产，代表不是私人所有者；重大改造、长期外营和拆除重要旧设施须由社群决定。家户祖传或购租房屋、工坊自有设备与公共旧构件使用权分别存在。已有共同、个人或合作矿权，不因缺全国统一字册就成为无主；确无旧主张的新矿段由本地区帝国公共持有，再授明确采用和收益安排，发现勘整投入获得约定报酬、机会或合作权，不自动取得全矿永久产权。\n\n经营安排说明范围、维护水土责任、费用分享、期限与终止，经营者负责设备、人手、订单、生产维护和废料并获约定收益。已完成工钱、承接费、材料运费、共同资产使用收益、维护预留和经营剩余分别核算；可事先约劳动参与剩余分成，经营不佳时分成可无，却不能追扣约定工资。共同收益先维持公共传承，再支持改善、教学和困难帮扶；既有帝国基本支持不因有经营收益取消，基本服务不以持股为门槛。本项是东部已采用社会安排，不上升为全国矿法地籍制度。",
+      "constant": false,
+      "selective": false,
+      "selectiveLogic": 0,
+      "order": 120,
+      "position": 1,
+      "disable": false,
+      "addMemo": true,
+      "scanDepth": 4,
+      "caseSensitive": false,
+      "matchWholeWords": false,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "delayUntilRecursion": false,
+      "probability": 100,
+      "useProbability": true,
+      "vectorized": false,
+      "ignoreBudget": false,
+      "matchPersonaDescription": false,
+      "matchCharacterDescription": false,
+      "matchCharacterPersonality": false,
+      "matchCharacterDepthPrompt": false,
+      "matchScenario": false,
+      "matchCreatorNotes": false,
+      "sticky": 0,
+      "cooldown": 0,
+      "delay": 0,
+      "extensions": {
+        "position": 1,
+        "exclude_recursion": true,
+        "prevent_recursion": true,
+        "delay_until_recursion": false,
+        "probability": 100,
+        "useProbability": true,
+        "scan_depth": 4,
+        "case_sensitive": false,
+        "match_whole_words": false,
+        "vectorized": false,
+        "sticky": 0,
+        "cooldown": 0,
+        "delay": 0,
+        "ignore_budget": false,
+        "match_persona_description": false,
+        "match_character_description": false,
+        "match_character_personality": false,
+        "match_character_depth_prompt": false,
+        "match_scenario": false,
+        "match_creator_notes": false,
+        "901_replay": {
+          "source_id": "WORLD_WRC_005",
+          "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+          "source_line": 2,
+          "revision": "M1_IMPORT_20261008_004",
+          "status": "runtime_candidate_for_human_review",
+          "source_refs": [
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 92,
+              "id": "UCL_20261007_023"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 93,
+              "id": "UCL_20261007_024"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 95,
+              "id": "UCL_20261007_026"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 91,
+              "id": "UCL_20261007_022"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 100,
+              "id": "UCL_20261007_031"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 106,
+              "id": "UCL_20261008_005"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 107,
+              "id": "UCL_20261008_006"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 98,
+              "id": "UCL_20261007_029"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 104,
+              "id": "UCL_20261008_003"
+            },
+            {
+              "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+              "line": 15,
+              "id": "921465"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 108,
+              "id": "UCL_20261008_007"
+            }
+          ],
+          "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+          "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+            "source_line": 11,
+            "revision": "M1_IMPORT_20261007_003",
+            "source_refs": [
+              {
+                "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                "line": 5
+              }
+            ],
+            "certainty_rule": "各正文标注及来源等级分别有效",
+            "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+              "source_line": 5,
+              "candidate_projection": {
+                "status": "provisional_for_human_review",
+                "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                "line": 3,
+                "source_index": "author_entry_sources.json",
+                "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+              }
+            }
+          }
+        },
+        "901_six_books": {
+          "revision": "SIX_BOOKS_20261023_001",
+          "entry_type": "concept",
+          "book": "政治与势力",
+          "source_units": [],
+          "source_refs": [
+            {
+              "path": "work/replay_research/lotin_river_valley_working_draft_20261012.md",
+              "line": 1201
+            }
+          ],
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+            "source_line": 2,
+            "revision": "M1_IMPORT_20261008_004",
+            "status": "runtime_candidate_for_human_review",
+            "source_refs": [
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 92,
+                "id": "UCL_20261007_023"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 93,
+                "id": "UCL_20261007_024"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 95,
+                "id": "UCL_20261007_026"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 91,
+                "id": "UCL_20261007_022"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 100,
+                "id": "UCL_20261007_031"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 106,
+                "id": "UCL_20261008_005"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 107,
+                "id": "UCL_20261008_006"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 98,
+                "id": "UCL_20261007_029"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 104,
+                "id": "UCL_20261008_003"
+              },
+              {
+                "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+                "line": 15,
+                "id": "921465"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 108,
+                "id": "UCL_20261008_007"
+              }
+            ],
+            "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+            "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+              "source_line": 11,
+              "revision": "M1_IMPORT_20261007_003",
+              "source_refs": [
+                {
+                  "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                  "line": 5
+                }
+              ],
+              "certainty_rule": "各正文标注及来源等级分别有效",
+              "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+              "baseline_source": {
+                "source_id": "WORLD_WRC_005",
+                "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+                "source_line": 5,
+                "candidate_projection": {
+                  "status": "provisional_for_human_review",
+                  "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                  "line": 3,
+                  "source_index": "author_entry_sources.json",
+                  "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+                }
+              }
+            }
+          },
+          "revisions": [
+            {
+              "source": "adopted_author_delta.json",
+              "author_key": "w-20261028-东部矿段与社群资产经营",
+              "reason": "2026-10-28已采用作者内容汇合；原文／采用／知情与实际分支分别保留。",
+              "mode": "append",
+              "source_segments": [
+                {
+                  "path": "work/replay_research/lotin_river_valley_working_draft_20261012.md",
+                  "line": 1201,
+                  "end_line": 1205,
+                  "sha256": "47d87db5533c8d42a485f2a6cf3d3c1ed3761af50aa1f5ae910a5bd2819da28f"
+                }
+              ]
+            }
+          ],
+          "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",
+          "authorization": "用户：基于 tavern-cards 编排六本书的条目、触发和状态分工，再据此迁移内容。"
+        }
+      }
+    },
+    "1232520640": {
+      "uid": 1232520640,
+      "key": [
+        "风门军械与军需往来",
+        "风门军需"
+      ],
+      "keysecondary": [],
+      "comment": "风门军械与军需往来",
+      "content": "风门军械与军需往来\n\n当地自愿练武、教武、体能练习和有规则比试与军旅、护运及普通学习者共存，目的可为自护、谋生或兴趣。公开基础可免费教，斗气、战技和秘传仍需真实资格。武艺、守约、克制、同行照料和整备共同形成声望，不是全民军役或好斗仪式。\n\n工坊制作修护普通枪头、箭镞、刀斧、盾甲部件和训练器，换柄补盾、绳皮连接同服务农旅；烬辉坯料钢件及复杂工艺有真实供应，风门不因制械成为大矿区。民用、私人、公用与军用各有付款者，高阶附魔和法师甲具不能由普通工坊包办。\n\n面向南方实际军用者，耐运粮、伙食、饲草、衣鞋、药绷带、工具、零件、容器和耗材可由本地、内地订单或实际下拨提供。国家储备巨大不等于当地库存无限或免费供货；军方既有物资可委运，商家须有实际订单，不能把全部收成征走或要求无限垫资。军自运、商委运和混合交接按各段能力安排，商队不全编军，也无保证安全。回程修装、容器和缺件反馈可回风门、烬辉，专用军运不自动开放搭客私信。\n\n军旅、退役、供应运输家庭的长离、家信、钱款、伤病照护和回程亲友关系影响生活。耐用易修衣具和负重走稳、判断停启、保护同行及照料牲畜的能力进入尚武审美，普通教师医者与照护者也有价值。",
+      "constant": false,
+      "selective": false,
+      "selectiveLogic": 0,
+      "order": 120,
+      "position": 1,
+      "disable": false,
+      "addMemo": true,
+      "scanDepth": 4,
+      "caseSensitive": false,
+      "matchWholeWords": false,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "delayUntilRecursion": false,
+      "probability": 100,
+      "useProbability": true,
+      "vectorized": false,
+      "ignoreBudget": false,
+      "matchPersonaDescription": false,
+      "matchCharacterDescription": false,
+      "matchCharacterPersonality": false,
+      "matchCharacterDepthPrompt": false,
+      "matchScenario": false,
+      "matchCreatorNotes": false,
+      "sticky": 0,
+      "cooldown": 0,
+      "delay": 0,
+      "extensions": {
+        "position": 1,
+        "exclude_recursion": true,
+        "prevent_recursion": true,
+        "delay_until_recursion": false,
+        "probability": 100,
+        "useProbability": true,
+        "scan_depth": 4,
+        "case_sensitive": false,
+        "match_whole_words": false,
+        "vectorized": false,
+        "sticky": 0,
+        "cooldown": 0,
+        "delay": 0,
+        "ignore_budget": false,
+        "match_persona_description": false,
+        "match_character_description": false,
+        "match_character_personality": false,
+        "match_character_depth_prompt": false,
+        "match_scenario": false,
+        "match_creator_notes": false,
+        "901_replay": {
+          "source_id": "WORLD_WRC_005",
+          "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+          "source_line": 2,
+          "revision": "M1_IMPORT_20261008_004",
+          "status": "runtime_candidate_for_human_review",
+          "source_refs": [
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 92,
+              "id": "UCL_20261007_023"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 93,
+              "id": "UCL_20261007_024"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 95,
+              "id": "UCL_20261007_026"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 91,
+              "id": "UCL_20261007_022"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 100,
+              "id": "UCL_20261007_031"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 106,
+              "id": "UCL_20261008_005"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 107,
+              "id": "UCL_20261008_006"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 98,
+              "id": "UCL_20261007_029"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 104,
+              "id": "UCL_20261008_003"
+            },
+            {
+              "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+              "line": 15,
+              "id": "921465"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 108,
+              "id": "UCL_20261008_007"
+            }
+          ],
+          "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+          "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+            "source_line": 11,
+            "revision": "M1_IMPORT_20261007_003",
+            "source_refs": [
+              {
+                "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                "line": 5
+              }
+            ],
+            "certainty_rule": "各正文标注及来源等级分别有效",
+            "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+              "source_line": 5,
+              "candidate_projection": {
+                "status": "provisional_for_human_review",
+                "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                "line": 3,
+                "source_index": "author_entry_sources.json",
+                "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+              }
+            }
+          }
+        },
+        "901_six_books": {
+          "revision": "SIX_BOOKS_20261023_001",
+          "entry_type": "concept",
+          "book": "政治与势力",
+          "source_units": [],
+          "source_refs": [
+            {
+              "path": "work/replay_research/fengmen_foothills_working_draft_20261012.md",
+              "line": 466
+            }
+          ],
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+            "source_line": 2,
+            "revision": "M1_IMPORT_20261008_004",
+            "status": "runtime_candidate_for_human_review",
+            "source_refs": [
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 92,
+                "id": "UCL_20261007_023"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 93,
+                "id": "UCL_20261007_024"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 95,
+                "id": "UCL_20261007_026"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 91,
+                "id": "UCL_20261007_022"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 100,
+                "id": "UCL_20261007_031"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 106,
+                "id": "UCL_20261008_005"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 107,
+                "id": "UCL_20261008_006"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 98,
+                "id": "UCL_20261007_029"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 104,
+                "id": "UCL_20261008_003"
+              },
+              {
+                "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+                "line": 15,
+                "id": "921465"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 108,
+                "id": "UCL_20261008_007"
+              }
+            ],
+            "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+            "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+              "source_line": 11,
+              "revision": "M1_IMPORT_20261007_003",
+              "source_refs": [
+                {
+                  "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                  "line": 5
+                }
+              ],
+              "certainty_rule": "各正文标注及来源等级分别有效",
+              "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+              "baseline_source": {
+                "source_id": "WORLD_WRC_005",
+                "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+                "source_line": 5,
+                "candidate_projection": {
+                  "status": "provisional_for_human_review",
+                  "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                  "line": 3,
+                  "source_index": "author_entry_sources.json",
+                  "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+                }
+              }
+            }
+          },
+          "revisions": [
+            {
+              "source": "adopted_author_delta.json",
+              "author_key": "w-20261028-风门军械与军需往来",
+              "reason": "2026-10-28已采用作者内容汇合；原文／采用／知情与实际分支分别保留。",
+              "mode": "append",
+              "source_segments": [
+                {
+                  "path": "work/replay_research/fengmen_foothills_working_draft_20261012.md",
+                  "line": 466,
+                  "end_line": 474,
+                  "sha256": "3f2c71c07c16186fe4f06ffe4571815bc69f4146c79ee8ce46a73f221d1cfdf7"
+                }
+              ]
+            }
+          ],
+          "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",
+          "authorization": "用户：基于 tavern-cards 编排六本书的条目、触发和状态分工，再据此迁移内容。"
+        }
+      }
+    },
+    "1479118120": {
+      "uid": 1479118120,
+      "key": [
+        "北地高等精灵家族生活"
+      ],
+      "keysecondary": [],
+      "comment": "北地高等精灵家族生活",
+      "content": "北地高等精灵家族生活\n\n一些高等精灵家族在帝国秩序中保有贵族传统、资产与文化自主性，经营、采购、管理、翻译、家务和运输可委托有酬人员，不靠把所有族人变成农户或奴仆维生。既有财富、知识和有效资产收益支持训练、器材、藏书、研究与讲究生活，仍有预算、维护、真实工作与风险；没有人人无限财富。少量高价值专业服务、资产保护与高质量定制支持地方生计，力量、旧身份与实际官职不同，教学贡献可以有报酬，不购买学历资格。\n\n多代亲属共同在世，保存旧语言、家史和物件，亲历、转述、翻译与推测要分开。长寿允许反复深入学习和长期项目，但不使所有学习都慢，也不等于某人经历每段古史。精灵繁衍明显低于人类，没有由此新增固定生育间隔或统一成年礼。成熟年轻者可独立求学、工作、生活和交友；外出研习后可去留，跨寿命友情不由子孙继承。长项目按真实阶段安排劳动与报酬，不让合作者等几百年。\n\n家务、经营和研究按能力、兴趣与承诺分担，不由年资自动掌权。共同资产、个人资产和使用权分别说明，独立不必等长辈去世继承；以共同资源开新事业须约范围，不等于个人成果全部归家族。实际交接负责人后，长辈可以做顾问而非双重指挥。成员可有自己的住处、朋友、职业与私人记录；具体争议不永久取消自主性。\n\n旧贵族声望与资产不等于帝国世袭官僚权力。官员只有实际职权，旧友关系不能命令其继任者；普通家庭可以礼貌、交友、求学而不成为依附者。交易谈费用、期限和预算，日常往来无需跪拜或免费赠物；私人档案按愿意开放的范围。反复有酬合作、照护和守信形成关系，继任者重新建立信任。银月城提供更多家族与研究选择，不能预定两地敌对、统一路线或所有家族同一立场。",
+      "constant": false,
+      "selective": false,
+      "selectiveLogic": 0,
+      "order": 120,
+      "position": 1,
+      "disable": false,
+      "addMemo": true,
+      "scanDepth": 4,
+      "caseSensitive": false,
+      "matchWholeWords": false,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "delayUntilRecursion": false,
+      "probability": 100,
+      "useProbability": true,
+      "vectorized": false,
+      "ignoreBudget": false,
+      "matchPersonaDescription": false,
+      "matchCharacterDescription": false,
+      "matchCharacterPersonality": false,
+      "matchCharacterDepthPrompt": false,
+      "matchScenario": false,
+      "matchCreatorNotes": false,
+      "sticky": 0,
+      "cooldown": 0,
+      "delay": 0,
+      "extensions": {
+        "position": 1,
+        "exclude_recursion": true,
+        "prevent_recursion": true,
+        "delay_until_recursion": false,
+        "probability": 100,
+        "useProbability": true,
+        "scan_depth": 4,
+        "case_sensitive": false,
+        "match_whole_words": false,
+        "vectorized": false,
+        "sticky": 0,
+        "cooldown": 0,
+        "delay": 0,
+        "ignore_budget": false,
+        "match_persona_description": false,
+        "match_character_description": false,
+        "match_character_personality": false,
+        "match_character_depth_prompt": false,
+        "match_scenario": false,
+        "match_creator_notes": false,
+        "901_replay": {
+          "source_id": "WORLD_WRC_005",
+          "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+          "source_line": 2,
+          "revision": "M1_IMPORT_20261008_004",
+          "status": "runtime_candidate_for_human_review",
+          "source_refs": [
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 92,
+              "id": "UCL_20261007_023"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 93,
+              "id": "UCL_20261007_024"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 95,
+              "id": "UCL_20261007_026"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 91,
+              "id": "UCL_20261007_022"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 100,
+              "id": "UCL_20261007_031"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 106,
+              "id": "UCL_20261008_005"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 107,
+              "id": "UCL_20261008_006"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 98,
+              "id": "UCL_20261007_029"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 104,
+              "id": "UCL_20261008_003"
+            },
+            {
+              "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+              "line": 15,
+              "id": "921465"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 108,
+              "id": "UCL_20261008_007"
+            }
+          ],
+          "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+          "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+            "source_line": 11,
+            "revision": "M1_IMPORT_20261007_003",
+            "source_refs": [
+              {
+                "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                "line": 5
+              }
+            ],
+            "certainty_rule": "各正文标注及来源等级分别有效",
+            "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+              "source_line": 5,
+              "candidate_projection": {
+                "status": "provisional_for_human_review",
+                "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                "line": 3,
+                "source_index": "author_entry_sources.json",
+                "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+              }
+            }
+          }
+        },
+        "901_six_books": {
+          "revision": "SIX_BOOKS_20261023_001",
+          "entry_type": "concept",
+          "book": "政治与势力",
+          "source_units": [],
+          "source_refs": [
+            {
+              "path": "work/replay_research/baimu_northern_margin_working_draft_20261012.md",
+              "line": 2346
+            }
+          ],
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+            "source_line": 2,
+            "revision": "M1_IMPORT_20261008_004",
+            "status": "runtime_candidate_for_human_review",
+            "source_refs": [
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 92,
+                "id": "UCL_20261007_023"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 93,
+                "id": "UCL_20261007_024"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 95,
+                "id": "UCL_20261007_026"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 91,
+                "id": "UCL_20261007_022"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 100,
+                "id": "UCL_20261007_031"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 106,
+                "id": "UCL_20261008_005"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 107,
+                "id": "UCL_20261008_006"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 98,
+                "id": "UCL_20261007_029"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 104,
+                "id": "UCL_20261008_003"
+              },
+              {
+                "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+                "line": 15,
+                "id": "921465"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 108,
+                "id": "UCL_20261008_007"
+              }
+            ],
+            "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+            "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+              "source_line": 11,
+              "revision": "M1_IMPORT_20261007_003",
+              "source_refs": [
+                {
+                  "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                  "line": 5
+                }
+              ],
+              "certainty_rule": "各正文标注及来源等级分别有效",
+              "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+              "baseline_source": {
+                "source_id": "WORLD_WRC_005",
+                "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+                "source_line": 5,
+                "candidate_projection": {
+                  "status": "provisional_for_human_review",
+                  "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                  "line": 3,
+                  "source_index": "author_entry_sources.json",
+                  "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+                }
+              }
+            }
+          },
+          "revisions": [
+            {
+              "source": "adopted_author_delta.json",
+              "author_key": "w-20261028-北地高等精灵家族生活",
+              "reason": "2026-10-28已采用作者内容汇合；原文／采用／知情与实际分支分别保留。",
+              "mode": "append",
+              "source_segments": [
+                {
+                  "path": "work/replay_research/baimu_northern_margin_working_draft_20261012.md",
+                  "line": 2346,
+                  "end_line": 2354,
+                  "sha256": "77d204bfa44d1a66dce19d51838d59272256a5e67701929bf05222edfc2e854c"
+                }
+              ]
+            }
+          ],
+          "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",
+          "authorization": "用户：基于 tavern-cards 编排六本书的条目、触发和状态分工，再据此迁移内容。"
+        }
+      }
+    },
+    "1246292207": {
+      "uid": 1246292207,
+      "key": [
+        "银月城家族传承与外派学习",
+        "银月城外派研习"
+      ],
+      "keysecondary": [],
+      "comment": "银月城家族传承与外派学习",
+      "content": "银月城家族传承与外派学习\n\n家庭与熟悉导师教授适合的古语言、魔法和工艺，不因此设立统一中央学院。优秀而成熟的学生可围绕具体问题外派求学，优秀不只指战斗力。家族可以承担额外旅费、生活和材料，外部机构的实际准入仍有效，推荐信不是一切教育的门票。白暮实践、帝都广泛课程、法师塔专门工艺各有价值，不能把地方工作视为附属低等训练。\n\n导师的专长与年龄不必一致，长寿年轻人可以是成熟同行。家庭财富、打工与照护安排影响求学，礼物不形成效忠关系；实际生产实践要有授权，不擅改商业批次。公共知识、共同成果与私人核心分别约明范围，贡献保留原有、地方与新改者，资料不足可缩小课题。返回家乡、留外、继续往返都可选择，不自动形成终身公职或义务。\n\n外派者有自己的友谊、研究和普通生活，后代不继承长辈全部关系。长期家族资源支持与年轻独立可以并存；私人传承不自动成为国家所有，也不因保有私人知识否定公开免费教学。",
+      "constant": false,
+      "selective": false,
+      "selectiveLogic": 0,
+      "order": 120,
+      "position": 1,
+      "disable": false,
+      "addMemo": true,
+      "scanDepth": 4,
+      "caseSensitive": false,
+      "matchWholeWords": false,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "delayUntilRecursion": false,
+      "probability": 100,
+      "useProbability": true,
+      "vectorized": false,
+      "ignoreBudget": false,
+      "matchPersonaDescription": false,
+      "matchCharacterDescription": false,
+      "matchCharacterPersonality": false,
+      "matchCharacterDepthPrompt": false,
+      "matchScenario": false,
+      "matchCreatorNotes": false,
+      "sticky": 0,
+      "cooldown": 0,
+      "delay": 0,
+      "extensions": {
+        "position": 1,
+        "exclude_recursion": true,
+        "prevent_recursion": true,
+        "delay_until_recursion": false,
+        "probability": 100,
+        "useProbability": true,
+        "scan_depth": 4,
+        "case_sensitive": false,
+        "match_whole_words": false,
+        "vectorized": false,
+        "sticky": 0,
+        "cooldown": 0,
+        "delay": 0,
+        "ignore_budget": false,
+        "match_persona_description": false,
+        "match_character_description": false,
+        "match_character_personality": false,
+        "match_character_depth_prompt": false,
+        "match_scenario": false,
+        "match_creator_notes": false,
+        "901_replay": {
+          "source_id": "WORLD_WRC_005",
+          "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+          "source_line": 2,
+          "revision": "M1_IMPORT_20261008_004",
+          "status": "runtime_candidate_for_human_review",
+          "source_refs": [
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 92,
+              "id": "UCL_20261007_023"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 93,
+              "id": "UCL_20261007_024"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 95,
+              "id": "UCL_20261007_026"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 91,
+              "id": "UCL_20261007_022"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 100,
+              "id": "UCL_20261007_031"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 106,
+              "id": "UCL_20261008_005"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 107,
+              "id": "UCL_20261008_006"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 98,
+              "id": "UCL_20261007_029"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 104,
+              "id": "UCL_20261008_003"
+            },
+            {
+              "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+              "line": 15,
+              "id": "921465"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 108,
+              "id": "UCL_20261008_007"
+            }
+          ],
+          "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+          "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+            "source_line": 11,
+            "revision": "M1_IMPORT_20261007_003",
+            "source_refs": [
+              {
+                "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                "line": 5
+              }
+            ],
+            "certainty_rule": "各正文标注及来源等级分别有效",
+            "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+              "source_line": 5,
+              "candidate_projection": {
+                "status": "provisional_for_human_review",
+                "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                "line": 3,
+                "source_index": "author_entry_sources.json",
+                "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+              }
+            }
+          }
+        },
+        "901_six_books": {
+          "revision": "SIX_BOOKS_20261023_001",
+          "entry_type": "concept",
+          "book": "政治与势力",
+          "source_units": [],
+          "source_refs": [
+            {
+              "path": "work/replay_research/silvermoon_high_elf_city_working_draft_20261015.md",
+              "line": 683
+            }
+          ],
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+            "source_line": 2,
+            "revision": "M1_IMPORT_20261008_004",
+            "status": "runtime_candidate_for_human_review",
+            "source_refs": [
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 92,
+                "id": "UCL_20261007_023"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 93,
+                "id": "UCL_20261007_024"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 95,
+                "id": "UCL_20261007_026"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 91,
+                "id": "UCL_20261007_022"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 100,
+                "id": "UCL_20261007_031"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 106,
+                "id": "UCL_20261008_005"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 107,
+                "id": "UCL_20261008_006"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 98,
+                "id": "UCL_20261007_029"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 104,
+                "id": "UCL_20261008_003"
+              },
+              {
+                "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+                "line": 15,
+                "id": "921465"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 108,
+                "id": "UCL_20261008_007"
+              }
+            ],
+            "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+            "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+              "source_line": 11,
+              "revision": "M1_IMPORT_20261007_003",
+              "source_refs": [
+                {
+                  "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                  "line": 5
+                }
+              ],
+              "certainty_rule": "各正文标注及来源等级分别有效",
+              "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+              "baseline_source": {
+                "source_id": "WORLD_WRC_005",
+                "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+                "source_line": 5,
+                "candidate_projection": {
+                  "status": "provisional_for_human_review",
+                  "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                  "line": 3,
+                  "source_index": "author_entry_sources.json",
+                  "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+                }
+              }
+            }
+          },
+          "revisions": [
+            {
+              "source": "adopted_author_delta.json",
+              "author_key": "w-20261028-银月城家族传承与外派学习",
+              "reason": "2026-10-28已采用作者内容汇合；原文／采用／知情与实际分支分别保留。",
+              "mode": "append",
+              "source_segments": [
+                {
+                  "path": "work/replay_research/silvermoon_high_elf_city_working_draft_20261015.md",
+                  "line": 683,
+                  "end_line": 689,
+                  "sha256": "312a052a33706cd257d19ec88bbd93a126065c3f70f3aa7286c44cbe167d4ce6"
+                }
+              ]
+            }
+          ],
+          "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",
+          "authorization": "用户：基于 tavern-cards 编排六本书的条目、触发和状态分工，再据此迁移内容。"
+        }
+      }
+    },
+    "1035836480": {
+      "uid": 1035836480,
+      "key": [
+        "山脉魔兽社会与权力更替"
+      ],
+      "keysecondary": [],
+      "comment": "山脉魔兽社会与权力更替",
+      "content": "山脉魔兽社会与权力更替\n\n力量是政治条件之一，还要结合部族组织、法术、地形、盟友和支持者。贡纳、劳动、巢域等可形成严酷依附，但没有一套全国通用继承制度。竞争可以围绕水源、领地、材料和声望，不是全体饥饿。暂时合作取决于利益与保证，不能用阵营或魔法强制解释所有忠诚。\n\n私人路径、交易和保护带来掠夺之外的选择，未来收益也能约束行为，却不证明统一官方市场或全球地下网络。联盟军务约束部分部族争斗，不使全部山路开放。伤势、能力下降、传闻和实际失权不同，消息延迟会引来试探；继任者要真正掌控人手、资产与支持，旧承诺可能重谈，也不必每次全面内战。改变依附可能出于生存或机会，旧命令并不因风声自动消失。渠道、债务与承诺不能一律无条件继承。",
+      "constant": false,
+      "selective": false,
+      "selectiveLogic": 0,
+      "order": 120,
+      "position": 1,
+      "disable": false,
+      "addMemo": true,
+      "scanDepth": 4,
+      "caseSensitive": false,
+      "matchWholeWords": false,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "delayUntilRecursion": false,
+      "probability": 100,
+      "useProbability": true,
+      "vectorized": false,
+      "ignoreBudget": false,
+      "matchPersonaDescription": false,
+      "matchCharacterDescription": false,
+      "matchCharacterPersonality": false,
+      "matchCharacterDepthPrompt": false,
+      "matchScenario": false,
+      "matchCreatorNotes": false,
+      "sticky": 0,
+      "cooldown": 0,
+      "delay": 0,
+      "extensions": {
+        "position": 1,
+        "exclude_recursion": true,
+        "prevent_recursion": true,
+        "delay_until_recursion": false,
+        "probability": 100,
+        "useProbability": true,
+        "scan_depth": 4,
+        "case_sensitive": false,
+        "match_whole_words": false,
+        "vectorized": false,
+        "sticky": 0,
+        "cooldown": 0,
+        "delay": 0,
+        "ignore_budget": false,
+        "match_persona_description": false,
+        "match_character_description": false,
+        "match_character_personality": false,
+        "match_character_depth_prompt": false,
+        "match_scenario": false,
+        "match_creator_notes": false,
+        "901_replay": {
+          "source_id": "WORLD_WRC_005",
+          "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+          "source_line": 2,
+          "revision": "M1_IMPORT_20261008_004",
+          "status": "runtime_candidate_for_human_review",
+          "source_refs": [
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 92,
+              "id": "UCL_20261007_023"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 93,
+              "id": "UCL_20261007_024"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 95,
+              "id": "UCL_20261007_026"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 91,
+              "id": "UCL_20261007_022"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 100,
+              "id": "UCL_20261007_031"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 106,
+              "id": "UCL_20261008_005"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 107,
+              "id": "UCL_20261008_006"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 98,
+              "id": "UCL_20261007_029"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 104,
+              "id": "UCL_20261008_003"
+            },
+            {
+              "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+              "line": 15,
+              "id": "921465"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 108,
+              "id": "UCL_20261008_007"
+            }
+          ],
+          "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+          "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+            "source_line": 11,
+            "revision": "M1_IMPORT_20261007_003",
+            "source_refs": [
+              {
+                "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                "line": 5
+              }
+            ],
+            "certainty_rule": "各正文标注及来源等级分别有效",
+            "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+              "source_line": 5,
+              "candidate_projection": {
+                "status": "provisional_for_human_review",
+                "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                "line": 3,
+                "source_index": "author_entry_sources.json",
+                "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+              }
+            }
+          }
+        },
+        "901_six_books": {
+          "revision": "SIX_BOOKS_20261023_001",
+          "entry_type": "concept",
+          "book": "政治与势力",
+          "source_units": [],
+          "source_refs": [
+            {
+              "path": "work/replay_research/settlements_wilderness_working_draft_20261015.md",
+              "line": 705
+            }
+          ],
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+            "source_line": 2,
+            "revision": "M1_IMPORT_20261008_004",
+            "status": "runtime_candidate_for_human_review",
+            "source_refs": [
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 92,
+                "id": "UCL_20261007_023"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 93,
+                "id": "UCL_20261007_024"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 95,
+                "id": "UCL_20261007_026"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 91,
+                "id": "UCL_20261007_022"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 100,
+                "id": "UCL_20261007_031"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 106,
+                "id": "UCL_20261008_005"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 107,
+                "id": "UCL_20261008_006"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 98,
+                "id": "UCL_20261007_029"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 104,
+                "id": "UCL_20261008_003"
+              },
+              {
+                "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+                "line": 15,
+                "id": "921465"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 108,
+                "id": "UCL_20261008_007"
+              }
+            ],
+            "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+            "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+              "source_line": 11,
+              "revision": "M1_IMPORT_20261007_003",
+              "source_refs": [
+                {
+                  "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                  "line": 5
+                }
+              ],
+              "certainty_rule": "各正文标注及来源等级分别有效",
+              "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+              "baseline_source": {
+                "source_id": "WORLD_WRC_005",
+                "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+                "source_line": 5,
+                "candidate_projection": {
+                  "status": "provisional_for_human_review",
+                  "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                  "line": 3,
+                  "source_index": "author_entry_sources.json",
+                  "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+                }
+              }
+            }
+          },
+          "revisions": [
+            {
+              "source": "adopted_author_delta.json",
+              "author_key": "w-20261028-山脉魔兽社会与权力更替",
+              "reason": "2026-10-28已采用作者内容汇合；原文／采用／知情与实际分支分别保留。",
+              "mode": "append",
+              "source_segments": [
+                {
+                  "path": "work/replay_research/settlements_wilderness_working_draft_20261015.md",
+                  "line": 705,
+                  "end_line": 709,
+                  "sha256": "7f0c2a4495b7c476d8a6e3dac8cd44ed241fd9b5b0b84003a7dc5a9faae6bf89"
+                }
+              ]
+            }
+          ],
+          "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",
+          "authorization": "用户：基于 tavern-cards 编排六本书的条目、触发和状态分工，再据此迁移内容。"
+        }
+      }
+    },
+    "1518974221": {
+      "uid": 1518974221,
+      "key": [
+        "帝国军区与部队协作",
+        "帝国军区"
+      ],
+      "keysecondary": [],
+      "comment": "帝国军区与部队协作",
+      "content": "帝国军区与部队协作\n\n帝国军队属于国家，不是八柱将私人武装；守卫、常规部队、地区训练轮换与动员各有任务，军务不吞并全部民政。分散驻军与跨区机动可按任务重组，不因此重复计算总兵力。中央腹地、西部、北境、东部、南部五区表达军务协调方向，不是五处营地、五支全员集中的野战军，也不确定正式行政省界、司令部或各区人数。\n\n中央腹地由帝或其明确任命的八柱将直辖；右近负责帝都城区及实际防务范围，不自动指挥全部腹地。中央兼腹地交通、供给节点、训练和增援机动。西部连接佛萨罗伦、塔镇方向高地及已有远西联系，重陆路、分散城镇、高地林地巡行；不把所有商旅护送交军方。北境依可维持支援的地点寒地驻守，重雪季补给、轮换、季节水陆防护和必要救援，不据此推定极北全有驻军。东部连接洛汀河谷、烬辉丘陵，重河运节点、水陆交接、丘陵机动和生产运输节点，配合矿区设施，不另割工坊军。南部在风门与山前居民腹地警戒通道、接应增援撤回，和边关军、监狱塔分别履职。\n\n中央步骑有驻守和机动任务；西部骑巡与分散步兵适应高地林地；北境寒地部队与有条件舟运相配；东部河渡舟运、丘陵与技术任务并存；南部依堡垒、谷口、通道与后方支持。职能可按任务调整，直属部队不全是精锐，法师仍稀缺，不给每队默认施法者。直属部队驻到某区不自动变更隶属，跨区任务须明确附属和一个实际指挥关系；地方资产不因军队到场自动被征用。T0已失陷边关的部队与通路不能由长期编制重新生成。",
+      "constant": false,
+      "selective": false,
+      "selectiveLogic": 0,
+      "order": 120,
+      "position": 1,
+      "disable": false,
+      "addMemo": true,
+      "scanDepth": 4,
+      "caseSensitive": false,
+      "matchWholeWords": false,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "delayUntilRecursion": false,
+      "probability": 100,
+      "useProbability": true,
+      "vectorized": false,
+      "ignoreBudget": false,
+      "matchPersonaDescription": false,
+      "matchCharacterDescription": false,
+      "matchCharacterPersonality": false,
+      "matchCharacterDepthPrompt": false,
+      "matchScenario": false,
+      "matchCreatorNotes": false,
+      "sticky": 0,
+      "cooldown": 0,
+      "delay": 0,
+      "extensions": {
+        "position": 1,
+        "exclude_recursion": true,
+        "prevent_recursion": true,
+        "delay_until_recursion": false,
+        "probability": 100,
+        "useProbability": true,
+        "scan_depth": 4,
+        "case_sensitive": false,
+        "match_whole_words": false,
+        "vectorized": false,
+        "sticky": 0,
+        "cooldown": 0,
+        "delay": 0,
+        "ignore_budget": false,
+        "match_persona_description": false,
+        "match_character_description": false,
+        "match_character_personality": false,
+        "match_character_depth_prompt": false,
+        "match_scenario": false,
+        "match_creator_notes": false,
+        "901_replay": {
+          "source_id": "WORLD_WRC_005",
+          "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+          "source_line": 2,
+          "revision": "M1_IMPORT_20261008_004",
+          "status": "runtime_candidate_for_human_review",
+          "source_refs": [
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 92,
+              "id": "UCL_20261007_023"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 93,
+              "id": "UCL_20261007_024"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 95,
+              "id": "UCL_20261007_026"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 91,
+              "id": "UCL_20261007_022"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 100,
+              "id": "UCL_20261007_031"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 106,
+              "id": "UCL_20261008_005"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 107,
+              "id": "UCL_20261008_006"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 98,
+              "id": "UCL_20261007_029"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 104,
+              "id": "UCL_20261008_003"
+            },
+            {
+              "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+              "line": 15,
+              "id": "921465"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 108,
+              "id": "UCL_20261008_007"
+            }
+          ],
+          "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+          "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+            "source_line": 11,
+            "revision": "M1_IMPORT_20261007_003",
+            "source_refs": [
+              {
+                "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                "line": 5
+              }
+            ],
+            "certainty_rule": "各正文标注及来源等级分别有效",
+            "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+              "source_line": 5,
+              "candidate_projection": {
+                "status": "provisional_for_human_review",
+                "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                "line": 3,
+                "source_index": "author_entry_sources.json",
+                "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+              }
+            }
+          }
+        },
+        "901_six_books": {
+          "revision": "SIX_BOOKS_20261023_001",
+          "entry_type": "concept",
+          "book": "政治与势力",
+          "source_units": [],
+          "source_refs": [
+            {
+              "path": "work/replay_research/empire_military_strength_20261007.md",
+              "line": 731
+            }
+          ],
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+            "source_line": 2,
+            "revision": "M1_IMPORT_20261008_004",
+            "status": "runtime_candidate_for_human_review",
+            "source_refs": [
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 92,
+                "id": "UCL_20261007_023"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 93,
+                "id": "UCL_20261007_024"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 95,
+                "id": "UCL_20261007_026"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 91,
+                "id": "UCL_20261007_022"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 100,
+                "id": "UCL_20261007_031"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 106,
+                "id": "UCL_20261008_005"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 107,
+                "id": "UCL_20261008_006"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 98,
+                "id": "UCL_20261007_029"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 104,
+                "id": "UCL_20261008_003"
+              },
+              {
+                "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+                "line": 15,
+                "id": "921465"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 108,
+                "id": "UCL_20261008_007"
+              }
+            ],
+            "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+            "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+              "source_line": 11,
+              "revision": "M1_IMPORT_20261007_003",
+              "source_refs": [
+                {
+                  "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                  "line": 5
+                }
+              ],
+              "certainty_rule": "各正文标注及来源等级分别有效",
+              "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+              "baseline_source": {
+                "source_id": "WORLD_WRC_005",
+                "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+                "source_line": 5,
+                "candidate_projection": {
+                  "status": "provisional_for_human_review",
+                  "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                  "line": 3,
+                  "source_index": "author_entry_sources.json",
+                  "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+                }
+              }
+            }
+          },
+          "revisions": [
+            {
+              "source": "adopted_author_delta.json",
+              "author_key": "w-20261028-帝国军区与部队协作",
+              "reason": "2026-10-28已采用作者内容汇合；原文／采用／知情与实际分支分别保留。",
+              "mode": "append",
+              "source_segments": [
+                {
+                  "path": "work/replay_research/empire_military_strength_20261007.md",
+                  "line": 731,
+                  "end_line": 737,
+                  "sha256": "37baf77d3a5aa7c93239ece8aba01ea8e0c08d44c3ed21095546aa6717b51096"
+                }
+              ]
+            }
+          ],
+          "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",
+          "authorization": "用户：基于 tavern-cards 编排六本书的条目、触发和状态分工，再据此迁移内容。"
+        }
+      }
+    },
+    "1538814367": {
+      "uid": 1538814367,
+      "key": [
+        "帝国军队训练与轮换",
+        "帝国军队轮换"
+      ],
+      "keysecondary": [],
+      "comment": "帝国军队训练与轮换",
+      "content": "帝国军队训练与轮换\n\n共同训练包括命令理解、协同、防守与野外行动、联络和应对魔法威胁，仍依实际能力，不靠头衔保证全部精通。中央练驻守与机动配合，西部练分散巡行及林地高地，北境练寒地维护和季节通行，东部练河渡与水陆节点，南部练山前谷口与增援撤回。环境经验可以交流，不变成固定敌对军内派系。\n\n轮换分阶段保留骨干，接班者真实熟悉岗位、物资、路线与通信后再完成交接，不能同时撤空防务。新兵、老兵、专业人员各按已会本领补充，回来的经验可进入训练，人数补足不等于战力即刻相同。抽调与动员保留必要守卫、训练和基础运转，不能为集结凭空增加四千万以外另一总数；具体比例、日程和当前可用兵力另查。",
+      "constant": false,
+      "selective": false,
+      "selectiveLogic": 0,
+      "order": 120,
+      "position": 1,
+      "disable": false,
+      "addMemo": true,
+      "scanDepth": 4,
+      "caseSensitive": false,
+      "matchWholeWords": false,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "delayUntilRecursion": false,
+      "probability": 100,
+      "useProbability": true,
+      "vectorized": false,
+      "ignoreBudget": false,
+      "matchPersonaDescription": false,
+      "matchCharacterDescription": false,
+      "matchCharacterPersonality": false,
+      "matchCharacterDepthPrompt": false,
+      "matchScenario": false,
+      "matchCreatorNotes": false,
+      "sticky": 0,
+      "cooldown": 0,
+      "delay": 0,
+      "extensions": {
+        "position": 1,
+        "exclude_recursion": true,
+        "prevent_recursion": true,
+        "delay_until_recursion": false,
+        "probability": 100,
+        "useProbability": true,
+        "scan_depth": 4,
+        "case_sensitive": false,
+        "match_whole_words": false,
+        "vectorized": false,
+        "sticky": 0,
+        "cooldown": 0,
+        "delay": 0,
+        "ignore_budget": false,
+        "match_persona_description": false,
+        "match_character_description": false,
+        "match_character_personality": false,
+        "match_character_depth_prompt": false,
+        "match_scenario": false,
+        "match_creator_notes": false,
+        "901_replay": {
+          "source_id": "WORLD_WRC_005",
+          "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+          "source_line": 2,
+          "revision": "M1_IMPORT_20261008_004",
+          "status": "runtime_candidate_for_human_review",
+          "source_refs": [
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 92,
+              "id": "UCL_20261007_023"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 93,
+              "id": "UCL_20261007_024"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 95,
+              "id": "UCL_20261007_026"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 91,
+              "id": "UCL_20261007_022"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 100,
+              "id": "UCL_20261007_031"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 106,
+              "id": "UCL_20261008_005"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 107,
+              "id": "UCL_20261008_006"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 98,
+              "id": "UCL_20261007_029"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 104,
+              "id": "UCL_20261008_003"
+            },
+            {
+              "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+              "line": 15,
+              "id": "921465"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 108,
+              "id": "UCL_20261008_007"
+            }
+          ],
+          "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+          "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+            "source_line": 11,
+            "revision": "M1_IMPORT_20261007_003",
+            "source_refs": [
+              {
+                "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                "line": 5
+              }
+            ],
+            "certainty_rule": "各正文标注及来源等级分别有效",
+            "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+              "source_line": 5,
+              "candidate_projection": {
+                "status": "provisional_for_human_review",
+                "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                "line": 3,
+                "source_index": "author_entry_sources.json",
+                "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+              }
+            }
+          }
+        },
+        "901_six_books": {
+          "revision": "SIX_BOOKS_20261023_001",
+          "entry_type": "concept",
+          "book": "政治与势力",
+          "source_units": [],
+          "source_refs": [
+            {
+              "path": "work/replay_research/empire_military_strength_20261007.md",
+              "line": 739
+            }
+          ],
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+            "source_line": 2,
+            "revision": "M1_IMPORT_20261008_004",
+            "status": "runtime_candidate_for_human_review",
+            "source_refs": [
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 92,
+                "id": "UCL_20261007_023"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 93,
+                "id": "UCL_20261007_024"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 95,
+                "id": "UCL_20261007_026"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 91,
+                "id": "UCL_20261007_022"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 100,
+                "id": "UCL_20261007_031"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 106,
+                "id": "UCL_20261008_005"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 107,
+                "id": "UCL_20261008_006"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 98,
+                "id": "UCL_20261007_029"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 104,
+                "id": "UCL_20261008_003"
+              },
+              {
+                "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+                "line": 15,
+                "id": "921465"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 108,
+                "id": "UCL_20261008_007"
+              }
+            ],
+            "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+            "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+              "source_line": 11,
+              "revision": "M1_IMPORT_20261007_003",
+              "source_refs": [
+                {
+                  "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                  "line": 5
+                }
+              ],
+              "certainty_rule": "各正文标注及来源等级分别有效",
+              "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+              "baseline_source": {
+                "source_id": "WORLD_WRC_005",
+                "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+                "source_line": 5,
+                "candidate_projection": {
+                  "status": "provisional_for_human_review",
+                  "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                  "line": 3,
+                  "source_index": "author_entry_sources.json",
+                  "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+                }
+              }
+            }
+          },
+          "revisions": [
+            {
+              "source": "adopted_author_delta.json",
+              "author_key": "w-20261028-帝国军队训练与轮换",
+              "reason": "2026-10-28已采用作者内容汇合；原文／采用／知情与实际分支分别保留。",
+              "mode": "append",
+              "source_segments": [
+                {
+                  "path": "work/replay_research/empire_military_strength_20261007.md",
+                  "line": 739,
+                  "end_line": 743,
+                  "sha256": "98993ab5593543c9b55c1485b54adbcf54347d37521178430458b2da15e47610"
+                }
+              ]
             }
           ],
           "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",

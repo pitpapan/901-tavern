@@ -9,7 +9,7 @@ const { runGuardedTurn, replayGateReadiness, replaySceneFromChat,
   relevantLorebookFacts, replayLorebookNames, withReplayLorebook,
   replayPendingFromChat } = await import('/901-opening-combat/work/rules_engine/gm_runtime/adjudication-gate.mjs');
 const { createReplayCheckRuntime } = await import('/901-opening-combat/work/rules_engine/gm_runtime/replay-check.mjs');
-const { carryTestState, readTestOperation } = await import('/901-opening-combat/work/rules_engine/mvu_poc/adapter.mjs');
+const { carryTestState, readTestOperation, persistTavernRuleState } = await import('/901-opening-combat/work/rules_engine/mvu_poc/adapter.mjs');
 let running = false;
 // TavernHelper executes scripts in a zero-size iframe. Player UI belongs to
 // the host document, as in the existing isolated diagnostic panel.
@@ -109,6 +109,22 @@ const debug=profile.debug??REPLAY_GATE_DEBUG;
 if (typeof getMvu !== 'function') throw new Error('MVU provider required');
 if (typeof eventMakeFirst !== 'function' || !tavern_events?.GENERATE_AFTER_DATA)
   throw new Error('Pre-narration hook unavailable');
+// Native regenerate removes the last assistant message before GENERATE_AFTER_DATA.
+// Keep its actual pages for this generation only: the report can own the sole
+// latest combat state. Never reconstruct that state from the preceding floor.
+let nativeCombatRegeneration=null;
+if(combat && tavern_events.GENERATION_STARTED && typeof getChatMessages==='function')
+  eventMakeFirst(tavern_events.GENERATION_STARTED,async(type,_options,dryRun)=>{
+    nativeCombatRegeneration=null;
+    if(type!=='regenerate'||dryRun||running||combat.busy)return;
+    const id=chatId(),messageId=SillyTavern.chat.length-1;
+    const last=SillyTavern.chat[messageId];
+    if(!id||!last||last.is_user||last.is_system)return;
+    const mvu=await getMvu();
+    if(mvu.getMvuData({type:'message',message_id:messageId})?.stat_data?.['901_rules_poc']?.battle?.mode!=='combat')return;
+    const message=getChatMessages(String(messageId),{include_swipes:true})[0];
+    nativeCombatRegeneration={chatId:id,message:structuredClone(message)};
+  });
 const readinessOf = (mvu, player) => replayGateReadiness({ mvu, chatId: chatId(), player,
   generateRaw: typeof generateRaw === 'function' ? generateRaw : null,
   createChatMessages: typeof createChatMessages === 'function' ? createChatMessages : null,
@@ -117,6 +133,8 @@ const readinessOf = (mvu, player) => replayGateReadiness({ mvu, chatId: chatId()
   createRuleRuntime: createReplayCheckRuntime });
 eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
   if (dryRun || running || combat?.busy || !chatId() || !SillyTavern.chat?.some(m => m?.is_user && !m?.is_system)) return;
+  const regeneration=nativeCombatRegeneration;
+  nativeCombatRegeneration=null;
   running = true;
   const player = playerFloor();
   const expectedChatId = player.chatId;
@@ -148,6 +166,14 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
   try {
     mark('readiness');
     mvu = await getMvu();
+    if(regeneration?.chatId===expectedChatId && SillyTavern.chat.length===regeneration.message.message_id){
+      const message=regeneration.message,swipe=message.swipe_id;
+      mark('combat_report_restore');
+      await createChatMessages([{role:message.role,name:message.name,is_hidden:message.is_hidden,
+        message:message.swipes[swipe],data:message.swipes_data[swipe],extra:message.swipes_info[swipe]}]);
+      await setChatMessages([message]);
+      await SillyTavern.saveChat();
+    }
     await profile.prepare?.({mvu,player});
     if(combat) {
       const resumed=await combat.resumeEntry?.(player);
@@ -365,6 +391,10 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
         return runtime.settle({ operationId, request, choiceId });
       },
       narrate: async (context, settled, decision) => {
+        if(settled){
+          mark('state_persistence');
+          await persistTavernRuleState({mvu,tavern:SillyTavern,getAnchor,readSavedChat:profile.readSavedChat});
+        }
         if (decision.status === 'NO_CHECK') {
           // Persist the validated decision on the player floor BEFORE generation:
           // native regeneration may remove the failure notice, and refresh can
@@ -384,7 +414,11 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
         const modelOptions=typeof profile.modelOptions==='function'?profile.modelOptions():profile.modelOptions;
         let prose;
         try { prose = await withReplayLorebook({
-          book: getCurrentCharPrimaryLorebook(), books:profile.lorebooks, eventOn, event: tavern_events.WORLDINFO_ENTRIES_LOADED,
+          book: getCurrentCharPrimaryLorebook(), books:profile.lorebooks,
+          // This host build's stop handle removes the wrapper instead of the
+          // original callback. Explicit removal prevents a filter escaping its request.
+          eventOn:(event,listener)=>{eventOn(event,listener);return {stop:()=>eventRemoveListener(event,listener)};},
+          event: tavern_events.WORLDINFO_ENTRIES_LOADED,
           generate: () => generateRaw({ ...model, ...modelOptions, user_input:
         `玩家行动：${context.original.text}\n` +
         (context.latest.messageId !== context.original.messageId ? `本次补充：${context.latest.text}\n` : '') +
@@ -428,7 +462,9 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
             },
           } }], { refresh: 'none' });
         }
-        await SillyTavern.saveChat();
+        if(meta.status==='APPLIED'||meta.status==='NO_CHECK')
+          await persistTavernRuleState({mvu,tavern:SillyTavern,readSavedChat:profile.readSavedChat});
+        else await SillyTavern.saveChat();
       } });
     mark('complete');
     console.log('[901-REPLAY-GATE]', result.status, result.operationId);
@@ -449,7 +485,9 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
       operationId }); }
     catch { /* no state on this branch */ }
     const narrationPending = !!saved || !!pending?.narrationDecision;
-    const message = saved
+    const message = error?.code==='CHAT_PERSISTENCE_UNCONFIRMED'
+      ? '规则状态仍在当前页面内存中，但聊天持久保存未确认；请保持页面并恢复本次操作，不要重复付费或重新投骰。'
+      : saved
       ? '规则结果已保存，叙述尚未完成；请恢复本次操作，不要重新投骰。'
       : pending?.narrationDecision ? '行动已判定无需检定，叙述尚未完成；重新生成本条回复即可恢复，无需重复发送行动。'
       : error?.code === 'INVALID_CHECK_ATTRIBUTE' ? '主持模型生成的检定属性不合法，本次尚未掷骰或结算，需要纠正判定输入。'

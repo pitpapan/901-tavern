@@ -1512,6 +1512,544 @@
           "authorization": "用户：基于 tavern-cards 编排六本书的条目、触发和状态分工，再据此迁移内容。"
         }
       }
+    },
+    "1921174895": {
+      "uid": 1921174895,
+      "key": [],
+      "keysecondary": [],
+      "comment": "北地海岸古史与泰蕾斯证言",
+      "content": "北地海岸古史与泰蕾斯证言\n\n古北方文明覆亡与海岸旧纹样可构成历史背景，但不把所有水域认作污染禁区。古史中高等精灵滥用永恒之井、操纵海怪、覆亡与娜迦转变按已有历史证据；泰蕾斯关于外神、两位王、海怪与自身经历的说明保留人物证言，不能等同全体北地居民的知识，也不能把提及的王无据合为同一人。年代、井址与当代家族亲历留空。",
+      "constant": true,
+      "selective": false,
+      "selectiveLogic": 0,
+      "order": 80,
+      "position": 1,
+      "disable": true,
+      "addMemo": true,
+      "scanDepth": 4,
+      "caseSensitive": false,
+      "matchWholeWords": false,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "delayUntilRecursion": false,
+      "probability": 100,
+      "useProbability": true,
+      "vectorized": false,
+      "ignoreBudget": false,
+      "matchPersonaDescription": false,
+      "matchCharacterDescription": false,
+      "matchCharacterPersonality": false,
+      "matchCharacterDepthPrompt": false,
+      "matchScenario": false,
+      "matchCreatorNotes": false,
+      "sticky": 0,
+      "cooldown": 0,
+      "delay": 0,
+      "extensions": {
+        "position": 1,
+        "exclude_recursion": true,
+        "prevent_recursion": true,
+        "delay_until_recursion": false,
+        "probability": 100,
+        "useProbability": true,
+        "scan_depth": 4,
+        "case_sensitive": false,
+        "match_whole_words": false,
+        "vectorized": false,
+        "sticky": 0,
+        "cooldown": 0,
+        "delay": 0,
+        "ignore_budget": false,
+        "match_persona_description": false,
+        "match_character_description": false,
+        "match_character_personality": false,
+        "match_character_depth_prompt": false,
+        "match_scenario": false,
+        "match_creator_notes": false,
+        "901_replay": {
+          "source_id": "WORLD_WRC_005",
+          "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+          "source_line": 2,
+          "revision": "M1_IMPORT_20261008_004",
+          "status": "runtime_candidate_for_human_review",
+          "source_refs": [
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 92,
+              "id": "UCL_20261007_023"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 93,
+              "id": "UCL_20261007_024"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 95,
+              "id": "UCL_20261007_026"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 91,
+              "id": "UCL_20261007_022"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 100,
+              "id": "UCL_20261007_031"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 106,
+              "id": "UCL_20261008_005"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 107,
+              "id": "UCL_20261008_006"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 98,
+              "id": "UCL_20261007_029"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 104,
+              "id": "UCL_20261008_003"
+            },
+            {
+              "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+              "line": 15,
+              "id": "921465"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 108,
+              "id": "UCL_20261008_007"
+            }
+          ],
+          "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+          "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+            "source_line": 11,
+            "revision": "M1_IMPORT_20261007_003",
+            "source_refs": [
+              {
+                "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                "line": 5
+              }
+            ],
+            "certainty_rule": "各正文标注及来源等级分别有效",
+            "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+              "source_line": 5,
+              "candidate_projection": {
+                "status": "provisional_for_human_review",
+                "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                "line": 3,
+                "source_index": "author_entry_sources.json",
+                "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+              }
+            }
+          }
+        },
+        "901_six_books": {
+          "revision": "SIX_BOOKS_20261023_001",
+          "entry_type": "concept",
+          "book": "历史与事件",
+          "source_units": [],
+          "source_refs": [
+            {
+              "path": "work/replay_research/baimu_northern_margin_working_draft_20261012.md",
+              "line": 2330
+            }
+          ],
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+            "source_line": 2,
+            "revision": "M1_IMPORT_20261008_004",
+            "status": "runtime_candidate_for_human_review",
+            "source_refs": [
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 92,
+                "id": "UCL_20261007_023"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 93,
+                "id": "UCL_20261007_024"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 95,
+                "id": "UCL_20261007_026"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 91,
+                "id": "UCL_20261007_022"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 100,
+                "id": "UCL_20261007_031"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 106,
+                "id": "UCL_20261008_005"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 107,
+                "id": "UCL_20261008_006"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 98,
+                "id": "UCL_20261007_029"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 104,
+                "id": "UCL_20261008_003"
+              },
+              {
+                "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+                "line": 15,
+                "id": "921465"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 108,
+                "id": "UCL_20261008_007"
+              }
+            ],
+            "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+            "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+              "source_line": 11,
+              "revision": "M1_IMPORT_20261007_003",
+              "source_refs": [
+                {
+                  "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                  "line": 5
+                }
+              ],
+              "certainty_rule": "各正文标注及来源等级分别有效",
+              "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+              "baseline_source": {
+                "source_id": "WORLD_WRC_005",
+                "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+                "source_line": 5,
+                "candidate_projection": {
+                  "status": "provisional_for_human_review",
+                  "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                  "line": 3,
+                  "source_index": "author_entry_sources.json",
+                  "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+                }
+              }
+            }
+          },
+          "revisions": [
+            {
+              "source": "adopted_author_delta.json",
+              "author_key": "w-northern-history",
+              "reason": "2026-10-28已采用作者内容汇合；原文／采用／知情与实际分支分别保留。",
+              "mode": "append",
+              "source_segments": [
+                {
+                  "path": "work/replay_research/baimu_northern_margin_working_draft_20261012.md",
+                  "line": 2330,
+                  "end_line": 2336,
+                  "sha256": "1ec5d5099bae3dedfcc2c0299926ca03c82bf81310c9b89209524ebd7436ed2a"
+                }
+              ]
+            }
+          ],
+          "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",
+          "authorization": "用户：基于 tavern-cards 编排六本书的条目、触发和状态分工，再据此迁移内容。"
+        }
+      }
+    },
+    "1536998982": {
+      "uid": 1536998982,
+      "key": [],
+      "keysecondary": [],
+      "comment": "高等精灵家传古史与知情边界",
+      "content": "高等精灵家传古史与知情边界\n\n一般家族可以知道古文明曾覆亡、迁徙和祖辈保存的故事；较深入研习者知道部分错误、争议和禁忌，却未必知道娜迦。只有实际接触特定档案、传承或亲历的人，才可能掌握永恒之井、娜迦与内斗等更深片段。头衔、年龄、精灵身份或外派旅行都不自动解锁这些知识，未定年代不能用来一律判定在世者皆亲历或皆不可能亲历。\n\n家谱、物件、笔记与口述保留亲历、转述、解释和缺页之分。出发前可以说明哪些公开、哪些私人、哪些未知，不能为了保密教育反而先把未知者不知的秘密讲出。具体提问可回答不知道、不确定或不愿谈，不规定全族统一撒谎。祖先、当代幸存者和娜迦的责任分别判断，不把族群当同一行为人。\n\n专业查询按真实权限使用有限摘录或副本，血统不会自动辨认古物。新外部文献可能纠正长者记忆，也可能暂留两个解释。外神的确切现状、井址和本城建城关系未定；家族各有记忆焦点不等于全国审查或统一伪史。",
+      "constant": true,
+      "selective": false,
+      "selectiveLogic": 0,
+      "order": 80,
+      "position": 1,
+      "disable": true,
+      "addMemo": true,
+      "scanDepth": 4,
+      "caseSensitive": false,
+      "matchWholeWords": false,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "delayUntilRecursion": false,
+      "probability": 100,
+      "useProbability": true,
+      "vectorized": false,
+      "ignoreBudget": false,
+      "matchPersonaDescription": false,
+      "matchCharacterDescription": false,
+      "matchCharacterPersonality": false,
+      "matchCharacterDepthPrompt": false,
+      "matchScenario": false,
+      "matchCreatorNotes": false,
+      "sticky": 0,
+      "cooldown": 0,
+      "delay": 0,
+      "extensions": {
+        "position": 1,
+        "exclude_recursion": true,
+        "prevent_recursion": true,
+        "delay_until_recursion": false,
+        "probability": 100,
+        "useProbability": true,
+        "scan_depth": 4,
+        "case_sensitive": false,
+        "match_whole_words": false,
+        "vectorized": false,
+        "sticky": 0,
+        "cooldown": 0,
+        "delay": 0,
+        "ignore_budget": false,
+        "match_persona_description": false,
+        "match_character_description": false,
+        "match_character_personality": false,
+        "match_character_depth_prompt": false,
+        "match_scenario": false,
+        "match_creator_notes": false,
+        "901_replay": {
+          "source_id": "WORLD_WRC_005",
+          "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+          "source_line": 2,
+          "revision": "M1_IMPORT_20261008_004",
+          "status": "runtime_candidate_for_human_review",
+          "source_refs": [
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 92,
+              "id": "UCL_20261007_023"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 93,
+              "id": "UCL_20261007_024"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 95,
+              "id": "UCL_20261007_026"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 91,
+              "id": "UCL_20261007_022"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 100,
+              "id": "UCL_20261007_031"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 106,
+              "id": "UCL_20261008_005"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 107,
+              "id": "UCL_20261008_006"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 98,
+              "id": "UCL_20261007_029"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 104,
+              "id": "UCL_20261008_003"
+            },
+            {
+              "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+              "line": 15,
+              "id": "921465"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.jsonl",
+              "line": 108,
+              "id": "UCL_20261008_007"
+            }
+          ],
+          "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+          "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+            "source_line": 11,
+            "revision": "M1_IMPORT_20261007_003",
+            "source_refs": [
+              {
+                "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                "line": 5
+              }
+            ],
+            "certainty_rule": "各正文标注及来源等级分别有效",
+            "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+              "source_line": 5,
+              "candidate_projection": {
+                "status": "provisional_for_human_review",
+                "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                "line": 3,
+                "source_index": "author_entry_sources.json",
+                "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+              }
+            }
+          }
+        },
+        "901_six_books": {
+          "revision": "SIX_BOOKS_20261023_001",
+          "entry_type": "concept",
+          "book": "历史与事件",
+          "source_units": [],
+          "source_refs": [
+            {
+              "path": "work/replay_research/silvermoon_high_elf_city_working_draft_20261015.md",
+              "line": 691
+            }
+          ],
+          "baseline_source": {
+            "source_id": "WORLD_WRC_005",
+            "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+            "source_line": 2,
+            "revision": "M1_IMPORT_20261008_004",
+            "status": "runtime_candidate_for_human_review",
+            "source_refs": [
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 92,
+                "id": "UCL_20261007_023"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 93,
+                "id": "UCL_20261007_024"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 95,
+                "id": "UCL_20261007_026"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 91,
+                "id": "UCL_20261007_022"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 100,
+                "id": "UCL_20261007_031"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 106,
+                "id": "UCL_20261008_005"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 107,
+                "id": "UCL_20261008_006"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 98,
+                "id": "UCL_20261007_029"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 104,
+                "id": "UCL_20261008_003"
+              },
+              {
+                "path": "extracted-second/NO.901MurginMunalos，我重临世界之日，诸逆臣皆当死去！ - 页 9/posts.jsonl",
+                "line": 15,
+                "id": "921465"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.jsonl",
+                "line": 108,
+                "id": "UCL_20261008_007"
+              }
+            ],
+            "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+            "temporal_rule": "人口、军力、粮储由用户分别采用为T0背景；原线P2朝会原文仍是该时期官员报告。设施与服务为一般可得性，不初始化分支事件；未采用的普通城市全套服务、具体隐士和魔法农业机制不进入。",
+            "baseline_source": {
+              "source_id": "WORLD_WRC_005",
+              "source_file": "work/replay_research/runtime_sync_20261007/projected_entries.jsonl",
+              "source_line": 11,
+              "revision": "M1_IMPORT_20261007_003",
+              "source_refs": [
+                {
+                  "path": "work/replay_research/divinity_belief_reference_20261007.md",
+                  "line": 5
+                }
+              ],
+              "certainty_rule": "各正文标注及来源等级分别有效",
+              "temporal_rule": "古史背景、T0事实、原团后期披露分开；实际分支按发生情况更新",
+              "baseline_source": {
+                "source_id": "WORLD_WRC_005",
+                "source_file": "output/replay_f_review/v1/worldbook_source.jsonl",
+                "source_line": 5,
+                "candidate_projection": {
+                  "status": "provisional_for_human_review",
+                  "path": "work/replay_research/enh_20261004_r2_candidates/world_changes.jsonl",
+                  "line": 3,
+                  "source_index": "author_entry_sources.json",
+                  "period": "T0起可用的持续背景；人物知情依实际经历 T0后台信息差；后续知识依当前分支实际传递更新。"
+                }
+              }
+            }
+          },
+          "revisions": [
+            {
+              "source": "adopted_author_delta.json",
+              "author_key": "w-20261028-高等精灵家传古史与知情边界",
+              "reason": "2026-10-28已采用作者内容汇合；原文／采用／知情与实际分支分别保留。",
+              "mode": "append",
+              "source_segments": [
+                {
+                  "path": "work/replay_research/silvermoon_high_elf_city_working_draft_20261015.md",
+                  "line": 691,
+                  "end_line": 697,
+                  "sha256": "88deedf8c0c67f56e7af4e1ad92c774fc6a32bfef10718681186b4ec73b686ed"
+                }
+              ]
+            }
+          ],
+          "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",
+          "authorization": "用户：基于 tavern-cards 编排六本书的条目、触发和状态分工，再据此迁移内容。"
+        }
+      }
     }
   }
 }

@@ -1,5 +1,6 @@
+import {selectCaster} from './resource-casting.mjs';
 import {effectValue,effectMatches,applyAcquisitionEffects} from './resource-effects.mjs';
-export function assertSpellQualifications(state,id,definition,{grade=definition?.grade,versionMode}={}){
+export function assertSpellQualifications(state,id,definition,{grade=definition?.grade,versionMode,casterSource}={}){
  if(definition?.identity?.category!=='spell')return;
  const policy=definition.learning?.policy;
  if(policy){
@@ -8,7 +9,7 @@ export function assertSpellQualifications(state,id,definition,{grade=definition?
   return;
  }
  if(definition.grade==='C'&&grade!=='C')throw Error('原生C术不能改写为未定义的D版');
- const caster=state.casting?.imperial??state.guanlan?.caster,grades=['D','C','B','A','S'];
+ const caster=selectCaster(state,casterSource??state.learnedResources?.[id]?.casterSource),grades=['D','C','B','A','S'];
  if(!caster||grades.indexOf(caster.grade)<grades.indexOf(grade)||!['D','C'].includes(grade))throw Error('学习法术须有对应等级施法职能');
  const known=state.learnedResources?.[id];
  if(definition.grade==='D'&&grade==='C'&&(!known?.learned||known.grade!=='D'||!versionMode))throw Error('D术升阶须先学D版并明确保留或替换版本');
@@ -62,12 +63,19 @@ export function acquireDefinition(state,id,definition,choices,context){
 export function claimLearningGrant(state,grantId,resourceIds,definitions,source){
  const grant=state.learningGrants?.[grantId];if(!grant||!source)throw Error('须实际授术名额与选定来源');
  if(!Array.isArray(resourceIds)||new Set(resourceIds).size!==resourceIds.length||resourceIds.length>grant.count-grant.used.length)throw Error('授术选择超过剩余名额或重复');
- for(const id of resourceIds){const d=definitions[id];
-  if(!d||d.prohibited||d.grade!=='D'||!d.learning||state.learnedResources?.[id]?.learned)throw Error('授术须合法、未学会的本职D级法术');
-  if(!d.schools?.includes(grant.school))throw Error('授术不属于此名额对应的专业');
-  assertSpellQualifications(state,id,d,{grade:'D'});
+ const upgrades=new Set();
+ for(const id of resourceIds){const d=definitions[id],known=state.learnedResources?.[id],grade=grant.grade??'D';
+  const upgrade=grant.casterSource&&grade==='C'&&d?.grade==='D'&&d.learning?.upgradeC&&known?.learned&&known.grade==='D';
+  if(!d||d.prohibited||!d.learning||!upgrade&&(d.grade!==grade||known?.learned))throw Error('授术须合法、符合本阶且尚未学会该版本');
+  if(grant.tree&&d.identity?.tree!==grant.tree)throw Error('授术须为本名额声明的通用法术');
+  if(grant.school&&!d.schools?.includes(grant.school))throw Error('授术不属于此名额对应的专业');
+  assertSpellQualifications(state,id,d,{grade,casterSource:grant.casterSource,...(upgrade?{versionMode:'retain'}:{})});
+  if(upgrade)upgrades.add(id);
  }
- for(const id of resourceIds){(state.learnedResources??={})[id]={learned:true,source,grade:'D',kind:'technique',tree:definitions[id].identity?.tree??'imperial',version:definitions[id].contractVersion,grantedBy:grantId};grant.used.push(id);}
+ for(const id of resourceIds){
+  const prior=state.learnedResources?.[id],upgrade=upgrades.has(id);
+  (state.learnedResources??={})[id]={...(upgrade?structuredClone(prior):{}),learned:true,source:upgrade?prior.source:source,grade:grant.grade??'D',...(grant.casterSource?{casterSource:grant.casterSource}:{}),kind:'technique',tree:definitions[id].identity?.tree??'imperial',version:definitions[id].contractVersion,grantedBy:upgrade?prior.grantedBy:grantId,...(upgrade?{versions:['D','C'],grantHistory:[...(prior.grantHistory??(prior.grantedBy?[prior.grantedBy]:[])),grantId]}:{})};grant.used.push(id);
+ }
  return {learned:[...resourceIds],remaining:grant.count-grant.used.length,chargedXP:0};
 }
 

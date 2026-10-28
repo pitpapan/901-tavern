@@ -1,0 +1,13 @@
+Generated modelOptions evaluated with null and existing scene: PASS
+Player input stays last: PASS
+Shared author guidance is in final system context: PASS
+
+function modelOptions() {
+  const scene=getSession().storyContext();
+  return {should_stream:false,should_silence:true,max_chat_history:6,
+    ordered_prompts:['world_info_before','char_description',...(scene?[]:['scenario']),
+      'world_info_after','chat_history',
+      {role:'system',content:"世界书中的产地、供料与工艺是背景知识，不是本次现场清单。仅讲解材料用途时，用一般性说明或人物口头讲解；没有已确认的样品时，不安排指向、取出或展示样品，也不补写材料堆放。普通桌椅、光声和人物姿态仍可按场景描写，不能借这些细节把背景资源变成本店现货或人物持有物。当前聊天已经确认的实物及本次真实取得、交付照常承接；库存未定不等于缺货。"+'\n'+currentSceneText(scene)+
+        '\n以上是本次续写的现场依据。聊天用于承接已发生的言行，旧回复中的多余人物或伤势不得覆盖这份结算事实。未见伤势者不能补写交锋造成的伤口或裂痕。'+
+        '只写可观察表现，不公开同伴或敌人数值；JS独占规则写回。玩家数值面板由MVU显示，正文不附面板。'},'user_input']};
+}

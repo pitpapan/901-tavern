@@ -232308,6 +232308,1820 @@
           "authorization": "用户：基于 tavern-cards 编排六本书的条目、触发和状态分工，再据此迁移内容。"
         }
       }
+    },
+    "1273564015": {
+      "uid": 1273564015,
+      "key": [],
+      "keysecondary": [],
+      "comment": "候选资源·法师",
+      "content": "候选资源·法师\n\n资源定义不表示任何人物已经取得；实际资格、持有、能量、冷却、XP只认当前JS/MVU。本批适配候选，默认手动禁用；执行证明只覆盖已列操作，须有该角色的已采用学习报价和实际取得记录才能使用，不自动加入帝国课程。\n\n# 法师\n\n用途：三系专长及各阶赠通用法术。\n\n**2026-10-28.magic.2 · 901适配候选阅读版。**\n\n配对机械契约见[execution/contracts](../execution/contracts)；完整运行接入按覆盖表，存在契约不等于已可执行。\n\n[共用判定](../共用901判定.md)｜[依赖](../依赖/引用定位.md)｜[来源/核算](../来源与核算.md)。各阶继承，替换值不叠加。\n\n## 本体\n\n能量：精神魔力。D/C/B/A/S依次取得对应施法职能，每阶分别免费选一项同阶通用法术；三系在D阶选定，后续沿所选系进阶。\n\n| 阶 | 奥术 | 火焰 | 冰霜 |\n| --- | --- | --- | --- |\n| D | 造成纯能量/力场伤害的法术施法+6修行DP | 火焰法术施法+6修行DP | 寒冷法术施法+6修行DP |\n| C | 精神魔力上限+10 | 每24小时额外恢复2×魔力上限，均摊到最小回复时长 | 法术魔力耗−1，最低1 |\n| B | 力场防御＝floor((L(智力)+神秘学适用附加成功)×4/3) | 以法术攻击时，传奇智力所供附加成功计算两次 | 施法判定用于削目标豁免时，传奇智力所供附加成功计算两次 |\n| A | 全伤害吸收＝L(智力) | 全能量抗力＝2L(智力) | 受异常点数前先减3L(智力) |\n| S | 三系共同：施法q≤12时−2、最低2；q>12时原q×5/6，向上取整后查动作表 | 同左 | 同左 |\n\n各阶新增收益继承；每阶赠术各一项，不把C赠术替换D赠术。传奇附加成功与901自动成功分账，不复制卡面已经计入的成功。\n\n执行版：candidate-901-magic-bundle-ba577210e69dafd5 @ 2026-10-28.magic.2；尚未完整执行验证；当前为开发候选，生成不代表部署。\n实现缺口：奥术D/C本体取得及赠术已验证；火焰、冰霜及B以上本体机制仍待接入。；被动或取得证明不代表全部法术变体交互与整套能力组认证。",
+      "constant": true,
+      "selective": false,
+      "selectiveLogic": 0,
+      "order": 180,
+      "position": 1,
+      "disable": true,
+      "addMemo": true,
+      "scanDepth": 4,
+      "caseSensitive": false,
+      "matchWholeWords": false,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "delayUntilRecursion": false,
+      "probability": 100,
+      "useProbability": true,
+      "vectorized": false,
+      "ignoreBudget": false,
+      "matchPersonaDescription": false,
+      "matchCharacterDescription": false,
+      "matchCharacterPersonality": false,
+      "matchCharacterDepthPrompt": false,
+      "matchScenario": false,
+      "matchCreatorNotes": false,
+      "sticky": 0,
+      "cooldown": 0,
+      "delay": 0,
+      "extensions": {
+        "position": 1,
+        "exclude_recursion": true,
+        "prevent_recursion": true,
+        "delay_until_recursion": false,
+        "probability": 100,
+        "useProbability": true,
+        "scan_depth": 4,
+        "case_sensitive": false,
+        "match_whole_words": false,
+        "vectorized": false,
+        "sticky": 0,
+        "cooldown": 0,
+        "delay": 0,
+        "ignore_budget": false,
+        "match_persona_description": false,
+        "match_character_description": false,
+        "match_character_personality": false,
+        "match_character_depth_prompt": false,
+        "match_scenario": false,
+        "match_creator_notes": false,
+        "901_replay": {
+          "source_id": "M1_CONTEXT_GENERAL",
+          "source_file": "work/replay_research/runtime_sync_20261018_flow/projected_entries.jsonl",
+          "source_line": 1,
+          "revision": "M1_IMPORT_20261018_008",
+          "source_refs": [
+            {
+              "path": "work/replay_research/user_clarifications.md",
+              "line": 4462,
+              "locator": "## UCL_20261018_006"
+            },
+            {
+              "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+              "line": 7,
+              "locator": "## 一 构筑口径与使用方法"
+            },
+            {
+              "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+              "line": 167,
+              "locator": "## 七 XP建议与结算实例"
+            },
+            {
+              "path": "output/replay_f_review/v1/gm/host_rules.md",
+              "line": 85,
+              "locator": "## 节点、挑战与击杀XP"
+            },
+            {
+              "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+              "line": 21,
+              "locator": "### 数值读法"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.md",
+              "line": 4468,
+              "locator": "## UCL_20261018_007"
+            },
+            {
+              "path": "output/replay_f_review/v1/gm/host_rules.md",
+              "line": 103,
+              "locator": "## 按需讲解规则"
+            },
+            {
+              "path": "output/replay_f_review/v1/gm/host_rules.md",
+              "line": 109,
+              "locator": "## 根据反馈调整场景重点"
+            },
+            {
+              "path": "output/replay_f_review/v1/gm/host_rules.md",
+              "line": 115,
+              "locator": "## 失败、压力与致命风险"
+            },
+            {
+              "path": "output/replay_f_review/v1/gm/turn_flow.md",
+              "line": 79,
+              "locator": "## 按需讲解、反馈与失败处理〔008〕"
+            },
+            {
+              "path": "work/replay_research/capital_event_dependencies.md",
+              "line": 1644,
+              "locator": "## 2026-10-18：按需讲解、反馈与相称后果〔008已采用〕"
+            },
+            {
+              "path": "901_rules_source_library/content/RE/01_rules/04_附录/ST指南.md",
+              "line": 593,
+              "locator": "**游戏教学**"
+            },
+            {
+              "path": "901_rules_source_library/content/RE/01_rules/04_附录/ST指南.md",
+              "line": 637,
+              "locator": "**运作游戏**"
+            },
+            {
+              "path": "901_rules_source_library/content/RE/01_rules/04_附录/ST指南.md",
+              "line": 699,
+              "locator": "**开团要点——来自某位ST的经验分享：**"
+            }
+          ],
+          "authorization": "UCL_20261018_007",
+          "operation": "update",
+          "entry_type": "concept",
+          "certainty_rule": "继承原确定性；新增为已采用主持方法，不成为原团事实或已发生事件",
+          "temporal_rule": "按真实重玩分支状态主持，不初始化到场、伤势、关系或奖励",
+          "baseline_source": {
+            "source_id": "M1_CONTEXT_GENERAL",
+            "source_file": "work/replay_research/runtime_sync_20261018_enemies/projected_entries.jsonl",
+            "source_line": 1,
+            "revision": "M1_IMPORT_20261018_007",
+            "source_refs": [
+              {
+                "path": "work/replay_research/user_clarifications.md",
+                "line": 4462,
+                "locator": "## UCL_20261018_006"
+              },
+              {
+                "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+                "line": 7,
+                "locator": "## 一 构筑口径与使用方法"
+              },
+              {
+                "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+                "line": 167,
+                "locator": "## 七 XP建议与结算实例"
+              },
+              {
+                "path": "output/replay_f_review/v1/gm/host_rules.md",
+                "line": 85,
+                "locator": "## 节点、挑战与击杀XP"
+              },
+              {
+                "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+                "line": 21,
+                "locator": "### 数值读法"
+              }
+            ],
+            "authorization": "UCL_20261018_006",
+            "operation": "update_content",
+            "certainty_rule": "继承内容保留原确定性；新增为已采用作者构筑和场景XP基准，不冒充原团记录或已发生事件",
+            "temporal_rule": "重玩帝都适用阶段，按真实分支状态取用，不重置到场、伤势、控制、消耗与奖励",
+            "baseline_source": {
+              "source_id": "M1_CONTEXT_GENERAL",
+              "source_file": "work/replay_research/runtime_sync_20261018/projected_entries.jsonl",
+              "source_line": 1,
+              "revision": "M1_IMPORT_20261018_006",
+              "patch_id": "006_consistency_r1",
+              "source_refs": [
+                {
+                  "path": "work/replay_research/user_clarifications.md",
+                  "line": 4435,
+                  "locator": "## UCL_20261018_002"
+                },
+                {
+                  "path": "output/replay_f_review/v1/gm/host_rules.md",
+                  "line": 77,
+                  "locator": "## 强度定位与遭遇"
+                },
+                {
+                  "path": "output/replay_f_review/v1/gm/host_rules.md",
+                  "line": 29,
+                  "locator": "## 未列明能力"
+                },
+                {
+                  "path": "output/replay_f_review/v1/gm/host_rules.md",
+                  "line": 83,
+                  "locator": "## 节点、挑战与击杀XP"
+                },
+                {
+                  "path": "work/replay_research/empire_military_strength_20261007.md",
+                  "line": 99,
+                  "locator": "### T0—T8统一个人战力工作版"
+                },
+                {
+                  "path": "work/rules_fusion/901-core-rules-v0.1.md",
+                  "line": 32,
+                  "locator": "## 3. 主技能、子技能与成长费用"
+                },
+                {
+                  "path": "output/replay_f_review/v1/gm/host_rules.md",
+                  "line": 89,
+                  "locator": "## 运作剧情与场景体验"
+                },
+                {
+                  "path": "work/replay_research/user_clarifications.md",
+                  "line": 4443,
+                  "locator": "## UCL_20261018_003"
+                },
+                {
+                  "path": "output/replay_f_review/v1/gm/host_rules.md",
+                  "line": 29,
+                  "locator": "## 未列明能力"
+                }
+              ],
+              "baseline_source": {
+                "source_id": "M1_CONTEXT_GENERAL",
+                "source_file": "work/replay_research/runtime_sync_20261012/projected_entries.jsonl",
+                "source_line": 13,
+                "revision": "M1_IMPORT_20261012_005",
+                "source_refs": [
+                  {
+                    "path": "work/replay_research/user_clarifications.md",
+                    "line": 3422,
+                    "locator": "## UCL_20261012_065："
+                  },
+                  {
+                    "path": "work/replay_research/user_clarifications.md",
+                    "line": 3456,
+                    "locator": "## UCL_20261012_068："
+                  },
+                  {
+                    "path": "work/replay_research/opening_state_consolidated.md",
+                    "line": 5,
+                    "locator": "## 切入点与开局成长"
+                  },
+                  {
+                    "path": "work/replay_research/user_clarifications.md",
+                    "line": 3478,
+                    "locator": "## UCL_20261012_070："
+                  }
+                ],
+                "baseline_source": {
+                  "source_id": "M1_CONTEXT_GENERAL",
+                  "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+                  "source_line": 16,
+                  "revision": "M1_IMPORT_20261008_004",
+                  "status": "runtime_candidate_for_human_review",
+                  "source_refs": [
+                    {
+                      "path": "work/replay_research/user_clarifications.jsonl",
+                      "line": 108,
+                      "id": "UCL_20261008_007"
+                    },
+                    {
+                      "path": "work/replay_research/opening_state_consolidated.jsonl",
+                      "line": 1,
+                      "id": "OPENR_001"
+                    }
+                  ],
+                  "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+                  "temporal_rule": "T0前已保留的能力；读写学习与角色知情依各自经历，当前分支不重置",
+                  "baseline_source": {
+                    "source_id": "M1_CONTEXT_GENERAL",
+                    "status": "runtime_candidate_for_human_review",
+                    "revision": "M1_IMPORT_20261005_002",
+                    "source_file": "output/replay_tavern/hallucination_prevention_20261005_candidate/texts/当前场景.txt",
+                    "source_refs": [
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 1,
+                        "fact_id": "M1_F01"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 2,
+                        "fact_id": "M1_F02"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 3,
+                        "fact_id": "M1_F03"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 4,
+                        "fact_id": "M1_F04"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 5,
+                        "fact_id": "M1_F05"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 6,
+                        "fact_id": "M1_F06"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 7,
+                        "fact_id": "M1_F07"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 8,
+                        "fact_id": "M1_F08"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 15,
+                        "fact_id": "M1_F15"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 16,
+                        "fact_id": "M1_F16"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 17,
+                        "fact_id": "M1_F17"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 18,
+                        "fact_id": "M1_F18"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 19,
+                        "fact_id": "M1_F19"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 20,
+                        "fact_id": "M1_F20"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 21,
+                        "fact_id": "M1_F21"
+                      }
+                    ],
+                    "period": "通用未绑定场景；具体分期见每项来源",
+                    "projection_scope": "runtime_host_context_not_formal_canon_entry"
+                  }
+                },
+                "certainty_rule": "原有事实、采用设计与人物证言按正文分别有效；不初始化未来事件",
+                "temporal_rule": "T0基线与条件式行动分开；当前分支按实际事件更新"
+              },
+              "certainty_rule": "继承事实保留原确定性；新增为用户授权主持方法，不声称原团已记载或人物已获得新能力",
+              "temporal_rule": "重玩T0及后续实际分支；主持方法有效，场景按真实条件启用，不初始化未来事件"
+            },
+            "entry_type": "concept"
+          }
+        },
+        "901_resource_contract": {
+          "id": "candidate-901-magic-bundle-ba577210e69dafd5",
+          "version": "2026-10-28.magic.2",
+          "reading": {
+            "path": "outputs/施法体系适配-20261024/阅读版/法师.md",
+            "sha256": "c5454a7520ef1e1bf7dc054e9554b5aa41d370a21f772e37d5fa4a7325f11a09"
+          },
+          "path": "../901-resource-authoring-kit/outputs/施法体系适配-20261024/execution/contracts/candidate-901-magic-bundle-ba577210e69dafd5.rule.json",
+          "sha256": "d3642bd7e7c4b4be05f695bfba457e7ea82fbf094fee6447730609beb6aba767",
+          "verification": {
+            "runtimeFullyVerified": false,
+            "scope": "paired-source-and-declarative-base; not full runtime",
+            "sourceChecked": true,
+            "status": "partial"
+          },
+          "actions": [
+            {
+              "actionCost": [],
+              "allowsModelNumericEffects": false,
+              "availability": "blocked",
+              "clauseId": "clause-15622692ac97",
+              "id": "candidate-901-magic-bundle-ba577210e69dafd5/clause-15622692ac97",
+              "missingPolicy": "implementation-needed; do not ask player for a rule",
+              "name": "本体",
+              "operation": null,
+              "requestFields": [],
+              "requiredChoice": []
+            },
+            {
+              "id": "claimLearning",
+              "name": "兑现已取得阶段赠术",
+              "operation": "claimLearning",
+              "actionCost": [],
+              "requiredChoice": [
+                "registered-grant-and-spell"
+              ],
+              "requestFields": [
+                "actorId",
+                "objectId",
+                "operation",
+                "part"
+              ],
+              "allowsModelNumericEffects": false,
+              "availability": "execution-verified",
+              "route": "mechanism",
+              "objectType": "kitResource"
+            }
+          ],
+          "implementationGaps": [
+            "奥术D/C本体取得及赠术已验证；火焰、冰霜及B以上本体机制仍待接入。",
+            "被动或取得证明不代表全部法术变体交互与整套能力组认证。"
+          ],
+          "unresolvedRules": [],
+          "adoptionStatus": "candidate",
+          "verifiedOperations": [
+            "claimLearning"
+          ],
+          "runtimeProjectionVerification": {
+            "status": "partial",
+            "sourceChecked": true,
+            "runtimeFullyVerified": false,
+            "scope": "arcane-D-C-body-acquisition-and-spell-grants"
+          },
+          "learning": {
+            "action": "resource",
+            "availability": "execution-verified",
+            "requiresRegisteredOffer": true,
+            "requestFields": [
+              "actorId",
+              "offerId",
+              "paymentId"
+            ],
+            "allowsModelNumericEffects": false,
+            "contractVersion": "2026-10-28.magic.2",
+            "grades": [
+              "D",
+              "C"
+            ],
+            "specializations": [
+              "奥术"
+            ]
+          }
+        },
+        "901_resource": {
+          "id": "candidate-901-magic-bundle-ba577210e69dafd5",
+          "version": "2026-10-28.magic.2",
+          "contract_path": "../901-resource-authoring-kit/outputs/施法体系适配-20261024/execution/contracts/candidate-901-magic-bundle-ba577210e69dafd5.rule.json",
+          "contract_sha256": "d3642bd7e7c4b4be05f695bfba457e7ea82fbf094fee6447730609beb6aba767",
+          "reading": {
+            "path": "outputs/施法体系适配-20261024/阅读版/法师.md",
+            "sha256": "c5454a7520ef1e1bf7dc054e9554b5aa41d370a21f772e37d5fa4a7325f11a09"
+          },
+          "verification": {
+            "runtimeFullyVerified": false,
+            "scope": "paired-source-and-declarative-base; not full runtime",
+            "sourceChecked": true,
+            "status": "partial"
+          },
+          "clauses": [
+            {
+              "effectStats": [],
+              "heading": "法师",
+              "status": "pending"
+            },
+            {
+              "effectStats": [],
+              "heading": "本体",
+              "status": "partial"
+            }
+          ],
+          "programSources": {},
+          "actions": [
+            {
+              "actionCost": [],
+              "allowsModelNumericEffects": false,
+              "availability": "blocked",
+              "clauseId": "clause-15622692ac97",
+              "id": "candidate-901-magic-bundle-ba577210e69dafd5/clause-15622692ac97",
+              "missingPolicy": "implementation-needed; do not ask player for a rule",
+              "name": "本体",
+              "operation": null,
+              "requestFields": [],
+              "requiredChoice": []
+            },
+            {
+              "id": "claimLearning",
+              "name": "兑现已取得阶段赠术",
+              "operation": "claimLearning",
+              "actionCost": [],
+              "requiredChoice": [
+                "registered-grant-and-spell"
+              ],
+              "requestFields": [
+                "actorId",
+                "objectId",
+                "operation",
+                "part"
+              ],
+              "allowsModelNumericEffects": false,
+              "availability": "execution-verified",
+              "route": "mechanism",
+              "objectType": "kitResource"
+            }
+          ],
+          "consumerCoverage": {
+            "effects": []
+          },
+          "implementationGaps": [
+            "奥术D/C本体取得及赠术已验证；火焰、冰霜及B以上本体机制仍待接入。",
+            "被动或取得证明不代表全部法术变体交互与整套能力组认证。"
+          ],
+          "unresolvedRules": [],
+          "deployment": "candidate_not_installed",
+          "adoptionStatus": "candidate",
+          "verifiedOperations": [
+            "claimLearning"
+          ],
+          "runtimeProjectionVerification": {
+            "status": "partial",
+            "sourceChecked": true,
+            "runtimeFullyVerified": false,
+            "scope": "arcane-D-C-body-acquisition-and-spell-grants"
+          },
+          "learning": {
+            "action": "resource",
+            "availability": "execution-verified",
+            "requiresRegisteredOffer": true,
+            "requestFields": [
+              "actorId",
+              "offerId",
+              "paymentId"
+            ],
+            "allowsModelNumericEffects": false,
+            "contractVersion": "2026-10-28.magic.2",
+            "grades": [
+              "D",
+              "C"
+            ],
+            "specializations": [
+              "奥术"
+            ]
+          }
+        },
+        "901_six_books": {
+          "revision": "SIX_BOOKS_20261023_001",
+          "entry_type": "concept",
+          "book": "能力与战力",
+          "source_units": [],
+          "source_refs": [
+            {
+              "path": "../901-resource-authoring-kit/outputs/施法体系适配-20261024/阅读版/法师.md",
+              "line": 1
+            },
+            {
+              "path": "../901-resource-authoring-kit/outputs/施法体系适配-20261024/execution/contracts/candidate-901-magic-bundle-ba577210e69dafd5.rule.json",
+              "line": 1
+            }
+          ],
+          "baseline_source": {
+            "source_id": "M1_CONTEXT_GENERAL",
+            "source_file": "work/replay_research/runtime_sync_20261018_flow/projected_entries.jsonl",
+            "source_line": 1,
+            "revision": "M1_IMPORT_20261018_008",
+            "source_refs": [
+              {
+                "path": "work/replay_research/user_clarifications.md",
+                "line": 4462,
+                "locator": "## UCL_20261018_006"
+              },
+              {
+                "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+                "line": 7,
+                "locator": "## 一 构筑口径与使用方法"
+              },
+              {
+                "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+                "line": 167,
+                "locator": "## 七 XP建议与结算实例"
+              },
+              {
+                "path": "output/replay_f_review/v1/gm/host_rules.md",
+                "line": 85,
+                "locator": "## 节点、挑战与击杀XP"
+              },
+              {
+                "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+                "line": 21,
+                "locator": "### 数值读法"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.md",
+                "line": 4468,
+                "locator": "## UCL_20261018_007"
+              },
+              {
+                "path": "output/replay_f_review/v1/gm/host_rules.md",
+                "line": 103,
+                "locator": "## 按需讲解规则"
+              },
+              {
+                "path": "output/replay_f_review/v1/gm/host_rules.md",
+                "line": 109,
+                "locator": "## 根据反馈调整场景重点"
+              },
+              {
+                "path": "output/replay_f_review/v1/gm/host_rules.md",
+                "line": 115,
+                "locator": "## 失败、压力与致命风险"
+              },
+              {
+                "path": "output/replay_f_review/v1/gm/turn_flow.md",
+                "line": 79,
+                "locator": "## 按需讲解、反馈与失败处理〔008〕"
+              },
+              {
+                "path": "work/replay_research/capital_event_dependencies.md",
+                "line": 1644,
+                "locator": "## 2026-10-18：按需讲解、反馈与相称后果〔008已采用〕"
+              },
+              {
+                "path": "901_rules_source_library/content/RE/01_rules/04_附录/ST指南.md",
+                "line": 593,
+                "locator": "**游戏教学**"
+              },
+              {
+                "path": "901_rules_source_library/content/RE/01_rules/04_附录/ST指南.md",
+                "line": 637,
+                "locator": "**运作游戏**"
+              },
+              {
+                "path": "901_rules_source_library/content/RE/01_rules/04_附录/ST指南.md",
+                "line": 699,
+                "locator": "**开团要点——来自某位ST的经验分享：**"
+              }
+            ],
+            "authorization": "UCL_20261018_007",
+            "operation": "update",
+            "entry_type": "concept",
+            "certainty_rule": "继承原确定性；新增为已采用主持方法，不成为原团事实或已发生事件",
+            "temporal_rule": "按真实重玩分支状态主持，不初始化到场、伤势、关系或奖励",
+            "baseline_source": {
+              "source_id": "M1_CONTEXT_GENERAL",
+              "source_file": "work/replay_research/runtime_sync_20261018_enemies/projected_entries.jsonl",
+              "source_line": 1,
+              "revision": "M1_IMPORT_20261018_007",
+              "source_refs": [
+                {
+                  "path": "work/replay_research/user_clarifications.md",
+                  "line": 4462,
+                  "locator": "## UCL_20261018_006"
+                },
+                {
+                  "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+                  "line": 7,
+                  "locator": "## 一 构筑口径与使用方法"
+                },
+                {
+                  "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+                  "line": 167,
+                  "locator": "## 七 XP建议与结算实例"
+                },
+                {
+                  "path": "output/replay_f_review/v1/gm/host_rules.md",
+                  "line": 85,
+                  "locator": "## 节点、挑战与击杀XP"
+                },
+                {
+                  "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+                  "line": 21,
+                  "locator": "### 数值读法"
+                }
+              ],
+              "authorization": "UCL_20261018_006",
+              "operation": "update_content",
+              "certainty_rule": "继承内容保留原确定性；新增为已采用作者构筑和场景XP基准，不冒充原团记录或已发生事件",
+              "temporal_rule": "重玩帝都适用阶段，按真实分支状态取用，不重置到场、伤势、控制、消耗与奖励",
+              "baseline_source": {
+                "source_id": "M1_CONTEXT_GENERAL",
+                "source_file": "work/replay_research/runtime_sync_20261018/projected_entries.jsonl",
+                "source_line": 1,
+                "revision": "M1_IMPORT_20261018_006",
+                "patch_id": "006_consistency_r1",
+                "source_refs": [
+                  {
+                    "path": "work/replay_research/user_clarifications.md",
+                    "line": 4435,
+                    "locator": "## UCL_20261018_002"
+                  },
+                  {
+                    "path": "output/replay_f_review/v1/gm/host_rules.md",
+                    "line": 77,
+                    "locator": "## 强度定位与遭遇"
+                  },
+                  {
+                    "path": "output/replay_f_review/v1/gm/host_rules.md",
+                    "line": 29,
+                    "locator": "## 未列明能力"
+                  },
+                  {
+                    "path": "output/replay_f_review/v1/gm/host_rules.md",
+                    "line": 83,
+                    "locator": "## 节点、挑战与击杀XP"
+                  },
+                  {
+                    "path": "work/replay_research/empire_military_strength_20261007.md",
+                    "line": 99,
+                    "locator": "### T0—T8统一个人战力工作版"
+                  },
+                  {
+                    "path": "work/rules_fusion/901-core-rules-v0.1.md",
+                    "line": 32,
+                    "locator": "## 3. 主技能、子技能与成长费用"
+                  },
+                  {
+                    "path": "output/replay_f_review/v1/gm/host_rules.md",
+                    "line": 89,
+                    "locator": "## 运作剧情与场景体验"
+                  },
+                  {
+                    "path": "work/replay_research/user_clarifications.md",
+                    "line": 4443,
+                    "locator": "## UCL_20261018_003"
+                  },
+                  {
+                    "path": "output/replay_f_review/v1/gm/host_rules.md",
+                    "line": 29,
+                    "locator": "## 未列明能力"
+                  }
+                ],
+                "baseline_source": {
+                  "source_id": "M1_CONTEXT_GENERAL",
+                  "source_file": "work/replay_research/runtime_sync_20261012/projected_entries.jsonl",
+                  "source_line": 13,
+                  "revision": "M1_IMPORT_20261012_005",
+                  "source_refs": [
+                    {
+                      "path": "work/replay_research/user_clarifications.md",
+                      "line": 3422,
+                      "locator": "## UCL_20261012_065："
+                    },
+                    {
+                      "path": "work/replay_research/user_clarifications.md",
+                      "line": 3456,
+                      "locator": "## UCL_20261012_068："
+                    },
+                    {
+                      "path": "work/replay_research/opening_state_consolidated.md",
+                      "line": 5,
+                      "locator": "## 切入点与开局成长"
+                    },
+                    {
+                      "path": "work/replay_research/user_clarifications.md",
+                      "line": 3478,
+                      "locator": "## UCL_20261012_070："
+                    }
+                  ],
+                  "baseline_source": {
+                    "source_id": "M1_CONTEXT_GENERAL",
+                    "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+                    "source_line": 16,
+                    "revision": "M1_IMPORT_20261008_004",
+                    "status": "runtime_candidate_for_human_review",
+                    "source_refs": [
+                      {
+                        "path": "work/replay_research/user_clarifications.jsonl",
+                        "line": 108,
+                        "id": "UCL_20261008_007"
+                      },
+                      {
+                        "path": "work/replay_research/opening_state_consolidated.jsonl",
+                        "line": 1,
+                        "id": "OPENR_001"
+                      }
+                    ],
+                    "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+                    "temporal_rule": "T0前已保留的能力；读写学习与角色知情依各自经历，当前分支不重置",
+                    "baseline_source": {
+                      "source_id": "M1_CONTEXT_GENERAL",
+                      "status": "runtime_candidate_for_human_review",
+                      "revision": "M1_IMPORT_20261005_002",
+                      "source_file": "output/replay_tavern/hallucination_prevention_20261005_candidate/texts/当前场景.txt",
+                      "source_refs": [
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 1,
+                          "fact_id": "M1_F01"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 2,
+                          "fact_id": "M1_F02"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 3,
+                          "fact_id": "M1_F03"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 4,
+                          "fact_id": "M1_F04"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 5,
+                          "fact_id": "M1_F05"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 6,
+                          "fact_id": "M1_F06"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 7,
+                          "fact_id": "M1_F07"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 8,
+                          "fact_id": "M1_F08"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 15,
+                          "fact_id": "M1_F15"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 16,
+                          "fact_id": "M1_F16"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 17,
+                          "fact_id": "M1_F17"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 18,
+                          "fact_id": "M1_F18"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 19,
+                          "fact_id": "M1_F19"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 20,
+                          "fact_id": "M1_F20"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 21,
+                          "fact_id": "M1_F21"
+                        }
+                      ],
+                      "period": "通用未绑定场景；具体分期见每项来源",
+                      "projection_scope": "runtime_host_context_not_formal_canon_entry"
+                    }
+                  },
+                  "certainty_rule": "原有事实、采用设计与人物证言按正文分别有效；不初始化未来事件",
+                  "temporal_rule": "T0基线与条件式行动分开；当前分支按实际事件更新"
+                },
+                "certainty_rule": "继承事实保留原确定性；新增为用户授权主持方法，不声称原团已记载或人物已获得新能力",
+                "temporal_rule": "重玩T0及后续实际分支；主持方法有效，场景按真实条件启用，不初始化未来事件"
+              },
+              "entry_type": "concept"
+            }
+          },
+          "revisions": [
+            {
+              "source": "kit-inventory.json",
+              "reason": "用户明确要求完整盘点并接入现有六书；定义、后期模板与当前持有分离。"
+            }
+          ],
+          "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",
+          "authorization": "用户：基于 tavern-cards 编排六本书的条目、触发和状态分工，再据此迁移内容。"
+        }
+      }
+    },
+    "1649560773": {
+      "uid": 1649560773,
+      "key": [],
+      "keysecondary": [],
+      "comment": "候选资源·阴影超魔使",
+      "content": "候选资源·阴影超魔使\n\n资源定义不表示任何人物已经取得；实际资格、持有、能量、冷却、XP只认当前JS/MVU。本批适配候选，默认手动禁用；执行证明只覆盖已列操作，须有该角色的已采用学习报价和实际取得记录才能使用，不自动加入帝国课程。\n\n# 阴影超魔使\n\n用途：额外超魔与专注支援；本体不提供施法职能。\n\n**2026-10-25.magic.1 · 901适配候选阅读版。**\n\n配对机械契约见[execution/contracts](../execution/contracts)；完整运行接入按覆盖表，存在契约不等于已可执行。\n\n[共用判定](../共用901判定.md)｜[依赖](../依赖/引用定位.md)｜[来源/核算](../来源与核算.md)。各阶继承，替换值不叠加。\n\n## 本体\n\n前提：已有魔力池、任一超魔技巧、至少D施法职能及一道D法术。魔幻本质；本体不新开能量池、不授施法职能或施法等级，只依次开D/C/B本树。\n\n| 阶 | 收益 |\n| --- | --- |\n| D | 内心之影：生命上限+3G、强韧+3G内在DP。阴影力量：所有法术P+1，但成为黑暗生物。 |\n| C | 阴影集中：施法自动带超魔“升阶”，其额外魔力耗−2、可到0。阴影超魔：每次施法可临时选一项旧价≤D+500的超魔使用，即使未学；不选超魔则该术魔力耗−1、最低1。C临时选择不含超魔熟稔。 |\n| B | 阴影超魔：临时选择数量改任意项，旧价仍各≤D+500，同技巧不能重复；继承C阶排除超魔熟稔。阴影疾驰：每天2G次，原q≤12的法术q−2后查动作表。 |\n\n阴影力量的黑暗生物层级由该分类依赖给定，不能把G直接当黑暗层级。\n\n### 阴影超魔使技能树\n\n### D级\n\n### 隐秘法术 D+1000\n- 在施放时，若法术增加等于法术等级倍的基础魔力消耗，法术的效果本身会获得反侦测等级，等于其法术等级。\n- 这意味着面对你使用的法术，若目标无法看到法术效果，就会处于等于法术等级的措手不及影响之下；也难以自知被什么法术影响了(例如你使用的火球没有外观，声音，风压，仅仅让所有被影响的生物受到灼伤，通常无法看出这是个火球术，但效果本身不会变化，一个受到不良状态点数的生物依然知道自己受到了不良状态，其他人也能发现，但通常不知道理由。)\n- 但在施放时，依然须通常的法术成分，因此即使不知道受到的是什么法术影响，依然可能知道影响来自于你(特别是即使你去除了语言，姿势，材料，依然可能因他人能观察到能量流动而被识破)\n- 你只能以该技艺对不高于S级的法术作调整。\n\n### C级\n\n### 阴影专注 C+2000\n- 阴影专注：将至多3项须动作维持的效果交给影子。影子每轮能维持的原动作标值合计≤10，单项≤12；超过10但≤12的单项须占满前后两轮维持容量；若效果须每轮支付该维持动作，则不能连续交给影子。该容量仅检验同时维持负荷，不储存、不转给主人、不用于施法或攻击；能量仍由主人支付。原10恢复/12上限改为本项维持时序候选，见R-影子。\n- 若一个效果原本可能打断自身专注或迫使你作专注判定，你依然须正常作该判定，若你判定失败，自身影子维持的专注会被正常打断。\n- 进化：支付65XP强化此能力，可让影子所维持的专注无法被打断。\n\n### B级\n\n### 法术恒效 B+2000\n- 施法时可视同搭配[法术恒定术](../依赖/通用法术.md#d16)，无需另学恒定术；目标术必须已会且持续不是立即或永久。合并施放至少1天（若目标术更久，取更久），沿用目标术射程但只影响一个选定目标。选项施放时确定，原本其他结束方式保留。\n- 恒定部分不扣当前魔力，但魔力和意志点上限各占`2×(7＋目标术能耗)`，减耗不减少该占用；目标术自身代价仍付。结合效果等级取目标术与A级恒定术较高者。可标准动作解消，结束时返还占用上限，不补当前余额。\n- 本特例将永久持续改为24小时，同时至多一道。不是单凭本项把任意法术免费变为24小时。\n\n### 影子戏法 B+4000\n- 借助阴影的力量，可向目标的投影，而非他本人施法。\n- 可对间接观测的对象施法，但自身实际观测对象必须如常处于自身范围。\n- 例如你向镜中，电视中，显示屏中，雷达中的对象施放时，这些事物必须处于自身范围；法术目标会如常获得你因间接观测而只能模糊定位的好处。\n- 即使只有模糊定位，你也能以此能力施展能够以生物为目标，而非位置，区域或其他对象为目标的法术。\n- 以此形式施放时，法术等级下降一级，影响所有相关法术参数；P最终值减半。\n\n执行版：candidate-901-magic-bundle-de9b5c40b4fa2353 @ 2026-10-25.magic.1；尚未完整执行验证；当前为开发候选，生成不代表部署。\n实现缺口：本体声明尚需逐机制接入与执行证明；技能树逐条款保留来源定位，尚未完整编码；未验证动作不进入执行白名单。",
+      "constant": true,
+      "selective": false,
+      "selectiveLogic": 0,
+      "order": 180,
+      "position": 1,
+      "disable": true,
+      "addMemo": true,
+      "scanDepth": 4,
+      "caseSensitive": false,
+      "matchWholeWords": false,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "delayUntilRecursion": false,
+      "probability": 100,
+      "useProbability": true,
+      "vectorized": false,
+      "ignoreBudget": false,
+      "matchPersonaDescription": false,
+      "matchCharacterDescription": false,
+      "matchCharacterPersonality": false,
+      "matchCharacterDepthPrompt": false,
+      "matchScenario": false,
+      "matchCreatorNotes": false,
+      "sticky": 0,
+      "cooldown": 0,
+      "delay": 0,
+      "extensions": {
+        "position": 1,
+        "exclude_recursion": true,
+        "prevent_recursion": true,
+        "delay_until_recursion": false,
+        "probability": 100,
+        "useProbability": true,
+        "scan_depth": 4,
+        "case_sensitive": false,
+        "match_whole_words": false,
+        "vectorized": false,
+        "sticky": 0,
+        "cooldown": 0,
+        "delay": 0,
+        "ignore_budget": false,
+        "match_persona_description": false,
+        "match_character_description": false,
+        "match_character_personality": false,
+        "match_character_depth_prompt": false,
+        "match_scenario": false,
+        "match_creator_notes": false,
+        "901_replay": {
+          "source_id": "M1_CONTEXT_GENERAL",
+          "source_file": "work/replay_research/runtime_sync_20261018_flow/projected_entries.jsonl",
+          "source_line": 1,
+          "revision": "M1_IMPORT_20261018_008",
+          "source_refs": [
+            {
+              "path": "work/replay_research/user_clarifications.md",
+              "line": 4462,
+              "locator": "## UCL_20261018_006"
+            },
+            {
+              "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+              "line": 7,
+              "locator": "## 一 构筑口径与使用方法"
+            },
+            {
+              "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+              "line": 167,
+              "locator": "## 七 XP建议与结算实例"
+            },
+            {
+              "path": "output/replay_f_review/v1/gm/host_rules.md",
+              "line": 85,
+              "locator": "## 节点、挑战与击杀XP"
+            },
+            {
+              "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+              "line": 21,
+              "locator": "### 数值读法"
+            },
+            {
+              "path": "work/replay_research/user_clarifications.md",
+              "line": 4468,
+              "locator": "## UCL_20261018_007"
+            },
+            {
+              "path": "output/replay_f_review/v1/gm/host_rules.md",
+              "line": 103,
+              "locator": "## 按需讲解规则"
+            },
+            {
+              "path": "output/replay_f_review/v1/gm/host_rules.md",
+              "line": 109,
+              "locator": "## 根据反馈调整场景重点"
+            },
+            {
+              "path": "output/replay_f_review/v1/gm/host_rules.md",
+              "line": 115,
+              "locator": "## 失败、压力与致命风险"
+            },
+            {
+              "path": "output/replay_f_review/v1/gm/turn_flow.md",
+              "line": 79,
+              "locator": "## 按需讲解、反馈与失败处理〔008〕"
+            },
+            {
+              "path": "work/replay_research/capital_event_dependencies.md",
+              "line": 1644,
+              "locator": "## 2026-10-18：按需讲解、反馈与相称后果〔008已采用〕"
+            },
+            {
+              "path": "901_rules_source_library/content/RE/01_rules/04_附录/ST指南.md",
+              "line": 593,
+              "locator": "**游戏教学**"
+            },
+            {
+              "path": "901_rules_source_library/content/RE/01_rules/04_附录/ST指南.md",
+              "line": 637,
+              "locator": "**运作游戏**"
+            },
+            {
+              "path": "901_rules_source_library/content/RE/01_rules/04_附录/ST指南.md",
+              "line": 699,
+              "locator": "**开团要点——来自某位ST的经验分享：**"
+            }
+          ],
+          "authorization": "UCL_20261018_007",
+          "operation": "update",
+          "entry_type": "concept",
+          "certainty_rule": "继承原确定性；新增为已采用主持方法，不成为原团事实或已发生事件",
+          "temporal_rule": "按真实重玩分支状态主持，不初始化到场、伤势、关系或奖励",
+          "baseline_source": {
+            "source_id": "M1_CONTEXT_GENERAL",
+            "source_file": "work/replay_research/runtime_sync_20261018_enemies/projected_entries.jsonl",
+            "source_line": 1,
+            "revision": "M1_IMPORT_20261018_007",
+            "source_refs": [
+              {
+                "path": "work/replay_research/user_clarifications.md",
+                "line": 4462,
+                "locator": "## UCL_20261018_006"
+              },
+              {
+                "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+                "line": 7,
+                "locator": "## 一 构筑口径与使用方法"
+              },
+              {
+                "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+                "line": 167,
+                "locator": "## 七 XP建议与结算实例"
+              },
+              {
+                "path": "output/replay_f_review/v1/gm/host_rules.md",
+                "line": 85,
+                "locator": "## 节点、挑战与击杀XP"
+              },
+              {
+                "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+                "line": 21,
+                "locator": "### 数值读法"
+              }
+            ],
+            "authorization": "UCL_20261018_006",
+            "operation": "update_content",
+            "certainty_rule": "继承内容保留原确定性；新增为已采用作者构筑和场景XP基准，不冒充原团记录或已发生事件",
+            "temporal_rule": "重玩帝都适用阶段，按真实分支状态取用，不重置到场、伤势、控制、消耗与奖励",
+            "baseline_source": {
+              "source_id": "M1_CONTEXT_GENERAL",
+              "source_file": "work/replay_research/runtime_sync_20261018/projected_entries.jsonl",
+              "source_line": 1,
+              "revision": "M1_IMPORT_20261018_006",
+              "patch_id": "006_consistency_r1",
+              "source_refs": [
+                {
+                  "path": "work/replay_research/user_clarifications.md",
+                  "line": 4435,
+                  "locator": "## UCL_20261018_002"
+                },
+                {
+                  "path": "output/replay_f_review/v1/gm/host_rules.md",
+                  "line": 77,
+                  "locator": "## 强度定位与遭遇"
+                },
+                {
+                  "path": "output/replay_f_review/v1/gm/host_rules.md",
+                  "line": 29,
+                  "locator": "## 未列明能力"
+                },
+                {
+                  "path": "output/replay_f_review/v1/gm/host_rules.md",
+                  "line": 83,
+                  "locator": "## 节点、挑战与击杀XP"
+                },
+                {
+                  "path": "work/replay_research/empire_military_strength_20261007.md",
+                  "line": 99,
+                  "locator": "### T0—T8统一个人战力工作版"
+                },
+                {
+                  "path": "work/rules_fusion/901-core-rules-v0.1.md",
+                  "line": 32,
+                  "locator": "## 3. 主技能、子技能与成长费用"
+                },
+                {
+                  "path": "output/replay_f_review/v1/gm/host_rules.md",
+                  "line": 89,
+                  "locator": "## 运作剧情与场景体验"
+                },
+                {
+                  "path": "work/replay_research/user_clarifications.md",
+                  "line": 4443,
+                  "locator": "## UCL_20261018_003"
+                },
+                {
+                  "path": "output/replay_f_review/v1/gm/host_rules.md",
+                  "line": 29,
+                  "locator": "## 未列明能力"
+                }
+              ],
+              "baseline_source": {
+                "source_id": "M1_CONTEXT_GENERAL",
+                "source_file": "work/replay_research/runtime_sync_20261012/projected_entries.jsonl",
+                "source_line": 13,
+                "revision": "M1_IMPORT_20261012_005",
+                "source_refs": [
+                  {
+                    "path": "work/replay_research/user_clarifications.md",
+                    "line": 3422,
+                    "locator": "## UCL_20261012_065："
+                  },
+                  {
+                    "path": "work/replay_research/user_clarifications.md",
+                    "line": 3456,
+                    "locator": "## UCL_20261012_068："
+                  },
+                  {
+                    "path": "work/replay_research/opening_state_consolidated.md",
+                    "line": 5,
+                    "locator": "## 切入点与开局成长"
+                  },
+                  {
+                    "path": "work/replay_research/user_clarifications.md",
+                    "line": 3478,
+                    "locator": "## UCL_20261012_070："
+                  }
+                ],
+                "baseline_source": {
+                  "source_id": "M1_CONTEXT_GENERAL",
+                  "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+                  "source_line": 16,
+                  "revision": "M1_IMPORT_20261008_004",
+                  "status": "runtime_candidate_for_human_review",
+                  "source_refs": [
+                    {
+                      "path": "work/replay_research/user_clarifications.jsonl",
+                      "line": 108,
+                      "id": "UCL_20261008_007"
+                    },
+                    {
+                      "path": "work/replay_research/opening_state_consolidated.jsonl",
+                      "line": 1,
+                      "id": "OPENR_001"
+                    }
+                  ],
+                  "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+                  "temporal_rule": "T0前已保留的能力；读写学习与角色知情依各自经历，当前分支不重置",
+                  "baseline_source": {
+                    "source_id": "M1_CONTEXT_GENERAL",
+                    "status": "runtime_candidate_for_human_review",
+                    "revision": "M1_IMPORT_20261005_002",
+                    "source_file": "output/replay_tavern/hallucination_prevention_20261005_candidate/texts/当前场景.txt",
+                    "source_refs": [
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 1,
+                        "fact_id": "M1_F01"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 2,
+                        "fact_id": "M1_F02"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 3,
+                        "fact_id": "M1_F03"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 4,
+                        "fact_id": "M1_F04"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 5,
+                        "fact_id": "M1_F05"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 6,
+                        "fact_id": "M1_F06"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 7,
+                        "fact_id": "M1_F07"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 8,
+                        "fact_id": "M1_F08"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 15,
+                        "fact_id": "M1_F15"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 16,
+                        "fact_id": "M1_F16"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 17,
+                        "fact_id": "M1_F17"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 18,
+                        "fact_id": "M1_F18"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 19,
+                        "fact_id": "M1_F19"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 20,
+                        "fact_id": "M1_F20"
+                      },
+                      {
+                        "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                        "jsonl_line": 21,
+                        "fact_id": "M1_F21"
+                      }
+                    ],
+                    "period": "通用未绑定场景；具体分期见每项来源",
+                    "projection_scope": "runtime_host_context_not_formal_canon_entry"
+                  }
+                },
+                "certainty_rule": "原有事实、采用设计与人物证言按正文分别有效；不初始化未来事件",
+                "temporal_rule": "T0基线与条件式行动分开；当前分支按实际事件更新"
+              },
+              "certainty_rule": "继承事实保留原确定性；新增为用户授权主持方法，不声称原团已记载或人物已获得新能力",
+              "temporal_rule": "重玩T0及后续实际分支；主持方法有效，场景按真实条件启用，不初始化未来事件"
+            },
+            "entry_type": "concept"
+          }
+        },
+        "901_resource_contract": {
+          "id": "candidate-901-magic-bundle-de9b5c40b4fa2353",
+          "version": "2026-10-25.magic.1",
+          "reading": {
+            "path": "outputs/施法体系适配-20261024/阅读版/阴影超魔使.md",
+            "sha256": "84a57052f19eb3a1a46d07c8af2817f9d07320751352f123283524c031932541"
+          },
+          "path": "../901-resource-authoring-kit/outputs/施法体系适配-20261024/execution/contracts/candidate-901-magic-bundle-de9b5c40b4fa2353.rule.json",
+          "sha256": "7b0739998415e8751f100afe10aee12e6ccef98df9805fa1fc1c01968fb549a8",
+          "verification": {
+            "runtimeFullyVerified": false,
+            "scope": "paired-source-and-declarative-base; not full runtime",
+            "sourceChecked": true,
+            "status": "partial"
+          },
+          "actions": [
+            {
+              "actionCost": [],
+              "allowsModelNumericEffects": false,
+              "availability": "blocked",
+              "clauseId": "clause-15622692ac97",
+              "id": "candidate-901-magic-bundle-de9b5c40b4fa2353/clause-15622692ac97",
+              "missingPolicy": "implementation-needed; do not ask player for a rule",
+              "name": "本体",
+              "operation": null,
+              "requestFields": [],
+              "requiredChoice": []
+            },
+            {
+              "actionCost": [],
+              "allowsModelNumericEffects": false,
+              "availability": "blocked",
+              "clauseId": "clause-74647ff3295a",
+              "id": "candidate-901-magic-bundle-de9b5c40b4fa2353/clause-74647ff3295a",
+              "missingPolicy": "implementation-needed; do not ask player for a rule",
+              "name": "隐秘法术 D+1000",
+              "operation": null,
+              "requestFields": [],
+              "requiredChoice": []
+            },
+            {
+              "actionCost": [],
+              "allowsModelNumericEffects": false,
+              "availability": "blocked",
+              "clauseId": "clause-b98059f51913",
+              "id": "candidate-901-magic-bundle-de9b5c40b4fa2353/clause-b98059f51913",
+              "missingPolicy": "implementation-needed; do not ask player for a rule",
+              "name": "阴影专注 C+2000",
+              "operation": null,
+              "requestFields": [],
+              "requiredChoice": []
+            },
+            {
+              "actionCost": [],
+              "allowsModelNumericEffects": false,
+              "availability": "blocked",
+              "clauseId": "clause-83e14d3c6c8e",
+              "id": "candidate-901-magic-bundle-de9b5c40b4fa2353/clause-83e14d3c6c8e",
+              "missingPolicy": "implementation-needed; do not ask player for a rule",
+              "name": "法术恒效 B+2000",
+              "operation": null,
+              "requestFields": [],
+              "requiredChoice": []
+            },
+            {
+              "actionCost": [],
+              "allowsModelNumericEffects": false,
+              "availability": "blocked",
+              "clauseId": "clause-243a58045982",
+              "id": "candidate-901-magic-bundle-de9b5c40b4fa2353/clause-243a58045982",
+              "missingPolicy": "implementation-needed; do not ask player for a rule",
+              "name": "影子戏法 B+4000",
+              "operation": null,
+              "requestFields": [],
+              "requiredChoice": []
+            }
+          ],
+          "implementationGaps": [
+            "本体声明尚需逐机制接入与执行证明；技能树逐条款保留来源定位，尚未完整编码；未验证动作不进入执行白名单。"
+          ],
+          "unresolvedRules": [],
+          "adoptionStatus": "candidate",
+          "verifiedOperations": [],
+          "runtimeProjectionVerification": {
+            "status": "partial",
+            "sourceChecked": true,
+            "runtimeFullyVerified": false,
+            "scope": "verified-passive-slices-only"
+          },
+          "learning": null
+        },
+        "901_resource": {
+          "id": "candidate-901-magic-bundle-de9b5c40b4fa2353",
+          "version": "2026-10-25.magic.1",
+          "contract_path": "../901-resource-authoring-kit/outputs/施法体系适配-20261024/execution/contracts/candidate-901-magic-bundle-de9b5c40b4fa2353.rule.json",
+          "contract_sha256": "7b0739998415e8751f100afe10aee12e6ccef98df9805fa1fc1c01968fb549a8",
+          "reading": {
+            "path": "outputs/施法体系适配-20261024/阅读版/阴影超魔使.md",
+            "sha256": "84a57052f19eb3a1a46d07c8af2817f9d07320751352f123283524c031932541"
+          },
+          "verification": {
+            "runtimeFullyVerified": false,
+            "scope": "paired-source-and-declarative-base; not full runtime",
+            "sourceChecked": true,
+            "status": "partial"
+          },
+          "clauses": [
+            {
+              "effectStats": [],
+              "heading": "阴影超魔使",
+              "status": "pending"
+            },
+            {
+              "effectStats": [
+                "save"
+              ],
+              "heading": "本体",
+              "status": "partial"
+            },
+            {
+              "effectStats": [],
+              "heading": "隐秘法术 D+1000",
+              "status": "pending"
+            },
+            {
+              "effectStats": [],
+              "heading": "阴影专注 C+2000",
+              "status": "pending"
+            },
+            {
+              "effectStats": [],
+              "heading": "法术恒效 B+2000",
+              "status": "pending"
+            },
+            {
+              "effectStats": [],
+              "heading": "影子戏法 B+4000",
+              "status": "pending"
+            }
+          ],
+          "programSources": {},
+          "actions": [
+            {
+              "actionCost": [],
+              "allowsModelNumericEffects": false,
+              "availability": "blocked",
+              "clauseId": "clause-15622692ac97",
+              "id": "candidate-901-magic-bundle-de9b5c40b4fa2353/clause-15622692ac97",
+              "missingPolicy": "implementation-needed; do not ask player for a rule",
+              "name": "本体",
+              "operation": null,
+              "requestFields": [],
+              "requiredChoice": []
+            },
+            {
+              "actionCost": [],
+              "allowsModelNumericEffects": false,
+              "availability": "blocked",
+              "clauseId": "clause-74647ff3295a",
+              "id": "candidate-901-magic-bundle-de9b5c40b4fa2353/clause-74647ff3295a",
+              "missingPolicy": "implementation-needed; do not ask player for a rule",
+              "name": "隐秘法术 D+1000",
+              "operation": null,
+              "requestFields": [],
+              "requiredChoice": []
+            },
+            {
+              "actionCost": [],
+              "allowsModelNumericEffects": false,
+              "availability": "blocked",
+              "clauseId": "clause-b98059f51913",
+              "id": "candidate-901-magic-bundle-de9b5c40b4fa2353/clause-b98059f51913",
+              "missingPolicy": "implementation-needed; do not ask player for a rule",
+              "name": "阴影专注 C+2000",
+              "operation": null,
+              "requestFields": [],
+              "requiredChoice": []
+            },
+            {
+              "actionCost": [],
+              "allowsModelNumericEffects": false,
+              "availability": "blocked",
+              "clauseId": "clause-83e14d3c6c8e",
+              "id": "candidate-901-magic-bundle-de9b5c40b4fa2353/clause-83e14d3c6c8e",
+              "missingPolicy": "implementation-needed; do not ask player for a rule",
+              "name": "法术恒效 B+2000",
+              "operation": null,
+              "requestFields": [],
+              "requiredChoice": []
+            },
+            {
+              "actionCost": [],
+              "allowsModelNumericEffects": false,
+              "availability": "blocked",
+              "clauseId": "clause-243a58045982",
+              "id": "candidate-901-magic-bundle-de9b5c40b4fa2353/clause-243a58045982",
+              "missingPolicy": "implementation-needed; do not ask player for a rule",
+              "name": "影子戏法 B+4000",
+              "operation": null,
+              "requestFields": [],
+              "requiredChoice": []
+            }
+          ],
+          "consumerCoverage": {
+            "effects": []
+          },
+          "implementationGaps": [
+            "本体声明尚需逐机制接入与执行证明；技能树逐条款保留来源定位，尚未完整编码；未验证动作不进入执行白名单。"
+          ],
+          "unresolvedRules": [],
+          "deployment": "candidate_not_installed",
+          "adoptionStatus": "candidate",
+          "verifiedOperations": [],
+          "runtimeProjectionVerification": {
+            "status": "partial",
+            "sourceChecked": true,
+            "runtimeFullyVerified": false,
+            "scope": "verified-passive-slices-only"
+          },
+          "learning": null
+        },
+        "901_six_books": {
+          "revision": "SIX_BOOKS_20261023_001",
+          "entry_type": "concept",
+          "book": "能力与战力",
+          "source_units": [],
+          "source_refs": [
+            {
+              "path": "../901-resource-authoring-kit/outputs/施法体系适配-20261024/阅读版/阴影超魔使.md",
+              "line": 1
+            },
+            {
+              "path": "../901-resource-authoring-kit/outputs/施法体系适配-20261024/execution/contracts/candidate-901-magic-bundle-de9b5c40b4fa2353.rule.json",
+              "line": 1
+            }
+          ],
+          "baseline_source": {
+            "source_id": "M1_CONTEXT_GENERAL",
+            "source_file": "work/replay_research/runtime_sync_20261018_flow/projected_entries.jsonl",
+            "source_line": 1,
+            "revision": "M1_IMPORT_20261018_008",
+            "source_refs": [
+              {
+                "path": "work/replay_research/user_clarifications.md",
+                "line": 4462,
+                "locator": "## UCL_20261018_006"
+              },
+              {
+                "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+                "line": 7,
+                "locator": "## 一 构筑口径与使用方法"
+              },
+              {
+                "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+                "line": 167,
+                "locator": "## 七 XP建议与结算实例"
+              },
+              {
+                "path": "output/replay_f_review/v1/gm/host_rules.md",
+                "line": 85,
+                "locator": "## 节点、挑战与击杀XP"
+              },
+              {
+                "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+                "line": 21,
+                "locator": "### 数值读法"
+              },
+              {
+                "path": "work/replay_research/user_clarifications.md",
+                "line": 4468,
+                "locator": "## UCL_20261018_007"
+              },
+              {
+                "path": "output/replay_f_review/v1/gm/host_rules.md",
+                "line": 103,
+                "locator": "## 按需讲解规则"
+              },
+              {
+                "path": "output/replay_f_review/v1/gm/host_rules.md",
+                "line": 109,
+                "locator": "## 根据反馈调整场景重点"
+              },
+              {
+                "path": "output/replay_f_review/v1/gm/host_rules.md",
+                "line": 115,
+                "locator": "## 失败、压力与致命风险"
+              },
+              {
+                "path": "output/replay_f_review/v1/gm/turn_flow.md",
+                "line": 79,
+                "locator": "## 按需讲解、反馈与失败处理〔008〕"
+              },
+              {
+                "path": "work/replay_research/capital_event_dependencies.md",
+                "line": 1644,
+                "locator": "## 2026-10-18：按需讲解、反馈与相称后果〔008已采用〕"
+              },
+              {
+                "path": "901_rules_source_library/content/RE/01_rules/04_附录/ST指南.md",
+                "line": 593,
+                "locator": "**游戏教学**"
+              },
+              {
+                "path": "901_rules_source_library/content/RE/01_rules/04_附录/ST指南.md",
+                "line": 637,
+                "locator": "**运作游戏**"
+              },
+              {
+                "path": "901_rules_source_library/content/RE/01_rules/04_附录/ST指南.md",
+                "line": 699,
+                "locator": "**开团要点——来自某位ST的经验分享：**"
+              }
+            ],
+            "authorization": "UCL_20261018_007",
+            "operation": "update",
+            "entry_type": "concept",
+            "certainty_rule": "继承原确定性；新增为已采用主持方法，不成为原团事实或已发生事件",
+            "temporal_rule": "按真实重玩分支状态主持，不初始化到场、伤势、关系或奖励",
+            "baseline_source": {
+              "source_id": "M1_CONTEXT_GENERAL",
+              "source_file": "work/replay_research/runtime_sync_20261018_enemies/projected_entries.jsonl",
+              "source_line": 1,
+              "revision": "M1_IMPORT_20261018_007",
+              "source_refs": [
+                {
+                  "path": "work/replay_research/user_clarifications.md",
+                  "line": 4462,
+                  "locator": "## UCL_20261018_006"
+                },
+                {
+                  "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+                  "line": 7,
+                  "locator": "## 一 构筑口径与使用方法"
+                },
+                {
+                  "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+                  "line": 167,
+                  "locator": "## 七 XP建议与结算实例"
+                },
+                {
+                  "path": "output/replay_f_review/v1/gm/host_rules.md",
+                  "line": 85,
+                  "locator": "## 节点、挑战与击杀XP"
+                },
+                {
+                  "path": "work/replay_research/capital_enemy_builds_rewards_draft.md",
+                  "line": 21,
+                  "locator": "### 数值读法"
+                }
+              ],
+              "authorization": "UCL_20261018_006",
+              "operation": "update_content",
+              "certainty_rule": "继承内容保留原确定性；新增为已采用作者构筑和场景XP基准，不冒充原团记录或已发生事件",
+              "temporal_rule": "重玩帝都适用阶段，按真实分支状态取用，不重置到场、伤势、控制、消耗与奖励",
+              "baseline_source": {
+                "source_id": "M1_CONTEXT_GENERAL",
+                "source_file": "work/replay_research/runtime_sync_20261018/projected_entries.jsonl",
+                "source_line": 1,
+                "revision": "M1_IMPORT_20261018_006",
+                "patch_id": "006_consistency_r1",
+                "source_refs": [
+                  {
+                    "path": "work/replay_research/user_clarifications.md",
+                    "line": 4435,
+                    "locator": "## UCL_20261018_002"
+                  },
+                  {
+                    "path": "output/replay_f_review/v1/gm/host_rules.md",
+                    "line": 77,
+                    "locator": "## 强度定位与遭遇"
+                  },
+                  {
+                    "path": "output/replay_f_review/v1/gm/host_rules.md",
+                    "line": 29,
+                    "locator": "## 未列明能力"
+                  },
+                  {
+                    "path": "output/replay_f_review/v1/gm/host_rules.md",
+                    "line": 83,
+                    "locator": "## 节点、挑战与击杀XP"
+                  },
+                  {
+                    "path": "work/replay_research/empire_military_strength_20261007.md",
+                    "line": 99,
+                    "locator": "### T0—T8统一个人战力工作版"
+                  },
+                  {
+                    "path": "work/rules_fusion/901-core-rules-v0.1.md",
+                    "line": 32,
+                    "locator": "## 3. 主技能、子技能与成长费用"
+                  },
+                  {
+                    "path": "output/replay_f_review/v1/gm/host_rules.md",
+                    "line": 89,
+                    "locator": "## 运作剧情与场景体验"
+                  },
+                  {
+                    "path": "work/replay_research/user_clarifications.md",
+                    "line": 4443,
+                    "locator": "## UCL_20261018_003"
+                  },
+                  {
+                    "path": "output/replay_f_review/v1/gm/host_rules.md",
+                    "line": 29,
+                    "locator": "## 未列明能力"
+                  }
+                ],
+                "baseline_source": {
+                  "source_id": "M1_CONTEXT_GENERAL",
+                  "source_file": "work/replay_research/runtime_sync_20261012/projected_entries.jsonl",
+                  "source_line": 13,
+                  "revision": "M1_IMPORT_20261012_005",
+                  "source_refs": [
+                    {
+                      "path": "work/replay_research/user_clarifications.md",
+                      "line": 3422,
+                      "locator": "## UCL_20261012_065："
+                    },
+                    {
+                      "path": "work/replay_research/user_clarifications.md",
+                      "line": 3456,
+                      "locator": "## UCL_20261012_068："
+                    },
+                    {
+                      "path": "work/replay_research/opening_state_consolidated.md",
+                      "line": 5,
+                      "locator": "## 切入点与开局成长"
+                    },
+                    {
+                      "path": "work/replay_research/user_clarifications.md",
+                      "line": 3478,
+                      "locator": "## UCL_20261012_070："
+                    }
+                  ],
+                  "baseline_source": {
+                    "source_id": "M1_CONTEXT_GENERAL",
+                    "source_file": "work/replay_research/runtime_sync_20261008/projected_entries.jsonl",
+                    "source_line": 16,
+                    "revision": "M1_IMPORT_20261008_004",
+                    "status": "runtime_candidate_for_human_review",
+                    "source_refs": [
+                      {
+                        "path": "work/replay_research/user_clarifications.jsonl",
+                        "line": 108,
+                        "id": "UCL_20261008_007"
+                      },
+                      {
+                        "path": "work/replay_research/opening_state_consolidated.jsonl",
+                        "line": 1,
+                        "id": "OPENR_001"
+                      }
+                    ],
+                    "certainty_rule": "原条目与引用保留原等级；本批用户确认confirmed，证言及传闻单列",
+                    "temporal_rule": "T0前已保留的能力；读写学习与角色知情依各自经历，当前分支不重置",
+                    "baseline_source": {
+                      "source_id": "M1_CONTEXT_GENERAL",
+                      "status": "runtime_candidate_for_human_review",
+                      "revision": "M1_IMPORT_20261005_002",
+                      "source_file": "output/replay_tavern/hallucination_prevention_20261005_candidate/texts/当前场景.txt",
+                      "source_refs": [
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 1,
+                          "fact_id": "M1_F01"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 2,
+                          "fact_id": "M1_F02"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 3,
+                          "fact_id": "M1_F03"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 4,
+                          "fact_id": "M1_F04"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 5,
+                          "fact_id": "M1_F05"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 6,
+                          "fact_id": "M1_F06"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 7,
+                          "fact_id": "M1_F07"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 8,
+                          "fact_id": "M1_F08"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 15,
+                          "fact_id": "M1_F15"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 16,
+                          "fact_id": "M1_F16"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 17,
+                          "fact_id": "M1_F17"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 18,
+                          "fact_id": "M1_F18"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 19,
+                          "fact_id": "M1_F19"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 20,
+                          "fact_id": "M1_F20"
+                        },
+                        {
+                          "path": "work/replay_research/hallucination_prevention_20261005/facts.jsonl",
+                          "jsonl_line": 21,
+                          "fact_id": "M1_F21"
+                        }
+                      ],
+                      "period": "通用未绑定场景；具体分期见每项来源",
+                      "projection_scope": "runtime_host_context_not_formal_canon_entry"
+                    }
+                  },
+                  "certainty_rule": "原有事实、采用设计与人物证言按正文分别有效；不初始化未来事件",
+                  "temporal_rule": "T0基线与条件式行动分开；当前分支按实际事件更新"
+                },
+                "certainty_rule": "继承事实保留原确定性；新增为用户授权主持方法，不声称原团已记载或人物已获得新能力",
+                "temporal_rule": "重玩T0及后续实际分支；主持方法有效，场景按真实条件启用，不初始化未来事件"
+              },
+              "entry_type": "concept"
+            }
+          },
+          "revisions": [
+            {
+              "source": "kit-inventory.json",
+              "reason": "用户明确要求完整盘点并接入现有六书；定义、后期模板与当前持有分离。"
+            }
+          ],
+          "state_rule": "T0仅为首次入都的时期基线；实际保留分支的后续事件与当前记录优先。加载不初始化到场、知情、伤势、物品、部署或成果。",
+          "authorization": "用户：基于 tavern-cards 编排六本书的条目、触发和状态分工，再据此迁移内容。"
+        }
+      }
     }
   }
 }

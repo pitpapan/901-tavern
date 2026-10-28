@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "C:\Users\pit\.codex\worktrees\yulinfeng-tavern-plan\TRPG outputs\work\replay_research\six_books_20261023\build_candidate.py", line 239, in <module>
+    definitions,actions,selected,_=load_candidate_package(package)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pit\.codex\worktrees\yulinfeng-tavern-plan\901-resource-authoring-kit\tools\compile_resources.py", line 165, in load_candidate_package
+    artifacts,counts=module.build(docs,reuse,*evidence)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pit\.codex\worktrees\yulinfeng-tavern-plan\901-resource-authoring-kit\outputs\技艺适配-20261025\compiler\compile.py", line 101, in build
+    require(sha(ROOT/module['path'])==module['sha256'],'learning executor or test changed; acquisition proof stale: '+module['path'])
+  File "C:\Users\pit\.codex\worktrees\yulinfeng-tavern-plan\901-resource-authoring-kit\outputs\技艺适配-20261025\compiler\compile.py", line 11, in require
+    if not ok:raise ValueError(msg)
+              ^^^^^^^^^^^^^^^^^^^^^
+ValueError: learning executor or test changed; acquisition proof stale: ../TRPG outputs/work/rules_engine/mvu_poc/adapter.mjs

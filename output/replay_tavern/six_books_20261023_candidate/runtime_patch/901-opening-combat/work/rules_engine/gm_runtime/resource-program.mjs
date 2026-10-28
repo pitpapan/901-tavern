@@ -1,3 +1,4 @@
+import {selectCaster} from '../resource-casting.mjs';
 import {inspectProjectionCreation,createProjection,inspectProjectionControl,controlProjection,dispatchProjectionCue} from '../resource-projections.mjs';
 import {observeResourceObscuration} from '../resource-obscuration.mjs';
 import {retainedSelection,nextResourceEffectSerial} from '../resource-ongoing.mjs';
@@ -203,11 +204,13 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
   if(combat&&targetIds[0]!==r.actorId&&!plan.willingTargets?.includes(targetIds[0]))throw new IllegalAction('争夺武器的接触判定尚未接入（实现缺口），不能自动视为触及');
  }
  if(program.target==='single')requireFact(targetIds.length===1,'本动作只作用于单个目标');
+ const caster=program.casting&&program.executionPolicy?.requiresCaster!==false?selectCaster(s,plan.casterSource??learned.casterSource):undefined;
+ const spellDamageTypes=[...new Set(program.steps.filter(op=>op.op==='damage').map(op=>op.profile?program.damageProfiles?.[val(op.profile)]?.energyType:op.energy).filter(x=>typeof x==='string'))];
+ vars.spellDamageTypes=spellDamageTypes;vars.castingPool=caster?.pool;
  const skill=program.check?.skill??'神秘',sub=plan.sub??definition.subskills?.[0];
  const castingSkill=effectiveSkill(s,skill,sub);vars.E=castingSkill.level;vars.skillAuto=castingSkill.auto;
  if(sub&&definition.subskills?.length&&!definition.subskills.includes(sub))throw new IllegalAction('施法子技能不属于本术专业');
  if(program.casting){
-  const caster=s.casting?.imperial??s.guanlan?.caster;
   if(program.executionPolicy?.requiresCaster!==false){
   if(!caster?.grade)need('缺少已保存的等级施法职能','casting.grade');
   requireFact(['D','C','B','A','S'].includes(caster.grade)&&(['C','B','A','S'].includes(caster.grade)||rank==='D'),'缺少对应等级施法职能');
@@ -248,8 +251,8 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
    adjustIncomingDamage(target,split?[{...segment,severity:'L'},{...segment,severity:'A'}]:[segment],{sourceActorId:r.actorId,damageNature:program.steps.some(x=>x.op==='attack')?'attack':'fixed'});
   }
   for(const op of program.steps)if(op.targetSceneLimit)assertSceneEffectLimit(target.state,object.resourceId,op.targetSceneLimit);
-  for(const op of program.steps)if(op.op==='poolRestore')validatePoolRestore(s,{destinationPool:s.casting?.imperial?.pool,dayId:plan.dayId,context:vars,daily:op.daily});
-  for(const op of program.steps)if(op.op==='poolTransfer')validatePoolTransfer(target.state,s,{declaredPool:plan.poolChoices?.[op.choice],destinationPool:s.casting?.imperial?.pool,dayId:plan.dayId,context:vars,daily:op.daily?{...op.daily,key:op.daily.key??object.resourceId}:undefined});
+  for(const op of program.steps)if(op.op==='poolRestore')validatePoolRestore(s,{destinationPool:caster?.pool,dayId:plan.dayId,context:vars,daily:op.daily});
+  for(const op of program.steps)if(op.op==='poolTransfer')validatePoolTransfer(target.state,s,{declaredPool:plan.poolChoices?.[op.choice],destinationPool:caster?.pool,dayId:plan.dayId,context:vars,daily:op.daily?{...op.daily,key:op.daily.key??object.resourceId}:undefined});
   for(const op of program.steps)if(op.op==='effect'&&op.exclusiveGroup)exclusiveResourceChoice(target.state,{group:op.exclusiveGroup,incomingId:object.resourceId+'/'+r.actorId+(Object.keys(program.effectComponents??{}).length>1?'/'+op.component:''),policy:op.exclusivePolicy,targetId:id,choice:plan.exclusiveChoices?.[id]?.[op.exclusiveGroup]});
   for(const op of program.steps)if(op.op==='temporaryHealth')temporaryHealthChoice(target.state,object.resourceId+'/'+r.actorId,{targetId:id,choice:plan.temporaryHealthChoices?.[id]});
   for(const op of program.steps)if(op.op==='aura'&&op.temporaryAllocation)for(const memberId of plan.targetIds??[])temporaryHealthChoice(root.actors[memberId].state,'aura/'+object.resourceId+'/'+r.actorId,{targetId:memberId,choice:plan.temporaryHealthChoices?.[memberId]});
@@ -287,11 +290,11 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
   if(op.op==='projectionControl')inspectProjectionControl(root,r.actorId,object.resourceId,plan,op.mode);
  }
  const cost=val(program.cost??(rank==='C'?3:1))+val(program.repetition?.extraCost??0)*Math.max(0,targetIds.length-1);
- const selectedPool=policyPool(program,s,learned,plan,cost),pool=selectedPool??plan.pool??s.casting?.imperial?.pool;
+ const selectedPool=policyPool(program,s,learned,plan,cost),pool=selectedPool??plan.pool??caster?.pool;
  if(cost&&!program.executionPolicy?.pool){
   const energy=s.resources?.[pool];if(!energy)need('须选择实际施法能量池','resource.pool');
   if(definition.tree==='guanlan')requireFact(energy.generic===true&&!energy.special,'此技艺须单个非特殊通用能量池');
-  else requireFact(pool===s.casting?.imperial?.pool,'法术须使用本职施法池');
+  else requireFact(pool===caster?.pool,'法术须使用本职施法池');
   requireFact(energy.current>=cost,'施法能量不足');
  }
  const counterCosts=(program.counterCosts??[]).map(c=>({...c,amount:val(c.amount)}));
@@ -316,7 +319,7 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
    if(total<dc){if(program.channel==='maintain')delete state.resourceChannels[object.resourceId];return {...result,concentrationFailure:true};}
   }
  }
- if(program.check){const roll=check(state,{attribute:program.check.attribute??'智力',skill,sub,modifier:val(program.check.modifier??0),dice:drawDice(),context:{casting:true,mentalPower:true,genericEnergySupported:vars.genericEnergySupported,somatic:program.components.includes('posture'),schools:definition.schools}});requireFact(roll.eligible,roll.reason);vars.cast=roll.total;result.casting=roll;}
+ if(program.check){const roll=check(state,{attribute:program.check.attribute??'智力',skill,sub,modifier:val(program.check.modifier??0),dice:drawDice(),context:{casting:true,spellDamageTypes,mentalPower:true,genericEnergySupported:vars.genericEnergySupported,somatic:program.components.includes('posture'),schools:definition.schools}});requireFact(roll.eligible,roll.reason);vars.cast=roll.total;result.casting=roll;}
  const fixedArea=program.area&&!program.steps.some(x=>x.op==='attack');
  const applyTargets=()=>{
  for(const targetId of targetIds){
@@ -397,7 +400,7 @@ function resolveProgramSteps({root,r,object,definition,program,plan,state,target
    }else if(op.op==='attack'){
     const weapon=value(op.weapon),defense=objectAttackDefense(target)??resolveDefense(root,targetId,r.actorId,{ranged:true,contact:op.contact===true,...(op.energyWeapon?{flatFootedLevel:1}:{}),ap:value(op.ap??0),magic:value(op.magic??0),speed:value(op.speed??0),defenseMode:plan.defenseModes?.[targetId]});
     if(defense.pending)need('须目标声明防御方式','resource.defense');
-    const roll=check(state,{attribute:'智力',skill,sub,modifier:weapon+value(op.modifier??0)+resourceBonus(state,'attack',initiativeContext(root,r.actorId,targetId))-defense.total,dice:drawDice(),context:{attack:true,casting:true,mentalPower:true,genericEnergySupported:local.genericEnergySupported,somatic:program.components.includes('posture'),schools:definition.schools,targetId}});
+    const roll=check(state,{attribute:'智力',skill,sub,modifier:weapon+value(op.modifier??0)+resourceBonus(state,'attack',initiativeContext(root,r.actorId,targetId))-defense.total,dice:drawDice(),context:{attack:true,casting:true,spellDamageTypes:local.spellDamageTypes,mentalPower:true,genericEnergySupported:local.genericEnergySupported,somatic:program.components.includes('posture'),schools:definition.schools,targetId}});
     local.attackRanged=op.contact!==true;
     local.hit=Math.max(0,roll.total-(defense.extraSuccesses??0));local.damage=Math.min(local.hit,value(op.cap??{op:'add',args:[{op:'mul',args:[4,{context:'P'}]},{context:'E'}]}));
     out.steps.push({op:'attack',weapon,defense,roll,damage:local.damage});
@@ -431,11 +434,11 @@ function resolveProgramSteps({root,r,object,definition,program,plan,state,target
     if(op.energyWeapon&&amount){const aggravated=Math.min(amount,Math.floor(value(op.weapon??0)/2));if(aggravated&&!equipment(target).armor.energyWeaponProof){segments[0].amount-=aggravated;segments.push({...segments[0],amount:aggravated,severity:'A'});}}
     lastDamage=damageEvent(target,segments,false,result,{conversion:0},{root,targetId,sourceActorId:op.noAttackSource?null:r.actorId,drawDice,additionalDamageOrder:plan.additionalDamageOrder,additionalDamageTypeOrder:plan.additionalDamageTypeOrder,targetMode:program.area?'area':program.target==='selected'?'multiple':'single',ranged:local.attackRanged===true,damageNature:program.damageNature??(program.steps.some(x=>x.op==='attack')?'attack':'fixed')});local.actualDamage=lastDamage;out.steps.push({op:'damage',actualDamage:lastDamage});
    }else if(op.op==='poolRestore'){
-    const caster=root.actors[r.actorId].state;out.steps.push({op:'poolRestore',...restoreResourcePool(caster,{destinationPool:caster.casting?.imperial?.pool,dayId:plan.dayId,context:local,daily:op.daily,amount:Math.max(0,Math.floor(value(op.amount))),sourceId:object.resourceId,grade:rank})});
+    const caster=root.actors[r.actorId].state;out.steps.push({op:'poolRestore',...restoreResourcePool(caster,{destinationPool:local.castingPool,dayId:plan.dayId,context:local,daily:op.daily,amount:Math.max(0,Math.floor(value(op.amount))),sourceId:object.resourceId,grade:rank})});
    }else if(op.op==='poolTransfer'){
     const caster=root.actors[r.actorId].state;
     const transfer=transferResourcePool(target.state,caster,{sourceId:object.resourceId,version:definition.contractVersion,grade:rank,casterId:r.actorId,targetId,
-     declaredPool:plan.poolChoices?.[op.choice],destinationPool:caster.casting?.imperial?.pool,amount:Math.max(0,Math.floor(value(op.amount))),recover:op.recover,
+     declaredPool:plan.poolChoices?.[op.choice],destinationPool:local.castingPool,amount:Math.max(0,Math.floor(value(op.amount))),recover:op.recover,
      daily:op.daily?{...op.daily,key:op.daily.key??object.resourceId}:undefined,dayId:plan.dayId,context:local,drawDice});
     out.steps.push({op:'poolTransfer',...transfer});
    }else if(op.op==='status'){

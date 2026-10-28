@@ -621,7 +621,9 @@ export function readTestOpportunity({ mvu, getAnchor, opportunityKey }) {
 
 // Propagate a verified namespace snapshot to a later floor. An operation ID,
 // when supplied, additionally requires that committed operation at the source.
-// Only this namespace is copied; unrelated MVU data on the target is preserved.
+// Only this state namespace is copied. Missing MVU envelope metadata is inherited
+// so MVU does not treat an empty swipe as a pruned floor and replay older state.
+// Existing target metadata and unrelated state are preserved.
 export async function carryTestState({ mvu, getSourceAnchor, getAnchor,
   expectedChatId, operationId }) {
   const source = anchorOf(getSourceAnchor);
@@ -638,16 +640,19 @@ export async function carryTestState({ mvu, getSourceAnchor, getAnchor,
     if (operationId !== undefined && !sourceRoot.operations[operationId])
       throw new Error('No saved source operation to carry');
     const initial = read(mvu, target);
+    const missingMetadata = ['schema', 'initialized_lorebooks'].filter(
+      key => initial[key] === undefined && sourceData[key] !== undefined);
     const existing = initial.stat_data?.[NAMESPACE];
     if (existing !== undefined) {
       const current = rootOf(initial, expectedChatId);
-      if (same(current, sourceRoot)) return { status: 'already_synced', revision: current.revision };
-      if (current.revision >= sourceRoot.revision)
+      if (same(current, sourceRoot) && !missingMetadata.length) return { status: 'already_synced', revision: current.revision };
+      if (!same(current, sourceRoot) && current.revision >= sourceRoot.revision)
         throw new Error('Final GM floor has a conflicting 901 state');
     }
     const next = clone(initial);
     next.stat_data ??= {};
     next.stat_data[NAMESPACE] = clone(sourceRoot);
+    for (const key of missingMetadata) next[key] = clone(sourceData[key]);
     ensureAnchor(getSourceAnchor, source);
     ensureAnchor(getAnchor, target);
     if (!same(read(mvu, source), sourceData) || !same(read(mvu, target), initial))
@@ -660,6 +665,93 @@ export async function carryTestState({ mvu, getSourceAnchor, getAnchor,
     return { status: 'carried', revision: sourceRoot.revision,
       messageId: target.messageId, swipeId: target.swipeId };
   } finally { inFlight.delete(key); }
+}
+
+// ST saveChat may resolve after an HTTP failure. A saved receipt therefore
+// requires a read-back of this operation's page, never just its MVU memory.
+export async function persistTavernRuleState({mvu,tavern,getAnchor,readSavedChat}) {
+  const context=tavern.getContext?.()??tavern;
+  readSavedChat??=context.readSavedChat;
+  getAnchor??=()=>tavernAnchor(context.chat.length-1,context);
+  const anchor=anchorOf(getAnchor),expected=read(mvu,anchor),expectedRoot=rootOf(expected,anchor.chatId);
+  const text=context.chat[anchor.messageId]?.mes;
+  const failure=()=>Object.assign(Error('规则状态仍在当前页面内存中，但聊天持久保存未确认；请保持页面并重试同一操作。'),{code:'CHAT_PERSISTENCE_UNCONFIRMED'});
+  await context.saveChat();
+  let saved;
+  try {
+    if(readSavedChat)saved=await readSavedChat(anchor.chatId);
+    else {
+      const avatar=context.characters?.[context.characterId]?.avatar;
+      if(!avatar||context.groupId||typeof context.getRequestHeaders!=='function')throw failure();
+      const response=await fetch('/api/chats/get',{method:'POST',cache:'no-store',headers:context.getRequestHeaders(),
+        body:JSON.stringify({avatar_url:avatar,file_name:anchor.chatId})});
+      if(!response.ok)throw failure();
+      saved=await response.json();
+    }
+  } catch {throw failure();}
+  ensureAnchor(getAnchor,anchor);
+  const message=saved?.[anchor.messageId+1],page=message?.variables?.[anchor.swipeId];
+  if(!message||message.mes!==text||(message.swipe_id??0)!==anchor.swipeId||
+      !same(page?.stat_data?.[NAMESPACE],expectedRoot)||page?.snapshot!==expected.snapshot)throw failure();
+  return {status:'saved',revision:expectedRoot.revision,messageId:anchor.messageId,swipeId:anchor.swipeId};
+}
+
+// Explicit host checkpoint: MVU owns retention; no rule revision or history
+// database is created. Retrying an unsaved flag still verifies persistence.
+export async function retainRuleSnapshot({mvu,tavern,readSavedChat}) {
+  const context=tavern.getContext?.()??tavern,getAnchor=()=>tavernAnchor(context.chat.length-1,context);
+  const anchor=anchorOf(getAnchor),key=operationKey(anchor);
+  if(inFlight.has(key))throw Error('MVU operation already in progress');
+  inFlight.add(key);
+  try {
+    const initial=read(mvu,anchor),root=rootOf(initial,anchor.chatId),alreadyRetained=initial.snapshot===true;
+    if(!alreadyRetained){
+      const next=clone(initial);next.snapshot=true;
+      ensureAnchor(getAnchor,anchor);
+      await mvu.replaceMvuData(next,{type:'message',message_id:anchor.messageId});
+      ensureAnchor(getAnchor,anchor);
+      if(!same(read(mvu,anchor),next))throw Error('MVU checkpoint was not confirmed by readback');
+    }
+    await persistTavernRuleState({mvu,tavern:context,getAnchor,readSavedChat});
+    return {status:'checkpoint_saved',revision:root.revision,messageId:anchor.messageId,swipeId:anchor.swipeId,alreadyRetained};
+  } finally {inFlight.delete(key);}
+}
+
+// Explicitly accept ST's native branch copy at its selected tip. Old copied
+// floors retain their parent identity; actor values and prior operations are
+// inherited verbatim. Ordinary settlement still rejects cross-chat roots.
+export async function adoptNativeChatBranch({mvu,tavern,expectedParentChatId,expectedRevision}) {
+  const getAnchor=()=>tavernAnchor(tavern.chat.length-1,tavern),anchor=anchorOf(getAnchor);
+  const metadata=tavern.chatMetadata??tavern.chat_metadata;
+  if(!expectedParentChatId||anchor.chatId===expectedParentChatId||metadata?.main_chat!==expectedParentChatId||!metadata.integrity)
+    throw Error('Verified native branch source required');
+  const key=operationKey(anchor),operationId=`branch/${key}`;
+  if(inFlight.has(key))throw Error('MVU operation already in progress');
+  inFlight.add(key);
+  try {
+    const initial=read(mvu,anchor),existing=initial.stat_data?.[NAMESPACE];
+    if(existing?.chatId===anchor.chatId){
+      const current=rootOf(initial,anchor.chatId),prior=current.operations[operationId];
+      if(prior?.summary?.sourceChatId!==expectedParentChatId)throw Error('Branch tip already has a different identity');
+      return {...clone(prior.summary),status:'already_adopted'};
+    }
+    const source=rootOf(initial,expectedParentChatId);
+    if(!whole(expectedRevision)||source.revision!==expectedRevision)throw Error('MVU state version conflict');
+    if(source.battle?.mode==='combat')throw Error('Adopt a native branch at a settled story checkpoint');
+    for(const id of Object.keys(source.actors))actorOf(source,id);
+    const next=clone(initial),root=next.stat_data[NAMESPACE];
+    root.chatId=anchor.chatId;root.revision++;
+    const result={status:'adopted',operationId,revision:root.revision,sourceChatId:expectedParentChatId,
+      sourceRevision:source.revision,messageId:anchor.messageId,swipeId:anchor.swipeId};
+    root.operations[operationId]={signature:JSON.stringify({kind:'nativeBranch',sourceChatId:expectedParentChatId,
+      sourceRevision:source.revision,nativeIntegrity:metadata.integrity}),summary:result};
+    ensureAnchor(getAnchor,anchor);
+    if(!same(read(mvu,anchor),initial))throw Error('MVU data changed before branch adoption');
+    await mvu.replaceMvuData(next,{type:'message',message_id:anchor.messageId});
+    ensureAnchor(getAnchor,anchor);
+    if(!same(read(mvu,anchor),next))throw Error('MVU branch adoption was not confirmed by readback');
+    return result;
+  } finally {inFlight.delete(key);}
 }
 
 // For a manually triggered script in an isolated SillyTavern chat.

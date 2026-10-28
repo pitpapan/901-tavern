@@ -1,0 +1,51 @@
+{
+  "status": "partial",
+  "loadingAndSelectedMemory": "pass",
+  "budgetNarrative": "fail",
+  "reviewer": "主会话独立读取实际请求及回应；Terra 6.1 High只负责界面交互",
+  "evidence": "lifecycle-final.jsonl",
+  "budget": {
+    "contextLimit": 3621,
+    "focusedTokens": 3364,
+    "response": "洛汀河谷的水势与往来商旅如常。猫音身为帝国学士，在此处理日常文书与研习杂务，其学识与日常交往局限于公开的文脉与民间见识，并未持有白暮寒地或远西魔法林材等远方物资。御临风与猫音当前同处洛汀，周围仅有日常街景与行人，无多余库存或隐秘资源。",
+    "unsupportedClaims": [
+      "猫音在此处理日常文书与研习杂务：场景未授权该活动，学士资格不能推出岗位或事务。",
+      "并未持有远方物资、无多余库存：未提供的库存或持有不能断言不存在。"
+    ],
+    "sourceBoundary": "knowledge_projection.md / W4续写入口：背景与现场；人物·猫音条目；本题输入只确认洛汀与猫音在场。",
+    "retestPolicy": "同题、同模型单次复测仍失败，保留原文，不抽样刷通过，不把输出采纳为事实。"
+  },
+  "memory": {
+    "selectedBranchAndKnowledge": "pass",
+    "scope": "A仅取信且未获送达记录；B未发出；信文与私人猜测没有传播给猫音。只验证这些命题及实际请求单次注入。",
+    "proseLimitations": [
+      "A补出客栈、把茶凉改成铜壶已冷，并以在途概括取信，未列为逐句准确。",
+      "刷新后B尾部出现]]></text>；保留原文，没有自动写入人工摘要。"
+    ],
+    "automaticAdoption": false
+  },
+  "integration": {
+    "status": "pass",
+    "previous_block": {
+      "status": "pending_resource_proof",
+      "error": "learning executor or test changed; acquisition proof stale: ../TRPG outputs/work/rules_engine/mvu_poc/adapter.mjs",
+      "authorGuidance": "最新追加边界已用于隔离复测；共享规划与候选尚待资源线证明完成后重新生成。",
+      "formalDeployment": false
+    },
+    "report": "manual-merge-verification.json",
+    "scope": "资源证明已更新；本轮重新plan/runtime/verify通过，六书原生文件和受保护入口哈希不变；未正式部署"
+  },
+  "manualAdoption": {
+    "status": "pass",
+    "source": "lifecycle-verification.json / manualAdoption",
+    "response": "当前地点为洛汀，猫音在场。\n\n猫音身份已确认取得帝国学士资格；右近亲妹妹。\n\n现有记录未确认她在处理文书，也未确认她持有远方材料；具体事务与个人持有物均属未记录。\n\n对于未记录的库存，应表述为“店内库存未记录”或“未确认”，不据此断言存在或缺货。",
+    "review": "当前地点、在场、学士资格与亲缘均有输入或条目支持；事务、持有和库存仍未记录，无无据否定或新事件。原失败回复已从本次最近聊天订正，摘要单次注入。",
+    "actualModel": "gemini-3.8-flash",
+    "priorBudgetModel": "gemini-3.5-flash-lite",
+    "comparisonLimit": "本轮未操作模型或连接设置；未采集进入本轮前模型快照，不能断定变更时点，也不作同模型修复或效果归因。",
+    "requestCount": 1,
+    "manualEditAndRefreshVerified": true,
+    "automaticAdoption": false,
+    "formalCampaignMemoryModified": false
+  }
+}

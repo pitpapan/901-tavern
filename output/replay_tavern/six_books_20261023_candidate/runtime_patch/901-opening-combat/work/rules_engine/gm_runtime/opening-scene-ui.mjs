@@ -10,7 +10,10 @@ export function mountOpeningSceneHost({document,getSession,isActive,tavern}) {
     const status=document.createElement('p'),save=document.createElement('button');save.textContent='确认实际现场并保存';
     save.onclick=async()=>{try {const config=JSON.parse(input.value),result=await (config.kind==='ruleScene'?getSession().registerRuleScene(config):getSession().registerEncounter(config));status.textContent=`已保存：revision ${result.revision}。后续明确行动将使用这份场景资料。`;}catch(e){status.textContent=e.message;}};
     const close=document.createElement('button');close.textContent='关闭';close.onclick=()=>{dialog.close();dialog.remove();};
-    dialog.append(intro,input,save,close,status);document.body.append(dialog);dialog.showModal();
+    const checkpointInfo=document.createElement('p');checkpointInfo.textContent='规则检查点：确认场景、关键分支前或战斗结束后，可保留当前页。每张需要回滚的备用页须分别保留；普通历史楼仍受MVU清理窗口限制，已清理的旧页不会恢复。';
+    const checkpoint=document.createElement('button');checkpoint.textContent='保留当前页规则检查点';
+    checkpoint.onclick=async()=>{checkpoint.disabled=true;try{const r=await getSession().retainSnapshot();status.textContent=`检查点已保存：楼${r.messageId}／页${r.swipeId}，修订${r.revision}；规则状态未改变。`;}catch(e){status.textContent=e.message;}finally{checkpoint.disabled=false;}};
+    dialog.append(intro,input,save,checkpointInfo,checkpoint,close,status);document.body.append(dialog);dialog.showModal();
   };
   const win=document.defaultView;win.addEventListener('901-opening-host-register',open);
   if(tavern?.SlashCommandParser&&tavern?.SlashCommand)tavern.SlashCommandParser.addCommandObject(tavern.SlashCommand.fromProps({name:'901-scene',callback:async()=>{open();return '';},helpString:'主持登记当前已确认遭遇（后台设置）。'}));

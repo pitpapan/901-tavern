@@ -1,0 +1,91 @@
+{
+  "status": "pass",
+  "scope": "仅请求、预算与所选记忆读取；语义结果单列lifecycle-semantic-review.json，不由此pass推断",
+  "errors": [],
+  "budget": {
+    "scope": "native getWorldInfoPrompt with explicit available-context argument; account/model budget unchanged",
+    "contextLimit": 3621,
+    "focusedTokens": 3364,
+    "crowdedMissing": [
+      "洛汀"
+    ],
+    "retained": [
+      "大陆法则限制",
+      "妄想大陆",
+      "901已采用核心裁定规则",
+      "人物·猫音",
+      "洛汀"
+    ],
+    "dropped": [
+      "破关后的道路与通行基线",
+      "帝国",
+      "帝国公共消息与民间见识",
+      "帝国学士与长期研习",
+      "飘零大陆",
+      "风门山前魔法生态",
+      "帝国邻里与私人交往",
+      "帝国人口与聚落规模",
+      "远西魔法林材与特殊木材",
+      "白暮寒地材料与器材",
+      "飘零大陆共同节令与年度生活",
+      "银月城"
+    ],
+    "response": "洛汀河谷的水势与往来商旅如常。猫音身为帝国学士，在此处理日常文书与研习杂务，其学识与日常交往局限于公开的文脉与民间见识，并未持有白暮寒地或远西魔法林材等远方物资。御临风与猫音当前同处洛汀，周围仅有日常街景与行人，无多余库存或隐秘资源。",
+    "shortageLimit": 128,
+    "shortageMissing": [
+      "洛汀",
+      "大陆法则限制",
+      "妄想大陆",
+      "人物·猫音",
+      "901已采用核心裁定规则"
+    ],
+    "shortageRequests": 0
+  },
+  "memory": {
+    "source": "native selected message extra.memory; manual adoption, automatic summary remains frozen",
+    "reads": [
+      {
+        "branch": "A",
+        "started": "2026-10-28T12:23:35.790Z",
+        "response": "洛汀的客栈室内，炉火正亮，铜壶已冷。猫音在场，她已知晓那封交由信使取走的密封信委托，但未见过信件内容。信件目前尚在途中，无送达或拆信记录。御临风关于信使来自兄弟会的猜测仅存于其私人思考，未曾说出口，猫音并不知晓。",
+        "selectedSwipe": 0,
+        "memoryCopies": 1,
+        "nativeSummaryWasStale": false
+      },
+      {
+        "branch": "B",
+        "started": "2026-10-28T12:23:48.490Z",
+        "response": "当前在洛汀，猫音在场。信使没有接下委托，信件未发出。\n\n她知道委托未被接下，未见信文；御临风关于信使来自兄弟会的私人猜测并未说出口，她对此并不知情。",
+        "selectedSwipe": 1,
+        "memoryCopies": 1,
+        "nativeSummaryWasStale": true
+      },
+      {
+        "branch": "B",
+        "started": "2026-10-28T12:24:12.922Z",
+        "response": "当前洛汀室内，猫音在场，已知信件未被信使接下，信尚未发出。她仅知晓委托未成，未见信文。御临风关于信使来自兄弟会的猜测为私下推测，未曾说出口，猫音并不知情。]]></text>\n",
+        "selectedSwipe": 1,
+        "memoryCopies": 1,
+        "nativeSummaryWasStale": false
+      }
+    ],
+    "settings": {
+      "frozen": true,
+      "source": "extras"
+    },
+    "cleanupMessages": 1
+  },
+  "manualAdoption": {
+    "started": "2026-10-28T19:58:51.282Z",
+    "reviewedReply": "当前场景在洛汀，猫音在场。她已取得帝国学士资格。现有资料没有说明她此刻的具体事务，也没有记录个人持有物或店内库存；这些项目保持未确认。",
+    "reviewedMemory": "隔离验收W5人工采纳01（仅本测试分支）：当前在洛汀，猫音在场。她此刻的具体事务、个人持有物及店内库存未记录，不据此断言存在或不存在。未新增职业、专长、取得、交易、送信或知情传播。来源：本测试场景输入与人工订正后的保留回复；父记忆为空。",
+    "requestCount": 1,
+    "response": "当前地点为洛汀，猫音在场。\n\n猫音身份已确认取得帝国学士资格；右近亲妹妹。\n\n现有记录未确认她在处理文书，也未确认她持有远方材料；具体事务与个人持有物均属未记录。\n\n对于未记录的库存，应表述为“店内库存未记录”或“未确认”，不据此断言存在或缺货。",
+    "scope": "原生界面订正保留回复并手动编辑Summary，刷新后读取；非自动审核或自动采纳"
+  },
+  "limits": [
+    "人工采纳流程，未实现自动审阅／自动提交／自动在场追踪",
+    "短的跨窗口与候选切换实验，不冒充整场长期实团验收",
+    "本检查核对请求与状态；语义由主会话逐句判读"
+  ]
+}

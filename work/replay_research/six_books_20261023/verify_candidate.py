@@ -21,7 +21,10 @@ for b in plan['books']:
     for key,e in obj['entries'].items():assert key==str(e['uid'])
     entries.extend(obj['entries'].values())
 resource_entries=[e for e in entries if '901_resource' in e['extensions']]
-assert len(entries)-len(resource_entries)==173
+baseline=read(Path(__file__).with_name('world-integration-baseline-20261028.json'))
+baseline_lore=set(baseline['uids'])-{int(uid) for uid in baseline['resource_entries']}
+new_author_uids={1_000_000_000+int(hashlib.sha256(d['key'].encode()).hexdigest()[:8],16)%1_000_000_000 for d in ctx['author_deltas'] if not d.get('target_uid')}
+assert {e['uid'] for e in entries if '901_resource' not in e['extensions']}==baseline_lore|new_author_uids
 assert len(entries)==len({e['uid'] for e in entries})
 assert len(resource_entries)==len(ctx['contracts'])
 assert {e['extensions']['901_resource']['id'] for e in resource_entries}==set(ctx['contracts'])
@@ -41,7 +44,7 @@ assert 79768996 not in by_uid
 mapping=read(OUT/'migration_map.json')
 assert len(mapping['source_coverage'])==136
 assert all(row['destinations'] for row in mapping['source_coverage'])
-checks.append(f'六书{len(entries)}个UID唯一，保留173个既有条目及全部{len(resource_entries)}份资源契约；135个原UID保留，136个来源均有去向；模板手动禁用')
+checks.append(f'六书{len(entries)}个UID唯一，保留173个既有非资源条目并合入采用作者增量及全部{len(resource_entries)}份资源契约；135个原UID保留，136个来源均有去向；模板手动禁用')
 seen=Counter()
 for r in ctx['records'].values():
     actual=(OUT/r['path']).read_text(encoding='utf-8').rstrip('\n')
@@ -75,7 +78,10 @@ for r in (r for r in ctx['records'].values() if 'resourceContract' in r):
         assert meta['learning']==ctx['candidate_actions'].get(meta['id'],{}).get('learning')
         assert '默认手动禁用' in r['content'] and '实际取得记录' in r['content']
 resource_loads=Counter('disabled' if e['disable'] else 'constant' if e['constant'] else 'keyword' for e in resource_entries)
-assert loads==Counter({'disabled':19,'constant':3,'keyword':151})+resource_loads
+additional=[r for r in ctx['records'].values() if r['book']!='主持卡' and r['uid'] not in baseline['uids'] and '901_resource' not in r['native']['extensions']]
+additional_loads=Counter('disabled' if r['native']['disable'] else 'constant' if r['native']['constant'] else 'keyword' for r in additional)
+assert loads==Counter({'disabled':19,'constant':3,'keyword':151})+resource_loads+additional_loads
+assert not additional_loads['constant']
 assert resource_loads['constant']==0
 checks.append(f'原9条禁用保持；当前加载分布{dict(loads)}；资源不新增常驻，后期模板不默认启用；无单字触发或无键绿灯')
 
@@ -96,6 +102,12 @@ for k,v in oldcard['extensions'].items():
     if k not in ['world','tavern_helper']:assert card['extensions'][k]==v,k
 expected_helper=json.loads(json.dumps(oldcard['extensions']['tavern_helper']))
 expected_helper['scripts'][1]['content']=expected_helper['scripts'][1]['content'].replace('profile:{debug:false,','profile:{lorebooks:'+json.dumps(list(ctx['FILENAMES'].values()),ensure_ascii=False)+',debug:false,')
+expected_helper['scripts'][1]['content']=expected_helper['scripts'][1]['content'].replace(
+    "{role:'system',content:currentSceneText(scene)+",
+    "{role:'system',content:"+json.dumps(plan['world_context_guidance']['content'],ensure_ascii=False)+"+'\\n'+currentSceneText(scene)+")
+expected_helper['scripts'][1]['content']="const {retainedBranchMemory}=await import('/901-opening-combat/work/replay_research/six_books_20261023/branch-memory.mjs');\n"+expected_helper['scripts'][1]['content']
+expected_helper['scripts'][1]['content']=expected_helper['scripts'][1]['content'].replace(
+    "      'world_info_after','chat_history',", "      'world_info_after','chat_history',\n      ...(retainedBranchMemory(SillyTavern.chat)?[{role:'system',content:retainedBranchMemory(SillyTavern.chat)}]:[]),")
 assert card['extensions']['tavern_helper']==expected_helper
 for module in read(OUT/'runtime_patch_manifest.json')['modules']:
     assert sha(ROOT/module['source'])==module['source_sha256']
@@ -110,13 +122,14 @@ for k in ['personality','first_mes','mes_example','system_prompt','post_history_
     assert card[k]==oldcard[k],k
 assert card['scenario'].startswith(oldcard['scenario'])
 embedded=card['character_book']['entries'];primary=book_objects['世界基础设定']['entries']
-assert len(embedded)==len(primary)==41
+assert len(embedded)==len(primary)
+assert {e['id'] for e in embedded}=={r['uid'] for r in ctx['records'].values() if r['book']=='世界基础设定'}
 for e in embedded:
     n=primary[str(e['id'])]
     for a,b in [('keys','key'),('content','content'),('constant','constant'),('insertion_order','order'),('extensions','extensions')]:assert e[a]==n[b]
     assert e['enabled']==(not n['disable'])
 assert ctx['records'][123]['content'] in card['description']
-checks.append('主持卡内嵌41条基础书一致；入口脚本仅增加显式六书名单，正则、开场及执行提示保持；完整运行时依赖哈希一致')
+checks.append(f'主持卡内嵌{len(primary)}条基础书一致；入口脚本增加显式六书名单、同源背景／现场说明及当前人工分支记忆，正则、开场及机械执行提示保持；完整运行时依赖哈希一致')
 
 assert '开局剑的具体数值尚需' not in by_uid[57247236]['content']
 assert '6L、破魔2、破甲2' in by_uid[57247236]['content']
@@ -134,12 +147,19 @@ cases=[
  ('远处这株世界树有什么来历？',set(),{'YGGDRASIL'}),
  ('讨论帝都近郊峡谷的施工。',{'帝都近郊峡谷','法阵安装者','峡谷结界与空间封印运行','901短卡计算约定'}, {'峡谷调查、交战与战后接续','帝提前干预：峡谷停军'}),
  ('使用弃风剑。',{'弃风剑'},set()),
+ ('我在帝都买早餐。',{'帝都'},{'帝国公共消息与民间见识','帝都腹地供给与公费农作施术','帝国军力与粮储基线'}),
+ ('前往银月城。',{'银月城'},{'高等精灵家传古史与知情边界'}),
+ ('猫音谈起帝国学士。',{'人物·猫音','帝国学士与长期研习'},set()),
+ ('肯达·凯·弗格斯与白色魔法使相谈。',{'人物·肯达·凯·弗格斯','人物·白色魔法使'},{'肯达后期暗桩身份','白魔私人目标','白魔后来协作关系证据'}),
+ ('查看弃风剑，问起悠悠。',{'弃风剑'},{'弃风隐藏灵性与重铸条件','悠悠诅咒辨认与转送条件'}),
+ ('副队洛报告给队长霞。',{'人物·洛','人物·霞'},set()),
+ ('谈谈远西的世界树。',{'远西世界树及共同照护'},{'YGGDRASIL'}),
 ]
 probes=[]
 for prompt,required,forbidden in cases:
     actual=matches(prompt);assert required<=actual and not actual&forbidden,(prompt,actual)
     probes.append({'text':prompt,'matched':sorted(actual),'status':'pass'})
-checks.append('5组字面触发探针符合目标；禁用剧情没有因关键词自动启用')
+checks.append(f'{len(cases)}组字面触发探针符合目标；禁用剧情与新作者秘密没有因关键词自动启用')
 for p in OUT.rglob('*.md'):
     for target in re.findall(r'\]\(<?([^\n)>]+)>?\)',p.read_text(encoding='utf-8')):
         if '://' in target or target.startswith('#'):continue
