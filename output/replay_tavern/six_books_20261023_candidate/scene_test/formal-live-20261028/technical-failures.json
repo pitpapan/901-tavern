@@ -1,0 +1,89 @@
+{
+  "status": "technical_failure_retained",
+  "case": "qualification",
+  "chatId": "901 正式六书隔离加载验收 20261028 - 01资格与库存",
+  "providerUiMessage": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+  "gate": {
+    "status": "UNRESOLVED",
+    "operationId": "gm-runtime/901 正式六书隔离加载验收 20261028 - 01资格与库存/1/0",
+    "pending": {
+      "original": {
+        "chatId": "901 正式六书隔离加载验收 20261028 - 01资格与库存",
+        "messageId": 1,
+        "swipeId": 0,
+        "text": "仅做世界资料核对，不执行角色行动或机械结算，不改变当前现场，不替御临风说话或决定。请用三句话以内回答：猫音已取得什么学术资格？能否由此确认她的具体职业、专业领域或此刻正在处理文书？洛汀岩地矿料与工艺所述地区供料，是否足以确认某店有货或无货？"
+      },
+      "operationId": "gm-runtime/901 正式六书隔离加载验收 20261028 - 01资格与库存/1/0",
+      "request": null
+    },
+    "diagnostic": {
+      "stage": "blocked",
+      "operationId": "gm-runtime/901 正式六书隔离加载验收 20261028 - 01资格与库存/1/0",
+      "classificationRequests": 1,
+      "narrationRequests": 0,
+      "elapsedMs": 17523,
+      "generationId": "901-classify-1793219820431-5xj0v48s6h",
+      "explicitRequestBytes": 74008,
+      "finalMessageCount": 2,
+      "finalMessageBytes": 73897,
+      "failureStage": "messages_assembled",
+      "reason": "transport_or_host_error",
+      "httpStatus": null
+    }
+  },
+  "retry": {
+    "chatId": "901 正式六书隔离加载验收 20261028 - 04资格与库存技术重试",
+    "sent": true,
+    "previousBlocker": "Browser is not available: iab; runtime reset attempted once; no alternative browser used",
+    "browserRecovery": {
+      "status": "connected",
+      "method": "fresh Terra 6.1 High control session; hidden IAB http://127.0.0.1:8000/",
+      "oldHungSessionInterrupted": true,
+      "tavernRestarted": false
+    },
+    "status": "recovered_and_verified",
+    "gate": {
+      "status": "NARRATION_PENDING",
+      "operationId": "gm-runtime/901 正式六书隔离加载验收 20261028 - 04资格与库存技术重试/1/0",
+      "pending": {
+        "original": {
+          "chatId": "901 正式六书隔离加载验收 20261028 - 04资格与库存技术重试",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "仅做世界资料核对，不执行角色行动或机械结算，不改变当前现场，不替御临风说话或决定。请用三句话以内回答：猫音已取得什么学术资格？能否由此确认她的具体职业、专业领域或此刻正在处理文书？洛汀岩地矿料与工艺所述地区供料，是否足以确认某店有货或无货？"
+        },
+        "operationId": "gm-runtime/901 正式六书隔离加载验收 20261028 - 04资格与库存技术重试/1/0",
+        "request": null,
+        "narrationDecision": {
+          "status": "NO_CHECK",
+          "basis": "visible_fact",
+          "reason": "猫音在T0前已取得帝国学士资格。该资格不等于被指派的职业或岗位，不能据此确认其具体职业、专业领域或此刻正在处理文书。洛汀地区供料背景不代表具体店铺有现货或缺货，未确认库存保持未定。"
+        }
+      },
+      "diagnostic": {
+        "stage": "blocked",
+        "operationId": "gm-runtime/901 正式六书隔离加载验收 20261028 - 04资格与库存技术重试/1/0",
+        "classificationRequests": 1,
+        "narrationRequests": 1,
+        "elapsedMs": 28241,
+        "generationId": "901-classify-1793220799878-vj44meqovk9",
+        "explicitRequestBytes": 74008,
+        "finalMessageCount": 2,
+        "finalMessageBytes": 73897,
+        "narrationErrorName": "Error",
+        "failureStage": "continuation_request_failed",
+        "reason": "continuation_failed",
+        "httpStatus": null
+      }
+    },
+    "continuationRecovery": {
+      "completed": true,
+      "nativeRegenerations": 1,
+      "newUserInputs": 0,
+      "classificationRequestsDuringRecovery": 0,
+      "narrationRequestsDuringRecovery": 1,
+      "finalGate": "NO_CHECK",
+      "rulesUnchanged": true
+    }
+  }
+}

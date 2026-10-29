@@ -1,0 +1,56 @@
+{
+  "status": "pass",
+  "reviewer": "parent session; source and response read directly",
+  "model": "gemini-3.5-flash",
+  "cases": [
+    {
+      "id": "secrets",
+      "status": "pass",
+      "response": "银月城以高等精灵家族的学术研习、附魔与精细手艺定制为特色，多族居民在此共同生活，日常物资多与白暮等周边互补。仅凭听过姓名且未经调查或获告，御临风无法确认白色魔法使与肯达·凯·弗格斯的私人目标或隐藏身份。二人真实动机与未公开背景仍需通过后续实际接触或调查方能获知。\n\n<StatusPlaceHolderImpl/>",
+      "checks": [
+        "银月城生活概述有实际入选条目支持",
+        "未把只听姓名写成知道私密目标或隐藏身份",
+        "没有推进现场或替玩家决定"
+      ],
+      "sourceUids": [
+        1937991008,
+        90804397,
+        240530842
+      ]
+    },
+    {
+      "id": "materials",
+      "status": "pass",
+      "response": "韧纹铁产自洛汀东部地区的东南丘陵矿段。导流晶的用途在于经处理后引导相适应的魔力。其限制在于本身并不具备供能效果，仅起到引导作用。\n\n<StatusPlaceHolderImpl/>",
+      "checks": [
+        "韧纹铁产地对应东南丘陵矿段",
+        "导流晶引导相适魔力且不自行供能",
+        "没有材料样品、持有或库存断言"
+      ],
+      "sourceUids": [
+        1411441543
+      ]
+    },
+    {
+      "id": "qualification",
+      "status": "pass",
+      "response": "猫音在T0前已取得帝国学士资格。仅凭此资格不能确认她的具体职业、专业领域或此刻正在处理文书，其岗位与课题均处于未定状态。洛汀岩地矿料与工艺属于地区供料背景，不足以确认具体店铺是否有现货或缺货，未确认的库存继续保持未定。\n\n<StatusPlaceHolderImpl/>",
+      "checks": [
+        "T0前已取得帝国学士资格，未改成最近取得",
+        "资格不等于职业、专业领域或当下处理文书",
+        "地区供料不等于某店有货或缺货，库存仍未定",
+        "没有代替玩家行动或推进现场"
+      ],
+      "sourceUids": [
+        1819380956,
+        1411441543
+      ],
+      "technicalRecovery": "one native pending continuation recovery, no new user input or reclassification"
+    }
+  ],
+  "limits": [
+    "Three representative cases, not exhaustive coverage",
+    "Does not supersede earlier low-budget semantic failure",
+    "User-confirmed formal chat test is outside this isolated acceptance sample"
+  ]
+}

@@ -1,0 +1,23 @@
+import {readFile, writeFile, access, copyFile} from 'node:fs/promises';
+import {resolve} from 'node:path';
+import assert from 'node:assert/strict';
+const out=resolve('output/replay_tavern/six_books_20261023_candidate/scene_test/formal-live-20261028');
+const read=async p=>JSON.parse(await readFile(p,'utf8'));
+const cfg=await read(resolve(out,'config.json'));
+const installation=await read(resolve(out,'installation.json'));
+const retryChat=cfg.name+' - 04资格与库存技术重试';
+const retryPath=resolve('D:/github/sillyTavern/data/default-user/chats',cfg.name,retryChat+'.jsonl');
+assert(!cfg.cases[0].chatId.includes('技术重试'),'Retry already prepared');
+try {await access(retryPath);throw Error('Retry chat already exists');} catch(e){if(e.code!=='ENOENT')throw e;}
+await access(resolve(out,'qualification-provider-failure.jsonl'));
+await copyFile(resolve(out,'config.json'),resolve(out,'config-before-qualification-retry.json'));
+const csrf=await fetch('http://localhost:8000/csrf-token');
+const cookie=csrf.headers.getSetCookie().map(c=>c.split(';')[0]).join('; ');
+const {token}=await csrf.json();
+const clone=await read(resolve(out,'isolated.card.json'));
+const r=await fetch('http://localhost:8000/api/chats/save',{method:'POST',headers:{Cookie:cookie,'X-CSRF-Token':token,'Content-Type':'application/json'},body:JSON.stringify({avatar_url:installation.avatar,file_name:retryChat,chat:[{user_name:'御临风',character_name:cfg.name,chat_metadata:{note_prompt:'',variables:{}}},{name:cfg.name,is_user:false,is_system:false,send_date:new Date().toISOString(),mes:clone.data.first_mes,extra:{}}]})});
+assert(r.ok,'Create retry chat '+r.status);
+cfg.cases[0].chatId=retryChat;
+await writeFile(resolve(out,'config.json'),JSON.stringify(cfg,null,2)+'\n');
+await copyFile(resolve(out,'config.json'),'D:/github/sillyTavern/public/901-formal-loading-20261028/config.json');
+console.log(JSON.stringify({status:'prepared-one-technical-retry',chatId:retryChat,model:cfg.model.model,input:cfg.cases[0].input}));
