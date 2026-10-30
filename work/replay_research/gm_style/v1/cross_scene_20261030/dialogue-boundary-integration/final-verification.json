@@ -1,0 +1,38 @@
+{
+  "status": "pass",
+  "styleIdentifier": "901-gm-style-v1",
+  "styleChars": 2812,
+  "styleSha256": "0e36e8fc6987a82e50d0cf651bdf7c54b2c4406e6b5a9a7a6176a8c85823e7a9",
+  "assetSha256": "1c0d8e03aa91e14a5bd94650199d1493ce344ce6b54e59f7935671cf73b3ffcb",
+  "authorDevelopmentAndInstalledDiskIdentical": true,
+  "sourceTests": {
+    "passed": 10,
+    "failed": 0,
+    "log": "source-green.log"
+  },
+  "formal": {
+    "independentlyCheckedFiles": 274,
+    "onlyChangedFile": "public/901-opening-combat/narrative-style.json",
+    "formalCardExactBytesUnchanged": true,
+    "entrySha256": "b1b64b4242a0839a62b30a4ea87a5118923ab6e9a029bc7200e80e17a54b41ab",
+    "completeSettingsHashUnchanged": true,
+    "allOtherProtectedFilesByteUnchanged": true
+  },
+  "http": {
+    "matchesDisk": true,
+    "evidence": "installation.json; deployment-side HTTP readback",
+    "independentRepeat": "Sandbox EACCES prevented the extra read-only request; no independent HTTP success claimed."
+  },
+  "development": {
+    "onlyStyleAndManifestChanged": true,
+    "otherCandidateFilesByteUnchanged": 1411,
+    "onlyManifestAssetHashesChanged": true,
+    "beforeCopies": "before/<original repo-relative path>"
+  },
+  "newModelCalls": 0,
+  "newUIActions": 0,
+  "cardWrites": 0,
+  "chatWrites": 0,
+  "runtimeCodeChanges": 0,
+  "limits": "Asset delivery and request construction verified; no new live model behavior test."
+}

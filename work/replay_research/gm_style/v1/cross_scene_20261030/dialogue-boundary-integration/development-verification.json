@@ -1,0 +1,33 @@
+{
+  "status": "pass",
+  "styleIdentifier": "901-gm-style-v1",
+  "beforeChars": 2757,
+  "afterChars": 2812,
+  "styleSha256": "0e36e8fc6987a82e50d0cf651bdf7c54b2c4406e6b5a9a7a6176a8c85823e7a9",
+  "assetSha256": "1c0d8e03aa91e14a5bd94650199d1493ce344ce6b54e59f7935671cf73b3ffcb",
+  "exactlyTwoAuthorizedTextReplacements": true,
+  "assetBytesEqualRootExpected": true,
+  "manifestOnlyAssetsSourceAndDestinationHashesChanged": true,
+  "existingCandidateFilesChecked": 1413,
+  "changedCandidateFiles": [
+    "runtime_patch/901-opening-combat/narrative-style.json",
+    "runtime_patch_manifest.json"
+  ],
+  "otherCandidateFilesByteUnchanged": 1411,
+  "sourceTests": {
+    "passed": 10,
+    "failed": 0,
+    "redLog": "source-red.log",
+    "greenLog": "source-green.log"
+  },
+  "modifiedSourceFiles": [
+    "work/rules_engine/gm_runtime/narrative-style.test.mjs"
+  ],
+  "beforeCopies": "before/<original repo-relative path>",
+  "cardEntryChanged": false,
+  "runtimeCodeChanged": false,
+  "formalWrites": 0,
+  "newModelCalls": 0,
+  "newUIActions": 0,
+  "limits": "Prompt/asset delivery verified; no fresh model behavior test."
+}
