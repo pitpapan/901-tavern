@@ -1,0 +1,66 @@
+{
+  "status": "pass",
+  "scope": "Declared-action clause and WM08/WM09 source-hash synchronization only; Summary remains pending and uninstalled.",
+  "sourceTests": {
+    "passed": 8,
+    "failed": 0,
+    "logs": [
+      "action-red.log",
+      "action-green.log"
+    ],
+    "initialSummaryExploration": "source-red.log is not action-only evidence; see source-red-scope.txt"
+  },
+  "formal": {
+    "entrySha256": "b7148f4d6d84a3f8212f16b299f0ba5c59168c36bf9a42c2c28fbd56557f253a",
+    "diskEntireCardEqualsExpected": true,
+    "onlyApprovedClauseChanged": true,
+    "rootExpectedFileNowByteIdentical": true,
+    "originalLineEndingsPreserved": {
+      "CRLF": 60,
+      "bareLF": 7
+    },
+    "summaryInstalled": false,
+    "protectedFiles": 274,
+    "onlyChangedFile": "data/default-user/characters/901 帝都初始卡.png",
+    "allOtherFilesAndSettingsUnchanged": true,
+    "recoveryGateSha256": "f8a5a13bf2085e98a6befbc6a1505c66d7afd24b99f0b006458e41fa6a6e1d1d"
+  },
+  "authorSources": {
+    "topics": [
+      "WM08",
+      "WM09"
+    ],
+    "sourceHashesMatch": true,
+    "bothPlansReverseExactlyToRecordedPreSyncHashes": true,
+    "onlyTwoHashValuesChangedPerPlan": true,
+    "entryChecksReused": [
+      {
+        "evidence": "work/replay_research/power_interaction_entry_check_20261030.json",
+        "entries": 19,
+        "fullEntriesEqualCurrentFormal": true,
+        "contentHashesMatchEvidence": true
+      },
+      {
+        "evidence": "work/replay_research/gm_style/v1/cross_scene_20261030/wm09-entry-check.json",
+        "entries": 7,
+        "fullEntriesEqualCurrentFormal": true,
+        "contentHashesMatchEvidence": true
+      }
+    ],
+    "preexistingPendingChangesPreserved": true
+  },
+  "candidateProjection": {
+    "files": [
+      "import/901_六书主持入口.script.json",
+      "import/901_帝都初始卡_六书候选.card.json"
+    ],
+    "eachReverseExactlyToRecordedPreSyncHash": true,
+    "onlyActionClauseChanged": true,
+    "existingOptionalSummaryUntouched": true
+  },
+  "newModelCalls": 0,
+  "newUIActions": 0,
+  "runtimeModulesInstalled": 0,
+  "worldbooksWritten": 0,
+  "chatFilesWrittenOrDeleted": 0
+}

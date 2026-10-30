@@ -1,0 +1,56 @@
+{
+  "status": "pass",
+  "sources": [
+    {
+      "topic": "WM08",
+      "path": "work/replay_research/power_rules_dossier.md",
+      "beforeSha256": "5c3beada52e3071ab3cfebe34d15af9d9203d1537df4234a10d153e42fb18c68",
+      "afterSha256": "3ec1121450f261b5133ee7400886a0adff6529f30d873402c92021c4ad2dab31",
+      "priorSourceBytesPreserved": true,
+      "addedSeparatorBytes": 2
+    },
+    {
+      "topic": "WM09",
+      "path": "work/replay_research/information_consequences_reference_20261007.md",
+      "beforeSha256": "486f9d50979c738c8e70c9ab9853fa8246e2ecf1c8b9b900d86f2469af24dd7c",
+      "afterSha256": "9ceba5ed8dafda3206d7508df47201ba62560651d81fb93426dcc29080b93ce0",
+      "priorSourceBytesPreserved": true,
+      "addedSeparatorBytes": 2
+    }
+  ],
+  "entryChecks": [
+    {
+      "evidence": "work/replay_research/power_interaction_entry_check_20261030.json",
+      "entries": 19,
+      "fullEntriesEqualCurrentFormal": true,
+      "contentHashesMatchEvidence": true
+    },
+    {
+      "evidence": "work/replay_research/gm_style/v1/cross_scene_20261030/wm09-entry-check.json",
+      "entries": 7,
+      "fullEntriesEqualCurrentFormal": true,
+      "contentHashesMatchEvidence": true
+    }
+  ],
+  "plans": [
+    {
+      "path": "work/replay_research/six_books_20261023/创作规划.yaml",
+      "beforeSha256": "fc7fc57f54176140154552a2b770f749db96e64cccd60900718f5bec7671fcad",
+      "afterSha256": "7f303c2162d2683c819ed7fbe3a21506fbcd00c04a412ae5e51bd8a3276f15f1",
+      "onlyTwoSourceHashValuesChanged": true,
+      "entriesAndLoadingUnchanged": true
+    },
+    {
+      "path": "output/replay_tavern/six_books_20261023_candidate/创作规划.yaml",
+      "beforeSha256": "a13e039ba14d427f42069cbdc3b2ec9df0d69e46de3b863a6cc0b09ad94aa2ef",
+      "afterSha256": "fe21d03660237c27495855a53e7c170a5e79dfa5b1b775d8a902057b027c6eef",
+      "onlyTwoSourceHashValuesChanged": true,
+      "entriesAndLoadingUnchanged": true
+    }
+  ],
+  "newEntries": 0,
+  "worldbooksWritten": 0,
+  "formalFilesWritten": 0,
+  "generatorRun": false,
+  "memoryChoice": "pending; no Summary installation"
+}

@@ -56,5 +56,5 @@ const combat={
 registerReplayGate({getMvu:async()=>Mvu,combat,
   profile:{debug:false,prepare:()=>getSession().prepare(),loadBaseline:async()=>getSession().baseline,directEffects:false,
     get sceneContext(){return currentSceneText();},classificationTimeoutMs:60000,modelOptions,
-    narrationInstruction:'承接本轮已声明言行的客观后果和相关人物的回应，不补御临风新台词、心理、选择或承诺。普通应答完成即可结束，未变化的环境、站位和闲置动作无需逐人复述；不以等待安排交棒。感官只呈现已有现场可支持的观察；普通休息、闲聊没有线索依据时不新增可疑人物或暗示危险。不公开NPC数值，不自动开战。'}});
+    narrationInstruction:'承接本轮已声明言行的客观后果和相关人物的回应，不补御临风未声明的动作、台词、心理、选择或承诺。普通应答完成即可结束，未变化的环境、站位和闲置动作无需逐人复述；不以等待安排交棒。感官只呈现已有现场可支持的观察；普通休息、闲聊没有线索依据时不新增可疑人物或暗示危险。不公开NPC数值，不自动开战。'}});
 window.addEventListener('pagehide',()=>{playerStatus.dispose();battleMap.dispose();try{getSession().dispose();}catch{}});
