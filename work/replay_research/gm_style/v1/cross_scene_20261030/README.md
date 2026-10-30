@@ -58,3 +58,19 @@
 验证命令：`node work/replay_research/gm_style/v1/cross_scene_20261030/check-capture.mjs baseline`明确返回 `reproduced-summary-omission`；同命令`candidate`返回 `pass`。`node --test work/replay_research/six_books_20261023/branch-memory.test.mjs`三项通过。`manage.mjs capture baseline|candidate`可只读重查酒馆并更新本地证据；不要重跑一次性prepare/install或用种子覆盖已完成聊天。
 
 本批第1、3项交付完成：跨场景基线、真实漏载定位、隔离候选定点复验及WM09作者正文/对应/加载要求均已有证据。生产入口的Summary缺口及动作句仍等待第4项串行汇合，不能将隔离修复说成已正式部署；共享源文件哈希变化也须由该线维护，不在本批伪报整包重新验证。
+
+## 正式汇合前的记忆来源纠正（2026-10-30）
+
+用户接续第4项后，重读[2026-10-28正式安装记录](../../../../../output/replay_tavern/six_books_20261023_candidate/formal-installation-20261028/README.md)发现：原正式聊天使用数据库记忆，安装当时明确省略可选Summary导入／注入，保留既有来源。此前将正式入口这两段缺失一概描述为生产缺陷不准确；它是当时有意采用的安装变体。
+
+本批隔离测试明确使用原生Summary，因此其真实续写需要相应读取段；候选三轮的实际请求证据仍有效，但不能据此自动给数据库模式加入另一记忆来源。正式原31楼目前无非空 `extra.memory`，Summary仍为Extras来源且冻结，数据库元数据保留。主会话已要求资源线暂停正式加入Summary，并向用户提出保留数据库／迁移原生Summary的实际选择；动作边界、WM08／WM09作者来源等不依赖该选择的汇合可以继续。最终正式入口应按用户选定方式核验，而不是不加区分地要求与含Summary的隔离候选逐字相同。
+
+## 动作边界正式安装与作者来源汇合（2026-10-30）
+
+资源线已提交`cf01a06`，在实际消费源和既有生成投影加入“未声明的动作”边界，保留文风、all历史、分类器及当前记忆方式。开发候选的两份主持入口只变更这句，原有可选Summary读取保持；不是将整个开发候选覆盖正式卡。WM08／WM09在两份共享规划中分别只更新新增作者正文后的来源哈希，已有条目正文、UID、触发与启用配置保持，其他未提交内容保留。此批不需要重建六书或新规则契约，也没有伪报整包重新验证。
+
+正式安装只替换原卡入口同一句，保留全部其他字段与原换行；入口SHA从 `784bcef4accc84d9e880bdcfe11a0d3d94884f78c415337c7dfdfbf867d5493d` 变为 `b7148f4d6d84a3f8212f16b299f0ba5c59168c36bf9a42c2c28fbd56557f253a`。Summary未安装，数据库记忆继续保留；原生Summary采用与否仍等待用户选择。安装备份、源测试、候选投影和来源核验见[integration](integration/installation.json)。
+
+主会话独立核验：274份既有文件只有正式卡PNG发生预期变化，其余273份和完整settings文件字节不变；解析后的整卡等于只替换该入口句子的预期卡，原31楼聊天SHA仍为 `c4be8e3f33a80dde5aa4d1830a85124e63a56ef1cc9fb7df95e95320863c06cc`，已安装恢复模块不变。8项相关测试独立重跑通过，两份规划内WM08／WM09哈希与作者文件一致。没有新模型请求或UI操作，复用本批13轮证据；去掉可选Summary两段并归一文件换行后，已实测候选与正式动作版本相同。
+
+主会话准备预期文件时曾因Python文本模式额外转换换行，资源线在正式写入前发现；随后用Node按原字符串字节重新生成预期并核验，保护快照未更换，未把该误差写入酒馆。纠正记录随[独立核验基线](formal-integration-review-before.json)保留，[独立安装后结果](formal-integration-review-after.json)通过。后续只读复核用 `node work/replay_research/gm_style/v1/cross_scene_20261030/formal-integration-review.mjs verify`，不要重跑capture或安装准备。
