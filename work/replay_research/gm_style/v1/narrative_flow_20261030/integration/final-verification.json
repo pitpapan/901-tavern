@@ -1,0 +1,56 @@
+{
+  "status": "pass",
+  "adoptedSourceCommit": "db61d85",
+  "sourceTests": {
+    "passed": 4,
+    "failed": 0,
+    "redLog": "source-red.log",
+    "greenLog": "source-green.log"
+  },
+  "sourceSha256": {
+    "narrative-script.js": "baee2ac0bf67336a1b76a3452421e5826059b10e30baca36db683e94d16ea508",
+    "narrative-style-projection.mjs": "8ccfd9ccc7b15eec81a0a5cb481bac1dbc49d7844f476fb1fe104565eb0fd315",
+    "narrative-style.test.mjs": "c153cb0380ef2f152e6cdf97678c2a5abeda3a0cfda904d3813fa4c1eb3aae3f"
+  },
+  "reusedLiveEvidence": {
+    "baselineRounds": 6,
+    "candidateRounds": 6,
+    "eachRoundClassification": 1,
+    "eachRoundNarration": 1,
+    "fullStyleOnce": true,
+    "allPriorPlayerTurnsPresent": true,
+    "eachGroupRuleFloorsChecked": 12,
+    "revision": 0,
+    "fullRuleRootsUnchanged": true,
+    "protectedFiles": [
+      266,
+      268
+    ]
+  },
+  "formal": {
+    "beforeEntrySha256": "cccfabe9f77b9d7f2f831c65c3560851d6285b808360cc6f79f603818dba06df",
+    "afterEntrySha256": "784bcef4accc84d9e880bdcfe11a0d3d94884f78c415337c7dfdfbf867d5493d",
+    "wholeCardEqualsPrepared": true,
+    "installedEntryEqualsAdoptedCandidateBytes": true,
+    "candidateMatchesDb61d85AfterGitEolNormalization": true,
+    "onlyChangedField": "profile.narrationInstruction",
+    "protectedFiles": 270,
+    "onlyChangedFile": "data/default-user/characters/901 帝都初始卡.png",
+    "allOtherFilesAndSettingsUnchanged": true,
+    "recoveryGateSha256": "f8a5a13bf2085e98a6befbc6a1505c66d7afd24b99f0b006458e41fa6a6e1d1d"
+  },
+  "candidateProjection": {
+    "changedFiles": [
+      "import/901_六书主持入口.script.json",
+      "import/901_帝都初始卡_六书候选.card.json"
+    ],
+    "eachExactlyOneInstructionReplacementFromHEAD": true,
+    "preexistingBranchMemoryPreserved": true,
+    "otherFilesByteUnchanged": 1411
+  },
+  "newUIActions": 0,
+  "newModelCalls": 0,
+  "runtimeModulesInstalled": 0,
+  "worldbooksChanged": 0,
+  "chatFilesModifiedOrDeleted": 0
+}

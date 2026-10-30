@@ -5,14 +5,19 @@ import {createHash} from 'node:crypto';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {patchNarrativeEntry,selectAdoptedStyle} from './narrative-style-projection.mjs';
+import * as projection from './narrative-style-projection.mjs';
 import {narrationRequest} from './narrative.mjs';
 import {replayClassificationRequest} from './adjudication-gate.mjs';
 const read=p=>readFileSync(new URL(p,import.meta.url),'utf8');
 const authoring=JSON.parse(read('../../replay_research/gm_style/v1/authoring.json'));
+// Adopted flow instruction and six-round evidence: db61d85; historical fixtures remain unchanged.
+const flow=JSON.parse(read('../../replay_research/gm_style/v1/narrative_flow_20261030/candidate-change.json'));
+const instruction=text=>"narrationInstruction:'"+text+"'";
 const style=authoring.modules.find(m=>m.identifier==='901-gm-style-v1').content;
 function options(source){const start=source.indexOf('function modelOptions()'),end=source.indexOf('\nlet playerStatus',start);return Function('style','getSession','currentSceneText',source.slice(start,end)+';return modelOptions();')(style,()=>({storyContext:()=>null}),()=> '现场标记');}
 test('actual narrative options include the complete adopted style and all retained history',()=>{
  const source=read('./narrative-script.js'),request=options(source);
+ assert.ok(source.includes(instruction(flow.after)));assert.ok(!source.includes(instruction(flow.before)));
  assert.equal(style.length,2757);assert.equal(createHash('sha256').update(style).digest('hex'),'19361c47654c8559968aa0fb245178c8a0ce0186fd52a96777e2d5959f78f62a');
  assert.equal(request.max_chat_history,'all');assert.equal(request.ordered_prompts.filter(p=>p.content===style).length,1);
  assert.deepEqual(request.ordered_prompts.filter(p=>typeof p==='string'),['world_info_before','char_description','scenario','world_info_after','chat_history','user_input']);
@@ -22,9 +27,9 @@ test('actual narrative options include the complete adopted style and all retain
  const classification=replayClassificationRequest({context:{original:action,latest:action}});assert.equal(classification.max_chat_history,0);assert.ok(!JSON.stringify(classification).includes(style));
 });
 
-test('formal patch preserves every other byte and selects full style by identifier',()=>{
+test('current cumulative patch upgrades historical fixture only at the three adopted anchors',()=>{
  const before=read('../../replay_research/gm_style/v1/live_acceptance_20261030/candidate/host-entry.before.js');
- const expected=before.replace('max_chat_history:6',"max_chat_history:'all'").replace("ordered_prompts:['world_info_before'","ordered_prompts:[{role:'system',content:style},'world_info_before'");
+ const expected=before.replace('max_chat_history:6',"max_chat_history:'all'").replace("ordered_prompts:['world_info_before'","ordered_prompts:[{role:'system',content:style},'world_info_before'").replace(instruction(flow.before),instruction(flow.after));
  assert.equal(patchNarrativeEntry(before),expected);
  assert.equal(patchNarrativeEntry(expected),expected);
  assert.equal(selectAdoptedStyle({...authoring,modules:[...authoring.modules].reverse()}),style);
@@ -42,10 +47,21 @@ exec(compile(ast.Module(body=[function],type_ignores=[]),str(path),'exec'))
 card=read(ROOT/'output/replay_tavern/opening_combat_20261022_candidate/import/901_帝都初始卡.card.json')
 print(json.dumps(project_narrative_entry(card['data']['extensions']['tavern_helper']['scripts'][1]['content']),ensure_ascii=False))`;
  const run=spawnSync('python',['-c',py,root],{encoding:'utf8',env:{...process.env,PYTHONIOENCODING:'utf-8'}});assert.equal(run.status,0,run.stderr);
- const result=JSON.parse(run.stdout);assert.equal(result.style,style);assert.equal(options(result.script).max_chat_history,'all');
+ const result=JSON.parse(run.stdout);assert.ok(result.script.includes(instruction(flow.after)));assert.equal(result.style,style);assert.equal(options(result.script).max_chat_history,'all');
  assert.equal(options(result.script).ordered_prompts.filter(p=>p.content===style).length,1);
  const builder=read('../../replay_research/six_books_20261023/build_candidate.py');
  assert.ok(builder.includes("narrative=project_narrative_entry(script['content'])"));
  assert.ok(builder.includes("dump(style_dest,narrative['style'])"));assert.ok(builder.includes("'assets':assets"));
  const integrated=read('./build-integrated.mjs');assert.ok(integrated.includes('selectAdoptedStyle(await readJson('));assert.ok(integrated.includes('narrative-style.json`),style)'));
+});
+
+test('flow-only formal patch exactly reproduces the accepted entry and is idempotent',()=>{
+ const candidate=read('../../replay_research/gm_style/v1/narrative_flow_20261030/candidate-entry.js');
+ const before=candidate.replace(instruction(flow.after),instruction(flow.before));
+ const sha=s=>createHash('sha256').update(s).digest('hex');
+ assert.equal(sha(before),flow.beforeEntrySha256);assert.equal(sha(candidate),flow.afterEntrySha256);
+ assert.equal(typeof projection.patchNarrationInstruction,'function');
+ assert.equal(projection.patchNarrationInstruction(before),candidate);
+ assert.equal(projection.patchNarrationInstruction(candidate),candidate);
+ assert.equal(patchNarrativeEntry(before),candidate);
 });

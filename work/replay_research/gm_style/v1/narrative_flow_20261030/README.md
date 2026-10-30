@@ -45,3 +45,13 @@
 [cleanup-plan.md](cleanup-plan.md)和[cleanup-inventory.json](cleanup-inventory.json)已盘点18张相关卡：正式卡长期保留；本轮2张保留；4张已完成的旧隔离卡可在完整归档后列入清理；另外11张需核对所属工作线。正式卡下含“实测”的31楼原聊天明确不删。本次只交付名单，没有归档、删除、改名或清空任何卡与聊天。
 
 验收重读：`node work/replay_research/gm_style/v1/narrative_flow_20261030/check-capture.mjs baseline`及`candidate`。`manage.mjs capture`同时复核保护文件，正式入口后续安装后应改用该次安装记录的预期变更核验，不把合法安装误报为本批写坏原卡。安装夹具已执行，不重跑prepare/install或重置聊天。
+
+## 资源线正式汇合（2026-10-30）
+
+作者提交 `db61d85` 的唯一字符串修复已进入 `narrative-script.js`。既有 `narrative-style-projection.mjs` 新增单字段投影，累计入口投影也采用该指令，因此复用旧中间CARD仍会生成当前指令。4项定向回归由红转绿，核对旧CARD升级、单字段精确替换与重复投影、完整文风、all历史、分类器零历史及既有战斗文风参数。没有改写作者文风或新增规则。
+
+开发六书候选只同步两份入口JSON；1413份既有文件中其余1411份字节不变。每份入口将新句逆替换为旧句后均还原同步前SHA，已有分支记忆接线保留。这些开发入口没有整份安装到正式卡。正式安装直接读取现有卡，只替换其入口同一句，前后SHA为 `cccfabe9f77b9d7f2f831c65c3560851d6285b808360cc6f79f603818dba06df` → `784bcef4accc84d9e880bdcfe11a0d3d94884f78c415337c7dfdfbf867d5493d`，安装后入口与本批已验收候选逐字一致，解析后整卡其余字段及脚本保持。
+
+270份既有文件仅正式卡PNG预期变化，其余269份及完整settings文件、模型和memory均哈希不变；已安装的行动失败恢复模块仍为 `f8a5a13bf2085e98a6befbc6a1505c66d7afd24b99f0b006458e41fa6a6e1d1d`。正式卡和入口安装前备份已保存，完整卡备份仅本地保留、不提交。见 [安装记录](integration/installation.json)、[保护结果](integration/protection-after.json)、[候选投影检查](integration/candidate-projection.json)及 [定向测试](integration/source-green.log)。
+
+本批复用上述12轮实际调用证据，未新增模型请求或UI交互，未重部署运行模块、全量生成、修改统一计划或清理测试。原卡名称、全部聊天和存档、六书及模型参数保持；冰霜和其他未提交增量不随本批提交或安装。源代码、生成入口与正式单字段安装的独立验收由Astra完成。后续只读保护核验使用 `node work/replay_research/gm_style/v1/narrative_flow_20261030/integration/manage.mjs verify`，不要重新运行一次性prepare、sync-local或install。
