@@ -2,6 +2,7 @@ import {readFile,writeFile,mkdir,cp} from 'node:fs/promises';
 import {randomUUID} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {resolve,dirname} from 'node:path';
+import {selectAdoptedStyle} from './narrative-style-projection.mjs';
 import {createOpeningFixture,OPENING_SCENE} from './opening.mjs';
 const root=fileURLToPath(new URL('../../../',import.meta.url));
 const opening=process.argv.includes('--opening');
@@ -14,7 +15,7 @@ const json=async(path,data)=>writeFile(path,JSON.stringify(data,null,2)+'\n');
 await mkdir(resolve(out,'import'),{recursive:true});
 const card=await readJson(resolve(source,'901_帝都主持.card.json'));
 const test=await readJson(resolve(root,'work/rules_engine/combat/duel-v2.card.json'));
-const style=await readJson(resolve(source,'文风_prompt.json'));
+const style=selectAdoptedStyle(await readJson(resolve(root,'work/replay_research/gm_style/v1/authoring.json')));
 const name=opening?'901 帝都初始卡':narrative?'901 叙事战斗测试':'901 主持整合测试';
 const fileName=opening?'901_帝都初始卡':narrative?'901_叙事战斗测试':'901_主持整合测试';
 const bookName=`${fileName}_008_${opening?'20261022':'20261020'}`;
@@ -25,7 +26,7 @@ card.data.creator_notes=note;
 card.data.description+='\n\n【当前规则入口】\n'+note+'\n'+(opening?OPENING_SCENE:
   '当前位于隔离演练场，取代本卡帝都初至开场。可以交谈、尝试矮横木平衡检定，或明确开始已登记的姜黄演练／御临风与姜子尤演练。主持分类器将开战交给程序。尚未适配的能力不能凭叙述得到机械效果。');
 if(narrative)card.data.description+='\n玩家通过自然语言写扮演、动作、判定及动作和能量消耗。只执行明确声明，余下动作保留等待续写，不擅自结束回合。对方反应只能表现已成立的结果，不赠送额外攻击。仅御临风自己的数值状态可见，队友和敌人的伤势与表现用可观察的文字描述。战斗按出手、位置、应对和后果连贯展开，不写结算表。';
-card.data.description+='\n\n'+style.data.prompts.filter(p=>p.enabled!==false).map(p=>p.content).join('\n');
+card.data.description+='\n\n'+style;
 const adoptedOpening={scenario:card.data.scenario,first_mes:card.data.first_mes};
 card.data.scenario=note+'\n场地开阔无遮挡。黄泉和姜子尤相距1米，御临风、布莱特在场边，旁边有一根练习平衡的矮横木。演练以一方失去行动能力为终点；伤势按程序保留，不构成角色在正式剧情中的遭遇。';
 card.data.first_mes='【独立主持整合测试｜完整卡配置】\n\n这段演练只用于检查主持、战斗和存档的连接，不计入正式剧情。\n\n空旷场地中央，黄泉与姜子尤相隔一步站定，还没有动手。布莱特留在场边。附近放着一根用于练习平衡的矮横木，踩空时可以直接落到地上。\n\n黄泉把手停在刀鞘旁，望向场边：“准备好就开始。”';
@@ -80,9 +81,7 @@ if(opening) {
   await json(resolve(out,`public/${route}/work/character_builder/real_character/yulinfeng_opening_20261022.baseline.json`),createOpeningFixture().baseline);
 }
 if(narrative) {
-  const combatStyle=style.data.prompts.filter(p=>p.enabled!==false).map(p=>p.content).join('\n')
-    .split(/\n\s*\n/).filter(p=>/^(从玩家刚才实际做|展开描写的行动场面|NPC按自己的关注点接话|主要使用第三人称|日常可以有轻微)/.test(p));
-  await json(resolve(out,`public/${route}/narrative-style.json`),combatStyle.join('\n\n'));
+  await json(resolve(out,`public/${route}/narrative-style.json`),style);
 }
 await json(resolve(out,'build-info.json'),{name,worldbookEntries:card.data.character_book.entries.length,
   source:'M1_IMPORT_20261018_008',scope:opening?'replay/T0/opening-20261022':'isolated/full-card-integration',runtimeFiles:files});

@@ -377,6 +377,13 @@ plan={
  'state_ownership':{'stable_lore':'六书条目','original_D3':'current_state.md仅原续团，不用于重玩','replay_present':'当前有效分支摘要、摘要后保留聊天、已确认运行存档','mechanics':'沿现有stat_data.901_rules_poc与JS写回，不新增或初始化MVU/EJS','phase':'按实际条件手动启用场景，不造自动变量门控','secrets':'资料加载不公开给NPC或玩家角色'},
  'protected_sha256':protected,'entries':[plan_record(r) for r in records.values()]}
 
+def project_narrative_entry(script):
+    # Refresh adopted entry options even when the intermediate CARD predates them.
+    author=ROOT/'work/replay_research/gm_style/v1/authoring.json'
+    helper=ROOT/'work/rules_engine/gm_runtime/narrative-style-projection.mjs'
+    result=subprocess.run(['node',str(helper)],input=json.dumps({'script':script,'authoring':read(author)},ensure_ascii=False),capture_output=True,text=True,encoding='utf-8',check=True)
+    return json.loads(result.stdout)
+
 def integrate_runtime():
     for r in records.values():write(OUT/r['path'],r['content'])
     for b in BOOKS:dump(OUT/f'import/{FILENAMES[b]}.json',{'entries':{str(r['uid']):r['native'] for r in records.values() if r['book']==b}})
@@ -385,6 +392,8 @@ def integrate_runtime():
     card=read(card_path)
     original_script=read(CARD)['data']['extensions']['tavern_helper']['scripts'][1]
     script=copy.deepcopy(original_script)
+    narrative=project_narrative_entry(script['content'])
+    script['content']=narrative['script']
     assert script['content'].count('profile:{debug:false,')==1
     script['content']=script['content'].replace('profile:{debug:false,','profile:{lorebooks:'+json.dumps(list(FILENAMES.values()),ensure_ascii=False)+',debug:false,')
     context_marker="{role:'system',content:currentSceneText(scene)+"
@@ -426,7 +435,11 @@ def integrate_runtime():
         dest=OUT/'runtime_patch/901-opening-combat'/src.relative_to(ROOT)
         write(dest,src.read_text(encoding='utf-8').replace('/901-rules-runtime/','/901-opening-combat/').replace('/901-combat-runtime/','/901-opening-combat/'))
         manifest.append({'source':str(src.relative_to(ROOT)),'source_sha256':sha(src),'destination':str(dest.relative_to(OUT)),'sha256':sha(dest)})
-    dump(OUT/'runtime_patch_manifest.json',{'profile_books':list(FILENAMES.values()),'modules':manifest,
+    style_source=ROOT/'work/replay_research/gm_style/v1/authoring.json'
+    style_dest=OUT/'runtime_patch/901-opening-combat/narrative-style.json'
+    dump(style_dest,narrative['style'])
+    assets=[{'source':str(style_source.relative_to(ROOT)),'source_sha256':sha(style_source),'destination':str(style_dest.relative_to(OUT)),'sha256':sha(style_dest)}]
+    dump(OUT/'runtime_patch_manifest.json',{'profile_books':list(FILENAMES.values()),'modules':manifest,'assets':assets,
         'deployment':'candidate_not_installed','resource_contracts':len(contracts),
         'runtime_fully_verified':sum(c['verification']['runtimeFullyVerified'] for c in contracts.values())})
     rows=['# 六书条目与触发表','正文与规划同源；新增手动场景启用后临时常驻，用完关闭。原谢尔伦条目启用后仍按关键词，其余原手动条目沿原常驻方式。所有条目在角色描述后插入，扫描4层、不递归。','|书／UID|条目|触发方式|顺序|来源UID|','|---|---|---|---|---|']

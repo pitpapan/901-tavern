@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "C:\Users\pit\.codex\worktrees\yulinfeng-tavern-plan\TRPG outputs\work\replay_research\six_books_20261023\verify_candidate.py", line 10, in <module>
+    ctx=runpy.run_path(str(Path(__file__).with_name('build_candidate.py')))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\pit\.codex\worktrees\yulinfeng-tavern-plan\TRPG outputs\work\replay_research\six_books_20261023\build_candidate.py", line 239, in <module>
+    definitions,actions,selected,_=load_candidate_package(package)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pit\.codex\worktrees\yulinfeng-tavern-plan\901-resource-authoring-kit\tools\compile_resources.py", line 160, in load_candidate_package
+    docs,reuse=module.load()
+               ^^^^^^^^^^^^^
+  File "C:\Users\pit\.codex\worktrees\yulinfeng-tavern-plan\901-resource-authoring-kit\outputs\��������-20261025\compiler\compile.py", line 15, in load
+    d=json.loads(p.read_text());validator.validate(d);require(d['schemaVersion']=='901-resource/1','schema')
+                 ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\pathlib.py", line 1028, in read_text
+    return f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0x80 in position 439: illegal multibyte sequence

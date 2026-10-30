@@ -101,6 +101,8 @@ card=read(OUT/'import/901_帝都初始卡_六书候选.card.json')['data'];oldca
 for k,v in oldcard['extensions'].items():
     if k not in ['world','tavern_helper']:assert card['extensions'][k]==v,k
 expected_helper=json.loads(json.dumps(oldcard['extensions']['tavern_helper']))
+narrative=ctx['project_narrative_entry'](expected_helper['scripts'][1]['content'])
+expected_helper['scripts'][1]['content']=narrative['script']
 expected_helper['scripts'][1]['content']=expected_helper['scripts'][1]['content'].replace('profile:{debug:false,','profile:{lorebooks:'+json.dumps(list(ctx['FILENAMES'].values()),ensure_ascii=False)+',debug:false,')
 expected_helper['scripts'][1]['content']=expected_helper['scripts'][1]['content'].replace(
     "{role:'system',content:currentSceneText(scene)+",
@@ -109,6 +111,12 @@ expected_helper['scripts'][1]['content']="const {retainedBranchMemory}=await imp
 expected_helper['scripts'][1]['content']=expected_helper['scripts'][1]['content'].replace(
     "      'world_info_after','chat_history',", "      'world_info_after','chat_history',\n      ...(retainedBranchMemory(SillyTavern.chat)?[{role:'system',content:retainedBranchMemory(SillyTavern.chat)}]:[]),")
 assert card['extensions']['tavern_helper']==expected_helper
+assert read(OUT/'runtime_patch/901-opening-combat/narrative-style.json')==narrative['style']
+assets=read(OUT/'runtime_patch_manifest.json')['assets']
+assert len(assets)==1 and assets[0]['destination'].replace('\\','/')=='runtime_patch/901-opening-combat/narrative-style.json'
+for asset in assets:
+    assert sha(ROOT/asset['source'])==asset['source_sha256']
+    assert sha(OUT/asset['destination'])==asset['sha256']
 for module in read(OUT/'runtime_patch_manifest.json')['modules']:
     assert sha(ROOT/module['source'])==module['source_sha256']
     assert sha(OUT/module['destination'])==module['sha256']

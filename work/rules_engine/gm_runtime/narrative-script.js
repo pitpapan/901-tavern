@@ -11,8 +11,8 @@ const baseline=await response.json();
 const style=await (await fetch('/901-host-integration/narrative-style.json')).json();
 function modelOptions() {
   const scene=getSession().storyContext();
-  return {should_stream:false,should_silence:true,max_chat_history:6,
-    ordered_prompts:['world_info_before','char_description',...(scene?[]:['scenario']),
+  return {should_stream:false,should_silence:true,max_chat_history:'all',
+    ordered_prompts:[{role:'system',content:style},'world_info_before','char_description',...(scene?[]:['scenario']),
       'world_info_after','chat_history',
       {role:'system',content:currentSceneText(scene)+
         '\n以上是本次续写的现场依据。聊天用于承接已发生的言行，旧回复中的多余人物或伤势不得覆盖这份结算事实。未见伤势者不能补写交锋造成的伤口或裂痕。'+
