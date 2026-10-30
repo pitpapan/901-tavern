@@ -55,3 +55,7 @@
 270份既有文件仅正式卡PNG预期变化，其余269份及完整settings文件、模型和memory均哈希不变；已安装的行动失败恢复模块仍为 `f8a5a13bf2085e98a6befbc6a1505c66d7afd24b99f0b006458e41fa6a6e1d1d`。正式卡和入口安装前备份已保存，完整卡备份仅本地保留、不提交。见 [安装记录](integration/installation.json)、[保护结果](integration/protection-after.json)、[候选投影检查](integration/candidate-projection.json)及 [定向测试](integration/source-green.log)。
 
 本批复用上述12轮实际调用证据，未新增模型请求或UI交互，未重部署运行模块、全量生成、修改统一计划或清理测试。原卡名称、全部聊天和存档、六书及模型参数保持；冰霜和其他未提交增量不随本批提交或安装。源代码、生成入口与正式单字段安装的独立验收由Astra完成。后续只读保护核验使用 `node work/replay_research/gm_style/v1/narrative_flow_20261030/integration/manage.mjs verify`，不要重新运行一次性prepare、sync-local或install。
+
+## 后续归档整理（2026-10-30）
+
+用户要求继续后，已完整备份清单中的四组已完成旧测试，20份源文件及4项绑定通过ZIP/源文件哈希核验，完整归档只留本地。其余十一组补充用途和证据缺口，均保留；部分战斗聊天仍被检查脚本直接引用，资源取得父子聊天仍承载分支与持久化证据。详见[归档及保留说明](cleanup-plan.md#四组归档完成2026-10-30)与[归档清单](archive/manifest.json)。本次酒馆写入/删除为0，无模型请求；正式保护检查再次通过，原聊天、存档、六书、模型和memory未变。未执行删除或恢复。
