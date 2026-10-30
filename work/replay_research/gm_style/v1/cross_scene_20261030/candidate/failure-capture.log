@@ -1,0 +1,41 @@
+{
+  "rounds": [
+    {
+      "id": "09-摘要后核对",
+      "requests": 1,
+      "messages": [
+        {
+          "id": 17,
+          "user": true,
+          "text": "桌外核对，不推进场景：请只按本聊天已确认内容，分别回答铜牌的号码、位置和出示情况；我的私人猜测有哪些人知道；旅行袋的归属及修补委托是否成立、是否完成；刚才关于客店的说法来源及后来核实结果；我现在在哪里。不要把未记录的事情补成已发生。"
+        },
+        {
+          "id": 18,
+          "user": false,
+          "text": "行动判断或规则输入未完成；本次行动尚未裁定，没有确定成败。\n\n<StatusPlaceHolderImpl/>",
+          "status": "UNRESOLVED",
+          "diagnostic": {
+            "stage": "blocked",
+            "operationId": "gm-runtime/901 跨场景记忆复验 20261030 - 01离场与返回/17/0",
+            "classificationRequests": 0,
+            "narrationRequests": 0,
+            "elapsedMs": 34,
+            "failureStage": "readiness",
+            "reason": "runtime_or_readiness_failed",
+            "httpStatus": null
+          }
+        }
+      ],
+      "state": null
+    }
+  ],
+  "protection": {
+    "protectedFiles": 272,
+    "allUnchanged": true,
+    "modelAndMemoryUnchanged": true,
+    "model": {
+      "source": "custom",
+      "model": "[抗截断]gemini-3.8-flash"
+    }
+  }
+}
