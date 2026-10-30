@@ -107,9 +107,6 @@ expected_helper['scripts'][1]['content']=expected_helper['scripts'][1]['content'
 expected_helper['scripts'][1]['content']=expected_helper['scripts'][1]['content'].replace(
     "{role:'system',content:currentSceneText(scene)+",
     "{role:'system',content:"+json.dumps(plan['world_context_guidance']['content'],ensure_ascii=False)+"+'\\n'+currentSceneText(scene)+")
-expected_helper['scripts'][1]['content']="const {retainedBranchMemory}=await import('/901-opening-combat/work/replay_research/six_books_20261023/branch-memory.mjs');\n"+expected_helper['scripts'][1]['content']
-expected_helper['scripts'][1]['content']=expected_helper['scripts'][1]['content'].replace(
-    "      'world_info_after','chat_history',", "      'world_info_after','chat_history',\n      ...(retainedBranchMemory(SillyTavern.chat)?[{role:'system',content:retainedBranchMemory(SillyTavern.chat)}]:[]),")
 assert card['extensions']['tavern_helper']==expected_helper
 assert read(OUT/'runtime_patch/901-opening-combat/narrative-style.json')==narrative['style']
 assets=read(OUT/'runtime_patch_manifest.json')['assets']

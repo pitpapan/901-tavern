@@ -67,7 +67,7 @@ const files=[
   ...['map','tactics','catalog','mechanics','engine','grapple','transitions','runtime','tavern','host','host-ui'].map(n=>`work/rules_engine/combat/${n}.mjs`),
   'work/rules_engine/combat/opening.mjs','work/rules_engine/gm_runtime/opening.mjs','work/rules_engine/gm_runtime/opening-binding.mjs','work/rules_engine/gm_runtime/opening-scene-ui.mjs',
   ...['adjudication-gate.mjs','replay-check.mjs','replay-gate-script.example.js','integrated.mjs','rule-actions.mjs','rule-reference.mjs','actor-rules.mjs','scene-rules.mjs'].map(n=>`work/rules_engine/gm_runtime/${n}`),
-  ...(narrative?['work/rules_engine/combat/presentation.mjs','work/rules_engine/gm_runtime/narrative.mjs','work/rules_engine/gm_runtime/player-status-ui.mjs','work/rules_engine/gm_runtime/map-ui.mjs','work/rules_engine/gm_runtime/map-art.mjs','work/rules_engine/gm_runtime/map-reference-demo.mjs','work/rules_engine/gm_runtime/map-reference-demo.html']:[]),
+  ...(narrative?['work/replay_research/six_books_20261023/branch-memory.mjs','work/rules_engine/combat/presentation.mjs','work/rules_engine/gm_runtime/narrative.mjs','work/rules_engine/gm_runtime/player-status-ui.mjs','work/rules_engine/gm_runtime/map-ui.mjs','work/rules_engine/gm_runtime/map-art.mjs','work/rules_engine/gm_runtime/map-reference-demo.mjs','work/rules_engine/gm_runtime/map-reference-demo.html']:[]),
 ];
 for(const file of files) {
   const dest=resolve(out,`public/${route}`,file);

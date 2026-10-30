@@ -1,3 +1,4 @@
+const {retainedBranchMemory}=await import('/901-host-integration/work/replay_research/six_books_20261023/branch-memory.mjs');
 const {registerReplayGate}=await import('/901-host-integration/work/rules_engine/gm_runtime/replay-gate-script.example.js');
 const {createChatSessionAccess,INTEGRATION_SCENE}=await import('/901-host-integration/work/rules_engine/gm_runtime/integrated.mjs');
 const {createNarrativeSession,narrationRequest}=await import('/901-host-integration/work/rules_engine/gm_runtime/narrative.mjs');
@@ -14,6 +15,7 @@ function modelOptions() {
   return {should_stream:false,should_silence:true,max_chat_history:'all',
     ordered_prompts:[{role:'system',content:style},'world_info_before','char_description',...(scene?[]:['scenario']),
       'world_info_after','chat_history',
+      ...(retainedBranchMemory(SillyTavern.chat)?[{role:'system',content:retainedBranchMemory(SillyTavern.chat)}]:[]),
       {role:'system',content:currentSceneText(scene)+
         '\n以上是本次续写的现场依据。聊天用于承接已发生的言行，旧回复中的多余人物或伤势不得覆盖这份结算事实。未见伤势者不能补写交锋造成的伤口或裂痕。'+
         '只写可观察表现，不公开同伴或敌人数值；JS独占规则写回。玩家数值面板由MVU显示，正文不附面板。'},'user_input']};

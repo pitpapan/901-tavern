@@ -22,6 +22,19 @@ export function patchDeclaredActionInstruction(source){
  if(source.split(before).length!==2||source.includes(after))throw Error('Declared-action instruction anchor differs');
  return source.replace(before,after);
 }
+// Reuse the selected native manual Summary source; no memory writes or tool switching.
+export function patchSummaryMemory(source){
+ const route=source.match(/const \{registerReplayGate\}=await import\('([^']+)work\/rules_engine\/gm_runtime\/replay-gate-script\.example\.js'\);/)?.[1];
+ if(!route)throw Error('Expected replay gate import route');
+ const importLine=`const {retainedBranchMemory}=await import('${route}work/replay_research/six_books_20261023/branch-memory.mjs');`;
+ if(!source.includes(importLine))source=importLine+'\n'+source;
+ if(source.split(importLine).length!==2)throw Error('Expected one Summary import');
+ const history="      'world_info_after','chat_history',";
+ const slot="\n      ...(retainedBranchMemory(SillyTavern.chat)?[{role:'system',content:retainedBranchMemory(SillyTavern.chat)}]:[]),";
+ if(source.split(history).length!==2)throw Error('Expected one continuation history slot');
+ if(!source.includes(history+slot)&&!source.includes(history+'\r'+slot))source=source.replace(history,history+slot);
+ return source;
+}
 export function patchNarrativeEntry(source){
  const replacements=[['max_chat_history:6',"max_chat_history:'all'"],["ordered_prompts:['world_info_before'","ordered_prompts:[{role:'system',content:style},'world_info_before'"]];
  for(const [before,after]of replacements){
@@ -29,7 +42,7 @@ export function patchNarrativeEntry(source){
   if(source.split(before).length!==2||source.includes(after))throw Error('Narrative entry anchor differs: '+before);
   source=source.replace(before,after);
  }
- return patchDeclaredActionInstruction(patchNarrationInstruction(source));
+ return patchSummaryMemory(patchDeclaredActionInstruction(patchNarrationInstruction(source)));
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
  const input=JSON.parse(readFileSync(0,'utf8'));

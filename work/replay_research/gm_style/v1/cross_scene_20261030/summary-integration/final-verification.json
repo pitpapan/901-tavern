@@ -1,0 +1,61 @@
+{
+  "status": "pass",
+  "scope": "User-approved manual native Summary import/read slot only; no automatic generation, memory writes or database conversion.",
+  "sourceTests": {
+    "passed": 9,
+    "failed": 0,
+    "log": "source-green.log",
+    "coverage": "existing memory3 + projection6; current generated entry exact idempotence included"
+  },
+  "sourceSha256": {
+    "work/rules_engine/gm_runtime/narrative-script.js": "d56a1e0fa7858f85fd25127724523413113b09c2394a6ab73cd448a63496b41c",
+    "work/rules_engine/gm_runtime/narrative-style-projection.mjs": "01257b6b957927b490416ccb1e6f2001578a4cf138d7ea979dd35b549bebf4fe",
+    "work/rules_engine/gm_runtime/narrative-style.test.mjs": "4702b09a26c26cb35be2185fe683d364c1146a99b1c9b2d0684acd51478d8a73",
+    "work/rules_engine/gm_runtime/build-integrated.mjs": "457d5622aa6250bf7bac78d4a4e365043346099bf4b07f831ede00913bf93e2a",
+    "work/replay_research/six_books_20261023/build_candidate.py": "f2f729e45b7bc3510798cac035530d03bab86187cd0a6a3841b9670f78d0b850",
+    "work/replay_research/six_books_20261023/verify_candidate.py": "49cdd59a1e5616dfb3d94467443d32788193887ac63e30a544930baf60b02087"
+  },
+  "formal": {
+    "entrySha256": "b1b64b4242a0839a62b30a4ea87a5118923ab6e9a029bc7200e80e17a54b41ab",
+    "wholeCardEqualsPrepared": true,
+    "entryEqualsRootExpected": true,
+    "onlyTwoInsertions": true,
+    "originalLineEndingsPreserved": {
+      "CRLF": 60,
+      "bareLFBefore": 7,
+      "bareLFAfter": 9
+    },
+    "summaryInstalled": true,
+    "protectedFiles": 274,
+    "onlyChangedFile": "data/default-user/characters/901 帝都初始卡.png",
+    "settingsExactHashUnchanged": true,
+    "recoveryGateSha256": "f8a5a13bf2085e98a6befbc6a1505c66d7afd24b99f0b006458e41fa6a6e1d1d",
+    "installedMemoryModuleEqualsUnchangedSource": true
+  },
+  "originalChat": {
+    "messages": 31,
+    "completeFileHashUnchanged": true,
+    "activeExtraMemoryCount": 0,
+    "databaseCheckpointReason": "init",
+    "databaseLogEntries": 0,
+    "databaseTables": 9,
+    "databaseDataRows": 0,
+    "databaseOnlyHeaders": true
+  },
+  "reusedLiveEvidence": {
+    "candidateRounds": 3,
+    "eachRealContinuationSummaryCopies": 1,
+    "styleOnce": true,
+    "allPriorPlayerInputsRetained": true,
+    "source": "../candidate/request-check.json"
+  },
+  "newModelCalls": 0,
+  "newUIActions": 0,
+  "runtimeModulesInstalled": 0,
+  "generatedOutputsWritten": 0,
+  "chatOrMemoryWrites": 0,
+  "limits": [
+    "Existing three-round isolated real Summary evidence reused; no fresh model calls.",
+    "All retained history remains available; does not establish long-term Summary-only recall."
+  ]
+}

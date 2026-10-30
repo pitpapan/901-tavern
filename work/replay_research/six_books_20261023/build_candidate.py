@@ -400,11 +400,6 @@ def integrate_runtime():
     assert script['content'].count(context_marker)==1, 'Expected final continuation context'
     script['content']=script['content'].replace(context_marker,
         "{role:'system',content:"+json.dumps(world_context_guidance,ensure_ascii=False)+"+'\\n'+currentSceneText(scene)+")
-    script['content']="const {retainedBranchMemory}=await import('/901-opening-combat/work/replay_research/six_books_20261023/branch-memory.mjs');\n"+script['content']
-    memory_marker="      'world_info_after','chat_history',"
-    assert script['content'].count(memory_marker)==1, 'Expected continuation history slot'
-    script['content']=script['content'].replace(memory_marker,memory_marker+
-        "\n      ...(retainedBranchMemory(SillyTavern.chat)?[{role:'system',content:retainedBranchMemory(SillyTavern.chat)}]:[]),")
     card['data']['extensions']['tavern_helper']['scripts'][1]=script
     base_entries={e['id']:e for e in read(CARD)['data']['character_book']['entries']}
     entries=[]
