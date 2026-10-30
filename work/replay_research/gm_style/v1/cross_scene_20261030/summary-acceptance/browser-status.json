@@ -1,0 +1,26 @@
+{
+  "status": "blocked-before-first-live-round",
+  "operator": "Terra 6.1 High",
+  "agent": "/root/terra_summary_confirmation",
+  "evidenceKind": "operator tool report; checked against persisted chat and recorder metadata",
+  "browserInventory": [],
+  "iabError": "Browser is not available: iab",
+  "chromeError": "Browser is not available: chrome",
+  "nativeFallback": {
+    "skyImported": true,
+    "chromeWindowFound": true,
+    "windowTitle": "抖音精选",
+    "operation": "get_window / activate_window / get_window_state combined call",
+    "elapsedSecondsReported": 278.7,
+    "result": "aborted by user",
+    "interruptionCause": "Main agent interrupted the unresponsive operator call; user did not cancel the task.",
+    "pageStateObtained": false,
+    "backgroundCompletionKnown": false
+  },
+  "messagesSent": 0,
+  "liveRounds": 0,
+  "savedChatMessages": 23,
+  "modelCalls": 0,
+  "nextRound": "12-对白与私人思考",
+  "resume": "Restore browser control, open the already installed isolated card/chat, start recorder, send config.rounds[0].input exactly once, save evidence, then main-agent review. Do not rerun preparation or installation."
+}

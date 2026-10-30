@@ -137,3 +137,21 @@ Terra 6.1 High通过IAB只读核对 `127.0.0.1:8000`：当前自定义聊天补�
 资源线已单独提交 `8c4e5e3`，正式汇合已完成：真实入口从 `/901-opening-combat/narrative-style.json` 加载文风，本次只安装这份2812字符的外置文风资产，正式卡入口无需改变。主会话独立[安装后核验](dialogue-review-after.json)确认274份保护文件仅该资产变化，其余273份、整张正式卡与完整settings字节不变；原31楼SHA仍为 `c4be8e3f33a80dde5aa4d1830a85124e63a56ef1cc9fb7df95e95320863c06cc`。文风文件SHA为 `1c0d8e03aa91e14a5bd94650199d1493ce344ce6b54e59f7935671cf73b3ffcb`，与独立逐字预期一致。模型与冻结摘要保持，新摘要未写入聊天。
 
 独立运行 `node --test work/replay_research/six_books_20261023/branch-memory.test.mjs work/rules_engine/gm_runtime/narrative-style.test.mjs`，10项通过。只读安装重查为 `node work/replay_research/gm_style/v1/cross_scene_20261030/dialogue-review.mjs verify`；不要重跑capture。源与候选投影、清单及安装细节由资源线记录在[dialogue-boundary-integration](dialogue-boundary-integration/installation.json)。本轮没有新的模型调用或UI交互，不将程序断言当作模型不会泄漏内心的语义保证。
+
+## 正式数据库模式与剧情摘要隔离采纳
+
+用户随后答复此前记忆选择题：“保留数据库记忆（推荐）：正式只合入动作边界和作者来源更新，Summary修复保留为可选方案。”又明确采用本轮剧情摘要，只写入隔离分支新副本，再做实际加载和叙事验收。此最新选择覆盖此前正式启用Summary的决定；不会撤销新对白／内心约定或动作边界。
+
+资源线已撤掉正式卡入口的Summary导入及注入两段，入口恢复为 `b7148f4d6d84a3f8212f16b299f0ba5c59168c36bf9a42c2c28fbd56557f253a`，2812字符外置文风仍为 `1c0d8e03aa91e14a5bd94650199d1493ce344ce6b54e59f7935671cf73b3ffcb`。数据库配置与空表、原聊天、存档和模型保持；Summary能力不删除，但构建默认关闭，须显式选择。见[模式恢复证据](database-mode-restore/installation.json)。主会话独立确认正式入口哈希，并重跑相关11项测试通过。历史Summary接线验收仅证明当时版本，不能继续当作当前正式模式。
+
+已新建独立角色 `901 剧情摘要采纳验收 20261030`，聊天为 `901 剧情摘要采纳验收 20261030 - 01已采纳剧情记忆`。从此前已验证候选复制23楼，只在新副本移除第4楼未经玩家声明的“示意”手势，保留全部玩家输入；七份完整规则快照只重绑定chatId，revision0与空操作账本保持。原有摘要从新副本的当前消息额外字段移除，最新第22楼写入[已采纳剧情摘要](summary-acceptance/adopted-summary.txt)，内容与用户批准版本一致，仅把待确认标题改为已采纳及截止第11轮。原候选与正式31楼不改。
+
+新副本显式保留可选Summary读取并引用已安装的2812字符文风，绑定既有六书；自动摘要仍冻结。安装后的独立保护核验通过：基线274份既有文件逐字不变，模型与完整memory配置哈希不变。完整卡和种子仅本地留存、不提交；[准备记录](summary-acceptance/preparation.json)及[安装记录](summary-acceptance/installation.json)保存来源与采纳范围。
+
+本次实际验收计划三轮：12对白与私人思考分离、13授权转场与停留、14桌外剧情记忆核对。每轮只发送一次并保存实际请求和回复，由Terra High操作UI，主会话判读、检查请求中摘要和文风各一次及规则根不变。准备与文件读回不算实际生成；当前进度以本节后续验收结果为准。
+
+资源线恢复正式数据库模式的独立提交为 `25f249c`。之后settings文件因本线给新增隔离角色添加六书绑定而变化，这是新副本安装的已授权变更；本线独立核对模型配置与完整memory配置哈希不变，未回退设置。正式入口、2812字符文风、原聊天和所有既有保护文件仍保持恢复后的基线。
+
+**本轮验收停点：浏览器工具连接阻塞，第12轮尚未发送。** Terra实际尝试IAB和Chrome均得到 `Browser is not available`，浏览器清单为空；按既有授权使用原生Windows接口成功导入sky并发现Chrome窗口，但窗口读取组合调用约278.7秒仍无页面状态，主会话中断，工具返回 `aborted by user`。这是主会话停止无响应工具，不是用户取消任务。操作方报告未打开聊天或发送内容；主会话读取持久化聊天仍为23楼，采集记录为空、七份完整规则根保持，274份既有文件保护复核通过。详见[browser-status](summary-acceptance/browser-status.json)及[保护结果](summary-acceptance/protection-after.json)。实际生成0轮、模型请求0次；不能声称此次摘要或NPC内心约定已经通过实际语义验收。
+
+恢复浏览器控制后直接打开上述已安装新副本，从第12轮开始采集并发送，无需再次询问已采用摘要、无需重建或覆盖聊天。每轮后只读核验命令：`node work/replay_research/gm_style/v1/cross_scene_20261030/summary-acceptance/manage.mjs capture`，然后 `node work/replay_research/gm_style/v1/cross_scene_20261030/summary-acceptance/check-capture.mjs`；后一命令要求至少一轮真实记录，当前0轮不得伪造pass。不要重跑prepare、baseline或install。
