@@ -40,3 +40,11 @@
 修复与隔离证据先提交为 `8456fba`，随后只替换正式 `/901-opening-combat/work/rules_engine/gm_runtime/replay-gate-script.example.js`。文件与HTTP读回和验收候选完全一致；`formal-installation.json`记录前后哈希，`formal-gate.before.js`保存原模块。安装后264份既有文件仅此1个预期变化，另外263份及完整模型/memory设置均不变。正式卡和原31楼保留；修复不回写旧的失败提示。已打开的酒馆页需刷新以载入新模块。
 
 共享生成器、规划、清单及生成输出未改。资源线汇合时应以本记录的正式安装哈希为当前基线，不能继续使用旧安装清单覆盖此模块；源文件自动投影规则不需新增。原历史底层异常仍无法追溯，但此后战后普通分类/续写异常已进入带安全诊断的正确恢复路径。
+
+## 资源线运行包与安装清单同步（2026-10-30）
+
+上段为正式单模块安装时的交接状态。资源线现已按既有生成器的路径及行尾规则，仅同步六书候选中的 `runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/replay-gate-script.example.js`，并更新 `runtime_patch_manifest.json` 对应的来源／产物哈希与 `installation.json` 中该模块的当前安装记录及证据引用。历史整批安装记录、prepared和before证据保持原样。
+
+来源与提交 `8456fba` 完全一致，来源SHA256为 `aa013a670180eabb2c2df99636a339e80c7b6a05cfb57161ef23af6b46631aaa`；候选产物与此前验收候选、当前正式文件逐字节相同，SHA256为 `f8a5a13bf2085e98a6befbc6a1505c66d7afd24b99f0b006458e41fa6a6e1d1d`。核对1413份现有候选文件，只有该模块及两份清单变化，其余1410份字节保持。详见 [runtime-package-sync.json](runtime-package-sync.json)。
+
+本批复用已完成的48项回归和Terra隔离实测证据，新增核验仅覆盖投影字节及清单一致性。未重新生成整包、安装正式环境、调用模型或打开浏览器；原卡、六书、模型参数、原聊天、存档及测试聊天均未写入或清理。冰霜与其他开发增量仍保留为原有未提交内容，不随本批提交或部署。

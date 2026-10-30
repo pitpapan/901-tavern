@@ -163,6 +163,15 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
   let pending = null;
   let lastDecision = null;
   let trustedRuleContext = {};
+  // A retained battle snapshot also exists in story mode. Only an exception
+  // from a combat call belongs to its recovery route, not later story work.
+  let handlingCombat = false;
+  const combatCall = async call => {
+    handlingCombat = true;
+    const result = await call();
+    handlingCombat = false;
+    return result;
+  };
   try {
     mark('readiness');
     mvu = await getMvu();
@@ -176,9 +185,9 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
     }
     await profile.prepare?.({mvu,player});
     if(combat) {
-      const resumed=await combat.resumeEntry?.(player);
+      const resumed=await combatCall(()=>combat.resumeEntry?.(player));
       if(resumed?.handled) {mark('combat_entry_resumed');return;}
-      const handled=await combat.handleTurn({player});
+      const handled=await combatCall(()=>combat.handleTurn({player}));
       if(handled?.handled) {mark('combat_handled');return;}
     }
     const readiness = readinessOf(mvu, player);
@@ -284,7 +293,7 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
         !readTestOperation({ mvu, getAnchor, operationId: candidate.operationId }),
       onStage: stage => mark(stage),
       enterCombat: combat?.enterForPlayer ? ({context,request})=>
-        combat.enterForPlayer(request.encounterId,context.original) : undefined,
+        combatCall(()=>combat.enterForPlayer(request.encounterId,context.original)) : undefined,
       classify: async context => {
         mark('request_construction');
         const saved = readTestOperation({ mvu, getAnchor, operationId: context.operationId });
@@ -469,7 +478,7 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
     mark('complete');
     console.log('[901-REPLAY-GATE]', result.status, result.operationId);
   } catch (error) {
-    if(lastDecision?.request?.kind!=='recovery'&&combat?.handleFailure&&chatId()===expectedChatId&&await combat.handleFailure({player,error}))return;
+    if(handlingCombat&&combat?.handleFailure&&chatId()===expectedChatId&&await combat.handleFailure({player,error}))return;
     // Do not expose a private opportunity via error notices/debug chat text.
     // A committed result remains recoverable directly from its MVU operation.
     if (lastDecision?.request?.kind === 'scripted_fortune') return;

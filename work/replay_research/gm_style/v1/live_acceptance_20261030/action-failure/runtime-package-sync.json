@@ -1,0 +1,42 @@
+{
+  "status": "pass",
+  "sourceCommit": "8456fba",
+  "installationEvidenceCommit": "0433bd6",
+  "sourceSha256": "aa013a670180eabb2c2df99636a339e80c7b6a05cfb57161ef23af6b46631aaa",
+  "projectedSha256": "f8a5a13bf2085e98a6befbc6a1505c66d7afd24b99f0b006458e41fa6a6e1d1d",
+  "sourceEqualsCommittedFix": true,
+  "existingGeneratorProjectionMatches": true,
+  "candidateEqualsVerifiedCandidateAndInstalledFile": true,
+  "installedFileReadOnly": true,
+  "candidateExistingFilesChecked": 1413,
+  "changedCandidateFiles": [
+    "installation.json",
+    "runtime_patch_manifest.json",
+    "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/replay-gate-script.example.js"
+  ],
+  "otherCandidateFilesByteUnchanged": 1410,
+  "installationRecordPath": "output/replay_tavern/six_books_20261023_candidate/installation.json",
+  "priorInstallationRecordSha256": "6f9b49b7f9eb89505397a3a7c90b7e8798b5ad9c9b261b864fe57cb59e45313e",
+  "installedAt": "2026-10-30T06:41:14.354Z",
+  "reusedRegression": {
+    "command": "node --test work/rules_engine/gm_runtime/replay-gate-script.test.mjs work/rules_engine/gm_runtime/narrative.test.mjs",
+    "passed": 48,
+    "failed": 0
+  },
+  "reusedLiveVerification": "work/replay_research/gm_style/v1/live_acceptance_20261030/action-failure/verification.json",
+  "newModelCalls": 0,
+  "newUIActions": 0,
+  "formalDeploymentsThisSync": 0,
+  "chatFilesWrittenOrDeleted": 0,
+  "unrelatedDevelopmentChangesPreserved": true,
+  "before": {
+    "installation.json": "02ba8eab1471b90d351c61fae0a0f91dba86ad166ae4a40df2a3472c185b992f",
+    "runtime_patch_manifest.json": "588f6bc170bbbbf155b0dd1db864542e690dcd9d66b0f2f79ad90ff1ff0e1921",
+    "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/replay-gate-script.example.js": "886f4bd160bcc83472eb1df3e8b6a237838f7c759832cee40c8659cba1603c87"
+  },
+  "after": {
+    "installation.json": "6d0100e5f005884e6e849187a91c4fcfd4dc99837236dac1a69bd03dbc95e0b4",
+    "runtime_patch_manifest.json": "b90dae2b4eae45bffb65b10896f7b2793922286c6f0077053d30bc52b23ca83d",
+    "runtime_patch/901-opening-combat/work/rules_engine/gm_runtime/replay-gate-script.example.js": "f8a5a13bf2085e98a6befbc6a1505c66d7afd24b99f0b006458e41fa6a6e1d1d"
+  }
+}
