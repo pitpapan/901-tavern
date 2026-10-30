@@ -1,0 +1,12 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {resolve} from 'node:path';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+const out=import.meta.dirname,source=await readFile(resolve(out,'baseline/host-entry.test.js'),'utf8');
+const before='用原团式文字承接当前场景。只描述队友和敌人的可见表现，不公开其数值；不自动开战，不替御临风说话或决定。';
+const after='承接本轮已声明言行的客观后果和相关人物的回应，不补御临风新台词、心理、选择或承诺。普通应答完成即可结束，未变化的环境、站位和闲置动作无需逐人复述；不以等待安排交棒。感官只呈现已有现场可支持的观察；普通休息、闲聊没有线索依据时不新增可疑人物或暗示危险。不公开NPC数值，不自动开战。';
+assert.equal(source.split(before).length,2);const candidate=source.replace(before,after);
+await writeFile(resolve(out,'candidate-entry.js'),candidate);
+const hash=x=>createHash('sha256').update(x).digest('hex');
+await writeFile(resolve(out,'candidate-change.json'),JSON.stringify({field:'profile.narrationInstruction',before,after,beforeEntrySha256:hash(source),afterEntrySha256:hash(candidate),styleModuleChanged:false,classificationChanged:false,mechanicsChanged:false,historySettingChanged:false,modelChanged:false},null,2)+'\n');
+console.log(JSON.stringify({prepared:true,changedField:'profile.narrationInstruction'}));
