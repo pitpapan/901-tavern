@@ -30,14 +30,16 @@
     "exactSeedRootUnchanged": true
   },
   "protectedFiles": 264,
-  "expectedChanges": [],
+  "expectedChanges": [
+    "public/901-opening-combat/work/rules_engine/gm_runtime/replay-gate-script.example.js"
+  ],
   "allOtherProtectedFilesUnchanged": true,
   "modelAndMemoryUnchanged": true,
   "model": {
     "source": "custom",
     "model": "[抗截断]gemini-3.8-flash"
   },
-  "formalInstalled": false,
+  "formalInstalled": true,
   "tests": {
     "command": "node --test work/rules_engine/gm_runtime/replay-gate-script.test.mjs work/rules_engine/gm_runtime/narrative.test.mjs",
     "passed": 48,
