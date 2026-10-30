@@ -1,0 +1,46 @@
+{
+  "status": "pass",
+  "naturalRepeat": {
+    "classification": 1,
+    "narration": 1
+  },
+  "controlledFaults": 2,
+  "baselineMisreportReproduced": true,
+  "fixedFailure": {
+    "status": "NARRATION_PENDING",
+    "diagnostic": {
+      "stage": "blocked",
+      "operationId": "gm-runtime/901 行动失败隔离验收 20261030 - 01原现场复现/31/0",
+      "classificationRequests": 0,
+      "narrationRequests": 1,
+      "elapsedMs": 713,
+      "failureStage": "continuation",
+      "reason": "http_error",
+      "httpStatus": 503
+    }
+  },
+  "nativeRetry": {
+    "classification": 0,
+    "narration": 1,
+    "newUserMessages": 0,
+    "status": "NO_CHECK"
+  },
+  "state": {
+    "revision": 10,
+    "exactSeedRootUnchanged": true
+  },
+  "protectedFiles": 264,
+  "expectedChanges": [],
+  "allOtherProtectedFilesUnchanged": true,
+  "modelAndMemoryUnchanged": true,
+  "model": {
+    "source": "custom",
+    "model": "[抗截断]gemini-3.8-flash"
+  },
+  "formalInstalled": false,
+  "tests": {
+    "command": "node --test work/rules_engine/gm_runtime/replay-gate-script.test.mjs work/rules_engine/gm_runtime/narrative.test.mjs",
+    "passed": 48,
+    "failed": 0
+  }
+}

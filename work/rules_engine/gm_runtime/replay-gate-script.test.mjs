@@ -102,6 +102,37 @@ test('unconfirmed rule persistence blocks narration and reports memory-only sett
  assert.doesNotMatch(fixture.chat.at(-1).mes,/规则结果已保存/);
 });
 
+test('postcombat story classification failure retains its diagnostic instead of using combat fallback',async()=>{
+ let combatFailures=0;
+ const fixture=await hostFixture({generationError:Object.assign(Error('upstream unavailable'),{status:503}),
+   combat:{handleTurn:async()=>({handled:false}),handleFailure:async()=>{combatFailures++;return true;}}});
+ await fixture.run();
+ assert.equal(combatFailures,0);
+ const meta=fixture.chat.at(-1).extra['901_replay_gate'];
+ assert.equal(meta.status,'UNRESOLVED');assert.equal(meta.diagnostic.httpStatus,503);
+ assert.equal(meta.diagnostic.failureStage,'request_dispatched');
+});
+
+test('postcombat story continuation failure remains resumable without reclassifying or settling',async()=>{
+ let combatFailures=0;
+ const fixture=await hostFixture({combat:{handleTurn:async()=>({handled:false}),handleFailure:async()=>{combatFailures++;return true;}}});
+ await fixture.run();
+ assert.equal(combatFailures,0);
+ assert.equal(fixture.chat.at(-1).extra['901_replay_gate'].status,'NARRATION_PENDING');
+ assert.match(fixture.chat.at(-1).mes,/无需检定.*叙述尚未完成/);
+ const before=structuredClone(fixture.floors[0]);
+ fixture.succeed();await fixture.load();await fixture.run();
+ assert.equal(fixture.stats.classifications,1);assert.equal(fixture.stats.narrations,2);
+ assert.equal(fixture.chat.at(-1).extra['901_replay_gate'].status,'NO_CHECK');
+ assert.deepEqual(fixture.floors[0],before);
+});
+
+test('a failure inside combat handling still uses the combat recovery route',async()=>{
+ const error=Error('combat narrator unavailable');let seen;
+ const fixture=await hostFixture({combat:{handleTurn:async()=>{throw error;},handleFailure:async input=>{seen=input;return true;}}});
+ await fixture.run();assert.equal(seen.error,error);assert.equal(fixture.stats.classifications,0);
+});
+
 test('native combat regeneration restores the deleted report and unique latest root before a cancelled menu',async()=>{
   let seen;
   const fixture=await hostFixture({combat:{handleTurn:async()=>{
