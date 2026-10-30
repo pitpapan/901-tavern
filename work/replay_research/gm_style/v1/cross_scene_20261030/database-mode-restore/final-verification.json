@@ -1,0 +1,46 @@
+{
+  "status": "installed-pass/current-settings-changed",
+  "sourceChanges": [
+    "work/rules_engine/gm_runtime/narrative-script.js",
+    "work/rules_engine/gm_runtime/narrative-style-projection.mjs",
+    "work/rules_engine/gm_runtime/narrative-style.test.mjs",
+    "work/replay_research/six_books_20261023/build_candidate.py"
+  ],
+  "sourceSha256": {
+    "work/rules_engine/gm_runtime/narrative-script.js": "a166818692f25acc9b3b0748a1972946191380371491946bff7e07e6c4a6a703",
+    "work/rules_engine/gm_runtime/narrative-style-projection.mjs": "5b4ffb7c560e6a488953b9bbe2f494266cd41a9e794c2f5dca9d448b5ba411c6",
+    "work/rules_engine/gm_runtime/narrative-style.test.mjs": "1c03093951cac6ab528caa478e9871936f4a6c4450c2f10cf7e9a3a8b0c4369e",
+    "work/replay_research/six_books_20261023/build_candidate.py": "8d88a61663cc906bda892c95bf1ca7054684c7780df63be6d7cda00c15e961ab"
+  },
+  "sourceTests": {
+    "passed": 11,
+    "failed": 0,
+    "redLog": "source-red.log",
+    "greenLog": "source-green.log"
+  },
+  "sharedDefault": "database mode: no Summary import or slot; existing database host behavior untouched",
+  "optionalSummary": "Explicit patchNarrativeEntry(source,{summary:true}) or JSON CLI summary:true; existing module semantics unchanged",
+  "sixBookDevelopment": "project_narrative_entry explicitly passes summary:true; validator reuses this helper; generated output unchanged in this task",
+  "formal": {
+    "entrySha256": "b7148f4d6d84a3f8212f16b299f0ba5c59168c36bf9a42c2c28fbd56557f253a",
+    "wholeCardEqualsPrepared": true,
+    "summaryAbsent": true,
+    "exactInversePatchTested": true,
+    "styleChars": 2812,
+    "styleAssetSha256": "1c0d8e03aa91e14a5bd94650199d1493ce344ce6b54e59f7935671cf73b3ffcb",
+    "existingBaselineFilesChecked": 274,
+    "onlyChangedBaselineFile": "data/default-user/characters/901 帝都初始卡.png",
+    "newFilesNotEnumeratedOrAttributedToThisTask": true
+  },
+  "settings": {
+    "unchangedAtRestorationInstall": true,
+    "matchesRestorationBaselineAtLaterReadback": false,
+    "scope": "Later shared settings drift is recorded, not attributed or overwritten; this agent made no settings writes."
+  },
+  "formalWritesByThisAgent": 0,
+  "runtimeModuleInstalls": 0,
+  "generatedOutputWrites": 0,
+  "newModelCalls": 0,
+  "newUIActions": 0,
+  "limits": "No database-reading adapter or memory-tool switch added; Summary remains optional for explicitly selected isolated/development use."
+}

@@ -378,10 +378,11 @@ plan={
  'protected_sha256':protected,'entries':[plan_record(r) for r in records.values()]}
 
 def project_narrative_entry(script):
+    # Optional manual-Summary development candidate; shared host defaults to database mode.
     # Refresh adopted entry options even when the intermediate CARD predates them.
     author=ROOT/'work/replay_research/gm_style/v1/authoring.json'
     helper=ROOT/'work/rules_engine/gm_runtime/narrative-style-projection.mjs'
-    result=subprocess.run(['node',str(helper)],input=json.dumps({'script':script,'authoring':read(author)},ensure_ascii=False),capture_output=True,text=True,encoding='utf-8',check=True)
+    result=subprocess.run(['node',str(helper)],input=json.dumps({'script':script,'authoring':read(author),'summary':True},ensure_ascii=False),capture_output=True,text=True,encoding='utf-8',check=True)
     return json.loads(result.stdout)
 
 def integrate_runtime():

@@ -35,16 +35,27 @@ export function patchSummaryMemory(source){
  if(!source.includes(history+slot)&&!source.includes(history+'\r'+slot))source=source.replace(history,history+slot);
  return source;
 }
-export function patchNarrativeEntry(source){
+// Database mode leaves the existing host memory system alone and removes only these optional insertions.
+export function removeSummaryMemory(source){
+ const route=source.match(/const \{registerReplayGate\}=await import\('([^']+)work\/rules_engine\/gm_runtime\/replay-gate-script\.example\.js'\);/)?.[1];
+ if(!route)throw Error('Expected replay gate import route');
+ const importLine=`const {retainedBranchMemory}=await import('${route}work/replay_research/six_books_20261023/branch-memory.mjs');`;
+ const history="      'world_info_after','chat_history',";
+ const slot="      ...(retainedBranchMemory(SillyTavern.chat)?[{role:'system',content:retainedBranchMemory(SillyTavern.chat)}]:[]),";
+ return source.replace(importLine+'\r\n','').replace(importLine+'\n','')
+   .replace(history+'\r\n'+slot,history).replace(history+'\n'+slot,history);
+}
+export function patchNarrativeEntry(source,{summary=false}={}){
  const replacements=[['max_chat_history:6',"max_chat_history:'all'"],["ordered_prompts:['world_info_before'","ordered_prompts:[{role:'system',content:style},'world_info_before'"]];
  for(const [before,after]of replacements){
   if(source.split(after).length===2&&!source.includes(before))continue;
   if(source.split(before).length!==2||source.includes(after))throw Error('Narrative entry anchor differs: '+before);
   source=source.replace(before,after);
  }
- return patchSummaryMemory(patchDeclaredActionInstruction(patchNarrationInstruction(source)));
+ source=patchDeclaredActionInstruction(patchNarrationInstruction(source));
+ return summary?patchSummaryMemory(source):removeSummaryMemory(source);
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
  const input=JSON.parse(readFileSync(0,'utf8'));
- process.stdout.write(JSON.stringify({script:patchNarrativeEntry(input.script),style:selectAdoptedStyle(input.authoring)}));
+ process.stdout.write(JSON.stringify({script:patchNarrativeEntry(input.script,{summary:input.summary??false}),style:selectAdoptedStyle(input.authoring)}));
 }

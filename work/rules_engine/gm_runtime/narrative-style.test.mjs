@@ -24,7 +24,7 @@ const instruction=text=>"narrationInstruction:'"+text+"'";
 const style=authoring.modules.find(m=>m.identifier==='901-gm-style-v1').content;
 function options(source,chat=[]){const start=source.indexOf('function modelOptions()'),end=source.indexOf('\nlet playerStatus',start);return Function('style','getSession','currentSceneText','retainedBranchMemory','SillyTavern',source.slice(start,end)+';return modelOptions();')(style,()=>({storyContext:()=>null}),()=> '现场标记',retainedBranchMemory,{chat});}
 test('actual narrative options include the complete adopted style and all retained history',()=>{
- const source=read('./narrative-script.js'),request=options(source);
+ const source=read('./narrative-script.js'),request=options(source);assert.ok(!source.includes('retainedBranchMemory'));
  assert.ok(source.includes(instruction(currentInstruction)));assert.ok(!source.includes(instruction(flow.before)));
  assert.equal(style.length,2812);assert.equal(createHash('sha256').update(style).digest('hex'),'0e36e8fc6987a82e50d0cf651bdf7c54b2c4406e6b5a9a7a6176a8c85823e7a9');
  assert.equal(request.max_chat_history,'all');assert.equal(request.ordered_prompts.filter(p=>p.content===style).length,1);
@@ -35,9 +35,9 @@ test('actual narrative options include the complete adopted style and all retain
  const classification=replayClassificationRequest({context:{original:action,latest:action}});assert.equal(classification.max_chat_history,0);assert.ok(!JSON.stringify(classification).includes(style));
 });
 
-test('current cumulative patch upgrades historical fixture only at the adopted anchors including manual Summary',()=>{
+test('current cumulative patch upgrades historical fixture only at the adopted anchors without enabling optional Summary',()=>{
  const before=read('../../replay_research/gm_style/v1/live_acceptance_20261030/candidate/host-entry.before.js');
- const expected=withSummary(before.replace('max_chat_history:6',"max_chat_history:'all'").replace("ordered_prompts:['world_info_before'","ordered_prompts:[{role:'system',content:style},'world_info_before'").replace(instruction(flow.before),instruction(currentInstruction)));
+ const expected=before.replace('max_chat_history:6',"max_chat_history:'all'").replace("ordered_prompts:['world_info_before'","ordered_prompts:[{role:'system',content:style},'world_info_before'").replace(instruction(flow.before),instruction(currentInstruction));
  assert.equal(patchNarrativeEntry(before),expected);
  assert.equal(patchNarrativeEntry(expected),expected);
  assert.equal(selectAdoptedStyle({...authoring,modules:[...authoring.modules].reverse()}),style);
@@ -55,7 +55,7 @@ exec(compile(ast.Module(body=[function],type_ignores=[]),str(path),'exec'))
 card=read(ROOT/'output/replay_tavern/opening_combat_20261022_candidate/import/901_帝都初始卡.card.json')
 print(json.dumps(project_narrative_entry(card['data']['extensions']['tavern_helper']['scripts'][1]['content']),ensure_ascii=False))`;
  const run=spawnSync('python',['-c',py,root],{encoding:'utf8',env:{...process.env,PYTHONIOENCODING:'utf-8'}});assert.equal(run.status,0,run.stderr);
- const result=JSON.parse(run.stdout);assert.equal(result.script.split(memoryImport.trim()).length,2);assert.equal(result.script.split(historySlot+memorySlot).length,2);assert.equal(patchNarrativeEntry(result.script),result.script);assert.ok(result.script.includes(instruction(currentInstruction)));assert.equal(result.style,style);assert.equal(options(result.script).max_chat_history,'all');
+ const result=JSON.parse(run.stdout);assert.equal(result.script.split(memoryImport.trim()).length,2);assert.equal(result.script.split(historySlot+memorySlot).length,2);assert.equal(patchNarrativeEntry(result.script,{summary:true}),result.script);assert.ok(result.script.includes(instruction(currentInstruction)));assert.equal(result.style,style);assert.equal(options(result.script).max_chat_history,'all');
  assert.equal(options(result.script).ordered_prompts.filter(p=>p.content===style).length,1);
  const builder=read('../../replay_research/six_books_20261023/build_candidate.py');
  assert.ok(builder.includes("narrative=project_narrative_entry(script['content'])"));
@@ -71,7 +71,7 @@ test('flow-only formal patch exactly reproduces the accepted entry and is idempo
  assert.equal(typeof projection.patchNarrationInstruction,'function');
  assert.equal(projection.patchNarrationInstruction(before),candidate);
  assert.equal(projection.patchNarrationInstruction(candidate),candidate);
- assert.equal(patchNarrativeEntry(before),withSummary(candidate.replace(cross.before,cross.after)));
+ assert.equal(patchNarrativeEntry(before),candidate.replace(cross.before,cross.after));
 });
 
 test('declared-action patch changes only the adopted clause without adding Summary wiring',()=>{
@@ -80,7 +80,7 @@ test('declared-action patch changes only the adopted clause without adding Summa
  assert.equal(typeof projection.patchDeclaredActionInstruction,'function');
  assert.equal(projection.patchDeclaredActionInstruction(before),expected);
  assert.equal(projection.patchDeclaredActionInstruction(expected),expected);
- assert.equal(patchNarrativeEntry(before),withSummary(expected));assert.equal(patchNarrativeEntry(expected),withSummary(expected));
+ assert.equal(patchNarrativeEntry(before),expected);assert.equal(patchNarrativeEntry(expected),expected);
  assert.ok(!expected.includes('retainedBranchMemory'));
 });
 
@@ -91,11 +91,11 @@ test('manual Summary patch preserves source bytes, matches accepted text and nev
  const expected=withSummary(before);assert.equal(projection.patchSummaryMemory(before),expected);
  assert.equal(expected.replaceAll('\r\n','\n'),candidate.replaceAll('\r\n','\n'));
  assert.equal(projection.patchSummaryMemory(candidate),candidate);
- assert.equal(patchNarrativeEntry(before),expected);assert.equal(patchNarrativeEntry(candidate),candidate);
+ assert.equal(patchNarrativeEntry(before,{summary:true}),expected);assert.equal(patchNarrativeEntry(candidate,{summary:true}),candidate);
  const generated=JSON.parse(read('../../../output/replay_tavern/six_books_20261023_candidate/import/901_六书主持入口.script.json')).content;
- assert.equal(patchNarrativeEntry(generated),generated);
+ assert.equal(patchNarrativeEntry(generated,{summary:true}),generated);
  const chat=[{extra:{memory:'当前人工摘要'},swipe_info:[{extra:{memory:'弃用摘要'}}]},{is_user:true}];
- for(const source of [candidate,read('./narrative-script.js')]){
+ for(const source of [candidate,projection.patchSummaryMemory(read('./narrative-script.js'))]){
   const request=options(source,chat);assert.equal(request.ordered_prompts.filter(p=>p.content===retainedBranchMemory(chat)).length,1);
   assert.ok(!JSON.stringify(request).includes('弃用摘要'));assert.equal(request.max_chat_history,'all');
   assert.equal(request.ordered_prompts.filter(p=>p.content===style).length,1);
@@ -113,4 +113,22 @@ test('external style asset carries player private delimiters and excludes NPC in
  assert.ok(asset.includes('不得输出[……]或【……】形式的NPC内心独白，也不得改用全知旁白直接揭露其未公开的真实想法、动机或判断。'));
  assert.equal(options(read('./narrative-script.js')).ordered_prompts.filter(p=>p.content===asset).length,1);
  assert.ok(narrationRequest({events:[]},asset).ordered_prompts[0].content.startsWith(asset+'\n\n'));
+});
+
+test('database default exactly reverses the two Summary insertions and CLI requires explicit opt-in',()=>{
+ const base=read('../../replay_research/gm_style/v1/narrative_flow_20261030/candidate-entry.js').replace(cross.before,cross.after);
+ const summary=withSummary(base),sha=s=>createHash('sha256').update(s).digest('hex');
+ assert.equal(sha(summary),'b1b64b4242a0839a62b30a4ea87a5118923ab6e9a029bc7200e80e17a54b41ab');
+ assert.equal(sha(base),'b7148f4d6d84a3f8212f16b299f0ba5c59168c36bf9a42c2c28fbd56557f253a');
+ assert.equal(typeof projection.removeSummaryMemory,'function');
+ assert.equal(projection.removeSummaryMemory(summary),base);assert.equal(projection.removeSummaryMemory(base),base);
+ assert.equal(patchNarrativeEntry(summary),base);assert.equal(patchNarrativeEntry(base),base);
+ assert.equal(patchNarrativeEntry(summary,{summary:true}),summary);
+ for(const enabled of [false,true]){
+  const run=spawnSync(process.execPath,[fileURLToPath(new URL('./narrative-style-projection.mjs',import.meta.url))],{encoding:'utf8',input:JSON.stringify({script:summary,authoring,...(enabled?{summary:true}:{})})});
+  assert.equal(run.status,0,run.stderr);assert.equal(JSON.parse(run.stdout).script,enabled?summary:base);
+ }
+ const request=options(base,[{extra:{memory:'Do not inject'}},{is_user:true}]);
+ assert.equal(request.max_chat_history,'all');assert.equal(request.ordered_prompts.filter(p=>p.content===style).length,1);
+ assert.ok(!JSON.stringify(request).includes('Do not inject'));
 });
