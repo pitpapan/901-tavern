@@ -1,5 +1,5 @@
 {
-  "status": "live-sampling-completed-final-ui-refresh-unavailable",
+  "status": "live-sampling-and-fresh-ui-readback-completed",
   "resumedOn": "2026-10-31",
   "operator": "Terra 6.1 High",
   "agent": "/root/terra_summary_live_resume",
@@ -10,7 +10,7 @@
   "savedChatMessages": 31,
   "duplicateSubmissions": 0,
   "uiRefreshAt29Messages": "passed",
-  "finalUiRefreshAt31Messages": "Browser is not available: 2; then iab unavailable after agent turn ended",
+  "finalUiRefreshAt31Messages": "passed via independent fresh IAB tab; original tab reload stalled",
   "diskReadbackAt31Messages": "passed",
   "previousAttempt": {
     "status": "blocked-before-first-live-round",
@@ -37,5 +37,7 @@
     "modelCalls": 0,
     "nextRound": "12-对白与私人思考",
     "resume": "Restore browser control, open the already installed isolated card/chat, start recorder, send config.rounds[0].input exactly once, save evidence, then main-agent review. Do not rerun preparation or installation."
-  }
+  },
+  "previousFinalUiRefreshAt31Messages": "Browser is not available: 2; then iab unavailable after agent turn ended",
+  "finalUiReadbackEvidence": "final-ui-refresh-after.json"
 }
