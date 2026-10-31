@@ -1,0 +1,240 @@
+{
+  "date": "2026-10-31",
+  "browser": "IAB",
+  "operator": "Terra 6.1 High",
+  "clock": "performance.now() rounded to ms; navigation ID is rounded performance.timeOrigin",
+  "source": "console TRACE901 records in Terra tool results, deduplicated across reads",
+  "runs": [
+    {
+      "id": 1793431312284,
+      "condition": "initial-navigation",
+      "events": [
+        {
+          "step": "html-head",
+          "ms": 136,
+          "type": "navigate"
+        },
+        {
+          "step": "module-at-load-gate",
+          "ms": 732,
+          "document": "interactive"
+        },
+        {
+          "step": "dom-content-loaded",
+          "ms": 741
+        },
+        {
+          "step": "window-load",
+          "ms": 882
+        },
+        {
+          "step": "module-past-load-gate",
+          "ms": 884
+        },
+        {
+          "step": "csrf-request",
+          "ms": 974
+        },
+        {
+          "step": "csrf-response",
+          "ms": 1016,
+          "status": 200
+        },
+        {
+          "step": "csrf-parsed",
+          "ms": 1016
+        },
+        {
+          "step": "splash-shown",
+          "ms": 1044
+        },
+        {
+          "step": "app-initialized-emit",
+          "ms": 7535
+        },
+        {
+          "step": "html-head",
+          "ms": 8480,
+          "type": "navigate"
+        },
+        {
+          "step": "app-ready-emit",
+          "ms": 9334
+        },
+        {
+          "step": "sample",
+          "ms": 15316,
+          "document": "complete",
+          "preloader": true,
+          "splash": false
+        }
+      ]
+    },
+    {
+      "id": 1793431330380,
+      "condition": "after-chat-text-visible",
+      "events": [
+        {
+          "step": "html-head",
+          "ms": 231,
+          "type": "reload"
+        },
+        {
+          "step": "module-at-load-gate",
+          "ms": 947,
+          "document": "interactive"
+        },
+        {
+          "step": "dom-content-loaded",
+          "ms": 958
+        },
+        {
+          "step": "window-load",
+          "ms": 1060
+        },
+        {
+          "step": "module-past-load-gate",
+          "ms": 1062
+        },
+        {
+          "step": "csrf-request",
+          "ms": 1143
+        },
+        {
+          "step": "csrf-response",
+          "ms": 1152,
+          "status": 200
+        },
+        {
+          "step": "csrf-parsed",
+          "ms": 1152
+        },
+        {
+          "step": "splash-shown",
+          "ms": 1173
+        },
+        {
+          "step": "app-initialized-emit",
+          "ms": 7334
+        },
+        {
+          "step": "html-head",
+          "ms": 7947,
+          "type": "reload"
+        },
+        {
+          "step": "app-ready-emit",
+          "ms": 9028
+        }
+      ]
+    },
+    {
+      "id": 1793431342624,
+      "condition": "immediately-after-click",
+      "events": [
+        {
+          "step": "html-head",
+          "ms": 1103,
+          "type": "reload"
+        },
+        {
+          "step": "module-at-load-gate",
+          "ms": 1621,
+          "document": "interactive"
+        },
+        {
+          "step": "dom-content-loaded",
+          "ms": 1622
+        },
+        {
+          "step": "window-load",
+          "ms": 1685
+        },
+        {
+          "step": "module-past-load-gate",
+          "ms": 1688
+        },
+        {
+          "step": "csrf-request",
+          "ms": 1768
+        },
+        {
+          "step": "csrf-response",
+          "ms": 1775,
+          "status": 200
+        },
+        {
+          "step": "csrf-parsed",
+          "ms": 1775
+        },
+        {
+          "step": "splash-shown",
+          "ms": 1789
+        },
+        {
+          "step": "app-ready-emit",
+          "ms": 10620
+        },
+        {
+          "step": "sample",
+          "ms": 16104,
+          "document": "complete",
+          "preloader": true,
+          "splash": false
+        }
+      ]
+    },
+    {
+      "id": 1793431362572,
+      "condition": "3814ms-after-click",
+      "events": [
+        {
+          "step": "html-head",
+          "ms": 900,
+          "type": "reload"
+        },
+        {
+          "step": "module-at-load-gate",
+          "ms": 1587,
+          "document": "interactive"
+        },
+        {
+          "step": "dom-content-loaded",
+          "ms": 1598
+        },
+        {
+          "step": "window-load",
+          "ms": 1722
+        },
+        {
+          "step": "module-past-load-gate",
+          "ms": 1725
+        },
+        {
+          "step": "csrf-request",
+          "ms": 1814
+        },
+        {
+          "step": "csrf-response",
+          "ms": 1827,
+          "status": 200
+        },
+        {
+          "step": "csrf-parsed",
+          "ms": 1828
+        },
+        {
+          "step": "splash-shown",
+          "ms": 1851
+        },
+        {
+          "step": "sample",
+          "ms": 15906,
+          "document": "complete",
+          "preloader": true,
+          "splash": false
+        }
+      ]
+    }
+  ]
+}
