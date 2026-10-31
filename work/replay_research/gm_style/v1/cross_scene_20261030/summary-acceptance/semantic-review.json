@@ -1,0 +1,42 @@
+{
+  "status": "completed-with-one-manual-correction",
+  "reviewedOn": "2026-10-31",
+  "scope": "Three planned rounds plus one targeted continuation; original failed wording preserved",
+  "rounds": [
+    {
+      "id": "12-对白与私人思考",
+      "result": "pass",
+      "finding": "NPCs answer public dialogue, stay near inn door, do not mention private Kenda/coin thoughts; no NPC inner monologue or undeclared player departure."
+    },
+    {
+      "id": "13-授权移动与歇脚",
+      "result": "pass",
+      "finding": "Authorized short walk and roadside stop continued; NPCs choose their own posture; no player sitting, putting bag down, new promise or private disclosure."
+    },
+    {
+      "id": "14-剧情记忆与知情核对",
+      "result": "partial-manually-corrected",
+      "finding": "Bag/repair/rumor/coin and latest roadside location correct; one line wrongly calls innkeeper present and overstates lack of disclosure as complete ignorance. Only that line corrected in isolated retained reply; raw output retained.",
+      "correction": "round14-correction.json"
+    },
+    {
+      "id": "15-订正后现场接续",
+      "result": "pass-after-correction",
+      "finding": "Roadside scene and held bag retained, innkeeper not added, NPCs respond only to public rumor/repair discussion. Their speculation about rumor source remains quoted opinion, not world fact; no Kenda/private-thought response."
+    }
+  ],
+  "observedLimits": [
+    "Weather, street sounds and closing descriptions remain mildly repetitive.",
+    "All retained history is still available; this does not prove Summary-only recall after context truncation.",
+    "Round14 required manual correction; the follow-up does not prove the model can never confuse knowledge or presence."
+  ],
+  "stateProtection": {
+    "fullRuleSnapshots": 15,
+    "revision": 0,
+    "operations": {},
+    "existingFilesUnchanged": 274,
+    "originalChatAndSavesUnchanged": true,
+    "modelAndMemoryConfigurationUnchanged": true
+  },
+  "persistence": "persistence-check.json"
+}

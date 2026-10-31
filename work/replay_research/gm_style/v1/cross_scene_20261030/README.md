@@ -155,3 +155,28 @@ Terra 6.1 High通过IAB只读核对 `127.0.0.1:8000`：当前自定义聊天补�
 **本轮验收停点：浏览器工具连接阻塞，第12轮尚未发送。** Terra实际尝试IAB和Chrome均得到 `Browser is not available`，浏览器清单为空；按既有授权使用原生Windows接口成功导入sky并发现Chrome窗口，但窗口读取组合调用约278.7秒仍无页面状态，主会话中断，工具返回 `aborted by user`。这是主会话停止无响应工具，不是用户取消任务。操作方报告未打开聊天或发送内容；主会话读取持久化聊天仍为23楼，采集记录为空、七份完整规则根保持，274份既有文件保护复核通过。详见[browser-status](summary-acceptance/browser-status.json)及[保护结果](summary-acceptance/protection-after.json)。实际生成0轮、模型请求0次；不能声称此次摘要或NPC内心约定已经通过实际语义验收。
 
 恢复浏览器控制后直接打开上述已安装新副本，从第12轮开始采集并发送，无需再次询问已采用摘要、无需重建或覆盖聊天。每轮后只读核验命令：`node work/replay_research/gm_style/v1/cross_scene_20261030/summary-acceptance/manage.mjs capture`，然后 `node work/replay_research/gm_style/v1/cross_scene_20261030/summary-acceptance/check-capture.mjs`；后一命令要求至少一轮真实记录，当前0轮不得伪造pass。不要重跑prepare、baseline或install。
+
+## 2026-10-31：剧情摘要实际加载与叙事验收
+
+用户再次要求沿已采用内容继续。本线未重建副本，也未重写摘要；Terra 6.1 High新子代理 `/root/terra_summary_live_resume` 恢复IAB，核对指定23楼隔离聊天后，启用该新卡既有主持／采集脚本并执行第12—14轮，每轮原文只发送一次、保存一次，不重抽。主会话独立检查实际请求和回复后，对第14轮发现的一处表述作最小人工订正，再补第15轮现场接续。实际4轮，分类4次、续写4次；每轮三个settings事件包括被拦截的原生外层组装，不能算作每轮三个模型调用。
+
+### 加载及语义结果
+
+四次实际续写请求均含用户采用的剧情摘要恰好一份、完整2812字符文风恰好一份，先前玩家输入全部保留；每轮只有一份实际回复，均走NO_CHECK，没有“行动尚未执行”。[请求检查](summary-acceptance/request-check.json)通过；[完整采集](summary-acceptance/captured-rounds.json)保留原始输出，语义由主会话逐条判读，见[语义记录](summary-acceptance/semantic-review.json)。
+
+| 轮次 | 结论 |
+| --- | --- |
+| 12 对白与私念 | NPC只回答公开的逛街／歇脚问题，没有回应方括号里的肯达或铜牌想法，也没有替御临风出发；没有NPC内心独白。 |
+| 13 授权转场 | 承接玩家声明的短途步行与路边停留；黄泉和布莱特各自行动，不替御临风坐下、放袋或承诺，不增加危机。 |
+| 14 桌外记忆核对 | 修补未委托、袋子持有人、传闻来源与店主答复、铜牌和新位置均正确，未被摘要中的旧客店门口位置覆盖。但一行把店主列为当前在场者，并将未披露夸大为“完全不知情”，此项不能判全部语义通过。 |
+| 15 订正后接续 | 保持三人在街边歇脚，店主未凭空到场；NPC只回应公开的传闻和修补安排，没有回应肯达私念。关于路人可能听错或乱传的说法保留为NPC带有不确定性的对白，不升级为世界事实。 |
+
+第14轮原始错误仍保留在采集记录。只在新隔离副本第28楼当前保留回复替换该行，改为“没有透露记录、不能凭玩家内心获知或回应，店主没有随三人到场记录”；其余文字、玩家输入和存档不改。Terra通过原生消息编辑完成，主会话磁盘逐字核对，刷新至29楼后更正仍在。更正与前后文见[round14-correction](summary-acceptance/round14-correction.json)。第15轮是订正后的接续复验，不把它倒算为第14轮原输出通过，也不声称提示词已从根本上消除这类模型错误。
+
+### 保存与保护
+
+新副本最终31楼，四轮采集、末轮回复和第28楼订正均从磁盘读回一致。第22楼人工摘要仍是用户采用的截至第11轮版本，没有自动重写；其后实际聊天承接新发生的转场。29楼时UI刷新已通过；Terra结束一轮工具会话后临时浏览器不可用，最终31楼UI刷新未能执行，磁盘持久化验证通过，二者分别记录在[persistence-check](summary-acceptance/persistence-check.json)与[browser-status](summary-acceptance/browser-status.json)。
+
+15份完整规则快照逐项相同，revision0、operations为空、无battle；274份既有文件仍逐字不变，原正式31楼与旧测试均保持，模型 `[抗截断]gemini-3.8-flash` 和完整memory配置哈希不变。正式入口继续数据库模式，本轮只使用已获授权的Summary隔离副本，不改正式卡或共享运行内容。[保护检查](summary-acceptance/protection-after.json)及[规则检查](summary-acceptance/rule-state-check.json)通过。
+
+本批已完成所要求的实际加载与叙事抽样，并留下实际错误及最小订正。仍有雨后风声、街景与收尾描写的轻微重复，未因此反复重抽或调参。完整历史仍在上下文内，本次不证明历史被裁掉后的摘要独立回忆能力，也不把一次复验推为所有场景均不会混淆在场与知情。
