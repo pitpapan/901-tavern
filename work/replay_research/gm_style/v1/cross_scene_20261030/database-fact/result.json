@@ -1,0 +1,102 @@
+{
+  "question": "我问黄泉：“上次摊主当着我们说的碰头记号是什么？”我等她回答。",
+  "databaseSource": {
+    "table": "纪要表",
+    "code": "DB901-01",
+    "fact": "此前在摊前，摊主当着御临风、黄泉和布莱特的面说：下回碰头的记号是“青鹭七扣”。三人都听到了。"
+  },
+  "testWorld": "901 正式数据库事实验收 20261031 主书副本",
+  "entry": {
+    "uid": 1,
+    "comment": "TavernDB-ACU-CustomExport-纪要-1",
+    "disabled": false,
+    "constant": true,
+    "depth": 999
+  },
+  "loadedEvents": [
+    [
+      {
+        "world": "901 正式数据库事实验收 20261031 主书副本",
+        "uid": 1,
+        "name": "TavernDB-ACU-CustomExport-纪要-1",
+        "disabled": false
+      }
+    ],
+    [
+      {
+        "world": "901 正式数据库事实验收 20261031 主书副本",
+        "uid": 1,
+        "name": "TavernDB-ACU-CustomExport-纪要-1",
+        "disabled": false
+      }
+    ],
+    [
+      {
+        "world": "901 正式数据库事实验收 20261031 主书副本",
+        "uid": 1,
+        "name": "TavernDB-ACU-CustomExport-纪要-1",
+        "disabled": false
+      }
+    ]
+  ],
+  "requests": [
+    {
+      "kind": "classification",
+      "model": "[抗截断]gemini-3.8-flash",
+      "promptSha256": "f13a6ec778b05a1ddf90e224fbba549477e08102d889332cb7dfb63f3763be69",
+      "cueCount": 1,
+      "completeFact": true,
+      "matches": [
+        {
+          "role": "user",
+          "hasMemoryWrapper": true,
+          "line": "[UID 1 TavernDB-ACU-CustomExport-纪要-1] | DB901-01 | 此前 | 摊前约好下次碰头。 | 此前在摊前，摊主当着御临风、黄泉和布莱特的面说：下回碰头的记号是“青鹭七扣”。三人都听到了。 |  |"
+        }
+      ]
+    },
+    {
+      "kind": "narration",
+      "model": "[抗截断]gemini-3.8-flash",
+      "promptSha256": "f48ddfc08a697f86af075fdfe6da3b171e120595e909cab697f7237a8e44f32c",
+      "cueCount": 1,
+      "completeFact": true,
+      "matches": [
+        {
+          "role": "system",
+          "hasMemoryWrapper": true,
+          "line": "| DB901-01 | 此前 | 摊前约好下次碰头。 | 此前在摊前，摊主当着御临风、黄泉和布莱特的面说：下回碰头的记号是“青鹭七扣”。三人都听到了。 |  |"
+        }
+      ]
+    },
+    {
+      "kind": "outer",
+      "model": "[抗截断]gemini-3.8-flash",
+      "promptSha256": "85d5c20b5915df01fec715c18ca58e447101fce77fe647729a62d20e588b771b",
+      "cueCount": 1,
+      "completeFact": true,
+      "matches": [
+        {
+          "role": "system",
+          "hasMemoryWrapper": true,
+          "line": "| DB901-01 | 此前 | 摊前约好下次碰头。 | 此前在摊前，摊主当着御临风、黄泉和布莱特的面说：下回碰头的记号是“青鹭七扣”。三人都听到了。 |  |"
+        }
+      ]
+    }
+  ],
+  "reply": "黄泉看向御临风，语气平淡地回了一句：\n\n“青鹭七扣。”\n\n<StatusPlaceHolderImpl/>",
+  "gate": "NO_CHECK",
+  "stateBefore": {
+    "chatId": "901 正式数据库事实验收 20261031 - 01独立纪要",
+    "revision": 0,
+    "battleMode": null,
+    "operations": {}
+  },
+  "stateAfter": {
+    "chatId": "901 正式数据库事实验收 20261031 - 01独立纪要",
+    "revision": 0,
+    "battleMode": null,
+    "operations": {}
+  },
+  "factInNarration": true,
+  "cueInReply": true
+}
