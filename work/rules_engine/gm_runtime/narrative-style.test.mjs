@@ -26,7 +26,7 @@ function options(source,chat=[]){const start=source.indexOf('function modelOptio
 test('actual narrative options include the complete adopted style and all retained history',()=>{
  const source=read('./narrative-script.js'),request=options(source);assert.ok(!source.includes('retainedBranchMemory'));
  assert.ok(source.includes(instruction(currentInstruction)));assert.ok(!source.includes(instruction(flow.before)));
- assert.equal(style.length,2812);assert.equal(createHash('sha256').update(style).digest('hex'),'0e36e8fc6987a82e50d0cf651bdf7c54b2c4406e6b5a9a7a6176a8c85823e7a9');
+ assert.equal(style.length,3164);assert.equal(createHash('sha256').update(style).digest('hex'),'24d2237ddb0d79d0d4424bd36acbe43eeabb92f7bcbff69428fccd4cba78d51b');
  assert.equal(request.max_chat_history,'all');assert.equal(request.ordered_prompts.filter(p=>p.content===style).length,1);
  assert.deepEqual(request.ordered_prompts.filter(p=>typeof p==='string'),['world_info_before','char_description','scenario','world_info_after','chat_history','user_input']);
  assert.match(source,/narrate:facts=>generateRaw\(narrationRequest\(facts,style\)\)/);
@@ -106,11 +106,13 @@ test('manual Summary patch preserves source bytes, matches accepted text and nev
  assert.ok(read('./build-integrated.mjs').includes("'work/replay_research/six_books_20261023/branch-memory.mjs'"));
 });
 
-test('external style asset carries player private delimiters and excludes NPC inner monologues',()=>{
+test('external style asset preserves private thoughts, event order and uncertain crowd details',()=>{
  const asset=JSON.parse(read('../../../output/replay_tavern/six_books_20261023_candidate/runtime_patch/901-opening-combat/narrative-style.json'));
  assert.equal(asset,style);
  assert.ok(asset.includes('玩家写的[……]与【……】均表示未说出口的私人内心'));
  assert.ok(asset.includes('不得输出[……]或【……】形式的NPC内心独白，也不得改用全知旁白直接揭露其未公开的真实想法、动机或判断。'));
+ assert.ok(asset.includes('玩家先交代一件事已经结束、随后开口，就从听者对这句话的即时反应起笔'));
+ assert.ok(asset.includes('用原记录的集合称谓指代群体，把未确定的数量或来向直接作为未知回答。'));
  assert.equal(options(read('./narrative-script.js')).ordered_prompts.filter(p=>p.content===asset).length,1);
  assert.ok(narrationRequest({events:[]},asset).ordered_prompts[0].content.startsWith(asset+'\n\n'));
 });
