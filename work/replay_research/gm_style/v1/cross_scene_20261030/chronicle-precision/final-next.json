@@ -1,0 +1,322 @@
+{
+  "messages": [
+    {
+      "floor": 0,
+      "user": false,
+      "text": "隔离测试场景。御临风、黄泉与布莱特在洛汀一间普通客店门外歇脚。"
+    },
+    {
+      "floor": 1,
+      "user": true,
+      "text": "我在门外停下，等两人走到身边。"
+    },
+    {
+      "floor": 2,
+      "user": false,
+      "text": "黄泉在廊柱边站住，布莱特也停下脚步。"
+    },
+    {
+      "floor": 3,
+      "user": true,
+      "text": "我等一拨镇民经过，随后对黄泉说：“这次交接的记号定为蓝鹊五铃，请你记住。”[我自己想了一个备用记号砂灯六纹，还没有告诉任何人。]我等她答复。"
+    },
+    {
+      "floor": 4,
+      "user": false,
+      "text": "那几名挑着杂货和干菜的镇民顺着街道走过去，脚步声在石板路面上渐远。\n\n黄泉听完，向御临风点了下头：“蓝鹊五铃。记下了。”\n\n她没有多问这个词的来历，只是简短应承下来。布莱特在一旁微微侧耳听着，并未插话。客店门前的檐影下，街风带着几分河谷的湿润气息拂过。\n\n<StatusPlaceHolderImpl/>"
+    },
+    {
+      "floor": 5,
+      "user": true,
+      "text": "我问黄泉：“请你把刚才公开约定的交接记号说一遍。刚才经过的是什么人？你记得具体有多少、是从哪边来的吗？还有别的记号是我告诉过你的吗？”我听她回答。"
+    },
+    {
+      "floor": 6,
+      "user": false,
+      "text": "黄泉站在客店门廊边，听御临风接连问出这一串，眼神里掠过一丝疑惑，但还是干脆地一一作答：\n\n“公开约定的记号，就是你刚才说的‘蓝鹊五铃’。”\n\n她稍稍侧头看了一眼方才人影散去的街面，接着说道：\n\n“刚才过去的，只是一群挑着杂货和干菜的镇民。我没有特意去数具体有多少人，也没留意他们最早是从哪条岔口或街角转过来的，只看到是顺着路走过去。”\n\n说到最后一个问题，她收回视线看着御临风，语气笃定而简短：\n\n“没有了。除了‘蓝鹊五铃’，你没跟我说过别的记号。”\n\n一旁的布莱特只是安静地站着，耳朵微微动了动，并没有插话。街面上只有微风卷着些许尘土，客店门前一时安静下来。\n\n<StatusPlaceHolderImpl/>"
+    }
+  ],
+  "frames": [
+    {
+      "floor": 2,
+      "logEntries": 0,
+      "chronicleInCheckpoint": [],
+      "cueCells": []
+    },
+    {
+      "floor": 4,
+      "logEntries": 1,
+      "chronicleInCheckpoint": [],
+      "cueCells": [
+        {
+          "path": "/logEntries/0/operations/1/statements/0",
+          "value": "UPDATE renwuyushijianbiao SET current_progress = '御临风在客店门外与黄泉约定交接记号为蓝鹊五铃' WHERE quest_name = '洛汀歇脚'"
+        },
+        {
+          "path": "/logEntries/0/operations/2/statements/0",
+          "value": "INSERT INTO jiyaobiao (row_id, code_index, time_span, summary, chronicle_text, key_dialogue) VALUES (2, 'AM0002', '未交代', '约定交接记号', '御临风在客店门外停下，待黄泉在廊柱边站住、布莱特停下脚步。有一群来向未详、挑着杂货和干菜的镇民（人数未详）顺着街道走过。御临风等镇民经过后，告知黄泉将此次交接记号定为蓝鹊五铃，黄泉点头应承记下，布莱特在旁侧耳倾听未插话。', '御临风：“这次交接的记号定为蓝鹊五铃，请你记住。”\n黄泉：“蓝鹊五铃。记下了。”')"
+        }
+      ]
+    },
+    {
+      "floor": 6,
+      "logEntries": 1,
+      "chronicleInCheckpoint": [],
+      "cueCells": [
+        {
+          "path": "/logEntries/0/operations/1/statements/0",
+          "value": "INSERT INTO jiyaobiao (row_id, code_index, time_span, summary, chronicle_text, key_dialogue) VALUES (3, 'AM0003', '未交代', '向黄泉核对记号与路人', '御临风在客店门廊边向黄泉询问公开约定的记号、刚才经过人群的身份人数与来向，以及是否有其他告知过的记号。黄泉回答公开约定的记号为蓝鹊五铃，说明刚才走过的是顺路走去、挑杂货干菜的镇民，具体人数与来向并未特意留意，并确认御临风未曾告知过其他记号。布莱特在一旁安静站着未插话。', '御临风：“请你把刚才公开约定的交接记号说一遍。刚才经过的是什么人？你记得具体有多少、是从哪边来的吗？还有别的记号是我告诉过你的吗？”\n黄泉：“公开约定的记号，就是你刚才说的‘蓝鹊五铃’。刚才过去的，只是一群挑着杂货和干菜的镇民。我没有特意去数具体有多少人，也没留意他们最早是从哪条岔口或街角转过来的，只看到是顺着路走过去。没有了。除了‘蓝鹊五铃’，你没跟我说过别的记号。”')"
+        }
+      ]
+    }
+  ],
+  "worldbookFacts": [
+    {
+      "uid": 6,
+      "comment": "TavernDB-ACU-CustomExport-纪要-2",
+      "active": true,
+      "content": "| AM0002 | 未交代 | 约定交接记号 | 御临风在客店门外停下，待黄泉在廊柱边站住、布莱特停下脚步。有一群来向未详、挑着杂货和干菜的镇民（人数未详）顺着街道走过。御临风等镇民经过后，告知黄泉将此次交接记号定为蓝鹊五铃，黄泉点头应承记下，布莱特在旁侧耳倾听未插话。 | 御临风：“这次交接的记号定为蓝鹊五铃，请你记住。”\n黄泉：“蓝鹊五铃。记下了。” |\n"
+    },
+    {
+      "uid": 7,
+      "comment": "TavernDB-ACU-CustomExport-纪要-3",
+      "active": true,
+      "content": "| AM0003 | 未交代 | 向黄泉核对记号与路人 | 御临风在客店门廊边向黄泉询问公开约定的记号、刚才经过人群的身份人数与来向，以及是否有其他告知过的记号。黄泉回答公开约定的记号为蓝鹊五铃，说明刚才走过的是顺路走去、挑杂货干菜的镇民，具体人数与来向并未特意留意，并确认御临风未曾告知过其他记号。布莱特在一旁安静站着未插话。 | 御临风：“请你把刚才公开约定的交接记号说一遍。刚才经过的是什么人？你记得具体有多少、是从哪边来的吗？还有别的记号是我告诉过你的吗？”\n黄泉：“公开约定的记号，就是你刚才说的‘蓝鹊五铃’。刚才过去的，只是一群挑着杂货和干菜的镇民。我没有特意去数具体有多少人，也没留意他们最早是从哪条岔口或街角转过来的，只看到是顺着路走过去。没有了。除了‘蓝鹊五铃’，你没跟我说过别的记号。” |\n"
+    },
+    {
+      "uid": 8,
+      "comment": "TavernDB-ACU-ReadableDataTable",
+      "active": true,
+      "content": "# 全局数据表\n\n| 全局状态 | 当前详细地点 | 当前次要地区 | 当前主要地区 | 上轮场景时间 | 经过的时间 | 当前时间 |\n|---|---|---|---|---|---|---|\n| 全局状态 | 客店门外 | 洛汀 | 洛汀 |  |  |  |\n\n# 主角信息表\n\n| 姓名 | 性别 | 年龄 | 外貌特征 | 身份 | 近况 | 所在地点 | 随身财物 |\n|---|---|---|---|---|---|---|---|\n| 御临风 | 男 | 未交代 | 外貌未详细描述 | 旅行者 | 在客店门外向黄泉核对交接记号与方才路过的镇民情况 | 客店门外 |  |\n\n# 主角技能表\n\n| 技能名称 | 技能类型 | 等级/阶段 | 效果描述 |\n|---|---|---|---|\n\n# 背包物品表\n\n| 物品名称 | 数量 | 描述/效果 | 类别 |\n|---|---|---|---|\n\n# 任务与事件表\n\n| 任务名称 | 任务类型 | 发布者 | 详细描述 | 当前进度 | 任务时限 | 奖励 | 惩罚 |\n|---|---|---|---|---|---|---|---|\n| 洛汀歇脚 | 主线任务 | 无 | 御临风、黄泉与布莱特在洛汀一间普通客店门外歇脚并做下一步打算。 | 御临风在客店门外与黄泉约定交接记号为蓝鹊五铃 | 无 | 无 | 无 |\n\n"
+    }
+  ],
+  "runs": [
+    {
+      "id": "auto-event",
+      "requests": [
+        {
+          "kind": "classifier",
+          "model": "[抗截断]gemini-3.8-flash",
+          "matches": [
+            {
+              "role": "user",
+              "line": "玩家原始行动：我等一拨镇民经过，随后对黄泉说：“这次交接的记号定为蓝鹊五铃，请你记住。”[我自己想了一个备用记号砂灯六纹，还没有告诉任何人。]我等她答复。",
+              "memoryWrapper": false
+            }
+          ],
+          "firstTurnInputVerbatim": true,
+          "firstTurnReplyOpening": false,
+          "sha256": "bfeb01f5d5963d8961df6c5803e325b3bf7c8ea378ab530767b306807691eeec"
+        },
+        {
+          "kind": "narration",
+          "model": "[抗截断]gemini-3.8-flash",
+          "matches": [
+            {
+              "role": "user",
+              "line": "我等一拨镇民经过，随后对黄泉说：“这次交接的记号定为蓝鹊五铃，请你记住。”[我自己想了一个备用记号砂灯六纹，还没有告诉任何人。]我等她答复。",
+              "memoryWrapper": false
+            },
+            {
+              "role": "user",
+              "line": "玩家行动：我等一拨镇民经过，随后对黄泉说：“这次交接的记号定为蓝鹊五铃，请你记住。”[我自己想了一个备用记号砂灯六纹，还没有告诉任何人。]我等她答复。",
+              "memoryWrapper": false
+            }
+          ],
+          "firstTurnInputVerbatim": true,
+          "firstTurnReplyOpening": false,
+          "sha256": "92b9156bc24798aaf8d99ce4c7d5c9684880c318b69b7bb56cbbcfc28d3eb676"
+        },
+        {
+          "kind": "other",
+          "model": "[抗截断]gemini-3.8-flash",
+          "matches": [
+            {
+              "role": "user",
+              "line": "我等一拨镇民经过，随后对黄泉说：“这次交接的记号定为蓝鹊五铃，请你记住。”[我自己想了一个备用记号砂灯六纹，还没有告诉任何人。]我等她答复。",
+              "memoryWrapper": false
+            }
+          ],
+          "firstTurnInputVerbatim": true,
+          "firstTurnReplyOpening": false,
+          "sha256": "2a3514ebbd8108671602dbfa2d6cccf27c8f2b0a2c91c60c695b9cf6c6cba3ad"
+        }
+      ],
+      "before": {
+        "chatId": "901 正式数据库事实验收 20261031 - 01独立纪要",
+        "revision": 0,
+        "battleMode": null,
+        "operations": {}
+      },
+      "after": {
+        "chatId": "901 正式数据库事实验收 20261031 - 01独立纪要",
+        "revision": 0,
+        "battleMode": null,
+        "operations": {}
+      }
+    },
+    {
+      "id": "recall",
+      "requests": [
+        {
+          "kind": "classifier",
+          "model": "[抗截断]gemini-3.8-flash",
+          "matches": [
+            {
+              "role": "user",
+              "line": "黄泉听完，向御临风点了下头：“蓝鹊五铃。记下了。”",
+              "memoryWrapper": true
+            },
+            {
+              "role": "user",
+              "line": "[UID 6 TavernDB-ACU-CustomExport-纪要-2] | AM0002 | 未交代 | 约定交接记号 | 御临风在客店门外停下，待黄泉在廊柱边站住、布莱特停下脚步。有一群来向未详、挑着杂货和干菜的镇民（人数未详）顺着街道走过。御临风等镇民经过后，告知黄泉将此次交接记号定为蓝鹊五铃，黄泉点头应承记下，布莱特在旁侧耳倾听未插话。 | 御临风：“这次交接的记号定为蓝鹊五铃，请你记住。”",
+              "memoryWrapper": true
+            },
+            {
+              "role": "user",
+              "line": "黄泉：“蓝鹊五铃。记下了。” |",
+              "memoryWrapper": true
+            },
+            {
+              "role": "user",
+              "line": "| 御临风 | 男 | 未交代 | 外貌未详细描述 | 旅行者 | 在客店门外与黄泉约定交接记号，心中留有未告知任何人的备用记号 | 客店门外 |  |",
+              "memoryWrapper": true
+            },
+            {
+              "role": "user",
+              "line": "| 洛汀歇脚 | 主线任务 | 无 | 御临风、黄泉与布莱特在洛汀一间普通客店门外歇脚并做下一步打算。 | 御临风在客店门外与黄泉约定交接记号为蓝鹊五铃 | 无 | 无 | 无 |",
+              "memoryWrapper": true
+            }
+          ],
+          "firstTurnInputVerbatim": false,
+          "firstTurnReplyOpening": true,
+          "sha256": "f74e90c1eb10fc0e06cdc4945bc20b4bb3e36794cede3ef6839a56e51cdb789f"
+        },
+        {
+          "kind": "narration",
+          "model": "[抗截断]gemini-3.8-flash",
+          "matches": [
+            {
+              "role": "system",
+              "line": "| 御临风 | 男 | 未交代 | 外貌未详细描述 | 旅行者 | 在客店门外与黄泉约定交接记号，心中留有未告知任何人的备用记号 | 客店门外 |  |",
+              "memoryWrapper": false
+            },
+            {
+              "role": "system",
+              "line": "| 洛汀歇脚 | 主线任务 | 无 | 御临风、黄泉与布莱特在洛汀一间普通客店门外歇脚并做下一步打算。 | 御临风在客店门外与黄泉约定交接记号为蓝鹊五铃 | 无 | 无 | 无 |",
+              "memoryWrapper": false
+            },
+            {
+              "role": "system",
+              "line": "| AM0002 | 未交代 | 约定交接记号 | 御临风在客店门外停下，待黄泉在廊柱边站住、布莱特停下脚步。有一群来向未详、挑着杂货和干菜的镇民（人数未详）顺着街道走过。御临风等镇民经过后，告知黄泉将此次交接记号定为蓝鹊五铃，黄泉点头应承记下，布莱特在旁侧耳倾听未插话。 | 御临风：“这次交接的记号定为蓝鹊五铃，请你记住。”",
+              "memoryWrapper": true
+            },
+            {
+              "role": "system",
+              "line": "黄泉：“蓝鹊五铃。记下了。” |",
+              "memoryWrapper": true
+            }
+          ],
+          "firstTurnInputVerbatim": false,
+          "firstTurnReplyOpening": false,
+          "sha256": "6819f258ef86716024a85adc7f435c61b42cede2e59a46d8424524fb60caaff1"
+        },
+        {
+          "kind": "other",
+          "model": "[抗截断]gemini-3.8-flash",
+          "matches": [
+            {
+              "role": "system",
+              "line": "| AM0002 | 未交代 | 约定交接记号 | 御临风在客店门外停下，待黄泉在廊柱边站住、布莱特停下脚步。有一群来向未详、挑着杂货和干菜的镇民（人数未详）顺着街道走过。御临风等镇民经过后，告知黄泉将此次交接记号定为蓝鹊五铃，黄泉点头应承记下，布莱特在旁侧耳倾听未插话。 | 御临风：“这次交接的记号定为蓝鹊五铃，请你记住。”",
+              "memoryWrapper": true
+            },
+            {
+              "role": "system",
+              "line": "黄泉：“蓝鹊五铃。记下了。” |",
+              "memoryWrapper": true
+            },
+            {
+              "role": "user",
+              "line": "我等一拨镇民经过，随后对黄泉说：“这次交接的记号定为蓝鹊五铃，请你记住。”[我自己想了一个备用记号砂灯六纹，还没有告诉任何人。]我等她答复。",
+              "memoryWrapper": false
+            },
+            {
+              "role": "assistant",
+              "line": "黄泉听完，向御临风点了下头：“蓝鹊五铃。记下了。”",
+              "memoryWrapper": false
+            }
+          ],
+          "firstTurnInputVerbatim": true,
+          "firstTurnReplyOpening": true,
+          "sha256": "8bd2eae4eafc65e497544ae4e43c447759b1b4c422d38f450854c77f3923708c"
+        }
+      ],
+      "before": {
+        "chatId": "901 正式数据库事实验收 20261031 - 01独立纪要",
+        "revision": 0,
+        "battleMode": null,
+        "operations": {}
+      },
+      "after": {
+        "chatId": "901 正式数据库事实验收 20261031 - 01独立纪要",
+        "revision": 0,
+        "battleMode": null,
+        "operations": {}
+      }
+    }
+  ],
+  "chronicles": {
+    "TavernDB-ACU-CustomExport-纪要-1": "| AM0001 | 未交代 | 三人于客店外歇脚 | 御临风、黄泉与布莱特来到洛汀的一间普通客店门外歇脚。三人暂未进入店内，在门外作短暂停留。 |  |\n",
+    "TavernDB-ACU-CustomExport-纪要-2": "| AM0002 | 未交代 | 约定交接记号 | 御临风在客店门外停下，待黄泉在廊柱边站住、布莱特停下脚步。有一群来向未详、挑着杂货和干菜的镇民（人数未详）顺着街道走过。御临风等镇民经过后，告知黄泉将此次交接记号定为蓝鹊五铃，黄泉点头应承记下，布莱特在旁侧耳倾听未插话。 | 御临风：“这次交接的记号定为蓝鹊五铃，请你记住。”\n黄泉：“蓝鹊五铃。记下了。” |\n",
+    "TavernDB-ACU-CustomExport-纪要-3": "| AM0003 | 未交代 | 向黄泉核对记号与路人 | 御临风在客店门廊边向黄泉询问公开约定的记号、刚才经过人群的身份人数与来向，以及是否有其他告知过的记号。黄泉回答公开约定的记号为蓝鹊五铃，说明刚才走过的是顺路走去、挑杂货干菜的镇民，具体人数与来向并未特意留意，并确认御临风未曾告知过其他记号。布莱特在一旁安静站着未插话。 | 御临风：“请你把刚才公开约定的交接记号说一遍。刚才经过的是什么人？你记得具体有多少、是从哪边来的吗？还有别的记号是我告诉过你的吗？”\n黄泉：“公开约定的记号，就是你刚才说的‘蓝鹊五铃’。刚才过去的，只是一群挑着杂货和干菜的镇民。我没有特意去数具体有多少人，也没留意他们最早是从哪条岔口或街角转过来的，只看到是顺着路走过去。没有了。除了‘蓝鹊五铃’，你没跟我说过别的记号。” |\n"
+  },
+  "timeAndProtagonistRows": "# 全局数据表\n\n| 全局状态 | 当前详细地点 | 当前次要地区 | 当前主要地区 | 上轮场景时间 | 经过的时间 | 当前时间 |\n|---|---|---|---|---|---|---|\n| 全局状态 | 客店门外 | 洛汀 | 洛汀 |  |  |  |\n\n# 主角信息表\n\n| 姓名 | 性别 | 年龄 | 外貌特征 | 身份 | 近况 | 所在地点 | 随身财物 |\n|---|---|---|---|---|---|---|---|\n| 御临风 | 男 | 未交代 | 外貌未详细描述 | 旅行者 | 在客店门外向黄泉核对交接记号与方才路过的镇民情况 | 客店门外 |  |\n\n",
+  "actualNarrations": [
+    {
+      "id": "auto-event",
+      "recallRuleInActualNarration": true,
+      "quantifierRuleInActualNarration": true,
+      "privateCodeInActualNarration": true,
+      "input": "我等一拨镇民经过，随后对黄泉说：“这次交接的记号定为蓝鹊五铃，请你记住。”[我自己想了一个备用记号砂灯六纹，还没有告诉任何人。]我等她答复。"
+    },
+    {
+      "id": "recall",
+      "recallRuleInActualNarration": true,
+      "quantifierRuleInActualNarration": true,
+      "privateCodeInActualNarration": false,
+      "input": "我问黄泉：“请你把刚才公开约定的交接记号说一遍。刚才经过的是什么人？你记得具体有多少、是从哪边来的吗？还有别的记号是我告诉过你的吗？”我听她回答。"
+    }
+  ],
+  "autoFillCalls": [
+    {
+      "publicInInput": false,
+      "privateCodeInInput": false,
+      "fillTimeRule": true,
+      "privateKnowledgeRule": true,
+      "quantityAndDirectionRule": true,
+      "obsoleteForcedFormat": false,
+      "completed": true,
+      "returnedChronicleInsert": true
+    },
+    {
+      "publicInInput": true,
+      "privateCodeInInput": true,
+      "fillTimeRule": true,
+      "privateKnowledgeRule": true,
+      "quantityAndDirectionRule": true,
+      "obsoleteForcedFormat": false,
+      "completed": true,
+      "returnedChronicleInsert": true
+    },
+    {
+      "publicInInput": true,
+      "privateCodeInInput": false,
+      "fillTimeRule": true,
+      "privateKnowledgeRule": true,
+      "quantityAndDirectionRule": true,
+      "obsoleteForcedFormat": false,
+      "completed": true,
+      "returnedChronicleInsert": true
+    }
+  ]
+}

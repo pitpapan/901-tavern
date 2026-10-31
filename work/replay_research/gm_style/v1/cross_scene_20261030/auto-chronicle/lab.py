@@ -37,7 +37,7 @@ def snapshot():
         files.extend(p for p in (FORMAL/folder).rglob("*") if p.is_file())
     return {str(p.relative_to(FORMAL)):sha(p.read_bytes()) for p in files}
 
-def patch_png(src, dest, recorder):
+def patch_png(src, dest, recorder, style_addition=""):
     raw=src.read_bytes()
     out=bytearray(raw[:8])
     i=8
@@ -55,6 +55,10 @@ def patch_png(src, dest, recorder):
             opt="max_chat_history:'all'"
             assert host["content"].count(opt)==1
             host["content"]=host["content"].replace(opt,"max_chat_history:SillyTavern.chat.some(m=>m.is_user && m.mes.includes('请你把刚才公开约定的交接记号说一遍'))?0:'all'")
+            if style_addition:
+                style_load="const style=await (await fetch('/901-opening-combat/narrative-style.json')).json();"
+                assert host["content"].count(style_load)==1
+                host["content"]=host["content"].replace(style_load,style_load[:-1]+"+"+json.dumps("\n"+style_addition,ensure_ascii=False)+";")
             next(s for s in scripts if s["name"]=="数据库事实验收采集")["content"]=recorder
             chunk=key+b"\0"+base64.b64encode(json.dumps(card,ensure_ascii=False).encode())
             changed+=1
@@ -64,7 +68,7 @@ def patch_png(src, dest, recorder):
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_bytes(out)
 
-def prepare():
+def prepare(style_addition=""):
     LAB.mkdir(exist_ok=False)
     put(LAB/"protection.json",snapshot())
     shutil.copyfile(APP/"config.yaml",LAB/"config.yaml")
@@ -92,7 +96,7 @@ def prepare():
         shutil.copyfile(FORMAL/"worlds"/(book+".json"),USER/"worlds"/(book+".json"))
     shutil.copyfile(FORMAL/"worlds/901_01_世界基础设定_20261023.json",USER/"worlds"/(BOOK+".json"))
     reset_seed()
-    make_card()
+    make_card(style_addition)
     print("Ready: isolated three-message fixture, empty chronicle, formal auto-fill off.")
 
 def reset_seed():
@@ -110,7 +114,7 @@ def reset_seed():
     dest.parent.mkdir(parents=True,exist_ok=True)
     dest.write_text(text,encoding="utf-8")
 
-def make_card():
+def make_card(style_addition=""):
     recorder=(APP/"public/901-db-fact-20261031/recorder.js").read_text(encoding="utf-8")
     first,tail=recorder.split("\n",1)
     assert first.startswith("//")
@@ -119,7 +123,7 @@ def make_card():
     # Test questions are operator instructions, never added to model prompts by this recorder.
     config={"name":NAME,"chatId":CHAT,"rounds":[None,{"id":"auto-event","input":INPUT1},{"id":"recall","input":INPUT2}]}
     recorder="const cfg="+json.dumps(config,ensure_ascii=False)+";\n"+tail.replace("db_fact_acceptance_20261031","auto_fill_observations")
-    patch_png(FORMAL/"characters"/(NAME+".png"),USER/"characters"/(NAME+".png"),recorder)
+    patch_png(FORMAL/"characters"/(NAME+".png"),USER/"characters"/(NAME+".png"),recorder,style_addition)
 
 if __name__=="__main__":
     if sys.argv[1]=="prepare":
