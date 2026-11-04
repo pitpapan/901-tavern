@@ -1,0 +1,74 @@
+{
+  "全局数据表": {
+    "note": "当前场景状态，至多一行，story_state固定为全局状态。地点三列各写已有证据支持的本级地点名，不补造未知层级。prev_scene_time、elapsed_time、cur_time仅记录有依据的剧情时间：未知写SQL NULL；有精确时刻才用YYYY-MM-DD HH:MM，只知相对或模糊时间则保留原精度。仅在起点与耗时均明确时计算终点；有据推进时将旧cur_time移入prev_scene_time，elapsed_time记本段耗时，再计算新cur_time；未知耗时不填0分。",
+    "initNode": "已有场景事实且本表为空时插入一行，未知字段为SQL NULL。",
+    "deleteNode": "禁止删除。",
+    "updateNode": "已证实地点或时间改变时才更新对应字段。没有新时间依据时不滚动时间列；地点变化不自动产生时间变化。",
+    "insertNode": "仅空表且有场景事实时初始化，不重复插行。",
+    "ddl": "CREATE TABLE global_state ( -- 全局数据表\n  row_id INTEGER PRIMARY KEY, -- 行号\n  story_state TEXT, -- 全局状态\n  current_location TEXT, -- 当前详细地点\n  current_minor_region TEXT, -- 当前次要地区\n  current_major_region TEXT, -- 当前主要地区\n  prev_scene_time TEXT, -- 上轮场景时间\n  elapsed_time TEXT, -- 经过的时间\n  cur_time TEXT -- 当前时间\n);"
+  },
+  "主角信息表": {
+    "note": "主角当前身份与状态，至多一行。姓名、性别、年龄、外貌、身份按提供的明确证据记录，不能用职业或性格默认值填空。近况记录已证身体状态、已表达情绪或有归属的私人想法；未交代不写一切如常。随身财物只记实物与持有状态，不放记号、想法或计划；背包物品表保存数量及物品详情，本栏只保留必要简述。地点只写已有地点名。",
+    "initNode": "有明确主角信息时初始化；未知字段SQL NULL。",
+    "deleteNode": "禁止删除。",
+    "updateNode": "只更新有变化证据的身份、状态、位置和持物信息，遗漏不视为消失。",
+    "insertNode": "仅空表且有主角证据时初始化，不重复插行。",
+    "ddl": "CREATE TABLE protagonist_info ( -- 主角信息\n  row_id INTEGER PRIMARY KEY, -- 行号，仅允许为 1\n  name TEXT, -- 姓名\n  gender TEXT, -- 性别\n  age TEXT, -- 年龄\n  appearance TEXT, -- 外貌特征\n  identity_text TEXT, -- 身份\n  current_condition TEXT, -- 近况\n  location_name TEXT, -- 所在地点\n  belongings TEXT -- 随身财物\n);"
+  },
+  "重要角色表": {
+    "note": "记录对当前剧情有作用的已知人物，不因提到名字就补全档案。brief_intro写已证身份、行为或关系；appearance和outfit_text分别记录已知外貌与可见穿戴，不生成默认形象或秘密性格。presence_status按在场/离场证据填写，未提及不自动离场。relation_text沿用角色名:关系描述格式，同一人多项用英文逗号，不同人用英文分号；未知关系不强填。只改新证据改变的关系分项，同一人的其他既有关系和判断保留；对某事项的信任不自动扩大到其他事项。past_experience保留来源及知情者，不把传闻当真相。interaction_options在本记忆维护模式留空，已有值不作为已选动作，不生成行动建议。",
+    "initNode": "有具体人物事实时初始化相应人物行，只填已知字段。",
+    "deleteNode": "暂时离场或无新信息保留原行；仅明确永久离开且不再需要追踪时删除。",
+    "updateNode": "人物身份、状态、位置或经历有新证据才更新。更新relation_text时先复用完整旧值，仅替换被明确改变的关系分项；未提到的旧分项原样保留，不能用本轮关系摘要覆盖整列。不把玩家私念写成该人物知识。",
+    "insertNode": "新出现且有相关事实的人物按唯一姓名新增，已有者更新原行。",
+    "ddl": "CREATE TABLE important_non_romance ( -- 重要角色表\n  row_id INTEGER PRIMARY KEY, -- 行号\n  name TEXT, -- 姓名\n  gender TEXT, -- 性别\n  age TEXT, -- 年龄\n  brief_intro TEXT, -- 一句话介绍\n  appearance TEXT, -- 外貌特征\n  outfit_text TEXT, -- 穿着打扮\n  location_name TEXT, -- 所在地点\n  presence_status TEXT, -- 在场状态\n  relation_text TEXT, -- 人际关系\n  past_experience TEXT, -- 过往经历\n  interaction_options TEXT -- 交互选项\n);"
+  },
+  "主角技能表": {
+    "note": "记录本分支已获得的技能与已证等级、效果。阅读介绍、提出学习或知道某技能存在不等于学会；未交代等级不补Lv.1。",
+    "initNode": "只录入提供的已拥有技能，没有证据时空表。",
+    "deleteNode": "明确失去或被替换时删除对应技能。",
+    "updateNode": "有升级或效果改变证据时更新对应技能，未交代字段保持。",
+    "insertNode": "已证获得新的技能时新增。",
+    "ddl": "CREATE TABLE protagonist_skills ( -- 主角技能表\n  row_id INTEGER PRIMARY KEY, -- 行号\n  skill_name TEXT, -- 技能名称\n  skill_type TEXT, -- 技能类型\n  skill_level TEXT, -- 等级/阶段\n  effect_desc TEXT -- 效果描述\n);"
+  },
+  "背包物品表": {
+    "note": "记录主角当前拥有或保管的实物、数量及持有状态。物品介绍不等于取得；思想、暗号及计划不是实物。quantity虽为TEXT，只在已有数值和实际增减都明确时计算；未知数量SQL NULL，不按默认1补数。已转交保管时按已证所有权和持有状态记录，不自动当作赠出。",
+    "initNode": "只录入有证据的初始持物，缺信息不补默认装备。",
+    "deleteNode": "只在明确全部用尽、丢弃、失去或摧毁时删除对应物品，不对未知数量批量删除。",
+    "updateNode": "按实际取得、消耗、交付和状态变化更新；仅损坏不自动减数量。不按同名介绍重复增加。",
+    "insertNode": "实际获得未有物品且有持有证据时新增。",
+    "ddl": "CREATE TABLE inventory ( -- 背包物品表\n  row_id INTEGER PRIMARY KEY, -- 行号\n  item_name TEXT, -- 物品名称\n  quantity TEXT, -- 数量\n  description TEXT, -- 描述/效果\n  category TEXT -- 类别\n);"
+  },
+  "任务与事件表": {
+    "note": "只记录已明确承接且仍待履行的持续目标或委托，不要求原文出现任务二字。提议、私人打算、道具用途和普通交付不自动成立新任务；已完成的日常互动进入纪要或人物近况。分类、发布者、期限及奖罚只取明示证据，未知SQL NULL，不强分主线或支线。进度区分实际完成和带归属的推测，私人线索不变共同知识。",
+    "initNode": "只有已成立且尚未完成的任务时初始化，否则空表。",
+    "deleteNode": "任务明确完成、失败或过期后移出当前任务表，结果保留于纪要；不能因没再提及就删除。",
+    "updateNode": "只按实际新证据更新已成立任务；无剧情时间证据不减少期限。",
+    "insertNode": "明确接下或自行确立仍待履行的具体目标时新增，不据重要性补主线。",
+    "ddl": "CREATE TABLE quests_events ( -- 任务与事件表\n  row_id INTEGER PRIMARY KEY, -- 行号\n  quest_name TEXT, -- 任务名称\n  quest_type TEXT, -- 任务类型\n  issuer TEXT, -- 发布者\n  detail_desc TEXT, -- 详细描述\n  current_progress TEXT, -- 当前进度\n  time_limit TEXT, -- 任务时限\n  reward TEXT, -- 奖励\n  penalty TEXT -- 惩罚\n);"
+  },
+  "纪要表": {
+    "note": "保存对接续有意义的新事件、决定、变化和订正；非每轮日志，不设最低字数，不强填对话句数。code_index为AM0001起递增的唯一编号，summary简短概括；chronicle_text按事实所需篇幅保留因果、结果、来源和知情范围，可合并同场细碎动作，不删掉关键真实情绪或结果，不要求开放结尾。time_span只在两端时刻都有依据时写具体区间；模糊时间保留原精度，完全无依据写未交代。人数与来向分别核对，已给的确数、群体称谓和明确方位来源照实保留，只对缺失项标未详；途经地点不证明来向。key_dialogue仅摘必要原文并标明说话者，缺少原话就留空。",
+    "initNode": "首次有值得保留的新剧情事实时新增；初始化本身不制造事件。",
+    "deleteNode": "禁止删除。",
+    "updateNode": "不覆盖历史纪要；明确订正用新纪要指明被订正的事实。",
+    "insertNode": "有新接续信息才追加，不把重复内容、桌外维护或无变化写成新事件。",
+    "ddl": "CREATE TABLE chronicle ( -- 纪要表\n  row_id INTEGER PRIMARY KEY, -- 行号\n  code_index TEXT, -- 编码索引\n  time_span TEXT, -- 时间跨度\n  summary TEXT, -- 概览\n  chronicle_text TEXT, -- 纪要\n  key_dialogue TEXT -- 重要对话\n);"
+  },
+  "选项表": {
+    "note": "兼容保留的行动建议表，本901记忆维护模式不生成菜单。已有选项只是未选建议，不是已执行行为、已接任务或NPC已知事实。",
+    "initNode": "不初始化。",
+    "deleteNode": "保留已有数据，不自动删除。",
+    "updateNode": "不更新。",
+    "insertNode": "不新增。",
+    "ddl": "CREATE TABLE options ( -- 选项表\n  row_id INTEGER PRIMARY KEY, -- 行号\n  option_1 TEXT, -- 选项一\n  option_2 TEXT, -- 选项二\n  option_3 TEXT, -- 选项三\n  option_4 TEXT -- 选项四\n);"
+  },
+  "大总结": {
+    "note": "按已完成阶段追加历史总结，已有行不可修改或删除。仅当本次请求中已存在的可见纪要达到$RECENT_CHRONICLE_ROWS条时新增，不计本轮拟插入行；逐条承接全部可见纪要，不漏掉未被后续取代的事实与变化；压缩表述仍保留因果、结果、持续约定、人物关系和知情范围；与前阶段总结按时序、因果和人物状态衔接。新订正保留订正关系，不为与旧总结表面一致而沿袭已证错误。新增后由系统隐藏已归纳纪要，不自行操作隐藏或填写引用范围。",
+    "initNode": "不因初始化新增。",
+    "deleteNode": "禁止删除已有总结。",
+    "updateNode": "禁止修改已有总结。",
+    "insertNode": "本次请求中已存在的可见纪要达到$RECENT_CHRONICLE_ROWS条才新增阶段总结，不计本轮拟插入行；未达阈值不新增。",
+    "ddl": "CREATE TABLE flight_big_summary ( -- 大总结\n  row_id INTEGER PRIMARY KEY, -- 行号\n  summary_text TEXT NOT NULL -- 总结\n);"
+  }
+}
