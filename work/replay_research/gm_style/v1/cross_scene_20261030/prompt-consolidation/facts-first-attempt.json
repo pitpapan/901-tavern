@@ -1,0 +1,54 @@
+{
+  "case": "facts",
+  "fixtures": {
+    "source": "controlled isolated fixture; not Canon",
+    "input": "已确认当前剧情时间是2026年2月4日09:00。我对黄泉说：“我已接下掌柜托我寻找失落铜钥匙的委托，现在还没找到，期限、报酬和失败后果都没有约定。”[我怀疑钥匙在旧井边，但没有告诉她。]我原有2瓶治疗药水，刚实际用掉1瓶，现在剩1瓶。两名镇民从西侧经过。我只读过火球术介绍，没有学会。",
+    "reply": "黄泉点头：“记住了，找掌柜的铜钥匙。”御临风用掉一瓶治疗药水后还剩一瓶。两名镇民从西侧走过。",
+    "expected": "one accepted task; NULL metadata; cur_time09:00; one potion; no learned skill; no options; exact crowd count/origin; private ownership"
+  },
+  "requests": [
+    {
+      "candidateRule": true,
+      "obsoleteForcedMain": false,
+      "autoUpdateEnabled": false,
+      "model": "[抗截断]gemini-3.8-flash",
+      "responded": true,
+      "sqlLines": [
+        "\"INSERT INTO global_state (story_state, current_location, current_minor_region, current_major_region, prev_scene_time, elapsed_time, cur_time) VALUES ('全局状态', NULL, NULL, NULL, NULL, NULL, '2026-02-04 09:00');\\n\" +",
+        "\"INSERT INTO protagonist_info (name, gender, age, appearance, identity_text, current_condition, location_name, belongings) VALUES ('御临风', NULL, NULL, NULL, NULL, '私人怀疑钥匙在旧井边（未告知黄泉）', NULL, '治疗药水1瓶');\\n\" +",
+        "\"INSERT INTO important_non_romance (name, gender, age, brief_intro, appearance, outfit_text, location_name, presence_status, relation_text, past_experience, interaction_options) VALUES ('黄泉', NULL, NULL, '听御临风说明寻找铜钥匙的委托', NULL, NULL, NULL, '在场', NULL, NULL, NULL);\\n\" +",
+        "\"INSERT INTO inventory (item_name, quantity, description, category) VALUES ('治疗药水', '1', NULL, NULL);\\n\" +",
+        "\"INSERT INTO quests_events (quest_name, quest_type, issuer, detail_desc, current_progress, time_limit, reward, penalty) VALUES ('寻找失落铜钥匙', NULL, '掌柜', '受掌柜托付寻找失落的铜钥匙', '现在还没找到；御临风私人怀疑钥匙在旧井边（未告知黄泉）', NULL, NULL, NULL);\\n\" +",
+        "\"INSERT INTO chronicle (code_index, time_span, summary, chronicle_text, key_dialogue) VALUES ('AM0001', '2026-02-04 09:00', '告知委托与使用药水', '御临风告知黄泉自己接下了掌柜寻找失落铜钥匙的委托，目前尚未找到，且无约定期限、报酬与惩罚；其内心怀疑钥匙在旧井边但未向黄泉透露。御临风使用了一瓶治疗药水（剩余一瓶）。期间有两名镇民（来向未详）从西侧经过。御临风仅读过火球术介绍，并未掌握该技能。', '御临风：“我已接下掌柜托我寻找失落铜钥匙的委托，现在还没找到，期限、报酬和失败后果都没有约定。”\\n\" +"
+      ]
+    }
+  ],
+  "exports": {
+    "TavernDB-ACU-CustomExport-纪要-包裹-上": "<记忆回溯>\n\n# 纪要表\n\n| 编码索引 | 时间跨度 | 概览 | 纪要 | 重要对话 |\n|---|---|---|---|---|",
+    "TavernDB-ACU-CustomExport-纪要-1": "| AM0001 | 2026-02-04 09:00 | 告知委托与使用药水 | 御临风告知黄泉自己接下了掌柜寻找失落铜钥匙的委托，目前尚未找到，且无约定期限、报酬与惩罚；其内心怀疑钥匙在旧井边但未向黄泉透露。御临风使用了一瓶治疗药水（剩余一瓶）。期间有两名镇民（来向未详）从西侧经过。御临风仅读过火球术介绍，并未掌握该技能。 | 御临风：“我已接下掌柜托我寻找失落铜钥匙的委托，现在还没找到，期限、报酬和失败后果都没有约定。”\n黄泉：“记住了，找掌柜的铜钥匙。” |\n",
+    "TavernDB-ACU-CustomExport-纪要-包裹-下": "</记忆回溯>",
+    "TavernDB-ACU-ReadableDataTable": "# 全局数据表\n\n| 全局状态 | 当前详细地点 | 当前次要地区 | 当前主要地区 | 上轮场景时间 | 经过的时间 | 当前时间 |\n|---|---|---|---|---|---|---|\n| 全局状态 |  |  |  |  |  | 2026-02-04 09:00 |\n\n# 主角信息表\n\n| 姓名 | 性别 | 年龄 | 外貌特征 | 身份 | 近况 | 所在地点 | 随身财物 |\n|---|---|---|---|---|---|---|---|\n| 御临风 |  |  |  |  | 私人怀疑钥匙在旧井边（未告知黄泉） |  | 治疗药水1瓶 |\n\n# 主角技能表\n\n| 技能名称 | 技能类型 | 等级/阶段 | 效果描述 |\n|---|---|---|---|\n\n# 背包物品表\n\n| 物品名称 | 数量 | 描述/效果 | 类别 |\n|---|---|---|---|\n| 治疗药水 | 1 |  |  |\n\n# 任务与事件表\n\n| 任务名称 | 任务类型 | 发布者 | 详细描述 | 当前进度 | 任务时限 | 奖励 | 惩罚 |\n|---|---|---|---|---|---|---|---|\n| 寻找失落铜钥匙 |  | 掌柜 | 受掌柜托付寻找失落的铜钥匙 | 现在还没找到；御临风私人怀疑钥匙在旧井边（未告知黄泉） |  |  |  |\n\n"
+  },
+  "messageCount": 5,
+  "taskRows": [
+    "",
+    "",
+    "| 任务名称 | 任务类型 | 发布者 | 详细描述 | 当前进度 | 任务时限 | 奖励 | 惩罚 |",
+    "|---|---|---|---|---|---|---|---|",
+    "| 寻找失落铜钥匙 |  | 掌柜 | 受掌柜托付寻找失落的铜钥匙 | 现在还没找到；御临风私人怀疑钥匙在旧井边（未告知黄泉） |  |  |  |",
+    ""
+  ],
+  "loadedSystemLines": true,
+  "loadedTableNotes": {
+    "全局数据表": true,
+    "主角信息表": true,
+    "重要角色表": true,
+    "主角技能表": true,
+    "背包物品表": true,
+    "任务与事件表": true,
+    "纪要表": true,
+    "选项表": true,
+    "大总结": true
+  },
+  "obsoleteTriggersPresent": []
+}

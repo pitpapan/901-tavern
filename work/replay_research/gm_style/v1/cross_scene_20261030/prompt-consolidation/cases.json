@@ -1,0 +1,20 @@
+{
+  "delivery": {
+    "source": "chronicle-write-read/first.json: exact original input and model reply",
+    "input": "我等一拨镇民经过，将写着接头记号松桥九拍的便条递给黄泉，说：“请替我收好这张便条。”[我另想了备用记号灰砚八折，但没有告诉任何人。]我等她答复。",
+    "reply": "几名端着竹篓的镇民从客店门前的石板路上走过去，脚步声顺着街面渐远。\n\n黄泉伸手接过那张便条，目光在纸面上扫了一眼，随即把它叠好收进衣内贴身处，向御临风点了点头：\n\n“知道了，我收着。”\n\n<StatusPlaceHolderImpl/>",
+    "expected": "no quest row"
+  },
+  "facts": {
+    "source": "controlled isolated fixture; not Canon",
+    "input": "已确认当前剧情时间是2026年2月4日09:00。我对黄泉说：“我已接下掌柜托我寻找失落铜钥匙的委托，现在还没找到，期限、报酬和失败后果都没有约定。”[我怀疑钥匙在旧井边，但没有告诉她。]我原有2瓶治疗药水，刚实际用掉1瓶，现在剩1瓶。两名镇民从西侧经过。我只读过火球术介绍，没有学会。",
+    "reply": "黄泉点头：“记住了，找掌柜的铜钥匙。”御临风用掉一瓶治疗药水后还剩一瓶。两名镇民从西侧走过。",
+    "expected": "one accepted task; NULL metadata; cur_time09:00; one potion; no learned skill; no options; exact crowd count/origin; private ownership"
+  },
+  "repeat": {
+    "source": "out-of-story no-change check after facts; not Canon",
+    "input": "（桌外：这是记忆核对，本轮没有新增剧情或状态变化，不重复记录上轮事件。）",
+    "reply": "（桌外：本轮无新增剧情。）",
+    "expected": "empty SQL; all stored tables and chronicle unchanged"
+  }
+}
