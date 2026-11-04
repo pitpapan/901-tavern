@@ -1,0 +1,61 @@
+{
+  "messages": [
+    {
+      "user": false,
+      "text": "隔离测试场景。御临风、黄泉与布莱特在洛汀一间普通客店门外歇脚。"
+    },
+    {
+      "user": true,
+      "text": "我在门外停下，等两人走到身边。"
+    },
+    {
+      "user": false,
+      "text": "黄泉在廊柱边站住，布莱特也停下脚步。"
+    },
+    {
+      "user": true,
+      "text": "我等一拨镇民经过，将写着接头记号松桥九拍的便条递给黄泉，说：“请替我收好这张便条。”[我另想了备用记号灰砚八折，但没有告诉任何人。]我等她答复。"
+    },
+    {
+      "user": false,
+      "text": "几名端着竹篓的镇民从客店门前的石板路上走过去，脚步声顺着街面渐远。\n\n黄泉伸手接过那张便条，目光在纸面上扫了一眼，随即把它叠好收进衣内贴身处，向御临风点了点头：\n\n“知道了，我收着。”\n\n<StatusPlaceHolderImpl/>"
+    }
+  ],
+  "runs": [
+    {
+      "id": "new-event",
+      "model": "[抗截断]gemini-3.8-flash",
+      "installedStyle": true,
+      "firstInputPresent": true,
+      "firstReplyPresent": false,
+      "secretPresent": true,
+      "memoryMatches": [],
+      "revisions": [
+        0,
+        0
+      ]
+    }
+  ],
+  "autoUpdateEnabled": false,
+  "chronicles": [
+    "| AM0001 | 未交代 | 交付接头便条 | 几名端着竹篓的镇民自客店门前石板路上走过，来向未详，人数未详。御临风等镇民过去后，将写着接头记号松桥九拍的便条递给黄泉，托其收好。御临风另在心中想了备用记号灰砚八折，未告知任何人。黄泉接过便条看了一眼，折好收进贴身衣内，应声表示知晓并收着。 | 御临风：“请替我收好这张便条。”\n黄泉：“知道了，我收着。” |\n"
+  ],
+  "globalState": [
+    "| 全局状态 | 客店门前 | 未知镇 | 未知主要地区 |  |  |  |"
+  ],
+  "npcRows": [
+    "| 黄泉 | 女 | 未交代 | 未交代 | 贴身衣物 | 客店门前 | 在场 | 主角:同行者，受托保管便条 | 从主角手中接过了写有接头记号松桥九拍的便条并收在贴身处。 | 向黄泉交代下一步的行动打算 |",
+    "| 黄泉 | 同行者，替主角保管接头便条 |"
+  ],
+  "fill": [
+    {
+      "timeRule": true,
+      "nullRule": true,
+      "privateRule": true,
+      "crowdRule": true,
+      "newEventInInput": true,
+      "returnedInsert": true,
+      "answered": true
+    }
+  ]
+}
