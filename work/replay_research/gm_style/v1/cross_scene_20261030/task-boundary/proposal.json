@@ -1,0 +1,39 @@
+{
+  "case": "proposal",
+  "fixtures": {
+    "source": "controlled isolated fixture, not played Canon",
+    "input": "我对黄泉说：“或许可以去找掌柜问问，但这只是个提议，我还没决定，也没接下什么委托。”[我想以后也许能去找那把遗失的钥匙，目前只是私下想法。]",
+    "reply": "黄泉说：“那就先不定。”",
+    "expected": "no quest row"
+  },
+  "requests": [
+    {
+      "candidateRule": true,
+      "obsoleteForcedMain": false,
+      "autoUpdateEnabled": false,
+      "model": "[抗截断]gemini-3.8-flash",
+      "responded": true,
+      "sqlLines": [
+        "\"INSERT INTO global_state (story_state, current_location, current_minor_region, current_major_region, prev_scene_time, elapsed_time, cur_time) VALUES ('全局状态', '未知地点', '未知区域', '未知大区', NULL, NULL, NULL);\\n\" +",
+        "\"INSERT INTO protagonist_info (name, gender, age, appearance, identity_text, current_condition, location_name, belongings) VALUES ('主角', '未知', '未知', '未详细描述', '旅行者', '一切如常，正与黄泉商议后续打算', '未知地点', '');\\n\" +",
+        "\"INSERT INTO important_non_romance (name, gender, age, brief_intro, appearance, outfit_text, location_name, presence_status, relation_text, past_experience, interaction_options) VALUES ('黄泉', '女', '未知', '与主角同行的同伴', '未详', '未详', '未知地点', '在场', '主角:同行同伴', '未知', '与黄泉讨论接下来的行动');\\n\" +",
+        "\"INSERT INTO chronicle (code_index, time_span, summary, chronicle_text, key_dialogue) VALUES ('AM0001', '未交代', '主角与黄泉商讨后续安排', '主角向黄泉提出去找掌柜询问的建议，并声明这仅是提议，自己尚未做出决定也未承接任何委托。黄泉对此表示赞同，回应暂且不定下行程，双方维持现状。', '主角:或许可以去找掌柜问问，但这只是个提议，我还没决定，也没接下什么委托。;黄泉:那就先不定。');\\n\" +",
+        "\"INSERT INTO options (option_1, option_2, option_3, option_4) VALUES ('主角尝试去找掌柜打听情况', '主角决定在原地稍作休整', '主角向黄泉表达关心并询问其意愿', '主角在与黄泉独处时靠近注视');\\n\" +"
+      ]
+    }
+  ],
+  "exports": {
+    "TavernDB-ACU-CustomExport-纪要-包裹-上": "<记忆回溯>\n\n# 纪要表\n\n| 编码索引 | 时间跨度 | 概览 | 纪要 | 重要对话 |\n|---|---|---|---|---|",
+    "TavernDB-ACU-CustomExport-纪要-1": "| AM0001 | 未交代 | 主角与黄泉商讨后续安排 | 主角向黄泉提出去找掌柜询问的建议，并声明这仅是提议，自己尚未做出决定也未承接任何委托。黄泉对此表示赞同，回应暂且不定下行程，双方维持现状。 | 主角:或许可以去找掌柜问问，但这只是个提议，我还没决定，也没接下什么委托。;黄泉:那就先不定。 |\n",
+    "TavernDB-ACU-CustomExport-纪要-包裹-下": "</记忆回溯>",
+    "TavernDB-ACU-ReadableDataTable": "# 全局数据表\n\n| 全局状态 | 当前详细地点 | 当前次要地区 | 当前主要地区 | 上轮场景时间 | 经过的时间 | 当前时间 |\n|---|---|---|---|---|---|---|\n| 全局状态 | 未知地点 | 未知区域 | 未知大区 |  |  |  |\n\n# 主角信息表\n\n| 姓名 | 性别 | 年龄 | 外貌特征 | 身份 | 近况 | 所在地点 | 随身财物 |\n|---|---|---|---|---|---|---|---|\n| 主角 | 未知 | 未知 | 未详细描述 | 旅行者 | 一切如常，正与黄泉商议后续打算 | 未知地点 |  |\n\n# 主角技能表\n\n| 技能名称 | 技能类型 | 等级/阶段 | 效果描述 |\n|---|---|---|---|\n\n# 背包物品表\n\n| 物品名称 | 数量 | 描述/效果 | 类别 |\n|---|---|---|---|\n\n# 任务与事件表\n\n| 任务名称 | 任务类型 | 发布者 | 详细描述 | 当前进度 | 任务时限 | 奖励 | 惩罚 |\n|---|---|---|---|---|---|---|---|\n\n"
+  },
+  "messageCount": 5,
+  "taskRows": [
+    "",
+    "",
+    "| 任务名称 | 任务类型 | 发布者 | 详细描述 | 当前进度 | 任务时限 | 奖励 | 惩罚 |",
+    "|---|---|---|---|---|---|---|---|",
+    ""
+  ]
+}

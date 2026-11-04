@@ -1,0 +1,20 @@
+{
+  "delivery": {
+    "source": "chronicle-write-read/first.json: exact original input and model reply",
+    "input": "我等一拨镇民经过，将写着接头记号松桥九拍的便条递给黄泉，说：“请替我收好这张便条。”[我另想了备用记号灰砚八折，但没有告诉任何人。]我等她答复。",
+    "reply": "几名端着竹篓的镇民从客店门前的石板路上走过去，脚步声顺着街面渐远。\n\n黄泉伸手接过那张便条，目光在纸面上扫了一眼，随即把它叠好收进衣内贴身处，向御临风点了点头：\n\n“知道了，我收着。”\n\n<StatusPlaceHolderImpl/>",
+    "expected": "no quest row"
+  },
+  "proposal": {
+    "source": "controlled isolated fixture, not played Canon",
+    "input": "我对黄泉说：“或许可以去找掌柜问问，但这只是个提议，我还没决定，也没接下什么委托。”[我想以后也许能去找那把遗失的钥匙，目前只是私下想法。]",
+    "reply": "黄泉说：“那就先不定。”",
+    "expected": "no quest row"
+  },
+  "accepted": {
+    "source": "controlled isolated fixture, not played Canon",
+    "input": "我对黄泉说：“我接下掌柜托我寻找失落铜钥匙的委托，现在还没找到。先把这项待办记住，期限、报酬和失败后果都没有约定。”[我怀疑钥匙在旧井边，但没有告诉她。]",
+    "reply": "黄泉点头：“记住了，找掌柜的铜钥匙。还没找到。”",
+    "expected": "pending search task; unknown type/time/reward/penalty, no private location as shared knowledge"
+  }
+}

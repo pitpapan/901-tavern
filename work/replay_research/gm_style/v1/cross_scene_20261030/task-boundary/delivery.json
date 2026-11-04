@@ -1,0 +1,39 @@
+{
+  "case": "delivery",
+  "fixtures": {
+    "source": "chronicle-write-read/first.json: exact original input and model reply",
+    "input": "我等一拨镇民经过，将写着接头记号松桥九拍的便条递给黄泉，说：“请替我收好这张便条。”[我另想了备用记号灰砚八折，但没有告诉任何人。]我等她答复。",
+    "reply": "几名端着竹篓的镇民从客店门前的石板路上走过去，脚步声顺着街面渐远。\n\n黄泉伸手接过那张便条，目光在纸面上扫了一眼，随即把它叠好收进衣内贴身处，向御临风点了点头：\n\n“知道了，我收着。”\n\n<StatusPlaceHolderImpl/>",
+    "expected": "no quest row"
+  },
+  "requests": [
+    {
+      "candidateRule": true,
+      "obsoleteForcedMain": false,
+      "autoUpdateEnabled": false,
+      "model": "[抗截断]gemini-3.8-flash",
+      "responded": true,
+      "sqlLines": [
+        "\"INSERT INTO global_state (story_state, current_location, current_minor_region, current_major_region, prev_scene_time, elapsed_time, cur_time) VALUES ('全局状态', '客店', '镇内', '未知', NULL, NULL, NULL);\\n\" +",
+        "\"INSERT INTO protagonist_info (name, gender, age, appearance, identity_text, current_condition, location_name, belongings) VALUES ('御临风', '男', '未知', '穿戴寻常', '行客', '刚将松桥九拍便条交给黄泉，心中备用记号灰砚八折未告知任何人', '客店', '随身行装');\\n\" +",
+        "\"INSERT INTO important_non_romance (name, gender, age, brief_intro, appearance, outfit_text, location_name, presence_status, relation_text, past_experience, interaction_options) VALUES ('黄泉', '女', '未知', '与御临风同行并代其保管接头记号便条', '神色沉静', '便于行动的衣物', '客店', '在场', '御临风:同行者,为其代为收管接头便条', '与御临风同行至此。', '与黄泉商讨接下来的行动');\\n\" +",
+        "\"INSERT INTO chronicle (code_index, time_span, summary, chronicle_text, key_dialogue) VALUES ('AM0001', '未交代', '御临风托黄泉保管便条', '几名端着竹篓的镇民（人数未详，来向未详）从客店门前的石板路上走过去。御临风等该拨镇民走过后，将写着接头记号松桥九拍的便条递给黄泉，请其代为收好。御临风另想了备用记号灰砚八折但未告知任何人。黄泉伸手接过便条，扫了一眼后叠好收进衣内贴身处，点头应允收着。', '御临风：“请替我收好这张便条。”\\n\" +",
+        "\"INSERT INTO options (option_1, option_2, option_3, option_4) VALUES ('主角向黄泉询问对接头地点的具体看法与准备', '主角留在客店门前观察街面镇民的动静', '主角确认黄泉放好便条并出言提醒多加小心', '主角凑近黄泉低声耳语接头细节时借机轻触其手背');\\n\" +"
+      ]
+    }
+  ],
+  "exports": {
+    "TavernDB-ACU-CustomExport-纪要-包裹-上": "<记忆回溯>\n\n# 纪要表\n\n| 编码索引 | 时间跨度 | 概览 | 纪要 | 重要对话 |\n|---|---|---|---|---|",
+    "TavernDB-ACU-CustomExport-纪要-1": "| AM0001 | 未交代 | 御临风托黄泉保管便条 | 几名端着竹篓的镇民（人数未详，来向未详）从客店门前的石板路上走过去。御临风等该拨镇民走过后，将写着接头记号松桥九拍的便条递给黄泉，请其代为收好。御临风另想了备用记号灰砚八折但未告知任何人。黄泉伸手接过便条，扫了一眼后叠好收进衣内贴身处，点头应允收着。 | 御临风：“请替我收好这张便条。”\n黄泉：“知道了，我收着。” |\n",
+    "TavernDB-ACU-CustomExport-纪要-包裹-下": "</记忆回溯>",
+    "TavernDB-ACU-ReadableDataTable": "# 全局数据表\n\n| 全局状态 | 当前详细地点 | 当前次要地区 | 当前主要地区 | 上轮场景时间 | 经过的时间 | 当前时间 |\n|---|---|---|---|---|---|---|\n| 全局状态 | 客店 | 镇内 | 未知 |  |  |  |\n\n# 主角信息表\n\n| 姓名 | 性别 | 年龄 | 外貌特征 | 身份 | 近况 | 所在地点 | 随身财物 |\n|---|---|---|---|---|---|---|---|\n| 御临风 | 男 | 未知 | 穿戴寻常 | 行客 | 刚将松桥九拍便条交给黄泉，心中备用记号灰砚八折未告知任何人 | 客店 | 随身行装 |\n\n# 主角技能表\n\n| 技能名称 | 技能类型 | 等级/阶段 | 效果描述 |\n|---|---|---|---|\n\n# 背包物品表\n\n| 物品名称 | 数量 | 描述/效果 | 类别 |\n|---|---|---|---|\n\n# 任务与事件表\n\n| 任务名称 | 任务类型 | 发布者 | 详细描述 | 当前进度 | 任务时限 | 奖励 | 惩罚 |\n|---|---|---|---|---|---|---|---|\n\n"
+  },
+  "messageCount": 5,
+  "taskRows": [
+    "",
+    "",
+    "| 任务名称 | 任务类型 | 发布者 | 详细描述 | 当前进度 | 任务时限 | 奖励 | 惩罚 |",
+    "|---|---|---|---|---|---|---|---|",
+    ""
+  ]
+}
