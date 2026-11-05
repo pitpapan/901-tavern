@@ -1,4 +1,5 @@
 """Isolated acceptance of the installed formal host and scoped table rules."""
+import re
 from integrate import *
 A=Path('C:/Users/pit/AppData/Local/901-relationship-facts-evidence-20261105')
 TEST=lab.NAME
@@ -19,7 +20,10 @@ check.onclick=async()=>{if(!valid())return;const data=window.top.AutoCardUpdater
 
 def setup():
  assert not L.exists();U.mkdir(parents=True)
- shutil.copyfile(lab.APP/'config.yaml',L/'config.yaml')
+ config=(lab.APP/'config.yaml').read_text(encoding='utf-8')
+ config,count=re.subn(r'(?m)^(browserLaunch:\r?\n[ \t]+enabled:)[^\r\n]*',r'\1 false',config,count=1)
+ assert count==1, 'Expected browserLaunch.enabled in the copied Tavern config'
+ (L/'config.yaml').write_text(config,encoding='utf-8')
  s=read(F/'settings.json');store,key,cfg=p.profile(s)
  assert cfg['autoUpdateEnabled'] is False
  for api in [cfg]+cfg['apiPresets']:
