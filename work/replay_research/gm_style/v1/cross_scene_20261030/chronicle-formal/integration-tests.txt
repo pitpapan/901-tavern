@@ -1,0 +1,20 @@
+describe('901 adopted chronicle sequence at SQL materialization', () => {
+  const fixture = () => ({sheet_ji_yao_biao: {
+    name: '纪要表',
+    sourceData: {ddl: 'CREATE TABLE chronicle (row_id INTEGER PRIMARY KEY, code_index TEXT, story TEXT);'},
+    content: [['行号', '编码索引', '剧情'], ['1', 'AM0015', '旧甲'], ['2', 'AM0001', '旧乙']],
+  }} as any);
+  it('allocates full-history maximum for multiple new values and preserves old rows', () => {
+    const data = fixture(), before = JSON.stringify(data);
+    const result = materializeSystemRowIdsForSqlInserts_ACU([
+      "INSERT INTO jiyaobiao (code_index, story) VALUES ('AM0001', '新甲'), ('AM0001', '新乙')",
+    ], data);
+    expect(result).toEqual(["INSERT INTO jiyaobiao (row_id, code_index, story) VALUES (3, 'AM0016', '新甲'), (4, 'AM0017', '新乙')"]);
+    expect(JSON.stringify(data)).toBe(before);
+  });
+  it('rejects old-row mutations at the real SQL materializer', () => {
+    for (const sql of ["UPDATE jiyaobiao SET story='坏' WHERE row_id=1", 'DELETE FROM jiyaobiao WHERE row_id=1', "REPLACE INTO jiyaobiao (code_index, story) VALUES ('AM0001','坏')", "INSERT OR REPLACE INTO jiyaobiao (code_index, story) VALUES ('AM0001','坏')"]) {
+      expect(() => materializeSystemRowIdsForSqlInserts_ACU([sql], fixture())).toThrow('901旧纪要只读');
+    }
+  });
+});

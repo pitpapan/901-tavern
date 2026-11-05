@@ -1,0 +1,94 @@
+--- a/src/service/table/sql-table-service.ts
++++ b/src/service/table/sql-table-service.ts
+@@ -0,0 +1 @@
++import { createChronicleSequence901 } from './chronicle-sequence-901.js';
+@@ -951,0 +953 @@
++  const sequence901 = createChronicleSequence901(tableData, getPhysicalTableNameForSheet_ACU);
+@@ -957,0 +960,4 @@
++    if (['INSERT', 'UPDATE', 'DELETE', 'REPLACE'].some(keyword => isSqlMutationKeyword_ACU(action, keyword))) {
++      sequence901.guard(getSqlMutationTargetToken_ACU(statement, tokens).value, action.value.toUpperCase(),
++        isSqlMutationKeyword_ACU(tokens[actionIndex + 1], 'OR') && isSqlMutationKeyword_ACU(tokens[actionIndex + 2], 'REPLACE'));
++    }
+@@ -1033 +1039,3 @@
+-      const businessValues = values.filter((_, index) => index !== suppliedRowIdIndex);
++      const businessValues = sequence901.values(target.value,
++        normalizedColumns.filter((_, index) => index !== suppliedRowIdIndex),
++        values.filter((_, index) => index !== suppliedRowIdIndex));
+--- a/src/service/ai/prompt-builder/prompt-prepare.ts
++++ b/src/service/ai/prompt-builder/prompt-prepare.ts
+@@ -0,0 +1 @@
++import { withChronicleSequenceNote901 } from '../../table/chronicle-sequence-901.js';
+@@ -198,0 +200 @@
++    workingTableData = withChronicleSequenceNote901(workingTableData);
+--- a/src/service/table/chronicle-sequence-901.js
++++ b/src/service/table/chronicle-sequence-901.js
+@@ -0,0 +1,45 @@
++// 901 chronicle numbering uses the full runtime snapshot before prompt hiding.
++function chronicleSheets901(data) {
++  return Object.entries(data || {}).filter(([key,sheet])=>key.startsWith('sheet_')
++    && sheet?.name==='纪要表' && /\bcode_index\b/.test(sheet.sourceData?.ddl || '')
++    && sheet.content?.[0]?.includes('编码索引'));
++}
++function maximumChronicleCode901(sheet) {
++  const column=sheet.content[0].indexOf('编码索引');
++  return sheet.content.slice(1).reduce((max,row)=>{
++    const match=/^AM(\d+)$/.exec(String(row[column] ?? '').trim());
++    return match ? Math.max(max,Number(match[1])) : max;
++  },0);
++}
++const formatChronicleCode901=n=>'AM'+String(n).padStart(4,'0');
++
++export function createChronicleSequence901(data,physicalNameForSheet) {
++  const sequences=new Map(chronicleSheets901(data).map(([key,sheet])=>[
++    physicalNameForSheet(data,key).toLowerCase(),{max:maximumChronicleCode901(sheet)}]));
++  return {
++    guard(table,action,replaceConflict) {
++      if(!sequences.has(table.toLowerCase()))return;
++      if(action!=='INSERT' || replaceConflict)throw new Error('901旧纪要只读：新增纪要用INSERT，禁止UPDATE/DELETE/REPLACE覆盖历史。');
++    },
++    values(table,columns,values) {
++      const seq=sequences.get(table.toLowerCase());
++      if(!seq)return values;
++      const index=columns.indexOf('code_index');
++      if(index<0)throw new Error('901纪要INSERT须显式包含code_index列，由系统分配编号。');
++      const assigned=formatChronicleCode901(++seq.max);
++      const result=values.slice();result[index]="'"+assigned+"'";
++      return result;
++    },
++  };
++}
++
++export function withChronicleSequenceNote901(data) {
++  const sheets=chronicleSheets901(data);if(!sheets.length)return data;
++  const result={...data};
++  for(const [key,sheet] of sheets) {
++    const max=maximumChronicleCode901(sheet);
++    result[key]={...sheet,sourceData:{...sheet.sourceData,
++      note:(sheet.sourceData.note || '')+'\n【系统编号快照】完整历史（含已隐藏纪要）最大编号'+formatChronicleCode901(max)+'，下一个'+formatChronicleCode901(max+1)+'。本批新增纪要由写入组件依次分配编号；不得重编号或覆盖旧纪要。'}};
++  }
++  return result;
++}
+--- a/tests/service/table/sql-table-service.test.ts
++++ b/tests/service/table/sql-table-service.test.ts
+@@ -2833,0 +2834,21 @@
++
++describe('901 adopted chronicle sequence at SQL materialization', () => {
++  const fixture = () => ({sheet_ji_yao_biao: {
++    name: '纪要表',
++    sourceData: {ddl: 'CREATE TABLE chronicle (row_id INTEGER PRIMARY KEY, code_index TEXT, story TEXT);'},
++    content: [['行号', '编码索引', '剧情'], ['1', 'AM0015', '旧甲'], ['2', 'AM0001', '旧乙']],
++  }} as any);
++  it('allocates full-history maximum for multiple new values and preserves old rows', () => {
++    const data = fixture(), before = JSON.stringify(data);
++    const result = materializeSystemRowIdsForSqlInserts_ACU([
++      "INSERT INTO jiyaobiao (code_index, story) VALUES ('AM0001', '新甲'), ('AM0001', '新乙')",
++    ], data);
++    expect(result).toEqual(["INSERT INTO jiyaobiao (row_id, code_index, story) VALUES (3, 'AM0016', '新甲'), (4, 'AM0017', '新乙')"]);
++    expect(JSON.stringify(data)).toBe(before);
++  });
++  it('rejects old-row mutations at the real SQL materializer', () => {
++    for (const sql of ["UPDATE jiyaobiao SET story='坏' WHERE row_id=1", 'DELETE FROM jiyaobiao WHERE row_id=1', "REPLACE INTO jiyaobiao (code_index, story) VALUES ('AM0001','坏')", "INSERT OR REPLACE INTO jiyaobiao (code_index, story) VALUES ('AM0001','坏')"]) {
++      expect(() => materializeSystemRowIdsForSqlInserts_ACU([sql], fixture())).toThrow('901旧纪要只读');
++    }
++  });
++});
