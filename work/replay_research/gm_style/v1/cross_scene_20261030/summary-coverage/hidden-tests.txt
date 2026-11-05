@@ -1,0 +1,18 @@
+
+it('901 real hiding gate rejects incomplete prose and hides only compiled preexisting sources', async () => {
+  const {compileStage901} = await import('../../../src/service/flight-mode/stage-coverage-901.js');
+  const fixture = (await import('../table/901-stage-fixture.json')).default;
+  const names:any = {sheet_ji_yao_biao:'纪要表',sheet_da_zong_jie:'大总结',sheet_relationship_facts:'独立关系事项'};
+  const before:any = Object.fromEntries(Object.entries(fixture.tables).map(([key,content])=>[key,{name:names[key]||key,content}]));
+  const after=JSON.parse(JSON.stringify(before));
+  after.sheet_da_zong_jie.content.push(['2','未证明覆盖的自由摘要']);
+  const flight={enabled:true,enabledAt:1,bigSummarySheetKey:'sheet_da_zong_jie',hiddenRowIds:[]};
+  expect(()=>getHiddenChronicleRowIdsAfterBigSummaryInsert_ACU(before,after,flight)).toThrow('覆盖');
+  after.sheet_ji_yao_biao.content.push(['16','AM0016','未交代','new','同批新事件','']);
+  compileStage901(before,after,flight,15);
+  const hidden=getHiddenChronicleRowIdsAfterBigSummaryInsert_ACU(before,after,flight);
+  expect(hidden?.map(Number).sort((a,b)=>a-b)).toEqual(Array.from({length:15},(_,i)=>i+1));
+  expect(hidden).not.toContain('16');
+  after.sheet_da_zong_jie.content.at(-1)[1]+='corrupt';
+  expect(()=>getHiddenChronicleRowIdsAfterBigSummaryInsert_ACU(before,after,flight)).toThrow('覆盖');
+});

@@ -1,0 +1,8 @@
+[
+  {
+    "level": "error",
+    "message": "[shujuku_v120] [TableUpdateCommit] applyUnifiedGroupFillResponses:runtime_sql failed: Error: 901阶段覆盖校验失败：汇编正文未逐字承接同一来源快照；不提交总结或隐藏旧纪要。\n    at fail (http://localhost:18106/scripts/extensions/third-party/shujuku-901-summary-coverage/index.js:8:2079508)\n    at assertStageCoverage901 (http://localhost:18106/scripts/extensions/third-party/shujuku-901-summary-coverage/index.js:8:2082844)\n    at getHiddenChronicleRowIdsAfterBigSummaryInsert_ACU (http://localhost:18106/scripts/extensions/third-party/shujuku-901-summary-coverage/index.js:8:2082871)\n    at Object.beforePersist (http://localhost:18106/scripts/extensions/third-party/shujuku-901-summary-coverage/index.js:28:930557)\n    at http://localhost:18106/scripts/extensions/third-party/shujuku-901-summary-coverage/index.js:28:779596\n    at async Object.runCommit (http://localhost:18106/scripts/extensions/third-party/shujuku-901-summary-coverage/index.js:8:1476037)\n    at async runTableWriteTransaction_ACU (http://localhost:18106/scripts/extensions/third-party/shujuku-901-summary-coverage/index.js:8:1476521)\n    at async runTableUpdateCommit_ACU (http://localhost:18106/scripts/extensions/third-party/shujuku-901-summary-coverage/index.js:28:778795)\n    at async applyUnifiedGroupFillResponsesCore_ACU (http://localhost:18106/scripts/extensions/third-party/shujuku-901-summary-coverage/index.js:28:949175)\n    at async processGroupedRuntimeChunkCore_ACU (http://localhost:18106/scripts/extensions/third-party/shujuku-901-summary-coverage/index.js:28:969195)",
+    "timestamp": "2026-11-05T11:17:52.869Z",
+    "url": "http://localhost:18106/scripts/extensions/third-party/shujuku-901-summary-coverage/index.js"
+  }
+]

@@ -1,0 +1,204 @@
+
+ RUN  v3.2.4 C:/Users/pit/AppData/Local/901-summary-coverage-build-20261105
+
+ ❯ tests/service/table/sql-table-service.test.ts (181 tests | 1 failed | 180 skipped) 227ms
+   ↓ rebindSqlMutationTableIdentifiers_ACU · 模板别名补充 > 运行时快照为空时，仍能借模板把 DDL 旧表名重绑定为拼音物理名
+   ↓ rebindSqlMutationTableIdentifiers_ACU · 模板别名补充 > 显式传入 null 补充源时不读模板，保持调用方完全控制
+   ↓ rebindSqlMutationTableIdentifiers_ACU · 模板别名补充 > 运行时快照已有该表时，物理名解析结果一致（幂等）
+   ↓ rebindSqlMutationTableIdentifiers_ACU · 模板别名补充 > 将显式 tableAliases、sheetKey、uid 和显示名重绑定到同一物理表
+   ↓ rebindSqlMutationTableIdentifiers_ACU · 模板别名补充 > 按共享别名注册表将 SQL 表名分类为权威 sheetKey
+   ↓ rebindSqlMutationTableIdentifiers_ACU · 模板别名补充 > AI 严格写入重绑定拒绝未知或冲突的作者 DDL 名，不保留原 SQL 交给 SQLite 猜测
+   ↓ splitSqlStatements > 按分号拆分多条语句
+   ↓ splitSqlStatements > 跳过字符串内的分号（单引号）
+   ↓ splitSqlStatements > 跳过字符串内的分号（双引号）
+   ↓ splitSqlStatements > 处理转义的单引号（SQL 风格 ''）
+   ↓ splitSqlStatements > 最后一条语句没有分号结尾
+   ↓ splitSqlStatements > 空字符串返回空数组
+   ↓ splitSqlStatements > 纯空白返回空数组
+   ↓ splitSqlStatements > 单条语句无分号
+   ↓ splitSqlStatements > 连续分号产生空语句被过滤
+   ↓ splitSqlStatements > 多行 SQL 语句
+   ↓ splitSqlStatements > 字符串中包含转义双引号
+   ↓ extractTableNamesFromStatements > 提取 INSERT INTO 的表名
+   ↓ extractTableNamesFromStatements > 提取 INSERT OR REPLACE INTO 的表名
+   ↓ extractTableNamesFromStatements > 使用 mutation token 提取真实目标表：REPLACE INTO inventory VALUES (1, '铁剑', 3)
+   ↓ extractTableNamesFromStatements > 使用 mutation token 提取真实目标表：REPLACE INTO inventory (row_id, value) VALUES (1, 'INSERT INTO quest_log')
+   ↓ extractTableNamesFromStatements > 使用 mutation token 提取真实目标表：REPLACE INTO inventory (row_id, value) VALUES (1, 'x') /* INSERT INTO quest_log */
+   ↓ extractTableNamesFromStatements > 使用 mutation token 提取真实目标表：INSERT OR REPLACE INTO inventory (row_id, value) VALUES (1, 'UPDATE quest_log SET value = 1')
+   ↓ extractTableNamesFromStatements > 使用 mutation token 提取真实目标表：REPLACE INTO main.inventory (row_id, value) VALUES (1, 'x')
+   ↓ extractTableNamesFromStatements > 提取 UPDATE 的表名
+   ↓ extractTableNamesFromStatements > 提取 UPDATE OR IGNORE 的表名
+   ↓ extractTableNamesFromStatements > 提取 DELETE FROM 的表名
+   ↓ extractTableNamesFromStatements > 提取 ALTER TABLE 的表名
+   ↓ extractTableNamesFromStatements > 多条语句提取多个表名（去重）
+   ↓ extractTableNamesFromStatements > SELECT 语句不提取表名
+   ↓ extractTableNamesFromStatements > CREATE TABLE 语句不提取表名
+   ↓ extractTableNamesFromStatements > 空数组返回空数组
+   ↓ extractTableNamesFromStatements > 空字符串语句不提取
+   ↓ extractTableNamesFromStatements > 大小写不敏感
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 基于显式快照应用 SQL，返回 workingData 且不污染输入快照与全局状态
+   ↓ applySqlEditsToTableDataSnapshot_ACU > generation 链将 sheetKey 和 uid alias 重绑定到权威物理表
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 严格单表范围下拒绝显式未知 SQL 表名，不能回退映射到唯一目标表
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 构建 V2 SQL operation 时不把显式未知表名归属给唯一回退目标
+   ↓ applySqlEditsToTableDataSnapshot_ACU > SQL 失败时返回错误且不污染输入快照与全局状态
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 严格单表日志模式下返回 sql_sheet_batch 而不是旧 sql_batch
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 目标表可识别的 WITH UPDATE 记录为 sql_sheet_batch
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 无显式列清单的 INSERT SELECT 维持 fail-closed（无法确定 row_id 之外的列对应）
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 显式列清单的 INSERT SELECT 先执行后物化：结果行转为 VALUES 字面量 + 系统 row_id
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 7.3 双轨：runtime 目标为 fallback 拼音，SQL 用模板 authored 英文列名 → 写入成功
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 7.3 双轨：runtime 目标为 explicit 英文 DDL，SQL 用 fallback 拼音列名 → 写入成功
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 7.3 双轨：supplemental 独有列不得写入 target（无证据不注册，SQLite no such column）
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 为同一批 INSERT 按当前最大 row_id 连续分配，并持久化具体身份
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 锁定差异回滚（S0-2） > 锁定行被 UPDATE：workingData 恢复前像，补偿语句进入 operations，revertedByLocks 上报
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 锁定差异回滚（S0-2） > 锁定行被 DELETE：整行恢复
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 锁定差异回滚（S0-2） > 锁定列被 UPDATE：仅该列回滚，其他列修改保留
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 锁定差异回滚（S0-2） > legacy 索引锁自动迁移后同样生效
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 锁定差异回滚（S0-2） > 锁不阻止对未锁定目标的修改与新增行
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 静默忽略 AI 显式 row_id，并按系统保留序列重新分配
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 普通表保留 INSERT OR REPLACE 原生语义，并将实际 SQL 写入单表 operation
+   ↓ applySqlEditsToTableDataSnapshot_ACU > REPLACE INTO 执行后返回 modifiedKeys 并生成单表 operation
+   ↓ applySqlEditsToTableDataSnapshot_ACU > REPLACE 语句不再受固定槽位契约限制：INSERT OR REPLACE INTO inventory (item_name, quantity) VALUES ('药水', 1)
+   ↓ applySqlEditsToTableDataSnapshot_ACU > REPLACE 语句不再受固定槽位契约限制：INSERT OR REPLACE INTO inventory (row_id, item_name, quantity) VALUES (3, '药水', 1)
+   ↓ applySqlEditsToTableDataSnapshot_ACU > REPLACE 语句不再受固定槽位契约限制：INSERT OR REPLACE INTO inventory (row_id, item_name, quantity) VALUES (1 + 0, '药水', 1)
+   ↓ applySqlEditsToTableDataSnapshot_ACU > REPLACE 语句不再受固定槽位契约限制：REPLACE INTO inventory (row_id, item_name, quantity) VALUES (1, '药水', 1)
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 普通稳定身份表允许 INSERT OR REPLACE
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 显式 row_id 是唯一列时拒绝无业务内容的 INSERT
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 无列清单 INSERT 仍然 fail closed
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 列间行注释与列后块注释不残留，row_id 物化仍按 token 语义工作
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 字符串字面量中的注释样文本不参与列清单解析
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 尾逗号 / 空项 / 重复列 / 非法关键字列一律 fail-closed
+   ↓ applySqlEditsToTableDataSnapshot_ACU > INSERT SELECT / 无显式列清单保持 fail-closed
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 显式 row_id 重分配 + 多 VALUES tuple + 注释同时存在时逐 tuple 物化
+   ↓ applySqlEditsToTableDataSnapshot_ACU > INSERT OR IGNORE/ABORT/FAIL/ROLLBACK 保留冲突子句前缀并照常物化系统 row_id
+   ↓ applySqlEditsToTableDataSnapshot_ACU > INSERT OR REPLACE 维持原生语义原样放行（不物化）
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 值比列多 1 且列清单未含 row_id → 首值按 AI 自带 row_id 剔除
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 值比列少 → 尾部补 NULL
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 值比列多 1 但列清单已含 row_id → 维持拒绝
+   ↓ applySqlEditsToTableDataSnapshot_ACU > 值比列多 2 及以上 → 维持拒绝
+   ↓ applySqlEditsToTableDataSnapshot_ACU > WITH ... INSERT ... SELECT 有预执行器时先执行后物化（WITH 前缀不进物化结果）
+   ↓ applySqlEditsToTableDataSnapshot_ACU > INSERT SELECT 结果为空 → 物化为空串（调用方过滤为无操作）
+   ↓ applySqlEditsToTableDataSnapshot_ACU > INSERT SELECT 结果超过 500 行上限 → 拒绝
+   ↓ applySqlEditsToTableDataSnapshot_ACU > INSERT SELECT 结果列数与插入列清单不一致 → 拒绝
+   ↓ applySqlEditsToTableDataSnapshot_ACU > INSERT SELECT 结果字符串含单引号时按 SQL 转义物化
+   ↓ applySqlEditsToTableDataSnapshot_ACU > WITH 前缀 + VALUES 插入维持拒绝
+   ↓ assertNoHiddenPhysicalColumnMutations_ACU > 拒绝 UPDATE、INSERT 和 WHERE 引用隐藏物理列
+   ↓ assertNoHiddenPhysicalColumnMutations_ACU > 存在隐藏列时拒绝省略 INSERT 列清单，避免按完整物理顺序写穿
+   ↓ assertNoHiddenPhysicalColumnMutations_ACU > 允许只引用可见列，并忽略字符串与注释中的隐藏列文本
+   ↓ assertNoHiddenPhysicalColumnMutations_ACU > 拒绝 schema-qualified 或 quoted target 对隐藏列的引用：UPDATE main.inventory SET legacy_note = '改写' WHERE row_id = 1
+   ↓ assertNoHiddenPhysicalColumnMutations_ACU > 拒绝 schema-qualified 或 quoted target 对隐藏列的引用：UPDATE "main"."inventory" SET "legacy_note" = '改写' WHERE row_id = 1
+   ↓ assertNoHiddenPhysicalColumnMutations_ACU > 拒绝 schema-qualified 或 quoted target 对隐藏列的引用：UPDATE `main`.`inventory` SET `legacy_note` = '改写' WHERE row_id = 1
+   ↓ assertNoHiddenPhysicalColumnMutations_ACU > 拒绝 schema-qualified 或 quoted target 对隐藏列的引用：UPDATE [main].[inventory] SET [legacy_note] = '改写' WHERE row_id = 1
+   ↓ assertNoHiddenPhysicalColumnMutations_ACU > 拒绝 schema-qualified 或 quoted target 对隐藏列的引用：INSERT INTO main.inventory (row_id, item_name, legacy_note, quantity) VALUES (2, '药水', '秘密', 1)
+   ↓ assertNoHiddenPhysicalColumnMutations_ACU > 拒绝 schema-qualified 或 quoted target 对隐藏列的引用：DELETE FROM main.inventory WHERE legacy_note = '历史秘密'
+   ↓ assertNoHiddenPhysicalColumnMutations_ACU > 允许 REPLACE 数据变更语句：REPLACE INTO inventory (item_name, quantity) VALUES ('药水', 1)
+   ↓ assertNoHiddenPhysicalColumnMutations_ACU > 允许 REPLACE 数据变更语句：INSERT OR REPLACE INTO inventory (item_name, quantity) VALUES ('药水', 1)
+   ↓ assertNoHiddenPhysicalColumnMutations_ACU > 允许 REPLACE 数据变更语句：WITH payload AS (SELECT 1) REPLACE INTO inventory (item_name, quantity) VALUES ('药水', 1)
+   ↓ assertNoHiddenPhysicalColumnMutations_ACU > 对 AI SQL 的非 mutation 语句 fail closed：ALTER TABLE inventory DROP COLUMN legacy_note
+   ↓ assertNoHiddenPhysicalColumnMutations_ACU > 对 AI SQL 的非 mutation 语句 fail closed：CREATE TABLE another_table (id INTEGER)
+   ↓ assertNoHiddenPhysicalColumnMutations_ACU > 对 AI SQL 的非 mutation 语句 fail closed：DROP TABLE inventory
+   ↓ assertNoHiddenPhysicalColumnMutations_ACU > 对 AI SQL 的非 mutation 语句 fail closed：BEGIN
+   ↓ assertNoHiddenPhysicalColumnMutations_ACU > 对 AI SQL 的非 mutation 语句 fail closed：COMMIT
+   ↓ assertNoHiddenPhysicalColumnMutations_ACU > 拒绝多语句中位于后续语句的隐藏列引用
+   ↓ extractRowIdsFromSqlSheetBatch_ACU > 从物化 INSERT VALUES 抽出全部 row_id
+   ↓ extractRowIdsFromSqlSheetBatch_ACU > VALUES (?) 使用对应 params 绑定
+   ↓ extractRowIdsFromSqlSheetBatch_ACU > UPDATE SET 占位符不会抢 WHERE row_id 的绑定
+   ↓ extractRowIdsFromSqlSheetBatch_ACU > DELETE/UPDATE 只接受单独的 row_id = / IN 谓词
+   ↓ extractRowIdsFromSqlSheetBatch_ACU > INSERT 未列出 row_id 时 fail-closed
+   ↓ extractRowIdsFromSqlSheetBatch_ACU > 无 WHERE 的 DELETE 与复合 WHERE 都拒绝
+   ↓ buildSqlSheetBatchOperations_ACU > 按 SQL 表名归类为单表 sql_sheet_batch，并按相邻同表合并
+   ↓ buildSqlSheetBatchOperations_ACU > 单目标 fallback 只在显式允许时把未知 SQL 归入目标 sheet
+   ↓ buildSqlSheetBatchOperations_ACU > 未归属语句在不允许单表 fallback 时保留为兼容 sql_batch
+   × SqlTableService > 901 compiled stage replaces live SQLite before persistence and remains exact after reload 223ms
+     → expected '模型未证实摘要' to contain '【阶段保真汇编 v1】'
+   ↓ SqlTableService > 未初始化时的行为 > applyEdits 未初始化时抛出错误
+   ↓ SqlTableService > 未初始化时的行为 > executeQuery 未初始化时抛出错误
+   ↓ SqlTableService > 未初始化时的行为 > executeMutation 未初始化时抛出错误
+   ↓ SqlTableService > loadFromChat > 无数据且无可解析模板时返回 empty
+   ↓ SqlTableService > loadFromChat > 无数据且无可解析模板时标记空 schema，不留下未绑定的 mapper
+   ↓ SqlTableService > loadFromChat > loadFromData(null) 空 schema 契约：loaded=false/source=empty/error 未定义/isReady=true，empty-schema mapper 已发布
+   ↓ SqlTableService > loadFromChat > 首个用户消息后、首个真实 AI 回复前将模板 seedRows 写入运行时 SQLite，支持首次 SQL 读取
+   ↓ SqlTableService > loadFromChat > 仅有基底状态数据时也写入运行时 SQLite，但不保留内部标记
+   ↓ SqlTableService > loadFromChat > 有数据时成功加载
+   ↓ SqlTableService > loadFromChat > 从显式 canonical 快照 hydrate 时不再次回放聊天，且 SQL 基底与快照一致
+   ↓ SqlTableService > loadFromChat > 从错序旧 chronicle snapshot hydrate 后保持 SQLite ready 与字段语义
+   ↓ SqlTableService > loadFromChat > strict hydrate 遇到非空未映射旧字段时清理 runtime 并保持 not ready
+   ↓ SqlTableService > loadFromChat > runtime load 遇到非法显式 DDL 时使用 fallback，且不修改调用方原始 DDL
+   ↓ SqlTableService > loadFromChat > runtime load 建表语句执行失败时按 SyncBridge 实际 fallback schema 校验并发布 NameMapper
+   ↓ SqlTableService > loadFromChat > loadFromData 重置 runtime 时先使旧 mapper 失效，再按新 schema 重建
+   ↓ SqlTableService > loadFromChat > 映射发布被更新 runtime 拒绝时，hydrate 必须失败而不是宣称就绪
+   ↓ SqlTableService > loadFromChat > 空 schema 标记被拒绝时同样不得宣称就绪
+   ↓ SqlTableService > loadFromChat > 加载后可以执行查询
+   ↓ SqlTableService > loadFromChat > 加载失败时返回错误信息
+   ↓ SqlTableService > applyEdits > 执行单条 INSERT 语句
+   ↓ SqlTableService > applyEdits > 执行多条语句
+   ↓ SqlTableService > applyEdits > 部分运行时快照补建其它模板表后，applyEdits 会在 provider 边界重绑定 DDL 表名
+   ↓ SqlTableService > applyEdits > 批量提交中已有表与模板新表混合写入时，每条语句都在 provider 边界完成重绑定
+   ↓ SqlTableService > applyEdits > 部分运行时快照补建其它模板表后，executeMutation 同样重绑定 DDL 表名
+   ↓ SqlTableService > applyEdits > 同一组 SQL 修改多张表时，后续表失败会回滚前面表的写入
+   ↓ SqlTableService > applyEdits > 空字符串返回成功（无操作）
+   ↓ SqlTableService > applyEdits > 纯空白返回成功（无操作）
+   ↓ SqlTableService > applyEdits > 去除 HTML 注释标记
+   ↓ SqlTableService > applyEdits > SQL 语法错误时抛出异常
+   ↓ SqlTableService > applyEdits > 返回受影响的 modifiedKeys
+   ↓ SqlTableService > applyEdits 不再在写路径 reseed > DELETE 全表后 UPDATE 不自动回灌，直接作用于空表
+   ↓ SqlTableService > applyEdits 不再在写路径 reseed > 非空表不触发 reseed
+   ↓ SqlTableService > applyEdits 不再在写路径 reseed > 无 seedRows 的表不触发 reseed
+   ↓ SqlTableService > applyEdits 不再在写路径 reseed > 空表 + 有 seedRows 时写路径不 reseed，INSERT 由 AI 自行初始化
+   ↓ SqlTableService > applyEditsWithSystemRowIds > [阶段 E] 空表不再由写路径补种，AI INSERT 从 row_id=1 开始分配
+   ↓ SqlTableService > applyEditsWithSystemRowIds > 非首列空业务表头的模板表在 SQL 活动快照中休眠：不进 activeSheetKeys，不阻塞有效表
+   ↓ SqlTableService > applyEditsWithSystemRowIds > 全部模板表均非首列空表头时，SQL 活动快照为空集而非 null，且不丢元数据
+   ↓ SqlTableService > applyEditsWithSystemRowIds > AI 等待期间切换聊天模板后，提交仍使用请求前捕获的建表与别名快照
+   ↓ SqlTableService > applyEditsWithSystemRowIds > 提交前 finalize 严格导出失败时回滚补种与 AI SQL
+   ↓ SqlTableService > applyEditsWithSystemRowIds > test31 无 DDL fallback 表：未知列必须在 SQLite mutation 前结构化拒绝，数据库内容不变且错误脱敏
+   ↓ SqlTableService > applyEditsWithSystemRowIds > 冻结 schema 与 live SQLite 一致时正常执行（runtime schema digest 一致路径）
+   ↓ SqlTableService > applyEditsWithSystemRowIds > AI 等待期间 live SQLite schema 漂移时提交前 fail-closed：抛 SQL_RUNTIME_SCHEMA_STALE_ACU 且零 mutation
+   ↓ SqlTableService > executeQuery > 执行 SELECT 查询
+   ↓ SqlTableService > executeQuery > 带参数的查询
+   ↓ SqlTableService > executeQuery > 无结果的查询
+   ↓ SqlTableService > executeQuery > 已存在空表 + 有 seedRows 时 executeQuery 不触发 reseed
+   ↓ SqlTableService > 新开卡场景下 executeQuery 不触发建表 > 新开卡后 executeQuery 查询不存在的表应抛出错误，而非静默建表
+   ↓ SqlTableService > 新开卡场景下 executeQuery 不触发建表 > 新开卡后 applyEdits 才触发建表
+   ↓ SqlTableService > 新开卡场景下 executeQuery 不触发建表 > 新开卡首次写入遇到非法 DDL 时使用 runtime fallback，且不改写模板原文
+   ↓ SqlTableService > 建表时 seedRows 写入 SQLite > 有 seedRows 的表建表后数据被写入 SQLite
+   ↓ SqlTableService > 建表时 seedRows 写入 SQLite > seedRows 缺失 row_id 时会稳定化后写入 SQLite
+   ↓ SqlTableService > 建表时 seedRows 写入 SQLite > 没有 seedRows 的表建表后仍为空表
+   ↓ SqlTableService > 建表时 seedRows 写入 SQLite > 已存在的表不会被重复写入 seedRows
+   ↓ SqlTableService > 建表时只使用当前聊天模板预设 > chat_override 模式下只建聊天级模板中的表，不建全局模板的表
+   ↓ SqlTableService > 建表时只使用当前聊天模板预设 > chat_override 建表时不能被旧 currentJsonTableData 的 CHECK 覆盖
+   ↓ SqlTableService > 建表时只使用当前聊天模板预设 > inherit_global 模式下 fallback 到全局模板
+   ↓ SqlTableService > 建表时只使用当前聊天模板预设 > preset_link 模式下使用链接的全局预设
+   ↓ SqlTableService > executeMutation > 执行 INSERT 并返回 changes
+   ↓ SqlTableService > executeMutation > 执行 UPDATE 并返回 changes
+   ↓ SqlTableService > executeMutation > 执行 DELETE 并返回 changes
+   ↓ SqlTableService > executeMutation > SQL 错误时返回 errors 而不抛出
+   ↓ SqlTableService > executeMutation 不再在写路径 reseed > DELETE 全表后 executeMutation UPDATE 不自动回灌，作用于空表
+   ↓ SqlTableService > executeMutation 不再在写路径 reseed > 非空表不触发 reseed
+   ↓ SqlTableService > executeMutation 不再在写路径 reseed > 无 seedRows 的表不触发 reseed
+   ↓ SqlTableService > executeMutation 不再在写路径 reseed > 用户 SQL 失败时表保持空，无 reseed 残留
+   ↓ SqlTableService > getCurrentData > 未初始化时返回 currentJsonTableData_ACU
+   ↓ SqlTableService > getCurrentData > 初始化后返回导出的数据
+   ↓ SqlTableService > clearRuntimeData > 释放已初始化引擎并清空 JSON 视图
+   ↓ SqlTableService > saveToChat > 拒绝 provider 直接保存，要求走公共提交模型
+   ↓ SqlTableService > dispose > 销毁后无法执行查询
+   ↓ SqlTableService > dispose > 多次 dispose 不抛出
+   ↓ SqlTableService > isolatedRuntime > loadFromData / apply / dispose 不写全局 JSON，也不发布或释放全局 NameMapper
+   ↓ 901 adopted chronicle sequence at SQL materialization > allocates full-history maximum for multiple new values and preserves old rows
+   ↓ 901 adopted chronicle sequence at SQL materialization > rejects old-row mutations at the real SQL materializer
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/service/table/sql-table-service.test.ts > SqlTableService > 901 compiled stage replaces live SQLite before persistence and remains exact after reload
+AssertionError: expected '模型未证实摘要' to contain '【阶段保真汇编 v1】'
+
+Expected: "【阶段保真汇编 v1】"
+Received: "模型未证实摘要"
+
+ ❯ tests/service/table/sql-table-service.test.ts:1358:63
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 180 skipped (181)
+   Start at  12:28:29
+   Duration  3.01s (transform 1.04s, setup 0ms, collect 1.43s, tests 227ms, environment 0ms, prepare 602ms)

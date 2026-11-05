@@ -1,0 +1,27 @@
+
+describe('901 coverage rejection before persistence', () => {
+  it('rejects a corrupted stage before save and restores the live provider', async () => {
+    const { compileStage901, assertStageCoverage901 } = await import('../../../src/service/flight-mode/stage-coverage-901.js');
+    const fixture = (await import('./901-stage-fixture.json')).default;
+    const names: any = {sheet_ji_yao_biao:'纪要表',sheet_da_zong_jie:'大总结',sheet_relationship_facts:'独立关系事项'};
+    const before: any = Object.fromEntries(Object.entries(fixture.tables).map(([key,content])=>[key,{name:names[key]||key,content}]));
+    const after = JSON.parse(JSON.stringify(before));
+    after.sheet_da_zong_jie.content.push(['2','candidate']);
+    const state = {enabled:true,bigSummarySheetKey:'sheet_da_zong_jie',hiddenRowIds:[]};
+    compileStage901(before,after,state,15);
+    after.sheet_da_zong_jie.content.at(-1)[1] += 'corrupted';
+    mocks.migration.mockResolvedValue({ success: true, migrated: false });
+    mocks.transaction.mockImplementation(async (_options: any, task: any) => task({runCommit:async (f:any)=>f()},null));
+    mocks.persist.mockReset(); mocks.setCurrentData.mockReset(); mocks.reload.mockReset().mockResolvedValue(undefined);
+    const result = await runTableUpdateCommit_ACU(options('901_coverage_reject'), async()=>({
+      success:true,tableData:after,persist:{beforePersist:()=>{assertStageCoverage901(before,after,state,15);throw new Error('unreachable');}},
+    }));
+    expect(result.success).toBe(false);
+    expect(result.error).toContain('覆盖');
+    expect(mocks.persist).not.toHaveBeenCalled();
+    expect(mocks.setCurrentData).not.toHaveBeenCalled();
+    expect(mocks.reload).toHaveBeenCalledOnce();
+    expect(state.hiddenRowIds).toEqual([]);
+    expect(before.sheet_da_zong_jie.content).toEqual(fixture.tables.sheet_da_zong_jie);
+  });
+});

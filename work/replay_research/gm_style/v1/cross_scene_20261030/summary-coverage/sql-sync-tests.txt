@@ -1,0 +1,17 @@
+
+  it('901 compiled stage replaces live SQLite before persistence and remains exact after reload', async () => {
+    const {compileAndSyncStage901,assertStageCoverage901} = await import('../../../src/service/flight-mode/stage-coverage-901.js');
+    const fixture = (await import('./901-stage-full-fixture.json')).default;
+    const before:any = JSON.parse(JSON.stringify(fixture));
+    const after:any = JSON.parse(JSON.stringify(fixture));
+    after.sheet_da_zong_jie.content.push(['2','模型未证实摘要']);
+    const loaded=await service.loadFromData(after);expect(loaded.error).toBeUndefined();
+    const state={enabled:true,bigSummarySheetKey:'sheet_da_zong_jie',hiddenRowIds:[]};
+    await compileAndSyncStage901(service,before,after,state,15);
+    const live=service.getCurrentData()!;
+    expect((live as any).sheet_da_zong_jie.content.at(-1)[1]).toContain('【阶段保真汇编 v1】');
+    for(const key of Object.keys(after).filter(k=>k.startsWith('sheet_')))expect((live as any)[key].content).toEqual(after[key].content);
+    assertStageCoverage901(before,live,state,15);
+    const reloaded=await service.loadFromData(live);expect(reloaded.error).toBeUndefined();
+    expect((service.getCurrentData() as any).sheet_da_zong_jie.content).toEqual(after.sheet_da_zong_jie.content);
+  });

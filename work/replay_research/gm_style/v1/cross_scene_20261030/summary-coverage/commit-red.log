@@ -1,0 +1,41 @@
+
+ RUN  v3.2.4 C:/Users/pit/AppData/Local/901-summary-coverage-build-20261105
+
+(node:40052) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ❯ tests/service/table/table-update-commit.test.ts (20 tests | 1 failed) 84ms
+   ✓ runTableUpdateCommit_ACU migration gate > mixed/legacy 迁移失败时不执行 apply、事务或持久化 8ms
+   ✓ runTableUpdateCommit_ACU migration gate > SQLite mutation 同样在 provider 写入前被 migration gate 拦截 1ms
+   ✓ runTableUpdateCommit_ACU migration gate > AI 等待期间切换聊天后 fail-loud，禁止进入事务与 apply 3ms
+   ✓ runTableUpdateCommit_ACU migration gate > RuntimeRevision 错误不再分类为 conflict，未知提交错误统一归为 infrastructure 2ms
+   ✓ runTableUpdateCommit_ACU migration gate > persist 前只读拒绝空 row_id，且不会调用持久化或修复数据 3ms
+   ✓ runTableUpdateCommit_ACU migration gate > persist 前拒绝重复 row_id，并提供可定位的行号 1ms
+   ✓ runTableUpdateCommit_ACU migration gate > 将 workingDataMode=none 透传给事务层，并允许 apply 使用预计算结果 1ms
+   ✓ runTableUpdateCommit_ACU migration gate > 表格持久化失败时回滚同提交暂存的附属状态 4ms
+   ✓ runTableUpdateCommit_ACU migration gate > 回放宽容、写入严格：persist 拒绝按成因分类——写时探针拒绝可重试(model)，兼容只读门闸不可重试(precondition) 2ms
+   ✓ runTableUpdateCommit_ACU migration gate > 表格持久化成功后保留同提交暂存的附属状态 1ms
+   ✓ runTableUpdateCommit_ACU migration gate > 增量提交只校验目标表，不因未写入表的既有坏行重复扫描并阻断 5ms
+   ✓ runTableUpdateCommit_ACU migration gate > 全量提交仍校验全部表，不能借范围收窄绕过坏行 1ms
+   ✓ runTableUpdateCommit_ACU runtime-only 未落盘登记与写回 > 外部来源 skipChatSave 提交按写集登记待落盘表，不写聊天 2ms
+   ✓ runTableUpdateCommit_ACU runtime-only 未落盘登记与写回 > kind:all 的外部 skipChatSave 写集按当前全部表登记 1ms
+   ✓ runTableUpdateCommit_ACU runtime-only 未落盘登记与写回 > 非外部来源（填表 import 候选 / 运行时恢复）的 skipChatSave 不登记 1ms
+   ✓ runTableUpdateCommit_ACU runtime-only 未落盘登记与写回 > 普通持久化提交在开启事务前先触发已注册的写回；flush 自身提交不再触发 2ms
+   ✓ runTableUpdateCommit_ACU runtime-only 未落盘登记与写回 > 写回失败不阻断本次提交 1ms
+   ✓ runTableUpdateCommit_ACU stage_only 判别联合（计划 5.3） > stage_only 不调用 migration、bridge gate、persist，只更新运行时快照 1ms
+   ✓ runTableUpdateCommit_ACU stage_only 判别联合（计划 5.3） > stage_only 在应用阶段检测到聊天切换时 fail-closed 1ms
+   × 901 coverage rejection before persistence > rejects a corrupted stage before save and restores the live provider 39ms
+     → expected "spy" to be called once, but got 0 times
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/service/table/table-update-commit.test.ts > 901 coverage rejection before persistence > rejects a corrupted stage before save and restores the live provider
+AssertionError: expected "spy" to be called once, but got 0 times
+ ❯ tests/service/table/table-update-commit.test.ts:583:26
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 19 passed (20)
+   Start at  12:09:40
+   Duration  12.09s (transform 6.90s, setup 0ms, collect 10.25s, tests 84ms, environment 0ms, prepare 795ms)

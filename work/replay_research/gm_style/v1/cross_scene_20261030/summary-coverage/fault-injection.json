@@ -1,0 +1,6 @@
+{
+  "scope": "isolated served binary only; candidate source unchanged",
+  "position": "assertStageCoverage901 before validation",
+  "fault": "if(arguments[0]?.sheet_relationship_facts&&arguments[2]?.enabled){const k=arguments[2].bigSummarySheetKey,b=arguments[0][k]?.content,a=arguments[1][k]?.content;if(a?.length>b?.length)a[a.length-1][1]+=\"[隔离故障注入：覆盖缺口]\";}",
+  "purpose": "verify real pre-persist rejection, no chat row/hidden mutation and runtime reload"
+}

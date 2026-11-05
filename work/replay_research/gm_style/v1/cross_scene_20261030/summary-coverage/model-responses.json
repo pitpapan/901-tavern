@@ -1,0 +1,50 @@
+[
+  {
+    "request": 1,
+    "model": "[抗截断]gemini-3.8-flash",
+    "sql": [
+      "\"INSERT INTO flight_big_summary (summary_text) VALUES ('在客店中，掌柜澄清黎舟是修伞匠而非信使；掌柜与御临风、黄泉约定取物记号“苇灯六结”，御临风心中备用记号未公开。曾有一拨人数与来向未详的镇民经过。苏岚托御临风送信后暂离买纸，信件仍未交付。御临风完成了掌柜寻找铜钥匙的委托；送药委托因药包毁损宣告失败结案；限时凭证登记逾期结案。掌柜付清了欠黄泉的修缮费，黄泉仍保留下一站行程不告知掌柜；黄泉曾向黎舟借青竹伞未还，虽不信其转述的传闻，但因其实情说明而在修伞事宜上信任黎舟。');\\n\" +"
+    ]
+  },
+  {
+    "request": 2,
+    "model": "[抗截断]gemini-3.8-flash",
+    "sql": [
+      "\"INSERT INTO flight_big_summary (summary_text) VALUES ('本阶段：客店中掌柜澄清黎舟非信使，三人约定核验记号“苇灯六结”，御临风未公开内心备用记号；黎舟借黄泉青竹伞尚未归还；掌柜结清欠黄泉修缮费，黄泉仍保留下一站行程。苏岚去买纸暂离，御临风仍保管信件未交付。铜钥匙交付结案，药包毁损、凭证未登记均结束；黄泉信任黎舟处理修伞事宜。');\\n\" +"
+    ]
+  },
+  {
+    "request": 3,
+    "model": "[抗截断]gemini-3.8-flash",
+    "sql": [
+      "\"INSERT INTO flight_big_summary (summary_text) VALUES ('御临风与黄泉在客店停留期间，确认掌柜结清修缮款，但黄泉因行程泄露仍保留下一站去向；黄泉曾借黎舟青竹伞尚未归还，合作修伞并信任其手艺，但不信其转述的传闻。御临风交还掌柜铜钥匙完成委托，黎舟确认毁损药包委托失败，掌柜确认登记凭证逾期；御临风仍受托保管苏岚未拆信待交黎舟，且内心自定备用记号“瓷雀二鸣”未对任何人公开。');\\n\" +"
+    ]
+  },
+  {
+    "request": 4,
+    "model": "[抗截断]gemini-3.8-flash",
+    "sql": [
+      "\"INSERT INTO flight_big_summary (summary_text) VALUES ('客店交接阶段：掌柜澄清黎舟为修伞匠而非信使；双方当面定下苇灯六结取物记号，御临风内心备用记号未公开。曾有一拨人数与来向未详的镇民经过。掌柜结清欠黄泉的修缮费，黄泉未透露下一站；黎舟曾借黄泉青竹伞仍未还。御临风交还掌柜铜钥匙完成委托，黎舟确认送药包委托因药包毁损而结束，凭证限时委托逾期结束；苏岚暂离买纸，托交黎舟的未拆信仍由御临风保管。黄泉因黎舟实情说明在修伞事宜上信任他。');\\n\" +"
+    ]
+  },
+  {
+    "request": 5,
+    "model": "[抗截断]gemini-3.8-flash",
+    "sql": [
+      "\"INSERT INTO chronicle (code_index, time_span, summary, chronicle_text, key_dialogue) VALUES ('AM0016', '未交代', '黄泉归还青竹伞', '黄泉当着御临风的面把青竹伞交还给黎舟，黎舟当面接回并确认收妥。黄泉对黎舟表示伞已归还，在修伞一事上仍旧信任他，但对其转述的传闻依旧不信。御临风内心依旧没有把备用记号“瓷雀二鸣”说出口。', '黄泉：“伞还给你了。修伞仍信你，但你转述的传闻我仍不信。”');\\n\" +",
+      "\"UPDATE relationship_facts SET state = '已归还', source = 'AM0016', known_by = '御临风、黄泉、黎舟' WHERE row_id = 5;\\n\" +",
+      "\"UPDATE relationship_facts SET source = 'AM0016', known_by = '御临风、黄泉、黎舟' WHERE row_id = 6;\\n\" +",
+      "\"UPDATE relationship_facts SET source = 'AM0016', known_by = '御临风、黄泉、黎舟' WHERE row_id = 7;\\n\" +"
+    ]
+  },
+  {
+    "request": 6,
+    "model": "[抗截断]gemini-3.8-flash",
+    "sql": []
+  },
+  {
+    "request": 7,
+    "model": "[抗截断]gemini-3.8-flash",
+    "sql": []
+  }
+]

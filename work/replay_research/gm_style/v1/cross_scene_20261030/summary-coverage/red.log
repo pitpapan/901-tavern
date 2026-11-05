@@ -1,0 +1,92 @@
+✖ both observed omissions and keyword-complete reversed or synonymous free summaries cannot authorize hiding (8.4885ms)
+✖ lossless stage includes all source fields, private limits, and explicit structured loan roles (4.1297ms)
+✖ guard rejects omitted field, reversed explicit direction, changed source, changed historical summary, and changed relation snapshot (1.6255ms)
+✖ source threshold counts visible preexisting rows only; same-batch new chronicle excluded (1.5361ms)
+✔ no new summary and disabled flight mode leave all data unchanged (4.0688ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 1
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 302.0802
+
+✖ failing tests:
+
+test at TRPG outputs\work\replay_research\gm_style\v1\cross_scene_20261030\summary-coverage\coverage.test.mjs:11:1
+✖ both observed omissions and keyword-complete reversed or synonymous free summaries cannot authorize hiding (8.4885ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/replay_research/gm_style/v1/cross_scene_20261030/summary-coverage/coverage.test.mjs:13:69)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /覆盖/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at TRPG outputs\work\replay_research\gm_style\v1\cross_scene_20261030\summary-coverage\coverage.test.mjs:16:1
+✖ lossless stage includes all source fields, private limits, and explicit structured loan roles (4.1297ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+  + []
+  - [
+  -   'sheet_da_zong_jie'
+  - ]
+
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/replay_research/gm_style/v1/cross_scene_20261030/summary-coverage/coverage.test.mjs:17:51)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: [ 'sheet_da_zong_jie' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at TRPG outputs\work\replay_research\gm_style\v1\cross_scene_20261030\summary-coverage\coverage.test.mjs:25:1
+✖ guard rejects omitted field, reversed explicit direction, changed source, changed historical summary, and changed relation snapshot (1.6255ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/replay_research/gm_style/v1/cross_scene_20261030/summary-coverage/coverage.test.mjs:27:81)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /覆盖/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at TRPG outputs\work\replay_research\gm_style\v1\cross_scene_20261030\summary-coverage\coverage.test.mjs:30:1
+✖ source threshold counts visible preexisting rows only; same-batch new chronicle excluded (1.5361ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/replay_research/gm_style/v1/cross_scene_20261030/summary-coverage/coverage.test.mjs:33:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /覆盖/,
+    operator: 'throws',
+    diff: 'simple'
+  }
