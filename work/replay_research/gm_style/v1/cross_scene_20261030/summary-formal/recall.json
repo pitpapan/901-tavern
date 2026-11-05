@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "stageCompilationLoaded": true,
+    "newAM0016Loaded": true,
+    "oldChroniclesAbsentOutsideCompilation": true,
+    "oldPlotMessagesAbsent": true,
+    "noAssistantHistory": true,
+    "sevenItemsAndKnownScopes": true,
+    "privateCodeInMemory": true,
+    "privateCodeNotSpoken": true,
+    "publicCodeRecalled": true,
+    "tablesUnchanged": true
+  },
+  "model": "[抗截断]gemini-3.8-flash",
+  "reply": "客店内灯火照着木桌，黎舟刚刚收回青竹伞，周遭正渐渐安静下来。\n\n听到御临风连着抛出一串问题，黄泉转过视线，语气和平常一样直接而利落：\n\n“记号是掌柜当面和我们定的，‘苇灯六结’。黎舟是修伞匠，之前掌柜认错人喊他信使，早澄清过了。”\n\n她看了一眼黎舟手里的伞，继续说道：\n\n“青竹伞原来是我向他借的，方才我已经当着你的面还给他了，现在两边都不欠。至于他这个人，处理修伞的手艺我依然信，但他转述的那些传闻我还是不信。”\n\n黄泉顿了顿，回忆着刚才当场的动静，逐一答道：\n\n“刚才说这些、还伞的时候，你、我还有黎舟都在场听得清清楚楚。至于什么备用记号，你从来没跟我提过，哪来的另一个？”\n\n说完，她便停下话头，目光平静地看着御临风。\n\n<StatusPlaceHolderImpl/>",
+  "memoryLines": [
+    "事项#1：黄泉对御临风，事项「同行」，同行：同行。来源：原人物行；既有上一阶段总结。知情范围：御临风、黄泉。",
+    "事项#2：掌柜对黄泉，事项「修缮费用」，欠款：已结清。来源：AM0006、AM0007。知情范围：御临风、黄泉、掌柜。",
+    "事项#3：黄泉对掌柜，事项「下一站行程」，披露：不愿透露；未告知。来源：AM0007；原人物行。知情范围：御临风、黄泉；掌柜未获知下一站。",
+    "事项#4：黄泉对黎舟，事项「修伞」，合作：曾合作修伞。来源：AM0012；双方原人物行。知情范围：黄泉、黎舟；其他人未交代。",
+    "事项#5：黄泉向黎舟借入青竹伞；当前状态：已归还；黄泉已向黎舟归还青竹伞。来源：黄泉当着御临风把青竹伞归还黎舟，黎舟当面收妥。知情范围：御临风、黄泉、黎舟。",
+    "事项#6：黄泉对黎舟，事项「转述传闻」，可信度：不信。来源：黄泉当面表述：伞还给你了。修伞仍信你，但你转述的传闻我仍不信。知情范围：御临风、黄泉、黎舟。",
+    "事项#7：黄泉对黎舟，事项「处理修伞」，信任：信任。来源：黄泉当面表述：伞还给你了。修伞仍信你，但你转述的传闻我仍不信。知情范围：御临风、黄泉、黎舟。"
+  ],
+  "requestedModel": "[抗截断]gemini-3.8-flash",
+  "responseReportedModel": "gemini-3.8-flash-n",
+  "modelFieldMeaning": "Frontend/request model identifier; provider response reports a different label."
+}

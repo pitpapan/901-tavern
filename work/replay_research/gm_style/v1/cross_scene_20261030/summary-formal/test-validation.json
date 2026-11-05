@@ -1,0 +1,16 @@
+{
+  "freshPureCoverageTests": {
+    "passed": 5,
+    "failed": 0,
+    "command": "node --test work/replay_research/gm_style/v1/cross_scene_20261030/summary-coverage/coverage.test.mjs"
+  },
+  "priorIntegrationTests": {
+    "passed": 461,
+    "rerunThisBatch": false,
+    "source": "../summary-coverage/integration-final.log"
+  },
+  "sourceFilesExactlyMatchPriorTestedBuild": true,
+  "compiledArtifactExactlyMatchesPriorBrowserTest": true,
+  "newRuntimeCodeChanges": false,
+  "reason": "Adoption deploys exact prior tested source and binary; current batch verifies actual formal artifact loading and behavior in isolation."
+}
