@@ -1,0 +1,28 @@
+{
+  "stage": {
+    "fullCharacters": 2242,
+    "compressedCharacters": 1673,
+    "characterReductionPercent": 25.38,
+    "fullEstimatedTokens": 1844,
+    "compressedEstimatedTokens": 1442
+  },
+  "stageAndRelationshipMessages": {
+    "fullCharacters": 2823,
+    "compressedCharacters": 2254,
+    "characterReductionPercent": 20.16,
+    "fullEstimatedTokens": 2322,
+    "compressedEstimatedTokens": 1920
+  },
+  "wholeRequestText": {
+    "fullCharacters": 32448,
+    "compressedCharacters": 31879,
+    "characterReductionPercent": 1.75,
+    "fullEstimatedTokens": 25107,
+    "compressedEstimatedTokens": 24705
+  },
+  "oneCompactCopyActuallyLoaded": true,
+  "noFullCompilationDuplicate": true,
+  "baselineMethod": "Counterfactual identical actual request: replace only compact stage with the full representation of the same source snapshot. No extra model request.",
+  "tokenMethod": "Local o200k_base comparison only; not Gemini tokenizer or billed usage.",
+  "model": "[抗截断]gemini-3.8-flash"
+}

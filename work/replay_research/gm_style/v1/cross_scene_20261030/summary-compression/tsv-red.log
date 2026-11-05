@@ -1,0 +1,32 @@
+✔ shorter stage restores every original field including private limits and each independent item (6.9777ms)
+✖ omitted private chronicle, lost knowledge field, reordered sources and reversed loan cannot authorize hiding (5.2702ms)
+✔ JSON row encoding preserves quotes, newlines, Unicode, empty strings, nulls and numeric types (2.9748ms)
+✔ original guard invariants, visibility threshold, legacy summaries and same-batch source boundary remain enforced (9.9504ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 266.3728
+
+✖ failing tests:
+
+test at work\replay_research\gm_style\v1\cross_scene_20261030\summary-compression\compact.test.mjs:22:1
+✖ omitted private chronicle, lost knowledge field, reordered sources and reversed loan cannot authorize hiding (5.2702ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/replay_research/gm_style/v1/cross_scene_20261030/summary-compression/compact.test.mjs:30:49)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /覆盖/,
+    operator: 'throws',
+    diff: 'simple'
+  }

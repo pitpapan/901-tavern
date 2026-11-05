@@ -1,0 +1,70 @@
+✖ shorter stage restores every original field including private limits and each independent item (4.0338ms)
+✖ omitted private chronicle, lost knowledge field, reordered sources and reversed loan cannot authorize hiding (1.5088ms)
+✖ JSON row encoding preserves quotes, newlines, Unicode, empty strings, nulls and numeric types (0.93ms)
+✖ original guard invariants, visibility threshold, legacy summaries and same-batch source boundary remain enforced (4.2639ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 0
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 250.9399
+
+✖ failing tests:
+
+test at work\replay_research\gm_style\v1\cross_scene_20261030\summary-compression\compact.test.mjs:12:1
+✖ shorter stage restores every original field including private limits and each independent item (4.0338ms)
+  AssertionError [ERR_ASSERTION]: Stage must actually shrink
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/replay_research/gm_style/v1/cross_scene_20261030/summary-compression/compact.test.mjs:14:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at work\replay_research\gm_style\v1\cross_scene_20261030\summary-compression\compact.test.mjs:22:1
+✖ omitted private chronicle, lost knowledge field, reordered sources and reversed loan cannot authorize hiding (1.5088ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/replay_research/gm_style/v1/cross_scene_20261030/summary-compression/compact.test.mjs:30:49)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /覆盖/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at work\replay_research\gm_style\v1\cross_scene_20261030\summary-compression\compact.test.mjs:34:1
+✖ JSON row encoding preserves quotes, newlines, Unicode, empty strings, nulls and numeric types (0.93ms)
+  TypeError [Error]: compact.decodeStage901 is not a function
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/replay_research/gm_style/v1/cross_scene_20261030/summary-compression/compact.test.mjs:37:24)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at work\replay_research\gm_style\v1\cross_scene_20261030\summary-compression\compact.test.mjs:40:1
+✖ original guard invariants, visibility threshold, legacy summaries and same-batch source boundary remain enforced (4.2639ms)
+  TypeError [Error]: compact.decodeStage901 is not a function
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/replay_research/gm_style/v1/cross_scene_20261030/summary-compression/compact.test.mjs:51:27)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

@@ -1,0 +1,5 @@
+{
+  "scope": "isolated served binary only, not candidate source",
+  "fault": "omit AM0003 private-knowledge chronicle just before real coverage gate",
+  "code": "if(arguments[0]?.sheet_relationship_facts&&arguments[2]?.enabled){const k=arguments[2].bigSummarySheetKey,b=arguments[0][k]?.content,a=arguments[1][k]?.content;if(a?.length>b?.length)a[a.length-1][1]=a[a.length-1][1].split(\"\\n\").filter(l=>!l.includes(\"\\tAM0003\\t\")).join(\"\\n\");}"
+}

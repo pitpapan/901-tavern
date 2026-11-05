@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import {createRequire} from 'node:module';
+const load=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+const here=new URL('./',import.meta.url);
+const accepted=load(new URL('accepted.json',here));
+const full=load(new URL('../summary-formal/accepted.json',here)).newSummary;
+const actual=accepted.newSummary;
+const request=load('C:/Users/pit/AppData/Local/901-summary-compression-test-20261105/results/recall/request.json');
+const bodies=request.messages.map(m=>typeof m.content==='string'?m.content:JSON.stringify(m.content));
+const joined=bodies.join('\n');
+if(joined.split(actual).length!==2||joined.includes(full))throw new Error('Expected one compact stage and no original full duplicate.');
+const baseline=joined.replace(actual,full);
+const require=createRequire('D:/github/sillyTavern/package.json');
+const {get_encoding}=require('tiktoken');const enc=get_encoding('o200k_base');
+const measure=(old,now)=>({fullCharacters:[...old].length,compressedCharacters:[...now].length,characterReductionPercent:+((1-[...now].length/[...old].length)*100).toFixed(2),fullEstimatedTokens:enc.encode(old).length,compressedEstimatedTokens:enc.encode(now).length});
+const memories=bodies.filter(s=>s.includes(actual)||s.includes('【独立关系事项：')).join('\n');
+const report={stage:measure(full,actual),stageAndRelationshipMessages:measure(memories.replace(actual,full),memories),wholeRequestText:measure(baseline,joined),oneCompactCopyActuallyLoaded:true,noFullCompilationDuplicate:true,baselineMethod:'Counterfactual identical actual request: replace only compact stage with the full representation of the same source snapshot. No extra model request.',tokenMethod:'Local o200k_base comparison only; not Gemini tokenizer or billed usage.',model:request.model};
+enc.free();fs.writeFileSync(new URL('measurement.json',here),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
