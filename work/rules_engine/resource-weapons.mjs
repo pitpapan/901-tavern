@@ -12,6 +12,48 @@ const DRAW_RULES=[
  {when:{test:'eq',left:{context:'access'},right:'worn'},action:'move'},
  {when:{all:[{test:'eq',left:{context:'access'},right:'accessible'},{test:'eq',left:{context:'small'},right:true}]},action:'swift'},
 ];
+export function weaponDrawPrice(state,item){
+ const feat=state.feats?.['即时备战'];
+ const action=DRAW_RULES.find(r=>effectMatches(r.when,state,{...item,quickDraw:feat?.source?feat.level:0}))?.action;
+ if(!action)need('须实际佩带或存放位置；不能把背包中的武器当成腰间武器','resource.equip.storage');
+ return action;
+}
+export function availableWeaponHands(actor,limbEffects){
+ const state=actor.state,anatomy=state.anatomy;
+ if(state.grapple||state.grappleHolds?.length||actor.claws?.some(Boolean))unavailable('擒抱或钳制中的手不能用于本次取用');
+ if(!anatomy?.source||!Array.isArray(anatomy.graspingLimbs)||!anatomy.graspingLimbs.length)need('须登记实际可持握的手／肢体及来源','anatomy.graspingLimbs');
+ const usable=new Set(anatomy.graspingLimbs.filter(id=>!limbEffects(state,[id]).disabled)).size;
+ let occupied=0;
+ for(const held of state.possessions?.items??[])if(held.held&&held.location==='carried'){
+  const n=held.grip?.source?held.grip.hands:typeof held.oneHanded==='boolean'?(held.oneHanded?1:2):null;
+  if(!Number.isInteger(n)||n<1)need('须已持物品的实际占用手数','item.grip');
+  occupied+=n;
+ }
+ return usable-occupied;
+}
+function commitWeaponGrip(actor,item){
+ item.held=true;actor.state.equippedWeaponId=item.id;
+ if(item.resourceId)(actor.state.equippedResources??={}).weapon=item.resourceId;
+ else if(actor.state.equippedResources)delete actor.state.equippedResources.weapon;
+ if(actor.state.combatManeuvers)delete actor.state.combatManeuvers.weaponUnavailable;
+ actor.sheathed=false;
+}
+// Normal carried instances use the same PHB storage prices as resource weapons.
+// The enclosing reducer owns the clone and commits exactly once.
+export function drawWeaponInstance(actor,itemId,{combat=false,payAction,limbEffects}={}){
+ const item=weaponInstance(actor.state,itemId);
+ if(item.location!=='carried'||item.destroyed)unavailable('须随身携带且完好的实际武器');
+ if(item.held)unavailable('该武器已经持握，不能重复拔取');
+ if(actor.state.equippedWeaponId)unavailable('已有生效武器；须先明确处理原武器，不能免费切换');
+ if(typeof item.oneHanded!=='boolean')need('须实际武器的单手／双手要求','item.oneHanded');
+ const hands=item.oneHanded?1:2;
+ if(availableWeaponHands(actor,limbEffects)<hands)unavailable('没有足够的可用空闲手');
+ const action=weaponDrawPrice(actor.state,item);
+ if(combat){if(typeof payAction!=='function')throw Error('缺少动作支付器');payAction(action);}
+ item.grip={hands,source:'RE手持物；按实例原本持握要求取用'};
+ commitWeaponGrip(actor,item);
+ return {operation:'draw',itemId:item.id,name:item.name,action:combat?action:null,hands,equipped:true,location:item.location};
+}
 export function equipWeaponInstance(actor,resourceId,plan,{combat=false,preActionCleared=false}={}){
  const item=weaponInstance(actor.state,plan.itemId);
  if(item.resourceId!==resourceId||item.location!=='carried')unavailable('该实例不是当前随身持有的对应装备');
@@ -20,15 +62,11 @@ export function equipWeaponInstance(actor,resourceId,plan,{combat=false,preActio
   if(item.held)unavailable('该武器已经持握，不能重复拔取');
   if(typeof item.oneHanded!=='boolean'||!Number.isInteger(plan.availableHands))need('须实际武器持握需求与当前空闲手数','resource.equip.hands');
   if(plan.availableHands<(item.oneHanded?1:2))unavailable('没有足够的实际空闲手');
-  const feat=actor.state.feats?.['即时备战'];
-  action=DRAW_RULES.find(r=>effectMatches(r.when,actor.state,{...item,quickDraw:feat?.source?feat.level:0}))?.action;
-  if(!action)need('须实际佩带或存放位置；不能把背包中的武器当成腰间武器','resource.equip.storage');
+  action=weaponDrawPrice(actor.state,item);
   const spent=spendAction(actor.state,action,{preActionCleared});if(!spent.result.allowed)unavailable(spent.result.reason);
   actor.state=spent.state;
  }else if(plan.completed!==true)need('须确认实际装备已完成','resource.equip.completed');
- const actual=weaponInstance(actor.state,plan.itemId);actual.held=true;
- actor.state.equippedWeaponId=actual.id;(actor.state.equippedResources??={}).weapon=resourceId;
- actor.sheathed=false;
+ const actual=weaponInstance(actor.state,plan.itemId);commitWeaponGrip(actor,actual);
  return {equipped:resourceId,itemId:actual.id,slot:'weapon',action};
 }
 
@@ -49,7 +87,7 @@ export function instanceWeapon(state){
  const item=weaponInstance(state,state.equippedWeaponId);
  if(item.location!=='carried'||item.held!==true){const e=new Error('所选武器当前没有实际持握');e.code='UNAVAILABLE';throw e;}
  const base=item.weapon??RESOURCE_DEFINITIONS[item.resourceId].equipment.weapon;
- return {...base,instanceId:item.id,resourceId:item.resourceId,
+ return {...base,name:base.name??item.name,instanceId:item.id,resourceId:item.resourceId,
   ...(item.grip?{grip:item.grip}:{}),...(typeof item.oneHanded==='boolean'?{hands:item.oneHanded?1:2}:{}),
   damage:base.damage+itemBonus(item,'weaponDamage',state),
   explode:Math.min(base.explode??10,10-Math.min(2,itemBonus(item,'weaponExplodeReduction',state)))};

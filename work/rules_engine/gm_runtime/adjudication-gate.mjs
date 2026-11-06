@@ -271,7 +271,7 @@ export function playerCheckDisplay(basis) {
 
 export function compactNarrationFacts(result,currentState) {
   if(result?.prevented||result?.result?.prevented)return `行动前力量检定失败，人物陷入昏迷；原本声明的行动没有执行。不得把这次检定写成原行动的成败。`;
-  if(result?.kind==='rule'&&result.result?.action==='equipment')return `装备穿脱已由程序保存：${JSON.stringify(result.result.steps)}；合计经过${result.result.elapsedMinutes}分钟。按结果承接穿戴或随身携带状态及所需时间；不把卸下写成丢弃，不改变其他物品归属。无需掷骰，后续行动仅限玩家本轮明确声明的部分。`;
+  if(result?.kind==='rule'&&result.result?.action==='equipment')return `装备状态已由程序保存：${JSON.stringify(result.result.steps)}${result.result.elapsedMinutes?`；合计经过${result.result.elapsedMinutes}分钟`:'；非战斗拔取没有扣战斗动作额度，不补具体耗时'}。按结果承接穿戴、持握或随身携带状态及所需时间；不把卸下写成丢弃，不改变其他物品归属。无需掷骰，后续行动仅限玩家本轮明确声明的部分。`;
   if(result?.kind==='rule')return `已由JS保存的规则结果：${JSON.stringify(result.result)}。伤型B表示钝击伤害，L表示严重伤害，A表示恶性伤害；不能把L称作轻度伤害或因演练而淡化伤势。只叙述已结算成败与实际后果，不公开骰值、DC、NPC数值或秘密，不追加玩家动作。`;
   if (!record(result)) return '无需规则数值结算。';
   if(result.kind==='recovery') {
@@ -391,7 +391,7 @@ export function replayClassificationRequest({ context, scene = '', skills = {}, 
     '{"status":"NEEDS_INPUT","reason":"真正缺失的条件"}；或{"status":"UNRESOLVED","reason":"当前规则流程无法处理的具体原因"}。NO_CHECK、NEEDS_INPUT、UNRESOLVED不带request字段。' +
     '先看整条行动：复合行动中只要有一个具机械风险的子动作，就不能用寒暄等无风险部分将整条判为NO_CHECK；只为需要结算的子动作提出一次请求。' +
     (context.pending ? '若本次补充明确取消或暂不执行此前未结算行动，改看本次补充的整条当前声明；仅当前整条无需结算时返回NO_CHECK，并加cancelPending字段，逐字引用最新声明中明确取消或暂不执行的原文片段。普通闲聊、问候不表示取消；不要取消已结算操作或待恢复旁白。' : '') +
-    '玩家实际穿脱装备需要保存状态，不能用NO_CHECK略过。当前装备见状态摘要equipment；非战斗盔甲穿脱用CHECK_REQUIRED，request={"kind":"rule","action":"equipment","actorId":"player","steps":[{"operation":"equip或unequip（选择一个）","itemId":"实际已登记ID","sourceQuote":"逐字引用本次玩家穿脱动作原文"}]}。CHECK_REQUIRED在此表示交程序执行，不要求掷骰；步骤按原文顺序完整保留，不添加。程序决定时间及效果，模型不填写数值。物品未登记或歧义返回NEEDS_INPUT。引号中的对白、[]私念、询问、否定和未来打算不构成穿脱执行声明。其他装备位或战斗穿脱尚未接入，返回UNRESOLVED。' +
+    '玩家实际穿脱装备需要保存状态，不能用NO_CHECK略过。当前装备见状态摘要equipment；非战斗盔甲穿脱或随身武器拔出持握用CHECK_REQUIRED，request={"kind":"rule","action":"equipment","actorId":"player","steps":[{"operation":"equip穿甲、unequip卸甲或draw拔出武器（选择一个）","itemId":"实际已登记ID","sourceQuote":"逐字引用本次玩家装备动作原文"}]}。CHECK_REQUIRED在此表示交程序执行，不要求掷骰；步骤按原文顺序完整保留，不添加。程序决定时间及效果，模型不填写数值。物品未登记或歧义返回NEEDS_INPUT。引号中的对白、[]私念、询问、否定和未来打算不构成穿脱执行声明。武器拔取必须选择有来源的实际weapon实例，按已登记存放位置与空闲手执行，不把拔剑当作普通叙事NO_CHECK，也不使用仅黄泉特定拔刀术的ability draw。其他装备位或战斗穿甲尚未接入，返回UNRESOLVED。' +
     '除此类需要保存状态的操作外，普通对话、明确可见事实或依据已知条件能确定的成功／拒绝／前提不成立，可选NO_CHECK；说明具体依据，不得更改规则数值。' +
     '人物卡未列技艺不等于不会；已知训练与实践可支持有限普通操作，玩家与NPC同准，行动重要性不改变资格；不得补造经历、专有资源效果或数值。' +
     '有失败后果或重要不确定性时，先选与实际行动对应的资源、恢复或其他专门接口；仅普通技能任务使用普通检定。缺少目标、距离、角色输入或难度依据时选NEEDS_INPUT并指出真正缺项，不编造dc；缺少受支持的机械结算接口时选UNRESOLVED。' +

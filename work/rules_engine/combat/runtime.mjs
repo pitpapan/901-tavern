@@ -40,7 +40,8 @@ function candidatesFor(battle) {
       else if(['disarm','sunder'].includes(id)){for(const item of t.state.possessions?.items??[])if(item.held)add(id,{targetId:t.id,itemId:item.id});}
       else add(id,{targetId:t.id});
     }
-  }else if(id==='takeItem'){for(const item of a.state.possessions?.items??[])if(!item.held)add(id,{itemId:item.id});}
+  }else if(id==='drawWeapon'){for(const item of a.state.possessions?.items??[])if(!item.held&&item.location==='carried'&&(item.weapon||item.resourceId))add(id,{itemId:item.id});}
+  else if(id==='takeItem'){for(const item of a.state.possessions?.items??[])if(!item.held)add(id,{itemId:item.id});}
   else if(id==='pickupWeapon'){for(const choice of groundWeaponChoices(battle,a))add(id,choice);}
   else if(id!=='counterRush')add(id);
   for(const t of Object.values(battle.actors))if(t.present&&t.id!==a.id&&lifeStatus(t.state).deteriorating)add('firstAid',{targetId:t.id});

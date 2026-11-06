@@ -78,7 +78,7 @@ export function mountPlayerStatus({document,getState,getChatId,getAvatar=()=>nul
       row(`伤势：B ${p.health.B} / L ${p.health.L} / A ${p.health.A}`);
       if(p.inventory)row(`物品：${p.inventory.map(item=>`${item.name} ×${item.quantity??'数量未记'}`).join('、')||'无'}`);
       if(p.equipment){
-        row(`装备：${p.equipment.items.map(item=>`${item.name}（${item.worn?'穿戴中':item.location==='carried'?'已卸下／随身携带':'未穿戴'}）`).join('、')||'无已登记装备'}`);
+        row(`装备：${p.equipment.items.map(item=>`${item.name}（${item.slot==='weapon'?(item.held?'持握中':item.location==='carried'?'随身收起，未持握':'未持握'):item.worn?'穿戴中':item.location==='carried'?'已卸下／随身携带':'未穿戴'}）`).join('、')||'无已登记装备'}`);
         row(`护甲防御 ${p.equipment.armorDefense}（仅护甲部分）`);
       }
       if(p.pendingRecoveryEffects?.length)row(`待生效：${p.pendingRecoveryEffects.map(item=>`${item.medicine}${item.choice==='status'?'（解除指定状态）':''}`).join('、')}`);

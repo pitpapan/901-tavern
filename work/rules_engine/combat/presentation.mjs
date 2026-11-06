@@ -113,7 +113,7 @@ export function publicScene(root,{afterRevision=0,playerId='player'}={}) {
     else event.outcome='已执行';
     if(r.preActionCheck?.allowed===false)event.outcome='行动前检定未通过，所声明动作没有执行';
     if(r.posture)event.outcome=r.posture==='prone'?'已伏地，仍在原处':'已起身，仍在原处';
-    if(r.itemUse)event.outcome=r.itemUse.operation==='pickup'?`已从地面拾起${r.itemUse.name}并持握为当前武器；此次拾取没有攻击`:`已取出${r.itemUse.name}，没有自动使用或消耗该物品`;
+    if(r.itemUse)event.outcome=r.itemUse.operation==='draw'?`已拔出${r.itemUse.name}并持握为当前武器；没有攻击，也没有移动`:r.itemUse.operation==='pickup'?`已从地面拾起${r.itemUse.name}并持握为当前武器；此次拾取没有攻击`:`已取出${r.itemUse.name}，没有自动使用或消耗该物品`;
     if(['bullRush','counterRush'].includes(r.abilityId)&&!r.after.awaiting){
       event.execution='以身体冲撞目标';
       event.outcome=!r.contest?.won?'冲撞被抵挡或避让，目标未被击退或击倒':r.knockdown?'冲撞使目标倒地':r.forcedMovement?.blocked?'冲撞对抗成功，但击退路线受阻，目标没有位移':'冲撞将目标推离原位';
@@ -198,7 +198,7 @@ export function playerDeclarationContext(b,revision,playerId='player') {
   // Even explicitly shared ally stats are private under this campaign's rule.
   safe.knowledge={...safe.knowledge,[playerId]:Object.fromEntries(Object.entries(safe.knowledge?.[playerId]??{}).map(([id,k])=>[id,{...k,stats:false}]))};
   const context=decisionContext(safe,revision);
-  const itemIds=new Set(context.legalOptions.filter(c=>c.abilityId==='takeItem').map(c=>c.itemId));
+  const itemIds=new Set(context.legalOptions.filter(c=>['takeItem','drawWeapon'].includes(c.abilityId)).map(c=>c.itemId));
   const items=(safe.actors[playerId].state.possessions?.items??[]).filter(i=>itemIds.has(i.id)).map(i=>({
     id:i.id,ownerId:playerId,name:i.name,...(i.aliases?{aliases:i.aliases}:{}),access:i.access,held:i.held}));
   for(const c of context.legalOptions.filter(c=>c.abilityId==='pickupWeapon')){

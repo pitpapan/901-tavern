@@ -38,7 +38,7 @@ export async function interpretDeclaration({text,context},generateRaw) {
     ordered_prompts:[{role:'system',content:
       '你只翻译玩家已经明确声明的行动，不替玩家选招。返回JSON：{"steps":[{"quote":"玩家原文中的动作片段","command":{"abilityId":"...","targetId":"..."},"cost":{"actions":{"standard":1},"energy":{"风池":1}}}],"clarification":"需要澄清时的简短问题"}。'+
       'command字段仅按当前能力和legalOptions格式；actorId由程序设置。移动指令格式必须为{"abilityId":"move","to":[x,y]}，to是两个数值组成的数组；targetId仅表示角色ID，绝不能用它承载坐标字符串。允许玩家明确指定的距离和方向，不要求选预设终点。场地地形在terrain中；绕行必须填via:[[x,y],...]途经点，并与玩家声明一致。选点草稿不是已执行行动。'+
-      '普通战斗动作按legalOptions转写：charge冲锋、allOut全力、feint虚招、trip绊摔、bullRush冲撞（mode:push或knockdown）、grapple擒抱（attribute:strength或agility）、disarm/sunder击落/击破（实际itemId）、dropProne伏地、stand起身、aim瞄准、adjust调整架势、takeItem取出随身物品；pickupWeapon拾取地面武器（照legalOptions填写fromActorId与itemId）。反冲窗口用counterRush，mode为push/knockdown/decline。冲撞、绊摔和擒抱受击时，grappleDefense须玩家明确选择strength或agility。[]内容是私念，不构成执行声明，也不代表NPC知情。'+
+      '普通战斗动作按legalOptions转写：charge冲锋、allOut全力、feint虚招、trip绊摔、bullRush冲撞（mode:push或knockdown）、grapple擒抱（attribute:strength或agility）、disarm/sunder击落/击破（实际itemId）、dropProne伏地、stand起身、aim瞄准、adjust调整架势、takeItem取出随身物品；drawWeapon拔出随身武器并持握（实际itemId，按已登记存放处核费，不套用黄泉的draw拔刀术）；pickupWeapon拾取地面武器（照legalOptions填写fromActorId与itemId）。反冲窗口用counterRush，mode为push/knockdown/decline。冲撞、绊摔和擒抱受击时，grappleDefense须玩家明确选择strength或agility。[]内容是私念，不构成执行声明，也不代表NPC知情。'+
       'targetId使用participants或lastSeen中的id，不填人物中文姓名。lastSeen是此前目击位置，不代表现在仍可见；不能据此擅自提供盲攻效果。'+
       '开关门用{"abilityId":"door","featureId":"terrain中的id","open":true或false}；普通武器破坏障碍用{"abilityId":"destroy","featureId":"terrain中的id"}。不得将地形当作targetId人物，不得输入硬度、耐久、掩体或地图修改值。有免检爬墙资格者可在明确可承重的climbable表面填写climb:true；水面奔跑须有资格且填写run:true。其余高低差必须走已绘制坡道/阶梯；没有适配的攀爬、跳跃、开锁先澄清，不替换成免费移动或开门。'+
       '仅转写玩家明确写出的动作与能量消耗到cost；没有写则省略cost或相应部分。标准/移动/迅捷用standard/move/swift；自由动作actions为{}。'+
@@ -67,7 +67,7 @@ export function validateStep(step,text,battle) {
     if(named.length!==1||named[0].itemId!==c.itemId||named[0].fromActorId!==c.fromActorId)
       throw new IllegalAction('须明确实际落地武器名称及对应实例；本次尚未拾取或扣费。');
   }
-  if(c.abilityId==='takeItem') {
+  if(['takeItem','drawWeapon'].includes(c.abilityId)) {
     const named=(battle.actors.player.state.possessions?.items??[]).filter(i=>i.source&&[i.name,...(i.aliases??[])].some(name=>typeof name==='string'&&name&&step.quote.includes(name)));
     if(named.length!==1||named[0].id!==c.itemId)
       throw new IllegalAction('所选物品与声明中的登记名称不一致或不明确；请写明要取出的物品名称，本次尚未取物或扣费。');

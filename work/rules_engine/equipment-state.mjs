@@ -20,21 +20,23 @@ export function openingArmorRegistration(){
 export function equipmentRequestValid(r){
  return r?.kind==='rule'&&r.action==='equipment'&&r.actorId==='player'&&Array.isArray(r.steps)&&r.steps.length>0&&r.steps.length<=8&&
   r.steps.every(s=>s&&Object.keys(s).every(k=>['operation','itemId','sourceQuote'].includes(k))&&
-   ['equip','unequip'].includes(s.operation)&&text(s.itemId)&&text(s.sourceQuote));
+   ['equip','unequip','draw'].includes(s.operation)&&text(s.itemId)&&text(s.sourceQuote));
 }
 function physicalText(input){
  return String(input??'').replace(/\[[\s\S]*?\]|【[\s\S]*?】/g,'').replace(/“[^”]*”|「[^」]*」|『[^』]*』|"[^"]*"/g,'');
 }
-const verbs=/卸下|卸除|脱下|脱去|穿上|穿回|穿戴/g;
+const verbs=/卸下|卸除|脱下|脱去|穿上|穿回|穿戴|拔出|抽出|拔剑/g;
 const isUnequip=verb=>/卸|脱/.test(verb);
 export function equipmentDeclarations(input,state){
  const out=[];
- for(const clause of physicalText(input).split(/[，,。；;\n！？!?]/)){
-  if(/是否|能否|可否|要不要|该不该|应该|打算|想要|准备|计划|假如|如果|等.+再|之后再|以后|别|不要|不想|没有|尚未|暂不|不(?:穿|脱|卸)|未(?:穿|脱|卸)/.test(clause))continue;
+ for(const part of physicalText(input).matchAll(/[^，,。；;\n！？!?]+/g)){
+  const clause=part[0];
+  if(/是否|能否|可否|要不要|该不该|应该|打算|想要|准备|计划|假如|如果|等.+再|之后再|以后|别|不要|不想|没有|尚未|暂不|不(?:穿|脱|卸|拔|抽)|未(?:穿|脱|卸|拔|抽)/.test(clause))continue;
   for(const match of clause.matchAll(verbs)){
    const items=(state?.possessions?.items??[]).filter(i=>[i.name,...(i.aliases??[])].some(n=>n&&clause.includes(n)));
-   if(!items.length&&!/铠甲|盔甲|护甲/.test(clause))continue;
-   out.push({operation:isUnequip(match[0])?'unequip':'equip',clause,verb:match[0],itemIds:items.map(i=>i.id)});
+   const draw=/拔|抽/.test(match[0]);
+   if(!items.length&&!(draw?/剑|刀|武器|枪|弓/:/铠甲|盔甲|护甲/).test(clause))continue;
+   out.push({operation:draw?'draw':isUnequip(match[0])?'unequip':'equip',clause,verb:match[0],offset:part.index+match.index,itemIds:items.map(i=>i.id)});
   }
  }
  return out;
@@ -45,13 +47,16 @@ export function equipmentDeclarationMatches(request,input,state){
  return declarations.length===request.steps.length&&declarations.every((d,i)=>{
   const s=request.steps[i];return d.operation===s.operation&&d.itemIds.length===1&&d.itemIds[0]===s.itemId&&
    physicalText(input).includes(s.sourceQuote)&&s.sourceQuote.includes(d.verb)&&
-   (d.clause.includes(s.sourceQuote)||s.sourceQuote.includes(d.clause.trim()));
+   // The exact quote may start after the subject and continue past a comma.
+   // Match the actual verb span, not whole-clause containment.
+   (()=>{const body=physicalText(input);let start=body.indexOf(s.sourceQuote);
+    while(start>=0){if(start<=d.offset&&start+s.sourceQuote.length>=d.offset+d.verb.length)return true;start=body.indexOf(s.sourceQuote,start+1);}return false;})();
  });
 }
 export function equipmentStateSummary(state){
  if(!state.equipmentState)return null;
  return {managedSlots:state.equipmentState.managedSlots,items:(state.possessions?.items??[]).filter(i=>i.slot)
-  .map(i=>({id:i.id,name:i.name,aliases:i.aliases,slot:i.slot,armorClass:i.armorClass,worn:i.worn,location:i.location}))};
+  .map(i=>({id:i.id,name:i.name,aliases:i.aliases,slot:i.slot,armorClass:i.armorClass,worn:i.worn,location:i.location,...(i.slot==='weapon'?{held:i.held,access:i.access}:{} )}))};
 }
 function armorItems(state){
  if(!state.equipmentState?.managedSlots?.includes('armor'))return null;
@@ -68,15 +73,24 @@ export function instanceArmor(state){
 }
 // Mutates only the reducer's private clone. The enclosing MVU transaction
 // commits all steps and elapsed time once, or leaves the saved state untouched.
-export function changeEquipment(root,request){
+export function changeEquipment(root,request,{drawWeapon}={}){
  if(root.battle&&root.battle.mode!=='story')unsupported('战斗中的穿脱须使用战斗动作预算；本接口仅支持非战斗');
  if(!equipmentRequestValid(request))need('请明确穿脱的实际装备');
  const state=root.actors[request.actorId]?.state;
- if(!state?.equipmentState)need('当前分支尚未登记实际装备；不从人物卡历史自动补发');
+ if(!state)need('当前分支尚未登记实际人物');
  const steps=[];
  for(const step of request.steps){
   const item=state.possessions?.items?.find(i=>i.id===step.itemId);
   if(!item?.source||item.location!=='carried')need('该装备没有登记为当前随身实际物品');
+  if(step.operation==='draw'){
+   const actor=root.actors[request.actorId];
+   if(typeof drawWeapon!=='function')unsupported('武器拔取执行器未连接');
+   const drawn=drawWeapon(actor,item.id);
+   (actor.combatCarry??={}).sheathed=false;
+   actor.combatCarry.visibleArms=`${item.name}在手`;
+   steps.push({...drawn,elapsedMinutes:0,source:'PHB非战斗行动与战斗行动211–215；RE物品和装备位手持物'});continue;
+  }
+  if(!state.equipmentState)need('当前分支尚未登记实际装备；不从人物卡历史自动补发');
   if(item.slot!=='armor')unsupported('此装备位尚未接入穿脱执行，不按护甲规则套用');
   if(!['light','heavy'].includes(item.armorClass))need('须先核定这件盔甲的轻甲或重甲类别');
   if(typeof item.worn!=='boolean')need('须确认当前实际穿戴状态');

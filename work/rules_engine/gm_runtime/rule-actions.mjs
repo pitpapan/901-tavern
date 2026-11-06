@@ -1,3 +1,4 @@
+import {drawWeaponInstance} from '../resource-weapons.mjs';
 import {changeEquipment,equipmentRequestValid} from '../equipment-state.mjs';
 import {settleResourceDeaths} from '../resource-death.mjs';
 import {flushAutomaticResourceEvents} from './resource-program.mjs';
@@ -165,9 +166,9 @@ export function reduceRuleAction(input,request,{drawDice,actorTemplates={},event
         break;
       }
       case 'equipment': {
-        result=changeEquipment(next,r);
-        const changes=[];passTime(result.elapsedMinutes,changes);
-        result.timeChanges=changes;result.sceneChanges=advanceSceneTime(next.ruleScene,result.elapsedMinutes);
+        result=changeEquipment(next,r,{drawWeapon:(actor,itemId)=>drawWeaponInstance(actor,itemId,{limbEffects})});
+        if(result.elapsedMinutes){const changes=[];passTime(result.elapsedMinutes,changes);
+        result.timeChanges=changes;result.sceneChanges=advanceSceneTime(next.ruleScene,result.elapsedMinutes);}
         break;
       }
       case 'inventory': {

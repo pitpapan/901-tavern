@@ -1,5 +1,5 @@
-import {weaponInstance} from '../resource-weapons.mjs';
 import {limbEffects} from '../status-rules.mjs';
+import {weaponInstance,availableWeaponHands} from '../resource-weapons.mjs';
 import {RuleInputError,IllegalAction,equipment} from './mechanics.mjs';
 import {canObserve,clearLine,spatialDistance} from './map.mjs';
 
@@ -22,20 +22,9 @@ export function groundWeaponChoices(b,a){
 export function pickupGroundWeapon(b,a,c,spend){
  requireThat(groundWeaponChoices(b,a).some(x=>x.fromActorId===c.fromActorId&&x.itemId===c.itemId),'须可见、可及且完好的实际落地武器');
  const holder=b.actors[c.fromActorId],item=weaponInstance(holder.state,c.itemId);
- requireThat(!a.state.grapple&&!a.state.grappleHolds?.length&&!a.claws?.some(Boolean),'擒抱或钳制中的手不能用于本次拾取');
- const anatomy=a.state.anatomy;
- if(!anatomy?.source||!Array.isArray(anatomy.graspingLimbs)||!anatomy.graspingLimbs.length)
-  throw new RuleInputError('须登记实际可持握的手／肢体及来源','anatomy.graspingLimbs');
  if(typeof item.oneHanded!=='boolean')throw new RuleInputError('须实际武器的单手／双手要求','item.oneHanded');
  const hands=item.oneHanded?1:2;
- const usable=new Set(anatomy.graspingLimbs.filter(id=>!limbEffects(a.state,[id]).disabled)).size;
- let occupied=0;
- for(const held of a.state.possessions?.items??[])if(held.held&&held.location==='carried'){
-  const n=held.grip?.source?held.grip.hands:typeof held.oneHanded==='boolean'?(held.oneHanded?1:2):null;
-  if(!Number.isInteger(n)||n<1)throw new RuleInputError('须已持物品的实际占用手数','item.grip');
-  occupied+=n;
- }
- requireThat(usable-occupied>=hands,'没有足够的可用空闲手');
+ requireThat(availableWeaponHands(a,limbEffects)>=hands,'没有足够的可用空闲手');
  // Picking up must not silently replace another active weapon (RE switching rule).
  requireThat(!a.state.equippedWeaponId&&(a.state.combatManeuvers?.weaponUnavailable||equipment(a).weapon?.skill==='肉搏'),'已有生效武器；须先明确处理原武器，不能用拾取免费切换');
  requireThat(holder===a||!(a.state.possessions?.items??[]).some(x=>x.id===item.id),'目标角色已有同编号实例，不能复制或覆盖');

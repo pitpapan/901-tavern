@@ -2,7 +2,7 @@
 // not model-supplied numbers. Unmodified actions keep their own timing and effects.
 import {combatRoundKey} from '../resource-action-pricing.mjs';
 import {equipment} from './mechanics.mjs';
-import {ordinaryWeaponType,weaponAmmoSpec} from '../resource-weapons.mjs';
+import {ordinaryWeaponType,weaponAmmoSpec,weaponInstance,weaponDrawPrice} from '../resource-weapons.mjs';
 import {MEDICINES} from '../recovery.mjs';
 export const PHYSICAL_ACTIONS={
  strike:'attack',thunder:'attack',cleaveRock:'attack',lightning:'attack',conduct:'attack',destroy:'attack',
@@ -11,13 +11,14 @@ export const PHYSICAL_ACTIONS={
  aim:'full',door:'move',shieldPush:'standard',calibrate:'full',drawClub:'move',readyBow:'move',
  stowWeapon:'move',readyWeapon:'move',wake:'standard',firstAid:'full',escapeGrip:'attack',pressGrip:'attack',
  tentacles:'standard',releaseGrip:'free',garudaInterfere:'attack',
- block:'dynamic',reload:'dynamic',medicine:'dynamic',grappleAttack:'dynamic',garudaHide:'dynamic'
+ drawWeapon:'dynamic',block:'dynamic',reload:'dynamic',medicine:'dynamic',grappleAttack:'dynamic',garudaHide:'dynamic'
 };
 const attackIds=new Set(['strike','thunder','cleaveRock','lightning','conduct','destroy','tornado','gale']);
 export function physicalPriceRequest(root,actor,command,actualKind){
  const id=command.abilityId;if(!Object.hasOwn(PHYSICAL_ACTIONS,id))return null;
  let kind=actualKind??PHYSICAL_ACTIONS[id];
  if(kind==='dynamic'){
+  if(id==='drawWeapon')kind=weaponDrawPrice(actor.state,weaponInstance(actor.state,command.itemId));
   if(id==='block')kind=actor.state.wizard?.form==='water'?'swift':actor.kind==='huang'&&actor.ruleset!=='opening-20261022'?'free':'move';
   if(id==='reload')kind=weaponAmmoSpec(actor,equipment(actor).weapon)?.loadingAction??'swift';
   if(id==='medicine')kind=MEDICINES[command.medicine]?.action;

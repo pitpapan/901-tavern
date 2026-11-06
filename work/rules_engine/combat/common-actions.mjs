@@ -19,6 +19,7 @@ export const COMMON_ACTIONS={
  grapple:{name:'擒抱',action:'标准',text:'力量／敏捷＋肉搏接触命中，再作擒抱对抗；attribute须明确选择strength或agility。'},
  dropProne:{name:'伏地',action:'反射',text:'进入倒地；移动半速，近战防御－2，远程防御＋2，范围回避最终成功－1。'},
  stand:{name:'起身',action:'移动',text:'解除倒地，不赠送位移。'},
+ drawWeapon:{name:'拔出随身武器',action:'按实际存放处',text:'从实际登记的佩带位置取出武器并持握，核对空闲手；正常佩带移动、背包整轮，已登记即时备战按其规则。仅拔取，不自动攻击。'},
  pickupWeapon:{name:'拾取地面武器',action:'移动',text:'拾起可见可及的实际落地武器；按实例要求核对空闲手，持握为当前武器，不自动攻击，不免费替换已有生效武器。'},
  takeItem:{name:'取出物品',action:'按实物存放处',text:'正常佩带武器移动；方便取用的小物迅捷；背包取物整轮。仅取实际登记物品，不自动使用。'},
  aim:{name:'实际瞄准',action:'整轮',text:'实际远程武器瞄准三个射程单位内目标，下次本人行动时生效，最多三轮；迅捷装填不打断。'},

@@ -20,6 +20,7 @@ import {settleInitiativeChanges} from '../resource-turn-order.mjs';
 import {projectRecoveryLocks,syncActorWounds} from '../resource-wounds.mjs';
 import {healWounds} from '../healing.mjs';
 import {remainingPenalty} from '../resource-penalties.mjs';
+import {drawWeaponInstance} from '../resource-weapons.mjs';
 import {PHYSICAL_ACTIONS,physicalPriceRequest} from './action-prices.mjs';
 import {quoteActionPrice,consumeActionPrice,combatRoundKey} from '../resource-action-pricing.mjs';
 import {effectiveStatuses} from '../resource-status-applicability.mjs';
@@ -953,7 +954,7 @@ export function act(input,command,{drawDice=randomDice,playerAuthorized=false,de
       const source=b.actors[s.sourceActorId];return source&&Array.isArray(c.to)&&spatialDistance(b.map,c.to,source.position)>spatialDistance(b.map,a.position,source.position)&&(selectedFlight?.path??measurePath(b.map,a.position,c.to,c.via)).cost>=(selectedFlight?.speed??panel(b,a.id).speed)-1e-8;});
     a.statusPermission=statusActionPermission(a.state,c,{escape,perceived:s=>s.perceived??(b.actors[s.sourceActorId]?.present&&canObserve(b,b.actors[s.sourceActorId],a.id)?true:undefined)});
     if(selectedFlight?.maneuverability==='perfect')a.statusPermission.perfectFlight=true;
-    if(physicalActions.has(id)&&!['move','step','pickupWeapon'].includes(id)){const limb=limbEffects(a.state,c.limbIds??a.state.anatomy?.attackLimbs);requireThat(!limb.disabled,'该动作所需肢体已残障');}
+    if(physicalActions.has(id)&&!['move','step','pickupWeapon','drawWeapon'].includes(id)){const limb=limbEffects(a.state,c.limbIds??a.state.anatomy?.attackLimbs);requireThat(!limb.disabled,'该动作所需肢体已残障');}
   }
   requireThat(!a.underground?.mustEmerge||['emerge','end'].includes(id),'土遁期限已到，须标准动作出土');
   requireThat(!a.underground||['move','emerge','end'].includes(id),'地下不能攻击或使用地面动作');
@@ -1061,6 +1062,8 @@ export function act(input,command,{drawDice=randomDice,playerAuthorized=false,de
     case 'stand':
       requireThat(a.state.combatManeuvers?.prone,'当前没有倒地');
       spend(b,a,c,'move','move');delete a.state.combatManeuvers.prone;result.posture='standing';break;
+    case 'drawWeapon':
+      result.itemUse=drawWeaponInstance(a,c.itemId,{combat:true,limbEffects,payAction:kind=>spend(b,a,c,kind,undefined,undefined,'drawWeapon')});break;
     case 'pickupWeapon':
       result.itemUse=pickupGroundWeapon(b,a,c,kind=>spend(b,a,c,kind));break;
     case 'takeItem':

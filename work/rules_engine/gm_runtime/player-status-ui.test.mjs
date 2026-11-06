@@ -36,6 +36,14 @@ test('equipment distinguishes carried armor from worn armor without changing pen
  const ui=mountPlayerStatus({document,getState:async()=>current,getChatId:()=> 'armor-test'});await tick();
  const view=document.getElementById('rules901-player-status');assert.match(view.textContent,/帝国制式轻甲.*已卸下/);assert.match(view.textContent,/护甲防御 0/);assert.match(view.textContent,/防御 待声明/);ui.dispose();
 });
+test('weapon panel distinguishes a stowed sword from its actual held state',async()=>{
+ const document=documentFixture(),current=state();
+ const item={name:'弃风剑',slot:'weapon',held:false,location:'carried'};
+ current.player.equipment={armorDefense:0,items:[item]};
+ const ui=mountPlayerStatus({document,getState:async()=>current,getChatId:()=> 'draw-test'});await tick();
+ const view=document.getElementById('rules901-player-status');assert.match(view.textContent,/弃风剑（随身收起，未持握）/);
+ item.held=true;ui.refresh();await tick();assert.match(view.textContent,/弃风剑（持握中）/);ui.dispose();
+});
 
 test('player bar renders avatar and MVU values above input; explicit refresh updates guard and remaining actions',async()=>{
   const document=documentFixture();let current=state();
