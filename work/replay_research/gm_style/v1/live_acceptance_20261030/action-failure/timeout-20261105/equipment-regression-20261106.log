@@ -1,0 +1,47 @@
+✔ model can only choose current legal actions; already drawn weapon is excluded (993.544ms)
+✔ confirmed panels, only combatants loaded, effects do not leak from history (39.8254ms)
+✔ draw, free block, lightning, then automatic defense/action/energy changes (40.9342ms)
+✔ RE penetration consumes only matching defense and does not duplicate reductions (10.3753ms)
+✔ combo belongs to target, qi is not inner power, rejected command leaves input unchanged (23.5351ms)
+✔ once per scene damage conversion is explicit and converts entire mixed hit (14.2518ms)
+✔ summon has independent turn and persists health and once-per-scene uses across recall (33.5176ms)
+✔ movement triggers one legal opportunity, five-foot step avoids it (27.1706ms)
+✔ restraint payment affects subsequent panels and immobilizes beyond will (27.9537ms)
+✔ 龙象 ignores four points of conversion, not four free bonus damage (17.0055ms)
+✔ life squeezing records increasing recovery restrictions and rapid healing respects them (7.5414ms)
+✔ complete duel uses one resolver for companion and enemy, then stops (3324.714ms)
+✔ MVU settles and writes once, preserves unrelated state, readback supplies next prompt (68.1586ms)
+✔ Tavern controller posts and carries results; refreshing and report replay never settle again (177.3711ms)
+✔ opening profiles use complete period-specific rules, mother skill autos and no late equipment (32.785ms)
+✔ opening declared block includes mother skill auto; no free Huang block or late sword defense (119.0674ms)
+✔ opening attacks use flow, posture, draw, electricity and bare-body conditions exactly once (42.2645ms)
+✔ adopted enemies keep fixed HP and stone attack is B within its real territory (30.1802ms)
+✔ opening D magic-killer finisher uses one layer, adds no automatic successes and clears rather than restacks (13.1279ms)
+✔ formal withdrawal writes through existing MVU, keeps injuries/resources and does not complete task or award XP (24.1183ms)
+✔ withdrawal/reentry carries duration, same-scene once-use and cooldown; new-scene once-use remains fresh (46.0077ms)
+✔ ordinary opposed check uses actual two actors and active side wins ties (10.0201ms)
+✔ will save uses will and presence rather than a fabricated survival skill (1.3668ms)
+✔ extended check persists cumulative successes and prevents a completed task reroll (9.5669ms)
+✔ attribute growth spends the existing XP and does not fill health or resources (1.7751ms)
+✔ rule transaction saves both participants once and replay does not redraw (2.3072ms)
+✔ requests cannot supply arbitrary states, rolls or awards through growth (0.1693ms)
+✔ classifier always receives core rules and current subskills, independent of lore keywords (1.0029ms)
+✔ rule request enters the same guarded transaction and can recover a committed decision (0.9697ms)
+✔ constant and explicitly named scene entries reach classification without enabling disabled lore (0.2866ms)
+✔ opening runtime actually settles will saves and reuses them after reload (9.8088ms)
+✔ opening ordinary orientation uses the adopted +6 and keeps it through replay (6.5959ms)
+✔ random special wound deterioration commits its receipt and replay after reload never redraws (3.9814ms)
+✔ adopted jump checks use sourced run-up, apply the final success penalty and do not invent movement (6.2155ms)
+✔ wind footwork only removes the standing jump penalty while actual pool and armor qualify (6.935ms)
+✔ jump selectors cannot forge run-up or roll without an actual supported takeoff (1.0338ms)
+✔ jump receipt persists the sourced run-up and cannot reroll after MVU reload (2.781ms)
+✔ physical motion persists actual scene position and contacts through MVU time transactions without replaying impacts (12.0967ms)
+✔ a falling target uses an aura at contact time independently of actor iteration order (21.1836ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 39
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5168.3608

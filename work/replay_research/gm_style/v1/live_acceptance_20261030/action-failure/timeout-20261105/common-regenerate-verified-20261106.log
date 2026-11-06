@@ -1,0 +1,37 @@
+✔ unconfirmed rule persistence blocks narration and reports memory-only settlement (168.4314ms)
+✔ postcombat story classification failure retains its diagnostic instead of using combat fallback (7.7726ms)
+✔ dialogue classification timeout reports a processing failure without implying an attempted action (6.2993ms)
+✔ classification timeout retries the same input once with a new id and ignores the late first decision (34.4373ms)
+✔ classification recovery stops after two timeouts without narration or settlement (31.7169ms)
+✔ classification recovery does not retry after explicit stop, changed input, or unconfirmed cancellation (46.6835ms)
+✔ postcombat story continuation failure remains resumable without reclassifying or settling (8.9251ms)
+✔ a failure inside combat handling still uses the combat recovery route (3.7678ms)
+✔ native combat regeneration restores the deleted report and unique latest root before a cancelled menu (3.5787ms)
+✔ debug-disabled malformed recovery retains a precise failure without settling (4.3882ms)
+✔ debug-disabled invalid check attribute identifies model input failure without exposing DC (4.7722ms)
+✔ debug-disabled upstream quota failure is distinguished from invalid model output (4.207ms)
+✔ explicit additional lorebooks reach classification and ordinary narration (6.0772ms)
+✔ ordinary narration releases its lore filter even when host stop handle is broken (9.2387ms)
+✔ active combat handles the turn before ordinary classification or narration (2.5915ms)
+✔ host saved recovery survives failed narration and script reload without another debit (8.6785ms)
+✔ host executes the exact compound declaration once and resumes final sequence narration after reload (10.5471ms)
+✔ a completed pending medicine keeps its original operation across a later player floor and native regeneration (13.0995ms)
+✔ host classification passes a registered encounter to the player-bound combat entry (4.7294ms)
+✔ integrated profile cannot grant the old demo scene bonus (4.1914ms)
+✔ ordinary narration resolves current model options locally for each request (5.4687ms)
+✔ controller persists failed NO_CHECK and recovers after reload with no new player input (6.1999ms)
+✔ host cancels only the unexecuted medicine pending and anchors the current dialogue (7.383ms)
+✔ a cancellation declaration cannot undo a committed operation awaiting narration (9.7052ms)
+✔ regenerating a completed turn reuses its narration without model calls or another assistant message (5.9753ms)
+✔ regenerating a committed direct effect does not repeat classification, narration, or MVU writes (6.877ms)
+✔ lost direct-effect failure notice resumes saved operation without reclassification (6.96ms)
+✔ a completed-looking assistant cannot bypass a missing JS operation (3.7492ms)
+✔ completed assistant with missing MVU projection restores state without model requests (5.7452ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 636.0305

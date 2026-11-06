@@ -1,5 +1,6 @@
 import {createCharacter,baseHealthCapacity,beginTurn} from '../core.mjs';
 import {normalizeMap,distance} from './map.mjs';
+import {beginCommonTurn} from './common-actions.mjs';
 
 export const OPENING_RULESET='opening-20261022';
 export const OPENING_ABILITIES={
@@ -129,7 +130,7 @@ export function createOpeningEncounter({id,instanceId=id,scenario,participants,p
   const b={version:1,id,sceneInstanceId:instanceId,scenario,ruleset:OPENING_RULESET,actors,order,activeId,round:1,elapsedRounds:0,status:'active',mode:'combat',winner:null,
     reactionWindows:true,playerDefenseDeclarations:true,knowledge:{},turnTaken:[],objective,sceneFacts:structuredClone(sceneFacts)};
   if(!actors.player&&positions.player){b.observers={player:{...roster.player,position:structuredClone(positions.player)}};}
-  if(map)b.map=normalizeMap(map,b);return b;
+  if(map)b.map=normalizeMap(map,b);beginCommonTurn(b,actors[activeId]);return b;
 }
 // Goal registration is trusted encounter data, never supplied by a model action.
 export function objectiveSatisfied(b) {

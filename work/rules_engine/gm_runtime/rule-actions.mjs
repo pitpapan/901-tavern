@@ -1,3 +1,4 @@
+import {changeEquipment,equipmentRequestValid} from '../equipment-state.mjs';
 import {settleResourceDeaths} from '../resource-death.mjs';
 import {flushAutomaticResourceEvents} from './resource-program.mjs';
 import {jumpCheckContext,resolveJumpDistance} from '../resource-jumping.mjs';
@@ -39,6 +40,7 @@ const fields={
   chapter:['actorId','eventId'],
   reward:['actorId','eventId'],
   inventory:['actorId','operation','itemId'],
+  equipment:['actorId','steps'],
   time:['actorId','minutes','sourceQuote'],
   mechanism:['actorId','objectId','operation','part','willpower'],
   ability:['actorId','abilityId','tier','weapon'],
@@ -59,6 +61,7 @@ export function ruleRequestValid(r) {
   if(r.action==='opposed')return selector(r.active)&&selector(r.passive)&&r.active.actorId!==r.passive.actorId;
   if(!text(r.actorId))return false;
   switch(r.action) {
+    case 'equipment':return equipmentRequestValid(r);
     case 'resume_effects':return true;
     case 'check':return selector(Object.fromEntries(['actorId','attribute','skill','sub'].filter(k=>r[k]!==undefined).map(k=>[k,r[k]])))&&natural(r.dc);
     case 'save':return ['will','reflex','fort'].includes(r.type)&&natural(r.dc);
@@ -121,7 +124,7 @@ export function reduceRuleAction(input,request,{drawDice,actorTemplates={},event
   let preActionCheck,permission;assertEmbodied(actor(activeId).state,r,next.ruleScene?.objects);
   const completedSleep=r.action==='mechanism'&&(next.ruleScene?.objects?.[r.objectId]?.type==='magicConstitution'&&r.operation==='sleep'||next.ruleScene?.objects?.[r.objectId]?.type==='geneticLock'&&r.operation==='allocateBacklash');
   const activeProjectionObservation=r.action==='status_event'&&next.ruleScene?.events?.[r.eventId]?.type==='projectionEvent'&&next.ruleScene.events[r.eventId].operation==='observe'&&next.ruleScene.events[r.eventId].mode==='active';
-  if(!completedSleep&&(['check','opposed','extended','first_aid','inventory','mechanism'].includes(r.action)||activeProjectionObservation)){
+  if(!completedSleep&&(['check','opposed','extended','first_aid','inventory','equipment','mechanism'].includes(r.action)||activeProjectionObservation)){
     const a=actor(activeId);permission=statusActionPermission(a.state,r);const e=actionEligibility(a.state,'free',permission);if(!e.allowed)throw Error(e.reason);
     if(e.requiresBCheck){if(r.preActionDC===undefined)throw Error('B伤满格须提供行动前力量检定preActionDC');const pre=checkBeforeAction(a.state,{dc:r.preActionDC,dice:dice()});a.state=pre.state;preActionCheck=pre.result;
       if(!pre.result.allowed)return {...next,result:{action:r.action,prevented:true,preActionCheck}};
@@ -159,6 +162,12 @@ export function reduceRuleAction(input,request,{drawDice,actorTemplates={},event
       case 'mechanism':{
         result=runSceneMechanism(next,r,{drawDice:dice,actorTemplates,preActionCleared:preActionCheck?.allowed===true});
         if(result.elapsedMinutes){const changes=[];passTime(result.elapsedMinutes,changes);result.timeChanges=changes;result.sceneChanges=advanceSceneTime(next.ruleScene,result.elapsedMinutes);}
+        break;
+      }
+      case 'equipment': {
+        result=changeEquipment(next,r);
+        const changes=[];passTime(result.elapsedMinutes,changes);
+        result.timeChanges=changes;result.sceneChanges=advanceSceneTime(next.ruleScene,result.elapsedMinutes);
         break;
       }
       case 'inventory': {
@@ -260,7 +269,7 @@ export function reduceRuleAction(input,request,{drawDice,actorTemplates={},event
   const engageReturns=settleEngageReturns(next);if(engageReturns.length)result={...result,engageReturns};
   const interrupted=settleInterruptedTeleports(next);if(interrupted.length)result={...result,interruptedChannels:interrupted};
   completeStatusOrder(actor(activeId).state,permission);
-  if(!completedSleep&&(['check','opposed','extended','first_aid','inventory','mechanism'].includes(r.action)||activeProjectionObservation)){
+  if(!completedSleep&&(['check','opposed','extended','first_aid','inventory','equipment','mechanism'].includes(r.action)||activeProjectionObservation)){
     const record=actor(activeId),full={...structuredClone(actorTemplates[activeId]??{}),...record.combatCarry,state:record.state},log={damage:[]};
     const burn=burningDamage(record,'turn',full.combatProfile||full.kind?amount=>{damageEvent(full,[{amount,severity:'L',kind:'energy',energyType:'fire'}],false,log);record.state=full.state;return log.damage;}:undefined);if(burn)result={...result,burning:burn};
   }

@@ -4,6 +4,15 @@ import { potentialTargets } from './runtime.mjs';
 import { IllegalAction } from './mechanics.mjs';
 import {canObserve,lastVisiblePoint,distance} from './map.mjs';
 
+function offerCounter(out,c){
+ const b=out.battle,r=out.result,t=b.actors[c.targetId];
+ if(['bullRush','counterRush'].includes(c.abilityId)&&r.contest?.won===false&&r.contest.defense==='strength'&&t&&!t.state.turn.reactionLock&&panel(b,t.id).life==='可行动'){
+  b.pending={kind:'counterRush',awaiting:t.id,command:{actorId:t.id,abilityId:'counterRush',targetId:c.actorId}};
+  r.counterOffer={actorId:t.id,targetId:c.actorId};
+ }
+ return out;
+}
+
 // History records only established information; an unperformed sensory check
 // cannot grant knowledge or prevent the event which performs that check.
 function establishedSight(b,target,observerId){
@@ -40,6 +49,19 @@ function remember(before,b,c,result) {
 // costs debited until all reactions are chosen; a refresh resumes this record.
 export function resolveStep(input,c,options={}) {
   const b=structuredClone(input);
+  if(b.pending?.kind==='counterRush'){
+    const p=b.pending,a=b.actors[p.awaiting];
+    if(c.actorId!==a.id||c.abilityId!=='counterRush'||!['decline','push','knockdown'].includes(c.mode)||Object.keys(c).some(k=>!['actorId','abilityId','mode'].includes(k)))throw new IllegalAction('请选择反冲击退、击倒或放弃');
+    if(a.controller==='player'&&!options.playerAuthorized)throw new IllegalAction('反冲须由玩家明确选择');
+    delete b.pending;
+    if(c.mode==='decline')return {battle:b,result:stateResult(b,a.id,'counterRush',['放弃反冲，不消耗动作'])};
+    b.counterRushAllowance={actorId:a.id,targetId:p.command.targetId};
+    return resolveStep(b,{...p.command,mode:c.mode},options);
+  }
+  if(b.pending&&c.actorId===b.pending.awaiting&&c.abilityId==='dropProne'){
+    const pending=b.pending;delete b.pending;
+    const out=act(b,c,options);out.battle.pending=pending;remember(b,out.battle,c,out.result);return out;
+  }
   if(c.abilityId==='resumeEffects'){const out=act(b,c,options);remember(b,out.battle,c,out.result);return out;}
   if(b.pending&&c.actorId===b.pending.awaiting&&isReflexResource(b,c)){
     const pending=b.pending;delete b.pending;
@@ -62,8 +84,8 @@ export function resolveStep(input,c,options={}) {
       Object.keys(c).some(k=>!['actorId','abilityId','choice','defense','grappleDefense','willpower'].includes(k)))
       throw new IllegalAction('须由当前受击者选择使用或保留伤害转换');
     if(a.controller==='player'&&!options.playerAuthorized) throw new IllegalAction('反应须由玩家选择');
-    if(b.actors[pending.command.actorId]?.kind==='chuul'&&a.controller==='player') {
-      if(!['strength','agility'].includes(c.grappleDefense))throw new IllegalAction('须选择力量＋肉搏挣脱或敏捷＋运动逃脱');
+    if((b.actors[pending.command.actorId]?.kind==='chuul'||['bullRush','counterRush','trip','grapple','pressGrip','grappleAttack'].includes(pending.command.abilityId))&&a.controller==='player') {
+      if(!['strength','agility'].includes(c.grappleDefense))throw new IllegalAction('须选择力量抵挡／挣脱或敏捷避让／逃脱');
       (pending.grappleDefenses??={})[a.id]=c.grappleDefense;
     }
     if(b.playerDefenseDeclarations&&a.controller==='player') {
@@ -97,7 +119,7 @@ export function resolveStep(input,c,options={}) {
     // A declined/missed one-off reaction must not silently arm a future attack.
     for(const [id,armed] of Object.entries(prior)) out.battle.actors[id].reactions.damageConversion=armed&&!out.battle.actors[id].used.damageConversion;
     remember(b,out.battle,pending.command,out.result);
-    return out;
+    return offerCounter(out,pending.command);
   }
   if(c.abilityId==='react') throw new IllegalAction('没有等待反应的攻击');
   if(['jump','continueJump'].includes(c.abilityId)){const out=act(b,c,{...options,deferMovementReactions:b.reactionWindows});remember(b,out.battle,c,out.result);return out;}
@@ -113,7 +135,7 @@ export function resolveStep(input,c,options={}) {
     const queue=[...new Set(potentialTargets(b,c,options))].filter(id=>{
       const a=b.actors[id];
       return a&&panel(b,id).life==='可行动'&&(
-        b.actors[c.actorId]?.kind==='chuul'&&a.controller==='player'||
+        (b.actors[c.actorId]?.kind==='chuul'||['bullRush','counterRush','trip','grapple','pressGrip','grappleAttack'].includes(c.abilityId))&&a.controller==='player'||
         b.playerDefenseDeclarations&&a.controller==='player'&&!a.defenseIntent||
         a.controller==='player'&&a.state.will.current>0||a.abilities.includes('conversion')&&!a.used.damageConversion&&!a.reactions.damageConversion);
     });
@@ -123,5 +145,5 @@ export function resolveStep(input,c,options={}) {
       return {battle:b,result:stateResult(b,c.actorId,c.abilityId,['攻击已宣言，等待反应；尚未掷骰或扣除攻击资源'])};
     }
   }
-  const out=act(b,c,options);remember(b,out.battle,c,out.result);return out;
+  const out=act(b,c,options);remember(b,out.battle,c,out.result);return offerCounter(out,c);
 }

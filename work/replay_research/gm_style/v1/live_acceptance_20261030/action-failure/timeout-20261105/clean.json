@@ -1,0 +1,73 @@
+{
+  "trace": [
+    {
+      "event": "dispatch",
+      "at": 1793918413983,
+      "model": "[抗截断]gemini-3.8-flash",
+      "stream": false,
+      "maxTokens": 4096,
+      "messageBytes": 70283,
+      "requestHash": "7aecbf866ba7f16ea4d6d9ca7f1b570903808089c275c784c09a4079f0cbe486"
+    },
+    {
+      "event": "headers",
+      "elapsed": 5082,
+      "status": 200
+    },
+    {
+      "event": "complete",
+      "elapsed": 5097,
+      "usage": {
+        "prompt_tokens": 18215,
+        "completion_tokens": 91,
+        "total_tokens": 18306,
+        "prompt_tokens_details": {
+          "cached_tokens": 16170
+        }
+      },
+      "finishReason": "stop",
+      "textLength": 143
+    },
+    {
+      "event": "dispatch",
+      "at": 1793918419736,
+      "model": "[抗截断]gemini-3.8-flash",
+      "stream": false,
+      "maxTokens": 4096,
+      "messageBytes": 90515,
+      "requestHash": "bb502e3da834085a08963a589826a9c0e9a017d9e11d920995d56e004d1eab66"
+    },
+    {
+      "event": "headers",
+      "elapsed": 5711,
+      "status": 200
+    },
+    {
+      "event": "complete",
+      "elapsed": 5714,
+      "usage": {
+        "prompt_tokens": 22580,
+        "completion_tokens": 300,
+        "total_tokens": 22880,
+        "prompt_tokens_details": {
+          "cached_tokens": 20166
+        }
+      },
+      "finishReason": "stop",
+      "textLength": 347
+    },
+    {
+      "event": "aborted",
+      "elapsed": 13329
+    }
+  ],
+  "gate": {
+    "status": "NO_CHECK",
+    "operationId": "gm-runtime/901 帝都正式开局 20261105/3/0",
+    "basis": "ordinary_dialogue"
+  },
+  "messages": 5,
+  "playerTextsUnchanged": true,
+  "fullRuleRootUnchanged": true,
+  "ruleRevision": 0
+}

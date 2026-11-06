@@ -1,0 +1,69 @@
+{
+  "trace": [
+    {
+      "event": "dispatch",
+      "at": 1793917267502,
+      "model": "[抗截断]gemini-3.8-flash",
+      "stream": false,
+      "maxTokens": 4096,
+      "messageBytes": 70283
+    },
+    {
+      "event": "headers",
+      "elapsed": 2987,
+      "status": 200
+    },
+    {
+      "event": "complete",
+      "elapsed": 2992,
+      "usage": {
+        "prompt_tokens": 18215,
+        "completion_tokens": 114,
+        "total_tokens": 18329,
+        "prompt_tokens_details": {
+          "cached_tokens": 16170
+        }
+      },
+      "finishReason": "stop",
+      "textLength": 168
+    },
+    {
+      "event": "dispatch",
+      "at": 1793917271301,
+      "model": "[抗截断]gemini-3.8-flash",
+      "stream": false,
+      "maxTokens": 4096,
+      "messageBytes": 90515
+    },
+    {
+      "event": "headers",
+      "elapsed": 8781,
+      "status": 200
+    },
+    {
+      "event": "complete",
+      "elapsed": 8784,
+      "usage": {
+        "prompt_tokens": 22580,
+        "completion_tokens": 292,
+        "total_tokens": 22872,
+        "prompt_tokens_details": {
+          "cached_tokens": 20166
+        }
+      },
+      "finishReason": "stop",
+      "textLength": 336
+    },
+    {
+      "event": "aborted",
+      "elapsed": 16717
+    }
+  ],
+  "gate": {
+    "status": "NO_CHECK",
+    "operationId": "gm-runtime/901 帝都正式开局 20261105/3/0",
+    "basis": "ordinary_dialogue"
+  },
+  "messages": 5,
+  "classificationDeadlineMs": 180000
+}

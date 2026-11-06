@@ -1,3 +1,4 @@
+import {instanceArmor} from '../equipment-state.mjs';
 import {stackEffects} from '../resource-effects.mjs';
 import {syncActorWounds} from '../resource-wounds.mjs';
 import {resourceCapability} from '../resource-lifecycle.mjs';
@@ -45,6 +46,7 @@ export function profile(a) {
 }
 export function equipment(a) {
   let eq=a.equipment??profile(a).equipment;
+  const actualArmor=instanceArmor(a.state);if(actualArmor)eq={...eq,armor:actualArmor};
   for(const [slot,id]of Object.entries(a.state.equippedResources??{})){
    const item=RESOURCE_DEFINITIONS[id]?.equipment;if(!item||!a.state.learnedResources?.[id]?.learned)continue;
    if(slot==='weapon')eq={...eq,weapon:{...item.weapon,resourceId:id}};
@@ -52,7 +54,9 @@ export function equipment(a) {
   }
   const clothingId=a.state.equippedResources?.clothing,clothing=RESOURCE_DEFINITIONS[clothingId]?.equipment;
   if(clothing&&a.state.learnedResources?.[clothingId]?.learned)eq={...eq,armor:{...eq.armor,defense:Math.max(eq.armor.defense,clothing.armor.defense),ballisticProof:eq.armor.ballisticProof||clothing.armor.ballisticProof,energyWeaponProof:eq.armor.energyWeaponProof||clothing.armor.energyWeaponProof}};
+  if(a.state.combatManeuvers?.shieldUnavailable)eq={...eq,armor:{...eq.armor,shield:0}};
   const instance=instanceWeapon(a.state);if(instance)eq={...eq,weapon:instance};
+  else if(a.state.combatManeuvers?.weaponUnavailable)eq={...eq,weapon:{unarmed:true,name:'徒手',type:'natural',skill:'肉搏',damage:0,severity:'B',attackBonus:0,blockBonus:0,ap:0,magic:0}};
   if(a.state.wizard?.form){const old=equipment({...a,state:{...a.state,wizard:undefined}});return {...old,armor:{defense:8,ballisticProof:true,energyWeaponProof:true},weapon:wizardWeapon(a.state)??old.weapon};}
   if(!eq.weapon.instanceId&&!eq.weapon.resourceId&&a.ruleset==='opening-20261022'&&a.kind==='bright'&&['longknife','dagger','empty'].includes(a.weaponMode))
     return {...eq,weapon:{damage:a.weaponMode==='longknife'?2:a.weaponMode==='dagger'?1:0,attackBonus:a.weaponMode==='empty'?0:1,blockBonus:0,ap:0,magic:0}};
@@ -86,7 +90,7 @@ export function refreshDerived(a) {
   syncCounterConditions(a.state);a.state.will.max=d.willMax;
   a.state.will.current=Math.min(a.state.will.current,d.willMax);
 }
-export function attackSkill(a) { const p=profile(a);if(wizardWeapon(a.state)){const choice=a.state.wizard.weaponSkills?.[a.state.wizard.weaponMode];if(!choice?.main)throw new RuleInputError('须登记本人剑枪对应的实际技能/子技能','wizard.weaponSkills');return skill(a,choice.main,choice.sub);}const weapon=equipment(a).weapon;if((weapon.resourceId||weapon.instanceId)&&weapon.skill)return skill(a,weapon.skill,weapon.sub);return a.kind==='bright'&&a.ruleset==='opening-20261022'&&a.weaponMode&&a.weaponMode!=='bow'?skill(a,'白刃'):a.kind==='mireya'&&a.weaponMode==='club'?skill(a,'白刃','短棍'):skill(a,p.main,p.sub); }
+export function attackSkill(a) { const p=profile(a);if(wizardWeapon(a.state)){const choice=a.state.wizard.weaponSkills?.[a.state.wizard.weaponMode];if(!choice?.main)throw new RuleInputError('须登记本人剑枪对应的实际技能/子技能','wizard.weaponSkills');return skill(a,choice.main,choice.sub);}const weapon=equipment(a).weapon;if((weapon.unarmed||weapon.resourceId||weapon.instanceId)&&weapon.skill)return skill(a,weapon.skill,weapon.sub);return a.kind==='bright'&&a.ruleset==='opening-20261022'&&a.weaponMode&&a.weaponMode!=='bow'?skill(a,'白刃'):a.kind==='mireya'&&a.weaponMode==='club'?skill(a,'白刃','短棍'):skill(a,p.main,p.sub); }
 export function blockValue(a) {
   const w=equipment(a).weapon;
   if(a.ruleset==='opening-20261022')return a.kind==='bright'?skill(a,'白刃').level:attackSkill(a).level+(w.blockBonus??0);

@@ -1,0 +1,103 @@
+✔ all-out melee uses one standard action and its real +2/-2 expires at next own turn (57.2673ms)
+✔ fatigue prevents all-out without paying or changing the input state (3.2103ms)
+✔ drop prone consumes reflex, halves movement, modifies melee/ranged defense, stand consumes move (26.8267ms)
+✔ available common choices are present without granting a learned skill (199.4775ms)
+✔ ordinary item retrieval uses actual access and never duplicates ownership (4.8988ms)
+✔ incoming bull rush waits for the player choice and persists it across serialization (11.6504ms)
+✔ ordinary grapple enters the existing hold, suppression and escape system without damage (156.8327ms)
+✔ ordinary aiming pays a full round and a swift reload does not cancel it (7.3319ms)
+✖ charge pays move plus standard, stops at nearest melee range and saves its temporary penalty (6.3207ms)
+✖ feint has one target, removes only basic defense and is consumed by the next melee attack (2.2822ms)
+✖ trip is a contact contest, knocks down on success and never damages the creature (1.7604ms)
+✖ sunder uses hit then opposed roll, subtracts item hardness and never injures the holder (1.857ms)
+✖ disarm keeps the actual item on the ground and prevents the old weapon from returning by fallback (1.695ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 8
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 780.3638
+
+✖ failing tests:
+
+test at work\rules_engine\combat\common-actions.test.mjs:78:1
+✖ charge pays move plus standard, stops at nearest melee range and saves its temporary penalty (6.3207ms)
+  IllegalAction: 该参战者没有此能力
+      at fail (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/engine.mjs:62:30)
+      at requireThat (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/engine.mjs:63:45)
+      at act (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/engine.mjs:916:3)
+      at run (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/common-actions.test.mjs:11:35)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/common-actions.test.mjs:81:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12) {
+    code: 'UNAVAILABLE'
+  }
+
+test at work\rules_engine\combat\common-actions.test.mjs:89:1
+✖ feint has one target, removes only basic defense and is consumed by the next melee attack (2.2822ms)
+  IllegalAction: 该参战者没有此能力
+      at fail (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/engine.mjs:62:30)
+      at requireThat (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/engine.mjs:63:45)
+      at act (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/engine.mjs:916:3)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/common-actions.test.mjs:91:24)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    code: 'UNAVAILABLE'
+  }
+
+test at work\rules_engine\combat\common-actions.test.mjs:98:1
+✖ trip is a contact contest, knocks down on success and never damages the creature (1.7604ms)
+  IllegalAction: 该参战者没有此能力
+      at fail (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/engine.mjs:62:30)
+      at requireThat (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/engine.mjs:63:45)
+      at act (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/engine.mjs:916:3)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/common-actions.test.mjs:100:24)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    code: 'UNAVAILABLE'
+  }
+
+test at work\rules_engine\combat\common-actions.test.mjs:106:1
+✖ sunder uses hit then opposed roll, subtracts item hardness and never injures the holder (1.857ms)
+  IllegalAction: 该参战者没有此能力
+      at fail (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/engine.mjs:62:30)
+      at requireThat (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/engine.mjs:63:45)
+      at act (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/engine.mjs:916:3)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/common-actions.test.mjs:108:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    code: 'UNAVAILABLE'
+  }
+
+test at work\rules_engine\combat\common-actions.test.mjs:114:1
+✖ disarm keeps the actual item on the ground and prevents the old weapon from returning by fallback (1.695ms)
+  IllegalAction: 该参战者没有此能力
+      at fail (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/engine.mjs:62:30)
+      at requireThat (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/engine.mjs:63:45)
+      at act (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/engine.mjs:916:3)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/common-actions.test.mjs:116:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    code: 'UNAVAILABLE'
+  }

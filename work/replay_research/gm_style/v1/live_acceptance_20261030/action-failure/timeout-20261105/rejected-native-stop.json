@@ -1,0 +1,105 @@
+{
+  "trace": [
+    {
+      "event": "dispatch",
+      "at": 1793917718318,
+      "model": "[抗截断]gemini-3.8-flash",
+      "stream": false,
+      "maxTokens": 4096,
+      "messageBytes": 70283,
+      "requestHash": "7aecbf866ba7f16ea4d6d9ca7f1b570903808089c275c784c09a4079f0cbe486"
+    },
+    {
+      "event": "controlled_delay_before_upstream",
+      "elapsed": 4
+    },
+    {
+      "event": "aborted",
+      "elapsed": 59400
+    },
+    {
+      "event": "dispatch",
+      "at": 1793917778730,
+      "model": "[抗截断]gemini-3.8-flash",
+      "stream": false,
+      "maxTokens": 4096,
+      "messageBytes": 70283,
+      "requestHash": "7aecbf866ba7f16ea4d6d9ca7f1b570903808089c275c784c09a4079f0cbe486"
+    },
+    {
+      "event": "headers",
+      "elapsed": 3282,
+      "status": 200
+    },
+    {
+      "event": "complete",
+      "elapsed": 3296,
+      "usage": {
+        "prompt_tokens": 18215,
+        "completion_tokens": 95,
+        "total_tokens": 18310
+      },
+      "finishReason": "stop",
+      "textLength": 150
+    },
+    {
+      "event": "dispatch",
+      "at": 1793917782876,
+      "model": "[抗截断]gemini-3.8-flash",
+      "stream": false,
+      "maxTokens": 4096,
+      "messageBytes": 90515,
+      "requestHash": "bb502e3da834085a08963a589826a9c0e9a017d9e11d920995d56e004d1eab66"
+    },
+    {
+      "event": "headers",
+      "elapsed": 8514,
+      "status": 200
+    },
+    {
+      "event": "complete",
+      "elapsed": 8526,
+      "usage": {
+        "prompt_tokens": 22580,
+        "completion_tokens": 312,
+        "total_tokens": 22892
+      },
+      "finishReason": "stop",
+      "textLength": 375
+    },
+    {
+      "event": "dispatch",
+      "at": 1793917791791,
+      "model": "[抗截断]gemini-3.8-flash",
+      "stream": false,
+      "maxTokens": 4096,
+      "messageBytes": 94708,
+      "requestHash": "ed465aeec5892bd2d2c129ee10e4f0aad1eca126cb6aa72b8f4eb5ac750a296c"
+    },
+    {
+      "event": "headers",
+      "elapsed": 6591,
+      "status": 200
+    },
+    {
+      "event": "complete",
+      "elapsed": 6606,
+      "usage": {
+        "prompt_tokens": 23620,
+        "completion_tokens": 298,
+        "total_tokens": 23918
+      },
+      "finishReason": "stop",
+      "textLength": 336
+    },
+    {
+      "event": "aborted",
+      "elapsed": 14548
+    }
+  ],
+  "gate": null,
+  "messages": 6,
+  "playerTextsUnchanged": true,
+  "fullRuleRootUnchanged": true,
+  "ruleRevision": 0
+}

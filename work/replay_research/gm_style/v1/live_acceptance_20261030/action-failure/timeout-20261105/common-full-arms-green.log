@@ -1,0 +1,26 @@
+✔ all-out melee uses one standard action and its real +2/-2 expires at next own turn (58.9599ms)
+✔ fatigue prevents all-out without paying or changing the input state (3.8426ms)
+✔ drop prone consumes reflex, halves movement, modifies melee/ranged defense, stand consumes move (26.7639ms)
+✔ available common choices are present without granting a learned skill (217.5246ms)
+✔ ordinary item retrieval uses actual access and never duplicates ownership (4.5782ms)
+✔ incoming bull rush waits for the player choice and persists it across serialization (16.1298ms)
+✔ ordinary grapple enters the existing hold, suppression and escape system without damage (167.9114ms)
+✔ ordinary aiming pays a full round and a swift reload does not cancel it (7.557ms)
+✔ charge pays move plus standard, stops at nearest melee range and saves its temporary penalty (28.3133ms)
+✔ feint has one target, removes only basic defense and is consumed by the next melee attack (17.7746ms)
+✔ trip is a contact contest, knocks down on success and never damages the creature (6.131ms)
+✔ sunder uses hit then opposed roll, subtracts item hardness and never injures the holder (21.4962ms)
+✔ disarm keeps the actual item on the ground and prevents the old weapon from returning by fallback (18.4441ms)
+✔ a pending attack accepts explicit reflex prone without resolving or replacing the attack (12.6751ms)
+✔ resisted bull rush offers a paid optional counter without rerolling the original contest (16.5052ms)
+✔ counter rush chooses a reflex action and preserves the first paid contest (26.2705ms)
+✔ aim does not create an incoming attack window and missing durability cannot damage an item (213.9413ms)
+✔ prone appears in the actual pending choices and a second prone cannot spend again (17.4425ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1181.5868

@@ -1,0 +1,237 @@
+✔ arena profiles preserve T0 player and the two candidate panels without Bright aim features (35.9086ms)
+✔ shield push waits for player declaration before real dice or energy and moves only the target (39.0498ms)
+✔ shield push cannot pass through a wall or outside a bounded map (6.6595ms)
+✔ one-use qi defense costs once, adds only three and is consumed by the next physical defense (34.5457ms)
+✔ Mireya reload and full-round calibration produce one +3 shot with unchanged cap and no Bright extras (398.4955ms)
+✔ Mireya calibration is lost on movement and a melee hit; club draw and block cost separate actions (81.2991ms)
+✔ healthy Mireya opening keeps safe reload and attack preparation instead of conceding the match (888.5129ms)
+✔ NPC concession candidates require actual severe wounds or an exhausted bow without a melee fallback (535.2905ms)
+✔ arena voluntary concession and announced test referee stop preserve damage/resources and award no XP (243.7578ms)
+✔ arena MVU dedup, public shove result and reentry preserve actual injuries, ammo and held weapon (47.1636ms)
+✔ ballistics conserves horizontal velocity and uses actual seconds until first ground contact (3.7768ms)
+✔ wall contact removes only normal velocity, retains tangent motion and continues falling (1.3847ms)
+✔ roof, raised terrain and ramps use actual surface heights rather than a universal zero floor (0.8249ms)
+✔ split elapsed time and JSON reload preserve the same trajectory and do not replay wall impacts (0.6879ms)
+✔ curved movement crosses a response sphere by the actual parabola, including a vertical leave and reentry (1.4821ms)
+✔ model can only choose current legal actions; already drawn weapon is excluded (2156.6506ms)
+✔ confirmed panels, only combatants loaded, effects do not leak from history (48.6022ms)
+✔ draw, free block, lightning, then automatic defense/action/energy changes (66.4072ms)
+✔ RE penetration consumes only matching defense and does not duplicate reductions (9.1137ms)
+✔ combo belongs to target, qi is not inner power, rejected command leaves input unchanged (41.3373ms)
+✔ once per scene damage conversion is explicit and converts entire mixed hit (22.4375ms)
+✔ summon has independent turn and persists health and once-per-scene uses across recall (45.0492ms)
+✔ movement triggers one legal opportunity, five-foot step avoids it (47.0676ms)
+✔ restraint payment affects subsequent panels and immobilizes beyond will (39.8405ms)
+✔ 龙象 ignores four points of conversion, not four free bonus damage (29.9318ms)
+✔ life squeezing records increasing recovery restrictions and rapid healing respects them (14.0878ms)
+✔ complete duel uses one resolver for companion and enemy, then stops (5716.813ms)
+✔ MVU settles and writes once, preserves unrelated state, readback supplies next prompt (85.868ms)
+✔ Tavern controller posts and carries results; refreshing and report replay never settle again (320.3315ms)
+✔ all-out melee uses one standard action and its real +2/-2 expires at next own turn (116.6865ms)
+✔ fatigue prevents all-out without paying or changing the input state (7.3121ms)
+✔ drop prone consumes reflex, halves movement, modifies melee/ranged defense, stand consumes move (67.6086ms)
+✔ available common choices are present without granting a learned skill (560.684ms)
+✔ ordinary item retrieval uses actual access and never duplicates ownership (13.111ms)
+✔ incoming bull rush waits for the player choice and persists it across serialization (38.526ms)
+✔ ordinary grapple enters the existing hold, suppression and escape system without damage (368.3064ms)
+✔ ordinary aiming pays a full round and a swift reload does not cancel it (17.5056ms)
+✔ charge pays move plus standard, stops at nearest melee range and saves its temporary penalty (62.2009ms)
+✔ feint has one target, removes only basic defense and is consumed by the next melee attack (35.6051ms)
+✔ trip is a contact contest, knocks down on success and never damages the creature (11.1283ms)
+✔ sunder uses hit then opposed roll, subtracts item hardness and never injures the holder (33.4034ms)
+✔ disarm keeps the actual item on the ground and prevents the old weapon from returning by fallback (25.9561ms)
+✔ a pending attack accepts explicit reflex prone without resolving or replacing the attack (17.7309ms)
+✔ resisted bull rush offers a paid optional counter without rerolling the original contest (30.4681ms)
+✔ a universal action runs from a trusted non-spell definition without learning, mana, or a dedicated combat case (681.4462ms)
+✔ live declarative effects follow current facts and expire on successful configured actions, not on rounds or failed requests (41.2205ms)
+✔ the same declared stance modifies only area reflex saves and loses dodge when frozen or flat-footed (42.0806ms)
+✔ declared speed suppression applies to a visible firearm and does not grant general immunity to speed (42.5666ms)
+✔ a declared action discount pays a movement action for a held weapon attack once in the real round (690.1618ms)
+✔ movement discount is optional, physical only, and cannot bypass movement ineligibility (22.1046ms)
+✔ discount selection survives a pending defense and is charged once when the saved attack resumes (42.2805ms)
+✔ legacy initiative defense is retired by its acquired clause, not by a matching category or character name (2.0277ms)
+✔ speed ignoring uses one shared legacy contribution for defense and saves while other real sources retain the adopted maximum (11.0478ms)
+✔ gale attacks each legal enemy once, excludes allies and shares geometry across previews and reaction queue (2266.4974ms)
+✔ resolved response reports the actual effective guard and normal player defense omits it (44.8401ms)
+✔ attack, defense and movement derive from current attributes, skills and equipment (21.1268ms)
+✔ confirmed bow requirement four and sword sizes three remain distinct from lotus size twelve (42.9721ms)
+✔ four-person baselines and distinct weapon costs remain faithful to adopted cards (1291.8242ms)
+✔ special preview uses post-payment attack and reports missing parameters separately (1883.2068ms)
+✔ private enemy data and unrelated abilities are absent from model input (1149.2342ms)
+✔ reaction survives MVU refresh, rolls only after choice, and replays without spending twice (75.4869ms)
+✔ four-person encounter completes with player choices, action costs and reaction windows (13950.2847ms)
+✔ flight shares actual 3D distance and finite obstacle heights without changing ground path semantics (3.588ms)
+✔ a paid flight move uses the actual source and speed, saves altitude and descends through the shared clock (79.8641ms)
+✔ classifier offers real flight sources and MVU persists xyz plus the chosen support instance (363.39ms)
+✔ perfect flight ignores PHB stall using the selected live source, while immobilization still blocks movement (55.5527ms)
+✔ autonomous flight loses support at injury, keeps recorded inertia and applies only actual contacts (17.5965ms)
+✔ legacy airborne saves without a velocity do not silently become hovering or teleport to ground (8.7122ms)
+✔ an explicitly declared hover saves zero velocity and a lost historical velocity can be supplied only for that loss (25.1664ms)
+✔ impact protection is evaluated at the actual contact time, including expiry during a longer clock advance (21.5517ms)
+✔ flight end declarations are explicit classifier choices and cannot be attached to ground movement (224.2049ms)
+✔ combat never reports saved after swallowed disk failure and replay persists the same result (1267.6592ms)
+✖ host waits for player, settles a whole encounter, returns to story and carries wounds into next encounter (48653.2476ms)
+✔ haste changes order without extra turns; aiming matures next round and is lost on movement (65.3611ms)
+✔ invalid model selection retries without rolling; transport failures remain visible (1694.7316ms)
+✔ host tool is unavailable inside its own NPC decision request (0.369ms)
+✔ legendary dodge reduces high speed on reflex saves as well as defenses (17.1701ms)
+✔ bright switches to the adopted blade, spends stowing/drawing actions and consumes no arrow (119.1233ms)
+✔ wind sense requires air connection, while Huang can see and strike a spirit (50.543ms)
+✔ bright ignores difficult movement cost without crossing solid walls (43.3441ms)
+✔ opportunity threat uses four orthogonal directions and at most one grid (4.9202ms)
+✔ failed B-only pre-action check commits coma without attacking or spending energy (38.6232ms)
+✔ combat first aid stops A deterioration while spending a full round (38.8471ms)
+✔ all four adopted NPCs expose the actual period stats and skill cards (62.6764ms)
+✔ hypnosis spends its registered mana and survives the caster leaving and ordinary sleep (37.9873ms)
+✔ gremlin double attack spends all three action slots and earth travel uses the registered path (112.4098ms)
+✔ paid long jump saves its roll and remaining horizontal distance, then continues without rerolling or free action (122.9034ms)
+✔ Q13 high jump charges ascent only and leaves descent to actual elapsed time (37.9131ms)
+✔ jump declaration rejects missing actual takeoff and borrowed numeric results before drawing or spending (31.7701ms)
+✔ post-roll opportunity choice survives MVU reload and neither response nor replay repays the jump (149.0735ms)
+✔ Q14 uses the unassisted height rather than the running jump apex when landing at a lower level (55.4008ms)
+✔ foreign temporary boosts do not enlarge the Q14 unassisted landing baseline (36.0026ms)
+✔ Q18 retains self-produced temporary jump strength in the baseline without a second roll or payment (35.8778ms)
+✔ Q17 wind footwork retains its actual standing height for landing but grants no running DP (56.8317ms)
+✔ Q18 excludes foreign enhancements without removing a real foreign penalty from the landing baseline (38.8561ms)
+✔ summon avoids the blocked default point and records a new visible actor without moving the owner (51.4268ms)
+✔ explicit summon points respect obstacles, adjacency and closed scene boundaries (42.6321ms)
+✔ summon with no adjacent space is unavailable and leaves MVU, actions and energy unchanged (448.5363ms)
+✔ roar geometry excludes targets behind solid terrain from damage, previews and reaction queues (332.4956ms)
+✔ roar respects polygon walls and closed doors, while open doors and sight-only forest pass its effect (45.4034ms)
+✔ summon and terrain-blocked roar persist through MVU readback and duplicate dispatch only once (30.4255ms)
+✔ directional cover changes declared defense without blocking sight or allowing movement through it (48.2004ms)
+✔ elevation rejects cliff shortcuts, routes via a ramp and permits firing over a lower obstacle (48.0931ms)
+✔ declared doors and object attacks write actions and geometry together, replay only once, and redact durability (82.5824ms)
+✔ locked doors, occupied closure and unparameterized destruction leave the original state intact (25.46ms)
+✔ same geometry rejects wall crossing and attacks, accepts explicit detour, and charges difficult ground (89.3302ms)
+✔ map projection and SVG have no hidden actors, hidden landmarks or character statistics; clicks only produce drafts (5.7157ms)
+✔ map generation uses scene and positions once, not private panels (3.5227ms)
+✔ close melee has no purposeless retreat, remembers preparation and pressure, while injured withdrawal remains possible (836.6591ms)
+✔ bow user with an open shot does not approach melee, but can leave close interference (386.5391ms)
+✔ narration locates each visible actor on its actual terrain and elevation (5.0583ms)
+✖ MVU map initialization and a confirmed door change persist once without changing actor state (9.8489ms)
+✔ moving behind an opaque obstacle preserves the observed departure but conceals the final position (18.7786ms)
+✔ approach retains the attack action and excludes a worse partial sidestep or premature block (417.4805ms)
+✔ preparation-only prose explicitly carries no attack or contact (5.5832ms)
+✔ irregular terrain shares collision, path cost and visibility with the grid renderer (4.5855ms)
+✔ a lost target leaves only a last visible position to investigate, not hidden actions or its new location (122.6834ms)
+✔ opaque forest prevents targeting and direct magic cannot pass through a visible low wall (6.7974ms)
+✔ opening profiles use complete period-specific rules, mother skill autos and no late equipment (84.959ms)
+✔ opening declared block includes mother skill auto; no free Huang block or late sword defense (322.8222ms)
+✔ opening attacks use flow, posture, draw, electricity and bare-body conditions exactly once (97.2155ms)
+✔ adopted enemies keep fixed HP and stone attack is B within its real territory (57.6294ms)
+✔ opening D magic-killer finisher uses one layer, adds no automatic successes and clears rather than restacks (29.7855ms)
+✔ formal withdrawal writes through existing MVU, keeps injuries/resources and does not complete task or award XP (49.9817ms)
+✔ withdrawal/reentry carries duration, same-scene once-use and cooldown; new-scene once-use remains fresh (93.2068ms)
+✔ target-specific panel matches resolution including initiative, combo and penetration (204.2802ms)
+✔ compact panel distinguishes readiness and includes only live modifiers (68.7653ms)
+✔ legal movement uses reduced current speed, not the static base speed (806.0975ms)
+✔ model gets one coherent snapshot and compact commands still map to trusted actions (530.8243ms)
+✔ summon joins the projection, recalled actors disappear, and only active matchups are expanded (95.4787ms)
+✔ combat report includes saved mechanism damage instead of claiming no new damage (3.8808ms)
+✔ production narrator request prioritizes executed events over background and preserves the prose-only boundary (2.9178ms)
+✔ declared combat medicine spends its action once and refresh preserves inventory and health (2044.9683ms)
+✔ postcombat story medicine and next rest use current MVU without replaying battle prose (1579.4216ms)
+✔ story rest expires persisted player battle buffs in own status and leaves NPCs unchanged (969.8727ms)
+✔ declared door then obstacle attack preserves remaining actions, narrates the map result and survives refresh (2156.3168ms)
+✔ natural attack settles only the declared action, keeps remaining player actions, and hides NPC figures (2257.3094ms)
+✔ stationary tornado injury projects the unchanged target position as an observable result (1975.2205ms)
+✔ declared cost mismatch and invented end are rejected before rolling or spending (1437.389ms)
+✔ failed narration resumes saved action without rerolling, including a new session/refresh (1881.0471ms)
+✔ retrying committed guard narrates its execution without repeating prior damage or inventing another action (2741.8589ms)
+✔ explicit end advances to an actual player reaction; continuation preserves the same turn and resource costs (2521.0642ms)
+✔ own consequence receipt lists only actual player damage and effective condition changes once (1.1886ms)
+✖ every incoming player attack waits for a declared defense even after conversion is exhausted (15.0982ms)
+✔ player defense has no total until a defense mode is declared; ready block is not silently added to normal defense (6.8657ms)
+✔ an existing guard persists while a new attack offers the adopted optional will defense (47.234ms)
+✔ an enemy leaving reach cannot trigger an undeclared player opportunity attack (47.0869ms)
+✔ compound movement and attack use player-declared coordinates, not an extra implicit turn (2588.1392ms)
+✔ NPC duel writes back all private results but posts one public scene and allows story afterwards (1473.0631ms)
+✔ view-own-status opens only the UI before interpreting, narrating, rolling or adding an assistant floor (857.4447ms)
+✔ player UI reads latest selected MVU snapshot across new floors and refresh without writing or trusting prose (796.3564ms)
+✔ declared guard updates the player UI without ending the turn and survives refresh (1897.0932ms)
+✔ legacy own-status caches are stripped on replay without losing the saved narrative (855.6996ms)
+✔ existing chat builds its map once, map viewing does not spend actions, and next declaration still executes (2192.8719ms)
+ℹ tests 154
+ℹ suites 0
+ℹ pass 151
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 52777.0637
+
+✖ failing tests:
+
+test at work\rules_engine\combat\host.test.mjs:29:1
+✖ host waits for player, settles a whole encounter, returns to story and carries wounds into next encounter (48653.2476ms)
+  TypeError [Error]: Cannot read properties of undefined (reading 'name')
+      at file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/runtime.mjs:373:97
+      at Array.map (<anonymous>)
+      at chooseAction (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/runtime.mjs:373:74)
+      at step (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/tavern.mjs:38:24)
+      at Object.run (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/tavern.mjs:154:29)
+      at continueCombat (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/host.mjs:15:57)
+      at async TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/host.test.mjs:64:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at work\rules_engine\combat\map.test.mjs:79:1
+✖ MVU map initialization and a confirmed door change persist once without changing actor state (9.8489ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+  
+    {
+      huang: {
+        abilities: [
+          'strike',
+          'block',
+  ...
+          },
+  +       combatManeuvers: {
+  +         startVisible: [
+  +           'jiang'
+  +         ]
+  +       },
+          derived: {
+            defense: 6,
+            hpMax: 23,
+            initiative: 26,
+            speed: 23,
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/map.test.mjs:85:37)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { huang: { id: 'huang', name: '黄泉', kind: 'huang', ruleset: 'comparison-20261020', team: '敌人', controller: 'model', present: true, position: [Array], reach: 1.5, used: {}, cooldowns: {}, buffs: {}, combos: {}, reactions: [Object], sheathed: true, weaponSize: 3, abilities: [Array], state: [Object] }, jiang: { id: 'jiang', name: '姜子尤', kind: 'jiang', ruleset: 'comparison-20261020', team: '同伴', controller: 'model', present: true, position: [Array], reach: 1.5, used: {}, cooldowns: {}, buffs: {}, combos: {}, reactions: [Object], spartanBonus: 0, squeezed: 0, abilities: [Array], state: [Object] } },
+    expected: { huang: { id: 'huang', name: '黄泉', kind: 'huang', ruleset: 'comparison-20261020', team: '敌人', controller: 'model', present: true, position: [Array], reach: 1.5, used: {}, cooldowns: {}, buffs: {}, combos: {}, reactions: [Object], sheathed: true, weaponSize: 3, abilities: [Array], state: [Object] }, jiang: { id: 'jiang', name: '姜子尤', kind: 'jiang', ruleset: 'comparison-20261020', team: '同伴', controller: 'model', present: true, position: [Array], reach: 1.5, used: {}, cooldowns: {}, buffs: {}, combos: {}, reactions: [Object], spartanBonus: 0, squeezed: 0, abilities: [Array], state: [Object] } },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at work\rules_engine\gm_runtime\narrative.test.mjs:254:1
+✖ every incoming player attack waits for a declared defense even after conversion is exhausted (15.0982ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      'decline',
+  +   undefined
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/narrative.test.mjs:264:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'decline', undefined ],
+    expected: [ 'decline' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

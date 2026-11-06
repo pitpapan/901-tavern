@@ -8,6 +8,7 @@ import {groundElevationAt,elevationAt,measureFlightPath,canObserve} from './map.
 export function movementSpeed(actor,baseSpeed=derived(actor).speed,mode='land',{applyLandBonuses=mode==='land',ignoreStall=false,walkingCandidate=false}={}){
  const s=actor.state,points=t=>statusPenaltyPoints(s,t);
  const penalty=['麻痹','精神束缚','冻结','纠缠','晕眩','疲乏'].reduce((n,t)=>n+points(t),0);
+ if(mode==='flight')baseSpeed=Math.max(0,baseSpeed-(s.combatManeuvers?.tripFlight?.penalty??0));
  let speed=(points('纠缠')?Math.floor(baseSpeed/2):baseSpeed)-penalty;
  if(statusLevel(s,'目眩').severe&&!actor.windSense)speed-=Math.ceil(baseSpeed/2);
  if(statusLevel(s,'疲乏').severe)speed-=Math.ceil(baseSpeed/2);

@@ -1,0 +1,181 @@
+{
+  "port": 18111,
+  "model": "[抗截断]gemini-3.8-flash",
+  "fullResend": {
+    "messages": 7,
+    "status": "UNRESOLVED",
+    "operationId": "gm-runtime/901 帝都正式开局 20261105/3/0",
+    "diagnostic": {
+      "stage": "blocked",
+      "operationId": "gm-runtime/901 帝都正式开局 20261105/5/0",
+      "classificationRequests": 1,
+      "narrationRequests": 0,
+      "elapsedMs": 4493,
+      "generationId": "901-classify-1793947872234-tq08ts4qxbp",
+      "explicitRequestBytes": 141890,
+      "finalMessageCount": 2,
+      "finalMessageBytes": 141779,
+      "failureStage": "gate_validation",
+      "reason": "gate_rejected_decision",
+      "httpStatus": null
+    },
+    "reply": "行动判断或规则输入未完成；本次行动尚未裁定，没有确定成败。\n\n<StatusPlaceHolderImpl/>"
+  },
+  "shortBefore": {
+    "messages": 7,
+    "status": "UNRESOLVED",
+    "operationId": "gm-runtime/901 帝都正式开局 20261105/3/0",
+    "diagnostic": {
+      "stage": "blocked",
+      "operationId": "gm-runtime/901 帝都正式开局 20261105/5/0",
+      "classificationRequests": 1,
+      "narrationRequests": 0,
+      "elapsedMs": 5148,
+      "generationId": "901-classify-1793947997152-epbbjuy5np5",
+      "explicitRequestBytes": 70901,
+      "finalMessageCount": 2,
+      "finalMessageBytes": 70790,
+      "failureStage": "gate_validation",
+      "reason": "gate_rejected_decision",
+      "httpStatus": null
+    },
+    "reply": "行动判断或规则输入未完成；本次行动尚未裁定，没有确定成败。\n\n<StatusPlaceHolderImpl/>"
+  },
+  "shortAfter": {
+    "messages": 7,
+    "status": "NO_CHECK",
+    "operationId": "gm-runtime/901 帝都正式开局 20261105/3/0",
+    "diagnostic": null,
+    "reply": "布莱特听到甲胄互相刮碰的细微声响，略微偏了偏头，面向御临风的方向。\n\n“确实有些显眼。”布莱特说道，“帝都守备虽然见惯了各路来往的军士和佣兵，但穿着明显带伤的制式甲胄进城，守门的卫兵很可能会多问几句来历、所属的番号，或者扣留下来查验文书。”\n\n黄泉闻言勒马靠拢了半步，视线落在御临风身上那些划痕与裂口上。\n\n“外面套一件普通的防尘斗篷，或者把明显的徽记和伤痕遮一遮，会不会好些？”黄泉随口提道，“或者，找个货摊换身寻常的布衣。”\n\n前方的城门前，一队巡逻的卫士正按着剑柄从门洞两侧换岗，进出城门的行人依旧在有序地排队接受简单的目光检视。道旁有几个赶着货车歇脚的行商，车架上搭着不少用来遮挡风尘的粗麻布和旧斗篷。\n\n<StatusPlaceHolderImpl/>"
+  },
+  "trace": [
+    {
+      "event": "dispatch",
+      "at": 1793947873335,
+      "model": "[抗截断]gemini-3.8-flash",
+      "stream": false,
+      "maxTokens": 4096,
+      "messageBytes": 141779,
+      "requestHash": "204abd2c06e5693dfe697ba36420f5423be04f27ca2c692bbc00f0233fc1c908"
+    },
+    {
+      "event": "headers",
+      "elapsed": 3286,
+      "status": 200
+    },
+    {
+      "event": "complete",
+      "elapsed": 3289,
+      "usage": {
+        "prompt_tokens": 36178,
+        "completion_tokens": 83,
+        "total_tokens": 36261
+      },
+      "finishReason": "stop",
+      "textLength": 138
+    },
+    {
+      "event": "aborted",
+      "elapsed": 10789
+    },
+    {
+      "event": "dispatch",
+      "at": 1793947997704,
+      "model": "[抗截断]gemini-3.8-flash",
+      "stream": false,
+      "maxTokens": 4096,
+      "messageBytes": 70790,
+      "requestHash": "a7cb189fbea2a494e133d984ac654e503481d6cd358d662e11496f1a910958c6"
+    },
+    {
+      "event": "headers",
+      "elapsed": 4496,
+      "status": 200
+    },
+    {
+      "event": "complete",
+      "elapsed": 4498,
+      "usage": {
+        "prompt_tokens": 18331,
+        "completion_tokens": 103,
+        "total_tokens": 18434
+      },
+      "finishReason": "stop",
+      "textLength": 153
+    },
+    {
+      "event": "aborted",
+      "elapsed": 12133
+    },
+    {
+      "event": "dispatch",
+      "at": 1793948136623,
+      "model": "[抗截断]gemini-3.8-flash",
+      "stream": false,
+      "maxTokens": 4096,
+      "messageBytes": 70790,
+      "requestHash": "a7cb189fbea2a494e133d984ac654e503481d6cd358d662e11496f1a910958c6"
+    },
+    {
+      "event": "headers",
+      "elapsed": 6724,
+      "status": 200
+    },
+    {
+      "event": "complete",
+      "elapsed": 6736,
+      "usage": {
+        "prompt_tokens": 18331,
+        "completion_tokens": 89,
+        "total_tokens": 18420,
+        "prompt_tokens_details": {
+          "cached_tokens": 16286
+        }
+      },
+      "finishReason": "stop",
+      "textLength": 137
+    },
+    {
+      "event": "dispatch",
+      "at": 1793948143914,
+      "model": "[抗截断]gemini-3.8-flash",
+      "stream": false,
+      "maxTokens": 4096,
+      "messageBytes": 86611,
+      "requestHash": "8ce76818891205d4eb368ca0b84d900768cafde827e3d7adaf2c9d565cccd483"
+    },
+    {
+      "event": "headers",
+      "elapsed": 9707,
+      "status": 200
+    },
+    {
+      "event": "complete",
+      "elapsed": 9708,
+      "usage": {
+        "prompt_tokens": 21513,
+        "completion_tokens": 266,
+        "total_tokens": 21779
+      },
+      "finishReason": "stop",
+      "textLength": 305
+    },
+    {
+      "event": "aborted",
+      "elapsed": 17192
+    }
+  ],
+  "shortClassificationBodiesIdentical": true,
+  "originalFiveMessagesUnchanged": true,
+  "repeatedOriginalText": true,
+  "fullRuleRootUnchanged": true,
+  "revision": 0,
+  "protectedFiles": 272,
+  "formalChanges": [],
+  "tests": {
+    "passed": 70,
+    "failed": 0
+  },
+  "sourceModuleSha256": "69cff21567e201ab61a3680c0359d357dd00e5a6c1774cdcaad945287626964e",
+  "installedFormal": false
+}

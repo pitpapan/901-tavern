@@ -1,0 +1,37 @@
+✖ declaration choices identify actual carried objects by name and storage (283.2026ms)
+✖ takeItem cannot substitute another registered object for the named declaration (16.135ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 707.9972
+
+✖ failing tests:
+
+test at work\rules_engine\combat\common-actions.test.mjs:50:1
+✖ declaration choices identify actual carried objects by name and storage (283.2026ms)
+  TypeError [Error]: Cannot read properties of undefined (reading 'filter')
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/common-actions.test.mjs:55:27)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+
+test at work\rules_engine\gm_runtime\narrative.test.mjs:427:1
+✖ takeItem cannot substitute another registered object for the named declaration (16.135ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/narrative.test.mjs:433:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /物品|名称/,
+    operator: 'throws',
+    diff: 'simple'
+  }

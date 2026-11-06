@@ -7,6 +7,7 @@ import {physicalPriceRequest} from './action-prices.mjs';
 import {actionPriceOffers,combatRoundKey} from '../resource-action-pricing.mjs';
 import {weaponAmmoSpec,ordinaryWeaponType} from '../resource-weapons.mjs';
 import {BASIC_ACTIONS} from '../resource-action-bindings.mjs';
+import {COMMON_ACTIONS,COMMON_TARGETED,beginCommonTurn} from './common-actions.mjs';
 import {isReflexResource} from '../gm_runtime/resource-program.mjs';
 import {normalizeMap,mapView,canObserve,measurePath,clearLine,spatialDistance} from './map.mjs';
 import {movementCandidates,movementPurpose,tacticalInspection,lastSeenFoes} from './tactics.mjs';
@@ -15,7 +16,7 @@ import { act, currentContext, panel, attackProfile, TACTICS, stateResult, opport
 import { ABILITIES } from './catalog.mjs';
 import { beginTurn, freshTurn,lifeStatus,willEnhancement } from '../core.mjs';
 import { RuleInputError, IllegalAction, refreshDerived,equipment, blockValue } from './mechanics.mjs';
-import {grappleMembers} from './grapple.mjs';
+import {heldTargets,grappleMembers} from './grapple.mjs';
 import { resolveStep } from './transitions.mjs';
 import {resourceCapability} from '../resource-lifecycle.mjs';
 
@@ -31,11 +32,20 @@ function candidatesFor(battle) {
   if(a.state.paidMotion?.phase==='airborne')add('continueJump');
   if(!a.abilities.includes('reload')&&weaponAmmoSpec(a,equipment(a).weapon))add('reload');
   const enemies=Object.values(battle.actors).filter(t=>visibleTo(battle,t,a)&&t.team!==a.team);
+  for(const id of Object.keys(COMMON_ACTIONS))if(COMMON_TARGETED.includes(id)){
+    for(const t of enemies){
+      if(id==='bullRush')for(const mode of ['push','knockdown'])add(id,{targetId:t.id,mode});
+      else if(id==='grapple')for(const attribute of ['strength','agility'])add(id,{targetId:t.id,attribute});
+      else if(['disarm','sunder'].includes(id)){for(const item of t.state.possessions?.items??[])if(item.held)add(id,{targetId:t.id,itemId:item.id});}
+      else add(id,{targetId:t.id});
+    }
+  }else if(id==='takeItem'){for(const item of a.state.possessions?.items??[])if(!item.held)add(id,{itemId:item.id});}
+  else if(id!=='counterRush')add(id);
   for(const t of Object.values(battle.actors))if(t.present&&t.id!==a.id&&lifeStatus(t.state).deteriorating)add('firstAid',{targetId:t.id});
   for(const t of Object.values(battle.actors))if(t.present&&t.state.sleeping)add('wake',{targetId:t.id});
   for(const [eventId,e]of Object.entries(battle.ruleScene?.events??{}))if(e.actorIds?.includes(a.id)&&['extinguish','statusResistance','statusContext','channelFailure','demonGaze','geneticBacklash','passivePerception','projectionEvent'].includes(e.type)&&!a.state.ruleEvents?.includes(eventId))add('statusEvent',{eventId});
   if(a.state.grapple)for(const method of ['strength','agility'])add('escapeGrip',{method});
-  for(const targetId of [...new Set(a.claws?.filter(Boolean)??[])]){add('pressGrip',{targetId});add('grappleAttack',{targetId});}
+  for(const targetId of heldTargets(a)){add('pressGrip',{targetId});add('grappleAttack',{targetId});}
   for(const item of a.state.possessions?.items??[])add(item.location==='phaseRing'?'ringRetrieve':'ringStore',{itemId:item.id});
   for(const [objectId,o]of Object.entries(battle.ruleScene?.objects??{}))if(o.actorIds?.includes(a.id)) {
     if(o.type==='checkContext')for(const [part,p]of Object.entries(o.plans??{}))if(p.purpose==='jump'&&p.takeoff)add('jump',{objectId,part});
@@ -109,19 +119,22 @@ function candidatesFor(battle) {
 export function inspectCommands(battle) {
   const queued=Object.entries(battle.actors).find(([,a])=>a.state.resourceAutomaticEvents?.length);
   if(queued)return {options:[{command:{actorId:queued[0],abilityId:'resumeEffects'},preview:{timing:'续算已锁定自动效果，不扣动作、不重施、不重投已记录骰'}}],unavailable:[]};
+  if(battle.pending?.kind==='counterRush')return {options:['decline','push','knockdown'].map(mode=>({command:{actorId:battle.pending.awaiting,abilityId:'counterRush',mode},preview:{timing:'此前冲撞已经结算；可用反射动作反冲或放弃'}})),unavailable:[]};
   if(['opportunity','paid-movement'].includes(battle.pending?.kind))return {options:['strike','decline'].map(choice=>({
     command:{actorId:battle.pending.awaiting,abilityId:'opportunityReact',choice},
     preview:{timing:battle.pending.kind==='paid-movement'?'跳跃检定与移动支付已保存；选择后续算，不重投或重付':'对方准备离开威胁范围；等待玩家决定是否借机攻击'}})),unavailable:[]};
   if(battle.pending) {
     const a=battle.actors[battle.pending.awaiting];
     const defenses=battle.playerDefenseDeclarations&&a.controller==='player'?['normal',...(a.buffs.block?['block']:[])]:[undefined];
-    const grapple=battle.actors[battle.pending.command.actorId]?.kind==='chuul'&&a.controller==='player'?['strength','agility']:[undefined];
+    const grapple=(battle.actors[battle.pending.command.actorId]?.kind==='chuul'||['bullRush','counterRush','trip','grapple','pressGrip','grappleAttack'].includes(battle.pending.command.abilityId))&&a.controller==='player'?['strength','agility']:[undefined];
     const options=defenses.flatMap(defense=>grapple.flatMap(grappleDefense=>['decline',...(a.abilities.includes('conversion')&&!a.used.damageConversion?['conversion']:[])].map(choice=>({
     command:{actorId:battle.pending.awaiting,abilityId:'react',choice,...(defense?{defense}:{})},
     preview:{timing:'攻击宣言后、掷骰前；未掷骰，未扣攻击资源',cost:choice==='conversion'?'实际受伤才消耗一次场景次数':'不使用'},
   })).map(o=>({...o,command:{...o.command,...(grappleDefense?{grappleDefense}:{})},preview:{...o.preview,...(grappleDefense?{grappleDefense:grappleDefense==='strength'?'力量＋肉搏挣脱':'敏捷＋运动逃脱'}:{})}}))));
     if(willEnhancement(a.state).allowed)for(const option of [...options])options.push({...option,command:{...option.command,willpower:true},preview:{...option.preview,cost:'消耗1意志：本次防御＋3；若效果要求豁免/对抗则该次＋3DP，另加适用基因锁增益'}});
     const unavailable=[];
+    const prone={actorId:a.id,abilityId:'dropProne'};
+    try{const out=resolveStep(battle,prone,{playerAuthorized:true,drawDice:()=>Array(1024).fill(1)});options.push({command:prone,preview:previewOutcome(battle,prone,out)});}catch(error){unavailable.push({abilityId:'dropProne',status:error.code??'UNAVAILABLE',reason:error.message});}
     for(const [objectId,o]of Object.entries(battle.ruleScene?.objects??{}))if(o.actorIds?.includes(a.id))for(const [part,p]of Object.entries(o.plans??{}))for(const operation of p.operations??[]){
       const command={actorId:a.id,abilityId:'mechanism',objectId,operation,part};
       if(!isReflexResource(battle,command))continue;
@@ -180,9 +193,9 @@ export function potentialTargets(b,c,{opportunityDeclarations={}}={}) {
   if(c.abilityId==='doubleStrike')return [...new Set([c.targetId,c.secondTargetId??c.targetId])];
   if(c.abilityId==='roar')return roarTargets(b,c).map(x=>x.id);
   if(c.abilityId==='lightning'&&c.tier===3&&target) return actors.filter(x=>d(x,target)<=1.5&&clearLine(b.map,target.position,x.position)).map(x=>x.id);
-  if(c.abilityId==='move')return opportunityActors(b,c).some(x=>!b.playerDefenseDeclarations||x.controller!=='player'||opportunityDeclarations[x.id]===true)?[a.id]:[];
+  if(['move','charge'].includes(c.abilityId))return [...(c.abilityId==='charge'?[c.targetId]:[]),...(opportunityActors(b,c).some(x=>!b.playerDefenseDeclarations||x.controller!=='player'||opportunityDeclarations[x.id]===true)?[a.id]:[])];
   const linked=target?grappleMembers(b,target.id,a.id).map(x=>x.id):[];
-  return ['strike','thunder','cleaveRock','lightning','tornado','timeBolt','shieldPush','pressGrip','grappleAttack'].includes(c.abilityId)&&target?[...new Set([target.id,...linked])]:[];
+  return [...COMMON_TARGETED.filter(id=>id!=='aim'),'counterRush','strike','thunder','cleaveRock','lightning','tornado','timeBolt','shieldPush','pressGrip','grappleAttack'].includes(c.abilityId)&&target?[...new Set([target.id,...linked])]:[];
 }
 
 export function decisionContext(b,revision,inspection=inspectCommands(b)) {
@@ -270,6 +283,7 @@ export function createCombatRuntime({mvu,getAnchor,expectedChatId,drawDice}) {
           next.activeId=next.order.find(id=>panel(next,id).life==='可行动');
           if(!next.activeId) throw new Error('没有可行动的参战者');
           next.actors[next.activeId].state=beginTurn(next.actors[next.activeId].state).state;
+          beginCommonTurn(next,next.actors[next.activeId]);
           schedulePassivePerception(next,{drawDice:drawDice??randomDice,reason:'combat-enter'});
           next.mode='combat';return next;
         },reduce:b=>({battle:b,result:stateResult(b,b.activeId,'enter',['进入战斗；沿用现有伤势与能量'])})});
@@ -299,6 +313,8 @@ export function createCombatRuntime({mvu,getAnchor,expectedChatId,drawDice}) {
       return settleCombat({...environment,operationId,expectedRevision,command:{kind:'map',map},reduce:b=>{
         if(b.map)throw new Error('场景地图已建立，不自动重画');
         b.map=normalizeMap(map,b);
+        const active=b.actors[b.activeId];
+        if(active)b.initialMapVisibility={actorId:active.id,round:b.round,visible:Object.values(b.actors).filter(t=>t.present&&t.id!==active.id&&canObserve(b,t,active.id)).map(t=>t.id)};
         return {battle:b,result:stateResult(b,b.activeId,'map',['建立固定场景地图，人物与动作不变'])};
       }});
     },
@@ -351,6 +367,11 @@ export async function chooseAction(runtime,generateRaw,{rejection=null}={}) {
   if(actor.controller==='player') return {status:'awaiting_player',actorId:actor.id};
   const options=inspection.options.map(o=>o.command);
   if(!options.length) throw new Error('没有合法行动，需主持处理当前状态');
+  // The same abilities and target-specific attack figures already appear in
+  // abilities/legalOptions/previews. Do not resend their generic panel copies.
+  for(const participant of context.participants){delete participant.abilities;delete participant.attack;}
+  context.abilities=Object.fromEntries(Object.entries(context.abilities).filter(([,d])=>d).map(([id,d])=>[id,`${d.name}：${d.text}`]));
+  for(const key of ['projections','terrain','lastSeen','vagueObservations','pendingPerceptions'])if(context[key]?.length===0)delete context[key];
   const prompt=JSON.stringify(context);
   const text=await generateRaw({
     should_stream:false,should_silence:true,max_chat_history:0,

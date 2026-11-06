@@ -1,0 +1,104 @@
+{
+  "port": 18112,
+  "chat": "901 装备装卸隔离验收 20261106 - 引用复测",
+  "implementedScope": "noncombat registered single-layer physical armor equip/unequip; no automatic old-chat migration",
+  "liveScope": "exact user declaration unequip light armor; refresh and native regenerate",
+  "messages": 7,
+  "originalFiveUnchanged": true,
+  "gate": {
+    "status": "APPLIED",
+    "operationId": "gm-runtime/901 装备装卸隔离验收 20261106 - 引用复测/5/0",
+    "kind": "rule"
+  },
+  "request": {
+    "kind": "rule",
+    "action": "equipment",
+    "actorId": "player",
+    "steps": [
+      {
+        "operation": "unequip",
+        "itemId": "opening.imperial-light-armor",
+        "sourceQuote": "将身上铠甲卸下"
+      }
+    ]
+  },
+  "item": {
+    "id": "opening.imperial-light-armor",
+    "name": "帝国制式轻甲",
+    "aliases": [
+      "帝国制式盔甲",
+      "帝国制式铠甲",
+      "帝国制式甲",
+      "铠甲",
+      "盔甲",
+      "护甲"
+    ],
+    "slot": "armor",
+    "armorClass": "light",
+    "armor": {
+      "defense": 3
+    },
+    "location": "carried",
+    "worn": false,
+    "source": "work/character_builder/real_character/御临风_初始卡_20261021.txt:86; work/replay_research/opening_roster_p1_001_016.md:25,29; work/replay_research/opening_scene_evidence.md:18",
+    "appearance": "饱经战损；未确认数值损坏"
+  },
+  "armorDefenseBefore": 3,
+  "armorDefenseAfter": 0,
+  "elapsedMinutes": 1,
+  "revision": 1,
+  "operationCount": 1,
+  "refreshVerified": true,
+  "nativeRegenerateRootUnchanged": true,
+  "nativeRegenerateExtraRequests": 0,
+  "requests": 2,
+  "responses": 2,
+  "classificationRequests": 1,
+  "rejectedFirstRun": "valid quote crossed comma; previous validator rejected; no operation saved; preserved and regression fixed",
+  "tests": {
+    "targeted": 98,
+    "adjacent": 39
+  },
+  "model": "[抗截断]gemini-3.8-flash",
+  "modelSettingsUnchanged": true,
+  "autoUpdateEnabled": false,
+  "worldBindingsUnchanged": true,
+  "formalProtectedFiles": 277,
+  "formalChanges": [],
+  "installed8000": false,
+  "hashes": {
+    "equipment-state.mjs": {
+      "source": "fa40d40fe3b5deb8f810e420c84815aabe955d888b22cd2a5170e50761ff9680",
+      "isolated": "fa40d40fe3b5deb8f810e420c84815aabe955d888b22cd2a5170e50761ff9680"
+    },
+    "gm_runtime/rule-actions.mjs": {
+      "source": "f233fb0fe55362b213cf78f8a786fb6cd65e001976356d64e0d7ef717dafd7b1",
+      "isolated": "f233fb0fe55362b213cf78f8a786fb6cd65e001976356d64e0d7ef717dafd7b1"
+    },
+    "gm_runtime/replay-check.mjs": {
+      "source": "dcd37bfcc77b21ed7187b272978411bf01bf571ed9758b3fe83cd71bc4d42f96",
+      "isolated": "dcd37bfcc77b21ed7187b272978411bf01bf571ed9758b3fe83cd71bc4d42f96"
+    },
+    "gm_runtime/adjudication-gate.mjs": {
+      "source": "31b5fa94bfe694be75e0c9a69f4a329af3a8c718ed4f7f99150ae3e4ca7c53b5",
+      "isolated": "31b5fa94bfe694be75e0c9a69f4a329af3a8c718ed4f7f99150ae3e4ca7c53b5"
+    },
+    "gm_runtime/replay-gate-script.example.js": {
+      "source": "f674fc1841833756a9da74482024b0322796ec8f5b3a0eeb9ae540fcf18a27c2",
+      "isolated": "89799a00e953dab72e8f46d7370b6b494e923a9688878c95fcf247bb1acab99b"
+    },
+    "combat/mechanics.mjs": {
+      "source": "25fae4f42102e07cc2650ca24058e89952d6f04832ea21a6e0ca8db2895d5266",
+      "isolated": "25fae4f42102e07cc2650ca24058e89952d6f04832ea21a6e0ca8db2895d5266"
+    },
+    "combat/presentation.mjs": {
+      "source": "ef8c1127880407ddde10a44480bc2a03a9e59f3ce55e85811ed7c303db4dd6e3",
+      "isolated": "ef8c1127880407ddde10a44480bc2a03a9e59f3ce55e85811ed7c303db4dd6e3"
+    },
+    "gm_runtime/player-status-ui.mjs": {
+      "source": "4c83b0ec8532ce94b57bd570fea759012e216159513685d3a32925985b4707cd",
+      "isolated": "f5145a4a549980fbc04a40d4d8da5079e2be014e35be55b925c1caf05bae24d5"
+    }
+  },
+  "evidenceDirectory": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\equipment-20261106"
+}

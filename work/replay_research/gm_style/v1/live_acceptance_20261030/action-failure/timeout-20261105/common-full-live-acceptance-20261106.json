@@ -1,0 +1,4754 @@
+{
+  "date": "2026-11-06",
+  "port": 18112,
+  "interaction": "Terra gpt-6.1-terra high judged; main-session IAB executed",
+  "model": "[抗截断]gemini-3.8-flash",
+  "modelSettingsUnchanged": true,
+  "chats": 16,
+  "playerDeclarations": 36,
+  "newActionsActuallyResolved": [
+    "charge",
+    "feint",
+    "adjust",
+    "trip",
+    "disarm",
+    "sunder",
+    "allOut",
+    "bullRush",
+    "counterRush",
+    "grapple",
+    "dropProne",
+    "stand",
+    "takeItem",
+    "aim"
+  ],
+  "additionalActuallyResolved": [
+    "end",
+    "move",
+    "pressGrip",
+    "reload",
+    "step",
+    "strike"
+  ],
+  "fixtures": "Explicit non-Canon test actors/items/parameters; original random dice unchanged; no successful outcomes preseeded.",
+  "formalProtectedFiles": 277,
+  "formalChanges": [],
+  "autoFill": "not enabled; previous off setting retained; no fill UI operated",
+  "installedToFormal": false,
+  "committed": false,
+  "fixes": [
+    {
+      "problem": "Old weapon reappeared in narration after actual disarm",
+      "change": "Read combatManeuvers.weaponUnavailable in publicScene",
+      "failedCase": "05",
+      "liveRetest": "05fix"
+    },
+    {
+      "problem": "Backpack request executed the other legal item",
+      "change": "Expose legal item names/storage and validate takeItem quote against unique registered name/alias before mutation",
+      "failedCase": "02pack",
+      "liveRetest": "02packfix"
+    }
+  ],
+  "remainingObservations": [
+    {
+      "case": "07",
+      "issue": "Composite move/end invented flow with empty quote; entire plan rejected, revision unchanged; split declarations passed."
+    },
+    {
+      "case": "10",
+      "issue": "Keep aiming misread as another aim; rejected without mutation; simple reload passed."
+    },
+    {
+      "cases": [
+        "07",
+        "10",
+        "12",
+        "13"
+      ],
+      "issue": "Narrative still sometimes uses vague/inaccurate distance units, repeats drawing an already-loaded arrow, or invents test-stage flavor. Authoritative state/receipt correct; not claimed perfect prose fidelity."
+    }
+  ],
+  "localRegression": {
+    "tests": 44,
+    "passed": 44,
+    "log": "common-full-item-verified.log"
+  },
+  "deploymentHashes": {
+    "combat/presentation.mjs": "068c692d1d8103230759ad2fa25fe5a693a7a34aa2d45126bd93c4d455b5235b",
+    "gm_runtime/narrative.mjs": "e59a81352e92dc9b0a77344afe1236980fd22ab51e37ab29355db44e8c6ab211"
+  },
+  "cases": [
+    {
+      "id": "01",
+      "chat": "901 全项战斗 01 姿态全力 20261106",
+      "messages": 5,
+      "revision": 5,
+      "operations": [
+        {
+          "operationId": "declaration/901 全项战斗 01 姿态全力 20261106/1/0/0",
+          "command": {
+            "abilityId": "dropProne",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "posture": "prone"
+          },
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "swift": 1,
+              "reflex": 1
+            },
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 1,
+              "move": 1,
+              "swift": 0
+            }
+          }
+        },
+        {
+          "operationId": "declaration/901 全项战斗 01 姿态全力 20261106/1/0/1",
+          "command": {
+            "abilityId": "stand",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "posture": "standing"
+          },
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "move": 1
+            },
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 1,
+              "move": 0,
+              "swift": 0
+            }
+          }
+        },
+        {
+          "operationId": "declaration/901 全项战斗 01 姿态全力 20261106/1/0/2",
+          "command": {
+            "abilityId": "allOut",
+            "targetId": "huang",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "attack": {
+              "rawDP": 23,
+              "dp": 23,
+              "attribute": "敏捷",
+              "handling": {
+                "requirement": 0,
+                "deficit": 0,
+                "strengthPenalty": 0,
+                "gripPenalty": 0,
+                "aimMultiplier": 1,
+                "distancePenalty": 0
+              },
+              "legacyCompatible": true,
+              "weaponType": null,
+              "severity": "L",
+              "weapon": 6,
+              "cap": 14,
+              "fixed": 1,
+              "ap": 2,
+              "magic": 2,
+              "speed": 0,
+              "extra": 0,
+              "ignore": 0,
+              "aggravate": 0,
+              "electric": 0,
+              "reduction": 3,
+              "range": 1.5,
+              "explode": 10,
+              "magical": false,
+              "ranged": false,
+              "firearm": null,
+              "ballistic": null,
+              "energyWeapon": false,
+              "hardnessIgnore": 0,
+              "spiritEligible": true,
+              "defense": {
+                "total": 1,
+                "parts": {
+                  "base": 0,
+                  "natural": 0,
+                  "armor": 1,
+                  "dodge": 0,
+                  "insight": 0,
+                  "block": 0,
+                  "cover": 0,
+                  "cultivation": 0,
+                  "force": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "unholy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 0,
+                "guarded": false,
+                "extraSuccesses": 0
+              },
+              "roll": {
+                "dp": 22,
+                "luck": false,
+                "dice": [
+                  10,
+                  9,
+                  3,
+                  7,
+                  6,
+                  7,
+                  9,
+                  5,
+                  6,
+                  8,
+                  2,
+                  1,
+                  4,
+                  2,
+                  4,
+                  9,
+                  1,
+                  8,
+                  10,
+                  2,
+                  2,
+                  1,
+                  5,
+                  1
+                ],
+                "used": 24,
+                "rolledSuccesses": 7,
+                "luckMishap": false
+              },
+              "amount": 8
+            }
+          },
+          "damage": [
+            {
+              "targetId": "huang",
+              "kind": "physical",
+              "energyType": null,
+              "input": 8,
+              "inputSeverity": "L",
+              "severity": "L",
+              "actualDamage": 8,
+              "causedDamage": true,
+              "temporaryAbsorbed": 0
+            }
+          ],
+          "receipt": {
+            "actions": {
+              "standard": 1
+            },
+            "resources": [],
+            "items": [],
+            "targetId": "huang",
+            "willSpent": 0,
+            "weapon": "弃风长剑在手",
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          }
+        },
+        {
+          "operationId": "declaration/901 全项战斗 01 姿态全力 20261106/3/0/0",
+          "command": {
+            "abilityId": "end",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {},
+          "damage": [],
+          "receipt": {
+            "actions": {},
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          }
+        },
+        {
+          "operationId": "combat/3/0/4",
+          "command": {
+            "actorId": "huang",
+            "abilityId": "end"
+          },
+          "status": "resolved",
+          "result": {},
+          "damage": [],
+          "receipt": {
+            "actions": {},
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          }
+        }
+      ],
+      "finalState": {
+        "player": {
+          "maneuvers": {
+            "turn": 2,
+            "startVisible": [
+              "huang"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": null,
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            0,
+            0
+          ]
+        },
+        "huang": {
+          "maneuvers": {
+            "turn": 2,
+            "startVisible": [
+              "player"
+            ]
+          },
+          "health": {
+            "intact": 92,
+            "B": 0,
+            "L": 8,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "practice-sword",
+                "name": "试验剑",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "held": true,
+                "oneHanded": true,
+                "grip": {
+                  "hands": 1,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "weapon": {
+                  "name": "试验剑",
+                  "type": "melee",
+                  "skill": "白刃",
+                  "damage": 1,
+                  "severity": "L",
+                  "size": 2,
+                  "ap": 0,
+                  "magic": 0,
+                  "attackBonus": 0,
+                  "blockBonus": 0
+                },
+                "durability": {
+                  "current": 1,
+                  "max": 1,
+                  "hardness": 1
+                }
+              }
+            ]
+          },
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            1,
+            0
+          ]
+        }
+      },
+      "pending": null,
+      "privateSnapshotSha256": "3cb76f4f245a2b422c1c8cb5a8b95bf11b652082fab92e5e59b56325607d0fea"
+    },
+    {
+      "id": "02",
+      "chat": "901 全项战斗 02 取物 20261106",
+      "messages": 3,
+      "revision": 1,
+      "operations": [
+        {
+          "operationId": "declaration/901 全项战斗 02 取物 20261106/1/0/0",
+          "command": {
+            "abilityId": "takeItem",
+            "itemId": "test-cloth",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "itemUse": {
+              "itemId": "test-cloth",
+              "name": "试验布条",
+              "operation": "take",
+              "action": "swift"
+            }
+          },
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "swift": 1
+            },
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "itemUse": {
+              "itemId": "test-cloth",
+              "name": "试验布条",
+              "operation": "take",
+              "action": "swift"
+            },
+            "movement": 0,
+            "remaining": {
+              "standard": 1,
+              "move": 1,
+              "swift": 0
+            }
+          }
+        }
+      ],
+      "finalState": {
+        "player": {
+          "maneuvers": {
+            "turn": 1,
+            "startVisible": [
+              "huang"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "test-cloth",
+                "name": "试验布条",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "access": "accessible",
+                "small": true,
+                "held": true
+              },
+              {
+                "id": "test-pack",
+                "name": "试验油布包",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "access": "backpack",
+                "held": false
+              }
+            ]
+          },
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            0,
+            0
+          ]
+        },
+        "huang": {
+          "maneuvers": {
+            "turn": 1,
+            "startVisible": [
+              "player"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "practice-sword",
+                "name": "试验剑",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "held": true,
+                "oneHanded": true,
+                "grip": {
+                  "hands": 1,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "weapon": {
+                  "name": "试验剑",
+                  "type": "melee",
+                  "skill": "白刃",
+                  "damage": 1,
+                  "severity": "L",
+                  "size": 2,
+                  "ap": 0,
+                  "magic": 0,
+                  "attackBonus": 0,
+                  "blockBonus": 0
+                },
+                "durability": {
+                  "current": 1,
+                  "max": 1,
+                  "hardness": 1
+                }
+              }
+            ]
+          },
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            1,
+            0
+          ]
+        }
+      },
+      "pending": null,
+      "privateSnapshotSha256": "0a8f34f00f135297e8784eb420ad328f0a7cf1dbba5cb4f1645a7d4857cbc17a"
+    },
+    {
+      "id": "03",
+      "chat": "901 全项战斗 03 虚招 20261106",
+      "messages": 7,
+      "revision": 4,
+      "operations": [
+        {
+          "operationId": "declaration/901 全项战斗 03 虚招 20261106/1/0/0",
+          "command": {
+            "abilityId": "feint",
+            "targetId": "huang",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "contest": {
+              "active": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 6,
+                  "auto": 2,
+                  "main": 5,
+                  "sub": 1
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 3,
+                "dp": 16,
+                "luck": false,
+                "dice": [
+                  7,
+                  7,
+                  8,
+                  8,
+                  1,
+                  3,
+                  7,
+                  10,
+                  3,
+                  7,
+                  1,
+                  2,
+                  4,
+                  8,
+                  6,
+                  10,
+                  6,
+                  1
+                ],
+                "used": 18,
+                "rolledSuccesses": 5,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 8
+              },
+              "passive": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 1,
+                  "auto": 0,
+                  "main": 1,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 0,
+                "dp": 2,
+                "luck": false,
+                "dice": [
+                  3,
+                  1
+                ],
+                "used": 2,
+                "rolledSuccesses": 0,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 0
+              },
+              "won": true
+            }
+          },
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "standard": 1
+            },
+            "resources": [],
+            "items": [],
+            "targetId": "huang",
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 1,
+              "swift": 1
+            }
+          }
+        },
+        {
+          "operationId": "declaration/901 全项战斗 03 虚招 20261106/3/0/0",
+          "command": {
+            "abilityId": "end",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {},
+          "damage": [],
+          "receipt": {
+            "actions": {},
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          }
+        },
+        {
+          "operationId": "combat/3/0/2",
+          "command": {
+            "actorId": "huang",
+            "abilityId": "end"
+          },
+          "status": "resolved",
+          "result": {},
+          "damage": [],
+          "receipt": {
+            "actions": {},
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          }
+        },
+        {
+          "operationId": "declaration/901 全项战斗 03 虚招 20261106/5/0/0",
+          "command": {
+            "abilityId": "strike",
+            "targetId": "huang",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "attack": {
+              "rawDP": 18,
+              "dp": 18,
+              "attribute": "敏捷",
+              "handling": {
+                "requirement": 0,
+                "deficit": 0,
+                "strengthPenalty": 0,
+                "gripPenalty": 0,
+                "aimMultiplier": 1,
+                "distancePenalty": 0
+              },
+              "legacyCompatible": true,
+              "weaponType": null,
+              "severity": "L",
+              "weapon": 6,
+              "cap": 11,
+              "fixed": 2,
+              "ap": 2,
+              "magic": 2,
+              "speed": 0,
+              "extra": 0,
+              "ignore": 0,
+              "aggravate": 0,
+              "electric": 0,
+              "reduction": 3,
+              "range": 1.5,
+              "explode": 10,
+              "magical": false,
+              "ranged": false,
+              "firearm": null,
+              "ballistic": null,
+              "energyWeapon": false,
+              "hardnessIgnore": 0,
+              "spiritEligible": true,
+              "defense": {
+                "total": 1,
+                "parts": {
+                  "base": 0,
+                  "natural": 0,
+                  "armor": 1,
+                  "dodge": 0,
+                  "insight": 0,
+                  "block": 0,
+                  "cover": 0,
+                  "cultivation": 0,
+                  "force": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "unholy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 0,
+                "guarded": false,
+                "extraSuccesses": 0
+              },
+              "roll": {
+                "dp": 17,
+                "luck": false,
+                "dice": [
+                  7,
+                  5,
+                  9,
+                  5,
+                  4,
+                  5,
+                  1,
+                  3,
+                  5,
+                  3,
+                  2,
+                  9,
+                  7,
+                  4,
+                  10,
+                  5,
+                  10,
+                  9,
+                  8
+                ],
+                "used": 19,
+                "rolledSuccesses": 6,
+                "luckMishap": false
+              },
+              "amount": 8
+            }
+          },
+          "damage": [
+            {
+              "targetId": "huang",
+              "kind": "physical",
+              "energyType": null,
+              "input": 8,
+              "inputSeverity": "L",
+              "severity": "L",
+              "actualDamage": 8,
+              "causedDamage": true,
+              "temporaryAbsorbed": 0
+            }
+          ],
+          "receipt": {
+            "actions": {
+              "standard": 1
+            },
+            "resources": [],
+            "items": [],
+            "targetId": "huang",
+            "willSpent": 0,
+            "weapon": "弃风长剑在手",
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 1,
+              "swift": 1
+            }
+          }
+        }
+      ],
+      "finalState": {
+        "player": {
+          "maneuvers": {
+            "turn": 2,
+            "startVisible": [
+              "huang"
+            ],
+            "feints": {}
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": null,
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            0,
+            0
+          ]
+        },
+        "huang": {
+          "maneuvers": {
+            "turn": 2,
+            "startVisible": [
+              "player"
+            ]
+          },
+          "health": {
+            "intact": 92,
+            "B": 0,
+            "L": 8,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "practice-sword",
+                "name": "试验剑",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "held": true,
+                "oneHanded": true,
+                "grip": {
+                  "hands": 1,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "weapon": {
+                  "name": "试验剑",
+                  "type": "melee",
+                  "skill": "白刃",
+                  "damage": 1,
+                  "severity": "L",
+                  "size": 2,
+                  "ap": 0,
+                  "magic": 0,
+                  "attackBonus": 0,
+                  "blockBonus": 0
+                },
+                "durability": {
+                  "current": 1,
+                  "max": 1,
+                  "hardness": 1
+                }
+              }
+            ]
+          },
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            1,
+            0
+          ]
+        }
+      },
+      "pending": null,
+      "privateSnapshotSha256": "67d05361cb74c8c2a69c0bfad36c27a225c8b91fd131a2594b766a4be0e3575f"
+    },
+    {
+      "id": "04",
+      "chat": "901 全项战斗 04 绊摔 20261106",
+      "messages": 3,
+      "revision": 1,
+      "operations": [
+        {
+          "operationId": "declaration/901 全项战斗 04 绊摔 20261106/1/0/0",
+          "command": {
+            "abilityId": "trip",
+            "targetId": "huang",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "contest": {
+              "active": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 5,
+                  "auto": 2,
+                  "main": 5,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 3,
+                "dp": 14,
+                "luck": false,
+                "dice": [
+                  4,
+                  7,
+                  3,
+                  8,
+                  1,
+                  8,
+                  10,
+                  8,
+                  8,
+                  9,
+                  3,
+                  3,
+                  9,
+                  5,
+                  9
+                ],
+                "used": 15,
+                "rolledSuccesses": 8,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 11
+              },
+              "passive": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 1,
+                  "auto": 0,
+                  "main": 1,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 0,
+                "dp": 2,
+                "luck": false,
+                "dice": [
+                  2,
+                  6
+                ],
+                "used": 2,
+                "rolledSuccesses": 0,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 0
+              },
+              "won": true,
+              "margin": 11,
+              "defense": "strength"
+            },
+            "knockdown": {
+              "targetId": "huang"
+            }
+          },
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "standard": 1
+            },
+            "resources": [],
+            "items": [],
+            "targetId": "huang",
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 1,
+              "swift": 1
+            }
+          }
+        }
+      ],
+      "finalState": {
+        "player": {
+          "maneuvers": {
+            "turn": 1,
+            "startVisible": [
+              "huang"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": null,
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            0,
+            0
+          ]
+        },
+        "huang": {
+          "maneuvers": {
+            "turn": 1,
+            "startVisible": [
+              "player"
+            ],
+            "prone": true
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "practice-sword",
+                "name": "试验剑",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "held": true,
+                "oneHanded": true,
+                "grip": {
+                  "hands": 1,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "weapon": {
+                  "name": "试验剑",
+                  "type": "melee",
+                  "skill": "白刃",
+                  "damage": 1,
+                  "severity": "L",
+                  "size": 2,
+                  "ap": 0,
+                  "magic": 0,
+                  "attackBonus": 0,
+                  "blockBonus": 0
+                },
+                "durability": {
+                  "current": 1,
+                  "max": 1,
+                  "hardness": 1
+                }
+              }
+            ]
+          },
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            1,
+            0
+          ]
+        }
+      },
+      "pending": null,
+      "privateSnapshotSha256": "cd6aaa138f82866c128cbe46784783d4cde02a31773ab29d6613bd2f0f30941d"
+    },
+    {
+      "id": "05",
+      "chat": "901 全项战斗 05 击落 20261106",
+      "messages": 3,
+      "revision": 1,
+      "operations": [
+        {
+          "operationId": "declaration/901 全项战斗 05 击落 20261106/1/0/0",
+          "command": {
+            "abilityId": "disarm",
+            "targetId": "huang",
+            "itemId": "practice-sword",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "attack": {
+              "rawDP": 15,
+              "dp": 15,
+              "attribute": "敏捷",
+              "handling": {
+                "requirement": 0,
+                "deficit": 0,
+                "strengthPenalty": 0,
+                "gripPenalty": 0,
+                "aimMultiplier": 1,
+                "distancePenalty": 0
+              },
+              "legacyCompatible": true,
+              "weaponType": null,
+              "severity": "L",
+              "weapon": 6,
+              "cap": 11,
+              "fixed": 2,
+              "ap": 2,
+              "magic": 2,
+              "speed": 0,
+              "extra": 0,
+              "ignore": 0,
+              "aggravate": 0,
+              "electric": 0,
+              "reduction": 3,
+              "range": 1.5,
+              "explode": 10,
+              "magical": false,
+              "ranged": false,
+              "firearm": null,
+              "ballistic": null,
+              "energyWeapon": false,
+              "hardnessIgnore": 0,
+              "spiritEligible": true,
+              "calledPenalty": 3,
+              "defense": {
+                "total": 2,
+                "parts": {
+                  "base": 0,
+                  "natural": 0,
+                  "armor": 1,
+                  "dodge": 1,
+                  "insight": 0,
+                  "block": 0,
+                  "cover": 0,
+                  "cultivation": 0,
+                  "force": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "unholy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 0,
+                "guarded": false,
+                "extraSuccesses": 0
+              },
+              "roll": {
+                "dp": 13,
+                "luck": false,
+                "dice": [
+                  9,
+                  4,
+                  10,
+                  10,
+                  7,
+                  8,
+                  2,
+                  9,
+                  10,
+                  7,
+                  6,
+                  3,
+                  7,
+                  3,
+                  3,
+                  2
+                ],
+                "used": 16,
+                "rolledSuccesses": 6,
+                "luckMishap": false
+              },
+              "amount": 8
+            },
+            "contest": {
+              "active": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 5,
+                  "auto": 2,
+                  "main": 5,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 3,
+                "dp": 15,
+                "luck": false,
+                "dice": [
+                  2,
+                  5,
+                  6,
+                  8,
+                  3,
+                  1,
+                  1,
+                  4,
+                  8,
+                  5,
+                  7,
+                  1,
+                  5,
+                  1,
+                  5
+                ],
+                "used": 15,
+                "rolledSuccesses": 2,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 5
+              },
+              "passive": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 1,
+                  "auto": 0,
+                  "main": 1,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 0,
+                "dp": 2,
+                "luck": false,
+                "dice": [
+                  10,
+                  8,
+                  8
+                ],
+                "used": 3,
+                "rolledSuccesses": 3,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 3
+              },
+              "margin": 2,
+              "won": true
+            },
+            "disarmed": {
+              "targetId": "huang",
+              "itemId": "practice-sword",
+              "name": "试验剑",
+              "position": [
+                1,
+                0
+              ]
+            }
+          },
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "standard": 1
+            },
+            "resources": [],
+            "items": [],
+            "targetId": "huang",
+            "willSpent": 0,
+            "weapon": "弃风长剑在手",
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 1,
+              "swift": 1
+            }
+          }
+        }
+      ],
+      "finalState": {
+        "player": {
+          "maneuvers": {
+            "turn": 1,
+            "startVisible": [
+              "huang"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": null,
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            0,
+            0
+          ]
+        },
+        "huang": {
+          "maneuvers": {
+            "turn": 1,
+            "startVisible": [
+              "player"
+            ],
+            "weaponUnavailable": true
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "practice-sword",
+                "name": "试验剑",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "ground",
+                "held": false,
+                "oneHanded": true,
+                "grip": {
+                  "hands": 1,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "weapon": {
+                  "name": "试验剑",
+                  "type": "melee",
+                  "skill": "白刃",
+                  "damage": 1,
+                  "severity": "L",
+                  "size": 2,
+                  "ap": 0,
+                  "magic": 0,
+                  "attackBonus": 0,
+                  "blockBonus": 0
+                },
+                "durability": {
+                  "current": 1,
+                  "max": 1,
+                  "hardness": 1
+                },
+                "position": [
+                  1,
+                  0
+                ]
+              }
+            ]
+          },
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            1,
+            0
+          ]
+        }
+      },
+      "pending": null,
+      "privateSnapshotSha256": "86cd4dd9ee06a4c740f130b6bb2a9461e52777f4fbb4cf5a6932827ce5fafab2"
+    },
+    {
+      "id": "06",
+      "chat": "901 全项战斗 06 击破 20261106",
+      "messages": 3,
+      "revision": 1,
+      "operations": [
+        {
+          "operationId": "declaration/901 全项战斗 06 击破 20261106/1/0/0",
+          "command": {
+            "abilityId": "sunder",
+            "targetId": "huang",
+            "itemId": "practice-sword",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "attack": {
+              "rawDP": 15,
+              "dp": 15,
+              "attribute": "敏捷",
+              "handling": {
+                "requirement": 0,
+                "deficit": 0,
+                "strengthPenalty": 0,
+                "gripPenalty": 0,
+                "aimMultiplier": 1,
+                "distancePenalty": 0
+              },
+              "legacyCompatible": true,
+              "weaponType": null,
+              "severity": "L",
+              "weapon": 6,
+              "cap": 11,
+              "fixed": 2,
+              "ap": 2,
+              "magic": 2,
+              "speed": 0,
+              "extra": 0,
+              "ignore": 0,
+              "aggravate": 0,
+              "electric": 0,
+              "reduction": 3,
+              "range": 1.5,
+              "explode": 10,
+              "magical": false,
+              "ranged": false,
+              "firearm": null,
+              "ballistic": null,
+              "energyWeapon": false,
+              "hardnessIgnore": 0,
+              "spiritEligible": true,
+              "calledPenalty": 3,
+              "defense": {
+                "total": 2,
+                "parts": {
+                  "base": 0,
+                  "natural": 0,
+                  "armor": 1,
+                  "dodge": 1,
+                  "insight": 0,
+                  "block": 0,
+                  "cover": 0,
+                  "cultivation": 0,
+                  "force": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "unholy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 0,
+                "guarded": false,
+                "extraSuccesses": 0
+              },
+              "roll": {
+                "dp": 13,
+                "luck": false,
+                "dice": [
+                  3,
+                  5,
+                  2,
+                  4,
+                  8,
+                  2,
+                  4,
+                  5,
+                  7,
+                  9,
+                  1,
+                  2,
+                  4
+                ],
+                "used": 13,
+                "rolledSuccesses": 2,
+                "luckMishap": false
+              },
+              "amount": 4
+            },
+            "contest": {
+              "active": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 5,
+                  "auto": 2,
+                  "main": 5,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 3,
+                "dp": 11,
+                "luck": false,
+                "dice": [
+                  10,
+                  10,
+                  4,
+                  7,
+                  7,
+                  1,
+                  3,
+                  8,
+                  5,
+                  3,
+                  3,
+                  10,
+                  9,
+                  5
+                ],
+                "used": 14,
+                "rolledSuccesses": 5,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 8
+              },
+              "passive": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 1,
+                  "auto": 0,
+                  "main": 1,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 0,
+                "dp": -2,
+                "luck": true,
+                "dice": [
+                  3
+                ],
+                "used": 1,
+                "rolledSuccesses": 0,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 0
+              },
+              "margin": 8,
+              "won": true
+            },
+            "equipmentDamage": {
+              "targetId": "huang",
+              "itemId": "practice-sword",
+              "name": "试验剑",
+              "structuralDamage": 1,
+              "destroyed": true
+            }
+          },
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "standard": 1
+            },
+            "resources": [],
+            "items": [],
+            "targetId": "huang",
+            "willSpent": 0,
+            "weapon": "弃风长剑在手",
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 1,
+              "swift": 1
+            }
+          }
+        }
+      ],
+      "finalState": {
+        "player": {
+          "maneuvers": {
+            "turn": 1,
+            "startVisible": [
+              "huang"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": null,
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            0,
+            0
+          ]
+        },
+        "huang": {
+          "maneuvers": {
+            "turn": 1,
+            "startVisible": [
+              "player"
+            ],
+            "weaponUnavailable": true
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "practice-sword",
+                "name": "试验剑",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "held": false,
+                "oneHanded": true,
+                "grip": {
+                  "hands": 1,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "weapon": {
+                  "name": "试验剑",
+                  "type": "melee",
+                  "skill": "白刃",
+                  "damage": 1,
+                  "severity": "L",
+                  "size": 2,
+                  "ap": 0,
+                  "magic": 0,
+                  "attackBonus": 0,
+                  "blockBonus": 0
+                },
+                "durability": {
+                  "current": 0,
+                  "max": 1,
+                  "hardness": 1
+                },
+                "destroyed": true
+              }
+            ]
+          },
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            1,
+            0
+          ]
+        }
+      },
+      "pending": null,
+      "privateSnapshotSha256": "7465f4633253e6bd3e89d1bfc2afa4c60700d8aab548d417152b38a713fc250d"
+    },
+    {
+      "id": "07",
+      "chat": "901 全项战斗 07 冲撞 20261106",
+      "messages": 11,
+      "revision": 5,
+      "operations": [
+        {
+          "operationId": "declaration/901 全项战斗 07 冲撞 20261106/1/0/0",
+          "command": {
+            "abilityId": "bullRush",
+            "targetId": "huang",
+            "mode": "push",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "contest": {
+              "active": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 5,
+                  "auto": 2,
+                  "main": 5,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 3,
+                "dp": 15,
+                "luck": false,
+                "dice": [
+                  4,
+                  3,
+                  4,
+                  3,
+                  8,
+                  7,
+                  4,
+                  7,
+                  2,
+                  8,
+                  1,
+                  10,
+                  4,
+                  10,
+                  5,
+                  7,
+                  3
+                ],
+                "used": 17,
+                "rolledSuccesses": 4,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 7
+              },
+              "passive": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 1,
+                  "auto": 0,
+                  "main": 1,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 0,
+                "dp": 2,
+                "luck": false,
+                "dice": [
+                  9,
+                  9
+                ],
+                "used": 2,
+                "rolledSuccesses": 2,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 2
+              },
+              "margin": 5,
+              "won": true,
+              "defense": "strength"
+            },
+            "forcedMovement": {
+              "targetId": "huang",
+              "from": [
+                1,
+                0
+              ],
+              "to": [
+                3,
+                0
+              ],
+              "length": 2
+            }
+          },
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "standard": 1
+            },
+            "resources": [],
+            "items": [],
+            "targetId": "huang",
+            "willSpent": 0,
+            "movement": 0,
+            "forcedMovement": {
+              "targetId": "huang",
+              "from": [
+                1,
+                0
+              ],
+              "to": [
+                3,
+                0
+              ],
+              "length": 2
+            },
+            "remaining": {
+              "standard": 0,
+              "move": 1,
+              "swift": 1
+            }
+          }
+        },
+        {
+          "operationId": "declaration/901 全项战斗 07 冲撞 20261106/5/0/0",
+          "command": {
+            "abilityId": "move",
+            "to": [
+              1.5,
+              0
+            ],
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {},
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "move": 1
+            },
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 1.5,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 1
+            }
+          }
+        },
+        {
+          "operationId": "declaration/901 全项战斗 07 冲撞 20261106/7/0/0",
+          "command": {
+            "abilityId": "end",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {},
+          "damage": [],
+          "receipt": {
+            "actions": {},
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          }
+        },
+        {
+          "operationId": "combat/7/0/3",
+          "command": {
+            "actorId": "huang",
+            "abilityId": "end"
+          },
+          "status": "resolved",
+          "result": {},
+          "damage": [],
+          "receipt": {
+            "actions": {},
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          }
+        },
+        {
+          "operationId": "declaration/901 全项战斗 07 冲撞 20261106/9/0/0",
+          "command": {
+            "abilityId": "bullRush",
+            "targetId": "huang",
+            "mode": "knockdown",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "contest": {
+              "active": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 5,
+                  "auto": 2,
+                  "main": 5,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 3,
+                "dp": 15,
+                "luck": false,
+                "dice": [
+                  6,
+                  9,
+                  2,
+                  2,
+                  6,
+                  1,
+                  2,
+                  1,
+                  1,
+                  8,
+                  6,
+                  9,
+                  5,
+                  2,
+                  6
+                ],
+                "used": 15,
+                "rolledSuccesses": 3,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 6
+              },
+              "passive": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 1,
+                  "auto": 0,
+                  "main": 1,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 0,
+                "dp": 2,
+                "luck": false,
+                "dice": [
+                  7,
+                  3
+                ],
+                "used": 2,
+                "rolledSuccesses": 0,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 0
+              },
+              "margin": 6,
+              "won": true,
+              "defense": "strength"
+            },
+            "knockdown": {
+              "targetId": "huang"
+            }
+          },
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "standard": 1
+            },
+            "resources": [],
+            "items": [],
+            "targetId": "huang",
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 1,
+              "swift": 1
+            }
+          }
+        }
+      ],
+      "finalState": {
+        "player": {
+          "maneuvers": {
+            "turn": 2,
+            "startVisible": [
+              "huang"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": null,
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            1.5,
+            0
+          ]
+        },
+        "huang": {
+          "maneuvers": {
+            "turn": 2,
+            "startVisible": [
+              "player"
+            ],
+            "prone": true
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "practice-sword",
+                "name": "试验剑",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "held": true,
+                "oneHanded": true,
+                "grip": {
+                  "hands": 1,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "weapon": {
+                  "name": "试验剑",
+                  "type": "melee",
+                  "skill": "白刃",
+                  "damage": 1,
+                  "severity": "L",
+                  "size": 2,
+                  "ap": 0,
+                  "magic": 0,
+                  "attackBonus": 0,
+                  "blockBonus": 0
+                },
+                "durability": {
+                  "current": 1,
+                  "max": 1,
+                  "hardness": 1
+                }
+              }
+            ]
+          },
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            3,
+            0
+          ]
+        }
+      },
+      "pending": null,
+      "privateSnapshotSha256": "6627b162cd26ad28daf38bc17bb0b96cdbe2a161a25d0f76f611c107a8e5d6d8"
+    },
+    {
+      "id": "08",
+      "chat": "901 全项战斗 08 反冲 20261106",
+      "messages": 5,
+      "revision": 3,
+      "operations": [
+        {
+          "operationId": "declaration/901 全项战斗 08 反冲 20261106/1/0/0",
+          "command": {
+            "abilityId": "bullRush",
+            "targetId": "huang",
+            "mode": "push",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "contest": {
+              "active": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 0,
+                  "auto": 0,
+                  "main": 0,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 0,
+                "dp": 1,
+                "luck": false,
+                "dice": [
+                  7
+                ],
+                "used": 1,
+                "rolledSuccesses": 0,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 0
+              },
+              "passive": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 5,
+                  "auto": 2,
+                  "main": 5,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 4,
+                "dp": 17,
+                "luck": false,
+                "dice": [
+                  6,
+                  1,
+                  8,
+                  4,
+                  7,
+                  6,
+                  2,
+                  1,
+                  9,
+                  7,
+                  5,
+                  1,
+                  8,
+                  9,
+                  8,
+                  1,
+                  6
+                ],
+                "used": 17,
+                "rolledSuccesses": 5,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 9
+              },
+              "margin": 0,
+              "won": false,
+              "defense": "strength"
+            }
+          },
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "standard": 1
+            },
+            "resources": [],
+            "items": [],
+            "targetId": "huang",
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 1,
+              "swift": 1
+            }
+          }
+        },
+        {
+          "operationId": "combat/1/0/1",
+          "command": {
+            "actorId": "huang",
+            "abilityId": "counterRush",
+            "mode": "push"
+          },
+          "status": "pending",
+          "result": {},
+          "damage": [],
+          "receipt": null
+        },
+        {
+          "operationId": "declaration/901 全项战斗 08 反冲 20261106/3/0/0",
+          "command": {
+            "abilityId": "react",
+            "choice": "decline",
+            "defense": "normal",
+            "grappleDefense": "strength",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "contest": {
+              "active": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 5,
+                  "auto": 2,
+                  "main": 5,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 4,
+                "dp": 17,
+                "luck": false,
+                "dice": [
+                  2,
+                  6,
+                  1,
+                  10,
+                  9,
+                  1,
+                  3,
+                  8,
+                  3,
+                  5,
+                  7,
+                  6,
+                  3,
+                  2,
+                  4,
+                  4,
+                  2,
+                  5
+                ],
+                "used": 18,
+                "rolledSuccesses": 3,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 7
+              },
+              "passive": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 1,
+                  "auto": 0,
+                  "main": 1,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 0,
+                "dp": 0,
+                "luck": true,
+                "dice": [
+                  9
+                ],
+                "used": 1,
+                "rolledSuccesses": 0,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 0
+              },
+              "margin": 7,
+              "won": true,
+              "defense": "strength"
+            },
+            "forcedMovement": {
+              "targetId": "player",
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                -3,
+                0
+              ],
+              "length": 3
+            }
+          },
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "swift": 1,
+              "reflex": 1
+            },
+            "resources": [],
+            "items": [],
+            "targetId": "player",
+            "willSpent": 0,
+            "movement": 0,
+            "forcedMovement": {
+              "targetId": "player",
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                -3,
+                0
+              ],
+              "length": 3
+            },
+            "remaining": {
+              "standard": 1,
+              "move": 1,
+              "swift": 0
+            }
+          }
+        }
+      ],
+      "finalState": {
+        "player": {
+          "maneuvers": {
+            "turn": 1,
+            "startVisible": [
+              "huang"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": null,
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            -3,
+            0
+          ]
+        },
+        "huang": {
+          "maneuvers": {
+            "turn": 1,
+            "startVisible": [
+              "player"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "practice-sword",
+                "name": "试验剑",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "held": true,
+                "oneHanded": true,
+                "grip": {
+                  "hands": 1,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "weapon": {
+                  "name": "试验剑",
+                  "type": "melee",
+                  "skill": "白刃",
+                  "damage": 1,
+                  "severity": "L",
+                  "size": 2,
+                  "ap": 0,
+                  "magic": 0,
+                  "attackBonus": 0,
+                  "blockBonus": 0
+                },
+                "durability": {
+                  "current": 1,
+                  "max": 1,
+                  "hardness": 1
+                }
+              }
+            ]
+          },
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            1,
+            0
+          ]
+        }
+      },
+      "pending": null,
+      "privateSnapshotSha256": "72b24f89f4abf24a48e4bddf4e49581f4178d3b13826b357ca60448ae1e1ac53"
+    },
+    {
+      "id": "09",
+      "chat": "901 全项战斗 09 擒抱 20261106",
+      "messages": 9,
+      "revision": 5,
+      "operations": [
+        {
+          "operationId": "declaration/901 全项战斗 09 擒抱 20261106/1/0/0",
+          "command": {
+            "abilityId": "grapple",
+            "targetId": "huang",
+            "attribute": "strength",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "contact": {
+              "eligible": true,
+              "willCost": 0,
+              "skill": {
+                "level": 5,
+                "auto": 2,
+                "main": 5,
+                "sub": 0
+              },
+              "adjustments": {
+                "allowed": true,
+                "penalty": 0,
+                "bonus": 0,
+                "entries": []
+              },
+              "autoSuccesses": 3,
+              "dp": 14,
+              "luck": false,
+              "dice": [
+                7,
+                5,
+                9,
+                6,
+                10,
+                10,
+                2,
+                1,
+                3,
+                6,
+                1,
+                8,
+                10,
+                1,
+                10,
+                2,
+                6,
+                3
+              ],
+              "used": 18,
+              "rolledSuccesses": 6,
+              "luckMishap": false,
+              "reExtraSuccesses": 0,
+              "total": 9
+            },
+            "grapple": {
+              "active": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 5,
+                  "auto": 2,
+                  "main": 5,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 3,
+                "dp": 15,
+                "luck": false,
+                "dice": [
+                  10,
+                  7,
+                  4,
+                  6,
+                  8,
+                  7,
+                  2,
+                  8,
+                  3,
+                  2,
+                  5,
+                  7,
+                  3,
+                  4,
+                  10,
+                  6,
+                  4
+                ],
+                "used": 17,
+                "rolledSuccesses": 4,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 7
+              },
+              "passive": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 1,
+                  "auto": 0,
+                  "main": 1,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 0,
+                "dp": 2,
+                "luck": false,
+                "dice": [
+                  4,
+                  1
+                ],
+                "used": 2,
+                "rolledSuccesses": 0,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 0
+              },
+              "success": true,
+              "margin": 7
+            }
+          },
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "standard": 1
+            },
+            "resources": [],
+            "items": [],
+            "targetId": "huang",
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 1,
+              "swift": 1
+            }
+          }
+        },
+        {
+          "operationId": "declaration/901 全项战斗 09 擒抱 20261106/3/0/0",
+          "command": {
+            "abilityId": "step",
+            "to": [
+              -1.5,
+              0
+            ],
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "grapple": {
+              "active": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 0,
+                  "auto": 0,
+                  "main": 0,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 1,
+                "dp": 10,
+                "luck": false,
+                "dice": [
+                  10,
+                  3,
+                  10,
+                  5,
+                  6,
+                  1,
+                  1,
+                  10,
+                  1,
+                  3,
+                  4,
+                  9,
+                  6
+                ],
+                "used": 13,
+                "rolledSuccesses": 4,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 5
+              },
+              "passive": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 0,
+                  "auto": 0,
+                  "main": 0,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 0,
+                "dp": 1,
+                "luck": false,
+                "dice": [
+                  7
+                ],
+                "used": 1,
+                "rolledSuccesses": 0,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 0
+              },
+              "success": true,
+              "margin": 5
+            }
+          },
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "move": 1
+            },
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 1.5,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 1
+            }
+          }
+        },
+        {
+          "operationId": "declaration/901 全项战斗 09 擒抱 20261106/5/0/0",
+          "command": {
+            "abilityId": "end",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {},
+          "damage": [],
+          "receipt": {
+            "actions": {},
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          }
+        },
+        {
+          "operationId": "combat/5/0/3",
+          "command": {
+            "actorId": "huang",
+            "abilityId": "end"
+          },
+          "status": "resolved",
+          "result": {},
+          "damage": [],
+          "receipt": {
+            "actions": {},
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          }
+        },
+        {
+          "operationId": "declaration/901 全项战斗 09 擒抱 20261106/7/0/0",
+          "command": {
+            "abilityId": "pressGrip",
+            "targetId": "huang",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "grapple": {
+              "active": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 5,
+                  "auto": 2,
+                  "main": 5,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 3,
+                "dp": 15,
+                "luck": false,
+                "dice": [
+                  5,
+                  9,
+                  10,
+                  3,
+                  1,
+                  1,
+                  1,
+                  6,
+                  2,
+                  5,
+                  10,
+                  8,
+                  5,
+                  3,
+                  8,
+                  2,
+                  9
+                ],
+                "used": 17,
+                "rolledSuccesses": 6,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 9
+              },
+              "passive": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 1,
+                  "auto": 0,
+                  "main": 1,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 0,
+                "dp": 2,
+                "luck": false,
+                "dice": [
+                  1,
+                  1
+                ],
+                "used": 2,
+                "rolledSuccesses": 0,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 0
+              },
+              "success": true,
+              "margin": 9
+            }
+          },
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "standard": 1
+            },
+            "resources": [],
+            "items": [],
+            "targetId": "huang",
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 1,
+              "swift": 1
+            }
+          }
+        }
+      ],
+      "finalState": {
+        "player": {
+          "maneuvers": {
+            "turn": 2,
+            "weaponUnavailable": true,
+            "startVisible": [
+              "huang"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": null,
+          "grapple": null,
+          "holds": [
+            "huang"
+          ],
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            -1.5,
+            0
+          ]
+        },
+        "huang": {
+          "maneuvers": {
+            "turn": 2,
+            "startVisible": [
+              "player"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "practice-sword",
+                "name": "试验剑",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "held": true,
+                "oneHanded": true,
+                "grip": {
+                  "hands": 1,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "weapon": {
+                  "name": "试验剑",
+                  "type": "melee",
+                  "skill": "白刃",
+                  "damage": 1,
+                  "severity": "L",
+                  "size": 2,
+                  "ap": 0,
+                  "magic": 0,
+                  "attackBonus": 0,
+                  "blockBonus": 0
+                },
+                "durability": {
+                  "current": 1,
+                  "max": 1,
+                  "hardness": 1
+                }
+              }
+            ]
+          },
+          "grapple": {
+            "holderId": "player",
+            "margin": 9,
+            "pressed": true,
+            "sinceRound": 1,
+            "source": "PHB ordinary grapple"
+          },
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            -0.5,
+            0
+          ]
+        }
+      },
+      "pending": null,
+      "privateSnapshotSha256": "6121190378102bc7463d7f7a94aaa7df540b76f63c220a4a6fed86608aef9ce8"
+    },
+    {
+      "id": "10",
+      "chat": "901 全项战斗 10 瞄准 20261106",
+      "messages": 11,
+      "revision": 5,
+      "operations": [
+        {
+          "operationId": "declaration/901 全项战斗 10 瞄准 20261106/1/0/0",
+          "command": {
+            "abilityId": "aim",
+            "targetId": "huang",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {},
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "standard": 1,
+              "move": 1
+            },
+            "resources": [],
+            "items": [],
+            "targetId": "huang",
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 1
+            }
+          }
+        },
+        {
+          "operationId": "declaration/901 全项战斗 10 瞄准 20261106/5/0/0",
+          "command": {
+            "abilityId": "reload",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {},
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "swift": 1
+            },
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          }
+        },
+        {
+          "operationId": "declaration/901 全项战斗 10 瞄准 20261106/7/0/0",
+          "command": {
+            "abilityId": "end",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {},
+          "damage": [],
+          "receipt": {
+            "actions": {},
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          }
+        },
+        {
+          "operationId": "combat/7/0/3",
+          "command": {
+            "actorId": "huang",
+            "abilityId": "end"
+          },
+          "status": "resolved",
+          "result": {},
+          "damage": [],
+          "receipt": {
+            "actions": {},
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          }
+        },
+        {
+          "operationId": "declaration/901 全项战斗 10 瞄准 20261106/9/0/0",
+          "command": {
+            "abilityId": "strike",
+            "targetId": "huang",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "attack": {
+              "rawDP": 12,
+              "dp": 12,
+              "attribute": "敏捷",
+              "handling": {
+                "requirement": 2,
+                "deficit": 0,
+                "strengthPenalty": 0,
+                "gripPenalty": 0,
+                "aimMultiplier": 1,
+                "distancePenalty": 0,
+                "range": 160
+              },
+              "legacyCompatible": false,
+              "weaponType": "bow",
+              "severity": "L",
+              "weapon": 2,
+              "cap": 10,
+              "fixed": 0,
+              "ap": 0,
+              "magic": 0,
+              "speed": 0,
+              "extra": 0,
+              "ignore": 0,
+              "aggravate": 0,
+              "electric": 0,
+              "reduction": 0,
+              "range": 160,
+              "explode": 10,
+              "magical": false,
+              "ranged": true,
+              "firearm": null,
+              "ballistic": null,
+              "energyWeapon": false,
+              "hardnessIgnore": 0,
+              "spiritEligible": false,
+              "defense": {
+                "total": 4,
+                "parts": {
+                  "base": 1,
+                  "natural": 0,
+                  "armor": 3,
+                  "dodge": 0,
+                  "insight": 0,
+                  "block": 0,
+                  "cover": 0,
+                  "cultivation": 0,
+                  "force": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "unholy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 0,
+                "guarded": false,
+                "extraSuccesses": 0
+              },
+              "roll": {
+                "dp": 8,
+                "luck": false,
+                "dice": [
+                  7,
+                  9,
+                  9,
+                  9,
+                  3,
+                  2,
+                  5,
+                  6
+                ],
+                "used": 8,
+                "rolledSuccesses": 3,
+                "luckMishap": false
+              },
+              "amount": 3
+            }
+          },
+          "damage": [
+            {
+              "targetId": "huang",
+              "kind": "physical",
+              "energyType": null,
+              "input": 3,
+              "inputSeverity": "L",
+              "severity": "L",
+              "actualDamage": 3,
+              "causedDamage": true,
+              "temporaryAbsorbed": 0
+            }
+          ],
+          "receipt": {
+            "actions": {
+              "standard": 1
+            },
+            "resources": [],
+            "items": [
+              {
+                "name": "弹药",
+                "quantity": 1
+              }
+            ],
+            "targetId": "huang",
+            "willSpent": 0,
+            "weapon": "试验弓",
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 1,
+              "swift": 1
+            }
+          }
+        }
+      ],
+      "finalState": {
+        "player": {
+          "maneuvers": {
+            "turn": 2,
+            "startVisible": [
+              "huang"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "test-bow",
+                "name": "试验弓",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "held": true,
+                "oneHanded": false,
+                "grip": {
+                  "hands": 2,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "loaded": false,
+                "weapon": {
+                  "name": "试验弓",
+                  "type": "bow",
+                  "skill": "射击",
+                  "damage": 2,
+                  "severity": "L",
+                  "attackBonus": 0,
+                  "blockBonus": 0,
+                  "strengthRequirement": 2,
+                  "rangeUnit": 20,
+                  "rangeUnits": 8,
+                  "ap": 0,
+                  "magic": 0,
+                  "ammunition": {
+                    "kind": "arrow",
+                    "cost": 1,
+                    "loadingAction": "swift"
+                  }
+                }
+              }
+            ]
+          },
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": 4,
+          "position": [
+            0,
+            0
+          ]
+        },
+        "huang": {
+          "maneuvers": {
+            "turn": 2,
+            "startVisible": [
+              "player"
+            ]
+          },
+          "health": {
+            "intact": 97,
+            "B": 0,
+            "L": 3,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "practice-sword",
+                "name": "试验剑",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "held": true,
+                "oneHanded": true,
+                "grip": {
+                  "hands": 1,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "weapon": {
+                  "name": "试验剑",
+                  "type": "melee",
+                  "skill": "白刃",
+                  "damage": 1,
+                  "severity": "L",
+                  "size": 2,
+                  "ap": 0,
+                  "magic": 0,
+                  "attackBonus": 0,
+                  "blockBonus": 0
+                },
+                "durability": {
+                  "current": 1,
+                  "max": 1,
+                  "hardness": 1
+                }
+              }
+            ]
+          },
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            10,
+            0
+          ]
+        }
+      },
+      "pending": null,
+      "privateSnapshotSha256": "b8076201e848837f8ca6a541d6dd89c93a6d3764e3df1aa60b1eff3e204b1b6f"
+    },
+    {
+      "id": "11",
+      "chat": "901 全项战斗 11 调整 20261106",
+      "messages": 7,
+      "revision": 4,
+      "operations": [
+        {
+          "operationId": "combat/1/0/0",
+          "command": {
+            "actorId": "huang",
+            "abilityId": "feint",
+            "targetId": "player"
+          },
+          "status": "pending",
+          "result": {},
+          "damage": [],
+          "receipt": null
+        },
+        {
+          "operationId": "declaration/901 全项战斗 11 调整 20261106/3/0/0",
+          "command": {
+            "abilityId": "react",
+            "defense": "normal",
+            "choice": "decline",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "contest": {
+              "active": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 5,
+                  "auto": 3,
+                  "main": 5,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 5,
+                "dp": 17,
+                "luck": false,
+                "dice": [
+                  2,
+                  7,
+                  7,
+                  8,
+                  7,
+                  2,
+                  6,
+                  7,
+                  6,
+                  10,
+                  10,
+                  6,
+                  9,
+                  2,
+                  1,
+                  1,
+                  3,
+                  3,
+                  10,
+                  1
+                ],
+                "used": 20,
+                "rolledSuccesses": 5,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 10
+              },
+              "passive": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 2,
+                  "auto": 0,
+                  "main": 2,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 0,
+                "dp": 6,
+                "luck": false,
+                "dice": [
+                  6,
+                  2,
+                  7,
+                  2,
+                  6,
+                  1
+                ],
+                "used": 6,
+                "rolledSuccesses": 0,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 0
+              },
+              "won": true
+            }
+          },
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "standard": 1
+            },
+            "resources": [],
+            "items": [],
+            "targetId": "player",
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 1,
+              "swift": 1
+            }
+          }
+        },
+        {
+          "operationId": "combat/3/0/2",
+          "command": {
+            "actorId": "huang",
+            "abilityId": "end"
+          },
+          "status": "resolved",
+          "result": {},
+          "damage": [],
+          "receipt": {
+            "actions": {},
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          }
+        },
+        {
+          "operationId": "declaration/901 全项战斗 11 调整 20261106/5/0/0",
+          "command": {
+            "abilityId": "adjust",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {},
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "standard": 1,
+              "move": 1
+            },
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 1
+            }
+          }
+        }
+      ],
+      "finalState": {
+        "player": {
+          "maneuvers": {
+            "turn": 1,
+            "startVisible": [
+              "huang"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": null,
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            0,
+            0
+          ]
+        },
+        "huang": {
+          "maneuvers": {
+            "turn": 2,
+            "startVisible": [
+              "player"
+            ],
+            "feints": {}
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "practice-sword",
+                "name": "试验剑",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "held": true,
+                "oneHanded": true,
+                "grip": {
+                  "hands": 1,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "weapon": {
+                  "name": "试验剑",
+                  "type": "melee",
+                  "skill": "白刃",
+                  "damage": 1,
+                  "severity": "L",
+                  "size": 2,
+                  "ap": 0,
+                  "magic": 0,
+                  "attackBonus": 0,
+                  "blockBonus": 0
+                },
+                "durability": {
+                  "current": 1,
+                  "max": 1,
+                  "hardness": 1
+                }
+              }
+            ]
+          },
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            1,
+            0
+          ]
+        }
+      },
+      "pending": null,
+      "privateSnapshotSha256": "8360062613b032d3cab58c52313c7342d13208a582775e908de6549975f67fe2"
+    },
+    {
+      "id": "12",
+      "chat": "901 全项战斗 12 冲锋到期 20261106",
+      "messages": 5,
+      "revision": 3,
+      "operations": [
+        {
+          "operationId": "declaration/901 全项战斗 12 冲锋到期 20261106/1/0/0",
+          "command": {
+            "abilityId": "charge",
+            "targetId": "huang",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "attack": {
+              "rawDP": 25,
+              "dp": 25,
+              "attribute": "敏捷",
+              "handling": {
+                "requirement": 0,
+                "deficit": 0,
+                "strengthPenalty": 0,
+                "gripPenalty": 0,
+                "aimMultiplier": 1,
+                "distancePenalty": 0
+              },
+              "legacyCompatible": true,
+              "weaponType": null,
+              "severity": "L",
+              "weapon": 6,
+              "cap": 14,
+              "fixed": 1,
+              "ap": 2,
+              "magic": 2,
+              "speed": 0,
+              "extra": 0,
+              "ignore": 0,
+              "aggravate": 0,
+              "electric": 0,
+              "reduction": 3,
+              "range": 1.5,
+              "explode": 10,
+              "magical": false,
+              "ranged": false,
+              "firearm": null,
+              "ballistic": null,
+              "energyWeapon": false,
+              "hardnessIgnore": 0,
+              "spiritEligible": true,
+              "defense": {
+                "total": 1,
+                "parts": {
+                  "base": 0,
+                  "natural": 0,
+                  "armor": 1,
+                  "dodge": 0,
+                  "insight": 0,
+                  "block": 0,
+                  "cover": 0,
+                  "cultivation": 0,
+                  "force": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "unholy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 0,
+                "guarded": false,
+                "extraSuccesses": 0
+              },
+              "roll": {
+                "dp": 24,
+                "luck": false,
+                "dice": [
+                  5,
+                  9,
+                  7,
+                  7,
+                  10,
+                  6,
+                  3,
+                  7,
+                  6,
+                  3,
+                  1,
+                  10,
+                  8,
+                  5,
+                  5,
+                  9,
+                  3,
+                  8,
+                  7,
+                  1,
+                  3,
+                  5,
+                  6,
+                  2,
+                  4,
+                  7
+                ],
+                "used": 26,
+                "rolledSuccesses": 6,
+                "luckMishap": false
+              },
+              "amount": 7
+            }
+          },
+          "damage": [
+            {
+              "targetId": "huang",
+              "kind": "physical",
+              "energyType": null,
+              "input": 7,
+              "inputSeverity": "L",
+              "severity": "L",
+              "actualDamage": 7,
+              "causedDamage": true,
+              "temporaryAbsorbed": 0
+            }
+          ],
+          "receipt": {
+            "actions": {
+              "standard": 1,
+              "move": 1
+            },
+            "resources": [],
+            "items": [],
+            "targetId": "huang",
+            "willSpent": 0,
+            "weapon": "弃风长剑在手",
+            "movement": 4.5,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 1
+            }
+          }
+        },
+        {
+          "operationId": "declaration/901 全项战斗 12 冲锋到期 20261106/3/0/0",
+          "command": {
+            "abilityId": "end",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {},
+          "damage": [],
+          "receipt": {
+            "actions": {},
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          }
+        },
+        {
+          "operationId": "combat/3/0/2",
+          "command": {
+            "actorId": "huang",
+            "abilityId": "end"
+          },
+          "status": "resolved",
+          "result": {},
+          "damage": [],
+          "receipt": {
+            "actions": {},
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          }
+        }
+      ],
+      "finalState": {
+        "player": {
+          "maneuvers": {
+            "turn": 2,
+            "startVisible": [
+              "huang"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": null,
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            4.5,
+            0
+          ]
+        },
+        "huang": {
+          "maneuvers": {
+            "turn": 2,
+            "startVisible": [
+              "player"
+            ]
+          },
+          "health": {
+            "intact": 93,
+            "B": 0,
+            "L": 7,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "practice-sword",
+                "name": "试验剑",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "held": true,
+                "oneHanded": true,
+                "grip": {
+                  "hands": 1,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "weapon": {
+                  "name": "试验剑",
+                  "type": "melee",
+                  "skill": "白刃",
+                  "damage": 1,
+                  "severity": "L",
+                  "size": 2,
+                  "ap": 0,
+                  "magic": 0,
+                  "attackBonus": 0,
+                  "blockBonus": 0
+                },
+                "durability": {
+                  "current": 1,
+                  "max": 1,
+                  "hardness": 1
+                }
+              }
+            ]
+          },
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            6,
+            0
+          ]
+        }
+      },
+      "pending": null,
+      "privateSnapshotSha256": "9ca691a4daf4c33047d69304da909c706bdc7826164e3647e5193a51a5d8e9d6"
+    },
+    {
+      "id": "13",
+      "chat": "901 全项战斗 13 受击伏地 20261106",
+      "messages": 7,
+      "revision": 4,
+      "operations": [
+        {
+          "operationId": "combat/1/0/0",
+          "command": {
+            "actorId": "huang",
+            "abilityId": "strike",
+            "targetId": "player"
+          },
+          "status": "pending",
+          "result": {},
+          "damage": [],
+          "receipt": null
+        },
+        {
+          "operationId": "declaration/901 全项战斗 13 受击伏地 20261106/3/0/0",
+          "command": {
+            "abilityId": "dropProne",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "posture": "prone"
+          },
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "reflex": 1
+            },
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          }
+        },
+        {
+          "operationId": "declaration/901 全项战斗 13 受击伏地 20261106/5/0/0",
+          "command": {
+            "abilityId": "react",
+            "choice": "decline",
+            "defense": "normal",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "attack": {
+              "rawDP": 3,
+              "dp": 3,
+              "attribute": "敏捷",
+              "handling": {
+                "requirement": 0,
+                "deficit": 0,
+                "strengthPenalty": 0,
+                "gripPenalty": 0,
+                "aimMultiplier": 1,
+                "distancePenalty": 0
+              },
+              "legacyCompatible": true,
+              "weaponType": "melee",
+              "severity": "L",
+              "weapon": 1,
+              "cap": 2,
+              "fixed": 0,
+              "ap": 0,
+              "magic": 0,
+              "speed": 0,
+              "extra": 0,
+              "ignore": 0,
+              "aggravate": 0,
+              "electric": 0,
+              "reduction": 0,
+              "range": 1.5,
+              "explode": 10,
+              "magical": false,
+              "ranged": false,
+              "firearm": null,
+              "ballistic": null,
+              "energyWeapon": false,
+              "hardnessIgnore": 0,
+              "spiritEligible": true,
+              "defense": {
+                "total": 9,
+                "parts": {
+                  "base": 2,
+                  "natural": 0,
+                  "armor": 3,
+                  "dodge": 2,
+                  "insight": 0,
+                  "block": 0,
+                  "cover": 0,
+                  "deflection": 2,
+                  "cultivation": 0,
+                  "force": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "unholy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 0,
+                "guarded": false,
+                "extraSuccesses": 0
+              },
+              "roll": {
+                "dp": -6,
+                "luck": true,
+                "dice": [
+                  9
+                ],
+                "used": 1,
+                "rolledSuccesses": 0,
+                "luckMishap": false
+              },
+              "amount": 0
+            }
+          },
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "standard": 1
+            },
+            "resources": [],
+            "items": [],
+            "targetId": "player",
+            "willSpent": 0,
+            "weapon": "试验剑",
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 1,
+              "swift": 1
+            }
+          }
+        },
+        {
+          "operationId": "combat/5/0/3",
+          "command": {
+            "actorId": "huang",
+            "abilityId": "end"
+          },
+          "status": "resolved",
+          "result": {},
+          "damage": [],
+          "receipt": {
+            "actions": {},
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          }
+        }
+      ],
+      "finalState": {
+        "player": {
+          "maneuvers": {
+            "turn": 1,
+            "prone": true,
+            "startVisible": [
+              "huang"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": null,
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            0,
+            0
+          ]
+        },
+        "huang": {
+          "maneuvers": {
+            "turn": 2,
+            "startVisible": [
+              "player"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "practice-sword",
+                "name": "试验剑",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "held": true,
+                "oneHanded": true,
+                "grip": {
+                  "hands": 1,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "weapon": {
+                  "name": "试验剑",
+                  "type": "melee",
+                  "skill": "白刃",
+                  "damage": 1,
+                  "severity": "L",
+                  "size": 2,
+                  "ap": 0,
+                  "magic": 0,
+                  "attackBonus": 0,
+                  "blockBonus": 0
+                },
+                "durability": {
+                  "current": 1,
+                  "max": 1,
+                  "hardness": 1
+                }
+              }
+            ]
+          },
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            1,
+            0
+          ]
+        }
+      },
+      "pending": null,
+      "privateSnapshotSha256": "baeec02b6a15da0eb74df8d4ead5d8879fa85eaaf77e1079ecd399c46920798c"
+    },
+    {
+      "id": "05fix",
+      "chat": "901 全项战斗 05 击落修复 20261106",
+      "messages": 3,
+      "revision": 1,
+      "operations": [
+        {
+          "operationId": "declaration/901 全项战斗 05 击落修复 20261106/1/0/0",
+          "command": {
+            "abilityId": "disarm",
+            "targetId": "huang",
+            "itemId": "practice-sword",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "attack": {
+              "rawDP": 15,
+              "dp": 15,
+              "attribute": "敏捷",
+              "handling": {
+                "requirement": 0,
+                "deficit": 0,
+                "strengthPenalty": 0,
+                "gripPenalty": 0,
+                "aimMultiplier": 1,
+                "distancePenalty": 0
+              },
+              "legacyCompatible": true,
+              "weaponType": null,
+              "severity": "L",
+              "weapon": 6,
+              "cap": 11,
+              "fixed": 2,
+              "ap": 2,
+              "magic": 2,
+              "speed": 0,
+              "extra": 0,
+              "ignore": 0,
+              "aggravate": 0,
+              "electric": 0,
+              "reduction": 3,
+              "range": 1.5,
+              "explode": 10,
+              "magical": false,
+              "ranged": false,
+              "firearm": null,
+              "ballistic": null,
+              "energyWeapon": false,
+              "hardnessIgnore": 0,
+              "spiritEligible": true,
+              "calledPenalty": 3,
+              "defense": {
+                "total": 2,
+                "parts": {
+                  "base": 0,
+                  "natural": 0,
+                  "armor": 1,
+                  "dodge": 1,
+                  "insight": 0,
+                  "block": 0,
+                  "cover": 0,
+                  "cultivation": 0,
+                  "force": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "unholy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 0,
+                "guarded": false,
+                "extraSuccesses": 0
+              },
+              "roll": {
+                "dp": 13,
+                "luck": false,
+                "dice": [
+                  1,
+                  4,
+                  1,
+                  6,
+                  7,
+                  1,
+                  2,
+                  6,
+                  1,
+                  8,
+                  3,
+                  5,
+                  5
+                ],
+                "used": 13,
+                "rolledSuccesses": 1,
+                "luckMishap": false
+              },
+              "amount": 3
+            },
+            "contest": {
+              "active": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 5,
+                  "auto": 2,
+                  "main": 5,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 3,
+                "dp": 15,
+                "luck": false,
+                "dice": [
+                  7,
+                  8,
+                  5,
+                  5,
+                  7,
+                  10,
+                  7,
+                  3,
+                  7,
+                  3,
+                  3,
+                  9,
+                  2,
+                  4,
+                  1,
+                  2
+                ],
+                "used": 16,
+                "rolledSuccesses": 3,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 6
+              },
+              "passive": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 1,
+                  "auto": 0,
+                  "main": 1,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 0,
+                "dp": 2,
+                "luck": false,
+                "dice": [
+                  6,
+                  7
+                ],
+                "used": 2,
+                "rolledSuccesses": 0,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 0
+              },
+              "margin": 6,
+              "won": true
+            },
+            "disarmed": {
+              "targetId": "huang",
+              "itemId": "practice-sword",
+              "name": "试验剑",
+              "position": [
+                1,
+                0
+              ]
+            }
+          },
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "standard": 1
+            },
+            "resources": [],
+            "items": [],
+            "targetId": "huang",
+            "willSpent": 0,
+            "weapon": "弃风长剑在手",
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 1,
+              "swift": 1
+            }
+          }
+        }
+      ],
+      "finalState": {
+        "player": {
+          "maneuvers": {
+            "turn": 1,
+            "startVisible": [
+              "huang"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": null,
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            0,
+            0
+          ]
+        },
+        "huang": {
+          "maneuvers": {
+            "turn": 1,
+            "startVisible": [
+              "player"
+            ],
+            "weaponUnavailable": true
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "practice-sword",
+                "name": "试验剑",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "ground",
+                "held": false,
+                "oneHanded": true,
+                "grip": {
+                  "hands": 1,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "weapon": {
+                  "name": "试验剑",
+                  "type": "melee",
+                  "skill": "白刃",
+                  "damage": 1,
+                  "severity": "L",
+                  "size": 2,
+                  "ap": 0,
+                  "magic": 0,
+                  "attackBonus": 0,
+                  "blockBonus": 0
+                },
+                "durability": {
+                  "current": 1,
+                  "max": 1,
+                  "hardness": 1
+                },
+                "position": [
+                  1,
+                  0
+                ]
+              }
+            ]
+          },
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            1,
+            0
+          ]
+        }
+      },
+      "pending": null,
+      "privateSnapshotSha256": "98ac524c0674055ee915897b2aa6348c32e93c3e736494124ad3896284f9fc8b"
+    },
+    {
+      "id": "02pack",
+      "chat": "901 全项战斗 02 背包取物 20261106",
+      "messages": 3,
+      "revision": 1,
+      "operations": [
+        {
+          "operationId": "declaration/901 全项战斗 02 背包取物 20261106/1/0/0",
+          "command": {
+            "abilityId": "takeItem",
+            "itemId": "test-cloth",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "itemUse": {
+              "itemId": "test-cloth",
+              "name": "试验布条",
+              "operation": "take",
+              "action": "swift"
+            }
+          },
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "swift": 1
+            },
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "itemUse": {
+              "itemId": "test-cloth",
+              "name": "试验布条",
+              "operation": "take",
+              "action": "swift"
+            },
+            "movement": 0,
+            "remaining": {
+              "standard": 1,
+              "move": 1,
+              "swift": 0
+            }
+          }
+        }
+      ],
+      "finalState": {
+        "player": {
+          "maneuvers": {
+            "turn": 1,
+            "startVisible": [
+              "huang"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "test-cloth",
+                "name": "试验布条",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "access": "accessible",
+                "small": true,
+                "held": true
+              },
+              {
+                "id": "test-pack",
+                "name": "试验油布包",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "access": "backpack",
+                "held": false
+              }
+            ]
+          },
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            0,
+            0
+          ]
+        },
+        "huang": {
+          "maneuvers": {
+            "turn": 1,
+            "startVisible": [
+              "player"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "practice-sword",
+                "name": "试验剑",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "held": true,
+                "oneHanded": true,
+                "grip": {
+                  "hands": 1,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "weapon": {
+                  "name": "试验剑",
+                  "type": "melee",
+                  "skill": "白刃",
+                  "damage": 1,
+                  "severity": "L",
+                  "size": 2,
+                  "ap": 0,
+                  "magic": 0,
+                  "attackBonus": 0,
+                  "blockBonus": 0
+                },
+                "durability": {
+                  "current": 1,
+                  "max": 1,
+                  "hardness": 1
+                }
+              }
+            ]
+          },
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            1,
+            0
+          ]
+        }
+      },
+      "pending": null,
+      "privateSnapshotSha256": "071e93ba40d3f9efa7738b0dfb01082d37c10a8ad421815467fe621e3642ebd7"
+    },
+    {
+      "id": "02packfix",
+      "chat": "901 全项战斗 02 背包取物修复 20261106",
+      "messages": 3,
+      "revision": 1,
+      "operations": [
+        {
+          "operationId": "declaration/901 全项战斗 02 背包取物修复 20261106/1/0/0",
+          "command": {
+            "abilityId": "takeItem",
+            "itemId": "test-pack",
+            "actorId": "player"
+          },
+          "status": "resolved",
+          "result": {
+            "itemUse": {
+              "itemId": "test-pack",
+              "name": "试验油布包",
+              "operation": "take",
+              "action": "full"
+            }
+          },
+          "damage": [],
+          "receipt": {
+            "actions": {
+              "standard": 1,
+              "move": 1
+            },
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "itemUse": {
+              "itemId": "test-pack",
+              "name": "试验油布包",
+              "operation": "take",
+              "action": "full"
+            },
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 1
+            }
+          }
+        }
+      ],
+      "finalState": {
+        "player": {
+          "maneuvers": {
+            "turn": 1,
+            "startVisible": [
+              "huang"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "test-cloth",
+                "name": "试验布条",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "access": "accessible",
+                "small": true,
+                "held": false
+              },
+              {
+                "id": "test-pack",
+                "name": "试验油布包",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "access": "backpack",
+                "held": true
+              }
+            ]
+          },
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            0,
+            0
+          ]
+        },
+        "huang": {
+          "maneuvers": {
+            "turn": 1,
+            "startVisible": [
+              "player"
+            ]
+          },
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "practice-sword",
+                "name": "试验剑",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "carried",
+                "held": true,
+                "oneHanded": true,
+                "grip": {
+                  "hands": 1,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "weapon": {
+                  "name": "试验剑",
+                  "type": "melee",
+                  "skill": "白刃",
+                  "damage": 1,
+                  "severity": "L",
+                  "size": 2,
+                  "ap": 0,
+                  "magic": 0,
+                  "attackBonus": 0,
+                  "blockBonus": 0
+                },
+                "durability": {
+                  "current": 1,
+                  "max": 1,
+                  "hardness": 1
+                }
+              }
+            ]
+          },
+          "grapple": null,
+          "holds": null,
+          "aim": null,
+          "ammunition": null,
+          "position": [
+            1,
+            0
+          ]
+        }
+      },
+      "pending": null,
+      "privateSnapshotSha256": "227707a38fb1ad3529a44c7c5a8076e9bcc5538d0aa4e6f75db6dbb93e3828c2"
+    }
+  ]
+}

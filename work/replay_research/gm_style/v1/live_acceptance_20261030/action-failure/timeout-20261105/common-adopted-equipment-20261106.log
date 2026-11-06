@@ -1,0 +1,15 @@
+✔ the actual armor declaration is extracted; dialogue, private thoughts and future plans do not execute (2.633ms)
+✔ RE light armor removal consumes one minute, preserves the item, and removes real armor defense (20.7963ms)
+✔ unknown properties, unavailable items, combat, and unsupported layering never partially update (10.0939ms)
+✔ equipment distinguishes carried armor from worn armor without changing pending defense (15.5631ms)
+✔ player bar renders avatar and MVU values above input; explicit refresh updates guard and remaining actions (44.7609ms)
+✔ late state read cannot reveal the previous chat after switching chats (61.6906ms)
+✔ status request opens the bar when an initial read is still pending; unrelated cards stay hidden (15.0619ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 327.6513

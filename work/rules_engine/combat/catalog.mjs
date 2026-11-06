@@ -1,10 +1,12 @@
 import {BASIC_ACTIONS} from '../resource-action-bindings.mjs';
+import {COMMON_ACTIONS} from './common-actions.mjs';
 import { beginTurn, createCharacter } from '../core.mjs';
 
 // Adopted comparison configuration, NOT an overwrite of a campaign/T0 save.
 // Sources: outputs/同伴RE资源调整/{四人战斗面板对比,姜子尤,黄泉,龙象般若功,狮子王}.md
 // under the sibling 901-resource-authoring-kit. Existing 901 great powers retained.
 export const ABILITIES = {
+  ...COMMON_ACTIONS,
   search:{name:'主动侦查',action:'标准',text:'全部实际感官重新侦查感知范围内生物；胜出将定位提高一级，仍受反侦测与心灵免疫边界限制。'},
   jump:{name:'跳跃',action:'移动',text:'选择实际起跳计划；力量＋运动·跳跃判定后占真实移动额度，未完成须付后续移动动作。'},
   continueJump:{name:'续接跳跃',action:'移动',text:'续算保存的同一次跳跃，不重新投骰；跳高下降不另扣额度。'},
@@ -50,7 +52,7 @@ export const ABILITIES = {
   tornado:{name:'狂岚·聚风龙卷',action:'标准＋1合用能量',text:'20米单体白刃攻击，整体减防8替代弃风减防3。可随动作拔剑。'},
   gale:{name:'狂岚·群袭',action:'标准＋1合用能量',text:'20米内每个合法敌人逐一攻击；招式＋3与辟邪取高，每目标减防3，分别受伤害上限。'},
   reload:{name:'上箭',action:'迅捷',text:'装填一支现有普通箭；射击时消耗。'},
-  aim:{name:'实际瞄准',action:'标准',text:'本轮瞄准指定目标；下次行动开始增加一轮实际瞄准，与自动瞄准合计最多三轮。其他标准或移动动作、近战命中中断。'},
+  aim:{name:'实际瞄准',action:'整轮',text:'瞄准三个射程单位内的目标；下次行动开始增加一轮实际瞄准，与自动瞄准合计最多三轮。其他标准或移动动作、近战命中中断，迅捷装填不打断。'},
   timeBolt:{name:'时属性攻击',action:'标准＋1导力',text:'50米有效果线目标受1B精神能量伤害，无攻击及豁免。造成实伤后1DP成功则施加等量精神束缚。'},
   timeHaste:{name:'时间加速',action:'标准＋移动＋1导力',text:'50米，场景内目标每次自己回合结束后先攻顺位前移一位；不重复行动、不增加动作或移动速度；不越过原先更早的同术目标。'},
   react:{name:'受击反应',action:'无',text:'攻击宣言后、掷骰前选择本次伤害转换；命中造成伤害才消耗每场景次数。'},

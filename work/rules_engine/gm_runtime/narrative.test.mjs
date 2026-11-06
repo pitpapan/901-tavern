@@ -155,7 +155,12 @@ test('natural attack settles only the declared action, keeps remaining player ac
   assert.doesNotMatch(JSON.stringify(other),/health|energy|attributes|defense|buffs|cooldowns|\bDP\b/);
   assert.doesNotMatch(JSON.stringify(publicFacts.events),/actualDamage|rolledSuccesses|inputSeverity|defense|energy|hpMax/);
   assert.doesNotMatch(f.chat.at(-1).mes,/姜子尤：完好|结算明细|rules901_detail|主持补参/);
-  assert.doesNotMatch(f.chat.at(-1).mes,/<details>|自身状态|DP|剩余动作/);
+  assert.doesNotMatch(f.chat.at(-1).mes,/<details>|自身状态|DP/);
+  assert.match(f.chat.at(-1).mes,/【本次战斗记录】/);
+  assert.match(f.chat.at(-1).mes,/聚风龙卷 → 姜子尤/);
+  assert.match(f.chat.at(-1).mes,/标准×1/);
+  assert.match(f.chat.at(-1).mes,/风池×1/);
+  assert.match(f.chat.at(-1).mes,/剩余动作：移动×1、迅捷×1/);
   const ui=await f.session.currentState();
   assert.equal(ui.player.actions.move,1);
   assert.equal(ui.player.energy.风池.current,9);
@@ -256,7 +261,7 @@ test('every incoming player attack waits for a declared defense even after conve
     {drawDice:()=>{rolls++;return Array(1024).fill(8);}});
   assert.equal(out.battle.pending?.awaiting,'player');
   assert.equal(rolls,0);assert.equal(out.battle.actors.player.state.health.intact,21);
-  assert.deepEqual(inspectCommands(out.battle).options.filter(o=>!o.command.willpower).map(o=>o.command.choice),['decline']);
+  assert.deepEqual(inspectCommands(out.battle).options.filter(o=>o.command.abilityId==='react'&&!o.command.willpower).map(o=>o.command.choice),['decline']);
 });
 test('player defense has no total until a defense mode is declared; ready block is not silently added to normal defense',()=>{
   const b=createIntegrationFixture(baseline).encounters['yulin-jiang']();
@@ -417,4 +422,21 @@ test('existing chat builds its map once, map viewing does not spend actions, and
   }
   assert.deepEqual(f.root().battle.actors.player.position,[0,1]);assert.equal(f.root().actors.player.state.turn.move,0);
   assert.equal(generated,1);assert.equal((await session.currentState()).map.actors.find(a=>a.id==='player').position[1],1);
+});
+
+test('takeItem cannot substitute another registered object for the named declaration',()=>{
+ const b=createIntegrationFixture(baseline).encounters['yulin-jiang']();b.activeId='player';b.actors.player.state=beginTurn(b.actors.player.state).state;
+ b.actors.player.state.possessions={items:[
+  {id:'cloth',name:'试验布条',source:'fixture',location:'carried',access:'accessible',small:true,held:false},
+  {id:'pack',name:'试验油布包',source:'fixture',location:'carried',access:'backpack',held:false}]};
+ const quote='从背包取出试验油布包',before=structuredClone(b);
+ assert.throws(()=>narrative.validateStep({quote,command:{abilityId:'takeItem',itemId:'cloth'}},quote,b),/物品|名称/);
+ assert.deepEqual(b,before);
+ assert.equal(narrative.validateStep({quote,command:{abilityId:'takeItem',itemId:'pack'}},quote,b).itemId,'pack');
+ const cloth='取出试验布条';assert.equal(narrative.validateStep({quote:cloth,command:{abilityId:'takeItem',itemId:'cloth'}},cloth,b).itemId,'cloth');
+});
+
+test('private thoughts are never accepted as the quoted source for a battle command',()=>{
+ const b=createIntegrationFixture(baseline).encounters['yulin-jiang']();b.activeId='player';
+ assert.throws(()=>narrative.validateStep({quote:'我使用虚招',command:{abilityId:'feint',targetId:'jiang'}},'[我使用虚招] “等等。”',b),/私念|执行声明/);
 });

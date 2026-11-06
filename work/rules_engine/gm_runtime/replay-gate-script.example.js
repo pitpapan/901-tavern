@@ -21,6 +21,7 @@ window.addEventListener('pagehide', () => {
 function safeFailure(error, stage) {
   const status = Number(error?.status ?? error?.statusCode ?? error?.response?.status);
   if (error?.code === 'CLASSIFICATION_TIMEOUT') return { reason: 'deadline', httpStatus: null };
+  if (error?.code === 'CLASSIFICATION_CANCELLED') return { reason: 'cancelled', httpStatus: null };
   if (Number.isInteger(status) && status >= 100 && status <= 599)
     return { reason: 'http_error', httpStatus: status };
   if (stage === 'response_parse') return { reason: 'invalid_model_response', httpStatus: null };
@@ -38,7 +39,7 @@ function failureDetails(error) {
   // credentials or arbitrary error text in ordinary chat metadata.
   const details={};
   if(['INVALID_DECISION_JSON','INVALID_DECISION_STATUS','INVALID_DECISION_REASON','INVALID_DECISION_REQUEST','INVALID_CHECK_ATTRIBUTE',
-    'CLASSIFICATION_TIMEOUT'].includes(error?.code))details.errorCode=error.code;
+    'CLASSIFICATION_TIMEOUT','CLASSIFICATION_CANCELLED'].includes(error?.code))details.errorCode=error.code;
   const localErrors={
     'Player floor changed during adjudication':'PLAYER_ANCHOR_CHANGED',
     'MVU operation already in progress':'MVU_OPERATION_IN_PROGRESS',
@@ -123,7 +124,7 @@ if(combat && tavern_events.GENERATION_STARTED && typeof getChatMessages==='funct
     const mvu=await getMvu();
     if(mvu.getMvuData({type:'message',message_id:messageId})?.stat_data?.['901_rules_poc']?.battle?.mode!=='combat')return;
     const message=getChatMessages(String(messageId),{include_swipes:true})[0];
-    nativeCombatRegeneration={chatId:id,message:structuredClone(message)};
+    nativeCombatRegeneration={chatId:id,message:structuredClone(message),extra:structuredClone(last.extra??{})};
   });
 const readinessOf = (mvu, player) => replayGateReadiness({ mvu, chatId: chatId(), player,
   generateRaw: typeof generateRaw === 'function' ? generateRaw : null,
@@ -181,6 +182,10 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
       await createChatMessages([{role:message.role,name:message.name,is_hidden:message.is_hidden,
         message:message.swipes[swipe],data:message.swipes_data[swipe],extra:message.swipes_info[swipe]}]);
       await setChatMessages([message]);
+      // Native swipe_info includes dates and an extra envelope; the helper's
+      // swiped-message setter assigns that envelope to message.extra. Restore
+      // the actual report metadata so the narrative cache finds this report.
+      SillyTavern.chat[message.message_id].extra=structuredClone(regeneration.extra);
       await SillyTavern.saveChat();
     }
     await profile.prepare?.({mvu,player});
@@ -322,12 +327,37 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
         const request = replayClassificationRequest({ context,
           scene, relatedFacts,
           skills: currentPlayer.skills,ruleContext,
-          state: { health: summary.health, turn: summary.turn,...runtime.recoveryState() },
+          state: { health: summary.health, turn: summary.turn,...runtime.recoveryState(),equipment:runtime.equipmentState() },
           directEffects: profile.directEffects === false ? [] : runtime.directEffectOptions,
           encounters: combat?.encounterOptions ?? [],
           scriptedOpportunityIds: runtime.scriptedOpportunityIds(),
           unsupported: baseline.definition.abilities.map(ability => ability.name) });
-        const generationId = `901-classify-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+        const firstGenerationId = `901-classify-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+        let generationId = firstGenerationId;
+        let cancelled = false;
+        const deadlineStops = new Set();
+        const onStop = id => {
+          if (id !== undefined && deadlineStops.has(id)) return;
+          if (id === undefined || id === generationId) cancelled = true;
+        };
+        const stopListener = typeof eventOn === 'function' && tavern_events?.GENERATION_STOPPED
+          ? eventOn(tavern_events.GENERATION_STOPPED, onStop) : null;
+        // Keep the native generation blocked throughout this asynchronous hook.
+        // A non-silent helper request re-enables native send controls on cleanup.
+        const cancelParent = hostDocument.getElementById('leftSendForm');
+        const cancelButton = cancelParent && hostDocument.createElement('button');
+        if (cancelButton) {
+          cancelButton.type = 'button';
+          cancelButton.id = '901-classification-stop';
+          cancelButton.className = 'menu_button';
+          cancelButton.textContent = '停止判断';
+          cancelButton.onclick = () => { cancelled = true; stopGenerationById(generationId); };
+          cancelParent.append(cancelButton);
+        }
+        const stillCurrent = () => {
+          stable();
+          if (cancelled) throw Object.assign(new Error('Classification cancelled by user'), {code:'CLASSIFICATION_CANCELLED'});
+        };
         mark('request_serialization');
         mark('request_constructed', { generationId,
           explicitRequestBytes: new TextEncoder().encode(JSON.stringify(request)).length });
@@ -347,9 +377,30 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
                 elapsedToAssemblyMs: Math.round(performance.now() - started) }));
           }) : null;
         try {
-          mark('request_dispatched', { classificationRequests: diagnostic.classificationRequests + 1 });
-          const decision = await classifyWithDeadline({ generateRaw, stopGenerationById,
-            request, generationId, timeoutMs: profile.classificationTimeoutMs ?? 30000 });
+          let decision;
+          // Retry only an acknowledged deadline cancellation before any rule
+          // result exists. A new ID isolates the abandoned request's cleanup.
+          for (let attempt = 0; attempt < 2; attempt++) {
+            stillCurrent();
+            generationId = attempt ? `${firstGenerationId}-retry-1` : firstGenerationId;
+            inspected = false;
+            mark('request_dispatched', { generationId,
+              classificationRequests: diagnostic.classificationRequests + 1 });
+            try {
+              decision = await classifyWithDeadline({ generateRaw,
+                stopGenerationById: id => { deadlineStops.add(id); return stopGenerationById(id); },
+                request, generationId, timeoutMs: profile.classificationTimeoutMs ?? 30000 });
+              stillCurrent();
+              break;
+            } catch (error) {
+              stillCurrent();
+              if (attempt !== 0 || error?.code !== 'CLASSIFICATION_TIMEOUT' ||
+                  error.stopResult !== true || !stopListener) throw error;
+              mark('classification_timeout_retry', { classificationRecovery: {
+                reason:'CLASSIFICATION_TIMEOUT', attempts:2,
+                timeoutMs:profile.classificationTimeoutMs ?? 30000 } });
+            }
+          }
           try { lastDecision = parseReplayDecision(decision); }
           catch { lastDecision = null; }
           mark('response_received');
@@ -360,7 +411,13 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
           const safe = safeFailure(error, diagnostic.stage);
           mark('classification_failed', { failureStage: diagnostic.stage, ...safe });
           throw error;
-        } finally { listener?.stop(); }
+        } finally {
+          cancelButton?.remove();
+          listener?.stop();
+          stopListener?.stop();
+          if (typeof eventRemoveListener === 'function' && tavern_events?.GENERATION_STOPPED)
+            eventRemoveListener(tavern_events.GENERATION_STOPPED, onStop);
+        }
       },
       settle: async ({ context, operationId, request }) => {
         if(profile.directEffects===false&&request.kind==='direct_effect')
@@ -432,6 +489,7 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
         `玩家行动：${context.original.text}\n` +
         (context.latest.messageId !== context.original.messageId ? `本次补充：${context.latest.text}\n` : '') +
         `裁定路径：${decision.status}\n` +
+        (runtime.equipmentState()?`当前已保存装备状态：${JSON.stringify(runtime.equipmentState())}。物品仍在不等于仍在穿戴，按worn承接；旧回复不能恢复已卸下装备的效果。\n`:'')+
         (currentScene?`当前实际现场：${currentScene}\n开场背景与旧回复不能覆盖这份当前现场，未实际到场的人不能补入。\n`:'')+
         `规则事实：${settled?.kind === 'scripted_fortune'
           ? runtime.scriptedNarrationFacts(settled.operationId) : compactNarrationFacts(settled,settled?.kind==='recovery'?runtime.recoveryState():undefined)}\n` +
@@ -455,7 +513,9 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
           ? { status: meta.status, operationId: meta.operationId, kind: meta.result?.kind }
           : { ...meta, ...(meta.pending && pending?.localChoice ? { pending } : {}) };
         await createChatMessages([{ role: 'assistant', message, extra: { '901_replay_gate': {
-          ...publicMeta, ...(debug ? { diagnostic: { ...diagnostic } } : {}) } } }]);
+          ...publicMeta,
+          ...(diagnostic.classificationRecovery ? {classificationRecovery:diagnostic.classificationRecovery} : {}),
+          ...(debug ? { diagnostic: { ...diagnostic } } : {}) } } }]);
         if (meta.status === 'APPLIED' || meta.status === 'NO_CHECK') {
           const finalIndex = SillyTavern.chat.length - 1;
           await carryTestState({ mvu, expectedChatId,
@@ -499,6 +559,8 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
       : saved
       ? '规则结果已保存，叙述尚未完成；请恢复本次操作，不要重新投骰。'
       : pending?.narrationDecision ? '行动已判定无需检定，叙述尚未完成；重新生成本条回复即可恢复，无需重复发送行动。'
+      : error?.code === 'CLASSIFICATION_CANCELLED' ? '已停止消息处理；本轮没有执行规则结算。'
+      : error?.code === 'CLASSIFICATION_TIMEOUT' ? '消息处理请求超时，尚未生成回复；本轮没有执行规则结算。可重新生成本条回复重试，无需重复发送消息。'
       : error?.code === 'INVALID_CHECK_ATTRIBUTE' ? '主持模型生成的检定属性不合法，本次尚未掷骰或结算，需要纠正判定输入。'
       : '行动判断或规则输入未完成；本次行动尚未裁定，没有确定成败。';
     await createChatMessages([{ role: 'assistant', message: debug

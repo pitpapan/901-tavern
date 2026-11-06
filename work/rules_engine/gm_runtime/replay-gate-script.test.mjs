@@ -7,7 +7,7 @@ import {createRecoveryFixture} from './recovery-fixture.mjs';
 // Run the browser controller itself; replace only host APIs and model transport.
 // Real Builder, gate and MVU adapter modules still execute.
 async function hostFixture({ action = '我向布莱特点头，说：“我们到了。”',
-  decision = { status: 'NO_CHECK', basis: 'ordinary_dialogue', reason: '普通问候' }, combat = null, profile = {}, lorebooks = {901:[]}, generationError = null, brokenListenerStop = false } = {}) {
+  decision = { status: 'NO_CHECK', basis: 'ordinary_dialogue', reason: '普通问候' }, combat = null, profile = {}, lorebooks = {901:[]}, generationError = null, brokenListenerStop = false, classificationTransport = null, stopResult = true } = {}) {
   const root = new URL('../../../', import.meta.url);
   const source = (await readFile(new URL('./replay-gate-script.example.js', import.meta.url), 'utf8'))
     .replaceAll("'/901-rules-runtime/", `'${root.href}`)
@@ -28,11 +28,11 @@ async function hostFixture({ action = '我向布莱特点头，说：“我们�
     window: { top: { document: { getElementById: () => null } }, addEventListener() {} },
     console: { log() {}, info() {}, error() {} },
     SillyTavern: { chatId: 'host-test', chat, stopGeneration() {}, saveChat: async () => { stats.saves++; } },
-    tavern_events: { GENERATION_STARTED:'start', GENERATE_AFTER_DATA: 'generate', WORLDINFO_ENTRIES_LOADED: 'worlds' },
+    tavern_events: { GENERATION_STARTED:'start', GENERATION_STOPPED:'stopped', GENERATE_AFTER_DATA: 'generate', WORLDINFO_ENTRIES_LOADED: 'worlds' },
     eventMakeFirst: (event, listener) => { if(event==='generate')hook=listener;else generationHooks.set(event,listener); },
     eventOn: (event, listener) => { listeners.set(event, listener); return { stop: () => { if(!brokenListenerStop)listeners.delete(event); } }; },
     eventRemoveListener: (event, listener) => { if(listeners.get(event)===listener)listeners.delete(event); },
-    stopGenerationById() {},
+    stopGenerationById(id) { (stats.stoppedIds??=[]).push(id);listeners.get('stopped')?.(id);return stopResult; },
     getCurrentCharPrimaryLorebook: () => '901',
     getLorebookEntries: async book => { (stats.readBooks??=[]).push(book); return lorebooks[book]??[]; },
     fetch: async () => ({ ok: true, json: async () => baseline }),
@@ -40,6 +40,7 @@ async function hostFixture({ action = '我向布莱特点头，说：“我们�
       if (request.generation_id) {
         stats.classifications++;
         stats.lastClassificationRequest=request;
+        if(classificationTransport)return classificationTransport({request,stats,chat,listeners});
         if(generationError)throw generationError;
         return JSON.stringify(decision);
       }
@@ -113,6 +114,69 @@ test('postcombat story classification failure retains its diagnostic instead of 
  assert.equal(meta.diagnostic.failureStage,'request_dispatched');
 });
 
+test('dialogue classification timeout reports a processing failure without implying an attempted action',async()=>{
+ const action='“我现在的穿着直接进去？” 御临风指了指自己身上饱经战损的帝国制式盔甲，就这么过去一定会引起注意的。';
+ const fixture=await hostFixture({action,generationError:Object.assign(Error('classification deadline exceeded'),{code:'CLASSIFICATION_TIMEOUT'})});
+ await fixture.run();
+ const reply=fixture.chat.at(-1),meta=reply.extra['901_replay_gate'];
+ assert.match(reply.mes,/消息处理请求超时/);
+ assert.doesNotMatch(reply.mes,/本次行动|尚未裁定|确定成败/);
+ assert.equal(meta.status,'UNRESOLVED');
+ assert.equal(meta.diagnostic.errorCode,'CLASSIFICATION_TIMEOUT');
+ assert.equal(meta.pending.original.text,action);
+ assert.equal(meta.pending.request,null);
+ assert.equal(fixture.stats.classifications,1);
+ assert.equal(fixture.stats.narrations,0);
+ assert.equal(fixture.chat[0].mes,action);
+ assert.equal(fixture.floors[0].stat_data['901_rules_poc'].revision,0);
+ assert.deepEqual(fixture.floors[0].stat_data['901_rules_poc'].operations,{});
+});
+
+test('classification timeout retries the same input once with a new id and ignores the late first decision',async()=>{
+ let late;const requests=[];
+ const fixture=await hostFixture({profile:{classificationTimeoutMs:5,debug:false},classificationTransport:({request})=>{
+  requests.push(request);
+  if(requests.length===1)return new Promise(resolve=>{late=resolve;});
+  return JSON.stringify({status:'NO_CHECK',basis:'ordinary_dialogue',reason:'普通对白'});
+ }});
+ fixture.succeed();await fixture.run();
+ assert.equal(requests.length,2);
+ assert.equal(requests[0].should_silence,true,'classification must not reopen the intercepted native generation');
+ assert.notEqual(requests[0].generation_id,requests[1].generation_id);
+ const withoutId=({generation_id,...rest})=>rest;
+ assert.deepEqual(withoutId(requests[0]),withoutId(requests[1]));
+ assert.deepEqual(fixture.stats.stoppedIds,[requests[0].generation_id]);
+ assert.equal(fixture.chat.at(-1).extra['901_replay_gate'].status,'NO_CHECK');
+ assert.equal(fixture.chat.at(-1).extra['901_replay_gate'].classificationRecovery.attempts,2);
+ const before=structuredClone(fixture.floors);
+ late(JSON.stringify({status:'CHECK_REQUIRED',reason:'迟到的旧判断',request:{kind:'check',attribute:'力量',skill:'运动',dc:2}}));
+ await new Promise(resolve=>setTimeout(resolve,0));
+ assert.deepEqual(fixture.floors,before);assert.equal(fixture.stats.narrations,1);
+ assert.equal(fixture.floors[0].stat_data['901_rules_poc'].revision,0);
+});
+
+test('classification recovery stops after two timeouts without narration or settlement',async()=>{
+ const fixture=await hostFixture({profile:{classificationTimeoutMs:5},classificationTransport:()=>new Promise(()=>{})});
+ await fixture.run();
+ assert.equal(fixture.stats.classifications,2);assert.equal(fixture.stats.narrations,0);
+ assert.equal(fixture.chat.at(-1).extra['901_replay_gate'].diagnostic.classificationRequests,2);
+ assert.equal(fixture.chat.at(-1).extra['901_replay_gate'].status,'UNRESOLVED');
+ assert.equal(fixture.floors[0].stat_data['901_rules_poc'].revision,0);
+});
+
+test('classification recovery does not retry after explicit stop, changed input, or unconfirmed cancellation',async()=>{
+ for(const kind of ['stop','changed','unconfirmed']){
+  const fixture=await hostFixture({profile:{classificationTimeoutMs:5},stopResult:kind!=='unconfirmed',classificationTransport:({request,chat,listeners})=>{
+   if(kind==='stop')listeners.get('stopped')?.(request.generation_id);
+   if(kind==='changed')chat[0].mes='玩家已修改原消息';
+   return new Promise(()=>{});
+  }});
+  await fixture.run();
+  assert.equal(fixture.stats.classifications,1,kind);assert.equal(fixture.stats.narrations,0,kind);
+  assert.equal(fixture.floors[0].stat_data['901_rules_poc'].revision,0,kind);
+ }
+});
+
 test('postcombat story continuation failure remains resumable without reclassifying or settling',async()=>{
  let combatFailures=0;
  const fixture=await hostFixture({combat:{handleTurn:async()=>({handled:false}),handleFailure:async()=>{combatFailures++;return true;}}});
@@ -143,7 +207,7 @@ test('native combat regeneration restores the deleted report and unique latest r
   const latest={snapshot:true,stat_data:{'901_rules_poc':{revision:19,battle:{mode:'combat'},operations:{old:{},uniqueCast:{damage:3,energy:1}}}}};
   fixture.floors[0]=structuredClone(older);
   fixture.chat.push({is_user:false,name:'report',mes:'saved cast: 3L',extra:{combatReport:true},swipe_id:1,
-    swipes:['older alternate','saved cast: 3L'],variables:[older,latest],swipe_info:[{alternate:true},{combatReport:true}]});
+    swipes:['older alternate','saved cast: 3L'],variables:[older,latest],swipe_info:[{send_date:'old',extra:{alternate:true}},{send_date:'saved',extra:{combatReport:true}}]});
   fixture.floors[1]=structuredClone(latest);
   await fixture.start();
   fixture.chat.pop();delete fixture.floors[1]; // native Generate removes memory + DOM before the late hook
@@ -152,6 +216,7 @@ test('native combat regeneration restores the deleted report and unique latest r
   assert.equal(fixture.chat.length,2);
   assert.equal(fixture.chat[1].mes,'saved cast: 3L');
   assert.equal(fixture.chat[1].swipe_id,1);
+  assert.deepEqual(fixture.chat[1].extra,{combatReport:true},'native swipe envelope must not replace the report identity');
   assert.deepEqual(fixture.chat[1].variables,[older,latest]);
   assert.deepEqual(fixture.floors[0],older);
   assert.equal(fixture.stats.classifications,0);assert.equal(fixture.stats.narrations,0);

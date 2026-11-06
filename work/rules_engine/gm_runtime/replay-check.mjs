@@ -1,3 +1,4 @@
+import {equipmentDeclarationMatches,equipmentStateSummary} from '../equipment-state.mjs';
 import {flushAutomaticResourceEvents} from './resource-program.mjs';
 import {additionalDamageCandidates} from '../resource-additional-damage.mjs';
 import {socialResourceContext} from '../resource-social.mjs';
@@ -170,6 +171,7 @@ export function createReplayCheckRuntime({ baseline, mvu, getAnchor, expectedCha
     },
     read: () => readTestSummary(opts),
     currentPlayer:()=>readTestActorState({...opts,actorId:'player'}),
+    equipmentState:()=>equipmentStateSummary(readTestActorState({...opts,actorId:'player'})),
     ruleContext() {
       const scene=readTestSummary(opts).ruleScene;
       const actual={actors:Object.fromEntries(Object.keys(readTestSummary(opts).actors).map(id=>[id,{state:readTestActorState({...opts,actorId:id})}]))};
@@ -238,6 +240,8 @@ export function createReplayCheckRuntime({ baseline, mvu, getAnchor, expectedCha
         const saved=readTestOperation({...opts,operationId});
         if(saved){if(saved.signature!==JSON.stringify({request}))throw Error('Operation ID already used for different input');return {...saved.summary,status:'already_applied'};}
         const declaration=[context?.original?.text,context?.latest?.text].filter(Boolean).join('；');
+        if(request.action==='equipment'&&!equipmentDeclarationMatches(request,context?.original?.text,
+          readTestActorState({...opts,actorId:'player'})))return {status:'needs_input',missing:['须按玩家实际穿脱原文选择唯一装备并保留完整顺序；对白、私念和未来打算不执行。']};
         if(['growth','feat','resource'].includes(request.action)&&(!/提升|升级|提高|学习|购买|支付|付清/.test(declaration)||!/^(?!.*(?:暂不|不要|取消|能否|可否|是否)).*$/s.test(declaration)||
           !declaration.includes((request.action==='resource'?readTestSummary(opts).ruleScene.learningOffers?.[request.offerId]?.name:undefined)??request.attribute??request.sub??request.skill??({...ruleFeats,...readTestSummary(opts).ruleScene.feats})[request.featId]?.name??request.featId)))return {status:'needs_input',missing:['需要玩家明确声明提升的属性、技能、专长或资源；不自动花费XP。']};
         if(['growth','feat','resource'].includes(request.action)&&declaration.includes('悟法')&&(request.action!=='resource'||request.paymentId===undefined))return {status:'needs_input',missing:['悟法XP只能按已登记付款方案用于观澜树D级技艺；不能改扣普通XP。']};

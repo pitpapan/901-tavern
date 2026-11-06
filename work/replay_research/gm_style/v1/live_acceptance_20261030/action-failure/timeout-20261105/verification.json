@@ -1,0 +1,18 @@
+{
+  "naturalBaselineRuns": 2,
+  "naturalTimeoutReproduced": false,
+  "controlledTimeoutRecoveryPassed": true,
+  "actualStopButtonPassed": true,
+  "faultFreeCandidatePassed": true,
+  "sourceSha256": "ce8cdb0c7357c7800bdeaee2b844032541eea3cc11900bcd89953a884b4e3e19",
+  "isolatedGateSha256": "0a73c639195056ee03383bab7da2b2410ec3fae08a9b16b3624fefa9db15909a",
+  "formalProtectedFilesUnchanged": 272,
+  "formalInstalled": false,
+  "modelUnchanged": true,
+  "autoFillOff": true,
+  "tests": {
+    "command": "node --test work/rules_engine/gm_runtime/replay-gate-script.test.mjs work/rules_engine/gm_runtime/adjudication-gate.test.mjs",
+    "passed": 69
+  },
+  "providerInternalCause": "unknown"
+}

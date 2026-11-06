@@ -1,0 +1,49 @@
+✔ all-out melee uses one standard action and its real +2/-2 expires at next own turn (59.3015ms)
+✔ fatigue prevents all-out without paying or changing the input state (3.5955ms)
+✔ drop prone consumes reflex, halves movement, modifies melee/ranged defense, stand consumes move (26.5035ms)
+✔ available common choices are present without granting a learned skill (218.3489ms)
+✔ ordinary item retrieval uses actual access and never duplicates ownership (4.6256ms)
+✔ incoming bull rush waits for the player choice and persists it across serialization (15.8489ms)
+✔ ordinary grapple enters the existing hold, suppression and escape system without damage (165.4356ms)
+✔ ordinary aiming pays a full round and a swift reload does not cancel it (7.1219ms)
+✔ charge pays move plus standard, stops at nearest melee range and saves its temporary penalty (27.4085ms)
+✔ feint has one target, removes only basic defense and is consumed by the next melee attack (18.0677ms)
+✔ trip is a contact contest, knocks down on success and never damages the creature (6.3051ms)
+✔ sunder uses hit then opposed roll, subtracts item hardness and never injures the holder (22.0516ms)
+✖ disarm keeps the actual item on the ground and prevents the old weapon from returning by fallback (19.2817ms)
+✔ a pending attack accepts explicit reflex prone without resolving or replacing the attack (12.6612ms)
+✔ resisted bull rush offers a paid optional counter without rerolling the original contest (16.7241ms)
+✔ counter rush chooses a reflex action and preserves the first paid contest (27.112ms)
+✔ aim does not create an incoming attack window and missing durability cannot damage an item (217.9596ms)
+✔ prone appears in the actual pending choices and a second prone cannot spend again (17.6346ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 17
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1195.202
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\combat\common-actions.test.mjs:115:1
+✖ disarm keeps the actual item on the ground and prevents the old weapon from returning by fallback (19.2817ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /主手武器已脱手或损毁，当前徒手/. Input:
+  
+  '旧大师级太刀出鞘'
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/common-actions.test.mjs:121:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '旧大师级太刀出鞘',
+    expected: /主手武器已脱手或损毁，当前徒手/,
+    operator: 'match',
+    diff: 'simple'
+  }

@@ -4,10 +4,35 @@ import { readFileSync } from 'node:fs';
 import { createReplayCheckRuntime } from './replay-check.mjs';
 import {createOpeningFixture} from './opening.mjs';
 import {createRecoveryFixture} from './recovery-fixture.mjs';
+import {openingArmorRegistration} from '../equipment-state.mjs';
+import {equipment} from '../combat/mechanics.mjs';
+import {createOpeningRoster} from '../combat/opening.mjs';
 import { playerCheckDisplay, runGuardedTurn, savedDecisionForRecovery,
   replayClassificationRequest } from './adjudication-gate.mjs';
 
 const baseline = JSON.parse(readFileSync(new URL('../../character_builder/real_character/yulinfeng_replay_t0.baseline.json', import.meta.url)));
+
+test('equipment declaration commits once, survives narration recovery, and refuses private or invented steps',async()=>{
+ let data={stat_data:{}},writes=0;const anchor={chatId:'equipment-test',messageId:5,swipeId:0};
+ const opts={baseline,expectedChatId:anchor.chatId,getAnchor:()=>anchor,actorTemplates:createOpeningRoster(),
+  mvu:{getMvuData:()=>structuredClone(data),replaceMvuData:async v=>{writes++;data=structuredClone(v);}}};
+ let rt=createReplayCheckRuntime(opts);await rt.initialize({openingAssumption:true});
+ data.stat_data['901_rules_poc'].actors=createOpeningRoster();Object.assign(data.stat_data['901_rules_poc'].actors.player.state,openingArmorRegistration());
+ const request={kind:'rule',action:'equipment',actorId:'player',steps:[{operation:'unequip',itemId:'opening.imperial-light-armor',sourceQuote:'将身上铠甲卸下'}]};
+ const id='gm-runtime/equipment-test/5/0',before=structuredClone(data);
+ for(const text of ['[将身上铠甲卸下]','“将身上铠甲卸下。”','我打算将身上铠甲卸下','我没有将身上铠甲卸下']){
+  const p={...anchor,text};assert.equal((await rt.settle({operationId:id,request,context:{original:p,latest:p}})).status,'needs_input');assert.deepEqual(data,before);
+ }
+ const p={...anchor,text:'御临风将身上铠甲卸下，用油布裹好。'};
+ const result=await rt.settle({operationId:id,request,context:{original:p,latest:p}});
+ assert.equal(result.status,'applied');assert.equal(result.result.elapsedMinutes,1);
+ assert.equal(equipment(data.stat_data['901_rules_poc'].actors.player).armor.defense,0);
+ const saved=structuredClone(data),savedWrites=writes;rt=createReplayCheckRuntime(opts);
+ assert.equal((await rt.settle({operationId:id,request})).status,'already_applied');
+ assert.deepEqual(data,saved);assert.equal(writes,savedWrites);
+ assert.equal(rt.equipmentState().items[0].worn,false);
+ assert.equal(savedDecisionForRecovery(null,data.stat_data['901_rules_poc'].operations[id]).request.action,'equipment');
+});
 
 test('ordered recovery commits one operation and replays the complete saved medicine/rest/meditation sequence',async()=>{
   const fixture=createRecoveryFixture();let data={stat_data:{}},draws=0,writes=0;

@@ -1,0 +1,54 @@
+{
+  "trace": [
+    {
+      "event": "dispatch",
+      "at": 1793918293011,
+      "model": "[抗截断]gemini-3.8-flash",
+      "stream": false,
+      "maxTokens": 4096,
+      "messageBytes": 70283,
+      "requestHash": "7aecbf866ba7f16ea4d6d9ca7f1b570903808089c275c784c09a4079f0cbe486"
+    },
+    {
+      "event": "controlled_delay_before_upstream",
+      "elapsed": 4
+    },
+    {
+      "event": "aborted",
+      "elapsed": 8300
+    }
+  ],
+  "gate": {
+    "status": "UNRESOLVED",
+    "operationId": "gm-runtime/901 帝都正式开局 20261105/3/0",
+    "pending": {
+      "original": {
+        "chatId": "901 帝都正式开局 20261105",
+        "messageId": 3,
+        "swipeId": 0,
+        "text": "“我现在的穿着直接进去？” 御临风指了指自己身上饱经战损的帝国制式盔甲，就这么过去一定会引起注意的。"
+      },
+      "operationId": "gm-runtime/901 帝都正式开局 20261105/3/0",
+      "request": null
+    },
+    "diagnostic": {
+      "stage": "blocked",
+      "operationId": "gm-runtime/901 帝都正式开局 20261105/3/0",
+      "classificationRequests": 1,
+      "narrationRequests": 0,
+      "elapsedMs": 9667,
+      "generationId": "901-classify-1793918291714-inw3oq7uxp",
+      "explicitRequestBytes": 70394,
+      "finalMessageCount": 2,
+      "finalMessageBytes": 70283,
+      "failureStage": "messages_assembled",
+      "reason": "cancelled",
+      "httpStatus": null,
+      "errorCode": "CLASSIFICATION_CANCELLED"
+    }
+  },
+  "messages": 5,
+  "playerTextsUnchanged": true,
+  "fullRuleRootUnchanged": true,
+  "ruleRevision": 0
+}

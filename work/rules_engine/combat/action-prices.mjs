@@ -8,7 +8,7 @@ export const PHYSICAL_ACTIONS={
  strike:'attack',thunder:'attack',cleaveRock:'attack',lightning:'attack',conduct:'attack',destroy:'attack',
  move:'move',step:'fiveFootStep',jump:'move',continueJump:'move',draw:'move',sheathe:'move',
  roar:['full','swift'],doubleStrike:['full','swift'],tornado:'attack',gale:'attack',zheng:'move',
- aim:'standard',door:'move',shieldPush:'standard',calibrate:'full',drawClub:'move',readyBow:'move',
+ aim:'full',door:'move',shieldPush:'standard',calibrate:'full',drawClub:'move',readyBow:'move',
  stowWeapon:'move',readyWeapon:'move',wake:'standard',firstAid:'full',escapeGrip:'attack',pressGrip:'attack',
  tentacles:'standard',releaseGrip:'free',garudaInterfere:'attack',
  block:'dynamic',reload:'dynamic',medicine:'dynamic',grappleAttack:'dynamic',garudaHide:'dynamic'

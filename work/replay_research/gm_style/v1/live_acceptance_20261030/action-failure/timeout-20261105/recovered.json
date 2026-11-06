@@ -1,0 +1,89 @@
+{
+  "trace": [
+    {
+      "event": "dispatch",
+      "at": 1793918097566,
+      "model": "[抗截断]gemini-3.8-flash",
+      "stream": false,
+      "maxTokens": 4096,
+      "messageBytes": 70283,
+      "requestHash": "7aecbf866ba7f16ea4d6d9ca7f1b570903808089c275c784c09a4079f0cbe486"
+    },
+    {
+      "event": "controlled_delay_before_upstream",
+      "elapsed": 3
+    },
+    {
+      "event": "aborted",
+      "elapsed": 59350
+    },
+    {
+      "event": "dispatch",
+      "at": 1793918156931,
+      "model": "[抗截断]gemini-3.8-flash",
+      "stream": false,
+      "maxTokens": 4096,
+      "messageBytes": 70283,
+      "requestHash": "7aecbf866ba7f16ea4d6d9ca7f1b570903808089c275c784c09a4079f0cbe486"
+    },
+    {
+      "event": "headers",
+      "elapsed": 5901,
+      "status": 200
+    },
+    {
+      "event": "complete",
+      "elapsed": 5914,
+      "usage": {
+        "prompt_tokens": 18215,
+        "completion_tokens": 90,
+        "total_tokens": 18305
+      },
+      "finishReason": "stop",
+      "textLength": 135
+    },
+    {
+      "event": "dispatch",
+      "at": 1793918163567,
+      "model": "[抗截断]gemini-3.8-flash",
+      "stream": false,
+      "maxTokens": 4096,
+      "messageBytes": 90515,
+      "requestHash": "bb502e3da834085a08963a589826a9c0e9a017d9e11d920995d56e004d1eab66"
+    },
+    {
+      "event": "headers",
+      "elapsed": 5958,
+      "status": 200
+    },
+    {
+      "event": "complete",
+      "elapsed": 5972,
+      "usage": {
+        "prompt_tokens": 22580,
+        "completion_tokens": 252,
+        "total_tokens": 22832
+      },
+      "finishReason": "stop",
+      "textLength": 301
+    },
+    {
+      "event": "aborted",
+      "elapsed": 14571
+    }
+  ],
+  "gate": {
+    "status": "NO_CHECK",
+    "operationId": "gm-runtime/901 帝都正式开局 20261105/3/0",
+    "basis": "ordinary_dialogue",
+    "classificationRecovery": {
+      "reason": "CLASSIFICATION_TIMEOUT",
+      "attempts": 2,
+      "timeoutMs": 60000
+    }
+  },
+  "messages": 5,
+  "playerTextsUnchanged": true,
+  "fullRuleRootUnchanged": true,
+  "ruleRevision": 0
+}

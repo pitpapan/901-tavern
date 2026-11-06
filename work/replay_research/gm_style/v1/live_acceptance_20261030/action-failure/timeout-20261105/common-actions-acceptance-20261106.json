@@ -1,0 +1,309 @@
+{
+  "scope": "18112-only; Terra High judgment, primary IAB execution; synthetic battle geometry, actual T0 actor stats; not canon",
+  "tests": {
+    "combatNarrative": {
+      "pass": 158,
+      "fail": 0
+    },
+    "equipmentStatus": {
+      "pass": 7,
+      "fail": 0
+    },
+    "regenerationGate": {
+      "pass": 29,
+      "fail": 0
+    }
+  },
+  "live": {
+    "charge": {
+      "messages": 3,
+      "revision": 1,
+      "operations": 1,
+      "abilityId": "charge",
+      "activeId": "player",
+      "receipt": {
+        "actions": {
+          "standard": 1,
+          "move": 1
+        },
+        "resources": [],
+        "items": [],
+        "targetId": "huang",
+        "willSpent": 0,
+        "weapon": "弃风长剑在手",
+        "movement": 4.5,
+        "remaining": {
+          "standard": 0,
+          "move": 0,
+          "swift": 1
+        }
+      },
+      "won": null,
+      "chargePenalty": 4,
+      "rolls": {
+        "attack": {
+          "dp": 20,
+          "luck": false,
+          "dice": [
+            6,
+            10,
+            6,
+            7,
+            7,
+            3,
+            5,
+            6,
+            4,
+            8,
+            1,
+            10,
+            3,
+            4,
+            2,
+            9,
+            1,
+            3,
+            8,
+            3,
+            9,
+            5
+          ],
+          "used": 22,
+          "rolledSuccesses": 6,
+          "luckMishap": false
+        },
+        "active": null,
+        "passive": null
+      },
+      "privatePlannedActionExecuted": false,
+      "privateThoughtDisclosedInReply": false,
+      "hash": "720093e7dfeb04596380347c7911294cadcb3f89c9b92bbf64743ec64164c617"
+    },
+    "feint": {
+      "messages": 3,
+      "revision": 1,
+      "operations": 1,
+      "abilityId": "feint",
+      "activeId": "player",
+      "receipt": {
+        "actions": {
+          "standard": 1
+        },
+        "resources": [],
+        "items": [],
+        "targetId": "huang",
+        "willSpent": 0,
+        "movement": 0,
+        "remaining": {
+          "standard": 0,
+          "move": 1,
+          "swift": 1
+        }
+      },
+      "won": false,
+      "chargePenalty": null,
+      "rolls": {
+        "attack": null,
+        "active": {
+          "eligible": true,
+          "willCost": 0,
+          "skill": {
+            "level": 2,
+            "auto": 0,
+            "main": 2,
+            "sub": 0
+          },
+          "adjustments": {
+            "allowed": true,
+            "penalty": 0,
+            "bonus": 0,
+            "entries": []
+          },
+          "autoSuccesses": 0,
+          "dp": 6,
+          "luck": false,
+          "dice": [
+            4,
+            9,
+            4,
+            6,
+            3,
+            6
+          ],
+          "used": 6,
+          "rolledSuccesses": 1,
+          "luckMishap": false,
+          "reExtraSuccesses": 0,
+          "total": 1
+        },
+        "passive": {
+          "eligible": true,
+          "willCost": 0,
+          "skill": {
+            "level": 2,
+            "auto": 0,
+            "main": 1,
+            "sub": 1
+          },
+          "adjustments": {
+            "allowed": true,
+            "penalty": 0,
+            "bonus": 0,
+            "entries": []
+          },
+          "autoSuccesses": 0,
+          "dp": 7,
+          "luck": false,
+          "dice": [
+            9,
+            5,
+            6,
+            3,
+            4,
+            10,
+            10,
+            3,
+            4
+          ],
+          "used": 9,
+          "rolledSuccesses": 3,
+          "luckMishap": false,
+          "reExtraSuccesses": 0,
+          "total": 3
+        }
+      },
+      "privatePlannedActionExecuted": false,
+      "privateThoughtDisclosedInReply": false,
+      "hash": "fb76a2f607980597ec1f281f1b42a8a44cf4320081f54b2a816064be46987a95"
+    },
+    "trip": {
+      "messages": 3,
+      "revision": 1,
+      "operations": 1,
+      "abilityId": "trip",
+      "activeId": "player",
+      "receipt": {
+        "actions": {
+          "standard": 1
+        },
+        "resources": [],
+        "items": [],
+        "targetId": "huang",
+        "willSpent": 0,
+        "movement": 0,
+        "remaining": {
+          "standard": 0,
+          "move": 1,
+          "swift": 1
+        }
+      },
+      "won": false,
+      "chargePenalty": null,
+      "rolls": {
+        "attack": null,
+        "active": {
+          "eligible": true,
+          "willCost": 0,
+          "skill": {
+            "level": 0,
+            "auto": 0,
+            "main": 0,
+            "sub": 0
+          },
+          "adjustments": {
+            "allowed": true,
+            "penalty": 0,
+            "bonus": 0,
+            "entries": []
+          },
+          "autoSuccesses": 0,
+          "dp": -2,
+          "luck": true,
+          "dice": [
+            9
+          ],
+          "used": 1,
+          "rolledSuccesses": 0,
+          "luckMishap": false,
+          "reExtraSuccesses": 0,
+          "total": 0
+        },
+        "passive": {
+          "eligible": true,
+          "willCost": 0,
+          "skill": {
+            "level": 2,
+            "auto": 0,
+            "main": 2,
+            "sub": 0
+          },
+          "adjustments": {
+            "allowed": true,
+            "penalty": 0,
+            "bonus": 0,
+            "entries": []
+          },
+          "autoSuccesses": 1,
+          "dp": 8,
+          "luck": false,
+          "dice": [
+            8,
+            2,
+            4,
+            4,
+            4,
+            7,
+            6,
+            3
+          ],
+          "used": 8,
+          "rolledSuccesses": 1,
+          "luckMishap": false,
+          "reExtraSuccesses": 0,
+          "total": 2
+        }
+      },
+      "privatePlannedActionExecuted": false,
+      "privateThoughtDisclosedInReply": false,
+      "hash": "f788098c948dff22f51df6f049113db1563de8f12bf20c5111756111b397b672"
+    }
+  },
+  "regeneration": {
+    "rows": 4,
+    "root_unchanged": true,
+    "extra_preserved": true,
+    "swipes_preserved": true,
+    "reply_preserved": true,
+    "firstFailurePreserved": true
+  },
+  "formal": {
+    "checkedFiles": 277,
+    "changed": [],
+    "added": []
+  },
+  "isolatedModelConfigUnchanged": true,
+  "autoFill": "not enabled; previous off setting retained",
+  "limitations": [
+    "Charge expiry at next own turn: local tests only",
+    "Feint/trip success: local tests only",
+    "Disarm/sunder: local source-labeled synthetic item fixtures only; no invented durability in live actor",
+    "No formal install, original chat migration or commit",
+    "Chase-push and all special weapons/combinations not covered"
+  ],
+  "deployment": {
+    "combat/common-actions.mjs": "0f38189df92a358c9f0aff828ad97b4155a0c3324003c4d28754958739c9798e",
+    "combat/engine.mjs": "c703481ae340ad585cb49645e3ac1e6defa33382f6885332223b32571953a4ad",
+    "combat/runtime.mjs": "f30cde1ccebee36b2d9ce6bf3d805692c42fe3fe2d61d317167617e4537d0b00",
+    "combat/transitions.mjs": "765d9717e13ebd71404b1fd9230c4fddad1a6e91f3fa9ecc0943df847c653445",
+    "combat/mechanics.mjs": "86d7a09ee52cc7d05a0f9bff8ce4610dec13631f0d93f9b3e752c763b21e1e34",
+    "combat/presentation.mjs": "bf09ea2d6f04f0c570c403f82d18ac9323635d592a2876d690af889c97d744ad",
+    "combat/action-receipt.mjs": "9e7d5d4ce535ff5b868cce5135783b28ef4de0d5340c2f23af021a718803e341",
+    "combat/catalog.mjs": "2b9177566ec218014a7c92ba46917afce81c2a3967b67c5f2a509afc3f3878c6",
+    "combat/opening.mjs": "6e8b9bea34228fb9e864a626c982ab56461a133f6bfa8413e608cae6e4f2d528",
+    "combat/movement-modes.mjs": "660a0187f7ed93ee0d91e220685b8068ba4fad91fe32a49c2dfde5e69df41595",
+    "combat/grapple.mjs": "e14b19b0da850094354a3f4abac211a6ddb4f5788b40cc8f9b74dc4d0a4fada5",
+    "combat/action-prices.mjs": "d328d253dd6dcecb6f12fee0fe7b4297b7cee7bad964564d142a965b9829c6eb",
+    "gm_runtime/narrative.mjs": "0cf57dfc2207fa9c1df6be3dce54d4d8df8de4de66faef5f7108deb9d876e3a9",
+    "gm_runtime/replay-gate-script.example.js": "022403c81d58a87ae6ca1eca55e39339043845ac5d9927d407e06f1459d2054b"
+  }
+}

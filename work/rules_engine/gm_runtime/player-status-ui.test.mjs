@@ -30,6 +30,13 @@ const state=(revision=1)=>({revision,player:{name:'御临风',health:{intact:17,
   activeTurn:true,statuses:[{type:'晕眩',points:2}],life:'可行动',attributes:{力量:12}}});
 const tick=()=>new Promise(resolve=>setTimeout(resolve,5));
 
+test('equipment distinguishes carried armor from worn armor without changing pending defense',async()=>{
+ const document=documentFixture(),current=state();
+ current.player.equipment={armorDefense:0,items:[{name:'帝国制式轻甲',worn:false,location:'carried'}]};
+ const ui=mountPlayerStatus({document,getState:async()=>current,getChatId:()=> 'armor-test'});await tick();
+ const view=document.getElementById('rules901-player-status');assert.match(view.textContent,/帝国制式轻甲.*已卸下/);assert.match(view.textContent,/护甲防御 0/);assert.match(view.textContent,/防御 待声明/);ui.dispose();
+});
+
 test('player bar renders avatar and MVU values above input; explicit refresh updates guard and remaining actions',async()=>{
   const document=documentFixture();let current=state();
   const ui=mountPlayerStatus({document,getState:async()=>current,getChatId:()=> 'chat-a',getAvatar:()=>'/User Avatars/player.png'});

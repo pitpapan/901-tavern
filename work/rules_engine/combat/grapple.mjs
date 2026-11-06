@@ -4,11 +4,13 @@ import {actorCheckRules} from '../gm_runtime/actor-rules.mjs';
 import {check,effectiveAttribute,effectiveSkill} from '../core.mjs';
 import {RuleInputError,IllegalAction} from './mechanics.mjs';
 
+export const heldTargets=a=>[...new Set([...(a.claws??[]),...(a.state.grappleHolds??[])].filter(Boolean))];
+
 // D13: actual connected grapple group, with explicit line-of-fire exclusions.
 export function grappleMembers(b,targetId,attackerId){
  const ids=new Set([targetId]);let changed=true;
  while(changed){changed=false;for(const a of Object.values(b.actors)){
-   const links=[a.state.grapple?.holderId,...(a.claws??[])].filter(Boolean);
+   const links=[a.state.grapple?.holderId,...heldTargets(a)].filter(Boolean);
    if(ids.has(a.id)||links.some(id=>ids.has(id)))for(const id of [a.id,...links])if(id!==attackerId&&!ids.has(id)){ids.add(id);changed=true;}
  }}
  const excluded=b.ruleScene?.grappleOcclusion?.[attackerId];
@@ -47,5 +49,6 @@ export function attachClaw(b,holder,target,{drawDice,defense,claw}={}) {
 export function releaseGrapple(b,target) {
   const g=target.state.grapple;if(!g)return;
   const holder=b.actors[g.holderId];if(holder?.claws)holder.claws=holder.claws.map(id=>id===target.id?null:id);
+  if(holder?.state.grappleHolds)holder.state.grappleHolds=holder.state.grappleHolds.filter(id=>id!==target.id);
   delete target.state.grapple;
 }

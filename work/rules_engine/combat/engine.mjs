@@ -24,6 +24,8 @@ import {PHYSICAL_ACTIONS,physicalPriceRequest} from './action-prices.mjs';
 import {quoteActionPrice,consumeActionPrice,combatRoundKey} from '../resource-action-pricing.mjs';
 import {effectiveStatuses} from '../resource-status-applicability.mjs';
 import {BASIC_ACTIONS} from '../resource-action-bindings.mjs';
+import {COMMON_ACTIONS,COMMON_TARGETED,maneuverState,beginCommonTurn,endCommonTurn,checkManeuver,maneuverDefense,requireMeleeTarget,pushTarget,takeCarriedItem,feintSkill,chargePath,targetEquipment,equipmentContestModifier,loseHeldEquipment} from './common-actions.mjs';
+import {actionReceipt} from './action-receipt.mjs';
 import {weaponHandling,ordinaryWeaponType,weaponAmmoSpec,weaponAmmoState,consumeWeaponAmmo,loadWeaponAmmo} from '../resource-weapons.mjs';
 import {changeWill} from '../resource-counters.mjs';
 import {applyStructuralDamage} from '../structural-damage.mjs';
@@ -39,7 +41,7 @@ import {samplePassivePerception,measurePath,clearLine,canObserve,blocking,contai
 import {rememberTactic} from './tactics.mjs';
 import { ABILITIES, makeLotus } from './catalog.mjs';
 import {objectiveSatisfied} from './opening.mjs';
-import {grappleChoice,grappleContest,attachClaw,releaseGrapple,grappleMembers,weightedGrappleTarget} from './grapple.mjs';
+import {heldTargets,grappleChoice,grappleContest,attachClaw,releaseGrapple,grappleMembers,weightedGrappleTarget} from './grapple.mjs';
 import {runSceneMechanism,advanceSceneTime,sceneBarriers} from '../gm_runtime/scene-rules.mjs';
 import {reduceRecovery,advanceActorsTime} from '../recovery.mjs';
 import {triggerSpiritWard,ringTransfer} from '../possessions.mjs';
@@ -59,7 +61,7 @@ const unconscious = a => a.construct&&a.state.health.intact===0 || !a.diehard &&
 const penalty = a => ['麻痹','精神束缚','冻结','纠缠','晕眩','疲乏'].reduce((n,t) => n+penaltyPoints(a,t),0) + lifeStatus(a.state).woundPenalty;
 const fail = text => { throw new IllegalAction(text); };
 const requireThat = (ok,text) => { if (!ok) fail(text); };
-const physicalActions = new Set(['strike','thunder','cleaveRock','lightning','conduct','move','step','jump','continueJump','block','draw','sheathe','roar','tornado','gale','zheng','reload','aim','door','destroy','shieldPush','calibrate','drawClub','readyBow','medicine']);
+const physicalActions = new Set([...Object.keys(COMMON_ACTIONS).filter(id=>!['feint','adjust'].includes(id)),'strike','thunder','cleaveRock','lightning','conduct','move','step','jump','continueJump','block','draw','sheathe','roar','tornado','gale','zheng','reload','aim','door','destroy','shieldPush','calibrate','drawClub','readyBow','medicine']);
 
 export {randomDice} from '../rule-random.mjs';
 
@@ -79,6 +81,8 @@ function spend(b,a,c, kind, behavior, pricing,priceAction) {
   requireThat(out.result.allowed, out.result.reason);
   if(pricing){consumeActionPrice(a.state,pricing);a.state.activeResourceEffects=out.state.activeResourceEffects;}
   a.state.turn = out.state.turn;
+  if(out.state.activeResourceEffects!==undefined)a.state.activeResourceEffects=out.state.activeResourceEffects;
+  if(c.abilityId!=='aim'&&(Array.isArray(kind)?kind:[kind]).some(k=>['standard','attack','move','full','charge'].includes(k)))delete a.aim;
   return pricing;
 }
 
@@ -105,7 +109,7 @@ function heal(a, allowed, canHealAggravated=false) {
 
 export function attackProfile(b, id, c = {}) {
   let a = b.actors[id];const type = c.abilityId ?? 'strike',w=equipment(a).weapon;
-  const actualWeapon=!!(w.instanceId||w.resourceId),weaponType=ordinaryWeaponType(w),legacyCompatible=!actualWeapon||w.skill===profile(a).main&&weaponType===(ordinaryWeaponType(profile(a).equipment?.weapon??{})??({'白刃':'melee','肉搏':'natural','弓箭':'bow','枪械':'gun'}[profile(a).main]));
+  const actualWeapon=!!(w.unarmed||w.instanceId||w.resourceId),weaponType=ordinaryWeaponType(w),legacyCompatible=!actualWeapon||w.skill===profile(a).main&&weaponType===(ordinaryWeaponType(profile(a).equipment?.weapon??{})??({'白刃':'melee','肉搏':'natural','弓箭':'bow','枪械':'gun'}[profile(a).main]));
   if(actualWeapon&&!['melee','natural','bow'].includes(weaponType))throw new IllegalAction('该实际武器类别的完整装填/投掷消耗尚未接入（实现缺口）：'+weaponType);
   if(actualWeapon&&weaponType==='bow')a={...a,weaponMode:'bow'};
   const sk=attackSkill(a), str=value(a,'力量'), agi=value(a,'敏捷');
@@ -233,6 +237,8 @@ export function attackProfile(b, id, c = {}) {
   rawDP-=a.state.grapple?.margin??0;
   if (a.diehard && a.state.health.intact===0) rawDP+=a.state.health.A?3:a.state.health.L?2:1;
   explode=Math.min(explode,w.explode??10);
+  if(a.kind!=='bright'&&['bow','gun','thrown'].includes(weaponType)&&a.aim&&a.aim.targetId===c.targetId)rawDP+=Math.min(3,a.aim.rounds??0);
+  if(range<=a.reach)rawDP+=(a.state.combatManeuvers?.allOut?2:0)+(a.state.combatManeuvers?.chargeAttack??0);
   return { rawDP, dp:rawDP, attribute:attackAttribute, handling, legacyCompatible,weaponType,severity:actualWeapon?w.severity??'L':profile(a).severity??'L',weapon, cap, fixed, ap, magic, speed, extra, ignore, aggravate, electric, reduction, range, explode,magical:w.magical===true||resourceBonus(a.state,'weaponMagical')>0,ranged:actualWeapon?['bow','gun','thrown'].includes(weaponType):w.range>0||['射击','枪械','弓箭'].includes(wizardChoice?.main??profile(a).main),firearm:['gun','firearm'].includes(w.type)||wizardWeapon(a.state)&&a.state.wizard.weaponMode==='gun',ballistic:w.ballistic===true||wizardWeapon(a.state)&&a.state.wizard.weaponMode==='gun',energyWeapon:w.energyWeapon===true,grade:w.grade,hardnessIgnore:a.state.wizard?.form==='earth'&&wizardWeapon(a.state)?6:ignore,spiritEligible:a.spiritStrike===true||w.spiritStrike===true||magic>0||resourceBonus(a.state,'weaponSpirit')>0 };
 }
 
@@ -306,7 +312,7 @@ export function resolveDefense(b, id, attackerId, attack = {}, resourceAlternati
   if(a.state.sleeping||a.state.underworld){p.dodge=0;p.block=0;}
   if(a.state.permanentConditions?.some(x=>x.kind==='nauseaCollapse'))p.base=0;
   if(a.state.grapple?.pressed){p.base=0;p.dodge=0;p.block=0;}
-  if(attacker&&(a.state.grapple&&a.state.grapple.holderId!==attackerId||a.claws?.some(id=>id&&id!==attackerId)))p.base=0;
+  if(attacker&&(a.state.grapple&&a.state.grapple.holderId!==attackerId||heldTargets(a).some(id=>id!==attackerId)))p.base=0;
   const eat=(keys,n) => { for(const k of keys) { const v=Math.min(p[k]??0,n); p[k]=(p[k]??0)-v; n-=v; } return n; };
   const restraint=['精神束缚','麻痹','纠缠','冻结','剧痛','欲眠'].reduce((n,t)=>n+penaltyPoints(a,t),0);
   eat(['base','dodge','block'],restraint+lifeStatus(a.state).woundPenalty);
@@ -319,6 +325,11 @@ export function resolveDefense(b, id, attackerId, attack = {}, resourceAlternati
   if (a.buffs.iaiPenalty) eat(['base','dodge','block','insight','cultivation','armor','natural'],2);
   if (attack.contact) { p.armor=0; p.natural=0; }
   eat(['base','dodge','block','insight','cultivation'],Math.max(0,(attack.speed??0)-compatibleContribution(a,'ignoreSpeed',kitContext).value));
+  const maneuver=a.state.combatManeuvers;
+  if(maneuver?.prone){if(attack.ranged)p.posture=2;else eat(Object.keys(p),2);}
+  if(b.actors[attackerId]?.state.combatManeuvers?.feints?.[a.id]&&!attack.ranged)p.base=0;
+  if(attack.calledPenalty&&p.base>0&&attacker&&canObserve(b,attacker,a.id))p.dodge+=attack.calledPenalty;
+  eat(Object.keys(p),(maneuver?.allOut?2:0)+(maneuver?.chargePenalty??0));
   const protectedDeflection=a.buffs.zheng?p.deflection:0;
   if(attack.reduction===8) eat(['base','dodge','block','insight','cultivation','armor','natural','force',...(protectedDeflection?[]:['deflection'])],8);
   else eat(['base','dodge','block'],attack.reduction??0);
@@ -335,6 +346,7 @@ export function panel(b,id,attackerId) {
   const s=a.state;
   const d=derived(a);
   let speed=movementSpeed(a,d.speed,a.flight?'flight':a.underground?'earth':'land',{applyLandBonuses:true});
+  if(a.state.combatManeuvers?.prone)speed/=2;
   if(a.underground)speed=Math.min(8,Math.max(0,d.speed-penalty(a)));
   return { id, name:a.name, team:a.team, controller:a.controller, attributes:clone(s.attributes),
     health:clone(s.health), hpMax:s.derived.hpMax, life:unconscious(a)?'失去行动能力':s.sleeping?'睡眠':s.underworld?'意识离体':'可行动',
@@ -352,7 +364,7 @@ function saveRoll(a,type,drawDice,{ recognizable=false, speed=0, cover=0, areaAt
   const dp=base+(elected?3+resourceBonus(a.state,'willEnhancement'):0)+geneticCheckBonus(a.state,{willEligible:true,willSpent:elected})+(type==='reflex'?cover:0)+wizardCheck(a.state).dp-checkModifiers(a.state,{context:{willResistance:type==='will',physical:type!=='will',motion:type==='reflex',reflex:type==='reflex'}}).penalty;
   const bonus=geneticWillAuto(a.state,{willEligible:true,willSpent:elected});
   const r=rollPool(dp,drawDice());if(elected){changeWill(a.state,-1);delete a.willDefenseReady;}
-  return { ...r, fixed:fixed+bonus,willCost:elected?1:0,extra:r.rolledSuccesses>0?extra:0,total:r.rolledSuccesses+fixed+bonus+(r.rolledSuccesses>0?extra:0), type };
+  return { ...r, fixed:fixed+bonus,willCost:elected?1:0,extra:r.rolledSuccesses>0?extra:0,total:Math.max(0,r.rolledSuccesses+fixed+bonus+(r.rolledSuccesses>0?extra:0)-(areaAttack&&a.state.combatManeuvers?.prone?1:0)), type };
 }
 
 function inflictStatus(a,type,count,source,drawDice) {
@@ -543,6 +555,7 @@ function conversionFor(a, amount) {
 function strike(b,a,t,c,result,drawDice,options={}) {
  const priorAttack=result.attack,priorReflection=result.reflected,priorGrapple=result.grappleTarget,position=[...a.position];
  performStrike(b,a,t,c,result,drawDice,options);
+ if(result.attack!==priorAttack&&result.attack?.roll&&!result.attack.ranged&&a.state.combatManeuvers?.feints)delete a.state.combatManeuvers.feints[t.id];
  if(!options.feature&&(result.attack!==priorAttack&&(result.attack?.roll||result.attack?.decoy?.redirected)||result.reflected!==priorReflection&&(result.reflected?.roll||result.reflected?.decoy?.redirected))){
   const observerId=result.grappleTarget!==priorGrapple?result.grappleTarget.actual:t.id;
   const clue=discloseAttackOrigin(b,observerId,a.id,{source:'js/attack/'+c.abilityId,position});
@@ -563,7 +576,7 @@ function recordAttackUse(b,a,t,c,p,afterDefense,feature){
   if(c.empowered) a.buffs.fistQi=false;
   if(p.legacyCompatible&&a.kind==='yulin') a.attackedRound=b.round;
 }
-function performStrike(b,a,t,c,result,drawDice,{opportunity=false,freeResponse=false,actionAlreadyPaid=false,deferPlayerDefense=false,defenseDeclarations={},grappleDeclarations={},feature}={}) {
+function performStrike(b,a,t,c,result,drawDice,{opportunity=false,freeResponse=false,actionAlreadyPaid=false,deferPlayerDefense=false,defenseDeclarations={},grappleDeclarations={},feature,equipmentAttack=false}={}) {
   requireThat(!a.state.underworld,'意识离体期间不能用肉身攻击');
   requireThat(t?.present&&(feature||c.rapidFire||c.rapidSecondary||!unconscious(t)),'目标不在场或已失去行动能力');
   if(!feature)validateAdditionalDamageOrder(t.state,a.id,c.additionalDamageOrder);
@@ -573,7 +586,7 @@ function performStrike(b,a,t,c,result,drawDice,{opportunity=false,freeResponse=f
   requireThat(clearLine(b.map,a.position,t.position),'攻击路线被实体障碍阻挡');
   requireThat(feature?.projection?projectionCanSense(b,a.id,feature.projection,'visual'):canObserve(b,t,a.id),'目标不在视线内；当前能力没有盲攻判定');
   requireThat(equipment(a).weapon.instanceId||wizardWeapon(a.state)||a.kind!=='huang'||!a.sheathed,'须先拔刀');
-  requireThat(!a.state.grapple&&!a.claws?.includes(t.id),'擒抱中的攻击须使用擒抱内攻击动作');
+  requireThat(!a.state.grapple&&!heldTargets(a).includes(t.id),'擒抱中的攻击须使用擒抱内攻击动作');
   if(a.kind==='chuul') {
     requireThat(a.claws.some(x=>!x),'所有螯已被占用');
     if(!deferPlayerDefense&&t.state.size<=7)grappleChoice(t,grappleDeclarations[t.id]);
@@ -584,6 +597,7 @@ function performStrike(b,a,t,c,result,drawDice,{opportunity=false,freeResponse=f
   }
   if(c.finisher) requireThat(a.kind==='jiang'&&(a.combos[t.id]??0)===(a.ruleset==='opening-20261022'?1:5),a.ruleset==='opening-20261022'?'D级终结需要该目标1层':'终结技需要该目标5层');
   const p=attackProfile(b,a.id,c);
+  if(equipmentAttack){p.rawDP-=3;p.dp=p.rawDP;p.calledPenalty=3;}
   if(!feature&&additionalDamageCandidates(t.state,a.id).length&&(p.electric>0||a.state.wizard?.form==='fire'))validateDamageTypeOrder(['physical',a.state.wizard?.form==='fire'?'energy:fire':'energy:electric'],c.additionalDamageTypeOrder);
   if(!feature&&p.electric>0){const segment={amount:1,severity:'L',kind:'energy',energyType:'electric'};adjustIncomingDamage(t,p.aggravate>0||p.energyWeapon?[segment,{...segment,severity:'A'}]:[segment],{sourceActorId:a.id,damageNature:'attack'});}
   requireThat(p.legacyCompatible||['strike','destroy',undefined].includes(c.abilityId),'当前实际武器不满足这项原有专门攻击的类别');
@@ -664,6 +678,7 @@ function performStrike(b,a,t,c,result,drawDice,{opportunity=false,freeResponse=f
   const amount=Math.min(p.cap,afterDefense+extra);
   result.attack={...p,defense:d,roll,extra,amount,...(decoy?{decoy}:{})};
   recordAttackUse(b,a,t,c,p,afterDefense,feature);
+  if(equipmentAttack){result.equipmentHit=afterDefense>0;return;}
   if(feature?.projection){
     result.projectionInteraction=interactProjection(b,a.id,feature.projection,{kind:'attack',damage:amount,melee:!p.ranged,source:'js/weapon-attack-projection',witnesses:projectionWitnesses(b,a.id)});
     result.terrain={featureId:feature.id,label:feature.label,kind:'projection-interaction',physicalDamage:0,apparentImpact:amount};
@@ -685,7 +700,7 @@ function performStrike(b,a,t,c,result,drawDice,{opportunity=false,freeResponse=f
   if(a.kind==='chuul'&&c.abilityId!=='doubleStrike'&&!unconscious(t))
     (result.grapples??=[]).push(attachClaw(b,a,t,{drawDice,defense:grappleDeclarations[t.id]}));
   if(range<=a.reach)delete t.calibration;
-  if(a.kind!=='bright') delete t.aim;
+  if(!p.ranged) delete t.aim;
   if(c.abilityId==='conduct') {
     if(wizardArmor){result.notes.push('防能量武器装甲阻止御雷导电');return;}
     result.statuses.push({targetId:t.id,...inflictStatus(t,'麻痹',c.tier*4,'御雷·导电',drawDice)}); return;
@@ -747,6 +762,7 @@ function finishIfNeeded(b) {
 }
 
 function advance(b,result,choices={},drawDice=randomDice) {
+  endCommonTurn(b.actors[b.activeId]);
   endResourceChannelTurn(b.actors[b.activeId].state,b.round);
   const bleeding=b.actors[b.activeId];
   periodicStatusDamage(bleeding,'流血','turn',(amount,source)=>damageEvent(bleeding,[{amount,severity:'L',kind:'physical'}],false,result,{conversion:0},{root:b,targetId:bleeding.id,sourceActorId:source.sourceActorId??null,drawDice,damageNature:'fixed'}),{root:b,combat:true});
@@ -809,6 +825,7 @@ function advance(b,result,choices={},drawDice=randomDice) {
     for(const other of Object.values(b.actors)){for(const [key,e]of Object.entries(other.state.timedEffects??{}))if(e.clockActorId===a.id){e.remainingTurns=Math.max(0,e.remainingTurns-1);e.remainingMinutes=e.remainingTurns/10;if(!e.remainingTurns)delete other.state.timedEffects[key];}for(const e of other.state.statuses)if(e.clockActorId===a.id){e.remainingTurns=Math.max(0,e.remainingTurns-1);e.remainingMinutes=e.remainingTurns/10;}other.state.statuses=other.state.statuses.filter(e=>e.remainingMinutes!==0);}
     if(b.map)b.map.features=b.map.features.filter(f=>!f.wizardOwner||b.actors[f.wizardOwner]?.state.timedEffects?.wizardDefend?.form==='earth');
     delete a.buffs.block; delete a.buffs.zheng; delete a.buffs.iaiPenalty;
+    beginCommonTurn(b,a);
     delete a.defenseIntent;delete a.rapidAdjacentHits;
     if(a.aim?.pendingRound<b.round) {a.aim.rounds=Math.min(3,(a.aim.rounds??0)+1);delete a.aim.pendingRound;}
     if(a.calibration) {
@@ -823,6 +840,7 @@ function advance(b,result,choices={},drawDice=randomDice) {
 }
 
 export function opportunityActors(b,c) {
+  if(c.abilityId==='charge'){const path=chargePath(b,b.actors[c.actorId],b.actors[c.targetId]);c={actorId:c.actorId,abilityId:'move',to:path.to};}
   if(c.abilityId!=='move'||!Array.isArray(c.to))return [];
   const a=b.actors[c.actorId];
   const threatens=(foe,p)=>Math.min(Math.abs(p[0]-foe.position[0]),Math.abs(p[1]-foe.position[1]))<1e-8&&
@@ -899,7 +917,7 @@ export function act(input,command,{drawDice=randomDice,playerAuthorized=false,de
   requireThat(b.status==='active','战斗已结束或暂停');
   requireThat(a?.present,'参战者不存在');
   requireThat(a.controller!=='player'||playerAuthorized,'玩家角色须由玩家明确选择动作');
-  requireThat(a.abilities.includes(id)||BASIC_ACTIONS[id]||id==='reload'&&weaponAmmoSpec(a,equipment(a).weapon)||['firstAid','escapeGrip','pressGrip','grappleAttack','ringStore','ringRetrieve','mechanism','statusEvent','wake','jump','continueJump','search'].includes(id)||id==='medicine'&&a.state.inventory||id==='door'||id==='destroy'&&a.abilities.includes('strike'),'该参战者没有此能力');
+  requireThat(a.abilities.includes(id)||BASIC_ACTIONS[id]||COMMON_ACTIONS[id]||id==='reload'&&weaponAmmoSpec(a,equipment(a).weapon)||['firstAid','escapeGrip','pressGrip','grappleAttack','ringStore','ringRetrieve','mechanism','statusEvent','wake','jump','continueJump','search'].includes(id)||id==='medicine'&&a.state.inventory||id==='door'||id==='destroy'&&a.abilities.includes('strike'),'该参战者没有此能力');
   const commandKeys=id==='medicine'?['actorId','abilityId','medicine','resource','choice','statusIndex']:['door','destroy'].includes(id)?['actorId','abilityId','featureId',...(id==='door'?['open']:[])]:['actorId','abilityId','targetId','tier','empowered','finisher','strength','payment','to','via','enabled','resource'];
   commandKeys.push('preActionDC','deteriorationChoices',...(id==='readyWeapon'?['weapon']:[]),...(id==='doubleStrike'?['secondTargetId']:[]),...(id==='morph'?['form']:[]),...(id==='releaseGrip'?['claw']:[]),...(id==='escapeGrip'?['method']:[]),...(['move','step'].includes(id)?['run','climb','movementSource','flightEnd','motionObjectId','motionPart']:[]));
   if(['ringStore','ringRetrieve'].includes(id))commandKeys.push('itemId');
@@ -908,6 +926,7 @@ export function act(input,command,{drawDice=randomDice,playerAuthorized=false,de
   if(['jump','continueJump'].includes(id))requireThat(Object.keys(c).every(k=>['actorId','abilityId','preActionDC','actionDiscount',...(id==='jump'?['objectId','part','willpower']:[])].includes(k)),'跳跃只能选择实际计划或续接，不能提交数值和轨迹');
   if(Object.hasOwn(PHYSICAL_ACTIONS,id))commandKeys.push('actionDiscount');
   commandKeys.push('additionalDamageOrder','additionalDamageTypeOrder');
+  if(COMMON_ACTIONS[id])commandKeys.push('mode','attribute','itemId');
   commandKeys.push('limbIds','willpower',...(id==='strike'?['adjacentTargetIds','rapidFire']:[]),...(id==='move'?['block','hide']:[]));if(id==='statusEvent')commandKeys.push('eventId');
   requireThat(Object.keys(c).every(k=>commandKeys.includes(k)),'请求只能选择能力、目标与合法选项，不能给出骰值或结算数值');
   if(id==='destroy'){const projection=projectionFeature(b,c.featureId)?.projection;if(projection)inspectProjectionAttack(projection);}
@@ -921,7 +940,7 @@ export function act(input,command,{drawDice=randomDice,playerAuthorized=false,de
     finishIfNeeded(b);result.after=stateResult(b,a.id,id).after;return {battle:b,result};
   }
   assertEmbodied(a.state,c,b.ruleScene?.objects);
-  requireThat(id==='conversion'||isReflexResource(b,c)||a.id===b.activeId,'尚未轮到该参战者');
+  requireThat(id==='conversion'||id==='dropProne'||id==='counterRush'&&b.counterRushAllowance?.actorId===a.id||isReflexResource(b,c)||a.id===b.activeId,'尚未轮到该参战者');
   requireThat(!unconscious(a),'已失去行动能力');
   requireThat(a.state.paidMotion?.phase!=='airborne'||['continueJump','end'].includes(id)||isReflexResource(b,c),'当前跳跃须以后续移动动作补全，不能重新起跳或改为其他主动动作');
   requireThat(id==='end'||!a.state.sleeping,'睡眠期间不能主动行动或反应，须先醒来');
@@ -968,9 +987,115 @@ export function act(input,command,{drawDice=randomDice,playerAuthorized=false,de
     pay(a,'灵力',['lightning','conduct'].includes(id)?[1,3,5][c.tier-1]:1,c.payment);
     a.cooldowns[coolKey]=b.round+1;
   }
-  if(a.kind==='bright'&&!['strike','aim','conversion','end'].includes(id)) delete a.aim;
   if(a.kind==='mireya'&&['move','step','block','drawClub','readyBow','door','destroy','aim'].includes(id))delete a.calibration;
   switch(id) {
+    case 'charge': {
+      const path=chargePath(b,a,t),eligibility=actionEligibility(a.state,'charge');requireThat(eligibility.allowed,eligibility.reason);
+      requireThat(!attackProfile(b,a.id,{...c,abilityId:'strike'}).ranged,'冲锋须近战攻击');
+      requireThat(path.cost<=panel(b,a.id).speed,'冲锋超过本次移动速度');
+      const bonus=Math.min(Math.floor(path.length+1e-8),value(a,'力量'));
+      const foes=opportunityActors(b,c);spend(b,a,c,'charge','charge');maneuverState(a).chargePenalty=bonus;
+      for(const foe of foes){
+        if(b.playerDefenseDeclarations&&foe.controller==='player'&&opportunityDeclarations[foe.id]!==true)continue;
+        const sub={actorId:foe.id,abilityId:'strike',damage:[],statuses:[],saves:[]};
+        const freeResponse=waterResponse(foe),oldPosition=a.position;if(freeResponse)a.position=waterCrossing(b,foe,{...c,abilityId:'move',to:path.to});
+        strike(b,foe,a,{actorId:foe.id,abilityId:'strike',targetId:a.id},sub,drawDice,{opportunity:!freeResponse,freeResponse,deferPlayerDefense,defenseDeclarations});
+        if(!freeResponse||!unconscious(a))a.position=oldPosition;if(freeResponse)sub.freeResponse=true;(result.opportunities??=[]).push(sub);
+      }
+      if(unconscious(a)){result.notes.push('借机攻击中断冲锋，未完成位移和后续攻击。');break;}
+      result.movement={...path,length:path.length,cost:path.cost};a.position=[...path.to];maneuverState(a).chargeAttack=bonus;
+      strike(b,a,t,{...c,abilityId:'strike'},result,drawDice,{actionAlreadyPaid:true,deferPlayerDefense,defenseDeclarations,grappleDeclarations});
+      delete a.state.combatManeuvers.chargeAttack;break;
+    }
+    case 'feint': {
+      requireThat(t?.present&&t.id!==a.id&&canObserve(b,t,a.id)&&canObserve(b,a,t.id),'虚招须双方可以察觉彼此动作');
+      spend(b,a,c,'standard');if(deferPlayerDefense&&t.controller==='player')break;
+      const x=feintSkill(a),y=feintSkill(t,true);
+      const active=checkManeuver(a,'智力',x.main,drawDice,{sub:x.sub}),passive=checkManeuver(t,'感知',y.main,drawDice,{sub:y.sub,defending:true});
+      const won=active.total>=passive.total;result.contest={active,passive,won};
+      if(won){const s=maneuverState(a);(s.feints??={})[t.id]={expiresAfterTurn:s.turn+1};}break;
+    }
+    case 'trip': {
+      requireMeleeTarget(b,a,t);requireThat(!t.spirit||a.spiritStrike,'当前身体没有绊摔灵体资格');
+      spend(b,a,c,'attack','attack');if(deferPlayerDefense&&t.controller==='player')break;
+      const defense=resolveDefense(b,t.id,a.id,{contact:true,defenseMode:defenseDeclarations[t.id]});requireThat(!defense.pending,'须先选择接触防御');
+      const active=checkManeuver(a,'力量','肉搏',drawDice,{modifier:-defense.total-Math.max(0,t.state.size-a.state.size)});
+      active.total=Math.max(0,active.total-defense.extraSuccesses);
+      // Will was used in this one contact defense; do not grant it a second time.
+      if(t.willDefenseReady){changeWill(t.state,-1);delete t.willDefenseReady;}
+      const method=maneuverDefense(t,grappleDeclarations[t.id]);
+      const passive=checkManeuver(t,method==='strength'?'力量':'敏捷','运动',drawDice,{defending:true});
+      const won=active.total>0&&active.total>=passive.total,margin=Math.max(0,active.total-passive.total);
+      result.contest={active,passive,won,margin,defense:method};result.responses=[{targetId:t.id,method:method==='strength'?'力量稳住身体对抗绊摔':'敏捷避让绊摔'}];
+      if(won){if(t.flight||t.state.verticalPosition?.heightAboveGround>0){maneuverState(t).tripFlight={penalty:margin,turns:2};result.flightTrip={targetId:t.id,penalty:margin};}
+        else{maneuverState(t).prone=true;result.knockdown={targetId:t.id};}}
+      break;
+    }
+    case 'disarm':case 'sunder': {
+      requireMeleeTarget(b,a,t);const item=targetEquipment(t,c.itemId,{sunder:id==='sunder'});
+      requireThat(!attackProfile(b,a.id,{...c,abilityId:'strike'}).ranged,'击落／击破使用近战部位攻击');
+      strike(b,a,t,{...c,abilityId:'strike'},result,drawDice,{deferPlayerDefense,defenseDeclarations,grappleDeclarations,equipmentAttack:true});
+      if(!result.equipmentHit)break;
+      const ap=attackProfile(b,a.id,{...c,abilityId:'strike'}),tp=attackProfile(b,t.id,{targetId:a.id});
+      const am=id==='sunder'?equipmentContestModifier(a,null,t,{finesse:ap.attribute==='敏捷'}):0;
+      const tm=id==='sunder'?equipmentContestModifier(t,item,a,{finesse:tp.attribute==='敏捷'}):0;
+      const active=checkManeuver(a,'力量','白刃',drawDice,{modifier:am}),passive=checkManeuver(t,'力量','白刃',drawDice,{modifier:tm,defending:true});
+      const margin=Math.max(0,active.total-passive.total),won=margin>0;result.contest={active,passive,margin,won};
+      if(won){if(id==='sunder'){const damage=applyStructuralDamage(item,margin);result.equipmentDamage={targetId:t.id,itemId:item.id,name:item.name,...damage};if(item.destroyed)loseHeldEquipment(t,item,{broken:true});}
+        else{loseHeldEquipment(t,item);result.disarmed={targetId:t.id,itemId:item.id,name:item.name,position:[...t.position]};}}
+      break;
+    }
+    case 'allOut': {
+      requireThat(penaltyPoints(a,'疲乏')===0,'疲乏时不能全力一击');
+      requireThat(!attackProfile(b,a.id,{...c,abilityId:'strike'}).ranged,'全力一击只适用于近战');
+      const eligibility=actionEligibility(a.state,'allOut');requireThat(eligibility.allowed,eligibility.reason);
+      maneuverState(a).allOut=true;
+      strike(b,a,t,{...c,abilityId:'strike'},result,drawDice,{deferPlayerDefense,defenseDeclarations,grappleDeclarations});break;
+    }
+    case 'dropProne':
+      requireThat(!a.state.combatManeuvers?.prone,'已经倒地');
+      requireThat(!(a.state.verticalPosition?.heightAboveGround>0)&&!a.flight,'空中不能以伏地瞬间落地');
+      spend(b,a,c,'reflex');maneuverState(a).prone=true;result.posture='prone';break;
+    case 'stand':
+      requireThat(a.state.combatManeuvers?.prone,'当前没有倒地');
+      spend(b,a,c,'move','move');delete a.state.combatManeuvers.prone;result.posture='standing';break;
+    case 'takeItem':
+      result.itemUse=takeCarriedItem(a,c.itemId,kind=>spend(b,a,c,kind));break;
+    case 'adjust':
+      requireThat(Object.values(b.actors).some(x=>x.state.combatManeuvers?.feints?.[a.id]),'当前没有需要消除的虚招优势');
+      spend(b,a,c,'full');for(const x of Object.values(b.actors))if(x.state.combatManeuvers?.feints)delete x.state.combatManeuvers.feints[a.id];break;
+    case 'bullRush':case 'counterRush': {
+      requireMeleeTarget(b,a,t);requireThat(['push','knockdown'].includes(c.mode),'冲撞须选择击退或击倒');
+      if(id==='counterRush')requireThat(b.counterRushAllowance?.actorId===a.id&&b.counterRushAllowance.targetId===t.id,'没有可用的抵挡后反冲窗口');
+      requireThat(!(t.state.verticalPosition?.heightAboveGround>0)&&!t.flight,'空中冲撞须另有实际运动规则');
+      spend(b,a,c,id==='counterRush'?'reflex':'attack','attack');
+      if(deferPlayerDefense&&t.controller==='player')break;
+      const defense=maneuverDefense(t,grappleDeclarations[t.id]);
+      const active=checkManeuver(a,'力量','肉搏',drawDice,{modifier:-Math.max(0,t.state.size-a.state.size)});
+      const passive=checkManeuver(t,defense==='strength'?'力量':'敏捷','运动',drawDice,{defending:true,modifier:id==='counterRush'?-2:0});
+      const margin=Math.max(0,active.total-passive.total),won=active.total>=passive.total;
+      result.contest={active,passive,margin,won,defense};result.responses=[{targetId:t.id,method:defense==='strength'?'力量抵挡冲撞':'敏捷避让冲撞'}];
+      if(won){if(c.mode==='knockdown'){maneuverState(t).prone=true;result.knockdown={targetId:t.id};}
+        else result.forcedMovement=pushTarget(b,a,t,1+Math.floor(margin/3));}
+      if(id==='counterRush')delete b.counterRushAllowance;
+      break;
+    }
+    case 'grapple': {
+      requireMeleeTarget(b,a,t);requireThat(['strength','agility'].includes(c.attribute),'擒抱须选择力量或敏捷接触');
+      if(!(a.parameters?.freeHands>=1&&a.parameters?.freeHandsSource))throw new RuleInputError('须确认实际至少一只手可用于抓住对手',a.id+'.freeHands');
+      requireThat(!t.spirit||a.spiritStrike,'当前身体不能擒抱灵体');
+      requireThat(!t.state.grapple,'多人同时擒抱同一目标须先确认控制关系');
+      spend(b,a,c,'attack','attack');if(deferPlayerDefense&&t.controller==='player')break;
+      const defense=resolveDefense(b,t.id,a.id,{contact:true,defenseMode:defenseDeclarations[t.id]});requireThat(!defense.pending,'须先声明接触攻击的防御');
+      const contact=checkManeuver(a,c.attribute==='strength'?'力量':'敏捷','肉搏',drawDice,{modifier:-defense.total});
+      result.contact={...contact,total:Math.max(0,contact.total-defense.extraSuccesses)};
+      result.responses=[{targetId:t.id,guarded:defense.guarded}];
+      if(t.willDefenseReady){changeWill(t.state,-1);delete t.willDefenseReady;}
+      if(result.contact.total>0){
+        const contest=grappleContest(a,t,{drawDice,defense:grappleDeclarations[t.id]});result.grapple=contest;
+        if(contest.success){(a.state.grappleHolds??=[]).push(t.id);t.state.grapple={holderId:a.id,margin:contest.margin,pressed:false,sinceRound:b.round,source:'PHB ordinary grapple'};}
+      }break;
+    }
     case 'jump':case 'continueJump': {
       const budget=panel(b,a.id).speed;requireThat(budget>0,'当前没有可用于跳跃的移动速度');
       const prepared=id==='jump'?inspectJump(b,a,c):null;
@@ -1000,11 +1125,13 @@ export function act(input,command,{drawDice=randomDice,playerAuthorized=false,de
       const g=t?.state.grapple;requireThat(g?.holderId===a.id,'目标并未被自己擒抱');
       requireThat(id!=='pressGrip'||g.sinceRound<b.round,'下一轮才能压制');
       if(id==='pressGrip') {
-        spend(b,a,c,'attack');const contest=grappleContest(a,t,{drawDice,defense:grappleDeclarations[t.id]});
+        spend(b,a,c,'attack');if(deferPlayerDefense&&t.controller==='player')break;
+        const contest=grappleContest(a,t,{drawDice,defense:grappleDeclarations[t.id]});
         if(contest.success){g.pressed=true;g.margin=contest.margin;}result.grapple=contest;
       } else {
-        requireThat(a.kind==='chuul'||(equipment(a).weapon.size??a.weaponSize??Infinity)<=a.state.size-3,'该武器体积不适于擒抱内攻击');
-        spend(b,a,c,g.pressed?'standard':'full');const contest=g.pressed?{success:true}:grappleContest(a,t,{drawDice,defense:grappleDeclarations[t.id]});result.grapple=contest;
+        requireThat(a.kind==='chuul'||ordinaryWeaponType(equipment(a).weapon)==='natural'||(equipment(a).weapon.size??a.weaponSize??Infinity)<=a.state.size-3,'该武器体积不适于擒抱内攻击');
+        spend(b,a,c,g.pressed?'standard':'full');if(deferPlayerDefense&&t.controller==='player')break;
+        const contest=g.pressed?{success:true}:grappleContest(a,t,{drawDice,defense:grappleDeclarations[t.id]});result.grapple=contest;
         if(contest.success){const roll=check(a.state,{attribute:'力量',skill:'肉搏',dice:drawDice(),context:{physical:true,attack:true}});result.grappleAttack=roll;
           damageEvent(t,[{amount:roll.total,severity:'B',kind:'physical'}],conversionFor(t,roll.total),result,{conversion:0},{root:b,sourceActorId:a.id,targetId:t.id,drawDice,damageNature:'rolled'});}
       }break;
@@ -1179,7 +1306,11 @@ export function act(input,command,{drawDice=randomDice,playerAuthorized=false,de
       requireThat(a.kind!=='bright'||!a.weaponMode||a.weaponMode==='bow','须先取出长弓');
       requireThat(t?.present&&t.team!==a.team,'瞄准需要有效敌方目标');
       requireThat(canObserve(b,t,a.id),'目标不在视线内，无法瞄准');
-      requireThat(a.aim?.pendingRound!==b.round,'本轮已瞄准');spend(b,a,c,'standard');
+      requireThat(attackProfile(b,a.id,{targetId:t.id}).ranged,'瞄准须实际远程武器');
+      {const w=equipment(a).weapon,unit=w.rangePerStrength!==undefined?value(a,'力量')*w.rangePerStrength:w.rangeUnit??(a.kind==='bright'?40:null);
+       if(!(unit>0))throw new RuleInputError('瞄准须有实际射程单位','weapon.rangeUnit');
+       requireThat(spatialDistance(b.map,a.position,t.position)<=unit*3,'目标超出三个射程单位');}
+      requireThat(a.aim?.pendingRound!==b.round,'本轮已瞄准');spend(b,a,c,'full');
       a.aim={targetId:t.id,rounds:a.aim?.targetId===t.id?a.aim.rounds:0,pendingRound:b.round};break;
     case 'timeBolt': case 'timeHaste': {
       requireThat(t?.present&&spatialDistance(b.map,a.position,t.position)<=50,'目标须在50米内');
@@ -1270,9 +1401,9 @@ export function act(input,command,{drawDice=randomDice,playerAuthorized=false,de
       const baseSpeed=flight?flight.speed:panel(b,a.id).speed;
       const length=path.cost,maximum=id==='step'?Math.min(1.5,baseSpeed):baseSpeed;
       requireThat(length>0&&length<=maximum+1e-8,'移动距离超过可用速度');
-      const linked=a.state.grapple?b.actors[a.state.grapple.holderId]:b.actors[a.claws?.find(Boolean)];
+      const linked=a.state.grapple?b.actors[a.state.grapple.holderId]:b.actors[heldTargets(a)[0]];
       if(linked) {
-        requireThat(new Set(a.claws?.filter(Boolean)).size!==2,'牵带两个目标尚须明确负重和分别对抗，不能默认拖动');
+        requireThat(heldTargets(a).length<2,'牵带两个目标尚须明确负重和分别对抗，不能默认拖动');
         const g=a.state.grapple??linked.state.grapple;
         requireThat(!a.state.grapple?.pressed,'被压制者不能移动');
         if(g.pressed)requireThat(length<=maximum/2,'压制后牵带最多半速');
@@ -1323,11 +1454,13 @@ function finishAction(input,b,c,result,drawDice,pendingConcentration=[]){
   const observations=schedulePassivePerception(b,{drawDice,before:input,reason:id==='end'?'turn-start':'after-action',...(result.movement?{movement:{actorId:a.id,path:result.movement.path}}:{})});if(observations.length)(result.perceptions??=[]).push(...observations);
   finishIfNeeded(b);
   for(const observer of Object.values(b.actors))if(observer.calibration&&!canObserve(b,b.actors[observer.calibration.targetId],observer.id))delete observer.calibration;
+  for(const observer of Object.values(b.actors))if(observer.aim&&!canObserve(b,b.actors[observer.aim.targetId],observer.id))delete observer.aim;
   rememberTactic(input,b,c,result);
   const concentration=[...pendingConcentration,...settleResourceConcentration(input,b,drawDice)];
   if(concentration.length)result.concentration=concentration;
   refreshResourceAuras(b,{combat:true});
   result.after=stateResult(b,a.id,id).after;
+  result.receipt=actionReceipt(input,b,c,result);
   return {battle:b,result};
 }
 
@@ -1386,7 +1519,7 @@ export const TACTICS='敌人与同伴沿用相同流程：按目标、已知信�
 const nonzero = value => Object.fromEntries(Object.entries(value).filter(([,v]) => Boolean(v)));
 
 // This is a read-only projection, never a second saved character state.
-function availableActorActions(a){return [...new Set([...a.abilities,'jump',...(a.state.paidMotion?.phase==='airborne'?['continueJump']:[]),...Object.keys(BASIC_ACTIONS),...(weaponAmmoSpec(a,equipment(a).weapon)?['reload']:[])])];}
+function availableActorActions(a){return [...new Set([...a.abilities,'jump',...(a.state.paidMotion?.phase==='airborne'?['continueJump']:[]),...Object.keys(BASIC_ACTIONS),...Object.keys(COMMON_ACTIONS),...(weaponAmmoSpec(a,equipment(a).weapon)?['reload']:[])])];}
 function compactPanel(b, a) {
   const p=panel(b,a.id), s=a.state,weapon=equipment(a).weapon;
   const ammo=weaponAmmoSpec(a,weapon),instance=weapon.instanceId?s.possessions.items.find(i=>i.id===weapon.instanceId):null;

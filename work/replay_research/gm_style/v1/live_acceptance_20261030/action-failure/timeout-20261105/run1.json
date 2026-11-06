@@ -1,0 +1,62 @@
+{
+  "trace": [
+    {
+      "event": "dispatch",
+      "at": 1793917137045,
+      "model": "[抗截断]gemini-3.8-flash",
+      "stream": false,
+      "maxTokens": 4096,
+      "messageBytes": 70283
+    },
+    {
+      "event": "headers",
+      "elapsed": 2929,
+      "status": 200
+    },
+    {
+      "event": "complete",
+      "elapsed": 2935,
+      "usage": {
+        "prompt_tokens": 18215,
+        "completion_tokens": 101,
+        "total_tokens": 18316
+      },
+      "finishReason": "stop",
+      "textLength": 157
+    },
+    {
+      "event": "dispatch",
+      "at": 1793917141364,
+      "model": "[抗截断]gemini-3.8-flash",
+      "stream": false,
+      "maxTokens": 4096,
+      "messageBytes": 90515
+    },
+    {
+      "event": "headers",
+      "elapsed": 5750,
+      "status": 200
+    },
+    {
+      "event": "complete",
+      "elapsed": 5753,
+      "usage": {
+        "prompt_tokens": 22580,
+        "completion_tokens": 271,
+        "total_tokens": 22851
+      },
+      "finishReason": "stop",
+      "textLength": 325
+    },
+    {
+      "event": "aborted",
+      "elapsed": 14464
+    }
+  ],
+  "gate": {
+    "status": "NO_CHECK",
+    "operationId": "gm-runtime/901 帝都正式开局 20261105/3/0",
+    "basis": "ordinary_dialogue"
+  },
+  "messages": 5
+}

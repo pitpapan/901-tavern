@@ -1,8 +1,11 @@
+import {equipmentStateSummary,instanceArmor} from '../equipment-state.mjs';
 import {projectionView,projectionAppearance} from '../resource-projections.mjs';
 import {hydrateBattleActors} from './state-view.mjs';
 import {mapView,canObserve,distance,vertices,contains,elevationAt} from './map.mjs';
 import {ABILITIES} from './catalog.mjs';
+import {COMMON_ACTIONS} from './common-actions.mjs';
 import {panel} from './engine.mjs';
+import {equipment} from './mechanics.mjs';
 import {decisionContext} from './runtime.mjs';
 import {statusLevel,lifeStatus} from '../core.mjs';
 
@@ -47,7 +50,7 @@ export function ownImpactReport(root,{afterRevision=0,playerId='player'}={}) {
   return parts.length?`**${actor.name}本次结算：** ${parts.join('；')}。`:'';
 }
 
-const visibleArms=a=>a.kind==='mireya'?(a.weaponMode==='club'?'包毡短棍在手，竞技弓不处于射击姿势':`双手持竞技弓${a.loaded?'，已上箭':'，未上箭'}，包毡短棍收在腰侧`):a.ruleset==='opening-20261022'?`${a.visibleArms}${a.kind==='huang'?(a.sheathed?'在鞘':'出鞘'):''}`:a.kind==='jiang'?'徒手，以拳掌应战':a.kind==='huang'?`狮子王太刀${a.sheathed?'在鞘':'出鞘'}`:
+const visibleArms=a=>a.state.combatManeuvers?.weaponUnavailable?'主手武器已脱手或损毁，当前徒手':a.state.equippedWeaponId&&a.state.possessions?.items?.some(i=>i.id===a.state.equippedWeaponId&&i.held)?`${equipment(a).weapon.name??'实际武器'}在手`:a.kind==='mireya'?(a.weaponMode==='club'?'包毡短棍在手，竞技弓不处于射击姿势':`双手持竞技弓${a.loaded?'，已上箭':'，未上箭'}，包毡短棍收在腰侧`):a.ruleset==='opening-20261022'?`${a.visibleArms}${a.kind==='huang'?(a.sheathed?'在鞘':'出鞘'):''}`:a.kind==='jiang'?'徒手，以拳掌应战':a.kind==='huang'?`狮子王太刀${a.sheathed?'在鞘':'出鞘'}`:
   a.kind==='yulin'?`弃风长剑${a.sheathed?'在鞘':'在手'}`:a.kind==='bright'?'苍穹长弓':a.kind==='lotus'?'灵兽，以爪牙应战':'以已出现的装备为准';
 function condition(state,actor) {
   const life=lifeStatus(state).state;
@@ -91,7 +94,7 @@ export function publicScene(root,{afterRevision=0,playerId='player'}={}) {
     if(!seen.has(r.actorId)||['enter','leave','end','parameters','react','map','mapUpdate'].includes(r.abilityId))continue;
     if(r.after.awaiting&&op.summary.revision!==root.revision)continue;
     const command=c.abilityId===r.abilityId?c:declared.get(`${r.actorId}/${r.abilityId}`)??{};
-    const pendingMovement=Boolean(r.after.awaiting&&['move','step'].includes(r.abilityId));
+    const pendingMovement=Boolean(r.after.awaiting&&['move','step','charge'].includes(r.abilityId));
     if(r.after.awaiting)hasPending=true;
     if(r.attack||r.opportunities?.length)hasAttack=true;
     const event={actor:seen.get(r.actorId),action:b.actors[r.actorId]?.abilityDefinitions?.[r.abilityId]?.name??ABILITIES[r.abilityId]?.name??'行动',
@@ -108,6 +111,20 @@ export function publicScene(root,{afterRevision=0,playerId='player'}={}) {
     else if(r.attack)event.outcome=r.damage.some(x=>x.actualDamage>0)?'造成伤势':r.attack.amount>0?'攻击被防护化解':'未能命中';
     else if(preparations[r.abilityId])Object.assign(event,preparations[r.abilityId]);
     else event.outcome='已执行';
+    if(r.preActionCheck?.allowed===false)event.outcome='行动前检定未通过，所声明动作没有执行';
+    if(r.posture)event.outcome=r.posture==='prone'?'已伏地，仍在原处':'已起身，仍在原处';
+    if(r.itemUse)event.outcome=`已取出${r.itemUse.name}，没有自动使用或消耗该物品`;
+    if(['bullRush','counterRush'].includes(r.abilityId)&&!r.after.awaiting){
+      event.execution='以身体冲撞目标';
+      event.outcome=!r.contest?.won?'冲撞被抵挡或避让，目标未被击退或击倒':r.knockdown?'冲撞使目标倒地':r.forcedMovement?.blocked?'冲撞对抗成功，但击退路线受阻，目标没有位移':'冲撞将目标推离原位';
+      if(r.forcedMovement&&seen.has(r.forcedMovement.targetId))event.displacement={actor:seen.get(r.forcedMovement.targetId),travelMeters:r.forcedMovement.length};
+    }
+    if(r.abilityId==='grapple'&&!r.after.awaiting)event.outcome=r.grapple?.success?'已建立擒抱，抓住了目标；没有造成伤害':r.contact?.total>0?'接触到了目标，但擒抱对抗未成功；没有抓住或造成伤害':'未能接触抓住目标，没有造成伤害';
+    if(!r.after.awaiting){
+      if(r.abilityId==='feint')event.outcome=r.contest?.won?'虚招奏效，获得针对该目标的下次近战机会；尚未攻击或造成伤害':'对方没有被虚招骗过，未造成伤害';
+      if(r.abilityId==='trip')event.outcome=r.knockdown?'绊摔成功，目标倒地，未造成伤害':r.flightTrip?'绊摔使空中目标飞行受阻，未使其落地或造成伤害':'绊摔未成功，目标没有倒地';
+      if(r.abilityId==='disarm'||r.abilityId==='sunder')event.outcome=r.disarmed?`${r.disarmed.name}已脱手落地，持有人未受伤`:r.equipmentDamage?`${r.equipmentDamage.name}${r.equipmentDamage.destroyed?'已经损毁':r.equipmentDamage.structuralDamage>0?'受到结构损伤':'未被突破硬度'}，持有人未受伤`:'目标装备未被击落或损坏，持有人未受伤';
+    }
     // The attack profile belongs to this shot; the final actor may already
     // have spent its arrow or switched weapons by the time prose is rendered.
     if(r.attack&&['bright','mireya'].includes(b.actors[r.actorId].kind)&&r.attack.range>b.actors[r.actorId].reach) {
@@ -142,7 +159,7 @@ export function publicScene(root,{afterRevision=0,playerId='player'}={}) {
       }).map(id=>seen.get(id));
       if(stationary.length)event.consequence+=`${stationary.join('、')}此次受击时原地受创，站位未变。`;
     }
-    if(['move','step'].includes(r.abilityId)&&!pendingMovement) {
+    if(['move','step','charge'].includes(r.abilityId)&&!pendingMovement) {
       const to=r.after.participants.find(x=>x.id===r.actorId)?.position;
       const from=r.movement?.from??before?.find(x=>x.id===r.actorId)?.position;
       const observer=r.after.participants.find(x=>x.id===playerId)?.position;
@@ -161,7 +178,7 @@ export function publicScene(root,{afterRevision=0,playerId='player'}={}) {
     if(r.opportunities)event.reactions=r.opportunities.filter(x=>seen.has(x.actorId)).map(x=>({actor:seen.get(x.actorId),
       action:'借机攻击',arms:visibleArms(b.actors[x.actorId]),timing:'离开近战范围之前，随后才完成移动',outcome:x.damage.some(d=>d.actualDamage>0)?'造成伤势':'未造成伤势'}));
     if(r.responses?.length)event.responses=r.responses.filter(x=>seen.has(x.targetId)).map(x=>({
-      actor:seen.get(x.targetId),method:x.guarded?'已就绪的主动格挡参与本击防御':'本击仅使用基础及被动防护，没有使用主动格挡',
+      actor:seen.get(x.targetId),method:x.method??(x.guarded?'已就绪的主动格挡参与本击防御':'本击仅使用基础及被动防护，没有使用主动格挡'),
     }));
     events.push(event);
   }
@@ -172,7 +189,7 @@ export function publicScene(root,{afterRevision=0,playerId='player'}={}) {
   return {events,projections:projectionView(b,playerId),vagueObservations:mapView(b,playerId)?.vagueObservations??[],...(hasPending?{interaction:'本段含尚未结算的行动；只展开已经显现的准备或来势，停在所列等待处，不预写其移动、命中或伤害结果。'}:!hasAttack?{interaction:'本段仅发生已列出的移动、准备或恢复等行动，双方未发生攻击或挡接。'}:{}),setting:b.map?{name:b.map.title,nearbyLandmarks:nearby,...(b.arena?{nature:'实体练习场；终止是按约停手，不产生自动声光信号、光标或虚拟投影。'}:{})}:b.scenario,participants:actors.map(([id,a])=>({id,name:projectionAppearance(b,id,playerId)?.name??a.name,location:id===playerId?'你所在的位置':origin?`与你相距${Math.round(distance(a.position,origin)*10)/10}米`:'场上可见位置',...terrain(a),...(projectionAppearance(b,id,playerId)?{appearance:projectionAppearance(b,id,playerId).description}:{condition:condition(root.actors[id].state,a),arms:visibleArms(a)})})),
     ...(b.resolution?{resolution:b.resolution.kind==='refereeStop'
       ?{...b.resolution,text:'按本场预告的终止条件，练习结束；现有伤势与资源保留。'}:b.resolution}:{}),
-    phase:b.mode==='story'?'战斗结束':b.pending?.kind==='opportunity'?'等待玩家借机攻击声明':b.pending?.awaiting===playerId?'等待玩家受击反应':b.activeId===playerId?'等待玩家继续行动':'场上行动',
+    phase:b.mode==='story'?'战斗结束':b.pending?.kind==='counterRush'?'等待反冲选择':b.pending?.kind==='opportunity'?'等待玩家借机攻击声明':b.pending?.awaiting===playerId?'等待玩家受击反应':b.activeId===playerId?'等待玩家继续行动':'场上行动',
     ...(b.status==='finished'?{winners:actors.filter(([,a])=>a.team===b.winner).map(([,a])=>a.name)}:{})};
 }
 
@@ -181,8 +198,47 @@ export function playerDeclarationContext(b,revision,playerId='player') {
   // Even explicitly shared ally stats are private under this campaign's rule.
   safe.knowledge={...safe.knowledge,[playerId]:Object.fromEntries(Object.entries(safe.knowledge?.[playerId]??{}).map(([id,k])=>[id,{...k,stats:false}]))};
   const context=decisionContext(safe,revision);
+  const itemIds=new Set(context.legalOptions.filter(c=>c.abilityId==='takeItem').map(c=>c.itemId));
+  const items=(safe.actors[playerId].state.possessions?.items??[]).filter(i=>itemIds.has(i.id)).map(i=>({
+    id:i.id,ownerId:playerId,name:i.name,...(i.aliases?{aliases:i.aliases}:{}),access:i.access,held:i.held}));
+  if(items.length)context.items=items;
   context.abilities={...context.abilities,...Object.fromEntries([...safe.actors[playerId].abilities,'door','destroy','firstAid','escapeGrip','pressGrip','grappleAttack','ringStore','ringRetrieve','mechanism'].map(id=>[id,safe.actors[playerId].abilityDefinitions?.[id]??ABILITIES[id]]))};
   return context;
+}
+
+const slotNames={standard:'标准',move:'移动',swift:'迅捷',reflex:'反射'};
+const slots=o=>Object.entries(o??{}).filter(([,n])=>n>0).map(([k,n])=>`${slotNames[k]??k}×${n}`).join('、')||'无';
+export function combatActionReport(root,{afterRevision=0,playerId='player'}={}){
+ if(!root.battle)return '';
+ const lines=[],ops=Object.values(root.operations).filter(o=>o.summary?.revision>afterRevision&&o.summary.result?.after?.participants).sort((a,b)=>a.summary.revision-b.summary.revision);
+ for(const op of ops){
+  const r=op.summary.result,a=root.actors[r.actorId];if(!a||['enter','leave','parameters','map','mapUpdate','react'].includes(r.abilityId)||r.abilityId==='end'&&r.actorId!==playerId)continue;
+  if(r.after.awaiting&&op.summary.revision!==root.revision)continue;
+  const seen=r.after.visibleTo?.[playerId]??[];
+  if(r.actorId!==playerId&&!seen.includes(r.actorId))continue;
+  const command={...JSON.parse(op.signature),...(r.receipt?.targetId?{targetId:r.receipt.targetId}:{})},target=root.actors[command.targetId];
+  const label=root.battle.actors[r.actorId]?.abilityDefinitions?.[r.abilityId]?.name??ABILITIES[r.abilityId]?.name??'已记录行动';
+  lines.push(`${a.name}｜${label}${target&&(command.targetId===playerId||seen.includes(command.targetId))?` → ${target.name}`:''}`);
+  if(r.after.awaiting){lines.push(root.battle.pending?.kind==='paid-movement'?'状态：跳跃检定与本段移动动作已支付；实际轨迹等待借机反应，未完成位移。':'状态：待裁定；攻击、移动及对应消耗尚未执行。');continue;}
+  const q=r.receipt;
+  if(r.actorId===playerId&&q){
+   lines.push(`动作消耗：${slots(q.actions)}`);
+   const ordinary=COMMON_ACTIONS[r.abilityId]||['strike','move','step','block','fullDefense','reload','medicine','door','destroy','firstAid','escapeGrip','pressGrip','grappleAttack','jump','continueJump','end'].includes(r.abilityId);
+   lines.push(`技能／招式：${ordinary?'未额外使用特殊技能':label}`);
+   const use=[...(q.weapon?[`使用${q.weapon}`]:[]),...(q.itemUse?[`取出${q.itemUse.name}`]:[]),...q.items.map(x=>`${x.name}×${x.quantity}`)];
+   lines.push(`装备／物品：${use.join('；')||'无使用或消耗'}`);
+   const resources=[...q.resources.map(x=>`${x.name}×${x.quantity}`),...(q.willSpent?[`意志×${q.willSpent}`]:[])];
+   lines.push(`资源消耗：${resources.join('、')||'无'}`,`主动移动：${q.movement}米`,`剩余动作：${slots(q.remaining)}`);
+  }else if(r.movement)lines.push(`可见移动：${r.movement.length}米`);
+  for(const response of r.responses??[])if(response.targetId===playerId||seen.includes(response.targetId))lines.push(`防御（${root.actors[response.targetId]?.name??'受击者'}）：${response.method??(response.guarded?'使用已就绪的主动格挡':'基础及被动防护，未主动格挡')}`);
+  if(!(r.responses?.length))lines.push(['block','zheng','fullDefense','brace'].includes(r.abilityId)?'防御：已完成防护准备，尚不代表挡住一次攻击。':'防御：本动作没有防御结算。');
+  if(r.forcedMovement&&(r.forcedMovement.targetId===playerId||seen.includes(r.forcedMovement.targetId)))lines.push(`被迫位移（${root.actors[r.forcedMovement.targetId]?.name??'目标'}）：${r.forcedMovement.length}米${r.forcedMovement.blocked?'（受阻）':''}`);
+  if(r.disarmed)lines.push(`装备结果：${r.disarmed.name}已脱手落地。`);
+  if(r.equipmentDamage)lines.push(`装备结果：${r.equipmentDamage.name}${r.equipmentDamage.destroyed?'已损毁':r.equipmentDamage.structuralDamage>0?'已受损':'未突破硬度'}。`);
+  if(r.counterOffer)lines.push('此前冲撞已结算，等待抵挡者选择是否反冲。');
+  lines.push(`状态：${r.preActionCheck?.allowed===false?'行动前检定未通过，所声明动作未执行':r.grapple?r.grapple.success?'擒抱对抗成功':'擒抱对抗未成功':r.contact?.total===0?'未能接触抓住目标':r.contest?r.contest.won?'对抗成功':'对抗未成功':r.attack?r.damage.some(d=>d.actualDamage>0)?'攻击已结算，造成伤害':r.attack.amount>0?'攻击已结算，未造成实际伤害':'攻击已结算，未命中':'已执行'}`);
+ }
+ return lines.length?`【本次战斗记录】\n${lines.join('\n')}`:'';
 }
 
 // This object is for local player UI only; it never enters a narration prompt.
@@ -196,6 +252,7 @@ export function ownStatus(root,battle,playerId='player',fallbackActor) {
   const b=battle?.actors[playerId]?battle:{playerDefenseDeclarations:true,actors:{[playerId]:source}};
   const p=panel(b,playerId),intent=source.defenseIntent;
   return {name:actor.name,health:p.health,hpMax:p.hpMax,energy:p.energy,will:p.will,xp:actor.state.xp,
+    ...(equipmentStateSummary(source.state)?{equipment:{...equipmentStateSummary(source.state),armorDefense:instanceArmor(source.state)?.defense}}:{}),
     attack:{dp:p.attack.dp,fixed:p.attack.fixed,cap:p.attack.cap},
     defense:p.defense.pending?{pending:true}:{total:p.defense.total,parts:p.defense.parts,extraSuccesses:p.defense.extraSuccesses},
     speed:p.speed,actions:p.actions,activeTurn:battle?.mode==='combat'&&battle.activeId===playerId,

@@ -215,6 +215,40 @@ test('recorded continuation failure permits NO_CHECK recovery but an unresolved 
   assert.equal(gate.replayPendingFromChat(chat, current), null);
 });
 
+test('same declaration can recover a recorded classification timeout without cancelling an action', async () => {
+  const source = player('“我现在的穿着直接进去？” 我指了指破损的盔甲。');
+  const pending = { original: source, operationId: 'gm-runtime/isolation/1/0', request: null };
+  const diagnostic = { operationId: pending.operationId, failureStage: 'messages_assembled',
+    errorCode: 'CLASSIFICATION_TIMEOUT', reason: 'deadline', classificationRequests: 1, narrationRequests: 0 };
+  const entry = { status: 'UNRESOLVED', operationId: pending.operationId, pending, diagnostic };
+  const chat = [{ mes: '开场' }, { is_user: true, mes: source.text },
+    { is_user: false, extra: { '901_replay_gate': entry } }, { is_user: true, mes: source.text }];
+  const current = player(source.text, 3);
+  const recover = () => gate.replayPendingFromChat(chat, current);
+  let narrations = 0;
+  const options = { player: current, pending: recover(), canCancelPending: async () => true,
+    classify: async () => ({ status: 'NO_CHECK', basis: 'ordinary_dialogue', reason: '普通对白' }),
+    settle: async () => { throw Error('must not settle'); },
+    narrate: async context => { narrations++; assert.equal(context.operationId, pending.operationId); return '布莱特回答。'; },
+    post: async () => {} };
+  assert.equal((await runGuardedTurn(options)).status, 'NO_CHECK');
+  assert.equal(narrations, 1);
+  await assert.rejects(runGuardedTurn({ ...options, canCancelPending: async () => false }), /pending action.*NO_CHECK/i);
+  await assert.rejects(runGuardedTurn({ ...options, player: player('我走进城门', 3) }), /pending action.*NO_CHECK/i);
+  // Do not infer a classification retry from a redacted request or an older timeout.
+  for (const replacement of [
+    { ...diagnostic, failureStage: 'gate_validation', errorCode: undefined, reason: 'gate_rejected_decision' },
+    { ...diagnostic, narrationRequests: 1 },
+    { ...diagnostic, operationId: 'gm-runtime/other/1/0' },
+  ]) {
+    entry.diagnostic = replacement;
+    await assert.rejects(runGuardedTurn({ ...options, pending: recover() }), /pending action.*NO_CHECK/i);
+  }
+  entry.diagnostic = diagnostic;
+  entry.pending = { ...pending, request: { kind: 'check' } };
+  await assert.rejects(runGuardedTurn({ ...options, pending: recover() }), /pending action.*NO_CHECK/i);
+});
+
 test('explicit cancellation of the unexecuted medicine declaration continues the actual current turn only', async () => {
   // Verbatim player declarations saved in radwick-story-recheck-failed.jsonl,
   // floors 15 and 17 of the isolated live arena chat.
