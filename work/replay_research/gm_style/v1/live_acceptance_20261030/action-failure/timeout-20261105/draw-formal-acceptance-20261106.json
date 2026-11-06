@@ -1,0 +1,274 @@
+{
+  "date": "2026-11-06",
+  "status": "passed-formal-install-isolated-chats",
+  "commit": "6848bab1940839d36518da537ea63cc2266131fc",
+  "port": 8000,
+  "modules": {
+    "resource-weapons.mjs": {
+      "source": "2cfd8bb8d37b2b1d3100ab1c2e336a17e63b7e95705a1287b232562b115b97e2",
+      "before": "b13ed16efbabe8ca384a96826d1d91adda0d3f389493953b0bd932059f33b21e",
+      "installed": "2cfd8bb8d37b2b1d3100ab1c2e336a17e63b7e95705a1287b232562b115b97e2"
+    },
+    "equipment-state.mjs": {
+      "source": "a5c461bbb418509ef298eacf9261f89bd703544d0060550e339af40f195ad1e1",
+      "before": "fa40d40fe3b5deb8f810e420c84815aabe955d888b22cd2a5170e50761ff9680",
+      "installed": "a5c461bbb418509ef298eacf9261f89bd703544d0060550e339af40f195ad1e1"
+    },
+    "gm_runtime/rule-actions.mjs": {
+      "source": "a0e78c2487a34c006e54cb116059f7f7a5b8c8e88c6a17e18c04cec2159eef47",
+      "before": "9145f852b7daf22031febadc54ce1cd88830980009de2eef3c625ddfda3e6b61",
+      "installed": "4f1daea45100bd4d1e33eea9e96ac906769053ef454b0687c9366533caeba8fa"
+    },
+    "gm_runtime/adjudication-gate.mjs": {
+      "source": "c851120cdec2d7e6e00beb72ce63c231adad5e0b231ac623c799ba270cfb5e40",
+      "before": "dfeee32d2c25fc421bb0ba7f942f6c3411a1f82e67106382fce3aeb203847ea1",
+      "installed": "d76b5ce8a9e7bd0f69a6fa121f07812074e71f4df2d54fa3a97a6d9370592d43"
+    },
+    "gm_runtime/narrative.mjs": {
+      "source": "38a2c7aebe3ab19ce29a51bec057f6782102adde1cef0088f1c46494b35548ce",
+      "before": "fe05980bc820b85ab5b50e787f3ba1f46753f2cc9bd050f4ad5e7471d790390f",
+      "installed": "a0b23f6025f3eb10f1b1a2b72c9b2f2a953c4b6935bed8fc6064ea484f3ddee5"
+    },
+    "gm_runtime/player-status-ui.mjs": {
+      "source": "0c3a885bc7685a8999227d6134f5002bf17026bd958b7a4e1a00d9e5b5ad0742",
+      "before": "4c83b0ec8532ce94b57bd570fea759012e216159513685d3a32925985b4707cd",
+      "installed": "0c3a885bc7685a8999227d6134f5002bf17026bd958b7a4e1a00d9e5b5ad0742"
+    },
+    "combat/common-actions.mjs": {
+      "source": "8da422ce20eab5708f5de756f6c379802e8a6100384083e26c1f488d96eccded",
+      "before": "9e30b3d30adaa3b25bc203961d464acb7a302b0804135915e05652fc4bbc278c",
+      "installed": "6f1dc690f62e9c5a95daa3f4d668c4c4e2a590bc636888288f0a9b2a4f012b80"
+    },
+    "combat/engine.mjs": {
+      "source": "c0e2032a76187b6108fdf310f72b869606c60ab165fea61be39ee14e34c07d5d",
+      "before": "76cbd67647c08c522c564047cbf9db04e2a53277703b5a49a92acf81ceb6ea7f",
+      "installed": "9ba6f3fe5a4ea944789d157a209c66efd8bed218181bec78df1cc606d1596f4e"
+    },
+    "combat/action-prices.mjs": {
+      "source": "0c775e34affdd049cdcad864e6a504589d094b99cca39bec68cf490e1ec8cd16",
+      "before": "d328d253dd6dcecb6f12fee0fe7b4297b7cee7bad964564d142a965b9829c6eb",
+      "installed": "0c775e34affdd049cdcad864e6a504589d094b99cca39bec68cf490e1ec8cd16"
+    },
+    "combat/runtime.mjs": {
+      "source": "cc7d4e660fdf6f711e29df66c7042de1fc63397df1895576fd5a0741460fc4fe",
+      "before": "ad45775eb081578d88cee17dc4491320029784c2e7ba415dd62607c7878c61a0",
+      "installed": "bf2b4d8f87f32dfe8611d8ca4f4f036bf3c9177e99084c589045ae5cbc7f1c9b"
+    },
+    "combat/presentation.mjs": {
+      "source": "67fa6783ff06c296bb99561a5df2ae9d0d79a5f136a42f95711f26454ccfd8a9",
+      "before": "f76290d0d0900058b4cdd2201f5625efc8538e46725b8505146fc917fcc3c5d4",
+      "installed": "829b00c0aedf52cc7188cb8149428a5132f6213da27d5eda357190fd829724db"
+    },
+    "combat/ground-weapons.mjs": {
+      "source": "a05c2e518261853f3bb370c0c8b88f14417070cd29f9b1618d3fe391350d7866",
+      "before": "caf2a3968643bd54c89c6446e37a1bc59e2dddd5d0ead66ad3bbe6281c9c31c7",
+      "installed": "a05c2e518261853f3bb370c0c8b88f14417070cd29f9b1618d3fe391350d7866"
+    }
+  },
+  "httpReadbackMatches": true,
+  "interaction": "Terra High判断、主会话IAB执行",
+  "model": "[抗截断]gemini-3.8-flash",
+  "completeModelConfigUnchanged": true,
+  "autoUpdateEnabled": false,
+  "testCard": "901 正式战斗加载验收 20261106",
+  "chats": {
+    "noncombat": "901 正式弃风拔出验收 20261106 - 非战斗",
+    "combat": "901 正式弃风拔出验收 20261106 - 战斗"
+  },
+  "results": {
+    "noncombat": {
+      "messages": 9,
+      "revision": 1,
+      "operations": 1,
+      "held": true,
+      "refreshUnchanged": true,
+      "result": {
+        "steps": [
+          {
+            "operation": "draw",
+            "itemId": "opening.qifeng",
+            "name": "弃风剑",
+            "action": null,
+            "hands": 1,
+            "equipped": true,
+            "location": "carried",
+            "elapsedMinutes": 0,
+            "source": "PHB非战斗行动与战斗行动211–215；RE物品和装备位手持物"
+          }
+        ],
+        "elapsedMinutes": 0,
+        "armor": {
+          "defense": 0
+        },
+        "action": "equipment"
+      }
+    },
+    "combat": {
+      "messages": 3,
+      "revision": 1,
+      "operations": 1,
+      "held": true,
+      "refreshUnchanged": true,
+      "result": {
+        "actorId": "player",
+        "abilityId": "drawWeapon",
+        "round": 1,
+        "damage": [],
+        "statuses": [],
+        "saves": [],
+        "healing": [],
+        "notes": [],
+        "itemUse": {
+          "operation": "draw",
+          "itemId": "opening.qifeng",
+          "name": "弃风剑",
+          "action": "move",
+          "hands": 1,
+          "equipped": true,
+          "location": "carried"
+        },
+        "after": {
+          "status": "active",
+          "winner": null,
+          "activeId": "player",
+          "visibleTo": {
+            "player": [
+              "player",
+              "huang"
+            ],
+            "huang": [
+              "player",
+              "huang"
+            ]
+          },
+          "participants": [
+            {
+              "id": "player",
+              "name": "御临风",
+              "team": "玩家方",
+              "health": {
+                "intact": 12,
+                "B": 0,
+                "L": 0,
+                "A": 0,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "流风": {
+                  "current": 22,
+                  "max": 22
+                }
+              },
+              "actions": {
+                "phase": "active",
+                "standard": 1,
+                "move": 0,
+                "swift": 1,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                0,
+                0
+              ],
+              "statuses": []
+            },
+            {
+              "id": "huang",
+              "name": "试验陪练",
+              "team": "试验方",
+              "health": {
+                "intact": 89,
+                "B": 0,
+                "L": 11,
+                "A": 0,
+                "temp": 0,
+                "coma": false,
+                "deteriorationStopped": false
+              },
+              "energy": {
+                "灵力": {
+                  "current": 5,
+                  "max": 5
+                }
+              },
+              "actions": {
+                "phase": "ended",
+                "standard": 0,
+                "move": 0,
+                "swift": 0,
+                "reactionLock": false,
+                "reactionLockEnds": 0,
+                "responseDebt": false,
+                "opportunityUsed": false
+              },
+              "position": [
+                1,
+                0
+              ],
+              "statuses": []
+            }
+          ]
+        },
+        "receipt": {
+          "actions": {
+            "move": 1
+          },
+          "resources": [],
+          "items": [],
+          "willSpent": 0,
+          "itemUse": {
+            "operation": "draw",
+            "itemId": "opening.qifeng",
+            "name": "弃风剑",
+            "action": "move",
+            "hands": 1,
+            "equipped": true,
+            "location": "carried"
+          },
+          "movement": 0,
+          "remaining": {
+            "standard": 1,
+            "move": 0,
+            "swift": 1
+          }
+        }
+      }
+    }
+  },
+  "protectedFiles": 290,
+  "changedFiles": [
+    "D:\\github\\sillyTavern\\data\\default-user\\settings.json",
+    "D:\\github\\sillyTavern\\data\\default-user\\characters\\901 正式战斗加载验收 20261106.png",
+    "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\equipment-state.mjs",
+    "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\resource-weapons.mjs",
+    "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\combat\\action-prices.mjs",
+    "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\combat\\common-actions.mjs",
+    "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\combat\\engine.mjs",
+    "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\combat\\ground-weapons.mjs",
+    "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\combat\\presentation.mjs",
+    "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\combat\\runtime.mjs",
+    "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\gm_runtime\\adjudication-gate.mjs",
+    "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\gm_runtime\\narrative.mjs",
+    "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\gm_runtime\\player-status-ui.mjs",
+    "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\gm_runtime\\rule-actions.mjs"
+  ],
+  "newFiles": [
+    "D:\\github\\sillyTavern\\data\\default-user\\chats\\901 正式战斗加载验收 20261106\\901 正式弃风拔出验收 20261106 - 战斗.jsonl",
+    "D:\\github\\sillyTavern\\data\\default-user\\chats\\901 正式战斗加载验收 20261106\\901 正式弃风拔出验收 20261106 - 非战斗.jsonl"
+  ],
+  "allExistingChatsAndFormalPlayCardUnchanged": true,
+  "testCardChanges": [
+    "/ccv3/chat",
+    "/chara/chat"
+  ],
+  "settingsChangedPaths": [
+    "/active_character"
+  ],
+  "scope": "腰间、单手、双手可用仅测试条件；不迁移原聊天，不追加攻击或回合",
+  "privateEvidence": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\draw-formal-install-20261106"
+}
