@@ -1,0 +1,252 @@
+{
+  "status": "passed",
+  "port": 8000,
+  "cleanupCommit": "f2de4fd",
+  "testCharacter": "901 正式战斗加载验收 20261106",
+  "testChat": "901 仅六书真实战斗验收 20261106 - 击落武器",
+  "operator": "Terra gpt-6.1-terra high judgement; main session IAB execution",
+  "model": "[抗截断]gemini-3.8-flash",
+  "actualModelCombat": true,
+  "playerDeclarations": 1,
+  "messages": 3,
+  "revision": 1,
+  "operationIds": [
+    "declaration/901 仅六书真实战斗验收 20261106 - 击落武器/1/0/0"
+  ],
+  "input": "御临风攻击试验陪练手中那把试验剑，试图将剑击落；不结束本回合。",
+  "result": {
+    "actorId": "player",
+    "abilityId": "disarm",
+    "round": 1,
+    "damage": [],
+    "statuses": [],
+    "saves": [],
+    "healing": [],
+    "notes": [],
+    "responses": [
+      {
+        "targetId": "huang",
+        "guarded": false
+      }
+    ],
+    "attack": {
+      "rawDP": 15,
+      "dp": 15,
+      "attribute": "敏捷",
+      "handling": {
+        "requirement": 0,
+        "deficit": 0,
+        "strengthPenalty": 0,
+        "gripPenalty": 0,
+        "aimMultiplier": 1,
+        "distancePenalty": 0
+      },
+      "legacyCompatible": true,
+      "weaponType": null,
+      "severity": "L",
+      "weapon": 6,
+      "cap": 11,
+      "fixed": 2,
+      "ap": 2,
+      "magic": 2,
+      "speed": 0,
+      "extra": 0,
+      "ignore": 0,
+      "aggravate": 0,
+      "electric": 0,
+      "reduction": 3,
+      "range": 1.5,
+      "explode": 10,
+      "magical": false,
+      "ranged": false,
+      "firearm": null,
+      "ballistic": null,
+      "energyWeapon": false,
+      "hardnessIgnore": 0,
+      "spiritEligible": true,
+      "calledPenalty": 3,
+      "defense": {
+        "total": 2,
+        "parts": {
+          "base": 0,
+          "natural": 0,
+          "armor": 1,
+          "dodge": 1,
+          "insight": 0,
+          "block": 0,
+          "cover": 0,
+          "cultivation": 0,
+          "force": 0,
+          "device": 0,
+          "shield": 0,
+          "luck": 0,
+          "morale": 0,
+          "enhancement": 0,
+          "holy": 0,
+          "unholy": 0,
+          "technique": 0,
+          "performance": 0,
+          "intrinsic": 0,
+          "unnamed": 0
+        },
+        "remainingAP": 0,
+        "guarded": false,
+        "extraSuccesses": 0
+      },
+      "roll": {
+        "dp": 13,
+        "luck": false,
+        "dice": [
+          2,
+          4,
+          4,
+          4,
+          9,
+          5,
+          4,
+          7,
+          10,
+          2,
+          3,
+          7,
+          9,
+          3
+        ],
+        "used": 14,
+        "rolledSuccesses": 3,
+        "luckMishap": false
+      },
+      "amount": 5
+    },
+    "equipmentHit": true,
+    "contest": {
+      "active": {
+        "eligible": true,
+        "willCost": 0,
+        "skill": {
+          "level": 5,
+          "auto": 2,
+          "main": 5,
+          "sub": 0
+        },
+        "adjustments": {
+          "allowed": true,
+          "penalty": 0,
+          "bonus": 0,
+          "entries": []
+        },
+        "autoSuccesses": 3,
+        "dp": 15,
+        "luck": false,
+        "dice": [
+          2,
+          10,
+          3,
+          6,
+          7,
+          4,
+          3,
+          3,
+          2,
+          1,
+          2,
+          2,
+          7,
+          2,
+          8,
+          8
+        ],
+        "used": 16,
+        "rolledSuccesses": 3,
+        "luckMishap": false,
+        "reExtraSuccesses": 0,
+        "total": 6
+      },
+      "passive": {
+        "eligible": true,
+        "willCost": 0,
+        "skill": {
+          "level": 1,
+          "auto": 0,
+          "main": 1,
+          "sub": 0
+        },
+        "adjustments": {
+          "allowed": true,
+          "penalty": 0,
+          "bonus": 0,
+          "entries": []
+        },
+        "autoSuccesses": 0,
+        "dp": 2,
+        "luck": false,
+        "dice": [
+          3,
+          7
+        ],
+        "used": 2,
+        "rolledSuccesses": 0,
+        "luckMishap": false,
+        "reExtraSuccesses": 0,
+        "total": 0
+      },
+      "margin": 6,
+      "won": true
+    },
+    "disarmed": {
+      "targetId": "huang",
+      "itemId": "practice-sword",
+      "name": "试验剑",
+      "position": [
+        1,
+        0
+      ]
+    },
+    "receipt": {
+      "actions": {
+        "standard": 1
+      },
+      "resources": [],
+      "items": [],
+      "targetId": "huang",
+      "willSpent": 0,
+      "weapon": "弃风长剑在手",
+      "movement": 0,
+      "remaining": {
+        "standard": 0,
+        "move": 1,
+        "swift": 1
+      }
+    }
+  },
+  "response": "御临风手中的弃风长剑倏然起势，剑锋未走伤人的空当，而是径直切入对方架势微露的接缝处，精准地磕在试验剑的受力点上。\n\n试验陪练只来得及依凭身形与防护本能微侧卸力，并未起手格挡。剑刃交击的脆响方起，一股巧劲已顺着兵刃递了过去，试验陪练五指受震微松，手中的试验剑立时脱手飞出，“当啷”一声跌落在地。\n\n一击落定，试验陪练身形未损，只余空握的双手停在近身处。两步之内，弃风长剑剑尖压低，攻守转瞬已定。\n\n【本次战斗记录】\n御临风｜击落武器 → 试验陪练\n动作消耗：标准×1\n技能／招式：未额外使用特殊技能\n装备／物品：使用弃风长剑在手\n资源消耗：无\n主动移动：0米\n剩余动作：移动×1、迅捷×1\n防御（试验陪练）：基础及被动防护，未主动格挡\n装备结果：试验剑已脱手落地。\n状态：对抗成功\n\n<StatusPlaceHolderImpl/>",
+  "scannedBooks": [
+    "901_01_世界基础设定_20261023",
+    "901_02_政治与势力_20261023",
+    "901_03_人物资料库_20261023",
+    "901_04_能力与战力_20261023",
+    "901_05_历史与事件_20261023",
+    "901_06_当前剧本与局势_20261023"
+  ],
+  "availableEntries": 580,
+  "actualPromptAddingEvents": [
+    {
+      "level": "log",
+      "message": "[WI] Adding 8 entries to prompt Array(8)",
+      "timestamp": "2026-11-06T18:22:40.020Z",
+      "url": "http://127.0.0.1:8000/scripts/world-info.js"
+    }
+  ],
+  "oldBooksAbsent": true,
+  "fullRootAndReplyUnchangedAfterRefresh": true,
+  "autoUpdateEnabled": false,
+  "modelSettingsUnchanged": true,
+  "protectedExistingFiles": 283,
+  "changedExistingFiles": [
+    "D:\\github\\sillyTavern\\data\\default-user\\characters\\901 正式战斗加载验收 20261106.png"
+  ],
+  "originalCardAndAllExistingChatsWorldsRuntimeUnchanged": true,
+  "testCardNote": "Host rewrote acceptance card when selecting the new test chat. Its current chat points to this test; runtime scripts and primary lorebook match formal card. Original formal card untouched.",
+  "scope": "One real-model disarm smoke under six books; no regeneration or expanded action matrix.",
+  "screenshot": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\six-books-live-combat-20261106\\accepted.png"
+}
