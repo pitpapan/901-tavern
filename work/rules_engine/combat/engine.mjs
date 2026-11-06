@@ -24,6 +24,7 @@ import {PHYSICAL_ACTIONS,physicalPriceRequest} from './action-prices.mjs';
 import {quoteActionPrice,consumeActionPrice,combatRoundKey} from '../resource-action-pricing.mjs';
 import {effectiveStatuses} from '../resource-status-applicability.mjs';
 import {BASIC_ACTIONS} from '../resource-action-bindings.mjs';
+import {pickupGroundWeapon} from './ground-weapons.mjs';
 import {COMMON_ACTIONS,COMMON_TARGETED,maneuverState,beginCommonTurn,endCommonTurn,checkManeuver,maneuverDefense,requireMeleeTarget,pushTarget,takeCarriedItem,feintSkill,chargePath,targetEquipment,equipmentContestModifier,loseHeldEquipment} from './common-actions.mjs';
 import {actionReceipt} from './action-receipt.mjs';
 import {weaponHandling,ordinaryWeaponType,weaponAmmoSpec,weaponAmmoState,consumeWeaponAmmo,loadWeaponAmmo} from '../resource-weapons.mjs';
@@ -927,6 +928,7 @@ export function act(input,command,{drawDice=randomDice,playerAuthorized=false,de
   if(Object.hasOwn(PHYSICAL_ACTIONS,id))commandKeys.push('actionDiscount');
   commandKeys.push('additionalDamageOrder','additionalDamageTypeOrder');
   if(COMMON_ACTIONS[id])commandKeys.push('mode','attribute','itemId');
+  if(id==='pickupWeapon')commandKeys.push('fromActorId');
   commandKeys.push('limbIds','willpower',...(id==='strike'?['adjacentTargetIds','rapidFire']:[]),...(id==='move'?['block','hide']:[]));if(id==='statusEvent')commandKeys.push('eventId');
   requireThat(Object.keys(c).every(k=>commandKeys.includes(k)),'请求只能选择能力、目标与合法选项，不能给出骰值或结算数值');
   if(id==='destroy'){const projection=projectionFeature(b,c.featureId)?.projection;if(projection)inspectProjectionAttack(projection);}
@@ -951,7 +953,7 @@ export function act(input,command,{drawDice=randomDice,playerAuthorized=false,de
       const source=b.actors[s.sourceActorId];return source&&Array.isArray(c.to)&&spatialDistance(b.map,c.to,source.position)>spatialDistance(b.map,a.position,source.position)&&(selectedFlight?.path??measurePath(b.map,a.position,c.to,c.via)).cost>=(selectedFlight?.speed??panel(b,a.id).speed)-1e-8;});
     a.statusPermission=statusActionPermission(a.state,c,{escape,perceived:s=>s.perceived??(b.actors[s.sourceActorId]?.present&&canObserve(b,b.actors[s.sourceActorId],a.id)?true:undefined)});
     if(selectedFlight?.maneuverability==='perfect')a.statusPermission.perfectFlight=true;
-    if(physicalActions.has(id)&&!['move','step'].includes(id)){const limb=limbEffects(a.state,c.limbIds??a.state.anatomy?.attackLimbs);requireThat(!limb.disabled,'该动作所需肢体已残障');}
+    if(physicalActions.has(id)&&!['move','step','pickupWeapon'].includes(id)){const limb=limbEffects(a.state,c.limbIds??a.state.anatomy?.attackLimbs);requireThat(!limb.disabled,'该动作所需肢体已残障');}
   }
   requireThat(!a.underground?.mustEmerge||['emerge','end'].includes(id),'土遁期限已到，须标准动作出土');
   requireThat(!a.underground||['move','emerge','end'].includes(id),'地下不能攻击或使用地面动作');
@@ -1059,6 +1061,8 @@ export function act(input,command,{drawDice=randomDice,playerAuthorized=false,de
     case 'stand':
       requireThat(a.state.combatManeuvers?.prone,'当前没有倒地');
       spend(b,a,c,'move','move');delete a.state.combatManeuvers.prone;result.posture='standing';break;
+    case 'pickupWeapon':
+      result.itemUse=pickupGroundWeapon(b,a,c,kind=>spend(b,a,c,kind));break;
     case 'takeItem':
       result.itemUse=takeCarriedItem(a,c.itemId,kind=>spend(b,a,c,kind));break;
     case 'adjust':

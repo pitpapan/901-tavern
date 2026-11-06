@@ -1,0 +1,294 @@
+{
+  "status": "isolated_implementation_and_real_model_acceptance_passed",
+  "formalInstalled": false,
+  "port": 18114,
+  "operator": "Terra gpt-6.1-terra high judgement; main session IAB execution",
+  "model": "[抗截断]gemini-3.8-flash",
+  "modelConfigUnchanged": true,
+  "autoUpdateEnabled": false,
+  "sources": [
+    {
+      "path": "901_rules_source_library/content/RE/01_rules/02_战斗与动作/战斗开始.md",
+      "lines": "62-81",
+      "adopted": "拾取物品4AP，对应原版移动动作；使用现有动作支付器"
+    },
+    {
+      "path": "901_rules_source_library/content/RE/01_rules/04_附录/物品和装备位.md",
+      "lines": "235-245",
+      "adopted": "实际可持握肢体、占手与生效武器；不将拾取当作免费切换"
+    },
+    {
+      "path": "901_rules_source_library/content/PHB/01_rules/非战斗行动与战斗行动.md",
+      "lines": "211-215",
+      "adopted": "佩带武器拔取、容器取物维持原费用；地面拾取独立处理"
+    }
+  ],
+  "contract": {
+    "command": "pickupWeapon",
+    "fields": [
+      "fromActorId",
+      "itemId"
+    ],
+    "bodyData": "state.anatomy.source + graspingLimbs; lost/disabled hands and held-object grip are checked",
+    "instance": "existing sourced intact ground weapon within visible reach; no generated equipment",
+    "cost": "move, existing action economy; no automatic attack/end",
+    "state": "same instance carried/held, set equippedWeaponId, clear weaponUnavailable, actual grip and resource identity",
+    "switching": "does not replace an existing active weapon; handle that weapon explicitly first",
+    "missingBodyData": "NEEDS_INPUT; no automatic mutation of historical player saves"
+  },
+  "nonCanonFixture": {
+    "nonCanon": true,
+    "purpose": "ground weapon pickup then strike",
+    "basis": "explicit isolated initial condition, not a played disarm",
+    "parent": "weapon-formal-install-20261106/after-refresh.jsonl revision6"
+  },
+  "liveScope": "player own registered one-handed sword at feet, empty hands; pickup then separate ordinary attack; not a newly played disarm",
+  "messages": 5,
+  "revisions": [
+    0,
+    1,
+    2
+  ],
+  "inputs": [
+    "御临风从脚边拾起自己的试验剑，持在手中；不攻击，不结束本回合。",
+    "御临风用刚拾起的试验剑攻击试验陪练；不结束本回合。"
+  ],
+  "pickup": {
+    "receipt": {
+      "actions": {
+        "move": 1
+      },
+      "resources": [],
+      "items": [],
+      "willSpent": 0,
+      "itemUse": {
+        "operation": "pickup",
+        "fromActorId": "player",
+        "itemId": "player-practice-sword",
+        "name": "试验剑",
+        "action": "move",
+        "hands": 1,
+        "equipped": true
+      },
+      "movement": 0,
+      "remaining": {
+        "standard": 1,
+        "move": 0,
+        "swift": 1
+      }
+    },
+    "item": {
+      "id": "player-practice-sword",
+      "name": "试验剑",
+      "source": "2026-11-06 user-authorized nonCanon isolated pickup fixture: player owns this intact one-handed test sword at feet",
+      "location": "carried",
+      "held": true,
+      "oneHanded": true,
+      "grip": {
+        "hands": 1,
+        "source": "RE手持物；按实例原本持握要求拾取"
+      },
+      "weapon": {
+        "name": "试验剑",
+        "type": "melee",
+        "skill": "白刃",
+        "damage": 1,
+        "severity": "L",
+        "size": 2,
+        "ap": 0,
+        "magic": 0,
+        "attackBonus": 0,
+        "blockBonus": 0
+      },
+      "durability": {
+        "current": 1,
+        "max": 1,
+        "hardness": 1
+      }
+    },
+    "equippedWeaponId": "player-practice-sword",
+    "healthResourcesInventoryPositionsUnchanged": true
+  },
+  "attack": {
+    "receipt": {
+      "actions": {
+        "standard": 1
+      },
+      "resources": [],
+      "items": [],
+      "targetId": "huang",
+      "willSpent": 0,
+      "weapon": "试验剑",
+      "movement": 0,
+      "remaining": {
+        "standard": 0,
+        "move": 0,
+        "swift": 1
+      }
+    },
+    "attack": {
+      "rawDP": 13,
+      "dp": 13,
+      "attribute": "敏捷",
+      "handling": {
+        "requirement": 0,
+        "deficit": 0,
+        "strengthPenalty": 0,
+        "gripPenalty": 0,
+        "aimMultiplier": 1,
+        "distancePenalty": 0
+      },
+      "legacyCompatible": true,
+      "weaponType": "melee",
+      "severity": "L",
+      "weapon": 1,
+      "cap": 6,
+      "fixed": 2,
+      "ap": 0,
+      "magic": 0,
+      "speed": 0,
+      "extra": 0,
+      "ignore": 0,
+      "aggravate": 0,
+      "electric": 0,
+      "reduction": 0,
+      "range": 1.5,
+      "explode": 10,
+      "magical": false,
+      "ranged": false,
+      "firearm": null,
+      "ballistic": null,
+      "energyWeapon": false,
+      "hardnessIgnore": 0,
+      "spiritEligible": false,
+      "defense": {
+        "total": 4,
+        "parts": {
+          "base": 1,
+          "natural": 0,
+          "armor": 3,
+          "dodge": 0,
+          "insight": 0,
+          "block": 0,
+          "cover": 0,
+          "cultivation": 0,
+          "force": 0,
+          "device": 0,
+          "shield": 0,
+          "luck": 0,
+          "morale": 0,
+          "enhancement": 0,
+          "holy": 0,
+          "unholy": 0,
+          "technique": 0,
+          "performance": 0,
+          "intrinsic": 0,
+          "unnamed": 0
+        },
+        "remainingAP": 0,
+        "guarded": false,
+        "extraSuccesses": 0
+      },
+      "roll": {
+        "dp": 9,
+        "luck": false,
+        "dice": [
+          7,
+          3,
+          10,
+          3,
+          3,
+          4,
+          8,
+          3,
+          9,
+          9
+        ],
+        "used": 10,
+        "rolledSuccesses": 4,
+        "luckMishap": false
+      },
+      "amount": 6
+    },
+    "damage": [
+      {
+        "targetId": "huang",
+        "kind": "physical",
+        "energyType": null,
+        "input": 6,
+        "inputSeverity": "L",
+        "severity": "L",
+        "actualDamage": 6,
+        "causedDamage": true,
+        "temporaryAbsorbed": 0
+      }
+    ],
+    "playerHeldInstance": "player-practice-sword",
+    "targetHealth": {
+      "intact": 83,
+      "B": 0,
+      "L": 17,
+      "A": 0,
+      "temp": 0,
+      "coma": false,
+      "deteriorationStopped": false
+    }
+  },
+  "narration": {
+    "pickup": "御临风垂眸看向脚边，俯身探手，五指扣紧了落地的试验剑剑柄。\n\n随着剑身离地提起，重心重新落入掌心，试验剑已稳稳横在手中。眼前的试验陪练近在咫尺，身上带着可见的伤势，主手未持兵刃，只以徒手相对。御临风拾剑之后未再出招，兵刃在手，场中动势稍凝，等待着接下来的决断。\n\n【本次战斗记录】\n御临风｜拾取地面武器\n动作消耗：移动×1\n技能／招式：未额外使用特殊技能\n装备／物品：拾起并持握试验剑\n资源消耗：无\n主动移动：0米\n剩余动作：标准×1、迅捷×1\n防御：本动作没有防御结算。\n状态：已执行\n\n<StatusPlaceHolderImpl/>",
+    "attack": "御临风手中试验剑顺势斜递而出，剑尖破空，径直刺向近在咫尺的试验陪练。\n\n相距不过一米，试验陪练未及起手架隔，仅凭周身基础护体硬接这一击。剑锋切过防御，实实落在对方身上，锋芒划透皮肉带出受创痕迹。试验陪练身躯骤然一震，硬生生止在原地未退半步，身上已现出清晰伤势。\n\n剑势稍歇，试验陪练依旧立在原处，徒手相对。御临风手中长剑已稳，攻势未尽。\n\n【本次战斗记录】\n御临风｜普通攻击 → 试验陪练\n动作消耗：标准×1\n技能／招式：未额外使用特殊技能\n装备／物品：使用试验剑\n资源消耗：无\n主动移动：0米\n剩余动作：迅捷×1\n防御（试验陪练）：基础及被动防护，未主动格挡\n状态：攻击已结算，造成伤害\n\n<StatusPlaceHolderImpl/>",
+    "equipmentDefenseAndPositionsConsistent": true
+  },
+  "refresh": {
+    "sameTab": true,
+    "fullRuleRootEqual": true,
+    "lastTextEqual": true,
+    "messagesUnchanged": true
+  },
+  "tests": {
+    "passed": 58,
+    "failed": 0,
+    "focusedNewTests": 5,
+    "log": "ground-weapon-tests-20261106.log",
+    "redObserved": "missing pickup capability and missing legal options before implementation"
+  },
+  "protection": {
+    "formalProtectedFiles": 287,
+    "changes": [],
+    "newFormalFiles": []
+  },
+  "modules": {
+    "combat/ground-weapons.mjs": "caf2a3968643bd54c89c6446e37a1bc59e2dddd5d0ead66ad3bbe6281c9c31c7",
+    "combat/common-actions.mjs": "9e30b3d30adaa3b25bc203961d464acb7a302b0804135915e05652fc4bbc278c",
+    "combat/engine.mjs": "76cbd67647c08c522c564047cbf9db04e2a53277703b5a49a92acf81ceb6ea7f",
+    "combat/runtime.mjs": "ad45775eb081578d88cee17dc4491320029784c2e7ba415dd62607c7878c61a0",
+    "combat/presentation.mjs": "f76290d0d0900058b4cdd2201f5625efc8538e46725b8505146fc917fcc3c5d4",
+    "gm_runtime/narrative.mjs": "fe05980bc820b85ab5b50e787f3ba1f46753f2cc9bd050f4ad5e7471d790390f"
+  },
+  "evidenceDirectory": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\ground-weapon-20261106",
+  "screenshot": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\ground-weapon-20261106\\accepted.png",
+  "worldLoading": {
+    "worldFiles": [
+      "901_01_世界基础设定_20261023.json",
+      "901_02_政治与势力_20261023.json",
+      "901_03_人物资料库_20261023.json",
+      "901_04_能力与战力_20261023.json",
+      "901_05_历史与事件_20261023.json",
+      "901_06_当前剧本与局势_20261023.json",
+      "Eldoria.json"
+    ],
+    "actualRequestLog": "[WI] Adding 12 entries; [WI] Adding 6 entries, 2026-11-06T19:21:06/11Z",
+    "globalSelect": [],
+    "characterMain": "901_01_世界基础设定_20261023",
+    "characterExtra": [
+      "901_02_政治与势力_20261023",
+      "901_03_人物资料库_20261023",
+      "901_04_能力与战力_20261023",
+      "901_05_历史与事件_20261023",
+      "901_06_当前剧本与局势_20261023"
+    ],
+    "personaLorebook": "",
+    "defaultFile": "Eldoria.json is copied by host content bootstrap but is not selected or associated"
+  },
+  "boundary": "Only source and isolated app changed. Shared export/generator/manifest and formal8000 runtime untouched. Local cross-holder/two-hand tests are not claimed as live model tests."
+}

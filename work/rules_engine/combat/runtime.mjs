@@ -7,6 +7,7 @@ import {physicalPriceRequest} from './action-prices.mjs';
 import {actionPriceOffers,combatRoundKey} from '../resource-action-pricing.mjs';
 import {weaponAmmoSpec,ordinaryWeaponType} from '../resource-weapons.mjs';
 import {BASIC_ACTIONS} from '../resource-action-bindings.mjs';
+import {groundWeaponChoices} from './ground-weapons.mjs';
 import {COMMON_ACTIONS,COMMON_TARGETED,beginCommonTurn} from './common-actions.mjs';
 import {isReflexResource} from '../gm_runtime/resource-program.mjs';
 import {normalizeMap,mapView,canObserve,measurePath,clearLine,spatialDistance} from './map.mjs';
@@ -40,6 +41,7 @@ function candidatesFor(battle) {
       else add(id,{targetId:t.id});
     }
   }else if(id==='takeItem'){for(const item of a.state.possessions?.items??[])if(!item.held)add(id,{itemId:item.id});}
+  else if(id==='pickupWeapon'){for(const choice of groundWeaponChoices(battle,a))add(id,choice);}
   else if(id!=='counterRush')add(id);
   for(const t of Object.values(battle.actors))if(t.present&&t.id!==a.id&&lifeStatus(t.state).deteriorating)add('firstAid',{targetId:t.id});
   for(const t of Object.values(battle.actors))if(t.present&&t.state.sleeping)add('wake',{targetId:t.id});

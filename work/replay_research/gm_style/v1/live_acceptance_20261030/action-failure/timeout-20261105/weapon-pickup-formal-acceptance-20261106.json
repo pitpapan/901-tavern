@@ -1,0 +1,103 @@
+{
+  "status": "pickup_and_followup_attack_not_passed",
+  "port": 8000,
+  "operator": "Terra gpt-6.1-terra high judgement; main session IAB execution",
+  "testCharacter": "901 正式战斗加载验收 20261106",
+  "testChat": "901 正式落地武器拾取验收 20261106",
+  "nonCanon": true,
+  "input": "御临风伸手拾起地上的试验剑；暂不攻击，不结束本回合。",
+  "inheritedMessages": 9,
+  "messages": 11,
+  "revision": 6,
+  "round": 3,
+  "actualModelPlan": {
+    "steps": [
+      {
+        "quote": "御临风伸手拾起地上的试验剑",
+        "command": {
+          "abilityId": "takeItem"
+        }
+      }
+    ]
+  },
+  "response": "所选物品与声明中的登记名称不一致或不明确；请写明要取出的物品名称，本次尚未取物或扣费。\n\n<StatusPlaceHolderImpl/>",
+  "fullRulesRootUnchanged": true,
+  "newOperations": 0,
+  "playerActions": {
+    "phase": "active",
+    "standard": 1,
+    "move": 1,
+    "swift": 1,
+    "reactionLock": false,
+    "reactionLockEnds": 0,
+    "responseDebt": false,
+    "opportunityUsed": false
+  },
+  "sword": {
+    "id": "practice-sword",
+    "name": "试验剑",
+    "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+    "location": "ground",
+    "held": false,
+    "oneHanded": true,
+    "grip": {
+      "hands": 1,
+      "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+    },
+    "weapon": {
+      "name": "试验剑",
+      "type": "melee",
+      "skill": "白刃",
+      "damage": 1,
+      "severity": "L",
+      "size": 2,
+      "ap": 0,
+      "magic": 0,
+      "attackBonus": 0,
+      "blockBonus": 0
+    },
+    "durability": {
+      "current": 1,
+      "max": 1,
+      "hardness": 1
+    },
+    "position": [
+      1,
+      0
+    ]
+  },
+  "swordProvenance": "Previously dropped by test partner, not the player’s own sword. No ownership/held state remap.",
+  "attackTested": false,
+  "attackNotTestedReason": "No pickup executed; no valid picked-up weapon available for the requested followup attack.",
+  "failureChain": [
+    "Saved practice-sword remains in huang possessions at ground/held=false, complete durability1/1.",
+    "Installed playerDeclarationContext reconstructed read-only does not contain practice-sword as a legal selectable item.",
+    "Actual model selected takeItem without itemId.",
+    "validateStep rejected before any transaction: no uniquely matching player registered item.",
+    "Existing takeCarriedItem and equipWeaponInstance both require carried; ground pickup is not implemented in the inspected formal interfaces."
+  ],
+  "messageLimitation": "The request clearly named the sword; the returned name-mismatch clarification masks the unsupported ground-pickup path. Repeating the name alone does not supply the missing mechanics.",
+  "scannedBooks": [
+    "901_01_世界基础设定_20261023",
+    "901_02_政治与势力_20261023",
+    "901_03_人物资料库_20261023",
+    "901_04_能力与战力_20261023",
+    "901_05_历史与事件_20261023",
+    "901_06_当前剧本与局势_20261023"
+  ],
+  "model": "[抗截断]gemini-3.8-flash",
+  "autoUpdateEnabled": false,
+  "settingsByteIdentical": true,
+  "protectedExistingFiles": 286,
+  "changedExistingFiles": [
+    "D:\\github\\sillyTavern\\data\\default-user\\characters\\901 正式战斗加载验收 20261106.png"
+  ],
+  "testCardOnlyChatPointerChanged": true,
+  "newFiles": [
+    "D:\\github\\sillyTavern\\data\\default-user\\chats\\901 正式战斗加载验收 20261106\\901 正式落地武器拾取验收 20261106.jsonl"
+  ],
+  "originalChatsCardsWorldsRuntimeUnchanged": true,
+  "nextRequiredCapability": "Sourced ground item selection, reachable pickup with actual hand/holding checks, action payment and item transfer/equipped weapon update, then actual attack; rule costs must follow existing RE/PHB evidence. No new feature or rule was adopted by this test.",
+  "evidenceDirectory": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\weapon-pickup-formal-20261106",
+  "screenshot": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\weapon-pickup-formal-20261106\\result.png"
+}

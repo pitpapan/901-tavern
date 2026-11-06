@@ -113,7 +113,7 @@ export function publicScene(root,{afterRevision=0,playerId='player'}={}) {
     else event.outcome='已执行';
     if(r.preActionCheck?.allowed===false)event.outcome='行动前检定未通过，所声明动作没有执行';
     if(r.posture)event.outcome=r.posture==='prone'?'已伏地，仍在原处':'已起身，仍在原处';
-    if(r.itemUse)event.outcome=`已取出${r.itemUse.name}，没有自动使用或消耗该物品`;
+    if(r.itemUse)event.outcome=r.itemUse.operation==='pickup'?`已从地面拾起${r.itemUse.name}并持握为当前武器；此次拾取没有攻击`:`已取出${r.itemUse.name}，没有自动使用或消耗该物品`;
     if(['bullRush','counterRush'].includes(r.abilityId)&&!r.after.awaiting){
       event.execution='以身体冲撞目标';
       event.outcome=!r.contest?.won?'冲撞被抵挡或避让，目标未被击退或击倒':r.knockdown?'冲撞使目标倒地':r.forcedMovement?.blocked?'冲撞对抗成功，但击退路线受阻，目标没有位移':'冲撞将目标推离原位';
@@ -201,6 +201,10 @@ export function playerDeclarationContext(b,revision,playerId='player') {
   const itemIds=new Set(context.legalOptions.filter(c=>c.abilityId==='takeItem').map(c=>c.itemId));
   const items=(safe.actors[playerId].state.possessions?.items??[]).filter(i=>itemIds.has(i.id)).map(i=>({
     id:i.id,ownerId:playerId,name:i.name,...(i.aliases?{aliases:i.aliases}:{}),access:i.access,held:i.held}));
+  for(const c of context.legalOptions.filter(c=>c.abilityId==='pickupWeapon')){
+    const i=safe.actors[c.fromActorId].state.possessions.items.find(i=>i.id===c.itemId);
+    items.push({id:i.id,fromActorId:c.fromActorId,name:i.name,...(i.aliases?{aliases:i.aliases}:{}),location:'ground',position:i.position,held:false});
+  }
   if(items.length)context.items=items;
   context.abilities={...context.abilities,...Object.fromEntries([...safe.actors[playerId].abilities,'door','destroy','firstAid','escapeGrip','pressGrip','grappleAttack','ringStore','ringRetrieve','mechanism'].map(id=>[id,safe.actors[playerId].abilityDefinitions?.[id]??ABILITIES[id]]))};
   return context;
@@ -225,7 +229,7 @@ export function combatActionReport(root,{afterRevision=0,playerId='player'}={}){
    lines.push(`动作消耗：${slots(q.actions)}`);
    const ordinary=COMMON_ACTIONS[r.abilityId]||['strike','move','step','block','fullDefense','reload','medicine','door','destroy','firstAid','escapeGrip','pressGrip','grappleAttack','jump','continueJump','end'].includes(r.abilityId);
    lines.push(`技能／招式：${ordinary?'未额外使用特殊技能':label}`);
-   const use=[...(q.weapon?[`使用${q.weapon}`]:[]),...(q.itemUse?[`取出${q.itemUse.name}`]:[]),...q.items.map(x=>`${x.name}×${x.quantity}`)];
+   const use=[...(q.weapon?[`使用${q.weapon}`]:[]),...(q.itemUse?[`${q.itemUse.operation==='pickup'?'拾起并持握':'取出'}${q.itemUse.name}`]:[]),...q.items.map(x=>`${x.name}×${x.quantity}`)];
    lines.push(`装备／物品：${use.join('；')||'无使用或消耗'}`);
    const resources=[...q.resources.map(x=>`${x.name}×${x.quantity}`),...(q.willSpent?[`意志×${q.willSpent}`]:[])];
    lines.push(`资源消耗：${resources.join('、')||'无'}`,`主动移动：${q.movement}米`,`剩余动作：${slots(q.remaining)}`);
