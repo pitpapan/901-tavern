@@ -1,0 +1,2531 @@
+{
+  "status": "mechanics_passed_narrative_deviations_recorded",
+  "port": 8000,
+  "operator": "Terra gpt-6.1-terra high judgement; main session IAB execution",
+  "testCharacter": "901 正式战斗加载验收 20261106",
+  "testChat": "901 仅六书连续多回合验收 20261106",
+  "nonCanon": true,
+  "model": "[抗截断]gemini-3.8-flash",
+  "inherited": {
+    "messages": 3,
+    "revision": 1,
+    "action": "Previous real disarm, copied without replaying"
+  },
+  "newPlayerDeclarations": [
+    "御临风结束本回合。",
+    "御临风用手中长剑对空手的试验陪练发动一次普通近战攻击；不结束本回合。",
+    "御临风结束本回合。",
+    "御临风用手中长剑对试验陪练发动一次全力一击；不结束本回合。"
+  ],
+  "newPlayerDeclarationsCount": 4,
+  "newNpcActions": [
+    "end",
+    "end"
+  ],
+  "finalMessages": 11,
+  "finalRevision": 7,
+  "finalRound": 3,
+  "stages": {
+    "turn2-ready": {
+      "messages": 5,
+      "revision": 3,
+      "round": 2,
+      "activeId": "player",
+      "battleStatus": "active",
+      "pending": null,
+      "operations": [
+        {
+          "id": "declaration/901 仅六书连续多回合验收 20261106/1/0/0",
+          "result": {
+            "actorId": "player",
+            "abilityId": "disarm",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "responses": [
+              {
+                "targetId": "huang",
+                "guarded": false
+              }
+            ],
+            "attack": {
+              "rawDP": 15,
+              "dp": 15,
+              "attribute": "敏捷",
+              "handling": {
+                "requirement": 0,
+                "deficit": 0,
+                "strengthPenalty": 0,
+                "gripPenalty": 0,
+                "aimMultiplier": 1,
+                "distancePenalty": 0
+              },
+              "legacyCompatible": true,
+              "weaponType": null,
+              "severity": "L",
+              "weapon": 6,
+              "cap": 11,
+              "fixed": 2,
+              "ap": 2,
+              "magic": 2,
+              "speed": 0,
+              "extra": 0,
+              "ignore": 0,
+              "aggravate": 0,
+              "electric": 0,
+              "reduction": 3,
+              "range": 1.5,
+              "explode": 10,
+              "magical": false,
+              "ranged": false,
+              "firearm": null,
+              "ballistic": null,
+              "energyWeapon": false,
+              "hardnessIgnore": 0,
+              "spiritEligible": true,
+              "calledPenalty": 3,
+              "defense": {
+                "total": 2,
+                "parts": {
+                  "base": 0,
+                  "natural": 0,
+                  "armor": 1,
+                  "dodge": 1,
+                  "insight": 0,
+                  "block": 0,
+                  "cover": 0,
+                  "cultivation": 0,
+                  "force": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "unholy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 0,
+                "guarded": false,
+                "extraSuccesses": 0
+              },
+              "roll": {
+                "dp": 13,
+                "luck": false,
+                "dice": [
+                  2,
+                  4,
+                  4,
+                  4,
+                  9,
+                  5,
+                  4,
+                  7,
+                  10,
+                  2,
+                  3,
+                  7,
+                  9,
+                  3
+                ],
+                "used": 14,
+                "rolledSuccesses": 3,
+                "luckMishap": false
+              },
+              "amount": 5
+            },
+            "equipmentHit": true,
+            "contest": {
+              "active": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 5,
+                  "auto": 2,
+                  "main": 5,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 3,
+                "dp": 15,
+                "luck": false,
+                "dice": [
+                  2,
+                  10,
+                  3,
+                  6,
+                  7,
+                  4,
+                  3,
+                  3,
+                  2,
+                  1,
+                  2,
+                  2,
+                  7,
+                  2,
+                  8,
+                  8
+                ],
+                "used": 16,
+                "rolledSuccesses": 3,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 6
+              },
+              "passive": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 1,
+                  "auto": 0,
+                  "main": 1,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 0,
+                "dp": 2,
+                "luck": false,
+                "dice": [
+                  3,
+                  7
+                ],
+                "used": 2,
+                "rolledSuccesses": 0,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 0
+              },
+              "margin": 6,
+              "won": true
+            },
+            "disarmed": {
+              "targetId": "huang",
+              "itemId": "practice-sword",
+              "name": "试验剑",
+              "position": [
+                1,
+                0
+              ]
+            },
+            "receipt": {
+              "actions": {
+                "standard": 1
+              },
+              "resources": [],
+              "items": [],
+              "targetId": "huang",
+              "willSpent": 0,
+              "weapon": "弃风长剑在手",
+              "movement": 0,
+              "remaining": {
+                "standard": 0,
+                "move": 1,
+                "swift": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "declaration/901 仅六书连续多回合验收 20261106/3/0/0",
+          "result": {
+            "actorId": "player",
+            "abilityId": "end",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "resourceTriggers": [],
+            "receipt": {
+              "actions": {},
+              "resources": [],
+              "items": [],
+              "willSpent": 0,
+              "movement": 0,
+              "remaining": {
+                "standard": 0,
+                "move": 0,
+                "swift": 0
+              }
+            }
+          }
+        },
+        {
+          "id": "combat/3/0/2",
+          "result": {
+            "actorId": "huang",
+            "abilityId": "end",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "sceneChanges": [],
+            "timeChanges": [],
+            "resourceTriggers": [],
+            "receipt": {
+              "actions": {},
+              "resources": [],
+              "items": [],
+              "willSpent": 0,
+              "movement": 0,
+              "remaining": {
+                "standard": 0,
+                "move": 0,
+                "swift": 0
+              }
+            }
+          }
+        }
+      ],
+      "actors": {
+        "player": {
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "actions": {
+            "phase": "active",
+            "standard": 1,
+            "move": 1,
+            "swift": 1,
+            "reactionLock": false,
+            "reactionLockEnds": 0,
+            "responseDebt": false,
+            "opportunityUsed": false
+          },
+          "maneuvers": {
+            "turn": 2,
+            "startVisible": [
+              "huang"
+            ]
+          },
+          "possessions": null,
+          "position": [
+            0,
+            0
+          ]
+        },
+        "huang": {
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "actions": {
+            "phase": "ended",
+            "standard": 0,
+            "move": 0,
+            "swift": 0,
+            "reactionLock": false,
+            "reactionLockEnds": 0,
+            "responseDebt": false,
+            "opportunityUsed": false
+          },
+          "maneuvers": {
+            "turn": 2,
+            "startVisible": [
+              "player"
+            ],
+            "weaponUnavailable": true
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "practice-sword",
+                "name": "试验剑",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "ground",
+                "held": false,
+                "oneHanded": true,
+                "grip": {
+                  "hands": 1,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "weapon": {
+                  "name": "试验剑",
+                  "type": "melee",
+                  "skill": "白刃",
+                  "damage": 1,
+                  "severity": "L",
+                  "size": 2,
+                  "ap": 0,
+                  "magic": 0,
+                  "attackBonus": 0,
+                  "blockBonus": 0
+                },
+                "durability": {
+                  "current": 1,
+                  "max": 1,
+                  "hardness": 1
+                },
+                "position": [
+                  1,
+                  0
+                ]
+              }
+            ]
+          },
+          "position": [
+            1,
+            0
+          ]
+        }
+      },
+      "lastText": "试验场内空荡而安静。\n\n御临风持着弃风长剑立在平地上，剑尖自然垂落，并未继续追势出击；对面的试验陪练同样站在不过一米之隔的近处，主手武器已然不在手中，双臂微敛呈徒手防守的架势停在原地，周身不见新添的伤痕，亦没有新的动作迫近。\n\n双方在这极近的距离间维持着对峙，气机沉凝，场中一时只余下彼此平稳的呼吸。\n\n【本次战斗记录】\n御临风｜结束回合\n动作消耗：无\n技能／招式：未额外使用特殊技能\n装备／物品：无使用或消耗\n资源消耗：无\n主动移动：0米\n剩余动作：无\n防御：本动作没有防御结算。\n状态：已执行\n\n<StatusPlaceHolderImpl/>"
+    },
+    "turn2-strike": {
+      "messages": 7,
+      "revision": 4,
+      "round": 2,
+      "activeId": "player",
+      "battleStatus": "active",
+      "pending": null,
+      "operations": [
+        {
+          "id": "declaration/901 仅六书连续多回合验收 20261106/1/0/0",
+          "result": {
+            "actorId": "player",
+            "abilityId": "disarm",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "responses": [
+              {
+                "targetId": "huang",
+                "guarded": false
+              }
+            ],
+            "attack": {
+              "rawDP": 15,
+              "dp": 15,
+              "attribute": "敏捷",
+              "handling": {
+                "requirement": 0,
+                "deficit": 0,
+                "strengthPenalty": 0,
+                "gripPenalty": 0,
+                "aimMultiplier": 1,
+                "distancePenalty": 0
+              },
+              "legacyCompatible": true,
+              "weaponType": null,
+              "severity": "L",
+              "weapon": 6,
+              "cap": 11,
+              "fixed": 2,
+              "ap": 2,
+              "magic": 2,
+              "speed": 0,
+              "extra": 0,
+              "ignore": 0,
+              "aggravate": 0,
+              "electric": 0,
+              "reduction": 3,
+              "range": 1.5,
+              "explode": 10,
+              "magical": false,
+              "ranged": false,
+              "firearm": null,
+              "ballistic": null,
+              "energyWeapon": false,
+              "hardnessIgnore": 0,
+              "spiritEligible": true,
+              "calledPenalty": 3,
+              "defense": {
+                "total": 2,
+                "parts": {
+                  "base": 0,
+                  "natural": 0,
+                  "armor": 1,
+                  "dodge": 1,
+                  "insight": 0,
+                  "block": 0,
+                  "cover": 0,
+                  "cultivation": 0,
+                  "force": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "unholy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 0,
+                "guarded": false,
+                "extraSuccesses": 0
+              },
+              "roll": {
+                "dp": 13,
+                "luck": false,
+                "dice": [
+                  2,
+                  4,
+                  4,
+                  4,
+                  9,
+                  5,
+                  4,
+                  7,
+                  10,
+                  2,
+                  3,
+                  7,
+                  9,
+                  3
+                ],
+                "used": 14,
+                "rolledSuccesses": 3,
+                "luckMishap": false
+              },
+              "amount": 5
+            },
+            "equipmentHit": true,
+            "contest": {
+              "active": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 5,
+                  "auto": 2,
+                  "main": 5,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 3,
+                "dp": 15,
+                "luck": false,
+                "dice": [
+                  2,
+                  10,
+                  3,
+                  6,
+                  7,
+                  4,
+                  3,
+                  3,
+                  2,
+                  1,
+                  2,
+                  2,
+                  7,
+                  2,
+                  8,
+                  8
+                ],
+                "used": 16,
+                "rolledSuccesses": 3,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 6
+              },
+              "passive": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 1,
+                  "auto": 0,
+                  "main": 1,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 0,
+                "dp": 2,
+                "luck": false,
+                "dice": [
+                  3,
+                  7
+                ],
+                "used": 2,
+                "rolledSuccesses": 0,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 0
+              },
+              "margin": 6,
+              "won": true
+            },
+            "disarmed": {
+              "targetId": "huang",
+              "itemId": "practice-sword",
+              "name": "试验剑",
+              "position": [
+                1,
+                0
+              ]
+            },
+            "receipt": {
+              "actions": {
+                "standard": 1
+              },
+              "resources": [],
+              "items": [],
+              "targetId": "huang",
+              "willSpent": 0,
+              "weapon": "弃风长剑在手",
+              "movement": 0,
+              "remaining": {
+                "standard": 0,
+                "move": 1,
+                "swift": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "declaration/901 仅六书连续多回合验收 20261106/3/0/0",
+          "result": {
+            "actorId": "player",
+            "abilityId": "end",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "resourceTriggers": [],
+            "receipt": {
+              "actions": {},
+              "resources": [],
+              "items": [],
+              "willSpent": 0,
+              "movement": 0,
+              "remaining": {
+                "standard": 0,
+                "move": 0,
+                "swift": 0
+              }
+            }
+          }
+        },
+        {
+          "id": "combat/3/0/2",
+          "result": {
+            "actorId": "huang",
+            "abilityId": "end",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "sceneChanges": [],
+            "timeChanges": [],
+            "resourceTriggers": [],
+            "receipt": {
+              "actions": {},
+              "resources": [],
+              "items": [],
+              "willSpent": 0,
+              "movement": 0,
+              "remaining": {
+                "standard": 0,
+                "move": 0,
+                "swift": 0
+              }
+            }
+          }
+        },
+        {
+          "id": "declaration/901 仅六书连续多回合验收 20261106/5/0/0",
+          "result": {
+            "actorId": "player",
+            "abilityId": "strike",
+            "round": 2,
+            "damage": [
+              {
+                "targetId": "huang",
+                "kind": "physical",
+                "energyType": null,
+                "input": 11,
+                "inputSeverity": "L",
+                "severity": "L",
+                "actualDamage": 11,
+                "causedDamage": true,
+                "temporaryAbsorbed": 0
+              }
+            ],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "responses": [
+              {
+                "targetId": "huang",
+                "guarded": false
+              }
+            ],
+            "attack": {
+              "rawDP": 18,
+              "dp": 18,
+              "attribute": "敏捷",
+              "handling": {
+                "requirement": 0,
+                "deficit": 0,
+                "strengthPenalty": 0,
+                "gripPenalty": 0,
+                "aimMultiplier": 1,
+                "distancePenalty": 0
+              },
+              "legacyCompatible": true,
+              "weaponType": null,
+              "severity": "L",
+              "weapon": 6,
+              "cap": 11,
+              "fixed": 2,
+              "ap": 2,
+              "magic": 2,
+              "speed": 0,
+              "extra": 0,
+              "ignore": 0,
+              "aggravate": 0,
+              "electric": 0,
+              "reduction": 3,
+              "range": 1.5,
+              "explode": 10,
+              "magical": false,
+              "ranged": false,
+              "firearm": null,
+              "ballistic": null,
+              "energyWeapon": false,
+              "hardnessIgnore": 0,
+              "spiritEligible": true,
+              "defense": {
+                "total": 1,
+                "parts": {
+                  "base": 0,
+                  "natural": 0,
+                  "armor": 1,
+                  "dodge": 0,
+                  "insight": 0,
+                  "block": 0,
+                  "cover": 0,
+                  "cultivation": 0,
+                  "force": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "unholy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 0,
+                "guarded": false,
+                "extraSuccesses": 0
+              },
+              "roll": {
+                "dp": 17,
+                "luck": false,
+                "dice": [
+                  4,
+                  3,
+                  5,
+                  10,
+                  10,
+                  7,
+                  3,
+                  6,
+                  8,
+                  10,
+                  5,
+                  1,
+                  2,
+                  10,
+                  10,
+                  9,
+                  4,
+                  5,
+                  5,
+                  8,
+                  8,
+                  1
+                ],
+                "used": 22,
+                "rolledSuccesses": 9,
+                "luckMishap": false
+              },
+              "amount": 11
+            },
+            "resourceTriggers": [],
+            "damageEvents": [
+              {
+                "sourceActorId": "player",
+                "targetId": "huang",
+                "damageNature": "attack",
+                "originalSegments": [
+                  {
+                    "amount": 11,
+                    "severity": "L",
+                    "kind": "physical",
+                    "magical": false,
+                    "attack": true,
+                    "ranged": false
+                  }
+                ],
+                "causedDamage": true,
+                "converted": 0,
+                "temporaryAbsorbed": 0,
+                "actualDamage": 11,
+                "additionalActualDamage": 0,
+                "additionalSources": []
+              }
+            ],
+            "receipt": {
+              "actions": {
+                "standard": 1
+              },
+              "resources": [],
+              "items": [],
+              "targetId": "huang",
+              "willSpent": 0,
+              "weapon": "弃风长剑在手",
+              "movement": 0,
+              "remaining": {
+                "standard": 0,
+                "move": 1,
+                "swift": 1
+              }
+            }
+          }
+        }
+      ],
+      "actors": {
+        "player": {
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "actions": {
+            "phase": "active",
+            "standard": 0,
+            "move": 1,
+            "swift": 1,
+            "reactionLock": false,
+            "reactionLockEnds": 0,
+            "responseDebt": false,
+            "opportunityUsed": false
+          },
+          "maneuvers": {
+            "turn": 2,
+            "startVisible": [
+              "huang"
+            ]
+          },
+          "possessions": null,
+          "position": [
+            0,
+            0
+          ]
+        },
+        "huang": {
+          "health": {
+            "intact": 89,
+            "B": 0,
+            "L": 11,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "actions": {
+            "phase": "ended",
+            "standard": 0,
+            "move": 0,
+            "swift": 0,
+            "reactionLock": false,
+            "reactionLockEnds": 0,
+            "responseDebt": false,
+            "opportunityUsed": false
+          },
+          "maneuvers": {
+            "turn": 2,
+            "startVisible": [
+              "player"
+            ],
+            "weaponUnavailable": true
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "practice-sword",
+                "name": "试验剑",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "ground",
+                "held": false,
+                "oneHanded": true,
+                "grip": {
+                  "hands": 1,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "weapon": {
+                  "name": "试验剑",
+                  "type": "melee",
+                  "skill": "白刃",
+                  "damage": 1,
+                  "severity": "L",
+                  "size": 2,
+                  "ap": 0,
+                  "magic": 0,
+                  "attackBonus": 0,
+                  "blockBonus": 0
+                },
+                "durability": {
+                  "current": 1,
+                  "max": 1,
+                  "hardness": 1
+                },
+                "position": [
+                  1,
+                  0
+                ]
+              }
+            ]
+          },
+          "position": [
+            1,
+            0
+          ]
+        }
+      },
+      "lastText": "弃风长剑在手中顺势递出，剑锋撕开近前的一线空隙，直取试验陪练。\n\n相距不过一米，失去主手兵刃的陪练并未起手招架，仅凭体魄与周身残存的气劲硬接。剑刃切实破开护体阻碍斩落，在皮肉间带出一道分明的创口。陪练身形猛然一沉，硬生生受了这一击，双脚却仍死死钉在原地，并未退开半步。\n\n剑势稍歇，对方面带创伤直立在身前，全项隔离试验场内回荡的锐响随之落定。\n\n【本次战斗记录】\n御临风｜普通攻击 → 试验陪练\n动作消耗：标准×1\n技能／招式：未额外使用特殊技能\n装备／物品：使用弃风长剑在手\n资源消耗：无\n主动移动：0米\n剩余动作：移动×1、迅捷×1\n防御（试验陪练）：基础及被动防护，未主动格挡\n状态：攻击已结算，造成伤害\n\n<StatusPlaceHolderImpl/>"
+    },
+    "turn3-ready": {
+      "messages": 9,
+      "revision": 6,
+      "round": 3,
+      "activeId": "player",
+      "battleStatus": "active",
+      "pending": null,
+      "operations": [
+        {
+          "id": "declaration/901 仅六书连续多回合验收 20261106/1/0/0",
+          "result": {
+            "actorId": "player",
+            "abilityId": "disarm",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "responses": [
+              {
+                "targetId": "huang",
+                "guarded": false
+              }
+            ],
+            "attack": {
+              "rawDP": 15,
+              "dp": 15,
+              "attribute": "敏捷",
+              "handling": {
+                "requirement": 0,
+                "deficit": 0,
+                "strengthPenalty": 0,
+                "gripPenalty": 0,
+                "aimMultiplier": 1,
+                "distancePenalty": 0
+              },
+              "legacyCompatible": true,
+              "weaponType": null,
+              "severity": "L",
+              "weapon": 6,
+              "cap": 11,
+              "fixed": 2,
+              "ap": 2,
+              "magic": 2,
+              "speed": 0,
+              "extra": 0,
+              "ignore": 0,
+              "aggravate": 0,
+              "electric": 0,
+              "reduction": 3,
+              "range": 1.5,
+              "explode": 10,
+              "magical": false,
+              "ranged": false,
+              "firearm": null,
+              "ballistic": null,
+              "energyWeapon": false,
+              "hardnessIgnore": 0,
+              "spiritEligible": true,
+              "calledPenalty": 3,
+              "defense": {
+                "total": 2,
+                "parts": {
+                  "base": 0,
+                  "natural": 0,
+                  "armor": 1,
+                  "dodge": 1,
+                  "insight": 0,
+                  "block": 0,
+                  "cover": 0,
+                  "cultivation": 0,
+                  "force": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "unholy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 0,
+                "guarded": false,
+                "extraSuccesses": 0
+              },
+              "roll": {
+                "dp": 13,
+                "luck": false,
+                "dice": [
+                  2,
+                  4,
+                  4,
+                  4,
+                  9,
+                  5,
+                  4,
+                  7,
+                  10,
+                  2,
+                  3,
+                  7,
+                  9,
+                  3
+                ],
+                "used": 14,
+                "rolledSuccesses": 3,
+                "luckMishap": false
+              },
+              "amount": 5
+            },
+            "equipmentHit": true,
+            "contest": {
+              "active": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 5,
+                  "auto": 2,
+                  "main": 5,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 3,
+                "dp": 15,
+                "luck": false,
+                "dice": [
+                  2,
+                  10,
+                  3,
+                  6,
+                  7,
+                  4,
+                  3,
+                  3,
+                  2,
+                  1,
+                  2,
+                  2,
+                  7,
+                  2,
+                  8,
+                  8
+                ],
+                "used": 16,
+                "rolledSuccesses": 3,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 6
+              },
+              "passive": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 1,
+                  "auto": 0,
+                  "main": 1,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 0,
+                "dp": 2,
+                "luck": false,
+                "dice": [
+                  3,
+                  7
+                ],
+                "used": 2,
+                "rolledSuccesses": 0,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 0
+              },
+              "margin": 6,
+              "won": true
+            },
+            "disarmed": {
+              "targetId": "huang",
+              "itemId": "practice-sword",
+              "name": "试验剑",
+              "position": [
+                1,
+                0
+              ]
+            },
+            "receipt": {
+              "actions": {
+                "standard": 1
+              },
+              "resources": [],
+              "items": [],
+              "targetId": "huang",
+              "willSpent": 0,
+              "weapon": "弃风长剑在手",
+              "movement": 0,
+              "remaining": {
+                "standard": 0,
+                "move": 1,
+                "swift": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "declaration/901 仅六书连续多回合验收 20261106/3/0/0",
+          "result": {
+            "actorId": "player",
+            "abilityId": "end",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "resourceTriggers": [],
+            "receipt": {
+              "actions": {},
+              "resources": [],
+              "items": [],
+              "willSpent": 0,
+              "movement": 0,
+              "remaining": {
+                "standard": 0,
+                "move": 0,
+                "swift": 0
+              }
+            }
+          }
+        },
+        {
+          "id": "combat/3/0/2",
+          "result": {
+            "actorId": "huang",
+            "abilityId": "end",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "sceneChanges": [],
+            "timeChanges": [],
+            "resourceTriggers": [],
+            "receipt": {
+              "actions": {},
+              "resources": [],
+              "items": [],
+              "willSpent": 0,
+              "movement": 0,
+              "remaining": {
+                "standard": 0,
+                "move": 0,
+                "swift": 0
+              }
+            }
+          }
+        },
+        {
+          "id": "declaration/901 仅六书连续多回合验收 20261106/5/0/0",
+          "result": {
+            "actorId": "player",
+            "abilityId": "strike",
+            "round": 2,
+            "damage": [
+              {
+                "targetId": "huang",
+                "kind": "physical",
+                "energyType": null,
+                "input": 11,
+                "inputSeverity": "L",
+                "severity": "L",
+                "actualDamage": 11,
+                "causedDamage": true,
+                "temporaryAbsorbed": 0
+              }
+            ],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "responses": [
+              {
+                "targetId": "huang",
+                "guarded": false
+              }
+            ],
+            "attack": {
+              "rawDP": 18,
+              "dp": 18,
+              "attribute": "敏捷",
+              "handling": {
+                "requirement": 0,
+                "deficit": 0,
+                "strengthPenalty": 0,
+                "gripPenalty": 0,
+                "aimMultiplier": 1,
+                "distancePenalty": 0
+              },
+              "legacyCompatible": true,
+              "weaponType": null,
+              "severity": "L",
+              "weapon": 6,
+              "cap": 11,
+              "fixed": 2,
+              "ap": 2,
+              "magic": 2,
+              "speed": 0,
+              "extra": 0,
+              "ignore": 0,
+              "aggravate": 0,
+              "electric": 0,
+              "reduction": 3,
+              "range": 1.5,
+              "explode": 10,
+              "magical": false,
+              "ranged": false,
+              "firearm": null,
+              "ballistic": null,
+              "energyWeapon": false,
+              "hardnessIgnore": 0,
+              "spiritEligible": true,
+              "defense": {
+                "total": 1,
+                "parts": {
+                  "base": 0,
+                  "natural": 0,
+                  "armor": 1,
+                  "dodge": 0,
+                  "insight": 0,
+                  "block": 0,
+                  "cover": 0,
+                  "cultivation": 0,
+                  "force": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "unholy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 0,
+                "guarded": false,
+                "extraSuccesses": 0
+              },
+              "roll": {
+                "dp": 17,
+                "luck": false,
+                "dice": [
+                  4,
+                  3,
+                  5,
+                  10,
+                  10,
+                  7,
+                  3,
+                  6,
+                  8,
+                  10,
+                  5,
+                  1,
+                  2,
+                  10,
+                  10,
+                  9,
+                  4,
+                  5,
+                  5,
+                  8,
+                  8,
+                  1
+                ],
+                "used": 22,
+                "rolledSuccesses": 9,
+                "luckMishap": false
+              },
+              "amount": 11
+            },
+            "resourceTriggers": [],
+            "damageEvents": [
+              {
+                "sourceActorId": "player",
+                "targetId": "huang",
+                "damageNature": "attack",
+                "originalSegments": [
+                  {
+                    "amount": 11,
+                    "severity": "L",
+                    "kind": "physical",
+                    "magical": false,
+                    "attack": true,
+                    "ranged": false
+                  }
+                ],
+                "causedDamage": true,
+                "converted": 0,
+                "temporaryAbsorbed": 0,
+                "actualDamage": 11,
+                "additionalActualDamage": 0,
+                "additionalSources": []
+              }
+            ],
+            "receipt": {
+              "actions": {
+                "standard": 1
+              },
+              "resources": [],
+              "items": [],
+              "targetId": "huang",
+              "willSpent": 0,
+              "weapon": "弃风长剑在手",
+              "movement": 0,
+              "remaining": {
+                "standard": 0,
+                "move": 1,
+                "swift": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "declaration/901 仅六书连续多回合验收 20261106/7/0/0",
+          "result": {
+            "actorId": "player",
+            "abilityId": "end",
+            "round": 2,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "resourceTriggers": [],
+            "receipt": {
+              "actions": {},
+              "resources": [],
+              "items": [],
+              "willSpent": 0,
+              "movement": 0,
+              "remaining": {
+                "standard": 0,
+                "move": 0,
+                "swift": 0
+              }
+            }
+          }
+        },
+        {
+          "id": "combat/7/0/5",
+          "result": {
+            "actorId": "huang",
+            "abilityId": "end",
+            "round": 2,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "sceneChanges": [],
+            "timeChanges": [],
+            "resourceTriggers": [],
+            "receipt": {
+              "actions": {},
+              "resources": [],
+              "items": [],
+              "willSpent": 0,
+              "movement": 0,
+              "remaining": {
+                "standard": 0,
+                "move": 0,
+                "swift": 0
+              }
+            }
+          }
+        }
+      ],
+      "actors": {
+        "player": {
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "actions": {
+            "phase": "active",
+            "standard": 1,
+            "move": 1,
+            "swift": 1,
+            "reactionLock": false,
+            "reactionLockEnds": 0,
+            "responseDebt": false,
+            "opportunityUsed": false
+          },
+          "maneuvers": {
+            "turn": 3,
+            "startVisible": [
+              "huang"
+            ]
+          },
+          "possessions": null,
+          "position": [
+            0,
+            0
+          ]
+        },
+        "huang": {
+          "health": {
+            "intact": 89,
+            "B": 0,
+            "L": 11,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "actions": {
+            "phase": "ended",
+            "standard": 0,
+            "move": 0,
+            "swift": 0,
+            "reactionLock": false,
+            "reactionLockEnds": 0,
+            "responseDebt": false,
+            "opportunityUsed": false
+          },
+          "maneuvers": {
+            "turn": 3,
+            "startVisible": [
+              "player"
+            ],
+            "weaponUnavailable": true
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "practice-sword",
+                "name": "试验剑",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "ground",
+                "held": false,
+                "oneHanded": true,
+                "grip": {
+                  "hands": 1,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "weapon": {
+                  "name": "试验剑",
+                  "type": "melee",
+                  "skill": "白刃",
+                  "damage": 1,
+                  "severity": "L",
+                  "size": 2,
+                  "ap": 0,
+                  "magic": 0,
+                  "attackBonus": 0,
+                  "blockBonus": 0
+                },
+                "durability": {
+                  "current": 1,
+                  "max": 1,
+                  "hardness": 1
+                },
+                "position": [
+                  1,
+                  0
+                ]
+              }
+            ]
+          },
+          "position": [
+            1,
+            0
+          ]
+        }
+      },
+      "lastText": "交锋的余势落定，试验场内稍归沉寂。\n\n你手中的弃风长剑锋芒微定，未再催动新的攻势。一米开外，试验陪练徒手立于原地，方才受创之处痕迹分明，脱落或损毁的武器已不再其掌握之中。两人气机相对，对方并未冒进抢攻，只是在近身处稳住架势，防备着下一瞬的变化。\n\n场中气氛紧绷微滞，仍在等待你的动作。\n\n【本次战斗记录】\n御临风｜结束回合\n动作消耗：无\n技能／招式：未额外使用特殊技能\n装备／物品：无使用或消耗\n资源消耗：无\n主动移动：0米\n剩余动作：无\n防御：本动作没有防御结算。\n状态：已执行\n\n<StatusPlaceHolderImpl/>"
+    },
+    "turn3-allout": {
+      "messages": 11,
+      "revision": 7,
+      "round": 3,
+      "activeId": "player",
+      "battleStatus": "active",
+      "pending": null,
+      "operations": [
+        {
+          "id": "declaration/901 仅六书连续多回合验收 20261106/1/0/0",
+          "result": {
+            "actorId": "player",
+            "abilityId": "disarm",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "responses": [
+              {
+                "targetId": "huang",
+                "guarded": false
+              }
+            ],
+            "attack": {
+              "rawDP": 15,
+              "dp": 15,
+              "attribute": "敏捷",
+              "handling": {
+                "requirement": 0,
+                "deficit": 0,
+                "strengthPenalty": 0,
+                "gripPenalty": 0,
+                "aimMultiplier": 1,
+                "distancePenalty": 0
+              },
+              "legacyCompatible": true,
+              "weaponType": null,
+              "severity": "L",
+              "weapon": 6,
+              "cap": 11,
+              "fixed": 2,
+              "ap": 2,
+              "magic": 2,
+              "speed": 0,
+              "extra": 0,
+              "ignore": 0,
+              "aggravate": 0,
+              "electric": 0,
+              "reduction": 3,
+              "range": 1.5,
+              "explode": 10,
+              "magical": false,
+              "ranged": false,
+              "firearm": null,
+              "ballistic": null,
+              "energyWeapon": false,
+              "hardnessIgnore": 0,
+              "spiritEligible": true,
+              "calledPenalty": 3,
+              "defense": {
+                "total": 2,
+                "parts": {
+                  "base": 0,
+                  "natural": 0,
+                  "armor": 1,
+                  "dodge": 1,
+                  "insight": 0,
+                  "block": 0,
+                  "cover": 0,
+                  "cultivation": 0,
+                  "force": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "unholy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 0,
+                "guarded": false,
+                "extraSuccesses": 0
+              },
+              "roll": {
+                "dp": 13,
+                "luck": false,
+                "dice": [
+                  2,
+                  4,
+                  4,
+                  4,
+                  9,
+                  5,
+                  4,
+                  7,
+                  10,
+                  2,
+                  3,
+                  7,
+                  9,
+                  3
+                ],
+                "used": 14,
+                "rolledSuccesses": 3,
+                "luckMishap": false
+              },
+              "amount": 5
+            },
+            "equipmentHit": true,
+            "contest": {
+              "active": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 5,
+                  "auto": 2,
+                  "main": 5,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 3,
+                "dp": 15,
+                "luck": false,
+                "dice": [
+                  2,
+                  10,
+                  3,
+                  6,
+                  7,
+                  4,
+                  3,
+                  3,
+                  2,
+                  1,
+                  2,
+                  2,
+                  7,
+                  2,
+                  8,
+                  8
+                ],
+                "used": 16,
+                "rolledSuccesses": 3,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 6
+              },
+              "passive": {
+                "eligible": true,
+                "willCost": 0,
+                "skill": {
+                  "level": 1,
+                  "auto": 0,
+                  "main": 1,
+                  "sub": 0
+                },
+                "adjustments": {
+                  "allowed": true,
+                  "penalty": 0,
+                  "bonus": 0,
+                  "entries": []
+                },
+                "autoSuccesses": 0,
+                "dp": 2,
+                "luck": false,
+                "dice": [
+                  3,
+                  7
+                ],
+                "used": 2,
+                "rolledSuccesses": 0,
+                "luckMishap": false,
+                "reExtraSuccesses": 0,
+                "total": 0
+              },
+              "margin": 6,
+              "won": true
+            },
+            "disarmed": {
+              "targetId": "huang",
+              "itemId": "practice-sword",
+              "name": "试验剑",
+              "position": [
+                1,
+                0
+              ]
+            },
+            "receipt": {
+              "actions": {
+                "standard": 1
+              },
+              "resources": [],
+              "items": [],
+              "targetId": "huang",
+              "willSpent": 0,
+              "weapon": "弃风长剑在手",
+              "movement": 0,
+              "remaining": {
+                "standard": 0,
+                "move": 1,
+                "swift": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "declaration/901 仅六书连续多回合验收 20261106/3/0/0",
+          "result": {
+            "actorId": "player",
+            "abilityId": "end",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "resourceTriggers": [],
+            "receipt": {
+              "actions": {},
+              "resources": [],
+              "items": [],
+              "willSpent": 0,
+              "movement": 0,
+              "remaining": {
+                "standard": 0,
+                "move": 0,
+                "swift": 0
+              }
+            }
+          }
+        },
+        {
+          "id": "combat/3/0/2",
+          "result": {
+            "actorId": "huang",
+            "abilityId": "end",
+            "round": 1,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "sceneChanges": [],
+            "timeChanges": [],
+            "resourceTriggers": [],
+            "receipt": {
+              "actions": {},
+              "resources": [],
+              "items": [],
+              "willSpent": 0,
+              "movement": 0,
+              "remaining": {
+                "standard": 0,
+                "move": 0,
+                "swift": 0
+              }
+            }
+          }
+        },
+        {
+          "id": "declaration/901 仅六书连续多回合验收 20261106/5/0/0",
+          "result": {
+            "actorId": "player",
+            "abilityId": "strike",
+            "round": 2,
+            "damage": [
+              {
+                "targetId": "huang",
+                "kind": "physical",
+                "energyType": null,
+                "input": 11,
+                "inputSeverity": "L",
+                "severity": "L",
+                "actualDamage": 11,
+                "causedDamage": true,
+                "temporaryAbsorbed": 0
+              }
+            ],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "responses": [
+              {
+                "targetId": "huang",
+                "guarded": false
+              }
+            ],
+            "attack": {
+              "rawDP": 18,
+              "dp": 18,
+              "attribute": "敏捷",
+              "handling": {
+                "requirement": 0,
+                "deficit": 0,
+                "strengthPenalty": 0,
+                "gripPenalty": 0,
+                "aimMultiplier": 1,
+                "distancePenalty": 0
+              },
+              "legacyCompatible": true,
+              "weaponType": null,
+              "severity": "L",
+              "weapon": 6,
+              "cap": 11,
+              "fixed": 2,
+              "ap": 2,
+              "magic": 2,
+              "speed": 0,
+              "extra": 0,
+              "ignore": 0,
+              "aggravate": 0,
+              "electric": 0,
+              "reduction": 3,
+              "range": 1.5,
+              "explode": 10,
+              "magical": false,
+              "ranged": false,
+              "firearm": null,
+              "ballistic": null,
+              "energyWeapon": false,
+              "hardnessIgnore": 0,
+              "spiritEligible": true,
+              "defense": {
+                "total": 1,
+                "parts": {
+                  "base": 0,
+                  "natural": 0,
+                  "armor": 1,
+                  "dodge": 0,
+                  "insight": 0,
+                  "block": 0,
+                  "cover": 0,
+                  "cultivation": 0,
+                  "force": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "unholy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 0,
+                "guarded": false,
+                "extraSuccesses": 0
+              },
+              "roll": {
+                "dp": 17,
+                "luck": false,
+                "dice": [
+                  4,
+                  3,
+                  5,
+                  10,
+                  10,
+                  7,
+                  3,
+                  6,
+                  8,
+                  10,
+                  5,
+                  1,
+                  2,
+                  10,
+                  10,
+                  9,
+                  4,
+                  5,
+                  5,
+                  8,
+                  8,
+                  1
+                ],
+                "used": 22,
+                "rolledSuccesses": 9,
+                "luckMishap": false
+              },
+              "amount": 11
+            },
+            "resourceTriggers": [],
+            "damageEvents": [
+              {
+                "sourceActorId": "player",
+                "targetId": "huang",
+                "damageNature": "attack",
+                "originalSegments": [
+                  {
+                    "amount": 11,
+                    "severity": "L",
+                    "kind": "physical",
+                    "magical": false,
+                    "attack": true,
+                    "ranged": false
+                  }
+                ],
+                "causedDamage": true,
+                "converted": 0,
+                "temporaryAbsorbed": 0,
+                "actualDamage": 11,
+                "additionalActualDamage": 0,
+                "additionalSources": []
+              }
+            ],
+            "receipt": {
+              "actions": {
+                "standard": 1
+              },
+              "resources": [],
+              "items": [],
+              "targetId": "huang",
+              "willSpent": 0,
+              "weapon": "弃风长剑在手",
+              "movement": 0,
+              "remaining": {
+                "standard": 0,
+                "move": 1,
+                "swift": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "declaration/901 仅六书连续多回合验收 20261106/7/0/0",
+          "result": {
+            "actorId": "player",
+            "abilityId": "end",
+            "round": 2,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "resourceTriggers": [],
+            "receipt": {
+              "actions": {},
+              "resources": [],
+              "items": [],
+              "willSpent": 0,
+              "movement": 0,
+              "remaining": {
+                "standard": 0,
+                "move": 0,
+                "swift": 0
+              }
+            }
+          }
+        },
+        {
+          "id": "combat/7/0/5",
+          "result": {
+            "actorId": "huang",
+            "abilityId": "end",
+            "round": 2,
+            "damage": [],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "sceneChanges": [],
+            "timeChanges": [],
+            "resourceTriggers": [],
+            "receipt": {
+              "actions": {},
+              "resources": [],
+              "items": [],
+              "willSpent": 0,
+              "movement": 0,
+              "remaining": {
+                "standard": 0,
+                "move": 0,
+                "swift": 0
+              }
+            }
+          }
+        },
+        {
+          "id": "declaration/901 仅六书连续多回合验收 20261106/9/0/0",
+          "result": {
+            "actorId": "player",
+            "abilityId": "allOut",
+            "round": 3,
+            "damage": [
+              {
+                "targetId": "huang",
+                "kind": "physical",
+                "energyType": null,
+                "input": 11,
+                "inputSeverity": "L",
+                "severity": "L",
+                "actualDamage": 11,
+                "causedDamage": true,
+                "temporaryAbsorbed": 0
+              }
+            ],
+            "statuses": [],
+            "saves": [],
+            "healing": [],
+            "notes": [],
+            "responses": [
+              {
+                "targetId": "huang",
+                "guarded": false
+              }
+            ],
+            "attack": {
+              "rawDP": 20,
+              "dp": 20,
+              "attribute": "敏捷",
+              "handling": {
+                "requirement": 0,
+                "deficit": 0,
+                "strengthPenalty": 0,
+                "gripPenalty": 0,
+                "aimMultiplier": 1,
+                "distancePenalty": 0
+              },
+              "legacyCompatible": true,
+              "weaponType": null,
+              "severity": "L",
+              "weapon": 6,
+              "cap": 11,
+              "fixed": 2,
+              "ap": 2,
+              "magic": 2,
+              "speed": 0,
+              "extra": 0,
+              "ignore": 0,
+              "aggravate": 0,
+              "electric": 0,
+              "reduction": 3,
+              "range": 1.5,
+              "explode": 10,
+              "magical": false,
+              "ranged": false,
+              "firearm": null,
+              "ballistic": null,
+              "energyWeapon": false,
+              "hardnessIgnore": 0,
+              "spiritEligible": true,
+              "defense": {
+                "total": 1,
+                "parts": {
+                  "base": 0,
+                  "natural": 0,
+                  "armor": 1,
+                  "dodge": 0,
+                  "insight": 0,
+                  "block": 0,
+                  "cover": 0,
+                  "cultivation": 0,
+                  "force": 0,
+                  "device": 0,
+                  "shield": 0,
+                  "luck": 0,
+                  "morale": 0,
+                  "enhancement": 0,
+                  "holy": 0,
+                  "unholy": 0,
+                  "technique": 0,
+                  "performance": 0,
+                  "intrinsic": 0,
+                  "unnamed": 0
+                },
+                "remainingAP": 0,
+                "guarded": false,
+                "extraSuccesses": 0
+              },
+              "roll": {
+                "dp": 19,
+                "luck": false,
+                "dice": [
+                  7,
+                  5,
+                  10,
+                  5,
+                  3,
+                  3,
+                  10,
+                  8,
+                  7,
+                  9,
+                  3,
+                  2,
+                  4,
+                  8,
+                  5,
+                  10,
+                  1,
+                  1,
+                  9,
+                  8,
+                  9,
+                  3
+                ],
+                "used": 22,
+                "rolledSuccesses": 9,
+                "luckMishap": false
+              },
+              "amount": 11
+            },
+            "resourceTriggers": [],
+            "damageEvents": [
+              {
+                "sourceActorId": "player",
+                "targetId": "huang",
+                "damageNature": "attack",
+                "originalSegments": [
+                  {
+                    "amount": 11,
+                    "severity": "L",
+                    "kind": "physical",
+                    "magical": false,
+                    "attack": true,
+                    "ranged": false
+                  }
+                ],
+                "causedDamage": true,
+                "converted": 0,
+                "temporaryAbsorbed": 0,
+                "actualDamage": 11,
+                "additionalActualDamage": 0,
+                "additionalSources": []
+              }
+            ],
+            "receipt": {
+              "actions": {
+                "standard": 1
+              },
+              "resources": [],
+              "items": [],
+              "targetId": "huang",
+              "willSpent": 0,
+              "weapon": "弃风长剑在手",
+              "movement": 0,
+              "remaining": {
+                "standard": 0,
+                "move": 1,
+                "swift": 1
+              }
+            }
+          }
+        }
+      ],
+      "actors": {
+        "player": {
+          "health": {
+            "intact": 100,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "actions": {
+            "phase": "active",
+            "standard": 0,
+            "move": 1,
+            "swift": 1,
+            "reactionLock": false,
+            "reactionLockEnds": 0,
+            "responseDebt": false,
+            "opportunityUsed": false
+          },
+          "maneuvers": {
+            "turn": 3,
+            "startVisible": [
+              "huang"
+            ],
+            "allOut": true
+          },
+          "possessions": null,
+          "position": [
+            0,
+            0
+          ]
+        },
+        "huang": {
+          "health": {
+            "intact": 78,
+            "B": 0,
+            "L": 22,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "actions": {
+            "phase": "ended",
+            "standard": 0,
+            "move": 0,
+            "swift": 0,
+            "reactionLock": false,
+            "reactionLockEnds": 0,
+            "responseDebt": false,
+            "opportunityUsed": false
+          },
+          "maneuvers": {
+            "turn": 3,
+            "startVisible": [
+              "player"
+            ],
+            "weaponUnavailable": true
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "practice-sword",
+                "name": "试验剑",
+                "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+                "location": "ground",
+                "held": false,
+                "oneHanded": true,
+                "grip": {
+                  "hands": 1,
+                  "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+                },
+                "weapon": {
+                  "name": "试验剑",
+                  "type": "melee",
+                  "skill": "白刃",
+                  "damage": 1,
+                  "severity": "L",
+                  "size": 2,
+                  "ap": 0,
+                  "magic": 0,
+                  "attackBonus": 0,
+                  "blockBonus": 0
+                },
+                "durability": {
+                  "current": 1,
+                  "max": 1,
+                  "hardness": 1
+                },
+                "position": [
+                  1,
+                  0
+                ]
+              }
+            ]
+          },
+          "position": [
+            1,
+            0
+          ]
+        }
+      },
+      "lastText": "御临风臂上劲力骤发，弃风长剑携着压迫感十足的破空声骤然斩落，将全部去势灌入这一记全力挥出的剑锋之中。\n\n相距不过一米，试验陪练手中已无兵刃，面对猝然劈落的重击根本无从架隔，只凭着躯干硬抗与护体本能向旁微侧。剑锋结结实实切入防御，沉闷的撞击声随之在场中炸开。伴随着血痕崩裂与皮肉受挫的闷响，试验陪练身躯猛然一震，承受住这记斩击的力道，原地硬生生吃下了伤势，脚下却未曾后撤半步，徒手立在原地，身上创口显见。\n\n一击斩落，剑势已尽，御临风的长剑仍凝在身前，试验陪练近在咫尺。\n\n【本次战斗记录】\n御临风｜全力一击 → 试验陪练\n动作消耗：标准×1\n技能／招式：未额外使用特殊技能\n装备／物品：使用弃风长剑在手\n资源消耗：无\n主动移动：0米\n剩余动作：移动×1、迅捷×1\n防御（试验陪练）：基础及被动防护，未主动格挡\n状态：攻击已结算，造成伤害\n\n<StatusPlaceHolderImpl/>"
+    }
+  },
+  "allOutSnapshotCalculation": {
+    "method": "Read-only calculation on saved live snapshots; not an NPC attack",
+    "turn3-ready": {
+      "attack": {
+        "rawDP": 18,
+        "dp": 18,
+        "attribute": "敏捷",
+        "handling": {
+          "requirement": 0,
+          "deficit": 0,
+          "strengthPenalty": 0,
+          "gripPenalty": 0,
+          "aimMultiplier": 1,
+          "distancePenalty": 0
+        },
+        "legacyCompatible": true,
+        "weaponType": null,
+        "severity": "L",
+        "weapon": 6,
+        "cap": 11,
+        "fixed": 2,
+        "ap": 2,
+        "magic": 2,
+        "speed": 0,
+        "extra": 0,
+        "ignore": 0,
+        "aggravate": 0,
+        "electric": 0,
+        "reduction": 3,
+        "range": 1.5,
+        "explode": 10,
+        "magical": false,
+        "ranged": false,
+        "firearm": null,
+        "ballistic": null,
+        "energyWeapon": false,
+        "hardnessIgnore": 0,
+        "spiritEligible": true
+      },
+      "actions": {
+        "phase": "active",
+        "standard": 1,
+        "move": 1,
+        "swift": 1,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "passiveDefensePreview": {
+        "total": 11,
+        "parts": {
+          "base": 4,
+          "natural": 0,
+          "armor": 3,
+          "dodge": 2,
+          "insight": 0,
+          "block": 0,
+          "cover": 0,
+          "deflection": 2,
+          "cultivation": 0,
+          "force": 0,
+          "device": 0,
+          "shield": 0,
+          "luck": 0,
+          "morale": 0,
+          "enhancement": 0,
+          "holy": 0,
+          "unholy": 0,
+          "technique": 0,
+          "performance": 0,
+          "intrinsic": 0,
+          "unnamed": 0
+        },
+        "remainingAP": 0,
+        "guarded": false,
+        "extraSuccesses": 0
+      },
+      "maneuvers": {
+        "turn": 3,
+        "startVisible": [
+          "huang"
+        ]
+      }
+    },
+    "turn3-allout": {
+      "attack": {
+        "rawDP": 20,
+        "dp": 20,
+        "attribute": "敏捷",
+        "handling": {
+          "requirement": 0,
+          "deficit": 0,
+          "strengthPenalty": 0,
+          "gripPenalty": 0,
+          "aimMultiplier": 1,
+          "distancePenalty": 0
+        },
+        "legacyCompatible": true,
+        "weaponType": null,
+        "severity": "L",
+        "weapon": 6,
+        "cap": 11,
+        "fixed": 2,
+        "ap": 2,
+        "magic": 2,
+        "speed": 0,
+        "extra": 0,
+        "ignore": 0,
+        "aggravate": 0,
+        "electric": 0,
+        "reduction": 3,
+        "range": 1.5,
+        "explode": 10,
+        "magical": false,
+        "ranged": false,
+        "firearm": null,
+        "ballistic": null,
+        "energyWeapon": false,
+        "hardnessIgnore": 0,
+        "spiritEligible": true
+      },
+      "actions": {
+        "phase": "active",
+        "standard": 0,
+        "move": 1,
+        "swift": 1,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "passiveDefensePreview": {
+        "total": 9,
+        "parts": {
+          "base": 2,
+          "natural": 0,
+          "armor": 3,
+          "dodge": 2,
+          "insight": 0,
+          "block": 0,
+          "cover": 0,
+          "deflection": 2,
+          "cultivation": 0,
+          "force": 0,
+          "device": 0,
+          "shield": 0,
+          "luck": 0,
+          "morale": 0,
+          "enhancement": 0,
+          "holy": 0,
+          "unholy": 0,
+          "technique": 0,
+          "performance": 0,
+          "intrinsic": 0,
+          "unnamed": 0
+        },
+        "remainingAP": 0,
+        "guarded": false,
+        "extraSuccesses": 0
+      },
+      "maneuvers": {
+        "turn": 3,
+        "startVisible": [
+          "huang"
+        ],
+        "allOut": true
+      }
+    }
+  },
+  "scannedBooks": [
+    "901_01_世界基础设定_20261023",
+    "901_02_政治与势力_20261023",
+    "901_03_人物资料库_20261023",
+    "901_04_能力与战力_20261023",
+    "901_05_历史与事件_20261023",
+    "901_06_当前剧本与局势_20261023"
+  ],
+  "availableEntries": 580,
+  "lastActualPromptAddingEvents": [
+    {
+      "level": "log",
+      "message": "[WI] Adding 8 entries to prompt Array(8)",
+      "timestamp": "2026-11-06T18:30:55.391Z",
+      "url": "http://127.0.0.1:8000/scripts/world-info.js"
+    }
+  ],
+  "loadingEvidenceLimit": "Retained browser logs directly cover the last allOut request; not claimed as separate complete traces for all four requests. Settings unchanged throughout.",
+  "fullRootReplyExtraUnchangedAfterRefresh": true,
+  "protectedExistingFiles": 284,
+  "changedExistingFiles": [
+    "D:\\github\\sillyTavern\\data\\default-user\\characters\\901 正式战斗加载验收 20261106.png"
+  ],
+  "testCardOnlyChatPointerChanged": true,
+  "newFiles": [
+    "D:\\github\\sillyTavern\\data\\default-user\\chats\\901 正式战斗加载验收 20261106\\901 仅六书连续多回合验收 20261106.jsonl"
+  ],
+  "settingsAndFullModelConfigurationUnchanged": true,
+  "autoUpdateEnabled": false,
+  "originalChatsCardsWorldsRuntimeUnchanged": true,
+  "narrativeFindings": [
+    {
+      "stage": "turn3-ready",
+      "text": "脱落或损毁的武器",
+      "expected": "已脱手落地，耐久1/1，无损毁",
+      "severity": "Narrative ambiguity only; saved equipment remains correct"
+    },
+    {
+      "stage": "turn3-ready",
+      "text": "你手中的；仍在等待你的动作",
+      "severity": "Second-person/waiting closure style drift"
+    }
+  ],
+  "limits": [
+    "Only two added damaging attacks and two actual NPC end actions; not a full hostile-tactics test.",
+    "AllOut defense -2 checked read-only from installed code and saved live snapshots; no subsequent NPC attack or expiration round tested in this batch.",
+    "No new runtime or prompt repair; narrative deviations retained, not silently edited."
+  ],
+  "evidenceDirectory": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\six-books-multiround-20261106",
+  "screenshot": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\six-books-multiround-20261106\\accepted.png"
+}

@@ -119,6 +119,8 @@ test('sunder uses hit then opposed roll, subtracts item hardness and never injur
  assert.equal(out.battle.actors.huang.state.possessions.items[0].destroyed,true);
  assert.deepEqual(out.battle.actors.huang.state.health,b.actors.huang.state.health);assert.equal(out.result.damage.length,0);
  assert.doesNotThrow(()=>panel(out.battle,'huang'));assert.equal(attackProfile(out.battle,'huang').weapon,0);
+ const scene=publicScene({battle:out.battle,actors:out.battle.actors,operations:{}});
+ assert.equal(scene.participants.find(a=>a.id==='huang').arms,'当前徒手，主手没有可用武器');
 });
 test('disarm keeps the actual item on the ground and prevents the old weapon from returning by fallback',()=>{
  const b=armedTarget();let rolls=0;
@@ -126,7 +128,17 @@ test('disarm keeps the actual item on the ground and prevents the old weapon fro
  const item=out.battle.actors.huang.state.possessions.items[0];assert.equal(item.location,'ground');assert.equal(item.held,false);assert.deepEqual(item.position,[1,0]);
  assert.equal(attackProfile(out.battle,'huang').weapon,0);assert.equal(item.destroyed,undefined);
  const scene=publicScene({battle:out.battle,actors:Object.fromEntries(Object.entries(out.battle.actors).map(([id,a])=>[id,{name:a.name,state:a.state}])),operations:{}});
- assert.match(scene.participants.find(a=>a.id==='huang').arms,/主手武器已脱手或损毁，当前徒手/);
+ assert.equal(scene.participants.find(a=>a.id==='huang').arms,'当前徒手，主手没有可用武器');
+ assert.deepEqual(item.durability,b.actors.huang.state.possessions.items[0].durability);
+});
+test('unavailable weapon flag alone does not invent its loss cause or inspect unrelated inventory',()=>{
+ const b=armedTarget(),a=b.actors.huang;
+ delete a.state.equippedWeaponId;a.state.combatManeuvers={weaponUnavailable:true};
+ a.state.possessions.items[0].name='未公开的备用剑';
+ const scene=publicScene({battle:b,actors:b.actors,operations:{}});
+ const arms=scene.participants.find(x=>x.id==='huang').arms;
+ assert.equal(arms,'当前徒手，主手没有可用武器');
+ assert.doesNotMatch(arms,/损毁|脱手|落地|备用剑|太刀/);
 });
 test('a pending attack accepts explicit reflex prone without resolving or replacing the attack',()=>{
  let b=battle();b.activeId='huang';b.actors.huang.state=beginTurn(b.actors.huang.state).state;b.reactionWindows=true;b.playerDefenseDeclarations=true;

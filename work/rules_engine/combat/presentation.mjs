@@ -50,7 +50,7 @@ export function ownImpactReport(root,{afterRevision=0,playerId='player'}={}) {
   return parts.length?`**${actor.name}本次结算：** ${parts.join('；')}。`:'';
 }
 
-const visibleArms=a=>a.state.combatManeuvers?.weaponUnavailable?'主手武器已脱手或损毁，当前徒手':a.state.equippedWeaponId&&a.state.possessions?.items?.some(i=>i.id===a.state.equippedWeaponId&&i.held)?`${equipment(a).weapon.name??'实际武器'}在手`:a.kind==='mireya'?(a.weaponMode==='club'?'包毡短棍在手，竞技弓不处于射击姿势':`双手持竞技弓${a.loaded?'，已上箭':'，未上箭'}，包毡短棍收在腰侧`):a.ruleset==='opening-20261022'?`${a.visibleArms}${a.kind==='huang'?(a.sheathed?'在鞘':'出鞘'):''}`:a.kind==='jiang'?'徒手，以拳掌应战':a.kind==='huang'?`狮子王太刀${a.sheathed?'在鞘':'出鞘'}`:
+const visibleArms=a=>a.state.combatManeuvers?.weaponUnavailable?'当前徒手，主手没有可用武器':a.state.equippedWeaponId&&a.state.possessions?.items?.some(i=>i.id===a.state.equippedWeaponId&&i.held)?`${equipment(a).weapon.name??'实际武器'}在手`:a.kind==='mireya'?(a.weaponMode==='club'?'包毡短棍在手，竞技弓不处于射击姿势':`双手持竞技弓${a.loaded?'，已上箭':'，未上箭'}，包毡短棍收在腰侧`):a.ruleset==='opening-20261022'?`${a.visibleArms}${a.kind==='huang'?(a.sheathed?'在鞘':'出鞘'):''}`:a.kind==='jiang'?'徒手，以拳掌应战':a.kind==='huang'?`狮子王太刀${a.sheathed?'在鞘':'出鞘'}`:
   a.kind==='yulin'?`弃风长剑${a.sheathed?'在鞘':'在手'}`:a.kind==='bright'?'苍穹长弓':a.kind==='lotus'?'灵兽，以爪牙应战':'以已出现的装备为准';
 function condition(state,actor) {
   const life=lifeStatus(state).state;

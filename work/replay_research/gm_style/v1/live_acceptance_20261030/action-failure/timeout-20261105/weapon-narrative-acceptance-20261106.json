@@ -1,0 +1,365 @@
+{
+  "status": "isolated_fix_verified_not_installed_formally",
+  "port": 18113,
+  "operator": "Terra gpt-6.1-terra high judgement; main session IAB execution",
+  "model": "[抗截断]gemini-3.8-flash",
+  "scope": "One end-turn declaration each, from identical prior seven-message revision4 nonCanon snapshots. Old and fixed projection only.",
+  "cause": {
+    "save": "practice-sword ground, held=false, durability1/1; weaponUnavailable=true",
+    "mapping": "combat/presentation.mjs visibleArms unconditionally rendered weaponUnavailable as 主手武器已脱手或损毁，当前徒手",
+    "boundary": "publicScene participants.arms -> narrationRequest user_input JSON -> actual outgoing requestBody.messages",
+    "evidence": "Original previous-turn facts reconstructed separately; this batch directly captured both actual outgoing narrator fact JSONs before fetch.",
+    "whyLaterTurn": "end events are omitted from publicScene; old disarm event is below afterRevision. Current participants arms is therefore the equipment fact at this boundary."
+  },
+  "fix": {
+    "source": "work\\rules_engine\\combat\\presentation.mjs",
+    "before": "主手武器已脱手或损毁，当前徒手",
+    "after": "当前徒手，主手没有可用武器",
+    "noNewPromptRules": true,
+    "noPersistentStateSchemaChange": true,
+    "existingDisarmSunderEventOutcomesPreserved": true,
+    "doesNotClaimCurrentViewIncludesFullGroundInventory": true,
+    "sourceHash": "759eb98474f81c007d1121059c600ab964f7436a363867b59adc39f36cfb4808",
+    "testedIsolatedHash": "4cd6010b2f92e0e8e9e63b6ac2dab92db3dcc9f1d022e091b04a80fa51c959a3",
+    "lineEndingNote": "Source retains CRLF; isolated tested copy LF. Decoded text identical."
+  },
+  "cases": {
+    "old": {
+      "chat": "901 武器叙事隔离 旧映射 20261106",
+      "messages": 9,
+      "revision": 6,
+      "round": 3,
+      "capturedActualOutgoing": {
+        "at": "2026-11-06T18:45:08.283Z",
+        "model": "[抗截断]gemini-3.8-flash",
+        "facts": {
+          "events": [],
+          "projections": [],
+          "vagueObservations": [],
+          "interaction": "本段仅发生已列出的移动、准备或恢复等行动，双方未发生攻击或挡接。",
+          "setting": {
+            "name": "全项隔离试验场",
+            "nearbyLandmarks": []
+          },
+          "participants": [
+            {
+              "id": "player",
+              "name": "御临风",
+              "location": "你所在的位置",
+              "terrain": {
+                "elevation": 0,
+                "areas": []
+              },
+              "condition": "未见伤势",
+              "arms": "弃风长剑在手"
+            },
+            {
+              "id": "huang",
+              "name": "试验陪练",
+              "location": "与你相距1米",
+              "terrain": {
+                "elevation": 0,
+                "areas": []
+              },
+              "condition": "可见受伤",
+              "arms": "主手武器已脱手或损毁，当前徒手"
+            }
+          ],
+          "phase": "等待玩家继续行动",
+          "declaration": "御临风结束本回合。"
+        }
+      },
+      "narrative": "剑锋微敛，御临风并未趁势再进，只稳稳握住弃风长剑，将剑路收束于身前，调匀气息以作护持。\n\n近在咫尺的试验陪练主手兵刃已损毁脱手，身负可见创伤，此刻徒手立于一米开外，气息微窒，尚未有新的动向展开。场内短暂沉寂下来，唯余两人相对而立的屏息之势。\n\n【本次战斗记录】\n御临风｜结束回合\n动作消耗：无\n技能／招式：未额外使用特殊技能\n装备／物品：无使用或消耗\n资源消耗：无\n主动移动：0米\n剩余动作：无\n防御：本动作没有防御结算。\n状态：已执行\n\n<StatusPlaceHolderImpl/>",
+      "newActions": [
+        {
+          "actorId": "player",
+          "abilityId": "end",
+          "receipt": {
+            "actions": {},
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          },
+          "damage": []
+        },
+        {
+          "actorId": "huang",
+          "abilityId": "end",
+          "receipt": {
+            "actions": {},
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          },
+          "damage": []
+        }
+      ],
+      "playerTurn": {
+        "phase": "active",
+        "standard": 1,
+        "move": 1,
+        "swift": 1,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "opponentHealth": {
+        "intact": 89,
+        "B": 0,
+        "L": 11,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "item": {
+        "id": "practice-sword",
+        "name": "试验剑",
+        "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+        "location": "ground",
+        "held": false,
+        "oneHanded": true,
+        "grip": {
+          "hands": 1,
+          "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+        },
+        "weapon": {
+          "name": "试验剑",
+          "type": "melee",
+          "skill": "白刃",
+          "damage": 1,
+          "severity": "L",
+          "size": 2,
+          "ap": 0,
+          "magic": 0,
+          "attackBonus": 0,
+          "blockBonus": 0
+        },
+        "durability": {
+          "current": 1,
+          "max": 1,
+          "hardness": 1
+        },
+        "position": [
+          1,
+          0
+        ]
+      },
+      "scannedBooks": [
+        "901_01_世界基础设定_20261023",
+        "901_02_政治与势力_20261023",
+        "901_03_人物资料库_20261023",
+        "901_04_能力与战力_20261023",
+        "901_05_历史与事件_20261023",
+        "901_06_当前剧本与局势_20261023"
+      ],
+      "availableEntries": 580,
+      "promptAddingLogs": [
+        {
+          "level": "log",
+          "message": "[WI] Adding 7 entries to prompt Array(7)",
+          "timestamp": "2026-11-06T18:45:08.254Z",
+          "url": "http://127.0.0.1:18113/scripts/world-info.js"
+        }
+      ]
+    },
+    "fixed": {
+      "chat": "901 武器叙事隔离 修复映射 20261106",
+      "messages": 9,
+      "revision": 6,
+      "round": 3,
+      "capturedActualOutgoing": {
+        "at": "2026-11-06T18:47:31.820Z",
+        "model": "[抗截断]gemini-3.8-flash",
+        "facts": {
+          "events": [],
+          "projections": [],
+          "vagueObservations": [],
+          "interaction": "本段仅发生已列出的移动、准备或恢复等行动，双方未发生攻击或挡接。",
+          "setting": {
+            "name": "全项隔离试验场",
+            "nearbyLandmarks": []
+          },
+          "participants": [
+            {
+              "id": "player",
+              "name": "御临风",
+              "location": "你所在的位置",
+              "terrain": {
+                "elevation": 0,
+                "areas": []
+              },
+              "condition": "未见伤势",
+              "arms": "弃风长剑在手"
+            },
+            {
+              "id": "huang",
+              "name": "试验陪练",
+              "location": "与你相距1米",
+              "terrain": {
+                "elevation": 0,
+                "areas": []
+              },
+              "condition": "可见受伤",
+              "arms": "当前徒手，主手没有可用武器"
+            }
+          ],
+          "phase": "等待玩家继续行动",
+          "declaration": "御临风结束本回合。"
+        }
+      },
+      "narrative": "场中并无新的招式递出。\n\n御临风长剑在手，未再催发劲力追击，只是就此稳住架势，结束了这一轮的攻势。相隔仅一米处，试验陪练身上带着方才交锋留下的伤势，主手空垂，同样未见进一步动作，只在近处与他对峙。周围空气微定，两人间的气机暂且平缓下来。\n\n【本次战斗记录】\n御临风｜结束回合\n动作消耗：无\n技能／招式：未额外使用特殊技能\n装备／物品：无使用或消耗\n资源消耗：无\n主动移动：0米\n剩余动作：无\n防御：本动作没有防御结算。\n状态：已执行\n\n<StatusPlaceHolderImpl/>",
+      "newActions": [
+        {
+          "actorId": "player",
+          "abilityId": "end",
+          "receipt": {
+            "actions": {},
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          },
+          "damage": []
+        },
+        {
+          "actorId": "huang",
+          "abilityId": "end",
+          "receipt": {
+            "actions": {},
+            "resources": [],
+            "items": [],
+            "willSpent": 0,
+            "movement": 0,
+            "remaining": {
+              "standard": 0,
+              "move": 0,
+              "swift": 0
+            }
+          },
+          "damage": []
+        }
+      ],
+      "playerTurn": {
+        "phase": "active",
+        "standard": 1,
+        "move": 1,
+        "swift": 1,
+        "reactionLock": false,
+        "reactionLockEnds": 0,
+        "responseDebt": false,
+        "opportunityUsed": false
+      },
+      "opponentHealth": {
+        "intact": 89,
+        "B": 0,
+        "L": 11,
+        "A": 0,
+        "temp": 0,
+        "coma": false,
+        "deteriorationStopped": false
+      },
+      "item": {
+        "id": "practice-sword",
+        "name": "试验剑",
+        "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+        "location": "ground",
+        "held": false,
+        "oneHanded": true,
+        "grip": {
+          "hands": 1,
+          "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+        },
+        "weapon": {
+          "name": "试验剑",
+          "type": "melee",
+          "skill": "白刃",
+          "damage": 1,
+          "severity": "L",
+          "size": 2,
+          "ap": 0,
+          "magic": 0,
+          "attackBonus": 0,
+          "blockBonus": 0
+        },
+        "durability": {
+          "current": 1,
+          "max": 1,
+          "hardness": 1
+        },
+        "position": [
+          1,
+          0
+        ]
+      },
+      "scannedBooks": [
+        "901_01_世界基础设定_20261023",
+        "901_02_政治与势力_20261023",
+        "901_03_人物资料库_20261023",
+        "901_04_能力与战力_20261023",
+        "901_05_历史与事件_20261023",
+        "901_06_当前剧本与局势_20261023"
+      ],
+      "availableEntries": 580,
+      "promptAddingLogs": [
+        {
+          "level": "log",
+          "message": "[WI] Adding 7 entries to prompt Array(7)",
+          "timestamp": "2026-11-06T18:47:31.750Z",
+          "url": "http://127.0.0.1:18113/scripts/world-info.js"
+        }
+      ]
+    }
+  },
+  "onlyOutgoingFactDifference": "participants[huang].arms",
+  "mechanicalActorsAndBattleIdenticalAcrossCases": true,
+  "refreshRootReplyExtraUnchanged": true,
+  "localTests": {
+    "red": {
+      "total": 20,
+      "passed": 17,
+      "failed": 3
+    },
+    "green": {
+      "total": 55,
+      "passed": 55,
+      "failed": 0
+    },
+    "logs": [
+      "weapon-narrative-red-20261106.log",
+      "weapon-narrative-green-20261106.log"
+    ]
+  },
+  "protection": {
+    "formalExistingFiles": 285,
+    "formalChanged": [],
+    "formalNew": [],
+    "modelConfigUnchanged": true,
+    "autoUpdateEnabled": false
+  },
+  "limits": [
+    "One actual model comparison pair, not a guarantee of every narrative wording.",
+    "No style repair; no 8000 deployment.",
+    "Unavailable flag alone cannot identify cause or which historical item; precise lost/destroyed event descriptions remain in their existing event path."
+  ],
+  "evidenceDirectory": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\weapon-narrative-20261106",
+  "screenshot": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\weapon-narrative-20261106\\accepted.png"
+}

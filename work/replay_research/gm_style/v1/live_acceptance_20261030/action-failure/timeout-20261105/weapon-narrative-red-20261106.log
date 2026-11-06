@@ -1,0 +1,99 @@
+✔ all-out melee uses one standard action and its real +2/-2 expires at next own turn (60.0395ms)
+✔ fatigue prevents all-out without paying or changing the input state (3.5729ms)
+✔ drop prone consumes reflex, halves movement, modifies melee/ranged defense, stand consumes move (26.7951ms)
+✔ available common choices are present without granting a learned skill (218.0686ms)
+✔ ordinary item retrieval uses actual access and never duplicates ownership (4.4513ms)
+✔ declaration choices identify actual carried objects by name and storage (231.4337ms)
+✔ incoming bull rush waits for the player choice and persists it across serialization (15.5954ms)
+✔ ordinary grapple enters the existing hold, suppression and escape system without damage (161.5726ms)
+✔ ordinary aiming pays a full round and a swift reload does not cancel it (7.1407ms)
+✔ charge pays move plus standard, stops at nearest melee range and saves its temporary penalty (26.8748ms)
+✔ feint has one target, removes only basic defense and is consumed by the next melee attack (17.7249ms)
+✔ trip is a contact contest, knocks down on success and never damages the creature (6.1949ms)
+✖ sunder uses hit then opposed roll, subtracts item hardness and never injures the holder (24.0707ms)
+✖ disarm keeps the actual item on the ground and prevents the old weapon from returning by fallback (17.2824ms)
+✖ unavailable weapon flag alone does not invent its loss cause or inspect unrelated inventory (1.0117ms)
+✔ a pending attack accepts explicit reflex prone without resolving or replacing the attack (12.4038ms)
+✔ resisted bull rush offers a paid optional counter without rerolling the original contest (16.1362ms)
+✔ counter rush chooses a reflex action and preserves the first paid contest (26.7801ms)
+✔ aim does not create an incoming attack window and missing durability cannot damage an item (216.8073ms)
+✔ prone appears in the actual pending choices and a second prone cannot spend again (16.6011ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 17
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1501.9716
+
+✖ failing tests:
+
+test at work\rules_engine\combat\common-actions.test.mjs:115:1
+✖ sunder uses hit then opposed roll, subtracts item hardness and never injures the holder (24.0707ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '主手武器已脱手或损毁，当前徒手'
+  - '当前徒手，主手没有可用武器'
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/common-actions.test.mjs:123:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '主手武器已脱手或损毁，当前徒手',
+    expected: '当前徒手，主手没有可用武器',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at work\rules_engine\combat\common-actions.test.mjs:125:1
+✖ disarm keeps the actual item on the ground and prevents the old weapon from returning by fallback (17.2824ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '主手武器已脱手或损毁，当前徒手'
+  - '当前徒手，主手没有可用武器'
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/common-actions.test.mjs:131:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '主手武器已脱手或损毁，当前徒手',
+    expected: '当前徒手，主手没有可用武器',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at work\rules_engine\combat\common-actions.test.mjs:134:1
+✖ unavailable weapon flag alone does not invent its loss cause or inspect unrelated inventory (1.0117ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '主手武器已脱手或损毁，当前徒手'
+  - '当前徒手，主手没有可用武器'
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/common-actions.test.mjs:140:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '主手武器已脱手或损毁，当前徒手',
+    expected: '当前徒手，主手没有可用武器',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
