@@ -1,0 +1,181 @@
+{
+  "status": "installed_and_isolated_live_acceptance_passed",
+  "sourceCommit": "69e5f86",
+  "port": 8000,
+  "operator": "Terra gpt-6.1-terra high judgement; main session IAB execution",
+  "installation": {
+    "sourceCommit": "69e5f86",
+    "module": "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\combat\\presentation.mjs",
+    "hash": "759eb98474f81c007d1121059c600ab964f7436a363867b59adc39f36cfb4808",
+    "httpUrl": "http://127.0.0.1:8000/901-opening-combat/work/rules_engine/combat/presentation.mjs",
+    "httpHash": "759eb98474f81c007d1121059c600ab964f7436a363867b59adc39f36cfb4808",
+    "chat": "D:\\github\\sillyTavern\\data\\default-user\\chats\\901 正式战斗加载验收 20261106\\901 正式武器状态映射验收 20261106.jsonl",
+    "settingsWritten": false
+  },
+  "chat": "901 正式武器状态映射验收 20261106",
+  "input": "御临风结束本回合。",
+  "inheritedMessages": 7,
+  "inheritedRevision": 4,
+  "messages": 9,
+  "revision": 6,
+  "round": 3,
+  "newOperations": [
+    {
+      "actorId": "player",
+      "abilityId": "end",
+      "receipt": {
+        "actions": {},
+        "resources": [],
+        "items": [],
+        "willSpent": 0,
+        "movement": 0,
+        "remaining": {
+          "standard": 0,
+          "move": 0,
+          "swift": 0
+        }
+      },
+      "damage": []
+    },
+    {
+      "actorId": "huang",
+      "abilityId": "end",
+      "receipt": {
+        "actions": {},
+        "resources": [],
+        "items": [],
+        "willSpent": 0,
+        "movement": 0,
+        "remaining": {
+          "standard": 0,
+          "move": 0,
+          "swift": 0
+        }
+      },
+      "damage": []
+    }
+  ],
+  "playerTurn": {
+    "phase": "active",
+    "standard": 1,
+    "move": 1,
+    "swift": 1,
+    "reactionLock": false,
+    "reactionLockEnds": 0,
+    "responseDebt": false,
+    "opportunityUsed": false
+  },
+  "opponentHealth": {
+    "intact": 89,
+    "B": 0,
+    "L": 11,
+    "A": 0,
+    "temp": 0,
+    "coma": false,
+    "deteriorationStopped": false
+  },
+  "opponentItem": {
+    "id": "practice-sword",
+    "name": "试验剑",
+    "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色",
+    "location": "ground",
+    "held": false,
+    "oneHanded": true,
+    "grip": {
+      "hands": 1,
+      "source": "2026-11-06用户要求全项真实模型验收；仅隔离试验参数，非Canon，不赋给正式角色"
+    },
+    "weapon": {
+      "name": "试验剑",
+      "type": "melee",
+      "skill": "白刃",
+      "damage": 1,
+      "severity": "L",
+      "size": 2,
+      "ap": 0,
+      "magic": 0,
+      "attackBonus": 0,
+      "blockBonus": 0
+    },
+    "durability": {
+      "current": 1,
+      "max": 1,
+      "hardness": 1
+    },
+    "position": [
+      1,
+      0
+    ]
+  },
+  "response": "御临风手握弃风长剑，并未趁势再出招式，只是定在原地收束气息，结束了本轮动作。\n\n试验场内剑锋所及的劲风缓缓平息。试验陪练徒手立在近前不过一米之处，身上受创的痕迹清晰可见，但其身形依然稳住，只是停留在原处防备，彼此之间的视线一时间落在这仅隔数尺的距离上。场内归于短暂的僵持，只余空气中微末的呼吸与对峙之势。\n\n【本次战斗记录】\n御临风｜结束回合\n动作消耗：无\n技能／招式：未额外使用特殊技能\n装备／物品：无使用或消耗\n资源消耗：无\n主动移动：0米\n剩余动作：无\n防御：本动作没有防御结算。\n状态：已执行\n\n<StatusPlaceHolderImpl/>",
+  "fullRootReplyExtraUnchangedAfterRefresh": true,
+  "scannedBooks": [
+    "901_01_世界基础设定_20261023",
+    "901_02_政治与势力_20261023",
+    "901_03_人物资料库_20261023",
+    "901_04_能力与战力_20261023",
+    "901_05_历史与事件_20261023",
+    "901_06_当前剧本与局势_20261023"
+  ],
+  "availableEntries": 580,
+  "promptAddingLogs": [
+    {
+      "level": "log",
+      "message": "[WI] Adding 7 entries to prompt Array(7)",
+      "timestamp": "2026-11-06T18:53:02.041Z",
+      "url": "http://127.0.0.1:8000/scripts/world-info.js"
+    }
+  ],
+  "model": "[抗截断]gemini-3.8-flash",
+  "autoUpdateEnabled": false,
+  "modelSettingsUnchanged": true,
+  "protectedExistingFiles": 285,
+  "changedExistingFiles": [
+    "D:\\github\\sillyTavern\\data\\default-user\\characters\\901 正式战斗加载验收 20261106.png",
+    "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\combat\\presentation.mjs"
+  ],
+  "newFiles": [
+    "D:\\github\\sillyTavern\\data\\default-user\\chats\\901 正式战斗加载验收 20261106\\901 正式武器状态映射验收 20261106.jsonl"
+  ],
+  "originalCardAndExistingChatsWorldsOtherRuntimeUnchanged": true,
+  "testCardOnlyCurrentChatChanged": true,
+  "settings": {
+    "finalByteIdentical": true,
+    "intermediateObservation": [
+      {
+        "path": "/plotSettings/agentWorldbookControl/contextSettingsConfigured",
+        "added": true,
+        "type": "bool",
+        "after": false
+      },
+      {
+        "path": "/plotSettings/agentWorldbookControl/worldbookScope",
+        "added": true,
+        "type": "dict",
+        "after": null
+      },
+      {
+        "path": "/plotSettings/agentWorldbookControl/agentDecisionPromptSegments",
+        "added": true,
+        "type": "list",
+        "after": null
+      },
+      {
+        "path": "/plotSettings/agentWorldbookControl/agentSkillifyPromptSegments",
+        "added": true,
+        "type": "list",
+        "after": null
+      },
+      {
+        "path": "/plotSettings/agentPromptTemplates",
+        "added": true,
+        "type": "dict",
+        "after": null
+      }
+    ],
+    "note": "An intermediate read showed five added database default fields; existing values were unchanged. Final read/hash matches the original baseline again. No tool wrote or rolled back settings; external/plugin cause of the later return was not traced."
+  },
+  "evidenceLimits": "Formal entry verified by installed+HTTP module hashes, fresh IAB page, actual model reply, saved rules and refresh. No formal server diagnostic added; formal outgoing facts not directly captured. Prior direct comparison remains the 18113 evidence.",
+  "backupDirectory": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\weapon-formal-install-20261106",
+  "screenshot": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\weapon-formal-install-20261106\\accepted.png"
+}
