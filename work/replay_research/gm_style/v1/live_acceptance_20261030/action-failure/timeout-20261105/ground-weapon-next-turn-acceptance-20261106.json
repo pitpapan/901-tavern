@@ -1,0 +1,272 @@
+{
+  "status": "formal_next_turn_live_acceptance_passed",
+  "port": 8000,
+  "chat": "901 正式地面武器拾回再攻击验收 20261106",
+  "runtimeSourceCommit": "c3f8fe7",
+  "operator": "Terra gpt-6.1-terra high judgement; main session IAB execution",
+  "model": "[抗截断]gemini-3.8-flash",
+  "modelConfigUnchanged": true,
+  "autoUpdateEnabled": false,
+  "codeChanged": false,
+  "newUnitTestsRun": false,
+  "seed": {
+    "messages": 5,
+    "revision": 2,
+    "round": 3
+  },
+  "inputs": [
+    "御临风结束本回合。",
+    "御临风用手中的试验剑攻击试验陪练；不结束本回合。"
+  ],
+  "nextTurn": {
+    "messages": 7,
+    "revision": 4,
+    "round": 4,
+    "activeId": "player",
+    "actions": {
+      "phase": "active",
+      "standard": 1,
+      "move": 1,
+      "swift": 1,
+      "reactionLock": false,
+      "reactionLockEnds": 0,
+      "responseDebt": false,
+      "opportunityUsed": false
+    },
+    "heldInstance": "player-practice-sword",
+    "entirePossessionsUnchanged": true,
+    "actualNpcAction": "end"
+  },
+  "attack": {
+    "messages": 9,
+    "revision": 5,
+    "round": 4,
+    "receipt": {
+      "actions": {
+        "standard": 1
+      },
+      "resources": [],
+      "items": [],
+      "targetId": "huang",
+      "willSpent": 0,
+      "weapon": "试验剑",
+      "movement": 0,
+      "remaining": {
+        "standard": 0,
+        "move": 1,
+        "swift": 1
+      }
+    },
+    "attack": {
+      "rawDP": 13,
+      "dp": 13,
+      "attribute": "敏捷",
+      "handling": {
+        "requirement": 0,
+        "deficit": 0,
+        "strengthPenalty": 0,
+        "gripPenalty": 0,
+        "aimMultiplier": 1,
+        "distancePenalty": 0
+      },
+      "legacyCompatible": true,
+      "weaponType": "melee",
+      "severity": "L",
+      "weapon": 1,
+      "cap": 6,
+      "fixed": 2,
+      "ap": 0,
+      "magic": 0,
+      "speed": 0,
+      "extra": 0,
+      "ignore": 0,
+      "aggravate": 0,
+      "electric": 0,
+      "reduction": 0,
+      "range": 1.5,
+      "explode": 10,
+      "magical": false,
+      "ranged": false,
+      "firearm": null,
+      "ballistic": null,
+      "energyWeapon": false,
+      "hardnessIgnore": 0,
+      "spiritEligible": false,
+      "defense": {
+        "total": 4,
+        "parts": {
+          "base": 1,
+          "natural": 0,
+          "armor": 3,
+          "dodge": 0,
+          "insight": 0,
+          "block": 0,
+          "cover": 0,
+          "cultivation": 0,
+          "force": 0,
+          "device": 0,
+          "shield": 0,
+          "luck": 0,
+          "morale": 0,
+          "enhancement": 0,
+          "holy": 0,
+          "unholy": 0,
+          "technique": 0,
+          "performance": 0,
+          "intrinsic": 0,
+          "unnamed": 0
+        },
+        "remainingAP": 0,
+        "guarded": false,
+        "extraSuccesses": 0
+      },
+      "roll": {
+        "dp": 9,
+        "luck": false,
+        "dice": [
+          9,
+          6,
+          3,
+          5,
+          1,
+          1,
+          8,
+          4,
+          9
+        ],
+        "used": 9,
+        "rolledSuccesses": 3,
+        "luckMishap": false
+      },
+      "amount": 5
+    },
+    "damage": [
+      {
+        "targetId": "huang",
+        "kind": "physical",
+        "energyType": null,
+        "input": 5,
+        "inputSeverity": "L",
+        "severity": "L",
+        "actualDamage": 5,
+        "causedDamage": true,
+        "temporaryAbsorbed": 0
+      }
+    ],
+    "playerPossessionsUnchanged": true,
+    "totalHistoricalPickupOperations": 1,
+    "newPickupOperations": 0
+  },
+  "newOperations": [
+    {
+      "revision": 3,
+      "actorId": "player",
+      "abilityId": "end",
+      "receipt": {
+        "actions": {},
+        "resources": [],
+        "items": [],
+        "willSpent": 0,
+        "movement": 0,
+        "remaining": {
+          "standard": 0,
+          "move": 0,
+          "swift": 0
+        }
+      }
+    },
+    {
+      "revision": 4,
+      "actorId": "huang",
+      "abilityId": "end",
+      "receipt": {
+        "actions": {},
+        "resources": [],
+        "items": [],
+        "willSpent": 0,
+        "movement": 0,
+        "remaining": {
+          "standard": 0,
+          "move": 0,
+          "swift": 0
+        }
+      }
+    },
+    {
+      "revision": 5,
+      "actorId": "player",
+      "abilityId": "strike",
+      "receipt": {
+        "actions": {
+          "standard": 1
+        },
+        "resources": [],
+        "items": [],
+        "targetId": "huang",
+        "willSpent": 0,
+        "weapon": "试验剑",
+        "movement": 0,
+        "remaining": {
+          "standard": 0,
+          "move": 1,
+          "swift": 1
+        }
+      }
+    }
+  ],
+  "narration": {
+    "nextTurn": "试验剑横在身前，剑锋微沉，本轮并未再行进击。\n\n近在咫尺的试验陪练徒手立在原地，身上带着先前留下的创痕，气息起伏，但未有进一步的动作压上。一米之隔的方寸之间，交锋的劲力暂时平息下来，场中只余下两人相对的视线与各自落下的呼吸声。等待着接下来的动向。\n\n【本次战斗记录】\n御临风｜结束回合\n动作消耗：无\n技能／招式：未额外使用特殊技能\n装备／物品：无使用或消耗\n资源消耗：无\n主动移动：0米\n剩余动作：无\n防御：本动作没有防御结算。\n状态：已执行\n\n<StatusPlaceHolderImpl/>",
+    "attack": "手中试验剑锋刃微转，借着近身相持的间隙直取对方身前空隙。\n\n试验陪练徒手在侧，虽依凭周身气机与本能侧身微偏相抗，却并未起手架隔这记突刺。剑尖顺势破开被动护御，划过其衣袍带出一道实打实的受创痕迹。受此一创，试验陪练身形在原处猛然一震，脚下步法却硬生生扣死地面，并未后撤半寸。\n\n一击得手，试验剑刃锋仍悬于近前，剑势未尽。\n\n【本次战斗记录】\n御临风｜普通攻击 → 试验陪练\n动作消耗：标准×1\n技能／招式：未额外使用特殊技能\n装备／物品：使用试验剑\n资源消耗：无\n主动移动：0米\n剩余动作：移动×1、迅捷×1\n防御（试验陪练）：基础及被动防护，未主动格挡\n状态：攻击已结算，造成伤害\n\n<StatusPlaceHolderImpl/>"
+  },
+  "refresh": {
+    "sameTab": true,
+    "fullRuleRootEqual": true,
+    "lastTextEqual": true,
+    "messagesUnchanged": true,
+    "existingFiveMessagesUnchanged": true
+  },
+  "protection": {
+    "protectedFiles": 289,
+    "changes": [
+      "D:\\github\\sillyTavern\\data\\default-user\\chats\\901 正式战斗加载验收 20261106\\901 正式地面武器拾回再攻击验收 20261106.jsonl"
+    ],
+    "addedFiles": [],
+    "otherChatsCardsWorldsRuntimeUnchanged": true,
+    "previousSettingsValuesUnchanged": true,
+    "databaseAddedDefaultFields": [
+      {
+        "path": ".extension_settings.__userscripts.shujuku_v120__userscript_settings_v1.shujuku_v120_profile_v1____default____settingsJSON.plotSettings.agentPromptTemplates",
+        "beforeType": "NoneType",
+        "afterType": "dict",
+        "previouslyAbsentOrNull": true
+      },
+      {
+        "path": ".extension_settings.__userscripts.shujuku_v120__userscript_settings_v1.shujuku_v120_profile_v1____default____settingsJSON.plotSettings.agentWorldbookControl.worldbookScope",
+        "beforeType": "NoneType",
+        "afterType": "dict",
+        "previouslyAbsentOrNull": true
+      },
+      {
+        "path": ".extension_settings.__userscripts.shujuku_v120__userscript_settings_v1.shujuku_v120_profile_v1____default____settingsJSON.plotSettings.agentWorldbookControl.agentDecisionPromptSegments",
+        "beforeType": "NoneType",
+        "afterType": "list",
+        "previouslyAbsentOrNull": true
+      },
+      {
+        "path": ".extension_settings.__userscripts.shujuku_v120__userscript_settings_v1.shujuku_v120_profile_v1____default____settingsJSON.plotSettings.agentWorldbookControl.contextSettingsConfigured",
+        "beforeType": "NoneType",
+        "afterType": "bool",
+        "previouslyAbsentOrNull": true
+      },
+      {
+        "path": ".extension_settings.__userscripts.shujuku_v120__userscript_settings_v1.shujuku_v120_profile_v1____default____settingsJSON.plotSettings.agentWorldbookControl.agentSkillifyPromptSegments",
+        "beforeType": "NoneType",
+        "afterType": "list",
+        "previouslyAbsentOrNull": true
+      }
+    ]
+  },
+  "evidenceDirectory": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\ground-weapon-next-turn-20261106",
+  "screenshot": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\ground-weapon-next-turn-20261106\\accepted.png",
+  "scope": "continue existing nonCanon own one-handed sword test; no new fixture state or model dice edits"
+}
