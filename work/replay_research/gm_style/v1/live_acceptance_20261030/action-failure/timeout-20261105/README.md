@@ -236,3 +236,16 @@ Terra High判断、主会话IAB执行8000。从上批9消息/rev6建立 `901 正
 证据：`ground-weapon-acceptance-20261106.json`、`ground-weapon-tests-20261106.log`。私有初态、两轮结果、刷新副本、模块哈希及截图位于本机 `.classification-timeout-20261105/ground-weapon-20261106`。本批未提交；保留此前和另一条资源线的未提交修改。
 
 用户于2026-11-06采用此版并授权：先提交本线修改和验收记录，再仅将已验收六模块汇合8000，以新的隔离聊天复验；不改模型/旧聊天/存档，自动填表继续关闭。以下正式安装记录另列，不覆盖上述隔离阶段事实。
+
+
+## 2026-11-06 地面武器拾取汇合8000及正式隔离验收
+
+按用户采用指令，先以 `c3f8fe7` 提交本线11文件（含此前负例、本次实现及58项验收记录）；提交前六模块哈希与已验收版本一致，新增5项聚焦测试再次全过。其后备份正式旧模块和验收卡，只安装6个模块：新增 `combat/ground-weapons.mjs`，以及 `combat/{common-actions,engine,runtime,presentation}.mjs`、`gm_runtime/narrative.mjs`。全部8000 HTTP读回SHA256等于已验收源文件；不改共享六书生成器、规划、清单、生成输出或其他资源引擎模块。
+
+新建 `901 正式地面武器拾回再攻击验收 20261106`，位于既有“901 正式战斗加载验收 20261106”测试卡。复用18114已注明nonCanon的自有单手剑脚边初态，重设聊天锚点/完整性标识；不复制旧失败链，也不改原聊天中的物品归属、状态或手部资料。Terra High给出两条声明及先拾取落盘再攻击的条件，主会话IAB执行。
+
+正式实测：第一轮rev0→1，`player-practice-sword`同一实例从ground未持握变carried/held单手，设为equipped、清weaponUnavailable，仅move×1，其他库存/健康/资源/位置不变。第二轮rev1→2，以该剑damage1/AP0/magic0/DP13真实攻击，非回退默认启风参数；本次真实骰造成4L（与18114的6L不同），陪练HP89→85/L11→15，仅standard×1，剩swift1，仍玩家回合，未额外移动/end。两轮叙事和程序回执准确承接装备与动作。实际生成日志[WI] Adding 12/6 entries；正式六书关联及空global/Persona旧书关联保持。
+
+同标签刷新、重开后5消息不变，完整规则根及末条正文一致。Terra只读复核三份快照确认核心数据通过。287份批前受保护文件仅5个既有授权模块、测试卡PNG和settings发生变化；新增仅新模块及新验收聊天。测试卡两个元数据块只有当前chat指针变动。settings中模型完整配置和自动填表false保持，数据库插件自动新增本聊天specialIndexLocks条目，以及5个原先缺省的plotSettings字段；本线未直接写入或回退settings，其他既有字段保持。所有原聊天、原正式卡、存档及世界书原文件保持字节不变。未把测试手部数据回填历史存档。
+
+证据 `ground-weapon-formal-acceptance-20261106.json`；安装前备份、HTTP哈希、初态/两轮/刷新JSONL、设置字段级保护结果和截图位于本机 `.classification-timeout-20261105/ground-weapon-formal-20261106`。正式安装与所要求的隔离加载验收完成。

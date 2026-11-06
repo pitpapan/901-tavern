@@ -1,0 +1,333 @@
+{
+  "status": "installed_and_formal_isolated_live_acceptance_passed",
+  "sourceCommit": "c3f8fe7",
+  "port": 8000,
+  "operator": "Terra gpt-6.1-terra high judgement; main session IAB execution",
+  "installation": [
+    {
+      "module": "combat/ground-weapons.mjs",
+      "source": "C:\\Users\\pit\\.codex\\worktrees\\yulinfeng-tavern-plan\\TRPG outputs\\work\\rules_engine\\combat\\ground-weapons.mjs",
+      "target": "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\combat\\ground-weapons.mjs",
+      "before": null,
+      "after": "caf2a3968643bd54c89c6446e37a1bc59e2dddd5d0ead66ad3bbe6281c9c31c7",
+      "httpHash": "caf2a3968643bd54c89c6446e37a1bc59e2dddd5d0ead66ad3bbe6281c9c31c7"
+    },
+    {
+      "module": "combat/common-actions.mjs",
+      "source": "C:\\Users\\pit\\.codex\\worktrees\\yulinfeng-tavern-plan\\TRPG outputs\\work\\rules_engine\\combat\\common-actions.mjs",
+      "target": "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\combat\\common-actions.mjs",
+      "before": "4b237c7510b8a963da1a46e56479100c208d419bba5ef5fa3a767e9cb971d48e",
+      "after": "9e30b3d30adaa3b25bc203961d464acb7a302b0804135915e05652fc4bbc278c",
+      "httpHash": "9e30b3d30adaa3b25bc203961d464acb7a302b0804135915e05652fc4bbc278c"
+    },
+    {
+      "module": "combat/engine.mjs",
+      "source": "C:\\Users\\pit\\.codex\\worktrees\\yulinfeng-tavern-plan\\TRPG outputs\\work\\rules_engine\\combat\\engine.mjs",
+      "target": "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\combat\\engine.mjs",
+      "before": "15dcfcfa388cc22d4a0557a9546a8f810b92d0b1ca2ab0bbe0bd45855c7da3d0",
+      "after": "76cbd67647c08c522c564047cbf9db04e2a53277703b5a49a92acf81ceb6ea7f",
+      "httpHash": "76cbd67647c08c522c564047cbf9db04e2a53277703b5a49a92acf81ceb6ea7f"
+    },
+    {
+      "module": "combat/runtime.mjs",
+      "source": "C:\\Users\\pit\\.codex\\worktrees\\yulinfeng-tavern-plan\\TRPG outputs\\work\\rules_engine\\combat\\runtime.mjs",
+      "target": "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\combat\\runtime.mjs",
+      "before": "0835e1ff172e304d428c5622e82d603629d36deb196327241eccc8de34ee50d2",
+      "after": "ad45775eb081578d88cee17dc4491320029784c2e7ba415dd62607c7878c61a0",
+      "httpHash": "ad45775eb081578d88cee17dc4491320029784c2e7ba415dd62607c7878c61a0"
+    },
+    {
+      "module": "combat/presentation.mjs",
+      "source": "C:\\Users\\pit\\.codex\\worktrees\\yulinfeng-tavern-plan\\TRPG outputs\\work\\rules_engine\\combat\\presentation.mjs",
+      "target": "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\combat\\presentation.mjs",
+      "before": "759eb98474f81c007d1121059c600ab964f7436a363867b59adc39f36cfb4808",
+      "after": "f76290d0d0900058b4cdd2201f5625efc8538e46725b8505146fc917fcc3c5d4",
+      "httpHash": "f76290d0d0900058b4cdd2201f5625efc8538e46725b8505146fc917fcc3c5d4"
+    },
+    {
+      "module": "gm_runtime/narrative.mjs",
+      "source": "C:\\Users\\pit\\.codex\\worktrees\\yulinfeng-tavern-plan\\TRPG outputs\\work\\rules_engine\\gm_runtime\\narrative.mjs",
+      "target": "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\gm_runtime\\narrative.mjs",
+      "before": "b1b84de24f0bbb8f830e4632c43dafbb8133dd8a5201e1e324f3471235ba2d25",
+      "after": "fe05980bc820b85ab5b50e787f3ba1f46753f2cc9bd050f4ad5e7471d790390f",
+      "httpHash": "fe05980bc820b85ab5b50e787f3ba1f46753f2cc9bd050f4ad5e7471d790390f"
+    }
+  ],
+  "chat": "901 正式地面武器拾回再攻击验收 20261106",
+  "scope": "nonCanon player own sourced one-handed ground sword, hands explicitly registered in new test seed; no historical save migration",
+  "model": "[抗截断]gemini-3.8-flash",
+  "modelConfigUnchanged": true,
+  "autoUpdateEnabled": false,
+  "messages": 5,
+  "revision": 2,
+  "inputs": [
+    "御临风从脚边拾起自己的试验剑，持在手中；不攻击，不结束本回合。",
+    "御临风用刚拾起的试验剑攻击试验陪练；不结束本回合。"
+  ],
+  "pickup": {
+    "receipt": {
+      "actions": {
+        "move": 1
+      },
+      "resources": [],
+      "items": [],
+      "willSpent": 0,
+      "itemUse": {
+        "operation": "pickup",
+        "fromActorId": "player",
+        "itemId": "player-practice-sword",
+        "name": "试验剑",
+        "action": "move",
+        "hands": 1,
+        "equipped": true
+      },
+      "movement": 0,
+      "remaining": {
+        "standard": 1,
+        "move": 0,
+        "swift": 1
+      }
+    },
+    "item": {
+      "id": "player-practice-sword",
+      "name": "试验剑",
+      "source": "2026-11-06 user-authorized nonCanon isolated pickup fixture: player owns this intact one-handed test sword at feet",
+      "location": "carried",
+      "held": true,
+      "oneHanded": true,
+      "grip": {
+        "hands": 1,
+        "source": "RE手持物；按实例原本持握要求拾取"
+      },
+      "weapon": {
+        "name": "试验剑",
+        "type": "melee",
+        "skill": "白刃",
+        "damage": 1,
+        "severity": "L",
+        "size": 2,
+        "ap": 0,
+        "magic": 0,
+        "attackBonus": 0,
+        "blockBonus": 0
+      },
+      "durability": {
+        "current": 1,
+        "max": 1,
+        "hardness": 1
+      }
+    },
+    "equippedWeaponId": "player-practice-sword",
+    "healthResourcesOtherInventoryAndPositionsUnchanged": true
+  },
+  "attack": {
+    "receipt": {
+      "actions": {
+        "standard": 1
+      },
+      "resources": [],
+      "items": [],
+      "targetId": "huang",
+      "willSpent": 0,
+      "weapon": "试验剑",
+      "movement": 0,
+      "remaining": {
+        "standard": 0,
+        "move": 0,
+        "swift": 1
+      }
+    },
+    "attack": {
+      "rawDP": 13,
+      "dp": 13,
+      "attribute": "敏捷",
+      "handling": {
+        "requirement": 0,
+        "deficit": 0,
+        "strengthPenalty": 0,
+        "gripPenalty": 0,
+        "aimMultiplier": 1,
+        "distancePenalty": 0
+      },
+      "legacyCompatible": true,
+      "weaponType": "melee",
+      "severity": "L",
+      "weapon": 1,
+      "cap": 6,
+      "fixed": 2,
+      "ap": 0,
+      "magic": 0,
+      "speed": 0,
+      "extra": 0,
+      "ignore": 0,
+      "aggravate": 0,
+      "electric": 0,
+      "reduction": 0,
+      "range": 1.5,
+      "explode": 10,
+      "magical": false,
+      "ranged": false,
+      "firearm": null,
+      "ballistic": null,
+      "energyWeapon": false,
+      "hardnessIgnore": 0,
+      "spiritEligible": false,
+      "defense": {
+        "total": 4,
+        "parts": {
+          "base": 1,
+          "natural": 0,
+          "armor": 3,
+          "dodge": 0,
+          "insight": 0,
+          "block": 0,
+          "cover": 0,
+          "cultivation": 0,
+          "force": 0,
+          "device": 0,
+          "shield": 0,
+          "luck": 0,
+          "morale": 0,
+          "enhancement": 0,
+          "holy": 0,
+          "unholy": 0,
+          "technique": 0,
+          "performance": 0,
+          "intrinsic": 0,
+          "unnamed": 0
+        },
+        "remainingAP": 0,
+        "guarded": false,
+        "extraSuccesses": 0
+      },
+      "roll": {
+        "dp": 9,
+        "luck": false,
+        "dice": [
+          2,
+          1,
+          8,
+          10,
+          6,
+          3,
+          7,
+          2,
+          4,
+          5
+        ],
+        "used": 10,
+        "rolledSuccesses": 2,
+        "luckMishap": false
+      },
+      "amount": 4
+    },
+    "damage": [
+      {
+        "targetId": "huang",
+        "kind": "physical",
+        "energyType": null,
+        "input": 4,
+        "inputSeverity": "L",
+        "severity": "L",
+        "actualDamage": 4,
+        "causedDamage": true,
+        "temporaryAbsorbed": 0
+      }
+    ],
+    "heldInstance": "player-practice-sword"
+  },
+  "narration": {
+    "pickup": "御临风俯身探手，五指扣紧落在他脚边的剑柄，顺势将试验剑从地面提了起来，重新持定在手中。剑身平举在前，稳稳封住近前的架势，并未顺势发招压向近在咫尺的试验陪练。\n\n一米之外，身上带伤的陪练依然赤手空拳，主手并无兵刃，视线落向他重新握紧的剑锋。场中并未生出新的交锋，御临风尚有余力继续施展动作。\n\n【本次战斗记录】\n御临风｜拾取地面武器\n动作消耗：移动×1\n技能／招式：未额外使用特殊技能\n装备／物品：拾起并持握试验剑\n资源消耗：无\n主动移动：0米\n剩余动作：标准×1、迅捷×1\n防御：本动作没有防御结算。\n状态：已执行\n\n<StatusPlaceHolderImpl/>",
+    "attack": "试验剑入手的一瞬，剑锋顺势递出，直取近在咫尺的目标。\n\n试验陪练并未起手格挡，仅凭周身基础的防御硬接了这一记斩击。剑刃破开阻滞切入，伴随着闷响实实落在躯干上，带出一道清晰的受创痕迹。陪练身形随之震动，脚下却未曾后撤半步，仍立在原地承下了这一剑的力道，身上已现出明显的伤势。\n\n剑势稍歇，一米之隔的对手仍在原地。\n\n【本次战斗记录】\n御临风｜普通攻击 → 试验陪练\n动作消耗：标准×1\n技能／招式：未额外使用特殊技能\n装备／物品：使用试验剑\n资源消耗：无\n主动移动：0米\n剩余动作：迅捷×1\n防御（试验陪练）：基础及被动防护，未主动格挡\n状态：攻击已结算，造成伤害\n\n<StatusPlaceHolderImpl/>"
+  },
+  "refresh": {
+    "sameTab": true,
+    "fullRuleRootUnchanged": true,
+    "lastTextUnchanged": true,
+    "messagesUnchanged": true
+  },
+  "worldLoading": {
+    "globalSelect": [],
+    "personaLorebook": "",
+    "extraBooks": [
+      "901_02_政治与势力_20261023",
+      "901_03_人物资料库_20261023",
+      "901_04_能力与战力_20261023",
+      "901_05_历史与事件_20261023",
+      "901_06_当前剧本与局势_20261023"
+    ],
+    "actualLog": [
+      "[WI] Adding 12 entries to prompt 2026-11-06T19:37:00.128Z",
+      "[WI] Adding 6 entries to prompt 2026-11-06T19:37:04.537Z"
+    ]
+  },
+  "protection": {
+    "protectedFiles": 287,
+    "changed": [
+      "D:\\github\\sillyTavern\\data\\default-user\\settings.json",
+      "D:\\github\\sillyTavern\\data\\default-user\\characters\\901 正式战斗加载验收 20261106.png",
+      "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\combat\\common-actions.mjs",
+      "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\combat\\engine.mjs",
+      "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\combat\\presentation.mjs",
+      "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\combat\\runtime.mjs",
+      "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\gm_runtime\\narrative.mjs"
+    ],
+    "added": [
+      "D:\\github\\sillyTavern\\data\\default-user\\chats\\901 正式战斗加载验收 20261106\\901 正式地面武器拾回再攻击验收 20261106.jsonl",
+      "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\combat\\ground-weapons.mjs"
+    ],
+    "unexpected": [],
+    "cardChanges": [
+      {
+        "path": ".ccv3.chat",
+        "before": "901 正式落地武器拾取验收 20261106",
+        "after": "901 正式地面武器拾回再攻击验收 20261106"
+      },
+      {
+        "path": ".chara.chat",
+        "before": "901 正式落地武器拾取验收 20261106",
+        "after": "901 正式地面武器拾回再攻击验收 20261106"
+      }
+    ],
+    "settingsChangedPaths": [
+      ".extension_settings.__userscripts.shujuku_v120__userscript_settings_v1.shujuku_v120_profile_v1____default____settings"
+    ],
+    "databaseChanges": [
+      {
+        "path": ".specialIndexLocks.901 正式地面武器拾回再攻击验收 20261106::",
+        "previouslyAbsentOrNull": true
+      },
+      {
+        "path": ".plotSettings.agentPromptTemplates",
+        "previouslyAbsentOrNull": true
+      },
+      {
+        "path": ".plotSettings.agentWorldbookControl.agentDecisionPromptSegments",
+        "previouslyAbsentOrNull": true
+      },
+      {
+        "path": ".plotSettings.agentWorldbookControl.worldbookScope",
+        "previouslyAbsentOrNull": true
+      },
+      {
+        "path": ".plotSettings.agentWorldbookControl.agentSkillifyPromptSegments",
+        "previouslyAbsentOrNull": true
+      },
+      {
+        "path": ".plotSettings.agentWorldbookControl.contextSettingsConfigured",
+        "previouslyAbsentOrNull": true
+      }
+    ],
+    "modelConfigUnchanged": true,
+    "autoUpdateEnabled": false
+  },
+  "verification": {
+    "priorRelevantTests": 58,
+    "freshFocusedTestsBeforeCommit": 5,
+    "moduleHttpHashesMatch": true,
+    "terraReadOnlySnapshotAudit": "passed"
+  },
+  "privateEvidenceDirectory": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\ground-weapon-formal-20261106",
+  "screenshot": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\ground-weapon-formal-20261106\\accepted.png",
+  "sharedGeneratorPlanningManifestOutputsTouched": false
+}
