@@ -1,0 +1,43 @@
+Browser tab: 4, Title: "901 冰霜实际加载验收", URL: "http://127.0.0.1:8000/901-opening-combat/frost-browser-acceptance-20261107.html".
+0 AXWebArea 901 冰霜实际加载验收, URL: 127.0.0.1:8000/901-opening-combat/frost-browser-acceptance-20261107.html
+	1 heading 901 冰霜实际加载验收, Value: 1
+		2 text 901 冰霜实际加载验收
+	3 text 非 Canon、仅内存隔离夹具。直接加载本端口已安装模块，不调用叙事模型，不读写聊天、设置或存档。固定骰只隔离攻击随机性，费用和结果由实际规则程序计算。
+	4 text 当前服务：http://127.0.0.1:8000
+	5 button 运行两项验收, ID: run
+	6 text PASS — 2 / 2
+
+第3项：冰霜 D → C
+D阶上限：2；C阶上限：2。没有误领奥术＋10。
+
+第4项：C级寒冰箭实际施放
+无冰霜原价：3；有冰霜实际支付：2。
+初始余额：2；施放后余额：0。成功执行。
+余额只有1时：拒绝施放，输入状态未改写。
+
+7个配套模块均从当前服务加载。无模型请求、无持久化写入。
+	7 container
+		8 button (expanded) 已加载模块与 SHA-256, Secondary Actions: Collapse
+			9 text 已加载模块与 SHA-256
+		10 text staged-bundle.mjs
+23038a842407afee5e89dac7e1a42184d16cc072c724ae3f6d5298b8e69ba064
+
+gm_runtime/resource-program.mjs
+e9fc3d89ae0164a4b8c933718393b3d6f457493f59d1dec5ff2ea5e5b6474077
+
+rule-contracts.mjs
+cde9e09919ccfcbc2936cd17fd1bbb7006a190b8b354dd271b7f9e0630ac2232
+
+resource-data.mjs
+30a72976e7486fdb51f4363e4583ec167762a7b9e9e1bc89ba9af2d222ed93a0
+
+resource-action-index.mjs
+aa11e1d4bbf19019297a3fde7dc966bd7cb8c365c1aa861ee2b52e4272e75606
+
+gm_runtime/narrative.mjs
+9ec2eb5b9b645a4b0ca63bfd70a99ffc92d3c62fe821e49948599390fcc824c6
+
+combat/presentation.mjs
+cc40a9e07fa7d1cfe17afe1e90e7cd12552de6a572ae1708ef5fcb4e3db9e2da
+
+The focused UI element is 8 button (expanded) 已加载模块与 SHA-256, Secondary Actions: Collapse
