@@ -1,0 +1,1142 @@
+{
+  "date": "2026-11-07",
+  "port": 18116,
+  "formalInstalled": false,
+  "scope": "Installed opening/T0 player actions, adopted opening NPC and arena actions; not every resource prototype or every outcome combination.",
+  "casesExecuted": 71,
+  "distinctCommands": [
+    "adjust",
+    "aim",
+    "allOut",
+    "block",
+    "brace",
+    "bullRush",
+    "burrow",
+    "calibrate",
+    "charge",
+    "cleaveRock",
+    "concede",
+    "continueJump",
+    "counterRush",
+    "destroy",
+    "disarm",
+    "door",
+    "doubleStrike",
+    "draw",
+    "drawClub",
+    "drawWeapon",
+    "dropProne",
+    "emerge",
+    "end",
+    "escapeGrip",
+    "feint",
+    "firstAid",
+    "flow",
+    "fullDefense",
+    "gale",
+    "grapple",
+    "grappleAttack",
+    "hypnotize",
+    "jump",
+    "medicine",
+    "morph",
+    "move",
+    "opportunityReact",
+    "pickupWeapon",
+    "pressGrip",
+    "react",
+    "readyBow",
+    "readyWeapon",
+    "releaseGrip",
+    "reload",
+    "search",
+    "sheathe",
+    "shieldPush",
+    "stand",
+    "step",
+    "stowWeapon",
+    "strike",
+    "sunder",
+    "takeItem",
+    "tengzhuan",
+    "tentacles",
+    "thunder",
+    "tornado",
+    "trip",
+    "wake"
+  ],
+  "protection": {
+    "formalProtectedFiles": 288,
+    "formalChanged": [],
+    "autoUpdateEnabled": false,
+    "modelUnchanged": true,
+    "sourceUnchanged": true
+  },
+  "regression": {
+    "baseline": {
+      "tests": 977,
+      "passed": 973,
+      "failed": 4
+    },
+    "targetedGroups": [
+      34,
+      44
+    ]
+  },
+  "knownRemaining": [
+    "65 first response invented an unadopted movement restriction and omitted steps. Zero operations committed; unchanged regeneration succeeded. Model misclassification is not eliminated.",
+    "58 footer incorrectly says no defense settlement despite the recorded fortitude contest; mechanics and displacement are correct.",
+    "55 footer omits the visible burrowing action because the actor is absent from final visibility; prose and underground state are correct.",
+    "71 still describes torn skin despite actual converted 7B damage; 70 describes total action restriction despite grapple.pressed=false and remaining legal grapple actions. Minor invented approach/sheath details also remain.",
+    "Four baseline failures reflect installed versus newer author-line feature differences (two perception/map and two frost-resource assertions). No unrelated feature installation was performed."
+  ],
+  "cases": [
+    {
+      "id": "01",
+      "title": "姿态全力",
+      "expected": [
+        "dropProne",
+        "stand",
+        "allOut"
+      ],
+      "actual": [
+        "dropProne",
+        "stand",
+        "allOut"
+      ],
+      "revision": 3,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\01-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\01-result.jsonl"
+    },
+    {
+      "id": "02",
+      "title": "随身取物",
+      "expected": [
+        "takeItem",
+        "takeItem"
+      ],
+      "actual": [
+        "takeItem",
+        "takeItem"
+      ],
+      "revision": 2,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\02-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\02-result.jsonl"
+    },
+    {
+      "id": "03",
+      "title": "虚招",
+      "expected": [
+        "feint"
+      ],
+      "actual": [
+        "feint"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\03-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\03-result.jsonl"
+    },
+    {
+      "id": "04",
+      "title": "绊摔",
+      "expected": [
+        "trip"
+      ],
+      "actual": [
+        "trip"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\04-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\04-result.jsonl"
+    },
+    {
+      "id": "05",
+      "title": "击落",
+      "expected": [
+        "disarm"
+      ],
+      "actual": [
+        "disarm"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\05-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\05-result.jsonl"
+    },
+    {
+      "id": "06",
+      "title": "击破",
+      "expected": [
+        "sunder"
+      ],
+      "actual": [
+        "sunder"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\06-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\06-result.jsonl"
+    },
+    {
+      "id": "07",
+      "title": "击退",
+      "expected": [
+        "bullRush"
+      ],
+      "actual": [
+        "bullRush"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\07-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\07-result.jsonl"
+    },
+    {
+      "id": "08",
+      "title": "击倒",
+      "expected": [
+        "bullRush"
+      ],
+      "actual": [
+        "bullRush"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\08-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\08-result.jsonl"
+    },
+    {
+      "id": "09",
+      "title": "擒抱",
+      "expected": [
+        "grapple"
+      ],
+      "actual": [
+        "grapple"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\09-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\09-result.jsonl"
+    },
+    {
+      "id": "10",
+      "title": "瞄准装填",
+      "expected": [
+        "aim",
+        "reload",
+        "end",
+        "strike"
+      ],
+      "actual": [
+        "aim",
+        "reload",
+        "end",
+        "strike"
+      ],
+      "revision": 5,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\10-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\10-result.jsonl"
+    },
+    {
+      "id": "11",
+      "title": "调整架势",
+      "expected": [
+        "adjust"
+      ],
+      "actual": [
+        "adjust"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\11-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\11-result.jsonl"
+    },
+    {
+      "id": "12",
+      "title": "冲锋",
+      "expected": [
+        "charge"
+      ],
+      "actual": [
+        "charge"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\12-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\12-result.jsonl"
+    },
+    {
+      "id": "13",
+      "title": "反冲",
+      "expected": [
+        "counterRush"
+      ],
+      "actual": [],
+      "revision": 0,
+      "commandCoverage": false,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\13-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\13-result.jsonl"
+    },
+    {
+      "id": "14",
+      "title": "拔剑",
+      "expected": [
+        "drawWeapon"
+      ],
+      "actual": [
+        "drawWeapon"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\14-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\14-result.jsonl"
+    },
+    {
+      "id": "15",
+      "title": "拾剑",
+      "expected": [
+        "pickupWeapon"
+      ],
+      "actual": [
+        "pickupWeapon"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\15-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\15-result.jsonl"
+    },
+    {
+      "id": "16",
+      "title": "流风腾转",
+      "expected": [
+        "flow",
+        "tengzhuan"
+      ],
+      "actual": [
+        "flow",
+        "tengzhuan"
+      ],
+      "revision": 2,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\16-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\16-result.jsonl"
+    },
+    {
+      "id": "17",
+      "title": "龙卷",
+      "expected": [
+        "flow",
+        "tornado"
+      ],
+      "actual": [
+        "flow",
+        "tornado"
+      ],
+      "revision": 2,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\17-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\17-result.jsonl"
+    },
+    {
+      "id": "18",
+      "title": "群袭",
+      "expected": [
+        "gale"
+      ],
+      "actual": [
+        "gale"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\18-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\18-result.jsonl"
+    },
+    {
+      "id": "19",
+      "title": "移动快步",
+      "expected": [
+        "move",
+        "step"
+      ],
+      "actual": [
+        "move"
+      ],
+      "revision": 1,
+      "commandCoverage": false,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\19-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\19-result.jsonl"
+    },
+    {
+      "id": "20",
+      "title": "全力防御",
+      "expected": [
+        "fullDefense"
+      ],
+      "actual": [
+        "fullDefense"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\20-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\20-result.jsonl"
+    },
+    {
+      "id": "21",
+      "title": "侦查",
+      "expected": [
+        "search"
+      ],
+      "actual": [
+        "search"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\21-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\21-result.jsonl"
+    },
+    {
+      "id": "22",
+      "title": "开门破障",
+      "expected": [
+        "door",
+        "destroy"
+      ],
+      "actual": [
+        "door",
+        "destroy"
+      ],
+      "revision": 2,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\22-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\22-result.jsonl"
+    },
+    {
+      "id": "23",
+      "title": "雪莲子",
+      "expected": [
+        "medicine"
+      ],
+      "actual": [
+        "medicine"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\23-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\23-result.jsonl"
+    },
+    {
+      "id": "24",
+      "title": "培元丹",
+      "expected": [
+        "medicine"
+      ],
+      "actual": [
+        "medicine"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\24-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\24-result.jsonl"
+    },
+    {
+      "id": "25",
+      "title": "药A",
+      "expected": [
+        "medicine"
+      ],
+      "actual": [
+        "medicine"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\25-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\25-result.jsonl"
+    },
+    {
+      "id": "26",
+      "title": "药B",
+      "expected": [
+        "medicine"
+      ],
+      "actual": [
+        "medicine"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\26-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\26-result.jsonl"
+    },
+    {
+      "id": "27",
+      "title": "药C治疗",
+      "expected": [
+        "medicine"
+      ],
+      "actual": [
+        "medicine"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\27-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\27-result.jsonl"
+    },
+    {
+      "id": "28",
+      "title": "药C异常",
+      "expected": [
+        "medicine"
+      ],
+      "actual": [
+        "medicine"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\28-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\28-result.jsonl"
+    },
+    {
+      "id": "29",
+      "title": "急救",
+      "expected": [
+        "firstAid"
+      ],
+      "actual": [
+        "firstAid"
+      ],
+      "revision": 2,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\29-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\29-result.jsonl"
+    },
+    {
+      "id": "30",
+      "title": "唤醒",
+      "expected": [
+        "wake"
+      ],
+      "actual": [
+        "wake"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\30-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\30-result.jsonl"
+    },
+    {
+      "id": "31",
+      "title": "跳跃",
+      "expected": [
+        "jump"
+      ],
+      "actual": [
+        "jump"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\31-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\31-result.jsonl"
+    },
+    {
+      "id": "32",
+      "title": "挣脱",
+      "expected": [
+        "escapeGrip"
+      ],
+      "actual": [
+        "escapeGrip"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\32-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\32-result.jsonl"
+    },
+    {
+      "id": "33",
+      "title": "擒抱内攻击",
+      "expected": [
+        "grappleAttack"
+      ],
+      "actual": [
+        "grappleAttack"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\33-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\33-result.jsonl"
+    },
+    {
+      "id": "34",
+      "title": "压制",
+      "expected": [
+        "pressGrip"
+      ],
+      "actual": [
+        "pressGrip"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\34-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\34-result.jsonl"
+    },
+    {
+      "id": "35",
+      "title": "格挡",
+      "expected": [
+        "block"
+      ],
+      "actual": [
+        "block"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\35-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\35-result.jsonl"
+    },
+    {
+      "id": "36",
+      "title": "受击闪避",
+      "expected": [
+        "react"
+      ],
+      "actual": [
+        "react"
+      ],
+      "revision": 2,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\36-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\36-result.jsonl"
+    },
+    {
+      "id": "37",
+      "title": "受击格挡",
+      "expected": [
+        "react"
+      ],
+      "actual": [
+        "react"
+      ],
+      "revision": 2,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\37-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\37-result.jsonl"
+    },
+    {
+      "id": "38",
+      "title": "受击转换",
+      "expected": [
+        "react"
+      ],
+      "actual": [
+        "react"
+      ],
+      "revision": 2,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\38-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\38-result.jsonl"
+    },
+    {
+      "id": "39",
+      "title": "借机攻击",
+      "expected": [
+        "opportunityReact"
+      ],
+      "actual": [
+        "opportunityReact"
+      ],
+      "revision": 2,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\39-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\39-result.jsonl"
+    },
+    {
+      "id": "40",
+      "title": "借机放弃",
+      "expected": [
+        "opportunityReact"
+      ],
+      "actual": [
+        "opportunityReact"
+      ],
+      "revision": 2,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\40-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\40-result.jsonl"
+    },
+    {
+      "id": "41",
+      "title": "反冲正确窗口",
+      "expected": [
+        "counterRush"
+      ],
+      "actual": [
+        "counterRush"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\41-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\41-result.jsonl"
+    },
+    {
+      "id": "42",
+      "title": "药C既有状态基线",
+      "expected": [
+        "medicine"
+      ],
+      "actual": [
+        "medicine"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\42-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\42-result.jsonl"
+    },
+    {
+      "id": "43",
+      "title": "已支付续跳",
+      "expected": [
+        "continueJump"
+      ],
+      "actual": [
+        "continueJump"
+      ],
+      "revision": 1,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\43-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\43-result.jsonl"
+    },
+    {
+      "id": "44",
+      "title": "擂台认输",
+      "expected": [
+        "concede"
+      ],
+      "actual": [
+        "concede"
+      ],
+      "revision": 2,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\44-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\44-result.jsonl"
+    },
+    {
+      "id": "45",
+      "title": "黄泉拔刀",
+      "expected": [
+        "draw"
+      ],
+      "actual": [
+        "draw",
+        "end"
+      ],
+      "revision": 3,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\45-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\45-result.jsonl"
+    },
+    {
+      "id": "46",
+      "title": "黄泉收刀",
+      "expected": [
+        "sheathe"
+      ],
+      "actual": [
+        "sheathe",
+        "end"
+      ],
+      "revision": 3,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\46-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\46-result.jsonl"
+    },
+    {
+      "id": "47",
+      "title": "黄泉雷鸣",
+      "expected": [
+        "thunder"
+      ],
+      "actual": [
+        "thunder",
+        "end"
+      ],
+      "revision": 4,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\47-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\47-result.jsonl"
+    },
+    {
+      "id": "48",
+      "title": "黄泉斩岩",
+      "expected": [
+        "cleaveRock"
+      ],
+      "actual": [
+        "cleaveRock",
+        "end"
+      ],
+      "revision": 4,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\48-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\48-result.jsonl"
+    },
+    {
+      "id": "49",
+      "title": "布莱特换武器",
+      "expected": [
+        "stowWeapon",
+        "readyWeapon"
+      ],
+      "actual": [
+        "stowWeapon",
+        "readyWeapon",
+        "end"
+      ],
+      "revision": 4,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\49-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\49-result.jsonl"
+    },
+    {
+      "id": "50",
+      "title": "催眠魔兽催眠",
+      "expected": [
+        "hypnotize"
+      ],
+      "actual": [
+        "hypnotize",
+        "end"
+      ],
+      "revision": 3,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\50-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\50-result.jsonl"
+    },
+    {
+      "id": "51",
+      "title": "Chuul双螯",
+      "expected": [
+        "doubleStrike"
+      ],
+      "actual": [
+        "doubleStrike",
+        "end"
+      ],
+      "revision": 4,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\51-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\51-result.jsonl"
+    },
+    {
+      "id": "52",
+      "title": "Chuul触须",
+      "expected": [
+        "tentacles"
+      ],
+      "actual": [
+        "tentacles",
+        "end"
+      ],
+      "revision": 3,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\52-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\52-result.jsonl"
+    },
+    {
+      "id": "53",
+      "title": "Chuul释放",
+      "expected": [
+        "releaseGrip"
+      ],
+      "actual": [
+        "releaseGrip",
+        "releaseGrip",
+        "end"
+      ],
+      "revision": 4,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\53-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\53-result.jsonl"
+    },
+    {
+      "id": "54",
+      "title": "古雷姆林双刀",
+      "expected": [
+        "doubleStrike"
+      ],
+      "actual": [
+        "doubleStrike",
+        "end"
+      ],
+      "revision": 4,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\54-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\54-result.jsonl"
+    },
+    {
+      "id": "55",
+      "title": "古雷姆林入土",
+      "expected": [
+        "burrow"
+      ],
+      "actual": [
+        "burrow",
+        "end"
+      ],
+      "revision": 3,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\55-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\55-result.jsonl"
+    },
+    {
+      "id": "56",
+      "title": "古雷姆林出土",
+      "expected": [
+        "emerge"
+      ],
+      "actual": [
+        "emerge",
+        "end"
+      ],
+      "revision": 3,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\56-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\56-result.jsonl"
+    },
+    {
+      "id": "57",
+      "title": "古雷姆林变形",
+      "expected": [
+        "morph"
+      ],
+      "actual": [
+        "morph",
+        "end"
+      ],
+      "revision": 3,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\57-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\57-result.jsonl"
+    },
+    {
+      "id": "58",
+      "title": "擂台盾推",
+      "expected": [
+        "shieldPush"
+      ],
+      "actual": [
+        "shieldPush",
+        "end"
+      ],
+      "revision": 4,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\58-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\58-result.jsonl"
+    },
+    {
+      "id": "59",
+      "title": "擂台稳身",
+      "expected": [
+        "brace"
+      ],
+      "actual": [
+        "brace",
+        "end"
+      ],
+      "revision": 3,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\59-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\59-result.jsonl"
+    },
+    {
+      "id": "60",
+      "title": "擂台校准",
+      "expected": [
+        "calibrate"
+      ],
+      "actual": [
+        "reload",
+        "calibrate",
+        "end"
+      ],
+      "revision": 4,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\60-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\60-result.jsonl"
+    },
+    {
+      "id": "61",
+      "title": "擂台拔短棍",
+      "expected": [
+        "drawClub"
+      ],
+      "actual": [
+        "drawClub",
+        "end"
+      ],
+      "revision": 3,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\61-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\61-result.jsonl"
+    },
+    {
+      "id": "62",
+      "title": "擂台持弓",
+      "expected": [
+        "readyBow"
+      ],
+      "actual": [
+        "readyBow",
+        "reload",
+        "end"
+      ],
+      "revision": 4,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\62-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\62-result.jsonl"
+    },
+    {
+      "id": "63",
+      "title": "移动快步修复",
+      "expected": [
+        "move",
+        "step"
+      ],
+      "actual": [
+        "move",
+        "step"
+      ],
+      "revision": 2,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\63-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\63-result.jsonl"
+    },
+    {
+      "id": "64",
+      "title": "破障记录修复",
+      "expected": [
+        "door",
+        "destroy"
+      ],
+      "actual": [
+        "door",
+        "destroy"
+      ],
+      "revision": 2,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\64-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\64-result.jsonl"
+    },
+    {
+      "id": "65",
+      "title": "分步费用归属",
+      "expected": [
+        "move",
+        "step"
+      ],
+      "actual": [
+        "move",
+        "step"
+      ],
+      "revision": 2,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\65-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\65-result.jsonl"
+    },
+    {
+      "id": "66",
+      "title": "借机记录修复",
+      "expected": [
+        "opportunityReact"
+      ],
+      "actual": [
+        "opportunityReact"
+      ],
+      "revision": 2,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\66-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\66-result.jsonl"
+    },
+    {
+      "id": "67",
+      "title": "持弓投影修复",
+      "expected": [
+        "stowWeapon",
+        "readyWeapon"
+      ],
+      "actual": [
+        "stowWeapon",
+        "readyWeapon",
+        "end"
+      ],
+      "revision": 4,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\67-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\67-result.jsonl"
+    },
+    {
+      "id": "68",
+      "title": "催眠结果投影修复",
+      "expected": [
+        "hypnotize"
+      ],
+      "actual": [
+        "hypnotize",
+        "end"
+      ],
+      "revision": 3,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\68-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\68-result.jsonl"
+    },
+    {
+      "id": "69",
+      "title": "触须结果投影修复",
+      "expected": [
+        "tentacles"
+      ],
+      "actual": [
+        "tentacles",
+        "end"
+      ],
+      "revision": 3,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\69-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\69-result.jsonl"
+    },
+    {
+      "id": "70",
+      "title": "双螯夹持投影修复",
+      "expected": [
+        "doubleStrike"
+      ],
+      "actual": [
+        "doubleStrike",
+        "end"
+      ],
+      "revision": 4,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\70-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\70-result.jsonl"
+    },
+    {
+      "id": "71",
+      "title": "已持刀状态投影修复",
+      "expected": [
+        "thunder"
+      ],
+      "actual": [
+        "thunder",
+        "end"
+      ],
+      "revision": 4,
+      "commandCoverage": true,
+      "capture": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\71-capture.json",
+      "savedChat": "C:\\Users\\pit\\.codex\\visualizations\\2026\\10\\28\\01a18148-9afe-7661-9f62-b9b7a4d42fe0\\.classification-timeout-20261105\\action-sweep-20261107\\71-result.jsonl"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+▶ arcane staged acquisition
+  ✖ frost D/C keeps its own capacity and cold DP; C discounts actual spells to at least one (11.0815ms)
+  ✖ frost cost uses the final one-pool debit for all mana kinds, repetitions and minimum; other energy and zero stay unchanged (15.0261ms)
+✖ arcane staged acquisition (27.7297ms)
+ℹ tests 2
+ℹ suites 1
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 435.2802
+
+✖ failing tests:
+
+test at work\rules_engine\staged-bundle.test.mjs:120:1
+✖ frost D/C keeps its own capacity and cold DP; C discounts actual spells to at least one (11.0815ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  12 !== 2
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/visualizations/2026/10/28/01a18148-9afe-7661-9f62-b9b7a4d42fe0/.classification-timeout-20261105/action-sweep-20261107/regression/work/rules_engine/staged-bundle.test.mjs:125:35)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at async Promise.all (index 10)
+      at async Suite.run (node:internal/test_runner/test:1905:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 12,
+    expected: 2,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at work\rules_engine\staged-bundle.test.mjs:149:1
+✖ frost cost uses the final one-pool debit for all mana kinds, repetitions and minimum; other energy and zero stay unchanged (15.0261ms)
+  IllegalAction: 施法能量不足
+      at requireFact (file:///C:/Users/pit/.codex/visualizations/2026/10/28/01a18148-9afe-7661-9f62-b9b7a4d42fe0/.classification-timeout-20261105/action-sweep-20261107/regression/work/rules_engine/gm_runtime/resource-program-policy.mjs:5:47)
+      at policyPool (file:///C:/Users/pit/.codex/visualizations/2026/10/28/01a18148-9afe-7661-9f62-b9b7a4d42fe0/.classification-timeout-20261105/action-sweep-20261107/regression/work/rules_engine/gm_runtime/resource-program-policy.mjs:53:10)
+      at executeProgram (file:///C:/Users/pit/.codex/visualizations/2026/10/28/01a18148-9afe-7661-9f62-b9b7a4d42fe0/.classification-timeout-20261105/action-sweep-20261107/regression/work/rules_engine/gm_runtime/resource-program.mjs:293:21)
+      at runResourceProgram (file:///C:/Users/pit/.codex/visualizations/2026/10/28/01a18148-9afe-7661-9f62-b9b7a4d42fe0/.classification-timeout-20261105/action-sweep-20261107/regression/work/rules_engine/gm_runtime/resource-program.mjs:87:15)
+      at runKitMechanism (file:///C:/Users/pit/.codex/visualizations/2026/10/28/01a18148-9afe-7661-9f62-b9b7a4d42fe0/.classification-timeout-20261105/action-sweep-20261107/regression/work/rules_engine/gm_runtime/kit-runtime.mjs:33:19)
+      at runSceneMechanism (file:///C:/Users/pit/.codex/visualizations/2026/10/28/01a18148-9afe-7661-9f62-b9b7a4d42fe0/.classification-timeout-20261105/action-sweep-20261107/regression/work/rules_engine/gm_runtime/scene-rules.mjs:25:15)
+      at reduceRuleAction (file:///C:/Users/pit/.codex/visualizations/2026/10/28/01a18148-9afe-7661-9f62-b9b7a4d42fe0/.classification-timeout-20261105/action-sweep-20261107/regression/work/rules_engine/gm_runtime/rule-actions.mjs:164:16)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/visualizations/2026/10/28/01a18148-9afe-7661-9f62-b9b7a4d42fe0/.classification-timeout-20261105/action-sweep-20261107/regression/work/rules_engine/staged-bundle.test.mjs:162:14)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25) {
+    code: 'UNAVAILABLE'
+  }

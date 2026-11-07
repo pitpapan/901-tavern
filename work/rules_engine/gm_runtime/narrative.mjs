@@ -41,7 +41,7 @@ export async function interpretDeclaration({text,context},generateRaw) {
       '普通战斗动作按legalOptions转写：charge冲锋、allOut全力、feint虚招、trip绊摔、bullRush冲撞（mode:push或knockdown）、grapple擒抱（attribute:strength或agility）、disarm/sunder击落/击破（实际itemId）、dropProne伏地、stand起身、aim瞄准、adjust调整架势、takeItem取出随身物品；drawWeapon拔出随身武器并持握（实际itemId，按已登记存放处核费，不套用黄泉的draw拔刀术）；pickupWeapon拾取地面武器（照legalOptions填写fromActorId与itemId）。反冲窗口用counterRush，mode为push/knockdown/decline。冲撞、绊摔和擒抱受击时，grappleDefense须玩家明确选择strength或agility。[]内容是私念，不构成执行声明，也不代表NPC知情。'+
       'targetId使用participants或lastSeen中的id，不填人物中文姓名。lastSeen是此前目击位置，不代表现在仍可见；不能据此擅自提供盲攻效果。'+
       '开关门用{"abilityId":"door","featureId":"terrain中的id","open":true或false}；普通武器破坏障碍用{"abilityId":"destroy","featureId":"terrain中的id"}。不得将地形当作targetId人物，不得输入硬度、耐久、掩体或地图修改值。有免检爬墙资格者可在明确可承重的climbable表面填写climb:true；水面奔跑须有资格且填写run:true。其余高低差必须走已绘制坡道/阶梯；没有适配的攀爬、跳跃、开锁先澄清，不替换成免费移动或开门。'+
-      '仅转写玩家明确写出的动作与能量消耗到cost；没有写则省略cost或相应部分。标准/移动/迅捷用standard/move/swift；自由动作actions为{}。'+
+      '仅转写玩家明确写出的动作与能量消耗到cost；没有写则省略cost或相应部分。明确动作费用须在该步骤提供actionCostQuote，逐字引用同时包含该步骤quote和费用的连续原文，不包含其他步骤的动作。无法归属时澄清。标准/移动/迅捷用standard/move/swift；自由动作actions为{}。'+
       '带档位的能力必须在command中填写所选档位，cost不能替代它。例如明确消耗2点流风加速，command为{"abilityId":"flow","tier":2}；消耗1点则tier:1。'+
       'D9已采用：只有玩家明确花1意志增强时才填写willpower:true；普通单次攻击/检定加3DP，受击react对此次防御加3（若本次使用豁免/对抗则加3DP），另叠加适用基因锁增益。未声明不得自动消费意志。Wizard剑枪明确连射才填rapidFire:true，实际邻接含友方，至多10目标；不是普通射击的默认模式。基因锁unlockBoth须明确同轮双开且所选属性已有计划；end自由解除全部阶。Phantom exit整轮返回肉身，不需再裁定退出动作。'+
       '明确服用初始卡药品用{"abilityId":"medicine","medicine":"雪莲子|培元丹|药A|药B|药C|雷霆药剂","resource":"仅雪莲子须玩家指定能量池"}；药C须玩家明确选择choice:"heal"或"status"，解除状态填statusIndex。不得替玩家选择药品、能量池或用途。药品实际数量、效果、动作费用均由程序校验，不填写恢复数值。战斗中不能短休、长休或打坐恢复，战斗结束不自动休息或治疗。'+
@@ -57,10 +57,43 @@ export async function interpretDeclaration({text,context},generateRaw) {
     user_input:JSON.stringify({text,context})}));
 }
 
-export function validateStep(step,text,battle) {
+const actionCostPattern=/(?:标准|移动|迅捷|整轮|反射|自由)\s*(?:动作|[×x*]\s*\d+)/g;
+const publicDeclaration=text=>text.replace(/\[[\s\S]*?\]|【[\s\S]*?】/g,m=>' '.repeat(m.length));
+function actionCostSources(steps,text) {
+  const visible=publicDeclaration(text),claims=[...visible.matchAll(actionCostPattern)];
+  // Legacy plans have no source field. Reuse a punctuation-delimited segment
+  // only when it contains one action quote; otherwise require explicit source.
+  const segments=pattern=>[...visible.matchAll(pattern)].map(m=>({text:m[0],start:m.index}));
+  const narrow=segments(/[^，,；;。！？!?]+/g),wide=segments(/[^；;。！？!?]+/g);
+  const legacySource=(step,i)=>{
+    for(const group of [narrow,wide]) {
+      const found=group.filter(s=>s.text.includes(step.quote)&&[...s.text.matchAll(actionCostPattern)].length&&
+        !steps.some((other,j)=>j!==i&&other.quote&&s.text.includes(other.quote)));
+      if(found.length===1)return found[0].text;
+    }
+    return null;
+  };
+  const sources=steps.map((step,i)=>{
+    const source=step.actionCostQuote??(typeof step.quote==='string'&&[...step.quote.matchAll(actionCostPattern)].length?step.quote:steps.length===1&&claims.length?visible:step.quote?legacySource(step,i):null);
+    if(source===null)return null;
+    if(typeof source!=='string'||!source||!step.quote||!source.includes(step.quote)||!visible.includes(source)||
+      ![...source.matchAll(actionCostPattern)].length||!step.cost?.actions||
+      steps.some((other,j)=>j!==i&&other.quote&&source.includes(other.quote)))
+      throw new IllegalAction('动作费用的原文或归属不明确，请先确认；本次尚未执行。');
+    const start=visible.indexOf(source);
+    if(start!==visible.lastIndexOf(source))throw new IllegalAction('动作费用的原文或归属不明确，请先确认；本次尚未执行。');
+    return {start,end:start+source.length};
+  });
+  if(claims.some(m=>sources.filter(s=>s&&s.start<=m.index&&s.end>=m.index+m[0].length).length!==1))
+    throw new IllegalAction('动作费用的原文或归属不明确，请先确认；本次尚未执行。');
+  return sources;
+}
+
+export function validateStep(step,text,battle,{steps=[step]}={}) {
   if(!step||typeof step.quote!=='string'||!step.quote||!text.includes(step.quote)||!step.command)
     throw new IllegalAction('没有找到对应的明确行动声明，请写明这次要执行的动作。');
   if(!text.replace(/\[[\s\S]*?\]|【[\s\S]*?】/g,'').includes(step.quote))throw new IllegalAction('私念不构成执行声明；尚未执行动作。');
+  const costSources=actionCostSources(steps,text);
   const c={...step.command,actorId:'player'};
   if(c.abilityId==='pickupWeapon'){
     const named=groundWeaponChoices(battle,battle.actors.player).filter(x=>{const i=battle.actors[x.fromActorId].state.possessions.items.find(i=>i.id===x.itemId);return [i.name,...(i.aliases??[])].some(n=>typeof n==='string'&&n&&step.quote.includes(n));});
@@ -102,6 +135,9 @@ export function validateStep(step,text,battle) {
   const spent={actions:Object.fromEntries(Object.keys(actionNames).map(k=>[k,Math.max(0,before.turn[k]-after.turn[k])]).filter(([,n])=>n)),
     energy:Object.fromEntries(Object.entries(before.resources).map(([k,v])=>[k,Math.max(0,v.current-after.resources[k].current)]).filter(([,n])=>n))};
   if(c.abilityId!=='end')for(const key of ['actions','energy'])if(step.cost?.[key]) {
+    // The translator may estimate a cost even when the player declared only
+    // movement. Engine payment (including standard-for-move) stays authoritative.
+    if(key==='actions'&&!costSources[steps.indexOf(step)])continue;
     const declared=step.cost[key],actual=spent[key];
     if([...new Set([...Object.keys(declared),...Object.keys(actual)])].some(k=>(declared[k]??0)!==(actual[k]??0))) {
       const names=key==='actions'?actionNames:{};
@@ -199,6 +235,8 @@ export function createNarrativeSession(options) {
       if(plan.clarification)return flush(p,{notice:plan.clarification});
       if(plan.steps.slice(0,-1).some(s=>s.command?.abilityId==='end'))
         return flush(p,{notice:'结束回合之后的行动留到下一次声明；请确认这次结束前要做的动作。'});
+      try { actionCostSources(plan.steps,p.text); }
+      catch(error) { if(!(error instanceof IllegalAction))throw error; return flush(p,{notice:error.message}); }
       let notice='';
       for(let i=0;i<plan.steps.length;i++) {
         const operationId=`declaration/${key(p)}/${i}`;
@@ -207,7 +245,7 @@ export function createNarrativeSession(options) {
         if(battle.mode==='story')break;
         if((battle.pending?.awaiting??battle.activeId)!=='player')break;
         try {
-          const command=validateStep(plan.steps[i],p.text,battle);
+          const command=validateStep(plan.steps[i],p.text,battle,{steps:plan.steps});
           await base.controller.submitCommand({command,expectedRevision:revision,operationId});
           await base.handleTurn();
           // A newly offered reaction is a new player decision, not an implicit decline.

@@ -1,0 +1,78 @@
+{
+  "scope": "isolated 18116 only",
+  "authorFix": "reuse existing resource-engine frost implementation; no source overwrite",
+  "files": [
+    {
+      "file": "staged-bundle.mjs",
+      "before": "0fa3cbc91f151f67cf40f9754282490333f08b672ee143d7ec4b643998e7748e",
+      "after": "23038a842407afee5e89dac7e1a42184d16cc072c724ae3f6d5298b8e69ba064",
+      "verifiedCopy": true
+    },
+    {
+      "file": "gm_runtime/resource-program.mjs",
+      "before": "74804394025f65a9226cd5288c09c5fdd2604d3b190cd782bbc01ea9869aacb8",
+      "after": "e9fc3d89ae0164a4b8c933718393b3d6f457493f59d1dec5ff2ea5e5b6474077",
+      "verifiedCopy": true
+    },
+    {
+      "file": "rule-contracts.mjs",
+      "before": "363dee2a6aeea67648779d4da4ddc4bfeadd83824f931c906b55a00c2fd072be",
+      "after": "cde9e09919ccfcbc2936cd17fd1bbb7006a190b8b354dd271b7f9e0630ac2232",
+      "verifiedCopy": true
+    },
+    {
+      "file": "resource-data.mjs",
+      "before": "2902e50762fafe759e1a508354789aa2849cbb5879051da94c5ab7b9a0e4e0a4",
+      "after": "30a72976e7486fdb51f4363e4583ec167762a7b9e9e1bc89ba9af2d222ed93a0",
+      "verifiedCopy": true
+    },
+    {
+      "file": "resource-action-index.mjs",
+      "before": "604718316a6a4e36be48a1a73a946f423bcf35e6e4c2299492e41dce30b972a7",
+      "after": "aa11e1d4bbf19019297a3fde7dc966bd7cb8c365c1aa861ee2b52e4272e75606",
+      "verifiedCopy": true
+    }
+  ],
+  "http": [
+    {
+      "file": "staged-bundle.mjs",
+      "error": "URLError"
+    },
+    {
+      "file": "gm_runtime/resource-program.mjs",
+      "error": "URLError"
+    },
+    {
+      "file": "rule-contracts.mjs",
+      "error": "URLError"
+    },
+    {
+      "file": "resource-data.mjs",
+      "error": "URLError"
+    },
+    {
+      "file": "resource-action-index.mjs",
+      "error": "URLError"
+    }
+  ],
+  "baseline": {
+    "tests": 2,
+    "failed": 2
+  },
+  "focused": {
+    "tests": 12,
+    "passed": 12
+  },
+  "affected": {
+    "tests": 275,
+    "passed": 275,
+    "failed": 0
+  },
+  "formalProtectedFiles": 288,
+  "formalChanges": [],
+  "deferred": [
+    1,
+    2
+  ],
+  "newModelCalls": 0
+}
