@@ -1,0 +1,30 @@
+✔ dialogue classification timeout reports a processing failure without implying an attempted action (566.873ms)
+✔ unclassified technical failure recovers after reload on the same turn or a new ordinary message (227.0684ms)
+✔ a second classification failure belongs to the new message and remains recoverable (86.5233ms)
+✔ classification timeout retries the same input once with a new id and ignores the late first decision (29.2152ms)
+✔ classification recovery stops after two timeouts without narration or settlement (42.5113ms)
+✔ classification recovery does not retry after explicit stop, changed input, or unconfirmed cancellation (45.8816ms)
+✔ postcombat story continuation failure remains resumable without reclassifying or settling (12.2241ms)
+✔ native combat regeneration restores the deleted report and unique latest root before a cancelled menu (6.6666ms)
+✔ debug-disabled malformed recovery retains a precise failure without settling (8.6581ms)
+✔ debug-disabled invalid check attribute identifies model input failure without exposing DC (9.6337ms)
+✔ debug-disabled upstream quota failure is distinguished from invalid model output (10.9245ms)
+✔ active combat handles the turn before ordinary classification or narration (5.5093ms)
+✔ host saved recovery survives failed narration and script reload without another debit (28.6725ms)
+✔ host executes the exact compound declaration once and resumes final sequence narration after reload (30.6055ms)
+✔ a completed pending medicine keeps its original operation across a later player floor and native regeneration (26.5422ms)
+✔ controller persists failed NO_CHECK and recovers after reload with no new player input (13.2425ms)
+✔ host cancels only the unexecuted medicine pending and anchors the current dialogue (17.7524ms)
+✔ a cancellation declaration cannot undo a committed operation awaiting narration (17.1562ms)
+✔ regenerating a completed turn reuses its narration without model calls or another assistant message (15.4706ms)
+✔ regenerating a committed direct effect does not repeat classification, narration, or MVU writes (16.7621ms)
+✔ lost direct-effect failure notice resumes saved operation without reclassification (18.3122ms)
+✔ completed assistant with missing MVU projection restores state without model requests (14.3381ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2334.1755

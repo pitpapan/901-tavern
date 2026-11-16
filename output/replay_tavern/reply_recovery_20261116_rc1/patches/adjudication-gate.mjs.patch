@@ -1,0 +1,35 @@
+--- installed-before/adjudication-gate.mjs
++++ installed-after/adjudication-gate.mjs
+@@ -175,11 +175,14 @@
+     pending = current;
+     if (pending.request !== null || pending.narrationDecision) return pending;
+     const diagnostic = entry?.diagnostic;
+-    if (!pending.retryNoCheck && player.text === pending.original.text &&
++    const unparsed = diagnostic?.failureStage === 'response_parse' &&
++      diagnostic.reason === 'invalid_model_response';
++    const timedOut = ['request_dispatched', 'messages_assembled'].includes(diagnostic?.failureStage) &&
++      diagnostic.errorCode === 'CLASSIFICATION_TIMEOUT' && diagnostic.reason === 'deadline';
++    if (!pending.retryNoCheck &&
+         entry?.status === 'UNRESOLVED' && entry.operationId === pending.operationId &&
+         diagnostic?.operationId === pending.operationId &&
+-        diagnostic.failureStage === 'messages_assembled' &&
+-        diagnostic.errorCode === 'CLASSIFICATION_TIMEOUT' && diagnostic.reason === 'deadline' &&
++        (unparsed || timedOut) &&
+         diagnostic.classificationRequests > 0 && diagnostic.narrationRequests === 0)
+       return { ...pending, retryClassification: true };
+     // Older notices omitted the NO_CHECK decision. Only a recorded continuation
+@@ -507,6 +510,14 @@
+     throw new Error('Current player or pending action anchor invalid');
+   if ([classify, settle, narrate, post, ensureStable, onStage].some(fn => typeof fn !== 'function'))
+     throw new Error('Guarded turn callbacks required');
++  // A failed classification has no accepted action to supplement. A new
++  // declaration starts its own classification, only after the caller confirms
++  // that the old operation never committed. The failure notice stays in chat.
++  if (pending?.retryClassification === true && pending.request === null &&
++      !pending.narrationDecision && !pending.retryNoCheck && player.text !== pending.original.text &&
++      await canCancelPending(pending) === true) {
++    ensureStable();pending=null;
++  }
+   let original = pending?.original ?? player;
+   let operationId = key(original);
+   let context = { original, latest: player, operationId, pending: !!pending };

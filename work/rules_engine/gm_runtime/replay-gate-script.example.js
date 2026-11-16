@@ -300,6 +300,10 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
       enterCombat: combat?.enterForPlayer ? ({context,request})=>
         combatCall(()=>combat.enterForPlayer(request.encounterId,context.original)) : undefined,
       classify: async context => {
+        // The gate may start a fresh message after an unclassified technical
+        // failure. Keep later errors anchored to that actual current request.
+        if(!context.pending)pending=null;
+        diagnostic.operationId=context.operationId;
         mark('request_construction');
         const saved = readTestOperation({ mvu, getAnchor, operationId: context.operationId });
         const recovered = savedDecisionForRecovery(pending, saved);
@@ -560,15 +564,16 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
       ? '规则结果已保存，叙述尚未完成；请恢复本次操作，不要重新投骰。'
       : pending?.narrationDecision ? '行动已判定无需检定，叙述尚未完成；重新生成本条回复即可恢复，无需重复发送行动。'
       : error?.code === 'CLASSIFICATION_CANCELLED' ? '已停止消息处理；本轮没有执行规则结算。'
-      : error?.code === 'CLASSIFICATION_TIMEOUT' ? '消息处理请求超时，尚未生成回复；本轮没有执行规则结算。可重新生成本条回复重试，无需重复发送消息。'
+      : error?.code === 'CLASSIFICATION_TIMEOUT' ? '消息处理请求超时，尚未生成回复；本轮没有执行规则结算。可重新生成本条回复重试，或发送下一条消息继续。'
       : error?.code === 'INVALID_CHECK_ATTRIBUTE' ? '主持模型生成的检定属性不合法，本次尚未掷骰或结算，需要纠正判定输入。'
+      : failureStage === 'response_parse' ? '消息处理返回的格式不完整，尚未生成回复；本轮没有执行规则结算。可重新生成本条回复重试，或发送下一条消息继续。'
       : '行动判断或规则输入未完成；本次行动尚未裁定，没有确定成败。';
     await createChatMessages([{ role: 'assistant', message: debug
       ? `${message}\n【隔离诊断：${diagnostic.failureStage} / ${diagnostic.reason}】` : message, extra: {
       '901_replay_gate': { status: narrationPending ? 'NARRATION_PENDING' : 'UNRESOLVED',
         operationId,
         pending: { original, operationId, request:
-          (lastDecision?.request ?? pending?.request)?.actorId !== undefined
+          (failureStage === 'response_parse' && !pending?.request) || (lastDecision?.request ?? pending?.request)?.actorId !== undefined
             ? null : lastDecision?.request ?? pending?.request ?? null,
           ...(pending?.narrationDecision ? { narrationDecision: pending.narrationDecision } : {}),
           ...(pending?.retryNoCheck ? { retryNoCheck: true } : {}) },

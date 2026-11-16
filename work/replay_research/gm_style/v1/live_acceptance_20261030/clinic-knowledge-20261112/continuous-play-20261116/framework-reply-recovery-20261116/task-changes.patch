@@ -1,0 +1,188 @@
+--- adjudication-gate.mjs.before
++++ adjudication-gate.mjs
+@@ -177,11 +177,14 @@
+     pending = current;
+     if (pending.request !== null || pending.narrationDecision) return pending;
+     const diagnostic = entry?.diagnostic;
+-    if (!pending.retryNoCheck && player.text === pending.original.text &&
++    const unparsed = diagnostic?.failureStage === 'response_parse' &&
++      diagnostic.reason === 'invalid_model_response';
++    const timedOut = ['request_dispatched', 'messages_assembled'].includes(diagnostic?.failureStage) &&
++      diagnostic.errorCode === 'CLASSIFICATION_TIMEOUT' && diagnostic.reason === 'deadline';
++    if (!pending.retryNoCheck &&
+         entry?.status === 'UNRESOLVED' && entry.operationId === pending.operationId &&
+         diagnostic?.operationId === pending.operationId &&
+-        diagnostic.failureStage === 'messages_assembled' &&
+-        diagnostic.errorCode === 'CLASSIFICATION_TIMEOUT' && diagnostic.reason === 'deadline' &&
++        (unparsed || timedOut) &&
+         diagnostic.classificationRequests > 0 && diagnostic.narrationRequests === 0)
+       return { ...pending, retryClassification: true };
+     // Older notices omitted the NO_CHECK decision. Only a recorded continuation
+@@ -509,6 +512,14 @@
+     throw new Error('Current player or pending action anchor invalid');
+   if ([classify, settle, narrate, post, ensureStable, onStage].some(fn => typeof fn !== 'function'))
+     throw new Error('Guarded turn callbacks required');
++  // A failed classification has no accepted action to supplement. A new
++  // declaration starts its own classification, only after the caller confirms
++  // that the old operation never committed. The failure notice stays in chat.
++  if (pending?.retryClassification === true && pending.request === null &&
++      !pending.narrationDecision && !pending.retryNoCheck && player.text !== pending.original.text &&
++      await canCancelPending(pending) === true) {
++    ensureStable();pending=null;
++  }
+   let original = pending?.original ?? player;
+   let operationId = key(original);
+   let context = { original, latest: player, operationId, pending: !!pending };
+--- replay-gate-script.example.js.before
++++ replay-gate-script.example.js
+@@ -374,6 +374,10 @@
+       enterCombat: combat?.enterForPlayer ? ({context,request})=>
+         combatCall(()=>combat.enterForPlayer(request.encounterId,context.original)) : undefined,
+       classify: async context => {
++        // The gate may start a fresh message after an unclassified technical
++        // failure. Keep later errors anchored to that actual current request.
++        if(!context.pending)pending=null;
++        diagnostic.operationId=context.operationId;
+         mark('request_construction');
+         const saved = readTestOperation({ mvu, getAnchor, operationId: context.operationId });
+         const recovered = savedDecisionForRecovery(pending, saved);
+@@ -650,15 +654,16 @@
+       ? '规则结果已保存，叙述尚未完成；请恢复本次操作，不要重新投骰。'
+       : pending?.narrationDecision ? '行动已判定无需检定，叙述尚未完成；重新生成本条回复即可恢复，无需重复发送行动。'
+       : error?.code === 'CLASSIFICATION_CANCELLED' ? '已停止消息处理；本轮没有执行规则结算。'
+-      : error?.code === 'CLASSIFICATION_TIMEOUT' ? '消息处理请求超时，尚未生成回复；本轮没有执行规则结算。可重新生成本条回复重试，无需重复发送消息。'
++      : error?.code === 'CLASSIFICATION_TIMEOUT' ? '消息处理请求超时，尚未生成回复；本轮没有执行规则结算。可重新生成本条回复重试，或发送下一条消息继续。'
+       : error?.code === 'INVALID_CHECK_ATTRIBUTE' ? '主持模型生成的检定属性不合法，本次尚未掷骰或结算，需要纠正判定输入。'
++      : failureStage === 'response_parse' ? '消息处理返回的格式不完整，尚未生成回复；本轮没有执行规则结算。可重新生成本条回复重试，或发送下一条消息继续。'
+       : '行动判断或规则输入未完成；本次行动尚未裁定，没有确定成败。';
+     await createChatMessages([{ role: 'assistant', message: debug
+       ? `${message}\n【隔离诊断：${diagnostic.failureStage} / ${diagnostic.reason}】` : message, extra: {
+       '901_replay_gate': { status: narrationPending ? 'NARRATION_PENDING' : 'UNRESOLVED',
+         operationId,
+         pending: { original, operationId, request:
+-          (lastDecision?.request ?? pending?.request)?.actorId !== undefined
++          (failureStage === 'response_parse' && !pending?.request) || (lastDecision?.request ?? pending?.request)?.actorId !== undefined
+             ? null : lastDecision?.request ?? pending?.request ?? null,
+           ...(pending?.narrationDecision ? { narrationDecision: pending.narrationDecision } : {}),
+           ...(pending?.retryNoCheck ? { retryNoCheck: true } : {}) },
+--- story-dialogue-knowledge.mjs.before
++++ story-dialogue-knowledge.mjs
+@@ -446,6 +446,7 @@
+ export function createDialogueKnowledge({api,catalog,tavern,getAnchor,retainedSource,saveBatch,options}){
+  options={...options};
+  let busy=false;
++ let enabled=typeof options.extract==='function'||typeof options.dependencies==='function';
+  const batches=()=>api.read().dialogueBatches??{};
+  const active=b=>retainedSource(b.sourceAnchor);
+  const pending=()=>Object.values(batches()).filter(active).flatMap(b=>b.rows.filter(r=>r.status==='pending').map(r=>({...r,sourceAnchor:b.sourceAnchor,batchId:b.id})));
+@@ -524,11 +525,12 @@
+    .map(r=>({id:r.id,propositionRef:r.propositionRef,content:r.content,speakerId:r.speakerId,recipientIds:r.recipientIds,reason:r.reason,sourceAnchor:r.sourceAnchor}));
+  }
+  function configureDialogue(adapter){
+-  if(adapter===null){if(busy)throw Error('Dialogue extraction already in progress');delete options.extract;delete options.dependencies;return {status:'disabled'};}
++  if(adapter===null){if(busy)throw Error('Dialogue extraction already in progress');enabled=false;delete options.extract;delete options.dependencies;return {status:'disabled'};}
+   if(!adapter||Object.keys(adapter).some(k=>!['extract','readMemory','dependencies','ask'].includes(k)||typeof adapter[k]!=='function'))throw Error('Dialogue adapter accepts explicit callbacks only');
+-  if(busy)throw Error('Dialogue extraction already in progress');Object.assign(options,adapter);
++  if(busy)throw Error('Dialogue extraction already in progress');Object.assign(options,adapter);enabled=true;
+  }
+  async function resumeDialogue(){
++  if(!enabled)return {status:'disabled',pending:pending()};
+   if(busy)throw Error('Dialogue extraction already in progress');busy=true;
+   try{
+    for(const batch of Object.values(batches()).filter(b=>b.status==='prepared')){
+@@ -539,6 +541,9 @@
+   }finally{busy=false;}
+  }
+  async function prepareDialogueTurn(request,{ask=options.ask}={}){
++  // The host owns this optional feature's configuration. Disabling it keeps
++  // retained evidence, but neither resumes old work nor gates ordinary chat.
++  if(!enabled)return {status:'ready',questions:[]};
+   const candidates=pending();if(!candidates.length)return {status:'ready',questions:[]};
+   if(typeof options.dependencies!=='function')return {status:'unavailable',questions:[],reason:'dependency-adapter-missing'};
+   const anchor=structuredClone(getAnchor());
+--- replay-gate-script.test.mjs.before
++++ replay-gate-script.test.mjs
+@@ -222,6 +222,57 @@
+  assert.deepEqual(fixture.floors[0].stat_data['901_rules_poc'].operations,{});
+ });
+ 
++test('unclassified technical failure recovers after reload on the same turn or a new ordinary message',async()=>{
++ for(const kind of ['json','schema','timeout'])for(const nextMessage of [false,true]){
++  let failed=true;
++  const f=await hostFixture({profile:{debug:false,classificationTimeoutMs:5},classificationTransport:()=>{
++   if(!failed)return JSON.stringify({status:'NO_CHECK',basis:'ordinary_dialogue',reason:'普通对白'});
++   if(kind==='timeout')return new Promise(()=>{});
++   return kind==='json'?'{invalid model decision':JSON.stringify({status:'RECOVERY_REQUIRED',request:{kind:'recovery',type:'medicine',medicine:'药B'}});
++  }});
++  f.succeed();await f.run();
++  const failure=structuredClone(f.chat.at(-1)),before=structuredClone(f.floors[0]);
++  assert.equal(failure.extra['901_replay_gate'].status,'UNRESOLVED');assert.equal(f.stats.narrations,0);
++  if(nextMessage)f.chat.push({is_user:true,mes:'我仍在原地，问布莱特：“接下来呢？”',swipe_id:0});
++  failed=false;await f.load();await f.run();
++  assert.equal(f.chat.at(-1).extra['901_replay_gate'].status,'NO_CHECK',kind+'/'+nextMessage);
++  assert.equal(f.stats.narrations,1);assert.deepEqual(f.floors[0],before);
++  assert.ok(f.chat.some(m=>m.mes===failure.mes),'original failure notice is retained');
++  assert.match(f.stats.lastNarrationRequest.user_input,new RegExp(nextMessage?'接下来呢':'我们到了'));
++  f.chat.push({is_user:true,mes:'我点头，继续听他的回答。',swipe_id:0});await f.load();await f.run();
++  assert.equal(f.stats.narrations,2);assert.equal(f.chat.at(-1).extra['901_replay_gate'].status,'NO_CHECK');
++ }
++});
++
++test('saved prose extraction failure releases the controller for next chat and reload without settling twice',async()=>{
++ let extractions=0;
++ const f=await hostFixture({knowledgeCatalog:{id:'dialogue.failure.resume',actors:{bright:'布莱特'},facts:[]},profile:{onKnowledgeStatus:()=>{}},
++  knowledgeDialogue:{extract:async()=>{extractions++;throw Error('injected optional extraction failure');}}});
++ f.succeed();await f.run();const prose=f.chat[1].mes;
++ await f.run();assert.equal(f.stats.narrations,1);assert.equal(extractions,1);
++ f.chat.push({is_user:true,mes:'我问布莱特还有什么要补充。',swipe_id:0});await f.run();
++ assert.equal(f.stats.narrations,2);assert.equal(f.chat[1].mes,prose);
++ await f.load();f.chat.push({is_user:true,mes:'重开后我继续听他说话。',swipe_id:0});await f.run();
++ assert.equal(f.stats.narrations,3);assert.equal(extractions,3);assert.equal(f.chat[1].mes,prose);
++ const root=f.floors[f.chat.length-1].stat_data['901_rules_poc'];
++ assert.equal(root.revision,0);assert.deepEqual(root.operations,{});
++});
++
++test('a second classification failure belongs to the new message and remains recoverable',async()=>{
++ for(const kind of ['json','timeout']){
++ let failed=true;
++ const f=await hostFixture({profile:{debug:false,classificationTimeoutMs:5},classificationTransport:()=>failed?(kind==='json'?'{invalid':new Promise(()=>{})):JSON.stringify({status:'NO_CHECK',basis:'ordinary_dialogue',reason:'普通对白'})});
++ f.succeed();await f.run();
++ f.chat.push({is_user:true,mes:'我在原地问：“还有别的建议吗？”',swipe_id:0});await f.run();
++ const failure=f.chat.at(-1).extra['901_replay_gate'];
++ assert.equal(failure.pending.original.messageId,2);
++ assert.equal(failure.operationId,failure.diagnostic.operationId);
++ failed=false;await f.load();await f.run();
++ assert.equal(f.chat.at(-1).extra['901_replay_gate'].status,'NO_CHECK');assert.equal(f.stats.narrations,1);
++ assert.match(f.stats.lastNarrationRequest.user_input,/还有别的建议吗/);
++ }
++});
++
+ test('classification timeout retries the same input once with a new id and ignores the late first decision',async()=>{
+  let late;const requests=[];
+  const fixture=await hostFixture({profile:{classificationTimeoutMs:5,debug:false},classificationTransport:({request})=>{
+--- story-dialogue-compact.test.mjs.before
++++ story-dialogue-compact.test.mjs
+@@ -63,6 +63,23 @@
+  return {make,chat,state:()=>structuredClone(state),counts:()=>({writes,calls,asked})};
+ }
+ async function good(req){return JSON.stringify(wire(await prepare(JSON.parse(req.messages[1].content))).w);}
++
++test('disabled dialogue processing keeps failed and uncertain sources without blocking later chat or reopen',async()=>{
++ for(const complete of [async()=>'{invalid retained reply',good]){
++  const rt=runtime(complete),k=rt.make();await k.observeDialogue(options.sourceAnchor);
++  const before=rt.state(),pending=Object.values(k.read().dialogueBatches)[0];
++  assert.ok(pending.rows.some(r=>r.status==='pending'));
++  k.configureDialogue(null);
++  assert.equal((await k.prepareDialogueTurn({text:'无关闲聊'})).status,'ready');
++  assert.equal((await k.observeDialogue(options.sourceAnchor)).status,'disabled');
++  const reopened=rt.make();reopened.configureDialogue(null);await reopened.resumeDialogue();
++  assert.equal((await reopened.prepareDialogueTurn({text:'保存重开后继续闲聊'})).status,'ready');
++  assert.deepEqual(rt.state(),before,'disabling never clears pending rows, sources or failed output');
++  assert.equal(rt.counts().calls,1);assert.equal(rt.counts().asked,0);
++  reopened.configureDialogue({dependencies:async({pending})=>pending.map(p=>p.id)});
++  assert.notEqual((await reopened.prepareDialogueTurn({text:'重新启用依赖处理'})).status,'ready');
++ }
++});
+ test('invalid v7 raw reply persists unprocessed only; unrelated play, reload and observe never re-extract or ask',async()=>{
+  const raw='{"schemaVersion": illegal original';const rt=runtime(async()=>raw),k=rt.make(),result=await k.observeDialogue(options.sourceAnchor);
+  assert.equal(result.status,'unprocessed');assert.equal(result.pending.length,1);assert.equal(result.pending[0].kind,'unprocessed');assert.equal(Object.keys(k.read().knowledge).length,0);assert.equal(Object.keys(k.read().events).length,0);

@@ -1,0 +1,49 @@
+{
+  "version": "901-reply-recovery-20261116-rc1",
+  "status": "frozen-candidate",
+  "createdAt": "2026-11-16T22:21:03.454497+00:00",
+  "deployedThisTask": false,
+  "additionalModelCalls": 0,
+  "priorFormalInstallationRetained": true,
+  "priorInstallationReceipt": "work\\replay_research\\gm_style\\v1\\live_acceptance_20261030\\clinic-knowledge-20261112\\continuous-play-20261116\\framework-reply-recovery-20261116\\formal-installation-20261116\\installation.json",
+  "source": "Accepted minimal formal backport; not the entire experimental candidate runtime.",
+  "changes": [
+    {
+      "path": "work/rules_engine/gm_runtime/adjudication-gate.mjs",
+      "hunks": 2,
+      "beforeSha256": "d76b5ce8a9e7bd0f69a6fa121f07812074e71f4df2d54fa3a97a6d9370592d43",
+      "afterSha256": "2a27ceccda5467f245bdd309cf2980c23f1b8e3a533f5bd3fa352d1dd35a3acb",
+      "target": "public/901-opening-combat/work/rules_engine/gm_runtime/adjudication-gate.mjs",
+      "payload": "runtime_patch/public/901-opening-combat/work/rules_engine/gm_runtime/adjudication-gate.mjs",
+      "rollback": "rollback/public/901-opening-combat/work/rules_engine/gm_runtime/adjudication-gate.mjs"
+    },
+    {
+      "path": "work/rules_engine/gm_runtime/replay-gate-script.example.js",
+      "hunks": 2,
+      "beforeSha256": "632254575c388acc8e91b3a7da87740e2ae1ba1312915495aef618a79c3e9c50",
+      "afterSha256": "45aded93c99250cbe7f689ed79c16b40523607ee5524c430016e5dc7e0aa3f53",
+      "target": "public/901-opening-combat/work/rules_engine/gm_runtime/replay-gate-script.example.js",
+      "payload": "runtime_patch/public/901-opening-combat/work/rules_engine/gm_runtime/replay-gate-script.example.js",
+      "rollback": "rollback/public/901-opening-combat/work/rules_engine/gm_runtime/replay-gate-script.example.js"
+    }
+  ],
+  "payloadFileCount": 15,
+  "files": {
+    "backup-reference.json": "fef7eac8cf910e44485e986d2026f375499d5ae9a1fddc819bb26419677dae2a",
+    "compatibility.json": "ae4c1fe35073ee74587797ba0ed9bc4dc3101aa528eb0e06bd36508aca6ee22e",
+    "evidence/complete-result-confirmation.json": "ae420eceaf6c8e5409579d06fbb8581e5734f75defd5595870a99d543bb2f691",
+    "evidence/complete-result-controller-tests.log": "7d9797d7c191d72fcefe26b0834f6704b06c270c872dc1d3daea4ac3ff991b12",
+    "evidence/formal-controller-tests.log": "9ee61b3ffdb3b7fc0bb0bd98f79af7cb2927030315e51ad2417348e642d31b68",
+    "evidence/formal-gate-tests.log": "3d610d74b748c81c8595b56042c58d6899736c0f5459e990a061fbe508b41be8",
+    "evidence/historical-real-classification.json": "7b132f8a7e7660b48a5f77b698cbeeb5c8458fdebd06f35d2e54ff7a610542d8",
+    "evidence/historical-reopen-continuation.json": "eed22cae12c18da99e93c03dda3773df1fba53e2a88e0aff755992116af2cccc",
+    "patches/adjudication-gate.mjs.patch": "4c58f1528dd43c2d0f46c8261c7754259d5c0b3ec2a5ed3f1d6e1a52dee56c54",
+    "patches/replay-gate-script.example.js.patch": "dc0d49ca914cc4bd2faf4cf22c4a877f36cac826c6b31cec470b977796dd5f9a",
+    "README.md": "4ce6b4f5bbc40acc4036435bbaff903e0395c0e1a4231f45f741d145cfb6f330",
+    "rollback/public/901-opening-combat/work/rules_engine/gm_runtime/adjudication-gate.mjs": "d76b5ce8a9e7bd0f69a6fa121f07812074e71f4df2d54fa3a97a6d9370592d43",
+    "rollback/public/901-opening-combat/work/rules_engine/gm_runtime/replay-gate-script.example.js": "632254575c388acc8e91b3a7da87740e2ae1ba1312915495aef618a79c3e9c50",
+    "runtime_patch/public/901-opening-combat/work/rules_engine/gm_runtime/adjudication-gate.mjs": "2a27ceccda5467f245bdd309cf2980c23f1b8e3a533f5bd3fa352d1dd35a3acb",
+    "runtime_patch/public/901-opening-combat/work/rules_engine/gm_runtime/replay-gate-script.example.js": "45aded93c99250cbe7f689ed79c16b40523607ee5524c430016e5dc7e0aa3f53"
+  },
+  "followupPolicy": "Freeze this version. Make a new candidate only for a concrete issue observed in actual play; no unsolicited prompt or feature changes."
+}

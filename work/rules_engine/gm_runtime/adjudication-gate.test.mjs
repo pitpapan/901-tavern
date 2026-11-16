@@ -234,7 +234,12 @@ test('same declaration can recover a recorded classification timeout without can
   assert.equal((await runGuardedTurn(options)).status, 'NO_CHECK');
   assert.equal(narrations, 1);
   await assert.rejects(runGuardedTurn({ ...options, canCancelPending: async () => false }), /pending action.*NO_CHECK/i);
-  await assert.rejects(runGuardedTurn({ ...options, player: player('我走进城门', 3) }), /pending action.*NO_CHECK/i);
+  const nextPlayer=player('我问布莱特接下来怎么办',3);
+  assert.equal((await runGuardedTurn({...options,player:nextPlayer,
+    classify:async context=>{assert.deepEqual(context.original,nextPlayer);assert.equal(context.pending,false);return {status:'NO_CHECK',basis:'ordinary_dialogue',reason:'新的普通问话'};},
+    narrate:async context=>{assert.equal(context.operationId,'gm-runtime/isolation/3/0');return '布莱特回答。';}})).status,'NO_CHECK');
+  await assert.rejects(runGuardedTurn({...options,player:player('我攻击门卫',3)}),/mechanical risk/i);
+  await assert.rejects(runGuardedTurn({...options,player:nextPlayer,canCancelPending:async()=>false}),/pending action.*NO_CHECK/i);
   // Do not infer a classification retry from a redacted request or an older timeout.
   for (const replacement of [
     { ...diagnostic, failureStage: 'gate_validation', errorCode: undefined, reason: 'gate_rejected_decision' },

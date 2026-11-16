@@ -1,0 +1,45 @@
+{
+  "verifiedAt": "2026-11-16T22:00:55.075253+00:00",
+  "passed": true,
+  "additionalModelCalls": 0,
+  "currentCumulativeCalls": 546,
+  "ordinaryDialogue": {
+    "realClassification": 543,
+    "realProse": 544,
+    "status": "NO_CHECK",
+    "ruleRootUnchanged": true,
+    "savedProseUnmodified": true
+  },
+  "mechanicalAction": {
+    "realClassification": 545,
+    "realProse": 546,
+    "request": {
+      "kind": "recovery",
+      "type": "rest",
+      "rest": "short",
+      "minutes": 15
+    },
+    "status": "APPLIED",
+    "originalMvuExecutorCommittedBeforeProse": true,
+    "revisionBefore": 6,
+    "revisionAfter": 7,
+    "clockMinutes": 15,
+    "newOperations": 1,
+    "operationId": "gm-runtime/901 医馆自然叙事隔离 20261116 - Branch #4/32/0",
+    "rootBeforeProseAfterProseAndReopenEqual": true
+  },
+  "continueAfterReopen": {
+    "realNextProse": 542,
+    "previousProseInActualRequest": true,
+    "beforeReopenAfterReopenAndNextTurnRootsEqual": true,
+    "failedSourceAndPendingPreserved": true
+  },
+  "formalInstallation": {
+    "twoRecoveryModulesMatchAcceptedStage": true,
+    "remainingProtectedFilesUnchanged": 374,
+    "formalStoryOrSavesModifiedThisConfirmation": false
+  },
+  "priorEvidenceAndLedgersUnchanged": true,
+  "newProductOrPromptChanges": false,
+  "scope": "Fresh archival assertion replay and installed-file comparison; no new formal model dialogue. The short-rest example checks time/save/idempotency, with health and resources already full."
+}

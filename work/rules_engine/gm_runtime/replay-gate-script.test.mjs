@@ -132,6 +132,43 @@ test('dialogue classification timeout reports a processing failure without imply
  assert.deepEqual(fixture.floors[0].stat_data['901_rules_poc'].operations,{});
 });
 
+test('unclassified technical failure recovers after reload on the same turn or a new ordinary message',async()=>{
+ for(const kind of ['json','schema','timeout'])for(const nextMessage of [false,true]){
+  let failed=true;
+  const f=await hostFixture({profile:{debug:false,classificationTimeoutMs:5},classificationTransport:()=>{
+   if(!failed)return JSON.stringify({status:'NO_CHECK',basis:'ordinary_dialogue',reason:'普通对白'});
+   if(kind==='timeout')return new Promise(()=>{});
+   return kind==='json'?'{invalid model decision':JSON.stringify({status:'RECOVERY_REQUIRED',request:{kind:'recovery',type:'medicine',medicine:'药B'}});
+  }});
+  f.succeed();await f.run();
+  const failure=structuredClone(f.chat.at(-1)),before=structuredClone(f.floors[0]);
+  assert.equal(failure.extra['901_replay_gate'].status,'UNRESOLVED');assert.equal(f.stats.narrations,0);
+  if(nextMessage)f.chat.push({is_user:true,mes:'我仍在原地，问布莱特：“接下来呢？”',swipe_id:0});
+  failed=false;await f.load();await f.run();
+  assert.equal(f.chat.at(-1).extra['901_replay_gate'].status,'NO_CHECK',kind+'/'+nextMessage);
+  assert.equal(f.stats.narrations,1);assert.deepEqual(f.floors[0],before);
+  assert.ok(f.chat.some(m=>m.mes===failure.mes),'original failure notice is retained');
+  assert.match(f.stats.lastNarrationRequest.user_input,new RegExp(nextMessage?'接下来呢':'我们到了'));
+  f.chat.push({is_user:true,mes:'我点头，继续听他的回答。',swipe_id:0});await f.load();await f.run();
+  assert.equal(f.stats.narrations,2);assert.equal(f.chat.at(-1).extra['901_replay_gate'].status,'NO_CHECK');
+ }
+});
+
+test('a second classification failure belongs to the new message and remains recoverable',async()=>{
+ for(const kind of ['json','timeout']){
+ let failed=true;
+ const f=await hostFixture({profile:{debug:false,classificationTimeoutMs:5},classificationTransport:()=>failed?(kind==='json'?'{invalid':new Promise(()=>{})):JSON.stringify({status:'NO_CHECK',basis:'ordinary_dialogue',reason:'普通对白'})});
+ f.succeed();await f.run();
+ f.chat.push({is_user:true,mes:'我在原地问：“还有别的建议吗？”',swipe_id:0});await f.run();
+ const failure=f.chat.at(-1).extra['901_replay_gate'];
+ assert.equal(failure.pending.original.messageId,2);
+ assert.equal(failure.operationId,failure.diagnostic.operationId);
+ failed=false;await f.load();await f.run();
+ assert.equal(f.chat.at(-1).extra['901_replay_gate'].status,'NO_CHECK');assert.equal(f.stats.narrations,1);
+ assert.match(f.stats.lastNarrationRequest.user_input,/还有别的建议吗/);
+ }
+});
+
 test('classification timeout retries the same input once with a new id and ignores the late first decision',async()=>{
  let late;const requests=[];
  const fixture=await hostFixture({profile:{classificationTimeoutMs:5,debug:false},classificationTransport:({request})=>{

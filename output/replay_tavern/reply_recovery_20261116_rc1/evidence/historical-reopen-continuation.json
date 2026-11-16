@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "actualModelCalls": 2,
+  "requests": [
+    541,
+    542
+  ],
+  "used": 2,
+  "remaining": 4,
+  "cumulative": 542,
+  "ceiling": 546,
+  "model": "gemini-3.8-flash",
+  "httpStatus": [
+    200,
+    200
+  ],
+  "finishReason": [
+    "stop",
+    "stop"
+  ],
+  "rawResponsesAndSavedProseUnchanged": true,
+  "classificationAndOptionalExtractionFailuresWereLocalInjections": true,
+  "classificationModelCalls": 0,
+  "extractionModelCalls": 0,
+  "reviewCalls": 0,
+  "externalRetries": 0,
+  "localHarnessFailurePreservedAndCorrected": true,
+  "response541ReusedOnlyAfterByteIdenticalRequest": true,
+  "savedReopenAndNextTurnRootsEqual": true,
+  "revision": 5,
+  "failedPendingPreserved": 1,
+  "sourceMessageId": 27,
+  "sourceRemainsActive": true,
+  "actorsPriorOperationsAndKnowledgeReceiptsUnchanged": true,
+  "localEndpointCaptures": {
+    "classification": 3,
+    "narration": 3
+  },
+  "protectedPriorFilesUnchanged": 11,
+  "productModules": [
+    {
+      "file": "adjudication-gate.mjs",
+      "unchangedSinceLocalAcceptance": true
+    },
+    {
+      "file": "replay-gate-script.example.js",
+      "unchangedSinceLocalAcceptance": true
+    },
+    {
+      "file": "story-dialogue-knowledge.mjs",
+      "unchangedSinceLocalAcceptance": true
+    }
+  ],
+  "closed": true
+}

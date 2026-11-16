@@ -1,3 +1,7 @@
+2026-11-16 固定候选已封存：[901-reply-recovery-20261116-rc1](../../../output/replay_tavern/reply_recovery_20261116_rc1/README.md) 收录已验收的两个最小补丁与对应两个回退原文件；126文件兼容清单和既有实测/检查摘要随包保存。包与ZIP哈希核对通过，376份旧备份完整、376个正式文件在整理前后无变化，本轮部署0、模型0。前轮已授权的正式安装保持现状；当前候选不原地改写，后续只按实际游玩中的明确问题定位并形成新版本，不追加提示词或预防性功能，文风暂缓。
+
+2026-11-16 恢复修复已按用户授权安装到正式酒馆：先备份376文件并逐一核对，再仅将本轮分类超时/格式失败恢复补丁接入实际加载的 `901-opening-combat` 下 `adjudication-gate.mjs` 与 `replay-gate-script.example.js`。正式版本副本先复现2项恢复失败，补丁后41项gate与22项controller检查通过；HTTP回读哈希一致，内置浏览器打开原正式续玩存档及玩家状态栏正常。浏览器检查后其余374文件逐字节不变，剧情、存档、卡、六书、模型设置与文风保留。未安装通用对白抽取/实验知情接线，本轮模型0次，累计546保持。备份 `D:/github/sillyTavern/backups/901-reply-recovery-20261116`；[安装范围、证据与回退说明](../../replay_research/gm_style/v1/live_acceptance_20261030/clinic-knowledge-20261112/continuous-play-20261116/framework-reply-recovery-20261116/formal-installation-20261116/ASSESSMENT.md)。下方“未部署”为对应阶段历史状态。
+
 # 901 GM Runtime：正式开场接入与历史测试
 
 ## 2026-10-23 观澜法减费接入后的当前结果
