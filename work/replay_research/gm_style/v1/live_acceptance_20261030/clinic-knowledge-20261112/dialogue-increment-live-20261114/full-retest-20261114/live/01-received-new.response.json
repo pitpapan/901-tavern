@@ -1,0 +1,31 @@
+{
+  "kind": "dialogue-reception",
+  "startedAt": "2026-11-14T14:37:39.436Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-14T14:37:46.366Z",
+  "headersElapsedMs": 6930,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5a6c1609e0a3c61-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sat, 14 Nov 2026 14:37:46 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=uMHAtaulUQJD9%2FdnSUTUk2b8DxN%2FED6VpLp17ikQe8%2B4%2FaPtq8RY59Fmb%2BoKb%2FQqZAz2grlxadp6m21P%2FraK6T%2FOQqGkg20K5rgyW15hvUBK9yKzzaOaRPuFyJ6l%2BQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611141437397715384998268d9d6XwOI7u4g",
+    "x-zeabur-ip-country": "ES",
+    "x-zeabur-request-id": "1c9fe70c-72d8-4d5c-830f-81e9ec329cac"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"a98ae41e-748d-42be-aa93-1522c8b1fb9f\",\"object\":\"chat.completion\",\"created\":1794667066,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"contextRef\\\":\\\"1ba33df8174fb170bcbb000fd992c90eb869d09f5ab92f2ee5096fb22c77271c\\\",\\\"assertions\\\":{\\\"schemaVersion\\\":\\\"gm-assertion-output/1\\\",\\\"inputRef\\\":\\\"assertion.a358e69535b59c42267abb9eab2ffe327da906ae78ec215f679ae5ebae3751c4\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"status\\\":\\\"extracted\\\",\\\"claims\\\":[{\\\"id\\\":\\\"c1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"布莱特\\\",\\\"content\\\":\\\"东门封闭。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":3,\\\"quote\\\":\\\"布莱特\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":9,\\\"end\\\":14,\\\"quote\\\":\\\"东门封闭。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":15,\\\"quote\\\":\\\"布莱特对黄泉说：“东门封闭。”\\\"}},{\\\"id\\\":\\\"c2\\\",\\\"type\\\":\\\"state\\\",\\\"args\\\":{\\\"entity\\\":\\\"东门\\\",\\\"name\\\":\\\"status\\\",\\\"value\\\":\\\"封闭\\\"},\\\"argumentSpans\\\":{\\\"entity\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":9,\\\"end\\\":11,\\\"quote\\\":\\\"东门\\\"},\\\"name\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":11,\\\"end\\\":13,\\\"quote\\\":\\\"封闭\\\"},\\\"value\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":11,\\\"end\\\":13,\\\"quote\\\":\\\"封闭\\\"}},\\\"mode\\\":\\\"reported\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":\\\"布莱特\\\"},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":3,\\\"quote\\\":\\\"布莱特\\\"}},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":9,\\\"end\\\":13,\\\"quote\\\":\\\"东门封闭\\\"}},{\\\"id\\\":\\\"c3\\\",\\\"type\\\":\\\"action\\\",\\\"args\\\":{\\\"actor\\\":\\\"黄泉\\\",\\\"verb\\\":\\\"听清\\\",\\\"object\\\":null},\\\"argumentSpans\\\":{\\\"actor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":16,\\\"end\\\":18,\\\"quote\\\":\\\"黄泉\\\"},\\\"verb\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":18,\\\"end\\\":20,\\\"quote\\\":\\\"听清\\\"},\\\"object\\\":null},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":16,\\\"end\\\":21,\\\"quote\\\":\\\"黄泉听清了。\\\"}}],\\\"unresolved\\\":[]}]},\\\"receptions\\\":[{\\\"id\\\":\\\"rec1\\\",\\\"claimId\\\":\\\"c1\\\",\\\"speakerId\\\":\\\"bright\\\",\\\"recipientIds\\\":[\\\"huang\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":4,\\\"end\\\":6,\\\"quote\\\":\\\"黄泉\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":16,\\\"end\\\":21,\\\"quote\\\":\\\"黄泉听清了。\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"布莱特直接对黄泉说出，且文中明确陈述黄泉听清了。\\\"}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1702,\"completion_tokens\":732,\"total_tokens\":2434}}",
+  "responseBytes": 2910,
+  "responseBodySha256BeforePrivacyRedaction": "5f80932b491eaae1933dfcf4dd5912e1152a9df53bfda2985be4d516c292a313",
+  "outcome": "completed",
+  "finishedAt": "2026-11-14T14:37:46.412Z",
+  "elapsedMs": 6976
+}

@@ -188,6 +188,21 @@ test('declared cost mismatch and invented end are rejected before rolling or spe
   await f.session.handleTurn({player:f.player('我观察他')});
   assert.deepEqual(f.root(),before);assert.equal(f.rolls(),0);
 });
+test('recorded case 65 clarification without steps commits no action or rule change',async()=>{
+  const text='御临风用移动动作向后移动3米，然后继续沿同方向五尺快步1.5米；不攻击。';
+  // Original server log, first response 8f70629b-6f1c-46af-8660-402fcb5f3c86.
+  const reply='{"clarification":"五尺快步需要当前轮次未进行过任何其他形式的移动（包括普通移动），且一轮内无法同时执行普通移动与五尺快步。请问您希望如何调整本轮行动？"}';
+  const plan=await narrative.interpretDeclaration({text,context:{}},async()=>reply);
+  assert.equal(plan.steps,undefined);
+  const f=fixture();await start(f);
+  const before=structuredClone(f.root()),rolls=f.rolls(),narrations=f.facts.length;
+  f.setPlan(plan);const p=f.player(text);
+  await assert.rejects(f.session.handleTurn({player:p}),/行动声明未能识别/);
+  assert.deepEqual(f.root(),before);assert.equal(f.rolls(),rolls);assert.equal(f.facts.length,narrations);
+  await f.session.handleFailure({player:p});
+  assert.deepEqual(f.root(),before);assert.match(f.chat.at(-1).mes,/这次行动尚未执行/);
+});
+
 test('failed narration resumes saved action without rerolling, including a new session/refresh',async()=>{
   const f=fixture();await start(f);
   f.setPlan({steps:[{quote:'聚风龙卷',command:{abilityId:'tornado',targetId:'jiang'}}]});
@@ -223,6 +238,7 @@ test('explicit end advances to an actual player reaction; continuation preserves
   await f.session.handleTurn({player:f.player('我结束本回合')});
   assert.equal(f.root().battle.pending.awaiting,'player');
   assert.equal(f.facts.at(-1).events.at(-1).status,'pending');
+  assert.equal(f.facts.at(-1).events.at(-1).playerDamageTypes,undefined);
   assert.equal(f.root().actors.player.state.health.intact,21);
   f.refresh();
   f.setPlan({steps:[{quote:'按基础防御闪避，不用伤害转换',command:{abilityId:'react',choice:'decline',defense:'normal'}}]});
@@ -233,6 +249,10 @@ test('explicit end advances to an actual player reaction; continuation preserves
   assert.ok(f.root().actors.player.state.health.intact<21);
   const resolved=f.facts.at(-1).events.find(x=>x.affected.includes('御临风'));
   assert.equal(resolved.status,'resolved');assert.match(resolved.consequence,/确实受伤/);
+  assert.deepEqual(resolved.playerDamageTypes,['严重']);
+  const request=narrative.narrationRequest(f.facts.at(-1),'既有文风');
+  assert.deepEqual(JSON.parse(request.user_input).events.find(x=>x.affected.includes('御临风')).playerDamageTypes,['严重']);
+  assert.doesNotMatch(request.user_input,/actualDamage|inputSeverity|rolledSuccesses/);
   assert.match(f.chat.at(-1).mes,/御临风本次结算.*受到\d+点.*伤害（\d+[BLA]）/);
 });
 
@@ -250,6 +270,74 @@ test('own consequence receipt lists only actual player damage and effective cond
   assert.match(receipt,/当前负面状态：疲乏1点/);
   assert.doesNotMatch(receipt,/姜子尤|17|3点|生命/);
   assert.equal(ownImpactReport(root,{afterRevision:3}),'');
+});
+
+function grappleReceipt({before,after,damage=[]}) {
+ const b=createIntegrationFixture(baseline).encounters['yulin-jiang'](),player=b.actors.player;
+ if(after)player.state.grapple={holderId:'test.holder',margin:15,...after};else delete player.state.grapple;
+ const snapshot=grapple=>({participants:[{id:'player',statuses:[],health:player.state.health,...(grapple?{grapple}: {})}]});
+ return {actors:{player},operations:{
+  before:{summary:{revision:1,result:{damage:[],after:snapshot(before)}}},
+  current:{summary:{revision:2,result:{damage,after:snapshot(after)}}}
+ }};
+}
+
+test('player consequence receipt pairs actual injury with the current unpressed hold',()=>{
+ const root=grappleReceipt({after:{pressed:false},damage:[{targetId:'player',severity:'L',actualDamage:12}]});
+ const before=structuredClone(root),report=ownImpactReport(root,{afterRevision:1});
+ assert.match(report,/受到12点严重伤害（12L）/);
+ assert.match(report,/当前擒抱状态：擒抱中（未压制）/);
+ assert.doesNotMatch(report,/test.holder|margin|15|骰/);
+ assert.deepEqual(root,before);assert.equal(ownImpactReport(root,{afterRevision:2}),'');
+});
+
+test('suppression without new injury explicitly reports zero new damage and the current state',()=>{
+ const report=ownImpactReport(grappleReceipt({before:{pressed:false},after:{pressed:true}}),{afterRevision:1});
+ assert.match(report,/本次未受到伤害/);assert.match(report,/当前擒抱状态：已压制（仍在擒抱中）/);
+});
+
+test('removing suppression and escaping the hold have distinct consequence receipts',()=>{
+ const unpressed=ownImpactReport(grappleReceipt({before:{pressed:true},after:{pressed:false}}),{afterRevision:1});
+ assert.match(unpressed,/擒抱中（未压制）/);assert.doesNotMatch(unpressed,/已解除/);
+ const released=ownImpactReport(grappleReceipt({before:{pressed:false}}),{afterRevision:1});
+ assert.match(released,/当前擒抱状态：已解除/);assert.match(released,/本次未受到伤害/);
+});
+
+test('ordinary injury receipts explicitly say there is no new state',()=>{
+ for(const [severity,label] of [['B','冲击'],['L','严重']]){
+  const root=grappleReceipt({damage:[{targetId:'player',severity,actualDamage:9}]}),before=structuredClone(root);
+  const report=ownImpactReport(root,{afterRevision:1});
+  assert.match(report,new RegExp(`受到9点${label}伤害`));assert.match(report,/无新增状态/);
+  assert.deepEqual(root,before);assert.equal(ownImpactReport(root,{afterRevision:2}),'');
+ }
+});
+
+test('resolved harmless actions keep the player receipt with zero injury and no new state',()=>{
+ const root=grappleReceipt({}),before=structuredClone(root);
+ const report=ownImpactReport(root,{afterRevision:1});
+ assert.match(report,/御临风本次结算/);assert.match(report,/本次无伤害/);assert.match(report,/无新增状态/);
+ assert.deepEqual(root,before);assert.equal(ownImpactReport(root,{afterRevision:2}),'');
+});
+
+test('no new state does not hide an existing condition or replace an actual status change',()=>{
+ const root=grappleReceipt({});root.actors.player.state.statuses=[{type:'疲乏',points:1}];
+ for(const op of Object.values(root.operations))op.summary.result.after.participants[0].statuses=[{type:'疲乏',points:1}];
+ const unchanged=ownImpactReport(root,{afterRevision:1});
+ assert.match(unchanged,/无新增状态/);assert.match(unchanged,/当前负面状态：疲乏1点/);
+ root.operations.current.summary.result.after.participants[0].statuses.push({type:'麻痹',points:1});
+ const changed=ownImpactReport(root,{afterRevision:1});
+ assert.match(changed,/麻痹新增1点/);assert.doesNotMatch(changed,/无新增状态/);
+});
+
+test('pending attacks do not fabricate empty settled-player receipts',()=>{
+ const root=grappleReceipt({});root.operations.current.summary.result.after.awaiting='player';
+ assert.equal(ownImpactReport(root,{afterRevision:1}),'');
+ root.operations.pending=structuredClone(root.operations.current);root.operations.pending.summary.revision=3;
+ delete root.operations.current.summary.result.after.awaiting;
+ assert.equal(ownImpactReport(root,{afterRevision:1}),'','a later pending attack keeps zero-result wording unasserted');
+ delete root.operations.pending;
+ root.operations.before.summary.result.after.awaiting='player';
+ assert.match(ownImpactReport(root),/本次无伤害；无新增状态/,'a resolved reaction closes the earlier pending attack');
 });
 test('every incoming player attack waits for a declared defense even after conversion is exhausted',()=>{
   const b=createIntegrationFixture(baseline).encounters['yulin-jiang']();

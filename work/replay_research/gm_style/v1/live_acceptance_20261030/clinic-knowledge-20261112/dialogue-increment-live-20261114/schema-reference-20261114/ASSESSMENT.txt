@@ -1,0 +1,74 @@
+2026-11-14 五例格式失败诊断、最小接线与模型验收
+
+结论：已补生成端Schema投影与原回调传递，并修复一次有明确400证据的单目标Schema兼容问题；原五例尚未整体通过。不能把格式改善写成知情增量验收成功。
+
+原始五例（294/295/298/299/300）均完整保留：
+01/02的scope语义字段为span对象；05/06的原始JSON缺status键双引号；07非法manner类型。
+这些是原回复违反已发送合同，不是本地转存、引用处理或回执保存丢项。
+原入口只有文字合同，没有把可消费的生成Schema送入complete回调。此前新Host已有response_format请求惯例，但其grounded格式会改变本次输出结构，因此不迁换格式、不调用转换器。
+
+保留的最小实现（仅两份产品源）：
+1. gm/assertion-contract.js增加buildAssertionSchema，直接复用assertionSlots、modes、scopeKeys生成既有分离值/span格式的Schema。无新关键词表，无新执行器。
+2. story-dialogue-knowledge.mjs在原prepare处包裹contextRef/assertions/receptions，经原options.extract第三参数传给现有complete回调的responseFormat；验收请求将其映射为response_format。
+3. 原提示正文、业务输入、确定性坐标参照和生成参数均未改。原checkAssertionReply、接收检查、JSON.parse和MVU结算不放宽，不取quote代填、不转换action为utterance、不补坐标或接收回执。
+4. Schema约束类型、对象形状、枚举、目标数量和unit.status配对。跨字段值/span一致、原文切片、claim引用、实际听到与否、完整性仍由原检查及人工核对承担；Schema不批准正文。
+5. 没有恢复自动抽取、批准或修订路线。只是原已显式配置的回调可携带该元数据，未部署到正式游玩。
+
+本轮请求与额度：
+开始累计303、剩余20；本轮304—315共12次，累计315、剩余8。原30次授权总计使用22次。
+其中304为HTTP400、308为独立格式探针、其余10份为剧情复测。没有自动重试；失败后先诊断，再执行明确修改的请求或下一份已冻结不同输入。
+全部请求体与原始响应保存于三个目录：schema-format-20261114、schema-single-target-20261114、schema-reference-20261114。
+最后两组五例分别在各组首个请求前冻结；第二组相对第一组只在Schema的claimId字段增加description。
+固定请求模型为[抗截断]gemini-3.8-flash，temperature1、max_tokens4096等参数保持。
+响应模型却出现gemini-3.8-flash-control及gemini-3.8-flash-n，因此观察到的差异不能单独归因于Schema。
+
+阶段一：304上游格式兼容失败
+HTTP400指出不认识minContains/maxContains；没有模型正文，也没有证据指向请求字节数过长。
+单目标的固定ID加数组长度1本来已保证恰好一次，故仅移除单目标冗余contains计数。多目标仍保留各ID计数，原校验不变。
+新增断言先失败后通过；修改后HTTP200。保留304完整失败，不重发完全相同的请求。
+
+阶段二：基础Schema五例（305/306/307/309/310）
+五份均为合法JSON且符合发送的Schema，但没有完整语义通过样本。
+01/305：原scope对象错误消失；一个听见动作引用的quote与坐标不一致，且没有接收回执，原校验拒绝，revision0。
+02/306：引用和基本结构有效，但received指向action而非utterance，原接收检查拒绝；只保留黄泉原传闻，revision1。
+05/307：缺引号问题消失、断言引用有效，但received仍指向action，拒绝且revision0。
+06/309：原合同通过，仅布莱特取得“改从西桥绕行”的uncertain来源说法；第一半句不授予，无待核。但额外把介词“对”拆成独立action，完整抽取语义仅partial。没有为此添加词例或删除原claim。
+07/310：不再使用非法manner，原不确定接收仍在；但指向action，原检查拒绝，未形成真实待核。
+
+308独立格式探针（不是剧情通过样本）
+前三份集中选用了Schema的首个action分支，因此暂停剧情请求，发送一份要求原样复制合法utterance对象的格式探针。
+同样的生成类型分支与$defs可以准确返回非首个utterance分支。该探针反驳了“上游必定强制首分支”的假设；不证明它对所有复杂请求完整执行Schema，更不证明抽取语义正确。
+06/309也实际返回多个utterance与state，进一步不能把所有action误选归因于强制首分支。
+
+阶段三：Schema引用字段旁说明试验（311—315；产品说明已撤回）
+只在claimId的Schema字段旁重申原有规则：指向utterance，不能指向action/state，内容范围一致；无措辞关键词，无新校验。
+01/311：已指向utterance，但scope.time/attribution再次为span对象，违反实际请求的Schema；所有已给span切片准确，原合同仍拒绝，revision0。
+02/312：仍指向action，原接收检查拒绝，revision1。
+05/313：结构与引用均通过，却遗漏明确的前半句接收回执；零新知情，revision2只是处理批次。本例失败，不把遗漏算安全通过。
+06/314：结构通过，但只剩言说action，听清范围和接收回执均遗漏；零新知情，revision2，本例失败。
+07/315：结构通过，但听见歧义被整个遗漏；没有待核，后续无法据其询问，revision2，本例失败。
+本说明没有证明改善，已撤回该description；原试验请求、响应、日志仍全部保留，最终源码逐字匹配阶段二基础Schema候选。
+
+可证明与不能证明：
+10份剧情回复全部能直接JSON.parse，9份符合各自发送Schema；旧05/06的引号错误本轮未重现，非法manner未重现。
+但311实证违反strict请求中的字段类型，所以HTTP200/strict:true不是上游可靠强制保证。
+4份通过原本地结构检查，其中只有309达到该例知情目标且有额外误抽；313—315是结构合法的语义遗漏，必须判失败。
+基础Schema候选有局部格式改善证据，没有五例完整通过或稳定性证据；更不能证明长篇、多角色、实际正式酒馆效果。
+当前主要剩余问题：action与utterance选择/引用错误、明确接收和歧义漏抽、坐标错误，以及上游不稳定的Schema遵从。
+不通过逐词补丁、自动填回执、删错claim、放宽检查来制造成功；剩余8次未继续耗用。
+
+离线验证：
+新增8项回归，完成先失败后修复的Schema生成/传递与单目标兼容检查。
+最终引擎相关85/85，战役相关114/114，共199/199通过，日志为final-engine-tests.log与final-campaign-tests.log。
+正例覆盖既有类型及合法旧回复、目标顺序；反例覆盖scope对象、非法类型、错字段、重复目标、状态矛盾、缺span、错quote、action回执关联及原始缺引号。
+Schema允许但原精确校验拒绝的情况被明确保留，测试没有假定Schema能证明语义。
+verification.json逐份核验原始响应SHA、发送请求与原请求仅response_format不同、Schema结果、原合同结果及引用。
+565份此前证据、22份正式文件哈希保持；两份产品源为上述本地候选，其他5份基线产品源未变。
+
+记账说明：
+308探针完成后，转账脚本曾因Windows默认GBK读取UTF-8账本失败，导致06请求暂记重复序号308。
+核对两次不同请求/响应后，将06的本地序号纠正为309，额度相应扣除；原账本快照ledger-before-probe-reconciliation.json与原reserved序号保留。
+这是离线调用记账修正，不是修改模型响应；未超授权，未漏计探针或400请求。
+
+完整回复汇总：complete-outputs.txt（10份剧情正文、400原始错误、独立探针正文均保留）。
+未部署、未写正式剧情、未恢复自动批准或修订路线。

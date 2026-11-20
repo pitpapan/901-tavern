@@ -1,0 +1,76 @@
+{
+  "baselineStatus": "APPROVED_REPLAY_BASELINE",
+  "baselineMeaning": "完整更新卡作为来源快照保留；重玩 T0 开档沿用其六属性与技能等级，装备、能量和派生值按作者后续开局决定投影。不主张原团历史 T0 已有这些数值、装备或经历。",
+  "cardSource": "D:/备份文件/901记录/TRPG outputs/设定 人物/人物卡资料集_检索版.md#御临风，source message 843579，持续更新卡，第229—524行",
+  "definition": {
+    "id": "PC_YULINFENG_REPLAY_T0",
+    "name": "御临风",
+    "period": "replay/T0/帝都初至；strength snapshot: source message 843579",
+    "sources": ["人物卡资料集_检索版.md#御临风:229-524", "作者决定：现有卡面强度作为重玩 T0 初始强度"],
+    "size": 5,
+    "attributes": { "力量": 6, "敏捷": 7, "智力": 6, "感知": 5, "意志": 5, "风度": 4 },
+    "skills": {
+      "运动": { "level": 1 }, "肉搏": { "level": 0 },
+      "白刃": { "level": 5, "subs": { "长剑": { "level": 4, "scope": "长剑", "scopeId": "weapon.long-sword" } } },
+      "射击": { "level": 0 }, "隐藏": { "level": 1 },
+      "学识": { "level": 4, "subs": { "死灵学": { "level": 2, "scope": "死灵学", "scopeId": "knowledge.necromancy" } } },
+      "科学": { "level": 0 },
+      "神秘": { "level": 4, "subs": { "死灵学": { "level": 2, "scope": "死灵学", "scopeId": "occult.necromancy" } } },
+      "洞察": { "level": 1 }, "社交": { "level": 2 }, "电脑": { "level": 2 },
+      "驾驶": { "level": 0 }, "求生": { "level": 1 }, "医疗": { "level": 2 }
+    },
+    "overrides": { "derived": {
+      "hpMax": { "mode": "final", "value": 15, "source": "card:306，已含特兰尔希及传奇力量" },
+      "speed": { "mode": "final", "value": 28, "source": "card:303，已含身法、羽毛标本和盔甲惩罚" },
+      "initiative": { "mode": "final", "value": 11, "source": "card:304" },
+      "defense": { "mode": "final", "value": 5, "source": "card:305，照录明确写出的 5；括号分解与之冲突，待裁定" },
+      "willMax": { "mode": "final", "value": 9, "source": "card:307-308；仅上限，非重玩当前余额" }
+    } },
+    "equipment": [
+      { "id": "card.wind-sorrow", "name": "风之忧郁", "source": "card:339-341", "status": "CARD_LISTED_EQUIPPED_UNKNOWN", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "card.round-table-medium-armor", "name": "圆桌骑士中甲", "source": "card:343-346", "status": "CARD_LISTED_EQUIPPED_UNKNOWN", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "card.jergal-cloak", "name": "耶各代行者披风", "source": "card:348-350", "status": "CARD_LISTED_EQUIPPED_UNKNOWN", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "card.jergal-gloves", "name": "耶各代行者手套", "source": "card:352-354", "status": "CARD_LISTED_EQUIPPED_UNKNOWN", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "card.qifeng-repaired", "name": "弃风（卡面修复版）", "source": "card:356-360", "status": "CARD_LISTED_CURRENT_EQUIPPED_UNKNOWN", "engineSupportStatus": "UNSUPPORTED", "description": "6L；破魔2、破甲2、攻击速度加值+3DP；剑内风池上限10，8小时恢复。普通攻击尚未适配全部条件。" },
+      { "id": "card.phase-ring", "name": "相偏折戒指", "source": "card:362-370", "status": "CARD_LISTED_EQUIPPED_UNKNOWN", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "card.feather-specimen", "name": "羽毛标本", "source": "card:303", "status": "CARD_SPEED_FORMULA_REFERENCED_DETAILS_UNKNOWN", "engineSupportStatus": "UNSUPPORTED" }
+    ],
+    "abilities": [
+      { "id": "card.feats", "name": "方向感、广博知识、钢铁意志、守护战士", "source": "card:309-323", "summary": "方向感1、广博知识2；钢铁意志与守护战士列有效果但准确取得等级有歧义。", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "card.detective", "name": "C级侦探称号与广博知识（侦探）", "source": "card:333-337", "summary": "感知+1已计入卡面5；调查+2DP及+1自动成功有条件，未泛化。", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "card.movement", "name": "腾转挪移", "source": "card:373-381", "summary": "被动速度+10已计入卡面28；主动模式及能量消费未适配。", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "card.sword-arts", "name": "辟邪剑法、启剑式·风·狂岚、正十七", "source": "card:383-403", "summary": "白刃与长剑卡面等级照录；累积攻击、范围攻击与格挡效果未适配。", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "card.energy", "name": "魔法力体质、高级能量强化、风迹、流风、次级能量强化", "source": "card:406-435", "summary": "卡面有魔力106/106、弃风风池上限10；用户2026-10-21补定完整卡流风上限22、自由动作启动。重玩开场具体版本与余额另由开场卡确定。", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "card.jergal", "name": "耶各代行者", "source": "card:437-469", "summary": "死灵知识、驱散、操控及豁免等原卡能力；尚无完整 JS 结算。", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "card.perfect-warrior", "name": "完美战士", "source": "card:471-479", "summary": "完整更新卡中的后期法术，用户2026-10-21确认开局不具备；迅捷动作、3魔力、依施法成功数持续，每次施法时选择借用能力；尚无完整 JS 结算。", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "card.great-powers", "name": "传奇躲避、超级头脑、伤害转换", "source": "card:519-524", "summary": "原卡已列明；当前不自动计算。", "engineSupportStatus": "UNSUPPORTED" },
+      { "id": "card.consumables", "name": "药剂、提示符及杂物", "source": "card:481-518", "summary": "原卡数量与描述保留于来源；重玩当前数量及使用效果待确认。", "engineSupportStatus": "UNSUPPORTED" }
+    ]
+  },
+  "openingState": {
+    "status": "PARTIALLY_CONFIRMED",
+    "confirmed": ["健康开档", "意志点按已确认上限回满", "XP 0", "开场动作未使用", "穿帝国制式盔甲：基础与风之忧郁相同，无风之忧郁特殊效果", "有风迹；没有魔力和修复后弃风剑池", "保留完整卡面的六属性与技能等级，按开局资源重新计算派生值", "开局只保留早期已确认物品，不带入后期卡列装备"],
+    "confirmedInitial": { "health": "healthy", "willCurrent": 9, "turn": "ready", "xp": 0 },
+    "equippedArmor": { "id": "opening.imperial-standard-armor", "name": "帝国制式盔甲", "baseReference": "风之忧郁的普通制式甲基础", "specialEffects": [], "numericProtectionStatus": "UNRESOLVED" },
+    "resourceBoundary": { "present": ["风迹"], "absent": ["魔力", "修复后弃风剑池", "完美战士"] },
+    "openingEquipmentBoundary": { "present": ["普通帝国制式盔甲（穿戴）", "弃风（修复前；是否持剑未定）"], "excludedLaterCardEquipment": ["风之忧郁", "圆桌骑士中甲", "耶各代行者披风", "耶各代行者手套", "弃风（修复后）", "相偏折戒指", "羽毛标本"] },
+    "derivedPolicy": "按开局投影重新计算规则基础值；甲、剑、风迹未适配的数值不得暗中计入或将基础值称为最终值",
+    "missing": ["帝国制式盔甲的基础防护和惩罚数值", "修复前弃风的攻击参数、特殊效果与是否持剑", "风迹的能量上限、当前余额和消费机制", "早期消耗品及其他早期已确认物品的开局数量"],
+    "isolatedTestInitial": { "health": "healthy", "willCurrent": 9, "turn": "ready", "xp": 0 },
+    "isolatedTestInitialStatus": "ISOLATED_TEST；健康、意志9、XP0现与作者确认的开档基础值相同，但此测试实例不包含待定的装备、能量与消耗品状态，不写入正式存档。"
+  },
+  "unmappedCardFields": {
+    "制造主技能": "card:299 空白；炼药子技能2见 card:300，不能假设主技能0",
+    "立场防御": "card:305 写1；非 core 通用防御覆盖值",
+    "魔力卡面": "card:410-419 写106/106；与文字公式及强化叠算存在差异，不改写上限",
+    "卡面消耗品": { "source": "card:481-518", "status": "CARD_LISTED_OPENING_QUANTITY_UNKNOWN", "items": [
+      { "name": "冰凝丹", "cardQuantity": 1 }, { "name": "抗毒剂", "cardQuantity": 1 },
+      { "name": "雪莲子", "cardQuantity": 1 }, { "name": "培元丹", "cardQuantity": 3 },
+      { "name": "雷霆药剂", "cardQuantity": null }, { "name": "恶灵提示符", "cardQuantity": 100 },
+      { "name": "A", "cardQuantity": 2 }, { "name": "B", "cardQuantity": 5 },
+      { "name": "C", "cardQuantity": 5 }, { "name": "笔", "cardQuantity": null },
+      { "name": "干粮与水", "cardQuantity": null }, { "name": "线索笔记", "cardQuantity": 1 },
+      { "name": "技艺笔记", "cardQuantity": 1 }
+    ] }
+  }
+}

@@ -1,0 +1,41 @@
+✔ compact registry preserves original input, partial range and uncertainty through old strict receipt checker (651.5658ms)
+✔ compact scoped values come from explicitly selected source, not string coercion or omitted defaults (6.8017ms)
+✔ compact invalid selections, bindings, omitted fields and cross-reception ranges are rejected without repair (21.6202ms)
+✔ compact reply identity requires a known history row and a selection inside current answer (12.617ms)
+✔ compact explicit none, obstacle, unknown identity and unresolved preserve separate meanings (6.135ms)
+✔ invalid v7 raw reply persists unprocessed only; unrelated play, reload and observe never re-extract or ask (14.7338ms)
+✔ actual dependency triggers one bounded new extraction using frozen failed input; real partial/pending then uses old ask (34.7816ms)
+✔ second format failure remains technical unprocessed, never fake none or semantic confirmation and never loops (18.0099ms)
+✔ valid recovery with explicit no reception clears only the failed increment (19.0088ms)
+✔ source/branch changes and state persistence failures are not masked as extraction failures (6.9605ms)
+✔ existing knowledge survives a later failed increment (10.6749ms)
+✔ historical malformed replies remain rejected by explicit v7, never repaired or interpreted as a new wire (7.4448ms)
+✔ primitive, duplicate-key and invalid-selection failures retain exact raw replies, without any receipt adoption (22.6769ms)
+✔ recovery rechecks actual pending dependencies instead of asking about unrelated unresolved remainder (24.0852ms)
+✔ frozen reply identity cannot be recovered after its original history was edited (12.1327ms)
+✔ five preserved v7 failures reproduce under the exact sent contract, without local field loss or reply repair (34.5016ms)
+✔ a cross-boundary selection must explicitly choose its containing fragment; resolver never substitutes it (3.4883ms)
+✔ explicit listener requires an actual null history value, not an absent field (2.8243ms)
+✖ implicit reply identity and obstacle evidence keep separate ranges (4.4964ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 18
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1415.7298
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-compact.test.mjs:138:1
+✖ implicit reply identity and obstacle evidence keep separate ranges (4.4964ms)
+  Error: Inconsistent reception coverage
+      at Object.check (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs:220:156)
+      at Object.check (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs:262:17)
+      at Object.check (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs:308:26)
+      at Object.check (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs:390:18)
+      at Object.check (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs:440:19)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:140:17)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

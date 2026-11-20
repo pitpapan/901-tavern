@@ -1,0 +1,106 @@
+✖ v5 binds one listener, reception relation and partial content; reuses exact input and fragment catalogue (2.6576ms)
+✖ reply uses retained history identity and current answer citations, without requiring acknowledgement (0.4914ms)
+✖ rejects contradictory, stale, missing or misplaced relation fields without repairing raw objects (0.441ms)
+✖ unknown identity remains pending, explicit obstacle remains not received, none creates no receipts (0.4203ms)
+✖ relation labels do not certify semantic grounding or trigger a keyword filter (0.7205ms)
+✖ default adapter retains relation provenance through MVU/reopen and asks only on actual dependency (56.4175ms)
+✖ original failures remain byte-identical and cannot silently enter the new contract (5.1475ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 0
+ℹ fail 7
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 845.7514
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-related.test.mjs:20:1
+✖ v5 binds one listener, reception relation and partial content; reuses exact input and fragment catalogue (2.6576ms)
+  TypeError [Error]: dialogue.prepareRelatedDialogueExtraction is not a function
+      at prepare (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-related.test.mjs:11:37)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-related.test.mjs:21:16)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-related.test.mjs:28:1
+✖ reply uses retained history identity and current answer citations, without requiring acknowledgement (0.4914ms)
+  TypeError [Error]: dialogue.prepareRelatedDialogueExtraction is not a function
+      at prepare (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-related.test.mjs:11:37)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-related.test.mjs:29:16)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-related.test.mjs:33:1
+✖ rejects contradictory, stale, missing or misplaced relation fields without repairing raw objects (0.441ms)
+  TypeError [Error]: dialogue.prepareRelatedDialogueExtraction is not a function
+      at prepare (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-related.test.mjs:11:37)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-related.test.mjs:34:16)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-related.test.mjs:45:1
+✖ unknown identity remains pending, explicit obstacle remains not received, none creates no receipts (0.4203ms)
+  TypeError [Error]: dialogue.prepareRelatedDialogueExtraction is not a function
+      at prepare (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-related.test.mjs:11:37)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-related.test.mjs:46:16)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-related.test.mjs:51:1
+✖ relation labels do not certify semantic grounding or trigger a keyword filter (0.7205ms)
+  TypeError [Error]: dialogue.prepareRelatedDialogueExtraction is not a function
+      at prepare (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-related.test.mjs:11:37)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-related.test.mjs:52:16)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-related.test.mjs:55:1
+✖ default adapter retains relation provenance through MVU/reopen and asks only on actual dependency (56.4175ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'dialogue_reception_v4'
+  - 'dialogue_reception_v5'
+                         ^
+  
+      at complete (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-related.test.mjs:59:93)
+      at Object.assign.outputContract.outputContract [as extract] (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs:44:22)
+      at Object.observeDialogue (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs:254:45)
+      at async TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-related.test.mjs:63:16)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'dialogue_reception_v4',
+    expected: 'dialogue_reception_v5',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-related.test.mjs:68:1
+✖ original failures remain byte-identical and cannot silently enter the new contract (5.1475ms)
+  TypeError [Error]: dialogue.prepareRelatedDialogueExtraction is not a function
+      at prepare (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-related.test.mjs:11:37)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-related.test.mjs:71:146)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

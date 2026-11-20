@@ -1,0 +1,43 @@
+{
+  "status": "first-actual-request-frozen-not-sent",
+  "branchChatId": "901 医馆自然叙事隔离 20261116 - Branch #1",
+  "sourceActualOutput": 534,
+  "currentAllowance": 0,
+  "cumulativeBaseline": 534,
+  "firstRequest": {
+    "file": "round-01.request.json",
+    "capturedFile": "captures/continuation-branch.02.narration.request.json",
+    "bytes": 110154,
+    "sha256": "3b63354fa279eb77012516fadb389e6a1e236909c84716bafa1532c8e9f6a315",
+    "messages": 19,
+    "playerInput": "御临风低声问布莱特：“雪老和这位馆主是什么关系，你清楚吗？”",
+    "sent": false
+  },
+  "destination": "https://cdn.sta1n.cn/v1/chat/completions",
+  "parameters": {
+    "model": "[抗截断]gemini-3.8-flash",
+    "temperature": 1,
+    "max_tokens": 4096,
+    "stream": false,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "top_p": 1
+  },
+  "dataScope": "Existing private isolated campaign/character/world context, adopted style, retained history including actual 534, existing memory, manually registered bright-only knowledge; later requests will include actual outputs of this same continuous branch. No secrets in request bodies.",
+  "futureRounds": {
+    "count": 4,
+    "first": "Ask Bright about the relationship without stating its answer.",
+    "later": "Choose next player input from preceding actual retained model output. Direction examples only: asking directions/arrival, letter delivery or ordinary exchange. No fixed script or ideal responses prefilled.",
+    "exactControlledReception": "Only if actual retained dialogue clearly conveys this one controlled proposition, manually mark a test reception via existing receive with exact original source; do not claim automatic recognition.",
+    "ordinaryDialogue": "Use retained history and existing memory; do not classify each sentence or add semantic extraction/review calls.",
+    "playerControl": "Explicitly authorized ordinary actions may advance; NPC suggestions do not imply new player choices/commitments.",
+    "evaluation": "Read complete continuous text, check actual use of known information, attribution, companion voice/conditions and player choice; do not patch minor phrasing."
+  },
+  "budgetProposal": "budget-proposal.json",
+  "modelCallsInPreparation": 0,
+  "classification": "existing local NO_CHECK fixture; not classifier acceptance",
+  "extraction": "disabled persistently",
+  "autoSend": false,
+  "approvalOwner": "Control thread obtains explicit new allowance and complete branch-story payload/destination approval from user; do not ask again in this preparation chat.",
+  "memoryScope": "Actual 534 export and branch both have ten header-only database tables (0 data rows), byte-equivalent table contents. History and chat note remain; this does not validate non-empty database memory continuity."
+}

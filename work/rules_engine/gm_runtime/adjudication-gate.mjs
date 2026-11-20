@@ -149,20 +149,22 @@ export function replayLorebookNames({book,books=[]}) {
   return [...new Set([book,...books])];
 }
 
-export async function withReplayLorebook({ book, books, eventOn, event, generate }) {
+export async function withReplayLorebook({ book, books, eventOn, eventRemoveListener, event, generate,projectEntries }) {
   const allowed=new Set(replayLorebookNames({book,books}));
   if (typeof eventOn !== 'function' || !event)
     throw new Error('901 character worldbook isolation unavailable');
-  const listener = eventOn(event, lores => {
+  const filter = lores => {
     for (const name of ['globalLore', 'characterLore', 'chatLore', 'personaLore']) {
       const entries = lores[name];
       // The host retains these array references after emitting the event.
       for (let i = entries.length - 1; i >= 0; i--)
         if (!allowed.has(entries[i].world)) entries.splice(i, 1);
+      if(projectEntries)entries.splice(0,entries.length,...projectEntries(entries));
     }
-  });
+  };
+  const listener = eventOn(event, filter);
   try { return await generate(); }
-  finally { listener.stop(); }
+  finally { try { listener?.stop?.(); } finally { eventRemoveListener?.(event,filter); } }
 }
 
 export function replayPendingFromChat(chat, player) {

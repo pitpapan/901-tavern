@@ -1,0 +1,14 @@
+2026-11-14 首例明确接收：UTF-16规则与确定性坐标参照一次真实复测
+
+用户新增1次，custom277 HTTP200/stop，6741ms完整返回。1/1已用，余额0、账本关闭，无重试。原失败及旧批次未用9次保持关闭，不使用旧额度。
+
+实际请求request.json为7532字节，SHA256 91eb11408e7f98f2f4620012ca33041916d9089c361fb1639032723fcd38937b。以276的6186字节请求为基准，仅在system增加UTF-16坐标规则（正文748字节）及第三条user坐标数据（正文502字节）；总JSON增量1346字节。移除这两项后原消息逐项一致，原user内容/角色/事实/记忆/inputRef/contextRef及生成参数不变；与上一离线request-preview.json完全一致。参照各单元已与原文逐项核对，不含语义答案。
+
+模型标签[抗截断]gemini-3.8-flash，temperature1/top_p1/max_tokens4096/stream=false/presence_penalty0/frequency_penalty0，超时180000ms。上游自报gemini-3.8-flash-n，与前轮相同。raw-response.txt完整保存原始响应，content.txt仅原样取出message.content，response.json含HTTP元数据。原始响应SHA256 404c601b945ebd2764715e0f0fb85ce443b1db2d220dbaa35cb9a0fea071fd18，与传输时正文哈希一致。
+
+通过项：13处模型输出引用均与原文切片完全匹配。黄泉[15,17)、听清[17,19)、听清句及接收依据[15,21)正确；name=状态和value=封闭共用正确引用，reported归属布莱特。原合同与普通入口均通过，没有补坐标或放宽校验。
+明确接收：r1指向c1完整消息，bright向huang传递，received、propositionRef=null符合输入。原样回放原隔离seed后processed/pending=[]/revision3，仅黄泉新增private/uncertain来源消息，保留speakerId=bright，未确认世界事实，其他两人无新知情。正面reason不再误阻断。正式剧情及存档未写。
+
+保留限制：“听清”独立action的object与span仍为null，receptions通过claimId及evidence保留接收内容关联；明确接收指标通过，但不能宣称完整跨句动作抽取无遗漏，也不推断模型有意规避。人工总体partial，单次坐标成功不证明稳定性或因果改善。未追加测试、未修补模型回复。
+
+verification.json核对22正式文件、7产品源和此前证据不变。无部署、正式剧情写入、自动批准/修订路线恢复。本轮无产品修改，不重跑上一阶段156项离线产品回归；本轮为1次实际调用及原样离线回放。累计277，余额0。

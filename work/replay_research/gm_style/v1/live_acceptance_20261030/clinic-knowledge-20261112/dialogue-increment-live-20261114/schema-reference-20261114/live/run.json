@@ -1,0 +1,138 @@
+{
+  "authorization": "继续诊断五例失败并改善输出格式遵从；沿用前轮30次授权剩余13次（304—310含一次格式探针均已计入），不重置额度。先原五例各一次，后续根据真实结果诊断，不自动修补/放宽校验/部署/正式剧情/自动批准修订。",
+  "originalAuthorization": 30,
+  "alreadyUsed": 17,
+  "baseline": 310,
+  "limit": 13,
+  "cumulative": 315,
+  "remaining": 8,
+  "attempts": [
+    {
+      "id": "01-received-new",
+      "customRequest": 311,
+      "state": "completed",
+      "requestBytes": 27216,
+      "requestSha256": "ec314bf96552c432cdfc2f177db3220b4d0ab06fae724a99368b36c4b3671e31",
+      "status": 200,
+      "elapsedMs": 3538,
+      "rawResponseSha256": "6dabca436817260e5227db3e885a398b4a4b51fdb4d56df85009fa02dc6bf263",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-control",
+      "usage": {
+        "prompt_tokens": 3578,
+        "completion_tokens": 835,
+        "total_tokens": 4413
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Reference now correctly targets utterance, but scope.time and scope.attribution are span objects again, violating both supplied schema and original checker. All emitted spans match exact source slices. HTTP200/strict request does not prove provider enforcement. Revision0, no repair.",
+      "diagnosedContinuation": {
+        "reason": "Schema compliance failure preserved; continue distinct frozen02 once to assess the same reference-description revision, no repeat01.",
+        "nextCase": "02-received-rumor",
+        "originalFailureRetained": true
+      }
+    },
+    {
+      "id": "02-received-rumor",
+      "customRequest": 312,
+      "state": "completed",
+      "requestBytes": 27016,
+      "requestSha256": "c8d072cd96e7036b5636d77bfbd783d1f1ddd78faf22fb965c7ada0d930da8e7",
+      "status": 200,
+      "elapsedMs": 5208,
+      "rawResponseSha256": "e45aa07cac35a3e898703f9dd346844697f5e9d2662208aae4069002bc2c2b8f",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3457,
+        "completion_tokens": 446,
+        "total_tokens": 3903
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Explicit claimId schema description did not prevent reference to action c1; original check rejects, prior rumor unchanged. Basic schema shape passes but cross-item semantic relation does not. No evidence description solved this failure.",
+      "diagnosedContinuation": {
+        "reason": "Keep312 failure; next distinct05 is frozen before revision calls. No retry or conversion.",
+        "nextCase": "05-partial-first",
+        "originalFailureRetained": true
+      }
+    },
+    {
+      "id": "05-partial-first",
+      "customRequest": 313,
+      "state": "completed",
+      "requestBytes": 27525,
+      "requestSha256": "33bd4f27c71a2dc89f5420775174b864dd8660ece2a833ded5fece52cdf478db",
+      "status": 200,
+      "elapsedMs": 6297,
+      "rawResponseSha256": "e6ef756ff0cccad74bfc4ef6fc12e7c4d2718b42de4ec5efb26ea6ee536a5104",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3703,
+        "completion_tokens": 709,
+        "total_tokens": 4412
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Original strict structural check passes but receptions is empty despite explicit first-clause receipt; no knowledge registered, revision2 only batch processing. Semantic omission is failure, not successful safe abstention. No response reconstruction.",
+      "diagnosedContinuation": {
+        "reason": "Keep omitted receipt failure; continue frozen06 once, same bounded five-input comparison.",
+        "nextCase": "06-partial-second",
+        "originalFailureRetained": true
+      }
+    },
+    {
+      "id": "06-partial-second",
+      "customRequest": 314,
+      "state": "completed",
+      "requestBytes": 27526,
+      "requestSha256": "4bc4ddb17994ef3a7819bccca21b003034947d09ea3e8a1d26629b8bbcd3cea7",
+      "status": 200,
+      "elapsedMs": 4310,
+      "rawResponseSha256": "3ecee0444c47df4273d9c9324bda78ac8c4ca52fcf6ffa2bfe3bc721b3fed9bc",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3716,
+        "completion_tokens": 369,
+        "total_tokens": 4085
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Schema and original structural check pass, but explicit heard second clause and unheard first clause disappear and receptions empty; zero grants. Compared with309, no demonstrated gain from claimId description. Keep semantic failure unchanged.",
+      "diagnosedContinuation": {
+        "reason": "Finish frozen07 once, then close this description experiment; preserve all results and unused quota.",
+        "nextCase": "07-ambiguous-hearing",
+        "originalFailureRetained": true
+      }
+    },
+    {
+      "id": "07-ambiguous-hearing",
+      "customRequest": 315,
+      "state": "completed",
+      "requestBytes": 27309,
+      "requestSha256": "19a8b4d872892565cb86984ed3618f29cd32ec90e645c79a3767c97e33bb62ed",
+      "status": 200,
+      "elapsedMs": 4588,
+      "rawResponseSha256": "2a0dda221f0e1bc1978a04071169a61517c430c4e0e829eef251c41883f0bc2b",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3617,
+        "completion_tokens": 347,
+        "total_tokens": 3964
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Schema and strict structural check pass but hearing ambiguity is entirely omitted: no uncertain reception or unresolved item, pending empty. No false knowledge grant, but target fails because later dependency cannot ask. Description experiment has no end-to-end passing sample."
+    }
+  ],
+  "closed": true,
+  "retries": 0,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "stopReason": "bounded-format-and-reference-experiments-complete-semantic-failures-retained",
+  "retainedCandidate": "Base generated schema with single-target equivalence; unsuccessful reference description reverted; no further requests."
+}

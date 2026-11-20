@@ -1,0 +1,12 @@
+2026-11-14 args/scope语义值与引用字段类型说明：最小本地实现
+
+唯一产品修改是共享assertion-contract.js原buildAssertionMessages追加通用说明。args/scope每字段只能为非空非纯空白字符串或null，argumentSpans/scopeSpans对应字段只能为span对象或null。语义值与引用不可互填，不混入{value,span}、坐标参照单元、数组、数字或布尔值。禁止对象字符串化及删除限定规避，保留否定、时间、条件和归属。没有关键词表或新格式，没有调用转换器修补回复。
+
+验证：新增引擎5项、战役1项。引擎新文件先1失败/4通过，产品说明加入后相关引擎50/50、战役112/112，共162通过，完整TAP见engine.tap/campaign.tap。
+正例：time/condition/attribution分别有语义字符串与原文引用；无其他限定的字段成对null，原mode保留。
+反例：args各角色和三类scope中的span对象、配对对象、数组、数字、布尔值、空白值；引用互填、缺失或伪造等，均仍拒绝且候选不变。
+限制例：将span序列化成字符串、删掉时间限定、把昨日解释为明日，结构可能合法；测试保持semanticCompletenessVerified=false/canApprove=false，不添加自动语义分类器，不以类型通过宣称内容正确。
+原始custom280：读取实际请求和原始响应，scope.time仍为原span对象，新普通入口仍INVALID_ROLE_SPAN；原user输入和坐标消息不变，失败记录revision0保持。没有修补副本。
+
+完整性：177份旧证据、22正式文件哈希不变；原输入构造/绑定、校验和坐标参照代码逐字不变。详见verification.json、preservation-baseline.json及product.diff。
+本轮模型0、累计280不变；无部署、正式剧情写入或自动批准/修订恢复。旧批余6保持关闭。实际改善仅是类型合同完整传达，模型遵从及语义完整性尚未实测。

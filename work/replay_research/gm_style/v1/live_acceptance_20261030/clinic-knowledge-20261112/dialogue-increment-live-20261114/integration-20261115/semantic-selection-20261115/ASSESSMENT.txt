@@ -1,0 +1,16 @@
+2026-11-15 显式语义选择记录最小实现（离线）
+
+实现仅修改原story-dialogue-knowledge.mjs（共享assertion-contract及story-knowledge写入实现不变），新增prepareSemanticDialogueExtraction及显式dialogue-reception/6适配/observe分派。默认显式适配器仍v5，未配置仍disabled；没有恢复任何自动路线。
+
+v6根只有schemaVersion/contextRef/units；每target仍显式id/coverage/claims/utterances/unresolved。contextRef保留严格快照绑定，内部inputRef由已冻结输入确定。unit.status按显式unresolved数组派生，不从空数组补coverage。必要非言说claims保留原共享结构与ID，兼容原action端点；本轮没有重写Game IR。
+言说模型字段为speaker:{actorId,span}、content原文选择、mode、scope:{time,condition,attribution}（各为null或{value,span}）、anchor、receptions。模型仍负责实际发生、身份、归属、否定/条件、范围与证据；程序生成言说ID、speaker语义值及scope双字段，原引用校验继续执行。已知说话者从已选actorId取目录名称；未知actorId不推断，原来源门禁保持待核。
+回执只填content、listener、evidence、propositionRef、reason。程序从父项确定speakerId/claimId与回执ID，按原关系表确定status。原文选择仍是{fragmentId,quote}。回执content允许显式{ref:"utterance.content"}；listener/evidence.span还可显式{ref:"reception.content"}。未选择ref不能代填；非法/缺失引用、其他言说引用或旧格式一律拒绝。展开到v5后仍走v5→v4→v3→原断言校验，不能把“答道”改成回答或把action变成utterance。
+
+新版本生成说明替换旧重复结构说明，不附加到v5。输入、来源、角色/命题目录及片段参照保持相同；原v5消息/Schema不变。沿476原输入离线预览54787→44285字节，system字符5666→1157，预览未发送。这仅说明结构与说明减少，不代表模型遵从率改善。
+
+离线回归：新增10项，相关总174/174通过。7项先因无v6入口失败；随后集中检查发现新speaker选择器可把数字1当目录键'1'，新增反例先失败后修复，不更改v5旧校验。覆盖等价v5展开、原文/引用复用、scope成对、缺项/额外派生字段/过期绑定/非法范围/冲突范围、未接收/未开口、身份未知/范围无法确定、必要非言说claims、默认v5和显式版本分离、非法JSON/重复键/来源变化零写入，以及真实475/477/441失败保持拒绝。
+MVU合成入口证明：明确前半登记、后半uncertain独立待核；重开不重复抽取/登记；无关请求0问、依赖请求才问且不重复，显式否定确认只清该待核，不撤销已接收前半。既有unit.unresolved按范围关联机制未改，模型若把局部不确定错误标成整句未决，仍不能自动纠正。
+
+局限：没有真实模型调用，不能证明新wire的JSON遵从、引用语义或漏抽率改善。结构合法仍不等于语义完整/批准；canApprove和semanticCompletenessVerified保持false。必要非言说claims仍由模型按共享合同填写；非空回执的原历史失败未改写成成功。此次仅本地源码候选，未部署/正式剧情/自动批准修订。
+
+保全：全部既有请求/响应/账本及22份正式保护文件哈希保持（数量见verification.json）；累计477、余57原样不动。本轮模型0。产品差异见product.diff，测试见red.log/review-red.log/regression-final.log，完整未发送预览见request-preview.json。

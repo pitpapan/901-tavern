@@ -1,0 +1,22 @@
+2026-11-15 JSON与引用绑定继续诊断（465—468）
+
+结论：本轮没有找到新的明确产品程序缺口，未修改产品、生成提示、Schema或引用校验。现有合同已发送合法JSON要求、封闭字段，以及reply身份/依据引用当前回答的说明。最新三份JSON失败在原始HTTP响应的message.content中已经存在；本地未引入这些错字或括号错误。finish_reason均为stop，输出2076/501/486/679 tokens，均低于4096；不能归因为已证实的长度截断，也不能进一步断定生成端还是上游中间层造成。
+
+复用入口：story-dialogue-knowledge.mjs的prepareRelatedDialogueExtraction、createDialogueSemanticAdapter；原片段选择/引用解析/接收范围/逐人回执继续沿共享assertion-contract及旧MVU运行链。旧450/453的引用失败不是本地丢听者：450把回答与叙述合在reply依据内，453引用旁白“答”；发送合同已要求引用父言说内的当前回答。原有严格拒绝合理，未放宽或重新映射。
+
+离线：复用已有正反例重新运行164/164通过。覆盖合法/非法JSON、重复键、隐含听者、引用范围、部分接收、未收到、未开口、待核依赖等既有边界。无新增重复测试；这些是程序规则回归，不能替代模型验收。
+
+有限模型对照（先冻结四份，逐份核对，不自动重试）：
+465 bindingjson.reproduce.long：与462原请求125686字节完全相同。原始JSON在位置1495出现非法额外文字，另有相同形态错误；原生解析拒绝。可读正文保留三条言说，但第三条无接收记录，不能用coverage自报完整替代人工验收。无任何修补或从损坏文本补回执。
+466 bindingjson.reproduce.npc_reply：与450原请求53065字节完全相同，最近同体失败记录459保留。可读listener为bright/reply/history0，身份和evidence都选当前回答，局部选择比450合理；但原始JSON在位置1043出现额外文字，整份失败，不能归因于代码改善（代码未变）。
+467 bindingjson.probe.obstacle：新相近反例，布莱特问后走远听不到，黄泉仍回答。JSON/Schema通过，bright身份、not_received和obstacle引用均符合输入。listener.span却选叙述“答”，不在父言说内容中；原check报Reply evidence must reference current answer。此次实际触发的是listener身份引用分支，不是obstacle证据引用；没有把正确的未接收判断误说成错误。
+468 bindingjson.probe.partial：新相近部分接收例。可读contentSpan分别为“山路已经封闭了，”received与“明早在渡口会合。”not_received，未在contentSpan中把后半授予。身份reply历史0，后半障碍引用原文；前半evidence仍选完整回答，没有直接保留“只听清前半句”依据。原始JSON位置1075及后半证据处有非法额外文字，不能验收整份准确性，也不通过修补副本验证模型输出。
+
+四份均未通过完整验收；三份JSON失败、一份绑定失败。四份隔离回放写入均0，状态完全不变。没有正式剧情或生产存档操作。
+
+账本：本轮4次，累计请求468；原200额度用134，余66，关闭本轮有限批次，未用余额保留。631份原证据、全部既有逐次账本记录、22份正式保护文件哈希不变；两份原请求逐字节一致，四份生成参数相同，原始响应保存前后哈希一致。其余历史失败没有声称本轮已全部重跑。
+
+实际得到的是失败归属更明确：原始语法错误和已明文规定的引用选择错误仍在；没有新的功能改善或生成稳定性证据。继续重复同一请求不能被称作修复。本地严格拒绝避免本轮无效回复写入，但不能证明语义完整，也不能证明正常长剧情可靠。
+
+未自动修补回复、未放宽校验、未逐措辞补关键词、未部署、未写正式剧情、未恢复自动批准或修订路线。
+证据：diagnosis.json、campaign-tests.log、cases.json、各check.json、verification.json、complete-outputs.txt；完整请求/HTTP原始响应保存在同级iteration-200-20261115对应ID文件中。

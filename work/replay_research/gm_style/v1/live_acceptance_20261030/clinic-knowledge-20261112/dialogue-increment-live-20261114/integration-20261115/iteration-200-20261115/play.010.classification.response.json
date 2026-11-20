@@ -1,0 +1,31 @@
+{
+  "kind": "play.010.classification",
+  "startedAt": "2026-11-15T13:12:19.816Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T13:12:52.617Z",
+  "headersElapsedMs": 32801,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5ae81c3ed84ec8f-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 13:12:52 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=WmvIRZcYhK%2FEzmgzk9wZ%2F6DKgJEYHcO5cuU1anuCy8BDazNb7TEPgdL9yDPLvaEARvUEQwTWVDC9BSRhPYxvjePAoMIFya7mnZdbzHgrWRKHS9n5X6ANcDE44E2H0A%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611151312205542185888268d9d6RArEcniw",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "1a01a4c1-dc60-4090-a6e5-addd932fa089"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"64a1508c-7169-4b54-9aca-dfd15f1a4261\",\"object\":\"chat.completion\",\"created\":1794748372,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"status\\\":\\\"NO_CHECK\\\",\\\"basis\\\":\\\"ordinary_dialogue\\\",\\\"reason\\\":\\\"玩家在桥头停步，台词为普通的闲聊与请同伴辨认医馆，未声明自身带有机械风险的技能检定、移动、施法或开战要求；属于普通对话与场景推进。\\\"}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":23357,\"completion_tokens\":81,\"total_tokens\":23438}}",
+  "responseBytes": 555,
+  "responseBodySha256BeforePrivacyRedaction": "08d40d4a184ec8bf3ad719a8b7eb019d669d8c1e1478ddfd526e95a3f13ec527",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T13:12:52.628Z",
+  "elapsedMs": 32813
+}

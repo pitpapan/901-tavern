@@ -1,0 +1,343 @@
+{
+  "id": "implicit.npc_question.nested",
+  "exactCurrentMessages": true,
+  "structuralPass": true,
+  "checked": {
+    "contextRef": "f600e705952b47dfa66fc2b2dd0a45d619141d281bb2b80dbcf470267c07b85f",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.4914712d5fbbf1c31d6ac62e83a54b30e317e66f6d9cbf2aec98f53fe298eb02",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "turn.utterance.1",
+              "type": "utterance",
+              "args": {
+                "speaker": "huang",
+                "content": "日落后就锁门。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 0,
+                  "end": 2,
+                  "quote": "黄泉"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 6,
+                  "end": 13,
+                  "quote": "日落后就锁门。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 0,
+                "end": 14,
+                "quote": "黄泉答道：“日落后就锁门。”"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "turn.reception.1",
+        "speakerId": "huang",
+        "recipientIds": [
+          "bright"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 6,
+            "end": 13,
+            "quote": "日落后就锁门。"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 5,
+          "quote": "黄泉答道："
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "",
+        "claimId": "turn.utterance.1"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "recorded",
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 14,
+          "quote": "黄泉答道：“日落后就锁门。”"
+        },
+        "reason": "黄泉应答布莱特的提问，言说内容已被布莱特正常接收。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false
+  },
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": []
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": [
+        {
+          "id": "dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "日落后就锁门。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 1,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "implicit.offline.implicit.npc_question",
+                "messageId": 1,
+                "swipeId": 0,
+                "text": "黄泉答道：“日落后就锁门。”"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0",
+          "channel": "message",
+          "learnedAtMessage": 1
+        }
+      ]
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "pending": [],
+  "noQuestionWithoutDependency": true,
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "implicit.regression",
+    "chatId": "implicit.offline.implicit.npc_question",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      },
+      "dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message": {
+        "id": "dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "日落后就锁门。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      }
+    },
+    "events": {
+      "received.dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0": {
+        "id": "received.dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "bright"
+          ],
+          "propositionRefs": [
+            "dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "implicit.offline.implicit.npc_question",
+            "messageId": 1,
+            "swipeId": 0,
+            "text": "黄泉答道：“日落后就锁门。”"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/implicit.offline.implicit.npc_question",
+            "line": 2
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.bright.dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message.event": {
+        "id": "dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.bright.dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.bright.dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message",
+            "knowerId": "bright",
+            "propositionRef": "dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message",
+            "eventRef": "received.dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 1,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/implicit.offline.implicit.npc_question",
+            "line": 2
+          }
+        ]
+      }
+    },
+    "knowledge": {
+      "dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.bright.dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message": {
+        "id": "dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.bright.dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message",
+        "knowerId": "bright",
+        "propositionRef": "dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message",
+        "eventRef": "received.dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      }
+    },
+    "dialogueBatches": {
+      "dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca": {
+        "id": "dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca",
+        "sourceAnchor": {
+          "chatId": "implicit.offline.implicit.npc_question",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "黄泉答道：“日落后就锁门。”"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.2e9479041d8ac0e712b59918cc1b033078ede9975b6995f4379735aee99dc3ca.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0",
+            "claimId": "turn.utterance.1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "bright"
+            ],
+            "propositionRef": null,
+            "content": "日落后就锁门。",
+            "quote": "日落后就锁门。",
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 5,
+              "quote": "黄泉答道："
+            },
+            "unresolved": []
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "recorded",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 14,
+              "quote": "黄泉答道：“日落后就锁门。”"
+            },
+            "reason": "黄泉应答布莱特的提问，言说内容已被布莱特正常接收。"
+          }
+        ]
+      }
+    }
+  }
+}

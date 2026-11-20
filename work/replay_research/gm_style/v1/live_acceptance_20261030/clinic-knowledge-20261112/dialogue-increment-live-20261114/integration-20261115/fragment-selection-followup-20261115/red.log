@@ -1,0 +1,61 @@
+✔ fragment selections preserve UTF16, CRLF, whitespace and exact duplicate occurrences (15.224ms)
+✔ fragment mode is explicit; existing coordinate output and checker remain strict (1.5867ms)
+✖ fragment containers expose occurrence containment, not matching text from a different occurrence (1.8376ms)
+✖ container metadata never broadens acceptance or supplies missing selection fields (0.7518ms)
+✔ v4 selects text, program derives UTF16 coordinates, preserves input and partial receipt (875.555ms)
+✔ rejects missing, forged, ambiguous, legacy-coordinate and out-of-parent selections unchanged (17.1684ms)
+✔ repeated identical text selects the intended occurrence; ambiguous full target rejects (9.8934ms)
+✔ default adapter persists partial knowledge, pending and reopen through existing MVU without repair (73.0137ms)
+✔ none and not_received do not invent receipts or grant knowledge; semantic omissions stay unverified (5.5495ms)
+✔ three original failed replies remain unchanged and rejected by both historical and selected contracts (39.3669ms)
+✖ selected wire states JSON serialization in the existing envelope instruction without a second pseudo-object (15.9837ms)
+✔ v4 failed raw JSON and out-of-fragment originals still reject; valid original423 decodes identically (34.7657ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 9
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1845.5438
+
+✖ failing tests:
+
+test at 901-trpg-engine\tools\trpg-engine\tests\gm-assertion-fragments.test.js:24:1
+✖ fragment containers expose occurrence containment, not matching text from a different occurrence (1.8376ms)
+  TypeError [Error]: Cannot read properties of undefined (reading 'length')
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/901-trpg-engine/tools/trpg-engine/tests/gm-assertion-fragments.test.js:28:101)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at 901-trpg-engine\tools\trpg-engine\tests\gm-assertion-fragments.test.js:38:1
+✖ container metadata never broadens acceptance or supplies missing selection fields (0.7518ms)
+  TypeError [Error]: Cannot read properties of undefined (reading 'length')
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/901-trpg-engine/tools/trpg-engine/tests/gm-assertion-fragments.test.js:40:27)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-selected.test.mjs:77:1
+✖ selected wire states JSON serialization in the existing envelope instruction without a second pseudo-object (15.9837ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(p.messages[0].content.includes('单个合法JSON对象'))
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-selected.test.mjs:78:33)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

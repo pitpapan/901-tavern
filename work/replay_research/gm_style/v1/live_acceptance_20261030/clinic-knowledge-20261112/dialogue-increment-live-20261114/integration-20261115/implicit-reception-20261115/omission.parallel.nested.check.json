@@ -1,0 +1,571 @@
+{
+  "id": "omission.parallel.nested",
+  "exactCurrentMessages": true,
+  "structuralPass": true,
+  "checked": {
+    "contextRef": "9be5b85a191598fbe4fab5e52f8ce65ea2e374dedf61231270b98ae73c210717",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.7601e39fdae92b386646a97df422ee3715bdfcba1d2532ce06f89a5a96dc37c7",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "turn.utterance.1",
+              "type": "utterance",
+              "args": {
+                "speaker": "huang",
+                "content": "我没说有别的消息。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 0,
+                  "end": 2,
+                  "quote": "黄泉"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 6,
+                  "end": 15,
+                  "quote": "我没说有别的消息。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 0,
+                "end": 16,
+                "quote": "黄泉摇头：“我没说有别的消息。”"
+              }
+            },
+            {
+              "id": "turn.utterance.2",
+              "type": "utterance",
+              "args": {
+                "speaker": "huang",
+                "content": "只是外面的桥正在修，暂时别从那边走。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 16,
+                  "end": 17,
+                  "quote": "她"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 25,
+                  "end": 43,
+                  "quote": "只是外面的桥正在修，暂时别从那边走。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 16,
+                "end": 44,
+                "quote": "她想了想，又答：“只是外面的桥正在修，暂时别从那边走。”"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "turn.utterance.1.rec.1",
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 6,
+            "end": 15,
+            "quote": "我没说有别的消息。"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 6,
+          "end": 15,
+          "quote": "我没说有别的消息。"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "",
+        "claimId": "turn.utterance.1"
+      },
+      {
+        "id": "turn.utterance.2.rec.1",
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 25,
+            "end": 43,
+            "quote": "只是外面的桥正在修，暂时别从那边走。"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 25,
+          "end": 43,
+          "quote": "只是外面的桥正在修，暂时别从那边走。"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "",
+        "claimId": "turn.utterance.2"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "recorded",
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 44,
+          "quote": "黄泉摇头：“我没说有别的消息。”她想了想，又答：“只是外面的桥正在修，暂时别从那边走。”"
+        },
+        "reason": "黄泉对玩家（御临风）的询问作出了明确回应，先后表达了两段言说，且均已由玩家接收。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false
+  },
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": [
+        {
+          "id": "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "我没说有别的消息。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 1,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "implicit.offline.omission.parallel",
+                "messageId": 1,
+                "swipeId": 0,
+                "text": "黄泉摇头：“我没说有别的消息。”她想了想，又答：“只是外面的桥正在修，暂时别从那边走。”"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2",
+          "channel": "message",
+          "learnedAtMessage": 1
+        },
+        {
+          "id": "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "只是外面的桥正在修，暂时别从那边走。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 1,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "implicit.offline.omission.parallel",
+                "messageId": 1,
+                "swipeId": 0,
+                "text": "黄泉摇头：“我没说有别的消息。”她想了想，又答：“只是外面的桥正在修，暂时别从那边走。”"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b",
+          "channel": "message",
+          "learnedAtMessage": 1
+        }
+      ]
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": []
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "pending": [],
+  "noQuestionWithoutDependency": true,
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "implicit.regression",
+    "chatId": "implicit.offline.omission.parallel",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      },
+      "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message": {
+        "id": "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "我没说有别的消息。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      },
+      "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message": {
+        "id": "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "只是外面的桥正在修，暂时别从那边走。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      }
+    },
+    "events": {
+      "received.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2": {
+        "id": "received.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player"
+          ],
+          "propositionRefs": [
+            "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "implicit.offline.omission.parallel",
+            "messageId": 1,
+            "swipeId": 0,
+            "text": "黄泉摇头：“我没说有别的消息。”她想了想，又答：“只是外面的桥正在修，暂时别从那边走。”"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/implicit.offline.omission.parallel",
+            "line": 2
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.player.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message.event": {
+        "id": "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.player.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.player.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+            "eventRef": "received.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 1,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/implicit.offline.omission.parallel",
+            "line": 2
+          }
+        ]
+      },
+      "received.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b": {
+        "id": "received.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player"
+          ],
+          "propositionRefs": [
+            "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "implicit.offline.omission.parallel",
+            "messageId": 1,
+            "swipeId": 0,
+            "text": "黄泉摇头：“我没说有别的消息。”她想了想，又答：“只是外面的桥正在修，暂时别从那边走。”"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/implicit.offline.omission.parallel",
+            "line": 2
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.player.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message.event": {
+        "id": "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.player.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.player.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+            "eventRef": "received.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 1,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/implicit.offline.omission.parallel",
+            "line": 2
+          }
+        ]
+      }
+    },
+    "knowledge": {
+      "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.player.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message": {
+        "id": "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.player.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+        "eventRef": "received.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      },
+      "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.player.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message": {
+        "id": "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.player.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+        "eventRef": "received.dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      }
+    },
+    "dialogueBatches": {
+      "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79": {
+        "id": "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79",
+        "sourceAnchor": {
+          "chatId": "implicit.offline.omission.parallel",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "黄泉摇头：“我没说有别的消息。”她想了想，又答：“只是外面的桥正在修，暂时别从那边走。”"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2",
+            "claimId": "turn.utterance.1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "我没说有别的消息。",
+            "quote": "我没说有别的消息。",
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 6,
+              "end": 15,
+              "quote": "我没说有别的消息。"
+            },
+            "unresolved": []
+          },
+          {
+            "id": "dialogue.8f141a3e5c299239e842a15263939dff6adc950b82381757745d74aac2681b79.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b",
+            "claimId": "turn.utterance.2",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "只是外面的桥正在修，暂时别从那边走。",
+            "quote": "只是外面的桥正在修，暂时别从那边走。",
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 25,
+              "end": 43,
+              "quote": "只是外面的桥正在修，暂时别从那边走。"
+            },
+            "unresolved": []
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "recorded",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 44,
+              "quote": "黄泉摇头：“我没说有别的消息。”她想了想，又答：“只是外面的桥正在修，暂时别从那边走。”"
+            },
+            "reason": "黄泉对玩家（御临风）的询问作出了明确回应，先后表达了两段言说，且均已由玩家接收。"
+          }
+        ]
+      }
+    }
+  }
+}

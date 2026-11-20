@@ -1,0 +1,31 @@
+{
+  "kind": "v7.binding.obstacle",
+  "startedAt": "2026-11-15T22:59:25.855Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T22:59:28.962Z",
+  "headersElapsedMs": 3107,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b1ddc729540dd7-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 22:59:28 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=lIh4%2FFAsfeN93L2pWREneAj6nqEtlCdQ03mk5%2Fjt2w8CaC0wIpV6dRC3%2BGWUrC1Rib3ujdTzWQ2iG8h0qtvZnVvKnOmT4y2x1quu0fc%2B%2BE0Pag0CDVj1uUNLgo66MQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611152259264210828988268d9d6dTGcKmLr",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "c65490bd-3eda-4135-847f-232b746a89e4"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"f054e217-5ddf-4c11-bdb6-4bd9d88296d2\",\"object\":\"chat.completion\",\"created\":1794783568,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/7\\\",\\\"contextRef\\\":\\\"124a7e5a7f6a270d0d780b6a9ea76428d31bb026f946e3c07a9060de8371e041\\\",\\\"selections\\\":[{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"黄泉\\\"},{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"仓库要到明天才开门。\\\"},{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"回答\\\"},{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"布莱特\\\"},{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"已听不到身后的声音。\\\"}],\\\"utterances\\\":[{\\\"speakerId\\\":\\\"huang\\\",\\\"speaker\\\":0,\\\"content\\\":1,\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":2}],\\\"receptions\\\":[{\\\"utterance\\\":0,\\\"content\\\":1,\\\"listenerId\\\":\\\"bright\\\",\\\"identityKind\\\":\\\"explicit\\\",\\\"identity\\\":3,\\\"historyMessageId\\\":null,\\\"evidenceKind\\\":\\\"obstacle\\\",\\\"evidence\\\":4,\\\"propositionRef\\\":null}],\\\"unresolved\\\":[],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":4}}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2486,\"completion_tokens\":263,\"total_tokens\":2749}}",
+  "responseBytes": 1166,
+  "responseBodySha256BeforePrivacyRedaction": "348fdfe3e4c626706e656316145b64d0edc13b92da8782fbdab45e56f5b12d13",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T22:59:28.967Z",
+  "elapsedMs": 3112
+}

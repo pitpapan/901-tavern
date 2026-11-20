@@ -1,0 +1,409 @@
+{
+  "schemaValid": true,
+  "schemaErrors": [],
+  "spanCount": 39,
+  "matchingSpans": 34,
+  "mismatches": [
+    {
+      "path": "$.units[0].claims[4].argumentSpans.actor",
+      "start": 184,
+      "end": 186,
+      "quote": "摊主",
+      "actualSlice": "主正",
+      "matches": false,
+      "quoteUtf16Length": 2
+    },
+    {
+      "path": "$.units[0].claims[4].argumentSpans.verb",
+      "start": 195,
+      "end": 197,
+      "quote": "搬进",
+      "actualSlice": "进屋",
+      "matches": false,
+      "quoteUtf16Length": 2
+    },
+    {
+      "path": "$.units[0].claims[4].scopeSpans.time",
+      "start": 186,
+      "end": 199,
+      "quote": "正忙着将卸下的货筐搬进屋内",
+      "actualSlice": "忙着将卸下的货筐搬进屋内。",
+      "matches": false,
+      "quoteUtf16Length": 13
+    },
+    {
+      "path": "$.units[0].claims[4].anchor",
+      "start": 184,
+      "end": 199,
+      "quote": "摊主正忙着将卸下的货筐搬进屋内",
+      "actualSlice": "主正忙着将卸下的货筐搬进屋内。",
+      "matches": false,
+      "quoteUtf16Length": 15
+    },
+    {
+      "path": "$.units[0].coverage.evidence",
+      "start": 0,
+      "end": 200,
+      "quote": "黄泉正牵着马往前走，听到问话停下脚步，转过头有些莫名地看了御临风一眼。\n\n“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”\n\n她顿了顿，目光在御临风脸上停了片刻，随即收回视线看向前方的街巷：“怎么突然问这个？”\n\n旁边的布莱特也放缓了步子，侧耳听着两人的动静，没有插话。街道两旁的铺子依旧喧闹，引水渠旁的杂货摊前，摊主正忙着将卸下的货筐搬进屋内。\n\n",
+      "actualSlice": "黄泉正牵着马往前走，听到问话停下脚步，转过头有些莫名地看了御临风一眼。\n\n“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”\n\n她顿了顿，目光在御临风脸上停了片刻，随即收回视线看向前方的街巷：“怎么突然问这个？”\n\n旁边的布莱特也放缓了步子，侧耳听着两人的动静，没有插话。街道两旁的铺子依旧喧闹，引水渠旁的杂货摊前，摊主正忙着将卸下的货筐搬进屋内。\n",
+      "matches": false,
+      "quoteUtf16Length": 201
+    }
+  ],
+  "allSpans": [
+    {
+      "path": "$.units[0].claims[0].argumentSpans.actor",
+      "start": 0,
+      "end": 2,
+      "quote": "黄泉",
+      "actualSlice": "黄泉",
+      "matches": true,
+      "quoteUtf16Length": 2
+    },
+    {
+      "path": "$.units[0].claims[0].argumentSpans.verb",
+      "start": 3,
+      "end": 4,
+      "quote": "牵",
+      "actualSlice": "牵",
+      "matches": true,
+      "quoteUtf16Length": 1
+    },
+    {
+      "path": "$.units[0].claims[0].argumentSpans.object",
+      "start": 5,
+      "end": 6,
+      "quote": "马",
+      "actualSlice": "马",
+      "matches": true,
+      "quoteUtf16Length": 1
+    },
+    {
+      "path": "$.units[0].claims[0].scopeSpans.time",
+      "start": 2,
+      "end": 9,
+      "quote": "正牵着马往前走",
+      "actualSlice": "正牵着马往前走",
+      "matches": true,
+      "quoteUtf16Length": 7
+    },
+    {
+      "path": "$.units[0].claims[0].anchor",
+      "start": 0,
+      "end": 9,
+      "quote": "黄泉正牵着马往前走",
+      "actualSlice": "黄泉正牵着马往前走",
+      "matches": true,
+      "quoteUtf16Length": 9
+    },
+    {
+      "path": "$.units[0].claims[1].argumentSpans.actor",
+      "start": 0,
+      "end": 2,
+      "quote": "黄泉",
+      "actualSlice": "黄泉",
+      "matches": true,
+      "quoteUtf16Length": 2
+    },
+    {
+      "path": "$.units[0].claims[1].argumentSpans.verb",
+      "start": 14,
+      "end": 16,
+      "quote": "停下",
+      "actualSlice": "停下",
+      "matches": true,
+      "quoteUtf16Length": 2
+    },
+    {
+      "path": "$.units[0].claims[1].argumentSpans.object",
+      "start": 16,
+      "end": 18,
+      "quote": "脚步",
+      "actualSlice": "脚步",
+      "matches": true,
+      "quoteUtf16Length": 2
+    },
+    {
+      "path": "$.units[0].claims[1].scopeSpans.condition",
+      "start": 10,
+      "end": 14,
+      "quote": "听到问话",
+      "actualSlice": "听到问话",
+      "matches": true,
+      "quoteUtf16Length": 4
+    },
+    {
+      "path": "$.units[0].claims[1].anchor",
+      "start": 10,
+      "end": 18,
+      "quote": "听到问话停下脚步",
+      "actualSlice": "听到问话停下脚步",
+      "matches": true,
+      "quoteUtf16Length": 8
+    },
+    {
+      "path": "$.units[0].claims[2].argumentSpans.actor",
+      "start": 0,
+      "end": 2,
+      "quote": "黄泉",
+      "actualSlice": "黄泉",
+      "matches": true,
+      "quoteUtf16Length": 2
+    },
+    {
+      "path": "$.units[0].claims[2].argumentSpans.verb",
+      "start": 27,
+      "end": 28,
+      "quote": "看",
+      "actualSlice": "看",
+      "matches": true,
+      "quoteUtf16Length": 1
+    },
+    {
+      "path": "$.units[0].claims[2].argumentSpans.object",
+      "start": 29,
+      "end": 32,
+      "quote": "御临风",
+      "actualSlice": "御临风",
+      "matches": true,
+      "quoteUtf16Length": 3
+    },
+    {
+      "path": "$.units[0].claims[2].anchor",
+      "start": 19,
+      "end": 34,
+      "quote": "转过头有些莫名地看了御临风一眼",
+      "actualSlice": "转过头有些莫名地看了御临风一眼",
+      "matches": true,
+      "quoteUtf16Length": 15
+    },
+    {
+      "path": "$.units[0].claims[3].argumentSpans.actor",
+      "start": 136,
+      "end": 139,
+      "quote": "布莱特",
+      "actualSlice": "布莱特",
+      "matches": true,
+      "quoteUtf16Length": 3
+    },
+    {
+      "path": "$.units[0].claims[3].argumentSpans.verb",
+      "start": 140,
+      "end": 142,
+      "quote": "放缓",
+      "actualSlice": "放缓",
+      "matches": true,
+      "quoteUtf16Length": 2
+    },
+    {
+      "path": "$.units[0].claims[3].argumentSpans.object",
+      "start": 143,
+      "end": 145,
+      "quote": "步子",
+      "actualSlice": "步子",
+      "matches": true,
+      "quoteUtf16Length": 2
+    },
+    {
+      "path": "$.units[0].claims[3].anchor",
+      "start": 133,
+      "end": 145,
+      "quote": "旁边的布莱特也放缓了步子",
+      "actualSlice": "旁边的布莱特也放缓了步子",
+      "matches": true,
+      "quoteUtf16Length": 12
+    },
+    {
+      "path": "$.units[0].claims[4].argumentSpans.actor",
+      "start": 184,
+      "end": 186,
+      "quote": "摊主",
+      "actualSlice": "主正",
+      "matches": false,
+      "quoteUtf16Length": 2
+    },
+    {
+      "path": "$.units[0].claims[4].argumentSpans.verb",
+      "start": 195,
+      "end": 197,
+      "quote": "搬进",
+      "actualSlice": "进屋",
+      "matches": false,
+      "quoteUtf16Length": 2
+    },
+    {
+      "path": "$.units[0].claims[4].argumentSpans.object",
+      "start": 192,
+      "end": 194,
+      "quote": "货筐",
+      "actualSlice": "货筐",
+      "matches": true,
+      "quoteUtf16Length": 2
+    },
+    {
+      "path": "$.units[0].claims[4].scopeSpans.time",
+      "start": 186,
+      "end": 199,
+      "quote": "正忙着将卸下的货筐搬进屋内",
+      "actualSlice": "忙着将卸下的货筐搬进屋内。",
+      "matches": false,
+      "quoteUtf16Length": 13
+    },
+    {
+      "path": "$.units[0].claims[4].anchor",
+      "start": 184,
+      "end": 199,
+      "quote": "摊主正忙着将卸下的货筐搬进屋内",
+      "actualSlice": "主正忙着将卸下的货筐搬进屋内。",
+      "matches": false,
+      "quoteUtf16Length": 15
+    },
+    {
+      "path": "$.units[0].utterances[0].claim.argumentSpans.speaker",
+      "start": 42,
+      "end": 43,
+      "quote": "她",
+      "actualSlice": "她",
+      "matches": true,
+      "quoteUtf16Length": 1
+    },
+    {
+      "path": "$.units[0].utterances[0].claim.argumentSpans.content",
+      "start": 37,
+      "end": 42,
+      "quote": "“消息？”",
+      "actualSlice": "“消息？”",
+      "matches": true,
+      "quoteUtf16Length": 5
+    },
+    {
+      "path": "$.units[0].utterances[0].claim.anchor",
+      "start": 37,
+      "end": 42,
+      "quote": "“消息？”",
+      "actualSlice": "“消息？”",
+      "matches": true,
+      "quoteUtf16Length": 5
+    },
+    {
+      "path": "$.units[0].utterances[0].receptions[0].recipientSpans[0]",
+      "start": 29,
+      "end": 32,
+      "quote": "御临风",
+      "actualSlice": "御临风",
+      "matches": true,
+      "quoteUtf16Length": 3
+    },
+    {
+      "path": "$.units[0].utterances[0].receptions[0].evidence",
+      "start": 27,
+      "end": 34,
+      "quote": "看了御临风一眼",
+      "actualSlice": "看了御临风一眼",
+      "matches": true,
+      "quoteUtf16Length": 7
+    },
+    {
+      "path": "$.units[0].utterances[1].claim.argumentSpans.speaker",
+      "start": 42,
+      "end": 43,
+      "quote": "她",
+      "actualSlice": "她",
+      "matches": true,
+      "quoteUtf16Length": 1
+    },
+    {
+      "path": "$.units[0].utterances[1].claim.argumentSpans.content",
+      "start": 53,
+      "end": 87,
+      "quote": "“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”",
+      "actualSlice": "“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”",
+      "matches": true,
+      "quoteUtf16Length": 34
+    },
+    {
+      "path": "$.units[0].utterances[1].claim.anchor",
+      "start": 42,
+      "end": 87,
+      "quote": "她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”",
+      "actualSlice": "她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”",
+      "matches": true,
+      "quoteUtf16Length": 45
+    },
+    {
+      "path": "$.units[0].utterances[1].receptions[0].recipientSpans[0]",
+      "start": 68,
+      "end": 69,
+      "quote": "你",
+      "actualSlice": "你",
+      "matches": true,
+      "quoteUtf16Length": 1
+    },
+    {
+      "path": "$.units[0].utterances[1].receptions[0].evidence",
+      "start": 67,
+      "end": 69,
+      "quote": "问你",
+      "actualSlice": "问你",
+      "matches": true,
+      "quoteUtf16Length": 2
+    },
+    {
+      "path": "$.units[0].utterances[2].claim.argumentSpans.speaker",
+      "start": 89,
+      "end": 90,
+      "quote": "她",
+      "actualSlice": "她",
+      "matches": true,
+      "quoteUtf16Length": 1
+    },
+    {
+      "path": "$.units[0].utterances[2].claim.argumentSpans.content",
+      "start": 121,
+      "end": 131,
+      "quote": "“怎么突然问这个？”",
+      "actualSlice": "“怎么突然问这个？”",
+      "matches": true,
+      "quoteUtf16Length": 10
+    },
+    {
+      "path": "$.units[0].utterances[2].claim.anchor",
+      "start": 121,
+      "end": 131,
+      "quote": "“怎么突然问这个？”",
+      "actualSlice": "“怎么突然问这个？”",
+      "matches": true,
+      "quoteUtf16Length": 10
+    },
+    {
+      "path": "$.units[0].utterances[2].receptions[0].recipientSpans[0]",
+      "start": 97,
+      "end": 100,
+      "quote": "御临风",
+      "actualSlice": "御临风",
+      "matches": true,
+      "quoteUtf16Length": 3
+    },
+    {
+      "path": "$.units[0].utterances[2].receptions[0].evidence",
+      "start": 94,
+      "end": 106,
+      "quote": "目光在御临风脸上停了片刻",
+      "actualSlice": "目光在御临风脸上停了片刻",
+      "matches": true,
+      "quoteUtf16Length": 12
+    },
+    {
+      "path": "$.units[0].coverage.evidence",
+      "start": 0,
+      "end": 200,
+      "quote": "黄泉正牵着马往前走，听到问话停下脚步，转过头有些莫名地看了御临风一眼。\n\n“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”\n\n她顿了顿，目光在御临风脸上停了片刻，随即收回视线看向前方的街巷：“怎么突然问这个？”\n\n旁边的布莱特也放缓了步子，侧耳听着两人的动静，没有插话。街道两旁的铺子依旧喧闹，引水渠旁的杂货摊前，摊主正忙着将卸下的货筐搬进屋内。\n\n",
+      "actualSlice": "黄泉正牵着马往前走，听到问话停下脚步，转过头有些莫名地看了御临风一眼。\n\n“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”\n\n她顿了顿，目光在御临风脸上停了片刻，随即收回视线看向前方的街巷：“怎么突然问这个？”\n\n旁边的布莱特也放缓了步子，侧耳听着两人的动静，没有插话。街道两旁的铺子依旧喧闹，引水渠旁的杂货摊前，摊主正忙着将卸下的货筐搬进屋内。\n",
+      "matches": false,
+      "quoteUtf16Length": 201
+    }
+  ],
+  "sourceCharacters": 225,
+  "source": "黄泉正牵着马往前走，听到问话停下脚步，转过头有些莫名地看了御临风一眼。\n\n“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”\n\n她顿了顿，目光在御临风脸上停了片刻，随即收回视线看向前方的街巷：“怎么突然问这个？”\n\n旁边的布莱特也放缓了步子，侧耳听着两人的动静，没有插话。街道两旁的铺子依旧喧闹，引水渠旁的杂货摊前，摊主正忙着将卸下的货筐搬进屋内。\n\n<StatusPlaceHolderImpl/>",
+  "coordinatesRepaired": false
+}

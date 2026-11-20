@@ -1,0 +1,72 @@
+{
+  "id": "07-ambiguous-hearing",
+  "localProtocolPassed": true,
+  "result": {
+    "status": "processed",
+    "pending": []
+  },
+  "asked": [],
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "isolated.dialogue.live.v1",
+    "chatId": "isolated.dialogue.parallel.07-ambiguous-hearing",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "well.closed": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "well.closed",
+        "entityId": "well",
+        "field": "reported_status",
+        "value": "北街水井暂时停用",
+        "certainty": "rumor",
+        "visibility": "private"
+      }
+    },
+    "events": {},
+    "knowledge": {},
+    "dialogueBatches": {
+      "dialogue.84bc39c01b3eb16e6f067cd96e9551ee70741d5b83915d9497d73c490a126eff": {
+        "id": "dialogue.84bc39c01b3eb16e6f067cd96e9551ee70741d5b83915d9497d73c490a126eff",
+        "sourceAnchor": {
+          "chatId": "isolated.dialogue.parallel.07-ambiguous-hearing",
+          "messageId": 0,
+          "swipeId": 0,
+          "text": "黄泉轻声说：“渡船明早停航。”御临风在走廊另一端，记录不能确定他是否听清。"
+        },
+        "status": "processed",
+        "rows": []
+      }
+    }
+  },
+  "context": {
+    "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+    "actorKnowledge": [
+      {
+        "actorId": "bright",
+        "name": "布莱特",
+        "facts": []
+      },
+      {
+        "actorId": "huang",
+        "name": "黄泉",
+        "facts": []
+      },
+      {
+        "actorId": "player",
+        "name": "御临风",
+        "facts": []
+      }
+    ],
+    "availableInformation": []
+  },
+  "semanticAssessment": "pending-manual"
+}

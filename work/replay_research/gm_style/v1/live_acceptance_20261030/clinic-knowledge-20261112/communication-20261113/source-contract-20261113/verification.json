@@ -1,0 +1,44 @@
+{
+  "status": "offline-passed-live-stopped-on-dns-error",
+  "offlineTests": 62,
+  "offlineFailures": 0,
+  "requestAttempts": 1,
+  "completedModelResponses": 0,
+  "modelInvocationConfirmed": false,
+  "cumulativeRequestAttempts": 255,
+  "selectedRoundLimit": 2,
+  "unsentPlannedRequests": 1,
+  "retries": 0,
+  "classificationModelCalls": 0,
+  "sourceContextsVerified": 5,
+  "formalProtectedFilesUnchanged": 22,
+  "productModulesChanged": 1,
+  "sourceSha256": "5a8f456de7c6fa26988dcfa45758140b771dd3164a76355f1de46961b7ec75a9",
+  "response": {
+    "status": null,
+    "transportCode": "ENOTFOUND",
+    "elapsedMs": 150,
+    "rawResponseAvailable": false
+  },
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticRoutesResumed": false,
+  "results": [
+    {
+      "id": "pending",
+      "requestBytes": 114519,
+      "requestSha256": "63e0007d7ce76504ce114814e6f21be7760c4c1459693ce0adccce6c6f5ff9b0",
+      "onlyGeneralInstructionAdded": true,
+      "sourceContexts": 2,
+      "attempted": true
+    },
+    {
+      "id": "confirmed",
+      "requestBytes": 115516,
+      "requestSha256": "b18ebe14d76309cb0a7369b94a464e9e5e0c30940466f02bf609c12d10373a07",
+      "onlyGeneralInstructionAdded": true,
+      "sourceContexts": 3,
+      "attempted": false
+    }
+  ]
+}

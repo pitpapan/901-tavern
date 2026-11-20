@@ -1,0 +1,307 @@
+{
+  "actualRequests": 8,
+  "sceneReplies": 7,
+  "formatProbes": 1,
+  "sceneTargetPasses": 1,
+  "sceneFailures": 6,
+  "cumulative": 323,
+  "remaining": 0,
+  "allRawRequestsAndResponsesVerified": true,
+  "onlySystemAppendChanged": true,
+  "baseSchemaAndInputsUnchanged": true,
+  "trialGuidanceWithdrawn": true,
+  "productSourcesRestored": 7,
+  "protectedFilesUnchanged": 22,
+  "previousEvidenceUnchanged": 615,
+  "notCalled": [
+    "08-ambiguous-listener"
+  ],
+  "automaticRetry": false,
+  "responseRepair": false,
+  "validationRelaxed": false,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "probe": {
+    "customRequest": 321,
+    "state": "completed",
+    "requestSha256": "0214091e9c11ed7c7490162ec1fc66084783228f7119354fc29f5a9453e53ce2",
+    "cumulative": 321,
+    "remaining": 2,
+    "status": 200,
+    "closed": true,
+    "rawResponseSha256": "6c7d5e7d74363e41bd2ceb3d112774da879df6aeb68189bd48390979ca5c63d5",
+    "responseModel": "gemini-3.8-flash-n",
+    "finishReason": "stop",
+    "exactCopyPassed": true
+  },
+  "rows": [
+    {
+      "id": "02-received-rumor",
+      "customRequest": 316,
+      "status": 200,
+      "model": "gemini-3.8-flash-n",
+      "verdict": "fail",
+      "assessment": "The actual request includes required utterance projection and receipt coverage, but received still references action. Source slices and known rumor reference are correct; original reception checker rejects, prior rumor unchanged, revision1. Clarification has not solved this sample; no conversion.",
+      "assertionCheck": {
+        "ok": true,
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "originalProtocolPassed": false,
+      "knowledgeCounts": [
+        {
+          "actor": "bright",
+          "count": 0
+        },
+        {
+          "actor": "huang",
+          "count": 1
+        },
+        {
+          "actor": "player",
+          "count": 0
+        }
+      ],
+      "pending": null,
+      "spanCount": 6,
+      "invalidSpans": [],
+      "receptions": [
+        {
+          "status": "received",
+          "claimId": "turn.claim.1",
+          "claimType": "action",
+          "recipients": [
+            "player"
+          ]
+        }
+      ],
+      "schemaValid": true
+    },
+    {
+      "id": "05-partial-first",
+      "customRequest": 317,
+      "status": 200,
+      "model": "gemini-3.8-flash-n",
+      "verdict": "fail",
+      "assessment": "Structural check accepts but model drops message content, explicit partial hearing and all receptions. Zero grants and pending; revision2 is processing only. Complete coverage instruction was actually present. This is semantic omission, not successful abstention or local loss.",
+      "assertionCheck": {
+        "ok": true,
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "originalProtocolPassed": true,
+      "knowledgeCounts": [
+        {
+          "actor": "bright",
+          "count": 0
+        },
+        {
+          "actor": "huang",
+          "count": 0
+        },
+        {
+          "actor": "player",
+          "count": 0
+        }
+      ],
+      "pending": 0,
+      "spanCount": 4,
+      "invalidSpans": [],
+      "receptions": [],
+      "schemaValid": true
+    },
+    {
+      "id": "06-partial-second",
+      "customRequest": 318,
+      "status": 200,
+      "model": "gemini-3.8-flash-n",
+      "verdict": "fail",
+      "assessment": "Schema and structural checks pass but hearing range and receptions entirely omitted. No second-clause grant despite explicit source; revision2 only processing. Current guidance did not improve this case; preserve empty output, do not reconstruct.",
+      "assertionCheck": {
+        "ok": true,
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "originalProtocolPassed": true,
+      "knowledgeCounts": [
+        {
+          "actor": "bright",
+          "count": 0
+        },
+        {
+          "actor": "huang",
+          "count": 0
+        },
+        {
+          "actor": "player",
+          "count": 0
+        }
+      ],
+      "pending": 0,
+      "spanCount": 4,
+      "invalidSpans": [],
+      "receptions": [],
+      "schemaValid": true
+    },
+    {
+      "id": "07-ambiguous-hearing",
+      "customRequest": 319,
+      "status": 200,
+      "model": "gemini-3.8-flash-n",
+      "verdict": "fail",
+      "assessment": "Raw uncertain reception for player reappears with exact evidence, but claimId still targets action. Original checker rejects; pending not adopted. Also location/record interpretation rendered as actions. Cannot claim restored usable ambiguity or complete semantics.",
+      "assertionCheck": {
+        "ok": true,
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "originalProtocolPassed": false,
+      "knowledgeCounts": [
+        {
+          "actor": "bright",
+          "count": 0
+        },
+        {
+          "actor": "huang",
+          "count": 0
+        },
+        {
+          "actor": "player",
+          "count": 0
+        }
+      ],
+      "pending": null,
+      "spanCount": 14,
+      "invalidSpans": [],
+      "receptions": [
+        {
+          "status": "uncertain",
+          "claimId": "c1",
+          "claimType": "action",
+          "recipients": [
+            "player"
+          ]
+        }
+      ],
+      "schemaValid": true
+    },
+    {
+      "id": "01-received-new",
+      "customRequest": 320,
+      "status": 200,
+      "model": "gemini-3.8-flash-control",
+      "verdict": "fail",
+      "assessment": "Raw received decision and exact source references preserved, but c1 remains action, so original checker rejects revision0. All five scene replies still lack usable utterance linkage. Pause remaining scene controls for same-full-wrapper format capability probe; earlier probe only exercised claim at root.",
+      "assertionCheck": {
+        "ok": true,
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "originalProtocolPassed": false,
+      "knowledgeCounts": [
+        {
+          "actor": "bright",
+          "count": 0
+        },
+        {
+          "actor": "huang",
+          "count": 0
+        },
+        {
+          "actor": "player",
+          "count": 0
+        }
+      ],
+      "pending": null,
+      "spanCount": 10,
+      "invalidSpans": [],
+      "receptions": [
+        {
+          "status": "received",
+          "claimId": "c1",
+          "claimType": "action",
+          "recipients": [
+            "bright"
+          ]
+        }
+      ],
+      "schemaValid": true
+    },
+    {
+      "id": "03-not-heard",
+      "customRequest": 322,
+      "status": 200,
+      "model": "gemini-3.8-flash-n",
+      "verdict": "fail",
+      "assessment": "Correct denied hearing and not_received retained, but receipt targets action. Original checker rejects before writes, revision0. Negative knowledge boundary is safe in this output but protocol target fails; do not call full pass.",
+      "assertionCheck": {
+        "ok": true,
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "originalProtocolPassed": false,
+      "knowledgeCounts": [
+        {
+          "actor": "bright",
+          "count": 0
+        },
+        {
+          "actor": "huang",
+          "count": 0
+        },
+        {
+          "actor": "player",
+          "count": 0
+        }
+      ],
+      "pending": null,
+      "spanCount": 9,
+      "invalidSpans": [],
+      "receptions": [
+        {
+          "status": "not_received",
+          "claimId": "c1",
+          "claimType": "action",
+          "recipients": [
+            "bright"
+          ]
+        }
+      ],
+      "schemaValid": true
+    },
+    {
+      "id": "04-not-yet-said",
+      "customRequest": 323,
+      "status": 200,
+      "model": "gemini-3.8-flash-n",
+      "verdict": "pass",
+      "assessment": "Outer preparation keeps intended recipient and full ferry message, speech is denied with 尚未 retained in full source anchor. No independent asserted inner world fact, no receptions, pending or knowledge grant. Pass for this unspoken-message boundary only, not full temporal or semantic completeness.",
+      "assertionCheck": {
+        "ok": true,
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "originalProtocolPassed": true,
+      "knowledgeCounts": [
+        {
+          "actor": "bright",
+          "count": 0
+        },
+        {
+          "actor": "huang",
+          "count": 0
+        },
+        {
+          "actor": "player",
+          "count": 0
+        }
+      ],
+      "pending": 0,
+      "spanCount": 7,
+      "invalidSpans": [],
+      "receptions": [],
+      "schemaValid": true
+    }
+  ]
+}

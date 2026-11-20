@@ -1,0 +1,66 @@
+[
+  {
+    "id": "bindingjson.reproduce.long",
+    "call": 465,
+    "jsonError": {
+      "position": 1495,
+      "message": "Expecting ',' delimiter",
+      "excerpt": "干粮强上十倍。要是能在窗边坐下，再来一壶温热的麦茶，这几天的奔波才算真正缓过劲来。\"}}}损坏]},{\"claim\":{\"id\":\"turn.utt2\",\"type\":\"utterance\""
+    },
+    "strict": true,
+    "closed": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "rawUnmodified": true,
+    "finishReason": "stop",
+    "tokens": 2076,
+    "originalAssessment": "465 raw JSON stray tokens at1495, present in HTTP content; strict parse rejects with0 writes. No output repair; semantic completeness not accepted."
+  },
+  {
+    "id": "bindingjson.reproduce.npc_reply",
+    "call": 466,
+    "jsonError": {
+      "position": 1043,
+      "message": "Expecting ',' delimiter",
+      "excerpt": "\",\"span\":{\"fragmentId\":\"f3\",\"quote\":\"渡口今晚停航。\"资源\"}}}]}],\"coverage\":{\"status\":\"recorded\",\"evidenc"
+    },
+    "strict": true,
+    "closed": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "rawUnmodified": true,
+    "finishReason": "stop",
+    "tokens": 501,
+    "originalAssessment": "466 raw JSON stray token at1043; visible bright listener and current-answer reply selected correctly but cannot accept invalid whole output;0 isolated writes."
+  },
+  {
+    "id": "bindingjson.probe.obstacle",
+    "call": 467,
+    "jsonError": null,
+    "strict": true,
+    "closed": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "rawUnmodified": true,
+    "finishReason": "stop",
+    "tokens": 486,
+    "originalAssessment": "467 JSON/schema valid; bright/not_received/obstacle correct. Listener reply span selects narration 答 outside parent answer, violating actual sent contract. Strict binding rejects0 writes; no new local gap."
+  },
+  {
+    "id": "bindingjson.probe.partial",
+    "call": 468,
+    "jsonError": {
+      "position": 1075,
+      "message": "Expecting ',' delimiter",
+      "excerpt": "{\"fragmentId\":\"f1\",\"quote\":\"山路已经封闭了，明早在渡口会合。\"构}}},{\"id\":\"turn.huang.utterance.rec2\",\"contentSpa"
+    },
+    "strict": true,
+    "closed": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "rawUnmodified": true,
+    "finishReason": "stop",
+    "tokens": 679,
+    "originalAssessment": "468 raw JSON stray tokens at1075 and second obstacle selection; visible contentSpan splits heard/unheard halves, but whole output invalid and0 writes. Reply evidence still full answer, partial reception evidence accuracy not accepted."
+  }
+]

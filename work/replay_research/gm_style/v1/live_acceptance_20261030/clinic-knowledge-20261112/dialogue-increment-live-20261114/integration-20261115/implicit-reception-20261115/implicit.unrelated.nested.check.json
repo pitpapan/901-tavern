@@ -1,0 +1,166 @@
+{
+  "id": "implicit.unrelated.nested",
+  "exactCurrentMessages": true,
+  "structuralPass": true,
+  "checked": {
+    "contextRef": "2f1a52c3538f07e999146110c0e7ab44135986981ab7ffd68114a14dead7a19a",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.d839c75e03e9c92c4b0baf1a3503bf0098a369cb5afb63634383e3d62a2f22b9",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "turn.utterance.bright.1",
+              "type": "utterance",
+              "args": {
+                "speaker": "bright",
+                "content": "渡口停航。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 21,
+                  "end": 24,
+                  "quote": "布莱特"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 32,
+                  "end": 37,
+                  "quote": "渡口停航。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 21,
+                "end": 38,
+                "quote": "布莱特独自低声念道：“渡口停航。”"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "turn.reception.bright.1.1",
+        "speakerId": "bright",
+        "recipientIds": [],
+        "recipientSpans": [],
+        "evidence": {
+          "documentId": "current",
+          "start": 38,
+          "end": 47,
+          "quote": "其他人都没有听到。"
+        },
+        "status": "not_received",
+        "propositionRef": null,
+        "reason": "布莱特独自低声念道，且明确记录其他人都没有听到。",
+        "claimId": "turn.utterance.bright.1"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "recorded",
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 47,
+          "quote": "黄泉没有回答，只在心里盘算归程。街另一端，布莱特独自低声念道：“渡口停航。”其他人都没有听到。"
+        },
+        "reason": "黄泉未言说，布莱特低声念道的内容已被记录且明确未被其他人听到。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false
+  },
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": []
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": []
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "pending": [],
+  "noQuestionWithoutDependency": true,
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "implicit.regression",
+    "chatId": "implicit.offline.implicit.unrelated",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      }
+    },
+    "events": {},
+    "knowledge": {},
+    "dialogueBatches": {
+      "dialogue.9a781a1f4d55ba155c3aa80c1806a13196627371b4f641d1eadb572aad66baea": {
+        "id": "dialogue.9a781a1f4d55ba155c3aa80c1806a13196627371b4f641d1eadb572aad66baea",
+        "sourceAnchor": {
+          "chatId": "implicit.offline.implicit.unrelated",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "黄泉没有回答，只在心里盘算归程。街另一端，布莱特独自低声念道：“渡口停航。”其他人都没有听到。"
+        },
+        "status": "processed",
+        "rows": [],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "recorded",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 47,
+              "quote": "黄泉没有回答，只在心里盘算归程。街另一端，布莱特独自低声念道：“渡口停航。”其他人都没有听到。"
+            },
+            "reason": "黄泉未言说，布莱特低声念道的内容已被记录且明确未被其他人听到。"
+          }
+        ]
+      }
+    }
+  }
+}

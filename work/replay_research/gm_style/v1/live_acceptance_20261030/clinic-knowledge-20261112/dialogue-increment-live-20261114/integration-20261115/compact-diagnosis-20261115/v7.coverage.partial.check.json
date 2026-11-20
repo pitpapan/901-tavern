@@ -1,0 +1,775 @@
+{
+  "id": "v7.coverage.partial",
+  "actualMessagesAndSchemaMatch": true,
+  "schemaPass": true,
+  "checked": {
+    "contextRef": "378614872c71a324fec449250c7b81b9e331ef4e4e87852f3a4d8ed8c420971f",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.b8b716c45ab57593e1de5443afaa0e1a74134c7cb37f2b71732eb84a648b099c",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "semantic.turn.u0",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "石桥今晚停用；明早在北门碰面。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 0,
+                  "end": 2,
+                  "quote": "黄泉"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 6,
+                  "end": 21,
+                  "quote": "石桥今晚停用；明早在北门碰面。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 2,
+                "end": 4,
+                "quote": "答道"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "semantic.turn.u0.r0",
+        "speakerId": "huang",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 6,
+          "end": 12,
+          "quote": "石桥今晚停用"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "",
+        "recipientIds": [
+          "bright"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 22,
+            "end": 25,
+            "quote": "布莱特"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 25,
+          "end": 34,
+          "quote": "听清了石桥停用一事"
+        },
+        "claimId": "semantic.turn.u0"
+      },
+      {
+        "id": "semantic.turn.u0.r1",
+        "speakerId": "huang",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 13,
+          "end": 20,
+          "quote": "明早在北门碰面"
+        },
+        "status": "uncertain",
+        "propositionRef": null,
+        "reason": "",
+        "recipientIds": [
+          "bright"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 22,
+            "end": 25,
+            "quote": "布莱特"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 43,
+          "end": 54,
+          "quote": "谁也不能确定他是否听见"
+        },
+        "claimId": "semantic.turn.u0"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "uncertain",
+        "evidence": {
+          "documentId": "current",
+          "start": 43,
+          "end": 55,
+          "quote": "谁也不能确定他是否听见。"
+        },
+        "reason": "显式覆盖选择；不证明语义完整。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false,
+    "receptionBindings": [
+      {
+        "id": "semantic.turn.u0.r0",
+        "listener": {
+          "actorId": "bright",
+          "kind": "explicit",
+          "span": {
+            "documentId": "current",
+            "start": 22,
+            "end": 25,
+            "quote": "布莱特"
+          },
+          "historyMessageId": null
+        },
+        "evidence": {
+          "kind": "direct",
+          "span": {
+            "documentId": "current",
+            "start": 25,
+            "end": 34,
+            "quote": "听清了石桥停用一事"
+          }
+        }
+      },
+      {
+        "id": "semantic.turn.u0.r1",
+        "listener": {
+          "actorId": "bright",
+          "kind": "explicit",
+          "span": {
+            "documentId": "current",
+            "start": 22,
+            "end": 25,
+            "quote": "布莱特"
+          },
+          "historyMessageId": null
+        },
+        "evidence": {
+          "kind": "unknown",
+          "span": {
+            "documentId": "current",
+            "start": 43,
+            "end": 54,
+            "quote": "谁也不能确定他是否听见"
+          }
+        }
+      }
+    ]
+  },
+  "structuralPass": true,
+  "observation": {
+    "status": "processed",
+    "pending": [
+      {
+        "id": "dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.faaa2cb3a09fee06bf4170115c745440b939f802da664d064b10fdcf2fd09d5a",
+        "claimId": "semantic.turn.u0",
+        "speakerId": "huang",
+        "recipientIds": [
+          "bright"
+        ],
+        "propositionRef": null,
+        "content": "明早在北门碰面",
+        "quote": "明早在北门碰面",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 13,
+          "end": 20,
+          "quote": "明早在北门碰面"
+        },
+        "receptionBinding": {
+          "id": "semantic.turn.u0.r1",
+          "listener": {
+            "actorId": "bright",
+            "kind": "explicit",
+            "span": {
+              "documentId": "current",
+              "start": 22,
+              "end": 25,
+              "quote": "布莱特"
+            },
+            "historyMessageId": null
+          },
+          "evidence": {
+            "kind": "unknown",
+            "span": {
+              "documentId": "current",
+              "start": 43,
+              "end": 54,
+              "quote": "谁也不能确定他是否听见"
+            }
+          }
+        },
+        "belief": "uncertain",
+        "status": "pending",
+        "extractionReason": "",
+        "reason": "接收或归属未确定",
+        "evidence": {
+          "documentId": "current",
+          "start": 43,
+          "end": 54,
+          "quote": "谁也不能确定他是否听见"
+        },
+        "unresolved": [],
+        "sourceAnchor": {
+          "chatId": "v7.diag.partial_unknown",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "黄泉答道：“石桥今晚停用；明早在北门碰面。”布莱特听清了石桥停用一事；至于后面的安排，谁也不能确定他是否听见。"
+        },
+        "batchId": "dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30"
+      }
+    ]
+  },
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "compact.regression",
+    "chatId": "v7.diag.partial_unknown",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message": {
+        "id": "dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "石桥今晚停用"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      }
+    },
+    "events": {
+      "received.dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06": {
+        "id": "received.dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "bright"
+          ],
+          "propositionRefs": [
+            "dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "v7.diag.partial_unknown",
+            "messageId": 1,
+            "swipeId": 0,
+            "text": "黄泉答道：“石桥今晚停用；明早在北门碰面。”布莱特听清了石桥停用一事；至于后面的安排，谁也不能确定他是否听见。"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/v7.diag.partial_unknown",
+            "line": 2
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.bright.dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message.event": {
+        "id": "dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.bright.dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.bright.dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message",
+            "knowerId": "bright",
+            "propositionRef": "dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message",
+            "eventRef": "received.dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 1,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/v7.diag.partial_unknown",
+            "line": 2
+          }
+        ]
+      }
+    },
+    "knowledge": {
+      "dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.bright.dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message": {
+        "id": "dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.bright.dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message",
+        "knowerId": "bright",
+        "propositionRef": "dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message",
+        "eventRef": "received.dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      }
+    },
+    "dialogueBatches": {
+      "dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30": {
+        "id": "dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30",
+        "sourceAnchor": {
+          "chatId": "v7.diag.partial_unknown",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "黄泉答道：“石桥今晚停用；明早在北门碰面。”布莱特听清了石桥停用一事；至于后面的安排，谁也不能确定他是否听见。"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06",
+            "claimId": "semantic.turn.u0",
+            "speakerId": "huang",
+            "recipientIds": [
+              "bright"
+            ],
+            "propositionRef": null,
+            "content": "石桥今晚停用",
+            "quote": "石桥今晚停用",
+            "contentSpan": {
+              "documentId": "current",
+              "start": 6,
+              "end": 12,
+              "quote": "石桥今晚停用"
+            },
+            "receptionBinding": {
+              "id": "semantic.turn.u0.r0",
+              "listener": {
+                "actorId": "bright",
+                "kind": "explicit",
+                "span": {
+                  "documentId": "current",
+                  "start": 22,
+                  "end": 25,
+                  "quote": "布莱特"
+                },
+                "historyMessageId": null
+              },
+              "evidence": {
+                "kind": "direct",
+                "span": {
+                  "documentId": "current",
+                  "start": 25,
+                  "end": 34,
+                  "quote": "听清了石桥停用一事"
+                }
+              }
+            },
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 25,
+              "end": 34,
+              "quote": "听清了石桥停用一事"
+            },
+            "unresolved": []
+          },
+          {
+            "id": "dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.faaa2cb3a09fee06bf4170115c745440b939f802da664d064b10fdcf2fd09d5a",
+            "claimId": "semantic.turn.u0",
+            "speakerId": "huang",
+            "recipientIds": [
+              "bright"
+            ],
+            "propositionRef": null,
+            "content": "明早在北门碰面",
+            "quote": "明早在北门碰面",
+            "contentSpan": {
+              "documentId": "current",
+              "start": 13,
+              "end": 20,
+              "quote": "明早在北门碰面"
+            },
+            "receptionBinding": {
+              "id": "semantic.turn.u0.r1",
+              "listener": {
+                "actorId": "bright",
+                "kind": "explicit",
+                "span": {
+                  "documentId": "current",
+                  "start": 22,
+                  "end": 25,
+                  "quote": "布莱特"
+                },
+                "historyMessageId": null
+              },
+              "evidence": {
+                "kind": "unknown",
+                "span": {
+                  "documentId": "current",
+                  "start": 43,
+                  "end": 54,
+                  "quote": "谁也不能确定他是否听见"
+                }
+              }
+            },
+            "belief": "uncertain",
+            "status": "pending",
+            "extractionReason": "",
+            "reason": "接收或归属未确定",
+            "evidence": {
+              "documentId": "current",
+              "start": 43,
+              "end": 54,
+              "quote": "谁也不能确定他是否听见"
+            },
+            "unresolved": []
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "uncertain",
+            "evidence": {
+              "documentId": "current",
+              "start": 43,
+              "end": 55,
+              "quote": "谁也不能确定他是否听见。"
+            },
+            "reason": "显式覆盖选择；不证明语义完整。"
+          }
+        ],
+        "extractionInput": {
+          "assertion": {
+            "schemaVersion": "gm-assertion-input/1",
+            "stage": "source",
+            "documents": [
+              {
+                "id": "current",
+                "text": "黄泉答道：“石桥今晚停用；明早在北门碰面。”布莱特听清了石桥停用一事；至于后面的安排，谁也不能确定他是否听见。"
+              }
+            ],
+            "targets": [
+              {
+                "id": "turn",
+                "documentId": "current",
+                "start": 0,
+                "end": 55
+              }
+            ],
+            "prior": null,
+            "inputRef": "assertion.b8b716c45ab57593e1de5443afaa0e1a74134c7cb37f2b71732eb84a648b099c"
+          },
+          "sourceAnchor": {
+            "chatId": "v7.diag.partial_unknown",
+            "messageId": 1,
+            "swipeId": 0,
+            "text": "黄泉答道：“石桥今晚停用；明早在北门碰面。”布莱特听清了石桥停用一事；至于后面的安排，谁也不能确定他是否听见。"
+          },
+          "history": [
+            {
+              "messageId": 0,
+              "role": "user",
+              "text": "布莱特问黄泉：“今晚能走石桥吗？明早在哪儿碰面？”"
+            }
+          ],
+          "actors": {
+            "player": "御临风",
+            "bright": "布莱特",
+            "huang": "黄泉"
+          },
+          "facts": {
+            "clinic.owner.xuelao.old-friend": {
+              "effectiveAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 0,
+                "actorId": "legacy.story"
+              },
+              "discoveryConditions": [
+                "actual-receipt"
+              ],
+              "dependencyRefs": [],
+              "id": "clinic.owner.xuelao.old-friend",
+              "entityId": "clinic.owner",
+              "field": "relationship",
+              "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+              "certainty": "confirmed",
+              "visibility": "private"
+            },
+            "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message": {
+              "effectiveAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 12,
+                "actorId": "legacy.story"
+              },
+              "discoveryConditions": [
+                "actual-receipt"
+              ],
+              "dependencyRefs": [],
+              "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+              "entityId": "bright",
+              "field": "reported_message",
+              "value": {
+                "kind": "reported_message",
+                "speakerId": "bright",
+                "text": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+              },
+              "certainty": "uncertain",
+              "visibility": "private"
+            },
+            "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message": {
+              "effectiveAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 12,
+                "actorId": "legacy.story"
+              },
+              "discoveryConditions": [
+                "actual-receipt"
+              ],
+              "dependencyRefs": [],
+              "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+              "entityId": "bright",
+              "field": "reported_message",
+              "value": {
+                "kind": "reported_message",
+                "speakerId": "bright",
+                "text": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+              },
+              "certainty": "uncertain",
+              "visibility": "private"
+            },
+            "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message": {
+              "effectiveAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 12,
+                "actorId": "legacy.story"
+              },
+              "discoveryConditions": [
+                "actual-receipt"
+              ],
+              "dependencyRefs": [],
+              "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+              "entityId": "bright",
+              "field": "reported_message",
+              "value": {
+                "kind": "reported_message",
+                "speakerId": "bright",
+                "text": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+              },
+              "certainty": "uncertain",
+              "visibility": "private"
+            }
+          },
+          "memory": null,
+          "contextRef": "378614872c71a324fec449250c7b81b9e331ef4e4e87852f3a4d8ed8c420971f"
+        },
+        "recoveryAttempted": false,
+        "attempts": [
+          {
+            "status": "validated",
+            "rawReply": "{\"schemaVersion\":\"dialogue-reception/7\",\"contextRef\":\"378614872c71a324fec449250c7b81b9e331ef4e4e87852f3a4d8ed8c420971f\",\"selections\":[{\"fragmentId\":\"f2\",\"quote\":\"黄泉\"},{\"fragmentId\":\"f1\",\"quote\":\"石桥今晚停用；明早在北门碰面。\"},{\"fragmentId\":\"f2\",\"quote\":\"答道\"},{\"fragmentId\":\"f5\",\"quote\":\"布莱特\"},{\"fragmentId\":\"f3\",\"quote\":\"石桥今晚停用\"},{\"fragmentId\":\"f5\",\"quote\":\"听清了石桥停用一事\"},{\"fragmentId\":\"f4\",\"quote\":\"明早在北门碰面\"},{\"fragmentId\":\"f7\",\"quote\":\"谁也不能确定他是否听见\"},{\"fragmentId\":\"f7\",\"quote\":\"谁也不能确定他是否听见。\"}],\"utterances\":[{\"speakerId\":\"huang\",\"speaker\":0,\"content\":1,\"mode\":\"asserted\",\"scope\":{\"time\":null,\"condition\":null,\"attribution\":null},\"anchor\":2}],\"receptions\":[{\"utterance\":0,\"content\":4,\"listenerId\":\"bright\",\"identityKind\":\"explicit\",\"identity\":3,\"historyMessageId\":null,\"evidenceKind\":\"direct\",\"evidence\":5,\"propositionRef\":null},{\"utterance\":0,\"content\":6,\"listenerId\":\"bright\",\"identityKind\":\"explicit\",\"identity\":3,\"historyMessageId\":null,\"evidenceKind\":\"unknown\",\"evidence\":7,\"propositionRef\":null}],\"unresolved\":[],\"coverage\":{\"status\":\"uncertain\",\"evidence\":8}}"
+          }
+        ]
+      }
+    }
+  },
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": []
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": [
+        {
+          "id": "dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "石桥今晚停用"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 1,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "v7.diag.partial_unknown",
+                "messageId": 1,
+                "swipeId": 0,
+                "text": "黄泉答道：“石桥今晚停用；明早在北门碰面。”布莱特听清了石桥停用一事；至于后面的安排，谁也不能确定他是否听见。"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.72a71899f2a354754bd2cc249d16b1e01697a8150a1420173be8d506982a4e30.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06",
+          "channel": "message",
+          "learnedAtMessage": 1
+        }
+      ]
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "counts": {
+    "writes": 3,
+    "asked": 0
+  }
+}

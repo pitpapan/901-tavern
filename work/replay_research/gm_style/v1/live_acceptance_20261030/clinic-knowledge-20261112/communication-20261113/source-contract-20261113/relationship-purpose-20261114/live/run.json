@@ -1,0 +1,188 @@
+{
+  "authorization": "2026-11-14 用户对完整本地交付后的具体批次申请回复“允许”：最多6次叙事，读取现有密钥向原端点发送四份冻结首轮和两条真实承接后续；原参数、失败即停、不重试，不部署/写正式剧情/恢复自动路线。",
+  "baseline": 266,
+  "limit": 6,
+  "ceiling": 272,
+  "cumulative": 272,
+  "remaining": 0,
+  "attempts": [
+    {
+      "id": "01-relation-known",
+      "customRequest": 267,
+      "state": "completed",
+      "requestBytes": 106807,
+      "requestSha256": "4f46b33c27ad3b5ec56d2d50f68f6335915c44cdbf159e0fba7b733ef89e7692",
+      "status": 200,
+      "elapsedMs": 6789,
+      "rawResponseSha256": "d677e0a3dd393565c21792fa4500b3ff4d53947b1140ef89d0e710d7e22e4bf4",
+      "responseBytes": 1018,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "c74fe875-770f-4f0b-b455-3c32bb69715a",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 26582,
+        "completion_tokens": 215,
+        "total_tokens": 26797
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "已有与陶宁两次交接依据，回应自然使用相识且未扩大为通融、援助承诺或秘密权限。递单/询价为建议，没有代替玩家采纳。走委托时是未逐项明示的普通情境修饰；柜台接待员的识别依场景角色推定，未描写盲人视觉。此处不以细节未逐字列出单判实质关系越界。短正文回应当前办事问题，未复述合同；不是模型内心理解证明。"
+    },
+    {
+      "id": "02-relation-undetermined",
+      "customRequest": 268,
+      "state": "completed",
+      "requestBytes": 106760,
+      "requestSha256": "8e5963f86afa2700a7cf128edd2de593e0a5de6a2068a29e07d2a0ba18589345",
+      "status": 200,
+      "elapsedMs": 5945,
+      "rawResponseSha256": "9fc96523371137e205db9d4abf3a6551ed24da35ed3e38a8509c6b3dafb109a6",
+      "responseBytes": 1019,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "d905c03b-3d9d-4eee-b087-9c434df5a639",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 26562,
+        "completion_tokens": 223,
+        "total_tokens": 26785
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "本例关系边界通过：没有借罗恩或共同组织建立与陶宁的旧交，没有反向断言绝不认识，没有替御临风进去或递单。普通正文存在保留问题：“只认单据和定金”是没有本工坊制度来源的确定性人物说法，只能保留为布莱特的判断，不能采用为工坊事实；结尾“只等御临风拿定主意”复现原文风要求避免的等待交棒。后者是实际风格缺点，不能称文风全面通过，但不单独构成本批明确关系/目的/玩家控制实质越界的停发条件。",
+      "dimensions": {
+        "relationBoundary": "pass",
+        "playerAgency": "pass",
+        "proseQuality": "issues",
+        "workshopPolicy": "unverified-character-assertion-not-adopted"
+      }
+    },
+    {
+      "id": "03-purpose-unstated",
+      "customRequest": 269,
+      "state": "completed",
+      "requestBytes": 106764,
+      "requestSha256": "693b375b8436927c6132e92a70f2d925ca414e67c67cb7bdd4c5478f589317ef",
+      "status": 200,
+      "elapsedMs": 4674,
+      "rawResponseSha256": "1466696bc3026471589c82b2f4d86637cfd3e5b552ecbd128208ca39ce0c30c1",
+      "responseBytes": 813,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "aecc71a6-1a5d-47fc-8740-1557ccfd018f",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 26553,
+        "completion_tokens": 158,
+        "total_tokens": 26711
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "明确保留温衡与布莱特核对后向陶宁递交，未宣告完成；直接说温衡没有提具体缘由，未把个人理解归为来源目的。等温衡过来是提出的等候/会面安排，来源并未确认来访，不能登记为已约好或已到场；原话没有把该方式声称为温衡的强制要求。答应后按步骤办为本人行事理由。正文简短，回应当前问题，没有替玩家行动；实际说出部分只保留为真实历史，不自动新增知识回执。",
+      "dimensions": {
+        "purposeAttribution": "pass",
+        "conditionRolesAndCompletion": "pass",
+        "playerAgency": "pass",
+        "proseQuality": "concise-and-responsive",
+        "futureVisit": "proposed-not-confirmed"
+      }
+    },
+    {
+      "id": "04-purpose-stated",
+      "customRequest": 270,
+      "state": "completed",
+      "requestBytes": 107023,
+      "requestSha256": "5343acff4f4b62fe6c802c6877daaa95c9583642894a2f4e1fba7c4e3e795aca",
+      "status": 200,
+      "elapsedMs": 5013,
+      "rawResponseSha256": "4e33dfd9228c05e6b5da11abc894ca98388e30ddd0498159b1874ebe6cf6d244",
+      "responseBytes": 868,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "3e1dcad3-ae81-4e4f-a198-1243c2087863",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 26609,
+        "completion_tokens": 168,
+        "total_tokens": 26777
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "用“他的说法是”准确转述温衡自述理由，没有把其目的写成全知内心或唯一动机；“所以我打算”将等候会面的方式归为布莱特自己安排。保留原双方核对及未完成状态，未替御临风采纳或行动。末句“站在原地等待御临风的回应”再次出现等待交棒的文风缺点；只判来源归属等本次边界通过，不称整段文学表现全面通过。",
+      "dimensions": {
+        "purposeAttribution": "pass",
+        "conditionRolesAndCompletion": "pass",
+        "playerAgency": "pass",
+        "proseQuality": "waiting-handoff-recurrence",
+        "futureVisit": "proposed-not-confirmed"
+      }
+    },
+    {
+      "id": "05-relation-natural",
+      "customRequest": 271,
+      "state": "completed",
+      "requestBytes": 107710,
+      "requestSha256": "c905be869db0101cdd0f8b89520a4ca309bf4eba3efd043ed1d2d8f84016100d",
+      "status": 200,
+      "elapsedMs": 9145,
+      "rawResponseSha256": "6ab11368721392debd3f517fcb727d9e0145751e839a990baf1b61c21c7705b1",
+      "responseBytes": 878,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "93617281-66f2-4e7d-a0cc-6a5fc7f3e2f2",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 26806,
+        "completion_tokens": 171,
+        "total_tokens": 26977
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "承接02的真实回复回到清单准备，没有新增与陶宁的关系、介绍已完成或玩家递交/付款。保持廊下与柜台忙碌状态，没有场景重置或复述来源合同。继续把定金、准备充分性等当作笃定的办事建议，输入仍无该工坊具体制度证据，不能从连续两次对白采用为已证规程。黄泉未被强迫发言；旁观动作较模板化，但本轮没有等待玩家决定的明示结尾。关系/玩家控制指标通过，不把建议准确性或人物声线稳定性一并判通过。",
+      "dimensions": {
+        "relationContinuity": "pass",
+        "playerAgency": "pass",
+        "sceneContinuation": "pass",
+        "proseQuality": "ordinary-response-with-generic-side-action",
+        "workshopPolicy": "repeated-unverified-character-advice-not-adopted"
+      }
+    },
+    {
+      "id": "06-purpose-natural",
+      "customRequest": 272,
+      "state": "completed",
+      "requestBytes": 107568,
+      "requestSha256": "fe970ad1bb853999844b10593b0f619310e06f2f923af52925ed4d628276dbd2",
+      "status": 200,
+      "elapsedMs": 7804,
+      "rawResponseSha256": "0bd70280ef6e7fad9ededd116b96898923bea8590d5af09690bd11e5261c78e8",
+      "responseBytes": 736,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "cee399d0-1911-4c19-bbc2-11511efbc881",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 26754,
+        "completion_tokens": 137,
+        "total_tokens": 26891
+      },
+      "manualVerdict": "partial",
+      "manualAssessment": "能承接真实03回到清单准备，没有新增核对参与者、披露对象或宣告核对完成，也没有明确把未交代的动机说成温衡原话。仍有未定问题：原来源没提其他物件，不足以证明只需清单即可；“等温衡过来”的个人安排在本轮变为“待会儿他过来”，来源未确认来访或时间。“确认没遗漏”可以是对核对工作的自然理解，不单独当作新增秘密动机；上述话均仍在人物对白，不能仅凭确定语气断言已修改世界事实或角色故意说谎。目的归属未复现原错，但自然续接的事实把握不算完整通过。",
+      "dimensions": {
+        "purposeAttribution": "no-explicit-source-purpose-invention",
+        "conditionRolesAndCompletion": "preserved",
+        "playerAgency": "pass",
+        "sceneContinuation": "pass",
+        "proseQuality": "concise-with-generic-side-action",
+        "futureVisitAndReadiness": "unsupported-certainty-in-character-speech-not-adopted"
+      }
+    }
+  ],
+  "classificationCalls": 0,
+  "classification": "local NO_CHECK fixture only",
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "retries": 0,
+  "timeoutMs": 180000,
+  "automaticExtractionApprovalRevision": false,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "closed": true,
+  "stopReason": "six-authorized-attempts-completed-budget-exhausted",
+  "overallSemanticVerdict": "bounded-first-turn-evidence-positive; natural-prose-and-unverified-assertions-not-fully-passed"
+}

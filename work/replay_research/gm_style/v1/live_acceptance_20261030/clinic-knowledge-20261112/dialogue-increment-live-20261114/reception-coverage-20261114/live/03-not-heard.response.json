@@ -1,0 +1,31 @@
+{
+  "kind": "dialogue-reception",
+  "startedAt": "2026-11-14T19:58:06.995Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-14T19:58:13.804Z",
+  "headersElapsedMs": 6809,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5a896ccaecafe7e-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sat, 14 Nov 2026 19:58:13 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=cQFd8%2Bf5l5O9Nw3SXxbi%2BN85QalGCQL5XdAtuwWq%2Fu3k8S7nYWvD0K4RqGZWKBwN8N%2FdEh036yqEpNXHiPQJquwCX0XLbouILNjr4MGCjW7M8aXlQ3EYr3Tk%2FYe4tg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611141958068940510768268d9d6TQDlyKgC",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "b9f73965-0c02-493d-8400-e8b29d0a5437"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"9e8fd737-3c13-4f4a-b9ff-02c3bc6af308\",\"object\":\"chat.completion\",\"created\":1794686293,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"contextRef\\\":\\\"13b114382ffbb77d8c8c94ca06831da3c656d7a0008afcfc9731c970ad30492a\\\",\\\"assertions\\\":{\\\"schemaVersion\\\":\\\"gm-assertion-output/1\\\",\\\"inputRef\\\":\\\"assertion.4a9436967b14cf43cc10d1c28b7bc62021df6b46653ec84d93cf427347613c6b\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[{\\\"id\\\":\\\"c1\\\",\\\"type\\\":\\\"action\\\",\\\"args\\\":{\\\"actor\\\":\\\"御临风\\\",\\\"verb\\\":\\\"说\\\",\\\"object\\\":\\\"“北门暂停通行。”\\\"},\\\"argumentSpans\\\":{\\\"actor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":3,\\\"quote\\\":\\\"御临风\\\"},\\\"verb\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":15,\\\"end\\\":16,\\\"quote\\\":\\\"说\\\"},\\\"object\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":17,\\\"end\\\":26,\\\"quote\\\":\\\"“北门暂停通行。”\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":26,\\\"quote\\\":\\\"御临风隔着关闭的隔音窗对布莱特说：“北门暂停通行。”\\\"}},{\\\"id\\\":\\\"c2\\\",\\\"type\\\":\\\"action\\\",\\\"args\\\":{\\\"actor\\\":\\\"布莱特\\\",\\\"verb\\\":\\\"听见\\\",\\\"object\\\":null},\\\"argumentSpans\\\":{\\\"actor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":26,\\\"end\\\":29,\\\"quote\\\":\\\"布莱特\\\"},\\\"verb\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":31,\\\"end\\\":33,\\\"quote\\\":\\\"听见\\\"},\\\"object\\\":null},\\\"mode\\\":\\\"denied\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":26,\\\"end\\\":34,\\\"quote\\\":\\\"布莱特没有听见。\\\"}}],\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]},\\\"receptions\\\":[{\\\"id\\\":\\\"r1\\\",\\\"claimId\\\":\\\"c1\\\",\\\"speakerId\\\":\\\"player\\\",\\\"recipientIds\\\":[\\\"bright\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":12,\\\"end\\\":15,\\\"quote\\\":\\\"布莱特\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":26,\\\"end\\\":34,\\\"quote\\\":\\\"布莱特没有听见。\\\"},\\\"status\\\":\\\"not_received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"\\\"}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":3918,\"completion_tokens\":593,\"total_tokens\":4511}}",
+  "responseBytes": 2300,
+  "responseBodySha256BeforePrivacyRedaction": "c20423f5bec8fbfd06356177efcd3448072e7914cefccdb401542c80756611e8",
+  "outcome": "completed",
+  "finishedAt": "2026-11-14T19:58:13.819Z",
+  "elapsedMs": 6824
+}

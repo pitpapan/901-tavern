@@ -1,0 +1,47 @@
+REQUEST 485 wireprobe.baseline
+STATUS 200
+{"unconstrained":true}
+
+REQUEST 486 wireprobe.strict
+STATUS 200
+{"token":"wire_73a91f2c","count":7}
+
+REQUEST 487 wireprobe.nonstrict
+STATUS 200
+{"token":"wire_73a91f2c","count":7}
+
+REQUEST 488 wireprobe.conflict_baseline
+STATUS 200
+PROBE_PLAIN_73a91f2c
+
+REQUEST 489 wireprobe.conflict_strict
+STATUS 200
+{"token":"wire_73a91f2c","count":7}
+
+REQUEST 490 wireprobe.conflict_nonstrict
+STATUS 200
+{"token":"wire_73a91f2c","count":7}
+
+REQUEST 491 wireprobe.synthetic_complex
+STATUS 200
+{"schemaVersion":"dialogue-reception/6","contextRef":"f7633b1c547d2a1455e64fbbd5af649aee07238cf1c9ca81b4c1fe396a3e0411","units":[]}
+
+REQUEST 492 wireprobe.cardinality
+STATUS 200
+{"token":"wire_73a91f2c","items":["required_item"]}
+
+REQUEST 493 wireprobe.shallow_units
+STATUS 200
+PROBE_PLAIN_73a91f2c
+
+REQUEST 494 wireprobe.synthetic_copy_baseline
+STATUS 200
+{"schemaVersion":"dialogue-reception/6","contextRef":"d2817f48d65a74efac36a829fd7a98088ef28185aa04903302ebaa436c67b880","units":[{"id":"turn","claims":[],"utterances":[{"speaker":{"actorId":"speaker_a","span":{"fragmentId":"f1","quote":"Speaker A"}},"content":{"fragmentId":"f1","quote":"the token is blue."},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"anchor":{"fragmentId":"f1","quote":"Speaker A tells Listener B: the token is blue."},"receptions":[{"content":{"ref":"utterance.content"},"listener":{"actorId":"listener_b","kind":"explicit","span":{"fragmentId":"f2","quote":"Listener B"},"historyMessageId":null},"evidence":{"kind":"direct","span":{"fragmentId":"f1","quote":"Speaker A tells Listener B: the token is blue."}},"propositionRef":null,"reason":"Direct statement to Listener B."}]}],"unresolved":[],"coverage":{"status":"recorded","evidence":{"fragmentId":"f1","quote":"Speaker A tells Listener B: the token is blue. Listener B hears this statement."},"reason":"One direct reception."}}]}
+
+REQUEST 495 wireprobe.synthetic_copy_schema
+STATUS 200
+{"schemaVersion":"dialogue-reception/6","contextRef":"d2817f48d65a74efac36a829fd7a98088ef28185aa04903302ebaa436c67b880","units":[{"id":"turn","claims":[],"utterances":[{"speaker":{"actorId":"speaker_a","span":{"fragmentId":"f1","quote":"Speaker A"}},"content":{"fragmentId":"f1","quote":"the token is blue."},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"anchor":{"fragmentId":"f1","quote":"Speaker A tells Listener B: the token is blue."},"receptions":[{"content":{"ref":"utterance.content"},"listener":{"actorId":"listener_b","kind":"explicit","span":{"fragmentId":"f2","quote":"Listener B"},"historyMessageId":null},"evidence":{"kind":"direct","span":{"fragmentId":"f1","quote":"Speaker A tells Listener B: the token is blue."}},"propositionRef":null,"reason":"Direct statement to Listener B."}]}],"unresolved":[],"coverage":{"status":"recorded","evidence":{"fragmentId":"f1","quote":"Speaker A tells Listener B: the token is blue. Listener B hears this statement."},"reason":"One direct reception."}}]}
+
+REQUEST 496 wireprobe.keyword_support
+STATUS 400
+{"error":{"message":"Invalid JSON payload received. Unknown name \"minContains\" at 'request.generation_config.response_schema.properties[1].value': Cannot find field.\nInvalid JSON payload received. Unknown name \"maxContains\" at 'request.generation_config.response_schema.properties[1].value': Cannot find field.","type":"upstream_error","param":"","code":400}}

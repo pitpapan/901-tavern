@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createOpeningEncounter} from './opening.mjs';
-import {beginTurn} from '../core.mjs';
+import {beginTurn,endTurn} from '../core.mjs';
 import {act} from './engine.mjs';
 import {attachClaw} from './grapple.mjs';
 import {publicScene} from './presentation.mjs';
@@ -73,5 +73,66 @@ test('a successful Chuul claw hold is reported as a resolved consequence',()=>{
  assert.ok(out.result.grapples.some(g=>g.success));
  const facts=publicScene({battle:out.battle,actors:out.battle.actors,operations:{test:{signature:JSON.stringify(command),summary:{revision:1,result:out.result}}}});
  assert.match(JSON.stringify(facts.events[0]),/夹住|擒抱/);
+ assert.deepEqual(facts.events[0].grappleStates,[{actor:'御临风',state:'擒抱中，未压制'}]);
  assert.doesNotMatch(JSON.stringify(facts),/rolledSuccesses|margin|"claw"/);
+});
+
+test('later suppression does not rewrite an earlier claw hold in the same narration batch',()=>{
+ let b=encounter('chuul',true);b.actors.player.combatProfile.hpFixed=100;
+ b.actors.player.state.derived.hpMax=100;b.actors.player.state.health.intact=100;
+ b.actors.player.state.attributes.力量=1;b.actors.player.state.skills.肉搏={level:0,subs:{}};
+ const operations={};
+ for(const [index,abilityId] of ['doubleStrike','pressGrip'].entries()){
+  if(index){b.round++;b.actors.chuul.state=beginTurn(endTurn(b.actors.chuul.state).state).state;}
+  const command={actorId:'chuul',abilityId,targetId:'player'};
+  const out=act(b,command,{drawDice:dice,grappleDeclarations:{player:'strength'}});b=out.battle;
+  operations[index]={signature:JSON.stringify(command),summary:{revision:index+1,result:out.result}};
+ }
+ assert.equal(b.actors.player.state.grapple.pressed,true);
+ const root={battle:b,actors:b.actors,revision:2,operations},before=structuredClone(root);
+ const facts=publicScene(root);
+ assert.deepEqual(facts.events.map(e=>e.grappleStates),[
+  [{actor:'御临风',state:'擒抱中，未压制'}],[{actor:'御临风',state:'已压制'}]]);
+ assert.doesNotMatch(JSON.stringify(facts),/holderId|margin|claw|rolledSuccesses/);
+ assert.deepEqual(root,before);
+ const old=structuredClone(root);delete old.operations[0].summary.result.after.participants.find(p=>p.id==='player').grapple;
+ assert.equal(publicScene(old).events[0].grappleStates,undefined,'historical snapshots without state remain unknown');
+ old.operations[0].summary.result.after.awaiting='player';old.revision=1;delete old.operations[1];
+ assert.equal(publicScene(old).events[0].grappleStates,undefined,'pending attacks must not declare an established hold');
+});
+
+function projectDamage(damage,{awaiting,opportunities=[],afterRevision=0}={}) {
+ const b=encounter('huang');
+ const command={actorId:'huang',abilityId:'strike',targetId:'player'};
+ const result={actorId:'huang',abilityId:'strike',damage,opportunities,
+  after:{awaiting,participants:Object.entries(b.actors).map(([id,a])=>({id,position:a.position})),visibleTo:{player:['player','huang']}}};
+ const root={battle:b,actors:b.actors,revision:1,operations:{hit:{signature:JSON.stringify(command),summary:{revision:1,result}}}};
+ const before=structuredClone(root),facts=publicScene(root,{afterRevision});
+ assert.deepEqual(root,before,'projection must not change the mechanical save');
+ return facts;
+}
+
+test('player injury types use resolved severity after conversion, not weapon or input severity',()=>{
+ const facts=projectDamage([{targetId:'player',inputSeverity:'L',severity:'B',actualDamage:7}]);
+ assert.deepEqual(facts.events[0].playerDamageTypes,['冲击']);
+ assert.doesNotMatch(JSON.stringify(facts),/actualDamage|inputSeverity|7B|7点/);
+});
+
+test('mixed player injury types stay in their event and exclude NPC and zero damage',()=>{
+ const facts=projectDamage([
+  {targetId:'player',severity:'B',actualDamage:2},{targetId:'player',severity:'L',actualDamage:3},
+  {targetId:'player',severity:'B',actualDamage:1},{targetId:'player',severity:'A',actualDamage:0},
+  {targetId:'huang',severity:'A',actualDamage:9}]);
+ assert.deepEqual(facts.events[0].playerDamageTypes,['冲击','严重']);
+ assert.deepEqual(projectDamage([{targetId:'player',severity:'A',actualDamage:1}]).events[0].playerDamageTypes,['恶性']);
+ assert.equal(projectDamage([{targetId:'player',severity:'L',actualDamage:0}]).events[0].playerDamageTypes,undefined);
+ assert.equal(projectDamage([{targetId:'huang',severity:'L',actualDamage:9}]).events[0].playerDamageTypes,undefined);
+ assert.equal(projectDamage([{targetId:'player',severity:'B',actualDamage:7}],{afterRevision:1}).events.length,0);
+});
+
+test('pending main attacks do not predict injury types but settled opportunity damage is retained',()=>{
+ const damage=[{targetId:'player',severity:'L',actualDamage:3}];
+ assert.equal(projectDamage(damage,{awaiting:'player'}).events[0].playerDamageTypes,undefined);
+ const facts=projectDamage([],{awaiting:'player',opportunities:[{actorId:'huang',damage:[{targetId:'player',severity:'B',actualDamage:2}]}]});
+ assert.deepEqual(facts.events[0].playerDamageTypes,['冲击']);
 });

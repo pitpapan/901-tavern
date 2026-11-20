@@ -1,4 +1,5 @@
 import {instanceArmor} from '../equipment-state.mjs';
+import {iaiTerms} from './thunder-technique.mjs';
 import {stackEffects} from '../resource-effects.mjs';
 import {syncActorWounds} from '../resource-wounds.mjs';
 import {resourceCapability} from '../resource-lifecycle.mjs';
@@ -65,18 +66,19 @@ export function equipment(a) {
 }
 export function derived(a) {
   const p=profile(a), s=a.state, armor=equipment(a).armor;
+  const iai=iaiTerms(a),initiativeBonus=iai?(p.initiative??0)-iai.e.legacyInitiativeContribution+stackEffects([...iai.initiativeContributions,...resourceEffects(s,'initiative')]).value:(p.initiative??0)+resourceBonus(s,'initiative');
   const strength=value(a,'力量'), agility=value(a,'敏捷');
   const speedBonus=resourceBonus(s,'speed',{},a.kind==='yulin'?{bodyMethod:10+(a.buffs.tengzhuan?20:0)}:{});
   if(a.ruleset==='opening-20261022')return {
     hpMax:(p.hpFixed??baseHealthCapacity(s.attributes.力量+wizardAttribute(s,'力量'),s.size??5,p.hpBonus??0))+2*resourceBonus(s,'attribute',{attribute:'力量'})+(s.geneticLock?.hpBonus??0),
     speed:speedBonus+strength+agility+(s.size??5)+(p.speed??0)+(a.kind==='yulin'&&a.buffs.tengzhuan?20:0),
-    initiative:agility+value(a,p.initiativeAttribute??'风度')+(p.initiative??0)+resourceBonus(s,'initiative'),
+    initiative:agility+value(a,p.initiativeAttribute??'风度')+initiativeBonus,
     willMax:(p.willOverride??value(a,'意志')+value(a,'风度'))+resourceBonus(s,'willMax'),
   };
   return {
     hpMax:(s.size??5)+2*s.attributes.力量+2*Math.max(0,Math.floor((s.attributes.力量-1)/5))+p.hp+2*resourceBonus(s,'attribute',{attribute:'力量'})+(s.geneticLock?.hpBonus??0),
     speed:speedBonus+strength+agility+(s.size??5)+p.speed+(a.kind==='yulin'?2-(armor.speedPenalty??0)+(a.buffs.tengzhuan?20:0):0),
-    initiative:(a.kind==='bright'?agility+value(a,'意志')+automatic(a,'敏捷')+p.initiative:agility+value(a,'风度')+p.initiative)+resourceBonus(s,'initiative'),
+    initiative:(a.kind==='bright'?agility+value(a,'意志')+automatic(a,'敏捷'):agility+value(a,'风度'))+initiativeBonus,
     willMax:value(a,'意志')+value(a,'风度')+p.will+resourceBonus(s,'willMax'),
   };
 }

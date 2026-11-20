@@ -1,0 +1,114 @@
+{
+  "date": "2026-11-20",
+  "status": "orchestrator-audited",
+  "scope": "只读复核冻结请求、实际请求、原始响应、正文、账本、评审初判及保护文件；未调用模型。",
+  "coverage": {
+    "old": 171,
+    "products": 4,
+    "formal": 288,
+    "isolatedRuntime": 5,
+    "isolatedChats": 4,
+    "appendOnlyLogPrefixes": 2,
+    "authorizationProtectedEvidence": 47,
+    "childAndRestoredTemporaryFiles": 3
+  },
+  "protectedMismatches": [],
+  "attempts": [
+    {
+      "call": 621,
+      "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "responseSha256": "617a7687fb528be9cd3e799d0f1a8f8eaaad443e775d220d7209f9f6d277e72b",
+      "contentSha256": "e30e5092b7a4f574fdd90f5e22cc6ae346844ee7715955e9c63934961dbae5ca",
+      "httpStatus": 200,
+      "finishReason": "stop"
+    },
+    {
+      "call": 622,
+      "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "responseSha256": "72b9fd3b82336854adb448d6803005f1fe8315d9da73928171d2a004a2ee342e",
+      "contentSha256": "bf5346db1bd8253a02414ba94700efa969e8a98d4b6c43a5b0d28f1d95a51092",
+      "httpStatus": 200,
+      "finishReason": "stop"
+    },
+    {
+      "call": 623,
+      "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "responseSha256": "37cdcf76d81e2be22401313c57bd77d0ace860c5608c9012265daf05e26796b2",
+      "contentSha256": "9569cab844e9d4b3642cec5699ad8aef895e60f271e2b51a2889eca175e3b897",
+      "httpStatus": 200,
+      "finishReason": "stop"
+    },
+    {
+      "call": 624,
+      "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "responseSha256": "66f18cc1633299918d7bbc18310b2da0d0f10fe20d4e585a18beeeb6dec96ece",
+      "contentSha256": "9c6c74e69f9c423bb4ae4dd7e3ae196f722e2a1b2dcba80e072d2e12c6d09c90",
+      "httpStatus": 200,
+      "finishReason": "stop"
+    },
+    {
+      "call": 625,
+      "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "responseSha256": "21aaacd0436aeb2dc220a67830a91c13f6e01d4009b72ad774f19db3dcafa70d",
+      "contentSha256": "e6377affb00df603a912f96f12ca88c8a2d7e1feba2b774ceed7a8e40fcb149a",
+      "httpStatus": 200,
+      "finishReason": "stop"
+    },
+    {
+      "call": 626,
+      "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "responseSha256": "14ef641f86bbce1d4f16ab2f344e73108c5ad2a810e2913a7878850be896261e",
+      "contentSha256": "520eb4032764eef60834278d46986f6cc9b772ac73ec6145274dbe75b0ceba06",
+      "httpStatus": 200,
+      "finishReason": "stop"
+    },
+    {
+      "call": 627,
+      "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "responseSha256": "756b6cff1ed78491ae3bf6b50edbca5674e35a2378acdf018ffae3ca9f26b442",
+      "contentSha256": "222aeceb808f07b1af87256e438c87b944246ab040f95f6214c1d77e343eb671",
+      "httpStatus": 200,
+      "finishReason": "stop"
+    },
+    {
+      "call": 628,
+      "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "responseSha256": "cad7f3d0410cff4bd83501b75a0fdde143677c859829494ab3d503eeef768c37",
+      "contentSha256": "db61bc6ffe7a844812bb4335f9735b25591f6270304f6282445175c6bbae1c60",
+      "httpStatus": 200,
+      "finishReason": "stop"
+    },
+    {
+      "call": 629,
+      "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "responseSha256": "ea32ea5473f7653de8d4722b6c5781075f70e4622fbf6bd86fdccefb76c16f60",
+      "contentSha256": "4a8a13334447becc63eb9fb876b962d2ac01439a8ed769dbf18b43c1495dae1e",
+      "httpStatus": 200,
+      "finishReason": "stop"
+    },
+    {
+      "call": 630,
+      "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "responseSha256": "f5161c1abd5fdfbd60a3f8fc589765aa82d86398a1df2c0a5a05b78487f4b406",
+      "contentSha256": "c6e18fbcaba45149ff816e2bddd0935800dcc99865403444a47d904dda2a21da",
+      "httpStatus": 200,
+      "finishReason": "stop"
+    }
+  ],
+  "initialReviewHashes": {
+    "narrative-initial.json": "9cf74180da9a4b5f07761e0d8478f5c2278955a5db722a0b948658b694d9f815",
+    "narrative-initial.md": "dc37fb77f544c06cd72b615d58cf4305fe689a79503d613b6fd92d5334cd5f9e",
+    "orchestrator-initial.json": "464d4c45e4b6ea7bc515574dc9a5e0b417d28d1090c6d75d94db24c91954168c",
+    "orchestrator-initial.md": "79721dbb8e258ed6bcaabd6550a1e6de632f67336b0516f86303d8bb9d5e3d99"
+  },
+  "allEvidenceQuotesPresent": true,
+  "requestBytes": 109191,
+  "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+  "runSha256": "a49ff94a34d5b6a06da4ce59e49cfab3210b86592fb51253a7c0dafcd56d5339",
+  "completeResponses": 10,
+  "technicalFailures": 0,
+  "retries": 0,
+  "unattempted": 0,
+  "cumulative": 630,
+  "remaining": 0
+}

@@ -1,0 +1,58 @@
+{
+  "authorization": "用户新增10次，继续研发07—10，发现有证据问题则修复并离线回归后用剩余额度验收；失败先停诊断，不盲目重发、不修补回复或放宽校验。依赖承接真实待核结果，不部署/正式剧情/自动批准修订",
+  "resumes": "final-four-pairing-20261114",
+  "originalBudget": 10,
+  "previouslyUsed": 2,
+  "baseline": 288,
+  "limit": 8,
+  "cumulative": 290,
+  "remaining": 6,
+  "attempts": [
+    {
+      "id": "07-ambiguous-hearing",
+      "customRequest": 289,
+      "state": "completed",
+      "requestBytes": 12668,
+      "requestSha256": "f689fe05b50a1d4e5c78dd9778346219634fe8c7890fb5ee6ed0dbc5347d9577",
+      "status": 200,
+      "elapsedMs": 16898,
+      "rawResponseSha256": "06bedbd941e153b81545166ff1f3b4c53c93fbd9e5ac59665713f6fdd53a878f",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3473,
+        "completion_tokens": 2294,
+        "total_tokens": 5767
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "Original contract passes. Unknown hearing preserved, one pending message for Huang, no grants to any actor and no immediate questions. Content remains attributed, source and spatial facts retained. Suitable actual pending parent for cases09/10."
+    },
+    {
+      "id": "08-ambiguous-listener",
+      "customRequest": 290,
+      "state": "completed",
+      "requestBytes": 12861,
+      "requestSha256": "d09217ff34ae0c4d34ea3320ce1574d637dd8dbb73c31e8b61ecf4dbe3f11f0e",
+      "status": 200,
+      "elapsedMs": 11836,
+      "rawResponseSha256": "dcbb58b062ebac1839cbc6d6746e5d28349559f8cf5d3ef4237406aebba5c998",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3554,
+        "completion_tokens": 1750,
+        "total_tokens": 5304
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Receiver identity remains genuinely unresolved and no guesses, but unit.status=extracted with nonempty unresolved violates original unit invariant. Reject whole reply unchanged. Clarify status/list pairing before retest; actual passing case07 remains parent for dependencies."
+    }
+  ],
+  "closed": true,
+  "retries": 0,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "stopReason": "manual-fail"
+}

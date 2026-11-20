@@ -1,0 +1,78 @@
+[
+  {
+    "id": "binding.reproduce.006",
+    "original": "relation.followup.006",
+    "mode": "--retest",
+    "requestSha256": "49ade2aa08743f9cca3365ad72ddb384023cfc7e4856e82758102b5fa4907d17",
+    "bytes": 111682,
+    "reason": "Original was captured before prior-turn duplicate-member parser fix; request bytes unchanged, generation contract unchanged."
+  },
+  {
+    "id": "binding.reproduce.009",
+    "original": "relation.followup.009",
+    "mode": "--retest",
+    "requestSha256": "c0edd470e4bdef0348dde2d7f72b28401c2b7dbe63901f5360776de1c791108d",
+    "bytes": 125686,
+    "reason": "Original was captured before prior-turn duplicate-member parser fix; request bytes unchanged, generation contract unchanged."
+  },
+  {
+    "id": "binding.reproduce.direct",
+    "original": "relation.followup.direct",
+    "mode": "--retest",
+    "requestSha256": "44909cdea9ed58ba26f2474ebb2677274c2e1a08baebc1f36e46245a556abcfe",
+    "bytes": 54931,
+    "reason": "Original was captured before prior-turn duplicate-member parser fix; request bytes unchanged, generation contract unchanged."
+  },
+  {
+    "id": "binding.reproduce.npc_reply",
+    "original": "relation.followup.npc_reply",
+    "mode": "--retest",
+    "requestSha256": "1b2e144a1789b297b97203fd17dca0dafbc284e32f31772336e92b62260a3ccd",
+    "bytes": 53065,
+    "reason": "Original was captured before prior-turn duplicate-member parser fix; request bytes unchanged, generation contract unchanged."
+  },
+  {
+    "id": "binding.reproduce.partial",
+    "original": "relation.followup.partial.strict",
+    "mode": "--reproduce-failure",
+    "requestSha256": "93f57ab10df2e5562ff9d2790081238da2e85946f65156d803365358c574b15e",
+    "bytes": 54986
+  },
+  {
+    "id": "binding.reproduce.ambiguous",
+    "original": "relation.followup.ambiguous",
+    "mode": "--reproduce-failure",
+    "requestSha256": "81c534fab43f3310bd8f5ec9f01d34c1da232a655303d84a9516762ab677e9ba",
+    "bytes": 53739
+  },
+  {
+    "id": "binding.reproduce.obstacle",
+    "original": "relation.followup.obstacle",
+    "mode": "--reproduce-failure",
+    "requestSha256": "79c97b17423625709b116fba120834c77243e4b5240d5621be8e5b32a4aa1590",
+    "bytes": 54765
+  },
+  {
+    "id": "binding.reproduce.new_direct",
+    "original": "relation.followup.new_direct",
+    "mode": "--reproduce-failure",
+    "requestSha256": "15bcc4b1121973c8b21fbc6b41af135b635b39f1e0288d7eeb808ea196e74317",
+    "bytes": 54870
+  },
+  {
+    "id": "binding.probe.reply",
+    "original": null,
+    "mode": "--send",
+    "expected": "bright为唯一隐含被回应者；当前回答作为reply身份和依据，history0仅消歧，不凭user楼层授予player。",
+    "requestSha256": "eeb179330cff62e1d8e761ae7a0b801d0aae10fcc1fe0bf839baeee13dc2d1d6",
+    "bytes": 53013
+  },
+  {
+    "id": "binding.probe.obstacle",
+    "original": null,
+    "mode": "--send",
+    "expected": "player明确未接收；身份明示或reply均可，reply须引用当前回答，障碍引用离场听不到；不额外授予他人。",
+    "requestSha256": "807947f929c9f2e67400fb56f142f051da60ce9ad8cae2ab13c5286c73eed65d",
+    "bytes": 54223
+  }
+]

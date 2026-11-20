@@ -1,0 +1,845 @@
+{
+  "id": "relation.followup.partial",
+  "exactCurrentMessages": true,
+  "schemaPass": true,
+  "structuralPass": true,
+  "checked": {
+    "contextRef": "7248546c4bbd78fa12ef4c9bd6de69d0567f806075c1f07cb4d1a5584cfed19c",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.242657176818dfef1ea4d31e53718e20ccaf6144ad40e7c2af01830235306232",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "claim.utterance.1",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "渡口今晚停航，明早从山路绕行。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 0,
+                  "end": 2,
+                  "quote": "黄泉"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 9,
+                  "end": 24,
+                  "quote": "渡口今晚停航，明早从山路绕行。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 0,
+                "end": 25,
+                "quote": "黄泉对御临风说：“渡口今晚停航，明早从山路绕行。”"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "rec.1",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 9,
+          "end": 24,
+          "quote": "渡口今晚停航，明早从山路绕行。"
+        },
+        "speakerId": "huang",
+        "status": "received",
+        "propositionRef": null,
+        "reason": "",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 3,
+            "end": 6,
+            "quote": "御临风"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 25,
+          "end": 34,
+          "quote": "御临风听清了全部。"
+        },
+        "claimId": "claim.utterance.1"
+      },
+      {
+        "id": "rec.2",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 9,
+          "end": 16,
+          "quote": "渡口今晚停航，"
+        },
+        "speakerId": "huang",
+        "status": "received",
+        "propositionRef": null,
+        "reason": "",
+        "recipientIds": [
+          "bright"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 34,
+            "end": 37,
+            "quote": "布莱特"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 34,
+          "end": 49,
+          "quote": "布莱特只听清“渡口今晚停航”，"
+        },
+        "claimId": "claim.utterance.1"
+      },
+      {
+        "id": "rec.3",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 16,
+          "end": 24,
+          "quote": "明早从山路绕行。"
+        },
+        "speakerId": "huang",
+        "status": "not_received",
+        "propositionRef": null,
+        "reason": "",
+        "recipientIds": [
+          "bright"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 34,
+            "end": 37,
+            "quote": "布莱特"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 49,
+          "end": 58,
+          "quote": "后半句被车声盖住。"
+        },
+        "claimId": "claim.utterance.1"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "recorded",
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 58,
+          "quote": "黄泉对御临风说：“渡口今晚停航，明早从山路绕行。”御临风听清了全部。布莱特只听清“渡口今晚停航”，后半句被车声盖住。"
+        },
+        "reason": "已完整记录黄泉的言说，以及御临风完全接收、布莱特部分接收且后半句受阻未接收的状态。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false,
+    "receptionBindings": [
+      {
+        "id": "rec.1",
+        "listener": {
+          "actorId": "player",
+          "kind": "explicit",
+          "span": {
+            "documentId": "current",
+            "start": 3,
+            "end": 6,
+            "quote": "御临风"
+          },
+          "historyMessageId": null
+        },
+        "evidence": {
+          "kind": "direct",
+          "span": {
+            "documentId": "current",
+            "start": 25,
+            "end": 34,
+            "quote": "御临风听清了全部。"
+          }
+        }
+      },
+      {
+        "id": "rec.2",
+        "listener": {
+          "actorId": "bright",
+          "kind": "explicit",
+          "span": {
+            "documentId": "current",
+            "start": 34,
+            "end": 37,
+            "quote": "布莱特"
+          },
+          "historyMessageId": null
+        },
+        "evidence": {
+          "kind": "overheard",
+          "span": {
+            "documentId": "current",
+            "start": 34,
+            "end": 49,
+            "quote": "布莱特只听清“渡口今晚停航”，"
+          }
+        }
+      },
+      {
+        "id": "rec.3",
+        "listener": {
+          "actorId": "bright",
+          "kind": "explicit",
+          "span": {
+            "documentId": "current",
+            "start": 34,
+            "end": 37,
+            "quote": "布莱特"
+          },
+          "historyMessageId": null
+        },
+        "evidence": {
+          "kind": "obstacle",
+          "span": {
+            "documentId": "current",
+            "start": 49,
+            "end": 58,
+            "quote": "后半句被车声盖住。"
+          }
+        }
+      }
+    ]
+  },
+  "receptionBindings": [
+    {
+      "id": "rec.1",
+      "listener": {
+        "actorId": "player",
+        "kind": "explicit",
+        "span": {
+          "documentId": "current",
+          "start": 3,
+          "end": 6,
+          "quote": "御临风"
+        },
+        "historyMessageId": null
+      },
+      "evidence": {
+        "kind": "direct",
+        "span": {
+          "documentId": "current",
+          "start": 25,
+          "end": 34,
+          "quote": "御临风听清了全部。"
+        }
+      }
+    },
+    {
+      "id": "rec.2",
+      "listener": {
+        "actorId": "bright",
+        "kind": "explicit",
+        "span": {
+          "documentId": "current",
+          "start": 34,
+          "end": 37,
+          "quote": "布莱特"
+        },
+        "historyMessageId": null
+      },
+      "evidence": {
+        "kind": "overheard",
+        "span": {
+          "documentId": "current",
+          "start": 34,
+          "end": 49,
+          "quote": "布莱特只听清“渡口今晚停航”，"
+        }
+      }
+    },
+    {
+      "id": "rec.3",
+      "listener": {
+        "actorId": "bright",
+        "kind": "explicit",
+        "span": {
+          "documentId": "current",
+          "start": 34,
+          "end": 37,
+          "quote": "布莱特"
+        },
+        "historyMessageId": null
+      },
+      "evidence": {
+        "kind": "obstacle",
+        "span": {
+          "documentId": "current",
+          "start": 49,
+          "end": 58,
+          "quote": "后半句被车声盖住。"
+        }
+      }
+    }
+  ],
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": [
+        {
+          "id": "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "渡口今晚停航，明早从山路绕行。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 1,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "relation.offline.partial",
+                "messageId": 1,
+                "swipeId": 0,
+                "text": "黄泉对御临风说：“渡口今晚停航，明早从山路绕行。”御临风听清了全部。布莱特只听清“渡口今晚停航”，后半句被车声盖住。"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da",
+          "channel": "message",
+          "learnedAtMessage": 1
+        }
+      ]
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": [
+        {
+          "id": "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "渡口今晚停航，"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 1,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "relation.offline.partial",
+                "messageId": 1,
+                "swipeId": 0,
+                "text": "黄泉对御临风说：“渡口今晚停航，明早从山路绕行。”御临风听清了全部。布莱特只听清“渡口今晚停航”，后半句被车声盖住。"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b",
+          "channel": "message",
+          "learnedAtMessage": 1
+        }
+      ]
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "pending": [],
+  "noQuestionWithoutDependency": true,
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "implicit.regression",
+    "chatId": "relation.offline.partial",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da.message": {
+        "id": "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "渡口今晚停航，明早从山路绕行。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      },
+      "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b.message": {
+        "id": "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "渡口今晚停航，"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      }
+    },
+    "events": {
+      "received.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da": {
+        "id": "received.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player"
+          ],
+          "propositionRefs": [
+            "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "relation.offline.partial",
+            "messageId": 1,
+            "swipeId": 0,
+            "text": "黄泉对御临风说：“渡口今晚停航，明早从山路绕行。”御临风听清了全部。布莱特只听清“渡口今晚停航”，后半句被车声盖住。"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/relation.offline.partial",
+            "line": 2
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da.player.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da.message.event": {
+        "id": "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da.player.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da.player.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da.message",
+            "eventRef": "received.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 1,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/relation.offline.partial",
+            "line": 2
+          }
+        ]
+      },
+      "received.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b": {
+        "id": "received.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "bright"
+          ],
+          "propositionRefs": [
+            "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "relation.offline.partial",
+            "messageId": 1,
+            "swipeId": 0,
+            "text": "黄泉对御临风说：“渡口今晚停航，明早从山路绕行。”御临风听清了全部。布莱特只听清“渡口今晚停航”，后半句被车声盖住。"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/relation.offline.partial",
+            "line": 2
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b.bright.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b.message.event": {
+        "id": "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b.bright.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b.bright.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b.message",
+            "knowerId": "bright",
+            "propositionRef": "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b.message",
+            "eventRef": "received.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 1,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/relation.offline.partial",
+            "line": 2
+          }
+        ]
+      }
+    },
+    "knowledge": {
+      "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da.player.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da.message": {
+        "id": "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da.player.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da.message",
+        "eventRef": "received.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      },
+      "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b.bright.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b.message": {
+        "id": "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b.bright.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b.message",
+        "knowerId": "bright",
+        "propositionRef": "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b.message",
+        "eventRef": "received.dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      }
+    },
+    "dialogueBatches": {
+      "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca": {
+        "id": "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca",
+        "sourceAnchor": {
+          "chatId": "relation.offline.partial",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "黄泉对御临风说：“渡口今晚停航，明早从山路绕行。”御临风听清了全部。布莱特只听清“渡口今晚停航”，后半句被车声盖住。"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.22c00a6d026bec432a66bb1a00898e5f0329dbce55d6226390b2b56238eb86da",
+            "claimId": "claim.utterance.1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "渡口今晚停航，明早从山路绕行。",
+            "quote": "渡口今晚停航，明早从山路绕行。",
+            "contentSpan": {
+              "documentId": "current",
+              "start": 9,
+              "end": 24,
+              "quote": "渡口今晚停航，明早从山路绕行。"
+            },
+            "receptionBinding": {
+              "id": "rec.1",
+              "listener": {
+                "actorId": "player",
+                "kind": "explicit",
+                "span": {
+                  "documentId": "current",
+                  "start": 3,
+                  "end": 6,
+                  "quote": "御临风"
+                },
+                "historyMessageId": null
+              },
+              "evidence": {
+                "kind": "direct",
+                "span": {
+                  "documentId": "current",
+                  "start": 25,
+                  "end": 34,
+                  "quote": "御临风听清了全部。"
+                }
+              }
+            },
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 25,
+              "end": 34,
+              "quote": "御临风听清了全部。"
+            },
+            "unresolved": []
+          },
+          {
+            "id": "dialogue.af406edfdb0295b3eb46e29424e244afb219e04c7164e4ef4d69bf979af02cca.7dc321d4e9ea909c0e0d49af306d425d34381ed4e9c8aa52161e1cd7b3e7b00b",
+            "claimId": "claim.utterance.1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "bright"
+            ],
+            "propositionRef": null,
+            "content": "渡口今晚停航，",
+            "quote": "渡口今晚停航，",
+            "contentSpan": {
+              "documentId": "current",
+              "start": 9,
+              "end": 16,
+              "quote": "渡口今晚停航，"
+            },
+            "receptionBinding": {
+              "id": "rec.2",
+              "listener": {
+                "actorId": "bright",
+                "kind": "explicit",
+                "span": {
+                  "documentId": "current",
+                  "start": 34,
+                  "end": 37,
+                  "quote": "布莱特"
+                },
+                "historyMessageId": null
+              },
+              "evidence": {
+                "kind": "overheard",
+                "span": {
+                  "documentId": "current",
+                  "start": 34,
+                  "end": 49,
+                  "quote": "布莱特只听清“渡口今晚停航”，"
+                }
+              }
+            },
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 34,
+              "end": 49,
+              "quote": "布莱特只听清“渡口今晚停航”，"
+            },
+            "unresolved": []
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "recorded",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 58,
+              "quote": "黄泉对御临风说：“渡口今晚停航，明早从山路绕行。”御临风听清了全部。布莱特只听清“渡口今晚停航”，后半句被车声盖住。"
+            },
+            "reason": "已完整记录黄泉的言说，以及御临风完全接收、布莱特部分接收且后半句受阻未接收的状态。"
+          }
+        ]
+      }
+    }
+  },
+  "mvuWrites": 4,
+  "replayStateUnchanged": false
+}

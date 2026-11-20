@@ -1,0 +1,97 @@
+{
+  "authorization": "用户授权十次普通对白知情增量模型验证；不部署、不写正式剧情、不恢复自动批准或修订。按已声明策略：失败即停、不重试。",
+  "baseline": 275,
+  "limit": 10,
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "parameters": {
+    "model": "[抗截断]gemini-3.8-flash",
+    "temperature": 1,
+    "max_tokens": 4096,
+    "stream": false,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "top_p": 1
+  },
+  "cases": [
+    {
+      "id": "01-received-new",
+      "text": "布莱特对黄泉说：“东门封闭。”黄泉听清了。",
+      "expected": "黄泉获得东门封闭这一来源说法；其他人不共享；不确认世界事实。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 6186,
+      "requestSha256": "f71663b589315a8a2670804e60a4b97ab39944d936901f21d18fa0a0e91a91e0"
+    },
+    {
+      "id": "02-received-rumor",
+      "text": "布莱特对黄泉说：“码头停航。”",
+      "expected": "明确直接告知不强求复述；黄泉取得相同传闻或等价的未确认来源说法，不能升级为确认。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 6287,
+      "requestSha256": "410de2490a2814bc4c4ee8d0a7bfc326ee55e7dccdf644d446b07c5ce3857226"
+    },
+    {
+      "id": "03-not-heard",
+      "text": "布莱特对黄泉说：“东门封闭。”黄泉戴着隔音耳罩，没有听见。",
+      "expected": "不得给黄泉登记消息；明确未接收不应要求确认。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 6231,
+      "requestSha256": "e1b8a8cb0802d3c0747046dd52e19612eb3be53f717bbb4e3d86bd6dc5112c30"
+    },
+    {
+      "id": "04-not-yet-said",
+      "text": "布莱特打算告诉黄泉：“东门封闭。”他还没有开口。",
+      "expected": "计划未发生，不授予任何接收者，不应要求确认。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 6204,
+      "requestSha256": "b0d9b1ad2fb33b56f9976301b93d92aa55fbf96840e236a6cc32c34bcd6f513a"
+    },
+    {
+      "id": "05-partial-first",
+      "text": "布莱特对黄泉说：“东门封闭，改走南门。”黄泉只听清“东门封闭”，没听清后半句。",
+      "expected": "黄泉仅获得东门封闭，不能获得改走南门。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 6295,
+      "requestSha256": "13779da1b2fa55482a487f3dffb24af126d52bc76b32c5bb3c1def64e32b78f0"
+    },
+    {
+      "id": "06-partial-second",
+      "text": "布莱特对黄泉说：“东门封闭，改走南门。”黄泉只听清“改走南门”，没听清前半句。",
+      "expected": "黄泉仅获得改走南门，不能获得东门封闭。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 6296,
+      "requestSha256": "f0b2b3ca2f516f225479a566685ffd9cb8a4e746d6fb26ead45824a3456a146a"
+    },
+    {
+      "id": "07-ambiguous-hearing",
+      "text": "布莱特低声说：“仓库换了锁。”黄泉站在门边，不确定她是否听清。",
+      "expected": "不确定是否听清应待核；不直接授予黄泉。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 6251,
+      "requestSha256": "a6f9643b8fd42d0bd422a5b4e9a4af1b93e34cc143a09374b87d7032be6158f9"
+    },
+    {
+      "id": "08-ambiguous-listener",
+      "text": "布莱特对黄泉和御临风说：“见面改在钟楼。”其中一人没听清，记录没有说明是谁。",
+      "expected": "不得猜测哪个人听清；接收范围待核。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 6294,
+      "requestSha256": "c6125406994686e0e0f914c14631d7946866ceef6da3047acbc38a72a7408602"
+    }
+  ],
+  "followups": [
+    {
+      "id": "09-unrelated",
+      "parent": "07-ambiguous-hearing",
+      "text": "我整理衣袖，和黄泉聊聊今天的饭菜。",
+      "expected": "不依赖待核消息，required为空，不询问。"
+    },
+    {
+      "id": "10-dependent",
+      "parent": "07-ambiguous-hearing",
+      "text": "让黄泉根据布莱特刚才告知的仓库情况，判断能否用旧钥匙进去。",
+      "expected": "实际依赖黄泉是否收到仓库换锁消息，应返回相关待核id并触发询问；不代替用户回答。"
+    }
+  ],
+  "kind": "actual-semantic-adapter-requests-with-isolated-synthetic-prose",
+  "browserCapture": false
+}

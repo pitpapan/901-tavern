@@ -1,0 +1,35 @@
+--- before/story-dialogue-knowledge.mjs
++++ TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs
+@@ -39,7 +39,31 @@
+ export function createDialogueSemanticAdapter({complete,readMemory,outputContract=relatedContract}){
+  if(typeof complete!=='function')throw Error('Explicit semantic completion callback required');
+  if(![boundContract,scopedContract,selectedContract,relatedContract].includes(outputContract))throw Error('Unsupported dialogue contract');
+- const parse=value=>typeof value==='string'?JSON.parse(value):value;
++ const parse=value=>{
++  if(typeof value!=='string')return value;
++  const parsed=JSON.parse(value); // Keep native syntax rejection; never salvage text.
++  // Native JSON.parse silently keeps the last duplicate member. Validate raw
++  // member names before returning that object, including escaped equivalents.
++  // Syntax is already valid, so only object scopes and string tokens are needed.
++  const scopes=[];
++  for(let i=0;i<value.length;i++){
++   const ch=value[i];
++   if(ch==='{')scopes.push(new Set());
++   else if(ch==='[')scopes.push(null);
++   else if(ch==='}'||ch===']')scopes.pop();
++   else if(ch==='"'){
++    const start=i++;
++    while(value[i]!=='"'){if(value[i]==='\\')i++;i++;}
++    let next=i+1;while(/\s/.test(value[next]??'')&&next<value.length)next++;
++    if(value[next]===':'){
++     const name=JSON.parse(value.slice(start,i+1)),keys=scopes.at(-1);
++     if(keys.has(name))throw new SyntaxError('Duplicate JSON object key: '+JSON.stringify(name));
++     keys.add(name);
++    }
++   }
++  }
++  return parsed;
++ };
+  const extract=Object.assign(async(_input,messages,responseFormat)=>{
+   if(responseFormat?.json_schema?.name!==({[relatedContract]:'dialogue_reception_v5',[selectedContract]:'dialogue_reception_v4',[scopedContract]:'dialogue_reception_v3',[boundContract]:'dialogue_reception_v2'}[outputContract]))throw Error('Bound dialogue contract required');
+   return parse(await complete({purpose:'dialogue-reception',messages,responseFormat}));

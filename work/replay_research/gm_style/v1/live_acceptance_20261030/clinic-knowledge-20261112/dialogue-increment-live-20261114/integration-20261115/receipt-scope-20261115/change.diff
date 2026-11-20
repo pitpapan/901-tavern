@@ -1,0 +1,71 @@
+--- before/story-dialogue-knowledge.mjs
++++ current/story-dialogue-knowledge.mjs
+@@ -118,7 +118,8 @@
+  // Put each evidence role next to the field the model must fill. These are
+  // generation annotations, not a new validator or post-generation inference.
+  receiptProperties.recipientSpans={...receiptProperties.recipientSpans,description:'逐个recipientId选择其本轮依据：当前有该听者的称谓、代词或明确听取关系，直接引用它；当前省略对象但history唯一确定当前回答给谁，才引用该回答内容（可与claim.argumentSpans.content共用）。应答引用只指向被回应者，不能套给旁听者；旁听者须引用自己的称谓/代词/听取关系。不是引用说话者的代词、动作或语气。history消歧不充作current的quote；听者仍无法确定则recipientIds/recipientSpans均空，保留uncertain，不猜在场者。'};
+- receiptProperties.evidence={...structuredClone(defs.assertionSpan),description:'本轮该内容的实际接收或障碍依据；隐含应答可引用当前回答内容来承接history中的问题，不能仅用说话方式或动作证明听者接收。按当前否定、离场、声音遮挡及部分听清范围确定status，先前接收不明不自动延续为所有后续言说的接收障碍。'};
++ receiptProperties.evidence={...structuredClone(defs.assertionSpan),description:'本轮该内容的实际接收或障碍依据。识别听者不等于证明接收：单独的称谓、代词、目光或说话动作不足以代替传达关系；选能保留该关系及其限定的连续原文，不按引用字数判断充分性。隐含应答可引用当前回答内容承接history中的问题，直接告知无障碍不强求复述确认。旁听依据只支持其时间和内容范围；明确覆盖多段可共用，不能仅因同段落或在场就追溯全程，也不能把叙述位置直接当作听取起点。按原文区分全部、部分、未接收及范围不明，范围不明用uncertain，明确部分仍单独保留；不把未知写成未听见。当前否定、离场和声音遮挡限制对应范围，先前接收不明不自动延续为所有后续言说的障碍。'};
++ receiptProperties.reason={...receiptProperties.reason,description:'说明接收判断的依据和限制；多个内容范围共用依据时说明其覆盖关系，范围不明说明未确定之处。不得用理由新增原文没有的全程听取或时间界限；无补充说明仍可空字符串。'};
+  receiptProperties.propositionRef={...receiptProperties.propositionRef,description:receptionPropositionGuidance+' facts不是接收候选白名单；先识别本轮实际言说及接收，再找匹配命题，未匹配填null，不能删除新消息。'};
+  const receiptKeys=Object.keys(receiptProperties),coverageSchema=object({status:{type:'string',enum:['recorded','uncertain','none']},evidence:ref('assertionSpan'),reason:string});
+  const common={id:{type:'string',enum:input.assertion.targets.map(t=>t.id)},claims:{type:'array',items:ref('dialogueOtherClaim')},
+--- before/story-dialogue-bound.test.mjs
++++ current/story-dialogue-bound.test.mjs
+@@ -254,3 +254,56 @@
+  const failed=await dialogue.prepareBoundDialogueExtraction(JSON.parse(request.messages[1].content));
+  const result=failed.check(JSON.parse(raw));assert.equal(result.semanticCompletenessVerified,false);assert.equal(await readFile(new URL('B.scene2.reception.content.txt',dir),'utf8'),raw);
+ });
++
++test('reception evidence distinguishes identity from reception and limits reused evidence to its supported scope',async()=>{
++ const p=await prepare(),r=p.responseFormat.json_schema.schema.properties.units.items.properties.utterances.items.properties.receptions.items.properties;
++ assert.ok(r.evidence.description.includes('识别听者不等于证明接收'));
++ assert.ok(r.evidence.description.includes('不按引用字数判断充分性'));
++ assert.ok(r.evidence.description.includes('不能把叙述位置直接当作听取起点'));
++ assert.ok(r.evidence.description.includes('范围不明用uncertain'));
++ assert.ok(r.reason.description.includes('多个内容范围共用依据'));
++ assert.ok(p.messages[0].content.includes('明确直接向某人说出且没有接收障碍可以received，不强求复述确认'));
++ // No new minimum quote length or semantic validator: literal citation checks stay strict.
++ assert.deepEqual(withoutDescriptions(r.evidence),p.responseFormat.json_schema.schema.$defs.assertionSpan);
++ assert.deepEqual(withoutDescriptions(r.reason),{type:'string'});
++});
++
++test('reused listening evidence preserves explicit full, limited, unknown and absent reception through existing MVU',async()=>{
++ const cases=[
++  {tail:'丙从头到尾听清了两句。',statuses:['received','received'],known:['渡口停航。','明早改走山路。'],pending:0},
++  {tail:'丙第一句没听见，只听清了第二句。',statuses:['not_received','received'],known:['明早改走山路。'],pending:0},
++  {tail:'丙正在旁听，无法确定听到了哪句。',statuses:['uncertain','uncertain'],known:[],pending:2},
++  {tail:'丙只听清了第一句，不确定第二句是否听见。',statuses:['received','uncertain'],known:['渡口停航。'],pending:1},
++  {tail:'丙一直站在远处，两句都没听见。',statuses:['not_received','not_received'],known:[],pending:0},
++ ];
++ for(const c of cases){
++  const source='甲对乙说：“渡口停航。”随后又说：“明早改走山路。”'+c.tail;
++  const at=q=>({documentId:'current',start:source.indexOf(q),end:source.indexOf(q)+q.length,quote:q});
++  const chat=[{mes:source,is_user:false,swipe_id:0}];let state={stat_data:{'901_rules_poc':{schemaVersion:1,revision:0,chatId:'bound.test',actors:createOpeningFixture().actors,operations:{}}}},returned;
++  const mvu={getMvuData:()=>structuredClone(state),replaceMvuData:async v=>{state=structuredClone(v);}};
++  const tavern={chatId:'bound.test',chat,saveChat:async()=>{},readSavedChat:async()=>[{},...chat.map(m=>({...m,variables:[structuredClone(state)]}))]};
++  const adapter=dialogue.createDialogueSemanticAdapter({complete:async request=>{
++   const input=JSON.parse(request.messages[1].content),items=['渡口停航。','明早改走山路。'].map((q,i)=>({claim:{...claim('s'+i,q),argumentSpans:{speaker:at('甲'),content:at(q)},anchor:at(source)},receptions:[
++    {id:'direct'+i,speakerId:'a',recipientIds:['b'],recipientSpans:[at('乙')],evidence:at('甲对乙说：“渡口停航。”随后又说：“明早改走山路。”'),status:'received',propositionRef:null,reason:'直接告知，无接收障碍'},
++    {id:'overheard'+i,speakerId:'a',recipientIds:['c'],recipientSpans:[at('丙')],evidence:at(c.tail),status:c.statuses[i],propositionRef:null,reason:'依据中的逐句范围分别对应当前内容'}
++   ]}));
++   returned={schemaVersion:'dialogue-reception/2',contextRef:input.contextRef,inputRef:input.assertion.inputRef,units:[{id:'turn',status:'extracted',claims:[],utterances:items,unresolved:[],coverage:{status:c.pending?'uncertain':'recorded',evidence:at(source),reason:'逐人逐内容记录范围'}}]};return structuredClone(returned);
++  }});
++  const k=createStoryKnowledgeRuntime({catalog:{id:'bound.catalog',actors,facts:[]},mvu,tavern,getAnchor:()=>({chatId:'bound.test',messageId:0,swipeId:0}),dialogue:adapter});
++  const result=await k.observeDialogue({...options.sourceAnchor,text:source});
++  const messages=id=>k.context().actorKnowledge.find(a=>a.actorId===id).facts.map(f=>f.content.text);
++  assert.deepEqual(messages('c'),c.known);assert.equal(messages('b').length,2);assert.equal(result.pending.length,c.pending);
++  assert.deepEqual(k.dialogueQuestions([]),[]);assert.equal(chat[0].mes,source);
++  assert.deepEqual(returned.units[0].utterances.map(u=>u.receptions[1].status),c.statuses);
++ }
++});
++
++test('historical short evidence and blanket overhearing remain preserved rather than silently corrected',async()=>{
++ const dir=new URL('../../replay_research/gm_style/v1/live_acceptance_20261030/clinic-knowledge-20261112/dialogue-increment-live-20261114/integration-20261115/iteration-200-20261115/',import.meta.url);
++ const req=JSON.parse(await readFile(new URL('omission.original.nested.request.json',dir),'utf8')),raw=await readFile(new URL('omission.original.nested.content.txt',dir),'utf8'),w=JSON.parse(raw),before=structuredClone(w);
++ const p=await dialogue.prepareBoundDialogueExtraction(JSON.parse(req.messages[1].content)),checked=p.check(w);
++ assert.equal(checked.semanticCompletenessVerified,false);assert.deepEqual(w,before);
++ assert.ok(checked.receptions.some(r=>r.evidence.quote==='你'));
++ assert.equal(checked.receptions.filter(r=>r.recipientIds.includes('bright')&&r.status==='received').length,3);
++ assert.equal(await readFile(new URL('omission.original.nested.content.txt',dir),'utf8'),raw);
++});

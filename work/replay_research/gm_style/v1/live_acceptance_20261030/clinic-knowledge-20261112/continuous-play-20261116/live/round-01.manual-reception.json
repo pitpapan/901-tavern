@@ -1,0 +1,32 @@
+{
+  "manualTest": true,
+  "sourceActualRequest": 535,
+  "sourceStateFile": "round-01.state.json",
+  "receipt": {
+    "id": "continuous.round01.heard-old-friend",
+    "status": "received",
+    "authority": "host-confirmed",
+    "sourceAnchor": {
+      "chatId": "901 医馆自然叙事隔离 20261116 - Branch #1",
+      "messageId": 15,
+      "swipeId": 0,
+      "text": "布莱特牵着缰绳，脚步没有停下，侧过脸压低了声音回应：\n\n“算不上底细全知。不过我知道他们两位是旧识，彼此有些交情在，但医馆馆主是另一个人，可不是雪老自己。”\n\n他顿了顿，听着身旁车马驶过的轱辘声，继续说道：\n\n“至于他们过去具体有些什么牵扯、交情深浅到什么地步，等到了医馆当面见了馆主，自然更容易摸清楚。”\n\n黄泉走在另一侧，视线顺着街面望向前方分岔的巷道，听着两人的低语并未插话。前方的石板路沿着水渠一路向东延伸，渐渐能看到挂着各式药材幌子与杂货招牌的门面在街边排开。\n\n<StatusPlaceHolderImpl/>"
+    },
+    "recipientIds": [
+      "player",
+      "huang"
+    ],
+    "propositionRefs": [
+      "clinic.owner.xuelao.old-friend"
+    ],
+    "channel": "message",
+    "belief": "confirmed",
+    "senderId": "bright"
+  },
+  "manualReceptionBasis": {
+    "player": "The player explicitly asks Bright about the relationship and Bright directly answers in the retained dialogue.",
+    "huang": "Case-specific host judgement from complete scene: present on the other side and expressly 听着两人的低语 after the short answer, with no stated missed words. The core old-friend proposition is treated as heard here; not a keyword rule or automatic full-content inference."
+  },
+  "controlClarification": "Control thread explicitly allowed this bounded manual overhearing judgement from full context; not a forced-unknown rule and not automatic extraction acceptance.",
+  "notGranted": "No detail of earlier events, depth of friendship, new source, lodging or completed letter delivery is added."
+}

@@ -1,0 +1,48 @@
+{
+  "authorization": "2026-11-14 用户明确允许新增2次叙事，承接custom260核对个人安排与原约定的归属；其余参数不变，失败即停、不重试；沿既有密钥和端点授权。",
+  "baseline": 260,
+  "limit": 2,
+  "ceiling": 262,
+  "cumulative": 261,
+  "remaining": 1,
+  "attempts": [
+    {
+      "id": "01",
+      "customRequest": 261,
+      "state": "completed",
+      "requestBytes": 119137,
+      "requestSha256": "658ae21093e3177a721f09c0d197d101bdf67d91d2accf910b40097a02f44ca1",
+      "status": 200,
+      "elapsedMs": 3311,
+      "rawResponseSha256": "4909cad24213355c38c33e6f55e07b434838811fe506d1ac02c1f98bf2ed193e",
+      "responseBytes": 820,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "8230eb27-d4f7-45a4-a150-7e1a24289e88",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 29844,
+        "completion_tokens": 146,
+        "total_tokens": 29990
+      }
+    }
+  ],
+  "classification": "retained local NO_CHECK control",
+  "classificationCalls": 0,
+  "automaticExtractionApprovalRevision": false,
+  "retries": 0,
+  "timeoutMs": 180000,
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "deployed": false,
+  "formalStoryWritten": false,
+  "closed": true,
+  "stopReason": "manual-semantic-attribution-failure-stop-no-second-request",
+  "manualAssessment": {
+    "reviewer": "assistant, no model review call",
+    "criterion": "Distinguish the original agreement from newly chosen means/details",
+    "result": "failed-to-distinguish",
+    "evidence": "Asked about face-to-face verification and clarifying intent, the reply says it was explicitly required; the cited source only requires private confirmation.",
+    "unusedAuthorizedCalls": 1,
+    "secondRequestSent": false
+  }
+}

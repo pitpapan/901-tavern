@@ -232314,7 +232314,7 @@
       "key": [],
       "keysecondary": [],
       "comment": "候选资源·法师",
-      "content": "候选资源·法师\n\n资源定义不表示任何人物已经取得；实际资格、持有、能量、冷却、XP只认当前JS/MVU。本批适配候选，默认手动禁用；执行证明只覆盖已列操作，须有该角色的已采用学习报价和实际取得记录才能使用，不自动加入帝国课程。\n\n# 法师\n\n用途：三系专长及各阶赠通用法术。\n\n**2026-10-28.magic.2 · 901适配候选阅读版。**\n\n配对机械契约见[execution/contracts](../execution/contracts)；完整运行接入按覆盖表，存在契约不等于已可执行。\n\n[共用判定](../共用901判定.md)｜[依赖](../依赖/引用定位.md)｜[来源/核算](../来源与核算.md)。各阶继承，替换值不叠加。\n\n## 本体\n\n能量：精神魔力。D/C/B/A/S依次取得对应施法职能，每阶分别免费选一项同阶通用法术；三系在D阶选定，后续沿所选系进阶。\n\n| 阶 | 奥术 | 火焰 | 冰霜 |\n| --- | --- | --- | --- |\n| D | 造成纯能量/力场伤害的法术施法+6修行DP | 火焰法术施法+6修行DP | 寒冷法术施法+6修行DP |\n| C | 精神魔力上限+10 | 每24小时额外恢复2×魔力上限，均摊到最小回复时长 | 法术魔力耗−1，最低1 |\n| B | 力场防御＝floor((L(智力)+神秘学适用附加成功)×4/3) | 以法术攻击时，传奇智力所供附加成功计算两次 | 施法判定用于削目标豁免时，传奇智力所供附加成功计算两次 |\n| A | 全伤害吸收＝L(智力) | 全能量抗力＝2L(智力) | 受异常点数前先减3L(智力) |\n| S | 三系共同：施法q≤12时−2、最低2；q>12时原q×5/6，向上取整后查动作表 | 同左 | 同左 |\n\n各阶新增收益继承；每阶赠术各一项，不把C赠术替换D赠术。传奇附加成功与901自动成功分账，不复制卡面已经计入的成功。\n\n执行版：candidate-901-magic-bundle-ba577210e69dafd5 @ 2026-10-28.magic.2；尚未完整执行验证；当前为开发候选，生成不代表部署。\n实现缺口：奥术D/C本体取得及赠术已验证；火焰、冰霜及B以上本体机制仍待接入。；被动或取得证明不代表全部法术变体交互与整套能力组认证。",
+      "content": "候选资源·法师\n\n资源定义不表示任何人物已经取得；实际资格、持有、能量、冷却、XP只认当前JS/MVU。本批适配候选，默认手动禁用；执行证明只覆盖已列操作，须有该角色的已采用学习报价和实际取得记录才能使用，不自动加入帝国课程。\n\n# 法师\n\n用途：三系专长及各阶赠通用法术。\n\n**2026-10-28.magic.2 · 901适配候选阅读版。**\n\n配对机械契约见[execution/contracts](../execution/contracts)；完整运行接入按覆盖表，存在契约不等于已可执行。\n\n[共用判定](../共用901判定.md)｜[依赖](../依赖/引用定位.md)｜[来源/核算](../来源与核算.md)。各阶继承，替换值不叠加。\n\n## 本体\n\n能量：精神魔力。D/C/B/A/S依次取得对应施法职能，每阶分别免费选一项同阶通用法术；三系在D阶选定，后续沿所选系进阶。\n\n| 阶 | 奥术 | 火焰 | 冰霜 |\n| --- | --- | --- | --- |\n| D | 造成纯能量/力场伤害的法术施法+6修行DP | 火焰法术施法+6修行DP | 寒冷法术施法+6修行DP |\n| C | 精神魔力上限+10 | 每24小时额外恢复2×魔力上限，均摊到最小回复时长 | 法术魔力耗−1，最低1 |\n| B | 力场防御＝floor((L(智力)+神秘学适用附加成功)×4/3) | 以法术攻击时，传奇智力所供附加成功计算两次 | 施法判定用于削目标豁免时，传奇智力所供附加成功计算两次 |\n| A | 全伤害吸收＝L(智力) | 全能量抗力＝2L(智力) | 受异常点数前先减3L(智力) |\n| S | 三系共同：施法q≤12时−2、最低2；q>12时原q×5/6，向上取整后查动作表 | 同左 | 同左 |\n\n各阶新增收益继承；每阶赠术各一项，不把C赠术替换D赠术。传奇附加成功与901自动成功分账，不复制卡面已经计入的成功。\n\n执行版：candidate-901-magic-bundle-ba577210e69dafd5 @ 2026-10-28.magic.2；尚未完整执行验证；当前为开发候选，生成不代表部署。\n实现缺口：奥术及冰霜D/C本体取得、赠术与冰霜魔耗消费者已验证；火焰及B以上本体机制仍待接入。；被动或取得证明不代表全部法术变体交互与整套能力组认证。",
       "constant": true,
       "selective": false,
       "selectiveLogic": 0,
@@ -232683,7 +232683,7 @@
             "sha256": "c5454a7520ef1e1bf7dc054e9554b5aa41d370a21f772e37d5fa4a7325f11a09"
           },
           "path": "../901-resource-authoring-kit/outputs/施法体系适配-20261024/execution/contracts/candidate-901-magic-bundle-ba577210e69dafd5.rule.json",
-          "sha256": "d3642bd7e7c4b4be05f695bfba457e7ea82fbf094fee6447730609beb6aba767",
+          "sha256": "cbe147d8f399ddb33ef89e77e3c7d5d21704ae59925936f7515e9e0f9f14aceb",
           "verification": {
             "runtimeFullyVerified": false,
             "scope": "paired-source-and-declarative-base; not full runtime",
@@ -232724,7 +232724,7 @@
             }
           ],
           "implementationGaps": [
-            "奥术D/C本体取得及赠术已验证；火焰、冰霜及B以上本体机制仍待接入。",
+            "奥术及冰霜D/C本体取得、赠术与冰霜魔耗消费者已验证；火焰及B以上本体机制仍待接入。",
             "被动或取得证明不代表全部法术变体交互与整套能力组认证。"
           ],
           "unresolvedRules": [],
@@ -232736,7 +232736,7 @@
             "status": "partial",
             "sourceChecked": true,
             "runtimeFullyVerified": false,
-            "scope": "arcane-D-C-body-acquisition-and-spell-grants"
+            "scope": "arcane-frost-D-C-body-acquisition-spell-grants-and-frost-mana-cost"
           },
           "learning": {
             "action": "resource",
@@ -232754,7 +232754,8 @@
               "C"
             ],
             "specializations": [
-              "奥术"
+              "奥术",
+              "冰霜"
             ]
           }
         },
@@ -232762,7 +232763,7 @@
           "id": "candidate-901-magic-bundle-ba577210e69dafd5",
           "version": "2026-10-28.magic.2",
           "contract_path": "../901-resource-authoring-kit/outputs/施法体系适配-20261024/execution/contracts/candidate-901-magic-bundle-ba577210e69dafd5.rule.json",
-          "contract_sha256": "d3642bd7e7c4b4be05f695bfba457e7ea82fbf094fee6447730609beb6aba767",
+          "contract_sha256": "cbe147d8f399ddb33ef89e77e3c7d5d21704ae59925936f7515e9e0f9f14aceb",
           "reading": {
             "path": "outputs/施法体系适配-20261024/阅读版/法师.md",
             "sha256": "c5454a7520ef1e1bf7dc054e9554b5aa41d370a21f772e37d5fa4a7325f11a09"
@@ -232823,7 +232824,7 @@
             "effects": []
           },
           "implementationGaps": [
-            "奥术D/C本体取得及赠术已验证；火焰、冰霜及B以上本体机制仍待接入。",
+            "奥术及冰霜D/C本体取得、赠术与冰霜魔耗消费者已验证；火焰及B以上本体机制仍待接入。",
             "被动或取得证明不代表全部法术变体交互与整套能力组认证。"
           ],
           "unresolvedRules": [],
@@ -232836,7 +232837,7 @@
             "status": "partial",
             "sourceChecked": true,
             "runtimeFullyVerified": false,
-            "scope": "arcane-D-C-body-acquisition-and-spell-grants"
+            "scope": "arcane-frost-D-C-body-acquisition-spell-grants-and-frost-mana-cost"
           },
           "learning": {
             "action": "resource",
@@ -232854,7 +232855,8 @@
               "C"
             ],
             "specializations": [
-              "奥术"
+              "奥术",
+              "冰霜"
             ]
           }
         },

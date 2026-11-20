@@ -1,0 +1,33 @@
+{
+  "reason": "Original07 rejected; original09/10 blocked. Separate new branch from actual validated08, frozen before followup calls. No original result replaced.",
+  "blockedOriginal": [
+    {
+      "id": "09-unrelated",
+      "parent": "07-ambiguous-hearing",
+      "text": "我和御临风谈谈午饭的口味，再整理一下衣领。",
+      "expected": "不依赖待核渡船消息，required为空，不询问。"
+    },
+    {
+      "id": "10-dependent",
+      "parent": "07-ambiguous-hearing",
+      "text": "让御临风依据黄泉刚才说的渡船消息，安排明早过河的路线。",
+      "expected": "依赖御临风是否获知渡船消息，返回真实相关待核id并询问，不代答或授予知情。"
+    }
+  ],
+  "followups": [
+    {
+      "id": "09-unrelated-from08",
+      "parent": "08-ambiguous-listener",
+      "text": "我和御临风谈谈午饭的口味，再整理一下衣领。",
+      "expected": "required=[]; ready; no question or knowledge grant"
+    },
+    {
+      "id": "10-dependent-from08",
+      "parent": "08-ambiguous-listener",
+      "text": "让御临风依据黄泉刚才说的交货地点，决定把货物运到哪里。",
+      "expected": "require real parent pending ID; deferred; one question; no invented answer or knowledge grant"
+    }
+  ],
+  "parentCustomRequest": 301,
+  "parentRawResponseSha256": "c4b4314814922159c5fad929dd14c3c5b05f16513ae865a3032145ba811cdea4"
+}

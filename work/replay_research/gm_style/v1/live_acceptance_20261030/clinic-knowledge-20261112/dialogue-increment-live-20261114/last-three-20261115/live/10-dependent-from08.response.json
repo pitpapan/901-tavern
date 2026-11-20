@@ -1,0 +1,31 @@
+{
+  "kind": "dialogue-dependency",
+  "startedAt": "2026-11-14T23:05:21.536Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-14T23:05:28.778Z",
+  "headersElapsedMs": 7242,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5a9a91679e7eca9-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sat, 14 Nov 2026 23:05:28 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=pUvDUYQsCfJq8qjS5qy5uxErrpvkqjDSODK4Md%2FN7mfrzH0gEFoLhOoIR44tGfvfheGIta%2FKY3sbcMl9uMIwnrlW2j%2FTPvUfljfLNDgJA%2FXik0ttuKMu8PvNbbnPvg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611142305221300421848268d9d6Kn6rW2I2",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "6e88d512-8b22-4d18-817c-ded55e0964f2"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"9043c3fb-707b-49e0-bcbc-1b6fa64053c4\",\"object\":\"chat.completion\",\"created\":1794697528,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"inputRef\\\":\\\"f078a01c79fd7583b3c612cadd07c622be6d8cb0dbf1d0bcbed380d4051bf88e\\\",\\\"required\\\":[\\\"dialogue.b3ac974b07ad4379ee6468f3b9084b6398a71eb429db4687fb8ff4005990a54b.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0\\\"]}\",\"reasoning_content\":\"The request involves decision-making based on information from a specific source, indicating a potential dependency on that source's content. Specifically, the action 'deciding where to transport goods' relies on the content of the referenced message. Therefore, the response must identify the message ID.\\n\\n{\\n  \\\"inputRef\\\": \\\"id\\\",\\n  \\\"required\\\": [\\n    \\\"id\\\"\\n  ]\\n}\\n\\n\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":850,\"completion_tokens\":196,\"total_tokens\":1553,\"completion_tokens_details\":{\"reasoning_tokens\":507}}}",
+  "responseBytes": 982,
+  "responseBodySha256BeforePrivacyRedaction": "9c85ffe5e0a4f1a3da1b0cbcd7a2ab30ff07604b293440bbdeef0d38aa8d5b33",
+  "outcome": "completed",
+  "finishedAt": "2026-11-14T23:05:28.793Z",
+  "elapsedMs": 7258
+}

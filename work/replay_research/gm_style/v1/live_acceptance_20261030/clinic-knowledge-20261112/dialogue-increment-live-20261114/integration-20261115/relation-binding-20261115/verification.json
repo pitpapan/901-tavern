@@ -1,0 +1,94 @@
+{
+  "modelResults": [
+    {
+      "id": "relation.original.006.network",
+      "call": 429,
+      "verdict": "fail",
+      "schemaPass": true,
+      "structuralPass": true,
+      "isolatedWrites": 6,
+      "assessment": "429 JSON/schema/citations pass but model merged Huang speech across narration, used 答道 as reply reference within overly broad content, and still grants full Bright speech to Huang via 咱们 and speaking action. Structural binding alone does not prove semantics; isolated writes6. No raw repair."
+    },
+    {
+      "id": "relation.original.009",
+      "call": 430,
+      "verdict": "fail",
+      "schemaPass": true,
+      "structuralPass": true,
+      "isolatedWrites": 5,
+      "assessment": "430 JSON/schema/citations pass; first two answer references and history15 correct, no unsupported NPC mutual grants. Third receipt evidence only 咱们 still fails grounding, though player reception plausible. Three utterances retained; isolated writes5."
+    },
+    {
+      "id": "relation.direct",
+      "call": 431,
+      "verdict": "fail",
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "assessment": "431 reception identities and direct/obstacle evidence semantically correct, but unsupported listenerId:null extra field on both receipts violates schema/local shape. Original rejected unchanged, isolated writes0, not overall pass."
+    },
+    {
+      "id": "relation.npc_reply",
+      "call": 432,
+      "verdict": "fail",
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "assessment": "432 raw JSON includes stray token after quote; parse rejected unchanged, isolated writes0. Human inspection: bright reply identity correct, but extra player obstacle receipt uses current answer as identity/obstacle evidence, not valid current grounding. No repair/retry."
+    },
+    {
+      "id": "relation.partial",
+      "call": 433,
+      "verdict": "fail",
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "assessment": "433 raw JSON has stray field/token inside evidence span; parse rejected unchanged with writes0. Human inspection shows intended player full and bright partial received/remaining not_received, but cannot accept invalid raw output."
+    },
+    {
+      "id": "relation.ambiguous",
+      "call": 434,
+      "verdict": "fail",
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "assessment": "434 raw JSON has stray token after receipt object; parse rejected unchanged, isolated writes0. Human inspection preserves unknown listener and uncertain evidence, but no actual pending result exists because parse failed."
+    },
+    {
+      "id": "relation.obstacle",
+      "call": 435,
+      "verdict": "fail",
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "assessment": "435 raw JSON includes stray token after receipt; rejected unchanged, writes0. Human inspection has correct reply identity and current departure obstacle with not_received, but invalid JSON remains failure."
+    },
+    {
+      "id": "relation.unsaid",
+      "call": 436,
+      "verdict": "pass",
+      "schemaPass": true,
+      "structuralPass": true,
+      "isolatedWrites": 2,
+      "assessment": "436 JSON/schema/citations pass; no utterance/reception/knowledge/pending, coverage none preserves not spoken. Isolated writes2 only empty batch lifecycle, not knowledge grant. Limited reception-scope pass, not all semantic extraction."
+    }
+  ],
+  "attempts": 9,
+  "rawModelResponses": 8,
+  "transportFailures": 1,
+  "used": 102,
+  "remaining": 98,
+  "cumulative": 436,
+  "freshOfflineTests": 157,
+  "newRegressionTests": 11,
+  "originalEvidenceFilesPreserved": 485,
+  "formalProtectedFilesUnchanged": 22,
+  "priorLedgerAttemptsUnchanged": true,
+  "originalInputsAndFragmentCataloguesUnchanged": true,
+  "generationParametersUnchanged": true,
+  "rawRepair": false,
+  "validationRelaxed": false,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalOrRevisionRestored": false
+}

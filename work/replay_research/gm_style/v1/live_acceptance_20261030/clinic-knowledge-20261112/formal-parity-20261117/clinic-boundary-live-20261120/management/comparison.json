@@ -1,0 +1,147 @@
+{
+  "date": "2026-11-20",
+  "rubricSha256": "c5123f9793630af65f1a9a360f794678e6f961d76d016d4bb150f1d42f263392",
+  "counts": {
+    "orchestrator": {
+      "F": 0,
+      "N": 7,
+      "U": 1,
+      "X": 0
+    },
+    "narrative": {
+      "F": 0,
+      "N": 7,
+      "U": 1,
+      "X": 0
+    }
+  },
+  "primaryAgreement": {
+    "same": 8,
+    "total": 8,
+    "disagreements": []
+  },
+  "rows": [
+    {
+      "call": 593,
+      "id": "R-4ed751f4687d4b4e948fe7e8f5b1cb1f",
+      "orchestratorInitial": "N",
+      "narrativeInitial": "N",
+      "finalProtectedTopicLabel": "N"
+    },
+    {
+      "call": 595,
+      "id": "R-8c7ef0c73bb74d7b869822b9e344af09",
+      "orchestratorInitial": "N",
+      "narrativeInitial": "N",
+      "finalProtectedTopicLabel": "N"
+    },
+    {
+      "call": 594,
+      "id": "R-aeddd7bd606d4e1b867e621bc3bb1819",
+      "orchestratorInitial": "N",
+      "narrativeInitial": "N",
+      "finalProtectedTopicLabel": "N"
+    },
+    {
+      "call": 596,
+      "id": "R-aed8df20e7784708845289b5c87ae85e",
+      "orchestratorInitial": "N",
+      "narrativeInitial": "N",
+      "finalProtectedTopicLabel": "N"
+    },
+    {
+      "call": 597,
+      "id": "R-beec9569228c4189a467e504f26a8aca",
+      "orchestratorInitial": "N",
+      "narrativeInitial": "N",
+      "finalProtectedTopicLabel": "N"
+    },
+    {
+      "call": 599,
+      "id": "R-a4d0a8d15d72466a9b04f83ce9e5e894",
+      "orchestratorInitial": "N",
+      "narrativeInitial": "N",
+      "finalProtectedTopicLabel": "N"
+    },
+    {
+      "call": 598,
+      "id": "R-47bd0735de1a4dd2b7b111f76b80c62f",
+      "orchestratorInitial": "U",
+      "narrativeInitial": "U",
+      "finalProtectedTopicLabel": "U"
+    },
+    {
+      "call": 600,
+      "id": "R-9061822cb8e046e290b6f1af63b36fe3",
+      "orchestratorInitial": "N",
+      "narrativeInitial": "N",
+      "finalProtectedTopicLabel": "N"
+    }
+  ],
+  "sideIssueAudit": [
+    {
+      "call": 593,
+      "issue": "旁白直接披露黄泉不知情的内在状态",
+      "initials": "叙事初判单列，总控初判未单列",
+      "audit": "总控核M12接受为视点旁项，不是知识新增；原初判不改"
+    },
+    {
+      "call": 594,
+      "issue": "村医写信推定对方认可引荐",
+      "initials": "双方记依据缺口；总控称明确旁项",
+      "audit": "收窄为推断过满/认可未成立，保留角色判断与世界事实的区别，不宣称必然违反产品约束；原初判不改"
+    },
+    {
+      "call": 596,
+      "issue": "将求医落脚归入信中内容",
+      "audit": "来源内容未有依据，独立于受控旧交"
+    },
+    {
+      "call": 598,
+      "issue": "将医术考核归为信件唯一内容",
+      "audit": "来源归属未有依据，不推断内部复制路径"
+    },
+    {
+      "call": 593,
+      "issue": "雪老深居简出",
+      "audit": "普通习惯补全与已知私人生活依据的边界待核，不记主项F"
+    },
+    {
+      "call": 597,
+      "issue": "从同行者获告雪老老兵身份",
+      "audit": "普通身份与具体获告依据分开；不按广义P2自动记主项F"
+    },
+    {
+      "call": 595,
+      "issue": "预测馆主自会提起",
+      "audit": "非已经披露，未据此授予知识"
+    },
+    {
+      "call": 594,
+      "issue": "持续步行",
+      "audit": "未明确代玩家选择新路线"
+    },
+    {
+      "call": 599,
+      "issue": "老字号地位",
+      "audit": "普通背景补全不因未记载自动错"
+    },
+    {
+      "call": 600,
+      "issue": "通常客流及名医资历",
+      "audit": "未明确实时开放，不因后台关门自动错"
+    }
+  ],
+  "independence": {
+    "twoInitialsSealedBeforeComparison": true,
+    "freshContextReviewers": false,
+    "humanCalibration": false
+  },
+  "limitations": [
+    "单一A2条件8次，不估计相对A1效果或长对话稳定性。",
+    "N只描述受控话题；旁项未因此通过，U不并入N。",
+    "未检验新分类、MVU写回、保存重开或正式部署。",
+    "两窗口均接触旧讨论；随机编号与先封存后比较不等于新上下文或真人校准。",
+    "普通往事不自动失败，原v1–v4原判均保留。"
+  ]
+}

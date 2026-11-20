@@ -1,0 +1,38 @@
+{
+  "authorization": "用户新增10次，继续研发07—10，发现有证据问题则修复并离线回归后用剩余额度验收；失败先停诊断，不盲目重发、不修补回复或放宽校验。依赖承接真实待核结果，不部署/正式剧情/自动批准修订",
+  "resumes": "final-four-20261114",
+  "originalBudget": 10,
+  "previouslyUsed": 1,
+  "baseline": 287,
+  "limit": 9,
+  "cumulative": 288,
+  "remaining": 8,
+  "attempts": [
+    {
+      "id": "07-ambiguous-hearing",
+      "customRequest": 288,
+      "state": "completed",
+      "requestBytes": 12456,
+      "requestSha256": "701b634487848206e95b35d328c448619c43d8b5c7c9f938b4b7b925250c9b1a",
+      "status": 200,
+      "elapsedMs": 16606,
+      "rawResponseSha256": "f970a546da7c4122fe1d3ca653035404a7dc5e73f44385eb9142bcbe3e5a893b",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3422,
+        "completion_tokens": 2553,
+        "total_tokens": 5975
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Missing property span no longer reproduced, but model invented type manner outside existing type map; original contract rejects entire reply. Reception uncertain is preserved. No coercion; revise explicit closed type contract then retest within same pool."
+    }
+  ],
+  "closed": true,
+  "retries": 0,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "stopReason": "manual-fail"
+}

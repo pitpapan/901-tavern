@@ -1,0 +1,45 @@
+{
+  "userRequest": "那就让叙事质量窗口按A1基线准备B1、B2两份输入：布莱特不在场，同样询问黄泉，只改变布莱特的私有知情投影，然后再调用模型测试",
+  "sourceThreadId": "01a1c9e5-e4ab-7f33-923f-ed8800dfd5d3",
+  "verifiedAgainstUserMessage": true,
+  "coordinatorExecutionScope": {
+    "limit": 2,
+    "baseline": 554,
+    "ceiling": 556,
+    "oneAttemptPerGroup": true,
+    "failuresCount": true,
+    "automaticRetries": false,
+    "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+    "model": "[抗截断]gemini-3.8-flash",
+    "onlyNarration": true
+  },
+  "dataScope": "The approved B1/B2 bodies with A1 character/background/history, shared test scene and question, and B2 original private Bright receipt.",
+  "preparedExternalCalls": 0,
+  "status": "coordinator_preflight_approved",
+  "approvedRequestSha256": {
+    "B1": "5bc4654c93cc427f83f397499e88ebbeacead7278d6ae6589c50d935336144cb",
+    "B2": "6b8d4e11a7bac1f687fbd3315bd10105c4109f139c7be25c4a580352a21b3702"
+  },
+  "coordinatorReview": {
+    "turnId": "01a1f075-a2cb-7502-ba4b-f2098c7e68cc",
+    "approvalMessageId": "msg_00b41c8c7cb411b1016afe13e3d4fc87d2901a4d8ade1f0648",
+    "source": "Coordinator user-visible independent review, read directly in the source thread.",
+    "scope": "Exact frozen request hashes, two total narration attempts."
+  },
+  "explicitUserConfirmation": {
+    "sourceThreadId": "01a1c9e5-e4ab-7f33-923f-ed8800dfd5d3",
+    "replyMessageId": "01a1f07f-049b-7881-ab36-9c9075bd69e7",
+    "questionItemId": "[\"request_user_input_async\",\"call_2f36f969ac1e44e4bf4077d1e41d5751\",0]",
+    "question": "是否授权将已审阅的B1、B2完整正文请求发送至原端点 https://cdn.sta1n.cn/v1/chat/completions，使用 [抗截断]gemini-3.8-flash？请求包含现有角色资料、背景、保留历史、共同隔离场景，以及B2中布莱特的私下知情与来源。每份各1次，共最多2次尝试，失败计入，不自动重试，不改代码或部署。",
+    "answer": "授权这两份请求，各1次",
+    "verifiedAgainstUserMessage": true,
+    "coordinationTiming": "The specific reply was recorded here after the two attempts, which proceeded on the directly verified original user instruction and the coordinator approval visible in the source thread. No additional attempts."
+  },
+  "execution": {
+    "ledger": "live-20261118/run.json",
+    "used": 2,
+    "remaining": 0,
+    "cumulative": 556,
+    "closed": true
+  }
+}

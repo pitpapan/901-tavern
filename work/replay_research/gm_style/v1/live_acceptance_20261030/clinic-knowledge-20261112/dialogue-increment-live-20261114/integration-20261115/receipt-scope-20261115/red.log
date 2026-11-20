@@ -1,0 +1,82 @@
+✔ bound unit schema factors shared fields once without weakening either status branch (1027.5807ms)
+✔ bound prompt uses one output envelope while retaining shared field and coordinate contracts (6.4382ms)
+✔ bound schema carries recipient response evidence and new-message coverage at the responsible fields (8.9868ms)
+✔ bounded reception narrows generation scope and supplies exact source ranges without accepting old wrong spans (21.0131ms)
+✔ bound prompt retains the existing direct-reception rule without changing schema, input or other guidance (24.5143ms)
+✔ existing fact index does not limit new dialogue reception and never fills a false none (5.4536ms)
+✔ direct speech needs no acknowledgement; explicit obstruction and uncertainty retain their own outcomes (55.9358ms)
+✔ bound utterance maps only explicit nested receipts and retains mandatory coverage (3.6088ms)
+✔ action, forged reference, missing receipts and omitted target coverage reject without mutation (5.578ms)
+✔ uncertain coverage preserves explicit partial receipt plus uncertainty without blanket blocking (2.4537ms)
+✔ none and unresolved-only coverage require actual source evidence, never synthesize receipts (2.612ms)
+✔ original source, role, null-pair and identity checks remain in force (2.9305ms)
+✔ schema rejects nested action and missing coverage and allows explicit none and uncertainty (998.3414ms)
+✔ model adapter uses version2 and original MVU path persists coverage and independent known/pending rows (31.7034ms)
+✔ historical flat failures are retained and cannot silently enter the new wire (42.3738ms)
+✔ model-path invalid coverage writes nothing; explicit unreceived and none never grant or ask (35.9157ms)
+✔ planned speech keeps original intent claim and none coverage without creating utterance (3.3423ms)
+✔ existing Tavern completion maps exact messages and schema without settings or response repair (18.2226ms)
+✔ listener references can ground a current reply but cannot refer to its speaker (32.6652ms)
+✔ implicit response positive and obstacle/ambiguity/unsaid controls use original receipts without filling gaps (58.6844ms)
+✔ spoken content excludes intervening narration while source checks remain unchanged (9.9742ms)
+✖ reception evidence distinguishes identity from reception and limits reused evidence to its supported scope (17.5123ms)
+✖ reused listening evidence preserves explicit full, limited, unknown and absent reception through existing MVU (58.4953ms)
+✔ historical short evidence and blanket overhearing remain preserved rather than silently corrected (9.6143ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 22
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3356.1093
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-bound.test.mjs:258:1
+✖ reception evidence distinguishes identity from reception and limits reused evidence to its supported scope (17.5123ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(r.evidence.description.includes('识别听者不等于证明接收'))
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-bound.test.mjs:260:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-bound.test.mjs:271:1
+✖ reused listening evidence preserves explicit full, limited, unknown and absent reception through existing MVU (58.4953ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  +   {
+  +     kind: 'reported_message',
+  +     speakerId: 'a',
+  +     text: '渡口停航。'
+  +   },
+  +   {
+  +     kind: 'reported_message',
+  +     speakerId: 'a',
+  +     text: '明早改走山路。'
+  +   }
+  -   '渡口停航。',
+  -   '明早改走山路。'
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-bound.test.mjs:295:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ { kind: 'reported_message', speakerId: 'a', text: '渡口停航。' }, { kind: 'reported_message', speakerId: 'a', text: '明早改走山路。' } ],
+    expected: [ '渡口停航。', '明早改走山路。' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

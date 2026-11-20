@@ -1,0 +1,711 @@
+{
+  "id": "omission.original.r2",
+  "exactCurrentMessages": true,
+  "structuralPass": true,
+  "checked": {
+    "contextRef": "b3d4cf6209f6277a43fd8de5f449ceb1b9460609cc36f5f991b38ebe00052a91",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.da2aea4ece6e6e8982f8ec7345cf915ed10df8380d09ebe960a53566ad7cf86b",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "utterance.1",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "消息？"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 42,
+                  "end": 43,
+                  "quote": "她"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 38,
+                  "end": 41,
+                  "quote": "消息？"
+                }
+              },
+              "mode": "question",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 37,
+                "end": 53,
+                "quote": "“消息？”她语气里带着些许疑惑，"
+              }
+            },
+            {
+              "id": "utterance.2",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 42,
+                  "end": 43,
+                  "quote": "她"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 54,
+                  "end": 86,
+                  "quote": "我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 53,
+                "end": 87,
+                "quote": "“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”"
+              }
+            },
+            {
+              "id": "utterance.3",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "怎么突然问这个？"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 89,
+                  "end": 90,
+                  "quote": "她"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 122,
+                  "end": 130,
+                  "quote": "怎么突然问这个？"
+                }
+              },
+              "mode": "question",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 121,
+                "end": 131,
+                "quote": "“怎么突然问这个？”"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "reception.1.1",
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 38,
+            "end": 41,
+            "quote": "消息？"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 19,
+          "end": 35,
+          "quote": "转过头有些莫名地看了御临风一眼。"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "",
+        "claimId": "utterance.1"
+      },
+      {
+        "id": "reception.1.2",
+        "speakerId": "huang",
+        "recipientIds": [
+          "bright"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 38,
+            "end": 41,
+            "quote": "消息？"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 146,
+          "end": 156,
+          "quote": "侧耳听着两人的动静，"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "",
+        "claimId": "utterance.1"
+      },
+      {
+        "id": "reception.2.1",
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 68,
+            "end": 69,
+            "quote": "你"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 94,
+          "end": 107,
+          "quote": "目光在御临风脸上停了片刻，"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "",
+        "claimId": "utterance.2"
+      },
+      {
+        "id": "reception.2.2",
+        "speakerId": "huang",
+        "recipientIds": [
+          "bright"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 54,
+            "end": 86,
+            "quote": "我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 146,
+          "end": 156,
+          "quote": "侧耳听着两人的动静，"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "",
+        "claimId": "utterance.2"
+      },
+      {
+        "id": "reception.3.1",
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 122,
+            "end": 130,
+            "quote": "怎么突然问这个？"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 94,
+          "end": 107,
+          "quote": "目光在御临风脸上停了片刻，"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "",
+        "claimId": "utterance.3"
+      },
+      {
+        "id": "reception.3.2",
+        "speakerId": "huang",
+        "recipientIds": [
+          "bright"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 122,
+            "end": 130,
+            "quote": "怎么突然问这个？"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 146,
+          "end": 156,
+          "quote": "侧耳听着两人的动静，"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "",
+        "claimId": "utterance.3"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "recorded",
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 225,
+          "quote": "黄泉正牵着马往前走，听到问话停下脚步，转过头有些莫名地看了御临风一眼。\n\n“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”\n\n她顿了顿，目光在御临风脸上停了片刻，随即收回视线看向前方的街巷：“怎么突然问这个？”\n\n旁边的布莱特也放缓了步子，侧耳听着两人的动静，没有插话。街道两旁的铺子依旧喧闹，引水渠旁的杂货摊前，摊主正忙着将卸下的货筐搬进屋内。\n\n<StatusPlaceHolderImpl/>"
+        },
+        "reason": "黄泉对御临风的发言及布莱特在旁侧耳倾听的言说接收已完整记录"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false
+  },
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": [
+        {
+          "id": "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 13,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 13,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 13,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "901 帝都正式续玩 20261106",
+                "messageId": 13,
+                "swipeId": 0,
+                "text": "黄泉正牵着马往前走，听到问话停下脚步，转过头有些莫名地看了御临风一眼。\n\n“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”\n\n她顿了顿，目光在御临风脸上停了片刻，随即收回视线看向前方的街巷：“怎么突然问这个？”\n\n旁边的布莱特也放缓了步子，侧耳听着两人的动静，没有插话。街道两旁的铺子依旧喧闹，引水渠旁的杂货摊前，摊主正忙着将卸下的货筐搬进屋内。\n\n<StatusPlaceHolderImpl/>"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31",
+          "channel": "message",
+          "learnedAtMessage": 13
+        }
+      ]
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": [
+        {
+          "id": "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 13,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 13,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 13,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "901 帝都正式续玩 20261106",
+                "messageId": 13,
+                "swipeId": 0,
+                "text": "黄泉正牵着马往前走，听到问话停下脚步，转过头有些莫名地看了御临风一眼。\n\n“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”\n\n她顿了顿，目光在御临风脸上停了片刻，随即收回视线看向前方的街巷：“怎么突然问这个？”\n\n旁边的布莱特也放缓了步子，侧耳听着两人的动静，没有插话。街道两旁的铺子依旧喧闹，引水渠旁的杂货摊前，摊主正忙着将卸下的货筐搬进屋内。\n\n<StatusPlaceHolderImpl/>"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806",
+          "channel": "message",
+          "learnedAtMessage": 13
+        }
+      ]
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "pending": [],
+  "noQuestionWithoutDependency": true,
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "implicit.regression",
+    "chatId": "901 帝都正式续玩 20261106",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      },
+      "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message": {
+        "id": "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 13,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      },
+      "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806.message": {
+        "id": "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 13,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      }
+    },
+    "events": {
+      "received.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31": {
+        "id": "received.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player"
+          ],
+          "propositionRefs": [
+            "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 13,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "901 帝都正式续玩 20261106",
+            "messageId": 13,
+            "swipeId": 0,
+            "text": "黄泉正牵着马往前走，听到问话停下脚步，转过头有些莫名地看了御临风一眼。\n\n“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”\n\n她顿了顿，目光在御临风脸上停了片刻，随即收回视线看向前方的街巷：“怎么突然问这个？”\n\n旁边的布莱特也放缓了步子，侧耳听着两人的动静，没有插话。街道两旁的铺子依旧喧闹，引水渠旁的杂货摊前，摊主正忙着将卸下的货筐搬进屋内。\n\n<StatusPlaceHolderImpl/>"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 14
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.player.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message.event": {
+        "id": "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.player.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.player.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message",
+            "eventRef": "received.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 13,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 14
+          }
+        ]
+      },
+      "received.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806": {
+        "id": "received.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "bright"
+          ],
+          "propositionRefs": [
+            "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 13,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "901 帝都正式续玩 20261106",
+            "messageId": 13,
+            "swipeId": 0,
+            "text": "黄泉正牵着马往前走，听到问话停下脚步，转过头有些莫名地看了御临风一眼。\n\n“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”\n\n她顿了顿，目光在御临风脸上停了片刻，随即收回视线看向前方的街巷：“怎么突然问这个？”\n\n旁边的布莱特也放缓了步子，侧耳听着两人的动静，没有插话。街道两旁的铺子依旧喧闹，引水渠旁的杂货摊前，摊主正忙着将卸下的货筐搬进屋内。\n\n<StatusPlaceHolderImpl/>"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 14
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806.bright.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806.message.event": {
+        "id": "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806.bright.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806.bright.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806.message",
+            "knowerId": "bright",
+            "propositionRef": "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806.message",
+            "eventRef": "received.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 13,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 14
+          }
+        ]
+      }
+    },
+    "knowledge": {
+      "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.player.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message": {
+        "id": "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.player.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message",
+        "eventRef": "received.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 13,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      },
+      "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806.bright.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806.message": {
+        "id": "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806.bright.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806.message",
+        "knowerId": "bright",
+        "propositionRef": "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806.message",
+        "eventRef": "received.dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 13,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      }
+    },
+    "dialogueBatches": {
+      "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7": {
+        "id": "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7",
+        "sourceAnchor": {
+          "chatId": "901 帝都正式续玩 20261106",
+          "messageId": 13,
+          "swipeId": 0,
+          "text": "黄泉正牵着马往前走，听到问话停下脚步，转过头有些莫名地看了御临风一眼。\n\n“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”\n\n她顿了顿，目光在御临风脸上停了片刻，随即收回视线看向前方的街巷：“怎么突然问这个？”\n\n旁边的布莱特也放缓了步子，侧耳听着两人的动静，没有插话。街道两旁的铺子依旧喧闹，引水渠旁的杂货摊前，摊主正忙着将卸下的货筐搬进屋内。\n\n<StatusPlaceHolderImpl/>"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31",
+            "claimId": "utterance.2",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。",
+            "quote": "我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。",
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 94,
+              "end": 107,
+              "quote": "目光在御临风脸上停了片刻，"
+            },
+            "unresolved": []
+          },
+          {
+            "id": "dialogue.66e3eef121d36b1191bbddf5e20df47aa0da0b6de369804f04e44f1886189cc7.958422266ca050ccd9c11e799b12440634125b67ef9c23bc86d63053a4421806",
+            "claimId": "utterance.2",
+            "speakerId": "huang",
+            "recipientIds": [
+              "bright"
+            ],
+            "propositionRef": null,
+            "content": "我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。",
+            "quote": "我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。",
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 146,
+              "end": 156,
+              "quote": "侧耳听着两人的动静，"
+            },
+            "unresolved": []
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "recorded",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 225,
+              "quote": "黄泉正牵着马往前走，听到问话停下脚步，转过头有些莫名地看了御临风一眼。\n\n“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”\n\n她顿了顿，目光在御临风脸上停了片刻，随即收回视线看向前方的街巷：“怎么突然问这个？”\n\n旁边的布莱特也放缓了步子，侧耳听着两人的动静，没有插话。街道两旁的铺子依旧喧闹，引水渠旁的杂货摊前，摊主正忙着将卸下的货筐搬进屋内。\n\n<StatusPlaceHolderImpl/>"
+            },
+            "reason": "黄泉对御临风的发言及布莱特在旁侧耳倾听的言说接收已完整记录"
+          }
+        ]
+      }
+    }
+  }
+}

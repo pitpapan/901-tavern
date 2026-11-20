@@ -1,0 +1,216 @@
+{
+  "id": "implicit.obstacle.r2",
+  "exactCurrentMessages": true,
+  "structuralPass": true,
+  "checked": {
+    "contextRef": "73e7f01bb57dbb2e8bb41e0bbbacf4f42996100349e33c15b37924a9568cf171",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.d548392c3b5309b244f9553daf6e08948176e757b22006199c531e4e8ff3e8f0",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "turn.claim.1",
+              "type": "action",
+              "args": {
+                "actor": "御临风",
+                "verb": "走远",
+                "object": null
+              },
+              "argumentSpans": {
+                "actor": {
+                  "documentId": "current",
+                  "start": 0,
+                  "end": 3,
+                  "quote": "御临风"
+                },
+                "verb": {
+                  "documentId": "current",
+                  "start": 6,
+                  "end": 8,
+                  "quote": "走远"
+                },
+                "object": null
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 0,
+                "end": 9,
+                "quote": "御临风问完便走远，"
+              }
+            },
+            {
+              "id": "turn.utterance.1",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "日落后就锁门。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 19,
+                  "end": 21,
+                  "quote": "黄泉"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 31,
+                  "end": 38,
+                  "quote": "日落后就锁门。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 19,
+                "end": 39,
+                "quote": "黄泉没有察觉，仍答道：“日落后就锁门。”"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "turn.reception.1",
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 31,
+            "end": 38,
+            "quote": "日落后就锁门。"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 9,
+          "end": 19,
+          "quote": "已听不到这里的声音。"
+        },
+        "status": "not_received",
+        "propositionRef": null,
+        "reason": "御临风走远已听不到声音，明确未收到黄泉的回答。",
+        "claimId": "turn.utterance.1"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "recorded",
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 39,
+          "quote": "御临风问完便走远，已听不到这里的声音。黄泉没有察觉，仍答道：“日落后就锁门。”"
+        },
+        "reason": "黄泉回答御临风的问题，但御临风已走远听不到，记录为明确未接收（not_received）。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false
+  },
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": []
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": []
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "pending": [],
+  "noQuestionWithoutDependency": true,
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "implicit.regression",
+    "chatId": "implicit.offline.implicit.obstacle",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      }
+    },
+    "events": {},
+    "knowledge": {},
+    "dialogueBatches": {
+      "dialogue.6064c100882fdf32732d4abb532b825ec93b3b5dbd2a1912a8d5a563aa8ec069": {
+        "id": "dialogue.6064c100882fdf32732d4abb532b825ec93b3b5dbd2a1912a8d5a563aa8ec069",
+        "sourceAnchor": {
+          "chatId": "implicit.offline.implicit.obstacle",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "御临风问完便走远，已听不到这里的声音。黄泉没有察觉，仍答道：“日落后就锁门。”"
+        },
+        "status": "processed",
+        "rows": [],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "recorded",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 39,
+              "quote": "御临风问完便走远，已听不到这里的声音。黄泉没有察觉，仍答道：“日落后就锁门。”"
+            },
+            "reason": "黄泉回答御临风的问题，但御临风已走远听不到，记录为明确未接收（not_received）。"
+          }
+        ]
+      }
+    }
+  }
+}

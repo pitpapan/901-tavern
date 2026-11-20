@@ -1,0 +1,732 @@
+{
+  "chatId": "isolated.dialogue.parallel.07-ambiguous-hearing",
+  "chat": [
+    {
+      "mes": "黄泉轻声说：“渡船明早停航。”御临风在走廊另一端，记录不能确定他是否听清。",
+      "is_user": false,
+      "swipe_id": 0
+    }
+  ],
+  "floors": {
+    "0": {
+      "stat_data": {
+        "901_rules_poc": {
+          "schemaVersion": 1,
+          "revision": 2,
+          "chatId": "isolated.dialogue.parallel.07-ambiguous-hearing",
+          "actors": {
+            "player": {
+              "name": "御临风",
+              "state": {
+                "name": "御临风",
+                "attributes": {
+                  "力量": 5,
+                  "敏捷": 5,
+                  "智力": 4,
+                  "感知": 4,
+                  "意志": 1,
+                  "风度": 2
+                },
+                "size": 5,
+                "hpBonus": 0,
+                "derived": {
+                  "hpMax": 12,
+                  "defense": 4,
+                  "speed": 25,
+                  "initiative": 7,
+                  "willMax": 3,
+                  "vision": 40
+                },
+                "skills": {
+                  "运动": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "肉搏": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "白刃": {
+                    "level": 5,
+                    "subs": {
+                      "长剑": {
+                        "level": 3
+                      }
+                    }
+                  },
+                  "射击": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "隐藏": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "求生": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "驾驶": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "学识": {
+                    "level": 2,
+                    "subs": {}
+                  },
+                  "科学": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "神秘": {
+                    "level": 2,
+                    "subs": {}
+                  },
+                  "电脑": {
+                    "level": 2,
+                    "subs": {}
+                  },
+                  "医疗": {
+                    "level": 2,
+                    "subs": {}
+                  },
+                  "洞察": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "社交": {
+                    "level": 2,
+                    "subs": {}
+                  }
+                },
+                "resources": {
+                  "流风": {
+                    "current": 22,
+                    "max": 22
+                  }
+                },
+                "attributeAuto": {},
+                "derivedOverrides": [
+                  "hpMax",
+                  "willMax",
+                  "speed",
+                  "initiative"
+                ],
+                "health": {
+                  "intact": 12,
+                  "B": 0,
+                  "L": 0,
+                  "A": 0,
+                  "temp": 0,
+                  "coma": false,
+                  "deteriorationStopped": false
+                },
+                "will": {
+                  "current": 3,
+                  "max": 3
+                },
+                "xp": 0,
+                "greatPowersAvailable": 0,
+                "statuses": [],
+                "attributeDamage": {},
+                "turn": {
+                  "phase": "ready",
+                  "standard": 0,
+                  "move": 0,
+                  "swift": 0,
+                  "reactionLock": false,
+                  "reactionLockEnds": 0,
+                  "responseDebt": false,
+                  "opportunityUsed": false
+                },
+                "extendedActions": {},
+                "inventory": [
+                  {
+                    "name": "雪莲子",
+                    "quantity": 1,
+                    "source": "原"
+                  },
+                  {
+                    "name": "培元丹",
+                    "quantity": 3,
+                    "source": "原"
+                  },
+                  {
+                    "name": "药A",
+                    "quantity": 2,
+                    "source": "原"
+                  },
+                  {
+                    "name": "药B",
+                    "quantity": 3,
+                    "source": "原"
+                  },
+                  {
+                    "name": "药C",
+                    "quantity": 4,
+                    "source": "原"
+                  },
+                  {
+                    "name": "雷霆药剂",
+                    "quantity": null,
+                    "source": "原：数量未记"
+                  },
+                  {
+                    "name": "恶灵提示符",
+                    "quantity": null,
+                    "source": "原：100为价格，非数量"
+                  }
+                ],
+                "unknownSkills": {
+                  "制造": {
+                    "level": null,
+                    "subs": {
+                      "炼药": {
+                        "level": 2
+                      }
+                    }
+                  }
+                },
+                "recoveryRules": {
+                  "flow": {
+                    "attributes": [
+                      "敏捷",
+                      "感知"
+                    ],
+                    "physical": true,
+                    "longRest": true
+                  },
+                  "flowRecoveryCheck": {
+                    "attributes": [
+                      "敏捷",
+                      "感知"
+                    ],
+                    "source": "用户2026-10-23确认"
+                  }
+                }
+              }
+            },
+            "huang": {
+              "name": "黄泉",
+              "state": {
+                "name": "黄泉",
+                "attributes": {
+                  "力量": 5,
+                  "敏捷": 6,
+                  "智力": 2,
+                  "感知": 5,
+                  "意志": 3,
+                  "风度": 3
+                },
+                "size": 5,
+                "hpBonus": 0,
+                "derived": {
+                  "hpMax": 12,
+                  "defense": 5,
+                  "speed": 16,
+                  "initiative": 13,
+                  "willMax": 6,
+                  "vision": 50
+                },
+                "skills": {
+                  "运动": {
+                    "level": 2,
+                    "subs": {}
+                  },
+                  "肉搏": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "白刃": {
+                    "level": 5,
+                    "subs": {
+                      "太刀": {
+                        "level": 1
+                      }
+                    }
+                  },
+                  "射击": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "隐藏": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "求生": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "驾驶": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "学识": {
+                    "level": 2,
+                    "subs": {}
+                  },
+                  "科学": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "神秘": {
+                    "level": 1,
+                    "subs": {
+                      "除灵": {
+                        "level": 1
+                      }
+                    }
+                  },
+                  "调查": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "洞察": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "社交": {
+                    "level": 1,
+                    "subs": {
+                      "感受": {
+                        "level": 1
+                      },
+                      "表达": {
+                        "level": 1
+                      },
+                      "说服": {
+                        "level": 1
+                      }
+                    }
+                  },
+                  "电脑": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "医疗": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "制造": {
+                    "level": 0,
+                    "subs": {}
+                  }
+                },
+                "resources": {
+                  "灵力": {
+                    "current": 5,
+                    "max": 5
+                  }
+                },
+                "attributeAuto": {},
+                "derivedOverrides": [
+                  "hpMax",
+                  "willMax",
+                  "speed",
+                  "initiative"
+                ],
+                "health": {
+                  "intact": 12,
+                  "B": 0,
+                  "L": 0,
+                  "A": 0,
+                  "temp": 0,
+                  "coma": false,
+                  "deteriorationStopped": false
+                },
+                "will": {
+                  "current": 6,
+                  "max": 6
+                },
+                "xp": 0,
+                "greatPowersAvailable": 0,
+                "statuses": [],
+                "attributeDamage": {},
+                "turn": {
+                  "phase": "ready",
+                  "standard": 0,
+                  "move": 0,
+                  "swift": 0,
+                  "reactionLock": false,
+                  "reactionLockEnds": 0,
+                  "responseDebt": false,
+                  "opportunityUsed": false
+                },
+                "extendedActions": {}
+              }
+            },
+            "jiang": {
+              "name": "姜子尤",
+              "state": {
+                "name": "姜子尤",
+                "attributes": {
+                  "力量": 8,
+                  "敏捷": 2,
+                  "智力": 2,
+                  "感知": 3,
+                  "意志": 3,
+                  "风度": 3
+                },
+                "size": 5,
+                "hpBonus": 2,
+                "derived": {
+                  "hpMax": 20,
+                  "defense": 2,
+                  "speed": 25,
+                  "initiative": 6,
+                  "willMax": 6,
+                  "vision": 30
+                },
+                "skills": {
+                  "运动": {
+                    "level": 3,
+                    "subs": {}
+                  },
+                  "肉搏": {
+                    "level": 5,
+                    "subs": {
+                      "拳击": {
+                        "level": 2
+                      }
+                    }
+                  },
+                  "白刃": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "射击": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "隐藏": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "求生": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "驾驶": {
+                    "level": 2,
+                    "subs": {}
+                  },
+                  "学识": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "科学": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "神秘": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "调查": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "洞察": {
+                    "level": 2,
+                    "subs": {}
+                  },
+                  "社交": {
+                    "level": 1,
+                    "subs": {
+                      "威逼": {
+                        "level": 2
+                      },
+                      "街头智慧": {
+                        "level": 1
+                      },
+                      "沟通": {
+                        "level": 1
+                      }
+                    }
+                  },
+                  "电脑": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "医疗": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "制造": {
+                    "level": 0,
+                    "subs": {}
+                  }
+                },
+                "resources": {
+                  "气": {
+                    "current": 2,
+                    "max": 2
+                  },
+                  "斗气": {
+                    "current": 2,
+                    "max": 2
+                  }
+                },
+                "attributeAuto": {},
+                "derivedOverrides": [
+                  "hpMax",
+                  "willMax",
+                  "speed",
+                  "initiative"
+                ],
+                "health": {
+                  "intact": 20,
+                  "B": 0,
+                  "L": 0,
+                  "A": 0,
+                  "temp": 0,
+                  "coma": false,
+                  "deteriorationStopped": false
+                },
+                "will": {
+                  "current": 6,
+                  "max": 6
+                },
+                "xp": 0,
+                "greatPowersAvailable": 0,
+                "statuses": [],
+                "attributeDamage": {},
+                "turn": {
+                  "phase": "ready",
+                  "standard": 0,
+                  "move": 0,
+                  "swift": 0,
+                  "reactionLock": false,
+                  "reactionLockEnds": 0,
+                  "responseDebt": false,
+                  "opportunityUsed": false
+                },
+                "extendedActions": {}
+              }
+            },
+            "bright": {
+              "name": "布莱特",
+              "state": {
+                "name": "布莱特",
+                "attributes": {
+                  "力量": 3,
+                  "敏捷": 4,
+                  "智力": 2,
+                  "感知": 4,
+                  "意志": 2,
+                  "风度": 1
+                },
+                "size": 5,
+                "hpBonus": 0,
+                "derived": {
+                  "hpMax": 8,
+                  "defense": 4,
+                  "speed": 22,
+                  "initiative": 9,
+                  "willMax": 5,
+                  "vision": 40
+                },
+                "skills": {
+                  "运动": {
+                    "level": 2,
+                    "subs": {}
+                  },
+                  "肉搏": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "白刃": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "射击": {
+                    "level": 1,
+                    "subs": {
+                      "长弓": {
+                        "level": 4
+                      }
+                    }
+                  },
+                  "隐藏": {
+                    "level": 2,
+                    "subs": {}
+                  },
+                  "求生": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "驾驶": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "学识": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "科学": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "神秘": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "调查": {
+                    "level": 2,
+                    "subs": {
+                      "搜索": {
+                        "level": 1
+                      }
+                    }
+                  },
+                  "洞察": {
+                    "level": 2,
+                    "subs": {
+                      "追踪": {
+                        "level": 1
+                      }
+                    }
+                  },
+                  "社交": {
+                    "level": 1,
+                    "subs": {
+                      "动物沟通": {
+                        "level": 1
+                      },
+                      "感受": {
+                        "level": 1
+                      },
+                      "唬骗": {
+                        "level": 1
+                      },
+                      "说服": {
+                        "level": 1
+                      }
+                    }
+                  },
+                  "电脑": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "医疗": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "制造": {
+                    "level": 0,
+                    "subs": {
+                      "淬毒": {
+                        "level": 2
+                      }
+                    }
+                  }
+                },
+                "resources": {},
+                "attributeAuto": {},
+                "derivedOverrides": [
+                  "hpMax",
+                  "willMax",
+                  "speed",
+                  "initiative"
+                ],
+                "health": {
+                  "intact": 8,
+                  "B": 0,
+                  "L": 0,
+                  "A": 0,
+                  "temp": 0,
+                  "coma": false,
+                  "deteriorationStopped": false
+                },
+                "will": {
+                  "current": 5,
+                  "max": 5
+                },
+                "xp": 0,
+                "greatPowersAvailable": 0,
+                "statuses": [],
+                "attributeDamage": {},
+                "turn": {
+                  "phase": "ready",
+                  "standard": 0,
+                  "move": 0,
+                  "swift": 0,
+                  "reactionLock": false,
+                  "reactionLockEnds": 0,
+                  "responseDebt": false,
+                  "opportunityUsed": false
+                },
+                "extendedActions": {}
+              }
+            }
+          },
+          "operations": {
+            "story-dialogue/a3d2a79a2601ca369129c1e53962f9d491748d1759d2807047acd05d9fd118ea": {
+              "signature": "{\"id\":\"dialogue.84bc39c01b3eb16e6f067cd96e9551ee70741d5b83915d9497d73c490a126eff\",\"sourceAnchor\":{\"chatId\":\"isolated.dialogue.parallel.07-ambiguous-hearing\",\"messageId\":0,\"swipeId\":0,\"text\":\"黄泉轻声说：“渡船明早停航。”御临风在走廊另一端，记录不能确定他是否听清。\"},\"status\":\"prepared\",\"rows\":[]}",
+              "summary": {
+                "status": "applied",
+                "kind": "knowledge",
+                "operationId": "story-dialogue/a3d2a79a2601ca369129c1e53962f9d491748d1759d2807047acd05d9fd118ea",
+                "revision": 1,
+                "messageId": 0,
+                "swipeId": 0
+              }
+            },
+            "story-dialogue/487a0e8747f566795bcc888822ad7e7601acde1a8db08e941ac8a39fbffad37d": {
+              "signature": "{\"id\":\"dialogue.84bc39c01b3eb16e6f067cd96e9551ee70741d5b83915d9497d73c490a126eff\",\"sourceAnchor\":{\"chatId\":\"isolated.dialogue.parallel.07-ambiguous-hearing\",\"messageId\":0,\"swipeId\":0,\"text\":\"黄泉轻声说：“渡船明早停航。”御临风在走廊另一端，记录不能确定他是否听清。\"},\"status\":\"processed\",\"rows\":[]}",
+              "summary": {
+                "status": "applied",
+                "kind": "knowledge",
+                "operationId": "story-dialogue/487a0e8747f566795bcc888822ad7e7601acde1a8db08e941ac8a39fbffad37d",
+                "revision": 2,
+                "messageId": 0,
+                "swipeId": 0
+              }
+            }
+          },
+          "storyKnowledge": {
+            "schemaVersion": 1,
+            "catalogId": "isolated.dialogue.live.v1",
+            "chatId": "isolated.dialogue.parallel.07-ambiguous-hearing",
+            "timeBasis": "retained-chat-message-order",
+            "facts": {
+              "well.closed": {
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "discoveryConditions": [
+                  "actual-receipt"
+                ],
+                "dependencyRefs": [],
+                "id": "well.closed",
+                "entityId": "well",
+                "field": "reported_status",
+                "value": "北街水井暂时停用",
+                "certainty": "rumor",
+                "visibility": "private"
+              }
+            },
+            "events": {},
+            "knowledge": {},
+            "dialogueBatches": {
+              "dialogue.84bc39c01b3eb16e6f067cd96e9551ee70741d5b83915d9497d73c490a126eff": {
+                "id": "dialogue.84bc39c01b3eb16e6f067cd96e9551ee70741d5b83915d9497d73c490a126eff",
+                "sourceAnchor": {
+                  "chatId": "isolated.dialogue.parallel.07-ambiguous-hearing",
+                  "messageId": 0,
+                  "swipeId": 0,
+                  "text": "黄泉轻声说：“渡船明早停航。”御临风在走廊另一端，记录不能确定他是否听清。"
+                },
+                "status": "processed",
+                "rows": []
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

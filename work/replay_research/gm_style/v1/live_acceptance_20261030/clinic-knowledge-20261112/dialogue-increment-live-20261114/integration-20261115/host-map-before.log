@@ -1,0 +1,146 @@
+✔ ordinary saved narration invokes configured dialogue adapter without changing prose or memory route (131.2832ms)
+✔ saved prose survives extraction failure and completed-turn replay does not request prose again (17.4115ms)
+✔ ordinary next turn asks only when pending information is relevant, and deferred answer does not regenerate prose (50.692ms)
+✔ ordinary story generation consumes recipient knowledge and exposes only an explicit saved-receipt entry (19.4062ms)
+✔ ordinary classifier and narration both consume time and discovery filtered knowledge (13.135ms)
+✔ unconfirmed rule persistence blocks narration and reports memory-only settlement (28.7845ms)
+✔ postcombat story classification failure retains its diagnostic instead of using combat fallback (10.2223ms)
+✔ dialogue classification timeout reports a processing failure without implying an attempted action (9.2845ms)
+✔ classification timeout retries the same input once with a new id and ignores the late first decision (35.4423ms)
+✔ classification recovery stops after two timeouts without narration or settlement (31.3966ms)
+✔ classification recovery does not retry after explicit stop, changed input, or unconfirmed cancellation (45.7262ms)
+✔ postcombat story continuation failure remains resumable without reclassifying or settling (13.2638ms)
+✔ a failure inside combat handling still uses the combat recovery route (5.804ms)
+✔ native combat regeneration restores the deleted report and unique latest root before a cancelled menu (6.429ms)
+✔ debug-disabled malformed recovery retains a precise failure without settling (9.0147ms)
+✔ debug-disabled invalid check attribute identifies model input failure without exposing DC (9.6725ms)
+✔ debug-disabled upstream quota failure is distinguished from invalid model output (9.5952ms)
+✔ explicit additional lorebooks reach classification and ordinary narration (10.4076ms)
+✔ ordinary narration releases its lore filter even when host stop handle is broken (18.4909ms)
+✔ active combat handles the turn before ordinary classification or narration (6.6267ms)
+✔ host saved recovery survives failed narration and script reload without another debit (18.9167ms)
+✔ host executes the exact compound declaration once and resumes final sequence narration after reload (20.6396ms)
+✔ a completed pending medicine keeps its original operation across a later player floor and native regeneration (15.3933ms)
+✔ host classification passes a registered encounter to the player-bound combat entry (8.5125ms)
+✔ integrated profile cannot grant the old demo scene bonus (9.0162ms)
+✔ ordinary narration resolves current model options locally for each request (10.8422ms)
+✔ controller persists failed NO_CHECK and recovers after reload with no new player input (14.3857ms)
+✔ host cancels only the unexecuted medicine pending and anchors the current dialogue (17.3325ms)
+✔ a cancellation declaration cannot undo a committed operation awaiting narration (17.6033ms)
+✔ regenerating a completed turn reuses its narration without model calls or another assistant message (11.7335ms)
+✔ regenerating a committed direct effect does not repeat classification, narration, or MVU writes (13.7089ms)
+✔ lost direct-effect failure notice resumes saved operation without reclassification (16.4785ms)
+✔ a completed-looking assistant cannot bypass a missing JS operation (6.5975ms)
+✔ completed assistant with missing MVU projection restores state without model requests (13.8292ms)
+✔ explicit completion host binds v2 unchanged and can disable without touching memory (29.7556ms)
+✔ deferred local resolution resumes the same request without resending player input (38.5308ms)
+✔ completed reply recovery consumes prepared batch without another extraction or narration (17.2422ms)
+✖ native ordinary regeneration retains dialogue snapshot and never re-extracts (24.6347ms)
+✔ bound prompt retains the existing direct-reception rule without changing schema, input or other guidance (31.2691ms)
+✔ direct speech needs no acknowledgement; explicit obstruction and uncertainty retain their own outcomes (55.4789ms)
+✔ bound utterance maps only explicit nested receipts and retains mandatory coverage (2.9435ms)
+✔ action, forged reference, missing receipts and omitted target coverage reject without mutation (5.1501ms)
+✔ uncertain coverage preserves explicit partial receipt plus uncertainty without blanket blocking (2.8836ms)
+✔ none and unresolved-only coverage require actual source evidence, never synthesize receipts (2.9454ms)
+✔ original source, role, null-pair and identity checks remain in force (3.3459ms)
+✔ schema rejects nested action and missing coverage and allows explicit none and uncertainty (890.0287ms)
+✔ model adapter uses version2 and original MVU path persists coverage and independent known/pending rows (21.9807ms)
+✔ historical flat failures are retained and cannot silently enter the new wire (12.2873ms)
+✔ model-path invalid coverage writes nothing; explicit unreceived and none never grant or ask (27.3059ms)
+✔ planned speech keeps original intent claim and none coverage without creating utterance (3.1322ms)
+✖ existing Tavern completion maps exact messages and schema without settings or response repair (2.1867ms)
+ℹ tests 51
+ℹ suites 0
+ℹ pass 49
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1766.8556
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\replay-gate-script.test.mjs:656:1
+✖ native ordinary regeneration retains dialogue snapshot and never re-extracts (24.6347ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+  
+    {
+      stat_data: {
+        '901_rules_poc': {
+          actors: {
+            player: {
+  ...
+          chatId: 'host-test',
+  +       operations: {},
+  +       revision: 0,
+  -       operations: {
+  -         'story-dialogue/27491d57097ac92c92703c669a876d33b42263fd50d4fff344ed5eb061906fec': {
+  -           signature: '{"id":"dialogue.581c6dd7c38e527fc39eeb7817df98c106eca346e549adf7bb00e0c079e87622","sourceAnchor":{"chatId":"host-test","messageId":1,"swipeId":0,"text":"布莱特微微颔首。"},"status":"processed","rows":[]}',
+  -           summary: {
+  -             kind: 'knowledge',
+  -             messageId: 1,
+  -             operationId: 'story-dialogue/27491d57097ac92c92703c669a876d33b42263fd50d4fff344ed5eb061906fec',
+  -             revision: 2,
+  -             status: 'applied',
+  -             swipeId: 0
+  -           }
+  -         },
+  -         'story-dialogue/78591a0b55f5eef9e14105489c307a41a4e5f63fa5eab4b0e2167a2f8551bd29': {
+  -           signature: '{"id":"dialogue.581c6dd7c38e527fc39eeb7817df98c106eca346e549adf7bb00e0c079e87622","sourceAnchor":{"chatId":"host-test","messageId":1,"swipeId":0,"text":"布莱特微微颔首。"},"status":"prepared","rows":[]}',
+  -           summary: {
+  -             kind: 'knowledge',
+  -             messageId: 1,
+  -             operationId: 'story-dialogue/78591a0b55f5eef9e14105489c307a41a4e5f63fa5eab4b0e2167a2f8551bd29',
+  -             revision: 1,
+  -             status: 'applied',
+  -             swipeId: 0
+  -           }
+  -         }
+  -       },
+  -       revision: 2,
+          schemaVersion: 1,
+  -       storyKnowledge: {
+  -         catalogId: 'ordinary.regen',
+  -         chatId: 'host-test',
+  -         dialogueBatches: {
+  -           'dialogue.581c6dd7c38e527fc39eeb7817df98c106eca346e549adf7bb00e0c079e87622': {
+  -             id: 'dialogue.581c6dd7c38e527fc39eeb7817df98c106eca346e549adf7bb00e0c079e87622',
+  -             rows: [],
+  -             sourceAnchor: {
+  -               chatId: 'host-test',
+  -               messageId: 1,
+  -               swipeId: 0,
+  -               text: '布莱特微微颔首。'
+  -             },
+  -             status: 'processed'
+  -           }
+  -         },
+  -         events: {},
+  -         facts: {},
+  -         knowledge: {},
+  -         schemaVersion: 1,
+  -         timeBasis: 'retained-chat-message-order'
+  -       }
+        }
+      }
+    }
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/replay-gate-script.test.mjs:659:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { stat_data: { '901_rules_poc': [Object] } },
+    expected: { stat_data: { '901_rules_poc': [Object] } },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-bound.test.mjs:128:1
+✖ existing Tavern completion maps exact messages and schema without settings or response repair (2.1867ms)
+  TypeError [Error]: dialogue.createTavernDialogueCompletion is not a function
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-bound.test.mjs:130:26)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

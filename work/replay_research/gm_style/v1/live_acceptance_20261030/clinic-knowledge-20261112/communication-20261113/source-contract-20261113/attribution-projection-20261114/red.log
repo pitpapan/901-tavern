@@ -1,0 +1,137 @@
+(node:38892) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/pit/AppData/Local/Packages/openai.codex_2p2nqsd0c76g0/AC/%23!sandbox.%7Bd7609a31-3f52-4b48-ba4b-174575607a0a%7D/Temp/901-knowledge-q5Navn/shared/901-trpg-engine/tools/trpg-engine/gm/knowledge.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\pit\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ actual adopted ordinary entry constructs runtime, passes it to gate and exposes explicit receipts (11.827ms)
+✔ original Host knowledge closure packages as browser imports and stays executable (3772.6284ms)
+✔ reviewed lore and rejected old utterance are projected without editing original story (3.4534ms)
+✖ only the two reviewed attribution failures are annotated in their real retained continuation (71.7508ms)
+✖ generation distinguishes source requirements, personal choices and reviewed mistaken dialogue (12.4733ms)
+✖ reviewed attribution annotation preserves original prose, personal choices and source state through generation (16.1366ms)
+✖ attribution annotations require the reviewed utterance and its original source on the retained branch (19.2232ms)
+✖ matching language in a supported agreement or a new adopted agreement is not automatically flagged (23.0008ms)
+✔ generation contract preserves source identity and condition roles while keeping disclosure optional (3.5998ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: unlinked-identities (16.395ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: explicit-same-identity (9.7994ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: pending-condition-quiet-place (10.9111ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: confirmed-choice (22.0838ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: quotation-viewpoint-shift (11.5475ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: unresolved-reference (7.8623ms)
+✔ private knowledge exposes its actual source without inventing a duty of secrecy (5.4533ms)
+✔ explicit disclosure notes remain source-bound after reopening and are not silently inherited by a listener (22.3627ms)
+✔ a disclosure constraint must quote the retained source rather than arbitrary inferred secrecy (5.3573ms)
+✔ ordinary generation carries choice guidance and source notes without prescribing prose or granting listeners (6.5895ms)
+✔ a hidden source retains the speaker and quotation context in the final knowledge projection (7.4804ms)
+✔ a later explicit source confirmation retains both source contexts without granting listeners (11.43ms)
+✔ catalog time, discovery and dependency boundaries survive initialization and control public projection (3.6377ms)
+✔ future or differently clocked facts cannot be granted by a current message receipt (4.7408ms)
+✔ later-recorded old receipt cannot replace newer belief or upgrade a relay (15.436ms)
+✔ source replaced while disk save is pending cannot create an acquisition event (0.7999ms)
+✔ public but undiscovered facts cannot be relayed by an uninformed sender (13.1967ms)
+✔ historical known state retains its own effective and learned time rather than receiving an unseen update (5.7295ms)
+✔ receipt survives actual JSONL disk save and a fresh runtime reconstructed from saved variables (46.2946ms)
+✔ author truth is not initial party knowledge, while ordinary public facts remain available (5.5332ms)
+✔ actual receipt grants only named listeners and explicit later relay reaches its recipient (11.4537ms)
+✔ retrieval, unreceived messages and an uninformed sender never grant knowledge (1.9472ms)
+✔ saved reopen and idempotent receipts retain knowledge without a second state or grant (7.9262ms)
+✔ rumor is retained as rumor and a relay cannot silently upgrade belief (10.927ms)
+✔ lore projection is bound to source identity, preserves other content and does not guess changed sources (0.8473ms)
+✔ native branch adoption inherits the fork snapshot without sharing later receptions (16.4055ms)
+✔ changed or discarded source swipes cannot continue to prove knowledge (4.4781ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 31
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4626.0396
+
+✖ failing tests:
+
+test at work\rules_engine\gm_runtime\story-knowledge-entry.test.mjs:54:1
+✖ only the two reviewed attribution failures are annotated in their real retained continuation (71.7508ms)
+  AssertionError [ERR_ASSERTION]: Only custom260 and custom261 are established attribution failures.
+  
+  0 !== 2
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-knowledge-entry.test.mjs:61:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 2,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at work\rules_engine\gm_runtime\story-knowledge.test.mjs:29:1
+✖ generation distinguishes source requirements, personal choices and reviewed mistaken dialogue (12.4733ms)
+  AssertionError [ERR_ASSERTION]: 只把有来源依据的内容归为原要求
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-knowledge.test.mjs:33:55)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at work\rules_engine\gm_runtime\story-knowledge.test.mjs:49:1
+✖ reviewed attribution annotation preserves original prose, personal choices and source state through generation (16.1366ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '乙说：“我打算明早带上笔记再谈，这会儿也先不告诉丁。”\n乙说：“甲当初要求明早带上笔记，而且也不准告诉丁。”'
+  - '乙说：“我打算明早带上笔记再谈，这会儿也先不告诉丁。”\n' +
+  -   '乙说：“甲当初要求明早带上笔记，而且也不准告诉丁。”\n' +
+  -   '【来源核对（非角色对白）：原记录保留。已核定此处把个人安排归给原约定；原来源只支持甲乙核对后可向丙说明。未规定核对方式或限制向丁说明；人物仍可自行谨慎安排，不强制披露或改口。】'
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-knowledge.test.mjs:54:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '乙说：“我打算明早带上笔记再谈，这会儿也先不告诉丁。”\n乙说：“甲当初要求明早带上笔记，而且也不准告诉丁。”',
+    expected: '乙说：“我打算明早带上笔记再谈，这会儿也先不告诉丁。”\n乙说：“甲当初要求明早带上笔记，而且也不准告诉丁。”\n【来源核对（非角色对白）：原记录保留。已核定此处把个人安排归给原约定；原来源只支持甲乙核对后可向丙说明。未规定核对方式或限制向丁说明；人物仍可自行谨慎安排，不强制披露或改口。】',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at work\rules_engine\gm_runtime\story-knowledge.test.mjs:68:1
+✖ attribution annotations require the reviewed utterance and its original source on the retained branch (19.2232ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(k.projectMessages(messages)[0].content.includes(attributionNote))
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-knowledge.test.mjs:71:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at work\rules_engine\gm_runtime\story-knowledge.test.mjs:81:1
+✖ matching language in a supported agreement or a new adopted agreement is not automatically flagged (23.0008ms)
+  AssertionError [ERR_ASSERTION]: A later agreement does not retroactively validate the old attribution.
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-knowledge.test.mjs:90:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

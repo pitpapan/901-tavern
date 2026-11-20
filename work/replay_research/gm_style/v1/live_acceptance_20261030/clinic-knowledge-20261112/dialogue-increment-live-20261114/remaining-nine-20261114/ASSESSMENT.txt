@@ -1,0 +1,15 @@
+2026-11-14 普通对白知情增量：从02续测，04失败即停
+
+用户新增9次，继续02–10，最新坐标规则与参照、其余输入和参数不变；后续依赖测试须承接真实待核结果。累计基线277，实际custom278–280共3/9，剩6未用，已关闭，无重试或自动续发。
+
+准备：复用原隔离seed和参数，02–08请求7537–7968字节，原业务输入逐字相同；相对旧冻结请求只新增坐标规则与参照，没有改剧情、记忆、角色或输入绑定。09/10仅有原固定规则，本轮07未执行，不伪造真实前文或依赖请求。请求模型[抗截断]gemini-3.8-flash，temperature1/top_p1/max_tokens4096/stream=false/presence_penalty0/frequency_penalty0，超时180000ms。三次均HTTP200/stop、原始响应完整保存，上游自报gemini-3.8-flash-n。
+
+逐例：
+02-received-rumor/custom278：7537字节，7155ms，通过原合同及本例知情指标。直接向黄泉说“码头停航”，无额外复述确认要求。reception引用既有harbor.closed，布莱特原取得依据保持，黄泉获得同一命题且belief=rumor，不升级事实；御临风无知情，pending空、无询问。隔离当前楼层revision4（seed已有来源取得）。
+03-not-heard/custom279：7705字节，11845ms，通过原合同及本例知情指标。隔音耳罩/明确未听见被保留，reception=not_received，听见动作denied；所有人均无新增知情，pending空、无询问。隔离revision2仅保存处理批次，不是授予知情。独立听见动作object=null，记录这一完整抽取限制，不据此声称全语义无遗漏。
+04-not-yet-said/custom280：7598字节，5769ms，协议失败即停。模型保留了“打算告诉”的意图和denied开口，receptions为空，未把计划误当已接收；但c2.scope.time填入了{documentId,start,end,quote}对象，原合同要求string或null，原检查返回INVALID_ROLE_SPAN。模型输出的9处span均逐字对上，无坐标错位；错误是语义值槽位混入引用对象。原样隔离回放被拒绝，revision0、无知识授予或待核询问。没有修正字段类型或删字段。
+
+覆盖：05/06部分听见、07/08歧义和09/10依赖共6例未调用，本批没有这些类别的真实结果。不能把3次都称通过，也不能把未测类别当作失败或给完整九例通过率。此前277首例仅作为既有结果，不计入本轮新调用。
+
+保存：batch/有7份已冻结首轮请求与原seed，live/有3份实际请求、HTTP元数据、原始响应、正文、回放及账本。complete-outputs.txt为3份完整正文，04.offline-findings逐项记录类型错误及引用匹配。三份原始响应哈希均与传输时正文一致，无修补副本。
+verification.json/preservation-verification.json确认22正式文件、7产品源、135旧证据不变。没有产品改动、坐标修正、引用校验放宽、部署、正式剧情写入或自动批准/修订恢复；不重跑上一阶段156项离线回归。累计280，本批余6保持关闭。

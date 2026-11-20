@@ -1,0 +1,44 @@
+{
+  "authorization": "2026-11-15用户新增3次，最新合同补测08及原09/10-from08；后续承接本次真实待核，原剧情输入/参数保持。失败即停止整个批次，不重试、不继续不同例、不自动补回执、不转换action、不放宽校验，不部署/正式剧情/自动批准修订。",
+  "baseline": 331,
+  "limit": 3,
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "parameters": {
+    "model": "[抗截断]gemini-3.8-flash",
+    "temperature": 1,
+    "max_tokens": 4096,
+    "stream": false,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "top_p": 1
+  },
+  "cases": [
+    {
+      "id": "08-ambiguous-listener",
+      "text": "黄泉对御临风和布莱特说：“交货地点改到南岗。”两人中有一人没听清，但记录无法指出是哪一人。",
+      "speaker": "huang",
+      "recipient": null,
+      "content": "交货地点改到南岗",
+      "expected": "不能猜哪位听清，无知情授予，保留身份歧义和对应待核。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 28552,
+      "requestSha256": "0e9442606b36f4e87f39caeb19296760aca286c2eecc074b9c423fe2fb7c7bf2",
+      "change": "only shared reception-status guidance inserted; schema, business input, coordinates, generation parameters and original isolated seed unchanged"
+    }
+  ],
+  "followups": [
+    {
+      "id": "09-unrelated-from08",
+      "parent": "08-ambiguous-listener",
+      "text": "我和御临风谈谈午饭的口味，再整理一下衣领。",
+      "expected": "required=[]; ready; no question or knowledge grant"
+    },
+    {
+      "id": "10-dependent-from08",
+      "parent": "08-ambiguous-listener",
+      "text": "让御临风依据黄泉刚才说的交货地点，决定把货物运到哪里。",
+      "expected": "require real parent pending ID; deferred; one question; no invented answer or knowledge grant"
+    }
+  ],
+  "stopOnAnyFailure": true
+}

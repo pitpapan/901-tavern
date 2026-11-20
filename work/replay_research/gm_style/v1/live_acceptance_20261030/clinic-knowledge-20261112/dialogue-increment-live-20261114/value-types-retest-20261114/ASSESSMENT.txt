@@ -1,0 +1,17 @@
+2026-11-14 第04例打算告知、尚未开口：语义值类型说明一次复测
+
+用户新增一次，custom281 HTTP200/stop，9477ms完整返回。1/1已用、余额0、关闭，无重试。旧280失败和上一批未用6次保持关闭，不借用旧额度。
+
+request.json为实际完整请求8519字节，原280为7598字节。仅system增加语义值类型说明920字节（JSON序列化增量921）；去除这一段后系统提示与旧请求一致，其他消息逐字相同，包括原业务输入和确定性坐标参照。角色/记忆/事实/inputRef/contextRef及生成参数均保持。请求SHA256 2b1ce9d870dfd88fd5a0ab1b6396948a544fdeaebf45ba0717de5830b11d8ef6。
+模型标签[抗截断]gemini-3.8-flash，temperature1/top_p1/max_tokens4096/stream=false/presence_penalty0/frequency_penalty0，超时180000ms，上游自报gemini-3.8-flash-n。
+
+raw-response.txt保存完整原始响应，content.txt原样取出正文，response.json保存HTTP元数据。原始响应SHA256 068d48ef9a9ecd4808798074183a4bcb72a989b6181e82b308edc0cd5ed8fa7e，与传输捕获正文一致，未自动转换或修补。
+
+本例通过项：
+1. args/scope所有非null字段均为字符串；开口动作scope.time为“还没有”，scopeSpans.time独立引用原文，原280类型错误未复现。
+2. 13处span全部匹配原文，原合同/普通入口校验通过。
+3. “打算告知”的意图及denied开口保持，receptions为空。原样回放原04隔离seed后processed/pending=[]，三人均无知情授予，events/knowledge为空，未新增世界事实。revision2仅用于保存处理批次，无正式存档写入。
+
+语义保留项：模型额外单列东门封闭状态为mode=asserted，但scope.attribution明确是“布莱特打算告知的内容”，引用“打算告诉”。这是语气标签与计划内容归属的混合表达，不能据此宣称完整嵌套语气处理正确；也不能忽略该归属便声称模型已无条件确认世界事实。当前知情程序没有采用这条状态为世界事实。总体人工partial，分开记录类型/未接收指标通过与完整语义未证明；未改回复、追加模型或新建审查。
+
+verification.json确认22正式文件、7产品源和此前证据保持。无产品改动、校验放宽、部署、正式剧情写入或自动批准/修订恢复；本轮不重复上一阶段162项离线回归。单次通过不证明类型错误率或整体稳定性改善。累计281，本轮余额0。

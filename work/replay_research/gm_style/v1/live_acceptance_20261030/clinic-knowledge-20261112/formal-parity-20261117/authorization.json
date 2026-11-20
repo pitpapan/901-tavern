@@ -1,0 +1,18 @@
+{
+  "sourceThreadId": "01a1c9e5-e4ab-7f33-923f-ed8800dfd5d3",
+  "questionItemId": "[\"request_user_input_async\",\"call_bb112bf77f8c4c73afd345167f8cb4f3\",0]",
+  "userReply": "授权最多6次，完成三状态实测",
+  "destination": "https://cdn.sta1n.cn/v1/chat/completions",
+  "model": "[抗截断]gemini-3.8-flash",
+  "maximumCalls": 6,
+  "baselineCumulative": 546,
+  "ceiling": 552,
+  "includesFailuresAndRetries": true,
+  "dataScope": "隔离副本实际载入的人物资料、六书、记忆、选定历史分支、人工测试告知及本轮问答和逐人知情投影",
+  "purpose": "获知前、告知后、保存重开后三状态各一次真实分类和正文；平行对照",
+  "testQuestion": "若想向老馆主打听雪老的事，你知道他们有什么来往吗？",
+  "noExtractionOrReviewCalls": true,
+  "noDeployment": true,
+  "verifiedAgainstActualUserReplyInSourceThread": true,
+  "priorClosedLedgerSha256": "d4a705e25af8a4e3d2639b2b9491e49ca59e7f766c86de4482eb33af29bc843a"
+}

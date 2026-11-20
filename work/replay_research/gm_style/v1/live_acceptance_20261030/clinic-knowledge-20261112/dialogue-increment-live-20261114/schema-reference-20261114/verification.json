@@ -1,0 +1,496 @@
+{
+  "newRequests": 12,
+  "storyReplies": 10,
+  "httpErrors": 1,
+  "formatProbes": 1,
+  "cumulative": 315,
+  "remaining": 8,
+  "schemaValid": 9,
+  "originalRuntimePassed": 4,
+  "fullSemanticPasses": 0,
+  "receiptTargetPartialPasses": [
+    309
+  ],
+  "protectedUnchanged": 22,
+  "previousEvidenceUnchanged": 565,
+  "retainedProductChanges": [
+    "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs",
+    "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js"
+  ],
+  "retainedCandidate": "basic Schema plus equivalent single-target cardinality; failed claimId description reverted",
+  "generationParametersAndMessagesUnchanged": true,
+  "modelRoutesObserved": [
+    "gemini-3.8-flash-control",
+    "gemini-3.8-flash-n"
+  ],
+  "automaticRetry": false,
+  "responseRepair": false,
+  "validationRelaxed": false,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "probe": {
+    "baseline": 307,
+    "limit": 16,
+    "cumulative": 308,
+    "remaining": 15,
+    "state": "completed",
+    "status": 200,
+    "requestSha256": "12daab7ff105e40945c578cecedf8c9cc3f9852ac0636a85bad47c6b4354471b",
+    "rawResponseSha256": "18cb916a504825e9ac01f572422e2ab5a925632e3262c75ec9b6c48a5751f0b6",
+    "closed": true,
+    "responseModel": "gemini-3.8-flash-n",
+    "finishReason": "stop",
+    "exactCopyPassed": true
+  },
+  "rows": [
+    {
+      "phase": "schema-format-20261114",
+      "id": "01-received-new",
+      "customRequest": 304,
+      "status": 400,
+      "verdict": "fail",
+      "assessment": "HTTP400 explicitly rejects minContains/maxContains; no model content. Single fixed target and length1 make those keywords redundant; next revision removes only that redundancy, retaining multi-target cardinality and original checker.",
+      "requestSha256": "821169ea4e479ad7b282b9ef6ce7200e15c7ee31994ede524caba757aa9a0d3e",
+      "rawResponseSha256": "47a86cd0f8145c59be328b62603ca3b291b42238e111af515cd090ace8c37103"
+    },
+    {
+      "phase": "schema-single-target-20261114",
+      "id": "01-received-new",
+      "customRequest": 305,
+      "status": 200,
+      "model": "gemini-3.8-flash-control",
+      "verdict": "fail",
+      "assessment": "HTTP200 and JSON Schema valid: original scalar type issue absent. But source coordinates are wrong and all claims are action with receptions empty despite clear receipt. Original exact validator rejects revision0. Response model changed to flash-control; do not attribute effect solely to constraints. Preserve new failure, no repair.",
+      "requestSha256": "1302ff1a3a2516e164c913eb39aa28fa44fec6e9f9798b9a4c112f843ebd685a",
+      "rawResponseSha256": "b4ee65318a54f1259f1ae52c18efb15d33400c95a2c78a9ca83e5039cafd18ea",
+      "assertionCheck": {
+        "ok": false,
+        "issues": [
+          {
+            "code": "INVALID_ROLE_SPAN"
+          }
+        ],
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "originalRuntimePassed": false,
+      "knowledge": [
+        {
+          "actor": "bright",
+          "count": 0
+        },
+        {
+          "actor": "huang",
+          "count": 0
+        },
+        {
+          "actor": "player",
+          "count": 0
+        }
+      ],
+      "spanCount": 8,
+      "invalidSpans": [
+        {
+          "documentId": "current",
+          "start": 26,
+          "end": 28,
+          "quote": "听"
+        }
+      ],
+      "receptions": [],
+      "schemaValid": true,
+      "schemaIssues": []
+    },
+    {
+      "phase": "schema-single-target-20261114",
+      "id": "02-received-rumor",
+      "customRequest": 306,
+      "status": 200,
+      "model": "gemini-3.8-flash-n",
+      "verdict": "fail",
+      "assessment": "Scalar/JSON shape now valid and assertion exact references pass, but received rec1 points to action c1 instead of required utterance. Original reception checker rejects, prior rumor unchanged, revision1. No response conversion. Next input tests independent JSON syntax failure.",
+      "requestSha256": "c520c474826b41e3efa333e8057d9719839db4187b2de1d925200673ebdbb753",
+      "rawResponseSha256": "a19253b38c63e0ee90f06c7d52e3a95dd01fed3b3d837a08db129ee8cab5567b",
+      "assertionCheck": {
+        "ok": true,
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "originalRuntimePassed": false,
+      "knowledge": [
+        {
+          "actor": "bright",
+          "count": 0
+        },
+        {
+          "actor": "huang",
+          "count": 1
+        },
+        {
+          "actor": "player",
+          "count": 0
+        }
+      ],
+      "spanCount": 6,
+      "invalidSpans": [],
+      "receptions": [
+        {
+          "claimId": "c1",
+          "status": "received",
+          "recipients": [
+            "player"
+          ]
+        }
+      ],
+      "schemaValid": true,
+      "schemaIssues": []
+    },
+    {
+      "phase": "schema-single-target-20261114",
+      "id": "05-partial-first",
+      "customRequest": 307,
+      "status": 200,
+      "model": "gemini-3.8-flash-n",
+      "verdict": "fail",
+      "assessment": "JSON syntax repaired by generation constraint, not local repair; exact assertion spans pass. But every utterance projected as action and receipt refers action c2, original checker rejects. Third output selects first schema claim branch; pause remaining06/07 to test provider union handling before further scene calls.",
+      "requestSha256": "c54a2bae32bdb1a61fceca775b97f10ece09e68ee31415ca1e95a5b80b17c5d0",
+      "rawResponseSha256": "ba2145783cb6da953d7b9ff18eb4e697f4f4d2b157cc3fe4a7df0252336d9e68",
+      "assertionCheck": {
+        "ok": true,
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "originalRuntimePassed": false,
+      "knowledge": [
+        {
+          "actor": "bright",
+          "count": 0
+        },
+        {
+          "actor": "huang",
+          "count": 0
+        },
+        {
+          "actor": "player",
+          "count": 0
+        }
+      ],
+      "spanCount": 18,
+      "invalidSpans": [],
+      "receptions": [
+        {
+          "claimId": "c2",
+          "status": "received",
+          "recipients": [
+            "bright"
+          ]
+        }
+      ],
+      "schemaValid": true,
+      "schemaIssues": []
+    },
+    {
+      "phase": "schema-single-target-20261114",
+      "id": "06-partial-second",
+      "customRequest": 309,
+      "status": 200,
+      "model": "gemini-3.8-flash-n",
+      "verdict": "partial",
+      "assessment": "JSON and original strict contract pass. Only bright receives actual second clause as uncertain source message; first clause withheld, no pending. However c6 treats relational preposition 对 as a separate action, unsupported action segmentation. Reception target passes; full semantic extraction partial, retained without repair.",
+      "requestSha256": "c4f96b41ff2e4deadc226c8dd6d63f6c1a764ebad4c9e4a05363dc4077548912",
+      "rawResponseSha256": "9d3700ade69e8142a6c7f2a104de90d6ccb2fb0a53a357e7cf42d056aa3b5aad",
+      "assertionCheck": {
+        "ok": true,
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "originalRuntimePassed": true,
+      "knowledge": [
+        {
+          "actor": "bright",
+          "count": 1
+        },
+        {
+          "actor": "huang",
+          "count": 0
+        },
+        {
+          "actor": "player",
+          "count": 0
+        }
+      ],
+      "pending": 0,
+      "spanCount": 23,
+      "invalidSpans": [],
+      "receptions": [
+        {
+          "claimId": "c3",
+          "status": "received",
+          "recipients": [
+            "bright"
+          ]
+        }
+      ],
+      "schemaValid": true,
+      "schemaIssues": []
+    },
+    {
+      "phase": "schema-single-target-20261114",
+      "id": "07-ambiguous-hearing",
+      "customRequest": 310,
+      "status": 200,
+      "model": "gemini-3.8-flash-n",
+      "verdict": "fail",
+      "assessment": "Original invented manner type absent and schema shape valid; uncertain player reception retained in raw reply, but references action instead of utterance. Original checker rejects revision0. Exact input quote fragments not missing, but broader claim completeness not proven. No actual pending adopted.",
+      "requestSha256": "0b7f041d7e31b83fdb2867b9204205b4a7fe5993f33a1e0690a1bdd785cdf620",
+      "rawResponseSha256": "4647f123e3efffd72017249e9858d8697e3d13570e67eff61050ae54d27176e9",
+      "assertionCheck": {
+        "ok": true,
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "originalRuntimePassed": false,
+      "knowledge": [
+        {
+          "actor": "bright",
+          "count": 0
+        },
+        {
+          "actor": "huang",
+          "count": 0
+        },
+        {
+          "actor": "player",
+          "count": 0
+        }
+      ],
+      "spanCount": 6,
+      "invalidSpans": [],
+      "receptions": [
+        {
+          "claimId": "claim-01",
+          "status": "uncertain",
+          "recipients": [
+            "player"
+          ]
+        }
+      ],
+      "schemaValid": true,
+      "schemaIssues": []
+    },
+    {
+      "phase": "schema-reference-20261114",
+      "id": "01-received-new",
+      "customRequest": 311,
+      "status": 200,
+      "model": "gemini-3.8-flash-control",
+      "verdict": "fail",
+      "assessment": "Reference now correctly targets utterance, but scope.time and scope.attribution are span objects again, violating both supplied schema and original checker. All emitted spans match exact source slices. HTTP200/strict request does not prove provider enforcement. Revision0, no repair.",
+      "requestSha256": "ec314bf96552c432cdfc2f177db3220b4d0ab06fae724a99368b36c4b3671e31",
+      "rawResponseSha256": "6dabca436817260e5227db3e885a398b4a4b51fdb4d56df85009fa02dc6bf263",
+      "assertionCheck": {
+        "ok": false,
+        "issues": [
+          {
+            "code": "INVALID_ROLE_SPAN"
+          }
+        ],
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "originalRuntimePassed": false,
+      "knowledge": [
+        {
+          "actor": "bright",
+          "count": 0
+        },
+        {
+          "actor": "huang",
+          "count": 0
+        },
+        {
+          "actor": "player",
+          "count": 0
+        }
+      ],
+      "spanCount": 17,
+      "invalidSpans": [],
+      "receptions": [
+        {
+          "claimId": "claim-0",
+          "status": "received",
+          "recipients": [
+            "bright"
+          ]
+        }
+      ],
+      "schemaValid": false,
+      "schemaIssues": [
+        {
+          "path": [
+            "assertions",
+            "units",
+            0
+          ],
+          "keyword": "anyOf"
+        }
+      ]
+    },
+    {
+      "phase": "schema-reference-20261114",
+      "id": "02-received-rumor",
+      "customRequest": 312,
+      "status": 200,
+      "model": "gemini-3.8-flash-n",
+      "verdict": "fail",
+      "assessment": "Explicit claimId schema description did not prevent reference to action c1; original check rejects, prior rumor unchanged. Basic schema shape passes but cross-item semantic relation does not. No evidence description solved this failure.",
+      "requestSha256": "c8d072cd96e7036b5636d77bfbd783d1f1ddd78faf22fb965c7ada0d930da8e7",
+      "rawResponseSha256": "e45aa07cac35a3e898703f9dd346844697f5e9d2662208aae4069002bc2c2b8f",
+      "assertionCheck": {
+        "ok": true,
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "originalRuntimePassed": false,
+      "knowledge": [
+        {
+          "actor": "bright",
+          "count": 0
+        },
+        {
+          "actor": "huang",
+          "count": 1
+        },
+        {
+          "actor": "player",
+          "count": 0
+        }
+      ],
+      "spanCount": 6,
+      "invalidSpans": [],
+      "receptions": [
+        {
+          "claimId": "c1",
+          "status": "received",
+          "recipients": [
+            "player"
+          ]
+        }
+      ],
+      "schemaValid": true,
+      "schemaIssues": []
+    },
+    {
+      "phase": "schema-reference-20261114",
+      "id": "05-partial-first",
+      "customRequest": 313,
+      "status": 200,
+      "model": "gemini-3.8-flash-n",
+      "verdict": "fail",
+      "assessment": "Original strict structural check passes but receptions is empty despite explicit first-clause receipt; no knowledge registered, revision2 only batch processing. Semantic omission is failure, not successful safe abstention. No response reconstruction.",
+      "requestSha256": "33bd4f27c71a2dc89f5420775174b864dd8660ece2a833ded5fece52cdf478db",
+      "rawResponseSha256": "e6ef756ff0cccad74bfc4ef6fc12e7c4d2718b42de4ec5efb26ea6ee536a5104",
+      "assertionCheck": {
+        "ok": true,
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "originalRuntimePassed": true,
+      "knowledge": [
+        {
+          "actor": "bright",
+          "count": 0
+        },
+        {
+          "actor": "huang",
+          "count": 0
+        },
+        {
+          "actor": "player",
+          "count": 0
+        }
+      ],
+      "pending": 0,
+      "spanCount": 12,
+      "invalidSpans": [],
+      "receptions": [],
+      "schemaValid": true,
+      "schemaIssues": []
+    },
+    {
+      "phase": "schema-reference-20261114",
+      "id": "06-partial-second",
+      "customRequest": 314,
+      "status": 200,
+      "model": "gemini-3.8-flash-n",
+      "verdict": "fail",
+      "assessment": "Schema and original structural check pass, but explicit heard second clause and unheard first clause disappear and receptions empty; zero grants. Compared with309, no demonstrated gain from claimId description. Keep semantic failure unchanged.",
+      "requestSha256": "4bc4ddb17994ef3a7819bccca21b003034947d09ea3e8a1d26629b8bbcd3cea7",
+      "rawResponseSha256": "3ecee0444c47df4273d9c9324bda78ac8c4ca52fcf6ffa2bfe3bc721b3fed9bc",
+      "assertionCheck": {
+        "ok": true,
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "originalRuntimePassed": true,
+      "knowledge": [
+        {
+          "actor": "bright",
+          "count": 0
+        },
+        {
+          "actor": "huang",
+          "count": 0
+        },
+        {
+          "actor": "player",
+          "count": 0
+        }
+      ],
+      "pending": 0,
+      "spanCount": 4,
+      "invalidSpans": [],
+      "receptions": [],
+      "schemaValid": true,
+      "schemaIssues": []
+    },
+    {
+      "phase": "schema-reference-20261114",
+      "id": "07-ambiguous-hearing",
+      "customRequest": 315,
+      "status": 200,
+      "model": "gemini-3.8-flash-n",
+      "verdict": "fail",
+      "assessment": "Schema and strict structural check pass but hearing ambiguity is entirely omitted: no uncertain reception or unresolved item, pending empty. No false knowledge grant, but target fails because later dependency cannot ask. Description experiment has no end-to-end passing sample.",
+      "requestSha256": "19a8b4d872892565cb86984ed3618f29cd32ec90e645c79a3767c97e33bb62ed",
+      "rawResponseSha256": "2a0dda221f0e1bc1978a04071169a61517c430c4e0e829eef251c41883f0bc2b",
+      "assertionCheck": {
+        "ok": true,
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "originalRuntimePassed": true,
+      "knowledge": [
+        {
+          "actor": "bright",
+          "count": 0
+        },
+        {
+          "actor": "huang",
+          "count": 0
+        },
+        {
+          "actor": "player",
+          "count": 0
+        }
+      ],
+      "pending": 0,
+      "spanCount": 4,
+      "invalidSpans": [],
+      "receptions": [],
+      "schemaValid": true,
+      "schemaIssues": []
+    }
+  ]
+}

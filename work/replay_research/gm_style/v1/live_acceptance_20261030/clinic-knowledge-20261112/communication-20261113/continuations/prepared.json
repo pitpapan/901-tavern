@@ -1,0 +1,249 @@
+{
+  "status": "prepared-not-sent",
+  "modelCallsThisTask": 0,
+  "cumulative": 248,
+  "remaining": 0,
+  "chains": [
+    {
+      "id": "A",
+      "prior": "05-known-unasked",
+      "first": "“我们三个去见馆主，除了递信，还有什么最好先互相说清楚？”\n（桌外隔离验收，非正式剧情：承接前文，写布莱特的回应；可以回应在场同伴，不替御临风新增对白、心理或决定。）",
+      "nextIfShared": "“那见到馆主时，我先问接待还是先问住宿？”",
+      "nextIfNotShared": "“先把你觉得该说的告诉黄泉；拿不准的就留着当面问。”",
+      "purpose": "无保密约定：从送信住宿承接到是否需要互通信息；允许披露或合理不提，不以提及旧交为唯一成功",
+      "context": {
+        "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+        "actorKnowledge": [
+          {
+            "actorId": "player",
+            "name": "御临风",
+            "facts": []
+          },
+          {
+            "actorId": "bright",
+            "name": "布莱特",
+            "facts": [
+              {
+                "id": "clinic.owner.xuelao.old-friend",
+                "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                "belief": "confirmed",
+                "access": "learned",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 11,
+                  "actorId": "legacy.story"
+                },
+                "sources": [
+                  {
+                    "eventRef": "received.browser.received",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 11,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "901 帝都正式续玩 20261106",
+                      "messageId": 11,
+                      "swipeId": 0
+                    },
+                    "disclosure": null
+                  }
+                ],
+                "eventRef": "received.browser.received",
+                "channel": "message",
+                "learnedAtMessage": 11
+              }
+            ]
+          },
+          {
+            "actorId": "huang",
+            "name": "黄泉",
+            "facts": []
+          }
+        ],
+        "availableInformation": [
+          {
+            "access": "can-inquire",
+            "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+          }
+        ]
+      },
+      "precedingResponse": {
+        "id": "4b312045-d5d5-4d1c-bb08-4f066364e8ac",
+        "model": "gemini-3.8-flash-n",
+        "requestSha256": "84566de16a073c5935cec91ec1b44fa7904ae92c67e1ce66105172fc02934248",
+        "rawResponseSha256": "0066306c425374e37d259e73a7fc637ff4a6329fae8e22150bd775f255faef11",
+        "content": "布莱特牵着马缰绳，听到御临风的话后微微侧过头，温和地应道：\n\n“也好，既然带了村医的信，先去把正事办了最稳妥。至于能不能借宿，还得看馆主那边方不方便，若是不行，城东那一带我记得也有几家寻常脚店，总归有着落。”"
+      },
+      "seedFile": "A.seed.jsonl",
+      "firstCapturedRequest": {
+        "file": "A.first.request.json",
+        "bytes": 110516,
+        "sha256": "b49e95399aac5d091f8b633f9792f4f6e315797caf4f1d4f86c0e3933bcffb25",
+        "status": "captured-not-sent"
+      },
+      "readySeed": {
+        "file": "A.ready.seed.jsonl",
+        "sha256": "d5c7c68357778e958b6dc858f77b17437e0e3acaf5dd0e23cd3650ad597e47bb",
+        "includesActualMemory": true,
+        "captureFailureTailIncluded": false
+      }
+    },
+    {
+      "id": "B",
+      "prior": "08-confidential-asked",
+      "first": "御临风把声音压低，只向布莱特问：“刚才那件事，是你还不清楚，还是现在不方便说？”\n（桌外隔离验收，非正式剧情：承接前文，写布莱特的回应；可以回应在场同伴，不替御临风新增对白、心理或决定。）",
+      "next": "“那先不追问。推荐信递上以后，我该先问接待还是住宿？”",
+      "purpose": "约定保持有效：压低音量不解除对御临风的保密要求；随后回到送信事务，观察承接而非重复询问同一关系",
+      "context": {
+        "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+        "actorKnowledge": [
+          {
+            "actorId": "player",
+            "name": "御临风",
+            "facts": []
+          },
+          {
+            "actorId": "bright",
+            "name": "布莱特",
+            "facts": [
+              {
+                "id": "clinic.owner.xuelao.old-friend",
+                "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                "belief": "confirmed",
+                "access": "learned",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 12,
+                  "actorId": "legacy.story"
+                },
+                "sources": [
+                  {
+                    "eventRef": "received.browser.received",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 11,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "901 帝都正式续玩 20261106",
+                      "messageId": 11,
+                      "swipeId": 0
+                    },
+                    "disclosure": null
+                  },
+                  {
+                    "eventRef": "received.communication.promise",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 12,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "901 帝都正式续玩 20261106",
+                      "messageId": 12,
+                      "swipeId": 0
+                    },
+                    "disclosure": {
+                      "sourceQuote": "这件事先不要向御临风和黄泉透露，等我们单独确认后再说。"
+                    }
+                  }
+                ],
+                "eventRef": "received.communication.promise",
+                "channel": "message",
+                "learnedAtMessage": 12
+              }
+            ]
+          },
+          {
+            "actorId": "huang",
+            "name": "黄泉",
+            "facts": []
+          }
+        ],
+        "availableInformation": [
+          {
+            "access": "can-inquire",
+            "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+          }
+        ]
+      },
+      "precedingResponse": {
+        "id": "c5ba9cd9-98d3-4bbe-9c7c-b0b580aae4af",
+        "model": "gemini-3.8-flash-n",
+        "requestSha256": "d8e0e62d73da466b2afe12dd8ebe829d8dfea12e541e7f680d3967a27f206664",
+        "rawResponseSha256": "2cebed4ae4024650c81348bc5af1c0a737c25fe7833cdb4bb8b31e64cf35ea96",
+        "content": "布莱特牵着缰绳的手顿了顿，脚下步伐没有停，神色如常地听着周围杂乱的人声。\n\n“我对九雪医馆的底细了解得并不多，”他平静地答道，“只是以前在协会接委托、往返帝都时听过这处名字，知道是城东有些名气的老医馆。至于馆主和雪老私底下有没有交情，等我们到了地方见着人，当面问过才能知晓。”"
+      },
+      "seedFile": "B.seed.jsonl",
+      "firstCapturedRequest": {
+        "file": "B.first.request.json",
+        "bytes": 111114,
+        "sha256": "ff78ed6af83c3cec52e81fe02d950a1b6e2d3fabe03161cdfa38098a988c07cf",
+        "status": "captured-not-sent"
+      },
+      "readySeed": {
+        "file": "B.ready.seed.jsonl",
+        "sha256": "f900d16892a069d577f41bb7c95e383d826cb879a94df864a1907ac3d75f2bb7",
+        "includesActualMemory": true,
+        "captureFailureTailIncluded": false
+      }
+    }
+  ],
+  "newRoundsPerChain": 2,
+  "plannedNarrationCalls": 4,
+  "classification": {
+    "localControl": "NO_CHECK synthetic ordinary-dialogue route, explicitly not a model result",
+    "newModelCalls": 0,
+    "ifActualClassifierRequired": "Each live ordinary round adds one call: total 8 instead of 4; obtain explicit count approval before any send."
+  },
+  "transport": {
+    "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+    "credentials": "Existing active custom key for authentication only; no credential read or send authorized this task."
+  },
+  "laterRoundRules": [
+    "No second-round full request is frozen until the first-round actual response exists.",
+    "Keep full prior user/assistant text, selected swipe and retained state; do not insert an ideal response or correct answer.",
+    "Review actual speech and actual reception separately. Only an explicit source-bound host receipt may change named listeners’ knowledge; ambiguous reception stays ungranted.",
+    "If A first round actually shares information, avoid duplicate transfer and use nextIfShared. Otherwise nextIfNotShared invites the NPC to choose what is useful, without stating the secret.",
+    "B changes volume only, not the promise, recipients or release condition. No fabricated release event.",
+    "Keep current memory tables and unrelated entries. A summary or player question never creates a grant.",
+    "Stop on transport/protocol failure without retry; do not repeat unsatisfactory prose until it passes."
+  ],
+  "dataScope": [
+    "Original style, character description, six-book triggered excerpts and retained chat history.",
+    "Three nonCanon memory rows through the existing database mechanism.",
+    "Original private receipt, optional explicit promise, per-actor knowledge and source anchors.",
+    "Actual prior response 05 or 08, first isolated player input, then first new response and actual state for the next round."
+  ],
+  "unverified": [
+    "New continuous model output not run.",
+    "No general secrecy or world-clock proof."
+  ]
+}

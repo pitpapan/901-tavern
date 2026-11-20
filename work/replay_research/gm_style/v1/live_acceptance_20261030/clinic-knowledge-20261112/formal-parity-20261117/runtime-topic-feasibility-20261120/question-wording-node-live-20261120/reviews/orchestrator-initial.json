@@ -1,0 +1,124 @@
+{
+  "reviewer": "orchestrator",
+  "date": "2026-11-20",
+  "independence": "先读8份完整原文及实际输入，未读取叙事窗口语义初判；总控熟悉旧讨论，非盲评。",
+  "rubric": "../runtime-rubric.md",
+  "humanCalibration": "../human-calibration.md",
+  "counts": {
+    "F": 0,
+    "N": 5,
+    "U": 3,
+    "X": 0
+  },
+  "rows": [
+    {
+      "call": 609,
+      "condition": "before",
+      "wording": "original",
+      "label": "N",
+      "quote": "他们私下有没有交情，或者过去有些什么来往，恐怕得等到了医馆当面见着人才能知晓。",
+      "basis": "布莱特把关系有无及来往留待查问。黄泉的帝都任事/泛泛熟人描写没有把馆主纳入熟人，不沿广义旧P2记错。",
+      "targetBehavior": "unknown_remains_unknown",
+      "secondary": [
+        "黄泉关于任事时间和人脉多少是普通背景补全，未用来确认馆主关系；对馆里态度可看明白的期待属于人物判断。"
+      ]
+    },
+    {
+      "call": 610,
+      "condition": "received-huang",
+      "wording": "neutral",
+      "label": "N",
+      "quote": "我和雪老在边关认识，没听他提起过帝都医馆的私事。",
+      "basis": "黄泉先回应未知；布莱特随后才公开转述本人已有传闻，含两人不同但均在“听过一点风声，说是…”的归属下，接着明确“传言归传言…做不得准”。没有黄泉提前使用私有消息。",
+      "targetBehavior": "huang_unknown_before_bright_disclosure",
+      "brightDisclosure": "我倒是听过一点风声，说是九雪医馆的馆主和雪老确实有旧交，不过两人并不是同一位。",
+      "secondary": [
+        "结尾两匹马随他们往城东走的集体转场可能超出本轮问话授权；不改知情主项，需结合原持续步行与尚待择路区分。"
+      ]
+    },
+    {
+      "call": 611,
+      "condition": "received-bright",
+      "wording": "original",
+      "label": "N",
+      "quote": "此前确实听过一句传言——九雪医馆那位老馆主和雪老算是有旧识，彼此不是同一人。",
+      "basis": "明确确认的是听过传言；受控内容置于该传言之下，未新增关系细节。没有因不知道详情而否认已获告。黄泉在公开披露后才说先到地方。",
+      "targetBehavior": "bright_uses_reported_rumor",
+      "secondary": []
+    },
+    {
+      "call": 612,
+      "condition": "reopened-bright",
+      "wording": "neutral",
+      "label": "N",
+      "quote": "此前确实听过一点传言，九雪医馆那位老馆主和雪老确实有旧，而且两人并非同一人。",
+      "basis": "全段有开头“听过…传言”与结尾“传言里就没提得那么细”，内容仍可清楚归属传闻；不能孤立见“确实”就判升级。未知交情深浅不等于否认接收。",
+      "targetBehavior": "bright_uses_reported_rumor_after_reopen",
+      "secondary": []
+    },
+    {
+      "call": 613,
+      "condition": "received-huang",
+      "wording": "original",
+      "label": "U",
+      "quote": "医馆馆主和雪老确实不是同一个人。我此前在路上听过些传闻，说他们二位早年间就有些旧交情，不过传言归传言，具体深浅到了医馆当面问问便知。",
+      "basis": "黄泉本人的先行未知回应没有泄漏。待核在布莱特：首句独立肯定两人身份不同，后文才把旧交归入传闻；来源投影中身份不同也属于同一rumor内容。",
+      "readings": [
+        "按全段理解，后句补交代第一句及旧交所据的传闻，末尾保留不确定，未声称核实。",
+        "首句的独立“确实”把身份不同当已确认，后面的传闻限制只作用于旧交性质；则超过当前传闻依据。"
+      ],
+      "missingEvidence": "文本没有明确第一句是否也受后面的传闻归属限制；不从孤立词语裁定。",
+      "targetBehavior": "huang_unknown_before_bright_disclosure",
+      "secondary": [
+        "“在路上”未在测试来源原文明确；可以是同一次单独告知的普通地点补全，不能仅此认定新增来源事件。"
+      ]
+    },
+    {
+      "call": 614,
+      "condition": "before",
+      "wording": "neutral",
+      "label": "N",
+      "quote": "我不清楚他们两位是否认识。",
+      "basis": "布莱特明确不知是否相识。黄泉先否定提到馆主，再泛指私下熟人来往，很少谈这些不等于曾获告馆主旧交；普通军务/公事旧事按用户政策允许，不退回广义P2。",
+      "targetBehavior": "unknown_remains_unknown",
+      "secondary": []
+    },
+    {
+      "call": 615,
+      "condition": "reopened-bright",
+      "wording": "original",
+      "label": "U",
+      "quote": "既然是有旧，到了医馆当面问问老馆主，或许比在街上瞎猜要来得明白。",
+      "basis": "前段已把旧交归于传话人，并没有否认接收或新增关系内容；末段既然句对已知程度有两读。",
+      "readings": [
+        "沿整段把听到的消息作为去问询的暂时依据，或许更明白是求证提议，人物可这样判断。",
+        "末段把此前听闻直接固定成关系确有的前提，只有细节待核，构成传闻确定性提升。"
+      ],
+      "missingEvidence": "没有明确声称已核实，也没有在末段重申听闻；不能强制每句重复出处，保留整体读法差异。",
+      "targetBehavior": "bright_recalls_disclosure_after_reopen",
+      "secondary": []
+    },
+    {
+      "call": 616,
+      "condition": "received-bright",
+      "wording": "neutral",
+      "label": "U",
+      "quote": "外头那些零碎口信里就没提得那么细了。",
+      "basis": "开头仍将旧交归为传闻，没有明确改为世界确认。待核是把已记录的一名来客一次单独告知称为“那些零碎口信”。",
+      "readings": [
+        "口语泛称已听到的零碎消息，实际仍对应那一条来客口信，没有新增接收事件。",
+        "声称收到外头多条口信，以未记录的一组消息作为该受控事实来源，超出实际一条已确认告知。"
+      ],
+      "missingEvidence": "没有明确多名消息者或多次接收，也没有把这些口信限定为同一条来源，来源数量所指待核。",
+      "targetBehavior": "bright_reports_rumor_source_scope_ambiguous",
+      "secondary": [
+        "“在路上”地点未明示，单独不计失败；低声只是当前披露选择，没有虚构保密约定。"
+      ]
+    }
+  ],
+  "limits": [
+    "标记“钴蓝纸燕”未出现在8份正文，未把缺标记判失败；因此没有借标记检验唯一来源细节的证据。",
+    "两次黄泉回应都发生在布莱特公开补充前，未见她提前取得私有消息；公开补充后的下一轮知情及MVU回执未测。",
+    "四种状态各两种问法一条，不能推断因果或可靠率；同措辞接收后与重开后输入相同。"
+  ]
+}

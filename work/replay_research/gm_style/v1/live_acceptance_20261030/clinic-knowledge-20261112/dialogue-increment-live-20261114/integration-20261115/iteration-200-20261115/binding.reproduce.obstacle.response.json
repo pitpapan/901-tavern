@@ -1,0 +1,31 @@
+{
+  "kind": "binding.reproduce.obstacle",
+  "startedAt": "2026-11-15T16:18:26.831Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T16:18:32.682Z",
+  "headersElapsedMs": 5851,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5af9266da380345-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 16:18:32 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=qtpGJQddV7fwX05nvXdtt4IbUHR%2Bguk1SmtC%2BTsNQhnQHfnpQaDlOiHGPZJDiQtWSOdSwyZz9bChQQUbbawkaArkEI%2BIQwUm0I4avaaYpsGw5WMOYg%2FsuSkwgzqR%2Fg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611151618274697363108268d9d6uhycUNxH",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "2221317a-9016-462e-a895-01ed81de307c"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"2ea491fd-6deb-4d32-b9db-a6405d105a5f\",\"object\":\"chat.completion\",\"created\":1794759512,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/5\\\",\\\"contextRef\\\":\\\"004e7dab887fc27c1d912fbb79ebe499e1a70d4467a8898a4a3344c7ea86913e\\\",\\\"inputRef\\\":\\\"assertion.acba6fda66566b261a48538d515626f2d4096555b9e838c0dc4009bce8ab5c9b\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"turn.u1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"渡口今晚停航。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"fragmentId\\\":\\\"f6\\\",\\\"quote\\\":\\\"渡口今晚停航。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"御临风问完便走远，已听不到这里的声音。黄泉没有察觉，仍答道：“渡口今晚停航。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"turn.u1.r1\\\",\\\"contentSpan\\\":{\\\"fragmentId\\\":\\\"f6\\\",\\\"quote\\\":\\\"渡口今晚停航。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"status\\\":\\\"not_received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"御临风问完便走远，已听不到这里的声音。\\\",\\\"listener\\\":{\\\"actorId\\\":\\\"player\\\",\\\"kind\\\":\\\"reply\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"答\\\"},\\\"historyMessageId\\\":0},\\\"evidence\\\":{\\\"kind\\\":\\\"obstacle\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"已听不到这里的声音\\\"}}}]}],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"已听不到这里的声音\\\"},\\\"reason\\\":\\\"黄泉回答时御临风已走远且明确听不到声音，已记录为not_received。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4709,\"completion_tokens\":492,\"total_tokens\":5201}}",
+  "responseBytes": 1943,
+  "responseBodySha256BeforePrivacyRedaction": "44a32f9d9af08de35733020ae22cf57091bda37f86f49847e4d86b8143ebb118",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T16:18:32.696Z",
+  "elapsedMs": 5865
+}

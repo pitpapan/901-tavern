@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "actualCalls": 4,
+  "classificationCalls": 2,
+  "narrationCalls": 2,
+  "requests": [
+    543,
+    544,
+    545,
+    546
+  ],
+  "httpStatus": [
+    200,
+    200,
+    200,
+    200
+  ],
+  "finishReason": [
+    "stop",
+    "stop",
+    "stop",
+    "stop"
+  ],
+  "failures": 0,
+  "retries": 0,
+  "used": 4,
+  "remaining": 0,
+  "cumulative": 546,
+  "ceiling": 546,
+  "ordinary": {
+    "classification": "NO_CHECK/ordinary_dialogue",
+    "savedStatus": "NO_CHECK",
+    "fullRuleRootUnchanged": true
+  },
+  "mechanical": {
+    "classification": "RECOVERY_REQUIRED",
+    "request": {
+      "kind": "recovery",
+      "type": "rest",
+      "rest": "short",
+      "minutes": 15
+    },
+    "savedStatus": "APPLIED",
+    "revisionBefore": 6,
+    "revisionAfter": 7,
+    "clockMinutes": 15,
+    "newOperations": 1,
+    "operationId": "gm-runtime/901 医馆自然叙事隔离 20261116 - Branch #4/32/0",
+    "committedBeforeProse": true,
+    "rootAfterProseAndReopenEqual": true
+  },
+  "rawResponsesAndProseUnchanged": true,
+  "activeSavedAndDiskRootsEqual": true,
+  "knowledgeAndFailedSourcePreserved": true,
+  "healthResourcesInventoryUnchanged": true,
+  "classificationFixtures": false,
+  "productModulesUnchanged": true,
+  "protectedPriorFilesUnchanged": 4,
+  "closed": true
+}

@@ -1,0 +1,116 @@
+✔ bound utterance maps only explicit nested receipts and retains mandatory coverage (12.9437ms)
+✔ action, forged reference, missing receipts and omitted target coverage reject without mutation (2.9824ms)
+✔ uncertain coverage preserves explicit partial receipt plus uncertainty without blanket blocking (2.5189ms)
+✔ none and unresolved-only coverage require actual source evidence, never synthesize receipts (1.8994ms)
+✔ original source, role, null-pair and identity checks remain in force (2.8182ms)
+✔ schema rejects nested action and missing coverage and allows explicit none and uncertainty (595.7697ms)
+✔ model adapter uses version2 and original MVU path persists coverage and independent known/pending rows (17.5454ms)
+✔ historical flat failures are retained and cannot silently enter the new wire (11.346ms)
+✖ ordinary dialogue forwards generated schema to the existing completion callback without changing messages (17.4016ms)
+✔ five actual failures stay unchanged and rejected; valid saved replies satisfy generation schema (989.2061ms)
+✖ schema metadata does not repair syntax or retry completion failures (2.8283ms)
+✔ schema does not replace the existing receipt-to-utterance check or convert action claims (2.113ms)
+✔ actual action-linked receptions still fail and omitted receptions are not reconstructed (14.1777ms)
+✔ coexisting action and utterance projections preserve one reception or one pending item, without duplicate knowledge (23.6171ms)
+✔ parallel 01-received-new uses changed speaker, recipient and message with original reception engine (8.9718ms)
+✔ parallel 02-received-rumor uses changed speaker, recipient and message with original reception engine (11.1177ms)
+✔ parallel 03-not-heard uses changed speaker, recipient and message with original reception engine (7.4844ms)
+✔ parallel 04-not-yet-said uses changed speaker, recipient and message with original reception engine (5.0732ms)
+✔ parallel 05-partial-first uses changed speaker, recipient and message with original reception engine (7.5796ms)
+✔ parallel 06-partial-second uses changed speaker, recipient and message with original reception engine (8.946ms)
+✔ parallel 07-ambiguous-hearing uses changed speaker, recipient and message with original reception engine (5.7514ms)
+✔ parallel 08-ambiguous-listener uses changed speaker, recipient and message with original reception engine (5.6257ms)
+✔ parallel 09-unrelated consumes persisted pending through original dependency callback (6.3192ms)
+✔ parallel 10-dependent consumes persisted pending through original dependency callback (10.3475ms)
+✔ custom290 nonempty unresolved with extracted status remains rejected without status repair (3.1738ms)
+✔ custom288 invented type remains rejected without conversion or partial reception adoption (2.5953ms)
+✔ custom287 missing normalized degree span stays rejected; generated pair table reaches the same ordinary input (2.8949ms)
+✔ reception reason contract specifies string and empty explanation without conflating explanation and status (0.9374ms)
+✔ empty and nonempty reasons preserve explicit receipt status; invalid reason types reject without coercion (21.0823ms)
+✔ an empty reason cannot upgrade uncertain or unreceived reception (9.2928ms)
+✔ custom284 malformed original stays rejected despite correct fragment receptions (5.0028ms)
+✔ partial reception guidance pairs each receipt with a content-scoped utterance without altering input or coordinates (1.289ms)
+✔ first and second fragments register independently while the explicitly unheard fragment is ignored (15.9467ms)
+✔ different listeners keep distinct contents and only genuinely uncertain reception stays pending (11.1084ms)
+✔ partial claims cannot use forged spans or a listener state as a speech receipt (3.4207ms)
+✔ custom283 original uncertain whole-speech receipt remains unchanged and is not repaired into partial knowledge (9.7769ms)
+✔ planned speech with full content grants no knowledge or questions; actual received speech still registers (10.9924ms)
+✔ original custom281 keeps asserted plus intent attribution; updated shared guidance does not repair or certify it (8.539ms)
+✔ received explanation is retained as explanation, not a registration blocker (23.2137ms)
+✔ positive explanation cannot bypass status, scope, unresolved, identity, recipients or source acquisition (39.5005ms)
+✔ positive explanation never repairs a missing or forged role span (2.6229ms)
+✔ original custom273 response still fails INVALID_ROLE_SPAN unchanged; no source auto-completion (3.5858ms)
+✔ original custom274 normalized label without span remains rejected; new guidance reaches ordinary extraction (4.5988ms)
+✔ original custom276 shifted spans remain rejected with deterministic coordinates present (5.4551ms)
+✔ original custom280 object in scope.time still fails unchanged under explicit scalar instructions (5.1343ms)
+✔ shared span guidance reaches ordinary extraction; partial hearing retains only received content (8.3633ms)
+✔ ordinary prose: new message is attributed information, not a new world truth; persisted and idempotent (8.4664ms)
+✔ existing proposition relay keeps rumor and rejects invented sender acquisition (13.7364ms)
+✔ planned never grants knowledge or prompts (5.1052ms)
+✔ denied never grants knowledge or prompts (4.9518ms)
+✔ question never grants knowledge or prompts (4.0142ms)
+✔ not received never grants knowledge or prompts (4.5674ms)
+✔ ambiguous hearing persists across reopen and asks only for matching dependencies; explicit answer resolves once (11.302ms)
+✔ unresolved extraction cannot auto grant even if reception says received (5.3114ms)
+✔ invalid span or recipient rejects entire candidate batch before any write (4.3821ms)
+✔ source changes while extraction waits: no knowledge write (1.4923ms)
+✔ missing extractor is explicit disabled, not empty successful extraction (0.5291ms)
+✔ extractor failure is not cached as no change and does not write story (2.4557ms)
+✔ dependency callback gates questions, dismissal is not repeated on every turn (10.9007ms)
+✔ new content uses quoted words, never model normalization as an added fact (6.237ms)
+✔ prepared batch resumes without extracting again after receipt persistence interruption (7.0923ms)
+✔ native fork retains unresolved questions on its own branch (10.4861ms)
+✔ unresolved-only semantic output is retained, not falsely treated as no changes (8.8938ms)
+✔ browser extraction uses the same frozen assertion SHA contract as existing Node extractor (1.5054ms)
+✖ explicit semantic adapter accepts offline completion and binds dependency response; no review routes (2.0676ms)
+✔ an unrelated unresolved passage does not prevent explicit reception in the same turn (9.1403ms)
+✔ explicit contradictory actor mapping stays pending rather than granting the wrong actor (4.9096ms)
+✔ unknown or reported assertions do not automatically grant reception (8.5588ms)
+ℹ tests 68
+ℹ suites 0
+ℹ pass 65
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1882.3491
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-knowledge.test.mjs:33:1
+✖ ordinary dialogue forwards generated schema to the existing completion callback without changing messages (17.4016ms)
+  Error: Bound dialogue contract required
+      at Object.assign.outputContract [as extract] (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs:13:72)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.test.mjs:37:41)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-knowledge.test.mjs:53:1
+✖ schema metadata does not repair syntax or retry completion failures (2.8283ms)
+  AssertionError [ERR_ASSERTION]: The error is expected to be an instance of "SyntaxError". Received "Error"
+  
+  Error message:
+  
+  Bound dialogue contract required
+      at async TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.test.mjs:56:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: Bound dialogue contract required
+        at Object.assign.outputContract [as extract] (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs:13:72)
+        at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.test.mjs:56:31)
+        at async Test.run (node:internal/test_runner/test:1409:7)
+        at async Test.processPendingSubtests (node:internal/test_runner/test:974:7),
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-knowledge.test.mjs:456:1
+✖ explicit semantic adapter accepts offline completion and binds dependency response; no review routes (2.0676ms)
+  Error: Invalid bound dialogue reply
+      at Object.check (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs:110:217)
+      at Object.observeDialogue (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs:157:25)
+      at async TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.test.mjs:462:45)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

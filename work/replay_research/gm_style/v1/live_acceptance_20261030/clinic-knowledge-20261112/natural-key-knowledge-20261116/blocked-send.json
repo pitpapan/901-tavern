@@ -1,0 +1,13 @@
+{
+  "action":"External frozen 01-before narration via original configured API",
+  "request":"captures/01-before.02.narration.request.json",
+  "sha256":"641dc06e41959db0b692e035395b9d59e3719286cace8bf00358f6e164354c47",
+  "requestBytes":108003,
+  "approvalResult":"rejected-before-execution",
+  "reason":"该命令会把包含私有故事上下文的冻结请求发送到未被验证为可信的外部 API；既有模型调用授权未明确批准该具体敏感 payload 与目的地。",
+  "destination":"https://cdn.sta1n.cn/v1/chat/completions",
+  "actualExternalAttempts":0,
+  "credentialsRead":false,
+  "originalLedgerUnchanged":{"used":197,"remaining":3,"cumulative":531,"closed":true,"complete":true},
+  "followup":"Complete three-state MVU/save/reopen and capture all exact pending requests first. External transmission needs explicit approval for these payloads and destination; do not bypass rejection."
+}

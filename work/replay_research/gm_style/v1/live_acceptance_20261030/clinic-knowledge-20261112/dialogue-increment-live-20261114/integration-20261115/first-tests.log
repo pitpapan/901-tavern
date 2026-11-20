@@ -1,0 +1,139 @@
+✔ ordinary saved narration invokes configured dialogue adapter without changing prose or memory route (140.5315ms)
+✔ saved prose survives extraction failure and completed-turn replay does not request prose again (17.8356ms)
+✔ ordinary next turn asks only when pending information is relevant, and deferred answer does not regenerate prose (48.3213ms)
+✔ ordinary story generation consumes recipient knowledge and exposes only an explicit saved-receipt entry (18.6067ms)
+✔ ordinary classifier and narration both consume time and discovery filtered knowledge (12.7766ms)
+✔ unconfirmed rule persistence blocks narration and reports memory-only settlement (27.4406ms)
+✔ postcombat story classification failure retains its diagnostic instead of using combat fallback (9.638ms)
+✔ dialogue classification timeout reports a processing failure without implying an attempted action (9.1961ms)
+✔ classification timeout retries the same input once with a new id and ignores the late first decision (41.4309ms)
+✔ classification recovery stops after two timeouts without narration or settlement (32.1372ms)
+✔ classification recovery does not retry after explicit stop, changed input, or unconfirmed cancellation (45.6929ms)
+✔ postcombat story continuation failure remains resumable without reclassifying or settling (11.9789ms)
+✔ a failure inside combat handling still uses the combat recovery route (5.4982ms)
+✔ native combat regeneration restores the deleted report and unique latest root before a cancelled menu (5.8351ms)
+✔ debug-disabled malformed recovery retains a precise failure without settling (8.4054ms)
+✔ debug-disabled invalid check attribute identifies model input failure without exposing DC (8.3399ms)
+✔ debug-disabled upstream quota failure is distinguished from invalid model output (10.0197ms)
+✔ explicit additional lorebooks reach classification and ordinary narration (10.0334ms)
+✔ ordinary narration releases its lore filter even when host stop handle is broken (18.6242ms)
+✔ active combat handles the turn before ordinary classification or narration (5.1859ms)
+✔ host saved recovery survives failed narration and script reload without another debit (20.1108ms)
+✔ host executes the exact compound declaration once and resumes final sequence narration after reload (20.7186ms)
+✔ a completed pending medicine keeps its original operation across a later player floor and native regeneration (16.0194ms)
+✔ host classification passes a registered encounter to the player-bound combat entry (9.3936ms)
+✔ integrated profile cannot grant the old demo scene bonus (9.1351ms)
+✔ ordinary narration resolves current model options locally for each request (10.6276ms)
+✔ controller persists failed NO_CHECK and recovers after reload with no new player input (12.9071ms)
+✔ host cancels only the unexecuted medicine pending and anchors the current dialogue (15.8908ms)
+✔ a cancellation declaration cannot undo a committed operation awaiting narration (16.2453ms)
+✔ regenerating a completed turn reuses its narration without model calls or another assistant message (11.6893ms)
+✔ regenerating a committed direct effect does not repeat classification, narration, or MVU writes (13.6911ms)
+✔ lost direct-effect failure notice resumes saved operation without reclassification (14.5055ms)
+✔ a completed-looking assistant cannot bypass a missing JS operation (5.4526ms)
+✔ completed assistant with missing MVU projection restores state without model requests (13.1007ms)
+✔ explicit completion host binds v2 unchanged and can disable without touching memory (28.3917ms)
+✔ deferred local resolution resumes the same request without resending player input (37.638ms)
+✖ completed reply recovery consumes prepared batch without another extraction or narration (19.7123ms)
+✔ bound prompt retains the existing direct-reception rule without changing schema, input or other guidance (29.7686ms)
+✔ direct speech needs no acknowledgement; explicit obstruction and uncertainty retain their own outcomes (56.3249ms)
+✔ bound utterance maps only explicit nested receipts and retains mandatory coverage (4.0644ms)
+✔ action, forged reference, missing receipts and omitted target coverage reject without mutation (5.3102ms)
+✔ uncertain coverage preserves explicit partial receipt plus uncertainty without blanket blocking (2.7052ms)
+✔ none and unresolved-only coverage require actual source evidence, never synthesize receipts (2.9247ms)
+✔ original source, role, null-pair and identity checks remain in force (3.3174ms)
+✔ schema rejects nested action and missing coverage and allows explicit none and uncertainty (889.7251ms)
+✔ model adapter uses version2 and original MVU path persists coverage and independent known/pending rows (21.0085ms)
+✔ historical flat failures are retained and cannot silently enter the new wire (12.2645ms)
+✔ model-path invalid coverage writes nothing; explicit unreceived and none never grant or ask (26.2098ms)
+✔ planned speech keeps original intent claim and none coverage without creating utterance (2.2001ms)
+✔ ordinary dialogue forwards generated schema to the existing completion callback without changing messages (58.3033ms)
+✔ five actual failures stay unchanged and rejected; valid saved replies satisfy generation schema (1818.8706ms)
+✔ schema metadata does not repair syntax or retry completion failures (3.495ms)
+✔ schema does not replace the existing receipt-to-utterance check or convert action claims (2.1851ms)
+✔ actual action-linked receptions still fail and omitted receptions are not reconstructed (14.9857ms)
+✔ coexisting action and utterance projections preserve one reception or one pending item, without duplicate knowledge (38.3217ms)
+✔ parallel 01-received-new uses changed speaker, recipient and message with original reception engine (17.1532ms)
+✔ parallel 02-received-rumor uses changed speaker, recipient and message with original reception engine (22.368ms)
+✔ parallel 03-not-heard uses changed speaker, recipient and message with original reception engine (9.628ms)
+✔ parallel 04-not-yet-said uses changed speaker, recipient and message with original reception engine (9.8843ms)
+✔ parallel 05-partial-first uses changed speaker, recipient and message with original reception engine (15.1685ms)
+✔ parallel 06-partial-second uses changed speaker, recipient and message with original reception engine (15.2879ms)
+✔ parallel 07-ambiguous-hearing uses changed speaker, recipient and message with original reception engine (9.894ms)
+✔ parallel 08-ambiguous-listener uses changed speaker, recipient and message with original reception engine (10.5301ms)
+✔ parallel 09-unrelated consumes persisted pending through original dependency callback (12.4739ms)
+✔ parallel 10-dependent consumes persisted pending through original dependency callback (14.8343ms)
+✔ custom290 nonempty unresolved with extracted status remains rejected without status repair (3.4593ms)
+✔ custom288 invented type remains rejected without conversion or partial reception adoption (3.7561ms)
+✔ custom287 missing normalized degree span stays rejected; generated pair table reaches the same ordinary input (3.7197ms)
+✔ reception reason contract specifies string and empty explanation without conflating explanation and status (1.5944ms)
+✔ empty and nonempty reasons preserve explicit receipt status; invalid reason types reject without coercion (36.7944ms)
+✔ an empty reason cannot upgrade uncertain or unreceived reception (16.2752ms)
+✔ custom284 malformed original stays rejected despite correct fragment receptions (7.4209ms)
+✔ partial reception guidance pairs each receipt with a content-scoped utterance without altering input or coordinates (1.8877ms)
+✔ first and second fragments register independently while the explicitly unheard fragment is ignored (29.9951ms)
+✔ different listeners keep distinct contents and only genuinely uncertain reception stays pending (20.6005ms)
+✔ partial claims cannot use forged spans or a listener state as a speech receipt (5.4481ms)
+✔ custom283 original uncertain whole-speech receipt remains unchanged and is not repaired into partial knowledge (13.6012ms)
+✔ planned speech with full content grants no knowledge or questions; actual received speech still registers (23.7534ms)
+✔ original custom281 keeps asserted plus intent attribution; updated shared guidance does not repair or certify it (13.7663ms)
+✔ received explanation is retained as explanation, not a registration blocker (42.2818ms)
+✔ positive explanation cannot bypass status, scope, unresolved, identity, recipients or source acquisition (79.6927ms)
+✔ positive explanation never repairs a missing or forged role span (7.1292ms)
+✔ original custom273 response still fails INVALID_ROLE_SPAN unchanged; no source auto-completion (6.4168ms)
+✔ original custom274 normalized label without span remains rejected; new guidance reaches ordinary extraction (5.9572ms)
+✔ original custom276 shifted spans remain rejected with deterministic coordinates present (7.581ms)
+✔ original custom280 object in scope.time still fails unchanged under explicit scalar instructions (7.0755ms)
+✔ shared span guidance reaches ordinary extraction; partial hearing retains only received content (19.5422ms)
+✔ ordinary prose: new message is attributed information, not a new world truth; persisted and idempotent (17.2914ms)
+✔ existing proposition relay keeps rumor and rejects invented sender acquisition (31.0928ms)
+✔ planned never grants knowledge or prompts (11.4115ms)
+✔ denied never grants knowledge or prompts (9.7151ms)
+✔ question never grants knowledge or prompts (9.6547ms)
+✔ not received never grants knowledge or prompts (11.5608ms)
+✔ ambiguous hearing persists across reopen and asks only for matching dependencies; explicit answer resolves once (21.8784ms)
+✔ unresolved extraction cannot auto grant even if reception says received (12.993ms)
+✔ invalid span or recipient rejects entire candidate batch before any write (8.0611ms)
+✔ source changes while extraction waits: no knowledge write (3.632ms)
+✔ missing extractor is explicit disabled, not empty successful extraction (1.1158ms)
+✔ extractor failure is not cached as no change and does not write story (5.6444ms)
+✔ dependency callback gates questions, dismissal is not repeated on every turn (21.8193ms)
+✔ new content uses quoted words, never model normalization as an added fact (15.0578ms)
+✔ prepared batch resumes without extracting again after receipt persistence interruption (18.5873ms)
+✔ native fork retains unresolved questions on its own branch (19.6445ms)
+✔ unresolved-only semantic output is retained, not falsely treated as no changes (27.4669ms)
+✔ browser extraction uses the same frozen assertion SHA contract as existing Node extractor (2.0586ms)
+✔ explicit semantic adapter accepts offline completion and binds dependency response; no review routes (16.7739ms)
+✔ an unrelated unresolved passage does not prevent explicit reception in the same turn (15.907ms)
+✔ explicit contradictory actor mapping stays pending rather than granting the wrong actor (12.6754ms)
+✔ unknown or reported assertions do not automatically grant reception (19.505ms)
+ℹ tests 109
+ℹ suites 0
+ℹ pass 108
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3517.0527
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\replay-gate-script.test.mjs:649:1
+✖ completed reply recovery consumes prepared batch without another extraction or narration (19.7123ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'prepared'
+  - 'processed'
+       ^
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/replay-gate-script.test.mjs:653:38)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'prepared',
+    expected: 'processed',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

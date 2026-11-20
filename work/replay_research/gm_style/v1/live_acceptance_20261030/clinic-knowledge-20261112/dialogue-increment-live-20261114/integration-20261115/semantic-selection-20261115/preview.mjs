@@ -1,0 +1,14 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {pathToFileURL} from 'node:url';
+import assert from 'node:assert/strict';
+import {prepareSemanticDialogueExtraction,prepareRelatedDialogueExtraction} from '../../../../../../../../rules_engine/gm_runtime/story-dialogue-knowledge.mjs';
+const E=new URL('../',import.meta.url),N=new URL('./',import.meta.url),read=async p=>JSON.parse(await readFile(p,'utf8'));
+const base=await read(new URL('iteration-200-20261115/uncertaintycheck.reproduce.obstacle.request.json',E));
+const input=JSON.parse(base.messages[1].content),old=await prepareRelatedDialogueExtraction(input),fresh=await prepareSemanticDialogueExtraction(input);
+assert.deepEqual(old.messages,base.messages);assert.deepEqual(fresh.input,old.input);assert.deepEqual(fresh.messages.slice(1),old.messages.slice(1));
+const {flattenSchema}=await import(pathToFileURL((await read(new URL('browser-setup.json',E))).app+'/src/util.js'));
+const format=structuredClone(fresh.responseFormat);format.json_schema.schema=flattenSchema(format.json_schema.schema,'custom');
+const request={...base,messages:fresh.messages,response_format:format};
+await writeFile(new URL('request-preview.json',N),JSON.stringify(request));
+const report={sent:false,modelCalls:0,inputAndFragmentsUnchanged:true,oldRequestBytes:Buffer.byteLength(JSON.stringify(base)),newRequestBytes:Buffer.byteLength(JSON.stringify(request)),oldSystemChars:old.messages[0].content.length,newSystemChars:fresh.messages[0].content.length,defaultContract:'dialogue-reception/5',explicitContract:'dialogue-reception/6'};
+await writeFile(new URL('preview-summary.json',N),JSON.stringify(report,null,2));console.log(JSON.stringify(report));

@@ -1,0 +1,31 @@
+{
+  "kind": "relation.followup.direct",
+  "startedAt": "2026-11-15T15:53:23.663Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T15:53:28.758Z",
+  "headersElapsedMs": 5094,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5af6db3ff85013f-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 15:53:28 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=sIDjHNDZp%2BY60%2BiWuMBc736j1tlJRvhwgLvXp4xsMXiQOVarwyOu%2BMmRjEFdPuRVFgpVFSzWjVtbiUOyDaRaYzoUDQI381YhqsX0k6YmpPaondvgFMdGiTpukKgYeg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611151553238978462288268d9d6e3XzNbbW",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "53686a28-1326-4306-a003-02a4e2aba089"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"8d9ab909-e89b-4c03-a8aa-8079e99633f8\",\"object\":\"chat.completion\",\"created\":1794758008,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/5\\\",\\\"contextRef\\\":\\\"7a364d34ee2ff6981e9dab544fffe24c97f7e07dd85c7d05f4da22b2f6d72375\\\",\\\"inputRef\\\":\\\"assertion.727d6389cef05d2278a6f8bc4235e08ed0b528bace2fe291557e5223fa2029c5\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"turn.utterance.1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"渡口今晚停航。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"渡口今晚停航。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉对御临风说：“渡口今晚停航。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"turn.utterance.1.rec.1\\\",\\\"contentSpan\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"渡口今晚停航。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"黄泉直接对御临风说话，御临风无接收障碍，明确接收。\\\",\\\"listener\\\":{\\\"actorId\\\":\\\"player\\\",\\\"kind\\\":\\\"explicit\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"御临风\\\"},\\\"historyMessageId\\\":null},\\\"evidence\\\":{\\\"kind\\\":\\\"direct\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"对御临风说\\\" relapse\\\":null}}},{\\\"id\\\":\\\"turn.utterance.1.rec.2\\\",\\\"contentSpan\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"渡口今晚停航。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"status\\\":\\\"not_received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"布莱特在隔音房内听不到这里，存在明确接收障碍。\\\",\\\"listener\\\":{\\\"actorId\\\":\\\"bright\\\",\\\"kind\\\":\\\"explicit\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f6\\\",\\\"quote\\\":\\\"布莱特\\\"},\\\"historyMessageId\\\":null},\\\"evidence\\\":{\\\"kind\\\":\\\"obstacle\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f7\\\",\\\"quote\\\":\\\"听不到这里。\\\" relapse\\\":null}}}]}],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉对御临风说：“渡口今晚停航。”御临风继续整理行囊，没有复述这句话。布莱特在另一间隔音房内，听不到这里。\\\"},\\\"reason\\\":\\\"已完整记录黄泉言说对御临风的直接接收及对布莱特的未接收。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4746,\"completion_tokens\":648,\"total_tokens\":5394}}",
+  "responseBytes": 2588,
+  "responseBodySha256BeforePrivacyRedaction": "35f2179892d475dbabe554d13c66a545b3c102fbc5593e1e03a17650393104df",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T15:53:28.770Z",
+  "elapsedMs": 5106
+}

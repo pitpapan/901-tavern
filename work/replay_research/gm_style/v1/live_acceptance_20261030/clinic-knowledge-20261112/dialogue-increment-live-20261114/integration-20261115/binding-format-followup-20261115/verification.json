@@ -1,0 +1,126 @@
+{
+  "results": [
+    {
+      "id": "binding.reproduce.006",
+      "call": 447,
+      "schemaPass": true,
+      "structuralPass": true,
+      "isolatedWrites": 6,
+      "error": null,
+      "verdict": "fail",
+      "assessment": "447 JSON/schema/citation pass but Huang speech still merged across narration; full Bright utterance granted to Huang from group pronoun with no sufficient whole-range support. Writes6 isolated, no formal story; format variability not fixed-generation evidence."
+    },
+    {
+      "id": "binding.reproduce.009",
+      "call": 448,
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "error": "Expected ',' or '}' after property value in JSON at position 1463 (line 1 column 1464)",
+      "verdict": "fail",
+      "assessment": "448 raw response invalid JSON with stray text in reply span; syntax rejected unchanged writes0. No repaired semantic evaluation or success claim."
+    },
+    {
+      "id": "binding.reproduce.direct",
+      "call": 449,
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "error": "Expected double-quoted property name in JSON at position 1048 (line 1 column 1049)",
+      "verdict": "fail",
+      "assessment": "449 raw JSON syntax failure at1048, original native parser rejects, writes0. No repair, no semantic success claim."
+    },
+    {
+      "id": "binding.reproduce.npc_reply",
+      "call": 450,
+      "schemaPass": true,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "error": "Reply evidence must reference current answer",
+      "verdict": "fail",
+      "assessment": "450 JSON/schema valid but reply identity/evidence outside current answer; existing bound check rejects writes0. No scope relaxation or automatic remapping."
+    },
+    {
+      "id": "binding.reproduce.partial",
+      "call": 451,
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "error": "Expected ',' or '}' after property value in JSON at position 2544 (line 1 column 2545)",
+      "verdict": "fail",
+      "assessment": "451 raw JSON syntax error at2544; strict adapter rejects writes0. Original unchanged, no repaired interpretation."
+    },
+    {
+      "id": "binding.reproduce.ambiguous",
+      "call": 452,
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "error": "Expected ',' or ']' after array element in JSON at position 1075 (line 1 column 1076)",
+      "verdict": "fail",
+      "assessment": "452 invalid JSON at1075, raw rejected writes0, no actual pending generated from malformed response."
+    },
+    {
+      "id": "binding.reproduce.obstacle",
+      "call": 453,
+      "schemaPass": true,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "error": "Reply evidence must reference current answer",
+      "verdict": "fail",
+      "assessment": "453 JSON/schema pass, not_received/obstacle correct, but reply listener span is narration 答 outside utterance content. Strict binding rejects writes0; semantic nonreception itself not disproved."
+    },
+    {
+      "id": "binding.reproduce.new_direct",
+      "call": 454,
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "error": "Expected double-quoted property name in JSON at position 1037 (line 1 column 1038)",
+      "verdict": "fail",
+      "assessment": "454 raw JSON syntax failure at1037, adapter rejects writes0; no repair or semantic acceptance."
+    },
+    {
+      "id": "binding.probe.reply",
+      "call": 455,
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "error": "Expected ',' or ']' after array element in JSON at position 1020 (line 1 column 1021)",
+      "verdict": "fail",
+      "assessment": "455 nearby implicit answer raw JSON stray token, writes0. Visible bright identity/history0/current answer selections reasonable but malformed output is not accepted."
+    },
+    {
+      "id": "binding.probe.obstacle",
+      "call": 456,
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "error": "Expected ',' or ']' after array element in JSON at position 1036 (line 1 column 1037)",
+      "verdict": "fail",
+      "assessment": "456 nearby obstacle contrast invalid JSON stray text; strict parser rejects writes0. Visible identity/current answer/obstacle choices plausible, malformed output not accepted."
+    }
+  ],
+  "newCalls": 10,
+  "used": 122,
+  "remaining": 78,
+  "cumulative": 456,
+  "newTests": 2,
+  "freshOfflineTests": 163,
+  "productSourcesUnchanged": true,
+  "generationContractUnchanged": true,
+  "originalRequestsByteIdentical": 8,
+  "originalEvidenceFilesPreserved": 559,
+  "formalProtectedFilesUnchanged": 22,
+  "historicalLedgerPrefixUnchanged": true,
+  "allRawBytesUnmodified": true,
+  "syntaxFailures": 7,
+  "bindingFailures": 2,
+  "semanticFailures": 1,
+  "overallPasses": 0,
+  "rawRepair": false,
+  "validationRelaxed": false,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalOrRevisionRestored": false
+}

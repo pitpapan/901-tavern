@@ -1,0 +1,54 @@
+{
+  "authorization": "2026-11-15用户对完整12次集成批次明确回复“授权”；5叙事+5接收+2依赖，分类本地控制。首次失败/必要分支缺失即停，不重试、不修补、不部署、不写正式剧情、不恢复自动批准修订。",
+  "baseline": 334,
+  "limit": 12,
+  "cumulative": 336,
+  "remaining": 10,
+  "attempts": [
+    {
+      "id": "A1.narration",
+      "customRequest": 335,
+      "state": "completed",
+      "requestBytes": 108317,
+      "requestSha256": "f043140c27d077122e34be05b3be0a477fe58013d017293edbcd0df6751df8f7",
+      "startedAt": "2026-11-15T00:14:38.373Z",
+      "status": 200,
+      "elapsedMs": 4778,
+      "rawResponseSha256": "eb7f29bcbeaa14e83ab62954cee5240b859b285e560ec5edc1d4d418a63320cf",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 27036,
+        "completion_tokens": 170,
+        "total_tokens": 27206
+      },
+      "manualVerdict": "pass",
+      "assessment": "正文回应玩家问话；先前送推荐信或先找落脚处的问题在真实输入messages[9]存在；未虚构新的来源消息，未代替玩家行动。接收覆盖待下一步实际抽取。"
+    },
+    {
+      "id": "A1.reception",
+      "customRequest": 336,
+      "state": "completed",
+      "requestBytes": 96865,
+      "requestSha256": "d2ed4bb3f2be8e8c767ed13695fd61a2c49e7362b0a0e4e7b8499cc8fc492e81",
+      "startedAt": "2026-11-15T00:18:52.545Z",
+      "status": 200,
+      "elapsedMs": 13517,
+      "rawResponseSha256": "f6b3ef8b362f07826556b12f3b276e09a26c067fa8f8b6f8acaad64904848a8d",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 6096,
+        "completion_tokens": 2068,
+        "total_tokens": 8164
+      },
+      "manualVerdict": "fail",
+      "assessment": "原prepareBoundDialogueExtraction.check拒绝Invalid reception coverage，首次失败即停；保留完整原响应，不修补、不继续A2或B分支。"
+    }
+  ],
+  "closed": true,
+  "retries": 0,
+  "stopReason": "fail"
+}

@@ -1,0 +1,84 @@
+{
+  "authorization": "用户新增10次，继续研发07—10，发现有证据问题则修复并离线回归后用剩余额度验收；失败先停诊断，不盲目重发、不修补回复或放宽校验。依赖承接真实待核结果，不部署/正式剧情/自动批准修订",
+  "resumes": "final-four-types-20261114",
+  "originalBudget": 10,
+  "previouslyUsed": 4,
+  "baseline": 290,
+  "limit": 6,
+  "cumulative": 293,
+  "remaining": 3,
+  "attempts": [
+    {
+      "id": "08-ambiguous-listener",
+      "customRequest": 291,
+      "state": "completed",
+      "requestBytes": 13145,
+      "requestSha256": "5f73704b05078efdab749a46f04131418d721476834994012a91647a3d442139",
+      "status": 200,
+      "elapsedMs": 13431,
+      "rawResponseSha256": "e945cc48683696e067e3b27f89eed9ebeccd3a6d6840063778c79c438d747c74",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3622,
+        "completion_tokens": 1742,
+        "total_tokens": 5364
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "Original contract passes with unresolved unit and genuine ambiguous-person span. No receiver guessed, no grants to anyone, one pending message with empty recipients, no immediate questions. Known claims retained; case08 target passes."
+    },
+    {
+      "id": "09-unrelated",
+      "customRequest": 292,
+      "state": "completed",
+      "requestBytes": 1882,
+      "requestSha256": "00273d36ab40ddf62f8b7d40780e41793d0864ac0f5256809897e2e0bff921fa",
+      "status": 200,
+      "elapsedMs": 3752,
+      "rawResponseSha256": "7ec72ca6c731e61d9b6df6851b89454dfbcbfad714cd45a78cc03ac403ed1f65",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 787,
+        "completion_tokens": 80,
+        "total_tokens": 1052,
+        "completion_tokens_details": {
+          "reasoning_tokens": 185
+        }
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "Actual custom289 pending state retained, model returns required empty for unrelated chat; original dependency validator passes; ready, zero questions, no grant or pending resolution."
+    },
+    {
+      "id": "10-dependent",
+      "customRequest": 293,
+      "state": "completed",
+      "requestBytes": 1918,
+      "requestSha256": "1912a072e8a9bfafb6ba1ba55a39efae0499e2485e4ddbcf7b4ddc951dd087c3",
+      "status": 200,
+      "elapsedMs": 7502,
+      "rawResponseSha256": "cf987f0a0ce7f0c96802ee1d500ac706cc3c4850d36a9e321ab01af2cf04b02c",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 791,
+        "completion_tokens": 196,
+        "total_tokens": 1491,
+        "completion_tokens_details": {
+          "reasoning_tokens": 504
+        }
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "Dependency response selects exactly the actual custom289 pending id. Original validator passes; one isolated ask callback, deferred with unanswered pending, no grant to any actor. No dependency inference from synthetic substitutes."
+    }
+  ],
+  "closed": true,
+  "retries": 0,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "stopReason": "requested-cases-complete-unused-budget-closed"
+}

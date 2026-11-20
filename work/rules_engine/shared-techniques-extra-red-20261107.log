@@ -1,0 +1,64 @@
+✔ adoption is a pure binding, not an acquisition, reset or later-template switch (22.5865ms)
+✔ rock replaces its opening and later clauses and leaves unrelated attack values alone (43.1048ms)
+✔ rock keeps old payment/cooldown, rejects unsupported evolution and actual one-hand grip (69.8627ms)
+✔ iai replaces first-strike bonus, applies to thunder once, and never adds a second move bonus (82.6018ms)
+✔ iai requires recorded qualifications, does not buff an unrelated weapon and expires on next own turn (42.5816ms)
+✔ gale and tornado use their own shared clauses, one payment and original eligibility filtering (57.4132ms)
+✔ shared definition mutations drive consumers; missing or stale source never falls back (20.9498ms)
+✔ bindings survive the existing leave/enter save path without granting skills or refreshing pools (73.742ms)
+✖ gale reduction category is determined by its mode rather than the numeric amount (22.039ms)
+✖ existing option and context projections use shared values and offer every bound energy choice (44.836ms)
+✔ later iai replaces its attributed initiative and competes with other cultivation sources (4.9842ms)
+✔ each adapted action replays its old MVU operation without another roll or payment (140.4982ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 10
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1241.9815
+
+✖ failing tests:
+
+test at work\rules_engine\combat\shared-techniques.test.mjs:101:1
+✖ gale reduction category is determined by its mode rather than the numeric amount (22.039ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  3 !== 0
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/shared-techniques.test.mjs:107:51)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 3,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at work\rules_engine\combat\shared-techniques.test.mjs:110:1
+✖ existing option and context projections use shared values and offer every bound energy choice (44.836ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /16/. Input:
+  
+  '破甲＋4，忽略1点适用DR/硬度，不增加武器伤害，冷却1轮。'
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/shared-techniques.test.mjs:112:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '破甲＋4，忽略1点适用DR/硬度，不增加武器伤害，冷却1轮。',
+    expected: /16/,
+    operator: 'match',
+    diff: 'simple'
+  }

@@ -1,0 +1,402 @@
+01-received-new
+{"contextRef":"0da8b16b39df9e40714bb3e4d8da3d53d0e14f4b83847af96867be9562fe0f94","assertions":{"schemaVersion":"gm-assertion-output/1","inputRef":"assertion.c69175474df9c44a93c923258fa3b504335782865b73999009fb30c1dab7559c","units":[{"id":"turn","status":"extracted","claims":[{"id":"c1","type":"utterance","args":{"speaker":"御临风","content":"西侧栈桥暂时停用。"},"argumentSpans":{"speaker":{"documentId":"current","start":0,"end":3,"quote":"御临风"},"content":{"documentId":"current","start":10,"end":19,"quote":"西侧栈桥暂时停用。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":0,"end":20,"quote":"御临风对布莱特说：“西侧栈桥暂时停用。”"}},{"id":"c2","type":"state","args":{"entity":"西侧栈桥","name":"停用","value":"暂时停用"},"argumentSpans":{"entity":{"documentId":"current","start":10,"end":14,"quote":"西侧栈桥"},"name":{"documentId":"current","start":16,"end":18,"quote":"停用"},"value":{"documentId":"current","start":14,"end":18,"quote":"暂时停用"}},"mode":"reported","scope":{"time":{"documentId":"current","start":14,"end":16,"quote":"暂时"},"condition":null,"attribution":{"documentId":"current","start":0,"end":3,"quote":"御临风"}},"scopeSpans":{"time":{"documentId":"current","start":14,"end":16,"quote":"暂时"},"condition":null,"attribution":{"documentId":"current","start":0,"end":3,"quote":"御临风"}},"anchor":{"documentId":"current","start":10,"end":19,"quote":"西侧栈桥暂时停用。"}},{"id":"c3","type":"action","args":{"actor":"布莱特","verb":"听到","object":"这句话"},"argumentSpans":{"actor":{"documentId":"current","start":20,"end":23,"quote":"布莱特"},"verb":{"documentId":"current","start":26,"end":28,"quote":"听到"},"object":{"documentId":"current","start":29,"end":32,"quote":"这句话"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":20,"end":33,"quote":"布莱特清楚地听到了这句话。"}},{"id":"c4","type":"degree","args":{"entity":"听到","property":"清晰度","value":"清楚"},"argumentSpans":{"entity":{"documentId":"current","start":26,"end":28,"quote":"听到"},"property":{"documentId":"current","start":23,"end":25,"quote":"清楚"},"value":{"documentId":"current","start":23,"end":25,"quote":"清楚"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":20,"end":33,"quote":"布莱特清楚地听到了这句话。"}}],"unresolved":[]}]},"receptions":[{"id":"r1","claimId":"c1","speakerId":"player","recipientIds":["bright"],"recipientSpans":[{"documentId":"current","start":4,"end":7,"quote":"布莱特"}],"evidence":{"documentId":"current","start":20,"end":33,"quote":"布莱特清楚地听到了这句话。"},"status":"received","propositionRef":null,"reason":""}]}
+人工核对：Received decision and recipient correct, but scope.time and scope.attribution contain span objects contrary to explicit scalar-type contract. Whole reply rejected; revision0. No demonstrated local loss, no product fix or response repair. Keep frozen negative result.
+
+02-received-rumor
+{
+  "contextRef": "40e8717b93bcca15a9d8d2abaa1cd4184940805c8ef4546deb77374f71bc40f6",
+  "assertions": {
+    "schemaVersion": "gm-assertion-output/1",
+    "inputRef": "assertion.a8b23d4e35d674016529fb21a7a79aedce9d6efa4e18dccda5367cb8c313e913",
+    "units": [
+      {
+        "id": "turn",
+        "status": "extracted",
+        "claims": [
+          {
+            "id": "claim-1",
+            "type": "utterance",
+            "args": {
+              "speaker": "黄泉",
+              "content": "北街水井暂时停用。"
+            },
+            "argumentSpans": {
+              "speaker": {
+                "documentId": "current",
+                "start": 0,
+                "end": 2,
+                "quote": "黄泉"
+              },
+              "content": {
+                "documentId": "current",
+                "start": 9,
+                "end": 18,
+                "quote": "北街水井暂时停用。"
+              }
+            },
+            "mode": "asserted",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 0,
+              "end": 19,
+              "quote": "黄泉对御临风说：“北街水井暂时停用。”"
+            }
+          },
+          {
+            "id": "claim-2",
+            "type": "state",
+            "args": {
+              "entity": "北街水井",
+              "name": "使用状态",
+              "value": "暂时停用"
+            },
+            "argumentSpans": {
+              "entity": {
+                "documentId": "current",
+                "start": 9,
+                "end": 13,
+                "quote": "北街水井"
+              },
+              "name": {
+                "documentId": "current",
+                "start": 15,
+                "end": 17,
+                "quote": "停用"
+              },
+              "value": {
+                "documentId": "current",
+                "start": 13,
+                "end": 17,
+                "quote": "暂时停用"
+              }
+            },
+            "mode": "reported",
+            "scope": {
+              "time": {
+                "documentId": "current",
+                "start": 13,
+                "end": 15,
+                "quote": "暂时"
+              },
+              "condition": null,
+              "attribution": "黄泉"
+            },
+            "scopeSpans": {
+              "time": {
+                "documentId": "current",
+                "start": 13,
+                "end": 15,
+                "quote": "暂时"
+              },
+              "condition": null,
+              "attribution": {
+                "documentId": "current",
+                "start": 0,
+                "end": 2,
+                "quote": "黄泉"
+              }
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 9,
+              "end": 18,
+              "quote": "北街水井暂时停用。"
+            }
+          }
+        ],
+        "unresolved": []
+      }
+    ]
+  },
+  "receptions": [
+    {
+      "id": "rec-1",
+      "claimId": "claim-1",
+      "speakerId": "huang",
+      "recipientIds": [
+        "player"
+      ],
+      "recipientSpans": [
+        {
+          "documentId": "current",
+          "start": 3,
+          "end": 6,
+          "quote": "御临风"
+        }
+      ],
+      "evidence": {
+        "documentId": "current",
+        "start": 0,
+        "end": 19,
+        "quote": "黄泉对御临风说：“北街水井暂时停用。”"
+      },
+      "status": "received",
+      "propositionRef": "well.closed",
+      "reason": ""
+    }
+  ]
+}
+人工核对：Speaker acquisition and rumor reference correctly selected, but scope.time is a span object despite explicit string/null rule. Original checker rejects with no new receipt; prior Huang rumor remains intact. Same model contract noncompliance as case01; no local patch justified.
+
+03-not-heard
+{"contextRef":"13b114382ffbb77d8c8c94ca06831da3c656d7a0008afcfc9731c970ad30492a","assertions":{"schemaVersion":"gm-assertion-output/1","inputRef":"assertion.4a9436967b14cf43cc10d1c28b7bc62021df6b46653ec84d93cf427347613c6b","units":[{"id":"turn","status":"extracted","claims":[{"id":"c1","type":"state","args":{"entity":"隔音窗","name":"状态","value":"关闭"},"argumentSpans":{"entity":{"documentId":"current","start":8,"end":11,"quote":"隔音窗"},"name":{"documentId":"current","start":5,"end":7,"quote":"关闭"},"value":{"documentId":"current","start":5,"end":7,"quote":"关闭"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":5,"end":11,"quote":"关闭的隔音窗"}},{"id":"c2","type":"utterance","args":{"speaker":"御临风","content":"北门暂停通行。"},"argumentSpans":{"speaker":{"documentId":"current","start":0,"end":3,"quote":"御临风"},"content":{"documentId":"current","start":18,"end":25,"quote":"北门暂停通行。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":0,"end":26,"quote":"御临风隔着关闭的隔音窗对布莱特说：“北门暂停通行。”"}},{"id":"c3","type":"state","args":{"entity":"北门","name":"通行状态","value":"暂停通行"},"argumentSpans":{"entity":{"documentId":"current","start":18,"end":20,"quote":"北门"},"name":{"documentId":"current","start":20,"end":24,"quote":"暂停通行"},"value":{"documentId":"current","start":20,"end":24,"quote":"暂停通行"}},"mode":"reported","scope":{"time":null,"condition":null,"attribution":"御临风"},"scopeSpans":{"time":null,"condition":null,"attribution":{"documentId":"current","start":0,"end":3,"quote":"御临风"}},"anchor":{"documentId":"current","start":18,"end":25,"quote":"北门暂停通行。"}},{"id":"c4","type":"action","args":{"actor":"布莱特","verb":"听见","object":null},"argumentSpans":{"actor":{"documentId":"current","start":26,"end":29,"quote":"布莱特"},"verb":{"documentId":"current","start":31,"end":33,"quote":"听见"},"object":null},"mode":"denied","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":26,"end":34,"quote":"布莱特没有听见。"}}],"unresolved":[]}]},"receptions":[{"id":"rec-1","claimId":"c2","speakerId":"player","recipientIds":["bright"],"recipientSpans":[{"documentId":"current","start":12,"end":15,"quote":"布莱特"}],"evidence":{"documentId":"current","start":26,"end":34,"quote":"布莱特没有听见。"},"status":"not_received","propositionRef":null,"reason":"原文明确陈述布莱特没有听见。"}]}
+人工核对：Explicit not_received and denied hearing retained; original contract passes, no new knowledge to any actor, pending empty, no prompt. Case reception target passes; not a full semantic-completeness claim.
+
+04-not-yet-said
+{"contextRef":"49d59216671c38266662d5a8d37a950b78087ff30b17855cf4113b165b324cfa","assertions":{"schemaVersion":"gm-assertion-output/1","inputRef":"assertion.02996ef6bb95fd00f12dca1d075025c9a6540774c411f505b7565d10d2ba4424","units":[{"id":"turn","status":"extracted","claims":[{"id":"c1","type":"state","args":{"entity":"黄泉","name":"准备向御临风转告内容意图","value":"准备向御临风转告“渡船今晚停航”"},"argumentSpans":{"entity":{"documentId":"current","start":0,"end":2,"quote":"黄泉"},"name":{"documentId":"current","start":2,"end":10,"quote":"准备向御临风转告"},"value":{"documentId":"current","start":2,"end":20,"quote":"准备向御临风转告：“渡船今晚停航。”"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":0,"end":20,"quote":"黄泉准备向御临风转告：“渡船今晚停航。”"}},{"id":"c2","type":"action","args":{"actor":"黄泉","verb":"说出口","object":null},"argumentSpans":{"actor":{"documentId":"current","start":20,"end":21,"quote":"她"},"verb":{"documentId":"current","start":23,"end":26,"quote":"说出口"},"object":null},"mode":"denied","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":20,"end":27,"quote":"她尚未说出口。"}}],"unresolved":[]}]},"receptions":[]}
+人工核对：Intention retains Huang, recipient player and full intended ferry message. Speech denied, full 尚未 source anchor preserved; no separate asserted inner world fact, receptions empty, pending empty, no knowledge grants. Scope time remains null, so do not claim every temporal field separately populated.
+
+05-partial-first
+{"contextRef":"d3ac5edb8330ffe1c402b56beb88e6eaec8335aba3215fbccdb9a68b6090bc8e","assertions":{"schemaVersion":"gm-assertion-output/1","inputRef":"assertion.719241f05d828faede24d38561d6aaa4f887c659310afd0b6357058bf6c7bcfc","units":[{"id":"turn","status":"extracted","claims":[{"id":"c1","type":"utterance","args":{"speaker":"御临风","content":"北门暂停通行，改从西桥绕行。"},"argumentSpans":{"speaker":{"documentId":"current","start":0,"end":3,"quote":"御临风"},"content":{"documentId":"current","start":10,"end":24,"quote":"北门暂停通行，改从西桥绕行。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":0,"end":25,"quote":"御临风对布莱特说：“北门暂停通行，改从西桥绕行。”"}},{"id":"c2","type":"utterance","args":{"speaker":"御临风","content":"北门暂停通行"},"argumentSpans":{"speaker":{"documentId":"current","start":0,"end":3,"quote":"御临风"},"content":{"documentId":"current","start":10,"end":16,"quote":"北门暂停通行"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":0,"end":25,"quote":"御临风对布莱特说：“北门暂停通行，改从西桥绕行。”"}},{"id":"c3","type":"utterance","args":{"speaker":"御临风","content":"改从西桥绕行。"},"argumentSpans":{"speaker":{"documentId":"current","start":0,"end":3,"quote":"御临风"},"content":{"documentId":"current","start":17,"end":24,"quote":"改从西桥绕行。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":0,"end":25,"quote":"御临风对布莱特说：“北门暂停通行，改从西桥绕行。”"}},{"id":"c4","type":"state","args":{"entity":"布莱特","name":"听清内容","value":"北门暂停通行"},"argumentSpans":{"entity":{"documentId":"current","start":25,"end":28,"quote":"布莱特"},"name":{"documentId":"current","start":29,"end":31,"quote":"听清"},"value":{"documentId":"current","start":32,"end":38,"quote":"北门暂停通行"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":25,"end":39,"quote":"布莱特只听清“北门暂停通行”"}},{"id":"c5","type":"state","args":{"entity":"布莱特","name":"听清内容","value":"后半句"},"argumentSpans":{"entity":{"documentId":"current","start":25,"end":28,"quote":"布莱特"},"name":{"documentId":"current","start":41,"end":43,"quote":"听清"},"value":{"documentId":"current","start":43,"end":46,"quote":"后半句"}},"mode":"denied","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":40,"end":47,"quote":"没听清后半句。"}}],"unresolved":[]}]},"receptions":[{"id":"r1","claimId":"c2","speakerId":"player","recipientIds":["bright"],"recipientSpans":[{"documentId":"current","start":4,"end":7,"quote":"布莱特"}],"evidence":{"documentId":"current","start":25,"end":39,"quote":"布莱特只听清“北门暂停通行”"},status":"received","propositionRef":null,"reason":""},{"id":"r2","claimId":"c3","speakerId":"player","recipientIds":["bright"],"recipientSpans":[{"documentId":"current","start":4,"end":7,"quote":"布莱特"}],"evidence":{"documentId":"current","start":40,"end":47,"quote":"没听清后半句。"},status":"not_received","propositionRef":null,"reason":""}]}
+人工核对：Raw body has unquoted status keys in both receptions (status opening quote missing). JSON.parse rejects at2965, revision0. Content visually separates heard and unheard clauses, but invalid JSON is failure. Do not repair or semantically certify parsed substitutes.
+
+06-partial-second
+{"contextRef":"99f2d41c8eb6f675102b740f902df4dbeb2c197281ddbbf449d5fbc1c2d6c3c5","assertions":{"schemaVersion":"gm-assertion-output/1","inputRef":"assertion.35a9944a990ecbd4fddc72c08ddf45cbe4903a7836ae2d0404650db44e4d18c7","units":[{"id":"turn","status":"extracted","claims":[{"id":"c1","type":"utterance","args":{"speaker":"御临风","content":"北门暂停通行，改从西桥绕行。"},"argumentSpans":{"speaker":{"documentId":"current","start":0,"end":3,"quote":"御临风"},"content":{"documentId":"current","start":10,"end":24,"quote":"北门暂停通行，改从西桥绕行。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":0,"end":25,"quote":"御临风对布莱特说：“北门暂停通行，改从西桥绕行。”"}},{"id":"c2","type":"utterance","args":{"speaker":"御临风","content":"北门暂停通行"},"argumentSpans":{"speaker":{"documentId":"current","start":0,"end":3,"quote":"御临风"},"content":{"documentId":"current","start":10,"end":16,"quote":"北门暂停通行"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":0,"end":17,"quote":"御临风对布莱特说：“北门暂停通行，"}},{"id":"c3","type":"utterance","args":{"speaker":"御临风","content":"改从西桥绕行"},"argumentSpans":{"speaker":{"documentId":"current","start":0,"end":3,"quote":"御临风"},"content":{"documentId":"current","start":17,"end":23,"quote":"改从西桥绕行"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":0,"end":25,"quote":"御临风对布莱特说：“北门暂停通行，改从西桥绕行。”"}},{"id":"c4","type":"state","args":{"entity":"布莱特","name":"听清内容","value":"改从西桥绕行"},"argumentSpans":{"entity":{"documentId":"current","start":25,"end":28,"quote":"布莱特"},"name":{"documentId":"current","start":29,"end":31,"quote":"听清"},"value":{"documentId":"current","start":32,"end":38,"quote":"改从西桥绕行"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":25,"end":39,"quote":"布莱特只听清“改从西桥绕行”"}},{"id":"c5","type":"state","args":{"entity":"布莱特","name":"听清内容","value":"前半句"},"argumentSpans":{"entity":{"documentId":"current","start":25,"end":28,"quote":"布莱特"},"name":{"documentId":"current","start":41,"end":43,"quote":"听清"},"value":{"documentId":"current","start":43,"end":46,"quote":"前半句"}},"mode":"denied","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":40,"end":47,"quote":"没听清前半句。"}}],"unresolved":[]}]},"receptions":[{"id":"rec1","claimId":"c3","speakerId":"player","recipientIds":["bright"],"recipientSpans":[{"documentId":"current","start":4,"end":7,"quote":"布莱特"}],"evidence":{"documentId":"current","start":25,"end":39,"quote":"布莱特只听清“改从西桥绕行”"},status":"received","propositionRef":null,"reason":""},{"id":"rec2","claimId":"c2","speakerId":"player","recipientIds":["bright"],"recipientSpans":[{"documentId":"current","start":4,"end":7,"quote":"布莱特"}],"evidence":{"documentId":"current","start":40,"end":47,"quote":"没听清前半句。"},status":"not_received","propositionRef":null,"reason":""}]}
+人工核对：Raw JSON again lacks opening quote on status keys; parser rejects at2957. Contract asks valid JSON and contains no such malformed template. No local loss or repair justified; zero grants retained.
+
+07-ambiguous-hearing
+{"contextRef":"a6c7fa7e18ac8e603709e9b898db3e8fffaf8850d5b111b928a08af71d075828","assertions":{"schemaVersion":"gm-assertion-output/1","inputRef":"assertion.aa743b59e75545b1fe756a7839e5f0c30d0b6afa11bb1378833287be0093e217","units":[{"id":"turn","status":"extracted","claims":[{"id":"c1","type":"utterance","args":{"speaker":"黄泉","content":"渡船明早停航。"},"argumentSpans":{"speaker":{"documentId":"current","start":0,"end":2,"quote":"黄泉"},"content":{"documentId":"current","start":7,"end":14,"quote":"渡船明早停航。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":0,"end":15,"quote":"黄泉轻声说：“渡船明早停航。”"}},{"id":"c2","type":"manner","args":{"entity":"黄泉","property":"声音","value":"轻声"},"argumentSpans":{"entity":{"documentId":"current","start":0,"end":2,"quote":"黄泉"},"name":null,"value":{"documentId":"current","start":2,"end":4,"quote":"轻声"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":0,"end":5,"quote":"黄泉轻声说"}}],"unresolved":[]}]},"receptions":[{"id":"r1","claimId":"c1","speakerId":"huang","recipientIds":["player"],"recipientSpans":[{"documentId":"current","start":15,"end":18,"quote":"御临风"}],"evidence":{"documentId":"current","start":25,"end":37,"quote":"记录不能确定他是否听清。"},"status":"uncertain","propositionRef":null,"reason":"记录明确指出不能确定其是否听清"}]}
+人工核对：Uncertain player reception retained in raw output, but c2 invents illegal type manner and mismatched property/name span slots. Explicit closed type enum was sent. Entire reply rejected at revision0, no genuine pending seed for09/10. No demonstrated local omission.
+
+08-ambiguous-listener
+{
+  "contextRef": "82d91a3d6d9a18c3fd0ff3d0e4b821d580144f37f890d24cc470c0146b4d490b",
+  "assertions": {
+    "schemaVersion": "gm-assertion-output/1",
+    "inputRef": "assertion.09bc4e709a45b17c38123cf85bb7ea7d21d87408601042050cf5bb7e5635481f",
+    "units": [
+      {
+        "id": "turn",
+        "status": "unresolved",
+        "claims": [
+          {
+            "id": "c1",
+            "type": "utterance",
+            "args": {
+              "speaker": "黄泉",
+              "content": "交货地点改到南岗。"
+            },
+            "argumentSpans": {
+              "speaker": {
+                "documentId": "current",
+                "start": 0,
+                "end": 2,
+                "quote": "黄泉"
+              },
+              "content": {
+                "documentId": "current",
+                "start": 13,
+                "end": 22,
+                "quote": "交货地点改到南岗。"
+              }
+            },
+            "mode": "asserted",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 0,
+              "end": 23,
+              "quote": "黄泉对御临风和布莱特说：“交货地点改到南岗。”"
+            }
+          },
+          {
+            "id": "c2",
+            "type": "location",
+            "args": {
+              "entity": "交货地点",
+              "landmark": "南岗",
+              "region": null
+            },
+            "argumentSpans": {
+              "entity": {
+                "documentId": "current",
+                "start": 13,
+                "end": 17,
+                "quote": "交货地点"
+              },
+              "landmark": {
+                "documentId": "current",
+                "start": 19,
+                "end": 21,
+                "quote": "南岗"
+              },
+              "region": null
+            },
+            "mode": "reported",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": "黄泉"
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": {
+                "documentId": "current",
+                "start": 0,
+                "end": 2,
+                "quote": "黄泉"
+              }
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 13,
+              "end": 22,
+              "quote": "交货地点改到南岗。"
+            }
+          },
+          {
+            "id": "c3",
+            "type": "state",
+            "args": {
+              "entity": "一人",
+              "name": "听清状态",
+              "value": "没听清"
+            },
+            "argumentSpans": {
+              "entity": {
+                "documentId": "current",
+                "start": 27,
+                "end": 29,
+                "quote": "一人"
+              },
+              "name": {
+                "documentId": "current",
+                "start": 30,
+                "end": 32,
+                "quote": "听清"
+              },
+              "value": {
+                "documentId": "current",
+                "start": 29,
+                "end": 32,
+                "quote": "没听清"
+              }
+            },
+            "mode": "asserted",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 23,
+              "end": 32,
+              "quote": "两人中有一人没听清"
+            }
+          },
+          {
+            "id": "c4",
+            "type": "state",
+            "args": {
+              "entity": "记录",
+              "name": "指出能力",
+              "value": "无法指出是哪一人"
+            },
+            "argumentSpans": {
+              "entity": {
+                "documentId": "current",
+                "start": 34,
+                "end": 36,
+                "quote": "记录"
+              },
+              "name": {
+                "documentId": "current",
+                "start": 38,
+                "end": 40,
+                "quote": "指出"
+              },
+              "value": {
+                "documentId": "current",
+                "start": 36,
+                "end": 44,
+                "quote": "无法指出是哪一人"
+              }
+            },
+            "mode": "asserted",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 34,
+              "end": 45,
+              "quote": "记录无法指出是哪一人。"
+            }
+          }
+        ],
+        "unresolved": [
+          {
+            "span": {
+              "documentId": "current",
+              "start": 23,
+              "end": 44,
+              "quote": "两人中有一人没听清，但记录无法指出是哪一人"
+            },
+            "reason": "文中明确指出御临风和布莱特两人中有一人没听清，但无法确定具体是哪一人没听清、哪一人听清。"
+          }
+        ]
+      }
+    ]
+  },
+  "receptions": [
+    {
+      "id": "rec1",
+      "claimId": "c1",
+      "speakerId": "huang",
+      "recipientIds": [],
+      "recipientSpans": [],
+      "evidence": {
+        "documentId": "current",
+        "start": 23,
+        "end": 45,
+        "quote": "两人中有一人没听清，但记录无法指出是哪一人。"
+      },
+      "status": "uncertain",
+      "propositionRef": null,
+      "reason": "御临风与布莱特中有一人没听清，但记录无法确定具体是哪一人听清或未听清，因此接收者存在歧义且无法确认。"
+    }
+  ]
+}
+人工核对：Original contract passes. Both candidates retained, recipient unresolved not guessed; received knowledge zero, one pending row and no immediate prompt. Reported location attributed to Huang, not world truth. Real pending seed may support a separately frozen followup branch; original failed07 branch stays blocked.
+
+09-unrelated-from08
+{"inputRef":"c7e6871ece5ad91dfad71e1e62c16c3c676155c563d1e4f6e2e0d072cfea8c1b","required":[]}
+人工核对：Followup independently reopens actual301 pending seed; request only lunch/clothes unrelated to delivery. required empty, ready, zero asks and zero grants; real pending remains. Separate branch from08, does not certify original blocked07 chain.
+
+10-dependent-from08
+{"inputRef":"31b7a76ec1b99abc0a2ce448f9015e60b6601d03c6c35a1cd57b0996acd02275","required":["dialogue.b3ac974b07ad4379ee6468f3b9084b6398a71eb429db4687fb8ff4005990a54b.02cab05835aaf1f49976faeb1c2f92fc3082d15aa90d6a3bc1c3d749cfda6fc4"]}
+人工核对：Followup independently reopens identical actual301 pending seed, not a synthetic reply or output from09. Exact actual pending ID required; deferred with one question, no answer, no knowledge grant. Original07 branch remains blocked; alternate08 dependency target passes.
+

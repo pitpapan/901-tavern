@@ -1,0 +1,31 @@
+{
+  "kind": "replyrange.probe.answer",
+  "startedAt": "2026-11-15T20:07:05.291Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T20:07:09.464Z",
+  "headersElapsedMs": 4173,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b0e1544e7c191e-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 20:07:09 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=XhkCJ%2FRjUAR7tnEUvyVmad1i0V32xyg40AwSJ2zO3GBA5Qn0I0Jbez3xqnetWqJl9SduZS4XWMzNxbJm9VodJSoXpiIOhNgvWH8Pqb0ht85qRIbNeTX%2FRxgNaNZ6%2Bw%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611152007061684956648268d9d6ZON48dPx",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "c6570562-cac2-41c3-9f6d-62b3e0010be6"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"7cf7d666-ee15-425a-9613-737bfb62ca1c\",\"object\":\"chat.completion\",\"created\":1794773229,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/5\\\",\\\"contextRef\\\":\\\"68fd6ef0366081ef3cb6aa1ac6a542b0d68f5beccf947fef0994eaaef56dd247\\\",\\\"inputRef\\\":\\\"assertion.1671a1007afeb2ff9f71d5dda97c4d08c2660e503bab03d86c3c1648ffd2afd3\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"utterance.1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"huang\\\",\\\"content\\\":\\\"渡口明天才开放。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"渡口明天才开放。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉摇了摇头，答道：“渡口明天才开放。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"rec.1\\\",\\\"contentSpan\\\":{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"渡口明天才开放。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"\\\",\\\"listener\\\":{\\\"actorId\\\":\\\"bright\\\",\\\"kind\\\":\\\"reply\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"渡口明天才开放。\\\"},\\\"historyMessageId\\\":0},\\\"evidence\\\":{\\\"kind\\\":\\\"reply\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"渡口明天才开放。\\\"成品\\\"}}}]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4592,\"completion_tokens\":387,\"total_tokens\":4979}}",
+  "responseBytes": 1589,
+  "responseBodySha256BeforePrivacyRedaction": "a1d4431cade0074674bae8f5d426460fe4fdb86dece80a4cb323f20eeed43a9b",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T20:07:09.475Z",
+  "elapsedMs": 4183
+}

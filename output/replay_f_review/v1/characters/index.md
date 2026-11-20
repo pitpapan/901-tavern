@@ -211,12 +211,12 @@
 | CRC_099 | 尼克·弗瑞（伦敦梦境警监） | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
 | CRC_100 | 未具名心理医生（伦敦梦境） | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
 | CRC_101 | 中学音乐教师嫌犯（伦敦梦境） | excluded_special_interlude | 梦境／特殊插曲人物保留原研究档，不进入本次默认主世界档案或卡稿；同名主世界人物不合并。 |
-| CRC_102 | 阿伊达 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
-| CRC_103 | 维尔 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_102 | 阿伊达 | included_author_archive_and_card_draft | 2026-10-29背景整版采用（UCL_20261029_004）；已同步运行源摘要，时期与事实归属保留。 |
+| CRC_103 | 维尔 | included_author_archive_and_card_draft | 2026-10-29考古生活、父子关系、Faer失控与重新求学整版采用（UCL_20261029_005）；已同步运行源摘要，后期事件不前置。 |
 | CRC_104 | 研究所博士（拉塞尔） | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
 | CRC_105 | 逆羽·霞 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
 | CRC_106 | 幻翎·洛 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
-| CRC_107 | 劳霖 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
+| CRC_107 | 劳霖 | included_author_archive_and_card_draft | 2026-10-29补齐背景与原团经历；UCL_20261029_001确认背景，UCL_20261029_002整版采用深化；时期与未知项保留。 |
 | CRC_108 | 王骑 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
 | CRC_109 | 克拉肯 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |
 | CRC_110 | 曼吉 | included_author_archive_and_card_draft | 已有独立证据，按资料厚度写档；薄资料不补全人格。 |

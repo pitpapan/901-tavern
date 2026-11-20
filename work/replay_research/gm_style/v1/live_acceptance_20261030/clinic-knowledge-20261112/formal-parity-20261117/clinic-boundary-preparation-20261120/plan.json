@@ -1,0 +1,123 @@
+{
+  "date": "2026-11-20",
+  "status": "preparation-reviewed-awaiting-separate-call-authorization",
+  "proponent": "总控",
+  "purpose": "观察同一冻结 A2 明确声明下，新正文是否仍把馆主与雪老的关系或具体来往当成未知角色的已有知识，或补造受控获知经历。",
+  "authorization": {
+    "granted": false,
+    "authorizedAttempts": 0,
+    "requiredBeforeSend": true
+  },
+  "used": 0,
+  "attempts": [],
+  "existingClosedLedger": {
+    "file": "../background-ablation-v4-live-20261119/run.json",
+    "sha256": "28f6c4aeca432d7af8ed002315950a346721b8ea4904d7478b83e2cf493edfe3",
+    "cumulative": 592,
+    "available": 0,
+    "closed": true
+  },
+  "candidate": {
+    "fixedAttemptsIfAuthorized": 8,
+    "maxAttemptsIfAuthorized": 8,
+    "kind": "narration",
+    "useIdenticalRequestBytesEveryTime": true,
+    "allSamplesNew": true,
+    "omitHistoricalSamples": [
+      "548",
+      "553/A1",
+      "554/A2",
+      "v4 交错批次的 20 条"
+    ],
+    "classification": false,
+    "extraction": false,
+    "automaticReview": false,
+    "retry": false,
+    "semanticStopping": false,
+    "semanticExtension": false
+  },
+  "frozen": {
+    "request": {
+      "file": "../pair-a-preparation-20261118/A2.request.json",
+      "bytes": 111734,
+      "sha256": "f2e85a5f08201998fd8fb947bf1cf83999f808435ae7ff41a0bb420df3c9b007",
+      "priorAppearance": "第554次已发送的 A2 正文请求",
+      "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+      "parameters": {
+        "model": "[抗截断]gemini-3.8-flash",
+        "temperature": 1,
+        "max_tokens": 4096,
+        "stream": false,
+        "presence_penalty": 0,
+        "frequency_penalty": 0,
+        "top_p": 1
+      }
+    },
+    "ruling": {
+      "reusedHistoricalCall": 547,
+      "status": "NO_CHECK",
+      "basis": "ordinary_dialogue",
+      "reference": "../before-classification.content.txt",
+      "isNewClassificationTest": false
+    },
+    "rubric": {
+      "file": "protected-topic-rubric.md",
+      "sha256": "c5123f9793630af65f1a9a360f794678e6f961d76d016d4bb150f1d42f263392"
+    }
+  },
+  "technicalProtocol": {
+    "beforeFirstAttempt": "另行获得具体发送授权后，再核对旧账封闭状态、请求字节数与哈希、原端点和参数、判据哈希。记录新的批次授权，旧账本保持封存。",
+    "forEachAttempt": "先存实际请求原件和哈希、登记编号与开始时间，再发一次。保留原始响应字节、完整正文或可留存的部分响应、HTTP 状态、结束标识、返回模型、时间和哈希。密钥不入证据。",
+    "failureCountsAsAttempt": true,
+    "firstTechnicalOrRecordFailureStopsAndCloses": true,
+    "stopOn": [
+      "请求、冻结判据、参数或旧账不符",
+      "无法预登记、保存或核验实际请求、响应及对应记录",
+      "网络异常、超时、传输中断或 HTTP 非 200",
+      "响应解码或解析失败、缺完整正文、异常结束",
+      "返回模型标识缺失或批内漂移"
+    ],
+    "preserveEvidenceOnStop": true,
+    "normalStop": "达到 8 次固定上限后封账。未用余额随批次关闭，保留尝试／完结／技术失败数及原因。"
+  },
+  "futureAnonymousReview": {
+    "onlyAfterClosure": true,
+    "samples": "使用可评完整原文，独立随机编号与次序。旧样本、既有评分、模型与调用号只留管理侧。回复不得修补。",
+    "reviewerMaterials": [
+      "protected-topic-rubric.md",
+      "实际发送A2的完整14条消息原文及角色、顺序、零基消息索引；不只提供摘录",
+      "匿名编号与原始正文"
+    ],
+    "reviewRecord": [
+      "F/N/U/X",
+      "决定性原句",
+      "说话人或行动者及先后",
+      "语句用途",
+      "实际输入与当时的角色依据",
+      "本轮新来源、接收者及待核问题",
+      "其他明确约束的冲突"
+    ],
+    "ambiguityRecord": "保留两种读法和所缺依据。纯回避或未实质触及记 X。",
+    "aggregation": "分别报告完整正文与技术异常、F/N/U/X 及旁项。技术失败不能当作语义样本。保存独立初判再比较，管理映射另存。 U 和 X 不并入 N；保留各自原判，不把其他明确约束冲突藏入受控话题未越界。"
+  },
+  "limits": [
+    "隔离正文观察，不是新的分类、保存重开或生产链验收",
+    "单一 A2 条件，无法估计相对 A1 的改进",
+    "只判受保护的医馆旧交及其取得，不据此禁止普通往事补全",
+    "0/8 不证明越界已解决，也不作为部署依据"
+  ],
+  "coordinatorReview": {
+    "date": "2026-11-20",
+    "status": "preparation-only-passed",
+    "requestExactOriginalA2": true,
+    "A2InsertionRestoresA1AndOriginal548": true,
+    "rubricHashVerified": true,
+    "jsonAndReferencedFilesVerified": true,
+    "protectedExistingEvidenceFiles": 27,
+    "protectedEvidenceUnchanged": true,
+    "newGenerationCalls": 0,
+    "humanCalibrationPerformed": false,
+    "modelEffectVerified": false,
+    "productionOrRuntimeChanged": false
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "dialogue-reception",
+  "startedAt": "2026-11-14T22:51:19.843Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-14T22:51:22.690Z",
+  "headersElapsedMs": 2847,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5a9948938ca0370-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sat, 14 Nov 2026 22:51:22 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2FWqTu4BwHLeSYLqfCk61f4NKiLYpTUSSaupjrTgTSeyWZnDu8n8Fr4DjJCfaLM%2B5pGuElFZFN1Tv6yNS9ziFMuGO9h6tQaJV%2BQfc95q9mLLnox1wFbaMGSOuja%2B%2BVA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611142251199359932168268d9d65qoZePJp",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "3ebc4466-1a00-445f-8be7-79a161e1fc39"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"15b3f012-68f2-43d4-9746-435fa791e84d\",\"object\":\"chat.completion\",\"created\":1794696682,\"model\":\"gemini-3.8-flash-control\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/2\\\",\\\"contextRef\\\":\\\"a6c7fa7e18ac8e603709e9b898db3e8fffaf8850d5b111b928a08af71d075828\\\",\\\"inputRef\\\":\\\"assertion.aa743b59e75545b1fe756a7839e5f0c30d0b6afa11bb1378833287be0093e217\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"status\\\":\\\"extracted\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"utterance.1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"渡船明早停航。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":2,\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":7,\\\"end\\\":14,\\\"quote\\\":\\\"渡船明早停航。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":15,\\\"quote\\\":\\\"黄泉轻声说：“渡船明早停航。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"reception.1\\\",\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"player\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":15,\\\"end\\\":18,\\\"quote\\\":\\\"御临风\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":15,\\\"end\\\":37,\\\"quote\\\":\\\"御临风在走廊另一端，记录不能确定他是否听清。\\\"},\\\"status\\\":\\\"uncertain\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"原文明确指出御临风在走廊另一端，记录不能确定他是否听清。\\\"}]}],\\\"unresolved\\\":[],\\\"coverage\\\":{\\\"status\\\":\\\"uncertain\\\",\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":15,\\\"end\\\":37,\\\"quote\\\":\\\"御临风在走廊另一端，记录不能确定他是否听清。\\\"},\\\"reason\\\":\\\"听者御临风的接收状态明确为不确定是否听清。\\\"}}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":3582,\"completion_tokens\":506,\"total_tokens\":4088}}",
+  "responseBytes": 1992,
+  "responseBodySha256BeforePrivacyRedaction": "247c4661b05ec541f98843f1d03f14da440ed44886a57ac2342d7b36409e5335",
+  "outcome": "completed",
+  "finishedAt": "2026-11-14T22:51:22.696Z",
+  "elapsedMs": 2853
+}

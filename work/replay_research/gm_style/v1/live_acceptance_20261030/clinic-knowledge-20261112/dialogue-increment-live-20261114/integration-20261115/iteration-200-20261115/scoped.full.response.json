@@ -1,0 +1,31 @@
+{
+  "kind": "scoped.full",
+  "startedAt": "2026-11-15T10:24:18.755Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T10:24:22.069Z",
+  "headersElapsedMs": 3314,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5ad8ba53d3c6f95-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 10:24:21 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=5vbXLGq8U3Ul5i4U03UL0UXgn7%2BPJeD5xp%2Bl2havdu%2FDVmGo0zhtFVLPoaoKXp36JmLKslH4wmVq5ryYRDtn%2BGOi1lXstBdG5iJiOrRquYxlLsVXi8N2PB6noOwKvg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611151024188313683088268d9d6YE0cvaDp",
+    "x-zeabur-ip-country": "ES",
+    "x-zeabur-request-id": "7a098377-f1b4-4f78-a41d-06a0d5e546b1"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"ab0a8bcf-7490-43bf-aa1d-1e65a04ea17e\",\"object\":\"chat.completion\",\"created\":1794738261,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/3\\\",\\\"contextRef\\\":\\\"9b3339353e28908dcf94bd4f2b7009c58e7cef1b113d31efee9e98114dbf9abe\\\",\\\"inputRef\\\":\\\"assertion.383ec03319beef1f633f4806b982ea47d925011b7ffb5c82304003579e9bd995\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"utterance.0\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"西门今晚关闭，明早从石桥走。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":2,\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":13,\\\"end\\\":27,\\\"quote\\\":\\\"西门今晚关闭，明早从石桥走。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":28,\\\"quote\\\":\\\"黄泉对御临风和布莱特说：“西门今晚关闭，明早从石桥走。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"reception.0\\\",\\\"contentSpan\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":13,\\\"end\\\":27,\\\"quote\\\":\\\"西门今晚关闭，明早从石桥走。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"player\\\",\\\"bright\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":3,\\\"end\\\":6,\\\"quote\\\":\\\"御临风\\\"},{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":7,\\\"end\\\":10,\\\"quote\\\":\\\"布莱特\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":28,\\\"end\\\":38,\\\"quote\\\":\\\"两人都听清了整句话。\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"黄泉直接对御临风和布莱特说，且原文明确表述‘两人都听清了整句话’。\\\"}]}],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":38,\\\"quote\\\":\\\"黄泉对御临风和布莱特说：“西门今晚关闭，明早从石桥走。”两人都听清了整句话。\\\"},\\\"reason\\\":\\\"言说内容与两名听者的完整接收均已记录。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4016,\"completion_tokens\":596,\"total_tokens\":4612}}",
+  "responseBytes": 2295,
+  "responseBodySha256BeforePrivacyRedaction": "3b64170e0576a3ac097b35aa55d14773ccade8646a4e596d4e8722d0ee965c2b",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T10:24:22.079Z",
+  "elapsedMs": 3324
+}

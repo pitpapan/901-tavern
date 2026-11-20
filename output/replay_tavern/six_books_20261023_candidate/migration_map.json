@@ -48689,12 +48689,12 @@
           "reason": "用户明确要求完整盘点并接入现有六书；定义、后期模板与当前持有分离。"
         }
       ],
-      "content_sha256": "316d3471fb67b2ab7b003773fd3fb8a9e5fcc7c921dd73919f3c317ec1670b39",
+      "content_sha256": "79e7fb67c40b2e4a519e283b80768a5cbafdd31a528f837d4bfba0a1f786a818",
       "execution": {
         "id": "candidate-901-magic-bundle-ba577210e69dafd5",
         "version": "2026-10-28.magic.2",
         "contract_path": "../901-resource-authoring-kit/outputs/施法体系适配-20261024/execution/contracts/candidate-901-magic-bundle-ba577210e69dafd5.rule.json",
-        "contract_sha256": "d3642bd7e7c4b4be05f695bfba457e7ea82fbf094fee6447730609beb6aba767",
+        "contract_sha256": "cbe147d8f399ddb33ef89e77e3c7d5d21704ae59925936f7515e9e0f9f14aceb",
         "reading": {
           "path": "outputs/施法体系适配-20261024/阅读版/法师.md",
           "sha256": "c5454a7520ef1e1bf7dc054e9554b5aa41d370a21f772e37d5fa4a7325f11a09"
@@ -48755,7 +48755,7 @@
           "effects": []
         },
         "implementationGaps": [
-          "奥术D/C本体取得及赠术已验证；火焰、冰霜及B以上本体机制仍待接入。",
+          "奥术及冰霜D/C本体取得、赠术与冰霜魔耗消费者已验证；火焰及B以上本体机制仍待接入。",
           "被动或取得证明不代表全部法术变体交互与整套能力组认证。"
         ],
         "unresolvedRules": [],
@@ -48768,7 +48768,7 @@
           "status": "partial",
           "sourceChecked": true,
           "runtimeFullyVerified": false,
-          "scope": "arcane-D-C-body-acquisition-and-spell-grants"
+          "scope": "arcane-frost-D-C-body-acquisition-spell-grants-and-frost-mana-cost"
         },
         "learning": {
           "action": "resource",
@@ -48786,7 +48786,8 @@
             "C"
           ],
           "specializations": [
-            "奥术"
+            "奥术",
+            "冰霜"
           ]
         }
       },
@@ -48798,7 +48799,7 @@
           "sha256": "c5454a7520ef1e1bf7dc054e9554b5aa41d370a21f772e37d5fa4a7325f11a09"
         },
         "path": "../901-resource-authoring-kit/outputs/施法体系适配-20261024/execution/contracts/candidate-901-magic-bundle-ba577210e69dafd5.rule.json",
-        "sha256": "d3642bd7e7c4b4be05f695bfba457e7ea82fbf094fee6447730609beb6aba767",
+        "sha256": "cbe147d8f399ddb33ef89e77e3c7d5d21704ae59925936f7515e9e0f9f14aceb",
         "verification": {
           "runtimeFullyVerified": false,
           "scope": "paired-source-and-declarative-base; not full runtime",
@@ -48839,7 +48840,7 @@
           }
         ],
         "implementationGaps": [
-          "奥术D/C本体取得及赠术已验证；火焰、冰霜及B以上本体机制仍待接入。",
+          "奥术及冰霜D/C本体取得、赠术与冰霜魔耗消费者已验证；火焰及B以上本体机制仍待接入。",
           "被动或取得证明不代表全部法术变体交互与整套能力组认证。"
         ],
         "unresolvedRules": [],
@@ -48851,7 +48852,7 @@
           "status": "partial",
           "sourceChecked": true,
           "runtimeFullyVerified": false,
-          "scope": "arcane-D-C-body-acquisition-and-spell-grants"
+          "scope": "arcane-frost-D-C-body-acquisition-spell-grants-and-frost-mana-cost"
         },
         "learning": {
           "action": "resource",
@@ -48869,7 +48870,8 @@
             "C"
           ],
           "specializations": [
-            "奥术"
+            "奥术",
+            "冰霜"
           ]
         }
       }

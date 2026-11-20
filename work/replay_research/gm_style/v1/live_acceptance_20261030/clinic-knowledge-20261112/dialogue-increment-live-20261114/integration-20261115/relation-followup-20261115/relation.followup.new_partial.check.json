@@ -1,0 +1,677 @@
+{
+  "id": "relation.followup.new_partial",
+  "exactCurrentMessages": true,
+  "schemaPass": true,
+  "structuralPass": true,
+  "checked": {
+    "contextRef": "b7476f83d33eeddd7df2e8aa2111789957b9706699bb3936e9c20d86d66b6e71",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.565afa0a96875b9341a6269c6cfe90d2f21df16d46d32c4dc5188f8bad07ecbc",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "utterance.turn.1",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "钥匙在柜上，明早到码头等我。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 0,
+                  "end": 2,
+                  "quote": "黄泉"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 9,
+                  "end": 23,
+                  "quote": "钥匙在柜上，明早到码头等我。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 0,
+                "end": 24,
+                "quote": "黄泉对御临风说：“钥匙在柜上，明早到码头等我。”"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "reception.turn.1.1",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 9,
+          "end": 15,
+          "quote": "钥匙在柜上，"
+        },
+        "speakerId": "huang",
+        "status": "received",
+        "propositionRef": null,
+        "reason": "御临风明确听清前半句内容",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 3,
+            "end": 6,
+            "quote": "御临风"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 24,
+          "end": 33,
+          "quote": "御临风只听清前半句"
+        },
+        "claimId": "utterance.turn.1"
+      },
+      {
+        "id": "reception.turn.1.2",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 15,
+          "end": 23,
+          "quote": "明早到码头等我。"
+        },
+        "speakerId": "huang",
+        "status": "uncertain",
+        "propositionRef": null,
+        "reason": "后半句是否听清尚不确定",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 3,
+            "end": 6,
+            "quote": "御临风"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 34,
+          "end": 45,
+          "quote": "后半句是否听清尚不确定"
+        },
+        "claimId": "utterance.turn.1"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "uncertain",
+        "evidence": {
+          "documentId": "current",
+          "start": 34,
+          "end": 46,
+          "quote": "后半句是否听清尚不确定。"
+        },
+        "reason": "黄泉言说的前半句已被御临风接收，但后半句是否听清尚不确定，存在不确定接收状态。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false,
+    "receptionBindings": [
+      {
+        "id": "reception.turn.1.1",
+        "listener": {
+          "actorId": "player",
+          "kind": "explicit",
+          "span": {
+            "documentId": "current",
+            "start": 3,
+            "end": 6,
+            "quote": "御临风"
+          },
+          "historyMessageId": null
+        },
+        "evidence": {
+          "kind": "direct",
+          "span": {
+            "documentId": "current",
+            "start": 24,
+            "end": 33,
+            "quote": "御临风只听清前半句"
+          }
+        }
+      },
+      {
+        "id": "reception.turn.1.2",
+        "listener": {
+          "actorId": "player",
+          "kind": "explicit",
+          "span": {
+            "documentId": "current",
+            "start": 3,
+            "end": 6,
+            "quote": "御临风"
+          },
+          "historyMessageId": null
+        },
+        "evidence": {
+          "kind": "unknown",
+          "span": {
+            "documentId": "current",
+            "start": 34,
+            "end": 45,
+            "quote": "后半句是否听清尚不确定"
+          }
+        }
+      }
+    ]
+  },
+  "receptionBindings": [
+    {
+      "id": "reception.turn.1.1",
+      "listener": {
+        "actorId": "player",
+        "kind": "explicit",
+        "span": {
+          "documentId": "current",
+          "start": 3,
+          "end": 6,
+          "quote": "御临风"
+        },
+        "historyMessageId": null
+      },
+      "evidence": {
+        "kind": "direct",
+        "span": {
+          "documentId": "current",
+          "start": 24,
+          "end": 33,
+          "quote": "御临风只听清前半句"
+        }
+      }
+    },
+    {
+      "id": "reception.turn.1.2",
+      "listener": {
+        "actorId": "player",
+        "kind": "explicit",
+        "span": {
+          "documentId": "current",
+          "start": 3,
+          "end": 6,
+          "quote": "御临风"
+        },
+        "historyMessageId": null
+      },
+      "evidence": {
+        "kind": "unknown",
+        "span": {
+          "documentId": "current",
+          "start": 34,
+          "end": 45,
+          "quote": "后半句是否听清尚不确定"
+        }
+      }
+    }
+  ],
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": [
+        {
+          "id": "dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "钥匙在柜上，"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 1,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "relation.followup.new_partial",
+                "messageId": 1,
+                "swipeId": 0,
+                "text": "黄泉对御临风说：“钥匙在柜上，明早到码头等我。”御临风只听清前半句，后半句是否听清尚不确定。"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469",
+          "channel": "message",
+          "learnedAtMessage": 1
+        }
+      ]
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": []
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "pending": [
+    {
+      "id": "dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.dfb133ae5c35d039574d5ea02b2c9dd4843f65fecb476bda8c80f922cee32875",
+      "claimId": "utterance.turn.1",
+      "speakerId": "huang",
+      "recipientIds": [
+        "player"
+      ],
+      "propositionRef": null,
+      "content": "明早到码头等我。",
+      "quote": "明早到码头等我。",
+      "contentSpan": {
+        "documentId": "current",
+        "start": 15,
+        "end": 23,
+        "quote": "明早到码头等我。"
+      },
+      "receptionBinding": {
+        "id": "reception.turn.1.2",
+        "listener": {
+          "actorId": "player",
+          "kind": "explicit",
+          "span": {
+            "documentId": "current",
+            "start": 3,
+            "end": 6,
+            "quote": "御临风"
+          },
+          "historyMessageId": null
+        },
+        "evidence": {
+          "kind": "unknown",
+          "span": {
+            "documentId": "current",
+            "start": 34,
+            "end": 45,
+            "quote": "后半句是否听清尚不确定"
+          }
+        }
+      },
+      "belief": "uncertain",
+      "status": "pending",
+      "extractionReason": "后半句是否听清尚不确定",
+      "reason": "后半句是否听清尚不确定",
+      "evidence": {
+        "documentId": "current",
+        "start": 34,
+        "end": 45,
+        "quote": "后半句是否听清尚不确定"
+      },
+      "unresolved": []
+    }
+  ],
+  "noQuestionWithoutDependency": true,
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "implicit.regression",
+    "chatId": "relation.followup.new_partial",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469.message": {
+        "id": "dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "钥匙在柜上，"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      }
+    },
+    "events": {
+      "received.dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469": {
+        "id": "received.dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player"
+          ],
+          "propositionRefs": [
+            "dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "relation.followup.new_partial",
+            "messageId": 1,
+            "swipeId": 0,
+            "text": "黄泉对御临风说：“钥匙在柜上，明早到码头等我。”御临风只听清前半句，后半句是否听清尚不确定。"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/relation.followup.new_partial",
+            "line": 2
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469.player.dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469.message.event": {
+        "id": "dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469.player.dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469.player.dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469.message",
+            "eventRef": "received.dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 1,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/relation.followup.new_partial",
+            "line": 2
+          }
+        ]
+      }
+    },
+    "knowledge": {
+      "dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469.player.dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469.message": {
+        "id": "dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469.player.dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469.message",
+        "eventRef": "received.dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      }
+    },
+    "dialogueBatches": {
+      "dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398": {
+        "id": "dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398",
+        "sourceAnchor": {
+          "chatId": "relation.followup.new_partial",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "黄泉对御临风说：“钥匙在柜上，明早到码头等我。”御临风只听清前半句，后半句是否听清尚不确定。"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.c5aa9e66f389268eee22690614060c21b5122c448099a4666165bcff2df3e469",
+            "claimId": "utterance.turn.1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "钥匙在柜上，",
+            "quote": "钥匙在柜上，",
+            "contentSpan": {
+              "documentId": "current",
+              "start": 9,
+              "end": 15,
+              "quote": "钥匙在柜上，"
+            },
+            "receptionBinding": {
+              "id": "reception.turn.1.1",
+              "listener": {
+                "actorId": "player",
+                "kind": "explicit",
+                "span": {
+                  "documentId": "current",
+                  "start": 3,
+                  "end": 6,
+                  "quote": "御临风"
+                },
+                "historyMessageId": null
+              },
+              "evidence": {
+                "kind": "direct",
+                "span": {
+                  "documentId": "current",
+                  "start": 24,
+                  "end": 33,
+                  "quote": "御临风只听清前半句"
+                }
+              }
+            },
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "御临风明确听清前半句内容",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 24,
+              "end": 33,
+              "quote": "御临风只听清前半句"
+            },
+            "unresolved": []
+          },
+          {
+            "id": "dialogue.6c403ec91b9bbdffc142bf074a81230e60fd4c51b6aff86f26f1f43e65bb0398.dfb133ae5c35d039574d5ea02b2c9dd4843f65fecb476bda8c80f922cee32875",
+            "claimId": "utterance.turn.1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "明早到码头等我。",
+            "quote": "明早到码头等我。",
+            "contentSpan": {
+              "documentId": "current",
+              "start": 15,
+              "end": 23,
+              "quote": "明早到码头等我。"
+            },
+            "receptionBinding": {
+              "id": "reception.turn.1.2",
+              "listener": {
+                "actorId": "player",
+                "kind": "explicit",
+                "span": {
+                  "documentId": "current",
+                  "start": 3,
+                  "end": 6,
+                  "quote": "御临风"
+                },
+                "historyMessageId": null
+              },
+              "evidence": {
+                "kind": "unknown",
+                "span": {
+                  "documentId": "current",
+                  "start": 34,
+                  "end": 45,
+                  "quote": "后半句是否听清尚不确定"
+                }
+              }
+            },
+            "belief": "uncertain",
+            "status": "pending",
+            "extractionReason": "后半句是否听清尚不确定",
+            "reason": "后半句是否听清尚不确定",
+            "evidence": {
+              "documentId": "current",
+              "start": 34,
+              "end": 45,
+              "quote": "后半句是否听清尚不确定"
+            },
+            "unresolved": []
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "uncertain",
+            "evidence": {
+              "documentId": "current",
+              "start": 34,
+              "end": 46,
+              "quote": "后半句是否听清尚不确定。"
+            },
+            "reason": "黄泉言说的前半句已被御临风接收，但后半句是否听清尚不确定，存在不确定接收状态。"
+          }
+        ]
+      }
+    }
+  },
+  "mvuWrites": 3,
+  "replayStateUnchanged": false
+}

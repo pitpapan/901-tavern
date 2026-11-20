@@ -1,0 +1,59 @@
+2026-11-14 言说直接绑定接收与逐目标覆盖：最小本地实现
+
+结果：新版结构、校验映射和原MVU批次保存已接通。新增10项离线回归，相关126/126通过。没有新增模型调用，真实生成效果未验证。
+
+复用入口
+产品代码只改原story-dialogue-knowledge.mjs，新增prepareBoundDialogueExtraction并由现有createDialogueSemanticAdapter显式选择。
+复用共享assertion-contract的utterance完整字段、字段Schema、输入摘要、原文引用与严格检查；共享引擎合同源文件未修改。
+原story-knowledge.receive、知识投影、传闻等级、来源取得校验、MVU事务与逐人回执继续处理最终登记，无第二个状态执行器。
+
+新模型输出合同 dialogue-reception/2
+顶层：schemaVersion/contextRef/inputRef/units。
+每个unit：id/status/claims/utterances/unresolved/coverage。
+claims只放非utterance断言，保留意图、否定等原断言；utterances每项为{claim,receptions}，claim必须是原合同的utterance。
+接收项沿用id/speakerId/recipientIds/recipientSpans/evidence/status/propositionRef/reason；不接受模型填写claimId。
+映射只给已经存在的接收项添加其父claim.id作为内部claimId，不创建记录、不改变内容或类型、不根据听见动作推断回执。
+完整言说可以无直接接收项；需要分片时由模型明确给出对应utterance及嵌套记录，不由程序拆句或补范围。
+
+逐目标覆盖
+coverage固定为status/evidence/reason，必须有target内逐字原文引用和非空理由。
+recorded：至少一条接收记录，没有uncertain记录或显式未决项。
+uncertain：至少存在uncertain接收或显式unresolved；已明确片段仍可独立登记，不因整个target存在歧义而全部阻断。
+none：没有接收记录和未决项，允许保留尚未发生的意图等原断言；覆盖理由必须保留。
+空units、漏覆盖、重复target、recorded但无回执、uncertain却没有具体不确定项等结构矛盾被拒绝。
+coverage自身不会自动生成unresolved或回执；只能采用模型已经明确提供且通过原检查的记录。
+覆盖结果随原dialogueBatches存于receptionCoverage，保留sourceAnchor，不写另一份状态，不修改正式剧情。
+
+原有校验边界
+映射后仍通过原prepareDialogueExtraction.check和共享checkAssertionReply：原文切片、UTF-16坐标、类型、null配对、限定、目标数量、全局claim id、接收身份等检查保留。
+旧检查函数文本与保存的旧源逐字比对未变；共享assertion-contract源哈希未变。
+嵌套action、非法额外claimId、缺span、假quote、未知接收者、错误目标或矛盾覆盖不会被修复，且在MVU写入前失败。
+新模型适配器只使用v2，无自动退回旧格式。旧准备/检查API及显式宿主回调保留用于历史诊断；旧回复不自动迁移，不重新采用失败记录。
+
+离线回归
+首次8项新增测试均失败于缺少新入口/旧请求合同；最小实现后修正测试之间共享对象污染，随后通过。
+适配器既有桩测更新为作者构造的v2回复；没有把历史模型回复转换成新格式作通过样本。
+最终新增10项覆盖：
+- 明确嵌套关联映射且原输入不变；覆盖依据保存。
+- action父项、自由claimId、缺覆盖/缺记录、重复/缺target、伪造覆盖引用拒绝。
+- 明确部分接收与另一部分不确定共存，逐人登记一次及待核一次。
+- none和仅unresolved结构不自动生成接收。
+- 原字段/引用/null配对/身份检查保持。
+- 标准JSON Schema正反例。
+- 真实原MVU链的覆盖落盘、待核、无关时不问与幂等。
+- 历史错误平铺回复不能进入v2。
+- 无效模型路径零写入，not_received/none不授予、不询问。
+- 尚未发生的意图保留为原state，不能凭空制造言说。
+相关五套件最终126/126通过，详见offline-tests.log。
+
+实际改善及限制
+合法接收结构不再自由选择action/state的id，关联只能来自其所属utterance，消除了这类自由引用错误入口。
+每个目标必须明确交代覆盖结果，空回执不能在没有覆盖说明的情况下默认为无事；理由和引用可在原批次追溯。
+但模型仍可能把语义不正确的内容包装为utterance，误填接收者，遗漏部分消息，或带着真实引用谎报none。
+测试明确保留“结构合法但语义错误的none”场景，canApprove和semanticCompletenessVerified均为false；没有增加自动语义审查。
+没有证明上游接受新版Schema、真实模型漏抽率下降、多角色长剧情稳定或正式部署通过。
+
+保存与权限
+692份旧证据及22份正式文件哈希保持；唯一产品源变动为story-dialogue-knowledge.mjs，其余基线产品源不变。
+verify.mjs生成request-preview.json仅供审阅，28460字节，未发送；没有读取密钥或启动传输。
+模型新增0、累计323、余额0；没有部署、正式剧情写入或自动批准/修订路线恢复。

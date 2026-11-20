@@ -1,0 +1,376 @@
+{
+  "status": "sequential-pending-retelling",
+  "authorization": "2026-11-14 用户澄清本轮离线核对后追加3次归属测试，承接custom263核对个人选择与原约定的边界，失败即停、不重试",
+  "baseline": 263,
+  "limit": 3,
+  "parameters": {
+    "model": "[抗截断]gemini-3.8-flash",
+    "temperature": 1,
+    "max_tokens": 4096,
+    "stream": false,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "top_p": 1
+  },
+  "sourceSha256": "cb746d9fed005961f9bca98ca5563d7bf8b86a3c71d333928ba8d4ddd8918ed2",
+  "catalogSha256": "0438ebeda0b3f9c87419eedb29fac59e1f7ffde104e4a6abd7fb26cde76a8791",
+  "protectedFiles": {
+    "D:\\github\\sillyTavern\\data\\default-user\\settings.json": "9a33616d5762ca923b84b78152186ae63c1e6c4a522f238398b2b20fd77855c9",
+    "D:\\github\\sillyTavern\\data\\default-user\\chats\\901 帝都初始卡 独立事项版 20261105\\901 帝都正式续玩 20261106.jsonl": "c537ecb6d5c0d595cbe98916f0c4ccaf77824fa5d1da873302a24f2cd70e9749",
+    "D:\\github\\sillyTavern\\data\\default-user\\characters\\901 帝都初始卡 独立事项版 20261105.png": "283503692df2e0b4477bf7daf4117c54a4b5266b44fb41d0e51d0b08ab3ea379",
+    "D:\\github\\sillyTavern\\public\\901-opening-combat\\work\\rules_engine\\gm_runtime\\replay-gate-script.example.js": "632254575c388acc8e91b3a7da87740e2ae1ba1312915495aef618a79c3e9c50",
+    "D:\\github\\sillyTavern\\data\\default-user\\worlds\\901 正式数据库事实验收 20261031 主书副本.json": "68cc1bd65900c888310a23451c0f43afa341bf883cb59dc4e531d94181631bdb",
+    "D:\\github\\sillyTavern\\data\\default-user\\worlds\\901 资源取得隔离验收 20261028 - 自然语言隔离.json": "48fa736bfd493c8a8e4bdb253181cfc088ed26831f5acfbc81cb520096da90d7",
+    "D:\\github\\sillyTavern\\data\\default-user\\worlds\\901_01_世界基础设定_20261023.json": "d94e21a3ebee5861c013c25bac3a5a25378d0c0198cd686504c9e5ac09151100",
+    "D:\\github\\sillyTavern\\data\\default-user\\worlds\\901_02_政治与势力_20261023.json": "ef2e86ee17b09f52f386711045b3752d73bba46bdc0de977c73308b98c54df35",
+    "D:\\github\\sillyTavern\\data\\default-user\\worlds\\901_03_人物资料库_20261023.json": "17cde20536a00c67f1bb18c407e769de756bc1ee34059cb5db2091a53d476171",
+    "D:\\github\\sillyTavern\\data\\default-user\\worlds\\901_04_能力与战力_20261023.json": "2e5c6bacbd039346567a17e893ad133ba45a7a418a4b38e0a8082681ab5edd71",
+    "D:\\github\\sillyTavern\\data\\default-user\\worlds\\901_05_历史与事件_20261023.json": "baa61166d92fb35710b9a337fb8821ce81f541d12b97ac37f0300fb83432875e",
+    "D:\\github\\sillyTavern\\data\\default-user\\worlds\\901_06_当前剧本与局势_20261023.json": "777eba320f88551089864c7b3c3965306d9cd7d33914d26212402ef83979e299",
+    "D:\\github\\sillyTavern\\data\\default-user\\worlds\\901_主持整合测试_008_20261020.json": "24414dcb440cdb18b386f725a221bb01482431400292aa7ce884c77afd584eec",
+    "D:\\github\\sillyTavern\\data\\default-user\\worlds\\901_叙事战斗测试_008_20261020.json": "aff9d81a7deeeed2a5f4f920646ff90689328a17e25f5fa85598540c52774b2b",
+    "D:\\github\\sillyTavern\\data\\default-user\\worlds\\901_帝都入口_M1_20261012.json": "1fa59e0e9a3477565ba1fec377e7684cb46c8d941c2a05a07a30cfe7185a9c49",
+    "D:\\github\\sillyTavern\\data\\default-user\\worlds\\901_帝都初始卡_008_20261022.json": "71d12efded0e58a1b8ba4f04c0e6996995e80d53b3ef4b335d87a506f7dca69b",
+    "D:\\github\\sillyTavern\\data\\default-user\\worlds\\901_帝都重玩_ENH_20261004_r2_候选.json": "67c7686693e7cdc5525582acc4ca35bda78f7f07eb341a6b8d426e16d08be990",
+    "D:\\github\\sillyTavern\\data\\default-user\\worlds\\901_帝都重玩_M1_20261005.json": "c378df5baca87f75e7ec427e671de6c0023222f3a582efc8eaf0c6ca473f6e6c",
+    "D:\\github\\sillyTavern\\data\\default-user\\worlds\\901_帝都重玩_T0_v1.json": "738e8c5ae9ad19eee0ea170ada5fe2a2ea760b02ae9ab0fb6895680e68117733",
+    "D:\\github\\sillyTavern\\data\\default-user\\worlds\\901_帝都重玩_记忆_01.json": "48fa736bfd493c8a8e4bdb253181cfc088ed26831f5acfbc81cb520096da90d7",
+    "D:\\github\\sillyTavern\\data\\default-user\\worlds\\901_恢复隔离实测_008_20261023.json": "8a69f37c6e92b618d25e8c4725b4384561c0f20483d0129a6550ad8e39cc62b8",
+    "D:\\github\\sillyTavern\\data\\default-user\\worlds\\901_擂台隔离实测_008_20261023.json": "bf596d56acc345df79ae93597fa1e75e524b6c8abb8182a9cd1d03cd071b1a1c"
+  },
+  "cases": [
+    {
+      "id": "01",
+      "input": "“如果你后来觉得不必见面，也能和那个人单独把事情核实清楚，换一种做法是你自己可以调整的安排，还是会违背原来的约定？”\n（桌外隔离验收，非正式剧情：承接前文，写布莱特的回应；可以回应在场同伴，不替御临风新增对白、心理或决定。）",
+      "context": {
+        "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+        "actorKnowledge": [
+          {
+            "actorId": "player",
+            "name": "御临风",
+            "facts": []
+          },
+          {
+            "actorId": "bright",
+            "name": "布莱特",
+            "facts": [
+              {
+                "id": "clinic.owner.xuelao.old-friend",
+                "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                "belief": "confirmed",
+                "access": "learned",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 12,
+                  "actorId": "legacy.story"
+                },
+                "sources": [
+                  {
+                    "eventRef": "received.browser.received",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 11,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "901 帝都正式续玩 20261106",
+                      "messageId": 11,
+                      "swipeId": 0,
+                      "text": "桌外隔离验收事件（非正式剧情）：可信来客私下向布莱特告知：九雪医馆馆主与雪老有旧。布莱特已实际听到；御临风与黄泉均未听到。"
+                    },
+                    "disclosure": null
+                  },
+                  {
+                    "eventRef": "received.communication.promise",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 12,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "901 帝都正式续玩 20261106",
+                      "messageId": 12,
+                      "swipeId": 0,
+                      "text": "桌外隔离验收事件（非正式剧情）：同一来客向布莱特补充约定：“这件事先不要向御临风和黄泉透露，等我们单独确认后再说。”布莱特听到并答应了该约定；另两人未听见。"
+                    },
+                    "disclosure": {
+                      "sourceQuote": "这件事先不要向御临风和黄泉透露，等我们单独确认后再说。"
+                    }
+                  }
+                ],
+                "eventRef": "received.communication.promise",
+                "channel": "message",
+                "learnedAtMessage": 12
+              }
+            ]
+          },
+          {
+            "actorId": "huang",
+            "name": "黄泉",
+            "facts": []
+          }
+        ],
+        "availableInformation": [
+          {
+            "access": "can-inquire",
+            "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+          }
+        ]
+      },
+      "previousResponseId": "1098529f-6356-4e76-8192-44ce126f3c14",
+      "previousContentSha256": "23bdcd95e694a17007a0c85b68f51cfacd02afd49efea7762246ae6b67336b5c",
+      "previousRawResponseSha256": "c88aede01d4407cac78790ac2065c658e47fdde96e8dec61c9cb2dc7705dd6df",
+      "previousRequestSha256": "9a309b23c0c2044ccacd08f2497743018f6148b122ff516974dcbf8350138f2b",
+      "request": {
+        "file": "01.request.json",
+        "bytes": 124319,
+        "sha256": "88da09f442d85d3bc57d88cd2c63f19e33017a709702b7c31a3849ce86d0c3d1"
+      },
+      "parametersUnchanged": true,
+      "knowledgeUnchanged": true,
+      "reviewedAnnotations": [
+        27,
+        29
+      ],
+      "newKnowledgeReceipts": [],
+      "assembly": "Derived using actual previous response plus current user follow-up and existing generate/projectMessages; not a new browser capture"
+    },
+    {
+      "id": "02",
+      "input": "“那你暂时不对其他人说的做法，也能由你自己调整吗？还是得等那个人另行同意，才不算违反你答应的事？”\n（桌外隔离验收，非正式剧情：承接前文，写布莱特的回应；可以回应在场同伴，不替御临风新增对白、心理或决定。）",
+      "context": {
+        "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+        "actorKnowledge": [
+          {
+            "actorId": "player",
+            "name": "御临风",
+            "facts": []
+          },
+          {
+            "actorId": "bright",
+            "name": "布莱特",
+            "facts": [
+              {
+                "id": "clinic.owner.xuelao.old-friend",
+                "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                "belief": "confirmed",
+                "access": "learned",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 12,
+                  "actorId": "legacy.story"
+                },
+                "sources": [
+                  {
+                    "eventRef": "received.browser.received",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 11,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "901 帝都正式续玩 20261106",
+                      "messageId": 11,
+                      "swipeId": 0,
+                      "text": "桌外隔离验收事件（非正式剧情）：可信来客私下向布莱特告知：九雪医馆馆主与雪老有旧。布莱特已实际听到；御临风与黄泉均未听到。"
+                    },
+                    "disclosure": null
+                  },
+                  {
+                    "eventRef": "received.communication.promise",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 12,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "901 帝都正式续玩 20261106",
+                      "messageId": 12,
+                      "swipeId": 0,
+                      "text": "桌外隔离验收事件（非正式剧情）：同一来客向布莱特补充约定：“这件事先不要向御临风和黄泉透露，等我们单独确认后再说。”布莱特听到并答应了该约定；另两人未听见。"
+                    },
+                    "disclosure": {
+                      "sourceQuote": "这件事先不要向御临风和黄泉透露，等我们单独确认后再说。"
+                    }
+                  }
+                ],
+                "eventRef": "received.communication.promise",
+                "channel": "message",
+                "learnedAtMessage": 12
+              }
+            ]
+          },
+          {
+            "actorId": "huang",
+            "name": "黄泉",
+            "facts": []
+          }
+        ],
+        "availableInformation": [
+          {
+            "access": "can-inquire",
+            "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+          }
+        ]
+      },
+      "previousResponseId": "04643887-fc3c-47f5-bb71-3c6b3e3e0bcb",
+      "previousContentSha256": "d8b98e706661a21065532fc195392b80108d0d8b750d088b8102d56ed2b72614",
+      "previousRawResponseSha256": "903c9eeca6c33a891d3674f5307e81a3079f397301f53cf0ff50d30edc3194f4",
+      "previousRequestSha256": "88da09f442d85d3bc57d88cd2c63f19e33017a709702b7c31a3849ce86d0c3d1",
+      "request": {
+        "file": "02.request.json",
+        "bytes": 125740,
+        "sha256": "5c7c2ed8e3ef6c8c6d507b1c739b48e915e01bb8d583101a11b9169a8a9bdecf"
+      },
+      "parametersUnchanged": true,
+      "knowledgeUnchanged": true,
+      "reviewedAnnotations": [
+        27,
+        29
+      ],
+      "newKnowledgeReceipts": [],
+      "assembly": "Derived using actual previous response plus current user follow-up and existing generate/projectMessages; not a new browser capture"
+    },
+    {
+      "id": "03",
+      "input": "“那让你改成带着我和黄泉一起参与核实，也能算你自己的安排、直接调整吗？还是这会动到原来的约定？”\n（桌外隔离验收，非正式剧情：承接前文，写布莱特的回应；可以回应在场同伴，不替御临风新增对白、心理或决定。）",
+      "context": {
+        "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+        "actorKnowledge": [
+          {
+            "actorId": "player",
+            "name": "御临风",
+            "facts": []
+          },
+          {
+            "actorId": "bright",
+            "name": "布莱特",
+            "facts": [
+              {
+                "id": "clinic.owner.xuelao.old-friend",
+                "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                "belief": "confirmed",
+                "access": "learned",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 12,
+                  "actorId": "legacy.story"
+                },
+                "sources": [
+                  {
+                    "eventRef": "received.browser.received",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 11,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "901 帝都正式续玩 20261106",
+                      "messageId": 11,
+                      "swipeId": 0,
+                      "text": "桌外隔离验收事件（非正式剧情）：可信来客私下向布莱特告知：九雪医馆馆主与雪老有旧。布莱特已实际听到；御临风与黄泉均未听到。"
+                    },
+                    "disclosure": null
+                  },
+                  {
+                    "eventRef": "received.communication.promise",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 12,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "901 帝都正式续玩 20261106",
+                      "messageId": 12,
+                      "swipeId": 0,
+                      "text": "桌外隔离验收事件（非正式剧情）：同一来客向布莱特补充约定：“这件事先不要向御临风和黄泉透露，等我们单独确认后再说。”布莱特听到并答应了该约定；另两人未听见。"
+                    },
+                    "disclosure": {
+                      "sourceQuote": "这件事先不要向御临风和黄泉透露，等我们单独确认后再说。"
+                    }
+                  }
+                ],
+                "eventRef": "received.communication.promise",
+                "channel": "message",
+                "learnedAtMessage": 12
+              }
+            ]
+          },
+          {
+            "actorId": "huang",
+            "name": "黄泉",
+            "facts": []
+          }
+        ],
+        "availableInformation": [
+          {
+            "access": "can-inquire",
+            "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+          }
+        ]
+      },
+      "previousResponseId": "4cfed421-f210-40a6-b82d-c6d3198c53f0",
+      "previousContentSha256": "638281f76a1fb73375ee810ad5cf041c748b3d4187d6420b2e6ecea329a0fb1b",
+      "previousRawResponseSha256": "2e43ed5dc60ada3989cb10c129fd1b2f85b19bd25056b727a49060f779f6cae2",
+      "previousRequestSha256": "5c7c2ed8e3ef6c8c6d507b1c739b48e915e01bb8d583101a11b9169a8a9bdecf",
+      "request": {
+        "file": "03.request.json",
+        "bytes": 127104,
+        "sha256": "85f787821c91f36e9db63db7d1b4097457dce89988abe0a93476462f4630af4d"
+      },
+      "parametersUnchanged": true,
+      "knowledgeUnchanged": true,
+      "reviewedAnnotations": [
+        27,
+        29
+      ],
+      "newKnowledgeReceipts": [],
+      "assembly": "Derived using actual previous response plus current user follow-up and existing generate/projectMessages; not a new browser capture"
+    }
+  ]
+}

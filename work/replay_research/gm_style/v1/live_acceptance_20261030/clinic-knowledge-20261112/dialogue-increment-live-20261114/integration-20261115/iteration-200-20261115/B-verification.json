@@ -1,0 +1,59 @@
+{
+  "B": {
+    "actualModelCalls": [
+      344,
+      345,
+      351,
+      352,
+      353,
+      354,
+      356,
+      357
+    ],
+    "pendingFromActualResponse": "dialogue.28e35f389cbb7d6a2193a79e45aa4682c3388f9280612f4264e4c4d43929740a.e7743f6d803220bd4c93dce6362c27bac07bdf33f58ef22281b9b009ad3d078a",
+    "unrelatedRequired": [],
+    "unrelatedPreservedOriginalBatchExactly": true,
+    "relatedRequired": [
+      "dialogue.28e35f389cbb7d6a2193a79e45aa4682c3388f9280612f4264e4c4d43929740a.e7743f6d803220bd4c93dce6362c27bac07bdf33f58ef22281b9b009ad3d078a"
+    ],
+    "uiConfirmation": {
+      "received": true,
+      "recipientIds": [
+        "bright"
+      ],
+      "speakerId": "huang",
+      "quote": "刚才那边的商贩说，明天取货改到南门外的石桥旁。"
+    },
+    "samePlayerRequestCount": 1,
+    "confirmedBeforeNarration": true,
+    "sourceDecisionProjected": true,
+    "grantsAtSteps": [
+      0,
+      3,
+      4,
+      5
+    ],
+    "finalPending": 0,
+    "originalMessageBelief": "uncertain",
+    "mechanicsUnchanged": true,
+    "sourceAnchorsMatchRetainedBodies": true,
+    "bodyChange": "Only existing controller suffix: two newlines + <StatusPlaceHolderImpl/>",
+    "exactRequestAndRawReplay": true,
+    "classification": "local NO_CHECK, not model acceptance"
+  },
+  "rawEvidence": {
+    "attempts": 23,
+    "allOriginalRequestAndResponseHashesMatch": true,
+    "verdictCounts": {
+      "pass": 15,
+      "fail": 7,
+      "uncovered": 1
+    }
+  },
+  "limitations": [
+    "348/349 were manually withheld by acceptance harness, not detected by production semantic validation.",
+    "350 implicit listener citation still failed. Alternate B2 explicitly names conversational partners; it does not repair that failure.",
+    "355 non-disclosure is uncovered, not a mandatory-disclosure failure. Confirmation omission did exist in projection, but its causal role is unproven.",
+    "Controlled non-Canon scenes and local classification; no production deployment or general model reliability claim."
+  ]
+}

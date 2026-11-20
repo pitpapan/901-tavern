@@ -1,0 +1,135 @@
+{
+  "id": "10-dependent",
+  "localProtocolPassed": true,
+  "result": {
+    "status": "deferred",
+    "questions": [
+      {
+        "id": "dialogue.a88eacccb9aebd77a86e1b0dc27d702d0684aaff715c435a1786c51a930ac7e8.7b5714850f54942f0da4a9701187dd9727e31beb7121d5d1606281ac34934ed6",
+        "propositionRef": null,
+        "content": "仓库换了锁。",
+        "speakerId": "bright",
+        "recipientIds": [
+          "huang"
+        ],
+        "reason": "原文明确指出不确定她是否听清",
+        "sourceAnchor": {
+          "chatId": "isolated.dialogue.live.07-ambiguous-hearing",
+          "messageId": 0,
+          "swipeId": 0,
+          "text": "布莱特低声说：“仓库换了锁。”黄泉站在门边，不确定她是否听清。"
+        }
+      }
+    ]
+  },
+  "asked": [
+    {
+      "id": "dialogue.a88eacccb9aebd77a86e1b0dc27d702d0684aaff715c435a1786c51a930ac7e8.7b5714850f54942f0da4a9701187dd9727e31beb7121d5d1606281ac34934ed6",
+      "propositionRef": null,
+      "content": "仓库换了锁。",
+      "speakerId": "bright",
+      "recipientIds": [
+        "huang"
+      ],
+      "reason": "原文明确指出不确定她是否听清",
+      "sourceAnchor": {
+        "chatId": "isolated.dialogue.live.07-ambiguous-hearing",
+        "messageId": 0,
+        "swipeId": 0,
+        "text": "布莱特低声说：“仓库换了锁。”黄泉站在门边，不确定她是否听清。"
+      },
+      "actors": {
+        "bright": "布莱特",
+        "huang": "黄泉",
+        "player": "御临风"
+      }
+    }
+  ],
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "isolated.dialogue.live.v1",
+    "chatId": "isolated.dialogue.live.07-ambiguous-hearing",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "harbor.closed": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "harbor.closed",
+        "entityId": "harbor",
+        "field": "reported_status",
+        "value": "码头停航",
+        "certainty": "rumor",
+        "visibility": "private"
+      }
+    },
+    "events": {},
+    "knowledge": {},
+    "dialogueBatches": {
+      "dialogue.a88eacccb9aebd77a86e1b0dc27d702d0684aaff715c435a1786c51a930ac7e8": {
+        "id": "dialogue.a88eacccb9aebd77a86e1b0dc27d702d0684aaff715c435a1786c51a930ac7e8",
+        "sourceAnchor": {
+          "chatId": "isolated.dialogue.live.07-ambiguous-hearing",
+          "messageId": 0,
+          "swipeId": 0,
+          "text": "布莱特低声说：“仓库换了锁。”黄泉站在门边，不确定她是否听清。"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.a88eacccb9aebd77a86e1b0dc27d702d0684aaff715c435a1786c51a930ac7e8.7b5714850f54942f0da4a9701187dd9727e31beb7121d5d1606281ac34934ed6",
+            "claimId": "claim-01",
+            "speakerId": "bright",
+            "recipientIds": [
+              "huang"
+            ],
+            "propositionRef": null,
+            "content": "仓库换了锁。",
+            "quote": "仓库换了锁。",
+            "belief": "uncertain",
+            "status": "pending",
+            "extractionReason": "原文明确指出不确定她是否听清",
+            "reason": "原文明确指出不确定她是否听清",
+            "evidence": {
+              "documentId": "current",
+              "start": 22,
+              "end": 31,
+              "quote": "不确定她是否听清。"
+            },
+            "unresolved": [],
+            "prompted": true
+          }
+        ]
+      }
+    }
+  },
+  "context": {
+    "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+    "actorKnowledge": [
+      {
+        "actorId": "bright",
+        "name": "布莱特",
+        "facts": []
+      },
+      {
+        "actorId": "huang",
+        "name": "黄泉",
+        "facts": []
+      },
+      {
+        "actorId": "player",
+        "name": "御临风",
+        "facts": []
+      }
+    ],
+    "availableInformation": []
+  },
+  "semanticAssessment": "pending-manual"
+}

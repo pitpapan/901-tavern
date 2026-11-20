@@ -1,0 +1,31 @@
+{
+  "kind": "play.001.classification",
+  "startedAt": "2026-11-15T12:59:57.596Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T13:00:00.514Z",
+  "headersElapsedMs": 2919,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5ae6fa528687a8e-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 13:00:00 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=YhQADnHQtaXQEf5vg3xq9R6UqslKCTBiTCVvAFn3VeNevUjIBKws99UhmAJqupxf2qeClfbtEA9XBAA8Ipl32HllG4a0SYfSHlaVSgL1liOPl2PQvXYuEiuWDy6oFw%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611151259581690344208268d9d6tjYSRuiT",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "339b843d-2ea1-4579-a49f-b7bb80927222"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"69baaabe-8174-4f19-a62a-88250a0723b5\",\"object\":\"chat.completion\",\"created\":1794747600,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"status\\\":\\\"NO_CHECK\\\",\\\"basis\\\":\\\"ordinary_dialogue\\\",\\\"reason\\\":\\\"御临风沿着水渠石板路向东走，并向同行同伴布莱特询问到医馆后的交信流程。该行动为队内普通交流与常规赶路，未涉及攻击、穿脱装备、施法、技能挑战或敌对冲突，无需机械检定。\\\"}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":20596,\"completion_tokens\":97,\"total_tokens\":20693}}",
+  "responseBytes": 606,
+  "responseBodySha256BeforePrivacyRedaction": "5b7c9942608f97282b15405cbe81198da7f1b1b667324273daf5f688f74f54ec",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T13:00:00.526Z",
+  "elapsedMs": 2930
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "rawcheck.probe.reply",
+  "startedAt": "2026-11-15T16:35:25.833Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T16:35:56.342Z",
+  "headersElapsedMs": 30509,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5afab474dc61573-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 16:35:56 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=aKUYzXxSYR3sFpmyA9%2FKr%2B%2FSMEdLieBZa1bP1w%2FF63KnIbKtfojolEVVzUSD1qfkihNDVVr8mbg3EOP6g5uAlhtFcW8iOxeuQPV%2Bi%2BPgDhDhYs1b2gnvz1BxPmUhnA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611151635266184757948268d9d6OWtAkKai",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "73062137-44e9-453d-9e17-4da4c05e4743"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"408dd2a8-df1b-4a82-b236-446d3f405645\",\"object\":\"chat.completion\",\"created\":1794760556,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/5\\\",\\\"contextRef\\\":\\\"3ff0639f52c366cef0c5e9a93a6b91bc7183aa53a92310ab739c5cb60ac678b9\\\",\\\"inputRef\\\":\\\"assertion.17fd1af548903113099127db1ecb2a58e1cd1bde6b28a1ea314a00a6bca14d29\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[{\\\"id\\\":\\\"c1\\\",\\\"type\\\":\\\"action\\\",\\\"args\\\":{\\\"actor\\\":\\\"huang\\\",\\\"verb\\\":\\\"停下\\\",\\\"object\\\":\\\"脚步\\\"},\\\"argumentSpans\\\":{\\\"actor\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"},\\\"verb\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"停下\\\"},\\\"object\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"脚步\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉停下脚步，\\\"}}],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"u1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"huang\\\",\\\"content\\\":\\\"山路已经封闭了。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"山路已经封闭了。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"答道：“山路已经封闭了。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"r1\\\",\\\"contentSpan\\\":{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"山路已经封闭了。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"黄泉回答布莱特上一轮的询问，布莱特直接接收该回答。\\\",\\\"listener\\\":{\\\"actorId\\\":\\\"bright\\\",\\\"kind\\\":\\\"reply\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"山路已经封闭了。\\\"},\\\"historyMessageId\\\":0},\\\"evidence\\\":{\\\"kind\\\":\\\"reply\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"山路已经封闭了。\\\"}}}顶]}],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉停下脚步，答道：“山路已经封闭了。”\\\"},\\\"reason\\\":\\\"黄泉回应了布莱特在历史消息0中的提问，布莱特明确接收了回复。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4603,\"completion_tokens\":598,\"total_tokens\":5201}}",
+  "responseBytes": 2449,
+  "responseBodySha256BeforePrivacyRedaction": "7d229c0cb34f82cb9accfe4e0901d6985aa51021c59de7ae4a60d55303ed2054",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T16:35:56.355Z",
+  "elapsedMs": 30522
+}

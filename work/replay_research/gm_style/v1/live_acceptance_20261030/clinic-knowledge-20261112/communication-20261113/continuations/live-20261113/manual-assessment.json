@@ -1,0 +1,35 @@
+{
+  "method": "Main-session manual reading of all four complete outputs and their actual requests; not an automated review or extraction route",
+  "scope": "A/B two new rounds each, after real historical 05/08; no general lore audit",
+  "newCalls": 4,
+  "cumulative": 252,
+  "remaining": 0,
+  "transport": "Four HTTP 200, finish_reason stop; no retries or classification model calls",
+  "A": {
+    "assessment": "本次允许范围内，未发现必须判失败的知情/披露行为；未证明无约定时主动披露旧交的选择能力",
+    "first": "A1给出递信和对外介绍的建议，没有说出馆主与雪老有旧。依准备方案选择nextIfNotShared；这里未分享指受控旧交命题，不否认正文已有一般建议。",
+    "second": "A2承接真实A1，向黄泉说明办事口径。黄泉明确应答，但收到的是一般安排，没有收到受控旧交事实。",
+    "receipts": "不新增旧交获知回执；知道、说出、收到保持区分。未说旧交本身不判失败。"
+  },
+  "B": {
+    "assessment": "未泄露并自然回到事务；约定条件的理解存在偏差迹象，不能判完整通过",
+    "firstEvidence": "都有一些。……刚进城时有些零碎话递到我耳边，但眼下大街上人多眼杂，消息的真伪我也还没亲自核实过。等到了医馆附近，或者找个稳妥的地方落了脚，我再把听到的同你们细说。",
+    "sourceAgreement": "这件事先不要向御临风和黄泉透露，等我们单独确认后再说。",
+    "analysis": "回答表现出有所保留，比仅说不知道提供了更多行为证据。但后续细说的承诺只提医馆附近或落脚，没有保留与原来客单独确认的解除条件。可能把信息约定弱化为场所问题；未实际兑现披露，因此本次不等于已经泄密或已经解除约定。",
+    "beliefLimit": "投影为confirmed，正文说尚未亲自核实，可以是回避说法，也可能是忽略已知状态；仅凭正文不能确认内部原因。",
+    "second": "B2接受不再追问，回答先递信说明来意、再询问接待与住宿；没有继续透露旧交或编写解约事件。",
+    "programVsModel": "B1/B2完整请求均有原约定逐字sourceQuote及布莱特confirmed事实，未见本地字段丢失。现有证据指向模型表述/条件理解问题，不支持再补程序接线。"
+  },
+  "style": "保留原回复，未播报规则或另写御临风对白、心理和新决定。牵缰、步子、侧头、石板路和人流仍较集中；本次内容能承接问话，普通重复动作不单独判失败，也不宣称总体文风已改善。",
+  "continuity": "首轮来自上一阶段实际浏览器捕获。次轮在读到首轮真实响应后用原knowledge.generate/projectMessages派生，完整保留历史与非空记忆；次轮不是新的浏览器实走验收。",
+  "limits": [
+    "两条短链不能证明一般场景稳定性、全部秘密边界或所有人物行为。",
+    "B尚未到达其承诺的后续地点，不能证明是否会实际违约披露。",
+    "A没有实际转告旧交；不新增或伪造获知回执，也不声称此链完成转告验收。",
+    "分类是本地NO_CHECK控制，不是分类模型能力验证。",
+    "未修改产品模块，未重跑历史135项回归；本轮新核验为请求响应完整性、连续承接、投影来源与正式文件哈希。"
+  ],
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticExtractionApprovalRevision": false
+}

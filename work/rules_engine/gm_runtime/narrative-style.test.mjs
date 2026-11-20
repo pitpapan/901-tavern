@@ -55,7 +55,7 @@ exec(compile(ast.Module(body=[function],type_ignores=[]),str(path),'exec'))
 card=read(ROOT/'output/replay_tavern/opening_combat_20261022_candidate/import/901_帝都初始卡.card.json')
 print(json.dumps(project_narrative_entry(card['data']['extensions']['tavern_helper']['scripts'][1]['content']),ensure_ascii=False))`;
  const run=spawnSync('python',['-c',py,root],{encoding:'utf8',env:{...process.env,PYTHONIOENCODING:'utf-8'}});assert.equal(run.status,0,run.stderr);
- const result=JSON.parse(run.stdout);assert.equal(result.script.split(memoryImport.trim()).length,2);assert.equal(result.script.split(historySlot+memorySlot).length,2);assert.equal(patchNarrativeEntry(result.script,{summary:true}),result.script);assert.ok(result.script.includes(instruction(currentInstruction)));assert.equal(result.style,style);assert.equal(options(result.script).max_chat_history,'all');
+ const result=JSON.parse(run.stdout);assert.ok(!result.script.includes(memoryImport.trim()));assert.ok(result.script.includes('knowledge:storyKnowledge'));assert.ok(result.script.includes('window.top.__901StoryKnowledge='));assert.ok(result.script.includes(instruction(currentInstruction)));assert.equal(result.style,style);assert.equal(options(result.script).max_chat_history,'all');
  assert.equal(options(result.script).ordered_prompts.filter(p=>p.content===style).length,1);
  const builder=read('../../replay_research/six_books_20261023/build_candidate.py');
  assert.ok(builder.includes("narrative=project_narrative_entry(script['content'])"));

@@ -1,0 +1,100 @@
+{
+  "offline": {
+    "pass": 279,
+    "fail": 0,
+    "newTests": 5
+  },
+  "model": {
+    "newCalls": 6,
+    "pass": 4,
+    "fail": 2,
+    "usedOf200": 59,
+    "remaining": 141,
+    "cumulative": 393,
+    "attempts": [
+      {
+        "id": "range.original",
+        "request": 388,
+        "verdict": "fail",
+        "assessment": "原样请求模型仍将bright两条互斥状态绑定整句；JSON/Schema通过，但新增范围检查拒绝，原始回复经真实适配器零MVU写入。阻断生效，模型分片未通过，不修补或同版重试。",
+        "schemaPass": true,
+        "localCheckPass": false,
+        "mvuWrites": 0,
+        "runtimeError": "Conflicting dialogue reception ranges",
+        "returnedModel": "gemini-3.8-flash"
+      },
+      {
+        "id": "range.back",
+        "request": 389,
+        "verdict": "fail",
+        "assessment": "JSON层级/括号错误，原样拒绝且MVU零写入；可读内容已有前后分片与对应received/not_received，但不能修补成通过。",
+        "schemaPass": false,
+        "localCheckPass": false,
+        "mvuWrites": 0,
+        "runtimeError": "Unexpected non-whitespace character after JSON at position 2702 (line 1 column 2703)",
+        "returnedModel": "gemini-3.8-flash-n"
+      },
+      {
+        "id": "range.full",
+        "request": 390,
+        "verdict": "pass",
+        "assessment": "Schema/原引用/新增关系校验与原MVU通过；一个完整utterance及双听者received回执，两人各得整句，零待核，没有误要求分片。",
+        "schemaPass": true,
+        "localCheckPass": true,
+        "mvuWrites": 3,
+        "runtimeError": null,
+        "returnedModel": "gemini-3.8-flash-n"
+      },
+      {
+        "id": "range.none",
+        "request": 391,
+        "verdict": "pass",
+        "assessment": "完整同范围对不同听者保持received/not_received，检查没有误拒绝；原MVU仅player整句1条，bright0、待核0。",
+        "schemaPass": true,
+        "localCheckPass": true,
+        "mvuWrites": 3,
+        "runtimeError": null,
+        "returnedModel": "gemini-3.8-flash-n"
+      },
+      {
+        "id": "range.listeners",
+        "request": 392,
+        "verdict": "pass",
+        "assessment": "保留完整言说无回执、另有两个原文分片；各自绑定player/bright相反状态。原严格检查和新增关系检查通过，MVU仅player前半、bright后半各1条，无扩成整句或待核。",
+        "schemaPass": true,
+        "localCheckPass": true,
+        "mvuWrites": 4,
+        "runtimeError": null,
+        "returnedModel": "gemini-3.8-flash"
+      },
+      {
+        "id": "range.repeat",
+        "request": 393,
+        "verdict": "pass",
+        "assessment": "相同文本两次言说用不同原文坐标，第一次received第二次not_received；原严格校验及新关系检查通过，bright仅第一条知情，无误合并、误拒绝或待核。",
+        "schemaPass": true,
+        "localCheckPass": true,
+        "mvuWrites": 3,
+        "runtimeError": null,
+        "returnedModel": "gemini-3.8-flash-n"
+      }
+    ]
+  },
+  "verified": {
+    "original385NowRejectedWithZeroWrites": true,
+    "new388RejectedWithZeroWrites": true,
+    "originalRequestByteIdentical": true,
+    "noPromptSchemaParameterChanges": true,
+    "noReplyRepair": true,
+    "priorEvidenceUnchanged": 261,
+    "oldLedgerAttemptsUnchanged": true,
+    "formalProtectedUnchanged": 22,
+    "noDeploymentOrFormalStoryOrAutomaticApprovalRevision": true
+  },
+  "limits": [
+    "只拒绝同一听者在重叠原文范围上的互斥状态，不判断reason语义。",
+    "原例模型仍未分片；单条整句received配部分听清理由仍不能由该关系检查识别。",
+    "检查失败整批拒绝，不自动选取其中可用条目，也不修复既有记录。",
+    "候选ZIP和隔离安装仍为380版本，本轮只更新源码及离线证据。"
+  ]
+}

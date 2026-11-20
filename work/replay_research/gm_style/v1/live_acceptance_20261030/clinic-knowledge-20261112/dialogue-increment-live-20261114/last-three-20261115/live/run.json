@@ -1,0 +1,82 @@
+{
+  "authorization": "2026-11-15用户新增3次，最新合同补测08及原09/10-from08；后续承接本次真实待核，原剧情输入/参数保持。失败即停止整个批次，不重试、不继续不同例、不自动补回执、不转换action、不放宽校验，不部署/正式剧情/自动批准修订。",
+  "baseline": 331,
+  "limit": 3,
+  "cumulative": 334,
+  "remaining": 0,
+  "attempts": [
+    {
+      "id": "08-ambiguous-listener",
+      "customRequest": 332,
+      "state": "completed",
+      "requestBytes": 28552,
+      "requestSha256": "0e9442606b36f4e87f39caeb19296760aca286c2eecc074b9c423fe2fb7c7bf2",
+      "status": 200,
+      "elapsedMs": 4213,
+      "rawResponseSha256": "148f8bf2cf6493a086bc60a2d49a58e08bdb6717b122682ecad2147eef9620f6",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 3662,
+        "completion_tokens": 583,
+        "total_tokens": 4245
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "保留两人中一人没听清但无法指认的歧义；两名被告知者列在uncertain回执，无人获知情，待核1且当轮不问。utterance绑定与coverage正确，Schema及7引用通过。"
+    },
+    {
+      "id": "09-unrelated-from08",
+      "customRequest": 333,
+      "state": "completed",
+      "requestBytes": 2143,
+      "requestSha256": "704a2492a52f0fd83b3d1dcc5fa797a3fcbf5a5b684195b2f00c6bdeae1b3d15",
+      "status": 200,
+      "elapsedMs": 3176,
+      "rawResponseSha256": "cd65fb95ddf65746e54c84782ffbc368398041d1cb88b10b34d0731db090a61b",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 851,
+        "completion_tokens": 81,
+        "total_tokens": 1015,
+        "completion_tokens_details": {
+          "reasoning_tokens": 83
+        }
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "承接本次332真实待核，原午饭/衣领请求未变；模型required空，原运行链ready/questions空/asked0，仍无知情授予；隔离seed保持revision2。"
+    },
+    {
+      "id": "10-dependent-from08",
+      "customRequest": 334,
+      "state": "completed",
+      "requestBytes": 2161,
+      "requestSha256": "03eadeb743d7bcc2e53888d0c207b4f75020ff757313bb68c986bf31c1afbd19",
+      "status": 200,
+      "elapsedMs": 7258,
+      "rawResponseSha256": "9c85ffe5e0a4f1a3da1b0cbcd7a2ab30ff07604b293440bbdeef0d38aa8d5b33",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 850,
+        "completion_tokens": 196,
+        "total_tokens": 1553,
+        "completion_tokens_details": {
+          "reasoning_tokens": 507
+        }
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "原交货地点依赖请求不变，返回本次332唯一真实待核ID；原运行链deferred/询问1次，保持原歧义与来源，不代答、不授予知情，只标prompted。与09为同一真实08快照的平行对照。"
+    }
+  ],
+  "closed": true,
+  "retries": 0,
+  "stopOnAnyFailure": true,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "stopReason": "budget-exhausted"
+}

@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-18",
+  "inputs": {
+    "A1": {
+      "file": "A1.request.json",
+      "bytes": 111274,
+      "sha256": "64db4043559d82638ef6b7acee079874f5a8f2182256f7990ab0504ddb469496",
+      "origin": "../before-narration.request.json"
+    },
+    "A2": {
+      "file": "A2.request.json",
+      "bytes": 111734,
+      "sha256": "f2e85a5f08201998fd8fb947bf1cf83999f808435ae7ff41a0bb420df3c9b007"
+    }
+  },
+  "change": {
+    "operation": "insert",
+    "jsonPointer": "/messages/13/content",
+    "location": "Immediately after the original one-line knowledge projection JSON and before the line break introducing 受控命题用于对白、判断和行动理由时.",
+    "zeroBasedUtf8FileByteOffset": 106761,
+    "zeroBasedDecodedContentCodePointOffset": 1158,
+    "insertedUtf8FileBytes": 460,
+    "insertedDecodedText": "\n受控话题：医馆馆主与雪老之间是否有关系？两人过去有哪些来往（如有）？\n御临风、布莱特和黄泉在这个话题上均无已建立的获知来源。这个状态只描述三人对此话题的知情，关系与来往是否存在仍未由此判定。人物可以依据自己已有的信息提出明确的推测、询问、表示不知或自然回避。不得编造听闻、亲历或其他来源来说明自己为何知情。",
+    "insertedRawJsonText": "\\n受控话题：医馆馆主与雪老之间是否有关系？两人过去有哪些来往（如有）？\\n御临风、布莱特和黄泉在这个话题上均无已建立的获知来源。这个状态只描述三人对此话题的知情，关系与来往是否存在仍未由此判定。人物可以依据自己已有的信息提出明确的推测、询问、表示不知或自然回避。不得编造听闻、亲历或其他来源来说明自己为何知情。",
+    "restoreA1": "Delete exactly insertedUtf8FileBytes bytes starting at zeroBasedUtf8FileByteOffset from A2. The resulting bytes must equal A1."
+  },
+  "referenceOnly": {
+    "catalogFactId": "clinic.owner.xuelao.old-friend",
+    "classificationCall": 547,
+    "classificationEvidence": "../before-classification.content.txt",
+    "historicalNarrationCall": 548,
+    "priorEvidenceSha256": {
+      "before-narration.request.json": "64db4043559d82638ef6b7acee079874f5a8f2182256f7990ab0504ddb469496",
+      "before-narration.raw-response.txt": "32fef71f80a0324a5d900f1fbd1c0f241e4556f6e957cb5db3bd91619231f109",
+      "before-narration.content.txt": "72e55c3e95ad5bfbd34847c8fc84f6c0beb419f0434ddb31a4e9af92e1dbf5a9",
+      "before-classification.content.txt": "fb753638a68fd267e48baa3b0546caed7e744ca5dba0afc372ee802613ebfc55",
+      "before-classification.raw-response.txt": "183804ba2c272a4c4f5022caaadb94366fa75eeb7cce7591836303a65daf5062",
+      "run.json": "e3d5fdae80bc62b759f8f3e38a39f485fe92fd4911c23731631c652c6ebd4693"
+    }
+  },
+  "verification": {
+    "A1ExactSourceBytes": true,
+    "deletingInsertionRecreatesA1": true,
+    "onlyChangedJsonValue": "/messages/13/content",
+    "originalMessagesAndParametersPreserved": true,
+    "originalBackgroundRestrictionPreserved": true,
+    "knowledgeFactsPreserved": true
+  },
+  "coordinatorReview": {
+    "date": "2026-11-18",
+    "status": "preparation_review_passed_not_executed",
+    "independentlyVerifiedByteRestoration": true,
+    "independentlyVerifiedOnlyOneJsonValueChanged": true,
+    "protectedFilesChecked": 18,
+    "protectedFilesUnchanged": true,
+    "modelEffectVerified": false
+  },
+  "outboundModelCallsThisPreparation": 0,
+  "priorLedger": {
+    "cumulative": 552,
+    "remaining": 0,
+    "closed": true
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "status": "six-authorized-narrations-integrity-verified",
+  "modelCalls": 6,
+  "completeResponses": 6,
+  "cumulativeRequestAttempts": 272,
+  "remaining": 0,
+  "retries": 0,
+  "classificationModelCalls": 0,
+  "firstTurns": 4,
+  "naturalFollowups": 2,
+  "priorClinicChainExcluded": true,
+  "newKnowledgeReceipts": 0,
+  "formalProtectedFilesUnchanged": 22,
+  "productAndCandidateUnchanged": true,
+  "regressionSuitesRerun": false,
+  "priorLocalTests": 79,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticRoutesResumed": false,
+  "semanticScope": "Manual bounded judgments in run.json, not an automatic semantic score; do not combine with the old correction chain or claim overall literary quality passed.",
+  "modelLabelNote": "Request label unchanged: [抗截断]gemini-3.8-flash. All six upstream responses self-identify as gemini-3.8-flash-n; earlier clinic responses used gemini-3.8-flash. Cross-run routing/version equivalence is not established.",
+  "results": [
+    {
+      "id": "01-relation-known",
+      "customRequest": 267,
+      "status": 200,
+      "finishReason": "stop",
+      "requestBytes": 106807,
+      "requestSha256": "4f46b33c27ad3b5ec56d2d50f68f6335915c44cdbf159e0fba7b733ef89e7692",
+      "rawResponseBytes": 1018,
+      "rawResponseSha256": "d677e0a3dd393565c21792fa4500b3ff4d53947b1140ef89d0e710d7e22e4bf4",
+      "rawResponseUnmodified": true,
+      "responseModel": "gemini-3.8-flash-n",
+      "parent": null,
+      "knowledgeCounts": [
+        1,
+        2,
+        1
+      ],
+      "newKnowledgeReceipts": 0,
+      "manualVerdict": "pass"
+    },
+    {
+      "id": "02-relation-undetermined",
+      "customRequest": 268,
+      "status": 200,
+      "finishReason": "stop",
+      "requestBytes": 106760,
+      "requestSha256": "8e5963f86afa2700a7cf128edd2de593e0a5de6a2068a29e07d2a0ba18589345",
+      "rawResponseBytes": 1019,
+      "rawResponseSha256": "9fc96523371137e205db9d4abf3a6551ed24da35ed3e38a8509c6b3dafb109a6",
+      "rawResponseUnmodified": true,
+      "responseModel": "gemini-3.8-flash-n",
+      "parent": null,
+      "knowledgeCounts": [
+        1,
+        2,
+        1
+      ],
+      "newKnowledgeReceipts": 0,
+      "manualVerdict": "pass"
+    },
+    {
+      "id": "03-purpose-unstated",
+      "customRequest": 269,
+      "status": 200,
+      "finishReason": "stop",
+      "requestBytes": 106764,
+      "requestSha256": "693b375b8436927c6132e92a70f2d925ca414e67c67cb7bdd4c5478f589317ef",
+      "rawResponseBytes": 813,
+      "rawResponseSha256": "1466696bc3026471589c82b2f4d86637cfd3e5b552ecbd128208ca39ce0c30c1",
+      "rawResponseUnmodified": true,
+      "responseModel": "gemini-3.8-flash-n",
+      "parent": null,
+      "knowledgeCounts": [
+        1,
+        2,
+        1
+      ],
+      "newKnowledgeReceipts": 0,
+      "manualVerdict": "pass"
+    },
+    {
+      "id": "04-purpose-stated",
+      "customRequest": 270,
+      "status": 200,
+      "finishReason": "stop",
+      "requestBytes": 107023,
+      "requestSha256": "5343acff4f4b62fe6c802c6877daaa95c9583642894a2f4e1fba7c4e3e795aca",
+      "rawResponseBytes": 868,
+      "rawResponseSha256": "4e33dfd9228c05e6b5da11abc894ca98388e30ddd0498159b1874ebe6cf6d244",
+      "rawResponseUnmodified": true,
+      "responseModel": "gemini-3.8-flash-n",
+      "parent": null,
+      "knowledgeCounts": [
+        1,
+        2,
+        1
+      ],
+      "newKnowledgeReceipts": 0,
+      "manualVerdict": "pass"
+    },
+    {
+      "id": "05-relation-natural",
+      "customRequest": 271,
+      "status": 200,
+      "finishReason": "stop",
+      "requestBytes": 107710,
+      "requestSha256": "c905be869db0101cdd0f8b89520a4ca309bf4eba3efd043ed1d2d8f84016100d",
+      "rawResponseBytes": 878,
+      "rawResponseSha256": "6ab11368721392debd3f517fcb727d9e0145751e839a990baf1b61c21c7705b1",
+      "rawResponseUnmodified": true,
+      "responseModel": "gemini-3.8-flash-n",
+      "parent": "02-relation-undetermined",
+      "knowledgeCounts": [
+        1,
+        2,
+        1
+      ],
+      "newKnowledgeReceipts": 0,
+      "manualVerdict": "pass"
+    },
+    {
+      "id": "06-purpose-natural",
+      "customRequest": 272,
+      "status": 200,
+      "finishReason": "stop",
+      "requestBytes": 107568,
+      "requestSha256": "fe970ad1bb853999844b10593b0f619310e06f2f923af52925ed4d628276dbd2",
+      "rawResponseBytes": 736,
+      "rawResponseSha256": "0bd70280ef6e7fad9ededd116b96898923bea8590d5af09690bd11e5261c78e8",
+      "rawResponseUnmodified": true,
+      "responseModel": "gemini-3.8-flash-n",
+      "parent": "03-purpose-unstated",
+      "knowledgeCounts": [
+        1,
+        2,
+        1
+      ],
+      "newKnowledgeReceipts": 0,
+      "manualVerdict": "partial"
+    }
+  ]
+}

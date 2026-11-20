@@ -1,0 +1,39 @@
+✖ bound prompt retains the existing direct-reception rule without changing schema, input or other guidance (32.4098ms)
+✔ direct speech needs no acknowledgement; explicit obstruction and uncertainty retain their own outcomes (32.5006ms)
+✔ bound utterance maps only explicit nested receipts and retains mandatory coverage (1.4473ms)
+✔ action, forged reference, missing receipts and omitted target coverage reject without mutation (2.3229ms)
+✔ uncertain coverage preserves explicit partial receipt plus uncertainty without blanket blocking (1.346ms)
+✔ none and unresolved-only coverage require actual source evidence, never synthesize receipts (1.2799ms)
+✔ original source, role, null-pair and identity checks remain in force (1.5453ms)
+✔ schema rejects nested action and missing coverage and allows explicit none and uncertainty (501.7855ms)
+✔ model adapter uses version2 and original MVU path persists coverage and independent known/pending rows (10.3911ms)
+✔ historical flat failures are retained and cannot silently enter the new wire (6.171ms)
+✔ model-path invalid coverage writes nothing; explicit unreceived and none never grant or ask (13.3366ms)
+✔ planned speech keeps original intent claim and none coverage without creating utterance (1.1345ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 11
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 992.1762
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-bound.test.mjs:15:1
+✖ bound prompt retains the existing direct-reception rule without changing schema, input or other guidance (32.4098ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(bound.messages[0].content.includes(rule))
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-bound.test.mjs:20:62)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

@@ -1,0 +1,31 @@
+{
+  "kind": "implicit.unrelated.nested",
+  "startedAt": "2026-11-15T02:02:14.148Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T02:02:19.939Z",
+  "headersElapsedMs": 5791,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5aaac2f6b77f529-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 02:02:19 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=VDERZP040bHb3HEsqSQcmXnU1JgA7dzHCVgEGvKGMlmghpuez5CXHEUYRjGl30fWS87jDmbu7rmDSdV2bMUyr9WJxAaZCtUfY6UEnjTDuvS3M7Q6euEkAKqbkKAVMQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611150202144594724928268d9d6hHbLz76X",
+    "x-zeabur-ip-country": "ES",
+    "x-zeabur-request-id": "598a734b-58cc-4086-bf67-ea5b643582b0"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"60113689-51a2-446c-8f0e-de3ec9bfa1ef\",\"object\":\"chat.completion\",\"created\":1794708139,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/2\\\",\\\"contextRef\\\":\\\"2f1a52c3538f07e999146110c0e7ab44135986981ab7ffd68114a14dead7a19a\\\",\\\"inputRef\\\":\\\"assertion.d839c75e03e9c92c4b0baf1a3503bf0098a369cb5afb63634383e3d62a2f22b9\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"turn.utterance.bright.1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"bright\\\",\\\"content\\\":\\\"渡口停航。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":21,\\\"end\\\":24,\\\"quote\\\":\\\"布莱特\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":32,\\\"end\\\":37,\\\"quote\\\":\\\"渡口停航。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":21,\\\"end\\\":38,\\\"quote\\\":\\\"布莱特独自低声念道：“渡口停航。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"turn.reception.bright.1.1\\\",\\\"speakerId\\\":\\\"bright\\\",\\\"recipientIds\\\":[],\\\"recipientSpans\\\":[],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":38,\\\"end\\\":47,\\\"quote\\\":\\\"其他人都没有听到。\\\"},\\\"status\\\":\\\"not_received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"布莱特独自低声念道，且明确记录其他人都没有听到。\\\"}]}],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":47,\\\"quote\\\":\\\"黄泉没有回答，只在心里盘算归程。街另一端，布莱特独自低声念道：“渡口停航。”其他人都没有听到。\\\"},\\\"reason\\\":\\\"黄泉未言说，布莱特低声念道的内容已被记录且明确未被其他人听到。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4139,\"completion_tokens\":507,\"total_tokens\":4646}}",
+  "responseBytes": 1983,
+  "responseBodySha256BeforePrivacyRedaction": "5562e9f5c8820761183ec711aa5d100b171765ae93bf2cae1ac5146bd1242687",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T02:02:19.949Z",
+  "elapsedMs": 5801
+}

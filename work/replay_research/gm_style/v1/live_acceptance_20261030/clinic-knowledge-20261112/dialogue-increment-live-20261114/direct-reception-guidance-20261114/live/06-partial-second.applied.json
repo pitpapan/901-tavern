@@ -1,0 +1,253 @@
+{
+  "id": "06-partial-second",
+  "localProtocolPassed": true,
+  "result": {
+    "status": "processed",
+    "pending": []
+  },
+  "asked": [],
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "isolated.dialogue.live.v1",
+    "chatId": "isolated.dialogue.parallel.06-partial-second",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "well.closed": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "well.closed",
+        "entityId": "well",
+        "field": "reported_status",
+        "value": "北街水井暂时停用",
+        "certainty": "rumor",
+        "visibility": "private"
+      },
+      "dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a.message": {
+        "id": "dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a.message",
+        "entityId": "player",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "player",
+          "text": "改从西桥绕行"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      }
+    },
+    "events": {
+      "received.dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a": {
+        "id": "received.dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "bright"
+          ],
+          "propositionRefs": [
+            "dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 0,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "isolated.dialogue.parallel.06-partial-second",
+            "messageId": 0,
+            "swipeId": 0,
+            "text": "御临风对布莱特说：“北门暂停通行，改从西桥绕行。”布莱特只听清“改从西桥绕行”，没听清前半句。"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/isolated.dialogue.parallel.06-partial-second",
+            "line": 1
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a.bright.dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a.message.event": {
+        "id": "dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a.bright.dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a.bright.dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a.message",
+            "knowerId": "bright",
+            "propositionRef": "dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a.message",
+            "eventRef": "received.dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 0,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/isolated.dialogue.parallel.06-partial-second",
+            "line": 1
+          }
+        ]
+      }
+    },
+    "knowledge": {
+      "dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a.bright.dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a.message": {
+        "id": "dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a.bright.dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a.message",
+        "knowerId": "bright",
+        "propositionRef": "dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a.message",
+        "eventRef": "received.dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      }
+    },
+    "dialogueBatches": {
+      "dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362": {
+        "id": "dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362",
+        "sourceAnchor": {
+          "chatId": "isolated.dialogue.parallel.06-partial-second",
+          "messageId": 0,
+          "swipeId": 0,
+          "text": "御临风对布莱特说：“北门暂停通行，改从西桥绕行。”布莱特只听清“改从西桥绕行”，没听清前半句。"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a",
+            "claimId": "utterance-turn-part2",
+            "speakerId": "player",
+            "recipientIds": [
+              "bright"
+            ],
+            "propositionRef": null,
+            "content": "改从西桥绕行",
+            "quote": "改从西桥绕行",
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "布莱特明确只听清“改从西桥绕行”",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 25,
+              "end": 39,
+              "quote": "布莱特只听清“改从西桥绕行”"
+            },
+            "unresolved": []
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "recorded",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 47,
+              "quote": "御临风对布莱特说：“北门暂停通行，改从西桥绕行。”布莱特只听清“改从西桥绕行”，没听清前半句。"
+            },
+            "reason": "已完整记录御临风发言及布莱特对后半句听清、前半句没听清的接收情况"
+          }
+        ]
+      }
+    }
+  },
+  "context": {
+    "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+    "actorKnowledge": [
+      {
+        "actorId": "bright",
+        "name": "布莱特",
+        "facts": [
+          {
+            "id": "dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a.message",
+            "content": {
+              "kind": "reported_message",
+              "speakerId": "player",
+              "text": "改从西桥绕行"
+            },
+            "belief": "uncertain",
+            "access": "learned",
+            "effectiveAt": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 0,
+              "actorId": "legacy.story"
+            },
+            "learnedAt": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 0,
+              "actorId": "legacy.story"
+            },
+            "sources": [
+              {
+                "eventRef": "received.dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a",
+                "channel": "message",
+                "belief": "uncertain",
+                "senderId": null,
+                "learnedAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "sourceAnchor": {
+                  "chatId": "isolated.dialogue.parallel.06-partial-second",
+                  "messageId": 0,
+                  "swipeId": 0,
+                  "text": "御临风对布莱特说：“北门暂停通行，改从西桥绕行。”布莱特只听清“改从西桥绕行”，没听清前半句。"
+                },
+                "disclosure": null
+              }
+            ],
+            "eventRef": "received.dialogue.a6ec9034482daa4c7d6ec80042142a91f39cdf8773ada0369461d25183edb362.7dead87fbba7d5729e6ca8e6fe88191dd4b6feea46cd302a6111ea9742196a4a",
+            "channel": "message",
+            "learnedAtMessage": 0
+          }
+        ]
+      },
+      {
+        "actorId": "huang",
+        "name": "黄泉",
+        "facts": []
+      },
+      {
+        "actorId": "player",
+        "name": "御临风",
+        "facts": []
+      }
+    ],
+    "availableInformation": []
+  },
+  "semanticAssessment": "pending-manual"
+}

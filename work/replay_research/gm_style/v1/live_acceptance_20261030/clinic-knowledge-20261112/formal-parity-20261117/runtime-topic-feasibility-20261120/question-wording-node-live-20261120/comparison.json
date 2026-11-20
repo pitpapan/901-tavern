@@ -1,0 +1,100 @@
+{
+  "date": "2026-11-20",
+  "counts": {
+    "orchestrator": {
+      "F": 0,
+      "N": 5,
+      "U": 3,
+      "X": 0
+    },
+    "narrative": {
+      "F": 3,
+      "N": 4,
+      "U": 1,
+      "X": 0
+    }
+  },
+  "rows": [
+    {
+      "call": 609,
+      "condition": "before",
+      "wording": "original",
+      "orchestrator": "N",
+      "narrative": "N",
+      "finalAudit": "N",
+      "agreement": true
+    },
+    {
+      "call": 610,
+      "condition": "received-huang",
+      "wording": "neutral",
+      "orchestrator": "N",
+      "narrative": "N",
+      "finalAudit": "N",
+      "agreement": true
+    },
+    {
+      "call": 611,
+      "condition": "received-bright",
+      "wording": "original",
+      "orchestrator": "N",
+      "narrative": "N",
+      "finalAudit": "N",
+      "agreement": true
+    },
+    {
+      "call": 612,
+      "condition": "reopened-bright",
+      "wording": "neutral",
+      "orchestrator": "N",
+      "narrative": "U",
+      "finalAudit": "N",
+      "agreement": false
+    },
+    {
+      "call": 613,
+      "condition": "received-huang",
+      "wording": "original",
+      "orchestrator": "U",
+      "narrative": "F",
+      "finalAudit": "U",
+      "agreement": false
+    },
+    {
+      "call": 614,
+      "condition": "before",
+      "wording": "neutral",
+      "orchestrator": "N",
+      "narrative": "N",
+      "finalAudit": "N",
+      "agreement": true
+    },
+    {
+      "call": 615,
+      "condition": "reopened-bright",
+      "wording": "original",
+      "orchestrator": "U",
+      "narrative": "F",
+      "finalAudit": "U",
+      "agreement": false
+    },
+    {
+      "call": 616,
+      "condition": "received-bright",
+      "wording": "neutral",
+      "orchestrator": "U",
+      "narrative": "F",
+      "finalAudit": "U",
+      "agreement": false
+    }
+  ],
+  "matchingLabels": 4,
+  "sharedClearFailures": 0,
+  "conclusion": "终审核采用总控5N/3U；四处初判分歧保留，不称共同认定3F或8条全通过。",
+  "initialSha256": {
+    "reviews\\narrative-initial.json": "b8b40f24f6519d5a87a67ced1944aac50d146b810bf5c11660b61aee0aa12a42",
+    "reviews\\narrative-initial.md": "b7c63fd50fde7694788e1f6c8880f10bbc610039fa0389ae1f8c97fc1bba872f",
+    "reviews\\orchestrator-initial.json": "a17e9f1526ee4cd1b3b4a8f59f72c7a7354795e68fa1e8c1e3db6aefcc054369",
+    "reviews\\orchestrator-initial.md": "082943f95c0a778d71a34b5e0c55f11dd0630c706df55268a38292743fb99f00"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "authorization": "用户2026-11-13回复：给与8次调用",
+  "baseline": 240,
+  "limit": 8,
+  "ceiling": 248,
+  "plannedThisRound": 4,
+  "attempts": [
+    {
+      "id": "01-before",
+      "customRequest": 241,
+      "state": "completed",
+      "requestBytes": 104349,
+      "requestSha256": "5e6ac2a7e5be9d48191fd915f94878c6bf220155e1dbc34c8193c29221c79640",
+      "status": 200,
+      "elapsedMs": 4259,
+      "finishReason": "stop",
+      "responseId": "1d14c172-38a1-4783-8102-24efbf19720d",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 26121,
+        "completion_tokens": 97,
+        "total_tokens": 26218
+      },
+      "contentCharacters": 101
+    },
+    {
+      "id": "02-received",
+      "customRequest": 242,
+      "state": "completed",
+      "requestBytes": 105060,
+      "requestSha256": "fe219949006bd8b8cca8a7414fb1ce50257b2fdf21e630e57404ac2e510438c3",
+      "status": 200,
+      "elapsedMs": 3590,
+      "finishReason": "stop",
+      "responseId": "824c02fb-91f5-4032-8fa7-39dc03222447",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 26307,
+        "completion_tokens": 82,
+        "total_tokens": 26389
+      },
+      "contentCharacters": 79
+    },
+    {
+      "id": "03-unreceived",
+      "customRequest": 243,
+      "state": "completed",
+      "requestBytes": 105054,
+      "requestSha256": "ac79dc279f0f8d33387c577f34d9b8c129bcd298ba53b04d5992262a4b19441f",
+      "status": 200,
+      "elapsedMs": 2505,
+      "finishReason": "stop",
+      "responseId": "df943111-4b1a-45c1-84f9-99100e8a9a18",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 26305,
+        "completion_tokens": 75,
+        "total_tokens": 26380,
+        "prompt_tokens_details": {
+          "cached_tokens": 24247
+        }
+      },
+      "contentCharacters": 75
+    },
+    {
+      "id": "04-relayed",
+      "customRequest": 244,
+      "state": "completed",
+      "requestBytes": 105685,
+      "requestSha256": "91520d5760afc679b6dfc17f8456a5098ad0bbea462958777486ebbe860961b5",
+      "status": 200,
+      "elapsedMs": 3087,
+      "finishReason": "stop",
+      "responseId": "67afc586-120d-4955-984c-2f3d5c5e46d3",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 26468,
+        "completion_tokens": 70,
+        "total_tokens": 26538,
+        "prompt_tokens_details": {
+          "cached_tokens": 24262
+        }
+      },
+      "contentCharacters": 69
+    }
+  ],
+  "remaining": 4,
+  "model": "[抗截断]gemini-3.8-flash",
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "requestTimeoutMs": 180000,
+  "sharedTimeoutMs": 180000,
+  "retries": 0,
+  "classificationCalls": 0,
+  "extractionOrReviewCalls": 0,
+  "deployed": false,
+  "startedAt": "2026-11-13T10:13:55.816Z",
+  "stopReason": "four-frozen-requests-completed",
+  "finishedAt": "2026-11-13T10:14:09.281Z",
+  "elapsedMs": 13465,
+  "cumulative": 244,
+  "closed": true
+}

@@ -6,6 +6,7 @@ Run --plan, inspect 创作规划.yaml, then --export. JSON syntax is valid YAML 
 from pathlib import Path
 import argparse, copy, hashlib, json, re, shutil, subprocess, sys
 from collections import Counter
+from runtime_package import package_runtime
 
 ROOT = Path(__file__).resolve().parents[3]
 STAGE = Path(__file__).resolve().parent
@@ -382,7 +383,7 @@ def project_narrative_entry(script):
     # Refresh adopted entry options even when the intermediate CARD predates them.
     author=ROOT/'work/replay_research/gm_style/v1/authoring.json'
     helper=ROOT/'work/rules_engine/gm_runtime/narrative-style-projection.mjs'
-    result=subprocess.run(['node',str(helper)],input=json.dumps({'script':script,'authoring':read(author),'summary':True},ensure_ascii=False),capture_output=True,text=True,encoding='utf-8',check=True)
+    result=subprocess.run(['node',str(helper)],input=json.dumps({'script':script,'authoring':read(author),'summary':False,'knowledge':True},ensure_ascii=False),capture_output=True,text=True,encoding='utf-8',check=True)
     return json.loads(result.stdout)
 
 def integrate_runtime():
@@ -416,21 +417,9 @@ def integrate_runtime():
     manifest=[]
     pending=[ROOT/'work/rules_engine/gm_runtime'/name for name in ['replay-gate-script.example.js','narrative.mjs','integrated.mjs','opening.mjs','opening-binding.mjs','opening-scene-ui.mjs']]
     pending.append(STAGE/'branch-memory.mjs')
-    modules=set()
-    while pending:
-        src=pending.pop().resolve()
-        if src in modules:continue
-        assert src.is_relative_to(ROOT) and src.exists(),src
-        modules.add(src)
-        for rel in re.findall(r'''(?:from\s*|import\s*\()\s*['"]([^'"]+)['"]''',src.read_text(encoding='utf-8')):
-            if not rel.endswith(('.mjs','.js')):continue
-            if rel.startswith('.'):pending.append(src.parent/rel)
-            for prefix in ('/901-rules-runtime/','/901-combat-runtime/','/901-opening-combat/'):
-                if rel.startswith(prefix):pending.append(ROOT/rel[len(prefix):])
-    for src in sorted(modules):
-        dest=OUT/'runtime_patch/901-opening-combat'/src.relative_to(ROOT)
-        write(dest,src.read_text(encoding='utf-8').replace('/901-rules-runtime/','/901-opening-combat/').replace('/901-combat-runtime/','/901-opening-combat/'))
-        manifest.append({'source':str(src.relative_to(ROOT)),'source_sha256':sha(src),'destination':str(dest.relative_to(OUT)),'sha256':sha(dest)})
+    pending.extend(ROOT/'work/rules_engine/gm_runtime'/name for name in ['story-knowledge.mjs','clinic-knowledge-catalog.mjs'])
+    manifest=package_runtime(ROOT,OUT/'runtime_patch/901-opening-combat',pending)
+    for item in manifest:item['destination']=str(Path(item['destination']).relative_to(OUT))
     style_source=ROOT/'work/replay_research/gm_style/v1/authoring.json'
     style_dest=OUT/'runtime_patch/901-opening-combat/narrative-style.json'
     dump(style_dest,narrative['style'])

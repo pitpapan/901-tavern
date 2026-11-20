@@ -1,0 +1,9 @@
+{
+  "command": "node --test --test-reporter=tap tools/trpg-engine/tests/gm-assertion-proposition-mode.test.js",
+  "exitCode": 1,
+  "tests": 6,
+  "pass": 5,
+  "fail": 1,
+  "failure": "mode针对当前claim所表达的命题",
+  "subsequentFixtureCorrection": "audit测试须给draft绑定的prior，首次green尝试暴露测试夹具遗漏；仅修复夹具，最终全套通过。"
+}

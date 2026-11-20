@@ -1,0 +1,201 @@
+[
+  {
+    "id": "relation.followup.006",
+    "strict": true,
+    "finishReason": "stop",
+    "completionTokens": 1780,
+    "maxTokens": 4096,
+    "unchangedHttpBytes": true,
+    "closedReceipt": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "jsonError": {
+      "pos": 3675,
+      "message": "Extra data",
+      "context": "tatus\":\"extracted\",\"unresolved\":[]}]}"
+    },
+    "replyBindings": []
+  },
+  {
+    "id": "relation.followup.009",
+    "strict": true,
+    "finishReason": "stop",
+    "completionTokens": 2148,
+    "maxTokens": 4096,
+    "unchangedHttpBytes": true,
+    "closedReceipt": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "jsonError": null,
+    "replyBindings": [
+      {
+        "content": {
+          "fragmentId": "f4",
+          "quote": "“真要说想念的，哪怕只是小酒馆里一碗炖得烂熟的杂烩肉汤，配上刚烤透、皮还是脆的热麦饼，也比干粮强上十倍。要是能在窗边坐下，再来一壶温热的麦茶，这几天的奔波才算真正缓过劲来。”"
+        },
+        "listener": {
+          "actorId": "player",
+          "kind": "reply",
+          "span": {
+            "fragmentId": "f4",
+            "quote": "“真要说想念的，哪怕只是小酒馆里一碗炖得烂熟的杂烩肉汤，配上刚烤透、皮还是脆的热麦饼，也比干粮强上十倍。要是能在窗边坐下，再来一壶温热的麦茶，这几天的奔波才算真正缓过劲来。”"
+          },
+          "historyMessageId": 15
+        },
+        "evidence": {
+          "kind": "reply",
+          "span": {
+            "fragmentId": "f17",
+            "quote": "布莱特听到这话，"
+          }
+        },
+        "status": "received"
+      },
+      {
+        "content": {
+          "fragmentId": "f8",
+          "quote": "“热汤面，或者刚出锅的肉串。赶路的时候总觉得随便填饱肚子就行，真闻到街边的烟火气，倒确实想吃口带油盐味的热食。”"
+        },
+        "listener": {
+          "actorId": "player",
+          "kind": "reply",
+          "span": {
+            "fragmentId": "f8",
+            "quote": "“热汤面，或者刚出锅的肉串。赶路的时候总觉得随便填饱肚子就行，真闻到街边的烟火气，倒确实想吃口带油盐味的热食。”"
+          },
+          "historyMessageId": 15
+        },
+        "evidence": {
+          "kind": "reply",
+          "span": {
+            "fragmentId": "f8",
+            "quote": "“热汤面，或者刚出锅的肉串。赶路的时候总觉得随便填饱肚子就行，真闻到街边的烟火气，倒确实想吃口带油盐味的热食。”"
+          }
+        },
+        "status": "received"
+      }
+    ]
+  },
+  {
+    "id": "relation.followup.direct",
+    "strict": true,
+    "finishReason": "stop",
+    "completionTokens": 648,
+    "maxTokens": 4096,
+    "unchangedHttpBytes": true,
+    "closedReceipt": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "jsonError": {
+      "pos": 1040,
+      "message": "Expecting ',' delimiter",
+      "context": "{\"fragmentId\":\"f2\",\"quote\":\"对御临风说\" relapse\":null}}},{\"id\":\"turn.uttera"
+    },
+    "replyBindings": []
+  },
+  {
+    "id": "relation.followup.npc_reply",
+    "strict": true,
+    "finishReason": "stop",
+    "completionTokens": 497,
+    "maxTokens": 4096,
+    "unchangedHttpBytes": true,
+    "closedReceipt": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "jsonError": {
+      "pos": 1035,
+      "message": "Expecting ',' delimiter",
+      "context": "fragmentId\":\"f3\",\"quote\":\"渡口今晚停航。\" precedent\":null}}}]}],\"coverage\":{\""
+    },
+    "replyBindings": []
+  },
+  {
+    "id": "relation.followup.partial.strict",
+    "strict": true,
+    "finishReason": "stop",
+    "completionTokens": 830,
+    "maxTokens": 4096,
+    "unchangedHttpBytes": true,
+    "closedReceipt": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "jsonError": {
+      "pos": 1858,
+      "message": "Expecting ',' delimiter",
+      "context": "ragmentId\":\"f7\",\"quote\":\"后半句被车声盖住。\"堆}}}]}],\"coverage\":{\"status\":\"recor"
+    },
+    "replyBindings": []
+  },
+  {
+    "id": "relation.followup.ambiguous",
+    "strict": true,
+    "finishReason": "stop",
+    "completionTokens": 574,
+    "maxTokens": 4096,
+    "unchangedHttpBytes": true,
+    "closedReceipt": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "jsonError": {
+      "pos": 1075,
+      "message": "Expecting ',' delimiter",
+      "context": "fragmentId\":\"f5\",\"quote\":\"但无法确定是谁。\"来自\"}}}]}],\"coverage\":{\"status\":\"unc"
+    },
+    "replyBindings": []
+  },
+  {
+    "id": "relation.followup.obstacle",
+    "strict": true,
+    "finishReason": "stop",
+    "completionTokens": 539,
+    "maxTokens": 4096,
+    "unchangedHttpBytes": true,
+    "closedReceipt": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "jsonError": null,
+    "replyBindings": [
+      {
+        "content": {
+          "fragmentId": "f6",
+          "quote": "渡口今晚停航。"
+        },
+        "listener": {
+          "actorId": "player",
+          "kind": "reply",
+          "span": {
+            "fragmentId": "f5",
+            "quote": "仍答道："
+          },
+          "historyMessageId": 0
+        },
+        "evidence": {
+          "kind": "obstacle",
+          "span": {
+            "fragmentId": "f3",
+            "quote": "已听不到这里的声音。"
+          }
+        },
+        "status": "not_received"
+      }
+    ]
+  },
+  {
+    "id": "relation.followup.new_direct",
+    "strict": true,
+    "finishReason": "stop",
+    "completionTokens": 648,
+    "maxTokens": 4096,
+    "unchangedHttpBytes": true,
+    "closedReceipt": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "jsonError": {
+      "pos": 1031,
+      "message": "Expecting ',' delimiter",
+      "context": "{\"fragmentId\":\"f2\",\"quote\":\"对御临风说\" relapse_check:null}}},{\"id\":\"recept"
+    },
+    "replyBindings": []
+  }
+]

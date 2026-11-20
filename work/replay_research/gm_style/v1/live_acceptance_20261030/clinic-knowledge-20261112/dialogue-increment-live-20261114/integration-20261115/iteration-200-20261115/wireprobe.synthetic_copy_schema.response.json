@@ -1,0 +1,31 @@
+{
+  "kind": "wireprobe.synthetic_copy_schema",
+  "startedAt": "2026-11-15T21:46:17.928Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T21:46:20.426Z",
+  "headersElapsedMs": 2498,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b172a6dddfc6bd-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 21:46:20 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=5MR4Og6csHooN%2Bv%2BVjQJpMMVTyCGlEB%2F04YlnwdHjAdWwYTiTv9fczb7SfL86jtnoQJU9eRJpmA9mlRc1wyUHtitAe3z120ftfMNUzC3M8Hcs0JIUD%2FXSCTvRNZGBg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611152146181171019478268d9d6665IAdPX",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "375fbe8a-40c4-41ab-8f8e-063654b8eebe"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"c5d9ef1d-1200-4213-88d0-df9a7f10bb16\",\"object\":\"chat.completion\",\"created\":1794779180,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/6\\\",\\\"contextRef\\\":\\\"d2817f48d65a74efac36a829fd7a98088ef28185aa04903302ebaa436c67b880\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"speaker\\\":{\\\"actorId\\\":\\\"speaker_a\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"Speaker A\\\"}},\\\"content\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"the token is blue.\\\"},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"Speaker A tells Listener B: the token is blue.\\\"},\\\"receptions\\\":[{\\\"content\\\":{\\\"ref\\\":\\\"utterance.content\\\"},\\\"listener\\\":{\\\"actorId\\\":\\\"listener_b\\\",\\\"kind\\\":\\\"explicit\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"Listener B\\\"},\\\"historyMessageId\\\":null},\\\"evidence\\\":{\\\"kind\\\":\\\"direct\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"Speaker A tells Listener B: the token is blue.\\\"}},\\\"propositionRef\\\":null,\\\"reason\\\":\\\"Direct statement to Listener B.\\\"}]}],\\\"unresolved\\\":[],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"Speaker A tells Listener B: the token is blue. Listener B hears this statement.\\\"},\\\"reason\\\":\\\"One direct reception.\\\"}}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":547,\"completion_tokens\":317,\"total_tokens\":864}}",
+  "responseBytes": 1461,
+  "responseBodySha256BeforePrivacyRedaction": "949e62fb728e8a12ad567ea5b31eeb6ffe3ccbc3b72c1a494b6228f5b6fc97ae",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T21:46:20.437Z",
+  "elapsedMs": 2509
+}

@@ -1,0 +1,17 @@
+// Local evidence controls; data stays in this isolated workspace.
+router.post('/clinic-parity-phase',async(request,response)=>{
+ if(!['before','after','reopen'].includes(request.body.phase))return response.sendStatus(400);
+ const c=JSON.parse(fs901.readFileSync('clinic-parity-config.json','utf8'));c.phase=request.body.phase;
+ fs901.writeFileSync('clinic-parity-config.json',JSON.stringify(c));response.json({phase:c.phase,browserUpstreamCalls:0});
+});
+router.post('/clinic-parity-evidence',async(request,response)=>{
+ const c=JSON.parse(fs901.readFileSync('clinic-parity-config.json','utf8')),label=request.body.label,chatId=request.body.chatId;
+ if(!/^[-a-zA-Z0-9]+$/.test(label)||typeof chatId!=='string'||/[\\/]/.test(chatId)||!chatId.includes('Branch #'))return response.sendStatus(400);
+ const budget=fs901.existsSync(c.evidenceDir+'/../run.json')?JSON.parse(fs901.readFileSync(c.evidenceDir+'/../run.json','utf8')):{used:0,cumulative:546};
+ request.body.modelCalls=budget.used;request.body.cumulative=budget.cumulative;request.body.browserUpstreamCalls=0;
+ const file=c.evidenceDir+'/'+label+'.json';if(fs901.existsSync(file))return response.sendStatus(409);
+ const chatFile='data/default-user/chats/901 帝都初始卡 独立事项版 20261105/'+chatId+'.jsonl',bytes=fs901.readFileSync(chatFile);
+ fs901.writeFileSync(c.evidenceDir+'/'+label+'.seed.jsonl',bytes,{flag:'wx'});
+ fs901.writeFileSync(file,JSON.stringify(request.body,null,2),{flag:'wx'});
+ response.json({saved:true,seedSha256:hash901('sha256').update(bytes).digest('hex'),externalModelCalls:budget.used,modelCalls:budget.used,cumulative:budget.cumulative});
+});

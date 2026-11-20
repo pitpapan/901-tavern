@@ -1,0 +1,18 @@
+2026-11-14 首例明确接收：仅更新规范化标签与共用引用说明的一次真实复测
+
+授权新增1次，实际custom275，HTTP200/stop，10424毫秒完整返回。1/1已用、余额0、已关闭，无重试。原273/274失败、旧账本及未用额度保持。
+
+request.json是实际发送的完整6186字节请求，前次custom274为5416字节。只在system加入本次规范化说明，新增文本769字节（JSON转义后请求增量770）；删除该段后messages完全与274相同，user字符串、剧情、角色、事实、记忆、inputRef/contextRef和全部生成参数不变。模型标签[抗截断]gemini-3.8-flash，temperature1/top_p1/max_tokens4096/stream=false/presence_penalty0/frequency_penalty0，超时180000ms。上游自报gemini-3.8-flash-n，和前两次相同。
+
+raw-response.txt完整保存原始响应，content.txt原样取出message.content，response.json保留HTTP元数据及响应。原始响应哈希f7c73c446061864514d5ba58e4236d67324c5e425e40bc210c55cb30056417b0，与传输时正文哈希一致。未补引用、清空字段或改写任何模型内容。
+
+本次通过的指标：
+1. 原断言合同及普通对白入口校验通过，非null字段没有缺span。
+2. 模型将name规范化为“通行状态”，name/value均明确引用current[11,13)“封闭”；主体为东门，reported归属布莱特。没有添加具体禁令、时限或原因。
+3. reception指向claim-1的完整“东门封闭。”，说话者bright、接收者huang、received、新来源消息propositionRef=null均与输入一致。
+4. 原样回放原隔离seed，result=processed、pending=[]、revision3。仅黄泉获得一条private/uncertain来源消息，content.speakerId=bright，其他人无知情；正面reason没有误阻断。正文未改，未写正式剧情或正式存档。
+
+保留的限制：
+模型本次claim-3“听清”动作的object及其span同时为null，与上次非空对象不同。receptions通过claimId及听清依据仍保留接收者与内容关联，所以明确接收登记指标通过；但独立动作断言未表达跨句对象，不能宣称完整抽取无遗漏、不能证明所有跨句省略处理正确，也不能推断模型有意规避。总体人工记录partial，分别列明通过项与未证明项；原回复保持，不做修补或追加调用。
+
+verification.json确认22正式文件、7产品源及此前证据保持。没有产品改动、引用校验放宽、部署或自动批准/修订恢复。未重跑上一阶段148项离线测试，本轮为1次实际模型调用及原样离线回放。单例结果不证明跨场景稳定或因果改善。

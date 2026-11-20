@@ -1,0 +1,34 @@
+{
+  "baseline": 280,
+  "limit": 1,
+  "cumulative": 281,
+  "remaining": 0,
+  "attempts": [
+    {
+      "customRequest": 281,
+      "state": "completed",
+      "requestSha256": "2b1ce9d870dfd88fd5a0ab1b6396948a544fdeaebf45ba0717de5830b11d8ef6",
+      "requestBytes": 8519,
+      "status": 200,
+      "elapsedMs": 9477,
+      "rawResponseSha256": "068d48ef9a9ecd4808798074183a4bcb72a989b6181e82b308edc0cd5ed8fa7e",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 2380,
+        "completion_tokens": 685,
+        "total_tokens": 3065
+      },
+      "localProtocolPassed": true,
+      "manualVerdict": "partial",
+      "manualAssessment": "Original protocol and no-reception outcome pass. scope.time is now a string with separate span; all coordinates and scalar types valid. No knowledge or world fact grant, pending empty. Planned content is separately mode asserted but retains explicit intended-content attribution; do not certify full modality extraction. No coercion or repair."
+    }
+  ],
+  "closed": true,
+  "retries": 0,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "stopReason": "single-call-closed-partial-semantic-assessment"
+}

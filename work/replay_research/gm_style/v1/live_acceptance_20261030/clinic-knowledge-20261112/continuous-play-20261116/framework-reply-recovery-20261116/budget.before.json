@@ -1,0 +1,160 @@
+{
+  "authorization": "authorization.json",
+  "baseline": 534,
+  "limit": 12,
+  "used": 6,
+  "remaining": 6,
+  "cumulative": 540,
+  "ceiling": 546,
+  "attempts": [
+    {
+      "id": "round-01",
+      "customRequest": 535,
+      "state": "completed",
+      "purpose": "已明确授权12次；连续试玩首轮，直接追问布莱特已知关系，原冻结请求原样发送，不加抽取或审稿。",
+      "requestBytes": 110154,
+      "requestSha256": "3b63354fa279eb77012516fadb389e6a1e236909c84716bafa1532c8e9f6a315",
+      "startedAt": "2026-11-16T17:36:29.166Z",
+      "status": 200,
+      "elapsedMs": 4125,
+      "rawResponseSha256": "2035082bdef1596b611ed370e89a4ba06011a33310605cbb644ab1bf636bea0e",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 27517,
+        "completion_tokens": 201,
+        "total_tokens": 27718
+      },
+      "manualVerdict": "mixed",
+      "assessment": "正向知情使用通过：旧识/有交情，未知往事保留、无虚构获知来源；可不是雪老自己是生硬设定复述，仅记录不补提示。真实保存后对御临风直接受答及黄泉旁听作明示本例人工接收，未作为自动规则。继续实际问路。"
+    },
+    {
+      "id": "round-02",
+      "customRequest": 536,
+      "state": "completed",
+      "purpose": "连续第二轮：承接真实535与明示人工接收，玩家实际走近原有杂货铺伙计询问医馆路线；不预填路线或NPC答案。",
+      "requestBytes": 114348,
+      "requestSha256": "ecebba43dc46df7404c8323442316bfb024241b6644cada438cd7bdf27aecec8",
+      "startedAt": "2026-11-16T17:43:04.840Z",
+      "status": 200,
+      "elapsedMs": 4970,
+      "rawResponseSha256": "012e6f20bb86cc87150f6e4e60c75ecbd7c9d09fc2ce106e9709a9aa8d89c941",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 28647,
+        "completion_tokens": 220,
+        "total_tokens": 28867
+      },
+      "manualVerdict": "pass",
+      "assessment": "承接实际问路动作，伙计给出可执行路线与关门提醒，回到自己的工作自然收尾；没有代玩家敲门、进馆或交信。路线暂为该NPC当场说法，尚待到场观察，不升级为正式地理或已入馆。"
+    },
+    {
+      "id": "round-03",
+      "customRequest": 537,
+      "state": "completed",
+      "purpose": "连续第三轮：按真实536指路明确授权步行寻访，保留关门提醒，由模型实际呈现到场情况，不预定开门或进馆。",
+      "requestBytes": 115403,
+      "requestSha256": "7f49592e44eef9b9163d8fa1332194216d1a1f27612d03f16dd3c495123b9efb",
+      "startedAt": "2026-11-16T17:45:19.386Z",
+      "status": 200,
+      "elapsedMs": 4619,
+      "rawResponseSha256": "f59286bfdd10491cad9f3bcb6d8863eefb8415684df03667aa058a1da176795e",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 28939,
+        "completion_tokens": 379,
+        "total_tokens": 29318,
+        "prompt_tokens_details": {
+          "cached_tokens": 24481
+        }
+      },
+      "manualVerdict": "pass",
+      "assessment": "玩家已明确授权按伙计路线步行，正文顺序承接街口/平桥/药葫芦招牌并到达闭馆门前；关门提醒得到现场观察，未代玩家敲门、开门、入馆或交信。同伴仅各自观察。不是将授权行路判为越界。"
+    },
+    {
+      "id": "round-04",
+      "customRequest": 538,
+      "state": "completed",
+      "purpose": "连续第四轮：根据真实537闭门现场，玩家明确叩门询问并说明推荐信来意；不预定有人、开门或收信。",
+      "requestBytes": 116811,
+      "requestSha256": "f35f4a256b681904cceb42c45005cb5df07aa7d59f7e25c35672982812571b60",
+      "startedAt": "2026-11-16T17:47:30.689Z",
+      "status": 200,
+      "elapsedMs": 4685,
+      "rawResponseSha256": "7a0ac227ec78435abcd742f058b4103763cc7d7d3674ea95e5205570b82bc0ad",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 29325,
+        "completion_tokens": 260,
+        "total_tokens": 29585,
+        "prompt_tokens_details": {
+          "cached_tokens": 24475
+        }
+      },
+      "manualVerdict": "pass",
+      "assessment": "明确敲门没有被写成自动开门或递信成功，闭馆保持；布莱特把无人声保留为大概/至少前厅的判断，对街实际出声提供自然接话对象，不代玩家回应或承诺。"
+    },
+    {
+      "id": "round-05",
+      "customRequest": 539,
+      "state": "completed",
+      "purpose": "连续第五轮：回应真实538邻铺主动提醒，问馆主去向/可转交者，承接同一送信事项；不预定位置、闭馆原因、对方愿接信或任务完成。",
+      "requestBytes": 117912,
+      "requestSha256": "b00e82dce2f7f1dbacb6f1e65eae9ec461f5d9f35c6d39349f129adef11fe568",
+      "startedAt": "2026-11-16T17:49:47.107Z",
+      "status": 200,
+      "elapsedMs": 13821,
+      "rawResponseSha256": "9a6e9eaa9091358ba1dc44ef8c1043a096121e3736ee4115312daf15e3c0664c",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 29607,
+        "completion_tokens": 379,
+        "total_tokens": 29986,
+        "prompt_tokens_details": {
+          "cached_tokens": 24469
+        }
+      },
+      "manualVerdict": "mixed",
+      "assessment": "承接实际邻铺答话，说明关闭/人员被捕与已载入T0相容，具体去向仍未知，未承诺转交；新消息沿普通NPC对白/历史承接，不扩结构目录。东市分部等为NPC当场指路说法，未定羁押地点未补；结尾等待决定稍机械，仅自然度观察。"
+    },
+    {
+      "id": "round-06",
+      "customRequest": 540,
+      "state": "completed",
+      "purpose": "最后一轮连续选择：根据实际539建议保留推荐信、询问布莱特是否识路；玩家明确授权识路时带路，不预填熟人或协会接待结果。到下一节点收束。",
+      "requestBytes": 122219,
+      "requestSha256": "7ab4b7e3ae4264cb53ca96a56a9a8d1f32ace7c71e0d1da792b8482b5c0bd057",
+      "startedAt": "2026-11-16T17:54:43.798Z",
+      "status": 200,
+      "elapsedMs": 9383,
+      "rawResponseSha256": "ab35995a94c9508858bb4e35e5e048b5fc57b84d50c2deb768e0fc2951a4d811",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 30719,
+        "completion_tokens": 306,
+        "total_tokens": 31025
+      },
+      "manualVerdict": "mixed",
+      "assessment": "正常承接玩家保留信/转向协会及条件带路授权；布莱特识路与已载入失明后多次来帝都办委托补给相符，黄泉简短建议离巷，未代玩家接受新承诺。缰绳/侧耳/声响旁白仍重复，记自然度限制，不修提示。到前往协会的新节点收束，不宣称已到协会或找到馆主。"
+    }
+  ],
+  "closed": true,
+  "complete": true,
+  "scope": "Continuous isolated story; at least four sequential rounds then bounded conclusion, no quota filling",
+  "classificationModelCalls": 0,
+  "extractionCalls": 0,
+  "retries": 0,
+  "finishedAt": "2026-11-16T17:59:43.598847+00:00",
+  "stopReason": "Six continuous rounds reached the chosen transition toward the association; no technical blocker; unused six calls deliberately unspent. No further branch or verification matrix."
+}

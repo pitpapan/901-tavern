@@ -1,0 +1,310 @@
+{
+  "status": "prepared-from-browser-captures",
+  "modelCalls": 0,
+  "scope": "same clinic case, four contextual disclosure probes; not independent generalization or fresh browser captures",
+  "parameters": {
+    "model": "[抗截断]gemini-3.8-flash",
+    "temperature": 1,
+    "max_tokens": 4096,
+    "stream": false,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "top_p": 1
+  },
+  "probes": [
+    {
+      "id": "05-known-unasked",
+      "nonCanon": true,
+      "originalBrowserProbe": "02-received",
+      "originalRequestSha256": "fe219949006bd8b8cca8a7414fb1ce50257b2fdf21e630e57404ac2e510438c3",
+      "requestFile": "communication-20261113/05-known-unasked.request.json",
+      "requestBytes": 106948,
+      "requestSha256": "84566de16a073c5935cec91ec1b44fa7904ae92c67e1ce66105172fc02934248",
+      "context": {
+        "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+        "actorKnowledge": [
+          {
+            "actorId": "player",
+            "name": "御临风",
+            "facts": []
+          },
+          {
+            "actorId": "bright",
+            "name": "布莱特",
+            "facts": [
+              {
+                "id": "clinic.owner.xuelao.old-friend",
+                "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                "belief": "confirmed",
+                "access": "learned",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 11,
+                  "actorId": "legacy.story"
+                },
+                "sources": [
+                  {
+                    "eventRef": "received.browser.received",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 11,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "901 帝都正式续玩 20261106",
+                      "messageId": 11,
+                      "swipeId": 0
+                    },
+                    "disclosure": null
+                  }
+                ],
+                "eventRef": "received.browser.received",
+                "channel": "message",
+                "learnedAtMessage": 11
+              }
+            ]
+          },
+          {
+            "actorId": "huang",
+            "name": "黄泉",
+            "facts": []
+          }
+        ],
+        "availableInformation": [
+          {
+            "access": "can-inquire",
+            "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+          }
+        ]
+      },
+      "sourceSeed": "05-known-unasked.seed.jsonl",
+      "purpose": "已知但普通送信提议：提与不提都按相关性判断，不强迫展示知识"
+    },
+    {
+      "id": "06-known-asked",
+      "nonCanon": true,
+      "originalBrowserProbe": "02-received",
+      "originalRequestSha256": "fe219949006bd8b8cca8a7414fb1ce50257b2fdf21e630e57404ac2e510438c3",
+      "requestFile": "communication-20261113/06-known-asked.request.json",
+      "requestBytes": 106924,
+      "requestSha256": "87a8dafed33c6fe9f31ab51e5b2b7531088167b4a4ddc098f8e271a6e4ca2009",
+      "context": {
+        "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+        "actorKnowledge": [
+          {
+            "actorId": "player",
+            "name": "御临风",
+            "facts": []
+          },
+          {
+            "actorId": "bright",
+            "name": "布莱特",
+            "facts": [
+              {
+                "id": "clinic.owner.xuelao.old-friend",
+                "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                "belief": "confirmed",
+                "access": "learned",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 11,
+                  "actorId": "legacy.story"
+                },
+                "sources": [
+                  {
+                    "eventRef": "received.browser.received",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 11,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "901 帝都正式续玩 20261106",
+                      "messageId": 11,
+                      "swipeId": 0
+                    },
+                    "disclosure": null
+                  }
+                ],
+                "eventRef": "received.browser.received",
+                "channel": "message",
+                "learnedAtMessage": 11
+              }
+            ]
+          },
+          {
+            "actorId": "huang",
+            "name": "黄泉",
+            "facts": []
+          }
+        ],
+        "availableInformation": [
+          {
+            "access": "can-inquire",
+            "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+          }
+        ]
+      },
+      "sourceSeed": "06-known-asked.seed.jsonl",
+      "purpose": "已知者直接被问且无保密约定：自然使用已有知识"
+    },
+    {
+      "id": "07-unknown-asked",
+      "nonCanon": true,
+      "originalBrowserProbe": "01-before",
+      "originalRequestSha256": "5e6ac2a7e5be9d48191fd915f94878c6bf220155e1dbc34c8193c29221c79640",
+      "requestFile": "communication-20261113/07-unknown-asked.request.json",
+      "requestBytes": 105860,
+      "requestSha256": "01b40a0e044c93d02d0d6fbae9fac6503ca8d243e7cfe24d2ebc0a28e09c13c3",
+      "context": {
+        "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+        "actorKnowledge": [
+          {
+            "actorId": "player",
+            "name": "御临风",
+            "facts": []
+          },
+          {
+            "actorId": "bright",
+            "name": "布莱特",
+            "facts": []
+          },
+          {
+            "actorId": "huang",
+            "name": "黄泉",
+            "facts": []
+          }
+        ],
+        "availableInformation": [
+          {
+            "access": "can-inquire",
+            "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+          }
+        ]
+      },
+      "sourceSeed": "07-unknown-asked.seed.jsonl",
+      "purpose": "未获知者被直接询问：不确认关系也不凭空否认存在"
+    },
+    {
+      "id": "08-confidential-asked",
+      "nonCanon": true,
+      "originalBrowserProbe": "02-received",
+      "originalRequestSha256": "fe219949006bd8b8cca8a7414fb1ce50257b2fdf21e630e57404ac2e510438c3",
+      "requestFile": "communication-20261113/08-confidential-asked.request.json",
+      "requestBytes": 107604,
+      "requestSha256": "d8e0e62d73da466b2afe12dd8ebe829d8dfea12e541e7f680d3967a27f206664",
+      "context": {
+        "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+        "actorKnowledge": [
+          {
+            "actorId": "player",
+            "name": "御临风",
+            "facts": []
+          },
+          {
+            "actorId": "bright",
+            "name": "布莱特",
+            "facts": [
+              {
+                "id": "clinic.owner.xuelao.old-friend",
+                "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                "belief": "confirmed",
+                "access": "learned",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 12,
+                  "actorId": "legacy.story"
+                },
+                "sources": [
+                  {
+                    "eventRef": "received.browser.received",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 11,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "901 帝都正式续玩 20261106",
+                      "messageId": 11,
+                      "swipeId": 0
+                    },
+                    "disclosure": null
+                  },
+                  {
+                    "eventRef": "received.communication.promise",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 12,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "901 帝都正式续玩 20261106",
+                      "messageId": 12,
+                      "swipeId": 0
+                    },
+                    "disclosure": {
+                      "sourceQuote": "这件事先不要向御临风和黄泉透露，等我们单独确认后再说。"
+                    }
+                  }
+                ],
+                "eventRef": "received.communication.promise",
+                "channel": "message",
+                "learnedAtMessage": 12
+              }
+            ]
+          },
+          {
+            "actorId": "huang",
+            "name": "黄泉",
+            "facts": []
+          }
+        ],
+        "availableInformation": [
+          {
+            "access": "can-inquire",
+            "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+          }
+        ]
+      },
+      "sourceSeed": "08-confidential-asked.seed.jsonl",
+      "purpose": "已知且有明确保留约定：可保留或婉拒，不自动倾倒已知事实"
+    }
+  ]
+}

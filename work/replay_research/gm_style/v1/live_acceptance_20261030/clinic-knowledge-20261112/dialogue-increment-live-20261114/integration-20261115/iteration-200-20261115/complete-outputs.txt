@@ -1,0 +1,226 @@
+custom335 A1.narration [pass]
+
+正文回应玩家问话；先前送推荐信或先找落脚处的问题在真实输入messages[9]存在；未虚构新的来源消息，未代替玩家行动。接收覆盖待下一步实际抽取。
+
+黄泉正牵着马往前走，听到问话停下脚步，转过头有些莫名地看了御临风一眼。
+
+“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”
+
+她顿了顿，目光在御临风脸上停了片刻，随即收回视线看向前方的街巷：“怎么突然问这个？”
+
+旁边的布莱特也放缓了步子，侧耳听着两人的动静，没有插话。街道两旁的铺子依旧喧闹，引水渠旁的杂货摊前，摊主正忙着将卸下的货筐搬进屋内。
+
+
+
+custom336 A1.reception [fail]
+
+原prepareBoundDialogueExtraction.check拒绝Invalid reception coverage，首次失败即停；保留完整原响应，不修补、不继续A2或B分支。
+
+{"schemaVersion":"dialogue-reception/2","contextRef":"b3d4cf6209f6277a43fd8de5f449ceb1b9460609cc36f5f991b38ebe00052a91","inputRef":"assertion.da2aea4ece6e6e8982f8ec7345cf915ed10df8380d09ebe960a53566ad7cf86b","units":[{"id":"turn","status":"extracted","claims":[{"id":"c1","type":"action","args":{"actor":"黄泉","verb":"牵","object":"马"},"argumentSpans":{"actor":{"documentId":"current","start":0,"end":2,"quote":"黄泉"},"verb":{"documentId":"current","start":3,"end":4,"quote":"牵"},"object":{"documentId":"current","start":5,"end":6,"quote":"马"}},"mode":"asserted","scope":{"time":"正往前走时","condition":null,"attribution":null},"scopeSpans":{"time":{"documentId":"current","start":2,"end":9,"quote":"正牵着马往前走"},"condition":null,"attribution":null},"anchor":{"documentId":"current","start":0,"end":9,"quote":"黄泉正牵着马往前走"}},{"id":"c2","type":"action","args":{"actor":"黄泉","verb":"停下","object":"脚步"},"argumentSpans":{"actor":{"documentId":"current","start":0,"end":2,"quote":"黄泉"},"verb":{"documentId":"current","start":14,"end":16,"quote":"停下"},"object":{"documentId":"current","start":16,"end":18,"quote":"脚步"}},"mode":"asserted","scope":{"time":null,"condition":"听到问话","attribution":null},"scopeSpans":{"time":null,"condition":{"documentId":"current","start":10,"end":14,"quote":"听到问话"},"attribution":null},"anchor":{"documentId":"current","start":10,"end":18,"quote":"听到问话停下脚步"}},{"id":"c3","type":"action","args":{"actor":"黄泉","verb":"看","object":"御临风"},"argumentSpans":{"actor":{"documentId":"current","start":0,"end":2,"quote":"黄泉"},"verb":{"documentId":"current","start":27,"end":28,"quote":"看"},"object":{"documentId":"current","start":29,"end":32,"quote":"御临风"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":19,"end":34,"quote":"转过头有些莫名地看了御临风一眼"}},{"id":"c4","type":"action","args":{"actor":"布莱特","verb":"放缓","object":"步子"},"argumentSpans":{"actor":{"documentId":"current","start":136,"end":139,"quote":"布莱特"},"verb":{"documentId":"current","start":140,"end":142,"quote":"放缓"},"object":{"documentId":"current","start":143,"end":145,"quote":"步子"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":133,"end":145,"quote":"旁边的布莱特也放缓了步子"}},{"id":"c5","type":"action","args":{"actor":"摊主","verb":"搬进","object":"货筐"},"argumentSpans":{"actor":{"documentId":"current","start":184,"end":186,"quote":"摊主"},"verb":{"documentId":"current","start":195,"end":197,"quote":"搬进"},"object":{"documentId":"current","start":192,"end":194,"quote":"货筐"}},"mode":"asserted","scope":{"time":"正忙着将卸下的货筐搬进屋内","condition":null,"attribution":null},"scopeSpans":{"time":{"documentId":"current","start":186,"end":199,"quote":"正忙着将卸下的货筐搬进屋内"},"condition":null,"attribution":null},"anchor":{"documentId":"current","start":184,"end":199,"quote":"摊主正忙着将卸下的货筐搬进屋内"}}],"utterances":[{"claim":{"id":"u1","type":"utterance","args":{"speaker":"黄泉","content":"“消息？”"},"argumentSpans":{"speaker":{"documentId":"current","start":42,"end":43,"quote":"她"},"content":{"documentId":"current","start":37,"end":42,"quote":"“消息？”"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":37,"end":42,"quote":"“消息？”"}},"receptions":[{"id":"r1","speakerId":"huang","recipientIds":["player"],"recipientSpans":[{"documentId":"current","start":29,"end":32,"quote":"御临风"}],"evidence":{"documentId":"current","start":27,"end":34,"quote":"看了御临风一眼"},"status":"received","propositionRef":null,"reason":""}]},{"claim":{"id":"u2","type":"utterance","args":{"speaker":"黄泉","content":"“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”"},"argumentSpans":{"speaker":{"documentId":"current","start":42,"end":43,"quote":"她"},"content":{"documentId":"current","start":53,"end":87,"quote":"“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":42,"end":87,"quote":"她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”"}},"receptions":[{"id":"r2","speakerId":"huang","recipientIds":["player"],"recipientSpans":[{"documentId":"current","start":68,"end":69,"quote":"你"}],"evidence":{"documentId":"current","start":67,"end":69,"quote":"问你"},"status":"received","propositionRef":null,"reason":""}]},{"claim":{"id":"u3","type":"utterance","args":{"speaker":"黄泉","content":"“怎么突然问这个？”"},"argumentSpans":{"speaker":{"documentId":"current","start":89,"end":90,"quote":"她"},"content":{"documentId":"current","start":121,"end":131,"quote":"“怎么突然问这个？”"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":121,"end":131,"quote":"“怎么突然问这个？”"}},"receptions":[{"id":"r3","speakerId":"huang","recipientIds":["player"],"recipientSpans":[{"documentId":"current","start":97,"end":100,"quote":"御临风"}],"evidence":{"documentId":"current","start":94,"end":106,"quote":"目光在御临风脸上停了片刻"},"status":"received","propositionRef":null,"reason":""}]}],"coverage":{"status":"recorded","evidence":{"documentId":"current","start":0,"end":200,"quote":"黄泉正牵着马往前走，听到问话停下脚步，转过头有些莫名地看了御临风一眼。\n\n“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”\n\n她顿了顿，目光在御临风脸上停了片刻，随即收回视线看向前方的街巷：“怎么突然问这个？”\n\n旁边的布莱特也放缓了步子，侧耳听着两人的动静，没有插话。街道两旁的铺子依旧喧闹，引水渠旁的杂货摊前，摊主正忙着将卸下的货筐搬进屋内。\n\n"},"reason":"黄泉对御临风的提问做出回应，言说内容与接收均已记录，本段未涉及外部特定命题传递。"},"unresolved":[]}]}
+
+
+
+custom337 A1.reception.r1 [fail]
+
+13引用中11正确；两个接收依据坐标含逗号而quote不含，严格拒绝。无关claims已消除；原文及回复保留。
+
+{"schemaVersion":"dialogue-reception/2","contextRef":"b3d4cf6209f6277a43fd8de5f449ceb1b9460609cc36f5f991b38ebe00052a91","inputRef":"assertion.da2aea4ece6e6e8982f8ec7345cf915ed10df8380d09ebe960a53566ad7cf86b","units":[{"id":"turn","status":"extracted","claims":[],"utterances":[{"claim":{"id":"turn.utterance.1","type":"utterance","args":{"speaker":"黄泉","content":"“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”"},"argumentSpans":{"speaker":{"documentId":"current","start":42,"end":43,"quote":"她"},"content":{"documentId":"current","start":37,"end":87,"quote":"“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":37,"end":87,"quote":"“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”"}},"receptions":[{"id":"turn.reception.1","speakerId":"huang","recipientIds":["player","bright"],"recipientSpans":[{"documentId":"current","start":29,"end":32,"quote":"御临风"},{"documentId":"current","start":136,"end":139,"quote":"布莱特"}],"evidence":{"documentId":"current","start":146,"end":156,"quote":"侧耳听着两人的动静"},"status":"received","propositionRef":null,"reason":""}]},{"claim":{"id":"turn.utterance.2","type":"utterance","args":{"speaker":"黄泉","content":"“怎么突然问这个？”"},"argumentSpans":{"speaker":{"documentId":"current","start":89,"end":90,"quote":"她"},"content":{"documentId":"current","start":121,"end":131,"quote":"“怎么突然问这个？”"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":121,"end":131,"quote":"“怎么突然问这个？”"}},"receptions":[{"id":"turn.reception.2","speakerId":"huang","recipientIds":["player","bright"],"recipientSpans":[{"documentId":"current","start":97,"end":100,"quote":"御临风"},{"documentId":"current","start":136,"end":139,"quote":"布莱特"}],"evidence":{"documentId":"current","start":146,"end":156,"quote":"侧耳听着两人的动静"},"status":"received","propositionRef":null,"reason":""}]}],"coverage":{"status":"recorded","evidence":{"documentId":"current","start":0,"end":225,"quote":"黄泉正牵着马往前走，听到问话停下脚步，转过头有些莫名地看了御临风一眼。\n\n“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”\n\n她顿了顿，目光在御临风脸上停了片刻，随即收回视线看向前方的街巷：“怎么突然问这个？”\n\n旁边的布莱特也放缓了步子，侧耳听着两人的动静，没有插话。街道两旁的铺子依旧喧闹，引水渠旁的杂货摊前，摊主正忙着将卸下的货筐搬进屋内。\n\n<StatusPlaceHolderImpl/>"},"reason":"黄泉对御临风的回应与发问均已登记言说，布莱特与御临风在场聆听已形成接收记录。"},"unresolved":[]}]}
+
+
+
+custom338 A1.reception.r2 [fail]
+
+结构引用通过，但把facts误作接收范围，漏掉当前实际言说。v2相较旧合同未明确null代表新的有来源说法；保留语义失败。
+
+{"schemaVersion":"dialogue-reception/2","contextRef":"b3d4cf6209f6277a43fd8de5f449ceb1b9460609cc36f5f991b38ebe00052a91","inputRef":"assertion.da2aea4ece6e6e8982f8ec7345cf915ed10df8380d09ebe960a53566ad7cf86b","units":[{"id":"turn","status":"extracted","claims":[],"utterances":[],"coverage":{"status":"none","evidence":{"documentId":"current","start":0,"end":225,"quote":"黄泉正牵着马往前走，听到问话停下脚步，转过头有些莫名地看了御临风一眼。\n\n“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”\n\n她顿了顿，目光在御临风脸上停了片刻，随即收回视线看向前方的街巷：“怎么突然问这个？”\n\n旁边的布莱特也放缓了步子，侧耳听着两人的动静，没有插话。街道两旁的铺子依旧喧闹，引水渠旁的杂货摊前，摊主正忙着将卸下的货筐搬进屋内。\n\n<StatusPlaceHolderImpl/>"},"reason":"本轮中黄泉否认提过消息并追问御临风，未传达与事实clinic.owner.xuelao.old-friend相关的命题信息，无相关事实接收发生。"},"unresolved":[]}]}
+
+
+
+custom339 A1.reception.r3 [fail]
+
+坐标仍错误：她42:44、你68:70、布莱特136:140均比原文长；另合并言说时夹入叙述。严格拒绝。无新本地处理缺陷证据，保留失败并改用十二阶段实际需要的受控明确接收链。
+
+{"schemaVersion":"dialogue-reception/2","contextRef":"b3d4cf6209f6277a43fd8de5f449ceb1b9460609cc36f5f991b38ebe00052a91","inputRef":"assertion.da2aea4ece6e6e8982f8ec7345cf915ed10df8380d09ebe960a53566ad7cf86b","units":[{"id":"turn","claims":[],"utterances":[{"claim":{"id":"turn.utterance.1","type":"utterance","args":{"speaker":"黄泉","content":"“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”\n\n她顿了顿，目光在御临风脸上停了片刻，随即收回视线看向前方的街巷：“怎么突然问这个？”"},"argumentSpans":{"speaker":{"documentId":"current","start":42,"end":44,"quote":"她"},"content":{"documentId":"current","start":37,"end":131,"quote":"“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”\n\n她顿了顿，目光在御临风脸上停了片刻，随即收回视线看向前方的街巷：“怎么突然问这个？”"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":37,"end":131,"quote":"“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”\n\n她顿了顿，目光在御临风脸上停了片刻，随即收回视线看向前方的街巷：“怎么突然问这个？”"}},"receptions":[{"id":"turn.reception.1","speakerId":"huang","recipientIds":["player","bright"],"recipientSpans":[{"documentId":"current","start":68,"end":70,"quote":"你"},{"documentId":"current","start":136,"end":140,"quote":"布莱特"}],"evidence":{"documentId":"current","start":146,"end":156,"quote":"侧耳听着两人的动静，"},"status":"received","propositionRef":null,"reason":""}]}],"coverage":{"status":"recorded","evidence":{"documentId":"current","start":0,"end":225,"quote":"黄泉正牵着马往前走，听到问话停下脚步，转过头有些莫名地看了御临风一眼。\n\n“消息？”她语气里带着些许疑惑，“我刚才没提过什么消息。只是问你是先去医馆送信，还是先找地方落脚。”\n\n她顿了顿，目光在御临风脸上停了片刻，随即收回视线看向前方的街巷：“怎么突然问这个？”\n\n旁边的布莱特也放缓了步子，侧耳听着两人的动静，没有插话。街道两旁的铺子依旧喧闹，引水渠旁的杂货摊前，摊主正忙着将卸下的货筐搬进屋内。\n\n<StatusPlaceHolderImpl/>"},"reason":"黄泉对御临风的直接回应被御临风与旁边的布莱特听到"},"status":"extracted","unresolved":[]}]}
+
+
+
+custom340 A.scene1.narration [pass]
+
+实际正文未转述告示，遵守输入已有黄泉不因口语加持自动识字设定。形成真实新言说：我不认得这里的字/等布莱特或问路人；布莱特仍远处。后续按真实言说验接收，不称告示消息通过。
+
+黄泉牵着马缰停在路边，转头看了一眼御临风，语气平淡：
+
+“我不认得这里的字。”
+
+主神留下的加持能让她听懂和说出这边的言语，但纸上画着的规整文字并不包含在内。她收回视线，目光顺着街道往前看去：
+
+“上面写了什么，得等布莱特回来，或者找个认字的路人问问。”
+
+街道另一端的人流依旧熙攘，几间店铺门前飘出面点的热气，布莱特的身影还在那边的摊位前尚未返回。街边的石砌水渠里水流平缓，两旁的行人神色如常地各自走着，并无人特别留心他们这边的简短对答。
+
+
+
+custom341 A.scene1.reception [pass]
+
+Schema及原严格检查通过；实际两条说法完整，御临风明确接收、布莱特无授予，null新来源不升世界真相。第二依据引用结尾对答需结合前文指代，不单靠无人留心推定；输入整体充分。
+
+{"schemaVersion":"dialogue-reception/2","contextRef":"493cec79fcaca929a3b029e6696ee693fec968a0399a52e210e0a79e162a9f80","inputRef":"assertion.ac2bf783a69d256fc249acd8e46816d74c167518866bf8e9d3f99c87cfa3a3ef","units":[{"id":"turn","status":"extracted","claims":[],"utterances":[{"claim":{"id":"turn.utterance.1","type":"utterance","args":{"speaker":"黄泉","content":"我不认得这里的字。"},"argumentSpans":{"speaker":{"documentId":"current","start":0,"end":2,"quote":"黄泉"},"content":{"documentId":"current","start":29,"end":38,"quote":"我不认得这里的字。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":28,"end":39,"quote":"“我不认得这里的字。”"}},"receptions":[{"id":"turn.utterance.1.rec.1","speakerId":"huang","recipientIds":["player"],"recipientSpans":[{"documentId":"current","start":17,"end":20,"quote":"御临风"}],"evidence":{"documentId":"current","start":11,"end":26,"quote":"转头看了一眼御临风，语气平淡："},"status":"received","propositionRef":null,"reason":""}]},{"claim":{"id":"turn.utterance.2","type":"utterance","args":{"speaker":"黄泉","content":"上面写了什么，得等布莱特回来，或者找个认字的路人问问。"},"argumentSpans":{"speaker":{"documentId":"current","start":79,"end":80,"quote":"她"},"content":{"documentId":"current","start":99,"end":126,"quote":"上面写了什么，得等布莱特回来，或者找个认字的路人问问。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":98,"end":127,"quote":"“上面写了什么，得等布莱特回来，或者找个认字的路人问问。”"}},"receptions":[{"id":"turn.utterance.2.rec.1","speakerId":"huang","recipientIds":["player"],"recipientSpans":[{"documentId":"current","start":17,"end":20,"quote":"御临风"}],"evidence":{"documentId":"current","start":203,"end":220,"quote":"并无人特别留心他们这边的简短对答。"},"status":"received","propositionRef":null,"reason":""}]}],"coverage":{"status":"recorded","evidence":{"documentId":"current","start":0,"end":246,"quote":"黄泉牵着马缰停在路边，转头看了一眼御临风，语气平淡：\n\n“我不认得这里的字。”\n\n主神留下的加持能让她听懂和说出这边的言语，但纸上画着的规整文字并不包含在内。她收回视线，目光顺着街道往前看去：\n\n“上面写了什么，得等布莱特回来，或者找个认字的路人问问。”\n\n街道另一端的人流依旧熙攘，几间店铺门前飘出面点的热气，布莱特的身影还在那边的摊位前尚未返回。街边的石砌水渠里水流平缓，两旁的行人神色如常地各自走着，并无人特别留心他们这边的简短对答。\n\n<StatusPlaceHolderImpl/>"},"reason":"黄泉对御临风的两次言说均已记录且被御临风正常接收，布莱特尚未返回且行人未留心，对话未涉及医馆旧识等事实引用。"},"unresolved":[]}]}
+
+
+
+custom342 A.scene2.narration [pass]
+
+自然承接黄泉不识字及问路人建议，黄泉同意但未替御临风执行问话；布莱特仍远处，不伪称其收到。普通路人环境细节属于允许临场发挥。
+
+黄泉往告示木板的方向瞥了一眼，随即收回视线，点了点头：
+
+“可以。告示贴在路边，问问旁边的人就行。”
+
+木板立在引水渠旁的矮墙边上，周围不时有提着空桶或端着货盆的居民路过。近处几步远的地方，一名刚在渠边洗完菜篮的妇人正甩着手上的水珠，把篮子挎回臂弯，看起来并不匆忙。街道前方的摊贩声依旧热络，布莱特还在稍远些的铺子那边，没有立刻走回来。
+
+
+
+custom343 A.scene2.reception [pass]
+
+严格检查通过，完整保留黄泉同意及问路建议，仅御临风接收；recipientSpan是当前应答整句，接收者由真实上一轮提问消歧，不将历史作为伪造本轮引用。
+
+{"schemaVersion":"dialogue-reception/2","contextRef":"cd2b902e6b672265202f5f22cfc41ad2be11f9099a084de73fa5449ae92eeec6","inputRef":"assertion.dcfa1708edde5d3d6d0445ce9a0f8492b0284833995eaaa307c41e5a5f2e72d0","units":[{"id":"turn","claims":[],"utterances":[{"claim":{"id":"utterance.huang.1","type":"utterance","args":{"speaker":"黄泉","content":"“可以。告示贴在路边，问问旁边的人就行。”"},"argumentSpans":{"speaker":{"documentId":"current","start":0,"end":2,"quote":"黄泉"},"content":{"documentId":"current","start":29,"end":50,"quote":"“可以。告示贴在路边，问问旁边的人就行。”"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":0,"end":50,"quote":"黄泉往告示木板的方向瞥了一眼，随即收回视线，点了点头：\n\n“可以。告示贴在路边，问问旁边的人就行。”"}},"receptions":[{"id":"reception.huang.1","speakerId":"huang","recipientIds":["player"],"recipientSpans":[{"documentId":"current","start":29,"end":50,"quote":"“可以。告示贴在路边，问问旁边的人就行。”"}],"evidence":{"documentId":"current","start":22,"end":50,"quote":"点了点头：\n\n“可以。告示贴在路边，问问旁边的人就行。”"},"status":"received","propositionRef":null,"reason":""}]}],"coverage":{"status":"recorded","evidence":{"documentId":"current","start":0,"end":194,"quote":"黄泉往告示木板的方向瞥了一眼，随即收回视线，点了点头：\n\n“可以。告示贴在路边，问问旁边的人就行。”\n\n木板立在引水渠旁的矮墙边上，周围不时有提着空桶或端着货盆的居民路过。近处几步远的地方，一名刚在渠边洗完菜篮的妇人正甩着手上的水珠，把篮子挎回臂弯，看起来并不匆忙。街道前方的摊贩声依旧热络，布莱特还在稍远些的铺子那边，没有立刻走回来。\n\n<StatusPlaceHolderImpl/>"},"reason":"黄泉对御临风的提问做出回应并给出建议，御临风在场直接接收。"},"status":"extracted","unresolved":[]}]}
+
+
+
+custom344 B.scene1.narration [pass]
+
+完整保留商贩转述、明天/南门外石桥，以及两人之一听清但身份未知；未指定谁听见、未补发消息。话音刚落与噪声的文学时序有宽松，明确接收结论未改变。
+
+黄泉转过身来，迎着两人开口道：
+
+“刚才那边的商贩说，明天取货改到南门外的石桥旁。”
+
+她话音刚落，一辆装满石料的重型货车正好从旁边的车道碾过。沉重的铁箍木轮重重压过路面凸起的石板，轴承与车架发出粗重的摩擦与咯吱声，伴着驭者高声驱赶挽马的喝道声，将这片街面的声音顿时盖了过去。
+
+车队带起的灰尘缓缓落定，沉重的轰鸣声渐渐向街心拉远。两人之中只有一人在这片嘈杂中听清了她刚才那句话，另一人则只看到她嘴唇动了动，字句全被碾过去的轮声吞没。黄泉没有再重复，牵着马站在原地，等待眼前的路口空出来。
+
+
+
+custom345 B.scene1.reception [pass]
+
+原严格检查通过；完整商贩来源/明天/地点，uncertain听者留空，不猜授予；coverage uncertain，真实待核由原MVU生成。
+
+{"schemaVersion":"dialogue-reception/2","contextRef":"9ddd1749cac8c5caba2843a8cd5658c367166bcbc0b55070aa98a79a600dc067","inputRef":"assertion.3f2c77379128a6f77a21b5e7e51bddfe7cebc6cb4a5fe7586a19f2b797846ec1","units":[{"id":"turn","status":"extracted","claims":[],"utterances":[{"claim":{"id":"utterance.turn.huang.change-delivery","type":"utterance","args":{"speaker":"黄泉","content":"刚才那边的商贩说，明天取货改到南门外的石桥旁。"},"argumentSpans":{"speaker":{"documentId":"current","start":0,"end":2,"quote":"黄泉"},"content":{"documentId":"current","start":18,"end":41,"quote":"刚才那边的商贩说，明天取货改到南门外的石桥旁。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":0,"end":42,"quote":"黄泉转过身来，迎着两人开口道：\n\n“刚才那边的商贩说，明天取货改到南门外的石桥旁。”"}},"receptions":[{"id":"reception.turn.huang.change-delivery.uncertain-listener","speakerId":"huang","recipientIds":[],"recipientSpans":[],"evidence":{"documentId":"current","start":166,"end":217,"quote":"两人之中只有一人在这片嘈杂中听清了她刚才那句话，另一人则只看到她嘴唇动了动，字句全被碾过去的轮声吞没。"},"status":"uncertain","propositionRef":null,"reason":"重型货车碾过导致两人中仅有一人听清、另一人未听清，但原文未指明听清者具体是御临风还是布莱特，听者身份存在歧义。"}]}],"coverage":{"status":"uncertain","evidence":{"documentId":"current","start":0,"end":270,"quote":"黄泉转过身来，迎着两人开口道：\n\n“刚才那边的商贩说，明天取货改到南门外的石桥旁。”\n\n她话音刚落，一辆装满石料的重型货车正好从旁边的车道碾过。沉重的铁箍木轮重重压过路面凸起的石板，轴承与车架发出粗重的摩擦与咯吱声，伴着驭者高声驱赶挽马的喝道声，将这片街面的声音顿时盖了过去。\n\n车队带起的灰尘缓缓落定，沉重的轰鸣声渐渐向街心拉远。两人之中只有一人在这片嘈杂中听清了她刚才那句话，另一人则只看到她嘴唇动了动，字句全被碾过去的轮声吞没。黄泉没有再重复，牵着马站在原地，等待眼前的路口空出来。\n\n<StatusPlaceHolderImpl/>"},"reason":"黄泉转述的消息在二人中仅有一人听清，但具体接收者身份未明，登记为uncertain接收。"},"unresolved":[]}]}
+
+
+
+custom346 B.scene2.dependency [pass]
+
+原adapter校验通过，承接345真实待核与绑定，天气无关required空；不确认接收。
+
+{"inputRef":"c87ce1537d3c8a105bef162b198ff22567765df218b0c0d031eff01c0a1824ac","required":[]}
+
+
+
+custom347 B.scene2.narration [pass]
+
+自然回应天气与行路感受，没有重述取货消息、指定谁听见或询问待核；人物临场感受不作为世界事实批准。
+
+黄泉手里牵着马缰，步子没停。她抬头看了一眼上方透着微白的天色，又扫过街边被风吹得轻轻晃动的铺子布帘。
+
+“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，“比山路上好走多了。”
+
+主道旁的水渠里水流平稳地流淌着，带起些许细微的水声。街上的行人和往来摊贩各自忙碌，喧闹声在渐开的街市间散开。远处高耸的法师塔在半空映出清晰的轮廓，两旁的石木建筑遮住了大半偏侧的风，走在宽敞的石板路上，脚下确实比此前的荒野要踏实不少。
+
+
+
+custom348 B.scene2.reception [fail]
+
+结构坐标通过，但utterance.content及引用夹带收回视线/语气的旁白，若登记会当作黄泉说法。未交付为通过；补清内容字段与上下文引用区别，保留原响应。
+
+{"schemaVersion":"dialogue-reception/2","contextRef":"27465bfb195236e78f9074c52410c3f0aea1109072c782a248064f4c889a2f0a","inputRef":"assertion.d823063f02cae057a28b36272adebc9f694322949f62c47fae12d4f75ef97683","units":[{"id":"turn","claims":[],"utterances":[{"claim":{"id":"claim-huang-say","type":"utterance","args":{"speaker":"黄泉","content":"“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，“比山路上好走多了。”"},"argumentSpans":{"speaker":{"documentId":"current","start":66,"end":67,"quote":"她"},"content":{"documentId":"current","start":52,"end":92,"quote":"“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，“比山路上好走多了。”"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":52,"end":92,"quote":"“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，“比山路上好走多了。”"}},"receptions":[{"id":"rec-huang-say-player","speakerId":"huang","recipientIds":["player"],"recipientSpans":[{"documentId":"current","start":52,"end":92,"quote":"“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，“比山路上好走多了。”"}],"evidence":{"documentId":"current","start":52,"end":92,"quote":"“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，“比山路上好走多了。”"},"status":"received","propositionRef":null,"reason":"黄泉直接回应御临风的询问，且两人同行在场无阻碍接收。"}]}],"coverage":{"status":"recorded","evidence":{"documentId":"current","start":0,"end":236,"quote":"黄泉手里牵着马缰，步子没停。她抬头看了一眼上方透着微白的天色，又扫过街边被风吹得轻轻晃动的铺子布帘。\n\n“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，“比山路上好走多了。”\n\n主道旁的水渠里水流平稳地流淌着，带起些许细微的水声。街上的行人和往来摊贩各自忙碌，喧闹声在渐开的街市间散开。远处高耸的法师塔在半空映出清晰的轮廓，两旁的石木建筑遮住了大半偏侧的风，走在宽敞的石板路上，脚下确实比此前的荒野要踏实不少。\n\n<StatusPlaceHolderImpl/>"},"reason":"已登记黄泉回应御临风的言说及接收记录。"},"status":"extracted","unresolved":[]}]}
+
+
+
+custom349 B.retry2.reception [fail]
+
+内容分片已正确，但recipientSpans均引用指向黄泉的她，不能支持御临风；坐标合法不等语义归属正确。保留原失败，不修补。
+
+{"schemaVersion":"dialogue-reception/2","contextRef":"27465bfb195236e78f9074c52410c3f0aea1109072c782a248064f4c889a2f0a","inputRef":"assertion.d823063f02cae057a28b36272adebc9f694322949f62c47fae12d4f75ef97683","units":[{"id":"turn","status":"extracted","claims":[],"utterances":[{"claim":{"id":"turn.utterance.1","type":"utterance","args":{"speaker":"huang","content":"风有点凉，不过不算难受。"},"argumentSpans":{"speaker":{"documentId":"current","start":0,"end":2,"quote":"黄泉"},"content":{"documentId":"current","start":53,"end":65,"quote":"风有点凉，不过不算难受。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":52,"end":66,"quote":"“风有点凉，不过不算难受。”"}},"receptions":[{"id":"turn.utterance.1.rec.1","speakerId":"huang","recipientIds":["player"],"recipientSpans":[{"documentId":"current","start":66,"end":67,"quote":"她"}],"evidence":{"documentId":"current","start":66,"end":81,"quote":"她收回视线，语气依旧简洁平缓，"},"status":"received","propositionRef":null,"reason":""}]},{"claim":{"id":"turn.utterance.2","type":"utterance","args":{"speaker":"huang","content":"比山路上好走多了。"},"argumentSpans":{"speaker":{"documentId":"current","start":66,"end":67,"quote":"她"},"content":{"documentId":"current","start":82,"end":91,"quote":"比山路上好走多了。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":81,"end":92,"quote":"“比山路上好走多了。”"}},"receptions":[{"id":"turn.utterance.2.rec.1","speakerId":"huang","recipientIds":["player"],"recipientSpans":[{"documentId":"current","start":66,"end":67,"quote":"她"}],"evidence":{"documentId":"current","start":66,"end":81,"quote":"她收回视线，语气依旧简洁平缓，"},"status":"received","propositionRef":null,"reason":""}]}],"coverage":{"status":"recorded","evidence":{"documentId":"current","start":0,"end":236,"quote":"黄泉手里牵着马缰，步子没停。她抬头看了一眼上方透着微白的天色，又扫过街边被风吹得轻轻晃动的铺子布帘。\n\n“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，“比山路上好走多了。”\n\n主道旁的水渠里水流平稳地流淌着，带起些许细微的水声。街上的行人和往来摊贩各自忙碌，喧闹声在渐开的街市间散开。远处高耸的法师塔在半空映出清晰的轮廓，两旁的石木建筑遮住了大半偏侧的风，走在宽敞的石板路上，脚下确实比此前的荒野要踏实不少。\n\n<StatusPlaceHolderImpl/>"},"reason":"已完整记录黄泉回答御临风提问的言说与接收"},"unresolved":[]}]}
+
+
+
+custom350 B.retry3.reception [fail]
+
+内容与坐标正确，但听者依据只引用说话语气，未引用实际应答，不能称引用语义准确。原说明已明确，暂无新增程序遗漏证据；停止对同一段堆提示，保留隐式听者引用失败。
+
+{"schemaVersion":"dialogue-reception/2","contextRef":"27465bfb195236e78f9074c52410c3f0aea1109072c782a248064f4c889a2f0a","inputRef":"assertion.d823063f02cae057a28b36272adebc9f694322949f62c47fae12d4f75ef97683","units":[{"id":"turn","status":"extracted","claims":[],"utterances":[{"claim":{"id":"turn.utterance.1","type":"utterance","args":{"speaker":"黄泉","content":"风有点凉，不过不算难受。"},"argumentSpans":{"speaker":{"documentId":"current","start":66,"end":67,"quote":"她"},"content":{"documentId":"current","start":53,"end":65,"quote":"风有点凉，不过不算难受。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":52,"end":81,"quote":"“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，"}},"receptions":[{"id":"turn.reception.1","speakerId":"huang","recipientIds":["player"],"recipientSpans":[{"documentId":"current","start":72,"end":81,"quote":"语气依旧简洁平缓，"}],"evidence":{"documentId":"current","start":66,"end":81,"quote":"她收回视线，语气依旧简洁平缓，"},"status":"received","propositionRef":null,"reason":""}]},{"claim":{"id":"turn.utterance.2","type":"utterance","args":{"speaker":"黄泉","content":"比山路上好走多了。"},"argumentSpans":{"speaker":{"documentId":"current","start":66,"end":67,"quote":"她"},"content":{"documentId":"current","start":82,"end":91,"quote":"比山路上好走多了。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":66,"end":92,"quote":"她收回视线，语气依旧简洁平缓，“比山路上好走多了。”"}},"receptions":[{"id":"turn.reception.2","speakerId":"huang","recipientIds":["player"],"recipientSpans":[{"documentId":"current","start":72,"end":81,"quote":"语气依旧简洁平缓，"}],"evidence":{"documentId":"current","start":66,"end":81,"quote":"她收回视线，语气依旧简洁平缓，"},"status":"received","propositionRef":null,"reason":""}]}],"coverage":{"status":"recorded","evidence":{"documentId":"current","start":0,"end":236,"quote":"黄泉手里牵着马缰，步子没停。她抬头看了一眼上方透着微白的天色，又扫过街边被风吹得轻轻晃动的铺子布帘。\n\n“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，“比山路上好走多了。”\n\n主道旁的水渠里水流平稳地流淌着，带起些许细微的水声。街上的行人和往来摊贩各自忙碌，喧闹声在渐开的街市间散开。远处高耸的法师塔在半空映出清晰的轮廓，两旁的石木建筑遮住了大半偏侧的风，走在宽敞的石板路上，脚下确实比此前的荒野要踏实不少。\n\n<StatusPlaceHolderImpl/>"},"reason":"黄泉对玩家（御临风）提问的回应已完整登记言说及接收记录。"},"unresolved":[]}]}
+
+
+
+custom351 B.alt2.dependency [pass]
+
+原adapter输入绑定通过，required空；提及布莱特不等于依赖其是否收到取货消息。
+
+{"inputRef":"9533b2bc9140196b4700e7f90e731c1e9ab68e1c58805663dea7c2454ec16fef","required":[]}
+
+
+
+custom352 B.alt2.narration [pass]
+
+黄泉向布莱特谈天气并得到回应，未提取货或决定谁此前听清；布莱特对气候的评价保留为人物说法，不单独批准地理事实。
+
+黄泉牵着马绳，随着人流往前走了两步，目光在两侧层叠挺括的屋檐与远处投下的阴影间停了停。
+
+“风有点凉。”她转头看向布莱特，语气平淡，“不过比起前几天在野外赶路，石板路走起来还算踏实，身上也不用一直顶着荒原上的冷风。”
+
+布莱特微微仰起脸，迎着街巷间穿流的微风吸了口气，嘴角带起一点惯常的弧度：
+
+“帝都地势偏高，这个时节向来寒得早些。不过两边都是石木屋舍，把迎面的大风挡了大半，夹着市集里的烟火气，倒不算难熬。”
+
+街边的杂货摊前，老板刚搬下两捆扎好的干草，拍了拍手上的灰尘；主干道上的车马声与脚步声交叠着向前流淌，通往城东方向的石板路依旧宽阔。
+
+
+
+custom353 B.alt2.reception [pass]
+
+严格检查通过，黄泉两段实际发言分别登记给布莱特，布莱特完整回应登记给黄泉；无旁白混入，不给同场玩家自动授予。天气说法不解除取货待核。
+
+{"schemaVersion":"dialogue-reception/2","contextRef":"f7562a5a22457ecc63647b01232d1dd4fa6dbf31205f93a72e7a611a7059de28","inputRef":"assertion.cdd80db92a40ae4f856ceac28f76623bb15532e1d4f08124ebbfa41f0dfa2aed","units":[{"id":"turn","claims":[],"utterances":[{"claim":{"id":"utterance.huang.1","type":"utterance","args":{"speaker":"黄泉","content":"风有点凉。"},"argumentSpans":{"speaker":{"documentId":"current","start":52,"end":53,"quote":"她"},"content":{"documentId":"current","start":46,"end":51,"quote":"风有点凉。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":45,"end":66,"quote":"“风有点凉。”她转头看向布莱特，语气平淡，"}},"receptions":[{"id":"rec.huang.1.bright","speakerId":"huang","recipientIds":["bright"],"recipientSpans":[{"documentId":"current","start":57,"end":60,"quote":"布莱特"}],"evidence":{"documentId":"current","start":52,"end":60,"quote":"她转头看向布莱特"},"status":"received","propositionRef":null,"reason":""}]},{"claim":{"id":"utterance.huang.2","type":"utterance","args":{"speaker":"黄泉","content":"不过比起前几天在野外赶路，石板路走起来还算踏实，身上也不用一直顶着荒原上的冷风。"},"argumentSpans":{"speaker":{"documentId":"current","start":52,"end":53,"quote":"她"},"content":{"documentId":"current","start":67,"end":107,"quote":"不过比起前几天在野外赶路，石板路走起来还算踏实，身上也不用一直顶着荒原上的冷风。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":66,"end":108,"quote":"“不过比起前几天在野外赶路，石板路走起来还算踏实，身上也不用一直顶着荒原上的冷风。”"}},"receptions":[{"id":"rec.huang.2.bright","speakerId":"huang","recipientIds":["bright"],"recipientSpans":[{"documentId":"current","start":57,"end":60,"quote":"布莱特"}],"evidence":{"documentId":"current","start":110,"end":146,"quote":"布莱特微微仰起脸，迎着街巷间穿流的微风吸了口气，嘴角带起一点惯常的弧度："},"status":"received","propositionRef":null,"reason":""}]},{"claim":{"id":"utterance.bright.1","type":"utterance","args":{"speaker":"布莱特","content":"帝都地势偏高，这个时节向来寒得早些。不过两边都是石木屋舍，把迎面的大风挡了大半，夹着市集里的烟火气，倒不算难熬。"},"argumentSpans":{"speaker":{"documentId":"current","start":110,"end":113,"quote":"布莱特"},"content":{"documentId":"current","start":149,"end":205,"quote":"帝都地势偏高，这个时节向来寒得早些。不过两边都是石木屋舍，把迎面的大风挡了大半，夹着市集里的烟火气，倒不算难熬。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":148,"end":206,"quote":"“帝都地势偏高，这个时节向来寒得早些。不过两边都是石木屋舍，把迎面的大风挡了大半，夹着市集里的烟火气，倒不算难熬。”"}},"receptions":[{"id":"rec.bright.1.huang","speakerId":"bright","recipientIds":["huang"],"recipientSpans":[{"documentId":"current","start":149,"end":205,"quote":"帝都地势偏高，这个时节向来寒得早些。不过两边都是石木屋舍，把迎面的大风挡了大半，夹着市集里的烟火气，倒不算难熬。"}],"evidence":{"documentId":"current","start":110,"end":146,"quote":"布莱特微微仰起脸，迎着街巷间穿流的微风吸了口气，嘴角带起一点惯常的弧度："},"status":"received","propositionRef":null,"reason":""}]}],"coverage":{"status":"recorded","evidence":{"documentId":"current","start":0,"end":299,"quote":"黄泉牵着马绳，随着人流往前走了两步，目光在两侧层叠挺括的屋檐与远处投下的阴影间停了停。\n\n“风有点凉。”她转头看向布莱特，语气平淡，“不过比起前几天在野外赶路，石板路走起来还算踏实，身上也不用一直顶着荒原上的冷风。”\n\n布莱特微微仰起脸，迎着街巷间穿流的微风吸了口气，嘴角带起一点惯常的弧度：\n\n“帝都地势偏高，这个时节向来寒得早些。不过两边都是石木屋舍，把迎面的大风挡了大半，夹着市集里的烟火气，倒不算难熬。”\n\n街边的杂货摊前，老板刚搬下两捆扎好的干草，拍了拍手上的灰尘；主干道上的车马声与脚步声交叠着向前流淌，通往城东方向的石板路依旧宽阔。\n\n<StatusPlaceHolderImpl/>"},"reason":"黄泉与布莱特之间的当面对话已完整记录其言说及接收情况。"},"status":"extracted","unresolved":[]}]}
+
+
+
+custom354 B.scene3.dependency [pass]
+
+原adapter绑定通过，唯一required正是345真实待核ID；不直接裁定听者，不授予。
+
+{"inputRef":"2aad48896553b6c49fb0dfbfda79fb0fcb68a7f3b0627568349983bef1fa2c16","required":["dialogue.28e35f389cbb7d6a2193a79e45aa4682c3388f9280612f4264e4c4d43929740a.e7743f6d803220bd4c93dce6362c27bac07bdf33f58ef22281b9b009ad3d078a"]}
+
+
+
+custom355 B.scene3.narration [uncovered]
+
+实际UI和知识投影续行正确，但对白说自己只听半句；可能模型未承接，也可能角色回避，不能证明。明确查到row.decision未进入来源投影，旧原文仍听者不明；补现有确认依据，不强制披露。
+
+布莱特侧过头，稍稍辨了辨御临风说话的方向，随即坦然笑了笑：
+
+“刚才那辆运石料的重车正好压着石板过去，铁箍车轮和挽马动静实在太大，我只听见黄泉开口说了半句，后半截全被轰隆隆的轮声盖过去了。你要是想知道改在哪儿，直接问问黄泉更稳妥。”
+
+旁边街面上，那辆拉着沉重石料的大车已经慢吞吞拐进了前方的横巷，留下一道淡淡的浮尘。水渠旁的风依旧带着凉意，街上的行人继续往前走着，谁也没有多在路口逗留。
+
+
+
+custom356 B.fix3.narration [pass]
+
+实际回应承接已确认接收，保留黄泉转述/商贩来源、明天和南门外石桥，不将消息变成独立事实，不替玩家行动。有限成对复测改善，不证明因果或稳定性。
+
+布莱特牵着马绳，步子没有停下。他侧过头来面向御临风，语气平和自然：
+
+“刚才大车过去之前，黄泉转述的是商贩说明天改到南门外的石桥旁取货。”
+
+身旁的水渠边正有洗菜的妇人舀水，街面上的喧闹声一阵阵掠过，城东的方向还在主道的前方铺展着。
+
+
+
+custom357 B.fix3.reception [pass]
+
+原严格检查通过；实际布莱特→御临风转述绑定原取货命题，发送者已有经UI确认取得依据，时间地点来源完整、belief不升级。
+
+{"schemaVersion":"dialogue-reception/2","contextRef":"9a1ce5db1d2c7ce69873c7551401e64507f8cfd3229ae651deacf644d7acab4a","inputRef":"assertion.7749afa08f52b661ba81761ef6496ebd34f0964b47cc13cd8be0375ec705f9df","units":[{"id":"turn","status":"extracted","claims":[],"utterances":[{"claim":{"id":"utterance.bright.1","type":"utterance","args":{"speaker":"布莱特","content":"刚才大车过去之前，黄泉转述的是商贩说明天改到南门外的石桥旁取货。"},"argumentSpans":{"speaker":{"documentId":"current","start":0,"end":3,"quote":"布莱特"},"content":{"documentId":"current","start":36,"end":68,"quote":"刚才大车过去之前，黄泉转述的是商贩说明天改到南门外的石桥旁取货。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":35,"end":69,"quote":"“刚才大车过去之前，黄泉转述的是商贩说明天改到南门外的石桥旁取货。”"}},"receptions":[{"id":"reception.bright.1.player","speakerId":"bright","recipientIds":["player"],"recipientSpans":[{"documentId":"current","start":22,"end":25,"quote":"御临风"}],"evidence":{"documentId":"current","start":15,"end":26,"quote":"他侧过头来面向御临风，"},"status":"received","propositionRef":"dialogue.28e35f389cbb7d6a2193a79e45aa4682c3388f9280612f4264e4c4d43929740a.e7743f6d803220bd4c93dce6362c27bac07bdf33f58ef22281b9b009ad3d078a.message","reason":""}]}],"coverage":{"status":"recorded","evidence":{"documentId":"current","start":0,"end":142,"quote":"布莱特牵着马绳，步子没有停下。他侧过头来面向御临风，语气平和自然：\n\n“刚才大车过去之前，黄泉转述的是商贩说明天改到南门外的石桥旁取货。”\n\n身旁的水渠边正有洗菜的妇人舀水，街面上的喧闹声一阵阵掠过，城东的方向还在主道的前方铺展着。\n\n<StatusPlaceHolderImpl/>"},"reason":"布莱特面向御临风直接说出商贩改地取货的消息，且内容与已有命题一致，御临风无障碍接收。"},"unresolved":[]}]}
+

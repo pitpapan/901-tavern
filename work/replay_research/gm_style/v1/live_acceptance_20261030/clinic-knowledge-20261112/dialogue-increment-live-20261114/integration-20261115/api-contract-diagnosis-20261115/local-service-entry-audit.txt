@@ -1,0 +1,34 @@
+本地转发服务入口核对（2026-11-15，离线/本机只读）
+
+结论
+在本轮列明的本地开发目录、常规部署配置及运行入口中，没有找到能够与cdn.sta1n.cn关联的转发服务源码、服务端配置、管理入口或内部日志。找到的是酒馆客户端/适配代码、诊断发送与响应捕获记录。无依据把本地SillyTavern当成远端API网关，也无依据声称全电脑/所有远程账号绝对不存在相关服务。
+
+检查范围与结果
+- D:/github下现有项目（含SillyTavern和ST-BaiBai-Tools），C:/Users/pit/source、PycharmProjects、Documents/Codex、D:/env-windows；按域名sta1n、zeabur、one-api/new-api/oneapi/litellm及部署文件名检查源码/配置/日志。排除依赖、Git对象、虚拟环境、正式data、密钥文件，不输出秘密。D:/github仅3份酒馆语言文件命中网关通用词，无服务实现关联。
+- 当前901工作区相关gm/node/tavern及战役gm_runtime的运行代码中未找到目标网关实现/管理连接。已知sample诊断脚本只是调用远端API，历史请求/响应是客户端证据。
+- 常规.env/config/conf/log补查未发现目标关联；部署文件名命中仅D:/github/sillyTavern/docker/docker-compose.yml，其定义仅SillyTavern容器与8000端口，不是远端网关部署。
+- D:/xampp/apache/conf与htdocs路径不存在，现存xampp目录只有phpMyAdmin。不能把名称为xampp的残留目录当成可用代理。
+- 本机受限环境初次CIM/服务管理器读取失败；经只读权限扩展成功取得进程/服务清单。没有匹配目标域名/网关关键词的进程或相关网关服务。Node PID12388监听127.0.0.1:8000；对源码已定义的本机GET /version做一次只读核对，返回SillyTavern:1.19.0、gitRevision06bde939f/release。其他列出的Node属于Codex/工具运行时。未启动或停止任何服务。
+- WSL已注册发行版清单返回“没有已安装的分发”，没有启动/安装WSL。
+- docker CLI不在PATH，常见Docker Desktop二进制不存在，无Docker服务进程；残留Docker context仅desktop-linux，目标为本机npipe DockerDesktopLinuxEngine。未连接远程Docker，未读取认证文件。
+- .pm2目录不存在；.ssh/config含2个Host块，但无目标域名或所查网关关联。没有读取私钥、known_hosts内容或尝试SSH登录。主机使用任意别名/IP时不能凭本次关键词检查排除远程部署存在。
+- 正式酒馆仍配置custom_url=https://cdn.sta1n.cn/v1与当前模型别名，requestProxy.enabled=false；8000版本接口只证明本地酒馆身份，不赋予网关内部访问权。
+
+仍缺的入口
+没有已证实的服务源码仓库、部署地址/项目、控制台、路由配置或可查询日志凭据。不能通过当前API普通调用权限读到内部转换后的请求、真实模型输出或后处理差异。未登录其他账号/网站，不搜索浏览器历史或全盘用户文档，不扫描网络，不新增模型请求。
+
+交付
+provider-evidence-493.zip及同名目录包含：
+request.json：958字节冻结原请求；
+raw-response.txt：303字节完整原始响应正文（HTTP内容解码后，与原捕获哈希一致）；
+response-content.txt：纯文本PROBE_PLAIN_73a91f2c；
+capture-metadata.json：UTC时间、端点、状态、请求/响应哈希、响应关联编号；
+service-checklist.txt：逐环节请求、转换、路由、模型原输出和后处理核对事项；
+manifest.json：文件长度和SHA-256。
+包内不含真实Authorization、密钥、Cookie或正式剧情，只有人工格式探针；未发送给服务方。ZIP解包逐字核验一致。
+x-oneapi-request-id=202611152144132171944488268d9d6UiAoXCxC
+x-zeabur-request-id=ac63c0c0-2ac3-4fb6-ae6b-1e9a6b3b66ee
+cf-ray=a5b16f981fc7038d-MAD
+请求开始2026-11-15T21:44:12.601Z；响应完成2026-11-15T21:44:14.688Z。
+
+本轮新模型调用0，外部API请求0，本机版本GET1。未改产品、运行配置、正式剧情或自动路线，未部署；原22正式文件及3产品源哈希保持。累计498、余额36未变。后续由服务方据关联编号提供日志；本地继续盲测不能替代该证据。

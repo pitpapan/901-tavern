@@ -1,0 +1,31 @@
+{
+  "kind": "review",
+  "startedAt": "2026-11-14T19:57:29.379Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-14T19:57:33.818Z",
+  "headersElapsedMs": 4439,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5a895e18f6dcfee-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sat, 14 Nov 2026 19:57:33 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=6qQjovILFRenp7NDwflT4H%2F7PNWarNppan%2BiBZrIN9WYT1O%2B6vTrYWE7pPv%2FIbLWFkwOvYUaKFv4GKsnYW54M1Hb0kF1nQy37ITaNsEdMQ7MmjmLmic0WFLaSeg9Wg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611141957292783227938268d9d69KMh8Icb",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "c74bec2e-2c4e-44ab-b625-33609301965a"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"e752d153-651c-4386-a2f6-f48fe6fca106\",\"object\":\"chat.completion\",\"created\":1794686253,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"contextRef\\\":\\\"40e8717b93bcca15a9d8d2abaa1cd4184940805c8ef4546deb77374f71bc40f6\\\",\\\"assertions\\\":{\\\"schemaVersion\\\":\\\"gm-assertion-output/1\\\",\\\"inputRef\\\":\\\"assertion.a8b23d4e35d674016529fb21a7a79aedce9d6efa4e18dccda5367cb8c313e913\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"status\\\":\\\"extracted\\\",\\\"claims\\\":[{\\\"id\\\":\\\"speech\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"北街水井暂时停用。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":2,\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":9,\\\"end\\\":18,\\\"quote\\\":\\\"北街水井暂时停用。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":19,\\\"quote\\\":\\\"黄泉对御临风说：“北街水井暂时停用。”\\\"}}],\\\"unresolved\\\":[]}]},\\\"receptions\\\":[{\\\"id\\\":\\\"r\\\",\\\"claimId\\\":\\\"speech\\\",\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"player\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":3,\\\"end\\\":6,\\\"quote\\\":\\\"御临风\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":19,\\\"quote\\\":\\\"黄泉对御临风说：“北街水井暂时停用。”\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":\\\"well.closed\\\",\\\"reason\\\":\\\"\\\"}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":660,\"completion_tokens\":417,\"total_tokens\":1077}}",
+  "responseBytes": 1653,
+  "responseBodySha256BeforePrivacyRedaction": "6c7d5e7d74363e41bd2ceb3d112774da879df6aeb68189bd48390979ca5c63d5",
+  "outcome": "completed",
+  "finishedAt": "2026-11-14T19:57:33.823Z",
+  "elapsedMs": 4444
+}

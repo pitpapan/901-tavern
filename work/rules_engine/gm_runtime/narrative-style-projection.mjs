@@ -45,7 +45,31 @@ export function removeSummaryMemory(source){
  return source.replace(importLine+'\r\n','').replace(importLine+'\n','')
    .replace(history+'\r\n'+slot,history).replace(history+'\n'+slot,history);
 }
-export function patchNarrativeEntry(source,{summary=false}={}){
+export function patchStoryKnowledgeEntry(source){
+ const route=source.match(/const \{registerReplayGate\}=await import\('([^']+)work\/rules_engine\/gm_runtime\/replay-gate-script\.example\.js'\);/)?.[1];
+ if(!route)throw Error('Expected replay gate import route');
+ const anchor='registerReplayGate({getMvu:async()=>Mvu,combat,';
+ if(source.split(anchor).length!==2)throw Error('Expected one ordinary story gate');
+ const setup=`const {createStoryKnowledgeRuntime}=await import('${route}work/rules_engine/gm_runtime/story-knowledge.mjs');
+const {CLINIC_KNOWLEDGE_CATALOG}=await import('${route}work/rules_engine/gm_runtime/clinic-knowledge-catalog.mjs');
+const storyKnowledge=createStoryKnowledgeRuntime({mvu:Mvu,tavern:SillyTavern,catalog:CLINIC_KNOWLEDGE_CATALOG,
+  dialogue:{readMemory:()=>({source:'existing-database',data:window.top.AutoCardUpdaterAPI?.exportTableAsJson?.()??null})},
+  getAnchor:()=>({chatId:SillyTavern.getCurrentChatId?.()??SillyTavern.chatId,messageId:SillyTavern.chat.length-1,swipeId:SillyTavern.chat.at(-1)?.swipe_id??0})});
+const storyKnowledgeController=`;
+ source=source.replace(anchor,setup+anchor+'knowledge:storyKnowledge,');
+ // Explicit host adapter binding only; no default semantic/model transport is installed.
+ return source+`\nwindow.top.__901StoryKnowledge={context:()=>storyKnowledge.context(),receive:receipt=>{if(SillyTavern.characterId!==sourceCharacter)throw Error('Inactive story character');return storyKnowledgeController.receiveKnowledge(receipt);}};
+Object.assign(window.top.__901StoryKnowledge,{
+ configureDialogueHost:config=>{if(SillyTavern.characterId!==sourceCharacter)throw Error('Inactive story character');return storyKnowledgeController.configureKnowledgeDialogueHost(config);},
+ configureDialogue:adapter=>{if(SillyTavern.characterId!==sourceCharacter)throw Error('Inactive story character');return storyKnowledgeController.configureKnowledgeDialogue(adapter);},
+ questions:refs=>{if(SillyTavern.characterId!==sourceCharacter)throw Error('Inactive story character');return storyKnowledgeController.dialogueQuestions(refs);},
+ resolve:answer=>{if(SillyTavern.characterId!==sourceCharacter)throw Error('Inactive story character');return storyKnowledgeController.resolveKnowledgeDialogue(answer);}
+});
+// Host-owned explicit configuration is optional and is never persisted in story state.
+if(window.top.__901DialogueHost?.enabled===true)window.top.__901StoryKnowledge.configureDialogueHost(window.top.__901DialogueHost);
+window.addEventListener('pagehide',()=>{if(SillyTavern.characterId===sourceCharacter)delete window.top.__901StoryKnowledge;});\n`;
+}
+export function patchNarrativeEntry(source,{summary=false,knowledge=false}={}){
  const replacements=[['max_chat_history:6',"max_chat_history:'all'"],["ordered_prompts:['world_info_before'","ordered_prompts:[{role:'system',content:style},'world_info_before'"]];
  for(const [before,after]of replacements){
   if(source.split(after).length===2&&!source.includes(before))continue;
@@ -53,9 +77,10 @@ export function patchNarrativeEntry(source,{summary=false}={}){
   source=source.replace(before,after);
  }
  source=patchDeclaredActionInstruction(patchNarrationInstruction(source));
- return summary?patchSummaryMemory(source):removeSummaryMemory(source);
+ source=summary?patchSummaryMemory(source):removeSummaryMemory(source);
+ return knowledge?patchStoryKnowledgeEntry(source):source;
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
  const input=JSON.parse(readFileSync(0,'utf8'));
- process.stdout.write(JSON.stringify({script:patchNarrativeEntry(input.script,{summary:input.summary??false}),style:selectAdoptedStyle(input.authoring)}));
+ process.stdout.write(JSON.stringify({script:patchNarrativeEntry(input.script,{summary:input.summary??false,knowledge:input.knowledge??false}),style:selectAdoptedStyle(input.authoring)}));
 }

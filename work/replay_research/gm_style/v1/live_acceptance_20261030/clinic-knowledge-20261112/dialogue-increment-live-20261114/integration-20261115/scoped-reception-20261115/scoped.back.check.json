@@ -1,0 +1,591 @@
+{
+  "id": "scoped.back",
+  "exactCurrentMessages": true,
+  "schemaPass": true,
+  "structuralPass": true,
+  "checked": {
+    "contextRef": "6705097eeb519053f4a3a3fc9bd4d1b28d109ae7f39f58c7c4fe6c7a96833db6",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.d2d25489ac483b915bd4b70390a607dfece15d94cc9ab23c69d2d499c0fe5e42",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "claim-utt-1",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "西门今晚关闭，明早从石桥走。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 0,
+                  "end": 2,
+                  "quote": "黄泉"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 9,
+                  "end": 23,
+                  "quote": "西门今晚关闭，明早从石桥走。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 0,
+                "end": 24,
+                "quote": "黄泉对御临风说：“西门今晚关闭，明早从石桥走。”"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "rec-1",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 9,
+          "end": 23,
+          "quote": "西门今晚关闭，明早从石桥走。"
+        },
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 3,
+            "end": 6,
+            "quote": "御临风"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 8,
+          "quote": "黄泉对御临风说："
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "黄泉直接对御临风说出且无接收障碍。",
+        "claimId": "claim-utt-1"
+      },
+      {
+        "id": "rec-2",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 9,
+          "end": 16,
+          "quote": "西门今晚关闭，"
+        },
+        "speakerId": "huang",
+        "recipientIds": [
+          "bright"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 24,
+            "end": 27,
+            "quote": "布莱特"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 24,
+          "end": 33,
+          "quote": "布莱特没听见前半句"
+        },
+        "status": "not_received",
+        "propositionRef": null,
+        "reason": "原文明确指出布莱特没听见前半句。",
+        "claimId": "claim-utt-1"
+      },
+      {
+        "id": "rec-3",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 16,
+          "end": 23,
+          "quote": "明早从石桥走。"
+        },
+        "speakerId": "huang",
+        "recipientIds": [
+          "bright"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 24,
+            "end": 27,
+            "quote": "布莱特"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 34,
+          "end": 46,
+          "quote": "只听清了“明早从石桥走”"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "原文明确指出布莱特只听清了“明早从石桥走”。",
+        "claimId": "claim-utt-1"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "recorded",
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 47,
+          "quote": "黄泉对御临风说：“西门今晚关闭，明早从石桥走。”布莱特没听见前半句，只听清了“明早从石桥走”。"
+        },
+        "reason": "记录了黄泉向御临风所说话语及御临风完整接收、布莱特对前半句的未接收及对后半句的听清记录。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false
+  },
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": [
+        {
+          "id": "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "西门今晚关闭，明早从石桥走。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 1,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "range.offline.range.back",
+                "messageId": 1,
+                "swipeId": 0,
+                "text": "黄泉对御临风说：“西门今晚关闭，明早从石桥走。”布莱特没听见前半句，只听清了“明早从石桥走”。"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b",
+          "channel": "message",
+          "learnedAtMessage": 1
+        }
+      ]
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": [
+        {
+          "id": "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "明早从石桥走。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 1,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "range.offline.range.back",
+                "messageId": 1,
+                "swipeId": 0,
+                "text": "黄泉对御临风说：“西门今晚关闭，明早从石桥走。”布莱特没听见前半句，只听清了“明早从石桥走”。"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3",
+          "channel": "message",
+          "learnedAtMessage": 1
+        }
+      ]
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "pending": [],
+  "noQuestionWithoutDependency": true,
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "implicit.regression",
+    "chatId": "range.offline.range.back",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      },
+      "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b.message": {
+        "id": "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "西门今晚关闭，明早从石桥走。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      },
+      "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3.message": {
+        "id": "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "明早从石桥走。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      }
+    },
+    "events": {
+      "received.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b": {
+        "id": "received.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player"
+          ],
+          "propositionRefs": [
+            "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "range.offline.range.back",
+            "messageId": 1,
+            "swipeId": 0,
+            "text": "黄泉对御临风说：“西门今晚关闭，明早从石桥走。”布莱特没听见前半句，只听清了“明早从石桥走”。"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/range.offline.range.back",
+            "line": 2
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b.player.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b.message.event": {
+        "id": "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b.player.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b.player.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b.message",
+            "eventRef": "received.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 1,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/range.offline.range.back",
+            "line": 2
+          }
+        ]
+      },
+      "received.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3": {
+        "id": "received.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "bright"
+          ],
+          "propositionRefs": [
+            "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "range.offline.range.back",
+            "messageId": 1,
+            "swipeId": 0,
+            "text": "黄泉对御临风说：“西门今晚关闭，明早从石桥走。”布莱特没听见前半句，只听清了“明早从石桥走”。"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/range.offline.range.back",
+            "line": 2
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3.bright.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3.message.event": {
+        "id": "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3.bright.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3.bright.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3.message",
+            "knowerId": "bright",
+            "propositionRef": "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3.message",
+            "eventRef": "received.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 1,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/range.offline.range.back",
+            "line": 2
+          }
+        ]
+      }
+    },
+    "knowledge": {
+      "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b.player.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b.message": {
+        "id": "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b.player.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b.message",
+        "eventRef": "received.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      },
+      "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3.bright.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3.message": {
+        "id": "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3.bright.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3.message",
+        "knowerId": "bright",
+        "propositionRef": "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3.message",
+        "eventRef": "received.dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      }
+    },
+    "dialogueBatches": {
+      "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec": {
+        "id": "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec",
+        "sourceAnchor": {
+          "chatId": "range.offline.range.back",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "黄泉对御临风说：“西门今晚关闭，明早从石桥走。”布莱特没听见前半句，只听清了“明早从石桥走”。"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b",
+            "claimId": "claim-utt-1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "西门今晚关闭，明早从石桥走。",
+            "quote": "西门今晚关闭，明早从石桥走。",
+            "contentSpan": {
+              "documentId": "current",
+              "start": 9,
+              "end": 23,
+              "quote": "西门今晚关闭，明早从石桥走。"
+            },
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "黄泉直接对御临风说出且无接收障碍。",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 8,
+              "quote": "黄泉对御临风说："
+            },
+            "unresolved": []
+          },
+          {
+            "id": "dialogue.1d4bbae647a925a4b6f210256de0a4420e23884afb9059f8b0f47525f15c93ec.d59e20b59b9b7fb87cea53eb6845ed361cef1b58483b4271c0bb7cafee3809e3",
+            "claimId": "claim-utt-1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "bright"
+            ],
+            "propositionRef": null,
+            "content": "明早从石桥走。",
+            "quote": "明早从石桥走。",
+            "contentSpan": {
+              "documentId": "current",
+              "start": 16,
+              "end": 23,
+              "quote": "明早从石桥走。"
+            },
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "原文明确指出布莱特只听清了“明早从石桥走”。",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 34,
+              "end": 46,
+              "quote": "只听清了“明早从石桥走”"
+            },
+            "unresolved": []
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "recorded",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 47,
+              "quote": "黄泉对御临风说：“西门今晚关闭，明早从石桥走。”布莱特没听见前半句，只听清了“明早从石桥走”。"
+            },
+            "reason": "记录了黄泉向御临风所说话语及御临风完整接收、布莱特对前半句的未接收及对后半句的听清记录。"
+          }
+        ]
+      }
+    }
+  },
+  "mvuWrites": 4,
+  "replayStateUnchanged": false
+}

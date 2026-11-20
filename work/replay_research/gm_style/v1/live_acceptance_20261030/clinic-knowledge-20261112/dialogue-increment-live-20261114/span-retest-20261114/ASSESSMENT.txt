@@ -1,0 +1,15 @@
+2026-11-14 首例明确接收：仅引用说明更新的一次真实复测
+
+用户授权新增1次。custom274实际HTTP200，finish_reason=stop，10951毫秒完整返回；调用1/1，余额0，已关闭，无重试。原custom273及其旧余额9、失败记录、诊断副本均保持，不使用旧额度。
+
+请求：request.json为实际发送完整请求，5416字节；原首例4531字节。仅system新增共享合同引用说明，added-guidance.txt为该增量（UTF-8正文884字节，序列化转义后请求增量885字节）。去掉这一段，新旧messages逐项相同；user字符串、剧情原文、角色、事实、记忆、contextRef/inputRef及所有生成参数均不变。请求模型[抗截断]gemini-3.8-flash，temperature1、top_p1、max_tokens4096、stream=false、presence/frequency_penalty0，超时180000ms。上游自报gemini-3.8-flash-n，与custom273自报相同。
+
+完整原始响应：raw-response.txt；content.txt为message.content原样取出；response.json保存HTTP元数据及完整响应正文。原始响应SHA256与传输捕获时未脱敏正文哈希一致：414b508d9f9eb7319079be9138daf5c9d3b6268c239fdd37d16371da054d6848。未修补、删字段或清空值。
+
+结果：仍未通过，失败即停。
+1. 原先缺失的听清对象引用此次由模型提供：claim.2.args.object=东门封闭。，argumentSpans.object={documentId:current,start:9,end:14,quote:东门封闭。}。这是一处局部正面观察，不能由单次样本证明提示改善稳定或因果确定。
+2. 新失败在claim.1：args.name=状态，但argumentSpans.name=null。非null角色无引用，原checkAssertionReply返回INVALID_ROLE_SPAN，普通入口同样拒绝整个候选。
+3. 消息的说话者bright、接收者huang、received、propositionRef=null与输入相符；没有多授予御临风，东门状态仍为reported且归属布莱特。但这些局部语义正确不能抵消结构失败。
+4. 仅在原隔离seed中原样回放，applied.json记录localProtocolPassed=false；revision0，events/knowledge为空，三人均无新增知情。after.seed.json为隔离结果，不写正式存档或正式剧情。
+
+保留：verification.json核对原证据、22正式文件、7产品源均不变。未部署、未恢复自动批准/修订、未改校验或自动补原文。未重跑之前142项离线回归，因为本轮产品没有修改；本轮验证为实际一次请求及其原样离线回放。

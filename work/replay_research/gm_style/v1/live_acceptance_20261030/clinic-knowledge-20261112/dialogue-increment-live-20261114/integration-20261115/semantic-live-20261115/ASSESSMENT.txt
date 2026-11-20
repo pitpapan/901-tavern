@@ -1,0 +1,28 @@
+2026-11-15 显式v6首次真实模型验收（478—484）
+
+范围与输入：用户授权从剩余57次额度验证显式dialogue-reception/6。预先冻结七份既有输入，原文、sourceAnchor、history、actors、facts、memory、片段参照和全部生成参数逐份保持；只更换system生成合同与response_format为当前v6。每份实际请求messages/Schema与当前prepare输出深比较一致，实际端点与模型沿现有runner设置，未改温度、top_p或max_tokens。未通过把当前听者明确写出来绕开隐含身份问题。
+
+程序与离线：产品源码没有改动。仅原离线回放助手增加按已发送Schema显式选择v6的分派，并在合法回放后保存真实隔离seed供追溯。原v5及历史分派保留，不按模型回复猜版本、不自动回退。相关174/174离线回归通过。没有恢复自动批准/修订、没有部署/正式剧情写入。
+
+结果：7份均HTTP200/stop，无传输重试；5份原始JSON语法失败，2份JSON/Schema/严格引用通过。两份中480绑定与接收指标通过，但scope语义错误，整份判失败；484未开口反例通过本次知情指标。部分接收和歧义待核没有通过，未用手工构造待核继续测试，后续依赖模型调用0。
+
+逐例诊断：
+478 v6.accept.partial（原475部分接收绑定失败）：原始JSON位置1359在coverage.reason后混入未加引号的说明文字，原生解析拒绝，隔离写入0。可读范围前后分开，但第一条evidence.kind=reply却引用“布莱特只听清前半句”旁白，违背已发reply当前回答范围；另把“已经封闭”当作scope.condition，不能完整判语义准确。原件保留、不修补或重发。
+479 v6.accept.uncertain（原477局部接收歧义）：原始JSON末尾结构未正确闭合，位置1177解析失败，写入0、没有真实待核。可读后半使用unknown且保留未知范围，前半reply依据仍是旁白听清说明，不能据局部合理判整体通过。finish_reason=stop，不把语法未闭合说成已证实的网络/长度截断。
+480 v6.accept.npc_reply（原466隐含NPC听者）：JSON/Schema/引用检查通过；程序成功生成ID与派生状态，隐含听者bright/history0/当前回答匹配，只给布莱特登记“渡口今晚停航。”这一来源说法，player/huang不获知，pending空、无关0问。隔离MVU写入3次，原正式存档不受影响。模型却把原文没有的condition/attribution填成{value:"null",span:整句回答}，字符串不是JSON null；引用存在不支持该语义，因此整份人工判失败。当前共享合同允许非空语义字符串，不能靠关键字“null”拦截或自动转型掩盖这一偏差。输入已经说明未陈述才null，未证实新的本地漏传。
+481 v6.accept.long（原465长文JSON失败）：位置4624有额外根闭合符，原始JSON拒绝、写入0。可读结构中多个explicit listener漏必填historyMessageId；第三段content包含“侧过头、辨方向”等旁白；部分接收依据仅描述同行或动作，不能充分支持全句接收。三段话被列出不等于完整准确。全部原始内容保留，不截取首个JSON对象来接受。
+482 v6.accept.identity_unknown（原relation.ambiguous听者身份歧义）：位置1110混入额外文字，拒绝、写入0。可读actorId=null/kind=unknown保留身份不确定，但把路线内容当scope.condition；unresolved未进入有效运行，不能声称真实待核/后续依赖通过。
+483 v6.accept.obstacle（原476未接收控制）：位置862在coverage.reason后有非法额外文字，拒绝、写入0。可读listener为当前回答、障碍准确、scope为null，仍不能把非法整份当通过。
+484 v6.accept.unsaid（原474未开口控制）：JSON/Schema/引用及未接收知情指标通过，utterances/receptions为空，coverage=none准确引用“却始终没有开口。”；无knowledge/events/pending增量，无关0问，原facts保持。隔离MVU仅2次批次保存，不是零写入或正式剧情写入。完整断言抽取不因此获证。
+
+实际证明与限制：
+- v6确实通过现有通道发送，输出不再要求重复ID/回执说话者/派生状态，480已验证程序展开和原知情登记可工作。
+- 本批原始正文都没有使用显式ref简写，仍逐处选择原文片段；不能宣称模型已采用全部精简能力。
+- 格式错误仍大量存在，减少重复结构并未在本批证明稳定性改善；结构通过也无法保证scope含义或接收依据正确。
+- 原始错误存在于保存的HTTP message.content中，保存前后哈希相同；actual request的strict Schema完整，不能将失败归为本地丢项。上游内部成因仍未确定。
+- 0个有效歧义待核样本，因此没有后续依赖真实承接验证；不能替换为旧待核或手工样本冒称通过。
+
+账本：本轮7次（478—484），原200额度已用150、余50，累计484，本轮有限批次关闭。683份此前请求/响应证据、历史逐次账本及22份正式文件保持；模型响应全文/完整请求逐份保存，原失败未覆盖。其余50次保留，不对同请求自动重试。
+
+未自动修补、未放宽校验、未改产品提示、未部署、未写正式剧情、未恢复自动批准或修订路线。
+证据：cases.json、contract-verification.json、campaign-tests.log、各check.json及合法回放after.seed.json、verification.json、complete-outputs.txt；完整请求和原始HTTP响应位于同级iteration-200-20261115/v6.accept.*文件。

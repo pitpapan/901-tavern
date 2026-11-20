@@ -1,0 +1,7 @@
+Read-only invocation of existing verifier: its sole verification.json write is replaced by equality against the saved report; no generated files changed.
+Traceback (most recent call last):
+  File "<stdin>", line 8, in <module>
+  File "C:\Users\pit\.codex\worktrees\yulinfeng-tavern-plan\TRPG outputs\work\replay_research\six_books_20261023\verify_candidate.py", line 12, in <module>
+    assert plan==ctx['plan']==read(Path(__file__).with_name('创作规划.yaml'))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

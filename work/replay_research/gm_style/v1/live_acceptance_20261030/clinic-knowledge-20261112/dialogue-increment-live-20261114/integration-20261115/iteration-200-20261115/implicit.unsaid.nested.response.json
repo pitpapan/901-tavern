@@ -1,0 +1,31 @@
+{
+  "kind": "implicit.unsaid.nested",
+  "startedAt": "2026-11-15T02:00:37.436Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T02:00:40.721Z",
+  "headersElapsedMs": 3286,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5aaa9d28e1dad67-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 02:00:40 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=G6Uxw1HvbE%2BDkqB68ZI3%2FRkBdLvy%2FLI2V91H7zF%2BSFUz0PvXsd8otOHwMR7DgZEBUFcc5GK3H1omzHi16k7lPES3KIWfGoYDWDKYN7LTu6ir9%2B7TpTPkMcix27078g%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611150200375936045858268d9d6gwAU9DkM",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "957ddd2d-1d49-43f9-a367-02bb9f697488"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"965deaf5-b206-4deb-a50d-f52315b78586\",\"object\":\"chat.completion\",\"created\":1794708040,\"model\":\"gemini-3.8-flash-control\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/2\\\",\\\"contextRef\\\":\\\"e66372f13007d5fca86223f7c53e9796f2589b2affe4cd200ee4ed39e34d6bb2\\\",\\\"inputRef\\\":\\\"assertion.c6590c8c75289cbce31667dbee01331e5646cd4ec456a3f771d7a16096aaf757\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[{\\\"id\\\":\\\"turn.claim.1\\\",\\\"type\\\":\\\"action\\\",\\\"args\\\":{\\\"actor\\\":\\\"黄泉\\\",\\\"verb\\\":\\\"开口\\\",\\\"object\\\":\\\"回答\\\"},\\\"argumentSpans\\\":{\\\"actor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":2,\\\"quote\\\":\\\"黄泉\\\"},\\\"verb\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":24,\\\"end\\\":26,\\\"quote\\\":\\\"开口\\\"},\\\"object\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":16,\\\"end\\\":18,\\\"quote\\\":\\\"回答\\\"}},\\\"mode\\\":\\\"denied\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":19,\\\"end\\\":27,\\\"quote\\\":\\\"却始终没有开口。\\\"}}],\\\"utterances\\\":[],\\\"coverage\\\":{\\\"status\\\":\\\"none\\\",\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":27,\\\"quote\\\":\\\"黄泉心里拟好了“日落后就锁门”的回答，却始终没有开口。\\\"},\\\"reason\\\":\\\"黄泉仅在心里拟好回答，明确未开口说话，没有发生实际言说与信息传递。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":3813,\"completion_tokens\":403,\"total_tokens\":4216}}",
+  "responseBytes": 1579,
+  "responseBodySha256BeforePrivacyRedaction": "84b37ec043c9725a97e46b636c4dcb37bccd9dd6349eef1d8d249c6d488216ff",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T02:00:40.732Z",
+  "elapsedMs": 3296
+}

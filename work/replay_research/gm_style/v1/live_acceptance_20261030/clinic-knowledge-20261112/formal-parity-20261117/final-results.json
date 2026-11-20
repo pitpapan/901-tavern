@@ -1,0 +1,79 @@
+{
+  "status": "coordinator_review_completed_narrative_not_accepted",
+  "coordinatorReviewDate": "2026-11-17",
+  "overallNarrativePass": false,
+  "localIntegrationAndPersistencePassed": true,
+  "localTestsPassed": 91,
+  "calls": 6,
+  "classificationCalls": 3,
+  "narrationCalls": 3,
+  "cumulative": 552,
+  "remaining": 0,
+  "failuresOrExternalRetriesDuringTransport": 0,
+  "semanticVerdicts": {
+    "548": "fail: invented prior hearing or dealings",
+    "550": "pass for this controlled known-state question",
+    "552": "pass for this controlled saved/reopened question"
+  },
+  "inputKnowledgeCounts": {
+    "before": [
+      0,
+      0,
+      0
+    ],
+    "after": [
+      0,
+      1,
+      0
+    ],
+    "reopen": [
+      0,
+      1,
+      0
+    ]
+  },
+  "publicReceptionsAfterActualProse": {
+    "550": {
+      "manual": true,
+      "sender": "bright",
+      "recipients": [
+        "player",
+        "huang"
+      ],
+      "result": [
+        1,
+        1,
+        1
+      ]
+    },
+    "552": {
+      "manual": true,
+      "sender": "bright",
+      "recipients": [
+        "player",
+        "huang"
+      ],
+      "result": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "sameInitialReceivedSeedAndAfterReopenRequests": true,
+  "actualCurrentSwipeAndDiskEqual": true,
+  "finalReopenAndRepeatedReceiptFullRuleRootEqual": true,
+  "receiptRepeatResult": "already_applied",
+  "actorsResourcesAndOldOperationsUnchanged": true,
+  "formalProtectedFilesUnchanged": 288,
+  "formalRuntimeFiles": 126,
+  "existingRuntimeFilesPatchedOnlyInIsolate": 3,
+  "addedDependencyFilesOnlyInIsolate": 17,
+  "generalDialogueExtractionAndReviewCalls": 0,
+  "styleChanges": false,
+  "allRelatedGmBackgroundFiltered": false,
+  "deployed": false,
+  "committedOrPushed": false,
+  "manualOperator": "Codex executed explicitly described experimental controls; semantic confirmation is still an operator responsibility, not automatic reception detection.",
+  "coordinatorIndependentAudit": "Root reported independent verification of six raw request/response hashes, all three saved swipes, explicit propagation receipts, full-root idempotency and formal 288-file preservation."
+}

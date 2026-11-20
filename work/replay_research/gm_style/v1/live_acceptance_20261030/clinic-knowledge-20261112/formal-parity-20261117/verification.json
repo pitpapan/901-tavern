@@ -1,0 +1,127 @@
+{
+  "localPreparationPassed": true,
+  "realModelPerformanceVerified": false,
+  "modelCalls": 0,
+  "budgetRemaining": 0,
+  "nativeBranch": "901 帝都正式续玩 20261106 - Branch #1",
+  "nativeCutMessageId": 8,
+  "originalRetainedMessages": 9,
+  "before": {
+    "revision": 1,
+    "knowledge": {
+      "player": 0,
+      "bright": 0,
+      "huang": 0
+    }
+  },
+  "after": {
+    "revision": 2,
+    "knowledge": {
+      "player": 0,
+      "bright": 1,
+      "huang": 0
+    },
+    "sourceEvents": 1,
+    "grantAuditEvents": 1,
+    "grants": 1,
+    "newKnowledgeOperations": 1
+  },
+  "reopen": {
+    "sameFullRuleRoot": true,
+    "sameKnowledgeContext": true,
+    "sameExactSavedSeed": true,
+    "sameClassificationRequestBytes": true
+  },
+  "activeCurrentSwipeEqualsSavedDisk": true,
+  "mechanicalActorsUnchanged": true,
+  "oldOperationsUnchanged": true,
+  "genericExtractionDisabled": true,
+  "preparationFailureNoticesArchivedAndExcludedFromCleanSeeds": true,
+  "formalProtectedFilesUnchanged": 288,
+  "formalRuntimeFiles": 126,
+  "changedExistingRuntimeFiles": [
+    "public/901-opening-combat/work/rules_engine/gm_runtime/adjudication-gate.mjs",
+    "public/901-opening-combat/work/rules_engine/gm_runtime/replay-gate-script.example.js",
+    "public/901-opening-combat/work/rules_engine/mvu_poc/adapter.mjs"
+  ],
+  "addedDependencies": 17,
+  "formalStyleWorldbooksAndMemorySettingsPreserved": true,
+  "credentialsCopied": false,
+  "localTestsPassed": 91,
+  "classificationRequestsPrepared": 3,
+  "narrationRequestsPrepared": 0,
+  "classificationRequests": [
+    {
+      "phase": "before",
+      "kind": "classification",
+      "request": "browser\\captures\\before.classification.ae0bd163c084db1500f64a2b1a1c0159c48e91aa2507b65fcee9a4ffeb0cfe08.request.json",
+      "sha256": "ae0bd163c084db1500f64a2b1a1c0159c48e91aa2507b65fcee9a4ffeb0cfe08",
+      "bytes": 83956,
+      "parameters": {
+        "model": "[抗截断]gemini-3.8-flash",
+        "temperature": 1,
+        "max_tokens": 4096,
+        "stream": false,
+        "presence_penalty": 0,
+        "frequency_penalty": 0,
+        "top_p": 1
+      },
+      "knowledgeCounts": {
+        "player": 0,
+        "bright": 0,
+        "huang": 0
+      },
+      "classificationFixture": false,
+      "sent": false
+    },
+    {
+      "phase": "after",
+      "kind": "classification",
+      "request": "browser\\captures\\after.classification.dbdce4df1b1b85963a972af1abfaac6d4cdb66e68e1f6dd635f91736a2c9e628.request.json",
+      "sha256": "dbdce4df1b1b85963a972af1abfaac6d4cdb66e68e1f6dd635f91736a2c9e628",
+      "bytes": 85056,
+      "parameters": {
+        "model": "[抗截断]gemini-3.8-flash",
+        "temperature": 1,
+        "max_tokens": 4096,
+        "stream": false,
+        "presence_penalty": 0,
+        "frequency_penalty": 0,
+        "top_p": 1
+      },
+      "knowledgeCounts": {
+        "player": 0,
+        "bright": 1,
+        "huang": 0
+      },
+      "classificationFixture": false,
+      "sent": false
+    },
+    {
+      "phase": "reopen",
+      "kind": "classification",
+      "request": "browser\\captures\\reopen.classification.dbdce4df1b1b85963a972af1abfaac6d4cdb66e68e1f6dd635f91736a2c9e628.request.json",
+      "sha256": "dbdce4df1b1b85963a972af1abfaac6d4cdb66e68e1f6dd635f91736a2c9e628",
+      "bytes": 85056,
+      "parameters": {
+        "model": "[抗截断]gemini-3.8-flash",
+        "temperature": 1,
+        "max_tokens": 4096,
+        "stream": false,
+        "presence_penalty": 0,
+        "frequency_penalty": 0,
+        "top_p": 1
+      },
+      "knowledgeCounts": {
+        "player": 0,
+        "bright": 1,
+        "huang": 0
+      },
+      "classificationFixture": false,
+      "sent": false
+    }
+  ],
+  "newPromptsOrModelOutputRepair": false,
+  "deployed": false,
+  "committedOrPushed": false
+}

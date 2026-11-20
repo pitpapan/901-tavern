@@ -1,0 +1,161 @@
+✖ v6 selections expand to the existing v5 contract without changing input or semantic guarantees (5.4921ms)
+✖ explicit answer/content references reuse selections; scoped values still require paired source evidence (0.773ms)
+✖ v6 rejects omissions, extra/derived fields, stale bindings and invalid reuse without correction (0.7252ms)
+✖ nonreception, unknown identity, explicit none and unformable-content ambiguity retain original meanings (0.5593ms)
+✖ explicit v6 runtime registers only heard range; reopens idempotently and asks only on actual dependency (4.5591ms)
+✖ invalid raw JSON, duplicate fields, missing selections and changed source never write state (2.0753ms)
+✖ v6 is opt-in; actual raw failures cannot fall back or be upgraded to selections (0.8758ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 0
+ℹ fail 7
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 748.0977
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-semantic.test.mjs:26:1
+✖ v6 selections expand to the existing v5 contract without changing input or semantic guarantees (5.4921ms)
+  AssertionError [ERR_ASSERTION]: explicit semantic selection preparer must exist
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at prepare (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-semantic.test.mjs:11:42)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-semantic.test.mjs:27:16)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-semantic.test.mjs:37:1
+✖ explicit answer/content references reuse selections; scoped values still require paired source evidence (0.773ms)
+  AssertionError [ERR_ASSERTION]: explicit semantic selection preparer must exist
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at prepare (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-semantic.test.mjs:11:42)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-semantic.test.mjs:38:16)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-semantic.test.mjs:47:1
+✖ v6 rejects omissions, extra/derived fields, stale bindings and invalid reuse without correction (0.7252ms)
+  AssertionError [ERR_ASSERTION]: explicit semantic selection preparer must exist
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at prepare (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-semantic.test.mjs:11:42)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-semantic.test.mjs:48:16)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-semantic.test.mjs:70:1
+✖ nonreception, unknown identity, explicit none and unformable-content ambiguity retain original meanings (0.5593ms)
+  AssertionError [ERR_ASSERTION]: explicit semantic selection preparer must exist
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at prepare (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-semantic.test.mjs:11:42)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-semantic.test.mjs:71:16)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-semantic.test.mjs:86:1
+✖ explicit v6 runtime registers only heard range; reopens idempotently and asks only on actual dependency (4.5591ms)
+  Error: Unsupported dialogue contract
+      at Module.createDialogueSemanticAdapter (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs:41:101)
+      at runtime (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-semantic.test.mjs:82:25)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-semantic.test.mjs:87:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-semantic.test.mjs:100:1
+✖ invalid raw JSON, duplicate fields, missing selections and changed source never write state (2.0753ms)
+  Error: Unsupported dialogue contract
+      at Module.createDialogueSemanticAdapter (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs:41:101)
+      at runtime (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-semantic.test.mjs:82:25)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-semantic.test.mjs:102:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-semantic.test.mjs:107:1
+✖ v6 is opt-in; actual raw failures cannot fall back or be upgraded to selections (0.8758ms)
+  AssertionError [ERR_ASSERTION]: explicit semantic selection preparer must exist
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at prepare (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-semantic.test.mjs:11:42)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-semantic.test.mjs:108:16)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

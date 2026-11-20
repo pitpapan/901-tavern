@@ -1,0 +1,31 @@
+{
+  "kind": "wireprobe.strict",
+  "startedAt": "2026-11-15T21:37:41.160Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T21:37:43.346Z",
+  "headersElapsedMs": 2186,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b16608facacc3d-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 21:37:43 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=VZ7OrDAXqA4kyQsvSltCBKDx%2FKUJzlhX4s3Mbt7ywa3UojZarLQH97eSPUGFHepJd%2BoesLjIsx2GhPXaFVAqhQFCE7NYgKvhsYxZiuMLkSPXllYACH9wJHfstGtAjg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611152137417416890698268d9d6X1tWpbon",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "6ed497ed-7fb3-44d9-ad6e-07bd5caee0c3"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"05f43ca3-0a90-4865-a03d-21b1b8f774a6\",\"object\":\"chat.completion\",\"created\":1794778663,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"token\\\":\\\"wire_73a91f2c\\\",\\\"count\\\":7}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":260,\"completion_tokens\":33,\"total_tokens\":293}}",
+  "responseBytes": 324,
+  "responseBodySha256BeforePrivacyRedaction": "862091a46da118b8fc3ce037bd092cfcc4fb54cea149e41f3d475cd0a015faff",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T21:37:43.354Z",
+  "elapsedMs": 2194
+}

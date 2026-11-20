@@ -1,0 +1,54 @@
+--- a/public/901-opening-combat/work/rules_engine/gm_runtime/story-knowledge.mjs
++++ b/public/901-opening-combat/work/rules_engine/gm_runtime/story-knowledge.mjs
+@@ -33,8 +33,9 @@
+  if(!knowledge)return generateRaw(request);
+  if(!event||typeof eventOn!=='function'||typeof eventRemoveListener!=='function')throw Error('Knowledge prompt projection hook unavailable');
+  const marker='【901逐角色知情投影】',context=knowledge.context();
++ const protectedTopicText=knowledge.describeProtectedTopics?.(context)??'';
+  const hasReceptionConfirmation=context.actorKnowledge.some(a=>a.facts.some(f=>f.sources.some(s=>s.receptionConfirmation)));
+- const projected={...request,user_input:request.user_input+'\n'+marker+'\n'+JSON.stringify(context)+(hasReceptionConfirmation?'\n来源中的receptionConfirmation是对原接收歧义已经作出的明确确认；以其中的听者和内容范围承接，不再把旧原文的听者未定当作当前未确认。接收确认不改变消息真伪，也不强制人物披露；保留、回避或说谎仍是人物的选择，不倒写实际接收记录。':'')+
++ const projected={...request,user_input:request.user_input+'\n'+marker+'\n'+JSON.stringify(context)+protectedTopicText+(hasReceptionConfirmation?'\n来源中的receptionConfirmation是对原接收歧义已经作出的明确确认；以其中的听者和内容范围承接，不再把旧原文的听者未定当作当前未确认。接收确认不改变消息真伪，也不强制人物披露；保留、回避或说谎仍是人物的选择，不倒写实际接收记录。':'')+
+   '\n受控命题用于对白、判断和行动理由时，只用对应人物facts及其belief；公共常识与实际可观察现场仍按已有依据使用。可询问不等于已获知，同队或旧模型对白不补取得事件；未列知识也不表示世界事实不存在。effectiveAt是事实时点，learnedAt是人物获知时点；旧时点的事实不自动变成实时确认。聊天楼层不是世界时间，资料中的计划与条件不证明事件已发生或消息已送达。'+
+   '\n'+STORY_COMMUNICATION_INSTRUCTION};
+  const listener=data=>{
+@@ -96,6 +97,17 @@
+    });
+    return {actorId,name,facts};
+   }),availableInformation:structuredClone(catalog.availableInformation??[])};
++ }
++ function describeProtectedTopics({actorKnowledge}){
++  return (catalog.protectedTopics??[]).map(({propositionRef,question})=>{
++   const status=actorKnowledge.map(({name,facts})=>{
++    const fact=facts.find(f=>f.id===propositionRef);
++    if(!fact)return name+'在此话题上无已建立的获知来源。';
++    if(fact.access==='public')return name+'在此话题上有可用公开资料，以本人投影为准。';
++    return name+'在此话题上已有获知来源，按本人投影的来源原文、内容范围和信念状态使用。';
++   });
++   return '\n受控话题：'+question+'\n'+status.join('\n')+'\n上述状态仅描述各人的知情，不判定关系或来往在世界中是否存在。';
++  }).join('');
+  }
+  async function receive(receipt){
+   if(receipt?.status!=='received'||receipt.authority!=='host-confirmed'||!id(receipt.id)||
+@@ -172,7 +184,7 @@
+    return text.split(annotated).map(part=>part.split(s.message).join(annotated)).join(annotated);
+   },message.content)}:{})}));
+  }
+- const api={read,context,receive,projectEntries,projectMessages};
++ const api={read,context,describeProtectedTopics,receive,projectEntries,projectMessages};
+  const saveBatch=async batch=>{
+   if(!retainedSource(batch.sourceAnchor))throw Error('Dialogue batch source changed');
+   const anchor=getAnchor(),operationId='story-dialogue/'+await dialogueDigest(batch);
+--- a/public/901-opening-combat/work/rules_engine/gm_runtime/clinic-knowledge-catalog.mjs
++++ b/public/901-opening-combat/work/rules_engine/gm_runtime/clinic-knowledge-catalog.mjs
+@@ -1,5 +1,11 @@
+ // Source-bound local projection for the reviewed clinic case. Not a Canon knowledge grant.
+ export const CLINIC_KNOWLEDGE_CATALOG={
++  "protectedTopics": [
++    {
++      "propositionRef": "clinic.owner.xuelao.old-friend",
++      "question": "医馆馆主与雪老之间是否有关系？两人过去有哪些来往（如有）？"
++    }
++  ],
+   "id": "clinic.old-friend.20261112",
+   "actors": {
+     "player": "御临风",

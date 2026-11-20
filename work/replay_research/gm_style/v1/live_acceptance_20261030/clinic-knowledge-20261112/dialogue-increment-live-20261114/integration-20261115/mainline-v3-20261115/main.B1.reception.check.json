@@ -1,0 +1,648 @@
+{
+  "id": "main.B1.reception",
+  "exactCurrentMessages": true,
+  "schemaPass": true,
+  "structuralPass": true,
+  "checked": {
+    "contextRef": "bfc846ce1538c5d59f5bd23568b92eff5f2b5c33387e01177e4c4b5f60425b92",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.cb3f60f4775c8f17ba6b744f6e9df17e9a661c9d74ce90bdef198406814369e0",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "turn.utterance.1",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "渡口今晚停航，明早从南桥走。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 0,
+                  "end": 2,
+                  "quote": "黄泉"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 9,
+                  "end": 23,
+                  "quote": "渡口今晚停航，明早从南桥走。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 0,
+                "end": 24,
+                "quote": "黄泉对御临风说：“渡口今晚停航，明早从南桥走。”"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "turn.utterance.1.rec.player",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 9,
+          "end": 23,
+          "quote": "渡口今晚停航，明早从南桥走。"
+        },
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 3,
+            "end": 6,
+            "quote": "御临风"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 8,
+          "quote": "黄泉对御临风说："
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "黄泉直接对御临风说出该内容，无接收障碍。",
+        "claimId": "turn.utterance.1"
+      },
+      {
+        "id": "turn.utterance.1.rec.bright.1",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 9,
+          "end": 16,
+          "quote": "渡口今晚停航，"
+        },
+        "speakerId": "huang",
+        "recipientIds": [
+          "bright"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 24,
+            "end": 27,
+            "quote": "布莱特"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 24,
+          "end": 38,
+          "quote": "布莱特只听清“渡口今晚停航”"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "布莱特明确只听清前半句“渡口今晚停航”。",
+        "claimId": "turn.utterance.1"
+      },
+      {
+        "id": "turn.utterance.1.rec.bright.2",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 16,
+          "end": 23,
+          "quote": "明早从南桥走。"
+        },
+        "speakerId": "huang",
+        "recipientIds": [
+          "bright"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 24,
+            "end": 27,
+            "quote": "布莱特"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 39,
+          "end": 51,
+          "quote": "后半句有没有听见无法确定"
+        },
+        "status": "uncertain",
+        "propositionRef": null,
+        "reason": "原文明确指出后半句有没有听见无法确定。",
+        "claimId": "turn.utterance.1"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "uncertain",
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 78,
+          "quote": "黄泉对御临风说：“渡口今晚停航，明早从南桥走。”布莱特只听清“渡口今晚停航”，后半句有没有听见无法确定。\n\n<StatusPlaceHolderImpl/>"
+        },
+        "reason": "黄泉所说内容部分被布莱特听清，但后半句对布莱特的接收状态存在原文明确的uncertain情况。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false
+  },
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": [
+        {
+          "id": "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "渡口今晚停航，明早从南桥走。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 13,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 13,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 13,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "901 帝都正式续玩 20261106",
+                "messageId": 13,
+                "swipeId": 0,
+                "text": "黄泉对御临风说：“渡口今晚停航，明早从南桥走。”布莱特只听清“渡口今晚停航”，后半句有没有听见无法确定。\n\n<StatusPlaceHolderImpl/>"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37",
+          "channel": "message",
+          "learnedAtMessage": 13
+        }
+      ]
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": [
+        {
+          "id": "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "渡口今晚停航，"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 13,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 13,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 13,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "901 帝都正式续玩 20261106",
+                "messageId": 13,
+                "swipeId": 0,
+                "text": "黄泉对御临风说：“渡口今晚停航，明早从南桥走。”布莱特只听清“渡口今晚停航”，后半句有没有听见无法确定。\n\n<StatusPlaceHolderImpl/>"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea",
+          "channel": "message",
+          "learnedAtMessage": 13
+        }
+      ]
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "pending": [
+    {
+      "id": "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.c3e6243c65ebd62654c2412ccb8aa94826f9d8265c38949c66cc606272e267ba",
+      "claimId": "turn.utterance.1",
+      "speakerId": "huang",
+      "recipientIds": [
+        "bright"
+      ],
+      "propositionRef": null,
+      "content": "明早从南桥走。",
+      "quote": "明早从南桥走。",
+      "contentSpan": {
+        "documentId": "current",
+        "start": 16,
+        "end": 23,
+        "quote": "明早从南桥走。"
+      },
+      "belief": "uncertain",
+      "status": "pending",
+      "extractionReason": "原文明确指出后半句有没有听见无法确定。",
+      "reason": "原文明确指出后半句有没有听见无法确定。",
+      "evidence": {
+        "documentId": "current",
+        "start": 39,
+        "end": 51,
+        "quote": "后半句有没有听见无法确定"
+      },
+      "unresolved": []
+    }
+  ],
+  "noQuestionWithoutDependency": true,
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "implicit.regression",
+    "chatId": "901 帝都正式续玩 20261106",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      },
+      "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message": {
+        "id": "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "渡口今晚停航，明早从南桥走。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 13,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      },
+      "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea.message": {
+        "id": "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "渡口今晚停航，"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 13,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      }
+    },
+    "events": {
+      "received.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37": {
+        "id": "received.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player"
+          ],
+          "propositionRefs": [
+            "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 13,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "901 帝都正式续玩 20261106",
+            "messageId": 13,
+            "swipeId": 0,
+            "text": "黄泉对御临风说：“渡口今晚停航，明早从南桥走。”布莱特只听清“渡口今晚停航”，后半句有没有听见无法确定。\n\n<StatusPlaceHolderImpl/>"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 14
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.player.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message.event": {
+        "id": "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.player.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.player.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message",
+            "eventRef": "received.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 13,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 14
+          }
+        ]
+      },
+      "received.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea": {
+        "id": "received.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "bright"
+          ],
+          "propositionRefs": [
+            "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 13,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "901 帝都正式续玩 20261106",
+            "messageId": 13,
+            "swipeId": 0,
+            "text": "黄泉对御临风说：“渡口今晚停航，明早从南桥走。”布莱特只听清“渡口今晚停航”，后半句有没有听见无法确定。\n\n<StatusPlaceHolderImpl/>"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 14
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea.bright.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea.message.event": {
+        "id": "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea.bright.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea.bright.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea.message",
+            "knowerId": "bright",
+            "propositionRef": "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea.message",
+            "eventRef": "received.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 13,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 14
+          }
+        ]
+      }
+    },
+    "knowledge": {
+      "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.player.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message": {
+        "id": "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.player.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message",
+        "eventRef": "received.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 13,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      },
+      "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea.bright.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea.message": {
+        "id": "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea.bright.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea.message",
+        "knowerId": "bright",
+        "propositionRef": "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea.message",
+        "eventRef": "received.dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 13,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      }
+    },
+    "dialogueBatches": {
+      "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429": {
+        "id": "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429",
+        "sourceAnchor": {
+          "chatId": "901 帝都正式续玩 20261106",
+          "messageId": 13,
+          "swipeId": 0,
+          "text": "黄泉对御临风说：“渡口今晚停航，明早从南桥走。”布莱特只听清“渡口今晚停航”，后半句有没有听见无法确定。\n\n<StatusPlaceHolderImpl/>"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37",
+            "claimId": "turn.utterance.1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "渡口今晚停航，明早从南桥走。",
+            "quote": "渡口今晚停航，明早从南桥走。",
+            "contentSpan": {
+              "documentId": "current",
+              "start": 9,
+              "end": 23,
+              "quote": "渡口今晚停航，明早从南桥走。"
+            },
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "黄泉直接对御临风说出该内容，无接收障碍。",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 8,
+              "quote": "黄泉对御临风说："
+            },
+            "unresolved": []
+          },
+          {
+            "id": "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.119adf8d2addf889ab23db691e47737950939b549dc209e75cb18479d00bdbea",
+            "claimId": "turn.utterance.1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "bright"
+            ],
+            "propositionRef": null,
+            "content": "渡口今晚停航，",
+            "quote": "渡口今晚停航，",
+            "contentSpan": {
+              "documentId": "current",
+              "start": 9,
+              "end": 16,
+              "quote": "渡口今晚停航，"
+            },
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "布莱特明确只听清前半句“渡口今晚停航”。",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 24,
+              "end": 38,
+              "quote": "布莱特只听清“渡口今晚停航”"
+            },
+            "unresolved": []
+          },
+          {
+            "id": "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.c3e6243c65ebd62654c2412ccb8aa94826f9d8265c38949c66cc606272e267ba",
+            "claimId": "turn.utterance.1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "bright"
+            ],
+            "propositionRef": null,
+            "content": "明早从南桥走。",
+            "quote": "明早从南桥走。",
+            "contentSpan": {
+              "documentId": "current",
+              "start": 16,
+              "end": 23,
+              "quote": "明早从南桥走。"
+            },
+            "belief": "uncertain",
+            "status": "pending",
+            "extractionReason": "原文明确指出后半句有没有听见无法确定。",
+            "reason": "原文明确指出后半句有没有听见无法确定。",
+            "evidence": {
+              "documentId": "current",
+              "start": 39,
+              "end": 51,
+              "quote": "后半句有没有听见无法确定"
+            },
+            "unresolved": []
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "uncertain",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 78,
+              "quote": "黄泉对御临风说：“渡口今晚停航，明早从南桥走。”布莱特只听清“渡口今晚停航”，后半句有没有听见无法确定。\n\n<StatusPlaceHolderImpl/>"
+            },
+            "reason": "黄泉所说内容部分被布莱特听清，但后半句对布莱特的接收状态存在原文明确的uncertain情况。"
+          }
+        ]
+      }
+    }
+  },
+  "mvuWrites": 4,
+  "replayStateUnchanged": false
+}

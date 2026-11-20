@@ -1,0 +1,31 @@
+{
+  "kind": "implicit.original",
+  "startedAt": "2026-11-15T01:38:58.601Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T01:39:07.609Z",
+  "headersElapsedMs": 9008,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5aa8a1d79ce64d0-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 01:39:07 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=o6O5893dH0Z68GSYemYzGEc%2B1Om%2FAjIIuH5QYTxJliaSPaucgLvcinBCcD2PvinokEs34hj0TvNBE0XpqUNOYs5Cj0N9X%2FoiTnO6DByS%2BNoZBzr6KvRxLfes8DXPPA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611150138594915829558268d9d6R4Ictzrr",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "9233c0e6-bbdb-48cf-a94c-5ade456ed1e8"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"1ecf71e0-b07a-427f-954d-a7e33354d8f2\",\"object\":\"chat.completion\",\"created\":1794706747,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/2\\\",\\\"contextRef\\\":\\\"27465bfb195236e78f9074c52410c3f0aea1109072c782a248064f4c889a2f0a\\\",\\\"inputRef\\\":\\\"assertion.d823063f02cae057a28b36272adebc9f694322949f62c47fae12d4f75ef97683\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"status\\\":\\\"extracted\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"turn.say.1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"风有点凉，不过不算难受。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":66,\\\"end\\\":67,\\\"quote\\\":\\\"她\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":53,\\\"end\\\":65,\\\"quote\\\":\\\"风有点凉，不过不算难受。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":52,\\\"end\\\":81,\\\"quote\\\":\\\"“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"turn.rec.1\\\",\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"player\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":53,\\\"end\\\":65,\\\"quote\\\":\\\"风有点凉，不过不算难受。\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":52,\\\"end\\\":81,\\\"quote\\\":\\\"“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"黄泉直接回答御临风上一轮询问今天走在街上感觉如何的问题，御临风正常接收。\\\"}]},{\\\"claim\\\":{\\\"id\\\":\\\"turn.say.2\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"比山路上好走多了。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":66,\\\"end\\\":67,\\\"quote\\\":\\\"她\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":82,\\\"end\\\":91,\\\"quote\\\":\\\"比山路上好走多了。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":72,\\\"end\\\":92,\\\"quote\\\":\\\"语气依旧简洁平缓，“比山路上好走多了。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"turn.rec.2\\\",\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"player\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":82,\\\"end\\\":91,\\\"quote\\\":\\\"比山路上好走多了。\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":72,\\\"end\\\":92,\\\"quote\\\":\\\"语气依旧简洁平缓，“比山路上好走多了。”\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"黄泉继续回答御临风的问题，御临风正常接收。\\\"}]}],\\\"unresolved\\\":[],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":236,\\\"quote\\\":\\\"黄泉手里牵着马缰，步子没停。她抬头看了一眼上方透着微白的天色，又扫过街边被风吹得轻轻晃动的铺子布帘。\\\\n\\\\n“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，“比山路上好走多了。”\\\\n\\\\n主道旁的水渠里水流平稳地流淌着，带起些许细微的水声。街上的行人和往来摊贩各自忙碌，喧闹声在渐开的街市间散开。远处高耸的法师塔在半空映出清晰的轮廓，两旁的石木建筑遮住了大半偏侧的风，走在宽敞的石板路上，脚下确实比此前的荒野要踏实不少。\\\\n\\\\n<StatusPlaceHolderImpl/>\\\"},\\\"reason\\\":\\\"黄泉对上一轮御临风询问的回话已被全部记录，御临风正常接收。\\\"}},null]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":7777,\"completion_tokens\":991,\"total_tokens\":8768}}",
+  "responseBytes": 3874,
+  "responseBodySha256BeforePrivacyRedaction": "08e679df35f43128c8dc9588dd8c28746652ef529b21ce8a85f933828d40d6ab",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T01:39:07.619Z",
+  "elapsedMs": 9018
+}

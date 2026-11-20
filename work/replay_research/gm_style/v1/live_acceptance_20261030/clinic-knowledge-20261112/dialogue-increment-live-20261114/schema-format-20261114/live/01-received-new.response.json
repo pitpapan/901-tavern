@@ -1,0 +1,30 @@
+{
+  "kind": "dialogue-reception",
+  "startedAt": "2026-11-14T19:14:11.968Z",
+  "status": 400,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-14T19:14:12.858Z",
+  "headersElapsedMs": 890,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5a856778fdeca73-MAD",
+    "content-length": "400",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sat, 14 Nov 2026 19:14:12 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=yrmFpqA0GbW%2BEt22AY3L2WmRdmhMbiwpUaBAFdaSIA5bfVDforJFt4G394QQU0gQRxD4jMdeVXBeCxGrGBL7FWZ0RVwJnQZwfjUpg5NT8E9hv0K9t3H2Dzze0hwymQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "x-oneapi-request-id": "202611141914122338125598268d9d61cPsj142",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "569acc52-3dc0-40fd-89a5-288f611d114e"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"error\":{\"message\":\"Invalid JSON payload received. Unknown name \\\"minContains\\\" at 'request.generation_config.response_schema.properties[1].***.properties[2].value': Cannot find field.\\nInvalid JSON payload received. Unknown name \\\"maxContains\\\" at 'request.generation_config.response_schema.properties[1].***.properties[2].value': Cannot find field.\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":400}}",
+  "responseBytes": 400,
+  "responseBodySha256BeforePrivacyRedaction": "47a86cd0f8145c59be328b62603ca3b291b42238e111af515cd090ace8c37103",
+  "outcome": "service-error",
+  "finishedAt": "2026-11-14T19:14:12.862Z",
+  "elapsedMs": 894
+}

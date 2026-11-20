@@ -1,0 +1,571 @@
+{
+  "id": "implicit.parallel",
+  "exactCurrentMessages": true,
+  "structuralPass": true,
+  "checked": {
+    "contextRef": "23117d44d8a1899df90dcfe32b2ad8e06bc82e5d19f13e3bdd0581d668ac0f91",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.c65e4dcf101e84d78fed1ddb5ae6f923924caf8411b6a383e0bb9bc17fada74e",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "turn.utterance.1",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "日落后就锁门。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 0,
+                  "end": 2,
+                  "quote": "黄泉"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 14,
+                  "end": 21,
+                  "quote": "日落后就锁门。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 0,
+                "end": 22,
+                "quote": "黄泉把钥匙收进袖袋，答道：“日落后就锁门。”"
+              }
+            },
+            {
+              "id": "turn.utterance.2",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "明早再来吧。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 22,
+                  "end": 23,
+                  "quote": "她"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 35,
+                  "end": 41,
+                  "quote": "明早再来吧。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 22,
+                "end": 42,
+                "quote": "她稍作停顿，又补了一句：“明早再来吧。”"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "turn.reception.1",
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 14,
+            "end": 21,
+            "quote": "日落后就锁门。"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 10,
+          "end": 22,
+          "quote": "答道：“日落后就锁门。”"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "黄泉正面回答玩家的问题，玩家正常接收。",
+        "claimId": "turn.utterance.1"
+      },
+      {
+        "id": "turn.reception.2",
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 35,
+            "end": 41,
+            "quote": "明早再来吧。"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 28,
+          "end": 42,
+          "quote": "又补了一句：“明早再来吧。”"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "黄泉补充说明，玩家正常接收。",
+        "claimId": "turn.utterance.2"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "recorded",
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 42,
+          "quote": "黄泉把钥匙收进袖袋，答道：“日落后就锁门。”她稍作停顿，又补了一句：“明早再来吧。”"
+        },
+        "reason": "本轮两处言说均明确由黄泉对玩家说出并已记录接收。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false
+  },
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": [
+        {
+          "id": "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "日落后就锁门。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 1,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "implicit.offline.implicit.parallel",
+                "messageId": 1,
+                "swipeId": 0,
+                "text": "黄泉把钥匙收进袖袋，答道：“日落后就锁门。”她稍作停顿，又补了一句：“明早再来吧。”"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0",
+          "channel": "message",
+          "learnedAtMessage": 1
+        },
+        {
+          "id": "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "明早再来吧。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 1,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "implicit.offline.implicit.parallel",
+                "messageId": 1,
+                "swipeId": 0,
+                "text": "黄泉把钥匙收进袖袋，答道：“日落后就锁门。”她稍作停顿，又补了一句：“明早再来吧。”"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f",
+          "channel": "message",
+          "learnedAtMessage": 1
+        }
+      ]
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": []
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "pending": [],
+  "noQuestionWithoutDependency": true,
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "implicit.regression",
+    "chatId": "implicit.offline.implicit.parallel",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      },
+      "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message": {
+        "id": "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "日落后就锁门。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      },
+      "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f.message": {
+        "id": "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "明早再来吧。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      }
+    },
+    "events": {
+      "received.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0": {
+        "id": "received.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player"
+          ],
+          "propositionRefs": [
+            "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "implicit.offline.implicit.parallel",
+            "messageId": 1,
+            "swipeId": 0,
+            "text": "黄泉把钥匙收进袖袋，答道：“日落后就锁门。”她稍作停顿，又补了一句：“明早再来吧。”"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/implicit.offline.implicit.parallel",
+            "line": 2
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.player.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message.event": {
+        "id": "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.player.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.player.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message",
+            "eventRef": "received.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 1,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/implicit.offline.implicit.parallel",
+            "line": 2
+          }
+        ]
+      },
+      "received.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f": {
+        "id": "received.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player"
+          ],
+          "propositionRefs": [
+            "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "implicit.offline.implicit.parallel",
+            "messageId": 1,
+            "swipeId": 0,
+            "text": "黄泉把钥匙收进袖袋，答道：“日落后就锁门。”她稍作停顿，又补了一句：“明早再来吧。”"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/implicit.offline.implicit.parallel",
+            "line": 2
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f.player.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f.message.event": {
+        "id": "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f.player.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f.player.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f.message",
+            "eventRef": "received.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 1,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/implicit.offline.implicit.parallel",
+            "line": 2
+          }
+        ]
+      }
+    },
+    "knowledge": {
+      "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.player.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message": {
+        "id": "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.player.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0.message",
+        "eventRef": "received.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      },
+      "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f.player.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f.message": {
+        "id": "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f.player.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f.message",
+        "eventRef": "received.dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      }
+    },
+    "dialogueBatches": {
+      "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc": {
+        "id": "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc",
+        "sourceAnchor": {
+          "chatId": "implicit.offline.implicit.parallel",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "黄泉把钥匙收进袖袋，答道：“日落后就锁门。”她稍作停顿，又补了一句：“明早再来吧。”"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0",
+            "claimId": "turn.utterance.1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "日落后就锁门。",
+            "quote": "日落后就锁门。",
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "黄泉正面回答玩家的问题，玩家正常接收。",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 10,
+              "end": 22,
+              "quote": "答道：“日落后就锁门。”"
+            },
+            "unresolved": []
+          },
+          {
+            "id": "dialogue.51a1257cbfbea5f4dc7f50315394f04b0325069970183ca95366f7c5fb5400dc.9d603b0aa76bf8cf0916c3e4e742c1a6daa41da5942c726dfbdcaef0558ba50f",
+            "claimId": "turn.utterance.2",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "明早再来吧。",
+            "quote": "明早再来吧。",
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "黄泉补充说明，玩家正常接收。",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 28,
+              "end": 42,
+              "quote": "又补了一句：“明早再来吧。”"
+            },
+            "unresolved": []
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "recorded",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 42,
+              "quote": "黄泉把钥匙收进袖袋，答道：“日落后就锁门。”她稍作停顿，又补了一句：“明早再来吧。”"
+            },
+            "reason": "本轮两处言说均明确由黄泉对玩家说出并已记录接收。"
+          }
+        ]
+      }
+    }
+  }
+}

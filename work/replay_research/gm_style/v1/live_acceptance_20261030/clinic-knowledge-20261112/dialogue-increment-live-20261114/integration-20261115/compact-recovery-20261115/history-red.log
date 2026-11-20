@@ -1,0 +1,78 @@
+✔ ordinary saved narration invokes configured dialogue adapter without changing prose or memory route (74.9692ms)
+✔ saved prose survives extraction failure and completed-turn replay does not request prose again (10.1476ms)
+✔ explicit compact host preserves failed prose, continues unrelated play and recovers only on actual dependency (60.8552ms)
+✔ ordinary next turn asks only when pending information is relevant, and deferred answer does not regenerate prose (23.2779ms)
+✔ ordinary story generation consumes recipient knowledge and exposes only an explicit saved-receipt entry (9.2659ms)
+✔ ordinary classifier and narration both consume time and discovery filtered knowledge (7.0197ms)
+✔ unconfirmed rule persistence blocks narration and reports memory-only settlement (14.3583ms)
+✔ postcombat story classification failure retains its diagnostic instead of using combat fallback (5.3949ms)
+✔ dialogue classification timeout reports a processing failure without implying an attempted action (4.6728ms)
+✔ classification timeout retries the same input once with a new id and ignores the late first decision (31.3893ms)
+✔ classification recovery stops after two timeouts without narration or settlement (30.7851ms)
+✔ classification recovery does not retry after explicit stop, changed input, or unconfirmed cancellation (45.5545ms)
+✔ postcombat story continuation failure remains resumable without reclassifying or settling (6.5165ms)
+✔ a failure inside combat handling still uses the combat recovery route (2.4871ms)
+✔ native combat regeneration restores the deleted report and unique latest root before a cancelled menu (3.6746ms)
+✔ debug-disabled malformed recovery retains a precise failure without settling (4.4052ms)
+✔ debug-disabled invalid check attribute identifies model input failure without exposing DC (4.3888ms)
+✔ debug-disabled upstream quota failure is distinguished from invalid model output (6.4402ms)
+✔ explicit additional lorebooks reach classification and ordinary narration (5.6795ms)
+✔ ordinary narration releases its lore filter even when host stop handle is broken (8.8648ms)
+✔ active combat handles the turn before ordinary classification or narration (3.313ms)
+✔ host saved recovery survives failed narration and script reload without another debit (9.6545ms)
+✔ host executes the exact compound declaration once and resumes final sequence narration after reload (12.2783ms)
+✔ a completed pending medicine keeps its original operation across a later player floor and native regeneration (9.544ms)
+✔ host classification passes a registered encounter to the player-bound combat entry (6.5466ms)
+✔ integrated profile cannot grant the old demo scene bonus (3.7484ms)
+✔ ordinary narration resolves current model options locally for each request (6.2135ms)
+✔ controller persists failed NO_CHECK and recovers after reload with no new player input (6.6016ms)
+✔ host cancels only the unexecuted medicine pending and anchors the current dialogue (7.8755ms)
+✔ a cancellation declaration cannot undo a committed operation awaiting narration (10.2072ms)
+✔ regenerating a completed turn reuses its narration without model calls or another assistant message (7.6185ms)
+✔ regenerating a committed direct effect does not repeat classification, narration, or MVU writes (7.5243ms)
+✔ lost direct-effect failure notice resumes saved operation without reclassification (10.2139ms)
+✔ a completed-looking assistant cannot bypass a missing JS operation (3.2838ms)
+✔ completed assistant with missing MVU projection restores state without model requests (6.1328ms)
+✔ explicit completion host binds selected v4 references and can disable without touching memory (13.9357ms)
+✔ deferred local resolution resumes the same request without resending player input (22.5468ms)
+✔ completed reply recovery consumes prepared batch without another extraction or narration (11.5188ms)
+✔ native ordinary regeneration retains dialogue snapshot and never re-extracts (9.9029ms)
+✔ compact registry preserves original input, partial range and uncertainty through old strict receipt checker (465.4668ms)
+✔ compact scoped values come from explicitly selected source, not string coercion or omitted defaults (5.2573ms)
+✔ compact invalid selections, bindings, omitted fields and cross-reception ranges are rejected without repair (16.8465ms)
+✔ compact reply identity requires a known history row and a selection inside current answer (7.6994ms)
+✔ compact explicit none, obstacle, unknown identity and unresolved preserve separate meanings (5.2165ms)
+✔ invalid v7 raw reply persists unprocessed only; unrelated play, reload and observe never re-extract or ask (12.4841ms)
+✔ actual dependency triggers one bounded new extraction using frozen failed input; real partial/pending then uses old ask (31.1764ms)
+✔ second format failure remains technical unprocessed, never fake none or semantic confirmation and never loops (14.4527ms)
+✔ valid recovery with explicit no reception clears only the failed increment (16.7526ms)
+✔ source/branch changes and state persistence failures are not masked as extraction failures (5.285ms)
+✔ existing knowledge survives a later failed increment (8.1897ms)
+✔ historical malformed replies remain rejected by explicit v7, never repaired or interpreted as a new wire (6.0364ms)
+✔ primitive, duplicate-key and invalid-selection failures retain exact raw replies, without any receipt adoption (20.7201ms)
+✔ recovery rechecks actual pending dependencies instead of asking about unrelated unresolved remainder (22.318ms)
+✖ frozen reply identity cannot be recovered after its original history was edited (23.7547ms)
+ℹ tests 54
+ℹ suites 0
+ℹ pass 53
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1048.6552
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-compact.test.mjs:112:1
+✖ frozen reply identity cannot be recovered after its original history was edited (23.7547ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:114:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /history changed/,
+    operator: 'rejects',
+    diff: 'simple'
+  }

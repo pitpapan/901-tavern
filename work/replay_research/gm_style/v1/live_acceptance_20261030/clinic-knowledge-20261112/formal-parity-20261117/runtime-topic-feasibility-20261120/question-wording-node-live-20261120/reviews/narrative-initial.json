@@ -1,0 +1,273 @@
+{
+  "reviewer": "narrative-quality",
+  "status": "sealed_initial",
+  "runLedgerSha256": "4777090cd64b7e612869097a2c6abc7ed32ae7fa1723c3f3afaec155883fdf7b",
+  "rubricSha256": "15413ac8d0be3034dc522f4aa2670863ca33fc00c933e47e1c2c8bff3b033dda",
+  "humanCalibrationSha256": "719193a531f29c3a7f27460e8674245a2dfcd9bb91cbfee2886bfcc8ab37e552",
+  "counts": {
+    "F": 3,
+    "N": 4,
+    "U": 1,
+    "X": 0
+  },
+  "limitations": [
+    "每格一条，可定位具体表现，不能估计失败率或确定问句导致的因果效应。",
+    "中性问同时移除原问的打听情境铺垫。",
+    "接收后／重开后在同一措辞下请求逐字节相同，差异不能归因于重开。",
+    "本轮初判针对独立正文。正文中的自然披露与保存状态分别记录，未写入回执或正式存档。",
+    "历史547固定NO_CHECK，测试告知及接收人工确认，实际分类或自动抽取仍未验收。"
+  ],
+  "rows": [
+    {
+      "call": 609,
+      "label": "N",
+      "evidence": [
+        {
+          "quote": "他们私下有没有交情，或者过去有些什么来往，恐怕得等到了医馆当面见着人才能知晓。",
+          "actor": "布莱特",
+          "inputBasis": "M13 三人无受控来源。M11 原问仅为问题。M10 支持城东寻医馆的行动方向。",
+          "explanation": "明确把关系是否存在及交往细节都留待当面查问，没有用玩家预设填入旧闻。"
+        },
+        {
+          "quote": "雪老在帝都任事的时间不短，认识的人不少。",
+          "actor": "黄泉",
+          "inputBasis": "M0 确立黄泉边关旧识与雪老长期为帝国及兄弟会任事。M13 黄泉无对应来源。",
+          "explanation": "这里说一般人脉，下一句仍待看到医馆态度，没有把这名馆主归入其熟人。"
+        }
+      ],
+      "unresolved": [],
+      "publicDisclosure": "无人说出这两人的关系或来往，未显示新获知。",
+      "otherIssues": [
+        {
+          "quote": "雪老在帝都任事的时间不短，认识的人不少。",
+          "reason": "来源能支持长期任事，未直接建立任事长期发生于帝都。作为普通背景扩写记录。未见被用来支持馆主与雪老确有关系。"
+        }
+      ],
+      "slot": 1,
+      "condition": "before",
+      "wording": "original",
+      "request": "609.request.json",
+      "content": "609.content.txt",
+      "requestSha256": "37fa363001346e7ee76f4bc27f8a82a99e76070dcc17502c8b0c52e1db2748a3",
+      "contentSha256": "9baa9bd06e7aa3fab61405206d412e9b69670760e6a24d15bcc9e9c7e951c143"
+    },
+    {
+      "call": 610,
+      "label": "N",
+      "evidence": [
+        {
+          "quote": "我和雪老在边关认识，没听他提起过帝都医馆的私事。",
+          "actor": "黄泉",
+          "inputBasis": "M0 记录边关旧识。M13 黄泉的 facts 为空。",
+          "explanation": "在布莱特开口前，她只知道旧识背景，未把边关经历当成这段关系的渠道。"
+        },
+        {
+          "quote": "我倒是听过一点风声，说是九雪医馆的馆主和雪老确实有旧交，不过两人并不是同一位。传言归传言，具体是怎样的交情、如今还有没有走动，单凭道听途说做不得准。",
+          "actor": "布莱特",
+          "inputBasis": "M13 布莱特拥有来客告知的单条 rumor，消息9、选项0。",
+          "explanation": "说是与传言归传言共同限定消息内容和强度。没有添加具体往来或将关系当世界确认。"
+        }
+      ],
+      "unresolved": [],
+      "publicDisclosure": "黄泉先答，再由布莱特面向御临风口头披露。黄泉在旁，正文未明确她是否听清或在后续使用。没有将这份正文写入接收记录。",
+      "otherIssues": [],
+      "slot": 2,
+      "condition": "received-huang",
+      "wording": "neutral",
+      "request": "610.request.json",
+      "content": "610.content.txt",
+      "requestSha256": "2d56f202057834193b852814a69d64a310044dd0cb9c7b94fd1a96fee4e6569e",
+      "contentSha256": "23b0247094f179d73dc8db06af1cf987baa289b60e49548ec1a3ddb178c8c99d"
+    },
+    {
+      "call": 611,
+      "label": "N",
+      "evidence": [
+        {
+          "quote": "不过此前确实听过一句传言——九雪医馆那位老馆主和雪老算是有旧识，彼此不是同一人。至于他们早年具体是怎么结识的、又有过什么深浅交情，我就没听说过了。",
+          "actor": "布莱特",
+          "inputBasis": "M13 布莱特仅收到一条来客传闻，原文含二人有旧且是不同的人。",
+          "explanation": "破折号直接引出传闻内容。对认识经过及深浅的说法仍是未取得细节，没有另立已知过去。"
+        },
+        {
+          "quote": "黄泉在一旁听着，视线从前方的街口收回，只淡淡接了一句：“先到了地方再说。”",
+          "actor": "黄泉",
+          "inputBasis": "M13 黄泉起始 facts 为空。",
+          "explanation": "她在布莱特披露后才接话，没有声称自己以前就知道或据此确认关系。"
+        }
+      ],
+      "unresolved": [],
+      "publicDisclosure": "说出传闻后，旁白明确写黄泉在旁听着。只记录本条顺序及其实际回应。",
+      "otherIssues": [],
+      "slot": 3,
+      "condition": "received-bright",
+      "wording": "original",
+      "request": "611.request.json",
+      "content": "611.content.txt",
+      "requestSha256": "351af2e5759f5591867feafd25a878581237d7a0d73aeba6a1ebe49f434a02ec",
+      "contentSha256": "225e9d4d81d8761daffa38b666996531a9d8b4d7c4ec1ae0baa8713c1b7d0c6d"
+    },
+    {
+      "call": 612,
+      "label": "U",
+      "evidence": [
+        {
+          "quote": "不过此前确实听过一点传言，九雪医馆那位老馆主和雪老确实有旧，而且两人并非同一人。",
+          "actor": "布莱特",
+          "inputBasis": "M13 仅有来客 rumor，来源未核实关系或身份。",
+          "explanation": "第一分句给出传闻，逗号后的确实既可能保留在转述内，也可能是人物自己确认。影响主项。"
+        },
+        {
+          "quote": "至于他们过去究竟有哪些来往、私底下交情如何，传言里就没提得那么细了。",
+          "actor": "布莱特",
+          "inputBasis": "M13 同一来客原话未提具体交往。",
+          "explanation": "末句回到传闻的范围，为前述继续转述提供语境。整段没有外在佐证。"
+        }
+      ],
+      "unresolved": [
+        {
+          "reading1": "逗号后承接传言的内容，确实是所转述说法的措辞。末句一起限制了传闻范围，可作 N。",
+          "reading2": "说完听过传闻后，布莱特以确实有旧自行确认关系，末句只把深浅留给传闻，可作 F。",
+          "needed": "需要能明确指出该断言仍归来客所说，或存在独立核实与接收。正文两处都无明确补足。"
+        }
+      ],
+      "publicDisclosure": "黄泉在布莱特开口后才静静听着，没有先行断言，也没有随后使用。",
+      "otherIssues": [],
+      "slot": 4,
+      "condition": "reopened-bright",
+      "wording": "neutral",
+      "request": "612.request.json",
+      "content": "612.content.txt",
+      "requestSha256": "63cea602824890c9d835cda4d5186ce3302fb6c49f77611cbb9a304b8948a857",
+      "contentSha256": "b790d114a69f38dde98ef2211ed2c86e8c21c8f2d6bc0cf381db0910d3be0874"
+    },
+    {
+      "call": 613,
+      "label": "F",
+      "evidence": [
+        {
+          "quote": "在边关时只知道他是军中的老资历，后来各走各的路，私下里他和帝都哪家医馆的老人熟识、有过什么交情，我没听他提过。",
+          "actor": "黄泉",
+          "inputBasis": "M0 边关旧识和老兵身份。M13 黄泉无受控见闻。",
+          "explanation": "在布莱特披露前，黄泉回指未知范围。泛问哪家与有无交情没有确定馆主属于熟人。"
+        },
+        {
+          "quote": "医馆馆主和雪老确实不是同一个人。",
+          "actor": "布莱特",
+          "inputBasis": "M13 同一来客的 rumor 包含「二者是不同的人」。没有给布莱特此命题的确认来源。M0 作者资料分别介绍人物，本身未建立他已经核实。",
+          "explanation": "这一独立句把受控告知包含的身份区分作为人物确认。下一句才以听过传闻介绍旧交，不能给前句倒补确认。"
+        },
+        {
+          "quote": "我此前在路上听过些传闻，说他们二位早年间就有些旧交情，不过传言归传言，具体深浅到了医馆当面问问便知。",
+          "actor": "布莱特",
+          "inputBasis": "M13 私下收到来客说法，未给更多渠道或确切时间地点。",
+          "explanation": "这句自己的旧交内容仍有明确传闻标记。主项落在前句把同一告知里的身份分立升级为确认。"
+        }
+      ],
+      "unresolved": [],
+      "publicDisclosure": "黄泉先表示未知，布莱特随后插话。正文未描写黄泉听清后的回应，未把他的披露作为她此前知情的依据。",
+      "otherIssues": [
+        {
+          "quote": "我此前在路上听过些传闻",
+          "reason": "路上是来源地点的额外概括。输入未记来客说话地点，些传闻也可泛指一点消息。单靠这几个字不另判凭空取得。"
+        }
+      ],
+      "slot": 5,
+      "condition": "received-huang",
+      "wording": "original",
+      "request": "613.request.json",
+      "content": "613.content.txt",
+      "requestSha256": "954032a4299fb8c6570eae2814f5f7e40a5d749f8bb885395bc94c15a596187e",
+      "contentSha256": "3b85743cb0c3cd6f23c6baf71ec71516ac5525f68f2ec95b51905fb753edb4d0"
+    },
+    {
+      "call": 614,
+      "label": "N",
+      "evidence": [
+        {
+          "quote": "我不清楚他们两位是否认识。",
+          "actor": "布莱特",
+          "inputBasis": "M13 三人无受控来源。M11 提问保留双方相识与否。",
+          "explanation": "明确保留两人是否认识。其他普通行程和只听医馆名气未用于确认关系或来往。"
+        },
+        {
+          "quote": "在边关的时候，雪老没提过医馆馆主的事。我和他打交道多在军务和公事上，私底下的熟人来往，他向来很少挂在嘴边。",
+          "actor": "黄泉",
+          "inputBasis": "M0 支持黄泉与雪老的边关旧识，M13 没有该馆主关系的来源。",
+          "explanation": "明确否定获告，后句说泛泛的私交话题，没有把馆主列进那些熟人。"
+        }
+      ],
+      "unresolved": [],
+      "publicDisclosure": "无人披露这两人的关系或往来。",
+      "otherIssues": [
+        {
+          "quote": "相熟的几家补给铺子之间",
+          "reason": "细化了普通补给经历。M0 只有布莱特有协会熟人等背景，未建立这几家店，亦未见与角色、时期或受控来源冲突。"
+        }
+      ],
+      "slot": 6,
+      "condition": "before",
+      "wording": "neutral",
+      "request": "614.request.json",
+      "content": "614.content.txt",
+      "requestSha256": "c09c8890374788a2b636a5a35cc4742ca94ae1f149ff169ba9adbac48f8952be",
+      "contentSha256": "c5cff6279aceacdbd0053c6c9fa12280611c2372731f2405d3d6c653653d2bc5"
+    },
+    {
+      "call": 615,
+      "label": "F",
+      "evidence": [
+        {
+          "quote": "不过之前确实听人提起过一嘴，九雪医馆的馆主和雪老是旧识，但他们是两个人，不是同一位。",
+          "actor": "布莱特",
+          "inputBasis": "M13 来客原话及其 rumor 标签。",
+          "explanation": "前段先归为一次听闻，范围和身份区分仍可承接该来源。"
+        },
+        {
+          "quote": "既然是有旧，到了医馆当面问问老馆主，或许比在街上瞎猜要来得明白。",
+          "actor": "布莱特",
+          "inputBasis": "M13 未出现对受控关系的核实。该段中间只有黄泉听着与街景，没有追加来源。",
+          "explanation": "另一次开口把「有旧」作为已成立理由。或许修饰当面问是否更有效，街上瞎猜保留的是追问细节的空间。本段没有把出发理由说成按这条传闻试着求证。"
+        }
+      ],
+      "unresolved": [],
+      "publicDisclosure": "黄泉在前段传闻之后被写为一旁听着，未据此开口。随后布莱特的用语变化是其自身对传闻的处理。",
+      "otherIssues": [],
+      "slot": 7,
+      "condition": "reopened-bright",
+      "wording": "original",
+      "request": "615.request.json",
+      "content": "615.content.txt",
+      "requestSha256": "351af2e5759f5591867feafd25a878581237d7a0d73aeba6a1ebe49f434a02ec",
+      "contentSha256": "064184cb3dbe01a0d235b20c7ce4ff8c33e737d78a7d0c64f7783fdc278e9a00"
+    },
+    {
+      "call": 616,
+      "label": "F",
+      "evidence": [
+        {
+          "quote": "之前在路上听说过些传闻，九雪医馆那位老馆主和雪老确实有旧，不是同一个人。",
+          "actor": "布莱特",
+          "inputBasis": "M13 布莱特只有一位来客私下说的一条 rumor。",
+          "explanation": "首句仍可读成转述，确实一词本身未决定主项。此前在路上这一地点未见原记录。"
+        },
+        {
+          "quote": "外头那些零碎口信里就没提得那么细了。",
+          "actor": "布莱特",
+          "inputBasis": "M13 只有一个来源锚点和一份告知原文。未出现其他口信。",
+          "explanation": "「那些零碎口信」将受控话题归给一组消息，并用这组消息说明来往细节为何未知。通常读法给受控信息添了取得来源。缺少精确复述来客身份本身不构成问题。"
+        }
+      ],
+      "unresolved": [],
+      "publicDisclosure": "黄泉在布莱特说完后才被写为听了他的话，没有先用他的私有消息或在随后背书。",
+      "otherIssues": [],
+      "slot": 8,
+      "condition": "received-bright",
+      "wording": "neutral",
+      "request": "616.request.json",
+      "content": "616.content.txt",
+      "requestSha256": "63cea602824890c9d835cda4d5186ce3302fb6c49f77611cbb9a304b8948a857",
+      "contentSha256": "3e83f6a48aa48c104dac29f6ddafd78205b3d0cc659b4c479ba5e717c67083bb"
+    }
+  ]
+}

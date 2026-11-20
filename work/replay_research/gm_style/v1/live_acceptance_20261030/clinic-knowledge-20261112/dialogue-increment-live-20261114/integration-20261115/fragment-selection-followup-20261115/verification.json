@@ -1,0 +1,46 @@
+{
+  "newCalls": 2,
+  "cumulative": 425,
+  "used": 91,
+  "remaining": 109,
+  "offline": {
+    "campaign": 144,
+    "engine": 50,
+    "total": 194,
+    "newTests": 4
+  },
+  "results": [
+    {
+      "id": "selection.parents.play006",
+      "customRequest": 424,
+      "overallVerdict": "fail",
+      "structuralPass": false,
+      "schemaPass": null,
+      "error": "Expected ',' or ']' after array element in JSON at position 1187 (line 1 column 1188)",
+      "isolatedMvuWrites": 0,
+      "assessment": "424 HTTP200 stop; raw JSON still invalid: recipientSpans array closed with } instead of ]. SyntaxError at1187, zero writes. Existing valid JSON requirement delivered; no local omission demonstrated, no repair or retry."
+    },
+    {
+      "id": "selection.parents.play009",
+      "customRequest": 425,
+      "overallVerdict": "fail",
+      "structuralPass": true,
+      "schemaPass": true,
+      "error": null,
+      "isolatedMvuWrites": 8,
+      "assessment": "425 JSON/Schema and exact fragment selection pass; all three utterances retained. Overall semantic failure: player recipientSpan 听到这话 refers to Bright hearing the previous user question, not current listener; several reception evidence fields assert hearing from mere presence/walking. Isolated replay wrote8 state operations; not formal state, not a semantic pass. No new validator or repair."
+    }
+  ],
+  "priorEvidenceUnchanged": 9,
+  "priorLedgerEntriesUnchanged": true,
+  "formalFilesUnchanged": 22,
+  "schemaAndOriginalInputAndParametersUnchanged": true,
+  "fragmentIdsTextsAndRangesUnchanged": true,
+  "selectionDecoderUnchanged": true,
+  "originalV3CheckerUnchanged": true,
+  "newSemanticValidator": false,
+  "rawResponseRepair": false,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalOrRevisionRestored": false
+}

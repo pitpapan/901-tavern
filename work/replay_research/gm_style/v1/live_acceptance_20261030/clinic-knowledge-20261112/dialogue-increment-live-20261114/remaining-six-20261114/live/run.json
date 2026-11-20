@@ -1,0 +1,35 @@
+{
+  "authorization": "用户新增6次，第05至10例；最新抽取合同，其余输入/坐标参照/参数不变；依赖承接真实待核结果。失败即停、不重试、不修补、不放宽校验，不部署/正式剧情/自动批准修订。",
+  "baseline": 282,
+  "limit": 6,
+  "cumulative": 283,
+  "remaining": 5,
+  "attempts": [
+    {
+      "id": "05-partial-first",
+      "customRequest": 283,
+      "state": "completed",
+      "requestBytes": 10392,
+      "requestSha256": "073795b29398d5f894c1bf7acfe6f2fa2ddf00b390e4cc80d1fef8a0c84754d1",
+      "status": 200,
+      "elapsedMs": 8327,
+      "rawResponseSha256": "e2ede3fc5019e628adf9f4b007d0333b6269416e2bf92159adf48c3d4723f29d",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 2916,
+        "completion_tokens": 1120,
+        "total_tokens": 4036
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Explicit first clause was correctly extracted as heard, but reception linked only whole utterance with uncertain status and no recipients. Huang received no known first-clause content; one unnecessary pending item was created. Schema passes, case05 reception goal fails. Stop without repair or further calls."
+    }
+  ],
+  "closed": true,
+  "retries": 0,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "stopReason": "manual-fail"
+}

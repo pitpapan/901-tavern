@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {createCharacter} from '../core.mjs';
 import {reduceRuleAction, ruleRequestValid} from './rule-actions.mjs';
 import {settleRuleAction} from '../mvu_poc/adapter.mjs';
-import {replayClassificationRequest,runGuardedTurn,savedDecisionForRecovery,relevantLorebookFacts} from './adjudication-gate.mjs';
+import {replayClassificationRequest,runGuardedTurn,savedDecisionForRecovery,relevantLorebookFacts,compactNarrationFacts} from './adjudication-gate.mjs';
 import {createReplayCheckRuntime} from './replay-check.mjs';
 import {createOpeningFixture} from './opening.mjs';
 
@@ -11,6 +11,48 @@ const state=()=>createCharacter({attributes:{力量:3,敏捷:3,智力:3,感知:3
   skills:{运动:{level:1},求生:{level:1},社交:{level:1},洞察:{level:1},医疗:{level:1}},xp:30});
 const actors=()=>({player:{name:'玩家',state:state()},guard:{name:'门卫',state:state()}});
 const options={drawDice:()=>Array(256).fill(8)};
+
+test('inventory elapsed time advances existing actor and scene clocks once and reports their events',()=>{
+ const input={actors:actors(),ruleScene:{resourceClockMinutes:7,objects:{box:{type:'demonBox',sleep:1,open:true}}}};
+ input.actors.player.state.possessions={phaseRing:{owned:true,worn:true},items:[{id:'large.item',volume:2,weightKg:1,oneHanded:false,location:'phaseRing'}]};
+ input.actors.guard.combatCarry={durationCarry:{ward:{value:true,remainingRounds:1}},buffs:{ward:true}};
+ const before=structuredClone(input),request={kind:'rule',action:'inventory',actorId:'player',operation:'retrieve',itemId:'large.item'};
+ const out=reduceRuleAction(input,request,options);
+ assert.equal(out.result.elapsedMinutes,.1);assert.equal(out.ruleScene.resourceClockMinutes,7.1);
+ assert.equal(out.actors.player.state.possessions.items[0].location,'carried');
+ assert.equal(out.actors.guard.combatCarry.durationCarry.ward,undefined);
+ assert.equal(out.ruleScene.objects.box.released,true);
+ assert.ok(out.result.timeChanges.some(e=>e.expired==='ward'));
+ assert.ok(out.result.sceneChanges.some(e=>e.objectId==='box'&&e.released));
+ assert.deepEqual(input,before);
+ const instant=structuredClone(before);instant.actors.player.state.possessions.items[0].oneHanded=true;
+ const quick=reduceRuleAction(instant,request,options);assert.equal(quick.result.elapsedMinutes,0);
+ assert.equal(quick.ruleScene.resourceClockMinutes,7);assert.equal(quick.ruleScene.objects.box.released,undefined);
+});
+
+test('extended period includes already-settled scene events in its saved narration facts',()=>{
+ const input={actors:actors(),ruleScene:{resourceClockMinutes:0,objects:{box:{type:'demonBox',sleep:1,open:true}}}};
+ const request={kind:'rule',action:'extended',actorId:'player',taskId:'search.scene',attribute:'感知',skill:'洞察',target:7,periodMinutes:5,maxPeriods:3};
+ const out=reduceRuleAction(input,request,options);
+ assert.equal(out.ruleScene.resourceClockMinutes,5);assert.equal(out.ruleScene.objects.box.released,true);
+ assert.ok(out.result.sceneChanges?.some(e=>e.objectId==='box'&&e.released));
+ assert.ok(compactNarrationFacts({kind:'rule',result:out.result}).includes('box'));
+});
+
+test('timed inventory receipt survives MVU reload without advancing or firing scene events twice',async()=>{
+ const roster=actors();roster.player.state.possessions={phaseRing:{owned:true,worn:true},items:[{id:'large.item',volume:2,weightKg:1,oneHanded:false,location:'phaseRing'}]};
+ let data={stat_data:{'901_rules_poc':{schemaVersion:1,chatId:'timed',revision:0,actors:roster,operations:{},ruleScene:{resourceClockMinutes:0,objects:{box:{type:'demonBox',sleep:1,open:true}}}}}},reductions=0;
+ const opts={mvu:{getMvuData:()=>structuredClone(data),replaceMvuData:async next=>{data=structuredClone(next);}},
+  getAnchor:()=>({chatId:'timed',messageId:1,swipeId:0}),expectedChatId:'timed',operationId:'timed.inventory',expectedRevision:0,
+  request:{kind:'rule',action:'inventory',actorId:'player',operation:'retrieve',itemId:'large.item'},
+  reduce:(root,r)=>{reductions++;return reduceRuleAction(root,r,options);}};
+ const first=await settleRuleAction(opts);assert.equal(first.status,'applied');
+ const saved=JSON.stringify(data);data=JSON.parse(saved);
+ const replay=await settleRuleAction({...opts});assert.equal(replay.status,'already_applied');
+ assert.equal(reductions,1);assert.equal(JSON.stringify(data),saved);
+ assert.ok(compactNarrationFacts(first).includes('box'));
+ assert.deepEqual(replay.result,first.result);
+});
 
 test('ordinary opposed check uses actual two actors and active side wins ties',()=>{
   const input={actors:actors()},request={kind:'rule',action:'opposed',active:{actorId:'player',attribute:'风度',skill:'社交'},

@@ -1,0 +1,25 @@
+2026-11-15 剩余JSON/引用绑定失败续诊（469—471）
+
+本轮没有发现新的明确本地程序缺口，产品代码、提示、Schema、引用校验均未修改。复用prepareRelatedDialogueExtraction、createDialogueSemanticAdapter、原片段选择及知情回执链；不另造执行器，不把模型输出修成可接受对象。
+
+诊断依据：
+1. 465/466/468非法文字与括号错误存在于HTTP原始响应的message.content，保存前后哈希一致。captureSavedReview只发送冻结rawBody并保存响应；未发现本地改写制造这些语法错误。
+2. 467的JSON和Schema原本合法，bright/not_received/obstacle判断符合输入，但listener.reply引用“答”而不在父回答内容内。实际发送的listener说明明确要求当前回答引用，现有拒绝与合同一致，不应放宽。
+3. 本轮三份实际发送messages与response_format均和当前prepare输出（经现有flattenSchema）深比较完全一致。没有生成合同漏传、错误Schema版本或字段消失的证据。
+4. finish_reason均stop，completion_tokens为689、526、387，低于4096；无法据此证明更具体的模型/上游中间层根因，也没有证据将失败归为请求太长导致拒收。
+
+离线回归：原有相关正反例164/164通过。复用合法/非法JSON、重复键、听者/传达关系/接收范围、未接收/未开口、待核依赖及入口回归，无新增重复测试。本地通过不代表真实模型可靠。
+
+三份冻结对照，各一次，逐份核对后才发下一份：
+469 replyrange.reproduce.partial：原468请求54346字节逐字节一致。原始JSON位置1080出现额外说明文字，后半障碍引用后也有非法文字。可读contentSpan仍将前半received、后半not_received分开；前半evidence引用完整回答，不能据局部分片认定接收依据充分。没有修补副本、没有据reason自动补回执。
+470 replyrange.reproduce.obstacle：原467请求54787字节逐字节一致。这次可读listener引用当前回答，bright身份、未接收状态与障碍引用合理，未重复467的旁白引用形态；但位置1071出现非法文字和额外括号，整个对象不可解析。代码未变，局部选择变化不能归因于程序修复，不能判绑定验收通过。
+471 replyrange.probe.answer：相近新输入，history由布莱特问“渡口今天开放吗”，当前“黄泉摇了摇头，答道：渡口明天才开放”。未明确指定当前听者绕开隐含身份；可读listener与evidence都选当前回答/history0/bright，propositionRef null保留新说法。原始JSON位置1002有非法文字，可见结尾也未给出必需的coverage/status/unresolved字段。实际发送Schema仍包含这些必填字段。整份失败，未补字段或做可接受性修复。
+
+结果：3份完整验收均失败，全部在JSON语法层拒绝，隔离写入0、状态不变。bindingFailures=0只表示没有进入结构绑定检查后报错的本轮回复，绝不表示历史绑定问题已解决。上轮467及其他旧失败均保留，不宣称其余历史例本轮全部重跑。
+
+额度与保存：本轮3次（469—471），原200额度已用137，余63，累计471；本轮有限对照关闭，余额保留。647份旧证据、全部历史逐次账本、22份正式文件哈希保持；三份原始响应保存前后哈希一致；两份原请求逐字节保持，全部生成参数不变。
+
+实际改善：没有新的产品改善或稳定性提升证据。本轮增加的是失败定位证据：实际合同完整到达请求，语法错误仍来自本地处理之前的响应，程序正确阻止无效输出写入。继续原样重发不能当成研发进展；若没有新本地缺口证据，后续应先定位上游为何未遵从已有输出格式，而不是叠加提示或放宽校验。本轮没有改端点、模型或参数开展此类扩展试验。
+
+未自动修补、不放宽校验、不补关键词、不部署、不写正式剧情、不恢复自动批准/修订路线。
+证据：diagnosis.json、contract-verification.json、campaign-tests.log、cases.json、各check.json、verification.json、complete-outputs.txt；完整请求和HTTP响应在同级iteration-200-20261115对应文件。

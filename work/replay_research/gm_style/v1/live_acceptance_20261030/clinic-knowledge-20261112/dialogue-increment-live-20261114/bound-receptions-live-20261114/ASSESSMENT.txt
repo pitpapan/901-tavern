@@ -1,0 +1,24 @@
+2026-11-14 新版言说绑定与覆盖结果模型复测
+
+结论：首例语义失败即停。新增8次授权使用1次（custom324），其余7次未调用，本批次关闭；无重试。
+
+冻结顺序：02、05、06、07、01、03、04、08。优先原action引用失败，随后部分接收/歧义/明确新消息，并保留未听见和未开口反例。仅02发送，其余全部未验证；不能宣称反例或全套通过。
+
+本次输入：黄泉对御临风说：“北街水井暂时停用。”
+隔离前提：黄泉已有同一传闻的可信取得回执。预期御临风收到该传闻，不升级为已确认世界事实；无接收障碍的直接告知不强求复述确认。
+
+实际模型回执直接嵌在utterance下，未引用action；speakerId=huang，recipientIds=[player]，propositionRef=well.closed。逐目标coverage存在，status=uncertain。JSON Schema、原严格运行时校验及全部6处UTF-16原文引用通过。
+模型reason原文：“黄泉对御临风说话，但当前文本未提供御临风已确认听清或接收完成的明确反馈。”
+coverage.reason原文：“言说已发生并记录接收项，御临风是否确实接收尚无进一步确认证据，接收状态为uncertain。”
+隔离结果：御临风新增知情0，待核1，询问0；黄泉既有传闻保留，revision3。没有自动补回执或改变模型状态。
+
+实际改善：本次样本已生成utterance直接绑定回执及完整目标覆盖，绕开之前action引用的结构错误。不能由一例证明稳定遵从，也不能将结构通过当成接收语义通过。
+明确缺口：旧生成合同含“明确直接向某人说出且没有接收障碍可以received，不强求复述确认”；新版prepareBoundDialogueExtraction截取共享前缀并替换普通对白说明后，实际发送的新版system未包含该规则。模型理由恰好要求接收反馈。该提示投影遗漏可直接从请求对照证明；不能证明它是本次误判的唯一原因。本轮只记录，不改代码、不修提示、不重发。
+
+原业务输入、坐标参照、隔离seed和生成参数保持；变化限于新版言说绑定/覆盖输出合同及配套生成说明。实际请求27951字节，HTTP200/stop，6456ms，返回model=gemini-3.8-flash-n。
+请求SHA256：e869c6bb55a9070d2eb66c70d4fe0b666bf2d2dffe74a7e695fa6cb38de96449
+原始响应SHA256：0d3670a49abb63eb117e2842200dc5d22866fef8889ccc6612092021ed51b9f2
+累计调用324；本轮1/8，未用7。本轮不自动续发。
+
+文件：live/02-received-rumor.request.json为完整发送体；live/02-received-rumor.raw-response.txt为原始响应；live/02-received-rumor.content.txt为完整模型内容；live/02-received-rumor.applied.json及.after.seed.json为隔离回放；complete-outputs.txt汇总输出；offline-assessment.json、verification.json为离线检查。
+699份历史证据、22份受保护正式文件、7份产品源码哈希保持。没有自动修补、action转换或校验放宽，没有部署、正式剧情写入、自动批准或修订路线恢复。

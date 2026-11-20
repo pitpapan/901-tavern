@@ -1,0 +1,121 @@
+{
+  "id": "05-partial-first",
+  "localProtocolPassed": true,
+  "result": {
+    "status": "processed",
+    "pending": [
+      {
+        "id": "dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894",
+        "claimId": "c1",
+        "speakerId": "bright",
+        "recipientIds": [],
+        "propositionRef": null,
+        "content": "东门封闭，改走南门。",
+        "quote": "东门封闭，改走南门。",
+        "belief": "uncertain",
+        "status": "pending",
+        "extractionReason": "黄泉只听清前半句“东门封闭”，未完整接收整句对白“东门封闭，改走南门。”",
+        "reason": "黄泉只听清前半句“东门封闭”，未完整接收整句对白“东门封闭，改走南门。”",
+        "evidence": {
+          "documentId": "current",
+          "start": 20,
+          "end": 39,
+          "quote": "黄泉只听清“东门封闭”，没听清后半句。"
+        },
+        "unresolved": [],
+        "sourceAnchor": {
+          "chatId": "isolated.dialogue.live.05-partial-first",
+          "messageId": 0,
+          "swipeId": 0,
+          "text": "布莱特对黄泉说：“东门封闭，改走南门。”黄泉只听清“东门封闭”，没听清后半句。"
+        },
+        "batchId": "dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b"
+      }
+    ]
+  },
+  "asked": [],
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "isolated.dialogue.live.v1",
+    "chatId": "isolated.dialogue.live.05-partial-first",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "harbor.closed": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "harbor.closed",
+        "entityId": "harbor",
+        "field": "reported_status",
+        "value": "码头停航",
+        "certainty": "rumor",
+        "visibility": "private"
+      }
+    },
+    "events": {},
+    "knowledge": {},
+    "dialogueBatches": {
+      "dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b": {
+        "id": "dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b",
+        "sourceAnchor": {
+          "chatId": "isolated.dialogue.live.05-partial-first",
+          "messageId": 0,
+          "swipeId": 0,
+          "text": "布莱特对黄泉说：“东门封闭，改走南门。”黄泉只听清“东门封闭”，没听清后半句。"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894",
+            "claimId": "c1",
+            "speakerId": "bright",
+            "recipientIds": [],
+            "propositionRef": null,
+            "content": "东门封闭，改走南门。",
+            "quote": "东门封闭，改走南门。",
+            "belief": "uncertain",
+            "status": "pending",
+            "extractionReason": "黄泉只听清前半句“东门封闭”，未完整接收整句对白“东门封闭，改走南门。”",
+            "reason": "黄泉只听清前半句“东门封闭”，未完整接收整句对白“东门封闭，改走南门。”",
+            "evidence": {
+              "documentId": "current",
+              "start": 20,
+              "end": 39,
+              "quote": "黄泉只听清“东门封闭”，没听清后半句。"
+            },
+            "unresolved": []
+          }
+        ]
+      }
+    }
+  },
+  "context": {
+    "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+    "actorKnowledge": [
+      {
+        "actorId": "bright",
+        "name": "布莱特",
+        "facts": []
+      },
+      {
+        "actorId": "huang",
+        "name": "黄泉",
+        "facts": []
+      },
+      {
+        "actorId": "player",
+        "name": "御临风",
+        "facts": []
+      }
+    ],
+    "availableInformation": []
+  },
+  "semanticAssessment": "pending-manual"
+}

@@ -1,0 +1,153 @@
+{
+  "reviewer": "narrative-quality",
+  "status": "sealed_no_reviewable_responses",
+  "runLedgerSha256": "3f47cdb487579589ae9f9a2d2a93a1dd77fb8e0e43ded361683fe010cdee3f09",
+  "rubricSha256": "15413ac8d0be3034dc522f4aa2670863ca33fc00c933e47e1c2c8bff3b033dda",
+  "humanCalibrationSha256": "719193a531f29c3a7f27460e8674245a2dfcd9bb91cbfee2886bfcc8ab37e552",
+  "rows": [
+    {
+      "call": 601,
+      "slot": 1,
+      "condition": "before",
+      "wording": "original",
+      "request": "601.request.json",
+      "httpStatus": null,
+      "status": "unreviewable_transport_failure",
+      "technicalFailure": "SSLCertVerificationError",
+      "label": null,
+      "evidence": [],
+      "unresolved": [],
+      "newAcquisition": [],
+      "otherIssues": []
+    },
+    {
+      "call": 602,
+      "slot": 2,
+      "condition": "received-huang",
+      "wording": "neutral",
+      "request": "602.request.json",
+      "httpStatus": null,
+      "status": "unreviewable_transport_failure",
+      "technicalFailure": "SSLCertVerificationError",
+      "label": null,
+      "evidence": [],
+      "unresolved": [],
+      "newAcquisition": [],
+      "otherIssues": []
+    },
+    {
+      "call": 603,
+      "slot": 3,
+      "condition": "received-bright",
+      "wording": "original",
+      "request": "603.request.json",
+      "httpStatus": null,
+      "status": "unreviewable_transport_failure",
+      "technicalFailure": "SSLCertVerificationError",
+      "label": null,
+      "evidence": [],
+      "unresolved": [],
+      "newAcquisition": [],
+      "otherIssues": []
+    },
+    {
+      "call": 604,
+      "slot": 4,
+      "condition": "reopened-bright",
+      "wording": "neutral",
+      "request": "604.request.json",
+      "httpStatus": null,
+      "status": "unreviewable_transport_failure",
+      "technicalFailure": "SSLCertVerificationError",
+      "label": null,
+      "evidence": [],
+      "unresolved": [],
+      "newAcquisition": [],
+      "otherIssues": []
+    },
+    {
+      "call": 605,
+      "slot": 5,
+      "condition": "received-huang",
+      "wording": "original",
+      "request": "605.request.json",
+      "httpStatus": null,
+      "status": "unreviewable_transport_failure",
+      "technicalFailure": "SSLCertVerificationError",
+      "label": null,
+      "evidence": [],
+      "unresolved": [],
+      "newAcquisition": [],
+      "otherIssues": []
+    },
+    {
+      "call": 606,
+      "slot": 6,
+      "condition": "before",
+      "wording": "neutral",
+      "request": "606.request.json",
+      "httpStatus": null,
+      "status": "unreviewable_transport_failure",
+      "technicalFailure": "SSLCertVerificationError",
+      "label": null,
+      "evidence": [],
+      "unresolved": [],
+      "newAcquisition": [],
+      "otherIssues": []
+    },
+    {
+      "call": 607,
+      "slot": 7,
+      "condition": "reopened-bright",
+      "wording": "original",
+      "request": "607.request.json",
+      "httpStatus": null,
+      "status": "unreviewable_transport_failure",
+      "technicalFailure": "SSLCertVerificationError",
+      "label": null,
+      "evidence": [],
+      "unresolved": [],
+      "newAcquisition": [],
+      "otherIssues": []
+    },
+    {
+      "call": 608,
+      "slot": 8,
+      "condition": "received-bright",
+      "wording": "neutral",
+      "request": "608.request.json",
+      "httpStatus": null,
+      "status": "unreviewable_transport_failure",
+      "technicalFailure": "SSLCertVerificationError",
+      "label": null,
+      "evidence": [],
+      "unresolved": [],
+      "newAcquisition": [],
+      "otherIssues": []
+    }
+  ],
+  "counts": {
+    "F": 0,
+    "N": 0,
+    "U": 0,
+    "X": 0
+  },
+  "unscoredTechnicalFailures": 8,
+  "transport": {
+    "previousSuccessfulTransport": "Node https.request",
+    "previousExecutionReference": {
+      "threadId": "01a1e413-ef36-7873-b5a1-9d0ebb63235f",
+      "turnId": "01a1f896-f8f2-7561-985f-bb1bdd27157a",
+      "commandId": "exec-c17c0863-6cf1-4bec-b74b-601a8cdc3795"
+    },
+    "thisTransport": "Python http.client.HTTPSConnection with ssl.create_default_context()",
+    "failurePhase": "TLS certificate verification before any HTTP response",
+    "continuedFrozenSlotsAfterInitialFailure": 7,
+    "certificateCauseVerified": false
+  },
+  "limitations": [
+    "无完整正文，不能作受保护话题、来源、披露顺序或问法比较。",
+    "TLS 失败不记为 X 或任何语义标签。",
+    "旧 U 和原汇总未改。"
+  ]
+}

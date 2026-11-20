@@ -1,0 +1,1047 @@
+{
+  "status": "local-browser-input-verified",
+  "modelCallsThisTask": 0,
+  "credentialsRead": false,
+  "cumulative": 248,
+  "remaining": 0,
+  "newCaptures": 10,
+  "syntheticClassificationControls": 5,
+  "upstreamStoppedNarrations": 5,
+  "packagedModulesVerified": 133,
+  "explicitRelayReopened": true,
+  "nonemptyMemoryRetained": true,
+  "formalProtectedFilesUnchanged": true,
+  "currentRegressionRun": false,
+  "priorRegressionRecord": {
+    "tests": 135,
+    "failures": 0,
+    "log": "offline-regression.log"
+  },
+  "results": [
+    {
+      "label": "entry-promise",
+      "captures": [
+        {
+          "file": "1794592031497-classification.json",
+          "kind": "classification",
+          "sha256": "9c8e2d5d8157a85011e112343eea4870a2b3745260bfbf07c8c560d303bcb720",
+          "knowledgeCounts": [
+            0,
+            1,
+            0
+          ],
+          "explicitNotes": 1,
+          "context": {
+            "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+            "actorKnowledge": [
+              {
+                "actorId": "player",
+                "name": "御临风",
+                "facts": []
+              },
+              {
+                "actorId": "bright",
+                "name": "布莱特",
+                "facts": [
+                  {
+                    "id": "clinic.owner.xuelao.old-friend",
+                    "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                    "belief": "confirmed",
+                    "access": "learned",
+                    "effectiveAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 0,
+                      "actorId": "legacy.story"
+                    },
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 12,
+                      "actorId": "legacy.story"
+                    },
+                    "sources": [
+                      {
+                        "eventRef": "received.browser.received",
+                        "channel": "message",
+                        "belief": "confirmed",
+                        "senderId": null,
+                        "learnedAt": {
+                          "id": "legacy.story.order",
+                          "clock": "turn",
+                          "at": 11,
+                          "actorId": "legacy.story"
+                        },
+                        "sourceAnchor": {
+                          "chatId": "901 帝都正式续玩 20261106",
+                          "messageId": 11,
+                          "swipeId": 0
+                        },
+                        "disclosure": null
+                      },
+                      {
+                        "eventRef": "received.browser.communication.promise",
+                        "channel": "message",
+                        "belief": "confirmed",
+                        "senderId": null,
+                        "learnedAt": {
+                          "id": "legacy.story.order",
+                          "clock": "turn",
+                          "at": 12,
+                          "actorId": "legacy.story"
+                        },
+                        "sourceAnchor": {
+                          "chatId": "901 帝都正式续玩 20261106",
+                          "messageId": 12,
+                          "swipeId": 0
+                        },
+                        "disclosure": {
+                          "sourceQuote": "这件事先不要向御临风和黄泉透露，等我们单独确认后再说。"
+                        }
+                      }
+                    ],
+                    "eventRef": "received.browser.communication.promise",
+                    "channel": "message",
+                    "learnedAtMessage": 12
+                  }
+                ]
+              },
+              {
+                "actorId": "huang",
+                "name": "黄泉",
+                "facts": []
+              }
+            ],
+            "availableInformation": [
+              {
+                "access": "can-inquire",
+                "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+              }
+            ]
+          }
+        },
+        {
+          "file": "1794592032078-narration.json",
+          "kind": "narration",
+          "sha256": "cc0c5d50666b9d125c83f477449cd3870c5a41c33ff4db70ee2c89c6232fb703",
+          "knowledgeCounts": [
+            0,
+            1,
+            0
+          ],
+          "explicitNotes": 1,
+          "context": {
+            "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+            "actorKnowledge": [
+              {
+                "actorId": "player",
+                "name": "御临风",
+                "facts": []
+              },
+              {
+                "actorId": "bright",
+                "name": "布莱特",
+                "facts": [
+                  {
+                    "id": "clinic.owner.xuelao.old-friend",
+                    "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                    "belief": "confirmed",
+                    "access": "learned",
+                    "effectiveAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 0,
+                      "actorId": "legacy.story"
+                    },
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 12,
+                      "actorId": "legacy.story"
+                    },
+                    "sources": [
+                      {
+                        "eventRef": "received.browser.received",
+                        "channel": "message",
+                        "belief": "confirmed",
+                        "senderId": null,
+                        "learnedAt": {
+                          "id": "legacy.story.order",
+                          "clock": "turn",
+                          "at": 11,
+                          "actorId": "legacy.story"
+                        },
+                        "sourceAnchor": {
+                          "chatId": "901 帝都正式续玩 20261106",
+                          "messageId": 11,
+                          "swipeId": 0
+                        },
+                        "disclosure": null
+                      },
+                      {
+                        "eventRef": "received.browser.communication.promise",
+                        "channel": "message",
+                        "belief": "confirmed",
+                        "senderId": null,
+                        "learnedAt": {
+                          "id": "legacy.story.order",
+                          "clock": "turn",
+                          "at": 12,
+                          "actorId": "legacy.story"
+                        },
+                        "sourceAnchor": {
+                          "chatId": "901 帝都正式续玩 20261106",
+                          "messageId": 12,
+                          "swipeId": 0
+                        },
+                        "disclosure": {
+                          "sourceQuote": "这件事先不要向御临风和黄泉透露，等我们单独确认后再说。"
+                        }
+                      }
+                    ],
+                    "eventRef": "received.browser.communication.promise",
+                    "channel": "message",
+                    "learnedAtMessage": 12
+                  }
+                ]
+              },
+              {
+                "actorId": "huang",
+                "name": "黄泉",
+                "facts": []
+              }
+            ],
+            "availableInformation": [
+              {
+                "access": "can-inquire",
+                "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "memory-unknown",
+      "captures": [
+        {
+          "file": "1794592309805-classification.json",
+          "kind": "classification",
+          "sha256": "71906f2167f99dc78919385f92be7d9d1dcd0ec93f75a80419e4ee560babb06f",
+          "knowledgeCounts": [
+            0,
+            1,
+            0
+          ],
+          "explicitNotes": 1,
+          "context": {
+            "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+            "actorKnowledge": [
+              {
+                "actorId": "player",
+                "name": "御临风",
+                "facts": []
+              },
+              {
+                "actorId": "bright",
+                "name": "布莱特",
+                "facts": [
+                  {
+                    "id": "clinic.owner.xuelao.old-friend",
+                    "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                    "belief": "confirmed",
+                    "access": "learned",
+                    "effectiveAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 0,
+                      "actorId": "legacy.story"
+                    },
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 12,
+                      "actorId": "legacy.story"
+                    },
+                    "sources": [
+                      {
+                        "eventRef": "received.browser.received",
+                        "channel": "message",
+                        "belief": "confirmed",
+                        "senderId": null,
+                        "learnedAt": {
+                          "id": "legacy.story.order",
+                          "clock": "turn",
+                          "at": 11,
+                          "actorId": "legacy.story"
+                        },
+                        "sourceAnchor": {
+                          "chatId": "901 帝都正式续玩 20261106",
+                          "messageId": 11,
+                          "swipeId": 0
+                        },
+                        "disclosure": null
+                      },
+                      {
+                        "eventRef": "received.browser.communication.promise",
+                        "channel": "message",
+                        "belief": "confirmed",
+                        "senderId": null,
+                        "learnedAt": {
+                          "id": "legacy.story.order",
+                          "clock": "turn",
+                          "at": 12,
+                          "actorId": "legacy.story"
+                        },
+                        "sourceAnchor": {
+                          "chatId": "901 帝都正式续玩 20261106",
+                          "messageId": 12,
+                          "swipeId": 0
+                        },
+                        "disclosure": {
+                          "sourceQuote": "这件事先不要向御临风和黄泉透露，等我们单独确认后再说。"
+                        }
+                      }
+                    ],
+                    "eventRef": "received.browser.communication.promise",
+                    "channel": "message",
+                    "learnedAtMessage": 12
+                  }
+                ]
+              },
+              {
+                "actorId": "huang",
+                "name": "黄泉",
+                "facts": []
+              }
+            ],
+            "availableInformation": [
+              {
+                "access": "can-inquire",
+                "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+              }
+            ]
+          }
+        },
+        {
+          "file": "1794592310827-narration.json",
+          "kind": "narration",
+          "sha256": "cb04c89cd8b51bd01749f7c4eed7be457084e0bf6818daf4c84f4aaafb48ee79",
+          "knowledgeCounts": [
+            0,
+            1,
+            0
+          ],
+          "explicitNotes": 1,
+          "context": {
+            "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+            "actorKnowledge": [
+              {
+                "actorId": "player",
+                "name": "御临风",
+                "facts": []
+              },
+              {
+                "actorId": "bright",
+                "name": "布莱特",
+                "facts": [
+                  {
+                    "id": "clinic.owner.xuelao.old-friend",
+                    "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                    "belief": "confirmed",
+                    "access": "learned",
+                    "effectiveAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 0,
+                      "actorId": "legacy.story"
+                    },
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 12,
+                      "actorId": "legacy.story"
+                    },
+                    "sources": [
+                      {
+                        "eventRef": "received.browser.received",
+                        "channel": "message",
+                        "belief": "confirmed",
+                        "senderId": null,
+                        "learnedAt": {
+                          "id": "legacy.story.order",
+                          "clock": "turn",
+                          "at": 11,
+                          "actorId": "legacy.story"
+                        },
+                        "sourceAnchor": {
+                          "chatId": "901 帝都正式续玩 20261106",
+                          "messageId": 11,
+                          "swipeId": 0
+                        },
+                        "disclosure": null
+                      },
+                      {
+                        "eventRef": "received.browser.communication.promise",
+                        "channel": "message",
+                        "belief": "confirmed",
+                        "senderId": null,
+                        "learnedAt": {
+                          "id": "legacy.story.order",
+                          "clock": "turn",
+                          "at": 12,
+                          "actorId": "legacy.story"
+                        },
+                        "sourceAnchor": {
+                          "chatId": "901 帝都正式续玩 20261106",
+                          "messageId": 12,
+                          "swipeId": 0
+                        },
+                        "disclosure": {
+                          "sourceQuote": "这件事先不要向御临风和黄泉透露，等我们单独确认后再说。"
+                        }
+                      }
+                    ],
+                    "eventRef": "received.browser.communication.promise",
+                    "channel": "message",
+                    "learnedAtMessage": 12
+                  }
+                ]
+              },
+              {
+                "actorId": "huang",
+                "name": "黄泉",
+                "facts": []
+              }
+            ],
+            "availableInformation": [
+              {
+                "access": "can-inquire",
+                "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "memory-relayed",
+      "captures": [
+        {
+          "file": "1794592608894-classification.json",
+          "kind": "classification",
+          "sha256": "9b1265c918aa3cbaeb52723565c900a43878581cb75b87ee25092f7fe80f9459",
+          "knowledgeCounts": [
+            0,
+            1,
+            1
+          ],
+          "explicitNotes": 0,
+          "context": {
+            "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+            "actorKnowledge": [
+              {
+                "actorId": "player",
+                "name": "御临风",
+                "facts": []
+              },
+              {
+                "actorId": "bright",
+                "name": "布莱特",
+                "facts": [
+                  {
+                    "id": "clinic.owner.xuelao.old-friend",
+                    "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                    "belief": "confirmed",
+                    "access": "learned",
+                    "effectiveAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 0,
+                      "actorId": "legacy.story"
+                    },
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 11,
+                      "actorId": "legacy.story"
+                    },
+                    "sources": [
+                      {
+                        "eventRef": "received.browser.received",
+                        "channel": "message",
+                        "belief": "confirmed",
+                        "senderId": null,
+                        "learnedAt": {
+                          "id": "legacy.story.order",
+                          "clock": "turn",
+                          "at": 11,
+                          "actorId": "legacy.story"
+                        },
+                        "sourceAnchor": {
+                          "chatId": "901 帝都正式续玩 20261106",
+                          "messageId": 11,
+                          "swipeId": 0
+                        },
+                        "disclosure": null
+                      }
+                    ],
+                    "eventRef": "received.browser.received",
+                    "channel": "message",
+                    "learnedAtMessage": 11
+                  }
+                ]
+              },
+              {
+                "actorId": "huang",
+                "name": "黄泉",
+                "facts": [
+                  {
+                    "id": "clinic.owner.xuelao.old-friend",
+                    "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                    "belief": "confirmed",
+                    "access": "learned",
+                    "effectiveAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 0,
+                      "actorId": "legacy.story"
+                    },
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 12,
+                      "actorId": "legacy.story"
+                    },
+                    "sources": [
+                      {
+                        "eventRef": "received.browser.relay",
+                        "channel": "message",
+                        "belief": "confirmed",
+                        "senderId": "bright",
+                        "learnedAt": {
+                          "id": "legacy.story.order",
+                          "clock": "turn",
+                          "at": 12,
+                          "actorId": "legacy.story"
+                        },
+                        "sourceAnchor": {
+                          "chatId": "901 帝都正式续玩 20261106",
+                          "messageId": 12,
+                          "swipeId": 0
+                        },
+                        "disclosure": null
+                      }
+                    ],
+                    "eventRef": "received.browser.relay",
+                    "channel": "message",
+                    "learnedAtMessage": 12
+                  }
+                ]
+              }
+            ],
+            "availableInformation": [
+              {
+                "access": "can-inquire",
+                "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+              }
+            ]
+          }
+        },
+        {
+          "file": "1794592609460-narration.json",
+          "kind": "narration",
+          "sha256": "3d3e5f8a891084ba38be1ea2e9ca91fd388db60931d89652a8daca92001a1652",
+          "knowledgeCounts": [
+            0,
+            1,
+            1
+          ],
+          "explicitNotes": 0,
+          "context": {
+            "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+            "actorKnowledge": [
+              {
+                "actorId": "player",
+                "name": "御临风",
+                "facts": []
+              },
+              {
+                "actorId": "bright",
+                "name": "布莱特",
+                "facts": [
+                  {
+                    "id": "clinic.owner.xuelao.old-friend",
+                    "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                    "belief": "confirmed",
+                    "access": "learned",
+                    "effectiveAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 0,
+                      "actorId": "legacy.story"
+                    },
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 11,
+                      "actorId": "legacy.story"
+                    },
+                    "sources": [
+                      {
+                        "eventRef": "received.browser.received",
+                        "channel": "message",
+                        "belief": "confirmed",
+                        "senderId": null,
+                        "learnedAt": {
+                          "id": "legacy.story.order",
+                          "clock": "turn",
+                          "at": 11,
+                          "actorId": "legacy.story"
+                        },
+                        "sourceAnchor": {
+                          "chatId": "901 帝都正式续玩 20261106",
+                          "messageId": 11,
+                          "swipeId": 0
+                        },
+                        "disclosure": null
+                      }
+                    ],
+                    "eventRef": "received.browser.received",
+                    "channel": "message",
+                    "learnedAtMessage": 11
+                  }
+                ]
+              },
+              {
+                "actorId": "huang",
+                "name": "黄泉",
+                "facts": [
+                  {
+                    "id": "clinic.owner.xuelao.old-friend",
+                    "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                    "belief": "confirmed",
+                    "access": "learned",
+                    "effectiveAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 0,
+                      "actorId": "legacy.story"
+                    },
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 12,
+                      "actorId": "legacy.story"
+                    },
+                    "sources": [
+                      {
+                        "eventRef": "received.browser.relay",
+                        "channel": "message",
+                        "belief": "confirmed",
+                        "senderId": "bright",
+                        "learnedAt": {
+                          "id": "legacy.story.order",
+                          "clock": "turn",
+                          "at": 12,
+                          "actorId": "legacy.story"
+                        },
+                        "sourceAnchor": {
+                          "chatId": "901 帝都正式续玩 20261106",
+                          "messageId": 12,
+                          "swipeId": 0
+                        },
+                        "disclosure": null
+                      }
+                    ],
+                    "eventRef": "received.browser.relay",
+                    "channel": "message",
+                    "learnedAtMessage": 12
+                  }
+                ]
+              }
+            ],
+            "availableInformation": [
+              {
+                "access": "can-inquire",
+                "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "chain-A-first",
+      "captures": [
+        {
+          "file": "1794592761152-classification.json",
+          "kind": "classification",
+          "sha256": "31e8d7a1595e859cdfef94be4e600738e6fed3189e0eb50d4c154cd155c77425",
+          "knowledgeCounts": [
+            0,
+            1,
+            0
+          ],
+          "explicitNotes": 0,
+          "context": {
+            "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+            "actorKnowledge": [
+              {
+                "actorId": "player",
+                "name": "御临风",
+                "facts": []
+              },
+              {
+                "actorId": "bright",
+                "name": "布莱特",
+                "facts": [
+                  {
+                    "id": "clinic.owner.xuelao.old-friend",
+                    "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                    "belief": "confirmed",
+                    "access": "learned",
+                    "effectiveAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 0,
+                      "actorId": "legacy.story"
+                    },
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 11,
+                      "actorId": "legacy.story"
+                    },
+                    "sources": [
+                      {
+                        "eventRef": "received.browser.received",
+                        "channel": "message",
+                        "belief": "confirmed",
+                        "senderId": null,
+                        "learnedAt": {
+                          "id": "legacy.story.order",
+                          "clock": "turn",
+                          "at": 11,
+                          "actorId": "legacy.story"
+                        },
+                        "sourceAnchor": {
+                          "chatId": "901 帝都正式续玩 20261106",
+                          "messageId": 11,
+                          "swipeId": 0
+                        },
+                        "disclosure": null
+                      }
+                    ],
+                    "eventRef": "received.browser.received",
+                    "channel": "message",
+                    "learnedAtMessage": 11
+                  }
+                ]
+              },
+              {
+                "actorId": "huang",
+                "name": "黄泉",
+                "facts": []
+              }
+            ],
+            "availableInformation": [
+              {
+                "access": "can-inquire",
+                "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+              }
+            ]
+          }
+        },
+        {
+          "file": "1794592761717-narration.json",
+          "kind": "narration",
+          "sha256": "0d755d4ace2e8864a2c344727930c4612f95e3617bbccf2ff1a0d99744f9a31a",
+          "knowledgeCounts": [
+            0,
+            1,
+            0
+          ],
+          "explicitNotes": 0,
+          "context": {
+            "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+            "actorKnowledge": [
+              {
+                "actorId": "player",
+                "name": "御临风",
+                "facts": []
+              },
+              {
+                "actorId": "bright",
+                "name": "布莱特",
+                "facts": [
+                  {
+                    "id": "clinic.owner.xuelao.old-friend",
+                    "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                    "belief": "confirmed",
+                    "access": "learned",
+                    "effectiveAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 0,
+                      "actorId": "legacy.story"
+                    },
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 11,
+                      "actorId": "legacy.story"
+                    },
+                    "sources": [
+                      {
+                        "eventRef": "received.browser.received",
+                        "channel": "message",
+                        "belief": "confirmed",
+                        "senderId": null,
+                        "learnedAt": {
+                          "id": "legacy.story.order",
+                          "clock": "turn",
+                          "at": 11,
+                          "actorId": "legacy.story"
+                        },
+                        "sourceAnchor": {
+                          "chatId": "901 帝都正式续玩 20261106",
+                          "messageId": 11,
+                          "swipeId": 0
+                        },
+                        "disclosure": null
+                      }
+                    ],
+                    "eventRef": "received.browser.received",
+                    "channel": "message",
+                    "learnedAtMessage": 11
+                  }
+                ]
+              },
+              {
+                "actorId": "huang",
+                "name": "黄泉",
+                "facts": []
+              }
+            ],
+            "availableInformation": [
+              {
+                "access": "can-inquire",
+                "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "chain-B-first",
+      "captures": [
+        {
+          "file": "1794592945428-classification.json",
+          "kind": "classification",
+          "sha256": "915fc8cdd7dffe4895f297cfacf90c99facc5848662d4595887acdc73cebb450",
+          "knowledgeCounts": [
+            0,
+            1,
+            0
+          ],
+          "explicitNotes": 1,
+          "context": {
+            "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+            "actorKnowledge": [
+              {
+                "actorId": "player",
+                "name": "御临风",
+                "facts": []
+              },
+              {
+                "actorId": "bright",
+                "name": "布莱特",
+                "facts": [
+                  {
+                    "id": "clinic.owner.xuelao.old-friend",
+                    "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                    "belief": "confirmed",
+                    "access": "learned",
+                    "effectiveAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 0,
+                      "actorId": "legacy.story"
+                    },
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 12,
+                      "actorId": "legacy.story"
+                    },
+                    "sources": [
+                      {
+                        "eventRef": "received.browser.received",
+                        "channel": "message",
+                        "belief": "confirmed",
+                        "senderId": null,
+                        "learnedAt": {
+                          "id": "legacy.story.order",
+                          "clock": "turn",
+                          "at": 11,
+                          "actorId": "legacy.story"
+                        },
+                        "sourceAnchor": {
+                          "chatId": "901 帝都正式续玩 20261106",
+                          "messageId": 11,
+                          "swipeId": 0
+                        },
+                        "disclosure": null
+                      },
+                      {
+                        "eventRef": "received.communication.promise",
+                        "channel": "message",
+                        "belief": "confirmed",
+                        "senderId": null,
+                        "learnedAt": {
+                          "id": "legacy.story.order",
+                          "clock": "turn",
+                          "at": 12,
+                          "actorId": "legacy.story"
+                        },
+                        "sourceAnchor": {
+                          "chatId": "901 帝都正式续玩 20261106",
+                          "messageId": 12,
+                          "swipeId": 0
+                        },
+                        "disclosure": {
+                          "sourceQuote": "这件事先不要向御临风和黄泉透露，等我们单独确认后再说。"
+                        }
+                      }
+                    ],
+                    "eventRef": "received.communication.promise",
+                    "channel": "message",
+                    "learnedAtMessage": 12
+                  }
+                ]
+              },
+              {
+                "actorId": "huang",
+                "name": "黄泉",
+                "facts": []
+              }
+            ],
+            "availableInformation": [
+              {
+                "access": "can-inquire",
+                "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+              }
+            ]
+          }
+        },
+        {
+          "file": "1794592946006-narration.json",
+          "kind": "narration",
+          "sha256": "e4edc491ed1a5f0e621b98ab98edd7533ba117dc6a64c405aa92a590385886bc",
+          "knowledgeCounts": [
+            0,
+            1,
+            0
+          ],
+          "explicitNotes": 1,
+          "context": {
+            "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+            "actorKnowledge": [
+              {
+                "actorId": "player",
+                "name": "御临风",
+                "facts": []
+              },
+              {
+                "actorId": "bright",
+                "name": "布莱特",
+                "facts": [
+                  {
+                    "id": "clinic.owner.xuelao.old-friend",
+                    "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                    "belief": "confirmed",
+                    "access": "learned",
+                    "effectiveAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 0,
+                      "actorId": "legacy.story"
+                    },
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 12,
+                      "actorId": "legacy.story"
+                    },
+                    "sources": [
+                      {
+                        "eventRef": "received.browser.received",
+                        "channel": "message",
+                        "belief": "confirmed",
+                        "senderId": null,
+                        "learnedAt": {
+                          "id": "legacy.story.order",
+                          "clock": "turn",
+                          "at": 11,
+                          "actorId": "legacy.story"
+                        },
+                        "sourceAnchor": {
+                          "chatId": "901 帝都正式续玩 20261106",
+                          "messageId": 11,
+                          "swipeId": 0
+                        },
+                        "disclosure": null
+                      },
+                      {
+                        "eventRef": "received.communication.promise",
+                        "channel": "message",
+                        "belief": "confirmed",
+                        "senderId": null,
+                        "learnedAt": {
+                          "id": "legacy.story.order",
+                          "clock": "turn",
+                          "at": 12,
+                          "actorId": "legacy.story"
+                        },
+                        "sourceAnchor": {
+                          "chatId": "901 帝都正式续玩 20261106",
+                          "messageId": 12,
+                          "swipeId": 0
+                        },
+                        "disclosure": {
+                          "sourceQuote": "这件事先不要向御临风和黄泉透露，等我们单独确认后再说。"
+                        }
+                      }
+                    ],
+                    "eventRef": "received.communication.promise",
+                    "channel": "message",
+                    "learnedAtMessage": 12
+                  }
+                ]
+              },
+              {
+                "actorId": "huang",
+                "name": "黄泉",
+                "facts": []
+              }
+            ],
+            "availableInformation": [
+              {
+                "access": "can-inquire",
+                "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "No new continuous model response.",
+    "Memory labels and controlled projections are retained; semantic model compliance is not proven.",
+    "Free-text memory source/known_by fields do not constitute machine-validated grants.",
+    "No general secrecy audit or world-clock binding."
+  ]
+}

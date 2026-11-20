@@ -1,0 +1,73 @@
+[
+  {
+    "id": "receiptformat.reproduce.partial",
+    "call": 472,
+    "jsonError": {
+      "position": 1076,
+      "message": "Expecting ',' delimiter",
+      "excerpt": "{\"fragmentId\":\"f1\",\"quote\":\"山路已经封闭了，明早在渡口会合。\"满足？不，evidence.kind为reply，span必须支持传达关系}}},{\"id\":\"tu"
+    },
+    "requiredUnitFields": [
+      "id",
+      "claims",
+      "utterances",
+      "coverage",
+      "status",
+      "unresolved"
+    ],
+    "strict": true,
+    "receiptClosed": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "rawUnmodified": true,
+    "finishReason": "stop",
+    "tokens": 599,
+    "assessment": "472 original469 raw JSON syntax error at1076 with unquoted explanatory text; visible partial content splits but no valid receipt object, mandatory unit fields also absent.0 writes; no repair."
+  },
+  {
+    "id": "receiptformat.reproduce.obstacle",
+    "call": 473,
+    "jsonError": {
+      "position": 1031,
+      "message": "Expecting ',' delimiter",
+      "excerpt": "span\":{\"fragmentId\":\"f3\",\"quote\":\"已听不到这里的声音。\"在这个上下文明确表达障碍}}}]}],\"coverage\":{\"status\":\"recorded\""
+    },
+    "requiredUnitFields": [
+      "id",
+      "claims",
+      "utterances",
+      "coverage",
+      "status",
+      "unresolved"
+    ],
+    "strict": true,
+    "receiptClosed": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "rawUnmodified": true,
+    "finishReason": "stop",
+    "tokens": 490,
+    "assessment": "473 original470 raw JSON unquoted explanation at1031; visible current-answer listener and nonreception obstacle reasonable, but invalid whole output rejected0 writes."
+  },
+  {
+    "id": "receiptformat.probe.unsaid",
+    "call": 474,
+    "jsonError": null,
+    "requiredUnitFields": [
+      "id",
+      "claims",
+      "utterances",
+      "coverage",
+      "status",
+      "unresolved"
+    ],
+    "strict": true,
+    "receiptClosed": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "rawUnmodified": true,
+    "finishReason": "stop",
+    "tokens": 234,
+    "assessment": "474 passes scoped unsaid/reception control: JSON/schema/strict citation valid, no utterances or receipts, coverage none, no knowledge/events/pending/questions.2 isolated bookkeeping writes only. Not full assertion completeness or stable model proof."
+  }
+]

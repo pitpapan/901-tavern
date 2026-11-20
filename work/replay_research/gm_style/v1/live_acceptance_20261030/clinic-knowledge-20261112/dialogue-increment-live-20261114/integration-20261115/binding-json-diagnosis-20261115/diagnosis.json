@@ -1,0 +1,79 @@
+[
+  {
+    "id": "binding.reproduce.npc_reply",
+    "call": 450,
+    "jsonError": null,
+    "rawUnmodified": true,
+    "strict": true,
+    "receiptClosed": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "finishReason": "stop",
+    "tokens": 514,
+    "originalAssessment": "450 JSON/schema valid but reply identity/evidence outside current answer; existing bound check rejects writes0. No scope relaxation or automatic remapping."
+  },
+  {
+    "id": "binding.reproduce.obstacle",
+    "call": 453,
+    "jsonError": null,
+    "rawUnmodified": true,
+    "strict": true,
+    "receiptClosed": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "finishReason": "stop",
+    "tokens": 492,
+    "originalAssessment": "453 JSON/schema pass, not_received/obstacle correct, but reply listener span is narration 答 outside utterance content. Strict binding rejects writes0; semantic nonreception itself not disproved."
+  },
+  {
+    "id": "rawcheck.reproduce.long",
+    "call": 462,
+    "jsonError": {
+      "position": 1460,
+      "message": "Expecting property name enclosed in double quotes",
+      "excerpt": "麦饼，也比干粮强上十倍。要是能在窗边坐下，再来一壶温热的麦茶，这几天的奔波才算真正缓过劲来。\"}},{\"id\":\"turn.u1.r2\",\"contentSpan\":{\"fragmentId\":\"f4\",\"qu"
+    },
+    "rawUnmodified": true,
+    "strict": true,
+    "receiptClosed": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "finishReason": "stop",
+    "tokens": 2554,
+    "originalAssessment": "462 unchanged long original JSON syntax failure at1460; rejected writes0, no raw repair or semantic pass."
+  },
+  {
+    "id": "rawcheck.reproduce.identity",
+    "call": 463,
+    "jsonError": {
+      "position": 1076,
+      "message": "Expecting ',' delimiter",
+      "excerpt": "le\",\"span\":{\"fragmentId\":\"f3\",\"quote\":\"已听不到这里的声音。\"学者}}}]],\"coverage\":{\"status\":\"recorded\",\"evidence\":{\"fr"
+    },
+    "rawUnmodified": true,
+    "strict": true,
+    "receiptClosed": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "finishReason": "stop",
+    "tokens": 509,
+    "originalAssessment": "463 unchanged identity/nonreception original raw JSON syntax failure at1076 and invalid closure; strict parser rejects writes0. Visible selections reasonable but not accepted."
+  },
+  {
+    "id": "rawcheck.probe.reply",
+    "call": 464,
+    "jsonError": {
+      "position": 1416,
+      "message": "Expecting ',' delimiter",
+      "excerpt": "y\",\"span\":{\"fragmentId\":\"f4\",\"quote\":\"山路已经封闭了。\"}}}顶]}],\"coverage\":{\"status\":\"recorded\",\"evidence\":{\"fragm"
+    },
+    "rawUnmodified": true,
+    "strict": true,
+    "receiptClosed": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "finishReason": "stop",
+    "tokens": 598,
+    "originalAssessment": "464 nearby implicit answer raw JSON stray token at1416; parser rejects writes0. Visible current-answer identity/evidence cannot count as accepted output, no repair."
+  }
+]

@@ -1,0 +1,1892 @@
+{
+  "authorization": "用户自行修复推进十二阶段，总计200次；本集成批次335/336已用2次计入，最多再198次。不部署/正式剧情/自动批准修订，不修补回复或放宽校验。失败先诊断、再改进或调整测试，不盲目重发。",
+  "limit": 200,
+  "usedBefore": 2,
+  "used": 71,
+  "remaining": 129,
+  "cumulative": 405,
+  "attempts": [
+    {
+      "id": "A1.reception.r1",
+      "customRequest": 337,
+      "state": "completed",
+      "purpose": "复测336真实正文；仅收紧接收目的并增加确定性整段与逐行引用；相关262项离线通过",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "9fdf7ffa4c160cf01681a68120a546f503957faf9aedaf9c72c49f1f42043456",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "4aa7c2204bc9bdaed5504c956bde9bb0c949a19a53f43674bda6926a01202184"
+      },
+      "requestBytes": 99232,
+      "requestSha256": "7aa91fafd5c727a3889c465c6146fa662e89f3ce230332d45441610dc5f36aec",
+      "startedAt": "2026-11-15T00:33:10.185Z",
+      "status": 200,
+      "elapsedMs": 8584,
+      "rawResponseSha256": "ebe7db08e662fddd11208e7b95b0f3930d68f35648277c97815cd1ac75e30802",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 6727,
+        "completion_tokens": 1030,
+        "total_tokens": 7757
+      },
+      "manualVerdict": "fail",
+      "assessment": "13引用中11正确；两个接收依据坐标含逗号而quote不含，严格拒绝。无关claims已消除；原文及回复保留。"
+    },
+    {
+      "id": "A1.reception.r2",
+      "customRequest": 338,
+      "state": "completed",
+      "purpose": "针对337手工子串末尾错位提供通用标点短区间；优先复制现成引用，输入Schema参数不变，23相关回归通过",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "4aa7c2204bc9bdaed5504c956bde9bb0c949a19a53f43674bda6926a01202184"
+      },
+      "requestBytes": 102012,
+      "requestSha256": "9f5d73592b2f7ae482418841c9b0c94a1317031d4c3443e984a900cce308eeb7",
+      "startedAt": "2026-11-15T00:35:21.404Z",
+      "status": 200,
+      "elapsedMs": 4850,
+      "rawResponseSha256": "3dc14a6151a33deef5e835a04a80a24b89d88cf5738c3e19956c21aeeb07dd1a",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7487,
+        "completion_tokens": 414,
+        "total_tokens": 7901
+      },
+      "manualVerdict": "fail",
+      "assessment": "结构引用通过，但把facts误作接收范围，漏掉当前实际言说。v2相较旧合同未明确null代表新的有来源说法；保留语义失败。"
+    },
+    {
+      "id": "A1.reception.r3",
+      "customRequest": 339,
+      "state": "completed",
+      "purpose": "补齐v2遗漏的原有新来源说法定义，facts非抽取范围；输入参数Schema保持，75相关回归通过",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "3515ce09ba09602030d0abb50dca48e90b517c8b3147cb92b11cb83b049b4507"
+      },
+      "requestBytes": 102091,
+      "requestSha256": "57f5714dfdb48ce3b976414686b45c3e4af1ee563266e936180dc2d180ee5913",
+      "startedAt": "2026-11-15T00:37:08.541Z",
+      "status": 200,
+      "elapsedMs": 7588,
+      "rawResponseSha256": "4bfa74a2cc2e1d845056531d1aba2151f87408c32a254c187524a8f03eaeedd3",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7509,
+        "completion_tokens": 853,
+        "total_tokens": 8362
+      },
+      "manualVerdict": "fail",
+      "assessment": "坐标仍错误：她42:44、你68:70、布莱特136:140均比原文长；另合并言说时夹入叙述。严格拒绝。无新本地处理缺陷证据，保留失败并改用十二阶段实际需要的受控明确接收链。"
+    },
+    {
+      "id": "A.scene1.narration",
+      "customRequest": 340,
+      "state": "completed",
+      "purpose": "真实普通入口A1：受控非Canon告示消息，一名听者、另一人在远处；浏览器冻结原请求，分类本地控制",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "3515ce09ba09602030d0abb50dca48e90b517c8b3147cb92b11cb83b049b4507"
+      },
+      "requestBytes": 108843,
+      "requestSha256": "da88214371a088e711c66110ccb3232bf1fd7b580d6128257ed54ea279db072f",
+      "startedAt": "2026-11-15T00:43:09.100Z",
+      "status": 200,
+      "elapsedMs": 4933,
+      "rawResponseSha256": "89838eccd3bed08478367e92c9e4534c93fa9207b56344cf54250bea80c8e6c3",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 27168,
+        "completion_tokens": 189,
+        "total_tokens": 27357
+      },
+      "manualVerdict": "pass",
+      "assessment": "实际正文未转述告示，遵守输入已有黄泉不因口语加持自动识字设定。形成真实新言说：我不认得这里的字/等布莱特或问路人；布莱特仍远处。后续按真实言说验接收，不称告示消息通过。"
+    },
+    {
+      "id": "A.scene1.reception",
+      "customRequest": 341,
+      "state": "completed",
+      "purpose": "承接真实340保存正文，验黄泉不识字/问路人建议由御临风接收、远处布莱特不授予；最新v2合同，浏览器实际原请求",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "3515ce09ba09602030d0abb50dca48e90b517c8b3147cb92b11cb83b049b4507"
+      },
+      "requestBytes": 103251,
+      "requestSha256": "d8f948d9278b1f1ad4eca40b0cbfdb0673c4781c862dea72bf680e9a02f52b91",
+      "startedAt": "2026-11-15T00:44:26.992Z",
+      "status": 200,
+      "elapsedMs": 7453,
+      "rawResponseSha256": "ee864cbce6c61fcc54785d8ec79824451eda4a11cac664eb60407102cd4c340d",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7960,
+        "completion_tokens": 990,
+        "total_tokens": 8950
+      },
+      "manualVerdict": "pass",
+      "assessment": "Schema及原严格检查通过；实际两条说法完整，御临风明确接收、布莱特无授予，null新来源不升世界真相。第二依据引用结尾对答需结合前文指代，不单靠无人留心推定；输入整体充分。"
+    },
+    {
+      "id": "A.scene2.narration",
+      "customRequest": 342,
+      "state": "completed",
+      "purpose": "A2重开后真实承接340/341的已收说法，请黄泉一起向认字路人询问；不强迫披露/不替玩家行动",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "3515ce09ba09602030d0abb50dca48e90b517c8b3147cb92b11cb83b049b4507"
+      },
+      "requestBytes": 113380,
+      "requestSha256": "413f855d3348b52e815ac2fe90b19a5bd552f3917a1b6ff0cad5f14e581f11e6",
+      "startedAt": "2026-11-15T00:47:10.356Z",
+      "status": 200,
+      "elapsedMs": 4623,
+      "rawResponseSha256": "7a95d806e48c687b1ea936162b07bb982d66567b3cbae6fa4d9be6a3bc8099f6",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 28818,
+        "completion_tokens": 148,
+        "total_tokens": 28966,
+        "prompt_tokens_details": {
+          "cached_tokens": 25122
+        }
+      },
+      "manualVerdict": "pass",
+      "assessment": "自然承接黄泉不识字及问路人建议，黄泉同意但未替御临风执行问话；布莱特仍远处，不伪称其收到。普通路人环境细节属于允许临场发挥。"
+    },
+    {
+      "id": "A.scene2.reception",
+      "customRequest": 343,
+      "state": "completed",
+      "purpose": "A2保存真实342后续段落，核对同意问路建议的明确接收及远处同伴未知",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "3515ce09ba09602030d0abb50dca48e90b517c8b3147cb92b11cb83b049b4507"
+      },
+      "requestBytes": 102764,
+      "requestSha256": "7f3651d0a6d9f85c83be80b70a54b1c582a0a9151cd0f68245456c7d25c90492",
+      "startedAt": "2026-11-15T00:48:02.663Z",
+      "status": 200,
+      "elapsedMs": 7443,
+      "rawResponseSha256": "b4d53a4f77d8ab508feb87cd26f343c77e69d0970031c18bcfe06632a6dbfca2",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7620,
+        "completion_tokens": 685,
+        "total_tokens": 8305
+      },
+      "manualVerdict": "pass",
+      "assessment": "严格检查通过，完整保留黄泉同意及问路建议，仅御临风接收；recipientSpan是当前应答整句，接收者由真实上一轮提问消歧，不将历史作为伪造本轮引用。"
+    },
+    {
+      "id": "B.scene1.narration",
+      "customRequest": 344,
+      "state": "completed",
+      "purpose": "B受控非Canon真实转告场景：两人仅一人听清但身份未明，不预填待核，不要求回复固定文句",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "3515ce09ba09602030d0abb50dca48e90b517c8b3147cb92b11cb83b049b4507"
+      },
+      "requestBytes": 109149,
+      "requestSha256": "136ea324d3da6d08461f448d239c3451998988154a86238f0f9b0bf59ad4e75b",
+      "startedAt": "2026-11-15T00:51:06.395Z",
+      "status": 200,
+      "elapsedMs": 4696,
+      "rawResponseSha256": "eea95a72b80fdbf03e83b403df2cb6330a7bb4699917871fb5b75e435ae4fbb5",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 27250,
+        "completion_tokens": 216,
+        "total_tokens": 27466,
+        "prompt_tokens_details": {
+          "cached_tokens": 23382
+        }
+      },
+      "manualVerdict": "pass",
+      "assessment": "完整保留商贩转述、明天/南门外石桥，以及两人之一听清但身份未知；未指定谁听见、未补发消息。话音刚落与噪声的文学时序有宽松，明确接收结论未改变。"
+    },
+    {
+      "id": "B.scene1.reception",
+      "customRequest": 345,
+      "state": "completed",
+      "purpose": "从344真实正文抽取商贩来源消息及听者身份歧义；不得猜授予或手填待核",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "3515ce09ba09602030d0abb50dca48e90b517c8b3147cb92b11cb83b049b4507"
+      },
+      "requestBytes": 103964,
+      "requestSha256": "5c408bef9b3feb6e955177dd807b361f78a9d49f7e0ca896b89b9c6ff234fc3a",
+      "startedAt": "2026-11-15T00:51:53.134Z",
+      "status": 200,
+      "elapsedMs": 10240,
+      "rawResponseSha256": "d28d7617e75bf2aaf8a28701beeae80b2e6aceebcc9d02c18fc7e3a9c4f74cf3",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 8297,
+        "completion_tokens": 807,
+        "total_tokens": 9104
+      },
+      "manualVerdict": "pass",
+      "assessment": "原严格检查通过；完整商贩来源/明天/地点，uncertain听者留空，不猜授予；coverage uncertain，真实待核由原MVU生成。"
+    },
+    {
+      "id": "B.scene2.dependency",
+      "customRequest": 346,
+      "state": "completed",
+      "purpose": "承接345实际MVU待核，询问天气与取货消息无关，验证required空而非擅自解决歧义",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "3515ce09ba09602030d0abb50dca48e90b517c8b3147cb92b11cb83b049b4507"
+      },
+      "requestBytes": 3317,
+      "requestSha256": "917958eb9f5be1a4df34c9b7d97470f8fc5c23a996e6fe38cc602068713af1b3",
+      "startedAt": "2026-11-15T00:53:18.934Z",
+      "status": 200,
+      "elapsedMs": 6285,
+      "rawResponseSha256": "11f8534a930446008de8a5e2264fc23c2f5e1aa599a411c05227ac080b6238e6",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 1204,
+        "completion_tokens": 79,
+        "total_tokens": 1776,
+        "completion_tokens_details": {
+          "reasoning_tokens": 493
+        }
+      },
+      "manualVerdict": "pass",
+      "assessment": "原adapter校验通过，承接345真实待核与绑定，天气无关required空；不确认接收。"
+    },
+    {
+      "id": "B.scene2.narration",
+      "customRequest": 347,
+      "state": "completed",
+      "purpose": "B2无关天气闲聊，依赖346已通过无关；不解决或重发取货待核，按普通文风回应",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "3515ce09ba09602030d0abb50dca48e90b517c8b3147cb92b11cb83b049b4507"
+      },
+      "requestBytes": 109614,
+      "requestSha256": "d791ef2ddcfd5dd0b6c64fffb250ff6bad7f6853c5228f357c9d850c9db6bf10",
+      "startedAt": "2026-11-15T00:54:09.944Z",
+      "status": 200,
+      "elapsedMs": 7874,
+      "rawResponseSha256": "c77c4b2e8fb5a923fca8e9f64b190c288b7be3fbf91e975ed127fbdf557ee622",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 27362,
+        "completion_tokens": 189,
+        "total_tokens": 27551,
+        "prompt_tokens_details": {
+          "cached_tokens": 25289
+        }
+      },
+      "manualVerdict": "pass",
+      "assessment": "自然回应天气与行路感受，没有重述取货消息、指定谁听见或询问待核；人物临场感受不作为世界事实批准。"
+    },
+    {
+      "id": "B.scene2.reception",
+      "customRequest": 348,
+      "state": "completed",
+      "purpose": "B2真实347天气回应接收；历史取货待核保持，不扫描补录旧正文",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "3515ce09ba09602030d0abb50dca48e90b517c8b3147cb92b11cb83b049b4507"
+      },
+      "requestBytes": 102446,
+      "requestSha256": "bb40820a8a5b90b9445643b6a3adc436b810176ef2c42322172382432468c696",
+      "startedAt": "2026-11-15T00:54:55.298Z",
+      "status": 200,
+      "elapsedMs": 6959,
+      "rawResponseSha256": "1eb2240789c06deaf9dee88e29ab5329a77ab3db49ce6cff2210e7f318505d12",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7702,
+        "completion_tokens": 787,
+        "total_tokens": 8489
+      },
+      "manualVerdict": "fail",
+      "assessment": "结构坐标通过，但utterance.content及引用夹带收回视线/语气的旁白，若登记会当作黄泉说法。未交付为通过；补清内容字段与上下文引用区别，保留原响应。"
+    },
+    {
+      "id": "B.retry2.reception",
+      "customRequest": 349,
+      "state": "completed",
+      "purpose": "复测348旁白混入：原真实347正文/输入/Schema/参数保持，仅补明content直接登记且只含口头连续原文，265回归通过",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "cccd2f13772a8dba5b65ff9e6e7996b1d7a69adce0044ebd6b2c6f99cd151f45"
+      },
+      "requestBytes": 102771,
+      "requestSha256": "9700843d30a3f4fc9ab75b5e3cf80a5b291ec63a516391c140e1cd1a5984d613",
+      "startedAt": "2026-11-15T00:59:04.152Z",
+      "status": 200,
+      "elapsedMs": 8583,
+      "rawResponseSha256": "f44c3f99b7dae1aafa118c0a99b01c471d975e858492f7e6fdb66763f0702409",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7773,
+        "completion_tokens": 915,
+        "total_tokens": 8688
+      },
+      "manualVerdict": "fail",
+      "assessment": "内容分片已正确，但recipientSpans均引用指向黄泉的她，不能支持御临风；坐标合法不等语义归属正确。保留原失败，不修补。"
+    },
+    {
+      "id": "B.retry3.reception",
+      "customRequest": 350,
+      "state": "completed",
+      "purpose": "针对349听者引用误指说话者，澄清现有应答关系引用；原347正文/input/Schema/参数不变，77回归通过",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "8360bf71168f1cafa814b42ca2c346c3aeb02f59429861f796a3576b01e7b3d3"
+      },
+      "requestBytes": 103054,
+      "requestSha256": "0d452b758a3c999963132a58c55190eadbbd008236e6c64e5b264a82f6df9c74",
+      "startedAt": "2026-11-15T01:00:54.548Z",
+      "status": 200,
+      "elapsedMs": 8610,
+      "rawResponseSha256": "d13f9195cb3170bf83f3f70f9c637431043d708721b94989a42dac77be591f2e",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7842,
+        "completion_tokens": 949,
+        "total_tokens": 8791
+      },
+      "manualVerdict": "fail",
+      "assessment": "内容与坐标正确，但听者依据只引用说话语气，未引用实际应答，不能称引用语义准确。原说明已明确，暂无新增程序遗漏证据；停止对同一段堆提示，保留隐式听者引用失败。"
+    },
+    {
+      "id": "B.alt2.dependency",
+      "customRequest": 351,
+      "state": "completed",
+      "purpose": "同一345待核的替代无关天气闲聊，虽提及布莱特但不依赖取货消息；不替代348—350失败结论",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "8360bf71168f1cafa814b42ca2c346c3aeb02f59429861f796a3576b01e7b3d3"
+      },
+      "requestBytes": 3383,
+      "requestSha256": "816a0a15c5eb542cc8332a03a4c5f948f8ef221a2ff5f38ff583f941f29c7017",
+      "startedAt": "2026-11-15T01:04:27.879Z",
+      "status": 200,
+      "elapsedMs": 2623,
+      "rawResponseSha256": "eac79e42e3932557c5fb3f4f80d0d5467f5c4def498c40fd3cd04ba576102ed2",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 1224,
+        "completion_tokens": 81,
+        "total_tokens": 1305
+      },
+      "manualVerdict": "pass",
+      "assessment": "原adapter输入绑定通过，required空；提及布莱特不等于依赖其是否收到取货消息。"
+    },
+    {
+      "id": "B.alt2.narration",
+      "customRequest": 352,
+      "state": "completed",
+      "purpose": "B替代无关闲聊：黄泉与布莱特谈天气；原取货待核未解决，不能因此赋予先前消息",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "8360bf71168f1cafa814b42ca2c346c3aeb02f59429861f796a3576b01e7b3d3"
+      },
+      "requestBytes": 109680,
+      "requestSha256": "e99499ee8b8cba6453db291c900a9cab10777c7d38b1f64b277b5880f3b3750a",
+      "startedAt": "2026-11-15T01:05:08.170Z",
+      "status": 200,
+      "elapsedMs": 11680,
+      "rawResponseSha256": "865cf53d9fb3dabd8df19b9897d07b68ceb446fba23bc5f07dc1167b50de71fc",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 27380,
+        "completion_tokens": 242,
+        "total_tokens": 27622,
+        "prompt_tokens_details": {
+          "cached_tokens": 12619
+        }
+      },
+      "manualVerdict": "pass",
+      "assessment": "黄泉向布莱特谈天气并得到回应，未提取货或决定谁此前听清；布莱特对气候的评价保留为人物说法，不单独批准地理事实。"
+    },
+    {
+      "id": "B.alt2.reception",
+      "customRequest": 353,
+      "state": "completed",
+      "purpose": "B无关对白实际352两名NPC互答，核对言说分片/逐人接收；旧取货待核不能解决",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "8360bf71168f1cafa814b42ca2c346c3aeb02f59429861f796a3576b01e7b3d3"
+      },
+      "requestBytes": 106308,
+      "requestSha256": "363666312425bd1aa5f5fdb83137d2d3bd53145a5ef04e77c3065b5d82d8c96e",
+      "startedAt": "2026-11-15T01:06:04.695Z",
+      "status": 200,
+      "elapsedMs": 10968,
+      "rawResponseSha256": "5dfc1a0a54a11253af29d60f75377359fb43c16869084cca8c2131208392b4a0",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 9110,
+        "completion_tokens": 1516,
+        "total_tokens": 10626
+      },
+      "manualVerdict": "pass",
+      "assessment": "严格检查通过，黄泉两段实际发言分别登记给布莱特，布莱特完整回应登记给黄泉；无旁白混入，不给同场玩家自动授予。天气说法不解除取货待核。"
+    },
+    {
+      "id": "B.scene3.dependency",
+      "customRequest": 354,
+      "state": "completed",
+      "purpose": "承接345真实待核及352/353无关对话后状态，布莱特按先前听到消息指路实际依赖听者确认",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "8360bf71168f1cafa814b42ca2c346c3aeb02f59429861f796a3576b01e7b3d3"
+      },
+      "requestBytes": 3401,
+      "requestSha256": "8fc6c1897eecbce71134c6d971e3500b676fde293b8e44400097bcd757e9d5f9",
+      "startedAt": "2026-11-15T01:07:27.464Z",
+      "status": 200,
+      "elapsedMs": 3110,
+      "rawResponseSha256": "ef067d6c2d3dafff40ae6885953896034d8d4b4136577a51450fbca2e9a21be0",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 1220,
+        "completion_tokens": 199,
+        "total_tokens": 1419
+      },
+      "manualVerdict": "pass",
+      "assessment": "原adapter绑定通过，唯一required正是345真实待核ID；不直接裁定听者，不授予。"
+    },
+    {
+      "id": "B.scene3.narration",
+      "customRequest": 355,
+      "state": "completed",
+      "purpose": "实际UI确认布莱特收到后自动续同一B3请求；投影仅bright有原取货消息且belief uncertain，玩家仍未知",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "8360bf71168f1cafa814b42ca2c346c3aeb02f59429861f796a3576b01e7b3d3"
+      },
+      "requestBytes": 112691,
+      "requestSha256": "005ce033d63679a6eab64c05d23af8f57f773ae34767da93d9c8cef39e6a4b3a",
+      "startedAt": "2026-11-15T01:08:42.376Z",
+      "status": 200,
+      "elapsedMs": 8657,
+      "rawResponseSha256": "dacef47da2a511feeda1143f6460685ea3d5834778ca5e04e29505bd62fa789a",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 29205,
+        "completion_tokens": 171,
+        "total_tokens": 29376
+      },
+      "manualVerdict": "uncovered",
+      "assessment": "实际UI和知识投影续行正确，但对白说自己只听半句；可能模型未承接，也可能角色回避，不能证明。明确查到row.decision未进入来源投影，旧原文仍听者不明；补现有确认依据，不强制披露。"
+    },
+    {
+      "id": "B.fix3.narration",
+      "customRequest": 356,
+      "state": "completed",
+      "purpose": "355复测：仅第19消息增加既有显式接收确认投影，其他消息和参数相同；实际UI确认/原请求续行，267回归通过，不强制披露",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "8360bf71168f1cafa814b42ca2c346c3aeb02f59429861f796a3576b01e7b3d3"
+      },
+      "requestBytes": 113354,
+      "requestSha256": "5b77a41fb4cc90f2fa632bed67cd5e9a9db1cd686ba304aecea16ac76812a142",
+      "startedAt": "2026-11-15T01:19:40.693Z",
+      "status": 200,
+      "elapsedMs": 3810,
+      "rawResponseSha256": "5f09a325bccb3e2cf2aff7219cff7310cdf44621fb3b161d7ddd94299a9dbb4d",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 29444,
+        "completion_tokens": 110,
+        "total_tokens": 29554,
+        "prompt_tokens_details": {
+          "cached_tokens": 27163
+        }
+      },
+      "manualVerdict": "pass",
+      "assessment": "实际回应承接已确认接收，保留黄泉转述/商贩来源、明天和南门外石桥，不将消息变成独立事实，不替玩家行动。有限成对复测改善，不证明因果或稳定性。"
+    },
+    {
+      "id": "B.fix3.reception",
+      "customRequest": 357,
+      "state": "completed",
+      "purpose": "从356真实续写登记布莱特向御临风的转述，保留商贩/黄泉来源与未确认真伪，完成B真实链",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "8360bf71168f1cafa814b42ca2c346c3aeb02f59429861f796a3576b01e7b3d3",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 103865,
+      "requestSha256": "af2f7e114cd7370a5b48b8c3bd4ca2777c1c9e649389210be1d33f8843508b33",
+      "startedAt": "2026-11-15T01:20:33.221Z",
+      "status": 200,
+      "elapsedMs": 7172,
+      "rawResponseSha256": "e7513489045f96e0b57ce647a61363c0ce94574b2660156addd9447fef45f4f2",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7776,
+        "completion_tokens": 769,
+        "total_tokens": 8545
+      },
+      "manualVerdict": "pass",
+      "assessment": "原严格检查通过；实际布莱特→御临风转述绑定原取货命题，发送者已有经UI确认取得依据，时间地点来源完整、belief不升级。"
+    },
+    {
+      "id": "implicit.original",
+      "customRequest": 358,
+      "state": "completed",
+      "purpose": "原349/350同输入；仅将听者与新消息覆盖语义放到原Schema字段旁，约束/正文/历史/坐标/参数不变，128离线通过。用户续用余177额度。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "48cfbd9c264895d98b2ea9ec6c0163fa2bc74cabc181a4e46b2b736d5989ad6d",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 105632,
+      "requestSha256": "6936e2bcb15e7f20d718e862a302fd40b493cdf1ca8a9fafffd6e9b74978ac00",
+      "startedAt": "2026-11-15T01:38:58.463Z",
+      "status": 200,
+      "elapsedMs": 9018,
+      "rawResponseSha256": "08e679df35f43128c8dc9588dd8c28746652ef529b21ce8a85f933828d40d6ab",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7777,
+        "completion_tokens": 991,
+        "total_tokens": 8768
+      },
+      "manualVerdict": "fail",
+      "assessment": "358听者引用已选实际回答内容，两片都保留；但多输出null unit且coverage换行双重转义，违反原Schema/引用，整体失败，不修补或授予。先测另一原漏抽输入，不盲目重发。"
+    },
+    {
+      "id": "omission.original",
+      "customRequest": 359,
+      "state": "completed",
+      "purpose": "原338漏抽同输入，检验先言说接收后facts匹配；358已失败保留，不修补不重发；128离线通过。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "48cfbd9c264895d98b2ea9ec6c0163fa2bc74cabc181a4e46b2b736d5989ad6d",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 105277,
+      "requestSha256": "08e49fd59ebc0574ad345b7ab5c183b58fdb593686b75541dee0e800f5e130a6",
+      "startedAt": "2026-11-15T01:39:59.728Z",
+      "status": 200,
+      "elapsedMs": 11138,
+      "rawResponseSha256": "401a258d215617c549105993deb5291874d3960df177f514a7763c945291d760",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7584,
+        "completion_tokens": 1476,
+        "total_tokens": 9060
+      },
+      "manualVerdict": "fail",
+      "assessment": "359不再空数组漏抽，保留否认及询问言说，但原JSON在coverage附近括号闭合错误，未能解析；不修补不授予。两次均有生成格式错误，先检查原Schema投影结构。"
+    },
+    {
+      "id": "implicit.parallel",
+      "customRequest": 360,
+      "state": "completed",
+      "purpose": "预先冻结的隐含听者相近正例，两段回应无点名；同合同参数，区分语义改善与原长回复格式失败，不替代原例验收。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "48cfbd9c264895d98b2ea9ec6c0163fa2bc74cabc181a4e46b2b736d5989ad6d",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 95815,
+      "requestSha256": "0ec526aed0652e7e3ddc2bd065cf9662d21e3d2051dd11738c14f607f5e6607e",
+      "startedAt": "2026-11-15T01:41:21.537Z",
+      "status": 200,
+      "elapsedMs": 7589,
+      "rawResponseSha256": "21939559dc011edd50f088893551b884437d7b376f82c3a9dfe18cfab0d6d1f9",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 4108,
+        "completion_tokens": 787,
+        "total_tokens": 4895
+      },
+      "manualVerdict": "pass",
+      "assessment": "360两片实际回答以本身原文承接提问，recipientIds player且引用不指speaker；Schema/原严格校验及MVU隔离回放通过，只给player两条uncertain说法，bright零，无pending。有限相近例，不替原358/359失败。"
+    },
+    {
+      "id": "implicit.obstacle",
+      "customRequest": 361,
+      "state": "completed",
+      "purpose": "冻结反例：提问者已走远没有听到回答，不因应答关系自动授予，参数与合同不变。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "575455ad3fd953f236e202bc923f200d4364228d5f5bc2e7f279b834d8439caa",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "48cfbd9c264895d98b2ea9ec6c0163fa2bc74cabc181a4e46b2b736d5989ad6d",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 95652,
+      "requestSha256": "d8635638981bbd4a94f63671ef799ac5fc4f2807a928f8cc6a5dcf5e40e1c936",
+      "startedAt": "2026-11-15T01:41:57.023Z",
+      "status": 200,
+      "elapsedMs": 4334,
+      "rawResponseSha256": "c5457e00ace36e2ff3e52a4052aaa0e1936d348216c0a80385f46ab78cf7aaf5",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-control",
+      "usage": {
+        "prompt_tokens": 4059,
+        "completion_tokens": 551,
+        "total_tokens": 4610
+      },
+      "manualVerdict": "fail",
+      "assessment": "361上游返回control（请求模型未改），原始JSON在coverage附近闭合错误，整体拒绝；不修补、不授予。需缩小等价Schema重复结构以检验格式负担，不把格式错解释为本地丢项。"
+    },
+    {
+      "id": "implicit.original.r2",
+      "customRequest": 362,
+      "state": "completed",
+      "purpose": "消除v2共享提示残留旧gm-assertion-output返回外壳的明确冲突，153回归通过；只变system，原349/350正文历史坐标及Schema/参数全部不变。原358失败保留。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "24ebc29b0b1257bc77b29014e2b92af2315afbd08eab4ca70f3fb4ebb33940d4",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 105517,
+      "requestSha256": "629732b09cfff5612fec8d8cc96c1b102a499ccea12ca89755653dac7aa4cfd6",
+      "startedAt": "2026-11-15T01:44:12.482Z",
+      "status": 200,
+      "elapsedMs": 7446,
+      "rawResponseSha256": "e9ffaacc9c26e5c35548e5f204f7ab73d59191841f9549440f906248f5a6c346",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7744,
+        "completion_tokens": 949,
+        "total_tokens": 8693
+      },
+      "manualVerdict": "pass",
+      "assessment": "362原349/350同正文历史，两段实际回答分别绑定player，recipientSpans均为对应回答而非speaker/语气；Schema及原校验通过，隔离只给player两条uncertain来源消息，bright未知，无漏片段或续用旧障碍。"
+    },
+    {
+      "id": "omission.original.r2",
+      "customRequest": 363,
+      "state": "completed",
+      "purpose": "同一返回外壳冲突修复，153回归通过；原338/359漏抽同输入，只改system，Schema/坐标/参数保持，不修补旧回复。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "24ebc29b0b1257bc77b29014e2b92af2315afbd08eab4ca70f3fb4ebb33940d4",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 105162,
+      "requestSha256": "85628a6de38efee0bde58f368c863898f68a74dfe270965303284597905e1854",
+      "startedAt": "2026-11-15T01:44:47.502Z",
+      "status": 200,
+      "elapsedMs": 10311,
+      "rawResponseSha256": "c4bd79a96e66ae36c3127b4f2eae9a037c5560e752fa28bfddb4426f1e48c3a9",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7551,
+        "completion_tokens": 1470,
+        "total_tokens": 9021
+      },
+      "manualVerdict": "fail",
+      "assessment": "363原338漏抽已消除且结构/坐标通过，三段言说完整；player用你/回应正确，但bright旁听记录的recipientSpans套用了黄泉回答而非旁听者姓名/听取关系，语义仍失败。隔离观察只证明原回执处理，不能把Schema通过当语义通过。"
+    },
+    {
+      "id": "implicit.obstacle.r2",
+      "customRequest": 364,
+      "state": "completed",
+      "purpose": "同一返回外壳修复复测361离场未听见，其他输入参数不变；363旁听者引用泛化错误已记录，不以结构通过算语义通过。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "24ebc29b0b1257bc77b29014e2b92af2315afbd08eab4ca70f3fb4ebb33940d4",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 95537,
+      "requestSha256": "756fc87e685a68c687ee7e397abe21dc5220a44b3e6cae492972ac0811ac6815",
+      "startedAt": "2026-11-15T01:46:00.798Z",
+      "status": 200,
+      "elapsedMs": 3270,
+      "rawResponseSha256": "0fa9277edb937050d9762a186157f2bd3911c693a1331efabcadd5d4fd7ac56a",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-control",
+      "usage": {
+        "prompt_tokens": 4026,
+        "completion_tokens": 682,
+        "total_tokens": 4708
+      },
+      "manualVerdict": "pass",
+      "assessment": "364原361相同反例现结构/引用通过，识别player问后离场未听见；实际言说保留，not_received，不授予/待核。recipientSpans为该提问的回答片段，不承担已收到证明；障碍来自evidence。"
+    },
+    {
+      "id": "omission.original.r3",
+      "customRequest": 365,
+      "state": "completed",
+      "purpose": "仅原recipientSpans字段说明区分被回应者与旁听者，直接指代优先；针对363过度套用应答引用，20相关回归通过。原338正文历史参数不变，不新增听者称谓。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "7972c61a3c06ccea331d5c3c9430ba063a0782764812c5e910c652d9bfc5e6c3",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 105302,
+      "requestSha256": "71287ce269cddeed51fa31535e31a527b6cabf94b62ac12a9891ffcd48253861",
+      "startedAt": "2026-11-15T01:47:03.276Z",
+      "status": 200,
+      "elapsedMs": 8988,
+      "rawResponseSha256": "51296e705d3fafe258d1c55fbf173688e553f99db1de4c6a643aa1cb70219a33",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7551,
+        "completion_tokens": 1273,
+        "total_tokens": 8824
+      },
+      "manualVerdict": "fail",
+      "assessment": "365旁听引用已转向听取关系，但JSON将coverage/status/unresolved放错层并多闭合，且听取片段end含逗号quote未含，整体失败。原件保留，不修补。下一步等价提取Schema共有字段，减少重复嵌套，不放宽任何验证条件。"
+    },
+    {
+      "id": "omission.original.r4",
+      "customRequest": 366,
+      "state": "completed",
+      "purpose": "原338/359/363/365同输入；仅Schema共有字段提取一次，两个status/unresolved约束完全保留，归一后与旧Schema逐项相等，81离线通过；不新增提示或改变参数/正文。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "cfd0aa02e1c5b7fbda507277e8def50d05031085295ce673c37b2401101bd700",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 66183,
+      "requestSha256": "569d1bf58501d0e9728ecd1f2caf8e926fd9b9ec086e67c2fdc4825f7d86ded3",
+      "startedAt": "2026-11-15T01:49:22.560Z",
+      "status": 200,
+      "elapsedMs": 11110,
+      "rawResponseSha256": "be3bde3bf5109bfbdc0b2a27b924b6e2b13f0d1242c748e9c4a62a9eb6dfcad6",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7551,
+        "completion_tokens": 1507,
+        "total_tokens": 9058
+      },
+      "manualVerdict": "fail",
+      "assessment": "366等价Schema合并后仍在coverage附近提前闭合，JSON非法，不能算漏抽验收。没有修补或授予。请求缩至66183字节只证明体积减少，不能证明生成准确率改善。"
+    },
+    {
+      "id": "omission.original.r5",
+      "customRequest": 367,
+      "state": "completed",
+      "purpose": "仅Schema properties展示顺序将coverage等同级元数据放深嵌套utterances前；规则/required/anyOf/消息/正文/参数完全相同，81回归通过。检验366错误闭合，不修补回复。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "8a560383fa7a28ec29b1ee9e0c875c2e227acae7bb032132376d3f6a1002980e",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 66183,
+      "requestSha256": "a14dd503ac44bf5bead1911581f2b151a73ff036c54e2ed334735fdabb5e0cb9",
+      "startedAt": "2026-11-15T01:51:10.515Z",
+      "status": 200,
+      "elapsedMs": 10083,
+      "rawResponseSha256": "8790e9c135ff56679fa56b555871036f5e4e7ba6c31bc153397a3f48d2e3f081",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7551,
+        "completion_tokens": 1510,
+        "total_tokens": 9061,
+        "prompt_tokens_details": {
+          "cached_tokens": 6238
+        }
+      },
+      "manualVerdict": "fail",
+      "assessment": "367 JSON/Schema已通过，三段言说完整，player与bright引用均指实际本人，原漏抽/听者错绑指标改善；但两个speaker引用把她写成42:44实际她语，原严格校验拒绝。整体失败，不纠坐标；单独保留语义改善与引用失败。"
+    },
+    {
+      "id": "implicit.original.final",
+      "customRequest": 368,
+      "state": "completed",
+      "purpose": "最终候选下原349/350同输入复测；Schema等价合并及排序后核对无回退，原367坐标失败不掩盖。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "8a560383fa7a28ec29b1ee9e0c875c2e227acae7bb032132376d3f6a1002980e",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 66538,
+      "requestSha256": "df6c4622f1344b7cc2ebd93e3dcdf192796c6eafdeb0f554dc68d1ea2b5042e7",
+      "startedAt": "2026-11-15T01:52:54.535Z",
+      "status": 200,
+      "elapsedMs": 13916,
+      "rawResponseSha256": "a399df31756acf902d7d09a9ee05ecb76d03d97b2ad030f0b04023f79bb7b4b7",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7744,
+        "completion_tokens": 978,
+        "total_tokens": 8722
+      },
+      "manualVerdict": "fail",
+      "assessment": "368听者引用正确，但evidence仍只给说话动作/语气而非应答依据，结构通过仍不记完整语义通过。核查发现新增evidence.description与$ref同级，被现有宿主flattenSchema丢弃；修实际投影遗漏后再测，不改原回复。"
+    },
+    {
+      "id": "implicit.original.sent",
+      "customRequest": 369,
+      "state": "completed",
+      "purpose": "修复evidence字段$ref同级description被宿主flatten丢失的实际送达遗漏，81相关回归通过；原349/350输入不变，Schema仅实际保留说明，引用定义和校验相同。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "8bca27fb27593a7a7f865ba69c0092cc362c218c204c18ed0158c3fcea24e03c",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 66874,
+      "requestSha256": "d28d854ae10fc394ec610e83bec610fd68934bc37fce1a8f2f3352ff2782ac11",
+      "startedAt": "2026-11-15T01:54:58.853Z",
+      "status": 200,
+      "elapsedMs": 13633,
+      "rawResponseSha256": "e2bfea5e45072b26cf89c7b25208b3aa2e3584fcf11c79f407496a414c3d4e33",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7744,
+        "completion_tokens": 915,
+        "total_tokens": 8659
+      },
+      "manualVerdict": "pass",
+      "assessment": "369原349/350同输入最终版本：两片言说/听者引用/evidence均取相应回答原文，Schema/引用/原回执通过；只给player两条uncertain，bright零，不借旧车声降为未知，无旁白入消息。"
+    },
+    {
+      "id": "omission.original.sent",
+      "customRequest": 370,
+      "state": "completed",
+      "purpose": "同一evidence字段说明送达修复，原338漏抽输入复测；完整原文/历史/坐标/参数保持，367坐标错误未修补。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "8bca27fb27593a7a7f865ba69c0092cc362c218c204c18ed0158c3fcea24e03c",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 66519,
+      "requestSha256": "d3744a6695459577019cd376964f2537f9792362771cab0042a182ca5e31974d",
+      "startedAt": "2026-11-15T01:55:35.742Z",
+      "status": 200,
+      "elapsedMs": 11647,
+      "rawResponseSha256": "44a30c508204a9fdc197dfa30365acb71a16abc0f9b6bf66f3cd3e4eb9ce44c7",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7551,
+        "completion_tokens": 1592,
+        "total_tokens": 9143
+      },
+      "manualVerdict": "fail",
+      "assessment": "370漏抽内容已恢复但coverage/unresolved位于根层，违反Schema required/additionalProperties，整体失败，不迁字段；原370完整保留。继续只替换v2文字外壳为明确嵌套结构示意，不添加语义或更改Schema。"
+    },
+    {
+      "id": "omission.original.nested",
+      "customRequest": 371,
+      "state": "completed",
+      "purpose": "把原v2字段斜杠清单替换为明确嵌套结构示意，coverage/unresolved保持unit内；21回归通过，Schema/数据/坐标/参数不变。复测原370错层和338漏抽，不修补。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "e9a1153acd18c2382c2a6571c54decd340175541a3220da1362d4a97e8871d7f",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 66665,
+      "requestSha256": "03e8462439e9ccefa0bc0bd2dad22a98a693aee39a17ca928d4968684a3e9014",
+      "startedAt": "2026-11-15T01:57:10.891Z",
+      "status": 200,
+      "elapsedMs": 10426,
+      "rawResponseSha256": "d9a327e79c6b97c1815f7bd3363c2153a4055f24af3b593478d82c9fb028e9a7",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7587,
+        "completion_tokens": 1493,
+        "total_tokens": 9080
+      },
+      "manualVerdict": "pass",
+      "assessment": "371原338同输入通过本轮接收覆盖/引用指标：三段实际言说完整，player用御临风/你，bright用布莱特及实际侧耳听关系；Schema/坐标/MVU原回执通过，null新说法不局限clinic目录。问句也作为实际说过的uncertain来源消息保存，不批准问句内容为世界事实；不宣称所有mode分类泛化通过。"
+    },
+    {
+      "id": "implicit.parallel.nested",
+      "customRequest": 372,
+      "state": "completed",
+      "purpose": "冻结相近正例最终合同：隐含提问者，两片回答均应覆盖，不能用说话者代词；非原失败替代。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "e9a1153acd18c2382c2a6571c54decd340175541a3220da1362d4a97e8871d7f",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 57203,
+      "requestSha256": "0e8d56f01dbc90c13a65b6084f84d015da97ef668aa997f9ff597cfb4c38a992",
+      "startedAt": "2026-11-15T01:58:24.457Z",
+      "status": 200,
+      "elapsedMs": 6091,
+      "rawResponseSha256": "84469267c7ca7bcd853bc6bb495303c2d7ac20c16ed215dd36a7bee6b511420f",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 4111,
+        "completion_tokens": 762,
+        "total_tokens": 4873
+      },
+      "manualVerdict": "pass",
+      "assessment": "372最终合同相近正例两片完整，隐含player引用对应实际回答，evidence含答道和补说内容，Schema/精确引用/隔离回执通过，只有player两条uncertain消息，无pending。"
+    },
+    {
+      "id": "implicit.obstacle.nested",
+      "customRequest": 373,
+      "state": "completed",
+      "purpose": "冻结反例最终合同：提问者已经离场没听到，验证直接应答不覆盖明确障碍。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "e9a1153acd18c2382c2a6571c54decd340175541a3220da1362d4a97e8871d7f",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 57040,
+      "requestSha256": "02c6dfe4f2cbc602b7ec7d41fe96a0cc84c647372ca7208c257a90c666ba3ea8",
+      "startedAt": "2026-11-15T01:58:56.773Z",
+      "status": 200,
+      "elapsedMs": 3742,
+      "rawResponseSha256": "c5307e1aca5dec505097633b28c2cea1419a4e2653508f13f7331a577759b76b",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-control",
+      "usage": {
+        "prompt_tokens": 4062,
+        "completion_tokens": 548,
+        "total_tokens": 4610
+      },
+      "manualVerdict": "pass",
+      "assessment": "373明确未收到保留not_received，引用和Schema通过，问答关系不覆盖离场障碍；隔离无知识增量/待核。返回control标签保留，请求模型未更换。"
+    },
+    {
+      "id": "implicit.ambiguous.nested",
+      "customRequest": 374,
+      "state": "completed",
+      "purpose": "冻结歧义反例：两人提问但仅一人听清且身份不明，不能猜player或bright，不漏待核。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "e9a1153acd18c2382c2a6571c54decd340175541a3220da1362d4a97e8871d7f",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 56640,
+      "requestSha256": "55874dc7399714d355797d3fe94be8af34e83c71a0af288f8a3588798c6a6f08",
+      "startedAt": "2026-11-15T01:59:28.166Z",
+      "status": 200,
+      "elapsedMs": 6201,
+      "rawResponseSha256": "5f582d9a518b5354c986aa5dbab11deeb6b15edb97290aea6c3a00c1735e6d2f",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3903,
+        "completion_tokens": 558,
+        "total_tokens": 4461
+      },
+      "manualVerdict": "pass",
+      "assessment": "374不猜听者，recipientIds/Spans空且uncertain，原文依据完整，Schema/引用通过；实际隔离生成pending1，知识0，无依赖不问。"
+    },
+    {
+      "id": "implicit.partial.nested",
+      "customRequest": 375,
+      "state": "completed",
+      "purpose": "冻结部分接收正反对照：隐含应答两项内容，只有前半听清，后半明确被钟声盖住，不漏前半、不扩成全句。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "e9a1153acd18c2382c2a6571c54decd340175541a3220da1362d4a97e8871d7f",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 57020,
+      "requestSha256": "a35858fd17b8ff8601f80fc4231a7e461d32988f68094034f8c83e89ba197bfa",
+      "startedAt": "2026-11-15T01:59:58.777Z",
+      "status": 200,
+      "elapsedMs": 6973,
+      "rawResponseSha256": "16a564d20fc501d3d3763c317cb8129942e6ace78759f00dbf62457fb91ba458",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 4072,
+        "completion_tokens": 790,
+        "total_tokens": 4862
+      },
+      "manualVerdict": "pass",
+      "assessment": "375按两片实际内容分received/not_received，player只得日落后锁门，明早渡口不授予，无凭空待核或全队共享；Schema/精确引用/MVU回放通过。"
+    },
+    {
+      "id": "implicit.unsaid.nested",
+      "customRequest": 376,
+      "state": "completed",
+      "purpose": "冻结反例：历史有提问但当前只在心里拟答尚未开口，不因引号或问答位置登记接收。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "e9a1153acd18c2382c2a6571c54decd340175541a3220da1362d4a97e8871d7f",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 56358,
+      "requestSha256": "d4a375e132ba2322867ae28a0188164cee2431b52039f2df9df827a0f7cb6785",
+      "startedAt": "2026-11-15T02:00:37.301Z",
+      "status": 200,
+      "elapsedMs": 3296,
+      "rawResponseSha256": "84b37ec043c9725a97e46b636c4dcb37bccd9dd6349eef1d8d249c6d488216ff",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-control",
+      "usage": {
+        "prompt_tokens": 3813,
+        "completion_tokens": 403,
+        "total_tokens": 4216
+      },
+      "manualVerdict": "pass",
+      "assessment": "376心里拟答未开口，utterances/receptions空且coverage none，未造接收/待核，Schema/引用通过；其余非言说断言不作为本轮全量准确性验收。"
+    },
+    {
+      "id": "omission.parallel.nested",
+      "customRequest": 377,
+      "state": "completed",
+      "purpose": "冻结漏抽相近正例：否认另有消息与实际补充新消息并存，facts只有无关clinic命题，不得据目录或否认删去真实言说。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "e9a1153acd18c2382c2a6571c54decd340175541a3220da1362d4a97e8871d7f",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 57269,
+      "requestSha256": "c331ccf8058dbce73211d602d8dd2fc6c0689b1dc4dc02bc58d4979b663ca236",
+      "startedAt": "2026-11-15T02:01:08.043Z",
+      "status": 200,
+      "elapsedMs": 7155,
+      "rawResponseSha256": "72d1fd8c29aaae925e77fad563f4a0fcf5abb376b3c7eeb6fba1969f816b1ca0",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 4109,
+        "completion_tokens": 796,
+        "total_tokens": 4905
+      },
+      "manualVerdict": "pass",
+      "assessment": "377否认消息与随后实际补充均完整登记，两个propositionRef null保留新来源说法，不受无关clinic目录限制；player两个uncertain、bright零，严格Schema/引用/回执通过。"
+    },
+    {
+      "id": "implicit.npc_question.nested",
+      "customRequest": 378,
+      "state": "completed",
+      "purpose": "冻结提问者切换反例：history user楼层明确布莱特提问、player远处没听到；当前回答未点听者，不能默认user楼层等于player接收。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "e9a1153acd18c2382c2a6571c54decd340175541a3220da1362d4a97e8871d7f",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 56084,
+      "requestSha256": "5756be4f4acca5d530c5321143825acd4588227c11d970414090e124fec4c598",
+      "startedAt": "2026-11-15T02:01:41.205Z",
+      "status": 200,
+      "elapsedMs": 5671,
+      "rawResponseSha256": "1e7865525a4b65ac4b9099ea9fa41aa727fcfbd7fdbae6f27892c961a4eddad0",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3700,
+        "completion_tokens": 476,
+        "total_tokens": 4176
+      },
+      "manualVerdict": "pass",
+      "assessment": "378识别实际提问者bright，当前回答内容作隐含听者引用，答道作为当前应答关系依据；仅bright得到uncertain说法，player远处零授予，Schema/精确引用通过。"
+    },
+    {
+      "id": "implicit.unrelated.nested",
+      "customRequest": 379,
+      "state": "completed",
+      "purpose": "最后冻结反例：被问者没有回答，另一人远处无关独语且无人听到；不能把相邻言说误连为历史问题的回答或漏未接收记录。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "e9a1153acd18c2382c2a6571c54decd340175541a3220da1362d4a97e8871d7f",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 57289,
+      "requestSha256": "5aef4a5a935e82f440674bbfff54767141c514daef2bcd03a22fb00047f214a9",
+      "startedAt": "2026-11-15T02:02:14.034Z",
+      "status": 200,
+      "elapsedMs": 5801,
+      "rawResponseSha256": "5562e9f5c8820761183ec711aa5d100b171765ae93bf2cae1ac5146bd1242687",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 4139,
+        "completion_tokens": 507,
+        "total_tokens": 4646
+      },
+      "manualVerdict": "pass",
+      "assessment": "379保留bright真实独语及明确not_received，未把它连到黄泉的历史提问；无授予/待核，Schema/原文引用通过。"
+    },
+    {
+      "id": "implicit.original.nested",
+      "customRequest": 380,
+      "state": "completed",
+      "purpose": "最后版本一致性验收：369原隐含听者已通过，随后为原漏抽改了v2嵌套示意；仅此system变化，最终统一合同复测原349/350，不换正文或提问，非盲目同请求重试。",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "e9a1153acd18c2382c2a6571c54decd340175541a3220da1362d4a97e8871d7f",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 67020,
+      "requestSha256": "8ab773acd04a81decca07ad2de7ccc12c6a3e79944a2f4b3d1039f913991de20",
+      "startedAt": "2026-11-15T02:03:27.086Z",
+      "status": 200,
+      "elapsedMs": 13878,
+      "rawResponseSha256": "155bc5255da2eb957dac611e708153ac55717cac512e5e471f6fe123ae22f82b",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7780,
+        "completion_tokens": 1021,
+        "total_tokens": 8801
+      },
+      "manualVerdict": "pass",
+      "assessment": "380最终统一合同原349/350同输入再次通过：两片回答完整，recipientSpans/evidence均是对应回答，history消歧player且旧障碍不串入，无bright授予；结构/坐标/回执完整通过。"
+    },
+    {
+      "id": "scope.original",
+      "customRequest": 381,
+      "state": "completed",
+      "purpose": "原371不改输入，只更新接收依据角色及旁听范围说明；274项离线回归通过",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "1d1d9be014b98f097b36fee57d37445aa7cabb58988a1ffb3731c377cc03f6ac",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 229591,
+      "requestSha256": "8288b55f90fd36165d7a26f5cfb1783b368121e55df7a130ea25271798f48ce7",
+      "startedAt": "2026-11-15T09:50:20.633Z",
+      "status": 200,
+      "elapsedMs": 12110,
+      "rawResponseSha256": "53013dd1223ecd98563b32dff0d7f28ae34539acbf9f80e013ac9b257c0a9f92",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 7587,
+        "completion_tokens": 1570,
+        "total_tokens": 9157
+      },
+      "manualVerdict": "fail",
+      "assessment": "原始JSON括号/字段层级错误，原样拒绝；离线阅读仍用孤立目光/问你是作为接收依据，bright三段均received且无时间范围依据。新说明已送达，属于本次模型未遵从，不改回复、不重发。"
+    },
+    {
+      "id": "scope.full",
+      "customRequest": 382,
+      "state": "completed",
+      "purpose": "冻结正例：末尾明确全程听清两句，验证共用依据不被一概阻断；原381失败已审阅，不重试原例",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "1d1d9be014b98f097b36fee57d37445aa7cabb58988a1ffb3731c377cc03f6ac",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 220430,
+      "requestSha256": "f2d31fe3dc12b00db68e35631f85be67e49b751e33a091a717123a09f32d4304",
+      "startedAt": "2026-11-15T09:51:22.388Z",
+      "status": 200,
+      "elapsedMs": 5636,
+      "rawResponseSha256": "3b8b3e5d96df2d26b45649e3e87b73f798ea25902a40f9277180f0f780428fd4",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 4246,
+        "completion_tokens": 1034,
+        "total_tokens": 5280
+      },
+      "manualVerdict": "pass",
+      "assessment": "Schema/原校验通过；两句言说完整，player直接接收两句，bright明确全程证据共用而收到两句；隔离MVU各2条无待核，不因末尾叙述错误缩限。"
+    },
+    {
+      "id": "scope.late",
+      "customRequest": 383,
+      "state": "completed",
+      "purpose": "冻结反例：首句明确未听见、第二句明确听清，检查后续旁听不追溯前句",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "1d1d9be014b98f097b36fee57d37445aa7cabb58988a1ffb3731c377cc03f6ac",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 221032,
+      "requestSha256": "1d1029c5f0d83deadd967e4585ebbfb12bd9223a05550c59e488d7ec3583656b",
+      "startedAt": "2026-11-15T09:52:02.938Z",
+      "status": 200,
+      "elapsedMs": 9259,
+      "rawResponseSha256": "2004e089b15f8523102717cf4f8dbfc063c183998a302cf1b3da68e80d656a54",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 4483,
+        "completion_tokens": 1196,
+        "total_tokens": 5679
+      },
+      "manualVerdict": "pass",
+      "assessment": "Schema/原校验通过；player收到两句，bright首句not_received第二句received，各自使用明确依据；隔离只授予第二句，无待核。"
+    },
+    {
+      "id": "scope.unknown",
+      "customRequest": 384,
+      "state": "completed",
+      "purpose": "冻结范围歧义例：已知只听到一句但无法确定哪句，不可授予全段或改成完全未听见",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "1d1d9be014b98f097b36fee57d37445aa7cabb58988a1ffb3731c377cc03f6ac",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 220340,
+      "requestSha256": "580f3bf4ffb49bcc9543c5dc515f919258fecf341f495c332224cdf1a59d4257",
+      "startedAt": "2026-11-15T09:52:46.557Z",
+      "status": 200,
+      "elapsedMs": 8427,
+      "rawResponseSha256": "dc72c91c687f4076b21f6e0e0a0e3db0afa3bda17ef5b0d85a4ca6791df6ab57",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 4194,
+        "completion_tokens": 1051,
+        "total_tokens": 5245
+      },
+      "manualVerdict": "fail",
+      "assessment": "原始JSON括号错误拒绝；可读内容把bright两句保留uncertain且未擅自授予，但不能算链路通过，不修补原文或格式。"
+    },
+    {
+      "id": "scope.partial",
+      "customRequest": 385,
+      "state": "completed",
+      "purpose": "冻结部分接收例：bright前半明确听清、后半未知，复用内容分片而非整句授予或整句阻断",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "1d1d9be014b98f097b36fee57d37445aa7cabb58988a1ffb3731c377cc03f6ac",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 220303,
+      "requestSha256": "5274cbef73ec2917ea6c378d4835a592906ab17e9b5f82c877466b8a272186d9",
+      "startedAt": "2026-11-15T09:53:29.179Z",
+      "status": 200,
+      "elapsedMs": 5178,
+      "rawResponseSha256": "2fb391807643fb1f40f7042829a9346ecd1514c40e14cf04e560694fd2fc24b9",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 4207,
+        "completion_tokens": 844,
+        "total_tokens": 5051
+      },
+      "manualVerdict": "fail",
+      "assessment": "Schema/原校验通过但语义失败：bright前半received和后半uncertain都挂在完整言说，未按现有合同分片；真实隔离MVU因此登记整句给bright并产生1待核。无本地丢字段，reason不改变父内容，禁止自动修补。"
+    },
+    {
+      "id": "scope.absent",
+      "customRequest": 386,
+      "state": "completed",
+      "purpose": "冻结未接收反例：bright在远处一句没听到，直接听者正常接收，检查不按在场扩大",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "1d1d9be014b98f097b36fee57d37445aa7cabb58988a1ffb3731c377cc03f6ac",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 220153,
+      "requestSha256": "cfa3d87207a86bce4c054485076bae28f07c4d71f9a5c29b20b3b25f27d26226",
+      "startedAt": "2026-11-15T09:54:09.126Z",
+      "status": 200,
+      "elapsedMs": 7019,
+      "rawResponseSha256": "fd3df088b6f3c412ee65e7c744401a99486ae41faac30c78565f8b78fee12db4",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 4128,
+        "completion_tokens": 1002,
+        "total_tokens": 5130
+      },
+      "manualVerdict": "pass",
+      "assessment": "本例接收范围通过：player两句，bright两句明确not_received，零待核；第二句依据“她又说：”须结合前句明确传达对象作连续发言理解，不能宣称每条引用独立自足；没有目光/称谓单独证明接收。"
+    },
+    {
+      "id": "scope.reply",
+      "customRequest": 387,
+      "state": "completed",
+      "purpose": "冻结隐含应答正例：两片回答复用历史问题，不能为了证据充分强求复述确认，不授予远处旁人",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "1d1d9be014b98f097b36fee57d37445aa7cabb58988a1ffb3731c377cc03f6ac",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 219768,
+      "requestSha256": "b0bb7b9e25935e7969773e1ed60a8f1214e7ac7a364fc5026b074060f50b5bce",
+      "startedAt": "2026-11-15T09:54:55.580Z",
+      "status": 200,
+      "elapsedMs": 7486,
+      "rawResponseSha256": "3118de03db19a5bcc74f1fd82784fccc97ff5090a40d330080b1abbc06470186",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3979,
+        "completion_tokens": 750,
+        "total_tokens": 4729
+      },
+      "manualVerdict": "pass",
+      "assessment": "两片隐含回答完整，听者引用回答内容并由history唯一问题定位player；接收依据包含实际回答，无需复述确认。隔离player2条bright0条、无待核；未改正文或补回执。"
+    },
+    {
+      "id": "range.original",
+      "customRequest": 388,
+      "state": "completed",
+      "purpose": "用户明确授权修复后复测原385；仅本地跨回执范围一致性检查改变，279离线通过，请求字节完全不变，非盲重试",
+      "retestOf": "scope.partial",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "c2c559ab2fd7157ad4bb43e6b93cddb8ed768502757759c874c56c980dc8e75d",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 220303,
+      "requestSha256": "5274cbef73ec2917ea6c378d4835a592906ab17e9b5f82c877466b8a272186d9",
+      "startedAt": "2026-11-15T10:09:01.326Z",
+      "status": 200,
+      "elapsedMs": 4358,
+      "rawResponseSha256": "864630422a20768a8c03cdf55cf375ff8c751eaaa855c6a402911f148deae569",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 4207,
+        "completion_tokens": 846,
+        "total_tokens": 5053
+      },
+      "manualVerdict": "fail",
+      "assessment": "原样请求模型仍将bright两条互斥状态绑定整句；JSON/Schema通过，但新增范围检查拒绝，原始回复经真实适配器零MVU写入。阻断生效，模型分片未通过，不修补或同版重试。"
+    },
+    {
+      "id": "range.back",
+      "customRequest": 389,
+      "state": "completed",
+      "purpose": "冻结反向部分接收：前半没听见、后半听清；验证分片与互斥范围拒绝，原388已人工核对不重试",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "c2c559ab2fd7157ad4bb43e6b93cddb8ed768502757759c874c56c980dc8e75d",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 220145,
+      "requestSha256": "a5845c5c0ddc841d4f8bc66016644c1853542f1a71b863ac948e16044c123b6a",
+      "startedAt": "2026-11-15T10:10:07.531Z",
+      "status": 200,
+      "elapsedMs": 9293,
+      "rawResponseSha256": "6f37adab22dfa98a90ac433addbe6c8b49427f0ea761b8385b38a248ecee070c",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 4154,
+        "completion_tokens": 1012,
+        "total_tokens": 5166
+      },
+      "manualVerdict": "fail",
+      "assessment": "JSON层级/括号错误，原样拒绝且MVU零写入；可读内容已有前后分片与对应received/not_received，但不能修补成通过。"
+    },
+    {
+      "id": "range.full",
+      "customRequest": 390,
+      "state": "completed",
+      "purpose": "冻结正例：两人完整收到同一句，检查新增关系校验不强迫拆分或制造待核",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "c2c559ab2fd7157ad4bb43e6b93cddb8ed768502757759c874c56c980dc8e75d",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 219800,
+      "requestSha256": "b07efbfab301650a59762cd16c0b4ca3d08b8086e531afba265d204b7ebff3bc",
+      "startedAt": "2026-11-15T10:11:06.466Z",
+      "status": 200,
+      "elapsedMs": 7037,
+      "rawResponseSha256": "bccec36943078c10ef3100b243be99f98bd590f0df02963ec66b4114a72fc196",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 4019,
+        "completion_tokens": 549,
+        "total_tokens": 4568
+      },
+      "manualVerdict": "pass",
+      "assessment": "Schema/原引用/新增关系校验与原MVU通过；一个完整utterance及双听者received回执，两人各得整句，零待核，没有误要求分片。"
+    },
+    {
+      "id": "range.none",
+      "customRequest": 391,
+      "state": "completed",
+      "purpose": "冻结不同听者对照：同一整句player接收bright未接收，不得误报同范围冲突",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "c2c559ab2fd7157ad4bb43e6b93cddb8ed768502757759c874c56c980dc8e75d",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 220275,
+      "requestSha256": "5a7383a181848b561e4fd8091a603ec924601d2f66dbd1a337e698a36c07eaf3",
+      "startedAt": "2026-11-15T10:11:45.351Z",
+      "status": 200,
+      "elapsedMs": 7221,
+      "rawResponseSha256": "49612292d02727397fe29ccd8045eeabfa506128e278115b08a14cf49fc80637",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 4199,
+        "completion_tokens": 658,
+        "total_tokens": 4857
+      },
+      "manualVerdict": "pass",
+      "assessment": "完整同范围对不同听者保持received/not_received，检查没有误拒绝；原MVU仅player整句1条，bright0、待核0。"
+    },
+    {
+      "id": "range.listeners",
+      "customRequest": 392,
+      "state": "completed",
+      "purpose": "冻结双听者分片对照：player仅前半bright仅后半，验证逐人相反接收范围",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "c2c559ab2fd7157ad4bb43e6b93cddb8ed768502757759c874c56c980dc8e75d",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 220753,
+      "requestSha256": "e3cc05293c172b65304470db46cd49680166d2e2e23e0bf74bbcd982dba86cbd",
+      "startedAt": "2026-11-15T10:12:25.524Z",
+      "status": 200,
+      "elapsedMs": 5261,
+      "rawResponseSha256": "c1201b28d665d5d82fb3c41c391df61b12ccdbdf903a716064470a6391cd9e7f",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 4381,
+        "completion_tokens": 1231,
+        "total_tokens": 5612
+      },
+      "manualVerdict": "pass",
+      "assessment": "保留完整言说无回执、另有两个原文分片；各自绑定player/bright相反状态。原严格检查和新增关系检查通过，MVU仅player前半、bright后半各1条，无扩成整句或待核。"
+    },
+    {
+      "id": "range.repeat",
+      "customRequest": 393,
+      "state": "completed",
+      "purpose": "冻结发生次数对照：相同原话两次不同坐标，先听见后没听见，不按文字相同误合并或拒绝",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "c2c559ab2fd7157ad4bb43e6b93cddb8ed768502757759c874c56c980dc8e75d",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 220463,
+      "requestSha256": "476812af3a4ccecc874fcad345eb898e45db90d0600442986f8a5fe7d603c80a",
+      "startedAt": "2026-11-15T10:12:59.097Z",
+      "status": 200,
+      "elapsedMs": 23727,
+      "rawResponseSha256": "673f7fea8e6deeba8feac283ea270975ae624e0045810cdc12acfcb7176cf29a",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 4263,
+        "completion_tokens": 809,
+        "total_tokens": 5072
+      },
+      "manualVerdict": "pass",
+      "assessment": "相同文本两次言说用不同原文坐标，第一次received第二次not_received；原严格校验及新关系检查通过，bright仅第一条知情，无误合并、误拒绝或待核。"
+    },
+    {
+      "id": "scoped.original",
+      "customRequest": 394,
+      "state": "completed",
+      "purpose": "原385/388业务输入坐标参数不变；v3每条回执直接填写contentSpan，复用原言说与严格引用，284离线通过",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "4d44064546f4452d882109b7988e63a932f5397eedf8c47a18fd774ec5b6c9d4",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 221886,
+      "requestSha256": "f04105202cee856727c590a3e0dd941b687ba44669f34561d2a72037d01e3808",
+      "startedAt": "2026-11-15T10:22:45.236Z",
+      "status": 200,
+      "elapsedMs": 6472,
+      "rawResponseSha256": "9d4ca80af493e4741b6504d25d11fe6c80d84dce462a8c8764f89a58da6d543e",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 4204,
+        "completion_tokens": 935,
+        "total_tokens": 5139
+      },
+      "manualVerdict": "pass",
+      "assessment": "原385/388输入不变；一条完整言说，三条回执显式范围分别为player整句received、bright前半received、后半uncertain。Schema/精确引用/父范围/冲突检查通过，原MVU仅登记bright前半，后半1待核，无关0问，无自动修补。"
+    },
+    {
+      "id": "scoped.back",
+      "customRequest": 395,
+      "state": "completed",
+      "purpose": "原389输入坐标参数不变，新版回执范围：bright前半未听见、后半听清，核对局部not_received与received",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "4d44064546f4452d882109b7988e63a932f5397eedf8c47a18fd774ec5b6c9d4",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 221728,
+      "requestSha256": "f9735b21823a4fdf66b04f932fa4a178e5f4741f2f64532ebf11a3d41a0434ca",
+      "startedAt": "2026-11-15T10:23:24.658Z",
+      "status": 200,
+      "elapsedMs": 5154,
+      "rawResponseSha256": "223ada53c171c9e331c529edbd56bee0931575f5bc6dd0e50d66843282285728",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 4151,
+        "completion_tokens": 845,
+        "total_tokens": 4996
+      },
+      "manualVerdict": "pass",
+      "assessment": "一条完整言说，player整句received，bright前半not_received后半received，contentSpan各自准确；原MVU只登记bright后半，无待核，原389格式失败此次无重现。"
+    },
+    {
+      "id": "scoped.full",
+      "customRequest": 396,
+      "state": "completed",
+      "purpose": "原390完整接收正例，新版必填contentSpan仍应保留两人完整知情，不强制切分",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "4d44064546f4452d882109b7988e63a932f5397eedf8c47a18fd774ec5b6c9d4",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 221383,
+      "requestSha256": "5134a3a05b456c86e4475cc8abeb6f0ce674bc598e0ec0222d6847e2ebd8c6ab",
+      "startedAt": "2026-11-15T10:24:18.627Z",
+      "status": 200,
+      "elapsedMs": 3324,
+      "rawResponseSha256": "3b64170e0576a3ac097b35aa55d14773ccade8646a4e596d4e8722d0ee965c2b",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 4016,
+        "completion_tokens": 596,
+        "total_tokens": 4612
+      },
+      "manualVerdict": "pass",
+      "assessment": "完整言说和整句contentSpan由两位听者共用received回执；两人各获得完整消息，无待核，未误强制分片。"
+    },
+    {
+      "id": "scoped.none",
+      "customRequest": 397,
+      "state": "completed",
+      "purpose": "原391不同听者接收/未接收对照，同一contentSpan可以对不同听者有不同status",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "4d44064546f4452d882109b7988e63a932f5397eedf8c47a18fd774ec5b6c9d4",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 221858,
+      "requestSha256": "fb5af2b178dccf2fdea690ec2dae50642fed2e9e711cf11dece1528b07f524c1",
+      "startedAt": "2026-11-15T10:25:01.159Z",
+      "status": 200,
+      "elapsedMs": 4579,
+      "rawResponseSha256": "38252f12547cf5cdef41672e970471fc7146db86b356d0ab2e0c7cd043d35004",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 4196,
+        "completion_tokens": 728,
+        "total_tokens": 4924
+      },
+      "manualVerdict": "pass",
+      "assessment": "同一整句range分别对player received和bright not_received，严格检查通过；只有player新增知情，bright0，无待核。"
+    },
+    {
+      "id": "scoped.listeners",
+      "customRequest": 398,
+      "state": "completed",
+      "purpose": "原392两位听者各听一半，contentSpan应分别配对各自收到和没收到的内容",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "4d44064546f4452d882109b7988e63a932f5397eedf8c47a18fd774ec5b6c9d4",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 222336,
+      "requestSha256": "d015e83dc821b42915baee3eca5de12d0c3704a93a8de32e63b206bf8b0600a1",
+      "startedAt": "2026-11-15T10:25:32.823Z",
+      "status": 200,
+      "elapsedMs": 5649,
+      "rawResponseSha256": "274002307b6fdceeee31a166a27397e30e7040fd8d35e5d88e993f6b913251f8",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 4378,
+        "completion_tokens": 992,
+        "total_tokens": 5370
+      },
+      "manualVerdict": "pass",
+      "assessment": "完整言说保留1条，四条回执显式前后范围及逐人相反状态；严格检查和MVU通过，player只前半、bright只后半，0待核。"
+    },
+    {
+      "id": "scoped.repeat",
+      "customRequest": 399,
+      "state": "completed",
+      "purpose": "原393重复言说对照，contentSpan必须绑定各自发生坐标：第一次听见第二次未听见",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "4d44064546f4452d882109b7988e63a932f5397eedf8c47a18fd774ec5b6c9d4",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 222046,
+      "requestSha256": "be465b512fab80a082d731610a264800f29557d9e989c6333ab5f7cd7ee8dc08",
+      "startedAt": "2026-11-15T10:26:25.609Z",
+      "status": 200,
+      "elapsedMs": 5605,
+      "rawResponseSha256": "e918bf477e8a8450c1c455a0f87aacce49602101b08198a626977ad68d3ed40e",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 4260,
+        "completion_tokens": 879,
+        "total_tokens": 5139
+      },
+      "manualVerdict": "pass",
+      "assessment": "两次相同原话保留两个发生位置，各条contentSpan位于对应父言说；第一次received第二次not_received，bright仅获一次完整内容，无待核或跨发生错绑。"
+    },
+    {
+      "id": "main.A1.reception",
+      "customRequest": 400,
+      "state": "completed",
+      "purpose": "v3 ordinary UI explicit reception; exact captured request; isolated fixture source",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "4d44064546f4452d882109b7988e63a932f5397eedf8c47a18fd774ec5b6c9d4",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 60989,
+      "requestSha256": "e446d761ad1c6ced2173341ef6c1b5125157d858acfc2cb52881b24a40d5d3d3",
+      "startedAt": "2026-11-15T11:04:05.225Z",
+      "status": 200,
+      "elapsedMs": 4251,
+      "rawResponseSha256": "2bcf9920c53c13839e8a2cf0be73169a4c459f3efa2acd1863cdd5373fba7610",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 4944,
+        "completion_tokens": 753,
+        "total_tokens": 5697
+      },
+      "manualVerdict": "pass",
+      "assessment": "Schema and strict citations pass; player full received, bright not received, no pending; actual UI persistence checked after release"
+    },
+    {
+      "id": "main.B1.reception",
+      "customRequest": 401,
+      "state": "completed",
+      "purpose": "v3 actual ordinary UI partial reception and genuine pending; exact captured request",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "4d44064546f4452d882109b7988e63a932f5397eedf8c47a18fd774ec5b6c9d4",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 61014,
+      "requestSha256": "d8f0e003022b0bcbb61488aa0751805567992e6d65fa2420ca4b0e7a633ab0eb",
+      "startedAt": "2026-11-15T11:07:44.391Z",
+      "status": 200,
+      "elapsedMs": 5018,
+      "rawResponseSha256": "4b6ac45be8c254467861d8d647249a77d2375f6be7acbdcf60bbca373ddfa641",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 4963,
+        "completion_tokens": 883,
+        "total_tokens": 5846
+      },
+      "manualVerdict": "pass",
+      "assessment": "Exact contentSpan: player full; bright front received with delimiter only; back uncertain; no whole-sentence overgrant. Schema and citation checks pass."
+    },
+    {
+      "id": "main.B2.dependency",
+      "customRequest": 402,
+      "state": "completed",
+      "purpose": "Unrelated lunch request with actual UI pending from custom401; exact request",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "4d44064546f4452d882109b7988e63a932f5397eedf8c47a18fd774ec5b6c9d4",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 2363,
+      "requestSha256": "bd6628c5b800823f1c9f56b6b0e53c4baa4e73db6ffa6d9054bbcb84fa65e014",
+      "startedAt": "2026-11-15T11:08:56.448Z",
+      "status": 200,
+      "elapsedMs": 2888,
+      "rawResponseSha256": "844e936eb51d4f0e41a8ef4ecfd56c430506671d631b2ff36e5be6d5182a464d",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 923,
+        "completion_tokens": 80,
+        "total_tokens": 1431,
+        "completion_tokens_details": {
+          "reasoning_tokens": 428
+        }
+      },
+      "manualVerdict": "pass",
+      "assessment": "inputRef matches; required empty; actual401 pending second half used unchanged"
+    },
+    {
+      "id": "main.B3.dependency",
+      "customRequest": 403,
+      "state": "completed",
+      "purpose": "Related request using actual persisted custom401 pending after unrelated turn",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "4d44064546f4452d882109b7988e63a932f5397eedf8c47a18fd774ec5b6c9d4",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 2435,
+      "requestSha256": "cf73b6debb95a4bd67ef2f4c311bc5bb8bbfe02c94ae07e62c619b83336edca7",
+      "startedAt": "2026-11-15T11:10:02.342Z",
+      "status": 200,
+      "elapsedMs": 3265,
+      "rawResponseSha256": "ef9d8d5f808d7ebc3d196c10cfcd54b4ce1002004cbc55b4298c7f07a1f86ac3",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 949,
+        "completion_tokens": 202,
+        "total_tokens": 1457,
+        "completion_tokens_details": {
+          "reasoning_tokens": 306
+        }
+      },
+      "manualVerdict": "pass",
+      "assessment": "Exact inputRef and actual pending ID; related request depends on second half, does not resolve reception"
+    },
+    {
+      "id": "main.B3.narration",
+      "customRequest": 404,
+      "state": "completed",
+      "purpose": "Resume same actual UI player request after explicit isolated confirmation of real pending second half; preserve narrative autonomy",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "4d44064546f4452d882109b7988e63a932f5397eedf8c47a18fd774ec5b6c9d4",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 107189,
+      "requestSha256": "df3df90b58b04fd09da2af33583d3afa7e808161fa557ab00d6210e09ea8d0f9",
+      "startedAt": "2026-11-15T11:11:05.764Z",
+      "status": 200,
+      "elapsedMs": 4114,
+      "rawResponseSha256": "bc28de7f6240f28f1c03460d1b2abf71551bad924ac58c6b7bafd99dc7b019f7",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 27501,
+        "completion_tokens": 146,
+        "total_tokens": 27647
+      },
+      "manualVerdict": "pass",
+      "assessment": "Answers south bridge after explicit isolated confirmation; attributes earlier statement to Huang; no mandatory disclosure imposed, no new condition or relationship"
+    },
+    {
+      "id": "main.B3.reception",
+      "customRequest": 405,
+      "state": "completed",
+      "purpose": "Extract actual custom404 narrative saved by ordinary UI after real pending resolution; no fixture replacement",
+      "sourceHashes": {
+        "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "4d44064546f4452d882109b7988e63a932f5397eedf8c47a18fd774ec5b6c9d4",
+        "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+      },
+      "requestBytes": 67683,
+      "requestSha256": "4f07210159a1253e75d3ffc12190243fddbe0ed83cc0e6845da1c6e7456ee1d4",
+      "startedAt": "2026-11-15T11:11:38.960Z",
+      "status": 200,
+      "elapsedMs": 4235,
+      "rawResponseSha256": "7653120b58c51f8f2934a39c710e8ebe1c43998b1a5eef9a12dce500a4b402fc",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 7623,
+        "completion_tokens": 731,
+        "total_tokens": 8354
+      },
+      "manualVerdict": "pass",
+      "assessment": "Actual404 speech retained with attribution to Huang inside content; resolved speaker pronoun and player recipient cited exactly; no unsupported Huang grant; Schema and strict checks pass"
+    }
+  ],
+  "complete": true,
+  "lastFailure": {
+    "id": "range.back",
+    "assessment": "JSON层级/括号错误，原样拒绝且MVU零写入；可读内容已有前后分片与对应received/not_received，但不能修补成通过。"
+  },
+  "closed": true,
+  "stopReason": "Six bounded mainline calls completed; no further model calls scheduled",
+  "finalVerification": "../mainline-v3-20261115/verification.json",
+  "currentScope": "十二阶段主线回接v3；本轮6次有限UI集成模型调用，之后显示修复仅回放原响应",
+  "currentScopeResult": "405断点：六次指定指标通过，71/200已用、余129，候选更新默认disabled，未部署",
+  "activeScope": "mainline-v3-20261115: maximum 6 actual calls; stop on failure"
+}

@@ -1,0 +1,257 @@
+{
+  "id": "02-received-rumor",
+  "localProtocolPassed": true,
+  "result": {
+    "status": "processed",
+    "pending": [
+      {
+        "id": "dialogue.53ae2043a52b051a0b989504ab715bad828e4fe3b205bc58fef2799d47f05c71.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b",
+        "claimId": "claim-utterance-1",
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "propositionRef": "well.closed",
+        "content": "北街水井暂时停用。",
+        "quote": "北街水井暂时停用。",
+        "belief": "rumor",
+        "status": "pending",
+        "extractionReason": "黄泉对御临风说话，但当前文本未提供御临风已确认听清或接收完成的明确反馈。",
+        "reason": "黄泉对御临风说话，但当前文本未提供御临风已确认听清或接收完成的明确反馈。",
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 19,
+          "quote": "黄泉对御临风说：“北街水井暂时停用。”"
+        },
+        "unresolved": [],
+        "sourceAnchor": {
+          "chatId": "isolated.dialogue.parallel.02-received-rumor",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "黄泉对御临风说：“北街水井暂时停用。”"
+        },
+        "batchId": "dialogue.53ae2043a52b051a0b989504ab715bad828e4fe3b205bc58fef2799d47f05c71"
+      }
+    ]
+  },
+  "asked": [],
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "isolated.dialogue.live.v1",
+    "chatId": "isolated.dialogue.parallel.02-received-rumor",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "well.closed": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "well.closed",
+        "entityId": "well",
+        "field": "reported_status",
+        "value": "北街水井暂时停用",
+        "certainty": "rumor",
+        "visibility": "private"
+      }
+    },
+    "events": {
+      "received.isolated.prior": {
+        "id": "received.isolated.prior",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "huang"
+          ],
+          "propositionRefs": [
+            "well.closed"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 0,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "isolated.dialogue.parallel.02-received-rumor",
+            "messageId": 0,
+            "swipeId": 0,
+            "text": "隔离事件：黄泉收到一则未经核实的消息：“北街水井暂时停用”。"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/isolated.dialogue.parallel.02-received-rumor",
+            "line": 1
+          }
+        ],
+        "causeRefs": []
+      },
+      "isolated.prior.huang.well.closed.event": {
+        "id": "isolated.prior.huang.well.closed.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "isolated.prior.huang.well.closed",
+            "knowerId": "huang",
+            "propositionRef": "well.closed",
+            "eventRef": "received.isolated.prior",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 0,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "rumor"
+          }
+        },
+        "causeRefs": [
+          "received.isolated.prior"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/isolated.dialogue.parallel.02-received-rumor",
+            "line": 1
+          }
+        ]
+      }
+    },
+    "knowledge": {
+      "isolated.prior.huang.well.closed": {
+        "id": "isolated.prior.huang.well.closed",
+        "knowerId": "huang",
+        "propositionRef": "well.closed",
+        "eventRef": "received.isolated.prior",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "rumor"
+      }
+    },
+    "dialogueBatches": {
+      "dialogue.53ae2043a52b051a0b989504ab715bad828e4fe3b205bc58fef2799d47f05c71": {
+        "id": "dialogue.53ae2043a52b051a0b989504ab715bad828e4fe3b205bc58fef2799d47f05c71",
+        "sourceAnchor": {
+          "chatId": "isolated.dialogue.parallel.02-received-rumor",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "黄泉对御临风说：“北街水井暂时停用。”"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.53ae2043a52b051a0b989504ab715bad828e4fe3b205bc58fef2799d47f05c71.b89160b8b523d050963db179a725f80c1ccb723768943c27343e8ac4716aad6b",
+            "claimId": "claim-utterance-1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": "well.closed",
+            "content": "北街水井暂时停用。",
+            "quote": "北街水井暂时停用。",
+            "belief": "rumor",
+            "status": "pending",
+            "extractionReason": "黄泉对御临风说话，但当前文本未提供御临风已确认听清或接收完成的明确反馈。",
+            "reason": "黄泉对御临风说话，但当前文本未提供御临风已确认听清或接收完成的明确反馈。",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 19,
+              "quote": "黄泉对御临风说：“北街水井暂时停用。”"
+            },
+            "unresolved": []
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "uncertain",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 19,
+              "quote": "黄泉对御临风说：“北街水井暂时停用。”"
+            },
+            "reason": "言说已发生并记录接收项，御临风是否确实接收尚无进一步确认证据，接收状态为uncertain。"
+          }
+        ]
+      }
+    }
+  },
+  "context": {
+    "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+    "actorKnowledge": [
+      {
+        "actorId": "bright",
+        "name": "布莱特",
+        "facts": []
+      },
+      {
+        "actorId": "huang",
+        "name": "黄泉",
+        "facts": [
+          {
+            "id": "well.closed",
+            "content": "北街水井暂时停用",
+            "belief": "rumor",
+            "access": "learned",
+            "effectiveAt": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 0,
+              "actorId": "legacy.story"
+            },
+            "learnedAt": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 0,
+              "actorId": "legacy.story"
+            },
+            "sources": [
+              {
+                "eventRef": "received.isolated.prior",
+                "channel": "message",
+                "belief": "rumor",
+                "senderId": null,
+                "learnedAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "sourceAnchor": {
+                  "chatId": "isolated.dialogue.parallel.02-received-rumor",
+                  "messageId": 0,
+                  "swipeId": 0,
+                  "text": "隔离事件：黄泉收到一则未经核实的消息：“北街水井暂时停用”。"
+                },
+                "disclosure": null
+              }
+            ],
+            "eventRef": "received.isolated.prior",
+            "channel": "message",
+            "learnedAtMessage": 0
+          }
+        ]
+      },
+      {
+        "actorId": "player",
+        "name": "御临风",
+        "facts": []
+      }
+    ],
+    "availableInformation": []
+  },
+  "semanticAssessment": "pending-manual"
+}

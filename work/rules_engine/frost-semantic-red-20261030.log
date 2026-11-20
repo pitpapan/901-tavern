@@ -1,0 +1,41 @@
+✔ selected set retains Arcane Throne and never restores the six excluded bundles (1.018ms)
+✔ planeswalker power progression replaces totals 1/2/4/8 and does not sum 15 (0.2588ms)
+✔ book study vests capped finite bonuses once, never XP or repeated full grants (0.5848ms)
+✔ book inheritance is the same acquisition and non-sale 27S grants nothing (0.7012ms)
+✔ agent D uses two attribute increases and two scoped DP benefits, not a third will attribute (0.2609ms)
+✖ full bundles and missing-rule branches never enter executable action or automatic acquisition lists (1.456ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 5
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 232.6779
+
+✖ failing tests:
+
+test at 901-resource-authoring-kit\outputs\施法体系适配-20261024\compiler\semantic-check.test.mjs:51:1
+✖ full bundles and missing-rule branches never enter executable action or automatic acquisition lists (1.456ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      '奥术',
+  +   '冰霜'
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/901-resource-authoring-kit/outputs/%E6%96%BD%E6%B3%95%E4%BD%93%E7%B3%BB%E9%80%82%E9%85%8D-20261024/compiler/semantic-check.test.mjs:57:97)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ '奥术', '冰霜' ],
+    expected: [ '奥术' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

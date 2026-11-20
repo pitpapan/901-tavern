@@ -1,0 +1,140 @@
+{
+  "id": "08-ambiguous-listener",
+  "localProtocolPassed": true,
+  "result": {
+    "status": "processed",
+    "pending": [
+      {
+        "id": "dialogue.b3ac974b07ad4379ee6468f3b9084b6398a71eb429db4687fb8ff4005990a54b.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0",
+        "claimId": "turn.utterance.1",
+        "speakerId": "huang",
+        "recipientIds": [
+          "player",
+          "bright"
+        ],
+        "propositionRef": null,
+        "content": "交货地点改到南岗。",
+        "quote": "交货地点改到南岗。",
+        "belief": "uncertain",
+        "status": "pending",
+        "extractionReason": "两人中有一人没听清，但记录无法指出是哪一人，因此具体接收状态无法确定。",
+        "reason": "两人中有一人没听清，但记录无法指出是哪一人，因此具体接收状态无法确定。",
+        "evidence": {
+          "documentId": "current",
+          "start": 23,
+          "end": 45,
+          "quote": "两人中有一人没听清，但记录无法指出是哪一人。"
+        },
+        "unresolved": [],
+        "sourceAnchor": {
+          "chatId": "isolated.dialogue.parallel.08-ambiguous-listener",
+          "messageId": 0,
+          "swipeId": 0,
+          "text": "黄泉对御临风和布莱特说：“交货地点改到南岗。”两人中有一人没听清，但记录无法指出是哪一人。"
+        },
+        "batchId": "dialogue.b3ac974b07ad4379ee6468f3b9084b6398a71eb429db4687fb8ff4005990a54b"
+      }
+    ]
+  },
+  "asked": [],
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "isolated.dialogue.live.v1",
+    "chatId": "isolated.dialogue.parallel.08-ambiguous-listener",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "well.closed": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "well.closed",
+        "entityId": "well",
+        "field": "reported_status",
+        "value": "北街水井暂时停用",
+        "certainty": "rumor",
+        "visibility": "private"
+      }
+    },
+    "events": {},
+    "knowledge": {},
+    "dialogueBatches": {
+      "dialogue.b3ac974b07ad4379ee6468f3b9084b6398a71eb429db4687fb8ff4005990a54b": {
+        "id": "dialogue.b3ac974b07ad4379ee6468f3b9084b6398a71eb429db4687fb8ff4005990a54b",
+        "sourceAnchor": {
+          "chatId": "isolated.dialogue.parallel.08-ambiguous-listener",
+          "messageId": 0,
+          "swipeId": 0,
+          "text": "黄泉对御临风和布莱特说：“交货地点改到南岗。”两人中有一人没听清，但记录无法指出是哪一人。"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.b3ac974b07ad4379ee6468f3b9084b6398a71eb429db4687fb8ff4005990a54b.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0",
+            "claimId": "turn.utterance.1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player",
+              "bright"
+            ],
+            "propositionRef": null,
+            "content": "交货地点改到南岗。",
+            "quote": "交货地点改到南岗。",
+            "belief": "uncertain",
+            "status": "pending",
+            "extractionReason": "两人中有一人没听清，但记录无法指出是哪一人，因此具体接收状态无法确定。",
+            "reason": "两人中有一人没听清，但记录无法指出是哪一人，因此具体接收状态无法确定。",
+            "evidence": {
+              "documentId": "current",
+              "start": 23,
+              "end": 45,
+              "quote": "两人中有一人没听清，但记录无法指出是哪一人。"
+            },
+            "unresolved": []
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "uncertain",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 45,
+              "quote": "黄泉对御临风和布莱特说：“交货地点改到南岗。”两人中有一人没听清，但记录无法指出是哪一人。"
+            },
+            "reason": "黄泉对御临风和布莱特说出话语，但其中有一人没听清且无法指出具体是谁，接收存在不确定性。"
+          }
+        ]
+      }
+    }
+  },
+  "context": {
+    "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+    "actorKnowledge": [
+      {
+        "actorId": "bright",
+        "name": "布莱特",
+        "facts": []
+      },
+      {
+        "actorId": "huang",
+        "name": "黄泉",
+        "facts": []
+      },
+      {
+        "actorId": "player",
+        "name": "御临风",
+        "facts": []
+      }
+    ],
+    "availableInformation": []
+  },
+  "semanticAssessment": "pending-manual"
+}

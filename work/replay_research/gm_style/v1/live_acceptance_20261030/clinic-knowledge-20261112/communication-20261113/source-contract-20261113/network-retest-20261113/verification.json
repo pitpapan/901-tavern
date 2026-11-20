@@ -1,0 +1,44 @@
+{
+  "status": "two-unchanged-requests-and-complete-responses-verified",
+  "networkDiagnosis": "Same Node/host/probe fails ENOTFOUND when restricted and succeeds with escalated execution; strongly supports runtime network restriction, not a demonstrated upstream outage.",
+  "networkProbeModelCalls": 0,
+  "modelCalls": 2,
+  "cumulativeRequestAttempts": 257,
+  "remaining": 0,
+  "retries": 0,
+  "classificationModelCalls": 0,
+  "productChanges": 0,
+  "productRegressionsRerun": false,
+  "formalProtectedFilesUnchanged": 22,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticRoutesResumed": false,
+  "results": [
+    {
+      "id": "pending",
+      "customRequest": 256,
+      "requestBytes": 114519,
+      "requestSha256": "63e0007d7ce76504ce114814e6f21be7760c4c1459693ce0adccce6c6f5ff9b0",
+      "requestUnchanged": true,
+      "status": 200,
+      "elapsedMs": 3756,
+      "rawResponseBytes": 953,
+      "rawResponseSha256": "729e26fe3dd23545566d63e23714ed490070f961826fb55d0c853e530aec3f0f",
+      "rawResponseUnmodified": true,
+      "finishReason": "stop"
+    },
+    {
+      "id": "confirmed",
+      "customRequest": 257,
+      "requestBytes": 115516,
+      "requestSha256": "b18ebe14d76309cb0a7369b94a464e9e5e0c30940466f02bf609c12d10373a07",
+      "requestUnchanged": true,
+      "status": 200,
+      "elapsedMs": 3053,
+      "rawResponseBytes": 1181,
+      "rawResponseSha256": "c05e17df4a514c6b3b12ad72be3640b73802e644a00f06045acf543175f41ab1",
+      "rawResponseUnmodified": true,
+      "finishReason": "stop"
+    }
+  ]
+}

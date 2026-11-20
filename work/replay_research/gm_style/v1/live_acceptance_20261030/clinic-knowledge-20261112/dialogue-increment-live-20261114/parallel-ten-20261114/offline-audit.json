@@ -1,0 +1,876 @@
+{
+  "scope": "Ten new category controls; original07 followups blocked, separate09/10 branch uses actual validated08. No original failure replaced.",
+  "attempts": 10,
+  "passed": 5,
+  "failed": 5,
+  "blockedOriginalFollowups": [
+    {
+      "id": "09-unrelated",
+      "parent": "07-ambiguous-hearing",
+      "text": "我和御临风谈谈午饭的口味，再整理一下衣领。",
+      "expected": "不依赖待核渡船消息，required为空，不询问。"
+    },
+    {
+      "id": "10-dependent",
+      "parent": "07-ambiguous-hearing",
+      "text": "让御临风依据黄泉刚才说的渡船消息，安排明早过河的路线。",
+      "expected": "依赖御临风是否获知渡船消息，返回真实相关待核id并询问，不代答或授予知情。"
+    }
+  ],
+  "productChanged": false,
+  "modelOutputRepaired": false,
+  "validationRelaxed": false,
+  "semanticCompletenessOrStabilityProven": false,
+  "rows": [
+    {
+      "id": "01-received-new",
+      "customRequest": 294,
+      "verdict": "fail",
+      "assessment": "Received decision and recipient correct, but scope.time and scope.attribution contain span objects contrary to explicit scalar-type contract. Whole reply rejected; revision0. No demonstrated local loss, no product fix or response repair. Keep frozen negative result.",
+      "localProtocolPassed": false,
+      "asked": 0,
+      "knowledgeCounts": [
+        {
+          "id": "bright",
+          "count": 0
+        },
+        {
+          "id": "huang",
+          "count": 0
+        },
+        {
+          "id": "player",
+          "count": 0
+        }
+      ],
+      "contract": {
+        "ok": false,
+        "issues": [
+          {
+            "code": "INVALID_ROLE_SPAN"
+          }
+        ],
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "spanCount": 21,
+      "badSpans": [],
+      "unitStatuses": [
+        {
+          "status": "extracted",
+          "unresolved": 0
+        }
+      ],
+      "receptionStatuses": [
+        {
+          "status": "received",
+          "recipientIds": [
+            "bright"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02-received-rumor",
+      "customRequest": 295,
+      "verdict": "fail",
+      "assessment": "Speaker acquisition and rumor reference correctly selected, but scope.time is a span object despite explicit string/null rule. Original checker rejects with no new receipt; prior Huang rumor remains intact. Same model contract noncompliance as case01; no local patch justified.",
+      "localProtocolPassed": false,
+      "asked": 0,
+      "knowledgeCounts": [
+        {
+          "id": "bright",
+          "count": 0
+        },
+        {
+          "id": "huang",
+          "count": 1
+        },
+        {
+          "id": "player",
+          "count": 0
+        }
+      ],
+      "contract": {
+        "ok": false,
+        "issues": [
+          {
+            "code": "INVALID_ROLE_SPAN"
+          }
+        ],
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "spanCount": 12,
+      "badSpans": [],
+      "unitStatuses": [
+        {
+          "status": "extracted",
+          "unresolved": 0
+        }
+      ],
+      "receptionStatuses": [
+        {
+          "status": "received",
+          "recipientIds": [
+            "player"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03-not-heard",
+      "customRequest": 296,
+      "verdict": "pass",
+      "assessment": "Explicit not_received and denied hearing retained; original contract passes, no new knowledge to any actor, pending empty, no prompt. Case reception target passes; not a full semantic-completeness claim.",
+      "localProtocolPassed": true,
+      "asked": 0,
+      "knowledgeCounts": [
+        {
+          "id": "bright",
+          "count": 0
+        },
+        {
+          "id": "huang",
+          "count": 0
+        },
+        {
+          "id": "player",
+          "count": 0
+        }
+      ],
+      "contract": {
+        "ok": true,
+        "value": {
+          "schemaVersion": "gm-assertion-output/1",
+          "inputRef": "assertion.4a9436967b14cf43cc10d1c28b7bc62021df6b46653ec84d93cf427347613c6b",
+          "units": [
+            {
+              "id": "turn",
+              "status": "extracted",
+              "claims": [
+                {
+                  "id": "c1",
+                  "type": "state",
+                  "args": {
+                    "entity": "隔音窗",
+                    "name": "状态",
+                    "value": "关闭"
+                  },
+                  "argumentSpans": {
+                    "entity": {
+                      "documentId": "current",
+                      "start": 8,
+                      "end": 11,
+                      "quote": "隔音窗"
+                    },
+                    "name": {
+                      "documentId": "current",
+                      "start": 5,
+                      "end": 7,
+                      "quote": "关闭"
+                    },
+                    "value": {
+                      "documentId": "current",
+                      "start": 5,
+                      "end": 7,
+                      "quote": "关闭"
+                    }
+                  },
+                  "mode": "asserted",
+                  "scope": {
+                    "time": null,
+                    "condition": null,
+                    "attribution": null
+                  },
+                  "scopeSpans": {
+                    "time": null,
+                    "condition": null,
+                    "attribution": null
+                  },
+                  "anchor": {
+                    "documentId": "current",
+                    "start": 5,
+                    "end": 11,
+                    "quote": "关闭的隔音窗"
+                  }
+                },
+                {
+                  "id": "c2",
+                  "type": "utterance",
+                  "args": {
+                    "speaker": "御临风",
+                    "content": "北门暂停通行。"
+                  },
+                  "argumentSpans": {
+                    "speaker": {
+                      "documentId": "current",
+                      "start": 0,
+                      "end": 3,
+                      "quote": "御临风"
+                    },
+                    "content": {
+                      "documentId": "current",
+                      "start": 18,
+                      "end": 25,
+                      "quote": "北门暂停通行。"
+                    }
+                  },
+                  "mode": "asserted",
+                  "scope": {
+                    "time": null,
+                    "condition": null,
+                    "attribution": null
+                  },
+                  "scopeSpans": {
+                    "time": null,
+                    "condition": null,
+                    "attribution": null
+                  },
+                  "anchor": {
+                    "documentId": "current",
+                    "start": 0,
+                    "end": 26,
+                    "quote": "御临风隔着关闭的隔音窗对布莱特说：“北门暂停通行。”"
+                  }
+                },
+                {
+                  "id": "c3",
+                  "type": "state",
+                  "args": {
+                    "entity": "北门",
+                    "name": "通行状态",
+                    "value": "暂停通行"
+                  },
+                  "argumentSpans": {
+                    "entity": {
+                      "documentId": "current",
+                      "start": 18,
+                      "end": 20,
+                      "quote": "北门"
+                    },
+                    "name": {
+                      "documentId": "current",
+                      "start": 20,
+                      "end": 24,
+                      "quote": "暂停通行"
+                    },
+                    "value": {
+                      "documentId": "current",
+                      "start": 20,
+                      "end": 24,
+                      "quote": "暂停通行"
+                    }
+                  },
+                  "mode": "reported",
+                  "scope": {
+                    "time": null,
+                    "condition": null,
+                    "attribution": "御临风"
+                  },
+                  "scopeSpans": {
+                    "time": null,
+                    "condition": null,
+                    "attribution": {
+                      "documentId": "current",
+                      "start": 0,
+                      "end": 3,
+                      "quote": "御临风"
+                    }
+                  },
+                  "anchor": {
+                    "documentId": "current",
+                    "start": 18,
+                    "end": 25,
+                    "quote": "北门暂停通行。"
+                  }
+                },
+                {
+                  "id": "c4",
+                  "type": "action",
+                  "args": {
+                    "actor": "布莱特",
+                    "verb": "听见",
+                    "object": null
+                  },
+                  "argumentSpans": {
+                    "actor": {
+                      "documentId": "current",
+                      "start": 26,
+                      "end": 29,
+                      "quote": "布莱特"
+                    },
+                    "verb": {
+                      "documentId": "current",
+                      "start": 31,
+                      "end": 33,
+                      "quote": "听见"
+                    },
+                    "object": null
+                  },
+                  "mode": "denied",
+                  "scope": {
+                    "time": null,
+                    "condition": null,
+                    "attribution": null
+                  },
+                  "scopeSpans": {
+                    "time": null,
+                    "condition": null,
+                    "attribution": null
+                  },
+                  "anchor": {
+                    "documentId": "current",
+                    "start": 26,
+                    "end": 34,
+                    "quote": "布莱特没有听见。"
+                  }
+                }
+              ],
+              "unresolved": []
+            }
+          ]
+        },
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "spanCount": 17,
+      "badSpans": [],
+      "unitStatuses": [
+        {
+          "status": "extracted",
+          "unresolved": 0
+        }
+      ],
+      "receptionStatuses": [
+        {
+          "status": "not_received",
+          "recipientIds": [
+            "bright"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04-not-yet-said",
+      "customRequest": 297,
+      "verdict": "pass",
+      "assessment": "Intention retains Huang, recipient player and full intended ferry message. Speech denied, full 尚未 source anchor preserved; no separate asserted inner world fact, receptions empty, pending empty, no knowledge grants. Scope time remains null, so do not claim every temporal field separately populated.",
+      "localProtocolPassed": true,
+      "asked": 0,
+      "knowledgeCounts": [
+        {
+          "id": "bright",
+          "count": 0
+        },
+        {
+          "id": "huang",
+          "count": 0
+        },
+        {
+          "id": "player",
+          "count": 0
+        }
+      ],
+      "contract": {
+        "ok": true,
+        "value": {
+          "schemaVersion": "gm-assertion-output/1",
+          "inputRef": "assertion.02996ef6bb95fd00f12dca1d075025c9a6540774c411f505b7565d10d2ba4424",
+          "units": [
+            {
+              "id": "turn",
+              "status": "extracted",
+              "claims": [
+                {
+                  "id": "c1",
+                  "type": "state",
+                  "args": {
+                    "entity": "黄泉",
+                    "name": "准备向御临风转告内容意图",
+                    "value": "准备向御临风转告“渡船今晚停航”"
+                  },
+                  "argumentSpans": {
+                    "entity": {
+                      "documentId": "current",
+                      "start": 0,
+                      "end": 2,
+                      "quote": "黄泉"
+                    },
+                    "name": {
+                      "documentId": "current",
+                      "start": 2,
+                      "end": 10,
+                      "quote": "准备向御临风转告"
+                    },
+                    "value": {
+                      "documentId": "current",
+                      "start": 2,
+                      "end": 20,
+                      "quote": "准备向御临风转告：“渡船今晚停航。”"
+                    }
+                  },
+                  "mode": "asserted",
+                  "scope": {
+                    "time": null,
+                    "condition": null,
+                    "attribution": null
+                  },
+                  "scopeSpans": {
+                    "time": null,
+                    "condition": null,
+                    "attribution": null
+                  },
+                  "anchor": {
+                    "documentId": "current",
+                    "start": 0,
+                    "end": 20,
+                    "quote": "黄泉准备向御临风转告：“渡船今晚停航。”"
+                  }
+                },
+                {
+                  "id": "c2",
+                  "type": "action",
+                  "args": {
+                    "actor": "黄泉",
+                    "verb": "说出口",
+                    "object": null
+                  },
+                  "argumentSpans": {
+                    "actor": {
+                      "documentId": "current",
+                      "start": 20,
+                      "end": 21,
+                      "quote": "她"
+                    },
+                    "verb": {
+                      "documentId": "current",
+                      "start": 23,
+                      "end": 26,
+                      "quote": "说出口"
+                    },
+                    "object": null
+                  },
+                  "mode": "denied",
+                  "scope": {
+                    "time": null,
+                    "condition": null,
+                    "attribution": null
+                  },
+                  "scopeSpans": {
+                    "time": null,
+                    "condition": null,
+                    "attribution": null
+                  },
+                  "anchor": {
+                    "documentId": "current",
+                    "start": 20,
+                    "end": 27,
+                    "quote": "她尚未说出口。"
+                  }
+                }
+              ],
+              "unresolved": []
+            }
+          ]
+        },
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "spanCount": 7,
+      "badSpans": [],
+      "unitStatuses": [
+        {
+          "status": "extracted",
+          "unresolved": 0
+        }
+      ],
+      "receptionStatuses": []
+    },
+    {
+      "id": "05-partial-first",
+      "customRequest": 298,
+      "verdict": "fail",
+      "assessment": "Raw body has unquoted status keys in both receptions (status opening quote missing). JSON.parse rejects at2965, revision0. Content visually separates heard and unheard clauses, but invalid JSON is failure. Do not repair or semantically certify parsed substitutes.",
+      "localProtocolPassed": false,
+      "asked": 0,
+      "knowledgeCounts": [
+        {
+          "id": "bright",
+          "count": 0
+        },
+        {
+          "id": "huang",
+          "count": 0
+        },
+        {
+          "id": "player",
+          "count": 0
+        }
+      ],
+      "syntaxError": "Expected double-quoted property name in JSON at position 2965 (line 1 column 2966)"
+    },
+    {
+      "id": "06-partial-second",
+      "customRequest": 299,
+      "verdict": "fail",
+      "assessment": "Raw JSON again lacks opening quote on status keys; parser rejects at2957. Contract asks valid JSON and contains no such malformed template. No local loss or repair justified; zero grants retained.",
+      "localProtocolPassed": false,
+      "asked": 0,
+      "knowledgeCounts": [
+        {
+          "id": "bright",
+          "count": 0
+        },
+        {
+          "id": "huang",
+          "count": 0
+        },
+        {
+          "id": "player",
+          "count": 0
+        }
+      ],
+      "syntaxError": "Expected double-quoted property name in JSON at position 2957 (line 1 column 2958)"
+    },
+    {
+      "id": "07-ambiguous-hearing",
+      "customRequest": 300,
+      "verdict": "fail",
+      "assessment": "Uncertain player reception retained in raw output, but c2 invents illegal type manner and mismatched property/name span slots. Explicit closed type enum was sent. Entire reply rejected at revision0, no genuine pending seed for09/10. No demonstrated local omission.",
+      "localProtocolPassed": false,
+      "asked": 0,
+      "knowledgeCounts": [
+        {
+          "id": "bright",
+          "count": 0
+        },
+        {
+          "id": "huang",
+          "count": 0
+        },
+        {
+          "id": "player",
+          "count": 0
+        }
+      ],
+      "contract": {
+        "ok": false,
+        "issues": [
+          {
+            "code": "INVALID_ASSERTION_CLAIM"
+          }
+        ],
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "spanCount": 8,
+      "badSpans": [],
+      "unitStatuses": [
+        {
+          "status": "extracted",
+          "unresolved": 0
+        }
+      ],
+      "receptionStatuses": [
+        {
+          "status": "uncertain",
+          "recipientIds": [
+            "player"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08-ambiguous-listener",
+      "customRequest": 301,
+      "verdict": "pass",
+      "assessment": "Original contract passes. Both candidates retained, recipient unresolved not guessed; received knowledge zero, one pending row and no immediate prompt. Reported location attributed to Huang, not world truth. Real pending seed may support a separately frozen followup branch; original failed07 branch stays blocked.",
+      "localProtocolPassed": true,
+      "asked": 0,
+      "knowledgeCounts": [
+        {
+          "id": "bright",
+          "count": 0
+        },
+        {
+          "id": "huang",
+          "count": 0
+        },
+        {
+          "id": "player",
+          "count": 0
+        }
+      ],
+      "contract": {
+        "ok": true,
+        "value": {
+          "schemaVersion": "gm-assertion-output/1",
+          "inputRef": "assertion.09bc4e709a45b17c38123cf85bb7ea7d21d87408601042050cf5bb7e5635481f",
+          "units": [
+            {
+              "id": "turn",
+              "status": "unresolved",
+              "claims": [
+                {
+                  "id": "c1",
+                  "type": "utterance",
+                  "args": {
+                    "speaker": "黄泉",
+                    "content": "交货地点改到南岗。"
+                  },
+                  "argumentSpans": {
+                    "speaker": {
+                      "documentId": "current",
+                      "start": 0,
+                      "end": 2,
+                      "quote": "黄泉"
+                    },
+                    "content": {
+                      "documentId": "current",
+                      "start": 13,
+                      "end": 22,
+                      "quote": "交货地点改到南岗。"
+                    }
+                  },
+                  "mode": "asserted",
+                  "scope": {
+                    "time": null,
+                    "condition": null,
+                    "attribution": null
+                  },
+                  "scopeSpans": {
+                    "time": null,
+                    "condition": null,
+                    "attribution": null
+                  },
+                  "anchor": {
+                    "documentId": "current",
+                    "start": 0,
+                    "end": 23,
+                    "quote": "黄泉对御临风和布莱特说：“交货地点改到南岗。”"
+                  }
+                },
+                {
+                  "id": "c2",
+                  "type": "location",
+                  "args": {
+                    "entity": "交货地点",
+                    "landmark": "南岗",
+                    "region": null
+                  },
+                  "argumentSpans": {
+                    "entity": {
+                      "documentId": "current",
+                      "start": 13,
+                      "end": 17,
+                      "quote": "交货地点"
+                    },
+                    "landmark": {
+                      "documentId": "current",
+                      "start": 19,
+                      "end": 21,
+                      "quote": "南岗"
+                    },
+                    "region": null
+                  },
+                  "mode": "reported",
+                  "scope": {
+                    "time": null,
+                    "condition": null,
+                    "attribution": "黄泉"
+                  },
+                  "scopeSpans": {
+                    "time": null,
+                    "condition": null,
+                    "attribution": {
+                      "documentId": "current",
+                      "start": 0,
+                      "end": 2,
+                      "quote": "黄泉"
+                    }
+                  },
+                  "anchor": {
+                    "documentId": "current",
+                    "start": 13,
+                    "end": 22,
+                    "quote": "交货地点改到南岗。"
+                  }
+                },
+                {
+                  "id": "c3",
+                  "type": "state",
+                  "args": {
+                    "entity": "一人",
+                    "name": "听清状态",
+                    "value": "没听清"
+                  },
+                  "argumentSpans": {
+                    "entity": {
+                      "documentId": "current",
+                      "start": 27,
+                      "end": 29,
+                      "quote": "一人"
+                    },
+                    "name": {
+                      "documentId": "current",
+                      "start": 30,
+                      "end": 32,
+                      "quote": "听清"
+                    },
+                    "value": {
+                      "documentId": "current",
+                      "start": 29,
+                      "end": 32,
+                      "quote": "没听清"
+                    }
+                  },
+                  "mode": "asserted",
+                  "scope": {
+                    "time": null,
+                    "condition": null,
+                    "attribution": null
+                  },
+                  "scopeSpans": {
+                    "time": null,
+                    "condition": null,
+                    "attribution": null
+                  },
+                  "anchor": {
+                    "documentId": "current",
+                    "start": 23,
+                    "end": 32,
+                    "quote": "两人中有一人没听清"
+                  }
+                },
+                {
+                  "id": "c4",
+                  "type": "state",
+                  "args": {
+                    "entity": "记录",
+                    "name": "指出能力",
+                    "value": "无法指出是哪一人"
+                  },
+                  "argumentSpans": {
+                    "entity": {
+                      "documentId": "current",
+                      "start": 34,
+                      "end": 36,
+                      "quote": "记录"
+                    },
+                    "name": {
+                      "documentId": "current",
+                      "start": 38,
+                      "end": 40,
+                      "quote": "指出"
+                    },
+                    "value": {
+                      "documentId": "current",
+                      "start": 36,
+                      "end": 44,
+                      "quote": "无法指出是哪一人"
+                    }
+                  },
+                  "mode": "asserted",
+                  "scope": {
+                    "time": null,
+                    "condition": null,
+                    "attribution": null
+                  },
+                  "scopeSpans": {
+                    "time": null,
+                    "condition": null,
+                    "attribution": null
+                  },
+                  "anchor": {
+                    "documentId": "current",
+                    "start": 34,
+                    "end": 45,
+                    "quote": "记录无法指出是哪一人。"
+                  }
+                }
+              ],
+              "unresolved": [
+                {
+                  "span": {
+                    "documentId": "current",
+                    "start": 23,
+                    "end": 44,
+                    "quote": "两人中有一人没听清，但记录无法指出是哪一人"
+                  },
+                  "reason": "文中明确指出御临风和布莱特两人中有一人没听清，但无法确定具体是哪一人没听清、哪一人听清。"
+                }
+              ]
+            }
+          ]
+        },
+        "canApprove": false,
+        "semanticCompletenessVerified": false
+      },
+      "spanCount": 17,
+      "badSpans": [],
+      "unitStatuses": [
+        {
+          "status": "unresolved",
+          "unresolved": 1
+        }
+      ],
+      "receptionStatuses": [
+        {
+          "status": "uncertain",
+          "recipientIds": []
+        }
+      ]
+    },
+    {
+      "id": "09-unrelated-from08",
+      "customRequest": 302,
+      "verdict": "pass",
+      "assessment": "Followup independently reopens actual301 pending seed; request only lunch/clothes unrelated to delivery. required empty, ready, zero asks and zero grants; real pending remains. Separate branch from08, does not certify original blocked07 chain.",
+      "localProtocolPassed": true,
+      "asked": 0,
+      "knowledgeCounts": [
+        {
+          "id": "bright",
+          "count": 0
+        },
+        {
+          "id": "huang",
+          "count": 0
+        },
+        {
+          "id": "player",
+          "count": 0
+        }
+      ],
+      "actualParentRequest": 301,
+      "required": []
+    },
+    {
+      "id": "10-dependent-from08",
+      "customRequest": 303,
+      "verdict": "pass",
+      "assessment": "Followup independently reopens identical actual301 pending seed, not a synthetic reply or output from09. Exact actual pending ID required; deferred with one question, no answer, no knowledge grant. Original07 branch remains blocked; alternate08 dependency target passes.",
+      "localProtocolPassed": true,
+      "asked": 1,
+      "knowledgeCounts": [
+        {
+          "id": "bright",
+          "count": 0
+        },
+        {
+          "id": "huang",
+          "count": 0
+        },
+        {
+          "id": "player",
+          "count": 0
+        }
+      ],
+      "actualParentRequest": 301,
+      "required": [
+        "dialogue.b3ac974b07ad4379ee6468f3b9084b6398a71eb429db4687fb8ff4005990a54b.02cab05835aaf1f49976faeb1c2f92fc3082d15aa90d6a3bc1c3d749cfda6fc4"
+      ]
+    }
+  ]
+}

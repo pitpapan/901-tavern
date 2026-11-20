@@ -33,7 +33,7 @@ export function acquireStagedBundle(state,id,definition,context){
   if(!Number.isInteger(max)||max<0||!Number.isInteger(current)||current<0||current>max)throw Error('新池须确认0至上限的实际余额');
   pools[choices.pool]={kind:spec.pool.kind,generic:true,special:false,origin:id,acquisitionSources:[id],max,current};
  }
- pools[choices.pool].max+=stage.poolCapacity??0;
+ pools[choices.pool].max+=stage.specializations?.[choices.specialization]?.poolCapacity??stage.poolCapacity??0;
  (state.resourceRecovery??={})[choices.pool]??={...structuredClone(spec.pool.recovery),source:id};
  const grantId=id+'/'+record.grade+'/gift';
  (state.learningGrants??={})[grantId]={count:stage.spellCount,grade:record.grade,tree:spec.spellTree,resourceId:id,stage:record.grade,casterSource:id,source:context.source,used:[]};

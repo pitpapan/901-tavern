@@ -1,0 +1,321 @@
+{
+  "basis": "四份隔离酒馆普通入口的实际正文捕获",
+  "originalQuestion": "若想向老馆主打听雪老的事，你知道他们有什么来往吗？",
+  "neutralQuestion": "你知道老馆主和雪老是否相识、有没有来往吗？",
+  "coordinateConvention": "所有坐标为零基左闭右开。Body 使用完整 UTF-8 JSON 请求体字节偏移，Content 使用解码后的 Unicode 码点偏移。替换可逐字节逆转。",
+  "captures": {
+    "before": {
+      "label": "获知前问布莱特",
+      "addressee": "布莱特",
+      "observer": "黄泉",
+      "source": {
+        "file": "../evidence/captures/before.narration.request.json",
+        "bytes": 111635,
+        "sha256": "37fa363001346e7ee76f4bc27f8a82a99e76070dcc17502c8b0c52e1db2748a3"
+      },
+      "captureRecord": {
+        "file": "../evidence/captures/before.narration.capture.json",
+        "bytes": 233,
+        "sha256": "4d2590b33ea78e27cb86c66ba906f8af20c564a84ab80d49159e851b3d572db4"
+      },
+      "original": {
+        "file": "before.original.request.json",
+        "bytes": 111635,
+        "sha256": "37fa363001346e7ee76f4bc27f8a82a99e76070dcc17502c8b0c52e1db2748a3"
+      },
+      "neutral": {
+        "file": "before.neutral.request.json",
+        "bytes": 111611,
+        "sha256": "c09c8890374788a2b636a5a35cc4742ca94ae1f149ff169ba9adbac48f8952be"
+      },
+      "originalEdits": [],
+      "neutralEdits": [
+        {
+          "pointer": "/messages/11/content",
+          "role": "user",
+          "meaning": "玩家实际问句",
+          "originalBodyByteSpan": [
+            102618,
+            102693
+          ],
+          "neutralBodyByteSpan": [
+            102618,
+            102681
+          ],
+          "originalContentCodePointSpan": [
+            9,
+            34
+          ],
+          "neutralContentCodePointSpan": [
+            9,
+            30
+          ],
+          "old": "若想向老馆主打听雪老的事，你知道他们有什么来往吗？",
+          "new": "你知道老馆主和雪老是否相识、有没有来往吗？"
+        },
+        {
+          "pointer": "/messages/13/content",
+          "role": "user",
+          "meaning": "首行玩家行动复述",
+          "originalBodyByteSpan": [
+            104319,
+            104394
+          ],
+          "neutralBodyByteSpan": [
+            104307,
+            104370
+          ],
+          "originalContentCodePointSpan": [
+            14,
+            39
+          ],
+          "neutralContentCodePointSpan": [
+            14,
+            35
+          ],
+          "old": "若想向老馆主打听雪老的事，你知道他们有什么来往吗？",
+          "new": "你知道老馆主和雪老是否相识、有没有来往吗？"
+        }
+      ]
+    },
+    "received-bright": {
+      "label": "接收后问布莱特",
+      "addressee": "布莱特",
+      "observer": "黄泉",
+      "source": {
+        "file": "../evidence/captures/received-bright.narration.request.json",
+        "bytes": 112905,
+        "sha256": "351af2e5759f5591867feafd25a878581237d7a0d73aeba6a1ebe49f434a02ec"
+      },
+      "captureRecord": {
+        "file": "../evidence/captures/received-bright.narration.capture.json",
+        "bytes": 242,
+        "sha256": "7e7c8e38cd8bb3dae838e9b3e09871b6430affd77f86657ea96fc049df9de832"
+      },
+      "original": {
+        "file": "received-bright.original.request.json",
+        "bytes": 112905,
+        "sha256": "351af2e5759f5591867feafd25a878581237d7a0d73aeba6a1ebe49f434a02ec"
+      },
+      "neutral": {
+        "file": "received-bright.neutral.request.json",
+        "bytes": 112881,
+        "sha256": "63cea602824890c9d835cda4d5186ce3302fb6c49f77611cbb9a304b8948a857"
+      },
+      "originalEdits": [],
+      "neutralEdits": [
+        {
+          "pointer": "/messages/11/content",
+          "role": "user",
+          "meaning": "玩家实际问句",
+          "originalBodyByteSpan": [
+            102674,
+            102749
+          ],
+          "neutralBodyByteSpan": [
+            102674,
+            102737
+          ],
+          "originalContentCodePointSpan": [
+            9,
+            34
+          ],
+          "neutralContentCodePointSpan": [
+            9,
+            30
+          ],
+          "old": "若想向老馆主打听雪老的事，你知道他们有什么来往吗？",
+          "new": "你知道老馆主和雪老是否相识、有没有来往吗？"
+        },
+        {
+          "pointer": "/messages/13/content",
+          "role": "user",
+          "meaning": "首行玩家行动复述",
+          "originalBodyByteSpan": [
+            104375,
+            104450
+          ],
+          "neutralBodyByteSpan": [
+            104363,
+            104426
+          ],
+          "originalContentCodePointSpan": [
+            14,
+            39
+          ],
+          "neutralContentCodePointSpan": [
+            14,
+            35
+          ],
+          "old": "若想向老馆主打听雪老的事，你知道他们有什么来往吗？",
+          "new": "你知道老馆主和雪老是否相识、有没有来往吗？"
+        }
+      ]
+    },
+    "received-huang": {
+      "label": "同一接收快照问黄泉",
+      "addressee": "黄泉",
+      "observer": "布莱特",
+      "source": {
+        "file": "../evidence/captures/received-huang.narration.request.json",
+        "bytes": 112905,
+        "sha256": "954032a4299fb8c6570eae2814f5f7e40a5d749f8bb885395bc94c15a596187e"
+      },
+      "captureRecord": {
+        "file": "../evidence/captures/received-huang.narration.capture.json",
+        "bytes": 241,
+        "sha256": "0e613ea70f7c0a02dfa2dd0c36ac4f800556384835d94530bef23ad27482548d"
+      },
+      "original": {
+        "file": "received-huang.original.request.json",
+        "bytes": 112905,
+        "sha256": "954032a4299fb8c6570eae2814f5f7e40a5d749f8bb885395bc94c15a596187e"
+      },
+      "neutral": {
+        "file": "received-huang.neutral.request.json",
+        "bytes": 112881,
+        "sha256": "2d56f202057834193b852814a69d64a310044dd0cb9c7b94fd1a96fee4e6569e"
+      },
+      "originalEdits": [],
+      "neutralEdits": [
+        {
+          "pointer": "/messages/11/content",
+          "role": "user",
+          "meaning": "玩家实际问句",
+          "originalBodyByteSpan": [
+            102671,
+            102746
+          ],
+          "neutralBodyByteSpan": [
+            102671,
+            102734
+          ],
+          "originalContentCodePointSpan": [
+            8,
+            33
+          ],
+          "neutralContentCodePointSpan": [
+            8,
+            29
+          ],
+          "old": "若想向老馆主打听雪老的事，你知道他们有什么来往吗？",
+          "new": "你知道老馆主和雪老是否相识、有没有来往吗？"
+        },
+        {
+          "pointer": "/messages/13/content",
+          "role": "user",
+          "meaning": "首行玩家行动复述",
+          "originalBodyByteSpan": [
+            104372,
+            104447
+          ],
+          "neutralBodyByteSpan": [
+            104360,
+            104423
+          ],
+          "originalContentCodePointSpan": [
+            13,
+            38
+          ],
+          "neutralContentCodePointSpan": [
+            13,
+            34
+          ],
+          "old": "若想向老馆主打听雪老的事，你知道他们有什么来往吗？",
+          "new": "你知道老馆主和雪老是否相识、有没有来往吗？"
+        }
+      ]
+    },
+    "reopened-bright": {
+      "label": "保存重开后问布莱特",
+      "addressee": "布莱特",
+      "observer": "黄泉",
+      "source": {
+        "file": "../evidence/captures/reopened-bright.narration.request.json",
+        "bytes": 112905,
+        "sha256": "351af2e5759f5591867feafd25a878581237d7a0d73aeba6a1ebe49f434a02ec"
+      },
+      "captureRecord": {
+        "file": "../evidence/captures/reopened-bright.narration.capture.json",
+        "bytes": 242,
+        "sha256": "72a15b0e0fa2aa51b77103f39a446d291699f4113cc31462eb30cd9fbabc4fd8"
+      },
+      "original": {
+        "file": "reopened-bright.original.request.json",
+        "bytes": 112905,
+        "sha256": "351af2e5759f5591867feafd25a878581237d7a0d73aeba6a1ebe49f434a02ec"
+      },
+      "neutral": {
+        "file": "reopened-bright.neutral.request.json",
+        "bytes": 112881,
+        "sha256": "63cea602824890c9d835cda4d5186ce3302fb6c49f77611cbb9a304b8948a857"
+      },
+      "originalEdits": [],
+      "neutralEdits": [
+        {
+          "pointer": "/messages/11/content",
+          "role": "user",
+          "meaning": "玩家实际问句",
+          "originalBodyByteSpan": [
+            102674,
+            102749
+          ],
+          "neutralBodyByteSpan": [
+            102674,
+            102737
+          ],
+          "originalContentCodePointSpan": [
+            9,
+            34
+          ],
+          "neutralContentCodePointSpan": [
+            9,
+            30
+          ],
+          "old": "若想向老馆主打听雪老的事，你知道他们有什么来往吗？",
+          "new": "你知道老馆主和雪老是否相识、有没有来往吗？"
+        },
+        {
+          "pointer": "/messages/13/content",
+          "role": "user",
+          "meaning": "首行玩家行动复述",
+          "originalBodyByteSpan": [
+            104375,
+            104450
+          ],
+          "neutralBodyByteSpan": [
+            104363,
+            104426
+          ],
+          "originalContentCodePointSpan": [
+            14,
+            39
+          ],
+          "neutralContentCodePointSpan": [
+            14,
+            35
+          ],
+          "old": "若想向老馆主打听雪老的事，你知道他们有什么来往吗？",
+          "new": "你知道老馆主和雪老是否相识、有没有来往吗？"
+        }
+      ]
+    }
+  },
+  "distinctRequestBodies": 6,
+  "identicalInputGroups": {
+    "original": {
+      "conditions": [
+        "received-bright",
+        "reopened-bright"
+      ],
+      "sha256": "351af2e5759f5591867feafd25a878581237d7a0d73aeba6a1ebe49f434a02ec"
+    },
+    "neutral": {
+      "conditions": [
+        "received-bright",
+        "reopened-bright"
+      ],
+      "sha256": "63cea602824890c9d835cda4d5186ce3302fb6c49f77611cbb9a304b8948a857"
+    }
+  }
+}

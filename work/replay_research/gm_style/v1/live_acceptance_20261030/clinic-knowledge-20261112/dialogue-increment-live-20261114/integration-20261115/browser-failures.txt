@@ -1,0 +1,9 @@
+本轮均为本地合成接口，不是模型调用。
+1. 沙箱服务本地socket访问被拒绝；普通权限运行同一出站阻断服务后连接成功。
+2. A初次正文正常保存，语义消息被宿主merge_tools将业务JSON与坐标消息合并，接口夹具解析失败；保留A-first-failure、A-merge-failure及merge-failure-ingress。产品仅对此语义请求清空postprocessing，新增行为回归。
+3. 映射修复后已保留三个独立messages，但本地夹具错误预期状态占位符后还有换行，返回418；保留A-fixture-suffix-failure。只修合成夹具精确匹配，实际原文及引用均未修改。
+最终相关187项离线通过，A/B主链及最终入口完成，详细见browser-state-audit.json及DELIVERY.txt。
+4. 核验脚本先将下游Schema与原$defs形式直接比较而失败；原宿主flattenSchema展开引用。现比对完整原函数展开结果，并保留p.check严格校验，无产品Schema修改。
+5. 收尾原prepared恢复回归发现unprocessed标记残留；recovery-status-before.log保留失败，原控制器仅清除对应已processed且来源匹配标记。final-regression.log187/187通过。
+6. 候选核验脚本最初按node:文本判断导入，误中rule-actions普通对象的node键；改按原打包器IMPORT捕获真实导入，闭包无Node专属导入，不改产品。
+7. 续行时尝试启动18123返回端口已占用，实际浏览器复用了前轮已启动的隔离服务；未改端口或网络隔离。此启动尝试不计浏览器成功或模型调用。

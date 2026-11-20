@@ -1,0 +1,158 @@
+{
+  "status": "prepared-only",
+  "sendingAuthorization": "none; requires separate authorization and preflight",
+  "plannedAttempts": 20,
+  "plannedPerArm": {
+    "control": 10,
+    "ablation": 10
+  },
+  "blockSize": 2,
+  "seedHex": "273c263760251b7da394016a38ce1ad4",
+  "algorithm": "Rank blocks 1..10 by raw SHA-256 of ASCII seedHex + '|block=' + two-digit block number, then block number for ties. The five smallest ranks are control-first; all others ablation-first. Process blocks numerically.",
+  "previousClosedLedger": {
+    "cumulative": 572,
+    "available": 0
+  },
+  "slots": [
+    {
+      "slot": 1,
+      "block": 1,
+      "arm": "ablation",
+      "request": "ablation.request.json",
+      "sha256": "d138156cce1705496af7ee2409d63d23b158382cb26ced962d652cf0754644cd"
+    },
+    {
+      "slot": 2,
+      "block": 1,
+      "arm": "control",
+      "request": "control.request.json",
+      "sha256": "e25f6a9b25675f408ede511c0c5c958ef49c8dae13abab0e59b78ad5a3710c29"
+    },
+    {
+      "slot": 3,
+      "block": 2,
+      "arm": "control",
+      "request": "control.request.json",
+      "sha256": "e25f6a9b25675f408ede511c0c5c958ef49c8dae13abab0e59b78ad5a3710c29"
+    },
+    {
+      "slot": 4,
+      "block": 2,
+      "arm": "ablation",
+      "request": "ablation.request.json",
+      "sha256": "d138156cce1705496af7ee2409d63d23b158382cb26ced962d652cf0754644cd"
+    },
+    {
+      "slot": 5,
+      "block": 3,
+      "arm": "ablation",
+      "request": "ablation.request.json",
+      "sha256": "d138156cce1705496af7ee2409d63d23b158382cb26ced962d652cf0754644cd"
+    },
+    {
+      "slot": 6,
+      "block": 3,
+      "arm": "control",
+      "request": "control.request.json",
+      "sha256": "e25f6a9b25675f408ede511c0c5c958ef49c8dae13abab0e59b78ad5a3710c29"
+    },
+    {
+      "slot": 7,
+      "block": 4,
+      "arm": "control",
+      "request": "control.request.json",
+      "sha256": "e25f6a9b25675f408ede511c0c5c958ef49c8dae13abab0e59b78ad5a3710c29"
+    },
+    {
+      "slot": 8,
+      "block": 4,
+      "arm": "ablation",
+      "request": "ablation.request.json",
+      "sha256": "d138156cce1705496af7ee2409d63d23b158382cb26ced962d652cf0754644cd"
+    },
+    {
+      "slot": 9,
+      "block": 5,
+      "arm": "control",
+      "request": "control.request.json",
+      "sha256": "e25f6a9b25675f408ede511c0c5c958ef49c8dae13abab0e59b78ad5a3710c29"
+    },
+    {
+      "slot": 10,
+      "block": 5,
+      "arm": "ablation",
+      "request": "ablation.request.json",
+      "sha256": "d138156cce1705496af7ee2409d63d23b158382cb26ced962d652cf0754644cd"
+    },
+    {
+      "slot": 11,
+      "block": 6,
+      "arm": "ablation",
+      "request": "ablation.request.json",
+      "sha256": "d138156cce1705496af7ee2409d63d23b158382cb26ced962d652cf0754644cd"
+    },
+    {
+      "slot": 12,
+      "block": 6,
+      "arm": "control",
+      "request": "control.request.json",
+      "sha256": "e25f6a9b25675f408ede511c0c5c958ef49c8dae13abab0e59b78ad5a3710c29"
+    },
+    {
+      "slot": 13,
+      "block": 7,
+      "arm": "ablation",
+      "request": "ablation.request.json",
+      "sha256": "d138156cce1705496af7ee2409d63d23b158382cb26ced962d652cf0754644cd"
+    },
+    {
+      "slot": 14,
+      "block": 7,
+      "arm": "control",
+      "request": "control.request.json",
+      "sha256": "e25f6a9b25675f408ede511c0c5c958ef49c8dae13abab0e59b78ad5a3710c29"
+    },
+    {
+      "slot": 15,
+      "block": 8,
+      "arm": "ablation",
+      "request": "ablation.request.json",
+      "sha256": "d138156cce1705496af7ee2409d63d23b158382cb26ced962d652cf0754644cd"
+    },
+    {
+      "slot": 16,
+      "block": 8,
+      "arm": "control",
+      "request": "control.request.json",
+      "sha256": "e25f6a9b25675f408ede511c0c5c958ef49c8dae13abab0e59b78ad5a3710c29"
+    },
+    {
+      "slot": 17,
+      "block": 9,
+      "arm": "control",
+      "request": "control.request.json",
+      "sha256": "e25f6a9b25675f408ede511c0c5c958ef49c8dae13abab0e59b78ad5a3710c29"
+    },
+    {
+      "slot": 18,
+      "block": 9,
+      "arm": "ablation",
+      "request": "ablation.request.json",
+      "sha256": "d138156cce1705496af7ee2409d63d23b158382cb26ced962d652cf0754644cd"
+    },
+    {
+      "slot": 19,
+      "block": 10,
+      "arm": "control",
+      "request": "control.request.json",
+      "sha256": "e25f6a9b25675f408ede511c0c5c958ef49c8dae13abab0e59b78ad5a3710c29"
+    },
+    {
+      "slot": 20,
+      "block": 10,
+      "arm": "ablation",
+      "request": "ablation.request.json",
+      "sha256": "d138156cce1705496af7ee2409d63d23b158382cb26ced962d652cf0754644cd"
+    }
+  ]
+}

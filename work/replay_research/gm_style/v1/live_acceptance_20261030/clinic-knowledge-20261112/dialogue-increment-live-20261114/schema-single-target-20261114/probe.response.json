@@ -1,0 +1,31 @@
+{
+  "kind": "review",
+  "startedAt": "2026-11-14T19:18:45.914Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-14T19:18:50.537Z",
+  "headersElapsedMs": 4624,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5a85d26cedd031c-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sat, 14 Nov 2026 19:18:50 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=inLQaIs%2F1D6QB3BwhfapNoGa6jKdoSGZ5KOaj2rAw3fA2F1WeuSzJAyqI0HBs85t1Qa8myC5VvOY3mqZHSZsqsOkbZHyIPbCwJQ2NRiwN0COcnamzfHo6iKXKEVedg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611141918456611140078268d9d6LU6Z9mnB",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "fb8ef382-1a29-4661-976c-77f58bbbaa57"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"41fdbbd2-a077-4ea4-a7d5-167909bf8cd0\",\"object\":\"chat.completion\",\"created\":1794683930,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"claim\\\":{\\\"id\\\":\\\"probe\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"甲\\\",\\\"content\\\":\\\"甲\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":1,\\\"quote\\\":\\\"甲\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":1,\\\"quote\\\":\\\"甲\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":1,\\\"quote\\\":\\\"甲\\\"}}}\",\"reasoning_content\":\"Initial hypothesis: The task requires direct JSON object echoing, adhering strictly to a predefined schema and employing a specific output tool. Examining the input suggests a \\\"claim\\\" object with an \\\"id\\\" and \\\"type\\\" field. Confirming the input's compliance with the instruction and schema is the next step.\\n\\n\\n\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":373,\"completion_tokens\":138,\"total_tokens\":804,\"completion_tokens_details\":{\"reasoning_tokens\":293}}}",
+  "responseBytes": 1204,
+  "responseBodySha256BeforePrivacyRedaction": "18cb916a504825e9ac01f572422e2ab5a925632e3262c75ec9b6c48a5751f0b6",
+  "outcome": "completed",
+  "finishedAt": "2026-11-14T19:18:50.543Z",
+  "elapsedMs": 4630
+}

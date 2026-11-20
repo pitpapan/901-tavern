@@ -9,6 +9,7 @@ const { runGuardedTurn, replayGateReadiness, replaySceneFromChat,
   relevantLorebookFacts, replayLorebookNames, withReplayLorebook,
   replayPendingFromChat } = await import('/901-rules-runtime/work/rules_engine/gm_runtime/adjudication-gate.mjs');
 const { createReplayCheckRuntime } = await import('/901-rules-runtime/work/rules_engine/gm_runtime/replay-check.mjs');
+const { createDialogueSemanticAdapter,createTavernDialogueCompletion } = await import('/901-rules-runtime/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs');
 const { carryTestState, readTestOperation, persistTavernRuleState } = await import('/901-rules-runtime/work/rules_engine/mvu_poc/adapter.mjs');
 let running = false;
 // TavernHelper executes scripts in a zero-size iframe. Player UI belongs to
@@ -17,6 +18,7 @@ const hostDocument = window.top.document;
 window.addEventListener('pagehide', () => {
   hostDocument.getElementById('901-replay-public-pool')?.remove();
   hostDocument.getElementById('901-replay-choice')?.remove();
+  hostDocument.getElementById('901-knowledge-status')?.remove();
 });
 function safeFailure(error, stage) {
   const status = Number(error?.status ?? error?.statusCode ?? error?.response?.status);
@@ -90,6 +92,44 @@ function chooseLocalOption(basis, choices) {
     dialog.showModal();
   });
 }
+function chooseDialogueReceipt(question){
+ return new Promise(resolve=>{
+  const dialog=hostDocument.createElement('dialog');dialog.id='901-replay-choice';dialog.setAttribute('aria-label','确认消息接收范围');
+  dialog.style.cssText='background:#202329;color:#fff;border:1px solid #888;border-radius:.5rem;padding:1rem;max-width:min(44rem,90vw);max-height:85vh;overflow:auto;color-scheme:dark';
+  const style=hostDocument.createElement('style');style.textContent='#901-replay-choice label{display:flex;align-items:center;gap:.5rem;margin:.5rem 0;color:inherit}#901-replay-choice input[type=checkbox]{width:auto;margin:0}#901-replay-choice select,#901-replay-choice textarea,#901-replay-choice button{background:#15181d;color:#fff;border:1px solid #888;border-radius:.25rem;padding:.4rem}#901-replay-choice textarea{flex:1;min-width:0}#901-replay-choice button{margin:.5rem .5rem 0 0}';dialog.append(style);
+  const title=hostDocument.createElement('p');title.textContent=`后续行动需要这条消息：${question.content??'内容未确定'}。${question.reason}。这次谁实际收到？`;dialog.append(title);
+  const inputs=[],speaker=hostDocument.createElement('select'),quote=hostDocument.createElement('textarea');
+  for(const [id,name] of Object.entries(question.actors)){const option=hostDocument.createElement('option');option.value=id;option.textContent=name;speaker.append(option);}
+  speaker.value=question.speakerId??'';quote.value=question.content??'';
+  const source=hostDocument.createElement('details'),summary=hostDocument.createElement('summary'),original=hostDocument.createElement('p');
+  summary.textContent='查看原记录';original.textContent=question.sourceAnchor.text;source.append(summary,original);dialog.append(source);
+  const speakerLabel=hostDocument.createElement('label');speakerLabel.append(hostDocument.createTextNode('消息说话者'),speaker);
+  const contentLabel=hostDocument.createElement('label');contentLabel.append(hostDocument.createTextNode('实际收到的原文片段'),quote);dialog.append(speakerLabel,contentLabel);
+  for(const [id,name] of Object.entries(question.actors)){
+   const label=hostDocument.createElement('label'),input=hostDocument.createElement('input');input.type='checkbox';input.checked=question.recipientIds.includes(id);
+   label.append(input,hostDocument.createTextNode(name));dialog.append(label);inputs.push({id,input});
+  }
+  let answer=null;
+  for(const [label,received] of [['确认选中人物收到',true],['这次没有收到',false],['暂不确定',null]]){
+   const button=hostDocument.createElement('button');button.type='button';button.textContent=label;
+   button.addEventListener('click',()=>{
+    const recipientIds=inputs.filter(x=>x.input.checked).map(x=>x.id),start=question.sourceAnchor.text.indexOf(quote.value);
+    if(received&&(!recipientIds.length||!speaker.value||!quote.value||start<0))return;
+    answer=received===null?null:{received,recipientIds:received?recipientIds:[],...(received?{speakerId:speaker.value,contentSpan:{start,end:start+quote.value.length,quote:quote.value}}:{})};dialog.close();
+   });dialog.append(button);
+  }
+  dialog.addEventListener('close',()=>{dialog.remove();resolve(answer);},{once:true});hostDocument.body.append(dialog);dialog.showModal();
+ });
+}
+function showKnowledgeStatus(status,knowledge,resolveAnswer){
+ hostDocument.getElementById('901-knowledge-status')?.remove();
+ if(!['deferred','unavailable','unprocessed'].includes(status.status)||!hostDocument.createElement)return;
+ const panel=hostDocument.createElement('aside');panel.id='901-knowledge-status';
+ panel.textContent=status.status==='unprocessed'?'本轮正文已保存，知情整理尚未完成。':'这项行动依赖尚未确认的消息；可先进行不依赖它的对话。';
+ for(const q of status.questions??[]){const button=hostDocument.createElement('button');button.textContent='处理这条消息';button.type='button';
+  button.addEventListener('click',async()=>{if(running)return;const answer=await chooseDialogueReceipt({...q,actors:Object.fromEntries(knowledge.context().actorKnowledge.map(a=>[a.actorId,a.name]))});if(answer){await resolveAnswer({id:q.id,...answer});button.remove();}});panel.append(button);}
+ hostDocument.body.append(panel);
+}
 const chatId = () => SillyTavern.chatId || SillyTavern.getCurrentChatId?.();
 const model = { should_stream: false, should_silence: true,
   ordered_prompts: ['world_info_before', 'char_description', 'scenario',
@@ -105,8 +145,28 @@ const playerFloor = () => {
 };
 const latestPending = () => replayPendingFromChat(SillyTavern.chat, playerFloor());
 export function registerReplayGate({ getMvu = async () => globalThis.Mvu, npcContext,
-  scriptedOpportunities = {}, geneticOpportunities={},initialGeneticLock,ruleEvents={},ruleFeats={},combat = null, profile = {} } = {}) {
+  scriptedOpportunities = {}, geneticOpportunities={},initialGeneticLock,ruleEvents={},ruleFeats={},combat = null, profile = {},knowledge=null } = {}) {
 const debug=profile.debug??REPLAY_GATE_DEBUG;
+let deferredDialogue=null;
+const resolveAndResume=async answer=>{
+ if(running||combat?.busy)throw Error('Wait for current story operation');
+ const pendingPlayer=deferredDialogue;
+ if(pendingPlayer&&JSON.stringify(playerFloor())!==JSON.stringify(pendingPlayer))throw Error('Pending dialogue request changed');
+ await knowledge.resolveDialogue(answer);
+ if(pendingPlayer){deferredDialogue=null;hostDocument.getElementById('901-knowledge-status')?.remove();await handleTurn({},false);}
+};
+const resumeKnowledge=async()=>{
+ const status=await knowledge?.resumeDialogue?.();if(!status)return;
+ let changed=false;
+ for(const batch of Object.values(knowledge.read?.().dialogueBatches??{})){
+  const source=batch.sourceAnchor,row=SillyTavern.chat[source.messageId];
+  if(batch.status!=='processed'||source.chatId!==chatId()||row?.mes!==source.text||(row.swipe_id??0)!==source.swipeId||row.extra?.['901_knowledge_status']?.status!=='unprocessed')continue;
+  delete row.extra['901_knowledge_status'];changed=true;
+ }
+ if(changed){await SillyTavern.saveChat();await (profile.onKnowledgeStatus??(value=>showKnowledgeStatus(value,knowledge,resolveAndResume)))(status);}
+};
+const generateKnown=request=>knowledge?knowledge.generate({request,generateRaw,eventOn,eventRemoveListener,
+  event:tavern_events.CHAT_COMPLETION_SETTINGS_READY}):generateRaw(request);
 if (typeof getMvu !== 'function') throw new Error('MVU provider required');
 if (typeof eventMakeFirst !== 'function' || !tavern_events?.GENERATE_AFTER_DATA)
   throw new Error('Pre-narration hook unavailable');
@@ -114,15 +174,16 @@ if (typeof eventMakeFirst !== 'function' || !tavern_events?.GENERATE_AFTER_DATA)
 // Keep its actual pages for this generation only: the report can own the sole
 // latest combat state. Never reconstruct that state from the preceding floor.
 let nativeCombatRegeneration=null;
-if(combat && tavern_events.GENERATION_STARTED && typeof getChatMessages==='function')
+if(tavern_events.GENERATION_STARTED && typeof getChatMessages==='function')
   eventMakeFirst(tavern_events.GENERATION_STARTED,async(type,_options,dryRun)=>{
     nativeCombatRegeneration=null;
-    if(type!=='regenerate'||dryRun||running||combat.busy)return;
+    if(type!=='regenerate'||dryRun||running||combat?.busy)return;
     const id=chatId(),messageId=SillyTavern.chat.length-1;
     const last=SillyTavern.chat[messageId];
     if(!id||!last||last.is_user||last.is_system)return;
     const mvu=await getMvu();
-    if(mvu.getMvuData({type:'message',message_id:messageId})?.stat_data?.['901_rules_poc']?.battle?.mode!=='combat')return;
+    const root=mvu.getMvuData({type:'message',message_id:messageId})?.stat_data?.['901_rules_poc'];
+    if(!(combat&&root?.battle?.mode==='combat')&&!(knowledge&&root?.storyKnowledge&&['APPLIED','NO_CHECK'].includes(last.extra?.['901_replay_gate']?.status)))return;
     const message=getChatMessages(String(messageId),{include_swipes:true})[0];
     nativeCombatRegeneration={chatId:id,message:structuredClone(message),extra:structuredClone(last.extra??{})};
   });
@@ -132,7 +193,7 @@ const readinessOf = (mvu, player) => replayGateReadiness({ mvu, chatId: chatId()
   stopGeneration: SillyTavern.stopGeneration,
   stopGenerationById: typeof stopGenerationById === 'function' ? stopGenerationById : null,
   createRuleRuntime: createReplayCheckRuntime });
-eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
+const handleTurn=async (_data, dryRun) => {
   if (dryRun || running || combat?.busy || !chatId() || !SillyTavern.chat?.some(m => m?.is_user && !m?.is_system)) return;
   const regeneration=nativeCombatRegeneration;
   nativeCombatRegeneration=null;
@@ -238,6 +299,7 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
         await SillyTavern.saveChat();
       }
       mark('completed_reuse');
+      await resumeKnowledge();
       return;
     }
     if (cached?.operationId === completedOperationId && cached.playerText === player.text &&
@@ -293,6 +355,18 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
       }
     }
     console.log('[901-REPLAY-GATE] state ready');
+    if(knowledge?.prepareDialogueTurn){
+      await resumeKnowledge();
+      const readiness=await knowledge.prepareDialogueTurn({text:player.text,sourceAnchor:player},{ask:profile.askKnowledge??chooseDialogueReceipt});
+      stable();
+      if(readiness.status!=='ready'){
+        mark('knowledge_dependency_pending');
+        deferredDialogue=structuredClone(player);
+        await (profile.onKnowledgeStatus??(status=>showKnowledgeStatus(status,knowledge,resolveAndResume)))(readiness);
+        return;
+      }
+      deferredDialogue=null;
+    }
     const result = await runGuardedTurn({ player, pending, ensureStable: stable,
       canCancelPending: candidate => !candidate.narrationDecision && !candidate.retryNoCheck &&
         !readTestOperation({ mvu, getAnchor, operationId: candidate.operationId }),
@@ -324,9 +398,10 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
         mark('request_lorebook_read');
         const book = typeof getCurrentCharPrimaryLorebook === 'function'
           ? getCurrentCharPrimaryLorebook() : null;
-        const relatedFacts = book && typeof getLorebookEntries === 'function'
-          ? relevantLorebookFacts((await Promise.all(replayLorebookNames({book,books:profile.lorebooks})
-            .map(name=>getLorebookEntries(name)))).flat(), { action: context.original.text, scene }) : [];
+        const entries = book && typeof getLorebookEntries === 'function'
+          ? (await Promise.all(replayLorebookNames({book,books:profile.lorebooks})
+            .map(async name=>(await getLorebookEntries(name)).map(e=>({...e,world:name}))))).flat() : [];
+        const relatedFacts=relevantLorebookFacts(knowledge?knowledge.projectEntries(entries):entries,{action:context.original.text,scene});
         mark('request_build');
         const request = replayClassificationRequest({ context,
           scene, relatedFacts,
@@ -367,8 +442,7 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
           explicitRequestBytes: new TextEncoder().encode(JSON.stringify(request)).length });
         const started = performance.now();
         let inspected = false;
-        const listener = typeof eventOn === 'function' && tavern_events?.CHAT_COMPLETION_SETTINGS_READY
-          ? eventOn(tavern_events.CHAT_COMPLETION_SETTINGS_READY, data => {
+        const inspectMessages = data => {
             if (inspected || !Array.isArray(data.messages) ||
                 !data.messages.some(message => String(message.content ?? '').includes('你是901行动分类器'))) return;
             inspected = true;
@@ -379,7 +453,9 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
               JSON.stringify({ count: data.messages.length, bytes,
                 roles: data.messages.map(message => message.role),
                 elapsedToAssemblyMs: Math.round(performance.now() - started) }));
-          }) : null;
+          };
+        const listener = typeof eventOn === 'function' && tavern_events?.CHAT_COMPLETION_SETTINGS_READY
+          ? eventOn(tavern_events.CHAT_COMPLETION_SETTINGS_READY, inspectMessages) : null;
         try {
           let decision;
           // Retry only an acknowledged deadline cancellation before any rule
@@ -391,7 +467,7 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
             mark('request_dispatched', { generationId,
               classificationRequests: diagnostic.classificationRequests + 1 });
             try {
-              decision = await classifyWithDeadline({ generateRaw,
+              decision = await classifyWithDeadline({ generateRaw:generateKnown,
                 stopGenerationById: id => { deadlineStops.add(id); return stopGenerationById(id); },
                 request, generationId, timeoutMs: profile.classificationTimeoutMs ?? 30000 });
               stillCurrent();
@@ -418,6 +494,8 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
         } finally {
           cancelButton?.remove();
           listener?.stop();
+          if (typeof eventRemoveListener === 'function' && tavern_events?.CHAT_COMPLETION_SETTINGS_READY)
+            eventRemoveListener(tavern_events.CHAT_COMPLETION_SETTINGS_READY, inspectMessages);
           stopListener?.stop();
           if (typeof eventRemoveListener === 'function' && tavern_events?.GENERATION_STOPPED)
             eventRemoveListener(tavern_events.GENERATION_STOPPED, onStop);
@@ -489,7 +567,8 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
           // original callback. Explicit removal prevents a filter escaping its request.
           eventOn:(event,listener)=>{eventOn(event,listener);return {stop:()=>eventRemoveListener(event,listener)};},
           event: tavern_events.WORLDINFO_ENTRIES_LOADED,
-          generate: () => generateRaw({ ...model, ...modelOptions, user_input:
+          eventRemoveListener,projectEntries:knowledge?entries=>knowledge.projectEntries(entries):undefined,
+          generate: () => generateKnown({ ...model, ...modelOptions, user_input:
         `玩家行动：${context.original.text}\n` +
         (context.latest.messageId !== context.original.messageId ? `本次补充：${context.latest.text}\n` : '') +
         `裁定路径：${decision.status}\n` +
@@ -538,6 +617,17 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
         if(meta.status==='APPLIED'||meta.status==='NO_CHECK')
           await persistTavernRuleState({mvu,tavern:SillyTavern,readSavedChat:profile.readSavedChat});
         else await SillyTavern.saveChat();
+        if(['APPLIED','NO_CHECK'].includes(meta.status)&&knowledge?.observeDialogue){
+          const messageId=SillyTavern.chat.length-1,row=SillyTavern.chat[messageId];
+          try{
+            const status=await knowledge.observeDialogue({chatId:expectedChatId,messageId,swipeId:row.swipe_id??0,text:row.mes});
+            await (profile.onKnowledgeStatus??(value=>showKnowledgeStatus(value,knowledge,resolveAndResume)))(status);
+          }catch(error){
+            // Prose is already saved. Extraction failure must not regenerate it or settle actions again.
+            row.extra??={};row.extra['901_knowledge_status']={status:'unprocessed',reason:'dialogue-extraction-failed'};
+            await SillyTavern.saveChat();await (profile.onKnowledgeStatus??(value=>showKnowledgeStatus(value,knowledge,resolveAndResume)))(row.extra['901_knowledge_status']);
+          }
+        }
       } });
     mark('complete');
     console.log('[901-REPLAY-GATE]', result.status, result.operationId);
@@ -590,7 +680,8 @@ eventMakeFirst(tavern_events.GENERATE_AFTER_DATA, async (_data, dryRun) => {
     }
     await SillyTavern.saveChat();
   } finally { running = false; }
-});
+};
+eventMakeFirst(tavern_events.GENERATE_AFTER_DATA,handleTurn);
 console.log('[901-REPLAY-GATE] pre-narration hook registered; readiness pending', chatId());
 void (async () => {
   try {
@@ -598,4 +689,18 @@ void (async () => {
     console.log('[901-REPLAY-GATE]', readiness.ready ? 'READY' : 'NOT_READY', readiness.missing);
   } catch (error) { console.warn('[901-REPLAY-GATE] NOT_READY', error?.message); }
 })();
+return {configureKnowledgeDialogue:adapter=>{if(running||combat?.busy)throw Error('Wait for current story operation');return knowledge.configureDialogue(adapter);},
+ configureKnowledgeDialogueHost:({enabled=false,complete,useExistingHost=false,outputContract}={})=>{
+  if(running||combat?.busy)throw Error('Wait for current story operation');
+  if(!enabled)return knowledge.configureDialogue(null);
+  if(useExistingHost&&complete)throw Error('Choose one dialogue completion source');
+  knowledge.configureDialogue(createDialogueSemanticAdapter({outputContract,complete:useExistingHost?createTavernDialogueCompletion({generateRaw,eventOn,eventRemoveListener,event:tavern_events.CHAT_COMPLETION_SETTINGS_READY}):complete}));return {status:'enabled'};
+ },
+ dialogueQuestions:refs=>knowledge.dialogueQuestions(refs),
+ resolveKnowledgeDialogue:resolveAndResume,
+ receiveKnowledge:receipt=>{
+  if(!knowledge)throw Error('Story knowledge is not configured');
+  if(running||combat?.busy)throw Error('Wait for the current story operation before confirming knowledge');
+  return knowledge.receive(receipt);
+}};
 }

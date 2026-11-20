@@ -1,0 +1,70 @@
+{
+  "status": "complete-finite-original-and-nearby-reception-tests",
+  "regression": {
+    "passed": 271,
+    "failed": 0,
+    "log": "final-regression-current.log",
+    "sha256": "df4d50ccd0ffeffed2ee0c3091a75aa06d30d13302d8d3ccc0169df86fcaeb7b"
+  },
+  "budget": {
+    "newCalls": 23,
+    "newPassesOnSpecifiedMetrics": 14,
+    "newFailuresPreserved": 9,
+    "totalLimit": 200,
+    "totalUsed": 46,
+    "remainingUnspent": 154,
+    "historicalCumulative": 380
+  },
+  "finalSelectedCalls": [
+    380,
+    371,
+    372,
+    373,
+    374,
+    375,
+    376,
+    377,
+    378,
+    379
+  ],
+  "allTenUseCurrentSourceHashes": true,
+  "originalBusinessInputHistoryCoordinatesParametersUnchanged": true,
+  "originalSchemaConstraintsEquivalent": true,
+  "contractCompatibility": {
+    "defaultMessagesByteEquivalent": true,
+    "defaultAssertionSchemaUnchanged": true,
+    "sharedValidatorSourceIdentical": true,
+    "legacyAndBoundValidatorsSourceIdentical": true,
+    "evidenceAndRecipientDescriptionsPresentInActualSentRequest": true
+  },
+  "sourceHashes": {
+    "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+    "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "e9a1153acd18c2382c2a6571c54decd340175541a3220da1362d4a97e8871d7f",
+    "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-bound.test.mjs": "3be4d8c72fd180a90002752bc750fb5ab6e8a83257e39c97afbe6174375bd8f6"
+  },
+  "rawOriginalRequestsAndResponsesVerified": 23,
+  "previousEvidenceFilesUnchanged": 72,
+  "protectedFormalFilesUnchanged": 22,
+  "candidate": {
+    "modules": 135,
+    "assets": 3,
+    "changedFrom357": [
+      "shared/901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js",
+      "work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs"
+    ],
+    "defaultDisabled": true,
+    "archiveBytes": 747893,
+    "sha256": "c2466523f74776a7a8e07198f7c69f7b1b202151f1007e280f8aae5a62112342",
+    "entries": 141
+  },
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalOrRevision": false,
+  "newBrowserValidation": false,
+  "limits": [
+    "Finite iterated samples, not independent accuracy/stability evidence.",
+    "No automatic semantic error detection; 363/368 accepted structurally but manually failed.",
+    "No general mode/non-utterance classification or long-cast guarantee.",
+    "Original UI evidence belongs to earlier candidate; latest change verified by offline original host mapping and exact-request model tests."
+  ]
+}

@@ -1,0 +1,12 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+const at=s=>new URL(s,import.meta.url);
+const settings=JSON.parse(await readFile('D:/github/sillyTavern/data/default-user/settings.json','utf8')).oai_settings;
+if(settings.custom_url!=='https://cdn.sta1n.cn/v1')throw Error('Endpoint changed');
+const rows=JSON.parse(await readFile('D:/github/sillyTavern/data/default-user/secrets.json','utf8')).api_key_custom.filter(x=>x.active);if(rows.length!==1)throw Error('Ambiguous key');
+const response=await fetch(settings.custom_url+'/models',{headers:{Authorization:'Bearer '+rows[0].value},redirect:'error',signal:AbortSignal.timeout(30000)});
+const raw=await response.text();if(raw.includes(rows[0].value))throw Error('Unexpected secret in response');
+await writeFile(at('models.raw-response.txt'),raw,{flag:'wx'});
+const meta={method:'GET',url:settings.custom_url+'/models',status:response.status,bytes:Buffer.byteLength(raw),sha256:createHash('sha256').update(raw).digest('hex'),modelGenerationCalls:0};
+await writeFile(at('models.capture.json'),JSON.stringify(meta,null,2),{flag:'wx'});
+let data;try{data=JSON.parse(raw);}catch{}console.log(JSON.stringify({...meta,matchingModels:data?.data?.filter(m=>/gemini-3\.8-flash|抗截断/.test(m.id)).map(m=>({id:m.id,owned_by:m.owned_by}))}));

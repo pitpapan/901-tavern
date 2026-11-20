@@ -1,0 +1,94 @@
+{
+  "scope": "按新版规则的回溯复评，旧初判与终审均原样保留",
+  "rubric": "runtime-rubric-v2.md",
+  "rubricSha256": "171fc33d6457629cf96c28df41c389cebd6e4b28a5ee9c0f331bff3ee0f9ef09",
+  "counts": {
+    "F": 1,
+    "N": 7,
+    "U": 0,
+    "X": 0
+  },
+  "calibration": "CALIBRATION.md",
+  "rows": [
+    {
+      "call": 609,
+      "oldNarrative": "N",
+      "oldOrchestrator": "N",
+      "oldFinalAudit": "N",
+      "newLabel": "N",
+      "quote": "他们私下有没有交情，或者过去有些什么来往，恐怕得等到了医馆当面见着人才能知晓。",
+      "reason": "M13 布莱特无对应来源；问句不能授予事实。正面保留关系与往来的未知。一般城中任事、人脉不把馆主归入熟人。",
+      "contentSha256": "9baa9bd06e7aa3fab61405206d412e9b69670760e6a24d15bcc9e9c7e951c143"
+    },
+    {
+      "call": 610,
+      "oldNarrative": "N",
+      "oldOrchestrator": "N",
+      "oldFinalAudit": "N",
+      "newLabel": "N",
+      "quote": "传言归传言，具体是怎样的交情、如今还有没有走动，单凭道听途说做不得准。",
+      "reason": "M0 黄泉是雪老的边关旧识。M13 她无相应来源，先表示不清楚。布莱特随后的转述有明确传闻框架，未确认它为真。黄泉在旁但此条未显示听清或接话。",
+      "contentSha256": "23b0247094f179d73dc8db06af1cf987baa289b60e49548ec1a3ddb178c8c99d"
+    },
+    {
+      "call": 611,
+      "oldNarrative": "N",
+      "oldOrchestrator": "N",
+      "oldFinalAudit": "N",
+      "newLabel": "N",
+      "quote": "不过此前确实听过一句传言——九雪医馆那位老馆主和雪老算是有旧识，彼此不是同一人。",
+      "reason": "M13 布莱特同一来客 rumor 支持转述两项。后文黄泉听着并说“先到了地方再说”，没有以此确证。",
+      "contentSha256": "225e9d4d81d8761daffa38b666996531a9d8b4d7c4ec1ae0baa8713c1b7d0c6d"
+    },
+    {
+      "call": 612,
+      "oldNarrative": "U",
+      "oldOrchestrator": "N",
+      "oldFinalAudit": "N",
+      "newLabel": "N",
+      "quote": "至于他们过去究竟有哪些来往、私底下交情如何，传言里就没提得那么细了。",
+      "reason": "M13 仅有传闻。开头听过一点传言，末尾回到传言没说细，中间强调处于同一连续转述框架，本人没有另行确证或据此做实体行动。",
+      "contentSha256": "b790d114a69f38dde98ef2211ed2c86e8c21c8f2d6bc0cf381db0910d3be0874"
+    },
+    {
+      "call": 613,
+      "oldNarrative": "F",
+      "oldOrchestrator": "U",
+      "oldFinalAudit": "U",
+      "newLabel": "F",
+      "quote": "医馆馆主和雪老确实不是同一个人。",
+      "reason": "M13 布莱特仅有私下传闻。M0 分别记载馆主是医馆经营者和雪老是帝国老兵，未给布莱特独立核实渠道。该身份断言独立放在随后介绍旧交传闻之前，超出已获的强度；黄泉先表示不知，未提前使用。",
+      "contentSha256": "3b85743cb0c3cd6f23c6baf71ec71516ac5525f68f2ec95b51905fb753edb4d0"
+    },
+    {
+      "call": 614,
+      "oldNarrative": "N",
+      "oldOrchestrator": "N",
+      "oldFinalAudit": "N",
+      "newLabel": "N",
+      "quote": "我不清楚他们两位是否认识。",
+      "reason": "M13 三人无对应来源。清楚保留相识与否。黄泉说雪老在边关没提过馆主；通常的军务、补给往事没有提供受控关系依据。",
+      "contentSha256": "c5cff6279aceacdbd0053c6c9fa12280611c2372731f2405d3d6c653653d2bc5"
+    },
+    {
+      "call": 615,
+      "oldNarrative": "F",
+      "oldOrchestrator": "U",
+      "oldFinalAudit": "U",
+      "newLabel": "N",
+      "quote": "既然是有旧，到了医馆当面问问老馆主，或许比在街上瞎猜要来得明白。",
+      "reason": "M13 仅获传闻。前段已交代仅听人一句，此处后续行动是当面问询，合于把传闻作求证线索，没有宣布独立核实或以确认事实作其他实质行动。",
+      "contentSha256": "064184cb3dbe01a0d235b20c7ce4ff8c33e737d78a7d0c64f7783fdc278e9a00"
+    },
+    {
+      "call": 616,
+      "oldNarrative": "F",
+      "oldOrchestrator": "U",
+      "oldFinalAudit": "U",
+      "newLabel": "N",
+      "quote": "外头那些零碎口信里就没提得那么细了。",
+      "reason": "M13 记录一位来客单独传来的 rumor，无时地限定。用户明确这段是同一信息的笼统转述。承接开头听说传闻，并以末句限定所知范围；未见独立来源、互证、另行核实或新增具体交往。",
+      "contentSha256": "3e83f6a48aa48c104dac29f6ddafd78205b3d0cc659b4c479ba5e717c67083bb"
+    }
+  ]
+}

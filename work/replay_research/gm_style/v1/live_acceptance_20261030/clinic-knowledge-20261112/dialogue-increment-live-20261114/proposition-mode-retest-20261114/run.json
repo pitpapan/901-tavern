@@ -1,0 +1,34 @@
+{
+  "baseline": 281,
+  "limit": 1,
+  "cumulative": 282,
+  "remaining": 0,
+  "attempts": [
+    {
+      "customRequest": 282,
+      "state": "completed",
+      "requestSha256": "bcc2fea8a7734219d15995d2bf2f0fac06b77b3c8b4c8d36d33616a9b9c5df08",
+      "requestBytes": 10023,
+      "status": 200,
+      "elapsedMs": 5339,
+      "rawResponseSha256": "679592ab43ea740d8399a2fbf66125006892c3901c387cc4da7ff2905cd04699",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 2737,
+        "completion_tokens": 505,
+        "total_tokens": 3242
+      },
+      "localProtocolPassed": true,
+      "manualVerdict": "pass-for-case04-target",
+      "manualAssessment": "Full intended message remains inside outer asserted intention. No standalone embedded world assertion. Speech denied with temporal still and full anchor; receptions/pending empty; no knowledge or world-fact increment. Original types and all 8 UTF-16 spans pass. Single example, not general semantic certification."
+    }
+  ],
+  "closed": true,
+  "retries": 0,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "stopReason": "single-call-closed-case04-target-passed"
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "dialogue-reception",
+  "startedAt": "2026-11-14T22:50:12.184Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-14T22:50:20.000Z",
+  "headersElapsedMs": 7815,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5a992e39f12306b-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sat, 14 Nov 2026 22:50:19 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=OYrz%2Be4wuZBHZNDJCCMjhmph2P7aWqW79uVX4Y7I3quScW0u0WuTRETY7hPz08yYpD9f%2Bp48eXNuepx9zllcD%2FddAzT0zbvpk3AnuYORdL6xRFTLSsXbLJcZVw%2FjvA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611142250124891880248268d9d6q2kbiFQL",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "bdbf1388-6e96-4558-955f-7eeb76012c1d"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"135d2104-4301-4703-bec2-f0a680cfc3f6\",\"object\":\"chat.completion\",\"created\":1794696619,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/2\\\",\\\"contextRef\\\":\\\"d3ac5edb8330ffe1c402b56beb88e6eaec8335aba3215fbccdb9a68b6090bc8e\\\",\\\"inputRef\\\":\\\"assertion.719241f05d828faede24d38561d6aaa4f887c659310afd0b6357058bf6c7bcfc\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"status\\\":\\\"extracted\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"turn.utterance.full\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"御临风\\\",\\\"content\\\":\\\"北门暂停通行，改从西桥绕行。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":3,\\\"quote\\\":\\\"御临风\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":10,\\\"end\\\":24,\\\"quote\\\":\\\"北门暂停通行，改从西桥绕行。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":25,\\\"quote\\\":\\\"御临风对布莱特说：“北门暂停通行，改从西桥绕行。”\\\"}},\\\"receptions\\\":[]},{\\\"claim\\\":{\\\"id\\\":\\\"turn.utterance.part1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"御临风\\\",\\\"content\\\":\\\"北门暂停通行\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":3,\\\"quote\\\":\\\"御临风\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":10,\\\"end\\\":16,\\\"quote\\\":\\\"北门暂停通行\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":25,\\\"end\\\":39,\\\"quote\\\":\\\"布莱特只听清“北门暂停通行”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"turn.reception.1\\\",\\\"speakerId\\\":\\\"player\\\",\\\"recipientIds\\\":[\\\"bright\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":4,\\\"end\\\":7,\\\"quote\\\":\\\"布莱特\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":25,\\\"end\\\":39,\\\"quote\\\":\\\"布莱特只听清“北门暂停通行”\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"\\\"}]},{\\\"claim\\\":{\\\"id\\\":\\\"turn.utterance.part2\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"御临风\\\",\\\"content\\\":\\\"改从西桥绕行。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":3,\\\"quote\\\":\\\"御临风\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":17,\\\"end\\\":24,\\\"quote\\\":\\\"改从西桥绕行。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":40,\\\"end\\\":47,\\\"quote\\\":\\\"没听清后半句。\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"turn.reception.2\\\",\\\"speakerId\\\":\\\"player\\\",\\\"recipientIds\\\":[\\\"bright\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":4,\\\"end\\\":7,\\\"quote\\\":\\\"布莱特\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":40,\\\"end\\\":47,\\\"quote\\\":\\\"没听清后半句。\\\"},\\\"status\\\":\\\"not_received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"\\\"}]}],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":47,\\\"quote\\\":\\\"御临风对布莱特说：“北门暂停通行，改从西桥绕行。”布莱特只听清“北门暂停通行”，没听清后半句。\\\"},\\\"reason\\\":\\\"本段言说及其分片听清与未听清情况已完整记录于言说及接收列表中\\\"},\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":3668,\"completion_tokens\":927,\"total_tokens\":4595}}",
+  "responseBytes": 3691,
+  "responseBodySha256BeforePrivacyRedaction": "6f26d8d66859333d881cb30ca7e39068892942f9807b0036d5ba18d0e162e2ce",
+  "outcome": "completed",
+  "finishedAt": "2026-11-14T22:50:20.005Z",
+  "elapsedMs": 7821
+}

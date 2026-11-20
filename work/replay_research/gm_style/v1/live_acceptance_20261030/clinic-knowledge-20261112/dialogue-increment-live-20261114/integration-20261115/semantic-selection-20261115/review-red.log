@@ -1,0 +1,34 @@
+✔ v6 selections expand to the existing v5 contract without changing input or semantic guarantees (1053.0858ms)
+✔ explicit answer/content references reuse selections; scoped values still require paired source evidence (997.4572ms)
+✔ v6 rejects omissions, extra/derived fields, stale bindings and invalid reuse without correction (22.8622ms)
+✔ nonreception, unknown identity, explicit none and unformable-content ambiguity retain original meanings (1003.1277ms)
+✔ explicit v6 runtime registers only heard range; reopens idempotently and asks only on actual dependency (79.0291ms)
+✔ invalid raw JSON, duplicate fields, missing selections and changed source never write state (51.0725ms)
+✔ v6 is opt-in; actual raw failures cannot fall back or be upgraded to selections (33.9823ms)
+✖ the new speaker selector cannot coerce numeric actor IDs into catalogue keys (9.6095ms)
+✔ source-grounded obstacle and unsaid examples preserve nonreception rather than manufacture knowledge (2020.2611ms)
+✔ necessary non-speech assertions remain in the shared contract; references cannot convert action to speech (1030.2015ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 9
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7020.544
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-semantic.test.mjs:119:1
+✖ the new speaker selector cannot coerce numeric actor IDs into catalogue keys (9.6095ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-semantic.test.mjs:122:52)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /speaker/,
+    operator: 'throws',
+    diff: 'simple'
+  }

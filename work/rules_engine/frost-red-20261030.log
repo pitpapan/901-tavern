@@ -1,0 +1,33 @@
+▶ arcane staged acquisition
+  ✔ arcane D then C acquisition pays increments and preserves sources, wounds, current pools and T0 (13.738ms)
+  ✔ bundle rejects skipped, repeated, unsupported, repriced and changed choices before mutation (7.88ms)
+  ✔ bundle installments validate choices before charging, bind contract and grant only at completion (6.8993ms)
+  ✔ opening another sourced mental pool grants five capacity once and preserves other caster functions (5.9899ms)
+  ✔ each stage grants one legal matching spell without XP or replacing the D gift (6.5659ms)
+  ✔ arcane spell DP uses the actual damage type and acquired record; mental recovery uses actual time (8.7029ms)
+  ✔ C gift may upgrade the already granted D spell while retaining its original version and source (3.9709ms)
+  ✔ granted spell executes using the new caster and pool, with arcane DP in the actual attack roll (42.799ms)
+  ✔ registered D/C offers and gift choice survive MVU reload without duplicate charges or free ownership (33.407ms)
+  ✖ frost D/C keeps its own capacity and cold DP; C discounts actual spells to at least one (1.6634ms)
+✖ arcane staged acquisition (134.1905ms)
+ℹ tests 10
+ℹ suites 1
+ℹ pass 9
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 803.1115
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\staged-bundle.test.mjs:120:1
+✖ frost D/C keeps its own capacity and cold DP; C discounts actual spells to at least one (1.6634ms)
+  Error: 此专精的阶段取得尚未接入
+      at stagedBundleFacts (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/staged-bundle.mjs:14:66)
+      at purchaseLearning (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/growth-pricing.mjs:50:27)
+      at buy (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/staged-bundle.test.mjs:22:18)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/staged-bundle.test.mjs:122:8)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:974:7)

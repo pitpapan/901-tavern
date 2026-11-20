@@ -1,0 +1,46 @@
+[
+  {
+    "original": "selection.parents.play006",
+    "strictSchemaSent": true,
+    "finishReason": "stop",
+    "completionTokens": 2045,
+    "maxTokens": 4096,
+    "syntaxRuleSent": true,
+    "listenerAndEvidenceRulesSent": true,
+    "localRequestOmissionFound": false,
+    "receiverRule": "逐个recipientId选择其本轮依据：当前有该听者的称谓、代词或明确听取关系，直接引用它；当前省略对象但history唯一确定当前回答给谁，才引用该回答内容（可与claim.argumentSpans.content共用）。应答引用只指向被回应者，不能套给旁听者；旁听者须引用自己的称谓/代词/听取关系。不是引用说话者的代词、动作或语气。history消歧不充作current的quote；听者仍无法确定则recipientIds/recipientSpans均空，保留uncertain，不猜在场者。",
+    "evidenceRule": "本轮该内容的实际接收或障碍依据。识别听者不等于证明接收：单独的称谓、代词、目光或说话动作不足以代替传达关系；选能保留该关系及其限定的连续原文，不按引用字数判断充分性。隐含应答可引用当前回答内容承接history中的问题，直接告知无障碍不强求复述确认。旁听依据只支持其时间和内容范围；明确覆盖多段可共用，不能仅因同段落或在场就追溯全程，也不能把叙述位置直接当作听取起点。按原文区分全部、部分、未接收及范围不明，范围不明用uncertain，明确部分仍单独保留；不把未知写成未听见。当前否定、离场和声音遮挡限制对应范围，先前接收不明不自动延续为所有后续言说的障碍。"
+  },
+  {
+    "original": "selection.parents.play009",
+    "strictSchemaSent": true,
+    "finishReason": "stop",
+    "completionTokens": 2402,
+    "maxTokens": 4096,
+    "syntaxRuleSent": true,
+    "listenerAndEvidenceRulesSent": true,
+    "localRequestOmissionFound": false,
+    "receiverRule": "逐个recipientId选择其本轮依据：当前有该听者的称谓、代词或明确听取关系，直接引用它；当前省略对象但history唯一确定当前回答给谁，才引用该回答内容（可与claim.argumentSpans.content共用）。应答引用只指向被回应者，不能套给旁听者；旁听者须引用自己的称谓/代词/听取关系。不是引用说话者的代词、动作或语气。history消歧不充作current的quote；听者仍无法确定则recipientIds/recipientSpans均空，保留uncertain，不猜在场者。",
+    "evidenceRule": "本轮该内容的实际接收或障碍依据。识别听者不等于证明接收：单独的称谓、代词、目光或说话动作不足以代替传达关系；选能保留该关系及其限定的连续原文，不按引用字数判断充分性。隐含应答可引用当前回答内容承接history中的问题，直接告知无障碍不强求复述确认。旁听依据只支持其时间和内容范围；明确覆盖多段可共用，不能仅因同段落或在场就追溯全程，也不能把叙述位置直接当作听取起点。按原文区分全部、部分、未接收及范围不明，范围不明用uncertain，明确部分仍单独保留；不把未知写成未听见。当前否定、离场和声音遮挡限制对应范围，先前接收不明不自动延续为所有后续言说的障碍。"
+  },
+  {
+    "newCalls": [
+      426,
+      427
+    ],
+    "repeatedInputAndSource": true,
+    "JSONAndCitationChecksPassedBoth": true,
+    "semanticResults": [
+      {
+        "call": 426,
+        "issue": "whole Bright utterance granted to Huang using weak collective/speaking references and unsupported proximity/public-speaking premise"
+      },
+      {
+        "call": 427,
+        "improvement": "implicit answer references selected; NPC mutual grants omitted",
+        "issue": "evidence points to hearing prior question or walking, not current reception",
+        "qualification": "player reception conclusion can be plausible; failure is grounding, not proof player did not hear"
+      }
+    ]
+  }
+]

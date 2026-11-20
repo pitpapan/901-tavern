@@ -1,0 +1,123 @@
+{
+  "newCalls": 7,
+  "used": 150,
+  "remaining": 50,
+  "cumulative": 484,
+  "relatedOfflineTestsPassed": 174,
+  "syntaxFailures": 5,
+  "structurallyValid": 2,
+  "semanticFailureAfterStructuralPass": 1,
+  "scopedUnsaidPasses": 1,
+  "partialReceptionAccepted": false,
+  "ambiguityPendingAccepted": false,
+  "followupDependencyCalls": 0,
+  "productSourcesUnchanged": true,
+  "originalEvidencePreserved": 683,
+  "formalProtectedUnchanged": 22,
+  "actualInputsAndParametersUnchanged": true,
+  "allOriginalRawBytesPreserved": true,
+  "results": [
+    {
+      "id": "v6.accept.partial",
+      "call": 478,
+      "verdict": "fail",
+      "syntax": {
+        "message": "Expecting ',' delimiter",
+        "position": 1359,
+        "excerpt": "reason\":\"黄泉回答的内容及布莱特分别对前半句接收和后半句受阻的情况均已明确记录。\"来自当前文本。\"}}]}"
+      },
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "assessment": "478 v6 raw JSON extra text at1359, parser rejects0 writes. Visible reply evidence selects narration outside answer; condition mislabels already closed as a condition. Actual v6 contract present, no source/parameter drift or local repair; do not repeat this request.",
+      "explicitReuseRefsInRaw": 0
+    },
+    {
+      "id": "v6.accept.uncertain",
+      "call": 479,
+      "verdict": "fail",
+      "syntax": {
+        "message": "Expecting ',' delimiter",
+        "position": 1177,
+        "excerpt": "清后半句，眼下无人能确定。\"},\"reason\":\"后半句是否听清处于未确定状态。\"}}]"
+      },
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "assessment": "479 raw JSON closing structure invalid at1177; full HTTP stop response preserved,0 writes/no real pending. Visible first-half reply evidence quotes narration outside parent answer, second-half unknown scope retained; no local fix or raw retry.",
+      "explicitReuseRefsInRaw": 0
+    },
+    {
+      "id": "v6.accept.npc_reply",
+      "call": 480,
+      "verdict": "fail",
+      "syntax": null,
+      "schemaPass": true,
+      "structuralPass": true,
+      "isolatedWrites": 3,
+      "assessment": "480 JSON/schema/strict bindings and scoped reception pass: only bright receives,3 isolated writes. Overall semantic fail: absent condition/attribution emitted as string null with unrelated whole-answer spans, despite explicit null contract. Preserve original; no string coercion/keyword rejection or formal write.",
+      "explicitReuseRefsInRaw": 0
+    },
+    {
+      "id": "v6.accept.long",
+      "call": 481,
+      "verdict": "fail",
+      "syntax": {
+        "message": "Extra data",
+        "position": 4624,
+        "excerpt": "\":\"本轮布莱特、黄泉关于想吃食物以及前方食肆的对话均已明确传达并完成接收记录。\"}}]}}"
+      },
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "assessment": "481 raw JSON has extra root closing token at4624,0 writes. Visible explicit listeners omit required historyMessageId; third content includes narration; some reception bases only show co-presence/movement. No local contract omission proved, no repair or resend.",
+      "explicitReuseRefsInRaw": 0
+    },
+    {
+      "id": "v6.accept.identity_unknown",
+      "call": 482,
+      "verdict": "fail",
+      "syntax": {
+        "message": "Expecting ',' delimiter",
+        "position": 1110,
+        "excerpt": "人听见，但无法确定是谁。\"},\"reason\":\"虽然有人听见，但具体接收者身份不明。\" Justin\"}}]}"
+      },
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "assessment": "482 raw JSON extra token at1110,0 writes/no real pending. Visible actorId null and unknown evidence preserve identity ambiguity, but condition mislabels route content; no repair or duplicate retry.",
+      "explicitReuseRefsInRaw": 0
+    },
+    {
+      "id": "v6.accept.obstacle",
+      "call": 483,
+      "verdict": "fail",
+      "syntax": {
+        "message": "Expecting ',' delimiter",
+        "position": 862,
+        "excerpt": "这里的声音。\"},\"reason\":\"黄泉回答的内容因布莱特走远未被接收，已明确记录障碍\"凝聚}}]}"
+      },
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "assessment": "483 v6 nonreception raw JSON extra text at862,0 writes. Visible current-answer identity/obstacle and null scopes align, but entire invalid reply rejected. No fix or resend.",
+      "explicitReuseRefsInRaw": 0
+    },
+    {
+      "id": "v6.accept.unsaid",
+      "call": 484,
+      "verdict": "pass",
+      "syntax": null,
+      "schemaPass": true,
+      "structuralPass": true,
+      "isolatedWrites": 2,
+      "assessment": "484 v6 unsaid control passes JSON/schema/citation and scoped knowledge boundary: no utterances/receptions/knowledge/pending/questions;2 isolated batch bookkeeping writes. No full semantic completeness or stable reliability claim.",
+      "explicitReuseRefsInRaw": 0
+    }
+  ],
+  "rawRepair": false,
+  "validationRelaxed": false,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalOrRevisionRestored": false
+}

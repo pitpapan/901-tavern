@@ -1,0 +1,61 @@
+{
+  "results": [
+    {
+      "id": "uncertaintycheck.reproduce.partial",
+      "call": 475,
+      "verdict": "fail",
+      "syntax": null,
+      "checkError": "Reply evidence must reference current answer",
+      "isolatedWrites": 0,
+      "assessment": "475 JSON/schema valid and content ranges split correctly, but both reply listener identities and received evidence cite narration 答道 outside parent content. Existing strict contract rejects0 writes; no local omission."
+    },
+    {
+      "id": "uncertaintycheck.reproduce.obstacle",
+      "call": 476,
+      "verdict": "pass",
+      "syntax": null,
+      "checkError": null,
+      "isolatedWrites": 2,
+      "assessment": "476 unchanged473 original passes scoped nonreception: bright implicit reply/history0/current answer identity, obstacle exact, not_received, no knowledge or pending, no questions.2 isolated bookkeeping writes; no stable success or code improvement claim."
+    },
+    {
+      "id": "uncertaintycheck.probe.partial",
+      "call": 477,
+      "verdict": "fail",
+      "syntax": {
+        "position": 1423,
+        "message": "Expecting ',' delimiter",
+        "excerpt": "entId\":\"f1\",\"quote\":\"他有没有听清后半句，眼下无人能确定。\"成\"}}}]}],\"coverage\":{\"status\":\"uncertain"
+      },
+      "checkError": "Expected ',' or '}' after property value in JSON at position 1423 (line 1 column 1424)",
+      "isolatedWrites": 0,
+      "assessment": "477 raw JSON extra text at1423; visible first-half received and second-half uncertain ranges/identities reasonable, but parsing rejects before pending creation,0 writes. No claim of dependency behavior verified."
+    }
+  ],
+  "newCalls": 3,
+  "used": 143,
+  "remaining": 57,
+  "cumulative": 477,
+  "newTests": 0,
+  "freshOfflineTests": 164,
+  "productSourcesUnchanged": true,
+  "generationContractUnchanged": true,
+  "originalRequestsByteIdentical": 2,
+  "originalEvidenceFilesPreserved": 671,
+  "formalProtectedFilesUnchanged": 22,
+  "historicalLedgerPrefixUnchanged": true,
+  "allRawBytesUnmodified": true,
+  "syntaxFailures": 1,
+  "bindingFailures": 1,
+  "scopedKnowledgePasses": 1,
+  "overallSemanticCompletenessProven": false,
+  "failedIsolatedStatesUnchanged": true,
+  "controlBookkeepingWrites": 2,
+  "allKnowledgeUnchanged": true,
+  "scope": "Two latest partial/nonreception originals and one nearby partial-uncertainty contrast; other old failures retained, not all replayed this turn",
+  "rawRepair": false,
+  "validationRelaxed": false,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalOrRevisionRestored": false
+}

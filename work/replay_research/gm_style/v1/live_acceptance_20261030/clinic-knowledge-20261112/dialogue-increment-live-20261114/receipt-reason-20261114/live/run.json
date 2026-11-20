@@ -1,0 +1,58 @@
+{
+  "authorization": "用户明确继续迭代，使用前次3次授权中未使用的2次；不新增总额度。修复reason字段合同后依次验证05、06，仅增加reason字符串说明，其他输入/坐标参照/参数不变。失败即停、不重试、不修补、不放宽校验，不部署/正式剧情/自动批准修订。",
+  "resumes": "partial-reception-20261114",
+  "originalBudget": 3,
+  "previouslyUsed": 1,
+  "baseline": 284,
+  "limit": 2,
+  "cumulative": 286,
+  "remaining": 0,
+  "attempts": [
+    {
+      "id": "05-partial-first",
+      "customRequest": 285,
+      "state": "completed",
+      "requestBytes": 11677,
+      "requestSha256": "0af99ce3ea21027464345c164df776b7966fd5d9dd159cad56e7380269194824",
+      "status": 200,
+      "elapsedMs": 10864,
+      "rawResponseSha256": "3dff1174b5111c3f2e1a59feb9ca88d41ca86c21e8ff2b7c27937c893fbdeffe",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3205,
+        "completion_tokens": 1342,
+        "total_tokens": 4547
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "Original contract passes. Huang receives only first-clause quoted content, 东门封闭, as an uncertain attributed message. Second clause is not_received, all other actors remain uninformed, pending empty. reason strings valid; no repair or world-truth upgrade. This case target passes, not global semantic completeness."
+    },
+    {
+      "id": "06-partial-second",
+      "customRequest": 286,
+      "state": "completed",
+      "requestBytes": 11678,
+      "requestSha256": "604efcf0c9e65c4bd07eada166f43fae43a22c132755086bd835e27d7bd37505",
+      "status": 200,
+      "elapsedMs": 16654,
+      "rawResponseSha256": "e5fa175f07907ae2150b58a3c943e3ff78983514fcfe7ed8c6a43f15b34829fa",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3196,
+        "completion_tokens": 2486,
+        "total_tokens": 5682
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "Original contract passes. Huang receives only 改走南门 as an attributed uncertain message; 东门封闭 explicitly not_received. No knowledge to other actors, no pending or prompt, no world truth upgrade or repair. Case target passes; general completeness and remaining cases unverified."
+    }
+  ],
+  "closed": true,
+  "retries": 0,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "stopReason": "budget-exhausted"
+}

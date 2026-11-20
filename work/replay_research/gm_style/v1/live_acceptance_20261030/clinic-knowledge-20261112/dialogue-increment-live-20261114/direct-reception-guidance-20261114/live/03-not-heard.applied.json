@@ -1,0 +1,85 @@
+{
+  "id": "03-not-heard",
+  "localProtocolPassed": true,
+  "result": {
+    "status": "processed",
+    "pending": []
+  },
+  "asked": [],
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "isolated.dialogue.live.v1",
+    "chatId": "isolated.dialogue.parallel.03-not-heard",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "well.closed": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "well.closed",
+        "entityId": "well",
+        "field": "reported_status",
+        "value": "北街水井暂时停用",
+        "certainty": "rumor",
+        "visibility": "private"
+      }
+    },
+    "events": {},
+    "knowledge": {},
+    "dialogueBatches": {
+      "dialogue.ee95c31e9adea4ae8d1b232c14104bc5b7edcaba075ee661dec93e1f85882114": {
+        "id": "dialogue.ee95c31e9adea4ae8d1b232c14104bc5b7edcaba075ee661dec93e1f85882114",
+        "sourceAnchor": {
+          "chatId": "isolated.dialogue.parallel.03-not-heard",
+          "messageId": 0,
+          "swipeId": 0,
+          "text": "御临风隔着关闭的隔音窗对布莱特说：“北门暂停通行。”布莱特没有听见。"
+        },
+        "status": "processed",
+        "rows": [],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "recorded",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 34,
+              "quote": "御临风隔着关闭的隔音窗对布莱特说：“北门暂停通行。”布莱特没有听见。"
+            },
+            "reason": "完整记录了御临风对布莱特的言说以及布莱特未听见的接收结果"
+          }
+        ]
+      }
+    }
+  },
+  "context": {
+    "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+    "actorKnowledge": [
+      {
+        "actorId": "bright",
+        "name": "布莱特",
+        "facts": []
+      },
+      {
+        "actorId": "huang",
+        "name": "黄泉",
+        "facts": []
+      },
+      {
+        "actorId": "player",
+        "name": "御临风",
+        "facts": []
+      }
+    ],
+    "availableInformation": []
+  },
+  "semanticAssessment": "pending-manual"
+}

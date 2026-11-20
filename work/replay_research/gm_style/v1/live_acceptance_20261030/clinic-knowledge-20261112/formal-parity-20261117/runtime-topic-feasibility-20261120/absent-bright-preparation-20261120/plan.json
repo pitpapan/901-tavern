@@ -1,0 +1,175 @@
+{
+  "status": "offline_preparation_complete_pending_orchestrator_review_and_specific_transmission_authorization",
+  "authorizationRequiredFor": {
+    "destination": "https://cdn.sta1n.cn/v1/chat/completions",
+    "model": "[抗截断]gemini-3.8-flash",
+    "proposedMaxNarrationAttempts": 10,
+    "completeRequest": {
+      "file": "huang-absent-bright.request.json",
+      "bytes": 109191,
+      "sha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9"
+    },
+    "data": "完整16条，含人物和背景、保留旧历史、人工离场回合、当轮问句和仅布莱特可用的测试口信来源。",
+    "scope": "单组、独立样本、正文；不得以历史授权或方案候选次数代替本批许可。"
+  },
+  "ledger": {
+    "priorClosedRun": {
+      "file": "../continuation-node-live-20261120/run.json",
+      "bytes": 6122,
+      "sha256": "7461f114db73e979131d316c308c538c399b59742b85682890afae92245a2ac7"
+    },
+    "priorCumulativeAttempts": 620,
+    "priorUnspent": 0,
+    "newAuthorizedAttempts": 0,
+    "newExternalRequestsAttempted": 0,
+    "newAttemptsUsed": 0,
+    "newAvailable": 0,
+    "cumulativeAttempts": 620,
+    "attempts": []
+  },
+  "singleCondition": "布莱特已私下获知但未作公开披露，离场且不在听距；御临风中性询问黄泉；黄泉及御临风未收到。",
+  "completeFrozenRequest": {
+    "file": "huang-absent-bright.request.json",
+    "bytes": 109191,
+    "sha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9"
+  },
+  "parameters": {
+    "model": "[抗截断]gemini-3.8-flash",
+    "temperature": 1,
+    "max_tokens": 4096,
+    "stream": false,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "top_p": 1
+  },
+  "state": {
+    "file": "evidence/departure.seed.jsonl",
+    "bytes": 1199342,
+    "sha256": "26fc6f08e7e6072d72fc14133ce8e2389b7f91843a931763600632eb5ce181fe"
+  },
+  "rules": {
+    "base": {
+      "file": "../continuation-preparation-20261120/runtime-rubric-v2.md",
+      "bytes": 3175,
+      "sha256": "171fc33d6457629cf96c28df41c389cebd6e4b28a5ee9c0f331bff3ee0f9ef09"
+    },
+    "supplement": {
+      "file": "absent-boundary-rubric-v2.md",
+      "bytes": 3240,
+      "sha256": "2923e37b280d5465d81c049c95f46966931a14068c7282cabf98abb2e6a07f9f"
+    },
+    "manual": true,
+    "engineeringFailureSeparateFromFNUX": true
+  },
+  "technicalEvidence": {
+    "file": "verification.json",
+    "bytes": 3598,
+    "sha256": "979981bfc1ae1309eb4b023b8d33f00371b4edec3a6b85f63e84366500ae062a"
+  },
+  "schedule": [
+    {
+      "slot": 1,
+      "status": "pending_authorization",
+      "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "bytes": 109191
+    },
+    {
+      "slot": 2,
+      "status": "pending_authorization",
+      "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "bytes": 109191
+    },
+    {
+      "slot": 3,
+      "status": "pending_authorization",
+      "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "bytes": 109191
+    },
+    {
+      "slot": 4,
+      "status": "pending_authorization",
+      "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "bytes": 109191
+    },
+    {
+      "slot": 5,
+      "status": "pending_authorization",
+      "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "bytes": 109191
+    },
+    {
+      "slot": 6,
+      "status": "pending_authorization",
+      "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "bytes": 109191
+    },
+    {
+      "slot": 7,
+      "status": "pending_authorization",
+      "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "bytes": 109191
+    },
+    {
+      "slot": 8,
+      "status": "pending_authorization",
+      "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "bytes": 109191
+    },
+    {
+      "slot": 9,
+      "status": "pending_authorization",
+      "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "bytes": 109191
+    },
+    {
+      "slot": 10,
+      "status": "pending_authorization",
+      "requestSha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "bytes": 109191
+    }
+  ],
+  "schedulePolicy": {
+    "sameOriginalFrozenBufferEverySlot": true,
+    "independentStart": true,
+    "appendOutputToLaterInput": false,
+    "noAdditionalGroups": true,
+    "noAdditionalCalls": true,
+    "classificationReference547": "NO_CHECK，捕获时本地固定返回；将来正文实测也不新增分类。",
+    "automaticExtraction": false,
+    "externalReview": false
+  },
+  "futureTransport": {
+    "runtime": "Windows 主机 Node.js https.request",
+    "httpsAgent": false,
+    "certificateVerification": true,
+    "reusePriorSuccessfulMethod": "617–620；请求以冻结 UTF-8 Buffer 原样发出。",
+    "saveEvidence": [
+      "attempt registration",
+      "raw request",
+      "raw HTTP response or original sanitized error",
+      "raw content",
+      "HTTP and finish reason",
+      "returned model",
+      "time and hashes"
+    ],
+    "countAttemptOnFailure": true,
+    "automaticRetry": false,
+    "replacementSlots": false,
+    "alternateModelOrDestination": false,
+    "stopOnFirstSharedProblem": [
+      "DNS",
+      "TLS",
+      "无 HTTP 响应",
+      "共同认证拒绝",
+      "共同限流拒绝"
+    ],
+    "stopOnUnverifiableRequestOrRecording": true,
+    "stopOnSemanticFailure": false,
+    "whenStopped": "封账，区分实际尝试、完整正文、失败和未尝试；不将余量另用。"
+  },
+  "interpretationLimits": [
+    "单组小样本冒烟，不估计可靠率。",
+    "没有空投影对照，普通关系/身份越界不能归因私有投影。",
+    "不验收正文链在正式环境的表现。"
+  ]
+}

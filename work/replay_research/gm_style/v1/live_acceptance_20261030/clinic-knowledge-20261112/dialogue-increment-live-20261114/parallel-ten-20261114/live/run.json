@@ -1,0 +1,242 @@
+{
+  "authorization": "用户明确范围01—10各一组新平行例，新增30次模型总额度；本组先最多10次，失败先诊断，有明确依据再修复后用剩余额度验收，不盲目重发、不修补回复、不放宽校验、不部署/正式剧情/自动批准修订。",
+  "baseline": 293,
+  "limit": 30,
+  "cumulative": 303,
+  "remaining": 20,
+  "attempts": [
+    {
+      "id": "01-received-new",
+      "customRequest": 294,
+      "state": "completed",
+      "requestBytes": 13039,
+      "requestSha256": "776efcdb7ea83582c16adabc48a668260d958a8cc005703667e51ba12241d120",
+      "status": 200,
+      "elapsedMs": 8575,
+      "rawResponseSha256": "64147416ad2d22fc8191eee2cd7cb3ff8d7f5959b2dfe752685be77a27bc8e74",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3578,
+        "completion_tokens": 991,
+        "total_tokens": 4569
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Received decision and recipient correct, but scope.time and scope.attribution contain span objects contrary to explicit scalar-type contract. Whole reply rejected; revision0. No demonstrated local loss, no product fix or response repair. Keep frozen negative result.",
+      "diagnosedContinuation": {
+        "reason": "Type rule already explicitly present; no local omission. Continue next distinct frozen input once to measure generalization, not retry this failure.",
+        "nextCase": "02-received-rumor",
+        "originalFailureRetained": true
+      }
+    },
+    {
+      "id": "02-received-rumor",
+      "customRequest": 295,
+      "state": "completed",
+      "requestBytes": 12839,
+      "requestSha256": "a30024a13a10d6471599c74d43103f504827bdc51bc83ddfb2a7e85e0fb92edb",
+      "status": 200,
+      "elapsedMs": 9186,
+      "rawResponseSha256": "160126fcd85871aa6440c93ecfa2a5b10ea5d0e2839a59f554d07b9ac7dc4a55",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3457,
+        "completion_tokens": 1143,
+        "total_tokens": 4600
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Speaker acquisition and rumor reference correctly selected, but scope.time is a span object despite explicit string/null rule. Original checker rejects with no new receipt; prior Huang rumor remains intact. Same model contract noncompliance as case01; no local patch justified.",
+      "diagnosedContinuation": {
+        "reason": "Repeated upstream scalar-type violation; retain both failures unchanged and measure next independent frozen negative reception case.",
+        "nextCase": "03-not-heard",
+        "originalFailureRetained": true
+      }
+    },
+    {
+      "id": "03-not-heard",
+      "customRequest": 296,
+      "state": "completed",
+      "requestBytes": 13058,
+      "requestSha256": "ab5599e169efa2c49f7177edeb078ec0f693002695901cfdc0505343877e2735",
+      "status": 200,
+      "elapsedMs": 7523,
+      "rawResponseSha256": "8c3d7015f452ebb14eb2e350b45683a48fde7941ec1e668bcd6abbfcc58692d5",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3588,
+        "completion_tokens": 914,
+        "total_tokens": 4502
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "Explicit not_received and denied hearing retained; original contract passes, no new knowledge to any actor, pending empty, no prompt. Case reception target passes; not a full semantic-completeness claim."
+    },
+    {
+      "id": "04-not-yet-said",
+      "customRequest": 297,
+      "state": "completed",
+      "requestBytes": 12869,
+      "requestSha256": "0a3172e96ee53fd794ee9c1f10276f0ad433db5771eac4d35f1f0088f7e098e1",
+      "status": 200,
+      "elapsedMs": 5309,
+      "rawResponseSha256": "7a06433f59ffbb156161ae49ab18f6fd7dc3935f5f869d1ef2c0b40c093854ed",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3513,
+        "completion_tokens": 529,
+        "total_tokens": 4042
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "Intention retains Huang, recipient player and full intended ferry message. Speech denied, full 尚未 source anchor preserved; no separate asserted inner world fact, receptions empty, pending empty, no knowledge grants. Scope time remains null, so do not claim every temporal field separately populated."
+    },
+    {
+      "id": "05-partial-first",
+      "customRequest": 298,
+      "state": "completed",
+      "requestBytes": 13348,
+      "requestSha256": "774ce88f1ea1b1f0e663a359cc22cc0569db117a0c65aaa9bf5838d21714346a",
+      "status": 200,
+      "elapsedMs": 9560,
+      "rawResponseSha256": "ba0131fe7e54be44789368014b596c6e6b9941731ac6417ead2125db60179127",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3703,
+        "completion_tokens": 1173,
+        "total_tokens": 4876
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Raw body has unquoted status keys in both receptions (status opening quote missing). JSON.parse rejects at2965, revision0. Content visually separates heard and unheard clauses, but invalid JSON is failure. Do not repair or semantically certify parsed substitutes.",
+      "diagnosedContinuation": {
+        "reason": "Raw syntax violation, not local parser loss. Keep original invalid JSON; continue next different frozen partial-hearing case once.",
+        "nextCase": "06-partial-second",
+        "originalFailureRetained": true
+      }
+    },
+    {
+      "id": "06-partial-second",
+      "customRequest": 299,
+      "state": "completed",
+      "requestBytes": 13349,
+      "requestSha256": "5693404c6bcd0479c6d2971910cb4d59b05695278c2b1bbae23647f42636a1c1",
+      "status": 200,
+      "elapsedMs": 10340,
+      "rawResponseSha256": "2f1531179b333964bc909e593174fb2c5b015944353484fd9fd1698b6c4d8b49",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3716,
+        "completion_tokens": 1178,
+        "total_tokens": 4894
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Raw JSON again lacks opening quote on status keys; parser rejects at2957. Contract asks valid JSON and contains no such malformed template. No local loss or repair justified; zero grants retained.",
+      "diagnosedContinuation": {
+        "reason": "Preserve syntax failure unchanged. Continue distinct frozen ambiguity test, not retry partial-hearing input.",
+        "nextCase": "07-ambiguous-hearing",
+        "originalFailureRetained": true
+      }
+    },
+    {
+      "id": "07-ambiguous-hearing",
+      "customRequest": 300,
+      "state": "completed",
+      "requestBytes": 13132,
+      "requestSha256": "2e40126d571d747a9382ecde28ed79cc8d529646d2cfa8691c193ffce5ce6b5b",
+      "status": 200,
+      "elapsedMs": 6162,
+      "rawResponseSha256": "f94f61e785e850e2869485dae9c58eddc07101777bea251a9031d0096eaec60f",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3617,
+        "completion_tokens": 558,
+        "total_tokens": 4175
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Uncertain player reception retained in raw output, but c2 invents illegal type manner and mismatched property/name span slots. Explicit closed type enum was sent. Entire reply rejected at revision0, no genuine pending seed for09/10. No demonstrated local omission.",
+      "diagnosedContinuation": {
+        "reason": "Illegal type violates already explicit closed enum; preserve failure. Test next distinct frozen listener-ambiguity sample once; dependencies remain blocked unless real parent passes.",
+        "nextCase": "08-ambiguous-listener",
+        "originalFailureRetained": true
+      }
+    },
+    {
+      "id": "08-ambiguous-listener",
+      "customRequest": 301,
+      "state": "completed",
+      "requestBytes": 13309,
+      "requestSha256": "fc250dbb708bebf8a27c58fb7bc5a7dab48fa2a6a2df0ba57dfc6d7d9c5cd290",
+      "status": 200,
+      "elapsedMs": 15722,
+      "rawResponseSha256": "c4b4314814922159c5fad929dd14c3c5b05f16513ae865a3032145ba811cdea4",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3697,
+        "completion_tokens": 1777,
+        "total_tokens": 5474
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "Original contract passes. Both candidates retained, recipient unresolved not guessed; received knowledge zero, one pending row and no immediate prompt. Reported location attributed to Huang, not world truth. Real pending seed may support a separately frozen followup branch; original failed07 branch stays blocked."
+    },
+    {
+      "id": "09-unrelated-from08",
+      "customRequest": 302,
+      "state": "completed",
+      "requestBytes": 2469,
+      "requestSha256": "648324acabf65bae8d4b686f0822a237fab4c99b06ad6fefcbd82b1cbfd1e927",
+      "status": 200,
+      "elapsedMs": 2920,
+      "rawResponseSha256": "b4b7dd96129f82f2e849bd42042aea7c633984cf6b2b9ba5428bf3759fe06519",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 937,
+        "completion_tokens": 80,
+        "total_tokens": 1017
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "Followup independently reopens actual301 pending seed; request only lunch/clothes unrelated to delivery. required empty, ready, zero asks and zero grants; real pending remains. Separate branch from08, does not certify original blocked07 chain."
+    },
+    {
+      "id": "10-dependent-from08",
+      "customRequest": 303,
+      "state": "completed",
+      "requestBytes": 2487,
+      "requestSha256": "fb822f1889895be67473a5da2466c05f060e277e8e12d7fe93890aa1066d2653",
+      "status": 200,
+      "elapsedMs": 3078,
+      "rawResponseSha256": "6522dd5f7a3638eebe06fdabe49a6cb3db188dabef7e7f08b41c07b3c6a2f782",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 940,
+        "completion_tokens": 193,
+        "total_tokens": 1133
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "Followup independently reopens identical actual301 pending seed, not a synthetic reply or output from09. Exact actual pending ID required; deferred with one question, no answer, no knowledge grant. Original07 branch remains blocked; alternate08 dependency target passes."
+    }
+  ],
+  "closed": true,
+  "retries": 0,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "stopReason": "ten-category-parallel-comparison-complete-five-model-failures-retained",
+  "unusedAuthorization": 20,
+  "original07Followups": "blocked; distinct followups from actual301 recorded separately"
+}

@@ -1,0 +1,31 @@
+✔ reception-purpose references provide exact reusable target and line spans without normalizing source (9.3207ms)
+✔ short copy ranges partition punctuation and retain every UTF-16 unit (1.2312ms)
+✔ coordinate instructions and deterministic data preserve original input and zero-based end-exclusive bounds (1.8499ms)
+✔ decoded quotes, backslashes, tabs, spaces and CRLF remain separate original units (1.2968ms)
+✔ astral and combining characters use UTF-16 offsets without visual-character normalization (1.0548ms)
+✔ long references retain global offsets and do not split a surrogate pair across blocks (1.2183ms)
+✔ repeated quotes and separate documents keep their own positions; changed source gets a new binding (1.2143ms)
+✔ coordinates never repair replies: shifted, block-local, inclusive-end or forged quotes still fail (3.3934ms)
+✔ a real repeated substring is not certified as the right semantic occurrence (0.8859ms)
+✔ bounded reception narrows generation scope and supplies exact source ranges without accepting old wrong spans (35.0178ms)
+✔ bound prompt retains the existing direct-reception rule without changing schema, input or other guidance (11.7069ms)
+✔ direct speech needs no acknowledgement; explicit obstruction and uncertainty retain their own outcomes (48.0202ms)
+✔ bound utterance maps only explicit nested receipts and retains mandatory coverage (2.7904ms)
+✔ action, forged reference, missing receipts and omitted target coverage reject without mutation (4.1684ms)
+✔ uncertain coverage preserves explicit partial receipt plus uncertainty without blanket blocking (3.0566ms)
+✔ none and unresolved-only coverage require actual source evidence, never synthesize receipts (2.8634ms)
+✔ original source, role, null-pair and identity checks remain in force (3.205ms)
+✔ schema rejects nested action and missing coverage and allows explicit none and uncertainty (948.7726ms)
+✔ model adapter uses version2 and original MVU path persists coverage and independent known/pending rows (21.3061ms)
+✔ historical flat failures are retained and cannot silently enter the new wire (13.4158ms)
+✔ model-path invalid coverage writes nothing; explicit unreceived and none never grant or ask (38.3264ms)
+✔ planned speech keeps original intent claim and none coverage without creating utterance (2.2463ms)
+✔ existing Tavern completion maps exact messages and schema without settings or response repair (10.3963ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1835.8641

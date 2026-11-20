@@ -1,0 +1,31 @@
+{
+  "kind": "v7.accept.obstacle",
+  "startedAt": "2026-11-15T22:32:14.277Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T22:32:16.544Z",
+  "headersElapsedMs": 2267,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b1b5f1bb1ccfdf-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 22:32:16 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=9CjTbiHd4RDDJpcRelBHVLj14eeQ92RNI87Vxo2vvcBUlApl%2Beb41sPir1bWQuPRLDi8OrrfU7aeJkZmQiwk2U%2FLFhAgq%2F3r1z%2F1qSOTp7AcyqvVFXUZwUezHFFhUA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611152232144194891638268d9d6iELOUwFC",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "63582c89-9c05-4bb8-8523-24f12de35f5f"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"dba8ffb9-410b-4136-810e-0e0980beb6a4\",\"object\":\"chat.completion\",\"created\":1794781936,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/7\\\",\\\"contextRef\\\":\\\"c280d0a16d0ff7be00eb4299201b607ca4ac80bcf07e35926f8c380fbb25d602\\\",\\\"selections\\\":[{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"黄泉\\\"},{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"答道：\\\"},{\\\"fragmentId\\\":\\\"f6\\\",\\\"quote\\\":\\\"“山路已经封闭了。\\\"},{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"布莱特\\\"},{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"答\\\"},{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"已听不到这里的声音。\\\"}],\\\"utterances\\\":[{\\\"speakerId\\\":\\\"huang\\\",\\\"speaker\\\":0,\\\"content\\\":2,\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":1}],\\\"receptions\\\":[{\\\"utterance\\\":0,\\\"content\\\":2,\\\"listenerId\\\":\\\"bright\\\",\\\"identityKind\\\":\\\"reply\\\",\\\"identity\\\":4,\\\"historyMessageId\\\":0,\\\"evidenceKind\\\":\\\"obstacle\\\",\\\"evidence\\\":5,\\\"propositionRef\\\":null}],\\\"unresolved\\\":[],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":1}}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2481,\"completion_tokens\":269,\"total_tokens\":2750}}",
+  "responseBytes": 1202,
+  "responseBodySha256BeforePrivacyRedaction": "cc0c3bb7a841b5d10c52f304a37729c887328b57331834b8b0d1a54d05faf345",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T22:32:16.549Z",
+  "elapsedMs": 2272
+}

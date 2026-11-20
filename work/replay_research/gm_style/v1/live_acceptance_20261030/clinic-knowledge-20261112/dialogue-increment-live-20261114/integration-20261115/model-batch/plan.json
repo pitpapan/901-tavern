@@ -1,0 +1,122 @@
+{
+  "status": "prepared-not-authorized-not-sent",
+  "authorizedCalls": 0,
+  "requestedMaximum": 12,
+  "counts": {
+    "narration": 5,
+    "reception": 5,
+    "dependency": 2,
+    "externalClassification": 0,
+    "localClassificationControls": 5,
+    "totalExternalMaximum": 12,
+    "totalCompletionStepsMaximum": 17
+  },
+  "cumulativePrior": 334,
+  "endpointLabel": "https://cdn.sta1n.cn/v1/chat/completions",
+  "endpointBasis": "Existing last-three-20261115/run.mjs and previous approval; endpoint not freshly probed. Verify non-sensitive configured destination before any future authorized run.",
+  "modelAndParameters": {
+    "model": "[抗截断]gemini-3.8-flash",
+    "temperature": 1,
+    "max_tokens": 4096,
+    "stream": false,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "top_p": 1
+  },
+  "dataScope": "NonCanon isolated branch based on retained chat/character/worldbook material; actual private story context, readonly synthetic test memory, source quotations and UTF-16 reference. No credentials in saved bodies. This is not formal story.",
+  "firstRequests": [
+    {
+      "branch": "A",
+      "file": "A1-narration.request.json",
+      "bytes": 108317,
+      "sha256": "f043140c27d077122e34be05b3be0a477fe58013d017293edbcd0df6751df8f7",
+      "sourceCapture": "A1-1794699612332-narration.json",
+      "input": "黄泉，刚才要告诉我的消息是什么？",
+      "bodyUnchanged": true
+    },
+    {
+      "branch": "B",
+      "file": "B1-narration.request.json",
+      "bytes": 108299,
+      "sha256": "6da0bca74d44395575ee42db43951982ac684b8bff3a2044f094aced37e5590e",
+      "sourceCapture": "B-1794700552783-narration.json",
+      "input": "黄泉，把交货地点再说一下。",
+      "bodyUnchanged": true
+    }
+  ],
+  "seed": "noncanon-base.chat.jsonl",
+  "seedSha256": "fbe9da03791fcc25dfb2a7285c32397f38feb785072c0d128bbd0b2793782823",
+  "dynamicCalls": [
+    {
+      "id": "A1.narration",
+      "kind": "narration",
+      "frozen": "A1-narration.request.json"
+    },
+    {
+      "id": "A1.reception",
+      "kind": "reception",
+      "construct": "Use A1 actual saved assistant text including host suffix, retained history, same actor catalog, current facts and readonly memory. Original prepareBoundDialogueExtraction creates binding and UTF-16 reference; original host flattening only. Stop if invalid or explicit-reception branch is not established."
+    },
+    {
+      "id": "A2.narration",
+      "kind": "narration",
+      "input": "我根据刚听到的话，问黄泉还有什么要留意。",
+      "construct": "Reopen actual A1 after-state; original ordinary controller generates with actual retained A1 response and its accepted knowledge context. No fabricated reply/recipient."
+    },
+    {
+      "id": "A2.reception",
+      "kind": "reception",
+      "construct": "Original extraction of saved actual A2 reply; retain all new results and fail on invalid output, no repair."
+    },
+    {
+      "id": "B1.narration",
+      "kind": "narration",
+      "frozen": "B1-narration.request.json"
+    },
+    {
+      "id": "B1.reception",
+      "kind": "reception",
+      "construct": "Use actual saved B1 text, original context and v2 contract. The frozen question does not force ambiguity. If B1 has no legitimate pending item, stop as branch not exercised (not proof of semantic failure); never manufacture uncertainty or replace the response."
+    },
+    {
+      "id": "B2.dependency",
+      "kind": "dependency",
+      "input": "我们谈谈午饭的口味。",
+      "construct": "Original prepareDialogueTurn consumes actual B1 pending, inputRef and readonly memory. Require no needed pending item; no hand-filled IDs."
+    },
+    {
+      "id": "B2.narration",
+      "kind": "narration",
+      "construct": "Continue same B2 request with actual B1 history and unconfirmed context; preserve prose and autonomy."
+    },
+    {
+      "id": "B2.reception",
+      "kind": "reception",
+      "construct": "Extract actual saved B2 with original strict checker; maintain actual after-state for B3, not parallel reset."
+    },
+    {
+      "id": "B3.dependency",
+      "kind": "dependency",
+      "input": "请按刚才说的交货地点安排送货。",
+      "construct": "Use actual B2 retained state and original dependencies. Required ID must refer to an actual relevant pending item. Exercise temporary uncertainty then explicit nonCanon confirmation only if consistent with actual source, otherwise stop for review. No model answers the player choice."
+    },
+    {
+      "id": "B3.narration",
+      "kind": "narration",
+      "construct": "After authorized local test choice resolves actual receiving range, same original player message continues with updated projection. No second player message."
+    },
+    {
+      "id": "B3.reception",
+      "kind": "reception",
+      "construct": "Extract actual saved B3, preserve full reply and source; final report reads all prose, projections and state."
+    }
+  ],
+  "classification": "Keep explicit local NO_CHECK control as in browser; no claim of real classification model acceptance. If real classification is later requested, five additional calls need separate budget approval.",
+  "stop": "First transport, protocol, source-validation or in-scope semantic failure stops all remaining external calls; also stop if required branch precondition is absent. No retry, response substitution, action conversion, automatic receipt, automatic span/JSON repair or relaxation. Continue local evidence preservation and analysis.",
+  "replyAccounting": "Record actual returned model label, usage, raw HTTP body, request hash, start/end and failure. Different response model labels do not authorize a model switch.",
+  "unknownFuture": "Only two first narration requests frozen; all ten remaining bodies depend on actual future replies. No ideal replies, actual pending IDs or full future requests prefilled.",
+  "notProven": "Frozen B question may produce clear reception; then ambiguity branch remains untested, even if narrative is valid. Current fixture text and all five local classifications are synthetic, not model accuracy evidence.",
+  "noAutomaticSending": true,
+  "credentialsRead": false,
+  "deployed": false
+}

@@ -1,0 +1,122 @@
+{
+  "version": "source-context-20261113",
+  "modelCalls": 0,
+  "cumulative": 252,
+  "remaining": 0,
+  "sourceMessage": {
+    "chatId": "901 帝都正式续玩 20261106",
+    "messageId": 12,
+    "swipeId": 0,
+    "text": "桌外隔离验收事件（非正式剧情）：同一来客向布莱特补充约定：“这件事先不要向御临风和黄泉透露，等我们单独确认后再说。”布莱特听到并答应了该约定；另两人未听见。",
+    "is_system": true
+  },
+  "sourceSpeaker": "保留消息11告知关系、消息12补充约定的同一位可信来客；没有实名，不补actorId",
+  "quotedWe": "在“同一来客向布莱特补充约定”的原文中，按说话者与受话者承接为该来客与布莱特；并非御临风和黄泉",
+  "restrictedRecipients": [
+    "御临风",
+    "黄泉"
+  ],
+  "condition": "与该来客单独确认后再说，不能仅据地点变化或布莱特自己的承诺认定完成",
+  "satisfactionOrChangeBeforeB2": null,
+  "classification": {
+    "fieldOmission": "sourceQuote及confirmed未漏；sourceAnchor.text在context映射中被删去。",
+    "lostReferenceContext": "真实B1/B2聊天历史过滤is_system来源，senderId为空且没有来源原文，造成引用主体/指代语境缺失。",
+    "instructionConflict": "限定检查未发现允许换地点自动解除约定的直接指令；私谈只是表达选择。记忆3行无解约事件。B1自己的新承诺不是原条件满足证据。",
+    "modelDeviation": "B1实际承诺未保留原确认条件；没有实际泄密。不能证明此次缺失是唯一原因，也不能仅凭本地修复声称模型会改正。"
+  },
+  "dataPath": [
+    "显式receive保存sourceAnchor.text并按原MVU落盘读回",
+    "read核对原文、swipe及分支",
+    "context旧sources投影只留chatId/messageId/swipeId，不含text",
+    "registerReplayGate.generateKnown → knowledge.generate → generateRaw",
+    "JS-Slash-Runner src/function/generate/dataProcessor.ts:262过滤is_system历史",
+    "最终B1/B2仅剩无主体语境的sourceQuote"
+  ],
+  "smallestChange": {
+    "file": "work/rules_engine/gm_runtime/story-knowledge.mjs",
+    "behavior": "sources.sourceAnchor补回已校验的text",
+    "newExecutionOrWriteMechanism": false,
+    "instructionsChanged": false,
+    "disclosureSchemaChanged": false
+  },
+  "source08HadFullContext": true,
+  "scope": "仅B条件与相邻A/B正文，不扩大全库审计",
+  "relevantOriginalInstructionExcerpts": [
+    "沿用已确认的地点和机构名；未命名的场所按用途或位置称呼。不要为了让指路、告示或调查显得具体，补造行政区划、正式职衔、司法权限、拘捕程序或秘密关系。告示、传闻与NPC附和不能把猜测变成事实。人物的作品原型不自动带入原作设定。主持原则允许的普通NPC能力和必要参数仍可合理补全，并在影响后续时记住；不因卡上未列就冻结行动，也不用临时万能能力抹去玩家准备。",
+    "消息有具体的获知者与时间。只让人物回应他实际听见、看见或此前获知的内容；猜测保留为他的判断，作者后台与原线后期资料不借全知旁白泄露。公开消息正常说，未公开调查、内部怀疑、线人及行动安排考虑身份、关系与旁听；需要私谈时可提出邀请，压低声音不自动保证保密，也不凭空安排窃听者。谈话、信件和报告只有实际传达后才增加接收者知识。历史事实发生时间、当前获知时间和此刻行动分别承接，不因重述而重新发生。",
+    "<最新数据与记录>",
+    "以下是在这个时间点，当前场景下剧情相关的最新数据与记录，你在进行剧情分析时必须以此最新的数据为准，以下数据与记录的优先级高于其他任何背景设定：",
+    "</最新数据与记录>",
+    "使用本团已确认背景、适用时期的人物与力量资料、当前摘要，以及摘要之后实际保留的聊天。开局前的历史与既有关系保持；新选择只改变真正受影响的过程和结果。原线较晚才被角色获知的开局前事实仍属既定前史；具体日期未明，不等于事件未发生。原线未来不作为必须重演的台本，不用替身、巧合或临时能力恢复原结局。",
+    "NPC的新对白和战术、路人与普通环境细节可以作为本分支内容生成，沿用本团已确认的帝国西方魔幻/JRPG表现方向与具体地点。普通细节不包括无依据的新行政机关、正式职衔、持久监牢专名、司法权限、拘捕程序或关押去向；不能借布告、路人传闻或NPC职业口吻把它们当作已证事实。未命名场所可按已有用途描述，重要调查答案没有依据时保留未定。未知古史、血缘、秘密忠诚、力量来源和恒常法则仍不补造。资料空白不要求暂停无关互动；已被指出错误的旧输出也不因写进摘要而自动成为事实，用户确已采纳的分支变化分别保存。",
+    "保留聊天中的实际变化进入当前分支摘要：地点时间、在场者、关键资源或伤势、关系和承诺、线索与人物获知、有关事件进度。提议不是同意，受命不是完成，寄出不是收到，传闻不是事实。只记真正保留的回复，弃稿不叠加消耗或关系；新分支不改写原团资料。 摘要或记忆中的线索要区分来源与知情者；仅由玩家私下思考提出的推测不能记成队内共识或世界事实。已经被明确指出的信息泄漏与无据断言不因反复引用获得证明，应按用户采纳的订正更新其状态。 已被指出未经授权、且未获玩家采纳的主角对白或主动选择，不作为其既成承诺、传讯或队伍行动写入后续记录。",
+    "沿用已确认地点和机构的名称。未命名的普通场所按已知用途或位置描述；不为了让街景、公文或打听结果显得具体，补造坊市、行政机关、正式职衔、监牢专名、司法权限、拘捕程序或收押地点。告示与路人闲谈也不能替主持把未证的军令、罪名及调查答案变成事实。旧回复中被指出有误的临时专名不靠重复引用成为既定地理；区分用户已采纳的分支事件与待纠正输出。普通陈设、路人和当场互动仍可自然生成；无依据的历史真相、制度权限与秘密关系保持未定。主持原则已允许的NPC能力与必要参数可以合理补全，并在影响后续时记住，不因尚未列明就按重要设定缺口冻结。这些是主持表现与裁定边界，不让NPC讨论西方魔幻或JRPG。",
+    "六书分工：基础、政治、人物、能力、历史为按主题的背景定义；当前剧本书为分期基线与条件式资料。当前有效摘要、摘要后保留聊天和已确认规则存档优先于T0。不得把读到的方案写成已发生状态；手动启用只让主持可读，不证明到场或知情。人物离场但仍在讨论时仍可查人设，不据触发拉回现场。数值沿现有JS/MVU，不重新初始化。",
+    "已确认穿越截点：遭三途河重创、婚约取消后，按旧卡所记已受杀生石治愈但尚未植入时，黄泉因手机提示转入本团。植入后的恶灵化、战斗、复活和终局不属于本团前史，也不赋予相关记忆或力量。原乡旧伤不等于帝都T0当前伤势。T0已从村庄中毒后苏醒；灵力恢复是她本人的自述，具体余量依本分支存档。",
+    "已确认身份与时期：姜子尤和黄祸龙狼是容貌完全相同的二重身，二人分别建档；成因、能力联系、相互感知和双方何时知情未定。姜在本轮帝都阶段18岁。御临风、黄泉与姜有现代来客及边关共同经历，兄弟会联系依证件与实际任务理解；原线后来的离队、失踪、魔兽疑云不前置。姜不在首次抵都的御临风、布莱特、黄泉三人中，仅在本分支实际会合后出场。"
+  ],
+  "samples": [
+    {
+      "id": "B1",
+      "requestFile": "../continuations/live-20261113/B1.request.json",
+      "requestSha256": "ff78ed6af83c3cec52e81fe02d950a1b6e2d3fabe03161cdfa38098a988c07cf",
+      "rawResponseFile": "../continuations/live-20261113/B1.raw-response.txt",
+      "rawResponseSha256": "ad57b076b9a9ff2dc8ecb93da6174570155f89e6cf1c928f629970a87a65ffe8",
+      "fullOutput": "布莱特牵着马缰，步子缓了半步，侧头朝向御临风。街边正有一队运载木材的货车辘辘驶过，车轴的吱呀声与车夫的吆喝把两人的低语压在近处。\n\n“都有一些。”布莱特同样压低了嗓音，语气平静而克制，“刚进城时有些零碎话递到我耳边，但眼下大街上人多眼杂，消息的真伪我也还没亲自核实过。等到了医馆附近，或者找个稳妥的地方落了脚，我再把听到的同你们细说。”\n\n他说完便收回注意力，微微侧耳辨识着前方石板路上的蹄声与行人动向，继续顺着引水渠旁的主道稳步向前走去。",
+      "sourceQuoteRetained": true,
+      "belief": "confirmed",
+      "sourceContextMissing": true,
+      "sourceProjection": {
+        "eventRef": "received.communication.promise",
+        "channel": "message",
+        "belief": "confirmed",
+        "senderId": null,
+        "learnedAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "sourceAnchor": {
+          "chatId": "901 帝都正式续玩 20261106",
+          "messageId": 12,
+          "swipeId": 0
+        },
+        "disclosure": {
+          "sourceQuote": "这件事先不要向御临风和黄泉透露，等我们单独确认后再说。"
+        }
+      }
+    },
+    {
+      "id": "B2",
+      "requestFile": "../continuations/live-20261113/B2.request.json",
+      "requestSha256": "d7c6f19c76e0a3b703e5020bc1d03625655267cc17e8638a41d062c11925dbbb",
+      "rawResponseFile": "../continuations/live-20261113/B2.raw-response.txt",
+      "rawResponseSha256": "41e5ed5b9347c0ca316a8610d8a17637696287736ecf5171a7e698ca41c3818c",
+      "fullOutput": "布莱特牵着缰绳，边走边平静地应道：\n\n“自然是先谈信上的正事。推荐信是村医托付的由头，说明求医求学的来意，医馆的人看了才好拿捏如何接待。若是刚递过去就急着问留宿，倒显得咱们更像是来寻客栈白住的，难免失了分寸。”\n\n他微微顿了顿，顺着引水渠边的人流继续往前迈步，嗓音平稳：\n\n“等对方收了信、把来意接下了，再顺势提一句初到帝都、盘缠有限，询问附近可有规矩合适、价钱实在的落脚处，或者馆里是否方便腾出空屋借宿。届时看馆里的态度和反应，是留是走，咱们心里也好有个数。”",
+      "sourceQuoteRetained": true,
+      "belief": "confirmed",
+      "sourceContextMissing": true,
+      "sourceProjection": {
+        "eventRef": "received.communication.promise",
+        "channel": "message",
+        "belief": "confirmed",
+        "senderId": null,
+        "learnedAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "sourceAnchor": {
+          "chatId": "901 帝都正式续玩 20261106",
+          "messageId": 12,
+          "swipeId": 0
+        },
+        "disclosure": {
+          "sourceQuote": "这件事先不要向御临风和黄泉透露，等我们单独确认后再说。"
+        }
+      }
+    }
+  ]
+}

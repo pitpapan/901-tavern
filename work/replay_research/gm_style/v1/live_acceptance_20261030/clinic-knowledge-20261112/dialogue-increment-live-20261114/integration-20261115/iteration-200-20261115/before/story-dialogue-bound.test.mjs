@@ -1,0 +1,137 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {spawnSync} from 'node:child_process';
+import * as dialogue from './story-dialogue-knowledge.mjs';
+import {createStoryKnowledgeRuntime} from './story-knowledge.mjs';
+import {createOpeningFixture} from './opening.mjs';
+const text='甲向乙说：“渡口停航，改走山路。”乙听清了前半句，后半句是否听清不明。';
+const actors={a:'甲',b:'乙',c:'丙'},span=q=>({documentId:'current',start:text.indexOf(q),end:text.indexOf(q)+q.length,quote:q}),full=span(text);
+const options={sourceAnchor:{chatId:'bound.test',messageId:0,swipeId:0,text},history:[],actors,facts:{},memory:null};
+const claim=(id='speech',content='渡口停航')=>({id,type:'utterance',args:{speaker:'甲',content},argumentSpans:{speaker:span('甲'),content:span(content)},mode:'asserted',scope:{time:null,condition:null,attribution:null},scopeSpans:{time:null,condition:null,attribution:null},anchor:span('甲向乙说：“渡口停航，改走山路。”')});
+const receipt=(id='r',status='received')=>({id,speakerId:'a',recipientIds:['b'],recipientSpans:[span('乙')],evidence:span(status==='uncertain'?'后半句是否听清不明':'乙听清了前半句'),status,propositionRef:null,reason:''});
+function wire(p){return {schemaVersion:'dialogue-reception/2',contextRef:p.input.contextRef,inputRef:p.input.assertion.inputRef,units:[{id:'turn',status:'extracted',claims:[],utterances:[{claim:claim(),receptions:[receipt()]}],unresolved:[],coverage:{status:'recorded',evidence:structuredClone(full),reason:'前半句明确接收'}}]};}
+const prepare=()=>dialogue.prepareBoundDialogueExtraction(options);
+test('bound prompt retains the existing direct-reception rule without changing schema, input or other guidance',async()=>{
+ const base=new URL('../../replay_research/gm_style/v1/live_acceptance_20261030/clinic-knowledge-20261112/dialogue-increment-live-20261114/bound-receptions-live-20261114/live/',import.meta.url);
+ const request=JSON.parse(await readFile(new URL('02-received-rumor.request.json',base),'utf8'));
+ const input=JSON.parse(request.messages[1].content),legacy=await dialogue.prepareDialogueExtraction(input),bound=await dialogue.prepareBoundDialogueExtraction(input);
+ const rule='明确直接向某人说出且没有接收障碍可以received，不强求复述确认；计划、假设、内心话不算接收。';
+ assert.ok(legacy.messages[0].content.includes(rule));assert.ok(bound.messages[0].content.includes(rule));
+ assert.equal(bound.messages[0].content.replace(rule,''),request.messages[0].content);
+ assert.deepEqual(bound.messages.slice(1),request.messages.slice(1));assert.deepEqual(bound.responseFormat,request.response_format);
+ // The old semantic failure remains unchanged and uncertain, never repaired by preparation/checking.
+ const raw=await readFile(new URL('02-received-rumor.content.txt',base),'utf8'),reply=JSON.parse(raw),before=structuredClone(reply);
+ const checked=bound.check(reply);assert.equal(checked.receptions[0].status,'uncertain');assert.equal(checked.coverage[0].status,'uncertain');
+ assert.deepEqual(reply,before);assert.equal(await readFile(new URL('02-received-rumor.content.txt',base),'utf8'),raw);
+});
+test('direct speech needs no acknowledgement; explicit obstruction and uncertainty retain their own outcomes',async()=>{
+ for(const scenario of [
+  {text:'甲对乙说：“渡口停航。”',status:'received',evidence:'甲对乙说：“渡口停航。”',known:1,pending:0},
+  {text:'甲对乙说：“渡口停航。”乙没有听见。',status:'not_received',evidence:'乙没有听见',known:0,pending:0},
+  {text:'甲对乙说：“渡口停航。”无法确定乙是否听见。',status:'uncertain',evidence:'无法确定乙是否听见',known:0,pending:1}
+ ]){
+  const at=q=>({documentId:'current',start:scenario.text.indexOf(q),end:scenario.text.indexOf(q)+q.length,quote:q});
+  const chat=[{mes:scenario.text,is_user:false,swipe_id:0}],floors={0:{stat_data:{'901_rules_poc':{schemaVersion:1,revision:0,chatId:'bound.test',actors:createOpeningFixture().actors,operations:{}}}}};
+  const mvu={getMvuData:({message_id})=>structuredClone(floors[message_id]),replaceMvuData:async(v,{message_id})=>{floors[message_id]=structuredClone(v);}};
+  const tavern={chatId:'bound.test',chat,saveChat:async()=>{},readSavedChat:async()=>[{},...chat.map((m,i)=>({...m,variables:[structuredClone(floors[i])]}))]};
+  let returned;
+  const adapter=dialogue.createDialogueSemanticAdapter({complete:async request=>{
+   const input=JSON.parse(request.messages[1].content),speech={id:'speech',type:'utterance',args:{speaker:'甲',content:'渡口停航。'},argumentSpans:{speaker:at('甲'),content:at('渡口停航。')},mode:'asserted',scope:{time:null,condition:null,attribution:null},scopeSpans:{time:null,condition:null,attribution:null},anchor:at('甲对乙说：“渡口停航。”')};
+   returned={schemaVersion:'dialogue-reception/2',contextRef:input.contextRef,inputRef:input.assertion.inputRef,units:[{id:'turn',status:'extracted',claims:[],utterances:[{claim:speech,receptions:[{id:'r',speakerId:'a',recipientIds:['b'],recipientSpans:[at('乙')],evidence:at(scenario.evidence),status:scenario.status,propositionRef:null,reason:''}]}],unresolved:[],coverage:{status:scenario.status==='uncertain'?'uncertain':'recorded',evidence:at(scenario.text),reason:'按本轮实际接收依据记录'}}]};
+   return structuredClone(returned);
+  }});
+  const k=createStoryKnowledgeRuntime({catalog:{id:'bound.catalog',actors,facts:[]},mvu,tavern,getAnchor:()=>({chatId:'bound.test',messageId:0,swipeId:0}),dialogue:adapter});
+  const result=await k.observeDialogue({...options.sourceAnchor,text:scenario.text});
+  assert.equal(k.context().actorKnowledge.find(a=>a.actorId==='b').facts.length,scenario.known);assert.equal(result.pending.length,scenario.pending);
+  assert.deepEqual(k.dialogueQuestions([]),[]);assert.equal(returned.units[0].utterances[0].receptions[0].status,scenario.status);assert.equal(chat[0].mes,scenario.text);
+ }
+});
+test('bound utterance maps only explicit nested receipts and retains mandatory coverage',async()=>{
+ const p=await prepare(),w=wire(p),before=structuredClone(w),checked=p.check(w);
+ assert.deepEqual(w,before);assert.deepEqual(checked.assertions.units[0].claims,[w.units[0].utterances[0].claim]);
+ assert.deepEqual(checked.receptions,[{...receipt(),claimId:'speech'}]);assert.deepEqual(checked.coverage,[{targetId:'turn',...w.units[0].coverage}]);
+ assert.equal(p.responseFormat.json_schema.strict,true);
+});
+test('action, forged reference, missing receipts and omitted target coverage reject without mutation',async()=>{
+ const p=await prepare();
+ for(const change of [w=>w.units[0].utterances[0].claim.type='action',w=>w.units[0].utterances[0].receptions[0].claimId='other',w=>delete w.units[0].coverage,w=>w.units[0].utterances[0].receptions=[],w=>w.units=[],w=>w.units.push(structuredClone(w.units[0])),w=>w.units[0].coverage.evidence.quote='假的']){
+  const w=wire(p);change(w);const before=structuredClone(w);assert.throws(()=>p.check(w));assert.deepEqual(w,before);
+ }
+});
+test('uncertain coverage preserves explicit partial receipt plus uncertainty without blanket blocking',async()=>{
+ const p=await prepare(),w=wire(p);w.units[0].utterances.push({claim:claim('second','改走山路'),receptions:[receipt('r2','uncertain')]});w.units[0].coverage.status='uncertain';
+ const checked=p.check(w);assert.deepEqual(checked.receptions.map(r=>r.status),['received','uncertain']);assert.equal(checked.assertions.units[0].unresolved.length,0);
+ w.units[0].coverage.status='recorded';assert.throws(()=>p.check(w));
+});
+test('none and unresolved-only coverage require actual source evidence, never synthesize receipts',async()=>{
+ const p=await prepare(),none=wire(p);none.units[0].utterances=[];none.units[0].coverage={status:'none',evidence:full,reason:'模型声称无相关接收'};
+ const checked=p.check(none);assert.deepEqual(checked.receptions,[]);assert.deepEqual(checked.assertions.units[0].unresolved,[]);
+ // A source-backed but semantically false none statement is not an approval.
+ assert.equal(checked.semanticCompletenessVerified,false);assert.equal(checked.canApprove,false);
+ const unknown=structuredClone(none);unknown.units[0].status='unresolved';unknown.units[0].coverage.status='uncertain';unknown.units[0].unresolved=[{span:span('后半句是否听清不明'),reason:'无法判定接收'}];
+ assert.equal(p.check(unknown).assertions.units[0].unresolved.length,1);assert.equal(p.check(unknown).receptions.length,0);
+ unknown.units[0].unresolved=[];unknown.units[0].status='extracted';assert.throws(()=>p.check(unknown));
+});
+test('original source, role, null-pair and identity checks remain in force',async()=>{
+ const p=await prepare();
+ for(const change of [w=>w.units[0].utterances[0].claim.argumentSpans.content=null,w=>w.units[0].utterances[0].claim.scope.time=full,w=>w.units[0].utterances[0].claim.argumentSpans.content.start++,w=>w.units[0].utterances[0].receptions[0].recipientIds=['missing'],w=>w.units[0].utterances[0].receptions[0].recipientSpans=[]]){const w=wire(p);change(w);assert.throws(()=>p.check(w));}
+});
+test('schema rejects nested action and missing coverage and allows explicit none and uncertainty',async()=>{
+ const p=await prepare(),cases=[{value:wire(p),valid:true}];const bad=wire(p);bad.units[0].utterances[0].claim.type='action';cases.push({value:bad,valid:false});
+ const missing=wire(p);delete missing.units[0].coverage;cases.push({value:missing,valid:false});
+ const none=wire(p);none.units[0].utterances=[];none.units[0].coverage.status='none';cases.push({value:none,valid:true});
+ const r=spawnSync('python',['-c','import sys,json,jsonschema\nd=json.loads(sys.stdin.buffer.read().decode("utf-8"));jsonschema.Draft202012Validator.check_schema(d["schema"])\nfor c in d["cases"]: assert jsonschema.Draft202012Validator(d["schema"]).is_valid(c["value"]) == c["valid"]'],{input:JSON.stringify({schema:p.responseFormat.json_schema.schema,cases}),encoding:'utf8'});assert.equal(r.status,0,r.stderr);
+});
+test('model adapter uses version2 and original MVU path persists coverage and independent known/pending rows',async()=>{
+ const chat=[{mes:text,is_user:false,swipe_id:0}],floors={0:{stat_data:{'901_rules_poc':{schemaVersion:1,revision:0,chatId:'bound.test',actors:createOpeningFixture().actors,operations:{}}}}};
+ const mvu={getMvuData:({message_id})=>structuredClone(floors[message_id]),replaceMvuData:async(v,{message_id})=>{floors[message_id]=structuredClone(v);}};
+ const tavern={chatId:'bound.test',chat,saveChat:async()=>{},readSavedChat:async()=>[{},...chat.map((m,i)=>({...m,variables:[structuredClone(floors[i])]}))]};let calls=0;
+ const adapter=dialogue.createDialogueSemanticAdapter({complete:async request=>{calls++;assert.equal(request.responseFormat.json_schema.name,'dialogue_reception_v2');const p=await prepare(),input=JSON.parse(request.messages[1].content),w=wire({...p,input});w.units[0].utterances.push({claim:claim('second','改走山路'),receptions:[receipt('r2','uncertain')]});w.units[0].coverage.status='uncertain';return JSON.stringify(w);}});
+ const k=createStoryKnowledgeRuntime({catalog:{id:'bound.catalog',actors,facts:[]},mvu,tavern,getAnchor:()=>({chatId:'bound.test',messageId:0,swipeId:0}),dialogue:adapter});
+ const result=await k.observeDialogue(options.sourceAnchor);assert.equal(calls,1);assert.equal(result.pending.length,1);assert.equal(k.context().actorKnowledge.find(a=>a.actorId==='b').facts.length,1);
+ assert.equal(Object.values(k.read().dialogueBatches)[0].receptionCoverage[0].status,'uncertain');assert.equal(k.dialogueQuestions([]).length,0);
+ await k.observeDialogue(options.sourceAnchor);assert.equal(calls,1);assert.equal(chat[0].mes,text);
+});
+test('historical flat failures are retained and cannot silently enter the new wire',async()=>{
+ const base=new URL('../../replay_research/gm_style/v1/live_acceptance_20261030/clinic-knowledge-20261112/dialogue-increment-live-20261114/reception-coverage-20261114/live/',import.meta.url);
+ for(const id of ['02-received-rumor','05-partial-first','07-ambiguous-hearing']){const req=JSON.parse(await readFile(new URL(id+'.request.json',base),'utf8')),raw=await readFile(new URL(id+'.content.txt',base),'utf8'),value=JSON.parse(raw),p=await dialogue.prepareBoundDialogueExtraction(JSON.parse(req.messages[1].content));assert.throws(()=>p.check(value));assert.equal(await readFile(new URL(id+'.content.txt',base),'utf8'),raw);}
+});
+
+test('model-path invalid coverage writes nothing; explicit unreceived and none never grant or ask',async()=>{
+ for(const mode of ['missing-coverage','action-parent','not-received','none']){
+  const chat=[{mes:text,is_user:false,swipe_id:0}],floors={0:{stat_data:{'901_rules_poc':{schemaVersion:1,revision:0,chatId:'bound.test',actors:createOpeningFixture().actors,operations:{}}}}};
+  const mvu={getMvuData:({message_id})=>structuredClone(floors[message_id]),replaceMvuData:async(v,{message_id})=>{floors[message_id]=structuredClone(v);}};
+  const tavern={chatId:'bound.test',chat,saveChat:async()=>{},readSavedChat:async()=>[{},...chat.map((m,i)=>({...m,variables:[structuredClone(floors[i])]}))]};let calls=0;
+  const adapter=dialogue.createDialogueSemanticAdapter({complete:async request=>{calls++;const input=JSON.parse(request.messages[1].content),w=wire({input});
+   if(mode==='missing-coverage')delete w.units[0].coverage;
+   if(mode==='action-parent')w.units[0].utterances[0].claim.type='action';
+   if(mode==='not-received')w.units[0].utterances[0].receptions[0].status='not_received';
+   if(mode==='none'){w.units[0].utterances=[];w.units[0].coverage={status:'none',evidence:full,reason:'仅用于无事件结构的隔离反例'};}
+   return w;
+  }});
+  const k=createStoryKnowledgeRuntime({catalog:{id:'bound.catalog',actors,facts:[]},mvu,tavern,getAnchor:()=>({chatId:'bound.test',messageId:0,swipeId:0}),dialogue:adapter});
+  if(['missing-coverage','action-parent'].includes(mode)){await assert.rejects(k.observeDialogue(options.sourceAnchor));assert.equal(floors[0].stat_data['901_rules_poc'].revision,0);}
+  else {assert.equal((await k.observeDialogue(options.sourceAnchor)).pending.length,0);assert.equal(Object.values(k.read().dialogueBatches)[0].receptionCoverage[0].status,mode==='none'?'none':'recorded');}
+  assert.equal(calls,1);assert.ok(k.context().actorKnowledge.every(a=>a.facts.length===0));assert.deepEqual(k.dialogueQuestions([]),[]);
+ }
+});
+
+test('planned speech keeps original intent claim and none coverage without creating utterance',async()=>{
+ const plannedText='甲打算把消息告诉乙，但还没有开口。',at=q=>({documentId:'current',start:plannedText.indexOf(q),end:plannedText.indexOf(q)+q.length,quote:q});
+ const p=await dialogue.prepareBoundDialogueExtraction({...options,sourceAnchor:{...options.sourceAnchor,text:plannedText}});
+ const intent={id:'intent',type:'state',args:{entity:'甲',name:'意图',value:'把消息告诉乙'},argumentSpans:{entity:at('甲'),name:at('打算'),value:at('把消息告诉乙')},mode:'asserted',scope:{time:null,condition:null,attribution:null},scopeSpans:{time:null,condition:null,attribution:null},anchor:at(plannedText)};
+ const w={schemaVersion:'dialogue-reception/2',contextRef:p.input.contextRef,inputRef:p.input.assertion.inputRef,units:[{id:'turn',status:'extracted',claims:[intent],utterances:[],unresolved:[],coverage:{status:'none',evidence:at('还没有开口'),reason:'只有意图，传达尚未发生'}}]};
+ const result=p.check(w);assert.deepEqual(result.assertions.units[0].claims,[intent]);assert.deepEqual(result.receptions,[]);assert.equal(result.coverage[0].reason,w.units[0].coverage.reason);
+});
+
+test('existing Tavern completion maps exact messages and schema without settings or response repair',async()=>{
+ const p=await prepare();let listener,removed=false,seen;
+ const complete=dialogue.createTavernDialogueCompletion({event:'settings',eventOn:(_,fn)=>{listener=fn;},eventRemoveListener:(_,fn)=>{assert.equal(fn,listener);removed=true;},generateRaw:async config=>{
+  assert.deepEqual(config.ordered_prompts,p.messages);assert.equal(config.max_chat_history,0);assert.equal(config.should_stream,false);assert.equal(config.custom_api,undefined);
+  seen={messages:[...p.messages,{role:'system',content:'host injection'}],temperature:.7,custom_prompt_post_processing:'merge'};listener(seen);
+  return ' invalid raw JSON ';
+ }});
+ assert.equal(await complete({purpose:'dialogue-reception',messages:p.messages,responseFormat:p.responseFormat}),' invalid raw JSON ');
+ assert.deepEqual(seen.messages,p.messages);assert.deepEqual(seen.json_schema,{name:p.responseFormat.json_schema.name,value:p.responseFormat.json_schema.schema,strict:true});assert.equal(seen.temperature,.7);assert.equal(seen.custom_prompt_post_processing,'');assert.ok(removed);
+});

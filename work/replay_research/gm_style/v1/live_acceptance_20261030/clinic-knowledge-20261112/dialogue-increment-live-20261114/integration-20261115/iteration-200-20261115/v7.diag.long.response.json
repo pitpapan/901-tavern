@@ -1,0 +1,31 @@
+{
+  "kind": "v7.diag.long",
+  "startedAt": "2026-11-15T22:44:49.873Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T22:44:54.017Z",
+  "headersElapsedMs": 4144,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b1c8643fb5841a-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 22:44:53 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2FRKDsks7lBe6e5G7tMBze7%2BEcEn7tH9O2nMaGGDThzf6qZV6oYlk8aTdDM%2BCOIW9LQdmYyErM7H0OoGawPuqh0JCMOUY9mDe9IILWM6Q9LvGPJg7hOo1%2FBg9naAJ9A%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611152244504091027628268d9d6K4MnNB95",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "6939e913-fd5d-467e-b456-d70f83dd7d90"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"d119d55e-10f5-4670-b0f5-e32e940a3a97\",\"object\":\"chat.completion\",\"created\":1794782693,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/7\\\",\\\"contextRef\\\":\\\"b815a29418321fe278c1ec7497a2ad85c21e4277f9ef7dc711b3ea6a2cc508c2\\\",\\\"selections\\\":[{\\\"fragmentId\\\":\\\"f17\\\",\\\"quote\\\":\\\"布莱特听到这话，\\\"},{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"“真要说想念的，哪怕只是小酒馆里一碗炖得烂熟的杂烩肉汤，配上刚烤透、皮还是脆的热麦饼，也比干粮强上十倍。要是能在窗边坐下，再来一壶温热的麦茶，这几天的奔波才算真正缓过劲来。”\\\\n\\\"},{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"布莱特听到这话，嘴角扬了扬，牵着马缰走得颇为轻快：\\\\n\\\"},{\\\"fragmentId\\\":\\\"f30\\\",\\\"quote\\\":\\\"走在另一侧的黄泉顺手整了整马鞍旁的带子，\\\"},{\\\"fragmentId\\\":\\\"f8\\\",\\\"quote\\\":\\\"“热汤面，或者刚出锅的肉串。赶路的时候总觉得随便填饱肚子就行，真闻到街边的烟火气，倒确实想吃口带油盐味的热食。”\\\\n\\\"},{\\\"fragmentId\\\":\\\"f6\\\",\\\"quote\\\":\\\"走在另一侧的黄泉顺手整了整马鞍旁的带子，听着前方的市井动静，语气依旧平淡，但也带了点闲适：\\\\n\\\"},{\\\"fragmentId\\\":\\\"f50\\\",\\\"quote\\\":\\\"布莱特微微侧过头，\\\"},{\\\"fragmentId\\\":\\\"f12\\\",\\\"quote\\\":\\\"布莱特微微侧过头，辨了辨方向：“闻着味道，前面不远就有几家脚店和小食肆。咱们办完正事，找地方落脚填肚子倒不用愁了。”\\\\n\\\"},{\\\"fragmentId\\\":\\\"f51\\\",\\\"quote\\\":\\\"辨了辨方向：\\\"},{\\\"fragmentId\\\":\\\"f54\\\",\\\"quote\\\":\\\"咱们办完正事，\\\"}],\\\"utterances\\\":[{\\\"speakerId\\\":\\\"bright\\\",\\\"speaker\\\":0,\\\"content\\\":1,\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":2},{\\\"speakerId\\\":\\\"huang\\\",\\\"speaker\\\":3,\\\"content\\\":4,\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":5},{\\\"speakerId\\\":\\\"bright\\\",\\\"speaker\\\":6,\\\"content\\\":7,\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":9,\\\"attribution\\\":null},\\\"anchor\\\":8}],\\\"receptions\\\":[{\\\"utterance\\\":0,\\\"content\\\":1,\\\"listenerId\\\":\\\"player\\\",\\\"identityKind\\\":\\\"reply\\\",\\\"identity\\\":0,\\\"historyMessageId\\\":15,\\\"evidenceKind\\\":\\\"reply\\\",\\\"evidence\\\":0,\\\"propositionRef\\\":null},{\\\"utterance\\\":0,\\\"content\\\":1,\\\"listenerId\\\":\\\"huang\\\",\\\"identityKind\\\":\\\"explicit\\\",\\\"identity\\\":3,\\\"historyMessageId\\\":null,\\\"evidenceKind\\\":\\\"direct\\\",\\\"evidence\\\":2,\\\"propositionRef\\\":null},{\\\"utterance\\\":1,\\\"content\\\":4,\\\"listenerId\\\":\\\"player\\\",\\\"identityKind\\\":\\\"reply\\\",\\\"identity\\\":5,\\\"historyMessageId\\\":15,\\\"evidenceKind\\\":\\\"reply\\\",\\\"evidence\\\":5,\\\"propositionRef\\\":null},{\\\"utterance\\\":1,\\\"content\\\":4,\\\"listenerId\\\":\\\"bright\\\",\\\"identityKind\\\":\\\"explicit\\\",\\\"identity\\\":0,\\\"historyMessageId\\\":null,\\\"evidenceKind\\\":\\\"direct\\\",\\\"evidence\\\":5,\\\"propositionRef\\\":null},{\\\"utterance\\\":2,\\\"content\\\":7,\\\"listenerId\\\":\\\"player\\\",\\\"identityKind\\\":\\\"explicit\\\",\\\"identity\\\":9,\\\"historyMessageId\\\":null,\\\"evidenceKind\\\":\\\"direct\\\",\\\"evidence\\\":7,\\\"propositionRef\\\":null},{\\\"utterance\\\":2,\\\"content\\\":7,\\\"listenerId\\\":\\\"huang\\\",\\\"identityKind\\\":\\\"explicit\\\",\\\"identity\\\":9,\\\"historyMessageId\\\":null,\\\"evidenceKind\\\":\\\"direct\\\",\\\"evidence\\\":7,\\\"propositionRef\\\":null}],\\\"unresolved\\\":[],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":2}}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":14413,\"completion_tokens\":861,\"total_tokens\":15274}}",
+  "responseBytes": 3539,
+  "responseBodySha256BeforePrivacyRedaction": "26880c971f6a193b5a22a47ea93a4dfef66d6cfa5623ada1ae523f12bb1d8761",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T22:44:54.022Z",
+  "elapsedMs": 4149
+}

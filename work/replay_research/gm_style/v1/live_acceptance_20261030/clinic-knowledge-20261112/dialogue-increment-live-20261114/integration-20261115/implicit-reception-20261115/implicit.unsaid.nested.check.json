@@ -1,0 +1,156 @@
+{
+  "id": "implicit.unsaid.nested",
+  "exactCurrentMessages": true,
+  "structuralPass": true,
+  "checked": {
+    "contextRef": "e66372f13007d5fca86223f7c53e9796f2589b2affe4cd200ee4ed39e34d6bb2",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.c6590c8c75289cbce31667dbee01331e5646cd4ec456a3f771d7a16096aaf757",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "turn.claim.1",
+              "type": "action",
+              "args": {
+                "actor": "黄泉",
+                "verb": "开口",
+                "object": "回答"
+              },
+              "argumentSpans": {
+                "actor": {
+                  "documentId": "current",
+                  "start": 0,
+                  "end": 2,
+                  "quote": "黄泉"
+                },
+                "verb": {
+                  "documentId": "current",
+                  "start": 24,
+                  "end": 26,
+                  "quote": "开口"
+                },
+                "object": {
+                  "documentId": "current",
+                  "start": 16,
+                  "end": 18,
+                  "quote": "回答"
+                }
+              },
+              "mode": "denied",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 19,
+                "end": 27,
+                "quote": "却始终没有开口。"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "none",
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 27,
+          "quote": "黄泉心里拟好了“日落后就锁门”的回答，却始终没有开口。"
+        },
+        "reason": "黄泉仅在心里拟好回答，明确未开口说话，没有发生实际言说与信息传递。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false
+  },
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": []
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": []
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "pending": [],
+  "noQuestionWithoutDependency": true,
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "implicit.regression",
+    "chatId": "implicit.offline.implicit.unsaid",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      }
+    },
+    "events": {},
+    "knowledge": {},
+    "dialogueBatches": {
+      "dialogue.1e54375e80ee936deb37df51e9c0735631e49d3d67f7bc672e58e101e369ec93": {
+        "id": "dialogue.1e54375e80ee936deb37df51e9c0735631e49d3d67f7bc672e58e101e369ec93",
+        "sourceAnchor": {
+          "chatId": "implicit.offline.implicit.unsaid",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "黄泉心里拟好了“日落后就锁门”的回答，却始终没有开口。"
+        },
+        "status": "processed",
+        "rows": [],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "none",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 27,
+              "quote": "黄泉心里拟好了“日落后就锁门”的回答，却始终没有开口。"
+            },
+            "reason": "黄泉仅在心里拟好回答，明确未开口说话，没有发生实际言说与信息传递。"
+          }
+        ]
+      }
+    }
+  }
+}

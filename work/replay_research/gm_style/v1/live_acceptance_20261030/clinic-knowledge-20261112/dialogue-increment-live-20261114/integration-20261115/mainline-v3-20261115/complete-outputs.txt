@@ -1,0 +1,45 @@
+custom400 main.A1.reception
+Schema and strict citations pass; player full received, bright not received, no pending; actual UI persistence checked after release
+
+{"schemaVersion":"dialogue-reception/3","contextRef":"99beb414e2135fec79823e675d1ae5396816df970986b4502c78e2199f23400d","inputRef":"assertion.b1d934bb5fdeab52a759d649943b9aa1fb005b0206d1e71d681c4905dad1dff9","units":[{"id":"turn","status":"extracted","coverage":{"status":"recorded","evidence":{"documentId":"current","start":0,"end":75,"quote":"黄泉对御临风说：“西门今晚关闭，明早从石桥走。”御临风听清了整句话。布莱特离得太远，一句也没听见。\n\n<StatusPlaceHolderImpl/>"},"reason":"黄泉对御临风的言说已记录，御临风完整听清与布莱特因距离太远未听见均有明确依据并记录。"},"unresolved":[],"claims":[],"utterances":[{"claim":{"id":"turn.utterance.1","type":"utterance","args":{"speaker":"黄泉","content":"西门今晚关闭，明早从石桥走。"},"argumentSpans":{"speaker":{"documentId":"current","start":0,"end":2,"quote":"黄泉"},"content":{"documentId":"current","start":9,"end":23,"quote":"西门今晚关闭，明早从石桥走。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":0,"end":24,"quote":"黄泉对御临风说：“西门今晚关闭，明早从石桥走。”"}},"receptions":[{"id":"turn.utterance.1.rec.player","contentSpan":{"documentId":"current","start":9,"end":23,"quote":"西门今晚关闭，明早从石桥走。"},"speakerId":"huang","recipientIds":["player"],"recipientSpans":[{"documentId":"current","start":3,"end":6,"quote":"御临风"}],"evidence":{"documentId":"current","start":24,"end":34,"quote":"御临风听清了整句话。"},"status":"received","propositionRef":null,"reason":"原文直接指明御临风听清了整句话。"},{"id":"turn.utterance.1.rec.bright","contentSpan":{"documentId":"current","start":9,"end":23,"quote":"西门今晚关闭，明早从石桥走。"},"speakerId":"huang","recipientIds":["bright"],"recipientSpans":[{"documentId":"current","start":34,"end":37,"quote":"布莱特"}],"evidence":{"documentId":"current","start":34,"end":49,"quote":"布莱特离得太远，一句也没听见。"},"status":"not_received","propositionRef":null,"reason":"原文明确指出布莱特离得太远，一句也没听见。"}]}]}]}
+
+
+
+custom401 main.B1.reception
+Exact contentSpan: player full; bright front received with delimiter only; back uncertain; no whole-sentence overgrant. Schema and citation checks pass.
+
+{"schemaVersion":"dialogue-reception/3","contextRef":"bfc846ce1538c5d59f5bd23568b92eff5f2b5c33387e01177e4c4b5f60425b92","inputRef":"assertion.cb3f60f4775c8f17ba6b744f6e9df17e9a661c9d74ce90bdef198406814369e0","units":[{"id":"turn","claims":[],"utterances":[{"claim":{"id":"turn.utterance.1","type":"utterance","args":{"speaker":"黄泉","content":"渡口今晚停航，明早从南桥走。"},"argumentSpans":{"speaker":{"documentId":"current","start":0,"end":2,"quote":"黄泉"},"content":{"documentId":"current","start":9,"end":23,"quote":"渡口今晚停航，明早从南桥走。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":0,"end":24,"quote":"黄泉对御临风说：“渡口今晚停航，明早从南桥走。”"}},"receptions":[{"id":"turn.utterance.1.rec.player","contentSpan":{"documentId":"current","start":9,"end":23,"quote":"渡口今晚停航，明早从南桥走。"},"speakerId":"huang","recipientIds":["player"],"recipientSpans":[{"documentId":"current","start":3,"end":6,"quote":"御临风"}],"evidence":{"documentId":"current","start":0,"end":8,"quote":"黄泉对御临风说："},"status":"received","propositionRef":null,"reason":"黄泉直接对御临风说出该内容，无接收障碍。"},{"id":"turn.utterance.1.rec.bright.1","contentSpan":{"documentId":"current","start":9,"end":16,"quote":"渡口今晚停航，"},"speakerId":"huang","recipientIds":["bright"],"recipientSpans":[{"documentId":"current","start":24,"end":27,"quote":"布莱特"}],"evidence":{"documentId":"current","start":24,"end":38,"quote":"布莱特只听清“渡口今晚停航”"},"status":"received","propositionRef":null,"reason":"布莱特明确只听清前半句“渡口今晚停航”。"},{"id":"turn.utterance.1.rec.bright.2","contentSpan":{"documentId":"current","start":16,"end":23,"quote":"明早从南桥走。"},"speakerId":"huang","recipientIds":["bright"],"recipientSpans":[{"documentId":"current","start":24,"end":27,"quote":"布莱特"}],"evidence":{"documentId":"current","start":39,"end":51,"quote":"后半句有没有听见无法确定"},"status":"uncertain","propositionRef":null,"reason":"原文明确指出后半句有没有听见无法确定。"}]}],"coverage":{"status":"uncertain","evidence":{"documentId":"current","start":0,"end":78,"quote":"黄泉对御临风说：“渡口今晚停航，明早从南桥走。”布莱特只听清“渡口今晚停航”，后半句有没有听见无法确定。\n\n<StatusPlaceHolderImpl/>"},"reason":"黄泉所说内容部分被布莱特听清，但后半句对布莱特的接收状态存在原文明确的uncertain情况。"},"status":"extracted","unresolved":[]}]}
+
+
+
+custom402 main.B2.dependency
+inputRef matches; required empty; actual401 pending second half used unchanged
+
+{"inputRef":"18cfd79a32eaf4b07db42379477e9e0e1b1f7b39d7044fdd4c0e3bffe6eb968d","required":[]}
+
+
+
+custom403 main.B3.dependency
+Exact inputRef and actual pending ID; related request depends on second half, does not resolve reception
+
+{"inputRef":"a93812647e02c3a99d3625cd848d43477b6a696ae9d687f4d600b570ff6339dc","required":["dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.c3e6243c65ebd62654c2412ccb8aa94826f9d8265c38949c66cc606272e267ba"]}
+
+
+
+custom404 main.B3.narration
+Answers south bridge after explicit isolated confirmation; attributes earlier statement to Huang; no mandatory disclosure imposed, no new condition or relationship
+
+布莱特牵着马缰绳，脚步没有停下。听到御临风直接向他问起这一句，他微微侧了下头，神色平静地应道：
+
+“南桥。黄泉刚才说的是明早从南桥走。”
+
+街市上的车马声在身旁来回响着，两旁的行人依然顺着石板路各自走着，没有谁特意往他们这边看。九雪医馆的方向仍在城东，眼前的引水渠边，那几名脚夫已经挑起空担子，沿着巷口朝深处走去。
+
+
+
+custom405 main.B3.reception
+Actual404 speech retained with attribution to Huang inside content; resolved speaker pronoun and player recipient cited exactly; no unsupported Huang grant; Schema and strict checks pass
+
+{"schemaVersion":"dialogue-reception/3","contextRef":"5ba774ccc09fecdf5a52a6c5707e07a9f9b6e2faee78b40ac17e08800bce840d","inputRef":"assertion.159028c092dff8b23181067544ea0db16b43633be749c1342e278395db047c57","units":[{"id":"turn","claims":[],"utterances":[{"claim":{"id":"turn.utterance.bright.1","type":"utterance","args":{"speaker":"布莱特","content":"南桥。黄泉刚才说的是明早从南桥走。"},"argumentSpans":{"speaker":{"documentId":"current","start":31,"end":32,"quote":"他"},"content":{"documentId":"current","start":50,"end":67,"quote":"南桥。黄泉刚才说的是明早从南桥走。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":31,"end":68,"quote":"他微微侧了下头，神色平静地应道：\n\n“南桥。黄泉刚才说的是明早从南桥走。”"}},"receptions":[{"id":"turn.reception.1","contentSpan":{"documentId":"current","start":50,"end":67,"quote":"南桥。黄泉刚才说的是明早从南桥走。"},"speakerId":"bright","recipientIds":["player"],"recipientSpans":[{"documentId":"current","start":18,"end":21,"quote":"御临风"}],"evidence":{"documentId":"current","start":16,"end":47,"quote":"听到御临风直接向他问起这一句，他微微侧了下头，神色平静地应道："},"status":"received","propositionRef":null,"reason":"布莱特直接回应御临风的提问，当面应答无接收障碍。"}]}],"coverage":{"status":"recorded","evidence":{"documentId":"current","start":0,"end":183,"quote":"布莱特牵着马缰绳，脚步没有停下。听到御临风直接向他问起这一句，他微微侧了下头，神色平静地应道：\n\n“南桥。黄泉刚才说的是明早从南桥走。”\n\n街市上的车马声在身旁来回响着，两旁的行人依然顺着石板路各自走着，没有谁特意往他们这边看。九雪医馆的方向仍在城东，眼前的引水渠边，那几名脚夫已经挑起空担子，沿着巷口朝深处走去。\n\n<StatusPlaceHolderImpl/>"},"reason":"已完整记录布莱特对御临风的应答言说及接收情况。"},"status":"extracted","unresolved":[]}]}
+
+

@@ -1,0 +1,41 @@
+✔ compact registry preserves original input, partial range and uncertainty through old strict receipt checker (492.3277ms)
+✔ compact scoped values come from explicitly selected source, not string coercion or omitted defaults (4.6878ms)
+✔ compact invalid selections, bindings, omitted fields and cross-reception ranges are rejected without repair (17.4656ms)
+✔ compact reply identity requires a known history row and a selection inside current answer (9.4781ms)
+✔ compact explicit none, obstacle, unknown identity and unresolved preserve separate meanings (4.6434ms)
+✔ invalid v7 raw reply persists unprocessed only; unrelated play, reload and observe never re-extract or ask (12.8632ms)
+✔ actual dependency triggers one bounded new extraction using frozen failed input; real partial/pending then uses old ask (30.1483ms)
+✔ second format failure remains technical unprocessed, never fake none or semantic confirmation and never loops (14.1291ms)
+✔ valid recovery with explicit no reception clears only the failed increment (15.9945ms)
+✔ source/branch changes and state persistence failures are not masked as extraction failures (5.7319ms)
+✔ existing knowledge survives a later failed increment (7.876ms)
+✔ historical malformed replies remain rejected by explicit v7, never repaired or interpreted as a new wire (6.758ms)
+✖ primitive, duplicate-key and invalid-selection failures retain exact raw replies, without any receipt adoption (6.9514ms)
+✔ recovery rechecks actual pending dependencies instead of asking about unrelated unresolved remainder (22.3479ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 13
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1026.4444
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-compact.test.mjs:102:1
+✖ primitive, duplicate-key and invalid-selection failures retain exact raw replies, without any receipt adoption (6.9514ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  123 !== '  123  '
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:105:93)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 123,
+    expected: '  123  ',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,15 @@
+✔ v6 selections expand to the existing v5 contract without changing input or semantic guarantees (1086.1064ms)
+✔ explicit answer/content references reuse selections; scoped values still require paired source evidence (933.9348ms)
+✔ v6 rejects omissions, extra/derived fields, stale bindings and invalid reuse without correction (23.5822ms)
+✔ nonreception, unknown identity, explicit none and unformable-content ambiguity retain original meanings (934.3293ms)
+✔ explicit v6 runtime registers only heard range; reopens idempotently and asks only on actual dependency (103.3694ms)
+✔ invalid raw JSON, duplicate fields, missing selections and changed source never write state (64.3887ms)
+✔ v6 is opt-in; actual raw failures cannot fall back or be upgraded to selections (39.5405ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3902.9163

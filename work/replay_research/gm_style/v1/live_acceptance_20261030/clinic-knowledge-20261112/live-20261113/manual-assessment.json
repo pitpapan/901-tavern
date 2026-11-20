@@ -1,0 +1,45 @@
+{
+  "assessmentMode": "manual offline reading; no review model or automatic semantic gate",
+  "overall": "partial evidence, not full knowledge-conditioned narration acceptance",
+  "calls": {
+    "new": 4,
+    "cumulative": 244,
+    "remaining": 4
+  },
+  "cases": [
+    {
+      "id": "01-before",
+      "knowledgeBoundary": "No clinic-owner/Xuelao friendship disclosure",
+      "unsupportedAdditions": [
+        {
+          "quote": "老馆主行医多年，在城东有些名望",
+          "evidence": "No support for practice duration or reputation in the exact request; neither a confirmed fact nor a proven contradiction."
+        }
+      ],
+      "style": "Brief, coherent reply; lodging remains an inquiry rather than a confirmed result."
+    },
+    {
+      "id": "02-received",
+      "knowledgeBoundary": "Does not disclose the acquired friendship; silence is compatible with this general letter/lodging question. Positive use remains unproven.",
+      "style": "Natural conditional suggestion, but little distinguishable effect from the acquired knowledge."
+    },
+    {
+      "id": "03-unreceived",
+      "knowledgeBoundary": "No friendship disclosed by the uninformed actor.",
+      "style": "Brief Huang reply, but dialogue reproduces the retained earlier reply."
+    },
+    {
+      "id": "04-relayed",
+      "knowledgeBoundary": "Does not mention the acquired friendship. Cannot infer whether knowledge was ignored or simply not relevant to the chosen reply.",
+      "style": "Dialogue identical to case03 and earlier retained reply; adds two steps by Huang only, without controlling the player."
+    }
+  ],
+  "playerControl": "No new player dialogue, thought, decision, movement or lodging acceptance in these four outputs. NPC-only small actions are not failures.",
+  "inputFindings": "Frozen requests contain the intended actor contexts and sources; no new program wiring omission demonstrated. Original unverified eastward statements remain in retained history; this round does not establish route truth.",
+  "narrativeLimits": "These short replies are normal for the supplied brief-response instruction. No truncation: all finish_reason=stop. No proof of broad literary improvement, character differentiation or populated-memory isolation.",
+  "nextMinimalProbe": "If continued, prepare one neutral question about whether the addressed character knows any owner/Xuelao relationship, under the same four knowledge conditions. Do not assert friendship in the question. This would be a new diagnostic prompt, not re-sampling the current outputs or a generalization claim.",
+  "nextCallsSent": 0,
+  "productCodeChanged": false,
+  "deployed": false,
+  "realStoryWrites": 0
+}

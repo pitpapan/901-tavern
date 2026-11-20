@@ -1,0 +1,103 @@
+{
+  "offline": true,
+  "tests": 135,
+  "failures": 0,
+  "packagedModules": 133,
+  "realProtectedFilesUnchanged": true,
+  "derivedFromBrowserCaptures": true,
+  "newBrowserCapture": false,
+  "cumulativeModelCalls": 248,
+  "remainingCalls": 0,
+  "results": [
+    {
+      "id": "05-known-unasked",
+      "requestBytes": 106948,
+      "requestSha256": "84566de16a073c5935cec91ec1b44fa7904ae92c67e1ce66105172fc02934248",
+      "reopenedPackagedContextMatches": true,
+      "knowledgeCounts": [
+        0,
+        1,
+        0
+      ],
+      "explicitNotes": 0
+    },
+    {
+      "id": "06-known-asked",
+      "requestBytes": 106924,
+      "requestSha256": "87a8dafed33c6fe9f31ab51e5b2b7531088167b4a4ddc098f8e271a6e4ca2009",
+      "reopenedPackagedContextMatches": true,
+      "knowledgeCounts": [
+        0,
+        1,
+        0
+      ],
+      "explicitNotes": 0
+    },
+    {
+      "id": "07-unknown-asked",
+      "requestBytes": 105860,
+      "requestSha256": "01b40a0e044c93d02d0d6fbae9fac6503ca8d243e7cfe24d2ebc0a28e09c13c3",
+      "reopenedPackagedContextMatches": true,
+      "knowledgeCounts": [
+        0,
+        0,
+        0
+      ],
+      "explicitNotes": 0
+    },
+    {
+      "id": "08-confidential-asked",
+      "requestBytes": 107604,
+      "requestSha256": "d8e0e62d73da466b2afe12dd8ebe829d8dfea12e541e7f680d3967a27f206664",
+      "reopenedPackagedContextMatches": true,
+      "knowledgeCounts": [
+        0,
+        1,
+        0
+      ],
+      "explicitNotes": 1
+    }
+  ],
+  "liveResults": [
+    {
+      "id": "05-known-unasked",
+      "customRequest": 245,
+      "status": 200,
+      "finishReason": "stop",
+      "requestMatchesFrozen": true,
+      "rawResponseSha256": "0066306c425374e37d259e73a7fc637ff4a6329fae8e22150bd775f255faef11",
+      "rawResponsePreservedWithoutRedaction": true,
+      "contentMatchesRawResponse": true
+    },
+    {
+      "id": "06-known-asked",
+      "customRequest": 246,
+      "status": 200,
+      "finishReason": "stop",
+      "requestMatchesFrozen": true,
+      "rawResponseSha256": "9e8701783f2014f07321addaea9e2f1e26092ba05408c1b437cbabe37ceb3dc1",
+      "rawResponsePreservedWithoutRedaction": true,
+      "contentMatchesRawResponse": true
+    },
+    {
+      "id": "07-unknown-asked",
+      "customRequest": 247,
+      "status": 200,
+      "finishReason": "stop",
+      "requestMatchesFrozen": true,
+      "rawResponseSha256": "2b707fee481359e09fe539b5b5eec26b780ca5bbd36e01f2a7fff69954d93eee",
+      "rawResponsePreservedWithoutRedaction": true,
+      "contentMatchesRawResponse": true
+    },
+    {
+      "id": "08-confidential-asked",
+      "customRequest": 248,
+      "status": 200,
+      "finishReason": "stop",
+      "requestMatchesFrozen": true,
+      "rawResponseSha256": "2cebed4ae4024650c81348bc5af1c0a737c25fe7833cdb4bb8b31e64cf35ea96",
+      "rawResponsePreservedWithoutRedaction": true,
+      "contentMatchesRawResponse": true
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "contextRef": "40e8717b93bcca15a9d8d2abaa1cd4184940805c8ef4546deb77374f71bc40f6",
+  "assertions": {
+    "schemaVersion": "gm-assertion-output/1",
+    "inputRef": "assertion.a8b23d4e35d674016529fb21a7a79aedce9d6efa4e18dccda5367cb8c313e913",
+    "units": [
+      {
+        "id": "turn",
+        "status": "extracted",
+        "claims": [
+          {
+            "id": "speech",
+            "type": "utterance",
+            "args": {
+              "speaker": "黄泉",
+              "content": "北街水井暂时停用。"
+            },
+            "argumentSpans": {
+              "speaker": {
+                "documentId": "current",
+                "start": 0,
+                "end": 2,
+                "quote": "黄泉"
+              },
+              "content": {
+                "documentId": "current",
+                "start": 9,
+                "end": 18,
+                "quote": "北街水井暂时停用。"
+              }
+            },
+            "mode": "asserted",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 0,
+              "end": 19,
+              "quote": "黄泉对御临风说：“北街水井暂时停用。”"
+            }
+          }
+        ],
+        "unresolved": []
+      }
+    ]
+  },
+  "receptions": [
+    {
+      "id": "r",
+      "claimId": "speech",
+      "speakerId": "huang",
+      "recipientIds": [
+        "player"
+      ],
+      "recipientSpans": [
+        {
+          "documentId": "current",
+          "start": 3,
+          "end": 6,
+          "quote": "御临风"
+        }
+      ],
+      "evidence": {
+        "documentId": "current",
+        "start": 0,
+        "end": 19,
+        "quote": "黄泉对御临风说：“北街水井暂时停用。”"
+      },
+      "status": "received",
+      "propositionRef": "well.closed",
+      "reason": ""
+    }
+  ]
+}

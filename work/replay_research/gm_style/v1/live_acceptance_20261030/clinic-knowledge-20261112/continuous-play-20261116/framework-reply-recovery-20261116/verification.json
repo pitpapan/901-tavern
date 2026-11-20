@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "externalModelCalls": 0,
+  "budgetUnchanged": {
+    "used": 6,
+    "remaining": 6,
+    "cumulative": 540
+  },
+  "snapshots": [
+    {
+      "snapshot": "01-timeout-next-ok",
+      "messages": 31,
+      "revision": 4,
+      "lastStatus": "NO_CHECK",
+      "savedRootEqual": true
+    },
+    {
+      "snapshot": "02-malformed-error",
+      "messages": 33,
+      "revision": 4,
+      "lastStatus": "UNRESOLVED",
+      "savedRootEqual": true
+    },
+    {
+      "snapshot": "03-malformed-regenerated-ok",
+      "messages": 33,
+      "revision": 4,
+      "lastStatus": "NO_CHECK",
+      "savedRootEqual": true
+    },
+    {
+      "snapshot": "04-prose-saved-extraction-failed",
+      "messages": 35,
+      "revision": 5,
+      "lastStatus": "NO_CHECK",
+      "savedRootEqual": true
+    },
+    {
+      "snapshot": "05-disabled-old-failure-next-ok",
+      "messages": 37,
+      "revision": 5,
+      "lastStatus": "NO_CHECK",
+      "savedRootEqual": true
+    },
+    {
+      "snapshot": "06-reopened-preserved",
+      "messages": 37,
+      "revision": 5,
+      "lastStatus": "NO_CHECK",
+      "savedRootEqual": true
+    },
+    {
+      "snapshot": "07-reopened-next-ok",
+      "messages": 39,
+      "revision": 5,
+      "lastStatus": "NO_CHECK",
+      "savedRootEqual": true
+    }
+  ],
+  "localEndpointCaptures": {
+    "classification": 6,
+    "narration": 5
+  },
+  "timeout": {
+    "classificationAttemptsPerNotice": 2,
+    "narrationCalls": 0,
+    "noticesRetained": 2,
+    "deadlineMs": 500,
+    "requestReachedLocalEndpoint": false
+  },
+  "malformed": {
+    "classificationCalls": 1,
+    "narrationCalls": 0,
+    "recoveredThroughNativeRegenerate": true
+  },
+  "activeRetainedFailedBatch": {
+    "unchangedAfterDisableNextChatReopenAndNextChat": true,
+    "pending": 1,
+    "sourceMessageId": 34
+  },
+  "mechanicalActorsExistingOperationsKnowledgeReceiptsUnchanged": true,
+  "optionalBatchWriteOnly": {
+    "revisionBefore": 4,
+    "revisionAfter": 5,
+    "additionalKnowledgeBatchOperation": 1
+  },
+  "originalLabRestored": true,
+  "protectedFilesUnchanged": 3,
+  "compiledInstalledModules": [
+    "adjudication-gate.mjs",
+    "replay-gate-script.example.js",
+    "story-dialogue-knowledge.mjs"
+  ],
+  "limits": [
+    "All browser classification/prose results are local fixtures, not live model acceptance.",
+    "The 500 ms timeout fixture also produced two notices for the same unexecuted input; preserved, no repeated settlement.",
+    "Real unsettled mechanical actions and committed MVU results retain their existing recovery protections."
+  ]
+}

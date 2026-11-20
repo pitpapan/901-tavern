@@ -104,6 +104,7 @@ export const EFFECT_CONSUMERS={
  save:consumer('combat/mechanics.mjs','saveProfile'),tag:consumer('combat/mechanics.mjs','combatRuleContext'),
  incomingDamage:consumer('resource-damage-modifiers.mjs','adjustIncomingDamage'),
  absorb:consumer('combat/engine.mjs','damageEvent'),hardness:consumer('combat/engine.mjs','damageEvent'),dr:consumer('combat/engine.mjs','damageEvent'),energyResistance:consumer('combat/engine.mjs','damageEvent'),
+ spellManaCostReduction:consumer('gm_runtime/resource-program.mjs','executeProgram'),
  spellPower:consumer('gm_runtime/resource-program.mjs','executeProgram'),spellResistance:consumer('gm_runtime/resource-program.mjs','executeProgram + resource-auras'),mindStatusReduction:consumer('gm_runtime/resource-program.mjs','resolveProgramSteps'),
  ignoreWoundUnconsciousness:consumer('core.mjs','lifeStatus'),statusPenaltyIgnore:consumer('resource-penalties.mjs','remainingPenalty'),environmentPenaltyIgnore:consumer('resource-penalties.mjs','remainingPenalty'),
  extraSuccess:consumer('core.mjs','check'),explodeReduction:consumer('core.mjs','check'),willEnhancement:consumer('core.mjs','willEnhancement'),

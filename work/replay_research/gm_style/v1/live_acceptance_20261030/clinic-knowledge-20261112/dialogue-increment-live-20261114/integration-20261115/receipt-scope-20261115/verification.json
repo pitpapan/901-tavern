@@ -1,0 +1,99 @@
+{
+  "scope": "仅接收依据与旁听范围",
+  "offline": {
+    "passed": 274,
+    "failed": 0
+  },
+  "model": {
+    "newCalls": 7,
+    "pass": 4,
+    "fail": 3,
+    "remaining": 147,
+    "usedOf200": 53,
+    "cumulative": 387,
+    "attempts": [
+      {
+        "id": "scope.original",
+        "customRequest": 381,
+        "verdict": "fail",
+        "structuralPass": false,
+        "assessment": "原始JSON括号/字段层级错误，原样拒绝；离线阅读仍用孤立目光/问你是作为接收依据，bright三段均received且无时间范围依据。新说明已送达，属于本次模型未遵从，不改回复、不重发。",
+        "responseModel": "gemini-3.8-flash-n",
+        "requestBytes": 229591
+      },
+      {
+        "id": "scope.full",
+        "customRequest": 382,
+        "verdict": "pass",
+        "structuralPass": true,
+        "assessment": "Schema/原校验通过；两句言说完整，player直接接收两句，bright明确全程证据共用而收到两句；隔离MVU各2条无待核，不因末尾叙述错误缩限。",
+        "responseModel": "gemini-3.8-flash",
+        "requestBytes": 220430
+      },
+      {
+        "id": "scope.late",
+        "customRequest": 383,
+        "verdict": "pass",
+        "structuralPass": true,
+        "assessment": "Schema/原校验通过；player收到两句，bright首句not_received第二句received，各自使用明确依据；隔离只授予第二句，无待核。",
+        "responseModel": "gemini-3.8-flash-n",
+        "requestBytes": 221032
+      },
+      {
+        "id": "scope.unknown",
+        "customRequest": 384,
+        "verdict": "fail",
+        "structuralPass": false,
+        "assessment": "原始JSON括号错误拒绝；可读内容把bright两句保留uncertain且未擅自授予，但不能算链路通过，不修补原文或格式。",
+        "responseModel": "gemini-3.8-flash-n",
+        "requestBytes": 220340
+      },
+      {
+        "id": "scope.partial",
+        "customRequest": 385,
+        "verdict": "fail",
+        "structuralPass": true,
+        "assessment": "Schema/原校验通过但语义失败：bright前半received和后半uncertain都挂在完整言说，未按现有合同分片；真实隔离MVU因此登记整句给bright并产生1待核。无本地丢字段，reason不改变父内容，禁止自动修补。",
+        "responseModel": "gemini-3.8-flash",
+        "requestBytes": 220303
+      },
+      {
+        "id": "scope.absent",
+        "customRequest": 386,
+        "verdict": "pass",
+        "structuralPass": true,
+        "assessment": "本例接收范围通过：player两句，bright两句明确not_received，零待核；第二句依据“她又说：”须结合前句明确传达对象作连续发言理解，不能宣称每条引用独立自足；没有目光/称谓单独证明接收。",
+        "responseModel": "gemini-3.8-flash-n",
+        "requestBytes": 220153
+      },
+      {
+        "id": "scope.reply",
+        "customRequest": 387,
+        "verdict": "pass",
+        "structuralPass": true,
+        "assessment": "两片隐含回答完整，听者引用回答内容并由history唯一问题定位player；接收依据包含实际回答，无需复述确认。隔离player2条bright0条、无待核；未改正文或补回执。",
+        "responseModel": "gemini-3.8-flash-n",
+        "requestBytes": 219768
+      }
+    ]
+  },
+  "invariants": {
+    "historicalFilesUnchanged": 233,
+    "formalProtectedUnchanged": 22,
+    "originalInputMessagesCoordinatesUnchanged": true,
+    "generationParametersUnchanged": true,
+    "schemaConstraintsUnchanged": true,
+    "runtimeAndValidatorUnchanged": true,
+    "rawResponsesPreserved": true,
+    "noDeployment": true,
+    "noFormalStoryWrites": true,
+    "noAutomaticApprovalOrRevision": true
+  },
+  "limitations": [
+    "原例未通过：格式错误与原接收范围过推仍在。",
+    "范围未知对照虽写uncertain，但JSON错误，不能算通过。",
+    "部分听清对照结构合法但没有分片，隔离MVU实际过授予整句；产品未自动识别该语义错配。",
+    "正例仅有限接收范围指标通过，不证明新说明带来稳定因果改善。",
+    "旧候选ZIP仍是380断点，本轮未重打包或更新隔离安装。"
+  ]
+}

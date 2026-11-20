@@ -1,0 +1,31 @@
+{
+  "kind": "boundary.reproduce.short_json",
+  "startedAt": "2026-11-15T16:26:42.919Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T16:26:46.450Z",
+  "headersElapsedMs": 3531,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5af9e831d554d39-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 16:26:46 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=B%2Bsz4o6qZrFeC%2F5ymrfeWLFttD6Y8vd1UO0ZAqBAFeprkzxqjzaI1rjIU6NfbTTg1qNgyH%2BDGU57amE9OxLaDnCYY462M7SD6QZhrhONR08zCB5LILco9gM9qVRchQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611151626431142010748268d9d6h38uh9Bk",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "d76ff701-3882-4bfb-99e6-9ce9918b98a3"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"8685787c-04de-4736-9737-33eed79346cf\",\"object\":\"chat.completion\",\"created\":1794760006,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/5\\\",\\\"contextRef\\\":\\\"ab6d70ff48207c836f2b5f85496c308380eac9345607427ca65070c343e50698\\\",\\\"inputRef\\\":\\\"assertion.c81dd63b1be2d1f1c49e57e10993ecc291e87567238c5f223ba82bc6e1d0989c\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"claim-utt-1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"午后就闭门了。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"午后就闭门了。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉答道：“午后就闭门了。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"rec-1\\\",\\\"contentSpan\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"午后就闭门了。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"\\\",\\\"listener\\\":{\\\"actorId\\\":\\\"bright\\\",\\\"kind\\\":\\\"reply\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"午后就闭门了。\\\"},\\\"historyMessageId\\\":0},\\\"evidence\\\":{\\\"kind\\\":\\\"reply\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"午后就闭门了。\\\"复合_null\\\":null}}}]}],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉答道：“午后就闭门了。”\\\"},\\\"reason\\\":\\\"黄泉直接回答布莱特上一轮提问，内容完整传达且无接收障碍。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4582,\"completion_tokens\":473,\"total_tokens\":5055}}",
+  "responseBytes": 1845,
+  "responseBodySha256BeforePrivacyRedaction": "b8f2b1a6337c052ab9286cc40f34d6f7c6ad12295ab7734694fef65f3f40f2b6",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T16:26:46.461Z",
+  "elapsedMs": 3541
+}

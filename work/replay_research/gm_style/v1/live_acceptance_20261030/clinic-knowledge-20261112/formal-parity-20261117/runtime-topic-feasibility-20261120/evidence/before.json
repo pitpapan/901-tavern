@@ -1,0 +1,769 @@
+{
+  "label": "before",
+  "chatId": "901 帝都正式续玩 20261106 - Branch #2",
+  "anchor": {
+    "chatId": "901 帝都正式续玩 20261106 - Branch #2",
+    "messageId": 8,
+    "swipeId": 0
+  },
+  "root": {
+    "schemaVersion": 1,
+    "revision": 2,
+    "chatId": "901 帝都正式续玩 20261106 - Branch #2",
+    "operations": {
+      "branch/901 帝都正式续玩 20261106 - Branch #1/8/0": {
+        "signature": "{\"kind\":\"nativeBranch\",\"sourceChatId\":\"901 帝都正式续玩 20261106\",\"sourceRevision\":0,\"nativeIntegrity\":\"388d4877-3023-4826-90a3-a7fd527d83cb\"}",
+        "summary": {
+          "status": "adopted",
+          "operationId": "branch/901 帝都正式续玩 20261106 - Branch #1/8/0",
+          "revision": 1,
+          "sourceChatId": "901 帝都正式续玩 20261106",
+          "sourceRevision": 0,
+          "messageId": 8,
+          "swipeId": 0
+        }
+      },
+      "branch/901 帝都正式续玩 20261106 - Branch #2/8/0": {
+        "signature": "{\"kind\":\"nativeBranch\",\"sourceChatId\":\"901 帝都正式续玩 20261106 - Branch #1\",\"sourceRevision\":1,\"nativeIntegrity\":\"2d583540-fe4b-4295-9715-b1d778b26d8a\"}",
+        "summary": {
+          "status": "adopted",
+          "operationId": "branch/901 帝都正式续玩 20261106 - Branch #2/8/0",
+          "revision": 2,
+          "sourceChatId": "901 帝都正式续玩 20261106 - Branch #1",
+          "sourceRevision": 1,
+          "messageId": 8,
+          "swipeId": 0
+        }
+      }
+    },
+    "actors": {
+      "player": {
+        "name": "御临风",
+        "state": {
+          "name": "御临风",
+          "attributes": {
+            "力量": 5,
+            "敏捷": 5,
+            "智力": 4,
+            "感知": 4,
+            "意志": 1,
+            "风度": 2
+          },
+          "size": 5,
+          "hpBonus": 0,
+          "derived": {
+            "hpMax": 12,
+            "defense": 4,
+            "speed": 25,
+            "initiative": 7,
+            "willMax": 3,
+            "vision": 40
+          },
+          "skills": {
+            "运动": {
+              "level": 1,
+              "subs": {}
+            },
+            "肉搏": {
+              "level": 0,
+              "subs": {}
+            },
+            "白刃": {
+              "level": 5,
+              "subs": {
+                "长剑": {
+                  "level": 3
+                }
+              }
+            },
+            "射击": {
+              "level": 0,
+              "subs": {}
+            },
+            "隐藏": {
+              "level": 1,
+              "subs": {}
+            },
+            "求生": {
+              "level": 1,
+              "subs": {}
+            },
+            "驾驶": {
+              "level": 0,
+              "subs": {}
+            },
+            "学识": {
+              "level": 2,
+              "subs": {}
+            },
+            "科学": {
+              "level": 0,
+              "subs": {}
+            },
+            "神秘": {
+              "level": 2,
+              "subs": {}
+            },
+            "电脑": {
+              "level": 2,
+              "subs": {}
+            },
+            "医疗": {
+              "level": 2,
+              "subs": {}
+            },
+            "洞察": {
+              "level": 1,
+              "subs": {}
+            },
+            "社交": {
+              "level": 2,
+              "subs": {}
+            }
+          },
+          "resources": {
+            "流风": {
+              "current": 22,
+              "max": 22
+            }
+          },
+          "attributeAuto": {},
+          "derivedOverrides": [
+            "hpMax",
+            "willMax",
+            "speed",
+            "initiative"
+          ],
+          "health": {
+            "intact": 12,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "will": {
+            "current": 3,
+            "max": 3
+          },
+          "xp": 0,
+          "greatPowersAvailable": 0,
+          "statuses": [],
+          "attributeDamage": {},
+          "turn": {
+            "phase": "ready",
+            "standard": 0,
+            "move": 0,
+            "swift": 0,
+            "reactionLock": false,
+            "reactionLockEnds": 0,
+            "responseDebt": false,
+            "opportunityUsed": false
+          },
+          "extendedActions": {},
+          "inventory": [],
+          "unknownSkills": {
+            "制造": {
+              "level": null,
+              "subs": {
+                "炼药": {
+                  "level": 2
+                }
+              }
+            }
+          },
+          "recoveryRules": {
+            "flow": {
+              "attributes": [
+                "敏捷",
+                "感知"
+              ],
+              "physical": true,
+              "longRest": true
+            },
+            "flowRecoveryCheck": {
+              "attributes": [
+                "敏捷",
+                "感知"
+              ],
+              "source": "用户2026-10-23确认"
+            }
+          },
+          "equipmentState": {
+            "version": 1,
+            "managedSlots": [
+              "armor"
+            ],
+            "source": "901_rules_source_library/content/RE/01_rules/04_附录/物品和装备位.md:144–269"
+          },
+          "possessions": {
+            "items": [
+              {
+                "id": "opening.imperial-light-armor",
+                "name": "帝国制式轻甲",
+                "aliases": [
+                  "帝国制式盔甲",
+                  "帝国制式铠甲",
+                  "铠甲",
+                  "盔甲",
+                  "护甲"
+                ],
+                "slot": "armor",
+                "armorClass": "light",
+                "armor": {
+                  "defense": 3
+                },
+                "worn": false,
+                "location": "huang-horse-saddle",
+                "custody": "黄泉马鞍侧面的油布包裹",
+                "source": "御临风_初始卡_20261021.txt:86；opening_roster_p1_001_016.md:25,29；本聊天第5–6楼",
+                "appearance": "饱经战损；未确认数值损坏"
+              },
+              {
+                "id": "opening.qifeng",
+                "name": "弃风剑",
+                "aliases": [
+                  "弃风",
+                  "弃风长剑"
+                ],
+                "slot": "weapon",
+                "location": "carried",
+                "held": false,
+                "weapon": {
+                  "damage": 6,
+                  "attackBonus": 0,
+                  "blockBonus": 0,
+                  "ap": 2,
+                  "magic": 2,
+                  "size": 3,
+                  "defenseReduction": 3,
+                  "skill": "白刃",
+                  "sub": "长剑"
+                },
+                "source": "御临风_初始卡_20261021.txt:88–89；opening_roster_p1_001_016.md:8；2026-11-06用户确认随身收起未持握"
+              }
+            ]
+          },
+          "combatManeuvers": {
+            "weaponUnavailable": true
+          }
+        },
+        "combatCarry": {
+          "sheathed": true,
+          "visibleArms": "弃风剑随身收起；当前没有持握武器。轻甲包裹位于黄泉马鞍侧面，未穿戴。"
+        }
+      },
+      "huang": {
+        "name": "黄泉",
+        "state": {
+          "name": "黄泉",
+          "attributes": {
+            "力量": 5,
+            "敏捷": 6,
+            "智力": 2,
+            "感知": 5,
+            "意志": 3,
+            "风度": 3
+          },
+          "size": 5,
+          "hpBonus": 0,
+          "derived": {
+            "hpMax": 12,
+            "defense": 5,
+            "speed": 16,
+            "initiative": 13,
+            "willMax": 6,
+            "vision": 50
+          },
+          "skills": {
+            "运动": {
+              "level": 2,
+              "subs": {}
+            },
+            "肉搏": {
+              "level": 1,
+              "subs": {}
+            },
+            "白刃": {
+              "level": 5,
+              "subs": {
+                "太刀": {
+                  "level": 1
+                }
+              }
+            },
+            "射击": {
+              "level": 0,
+              "subs": {}
+            },
+            "隐藏": {
+              "level": 0,
+              "subs": {}
+            },
+            "求生": {
+              "level": 1,
+              "subs": {}
+            },
+            "驾驶": {
+              "level": 1,
+              "subs": {}
+            },
+            "学识": {
+              "level": 2,
+              "subs": {}
+            },
+            "科学": {
+              "level": 1,
+              "subs": {}
+            },
+            "神秘": {
+              "level": 1,
+              "subs": {
+                "除灵": {
+                  "level": 1
+                }
+              }
+            },
+            "调查": {
+              "level": 1,
+              "subs": {}
+            },
+            "洞察": {
+              "level": 1,
+              "subs": {}
+            },
+            "社交": {
+              "level": 1,
+              "subs": {
+                "感受": {
+                  "level": 1
+                },
+                "表达": {
+                  "level": 1
+                },
+                "说服": {
+                  "level": 1
+                }
+              }
+            },
+            "电脑": {
+              "level": 1,
+              "subs": {}
+            },
+            "医疗": {
+              "level": 0,
+              "subs": {}
+            },
+            "制造": {
+              "level": 0,
+              "subs": {}
+            }
+          },
+          "resources": {
+            "灵力": {
+              "current": 5,
+              "max": 5
+            }
+          },
+          "attributeAuto": {},
+          "derivedOverrides": [
+            "hpMax",
+            "willMax",
+            "speed",
+            "initiative"
+          ],
+          "health": {
+            "intact": 12,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "will": {
+            "current": 6,
+            "max": 6
+          },
+          "xp": 0,
+          "greatPowersAvailable": 0,
+          "statuses": [],
+          "attributeDamage": {},
+          "turn": {
+            "phase": "ready",
+            "standard": 0,
+            "move": 0,
+            "swift": 0,
+            "reactionLock": false,
+            "reactionLockEnds": 0,
+            "responseDebt": false,
+            "opportunityUsed": false
+          },
+          "extendedActions": {}
+        }
+      },
+      "jiang": {
+        "name": "姜子尤",
+        "state": {
+          "name": "姜子尤",
+          "attributes": {
+            "力量": 8,
+            "敏捷": 2,
+            "智力": 2,
+            "感知": 3,
+            "意志": 3,
+            "风度": 3
+          },
+          "size": 5,
+          "hpBonus": 2,
+          "derived": {
+            "hpMax": 20,
+            "defense": 2,
+            "speed": 25,
+            "initiative": 6,
+            "willMax": 6,
+            "vision": 30
+          },
+          "skills": {
+            "运动": {
+              "level": 3,
+              "subs": {}
+            },
+            "肉搏": {
+              "level": 5,
+              "subs": {
+                "拳击": {
+                  "level": 2
+                }
+              }
+            },
+            "白刃": {
+              "level": 1,
+              "subs": {}
+            },
+            "射击": {
+              "level": 0,
+              "subs": {}
+            },
+            "隐藏": {
+              "level": 1,
+              "subs": {}
+            },
+            "求生": {
+              "level": 1,
+              "subs": {}
+            },
+            "驾驶": {
+              "level": 2,
+              "subs": {}
+            },
+            "学识": {
+              "level": 1,
+              "subs": {}
+            },
+            "科学": {
+              "level": 0,
+              "subs": {}
+            },
+            "神秘": {
+              "level": 0,
+              "subs": {}
+            },
+            "调查": {
+              "level": 0,
+              "subs": {}
+            },
+            "洞察": {
+              "level": 2,
+              "subs": {}
+            },
+            "社交": {
+              "level": 1,
+              "subs": {
+                "威逼": {
+                  "level": 2
+                },
+                "街头智慧": {
+                  "level": 1
+                },
+                "沟通": {
+                  "level": 1
+                }
+              }
+            },
+            "电脑": {
+              "level": 1,
+              "subs": {}
+            },
+            "医疗": {
+              "level": 0,
+              "subs": {}
+            },
+            "制造": {
+              "level": 0,
+              "subs": {}
+            }
+          },
+          "resources": {
+            "气": {
+              "current": 2,
+              "max": 2
+            },
+            "斗气": {
+              "current": 2,
+              "max": 2
+            }
+          },
+          "attributeAuto": {},
+          "derivedOverrides": [
+            "hpMax",
+            "willMax",
+            "speed",
+            "initiative"
+          ],
+          "health": {
+            "intact": 20,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "will": {
+            "current": 6,
+            "max": 6
+          },
+          "xp": 0,
+          "greatPowersAvailable": 0,
+          "statuses": [],
+          "attributeDamage": {},
+          "turn": {
+            "phase": "ready",
+            "standard": 0,
+            "move": 0,
+            "swift": 0,
+            "reactionLock": false,
+            "reactionLockEnds": 0,
+            "responseDebt": false,
+            "opportunityUsed": false
+          },
+          "extendedActions": {}
+        }
+      },
+      "bright": {
+        "name": "布莱特",
+        "state": {
+          "name": "布莱特",
+          "attributes": {
+            "力量": 3,
+            "敏捷": 4,
+            "智力": 2,
+            "感知": 4,
+            "意志": 2,
+            "风度": 1
+          },
+          "size": 5,
+          "hpBonus": 0,
+          "derived": {
+            "hpMax": 8,
+            "defense": 4,
+            "speed": 22,
+            "initiative": 9,
+            "willMax": 5,
+            "vision": 40
+          },
+          "skills": {
+            "运动": {
+              "level": 2,
+              "subs": {}
+            },
+            "肉搏": {
+              "level": 1,
+              "subs": {}
+            },
+            "白刃": {
+              "level": 1,
+              "subs": {}
+            },
+            "射击": {
+              "level": 1,
+              "subs": {
+                "长弓": {
+                  "level": 4
+                }
+              }
+            },
+            "隐藏": {
+              "level": 2,
+              "subs": {}
+            },
+            "求生": {
+              "level": 1,
+              "subs": {}
+            },
+            "驾驶": {
+              "level": 0,
+              "subs": {}
+            },
+            "学识": {
+              "level": 1,
+              "subs": {}
+            },
+            "科学": {
+              "level": 1,
+              "subs": {}
+            },
+            "神秘": {
+              "level": 1,
+              "subs": {}
+            },
+            "调查": {
+              "level": 2,
+              "subs": {
+                "搜索": {
+                  "level": 1
+                }
+              }
+            },
+            "洞察": {
+              "level": 2,
+              "subs": {
+                "追踪": {
+                  "level": 1
+                }
+              }
+            },
+            "社交": {
+              "level": 1,
+              "subs": {
+                "动物沟通": {
+                  "level": 1
+                },
+                "感受": {
+                  "level": 1
+                },
+                "唬骗": {
+                  "level": 1
+                },
+                "说服": {
+                  "level": 1
+                }
+              }
+            },
+            "电脑": {
+              "level": 0,
+              "subs": {}
+            },
+            "医疗": {
+              "level": 1,
+              "subs": {}
+            },
+            "制造": {
+              "level": 0,
+              "subs": {
+                "淬毒": {
+                  "level": 2
+                }
+              }
+            }
+          },
+          "resources": {},
+          "attributeAuto": {},
+          "derivedOverrides": [
+            "hpMax",
+            "willMax",
+            "speed",
+            "initiative"
+          ],
+          "health": {
+            "intact": 8,
+            "B": 0,
+            "L": 0,
+            "A": 0,
+            "temp": 0,
+            "coma": false,
+            "deteriorationStopped": false
+          },
+          "will": {
+            "current": 5,
+            "max": 5
+          },
+          "xp": 0,
+          "greatPowersAvailable": 0,
+          "statuses": [],
+          "attributeDamage": {},
+          "turn": {
+            "phase": "ready",
+            "standard": 0,
+            "move": 0,
+            "swift": 0,
+            "reactionLock": false,
+            "reactionLockEnds": 0,
+            "responseDebt": false,
+            "opportunityUsed": false
+          },
+          "extendedActions": {}
+        }
+      }
+    }
+  },
+  "context": {
+    "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+    "actorKnowledge": [
+      {
+        "actorId": "player",
+        "name": "御临风",
+        "facts": []
+      },
+      {
+        "actorId": "bright",
+        "name": "布莱特",
+        "facts": []
+      },
+      {
+        "actorId": "huang",
+        "name": "黄泉",
+        "facts": []
+      }
+    ],
+    "availableInformation": [
+      {
+        "access": "can-inquire",
+        "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+      }
+    ]
+  },
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "clinic.old-friend.20261112",
+    "chatId": "901 帝都正式续玩 20261106 - Branch #2",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      }
+    },
+    "events": {},
+    "knowledge": {}
+  },
+  "dialogueDisabled": true,
+  "nonCanon": true,
+  "modelCalls": 0
+}

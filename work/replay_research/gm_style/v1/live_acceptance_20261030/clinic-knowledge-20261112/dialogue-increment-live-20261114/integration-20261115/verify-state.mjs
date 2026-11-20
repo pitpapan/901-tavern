@@ -1,0 +1,40 @@
+import {readFile,readdir,writeFile} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import {createStoryKnowledgeRuntime} from '../../../../../../../rules_engine/gm_runtime/story-knowledge.mjs';
+import {CLINIC_KNOWLEDGE_CATALOG as catalog} from '../../../../../../../rules_engine/gm_runtime/clinic-knowledge-catalog.mjs';
+const base=new URL('./',import.meta.url),load=async name=>JSON.parse(await readFile(new URL(name,base),'utf8'));
+const chat=async name=>(await readFile(new URL(name+'.chat.jsonl',base),'utf8')).trim().split('\n').map(JSON.parse).slice(1);
+const root=rows=>rows.at(-1).variables[0].stat_data['901_rules_poc'];
+const a1=await chat('A-received'),a2=await chat('A-reopened-next'),b1=await chat('B-pending'),b2=await chat('B-unrelated'),bd=await chat('B-deferred'),b3=await chat('B-resumed');
+assert.deepEqual(root(a1).storyKnowledge.knowledge,root(a2).storyKnowledge.knowledge);
+assert.equal(Object.values(root(a2).storyKnowledge.knowledge).length,1);
+assert.equal(Object.values(root(a2).storyKnowledge.knowledge)[0].knowerId,'player');
+assert.equal(Object.values(root(a2).storyKnowledge.knowledge)[0].belief,'uncertain');
+const rows=k=>Object.values(k.dialogueBatches).flatMap(b=>b.rows);
+assert.equal(rows(root(b1).storyKnowledge).filter(r=>r.status==='pending').length,1);
+assert.deepEqual(root(b1).storyKnowledge.knowledge,{});
+assert.deepEqual(rows(root(b1).storyKnowledge),rows(root(b2).storyKnowledge));
+assert.equal(bd.at(-1).is_user,true);assert.equal(rows(root(bd).storyKnowledge)[0].prompted,true);
+assert.equal(b3.length,bd.length+1);assert.deepEqual(b3.filter(r=>r.is_user).map(r=>r.mes),bd.filter(r=>r.is_user).map(r=>r.mes));
+assert.equal(b3.at(-1).is_user,false);assert.equal(rows(root(b3).storyKnowledge)[0].status,'registered');
+assert.deepEqual(Object.values(root(b3).storyKnowledge.knowledge).map(k=>[k.knowerId,k.belief]),[['player','uncertain']]);
+const captures=[];
+for(const file of await readdir(new URL('browser-evidence/',base))){if(!file.endsWith('.json'))continue;const d=await load('browser-evidence/'+file);captures.push({file,...d});}
+const bcap=captures.filter(c=>c.file.startsWith('B-'));assert.equal(bcap.filter(c=>c.kind==='dependency').length,2);assert.equal(bcap.filter(c=>c.kind==='narration').length,3);
+const deps=bcap.filter(c=>c.kind==='dependency').sort((a,b)=>a.file.localeCompare(b.file));assert.deepEqual(JSON.parse(deps[0].content).required,[]);assert.deepEqual(JSON.parse(deps[1].content).required,[rows(root(b1).storyKnowledge)[0].id]);
+function projection(c){const m=c.requestBody.messages.find(m=>m.content.includes('【901逐角色知情投影】'));assert.ok(m);const value=JSON.parse(m.content.split('【901逐角色知情投影】\n')[1].split('\n')[0]);assert.equal(value.actorKnowledge.find(a=>a.actorId==='player').facts.length,1);assert.deepEqual(value.actorKnowledge.find(a=>a.actorId==='bright').facts,[]);assert.equal(value.actorKnowledge.find(a=>a.actorId==='player').facts[0].belief,'uncertain');}
+for(const c of captures.filter(c=>c.file.startsWith('A2-')&&['classification','narration'].includes(c.kind)))projection(c);
+for(const kind of ['classification','narration'])projection(bcap.filter(c=>c.kind===kind).sort((a,b)=>a.file.localeCompare(b.file)).at(-1));
+for(const c of captures.filter(c=>c.file.startsWith('Final-')&&['classification','narration'].includes(c.kind)))projection(c);
+// A local branch of the actual deferred browser snapshot; no model, no formal writes.
+const local=structuredClone(bd),floors=Object.fromEntries(local.map((r,i)=>[i,structuredClone(r.variables?.[0])]));let writes=0;
+const mvu={getMvuData:({message_id})=>structuredClone(floors[message_id]),replaceMvuData:async(v,{message_id})=>{writes++;floors[message_id]=structuredClone(v);}};
+const anchor={chatId:root(bd).chatId,messageId:local.length-1,swipeId:local.at(-1).swipe_id??0};
+const tavern={chatId:anchor.chatId,chat:local,saveChat:async()=>{},readSavedChat:async()=>[{},...local.map((r,i)=>({...r,variables:[structuredClone(floors[i])]}))]};
+const runtime=createStoryKnowledgeRuntime({mvu,tavern,catalog,getAnchor:()=>anchor,dialogue:{dependencies:async({pending})=>pending.map(p=>p.id)}});
+let asks=0;assert.equal((await runtime.prepareDialogueTurn({text:local.at(-1).mes},{ask:async()=>{asks++;return null;}})).status,'deferred');assert.equal(asks,0);
+await runtime.resolveDialogue({id:rows(root(bd).storyKnowledge)[0].id,received:false,recipientIds:[]});
+assert.equal((await runtime.prepareDialogueTurn({text:local.at(-1).mes})).status,'ready');assert.deepEqual(runtime.read().knowledge,{});assert.equal(rows(runtime.read())[0].status,'dismissed');
+await writeFile(new URL('B-not-received.local-state.json',base),JSON.stringify(runtime.read(),null,2)+'\n');
+const result={A:{savedAndReopened:true,nextClassificationAndNarrationProjected:true,grants:1,noDuplicateGrant:true},B:{pendingFromCapturedSyntheticExtraction:true,unrelatedNoAsk:true,relatedOneAutomaticPrompt:true,postponedNoNewNarration:true,explicitReopenUsed:true,samePlayerRequestResumed:true,onlyPlayerGranted:true,notReceivedLocalReplay:true,postponedNoRepeatedAsk:true},capturedCalls:captures.length,modelCalls:0,localReplayWrites:writes};
+await writeFile(new URL('browser-state-audit.json',base),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));

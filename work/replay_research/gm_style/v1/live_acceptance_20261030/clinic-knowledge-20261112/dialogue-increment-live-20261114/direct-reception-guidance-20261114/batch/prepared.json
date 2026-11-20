@@ -1,0 +1,104 @@
+{
+  "authorization": "明确授权修复后复用上一批剩余7次，先复测02；仅新增共享直接接收判定说明。失败即停止整个批次，不重试、不继续不同例、不自动补回执、不转换action、不放宽校验，不部署/正式剧情/自动批准修订。",
+  "baseline": 324,
+  "limit": 7,
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "parameters": {
+    "model": "[抗截断]gemini-3.8-flash",
+    "temperature": 1,
+    "max_tokens": 4096,
+    "stream": false,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "top_p": 1
+  },
+  "cases": [
+    {
+      "id": "02-received-rumor",
+      "text": "黄泉对御临风说：“北街水井暂时停用。”",
+      "speaker": "huang",
+      "recipient": "player",
+      "content": "北街水井暂时停用",
+      "known": true,
+      "expected": "黄泉已有该传闻的可信隔离取得回执；御临风取得同一传闻或等价未确认来源说法，不升级为确认，不强求复述。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 28082,
+      "requestSha256": "daae7a4ca29fb1558c542a3425a74af940601bb2b8ba8bc80b9a022b6b96559c",
+      "change": "only shared reception-status guidance inserted; schema, business input, coordinates, generation parameters and original isolated seed unchanged"
+    },
+    {
+      "id": "05-partial-first",
+      "text": "御临风对布莱特说：“北门暂停通行，改从西桥绕行。”布莱特只听清“北门暂停通行”，没听清后半句。",
+      "speaker": "player",
+      "recipient": "bright",
+      "content": "北门暂停通行",
+      "expected": "只给布莱特登记前半句，不给后半句，不共享他人，pending为空。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 28591,
+      "requestSha256": "af9ee5aa539775cb55331cf226d9971b3e0ee6e034471a25b33ae412bcec8375",
+      "change": "only shared reception-status guidance inserted; schema, business input, coordinates, generation parameters and original isolated seed unchanged"
+    },
+    {
+      "id": "06-partial-second",
+      "text": "御临风对布莱特说：“北门暂停通行，改从西桥绕行。”布莱特只听清“改从西桥绕行”，没听清前半句。",
+      "speaker": "player",
+      "recipient": "bright",
+      "content": "改从西桥绕行",
+      "expected": "只给布莱特登记后半句，不给前半句，不共享他人，pending为空。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 28592,
+      "requestSha256": "078e78f019e439ddfc8527c448536f78e59358a758639df68b82d2daf36d94e7",
+      "change": "only shared reception-status guidance inserted; schema, business input, coordinates, generation parameters and original isolated seed unchanged"
+    },
+    {
+      "id": "07-ambiguous-hearing",
+      "text": "黄泉轻声说：“渡船明早停航。”御临风在走廊另一端，记录不能确定他是否听清。",
+      "speaker": "huang",
+      "recipient": "player",
+      "content": "渡船明早停航",
+      "expected": "不确定接收保留待核，不因在场或指代明确授予知情，不立即询问。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 28375,
+      "requestSha256": "b175e5a3882afcd5dbb6113fb0cb4444b27ba5309a9af7ff629b1d7ac4d9aaa3",
+      "change": "only shared reception-status guidance inserted; schema, business input, coordinates, generation parameters and original isolated seed unchanged"
+    },
+    {
+      "id": "01-received-new",
+      "text": "御临风对布莱特说：“西侧栈桥暂时停用。”布莱特清楚地听到了这句话。",
+      "speaker": "player",
+      "recipient": "bright",
+      "content": "西侧栈桥暂时停用",
+      "expected": "只给布莱特登记该来源说法，不确认世界真相；其余人不共享，pending为空。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 28282,
+      "requestSha256": "451045343ccd7d83221202c49e57eab997ebb57fcdde6a002de64aba6d80c707",
+      "change": "only shared reception-status guidance inserted; schema, business input, coordinates, generation parameters and original isolated seed unchanged"
+    },
+    {
+      "id": "03-not-heard",
+      "text": "御临风隔着关闭的隔音窗对布莱特说：“北门暂停通行。”布莱特没有听见。",
+      "speaker": "player",
+      "recipient": "bright",
+      "content": "北门暂停通行",
+      "expected": "没有收到，不给任何人新增知情，不产生多余待核。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 28301,
+      "requestSha256": "26c2dadde9ea48ccddb4ee2cf7796d4452c1eeb25f032cfaa8b32420b394607f",
+      "change": "only shared reception-status guidance inserted; schema, business input, coordinates, generation parameters and original isolated seed unchanged"
+    },
+    {
+      "id": "04-not-yet-said",
+      "text": "黄泉准备向御临风转告：“渡船今晚停航。”她尚未说出口。",
+      "speaker": "huang",
+      "recipient": "player",
+      "content": "渡船今晚停航",
+      "expected": "仅意图存在；未传达、不授予接收、不把内层内容当世界事实、不产生多余待核。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 28112,
+      "requestSha256": "b7eb37371b6b5c503bc460740e9145a3699717ecfa8093c5bba3fb4abdc37188",
+      "change": "only shared reception-status guidance inserted; schema, business input, coordinates, generation parameters and original isolated seed unchanged"
+    }
+  ],
+  "followups": [],
+  "stopOnAnyFailure": true
+}

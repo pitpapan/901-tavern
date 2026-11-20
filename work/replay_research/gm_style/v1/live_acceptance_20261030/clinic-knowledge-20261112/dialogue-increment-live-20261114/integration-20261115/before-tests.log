@@ -1,0 +1,91 @@
+✔ ordinary saved narration invokes configured dialogue adapter without changing prose or memory route (129.8611ms)
+✔ saved prose survives extraction failure and completed-turn replay does not request prose again (13.4191ms)
+✔ ordinary next turn asks only when pending information is relevant, and deferred answer does not regenerate prose (43.5517ms)
+✔ ordinary story generation consumes recipient knowledge and exposes only an explicit saved-receipt entry (17.0524ms)
+✔ ordinary classifier and narration both consume time and discovery filtered knowledge (11.8882ms)
+✔ unconfirmed rule persistence blocks narration and reports memory-only settlement (26.176ms)
+✔ postcombat story classification failure retains its diagnostic instead of using combat fallback (9.8872ms)
+✔ dialogue classification timeout reports a processing failure without implying an attempted action (8.3407ms)
+✔ classification timeout retries the same input once with a new id and ignores the late first decision (38.9319ms)
+✔ classification recovery stops after two timeouts without narration or settlement (31.4528ms)
+✔ classification recovery does not retry after explicit stop, changed input, or unconfirmed cancellation (46.0554ms)
+✔ postcombat story continuation failure remains resumable without reclassifying or settling (12.2557ms)
+✔ a failure inside combat handling still uses the combat recovery route (4.2487ms)
+✔ native combat regeneration restores the deleted report and unique latest root before a cancelled menu (5.3851ms)
+✔ debug-disabled malformed recovery retains a precise failure without settling (7.6293ms)
+✔ debug-disabled invalid check attribute identifies model input failure without exposing DC (7.1681ms)
+✔ debug-disabled upstream quota failure is distinguished from invalid model output (9.6346ms)
+✔ explicit additional lorebooks reach classification and ordinary narration (9.0662ms)
+✔ ordinary narration releases its lore filter even when host stop handle is broken (16.7704ms)
+✔ active combat handles the turn before ordinary classification or narration (4.2381ms)
+✔ host saved recovery survives failed narration and script reload without another debit (18.1724ms)
+✔ host executes the exact compound declaration once and resumes final sequence narration after reload (22.5319ms)
+✔ a completed pending medicine keeps its original operation across a later player floor and native regeneration (15.0706ms)
+✔ host classification passes a registered encounter to the player-bound combat entry (8.2698ms)
+✔ integrated profile cannot grant the old demo scene bonus (7.9703ms)
+✔ ordinary narration resolves current model options locally for each request (10.1652ms)
+✔ controller persists failed NO_CHECK and recovers after reload with no new player input (11.9617ms)
+✔ host cancels only the unexecuted medicine pending and anchors the current dialogue (15.207ms)
+✔ a cancellation declaration cannot undo a committed operation awaiting narration (16.5022ms)
+✔ regenerating a completed turn reuses its narration without model calls or another assistant message (12.7591ms)
+✔ regenerating a committed direct effect does not repeat classification, narration, or MVU writes (11.6355ms)
+✔ lost direct-effect failure notice resumes saved operation without reclassification (13.2465ms)
+✔ a completed-looking assistant cannot bypass a missing JS operation (4.2018ms)
+✔ completed assistant with missing MVU projection restores state without model requests (11.8779ms)
+✖ explicit completion host binds v2 unchanged and can disable without touching memory (5.4308ms)
+✖ deferred local resolution resumes the same request without resending player input (27.4627ms)
+✖ completed reply recovery consumes prepared batch without another extraction or narration (16.045ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 34
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1334.4472
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\replay-gate-script.test.mjs:629:1
+✖ explicit completion host binds v2 unchanged and can disable without touching memory (5.4308ms)
+  TypeError [Error]: f.controller.configureKnowledgeDialogueHost is not a function
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/replay-gate-script.test.mjs:634:28)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at TRPG outputs\work\rules_engine\gm_runtime\replay-gate-script.test.mjs:638:1
+✖ deferred local resolution resumes the same request without resending player input (27.4627ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 2
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/replay-gate-script.test.mjs:646:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 2,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at TRPG outputs\work\rules_engine\gm_runtime\replay-gate-script.test.mjs:649:1
+✖ completed reply recovery consumes prepared batch without another extraction or narration (16.045ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'prepared'
+  - 'processed'
+       ^
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/replay-gate-script.test.mjs:653:38)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'prepared',
+    expected: 'processed',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

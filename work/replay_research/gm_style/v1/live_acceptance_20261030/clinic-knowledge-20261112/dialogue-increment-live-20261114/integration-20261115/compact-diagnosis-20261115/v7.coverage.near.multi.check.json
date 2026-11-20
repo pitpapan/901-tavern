@@ -1,0 +1,898 @@
+{
+  "id": "v7.coverage.near.multi",
+  "actualMessagesAndSchemaMatch": true,
+  "schemaPass": true,
+  "checked": {
+    "contextRef": "7e228cb9fecfa48a79390437e5987d330c037e55541a86c8bc21131d819fd8e5",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.1b1997131179c61ee388aac8d393cf284841b1f64cbc7dcf39d39e8f0d1a2710",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "semantic.turn.u0",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "北桥已经关闭。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 0,
+                  "end": 2,
+                  "quote": "黄泉"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 9,
+                  "end": 16,
+                  "quote": "北桥已经关闭。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 6,
+                "end": 7,
+                "quote": "说"
+              }
+            },
+            {
+              "id": "semantic.turn.u1",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "沿河的小路仍能通行。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 26,
+                  "end": 28,
+                  "quote": "黄泉"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 35,
+                  "end": 45,
+                  "quote": "沿河的小路仍能通行。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 32,
+                "end": 33,
+                "quote": "说"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "semantic.turn.u0.r0",
+        "speakerId": "huang",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 9,
+          "end": 16,
+          "quote": "北桥已经关闭。"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "",
+        "recipientIds": [
+          "bright"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 3,
+            "end": 6,
+            "quote": "布莱特"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 17,
+          "end": 24,
+          "quote": "布莱特听清了。"
+        },
+        "claimId": "semantic.turn.u0"
+      },
+      {
+        "id": "semantic.turn.u1.r0",
+        "speakerId": "huang",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 35,
+          "end": 45,
+          "quote": "沿河的小路仍能通行。"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 29,
+            "end": 32,
+            "quote": "御临风"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 46,
+          "end": 54,
+          "quote": "御临风也听清了。"
+        },
+        "claimId": "semantic.turn.u1"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "recorded",
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 54,
+          "quote": "黄泉对布莱特说：“北桥已经关闭。”布莱特听清了。随后黄泉对御临风说：“沿河的小路仍能通行。”御临风也听清了。"
+        },
+        "reason": "显式覆盖选择；不证明语义完整。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false,
+    "receptionBindings": [
+      {
+        "id": "semantic.turn.u0.r0",
+        "listener": {
+          "actorId": "bright",
+          "kind": "explicit",
+          "span": {
+            "documentId": "current",
+            "start": 3,
+            "end": 6,
+            "quote": "布莱特"
+          },
+          "historyMessageId": null
+        },
+        "evidence": {
+          "kind": "direct",
+          "span": {
+            "documentId": "current",
+            "start": 17,
+            "end": 24,
+            "quote": "布莱特听清了。"
+          }
+        }
+      },
+      {
+        "id": "semantic.turn.u1.r0",
+        "listener": {
+          "actorId": "player",
+          "kind": "explicit",
+          "span": {
+            "documentId": "current",
+            "start": 29,
+            "end": 32,
+            "quote": "御临风"
+          },
+          "historyMessageId": null
+        },
+        "evidence": {
+          "kind": "direct",
+          "span": {
+            "documentId": "current",
+            "start": 46,
+            "end": 54,
+            "quote": "御临风也听清了。"
+          }
+        }
+      }
+    ]
+  },
+  "structuralPass": true,
+  "observation": {
+    "status": "processed",
+    "pending": []
+  },
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "compact.regression",
+    "chatId": "v7.diag.multi",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message": {
+        "id": "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "北桥已经关闭。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      },
+      "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623.message": {
+        "id": "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "沿河的小路仍能通行。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      }
+    },
+    "events": {
+      "received.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06": {
+        "id": "received.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "bright"
+          ],
+          "propositionRefs": [
+            "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "v7.diag.multi",
+            "messageId": 1,
+            "swipeId": 0,
+            "text": "黄泉对布莱特说：“北桥已经关闭。”布莱特听清了。随后黄泉对御临风说：“沿河的小路仍能通行。”御临风也听清了。"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/v7.diag.multi",
+            "line": 2
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.bright.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message.event": {
+        "id": "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.bright.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.bright.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message",
+            "knowerId": "bright",
+            "propositionRef": "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message",
+            "eventRef": "received.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 1,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/v7.diag.multi",
+            "line": 2
+          }
+        ]
+      },
+      "received.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623": {
+        "id": "received.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player"
+          ],
+          "propositionRefs": [
+            "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "v7.diag.multi",
+            "messageId": 1,
+            "swipeId": 0,
+            "text": "黄泉对布莱特说：“北桥已经关闭。”布莱特听清了。随后黄泉对御临风说：“沿河的小路仍能通行。”御临风也听清了。"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/v7.diag.multi",
+            "line": 2
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623.player.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623.message.event": {
+        "id": "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623.player.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623.player.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623.message",
+            "eventRef": "received.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 1,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/v7.diag.multi",
+            "line": 2
+          }
+        ]
+      }
+    },
+    "knowledge": {
+      "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.bright.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message": {
+        "id": "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.bright.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message",
+        "knowerId": "bright",
+        "propositionRef": "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message",
+        "eventRef": "received.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      },
+      "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623.player.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623.message": {
+        "id": "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623.player.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623.message",
+        "eventRef": "received.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      }
+    },
+    "dialogueBatches": {
+      "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c": {
+        "id": "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c",
+        "sourceAnchor": {
+          "chatId": "v7.diag.multi",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "黄泉对布莱特说：“北桥已经关闭。”布莱特听清了。随后黄泉对御临风说：“沿河的小路仍能通行。”御临风也听清了。"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06",
+            "claimId": "semantic.turn.u0",
+            "speakerId": "huang",
+            "recipientIds": [
+              "bright"
+            ],
+            "propositionRef": null,
+            "content": "北桥已经关闭。",
+            "quote": "北桥已经关闭。",
+            "contentSpan": {
+              "documentId": "current",
+              "start": 9,
+              "end": 16,
+              "quote": "北桥已经关闭。"
+            },
+            "receptionBinding": {
+              "id": "semantic.turn.u0.r0",
+              "listener": {
+                "actorId": "bright",
+                "kind": "explicit",
+                "span": {
+                  "documentId": "current",
+                  "start": 3,
+                  "end": 6,
+                  "quote": "布莱特"
+                },
+                "historyMessageId": null
+              },
+              "evidence": {
+                "kind": "direct",
+                "span": {
+                  "documentId": "current",
+                  "start": 17,
+                  "end": 24,
+                  "quote": "布莱特听清了。"
+                }
+              }
+            },
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 17,
+              "end": 24,
+              "quote": "布莱特听清了。"
+            },
+            "unresolved": []
+          },
+          {
+            "id": "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623",
+            "claimId": "semantic.turn.u1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "沿河的小路仍能通行。",
+            "quote": "沿河的小路仍能通行。",
+            "contentSpan": {
+              "documentId": "current",
+              "start": 35,
+              "end": 45,
+              "quote": "沿河的小路仍能通行。"
+            },
+            "receptionBinding": {
+              "id": "semantic.turn.u1.r0",
+              "listener": {
+                "actorId": "player",
+                "kind": "explicit",
+                "span": {
+                  "documentId": "current",
+                  "start": 29,
+                  "end": 32,
+                  "quote": "御临风"
+                },
+                "historyMessageId": null
+              },
+              "evidence": {
+                "kind": "direct",
+                "span": {
+                  "documentId": "current",
+                  "start": 46,
+                  "end": 54,
+                  "quote": "御临风也听清了。"
+                }
+              }
+            },
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 46,
+              "end": 54,
+              "quote": "御临风也听清了。"
+            },
+            "unresolved": []
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "recorded",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 54,
+              "quote": "黄泉对布莱特说：“北桥已经关闭。”布莱特听清了。随后黄泉对御临风说：“沿河的小路仍能通行。”御临风也听清了。"
+            },
+            "reason": "显式覆盖选择；不证明语义完整。"
+          }
+        ],
+        "extractionInput": {
+          "assertion": {
+            "schemaVersion": "gm-assertion-input/1",
+            "stage": "source",
+            "documents": [
+              {
+                "id": "current",
+                "text": "黄泉对布莱特说：“北桥已经关闭。”布莱特听清了。随后黄泉对御临风说：“沿河的小路仍能通行。”御临风也听清了。"
+              }
+            ],
+            "targets": [
+              {
+                "id": "turn",
+                "documentId": "current",
+                "start": 0,
+                "end": 54
+              }
+            ],
+            "prior": null,
+            "inputRef": "assertion.1b1997131179c61ee388aac8d393cf284841b1f64cbc7dcf39d39e8f0d1a2710"
+          },
+          "sourceAnchor": {
+            "chatId": "v7.diag.multi",
+            "messageId": 1,
+            "swipeId": 0,
+            "text": "黄泉对布莱特说：“北桥已经关闭。”布莱特听清了。随后黄泉对御临风说：“沿河的小路仍能通行。”御临风也听清了。"
+          },
+          "history": [
+            {
+              "messageId": 0,
+              "role": "user",
+              "text": "御临风和布莱特正在打听道路情况。"
+            }
+          ],
+          "actors": {
+            "player": "御临风",
+            "bright": "布莱特",
+            "huang": "黄泉"
+          },
+          "facts": {
+            "clinic.owner.xuelao.old-friend": {
+              "effectiveAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 0,
+                "actorId": "legacy.story"
+              },
+              "discoveryConditions": [
+                "actual-receipt"
+              ],
+              "dependencyRefs": [],
+              "id": "clinic.owner.xuelao.old-friend",
+              "entityId": "clinic.owner",
+              "field": "relationship",
+              "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+              "certainty": "confirmed",
+              "visibility": "private"
+            },
+            "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message": {
+              "effectiveAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 12,
+                "actorId": "legacy.story"
+              },
+              "discoveryConditions": [
+                "actual-receipt"
+              ],
+              "dependencyRefs": [],
+              "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+              "entityId": "bright",
+              "field": "reported_message",
+              "value": {
+                "kind": "reported_message",
+                "speakerId": "bright",
+                "text": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+              },
+              "certainty": "uncertain",
+              "visibility": "private"
+            },
+            "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message": {
+              "effectiveAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 12,
+                "actorId": "legacy.story"
+              },
+              "discoveryConditions": [
+                "actual-receipt"
+              ],
+              "dependencyRefs": [],
+              "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+              "entityId": "bright",
+              "field": "reported_message",
+              "value": {
+                "kind": "reported_message",
+                "speakerId": "bright",
+                "text": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+              },
+              "certainty": "uncertain",
+              "visibility": "private"
+            },
+            "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message": {
+              "effectiveAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 12,
+                "actorId": "legacy.story"
+              },
+              "discoveryConditions": [
+                "actual-receipt"
+              ],
+              "dependencyRefs": [],
+              "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+              "entityId": "bright",
+              "field": "reported_message",
+              "value": {
+                "kind": "reported_message",
+                "speakerId": "bright",
+                "text": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+              },
+              "certainty": "uncertain",
+              "visibility": "private"
+            }
+          },
+          "memory": null,
+          "contextRef": "7e228cb9fecfa48a79390437e5987d330c037e55541a86c8bc21131d819fd8e5"
+        },
+        "recoveryAttempted": false,
+        "attempts": [
+          {
+            "status": "validated",
+            "rawReply": "{\"schemaVersion\":\"dialogue-reception/7\",\"contextRef\":\"7e228cb9fecfa48a79390437e5987d330c037e55541a86c8bc21131d819fd8e5\",\"selections\":[{\"fragmentId\":\"f2\",\"quote\":\"黄泉\"},{\"fragmentId\":\"f3\",\"quote\":\"北桥已经关闭。\"},{\"fragmentId\":\"f2\",\"quote\":\"说\"},{\"fragmentId\":\"f2\",\"quote\":\"布莱特\"},{\"fragmentId\":\"f4\",\"quote\":\"布莱特听清了。\"},{\"fragmentId\":\"f5\",\"quote\":\"黄泉\"},{\"fragmentId\":\"f6\",\"quote\":\"沿河的小路仍能通行。\"},{\"fragmentId\":\"f5\",\"quote\":\"说\"},{\"fragmentId\":\"f5\",\"quote\":\"御临风\"},{\"fragmentId\":\"f7\",\"quote\":\"御临风也听清了。\"},{\"fragmentId\":\"f1\",\"quote\":\"黄泉对布莱特说：“北桥已经关闭。”布莱特听清了。随后黄泉对御临风说：“沿河的小路仍能通行。”御临风也听清了。\"}],\"utterances\":[{\"speakerId\":\"huang\",\"speaker\":0,\"content\":1,\"mode\":\"asserted\",\"scope\":{\"time\":null,\"condition\":null,\"attribution\":null},\"anchor\":2},{\"speakerId\":\"huang\",\"speaker\":5,\"content\":6,\"mode\":\"asserted\",\"scope\":{\"time\":null,\"condition\":null,\"attribution\":null},\"anchor\":7}],\"receptions\":[{\"utterance\":0,\"content\":1,\"listenerId\":\"bright\",\"identityKind\":\"explicit\",\"identity\":3,\"historyMessageId\":null,\"evidenceKind\":\"direct\",\"evidence\":4,\"propositionRef\":null},{\"utterance\":1,\"content\":6,\"listenerId\":\"player\",\"identityKind\":\"explicit\",\"identity\":8,\"historyMessageId\":null,\"evidenceKind\":\"direct\",\"evidence\":9,\"propositionRef\":null}],\"unresolved\":[],\"coverage\":{\"status\":\"recorded\",\"evidence\":10}}"
+          }
+        ]
+      }
+    }
+  },
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": [
+        {
+          "id": "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "沿河的小路仍能通行。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 1,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "v7.diag.multi",
+                "messageId": 1,
+                "swipeId": 0,
+                "text": "黄泉对布莱特说：“北桥已经关闭。”布莱特听清了。随后黄泉对御临风说：“沿河的小路仍能通行。”御临风也听清了。"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.2990af5bada82eef7501dd8dfdfff0bcf90b8cd111b1af22457353c8257a1623",
+          "channel": "message",
+          "learnedAtMessage": 1
+        }
+      ]
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": [
+        {
+          "id": "dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "北桥已经关闭。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 1,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "v7.diag.multi",
+                "messageId": 1,
+                "swipeId": 0,
+                "text": "黄泉对布莱特说：“北桥已经关闭。”布莱特听清了。随后黄泉对御临风说：“沿河的小路仍能通行。”御临风也听清了。"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.61de6b93d1bbc794dd89fbebe2cade8c155a122114790de8a56d1aac8215889c.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06",
+          "channel": "message",
+          "learnedAtMessage": 1
+        }
+      ]
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "counts": {
+    "writes": 4,
+    "asked": 0
+  }
+}

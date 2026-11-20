@@ -1,0 +1,14 @@
+2026-11-14 UTF-16坐标规则与确定性参照：最小离线实现
+
+实现：共享assertion-contract.js原buildAssertionMessages增加明确规则及第三条user数据消息。原输入JSON、inputRef、校验器不变；参照直接从input.documents计算，记录同inputRef、documentId、UTF-16长度以及最多32单元的显示块。单元为[全局start,全局end,原文字符]，for-of保持代理对显示完整、offset按字符UTF-16长度累计。块不是语义边界，文档坐标不重置。参照中的文本仍是数据，不执行内含指令。
+
+没有原文规范化、关键词分割、生成后查找或修正、缺失字段填充、自动批准/修订、模型调用或部署。只使用共享消息入口的抽取获得参照；未扩大到独立grounded消息格式。
+
+离线验证：新增引擎7项先全部失败（缺少第三条消息）；实现后相关引擎45/45、战役111/111，总156通过。新增战役测试读取原custom276实际请求和原始响应，验证第三条参照继承、原user输入保持、原错位仍INVALID_ASSERTION_CLAIM，原失败隔离revision0保持。没有修补副本。
+正例：文首/文末/标点；JSON解码引号与反斜杠、tab/空格/CRLF；表情代理对、组合字符；跨块全局偏移、多文档、重复出现位置。
+反例：整体错移、块内坐标误用、闭区间结束位置、伪造quote仍拒绝且不改候选。引用同名片段虽字符合法也不自动认证语义正确，canApprove和semanticCompletenessVerified保持false。
+
+完整性：111份旧证据和22正式文件哈希保持，checkAssertionReply/输入构造等原代码前缀逐字不变。详见verification.json/preservation-baseline.json，产品差异product.diff，完整日志engine.tap/campaign.tap。
+request-preview.json仅离线构建：首例旧6186字节，新7532字节；坐标数据正文502字节，21 UTF-16单元、1块。参数和原业务输入不变，新增系统坐标规则与第三条参照消息。没有读取密钥或发送。
+
+实际改善：生成前可直接查原文位置，不必只靠自行计数；绑定原输入并保持严格拒绝。尚未证明真实模型错位率、漏抽率或语义错绑改善；逐字符参照的大小随原文线性增长，未进行长篇模型验收。本轮模型0，累计276；旧剩余9仍关闭，无正式剧情写入或自动路线恢复。

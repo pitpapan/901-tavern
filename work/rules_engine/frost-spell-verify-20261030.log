@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\pit\.codex\worktrees\yulinfeng-tavern-plan\901-resource-authoring-kit\outputs\施法体系适配-20261024\compiler\verify.py", line 23, in <module>
+    subprocess.run(['node','--test','--test-isolation=none',str(BASE/'compiler/semantic-check.test.mjs')],check=True,stdout=subprocess.DEVNULL)
+  File "C:\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['node', '--test', '--test-isolation=none', 'C:\\Users\\pit\\.codex\\worktrees\\yulinfeng-tavern-plan\\901-resource-authoring-kit\\outputs\\施法体系适配-20261024\\compiler\\semantic-check.test.mjs']' returned non-zero exit status 1.

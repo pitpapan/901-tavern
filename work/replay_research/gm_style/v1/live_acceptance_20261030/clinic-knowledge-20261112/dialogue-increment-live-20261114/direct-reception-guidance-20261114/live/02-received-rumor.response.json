@@ -1,0 +1,31 @@
+{
+  "kind": "dialogue-reception",
+  "startedAt": "2026-11-14T22:49:26.988Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-14T22:49:32.364Z",
+  "headersElapsedMs": 5376,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5a991c85d1ce46c-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sat, 14 Nov 2026 22:49:32 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=mZOqMFqjoJp39Dv3vnwBr2RwnoQitqIuu2uP6TnOw53Cn8hrsTbvqCAb8Cjy43Ox6tu1rJgOoUQ59oAbEQ%2FaV%2FQlSMrLDIa%2FAvylsdoOZ%2BOaGNPj6CxFwrdu9E3wSw%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611142249275539351838268d9d6H1nsSJu0",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "779a4fde-61e7-4632-a0cf-31e8fc8e281a"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"37959df2-0657-4871-a20f-44f2bbcd9477\",\"object\":\"chat.completion\",\"created\":1794696572,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/2\\\",\\\"contextRef\\\":\\\"40e8717b93bcca15a9d8d2abaa1cd4184940805c8ef4546deb77374f71bc40f6\\\",\\\"inputRef\\\":\\\"assertion.a8b23d4e35d674016529fb21a7a79aedce9d6efa4e18dccda5367cb8c313e913\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"status\\\":\\\"extracted\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"turn.utterance.1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"北街水井暂时停用。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":2,\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":9,\\\"end\\\":18,\\\"quote\\\":\\\"北街水井暂时停用。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":19,\\\"quote\\\":\\\"黄泉对御临风说：“北街水井暂时停用。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"turn.utterance.1.reception.1\\\",\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"player\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":3,\\\"end\\\":6,\\\"quote\\\":\\\"御临风\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":19,\\\"quote\\\":\\\"黄泉对御临风说：“北街水井暂时停用。”\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":\\\"well.closed\\\",\\\"reason\\\":\\\"\\\"}]}],\\\"unresolved\\\":[],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":19,\\\"quote\\\":\\\"黄泉对御临风说：“北街水井暂时停用。”\\\"},\\\"reason\\\":\\\"黄泉直接对御临风言说，御临风明确接收了关于北街水井暂时停用的消息\\\"}}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":3422,\"completion_tokens\":502,\"total_tokens\":3924}}",
+  "responseBytes": 1968,
+  "responseBodySha256BeforePrivacyRedaction": "ef2fe185a7dbb28a1e98d99bf5d039860d44ed063eb314a654e7404feb2af464",
+  "outcome": "completed",
+  "finishedAt": "2026-11-14T22:49:32.370Z",
+  "elapsedMs": 5382
+}

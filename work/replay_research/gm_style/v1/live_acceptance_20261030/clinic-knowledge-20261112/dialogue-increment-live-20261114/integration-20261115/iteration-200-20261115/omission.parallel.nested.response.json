@@ -1,0 +1,31 @@
+{
+  "kind": "omission.parallel.nested",
+  "startedAt": "2026-11-15T02:01:08.194Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T02:01:15.339Z",
+  "headersElapsedMs": 7145,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5aaaa9348ed07b6-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 02:01:15 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=5oRfORQei4UckQh0VL2%2FvmyXVDx6VzBRb2pvqdcN3HU%2BC5QqqTyFtdBkHOCEutKLPZGl%2FuUDlCRWKM%2FITc7gOEpIbPdG6kQptdUvKrfWzNsQBTVqwulUTKPVEZl1tA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611150201088235864528268d9d6aZFwwfBA",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "35497991-93b2-4663-b749-c76633ad97fd"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"4d824658-2207-48b9-916d-df97610bd32d\",\"object\":\"chat.completion\",\"created\":1794708075,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/2\\\",\\\"contextRef\\\":\\\"9be5b85a191598fbe4fab5e52f8ce65ea2e374dedf61231270b98ae73c210717\\\",\\\"inputRef\\\":\\\"assertion.7601e39fdae92b386646a97df422ee3715bdfcba1d2532ce06f89a5a96dc37c7\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"turn.utterance.1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"huang\\\",\\\"content\\\":\\\"我没说有别的消息。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":2,\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":6,\\\"end\\\":15,\\\"quote\\\":\\\"我没说有别的消息。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":16,\\\"quote\\\":\\\"黄泉摇头：“我没说有别的消息。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"turn.utterance.1.rec.1\\\",\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"player\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":6,\\\"end\\\":15,\\\"quote\\\":\\\"我没说有别的消息。\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":6,\\\"end\\\":15,\\\"quote\\\":\\\"我没说有别的消息。\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"\\\"}]},{\\\"claim\\\":{\\\"id\\\":\\\"turn.utterance.2\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"huang\\\",\\\"content\\\":\\\"只是外面的桥正在修，暂时别从那边走。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":16,\\\"end\\\":17,\\\"quote\\\":\\\"她\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":25,\\\"end\\\":43,\\\"quote\\\":\\\"只是外面的桥正在修，暂时别从那边走。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":16,\\\"end\\\":44,\\\"quote\\\":\\\"她想了想，又答：“只是外面的桥正在修，暂时别从那边走。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"turn.utterance.2.rec.1\\\",\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"player\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":25,\\\"end\\\":43,\\\"quote\\\":\\\"只是外面的桥正在修，暂时别从那边走。\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":25,\\\"end\\\":43,\\\"quote\\\":\\\"只是外面的桥正在修，暂时别从那边走。\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"\\\"}]}],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":44,\\\"quote\\\":\\\"黄泉摇头：“我没说有别的消息。”她想了想，又答：“只是外面的桥正在修，暂时别从那边走。”\\\"},\\\"reason\\\":\\\"黄泉对玩家（御临风）的询问作出了明确回应，先后表达了两段言说，且均已由玩家接收。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4109,\"completion_tokens\":796,\"total_tokens\":4905}}",
+  "responseBytes": 3206,
+  "responseBodySha256BeforePrivacyRedaction": "72d1fd8c29aaae925e77fad563f4a0fcf5abb376b3c7eeb6fba1969f816b1ca0",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T02:01:15.349Z",
+  "elapsedMs": 7155
+}

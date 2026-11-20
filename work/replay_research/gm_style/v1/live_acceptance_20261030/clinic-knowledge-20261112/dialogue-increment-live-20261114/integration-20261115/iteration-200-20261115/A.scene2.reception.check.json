@@ -1,0 +1,101 @@
+{
+  "id": "A.scene2.reception",
+  "checked": {
+    "contextRef": "cd2b902e6b672265202f5f22cfc41ad2be11f9099a084de73fa5449ae92eeec6",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.dcfa1708edde5d3d6d0445ce9a0f8492b0284833995eaaa307c41e5a5f2e72d0",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "utterance.huang.1",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "“可以。告示贴在路边，问问旁边的人就行。”"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 0,
+                  "end": 2,
+                  "quote": "黄泉"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 29,
+                  "end": 50,
+                  "quote": "“可以。告示贴在路边，问问旁边的人就行。”"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 0,
+                "end": 50,
+                "quote": "黄泉往告示木板的方向瞥了一眼，随即收回视线，点了点头：\n\n“可以。告示贴在路边，问问旁边的人就行。”"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "reception.huang.1",
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 29,
+            "end": 50,
+            "quote": "“可以。告示贴在路边，问问旁边的人就行。”"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 22,
+          "end": 50,
+          "quote": "点了点头：\n\n“可以。告示贴在路边，问问旁边的人就行。”"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "",
+        "claimId": "utterance.huang.1"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "recorded",
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 194,
+          "quote": "黄泉往告示木板的方向瞥了一眼，随即收回视线，点了点头：\n\n“可以。告示贴在路边，问问旁边的人就行。”\n\n木板立在引水渠旁的矮墙边上，周围不时有提着空桶或端着货盆的居民路过。近处几步远的地方，一名刚在渠边洗完菜篮的妇人正甩着手上的水珠，把篮子挎回臂弯，看起来并不匆忙。街道前方的摊贩声依旧热络，布莱特还在稍远些的铺子那边，没有立刻走回来。\n\n<StatusPlaceHolderImpl/>"
+        },
+        "reason": "黄泉对御临风的提问做出回应并给出建议，御临风在场直接接收。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false
+  },
+  "pass": true
+}

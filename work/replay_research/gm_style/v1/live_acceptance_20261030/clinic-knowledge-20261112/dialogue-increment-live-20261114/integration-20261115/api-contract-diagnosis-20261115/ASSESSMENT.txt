@@ -1,0 +1,44 @@
+2026-11-15 当前API格式约束链路诊断
+
+结论
+当前API确实消费Schema，但没有对最终响应提供可靠的strict格式保证。不能把它概括为“完全不支持Schema”，也不能把失败单独归罪于模型。已找到不含任何战役内容、仅958字节的严格Schema反例，可直接提供给服务方复现。没有发现本地产品接线缺口，本轮不修改产品合同/校验器。
+
+范围和方法
+沿原200次总授权余50开展12次有区别的诊断请求（485—496），固定当前[抗截断]gemini-3.8-flash模型别名、temperature1、top_p1、max_tokens4096、stream=false和原其他生成参数。每份回复人工检查后才发下一份；两次格式失败先诊断再改实验变量，无原样重试。全部通过原run-iteration-model与captureSavedReview直连当前https://cdn.sta1n.cn/v1/chat/completions，保存发送原字节、HTTP状态/头、原始响应、正文和哈希。最后496是预先声明的兼容性拒绝探针，返回400后不再发送。另GET同域/v1/models一次，不生成内容。
+不经过运行中酒馆前后端；静态链路与历史捕获证明另述。没有部署、正式剧情写入、自动抽取/批准/修订路线恢复。没有修改模型原始回复，没有放宽生产校验。
+
+逐组证据
+485 不带response_format，配合型提示输出 {"unconstrained":true}。
+486 同样messages，只加入简单strict=true Schema；输出 {"token":"wire_73a91f2c","count":7}。标记只在Schema中，不在messages中。证明这次服务链使用了Schema的信息，非完全忽略。
+487 只把strict设false，输出与486一致；该场景未观察到strict开关差异。
+488 不带格式，明确要求纯文本；输出 PROBE_PLAIN_73a91f2c。
+489 同样冲突messages，加入简单strict=true Schema；输出与486一致。
+490 只改strict=false，仍同样合法。不能由这些成功样本认定服务端启用了约束解码，也不能认定strict字段完全被忽略。
+491 同样冲突messages，换为程序对完全人工A/B数据生成的完整v6 Schema；返回正确schemaVersion/contextRef，却units=[]，违反minItems=1。合法JSON但不符合发送Schema。输入没有战役/原模型回复；所有值/引用规则仍来自现成合同。
+492 在小Schema单独测试数组minItems=maxItems=1；返回一项required_item。排除minItems在所有请求中始终被忽略的说法。
+493 保留491根字段/数量限制/参数/messages，只把units.items换为浅层必填id对象；请求仅958字节，Schema为合法Draft2020。返回纯文本PROBE_PLAIN_73a91f2c，连JSON都不是。直接反驳“仅请求字节太长或只有深层Schema才会失败”。两个失败均HTTP200/stop，原始响应已这样返回。
+494 完全人工编写并先通过现有本地合同的A/B言说和回执JSON，不带Schema，让接口原样复制；完整值相等。
+495 同样复制messages，仅加入完整v6 Schema（请求36033字节），仍逐值相等，实际JSON/Schema通过，严格本地引用校验也通过。证明完整格式可以被正常生成，不证明独立语义抽取或稳定约束能力。
+496 在492小Schema增加标准contains/minContains/maxContains；本地Draft2020合法。接口HTTP400：Unknown name minContains/maxContains at request.generation_config.response_schema.properties[1].value。与历史304一致；这是当前返回的转换/处理证据，不能观察服务端真实内部请求的每个字段。400完整保存并计一次额度，无正文也不冒称实际底层模型已运行。
+
+本地链路检查
+createTavernDialogueCompletion把responseFormat.json_schema映射为酒馆json_schema{name,value,strict}；冻结messages并禁用该专用调用的custom_prompt_post_processing。酒馆前端发送json_schema，custom服务端映射为response_format。flattenSchema展开$defs/$ref、去掉顶层$schema；custom不使用Google专属关键词过滤。七份历史v6请求重新生成比对一致，无断裂/循环引用或ref同级约束丢失。
+正式酒馆custom_include_body/custom_exclude_body/custom_include_headers均空；requestProxy.enabled=false，诊断进程HTTP_PROXY/HTTPS_PROXY/ALL_PROXY/NODE_USE_ENV_PROXY/NODE_OPTIONS均未配置。普通设置中的merge_tools不能解释当前直连诊断；产品专用桥也显式禁用它。
+四组历史v2浏览器捕获request与实际送出request相等，但历史是隔离酒馆捕获+脚本发送+原响应回放，不能称正式v6已部署或最近12份经过完整浏览器路径。
+12份请求文件均等于冻结prepared字节，raw-response哈希等于响应读取时未隐私替换前哈希，content文件逐字等于raw choices[0].message.content。本地保存/解析未制造这些格式错误。HTTP解压后读到的原响应不是服务商内部模型输出日志。
+
+仍无法由当前权限区分的内部问题
+1. 服务端转换是否对某些Schema或请求分支丢失了约束/strict。
+2. 服务端是否仅把部分约束交给模型、是否启用约束解码，以及底层生成是否违规。
+3. 路由/别名是否切换后端，或服务端是否对生成正文执行了后处理。
+/v1/models仅返回[AN]、[ASP]、[抗截断]、[次][AN]等同系列别名，没有处理说明；owned_by=openai也是接口元数据，不足以证明真实模型提供方。没有切换未知模型/路由、没有猜测别名含义。响应cloudflare、x-oneapi-request-id等只帮助服务方定位请求，不证明具体错误位置。
+没有服务端转换后请求、实际模型原始输出或路由日志，也没有已配置且可核验的提供商原生直连凭证。因此不能声称上述内部原因已经逐个排除。继续盲目调用同一兼容端点无法替代这些证据。
+
+审批阻断
+尝试发送已准备的第480次完整原回复复制对照时，自动审批拒绝了外发，认为未明确授权这一具体剧情派生payload。进程未执行、调用未记账。已向用户询问两次具体原文复制授权；截至本报告仍待答复。其后的独立探针全部是新编人工数据，没有借道发送被拒绝内容。两份原文prepared文件保留但未发送。
+
+验证和额度
+12次API请求：11次HTTP200，其中两次strict格式反例；1次预期HTTP400。GET目录1次不计模型生成额度。原总额度用162/200，余38，累计496。预算/历史条目不重置，批次关闭。788份旧证据、22份正式文件、3份产品源哈希与原历史账本前缀保持。验证结果见verification.json；本轮全部正文/400错误见complete-outputs.txt；完整请求/HTTP原始响应在../iteration-200-20261115/wireprobe.*。没有产品改动，不重复运行无关全套回归。
+
+后续所需最小证据
+用493这份无剧情最小请求及响应，连同对应x-oneapi-request-id，请服务方提供格式转换后的实际请求、实际选中路由及模型输出前后差异。我们未向任何人发消息。当前证据不支持继续堆提示词或把strict当已验收保证；本地严格拒绝仍须保留，语义误判也不会因格式约束生效而自动消失。

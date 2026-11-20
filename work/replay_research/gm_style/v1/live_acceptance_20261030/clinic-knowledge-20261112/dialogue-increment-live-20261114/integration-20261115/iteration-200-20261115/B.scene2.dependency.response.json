@@ -1,0 +1,31 @@
+{
+  "kind": "B.scene2.dependency",
+  "startedAt": "2026-11-15T00:53:19.061Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T00:53:25.337Z",
+  "headersElapsedMs": 6276,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5aa473a9b471228-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 00:53:25 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=ok21bmTf0DqiSkewaCWFaWQzakkNqWmy3uQyJ%2Fd1PXTmyx0KXb1%2BYpZ%2F1ULDxjfa8Ng%2BfmchOKUEwmckLOZwgpBLIpnbxrAtm8A7FfVCN49oaFMm%2FetJGLZF4wbFxA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611150053195161278438268d9d6nDypjBG4",
+    "x-zeabur-ip-country": "ES",
+    "x-zeabur-request-id": "8b722cec-f55d-4305-9a64-2bc40b9178d9"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"53e09b48-5c08-4c8c-a8d3-8a93de8d042c\",\"object\":\"chat.completion\",\"created\":1794704005,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"inputRef\\\":\\\"c87ce1537d3c8a105bef162b198ff22567765df218b0c0d031eff01c0a1824ac\\\",\\\"required\\\":[]}\",\"reasoning_content\":\"Initial assessment: The user's input is a casual greeting about the weather, unrelated to any pending information. The pending message seems to be a commercial notification.\\n\\nThe core task appears to be a check for potential conflicts or contextually relevant information. The user's request appears unrelated to the pending message, which is a commercial transaction update. Proceeding with the standard response for a casual inquiry seems appropriate.\\n\\n\\n\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1204,\"completion_tokens\":79,\"total_tokens\":1776,\"completion_tokens_details\":{\"reasoning_tokens\":493}}}",
+  "responseBytes": 923,
+  "responseBodySha256BeforePrivacyRedaction": "11f8534a930446008de8a5e2264fc23c2f5e1aa599a411c05227ac080b6238e6",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T00:53:25.346Z",
+  "elapsedMs": 6285
+}

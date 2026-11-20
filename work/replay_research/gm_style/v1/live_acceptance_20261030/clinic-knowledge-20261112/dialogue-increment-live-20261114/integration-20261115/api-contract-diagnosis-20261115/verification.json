@@ -1,0 +1,186 @@
+{
+  "modelEndpointRequests": 12,
+  "http200": 11,
+  "expectedHttp400": 1,
+  "catalogGetRequests": 1,
+  "used": 162,
+  "remaining": 38,
+  "cumulative": 496,
+  "priorEvidenceUnchanged": 788,
+  "formalProtectedUnchanged": 22,
+  "productSourcesUnchanged": true,
+  "priorLedgerEntriesUnchanged": true,
+  "allPreparedBytesSentExactly": true,
+  "allRawResponsesPreserved": true,
+  "allSentSchemasLocallyValid": true,
+  "original480CopyRequestsSent": 0,
+  "automaticReviewBlockedOriginalCopy": true,
+  "replyRepair": false,
+  "validationRelaxed": false,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticRoutesRestored": false,
+  "results": [
+    {
+      "id": "wireprobe.baseline",
+      "call": 485,
+      "requestBytes": 435,
+      "status": 200,
+      "strict": null,
+      "jsonValid": true,
+      "schemaValid": null,
+      "errors": [],
+      "rawPreserved": true,
+      "assessment": "485 control exact unconstrained true, HTTP200 stop raw hash intact; next changes only response_format"
+    },
+    {
+      "id": "wireprobe.strict",
+      "call": 486,
+      "requestBytes": 715,
+      "status": 200,
+      "strict": true,
+      "jsonValid": true,
+      "schemaValid": true,
+      "errors": [],
+      "rawPreserved": true,
+      "assessment": "486 exact schema-only token and integer7, demonstrates schema affects output; does not yet prove hard decoding"
+    },
+    {
+      "id": "wireprobe.nonstrict",
+      "call": 487,
+      "requestBytes": 716,
+      "status": 200,
+      "strict": false,
+      "jsonValid": true,
+      "schemaValid": true,
+      "errors": [],
+      "rawPreserved": true,
+      "assessment": "487 same constrained output as486 with strict false; no visible strict distinction on cooperative prompt"
+    },
+    {
+      "id": "wireprobe.conflict_baseline",
+      "call": 488,
+      "requestBytes": 384,
+      "status": 200,
+      "strict": null,
+      "jsonValid": false,
+      "schemaValid": null,
+      "errors": [
+        {
+          "position": 0,
+          "message": "Expecting value"
+        }
+      ],
+      "rawPreserved": true,
+      "assessment": "488 exact requested plain text with no response format, establishes conflict control"
+    },
+    {
+      "id": "wireprobe.conflict_strict",
+      "call": 489,
+      "requestBytes": 664,
+      "status": 200,
+      "strict": true,
+      "jsonValid": true,
+      "schemaValid": true,
+      "errors": [],
+      "rawPreserved": true,
+      "assessment": "489 simple schema wins plain-text conflict; output exact enum values, cannot prove internal decoder mechanism"
+    },
+    {
+      "id": "wireprobe.conflict_nonstrict",
+      "call": 490,
+      "requestBytes": 665,
+      "status": 200,
+      "strict": false,
+      "jsonValid": true,
+      "schemaValid": true,
+      "errors": [],
+      "rawPreserved": true,
+      "assessment": "490 same valid schema output with strict false despite plain-text conflict. Six probes show schema consumed; strict-specific difference not observed. Next isolates full v6 schema with fixed valid content."
+    },
+    {
+      "id": "wireprobe.synthetic_complex",
+      "call": 491,
+      "requestBytes": 34882,
+      "status": 200,
+      "strict": true,
+      "jsonValid": true,
+      "schemaValid": false,
+      "errors": [
+        {
+          "path": [
+            "units"
+          ],
+          "message": "[] should be non-empty"
+        }
+      ],
+      "rawPreserved": true,
+      "assessment": "491 raw JSON valid and schemaVersion/contextRef copied only from schema, but units=[] violates explicit minItems1. Full schema partly consumed; next isolate array cardinality in minimal schema, not repeat original."
+    },
+    {
+      "id": "wireprobe.cardinality",
+      "call": 492,
+      "requestBytes": 728,
+      "status": 200,
+      "strict": true,
+      "jsonValid": true,
+      "schemaValid": true,
+      "errors": [],
+      "rawPreserved": true,
+      "assessment": "492 minimal array schema enforces1item under same conflict prompt; minItems not universally ignored. Next keep exact synthetic root/cardinality but simplify nested unit structure."
+    },
+    {
+      "id": "wireprobe.shallow_units",
+      "call": 493,
+      "requestBytes": 958,
+      "status": 200,
+      "strict": true,
+      "jsonValid": false,
+      "schemaValid": false,
+      "errors": [
+        {
+          "position": 0,
+          "message": "Expecting value"
+        }
+      ],
+      "rawPreserved": true,
+      "assessment": "493 HTTP200 stop returns plain text despite strict true and valid958-byte shallow schema. Not merely large-body/complex-schema failure; internal conversion vs decoding vs postprocess still unobservable. Next cooperative copy separates content generation from format feasibility."
+    },
+    {
+      "id": "wireprobe.synthetic_copy_baseline",
+      "call": 494,
+      "requestBytes": 1535,
+      "status": 200,
+      "strict": null,
+      "jsonValid": true,
+      "schemaValid": null,
+      "errors": [],
+      "rawPreserved": true,
+      "assessment": "494 exact artificial expected JSON copied with no schema; next only adds full generated v6 schema to same messages and params"
+    },
+    {
+      "id": "wireprobe.synthetic_copy_schema",
+      "call": 495,
+      "requestBytes": 36033,
+      "status": 200,
+      "strict": true,
+      "jsonValid": true,
+      "schemaValid": true,
+      "errors": [],
+      "rawPreserved": true,
+      "assessment": "495 exact synthetic nested receipt copy with full v6 schema, local schema pass. Feasibility demonstrated, not hard constraint reliability;493 remains plain-text failure. Final capability probe checks previously rejected minContains at current endpoint."
+    },
+    {
+      "id": "wireprobe.keyword_support",
+      "call": 496,
+      "requestBytes": 814,
+      "status": 400,
+      "strict": true,
+      "jsonValid": null,
+      "schemaValid": null,
+      "errors": [],
+      "rawPreserved": true,
+      "assessment": "496 expected capability400: current upstream error names generation_config.response_schema and unsupported minContains/maxContains. Valid Draft2020 schema locally; no generated content. Counted1 slot; stop live phase, no retry."
+    }
+  ]
+}

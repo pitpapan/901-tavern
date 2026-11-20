@@ -1,0 +1,221 @@
+{
+  "contextRef": "82d91a3d6d9a18c3fd0ff3d0e4b821d580144f37f890d24cc470c0146b4d490b",
+  "assertions": {
+    "schemaVersion": "gm-assertion-output/1",
+    "inputRef": "assertion.09bc4e709a45b17c38123cf85bb7ea7d21d87408601042050cf5bb7e5635481f",
+    "units": [
+      {
+        "id": "turn",
+        "status": "unresolved",
+        "claims": [
+          {
+            "id": "c1",
+            "type": "utterance",
+            "args": {
+              "speaker": "黄泉",
+              "content": "交货地点改到南岗。"
+            },
+            "argumentSpans": {
+              "speaker": {
+                "documentId": "current",
+                "start": 0,
+                "end": 2,
+                "quote": "黄泉"
+              },
+              "content": {
+                "documentId": "current",
+                "start": 13,
+                "end": 22,
+                "quote": "交货地点改到南岗。"
+              }
+            },
+            "mode": "asserted",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 0,
+              "end": 23,
+              "quote": "黄泉对御临风和布莱特说：“交货地点改到南岗。”"
+            }
+          },
+          {
+            "id": "c2",
+            "type": "location",
+            "args": {
+              "entity": "交货地点",
+              "landmark": "南岗",
+              "region": null
+            },
+            "argumentSpans": {
+              "entity": {
+                "documentId": "current",
+                "start": 13,
+                "end": 17,
+                "quote": "交货地点"
+              },
+              "landmark": {
+                "documentId": "current",
+                "start": 19,
+                "end": 21,
+                "quote": "南岗"
+              },
+              "region": null
+            },
+            "mode": "reported",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": "黄泉"
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": {
+                "documentId": "current",
+                "start": 0,
+                "end": 2,
+                "quote": "黄泉"
+              }
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 13,
+              "end": 22,
+              "quote": "交货地点改到南岗。"
+            }
+          },
+          {
+            "id": "c3",
+            "type": "state",
+            "args": {
+              "entity": "一人",
+              "name": "听清状态",
+              "value": "没听清"
+            },
+            "argumentSpans": {
+              "entity": {
+                "documentId": "current",
+                "start": 27,
+                "end": 29,
+                "quote": "一人"
+              },
+              "name": {
+                "documentId": "current",
+                "start": 30,
+                "end": 32,
+                "quote": "听清"
+              },
+              "value": {
+                "documentId": "current",
+                "start": 29,
+                "end": 32,
+                "quote": "没听清"
+              }
+            },
+            "mode": "asserted",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 23,
+              "end": 32,
+              "quote": "两人中有一人没听清"
+            }
+          },
+          {
+            "id": "c4",
+            "type": "state",
+            "args": {
+              "entity": "记录",
+              "name": "指出能力",
+              "value": "无法指出是哪一人"
+            },
+            "argumentSpans": {
+              "entity": {
+                "documentId": "current",
+                "start": 34,
+                "end": 36,
+                "quote": "记录"
+              },
+              "name": {
+                "documentId": "current",
+                "start": 38,
+                "end": 40,
+                "quote": "指出"
+              },
+              "value": {
+                "documentId": "current",
+                "start": 36,
+                "end": 44,
+                "quote": "无法指出是哪一人"
+              }
+            },
+            "mode": "asserted",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 34,
+              "end": 45,
+              "quote": "记录无法指出是哪一人。"
+            }
+          }
+        ],
+        "unresolved": [
+          {
+            "span": {
+              "documentId": "current",
+              "start": 23,
+              "end": 44,
+              "quote": "两人中有一人没听清，但记录无法指出是哪一人"
+            },
+            "reason": "文中明确指出御临风和布莱特两人中有一人没听清，但无法确定具体是哪一人没听清、哪一人听清。"
+          }
+        ]
+      }
+    ]
+  },
+  "receptions": [
+    {
+      "id": "rec1",
+      "claimId": "c1",
+      "speakerId": "huang",
+      "recipientIds": [],
+      "recipientSpans": [],
+      "evidence": {
+        "documentId": "current",
+        "start": 23,
+        "end": 45,
+        "quote": "两人中有一人没听清，但记录无法指出是哪一人。"
+      },
+      "status": "uncertain",
+      "propositionRef": null,
+      "reason": "御临风与布莱特中有一人没听清，但记录无法确定具体是哪一人听清或未听清，因此接收者存在歧义且无法确认。"
+    }
+  ]
+}

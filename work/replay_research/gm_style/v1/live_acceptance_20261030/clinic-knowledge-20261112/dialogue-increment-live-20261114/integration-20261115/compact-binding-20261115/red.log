@@ -1,0 +1,32 @@
+✖ compact schema retains existing listener and reception evidence descriptions rather than losing them during projection (25.8607ms)
+✔ implicit listeners remain tied to separate answer contents across intervening narrative (13.5721ms)
+✔ latest implicit-listener and long raw failures stay rejected unchanged (36.8255ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 2
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 525.7566
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-compact.test.mjs:155:1
+✖ compact schema retains existing listener and reception evidence descriptions rather than losing them during projection (25.8607ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - '本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用listenerId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。'
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:158:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: '本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用listenerId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

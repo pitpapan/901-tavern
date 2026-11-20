@@ -1,0 +1,31 @@
+{
+  "kind": "dialogue-reception",
+  "startedAt": "2026-11-14T19:23:51.221Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-14T19:23:55.524Z",
+  "headersElapsedMs": 4303,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5a8649b5b4ecc6c-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sat, 14 Nov 2026 19:23:55 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=R9dEE3r%2BTDfXfTjRKw5Lj8czBLJQ31DwA8jCvIQRkK1HIXUjbS6EoencAOoYIVNVQDpXoMR62JK5VBs%2BT%2BkwYXHBSKWUu9GzQsg7BPhw%2FG9xuRyHtwTY8HpMstng9A%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611141923510102793918268d9d6eVKtTitC",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "6e4523d6-f648-4e91-9f84-4a1cfb508ff0"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"814ba7ee-0ae7-4d74-9815-0fb9b13430fd\",\"object\":\"chat.completion\",\"created\":1794684235,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"contextRef\\\":\\\"99f2d41c8eb6f675102b740f902df4dbeb2c197281ddbbf449d5fbc1c2d6c3c5\\\",\\\"assertions\\\":{\\\"schemaVersion\\\":\\\"gm-assertion-output/1\\\",\\\"inputRef\\\":\\\"assertion.35a9944a990ecbd4fddc72c08ddf45cbe4903a7836ae2d0404650db44e4d18c7\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[{\\\"id\\\":\\\"c1\\\",\\\"type\\\":\\\"action\\\",\\\"args\\\":{\\\"actor\\\":\\\"御临风\\\",\\\"verb\\\":\\\"说\\\",\\\"object\\\":\\\"“北门暂停通行，改从西桥绕行。”\\\"},\\\"argumentSpans\\\":{\\\"actor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":3,\\\"quote\\\":\\\"御临风\\\"},\\\"verb\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":7,\\\"end\\\":8,\\\"quote\\\":\\\"说\\\"},\\\"object\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":9,\\\"end\\\":25,\\\"quote\\\":\\\"“北门暂停通行，改从西桥绕行。”\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":25,\\\"quote\\\":\\\"御临风对布莱特说：“北门暂停通行，改从西桥绕行。”\\\"}}],\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]},\\\"receptions\\\":[]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":3716,\"completion_tokens\":369,\"total_tokens\":4085}}",
+  "responseBytes": 1403,
+  "responseBodySha256BeforePrivacyRedaction": "3ecee0444c47df4273d9c9324bda78ac8c4ca52fcf6ffa2bfe3bc721b3fed9bc",
+  "outcome": "completed",
+  "finishedAt": "2026-11-14T19:23:55.531Z",
+  "elapsedMs": 4310
+}

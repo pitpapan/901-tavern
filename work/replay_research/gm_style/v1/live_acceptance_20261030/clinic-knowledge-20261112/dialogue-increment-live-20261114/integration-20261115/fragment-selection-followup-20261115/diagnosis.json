@@ -1,0 +1,45 @@
+{
+  "rawJSONFailure": "421 includes non-JSON text; no parsing repair. Schema was present, so upstream noncompliance remains.",
+  "fragmentFailure": [
+    {
+      "path": "reply.units.0.utterances.1.receptions.0.evidence",
+      "selection": {
+        "fragmentId": "f42",
+        "quote": "说话间，几人已经走下了缓坡。"
+      },
+      "fragmentText": "说话间，",
+      "reason": "quote absent",
+      "availableContainers": [
+        "f10",
+        "f1"
+      ]
+    },
+    {
+      "path": "reply.units.0.utterances.1.receptions.1.evidence",
+      "selection": {
+        "fragmentId": "f42",
+        "quote": "说话间，几人已经走下了缓坡。"
+      },
+      "fragmentText": "说话间，",
+      "reason": "quote absent",
+      "availableContainers": [
+        "f10",
+        "f1"
+      ]
+    },
+    {
+      "path": "reply.units.0.utterances.2.receptions.0.evidence",
+      "selection": {
+        "fragmentId": "f54",
+        "quote": "咱们办完正事，找地方落脚填肚子倒不用愁了。"
+      },
+      "fragmentText": "咱们办完正事，",
+      "reason": "quote absent",
+      "availableContainers": [
+        "f12",
+        "f1"
+      ]
+    }
+  ],
+  "localScope": "Pure JSON serialization at existing envelope and deterministic container projection; no validator changes or guaranteed causal attribution."
+}

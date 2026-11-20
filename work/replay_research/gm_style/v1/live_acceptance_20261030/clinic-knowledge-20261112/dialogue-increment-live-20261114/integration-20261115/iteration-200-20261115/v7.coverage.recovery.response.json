@@ -1,0 +1,31 @@
+{
+  "kind": "v7.coverage.recovery",
+  "startedAt": "2026-11-15T22:47:56.085Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T22:47:58.410Z",
+  "headersElapsedMs": 2325,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b1ccf06d218038-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 22:47:58 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=e%2F8ibO6TBtu2Z7VvZx2pSFDsTyxM61SZVk3dEXCiRDJz2vBi1gjsVWrBAxjgmzRn%2Bh3hl36VQ2Zi7iPw0CMyWanKh9qSyVvKEoStyCaqv0HAT4n2YsYI%2FtsoScV6dA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611152247562975440908268d9d6mVsYdZsq",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "64b75f54-ab39-466f-aa47-816811db9bdd"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"445417c0-4b91-4b6f-ae1e-3b004af8b9c2\",\"object\":\"chat.completion\",\"created\":1794782878,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/7\\\",\\\"contextRef\\\":\\\"a99e464c3e1f421386d06588875cec6542221cfafb03f611baabb647278ab086\\\",\\\"selections\\\":[{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"},{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"山路已经封闭了，明早在渡口会合。\\\"},{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"答道：\\\"},{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"布莱特\\\"},{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"山路已经封闭了\\\"},{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"听清了前半句\\\"},{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"明早在渡口会合\\\"},{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"钟声响起后，他有没有听清后半句，眼下无人能确定。\\\"}],\\\"utterances\\\":[{\\\"speakerId\\\":\\\"huang\\\",\\\"speaker\\\":0,\\\"content\\\":1,\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":2}],\\\"receptions\\\":[{\\\"utterance\\\":0,\\\"content\\\":4,\\\"listenerId\\\":\\\"bright\\\",\\\"identityKind\\\":\\\"explicit\\\",\\\"identity\\\":3,\\\"historyMessageId\\\":null,\\\"evidenceKind\\\":\\\"direct\\\",\\\"evidence\\\":5,\\\"propositionRef\\\":null}],\\\"unresolved\\\":[{\\\"selection\\\":7,\\\"reason\\\":\\\"钟声响起后布莱特是否听清后半句（明早在渡口会合）存在不确定性，无法确认其接收状态\\\"}],\\\"coverage\\\":{\\\"status\\\":\\\"uncertain\\\",\\\"evidence\\\":7}}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2669,\"completion_tokens\":358,\"total_tokens\":3027}}",
+  "responseBytes": 1558,
+  "responseBodySha256BeforePrivacyRedaction": "5f4c0b850118bfe25b98642bb123d9f6e3afd40eb8b07008f54fb0efef9f5af7",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T22:47:58.415Z",
+  "elapsedMs": 2330
+}

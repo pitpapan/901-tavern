@@ -1,0 +1,67 @@
+{
+  "authorization": "authorization.json",
+  "baseline": 540,
+  "limit": 6,
+  "used": 2,
+  "remaining": 4,
+  "cumulative": 542,
+  "ceiling": 546,
+  "attempts": [
+    {
+      "id": "round-01",
+      "customRequest": 541,
+      "state": "completed",
+      "purpose": "用户明确同意本轮同一隔离战役上下文发送到原端点，上限6次；本次验证本地分类格式错误后的原生重新生成，普通正文原样返回；不调用真实分类、抽取或审稿。",
+      "requestBytes": 123313,
+      "requestSha256": "1e2ad23e83ddea44ccdeb462ff9ac32d305a9ac12a6326f23a9c3c23064a4d69",
+      "startedAt": "2026-11-16T20:04:52.756Z",
+      "status": 200,
+      "elapsedMs": 9437,
+      "rawResponseSha256": "5aa0f6d055f24015506dc14d1a046a1d9f455b59b198a3d6a2b3082860bdcc2d",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 31007,
+        "completion_tokens": 303,
+        "total_tokens": 31310
+      },
+      "manualVerdict": "pass",
+      "assessment": "真实541正文已原样保存，源消息有效，failed pending保留；首次隔离转交分支418已保留并修正，同一字节请求本地复用541原始响应，无模型重试。仅故障恢复指标通过，不作通用模型稳定性或文风验收。"
+    },
+    {
+      "id": "round-02",
+      "customRequest": 542,
+      "state": "completed",
+      "purpose": "用户已明确同意同端点战役上下文最多6次。本次承接真实541，关闭可选整理并保存重开后，从原普通入口继续到协会门前；有效旧failed来源保留，不调用真实分类、抽取或审稿。",
+      "requestBytes": 124592,
+      "requestSha256": "37510a8bc09612cf05a2087b555a4e997a155fb9814c5f2c9f1f596b9c567c64",
+      "startedAt": "2026-11-16T20:14:51.599Z",
+      "status": 200,
+      "elapsedMs": 6501,
+      "rawResponseSha256": "23d1dcd5eebf0a206380e19801264ba9f2f4ba9870236ec7233ff9313c6c7340",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 31322,
+        "completion_tokens": 325,
+        "total_tokens": 31647
+      },
+      "manualVerdict": "pass",
+      "assessment": "承接真实541；关闭可选整理并保存重开后，经原普通入口收到真实542正文并原样保存。failed批次及有效来源保留，机械人物、既有操作和知情授予未再变化。本例恢复目标通过，未验收真实模型分类或所有网络故障。"
+    }
+  ],
+  "closed": true,
+  "complete": true,
+  "approvalState": "explicitly-confirmed",
+  "blockedBeforeExternalCall": false,
+  "previousApprovalReviewRejection": true,
+  "finishedAt": "2026-11-16T20:18:49.863029+00:00",
+  "stopReason": "Two real narration responses completed failure recovery and post-reopen continuation. No quota filling.",
+  "classificationModelCalls": 0,
+  "extractionModelCalls": 0,
+  "reviewModelCalls": 0,
+  "externalRetries": 0,
+  "locallyReusedOriginalResponse": 541
+}

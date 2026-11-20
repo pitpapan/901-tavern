@@ -1,0 +1,31 @@
+{
+  "kind": "dialogue-reception",
+  "startedAt": "2026-11-14T22:52:25.951Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-14T22:52:31.046Z",
+  "headersElapsedMs": 5095,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5a996267e9a666c-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sat, 14 Nov 2026 22:52:30 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=w%2BX0VD7z9P%2BVIeHDhj8PqkCwrb1NAyVqnTW0kMh7LAdWOUBOw99tRDMnljc%2BzOx2HUW87Er%2BTQ6fUf0bpZuGGm9qTVznriv5Jk5ov9S%2BwV7j1Z4QnKd%2FfVjBnWjp%2FQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611142252260697723198268d9d6un5YcFh1",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "461a4078-1dff-43e5-8880-c8b217a14975"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"8023ed6d-a6d5-4926-a27e-7c2083025da7\",\"object\":\"chat.completion\",\"created\":1794696750,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/2\\\",\\\"contextRef\\\":\\\"13b114382ffbb77d8c8c94ca06831da3c656d7a0008afcfc9731c970ad30492a\\\",\\\"inputRef\\\":\\\"assertion.4a9436967b14cf43cc10d1c28b7bc62021df6b46653ec84d93cf427347613c6b\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"status\\\":\\\"extracted\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"turn.utterance.1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"御临风\\\",\\\"content\\\":\\\"北门暂停通行。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":3,\\\"quote\\\":\\\"御临风\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":18,\\\"end\\\":25,\\\"quote\\\":\\\"北门暂停通行。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":26,\\\"quote\\\":\\\"御临风隔着关闭的隔音窗对布莱特说：“北门暂停通行。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"turn.utterance.1.rec.1\\\",\\\"speakerId\\\":\\\"player\\\",\\\"recipientIds\\\":[\\\"bright\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":12,\\\"end\\\":15,\\\"quote\\\":\\\"布莱特\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":26,\\\"end\\\":34,\\\"quote\\\":\\\"布莱特没有听见。\\\"},\\\"status\\\":\\\"not_received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"隔着关闭的隔音窗说话，布莱特明确没有听见\\\"}]}],\\\"unresolved\\\":[],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":34,\\\"quote\\\":\\\"御临风隔着关闭的隔音窗对布莱特说：“北门暂停通行。”布莱特没有听见。\\\"},\\\"reason\\\":\\\"完整记录了御临风对布莱特的言说以及布莱特未听见的接收结果\\\"}}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":3553,\"completion_tokens\":525,\"total_tokens\":4078}}",
+  "responseBytes": 2035,
+  "responseBodySha256BeforePrivacyRedaction": "d75c264528e8854eb65527ab72df890af47f56c13fb2502730b720e112a67c25",
+  "outcome": "completed",
+  "finishedAt": "2026-11-14T22:52:31.051Z",
+  "elapsedMs": 5100
+}

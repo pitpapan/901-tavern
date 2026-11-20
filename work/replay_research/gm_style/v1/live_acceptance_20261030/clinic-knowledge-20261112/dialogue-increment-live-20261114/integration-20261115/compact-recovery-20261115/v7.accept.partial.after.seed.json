@@ -1,0 +1,1095 @@
+{
+  "stat_data": {
+    "901_rules_poc": {
+      "schemaVersion": 1,
+      "revision": 3,
+      "chatId": "bindingjson.probe.partial",
+      "actors": {
+        "player": {
+          "name": "御临风",
+          "state": {
+            "name": "御临风",
+            "attributes": {
+              "力量": 5,
+              "敏捷": 5,
+              "智力": 4,
+              "感知": 4,
+              "意志": 1,
+              "风度": 2
+            },
+            "size": 5,
+            "hpBonus": 0,
+            "derived": {
+              "hpMax": 12,
+              "defense": 4,
+              "speed": 25,
+              "initiative": 7,
+              "willMax": 3,
+              "vision": 40
+            },
+            "skills": {
+              "运动": {
+                "level": 1,
+                "subs": {}
+              },
+              "肉搏": {
+                "level": 0,
+                "subs": {}
+              },
+              "白刃": {
+                "level": 5,
+                "subs": {
+                  "长剑": {
+                    "level": 3
+                  }
+                }
+              },
+              "射击": {
+                "level": 0,
+                "subs": {}
+              },
+              "隐藏": {
+                "level": 1,
+                "subs": {}
+              },
+              "求生": {
+                "level": 1,
+                "subs": {}
+              },
+              "驾驶": {
+                "level": 0,
+                "subs": {}
+              },
+              "学识": {
+                "level": 2,
+                "subs": {}
+              },
+              "科学": {
+                "level": 0,
+                "subs": {}
+              },
+              "神秘": {
+                "level": 2,
+                "subs": {}
+              },
+              "电脑": {
+                "level": 2,
+                "subs": {}
+              },
+              "医疗": {
+                "level": 2,
+                "subs": {}
+              },
+              "洞察": {
+                "level": 1,
+                "subs": {}
+              },
+              "社交": {
+                "level": 2,
+                "subs": {}
+              }
+            },
+            "resources": {
+              "流风": {
+                "current": 22,
+                "max": 22
+              }
+            },
+            "attributeAuto": {},
+            "derivedOverrides": [
+              "hpMax",
+              "willMax",
+              "speed",
+              "initiative"
+            ],
+            "health": {
+              "intact": 12,
+              "B": 0,
+              "L": 0,
+              "A": 0,
+              "temp": 0,
+              "coma": false,
+              "deteriorationStopped": false
+            },
+            "will": {
+              "current": 3,
+              "max": 3
+            },
+            "xp": 0,
+            "greatPowersAvailable": 0,
+            "statuses": [],
+            "attributeDamage": {},
+            "turn": {
+              "phase": "ready",
+              "standard": 0,
+              "move": 0,
+              "swift": 0,
+              "reactionLock": false,
+              "reactionLockEnds": 0,
+              "responseDebt": false,
+              "opportunityUsed": false
+            },
+            "extendedActions": {},
+            "inventory": [
+              {
+                "name": "雪莲子",
+                "quantity": 1,
+                "source": "原"
+              },
+              {
+                "name": "培元丹",
+                "quantity": 3,
+                "source": "原"
+              },
+              {
+                "name": "药A",
+                "quantity": 2,
+                "source": "原"
+              },
+              {
+                "name": "药B",
+                "quantity": 3,
+                "source": "原"
+              },
+              {
+                "name": "药C",
+                "quantity": 4,
+                "source": "原"
+              },
+              {
+                "name": "雷霆药剂",
+                "quantity": null,
+                "source": "原：数量未记"
+              },
+              {
+                "name": "恶灵提示符",
+                "quantity": null,
+                "source": "原：100为价格，非数量"
+              }
+            ],
+            "unknownSkills": {
+              "制造": {
+                "level": null,
+                "subs": {
+                  "炼药": {
+                    "level": 2
+                  }
+                }
+              }
+            },
+            "recoveryRules": {
+              "flow": {
+                "attributes": [
+                  "敏捷",
+                  "感知"
+                ],
+                "physical": true,
+                "longRest": true
+              },
+              "flowRecoveryCheck": {
+                "attributes": [
+                  "敏捷",
+                  "感知"
+                ],
+                "source": "用户2026-10-23确认"
+              }
+            }
+          }
+        },
+        "huang": {
+          "name": "黄泉",
+          "state": {
+            "name": "黄泉",
+            "attributes": {
+              "力量": 5,
+              "敏捷": 6,
+              "智力": 2,
+              "感知": 5,
+              "意志": 3,
+              "风度": 3
+            },
+            "size": 5,
+            "hpBonus": 0,
+            "derived": {
+              "hpMax": 12,
+              "defense": 5,
+              "speed": 16,
+              "initiative": 13,
+              "willMax": 6,
+              "vision": 50
+            },
+            "skills": {
+              "运动": {
+                "level": 2,
+                "subs": {}
+              },
+              "肉搏": {
+                "level": 1,
+                "subs": {}
+              },
+              "白刃": {
+                "level": 5,
+                "subs": {
+                  "太刀": {
+                    "level": 1
+                  }
+                }
+              },
+              "射击": {
+                "level": 0,
+                "subs": {}
+              },
+              "隐藏": {
+                "level": 0,
+                "subs": {}
+              },
+              "求生": {
+                "level": 1,
+                "subs": {}
+              },
+              "驾驶": {
+                "level": 1,
+                "subs": {}
+              },
+              "学识": {
+                "level": 2,
+                "subs": {}
+              },
+              "科学": {
+                "level": 1,
+                "subs": {}
+              },
+              "神秘": {
+                "level": 1,
+                "subs": {
+                  "除灵": {
+                    "level": 1
+                  }
+                }
+              },
+              "调查": {
+                "level": 1,
+                "subs": {}
+              },
+              "洞察": {
+                "level": 1,
+                "subs": {}
+              },
+              "社交": {
+                "level": 1,
+                "subs": {
+                  "感受": {
+                    "level": 1
+                  },
+                  "表达": {
+                    "level": 1
+                  },
+                  "说服": {
+                    "level": 1
+                  }
+                }
+              },
+              "电脑": {
+                "level": 1,
+                "subs": {}
+              },
+              "医疗": {
+                "level": 0,
+                "subs": {}
+              },
+              "制造": {
+                "level": 0,
+                "subs": {}
+              }
+            },
+            "resources": {
+              "灵力": {
+                "current": 5,
+                "max": 5
+              }
+            },
+            "attributeAuto": {},
+            "derivedOverrides": [
+              "hpMax",
+              "willMax",
+              "speed",
+              "initiative"
+            ],
+            "health": {
+              "intact": 12,
+              "B": 0,
+              "L": 0,
+              "A": 0,
+              "temp": 0,
+              "coma": false,
+              "deteriorationStopped": false
+            },
+            "will": {
+              "current": 6,
+              "max": 6
+            },
+            "xp": 0,
+            "greatPowersAvailable": 0,
+            "statuses": [],
+            "attributeDamage": {},
+            "turn": {
+              "phase": "ready",
+              "standard": 0,
+              "move": 0,
+              "swift": 0,
+              "reactionLock": false,
+              "reactionLockEnds": 0,
+              "responseDebt": false,
+              "opportunityUsed": false
+            },
+            "extendedActions": {}
+          }
+        },
+        "jiang": {
+          "name": "姜子尤",
+          "state": {
+            "name": "姜子尤",
+            "attributes": {
+              "力量": 8,
+              "敏捷": 2,
+              "智力": 2,
+              "感知": 3,
+              "意志": 3,
+              "风度": 3
+            },
+            "size": 5,
+            "hpBonus": 2,
+            "derived": {
+              "hpMax": 20,
+              "defense": 2,
+              "speed": 25,
+              "initiative": 6,
+              "willMax": 6,
+              "vision": 30
+            },
+            "skills": {
+              "运动": {
+                "level": 3,
+                "subs": {}
+              },
+              "肉搏": {
+                "level": 5,
+                "subs": {
+                  "拳击": {
+                    "level": 2
+                  }
+                }
+              },
+              "白刃": {
+                "level": 1,
+                "subs": {}
+              },
+              "射击": {
+                "level": 0,
+                "subs": {}
+              },
+              "隐藏": {
+                "level": 1,
+                "subs": {}
+              },
+              "求生": {
+                "level": 1,
+                "subs": {}
+              },
+              "驾驶": {
+                "level": 2,
+                "subs": {}
+              },
+              "学识": {
+                "level": 1,
+                "subs": {}
+              },
+              "科学": {
+                "level": 0,
+                "subs": {}
+              },
+              "神秘": {
+                "level": 0,
+                "subs": {}
+              },
+              "调查": {
+                "level": 0,
+                "subs": {}
+              },
+              "洞察": {
+                "level": 2,
+                "subs": {}
+              },
+              "社交": {
+                "level": 1,
+                "subs": {
+                  "威逼": {
+                    "level": 2
+                  },
+                  "街头智慧": {
+                    "level": 1
+                  },
+                  "沟通": {
+                    "level": 1
+                  }
+                }
+              },
+              "电脑": {
+                "level": 1,
+                "subs": {}
+              },
+              "医疗": {
+                "level": 0,
+                "subs": {}
+              },
+              "制造": {
+                "level": 0,
+                "subs": {}
+              }
+            },
+            "resources": {
+              "气": {
+                "current": 2,
+                "max": 2
+              },
+              "斗气": {
+                "current": 2,
+                "max": 2
+              }
+            },
+            "attributeAuto": {},
+            "derivedOverrides": [
+              "hpMax",
+              "willMax",
+              "speed",
+              "initiative"
+            ],
+            "health": {
+              "intact": 20,
+              "B": 0,
+              "L": 0,
+              "A": 0,
+              "temp": 0,
+              "coma": false,
+              "deteriorationStopped": false
+            },
+            "will": {
+              "current": 6,
+              "max": 6
+            },
+            "xp": 0,
+            "greatPowersAvailable": 0,
+            "statuses": [],
+            "attributeDamage": {},
+            "turn": {
+              "phase": "ready",
+              "standard": 0,
+              "move": 0,
+              "swift": 0,
+              "reactionLock": false,
+              "reactionLockEnds": 0,
+              "responseDebt": false,
+              "opportunityUsed": false
+            },
+            "extendedActions": {}
+          }
+        },
+        "bright": {
+          "name": "布莱特",
+          "state": {
+            "name": "布莱特",
+            "attributes": {
+              "力量": 3,
+              "敏捷": 4,
+              "智力": 2,
+              "感知": 4,
+              "意志": 2,
+              "风度": 1
+            },
+            "size": 5,
+            "hpBonus": 0,
+            "derived": {
+              "hpMax": 8,
+              "defense": 4,
+              "speed": 22,
+              "initiative": 9,
+              "willMax": 5,
+              "vision": 40
+            },
+            "skills": {
+              "运动": {
+                "level": 2,
+                "subs": {}
+              },
+              "肉搏": {
+                "level": 1,
+                "subs": {}
+              },
+              "白刃": {
+                "level": 1,
+                "subs": {}
+              },
+              "射击": {
+                "level": 1,
+                "subs": {
+                  "长弓": {
+                    "level": 4
+                  }
+                }
+              },
+              "隐藏": {
+                "level": 2,
+                "subs": {}
+              },
+              "求生": {
+                "level": 1,
+                "subs": {}
+              },
+              "驾驶": {
+                "level": 0,
+                "subs": {}
+              },
+              "学识": {
+                "level": 1,
+                "subs": {}
+              },
+              "科学": {
+                "level": 1,
+                "subs": {}
+              },
+              "神秘": {
+                "level": 1,
+                "subs": {}
+              },
+              "调查": {
+                "level": 2,
+                "subs": {
+                  "搜索": {
+                    "level": 1
+                  }
+                }
+              },
+              "洞察": {
+                "level": 2,
+                "subs": {
+                  "追踪": {
+                    "level": 1
+                  }
+                }
+              },
+              "社交": {
+                "level": 1,
+                "subs": {
+                  "动物沟通": {
+                    "level": 1
+                  },
+                  "感受": {
+                    "level": 1
+                  },
+                  "唬骗": {
+                    "level": 1
+                  },
+                  "说服": {
+                    "level": 1
+                  }
+                }
+              },
+              "电脑": {
+                "level": 0,
+                "subs": {}
+              },
+              "医疗": {
+                "level": 1,
+                "subs": {}
+              },
+              "制造": {
+                "level": 0,
+                "subs": {
+                  "淬毒": {
+                    "level": 2
+                  }
+                }
+              }
+            },
+            "resources": {},
+            "attributeAuto": {},
+            "derivedOverrides": [
+              "hpMax",
+              "willMax",
+              "speed",
+              "initiative"
+            ],
+            "health": {
+              "intact": 8,
+              "B": 0,
+              "L": 0,
+              "A": 0,
+              "temp": 0,
+              "coma": false,
+              "deteriorationStopped": false
+            },
+            "will": {
+              "current": 5,
+              "max": 5
+            },
+            "xp": 0,
+            "greatPowersAvailable": 0,
+            "statuses": [],
+            "attributeDamage": {},
+            "turn": {
+              "phase": "ready",
+              "standard": 0,
+              "move": 0,
+              "swift": 0,
+              "reactionLock": false,
+              "reactionLockEnds": 0,
+              "responseDebt": false,
+              "opportunityUsed": false
+            },
+            "extendedActions": {}
+          }
+        }
+      },
+      "operations": {
+        "story-dialogue/d65b2bdbcf22877008281e489f30f4a0372a9bafa67c5d2247d9082cb0cb1d5d": {
+          "signature": "{\"id\":\"dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce\",\"sourceAnchor\":{\"chatId\":\"bindingjson.probe.partial\",\"messageId\":1,\"swipeId\":0,\"text\":\"黄泉答道：“山路已经封闭了，明早在渡口会合。”布莱特只听清前半句，后半句被钟声盖住。\"},\"status\":\"prepared\",\"rows\":[{\"id\":\"dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06\",\"claimId\":\"semantic.turn.u0\",\"speakerId\":\"huang\",\"recipientIds\":[\"bright\"],\"propositionRef\":null,\"content\":\"山路已经封闭了\",\"quote\":\"山路已经封闭了\",\"contentSpan\":{\"documentId\":\"current\",\"start\":6,\"end\":13,\"quote\":\"山路已经封闭了\"},\"receptionBinding\":{\"id\":\"semantic.turn.u0.r0\",\"listener\":{\"actorId\":\"bright\",\"kind\":\"explicit\",\"span\":{\"documentId\":\"current\",\"start\":23,\"end\":26,\"quote\":\"布莱特\"},\"historyMessageId\":null},\"evidence\":{\"kind\":\"direct\",\"span\":{\"documentId\":\"current\",\"start\":26,\"end\":32,\"quote\":\"只听清前半句\"}}},\"belief\":\"uncertain\",\"status\":\"ready\",\"extractionReason\":\"\",\"reason\":\"\",\"evidence\":{\"documentId\":\"current\",\"start\":26,\"end\":32,\"quote\":\"只听清前半句\"},\"unresolved\":[]}],\"receptionCoverage\":[{\"targetId\":\"turn\",\"status\":\"recorded\",\"evidence\":{\"documentId\":\"current\",\"start\":26,\"end\":32,\"quote\":\"只听清前半句\"},\"reason\":\"显式覆盖选择；不证明语义完整。\"}],\"extractionInput\":{\"assertion\":{\"schemaVersion\":\"gm-assertion-input/1\",\"stage\":\"source\",\"documents\":[{\"id\":\"current\",\"text\":\"黄泉答道：“山路已经封闭了，明早在渡口会合。”布莱特只听清前半句，后半句被钟声盖住。\"}],\"targets\":[{\"id\":\"turn\",\"documentId\":\"current\",\"start\":0,\"end\":42}],\"prior\":null,\"inputRef\":\"assertion.88d620028e3d1c080b13f52623ff9603d479e1c0041d927a94a321ab223eff5e\"},\"sourceAnchor\":{\"chatId\":\"bindingjson.probe.partial\",\"messageId\":1,\"swipeId\":0,\"text\":\"黄泉答道：“山路已经封闭了，明早在渡口会合。”布莱特只听清前半句，后半句被钟声盖住。\"},\"history\":[{\"messageId\":0,\"role\":\"user\",\"text\":\"布莱特问黄泉：“山路能走吗？明早在哪里会合？”\"}],\"actors\":{\"player\":\"御临风\",\"bright\":\"布莱特\",\"huang\":\"黄泉\"},\"facts\":{\"clinic.owner.xuelao.old-friend\":{\"effectiveAt\":{\"id\":\"legacy.story.order\",\"clock\":\"turn\",\"at\":0,\"actorId\":\"legacy.story\"},\"discoveryConditions\":[\"actual-receipt\"],\"dependencyRefs\":[],\"id\":\"clinic.owner.xuelao.old-friend\",\"entityId\":\"clinic.owner\",\"field\":\"relationship\",\"value\":\"九雪医馆馆主与雪老有旧，二者是不同的人。\",\"certainty\":\"confirmed\",\"visibility\":\"private\"},\"dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message\":{\"effectiveAt\":{\"id\":\"legacy.story.order\",\"clock\":\"turn\",\"at\":12,\"actorId\":\"legacy.story\"},\"discoveryConditions\":[\"actual-receipt\"],\"dependencyRefs\":[],\"id\":\"dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message\",\"entityId\":\"bright\",\"field\":\"reported_message\",\"value\":{\"kind\":\"reported_message\",\"speakerId\":\"bright\",\"text\":\"寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。\"},\"certainty\":\"uncertain\",\"visibility\":\"private\"},\"dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message\":{\"effectiveAt\":{\"id\":\"legacy.story.order\",\"clock\":\"turn\",\"at\":12,\"actorId\":\"legacy.story\"},\"discoveryConditions\":[\"actual-receipt\"],\"dependencyRefs\":[],\"id\":\"dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message\",\"entityId\":\"bright\",\"field\":\"reported_message\",\"value\":{\"kind\":\"reported_message\",\"speakerId\":\"bright\",\"text\":\"不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。\"},\"certainty\":\"uncertain\",\"visibility\":\"private\"},\"dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message\":{\"effectiveAt\":{\"id\":\"legacy.story.order\",\"clock\":\"turn\",\"at\":12,\"actorId\":\"legacy.story\"},\"discoveryConditions\":[\"actual-receipt\"],\"dependencyRefs\":[],\"id\":\"dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message\",\"entityId\":\"bright\",\"field\":\"reported_message\",\"value\":{\"kind\":\"reported_message\",\"speakerId\":\"bright\",\"text\":\"先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。\"},\"certainty\":\"uncertain\",\"visibility\":\"private\"}},\"memory\":null,\"contextRef\":\"88975d1f8fb4eb5a7c1dd17418f86a6831cbd62fb11363d61550e92cc9dd7137\"},\"recoveryAttempted\":false,\"attempts\":[{\"status\":\"validated\",\"rawReply\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/7\\\",\\\"contextRef\\\":\\\"88975d1f8fb4eb5a7c1dd17418f86a6831cbd62fb11363d61550e92cc9dd7137\\\",\\\"selections\\\":[{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"},{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"山路已经封闭了，明早在渡口会合。\\\"},{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"答道\\\"},{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"山路已经封闭了\\\"},{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"布莱特\\\"},{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"只听清前半句\\\"},{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"明早在渡口会合\\\"},{\\\"fragmentId\\\":\\\"f6\\\",\\\"quote\\\":\\\"后半句被钟声盖住\\\"}],\\\"utterances\\\":[{\\\"speakerId\\\":\\\"huang\\\",\\\"speaker\\\":0,\\\"content\\\":1,\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":2}],\\\"receptions\\\":[{\\\"utterance\\\":0,\\\"content\\\":3,\\\"listenerId\\\":\\\"bright\\\",\\\"identityKind\\\":\\\"explicit\\\",\\\"identity\\\":4,\\\"historyMessageId\\\":null,\\\"evidenceKind\\\":\\\"direct\\\",\\\"evidence\\\":5,\\\"propositionRef\\\":null},{\\\"utterance\\\":0,\\\"content\\\":6,\\\"listenerId\\\":\\\"bright\\\",\\\"identityKind\\\":\\\"explicit\\\",\\\"identity\\\":4,\\\"historyMessageId\\\":null,\\\"evidenceKind\\\":\\\"obstacle\\\",\\\"evidence\\\":7,\\\"propositionRef\\\":null}],\\\"unresolved\\\":[],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":5}}\"}]}",
+          "summary": {
+            "status": "applied",
+            "kind": "knowledge",
+            "operationId": "story-dialogue/d65b2bdbcf22877008281e489f30f4a0372a9bafa67c5d2247d9082cb0cb1d5d",
+            "revision": 1,
+            "messageId": 1,
+            "swipeId": 0
+          }
+        },
+        "story-knowledge/dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06": {
+          "signature": "{\"id\":\"dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06\",\"status\":\"received\",\"authority\":\"host-confirmed\",\"sourceAnchor\":{\"chatId\":\"bindingjson.probe.partial\",\"messageId\":1,\"swipeId\":0,\"text\":\"黄泉答道：“山路已经封闭了，明早在渡口会合。”布莱特只听清前半句，后半句被钟声盖住。\"},\"recipientIds\":[\"bright\"],\"propositionRefs\":[\"dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message\"],\"channel\":\"message\",\"belief\":\"uncertain\",\"reportedMessage\":{\"speakerId\":\"huang\",\"text\":\"山路已经封闭了\",\"quote\":\"山路已经封闭了\"}}",
+          "summary": {
+            "status": "applied",
+            "kind": "knowledge",
+            "operationId": "story-knowledge/dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06",
+            "revision": 2,
+            "messageId": 1,
+            "swipeId": 0
+          }
+        },
+        "story-dialogue/b4baaa39e2cda1a5f7e4bf5a95cb928e61d7220260ae598036ae2654d10e80c1": {
+          "signature": "{\"id\":\"dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce\",\"sourceAnchor\":{\"chatId\":\"bindingjson.probe.partial\",\"messageId\":1,\"swipeId\":0,\"text\":\"黄泉答道：“山路已经封闭了，明早在渡口会合。”布莱特只听清前半句，后半句被钟声盖住。\"},\"status\":\"processed\",\"rows\":[{\"id\":\"dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06\",\"claimId\":\"semantic.turn.u0\",\"speakerId\":\"huang\",\"recipientIds\":[\"bright\"],\"propositionRef\":null,\"content\":\"山路已经封闭了\",\"quote\":\"山路已经封闭了\",\"contentSpan\":{\"documentId\":\"current\",\"start\":6,\"end\":13,\"quote\":\"山路已经封闭了\"},\"receptionBinding\":{\"id\":\"semantic.turn.u0.r0\",\"listener\":{\"actorId\":\"bright\",\"kind\":\"explicit\",\"span\":{\"documentId\":\"current\",\"start\":23,\"end\":26,\"quote\":\"布莱特\"},\"historyMessageId\":null},\"evidence\":{\"kind\":\"direct\",\"span\":{\"documentId\":\"current\",\"start\":26,\"end\":32,\"quote\":\"只听清前半句\"}}},\"belief\":\"uncertain\",\"status\":\"registered\",\"extractionReason\":\"\",\"reason\":\"\",\"evidence\":{\"documentId\":\"current\",\"start\":26,\"end\":32,\"quote\":\"只听清前半句\"},\"unresolved\":[]}],\"receptionCoverage\":[{\"targetId\":\"turn\",\"status\":\"recorded\",\"evidence\":{\"documentId\":\"current\",\"start\":26,\"end\":32,\"quote\":\"只听清前半句\"},\"reason\":\"显式覆盖选择；不证明语义完整。\"}],\"extractionInput\":{\"assertion\":{\"schemaVersion\":\"gm-assertion-input/1\",\"stage\":\"source\",\"documents\":[{\"id\":\"current\",\"text\":\"黄泉答道：“山路已经封闭了，明早在渡口会合。”布莱特只听清前半句，后半句被钟声盖住。\"}],\"targets\":[{\"id\":\"turn\",\"documentId\":\"current\",\"start\":0,\"end\":42}],\"prior\":null,\"inputRef\":\"assertion.88d620028e3d1c080b13f52623ff9603d479e1c0041d927a94a321ab223eff5e\"},\"sourceAnchor\":{\"chatId\":\"bindingjson.probe.partial\",\"messageId\":1,\"swipeId\":0,\"text\":\"黄泉答道：“山路已经封闭了，明早在渡口会合。”布莱特只听清前半句，后半句被钟声盖住。\"},\"history\":[{\"messageId\":0,\"role\":\"user\",\"text\":\"布莱特问黄泉：“山路能走吗？明早在哪里会合？”\"}],\"actors\":{\"player\":\"御临风\",\"bright\":\"布莱特\",\"huang\":\"黄泉\"},\"facts\":{\"clinic.owner.xuelao.old-friend\":{\"effectiveAt\":{\"id\":\"legacy.story.order\",\"clock\":\"turn\",\"at\":0,\"actorId\":\"legacy.story\"},\"discoveryConditions\":[\"actual-receipt\"],\"dependencyRefs\":[],\"id\":\"clinic.owner.xuelao.old-friend\",\"entityId\":\"clinic.owner\",\"field\":\"relationship\",\"value\":\"九雪医馆馆主与雪老有旧，二者是不同的人。\",\"certainty\":\"confirmed\",\"visibility\":\"private\"},\"dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message\":{\"effectiveAt\":{\"id\":\"legacy.story.order\",\"clock\":\"turn\",\"at\":12,\"actorId\":\"legacy.story\"},\"discoveryConditions\":[\"actual-receipt\"],\"dependencyRefs\":[],\"id\":\"dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message\",\"entityId\":\"bright\",\"field\":\"reported_message\",\"value\":{\"kind\":\"reported_message\",\"speakerId\":\"bright\",\"text\":\"寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。\"},\"certainty\":\"uncertain\",\"visibility\":\"private\"},\"dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message\":{\"effectiveAt\":{\"id\":\"legacy.story.order\",\"clock\":\"turn\",\"at\":12,\"actorId\":\"legacy.story\"},\"discoveryConditions\":[\"actual-receipt\"],\"dependencyRefs\":[],\"id\":\"dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message\",\"entityId\":\"bright\",\"field\":\"reported_message\",\"value\":{\"kind\":\"reported_message\",\"speakerId\":\"bright\",\"text\":\"不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。\"},\"certainty\":\"uncertain\",\"visibility\":\"private\"},\"dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message\":{\"effectiveAt\":{\"id\":\"legacy.story.order\",\"clock\":\"turn\",\"at\":12,\"actorId\":\"legacy.story\"},\"discoveryConditions\":[\"actual-receipt\"],\"dependencyRefs\":[],\"id\":\"dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message\",\"entityId\":\"bright\",\"field\":\"reported_message\",\"value\":{\"kind\":\"reported_message\",\"speakerId\":\"bright\",\"text\":\"先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。\"},\"certainty\":\"uncertain\",\"visibility\":\"private\"}},\"memory\":null,\"contextRef\":\"88975d1f8fb4eb5a7c1dd17418f86a6831cbd62fb11363d61550e92cc9dd7137\"},\"recoveryAttempted\":false,\"attempts\":[{\"status\":\"validated\",\"rawReply\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/7\\\",\\\"contextRef\\\":\\\"88975d1f8fb4eb5a7c1dd17418f86a6831cbd62fb11363d61550e92cc9dd7137\\\",\\\"selections\\\":[{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"},{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"山路已经封闭了，明早在渡口会合。\\\"},{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"答道\\\"},{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"山路已经封闭了\\\"},{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"布莱特\\\"},{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"只听清前半句\\\"},{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"明早在渡口会合\\\"},{\\\"fragmentId\\\":\\\"f6\\\",\\\"quote\\\":\\\"后半句被钟声盖住\\\"}],\\\"utterances\\\":[{\\\"speakerId\\\":\\\"huang\\\",\\\"speaker\\\":0,\\\"content\\\":1,\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":2}],\\\"receptions\\\":[{\\\"utterance\\\":0,\\\"content\\\":3,\\\"listenerId\\\":\\\"bright\\\",\\\"identityKind\\\":\\\"explicit\\\",\\\"identity\\\":4,\\\"historyMessageId\\\":null,\\\"evidenceKind\\\":\\\"direct\\\",\\\"evidence\\\":5,\\\"propositionRef\\\":null},{\\\"utterance\\\":0,\\\"content\\\":6,\\\"listenerId\\\":\\\"bright\\\",\\\"identityKind\\\":\\\"explicit\\\",\\\"identity\\\":4,\\\"historyMessageId\\\":null,\\\"evidenceKind\\\":\\\"obstacle\\\",\\\"evidence\\\":7,\\\"propositionRef\\\":null}],\\\"unresolved\\\":[],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":5}}\"}]}",
+          "summary": {
+            "status": "applied",
+            "kind": "knowledge",
+            "operationId": "story-dialogue/b4baaa39e2cda1a5f7e4bf5a95cb928e61d7220260ae598036ae2654d10e80c1",
+            "revision": 3,
+            "messageId": 1,
+            "swipeId": 0
+          }
+        }
+      },
+      "storyKnowledge": {
+        "schemaVersion": 1,
+        "catalogId": "compact.regression",
+        "chatId": "bindingjson.probe.partial",
+        "timeBasis": "retained-chat-message-order",
+        "facts": {
+          "clinic.owner.xuelao.old-friend": {
+            "effectiveAt": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 0,
+              "actorId": "legacy.story"
+            },
+            "discoveryConditions": [
+              "actual-receipt"
+            ],
+            "dependencyRefs": [],
+            "id": "clinic.owner.xuelao.old-friend",
+            "entityId": "clinic.owner",
+            "field": "relationship",
+            "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+            "certainty": "confirmed",
+            "visibility": "private"
+          },
+          "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message": {
+            "effectiveAt": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 12,
+              "actorId": "legacy.story"
+            },
+            "discoveryConditions": [
+              "actual-receipt"
+            ],
+            "dependencyRefs": [],
+            "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+            "entityId": "bright",
+            "field": "reported_message",
+            "value": {
+              "kind": "reported_message",
+              "speakerId": "bright",
+              "text": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+            },
+            "certainty": "uncertain",
+            "visibility": "private"
+          },
+          "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message": {
+            "effectiveAt": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 12,
+              "actorId": "legacy.story"
+            },
+            "discoveryConditions": [
+              "actual-receipt"
+            ],
+            "dependencyRefs": [],
+            "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+            "entityId": "bright",
+            "field": "reported_message",
+            "value": {
+              "kind": "reported_message",
+              "speakerId": "bright",
+              "text": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+            },
+            "certainty": "uncertain",
+            "visibility": "private"
+          },
+          "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message": {
+            "effectiveAt": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 12,
+              "actorId": "legacy.story"
+            },
+            "discoveryConditions": [
+              "actual-receipt"
+            ],
+            "dependencyRefs": [],
+            "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+            "entityId": "bright",
+            "field": "reported_message",
+            "value": {
+              "kind": "reported_message",
+              "speakerId": "bright",
+              "text": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+            },
+            "certainty": "uncertain",
+            "visibility": "private"
+          },
+          "dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message": {
+            "id": "dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message",
+            "entityId": "huang",
+            "field": "reported_message",
+            "value": {
+              "kind": "reported_message",
+              "speakerId": "huang",
+              "text": "山路已经封闭了"
+            },
+            "effectiveAt": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 1,
+              "actorId": "legacy.story"
+            },
+            "certainty": "uncertain",
+            "visibility": "private",
+            "discoveryConditions": [
+              "actual-receipt"
+            ],
+            "dependencyRefs": []
+          }
+        },
+        "events": {
+          "received.dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06": {
+            "id": "received.dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06",
+            "kind": "message.arrived",
+            "data": {
+              "knowerIds": [
+                "bright"
+              ],
+              "propositionRefs": [
+                "dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message"
+              ],
+              "at": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 1,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "bindingjson.probe.partial",
+                "messageId": 1,
+                "swipeId": 0,
+                "text": "黄泉答道：“山路已经封闭了，明早在渡口会合。”布莱特只听清前半句，后半句被钟声盖住。"
+              }
+            },
+            "sourceRefs": [
+              {
+                "file": "retained-chat/bindingjson.probe.partial",
+                "line": 2
+              }
+            ],
+            "causeRefs": []
+          },
+          "dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.bright.dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message.event": {
+            "id": "dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.bright.dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message.event",
+            "kind": "knowledge.granted",
+            "data": {
+              "grant": {
+                "id": "dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.bright.dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message",
+                "knowerId": "bright",
+                "propositionRef": "dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message",
+                "eventRef": "received.dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06",
+                "at": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 1,
+                  "actorId": "legacy.story"
+                },
+                "channel": "message",
+                "belief": "uncertain"
+              }
+            },
+            "causeRefs": [
+              "received.dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06"
+            ],
+            "sourceRefs": [
+              {
+                "file": "retained-chat/bindingjson.probe.partial",
+                "line": 2
+              }
+            ]
+          }
+        },
+        "knowledge": {
+          "dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.bright.dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message": {
+            "id": "dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.bright.dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message",
+            "knowerId": "bright",
+            "propositionRef": "dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06.message",
+            "eventRef": "received.dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 1,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "dialogueBatches": {
+          "dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce": {
+            "id": "dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce",
+            "sourceAnchor": {
+              "chatId": "bindingjson.probe.partial",
+              "messageId": 1,
+              "swipeId": 0,
+              "text": "黄泉答道：“山路已经封闭了，明早在渡口会合。”布莱特只听清前半句，后半句被钟声盖住。"
+            },
+            "status": "processed",
+            "rows": [
+              {
+                "id": "dialogue.8235a14825d3de11e4344b4b62f94301f310a0145fa70fe4fb86b3a92c8f37ce.4c52f30367b6fb5a7d7c0bddbab4174e40add0f533d6903a5f74c87d56d95c06",
+                "claimId": "semantic.turn.u0",
+                "speakerId": "huang",
+                "recipientIds": [
+                  "bright"
+                ],
+                "propositionRef": null,
+                "content": "山路已经封闭了",
+                "quote": "山路已经封闭了",
+                "contentSpan": {
+                  "documentId": "current",
+                  "start": 6,
+                  "end": 13,
+                  "quote": "山路已经封闭了"
+                },
+                "receptionBinding": {
+                  "id": "semantic.turn.u0.r0",
+                  "listener": {
+                    "actorId": "bright",
+                    "kind": "explicit",
+                    "span": {
+                      "documentId": "current",
+                      "start": 23,
+                      "end": 26,
+                      "quote": "布莱特"
+                    },
+                    "historyMessageId": null
+                  },
+                  "evidence": {
+                    "kind": "direct",
+                    "span": {
+                      "documentId": "current",
+                      "start": 26,
+                      "end": 32,
+                      "quote": "只听清前半句"
+                    }
+                  }
+                },
+                "belief": "uncertain",
+                "status": "registered",
+                "extractionReason": "",
+                "reason": "",
+                "evidence": {
+                  "documentId": "current",
+                  "start": 26,
+                  "end": 32,
+                  "quote": "只听清前半句"
+                },
+                "unresolved": []
+              }
+            ],
+            "receptionCoverage": [
+              {
+                "targetId": "turn",
+                "status": "recorded",
+                "evidence": {
+                  "documentId": "current",
+                  "start": 26,
+                  "end": 32,
+                  "quote": "只听清前半句"
+                },
+                "reason": "显式覆盖选择；不证明语义完整。"
+              }
+            ],
+            "extractionInput": {
+              "assertion": {
+                "schemaVersion": "gm-assertion-input/1",
+                "stage": "source",
+                "documents": [
+                  {
+                    "id": "current",
+                    "text": "黄泉答道：“山路已经封闭了，明早在渡口会合。”布莱特只听清前半句，后半句被钟声盖住。"
+                  }
+                ],
+                "targets": [
+                  {
+                    "id": "turn",
+                    "documentId": "current",
+                    "start": 0,
+                    "end": 42
+                  }
+                ],
+                "prior": null,
+                "inputRef": "assertion.88d620028e3d1c080b13f52623ff9603d479e1c0041d927a94a321ab223eff5e"
+              },
+              "sourceAnchor": {
+                "chatId": "bindingjson.probe.partial",
+                "messageId": 1,
+                "swipeId": 0,
+                "text": "黄泉答道：“山路已经封闭了，明早在渡口会合。”布莱特只听清前半句，后半句被钟声盖住。"
+              },
+              "history": [
+                {
+                  "messageId": 0,
+                  "role": "user",
+                  "text": "布莱特问黄泉：“山路能走吗？明早在哪里会合？”"
+                }
+              ],
+              "actors": {
+                "player": "御临风",
+                "bright": "布莱特",
+                "huang": "黄泉"
+              },
+              "facts": {
+                "clinic.owner.xuelao.old-friend": {
+                  "effectiveAt": {
+                    "id": "legacy.story.order",
+                    "clock": "turn",
+                    "at": 0,
+                    "actorId": "legacy.story"
+                  },
+                  "discoveryConditions": [
+                    "actual-receipt"
+                  ],
+                  "dependencyRefs": [],
+                  "id": "clinic.owner.xuelao.old-friend",
+                  "entityId": "clinic.owner",
+                  "field": "relationship",
+                  "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                  "certainty": "confirmed",
+                  "visibility": "private"
+                },
+                "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message": {
+                  "effectiveAt": {
+                    "id": "legacy.story.order",
+                    "clock": "turn",
+                    "at": 12,
+                    "actorId": "legacy.story"
+                  },
+                  "discoveryConditions": [
+                    "actual-receipt"
+                  ],
+                  "dependencyRefs": [],
+                  "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+                  "entityId": "bright",
+                  "field": "reported_message",
+                  "value": {
+                    "kind": "reported_message",
+                    "speakerId": "bright",
+                    "text": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+                  },
+                  "certainty": "uncertain",
+                  "visibility": "private"
+                },
+                "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message": {
+                  "effectiveAt": {
+                    "id": "legacy.story.order",
+                    "clock": "turn",
+                    "at": 12,
+                    "actorId": "legacy.story"
+                  },
+                  "discoveryConditions": [
+                    "actual-receipt"
+                  ],
+                  "dependencyRefs": [],
+                  "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+                  "entityId": "bright",
+                  "field": "reported_message",
+                  "value": {
+                    "kind": "reported_message",
+                    "speakerId": "bright",
+                    "text": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+                  },
+                  "certainty": "uncertain",
+                  "visibility": "private"
+                },
+                "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message": {
+                  "effectiveAt": {
+                    "id": "legacy.story.order",
+                    "clock": "turn",
+                    "at": 12,
+                    "actorId": "legacy.story"
+                  },
+                  "discoveryConditions": [
+                    "actual-receipt"
+                  ],
+                  "dependencyRefs": [],
+                  "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+                  "entityId": "bright",
+                  "field": "reported_message",
+                  "value": {
+                    "kind": "reported_message",
+                    "speakerId": "bright",
+                    "text": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+                  },
+                  "certainty": "uncertain",
+                  "visibility": "private"
+                }
+              },
+              "memory": null,
+              "contextRef": "88975d1f8fb4eb5a7c1dd17418f86a6831cbd62fb11363d61550e92cc9dd7137"
+            },
+            "recoveryAttempted": false,
+            "attempts": [
+              {
+                "status": "validated",
+                "rawReply": "{\"schemaVersion\":\"dialogue-reception/7\",\"contextRef\":\"88975d1f8fb4eb5a7c1dd17418f86a6831cbd62fb11363d61550e92cc9dd7137\",\"selections\":[{\"fragmentId\":\"f2\",\"quote\":\"黄泉\"},{\"fragmentId\":\"f1\",\"quote\":\"山路已经封闭了，明早在渡口会合。\"},{\"fragmentId\":\"f2\",\"quote\":\"答道\"},{\"fragmentId\":\"f1\",\"quote\":\"山路已经封闭了\"},{\"fragmentId\":\"f5\",\"quote\":\"布莱特\"},{\"fragmentId\":\"f5\",\"quote\":\"只听清前半句\"},{\"fragmentId\":\"f4\",\"quote\":\"明早在渡口会合\"},{\"fragmentId\":\"f6\",\"quote\":\"后半句被钟声盖住\"}],\"utterances\":[{\"speakerId\":\"huang\",\"speaker\":0,\"content\":1,\"mode\":\"asserted\",\"scope\":{\"time\":null,\"condition\":null,\"attribution\":null},\"anchor\":2}],\"receptions\":[{\"utterance\":0,\"content\":3,\"listenerId\":\"bright\",\"identityKind\":\"explicit\",\"identity\":4,\"historyMessageId\":null,\"evidenceKind\":\"direct\",\"evidence\":5,\"propositionRef\":null},{\"utterance\":0,\"content\":6,\"listenerId\":\"bright\",\"identityKind\":\"explicit\",\"identity\":4,\"historyMessageId\":null,\"evidenceKind\":\"obstacle\",\"evidence\":7,\"propositionRef\":null}],\"unresolved\":[],\"coverage\":{\"status\":\"recorded\",\"evidence\":5}}"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "scope.unknown",
+  "startedAt": "2026-11-15T09:52:46.708Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T09:52:55.125Z",
+  "headersElapsedMs": 8417,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5ad5d7408e7cbd6-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 09:52:54 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=9aKTDDg72820VAUxt3tWppUfpLJqBIX5lO4Nqk4Ze81%2Bb9NGFJQnzAqs9K4X%2FJ2yeJvcf1gC1tkwuCogkIorgnwTmcaru1%2BZ8VifWCFLf02%2Bz%2FU1yqHB0l3qO5wUOQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611150952473457302178268d9d6LkNYrWFc",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "af17e936-43ab-4c43-a02e-f773f203b4b7"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"880ad815-7dba-4f03-8807-80e3926beb9e\",\"object\":\"chat.completion\",\"created\":1794736374,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/2\\\",\\\"contextRef\\\":\\\"48ee4463912f78efb901df95a9ce4fcc7337ddea50c614a9b27a1085abf96ec4\\\",\\\"inputRef\\\":\\\"assertion.4f6b10d052b1b18166ba98191f68e09a4fc3e60cd01eee41364edfc2ddf0ca65\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"utterance-1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"渡口今晚停航。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":2,\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":9,\\\"end\\\":16,\\\"quote\\\":\\\"渡口今晚停航。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":17,\\\"quote\\\":\\\"黄泉对御临风说：“渡口今晚停航。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"reception-1-1\\\",\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"player\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":3,\\\"end\\\":6,\\\"quote\\\":\\\"御临风\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":8,\\\"quote\\\":\\\"黄泉对御临风说：\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"黄泉直接对御临风说，御临风正常接收。\\\"},{\\\"id\\\":\\\"reception-1-2\\\",\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"bright\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":30,\\\"end\\\":33,\\\"quote\\\":\\\"布莱特\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":30,\\\"end\\\":51,\\\"quote\\\":\\\"布莱特听到了其中一句，但无法确定是哪一句。\\\"},\\\"status\\\":\\\"uncertain\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"布莱特听到了其中一句，但无法确定是否为本句。\\\"}]},{\\\"claim\\\":{\\\"id\\\":\\\"utterance-2\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"明早从南桥走。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":17,\\\"end\\\":18,\\\"quote\\\":\\\"她\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":22,\\\"end\\\":29,\\\"quote\\\":\\\"明早从南桥走。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":17,\\\"end\\\":30,\\\"quote\\\":\\\"她又说：“明早从南桥走。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"reception-2-1\\\",\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"player\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":22,\\\"end\\\":29,\\\"quote\\\":\\\"明早从南桥走。\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":17,\\\"end\\\":21,\\\"quote\\\":\\\"她又说：\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"黄泉继续对御临风说，御临风正常接收。\\\"},{\\\"id\\\":\\\"reception-2-2\\\",\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"bright\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":30,\\\"end\\\":33,\\\"quote\\\":\\\"布莱特\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":30,\\\"end\\\":51,\\\"quote\\\":\\\"布莱特听到了其中一句，但无法确定是哪一句。\\\"},\\\"status\\\":\\\"uncertain\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"布莱特听到了其中一句，但无法确定是否为本句。\\\"}]}]],\\\"coverage\\\":{\\\"status\\\":\\\"uncertain\\\",\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":51,\\\"quote\\\":\\\"黄泉对御临风说：“渡口今晚停航。”她又说：“明早从南桥走。”布莱特听到了其中一句，但无法确定是哪一句。\\\"},\\\"reason\\\":\\\"御临风明确接收了两句发言，但布莱特具体听到了哪一句无法确定，存在不确定接收。\\\"},\\\"status\\\":\\\"unresolved\\\",\\\"unresolved\\\":[{\\\"span\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":30,\\\"end\\\":51,\\\"quote\\\":\\\"布莱特听到了其中一句，但无法确定是哪一句。\\\"},\\\"reason\\\":\\\"无法确定布莱特听到的具体是哪一句话。\\\"}]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4194,\"completion_tokens\":1051,\"total_tokens\":5245}}",
+  "responseBytes": 4208,
+  "responseBodySha256BeforePrivacyRedaction": "dc72c91c687f4076b21f6e0e0a0e3db0afa3bda17ef5b0d85a4ca6791df6ab57",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T09:52:55.135Z",
+  "elapsedMs": 8427
+}

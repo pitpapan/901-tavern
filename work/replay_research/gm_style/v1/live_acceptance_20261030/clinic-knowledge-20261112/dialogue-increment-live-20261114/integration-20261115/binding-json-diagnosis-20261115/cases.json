@@ -1,0 +1,32 @@
+[
+  {
+    "id": "bindingjson.reproduce.long",
+    "original": "rawcheck.reproduce.long",
+    "mode": "--reproduce-failure",
+    "requestSha256": "c0edd470e4bdef0348dde2d7f72b28401c2b7dbe63901f5360776de1c791108d",
+    "bytes": 125686
+  },
+  {
+    "id": "bindingjson.reproduce.npc_reply",
+    "original": "binding.reproduce.npc_reply",
+    "mode": "--reproduce-failure",
+    "requestSha256": "1b2e144a1789b297b97203fd17dca0dafbc284e32f31772336e92b62260a3ccd",
+    "bytes": 53065
+  },
+  {
+    "id": "bindingjson.probe.obstacle",
+    "original": null,
+    "mode": "--send",
+    "expected": "bright为隐含被回应者，但明确未接收；listener reply当前回答与history0，evidence障碍，不授予player或bright。",
+    "requestSha256": "48506d2d65437d31883ef8a56603d034b8bf252e6d9cd3a401cbc15dac33bbb8",
+    "bytes": 54787
+  },
+  {
+    "id": "bindingjson.probe.partial",
+    "original": null,
+    "mode": "--send",
+    "expected": "bright仅接收山路已经封闭了；渡口会合not_received，contentSpan分别保留范围；不将整句授予bright或player，不将明确未听到降为uncertain。",
+    "requestSha256": "fa52a7b1557297d340bc3934678817fe7a786fde918f31f1bec279a4d591c636",
+    "bytes": 54346
+  }
+]

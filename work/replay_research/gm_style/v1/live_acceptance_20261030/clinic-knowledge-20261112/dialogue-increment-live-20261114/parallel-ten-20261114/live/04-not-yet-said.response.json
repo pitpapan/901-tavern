@@ -1,0 +1,31 @@
+{
+  "kind": "dialogue-reception",
+  "startedAt": "2026-11-14T18:45:59.618Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-14T18:46:04.917Z",
+  "headersElapsedMs": 5299,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5a82d259a6d8038-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sat, 14 Nov 2026 18:46:04 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=UJswA88mSKWZzFgO82x6y8KnoxOcDS6OCpvYG0XJw7MjkPy%2FGhMctkTsjvulE2poffim9n%2BQSkiJ%2F442HM5WRHhrD2TEN3B0uFtUhTFxjgaSqe%2BEIAjqqS0j1w5GNg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611141845593681116318268d9d6IQUDRFQO",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "6f38d5a2-d953-4767-a139-e87e32760ca7"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"c0cae342-e207-4472-beba-1100c0686765\",\"object\":\"chat.completion\",\"created\":1794681964,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"contextRef\\\":\\\"49d59216671c38266662d5a8d37a950b78087ff30b17855cf4113b165b324cfa\\\",\\\"assertions\\\":{\\\"schemaVersion\\\":\\\"gm-assertion-output/1\\\",\\\"inputRef\\\":\\\"assertion.02996ef6bb95fd00f12dca1d075025c9a6540774c411f505b7565d10d2ba4424\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"status\\\":\\\"extracted\\\",\\\"claims\\\":[{\\\"id\\\":\\\"c1\\\",\\\"type\\\":\\\"state\\\",\\\"args\\\":{\\\"entity\\\":\\\"黄泉\\\",\\\"name\\\":\\\"准备向御临风转告内容意图\\\",\\\"value\\\":\\\"准备向御临风转告“渡船今晚停航”\\\"},\\\"argumentSpans\\\":{\\\"entity\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":2,\\\"quote\\\":\\\"黄泉\\\"},\\\"name\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":2,\\\"end\\\":10,\\\"quote\\\":\\\"准备向御临风转告\\\"},\\\"value\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":2,\\\"end\\\":20,\\\"quote\\\":\\\"准备向御临风转告：“渡船今晚停航。”\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":20,\\\"quote\\\":\\\"黄泉准备向御临风转告：“渡船今晚停航。”\\\"}},{\\\"id\\\":\\\"c2\\\",\\\"type\\\":\\\"action\\\",\\\"args\\\":{\\\"actor\\\":\\\"黄泉\\\",\\\"verb\\\":\\\"说出口\\\",\\\"object\\\":null},\\\"argumentSpans\\\":{\\\"actor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":20,\\\"end\\\":21,\\\"quote\\\":\\\"她\\\"},\\\"verb\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":23,\\\"end\\\":26,\\\"quote\\\":\\\"说出口\\\"},\\\"object\\\":null},\\\"mode\\\":\\\"denied\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":20,\\\"end\\\":27,\\\"quote\\\":\\\"她尚未说出口。\\\"}}],\\\"unresolved\\\":[]}]},\\\"receptions\\\":[]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":3513,\"completion_tokens\":529,\"total_tokens\":4042}}",
+  "responseBytes": 2009,
+  "responseBodySha256BeforePrivacyRedaction": "7a06433f59ffbb156161ae49ab18f6fd7dc3935f5f869d1ef2c0b40c093854ed",
+  "outcome": "completed",
+  "finishedAt": "2026-11-14T18:46:04.926Z",
+  "elapsedMs": 5309
+}

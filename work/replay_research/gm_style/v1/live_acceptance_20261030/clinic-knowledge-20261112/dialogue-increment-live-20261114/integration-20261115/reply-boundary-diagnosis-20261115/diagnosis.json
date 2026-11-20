@@ -1,0 +1,110 @@
+[
+  {
+    "id": "binding.reproduce.009",
+    "strict": true,
+    "closed": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "originalBytesUnchanged": true,
+    "finishReason": "stop",
+    "completionTokens": 1987,
+    "maxTokens": 4096,
+    "jsonError": {
+      "position": 1463,
+      "message": "Expecting ',' delimiter",
+      "context": "强上十倍。要是能在窗边坐下，再来一壶温热的麦茶，这几天的奔波才算真正缓过劲来。\"车}}]},{\"claim\":{\"id\":\"claim.u2\",\"type\":\""
+    },
+    "bindings": []
+  },
+  {
+    "id": "binding.probe.reply",
+    "strict": true,
+    "closed": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "originalBytesUnchanged": true,
+    "finishReason": "stop",
+    "completionTokens": 487,
+    "maxTokens": 4096,
+    "jsonError": {
+      "position": 1020,
+      "message": "Expecting ',' delimiter",
+      "context": ":{\"fragmentId\":\"f3\",\"quote\":\"午后就闭门了。\"}}}工作]}],\"coverage\":{\"status\":\"recorded\",\"e"
+    },
+    "bindings": []
+  },
+  {
+    "id": "binding.reproduce.npc_reply",
+    "strict": true,
+    "closed": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "originalBytesUnchanged": true,
+    "finishReason": "stop",
+    "completionTokens": 514,
+    "maxTokens": 4096,
+    "jsonError": null,
+    "bindings": [
+      {
+        "content": {
+          "fragmentId": "f3",
+          "quote": "渡口今晚停航。"
+        },
+        "listener": {
+          "actorId": "bright",
+          "kind": "reply",
+          "span": {
+            "fragmentId": "f3",
+            "quote": "渡口今晚停航。"
+          },
+          "historyMessageId": 0
+        },
+        "evidence": {
+          "kind": "reply",
+          "span": {
+            "fragmentId": "f1",
+            "quote": "黄泉答道：“渡口今晚停航。”"
+          }
+        },
+        "status": "received"
+      }
+    ]
+  },
+  {
+    "id": "binding.reproduce.obstacle",
+    "strict": true,
+    "closed": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "originalBytesUnchanged": true,
+    "finishReason": "stop",
+    "completionTokens": 492,
+    "maxTokens": 4096,
+    "jsonError": null,
+    "bindings": [
+      {
+        "content": {
+          "fragmentId": "f6",
+          "quote": "渡口今晚停航。"
+        },
+        "listener": {
+          "actorId": "player",
+          "kind": "reply",
+          "span": {
+            "fragmentId": "f5",
+            "quote": "答"
+          },
+          "historyMessageId": 0
+        },
+        "evidence": {
+          "kind": "obstacle",
+          "span": {
+            "fragmentId": "f3",
+            "quote": "已听不到这里的声音"
+          }
+        },
+        "status": "not_received"
+      }
+    ]
+  }
+]

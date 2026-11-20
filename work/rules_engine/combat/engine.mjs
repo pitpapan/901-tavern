@@ -1,4 +1,5 @@
 import {inspectProjectionAttack,projectionFeature,projectionCanSense,interactProjection,projectionMovementInteractions,projectionWitnesses,dispatchProjectionCue} from '../resource-projections.mjs';
+import {thunderTerms,rockTerms,iaiTerms,galeTerms,techniqueContributions,techniqueDescription} from './thunder-technique.mjs';
 import {redirectDecoyAttack,copyDecoyDamage} from '../resource-decoys.mjs';
 import {schedulePassivePerception} from '../resource-perception-scheduler.mjs';
 import {effectiveDetectionProtectionSources} from '../resource-detection.mjs';
@@ -115,6 +116,9 @@ export function attackProfile(b, id, c = {}) {
   if(actualWeapon&&!['melee','natural','bow'].includes(weaponType))throw new IllegalAction('该实际武器类别的完整装填/投掷消耗尚未接入（实现缺口）：'+weaponType);
   if(actualWeapon&&weaponType==='bow')a={...a,weaponMode:'bow'};
   const sk=attackSkill(a), str=value(a,'力量'), agi=value(a,'敏捷');
+  const thunder=type==='thunder'?thunderTerms(a,c):null;
+  const rock=type==='cleaveRock'?rockTerms(a,c):null,iai=iaiTerms(a),gale=['gale','tornado'].includes(type)?galeTerms(a,type):null;
+  const iaiReady=iai?.applicable&&!a.sheathed&&b.activeId===id&&a.buffs.drawnRound===b.round&&!a.buffs.drawUsed&&type!=='conduct';
   let attackAttribute='力量';
   let weapon, rawDP, cap, fixed, ap, magic=0, speed=0, extra=0, ignore=0, aggravate=0;
   let electric=0, reduction=0, range=a.reach, explode=10, bowRangeUnit=null,legacySpeed=0;
@@ -131,13 +135,12 @@ export function attackProfile(b, id, c = {}) {
     const target=b.actors[c.targetId],strengthAttack=c.strength===true||a.kind==='bright'&&a.weaponMode&&a.weaponMode!=='bow'||!['yulin','huang','bright'].includes(a.kind)&&!(a.kind==='mireya'&&a.weaponMode!=='club');
     attackAttribute=strengthAttack?'力量':'敏捷';rawDP=(strengthAttack?str:agi)+sk.level+weapon+(w.attackBonus??0);
     cap=profile(a).cap??weapon+sk.level+(strengthAttack?str:0);fixed=auto(a,strengthAttack?'力量':'敏捷')+sk.auto;
-    if(a.kind==='yulin') {legacySpeed=(a.buffs.flow??0)*2;rawDP+=(strengthAttack?0:a.buffs.tengzhuan?4:2)+(a.buffs.flow??0)*2+(type==='gale'?3:0);reduction=type==='tornado'?8:w.defenseReduction??0;if(['tornado','gale'].includes(type))range=20;}
+    if(a.kind==='yulin') {legacySpeed=(a.buffs.flow??0)*2;rawDP+=(strengthAttack?0:a.buffs.tengzhuan?4:2)+(a.buffs.flow??0)*2+(type==='gale'&&!gale?3:0);reduction=type==='tornado'&&!gale?8:w.defenseReduction??0;if(['tornado','gale'].includes(type)&&!gale)range=20;}
     if(a.kind==='huang') {
-      const drawn=type==='strike'&&a.buffs.drawnRound===b.round&&!a.buffs.drawUsed;
-      rawDP+=drawn?2:type==='thunder'?4:0;
+      const drawn=!iai&&type==='strike'&&a.buffs.drawnRound===b.round&&!a.buffs.drawUsed;
+      rawDP+=drawn?2:0;
       if(drawn&&target&&initiative(b,a)>initiative(b,target))extra=1;
-      if(type==='thunder')electric=2;
-      if(type==='cleaveRock'){ap+=4;ignore=1;}
+      if(type==='cleaveRock'&&!rock){ap+=4;ignore=1;}
     }
     if(a.kind==='jiang') {
       const bare=target&&!target.construct&&equipment(target).armor.defense===0;
@@ -168,18 +171,17 @@ export function attackProfile(b, id, c = {}) {
     ignore=4+(empowered?1:0); extra=c.finisher&&combo===5 ? 5:0;
   } else if (a.kind === 'huang') {
     const useStrength=c.strength===true;attackAttribute=useStrength?'力量':'敏捷';
-    weapon=w.damage+(type==='cleaveRock'?2:0);
-    const drawn = a.buffs.drawnRound === b.round && !a.buffs.drawUsed;
+    weapon=w.damage+(type==='cleaveRock'&&!rock?2:0);
+    const drawn = !iai&&a.buffs.drawnRound === b.round && !a.buffs.drawUsed;
     const moveBonus = Math.max(drawn?3:0, type==='lightning'&&c.tier===3?6:0);
-    rawDP=(useStrength?str:agi)+sk.level+weapon+9+w.attackBonus+moveBonus+(type==='thunder'?15:0);
-    cap=weapon+sk.level+(useStrength?str:0); fixed=auto(a,useStrength?'力量':'敏捷')+sk.auto; ap=type==='cleaveRock'?16:w.ap; magic=w.magic;
-    ignore=type==='cleaveRock'?4:0;
+    rawDP=(useStrength?str:agi)+sk.level+weapon+9+w.attackBonus+moveBonus;
+    cap=weapon+sk.level+(useStrength?str:0); fixed=auto(a,useStrength?'力量':'敏捷')+sk.auto; ap=type==='cleaveRock'&&!rock?16:w.ap; magic=w.magic;
+    ignore=type==='cleaveRock'&&!rock?4:0;
     const target=b.actors[c.targetId];
     aggravate=drawn && target && initiative(b,a)>initiative(b,target) ? 2:0;
-    if (type==='thunder') electric=0.5;
     if (type==='lightning') { electric=c.tier===1?0.5:1; speed=c.tier>=2?8:0; aggravate=Math.max(aggravate,c.tier===1?2:4); }
     if (type==='conduct') { rawDP=(useStrength?str:agi)+sk.level+9; weapon=0; cap=1; ap=0; magic=0; aggravate=0; }
-    if (type==='cleaveRock' && target?.buffs.block) {
+    if (type==='cleaveRock' && !rock && target?.buffs.block) {
       const size=a.weaponSize??w.size;
       if(!Number.isInteger(size)) throw new RuleInputError('斩岩威猛需要主持补齐狮子王武器体积',`${id}.weaponSize`);
       rawDP+=Math.min(Math.floor(size/2),blockValue(target));
@@ -188,10 +190,10 @@ export function attackProfile(b, id, c = {}) {
     attackAttribute=c.strength?'力量':'敏捷';weapon=w.damage;
     const posture=a.buffs.tengzhuan?4:2, flow=(a.buffs.flow??0)*2;legacySpeed=flow;
     rawDP=(c.strength?str:agi)+sk.level+weapon+w.attackBonus+flow
-      +(c.strength?0:posture)+Math.max(a.buffs.bixie??0,type==='gale'?3:0);
+      +(c.strength?0:posture)+Math.max(a.buffs.bixie??0,type==='gale'&&!gale?3:0);
     cap=weapon+sk.level+(c.strength?str:0); fixed=auto(a,c.strength?'力量':'敏捷')+sk.auto;
-    ap=w.ap; magic=w.magic; reduction=type==='tornado'?8:(w.defenseReduction??0);
-    if(['tornado','gale'].includes(type)) range=20;
+    ap=w.ap; magic=w.magic; reduction=type==='tornado'&&!gale?8:(w.defenseReduction??0);
+    if(['tornado','gale'].includes(type)&&!gale) range=20;
   } else if(a.kind==='bright') {
     attackAttribute='敏捷';const safe=!a.interfered&&!Object.values(b.actors).some(t=>t.present&&t.team!==a.team&&!unconscious(t)&&spatialDistance(b.map,a.position,t.position)<=7.5);
     const obstacle=c.featureId&&b.map?.features.find(f=>f.id===c.featureId);
@@ -218,6 +220,26 @@ export function attackProfile(b, id, c = {}) {
     }else if(type==='strike'||type==='destroy')range=a.reach;
     if(w.defenseReductionMinimumSkill!==undefined&&sk.level<w.defenseReductionMinimumSkill)reduction=0;
   }
+  const techniqueRows=[];
+  if(rock){
+    const delta=stackEffects(rock.contributions).value;weapon+=delta;rawDP+=delta;cap+=delta;techniqueRows.push(...rock.contributions);
+    const apRows=techniqueContributions(a,'cleaveRock','armorPenetration','penetration',a.ruleset==='opening-20261022'?4:16,rock.p.armorPenetration);
+    const ignoreRows=techniqueContributions(a,'cleaveRock','ignore','reduction-or-hardness',a.ruleset==='opening-20261022'?1:4,rock.p.ignoreReductionOrHardness);
+    ap=Math.max(ap,stackEffects(apRows).value);ignore=stackEffects(ignoreRows).value;techniqueRows.push(...apRows,...ignoreRows);
+    if(rock.p.tags.includes('威猛')&&b.actors[c.targetId]?.buffs.block){
+      const size=w.instanceId||w.resourceId?w.size:a.weaponSize??w.size;
+      if(!Number.isInteger(size))throw new RuleInputError('斩岩威猛须实际武器体积','weapon.size');
+      rawDP+=Math.min(Math.floor(size/2),blockValue(b.actors[c.targetId]));
+    }
+  }
+  if(iaiReady){
+    techniqueRows.push(...techniqueContributions(a,'iai','attack','first-strike',a.ruleset==='opening-20261022'?2:3,iai.p.attackDP,'technique'));
+    const severity=actualWeapon?w.severity??'L':profile(a).severity??'L';
+    if(severity==='L'&&b.actors[c.targetId]&&initiative(b,a)>initiative(b,b.actors[c.targetId]))aggravate=Math.max(aggravate,iai.p.aggravateMaxL);
+  }
+  if(gale){range=gale.p.rangeMeters;reduction=gale.p.defenseReduction;techniqueRows.push(...gale.contributions);}
+  const legacyTechnique=(iai||gale)&&legacyCompatible&&a.ruleset!=='opening-20261022'?
+    a.kind==='yulin'?a.buffs.bixie??0:a.kind==='huang'&&type==='lightning'&&c.tier===3?6:0:0;
   const wizardChoice=wizardWeapon(a.state)?a.state.wizard.weaponSkills?.[a.state.wizard.weaponMode]:null;
   const single=!c.rapidFire&&!c.rapidSecondary&&!c.adjacentTargetIds?.length&&!['doubleStrike','gale'].includes(type);
   rawDP+=geneticCheckBonus(a.state,{willEligible:single,willSpent:c.willpower===true});
@@ -231,7 +253,9 @@ export function attackProfile(b, id, c = {}) {
   const handling=weaponHandling(w,{strength:str,...(bowRangeUnit?{mode:'bow',rangeUnit:bowRangeUnit,rangeUnits:range/bowRangeUnit}:{}),distance:observedTarget?spatialDistance(b.map,a.position,observedTarget.position):0});
   if(handling.range!==undefined)range=handling.range;
   rawDP-=handling.distancePenalty+handling.gripPenalty;
-  rawDP+=stackEffects([...resourceEffects(a.state,'attributeCheck',{attribute:attackAttribute,attributes:[attackAttribute],attack:true,targetId:c.targetId}),...resourceEffects(a.state,'attack',{...observationContext(a.state,c.targetId,observedTarget?canObserve(b,observedTarget,a.id):false),...initiativeContext(b,id,c.targetId)}),{group:'equipment',value:-handling.strengthPenalty},{source:w.resourceId??'actual-held-weapon',stat:'attack',origin:'item',group:'speed',value:w.speedBonus??0,contribution:{sourceInstanceId:w.instanceId??w.resourceId??'legacy-weapon/'+a.id,itemId:w.instanceId,clauseId:'attack-speed',consumer:'attack'}},...(actualWeapon?[{source:w.resourceId??'actual-held-weapon',stat:'attack',origin:'item',group:'equipment',value:w.attackBonus??0,contribution:{sourceInstanceId:w.instanceId??w.resourceId??'legacy-weapon/'+a.id,itemId:w.instanceId,clauseId:'attack-equipment',consumer:'attack'}}]:[])],{speed:legacySpeed,...(actualWeapon?{equipment:w.attackBonus??0}:{})}).value;
+  const thunderRows=thunder&&(thunder.adapted||legacyCompatible&&!wizardWeapon(a.state))?thunder.contributions:[];
+  if(thunderRows.length)electric=thunder.electric;
+  rawDP+=stackEffects([...thunderRows,...techniqueRows.filter(r=>r.stat==='attack'),...resourceEffects(a.state,'attributeCheck',{attribute:attackAttribute,attributes:[attackAttribute],attack:true,targetId:c.targetId}),...resourceEffects(a.state,'attack',{...observationContext(a.state,c.targetId,observedTarget?canObserve(b,observedTarget,a.id):false),...initiativeContext(b,id,c.targetId)}),{group:'equipment',value:-handling.strengthPenalty},{source:w.resourceId??'actual-held-weapon',stat:'attack',origin:'item',group:'speed',value:w.speedBonus??0,contribution:{sourceInstanceId:w.instanceId??w.resourceId??'legacy-weapon/'+a.id,itemId:w.instanceId,clauseId:'attack-speed',consumer:'attack'}},...(actualWeapon?[{source:w.resourceId??'actual-held-weapon',stat:'attack',origin:'item',group:'equipment',value:w.attackBonus??0,contribution:{sourceInstanceId:w.instanceId??w.resourceId??'legacy-weapon/'+a.id,itemId:w.instanceId,clauseId:'attack-equipment',consumer:'attack'}}]:[])],{speed:legacySpeed,...((iai||gale)?{technique:legacyTechnique}:{}),...(actualWeapon?{equipment:w.attackBonus??0}:{})}).value;
   if(['白刃','肉搏'].includes(w.skill??profile(a).main))rawDP+=a.state.huaJin?.nextAttack??0;
   rawDP-=checkModifiers(a.state,{context:{attack:true,physical:true,visual:!a.windSense&&!a.spiritSight,targetId:c.targetId,limbIds:c.limbIds??a.state.anatomy?.attackLimbs}}).penalty;
   if(type==='doubleStrike')rawDP-=2;
@@ -241,7 +265,7 @@ export function attackProfile(b, id, c = {}) {
   explode=Math.min(explode,w.explode??10);
   if(a.kind!=='bright'&&['bow','gun','thrown'].includes(weaponType)&&a.aim&&a.aim.targetId===c.targetId)rawDP+=Math.min(3,a.aim.rounds??0);
   if(range<=a.reach)rawDP+=(a.state.combatManeuvers?.allOut?2:0)+(a.state.combatManeuvers?.chargeAttack??0);
-  return { rawDP, dp:rawDP, attribute:attackAttribute, handling, legacyCompatible,weaponType,severity:actualWeapon?w.severity??'L':profile(a).severity??'L',weapon, cap, fixed, ap, magic, speed, extra, ignore, aggravate, electric, reduction, range, explode,magical:w.magical===true||resourceBonus(a.state,'weaponMagical')>0,ranged:actualWeapon?['bow','gun','thrown'].includes(weaponType):w.range>0||['射击','枪械','弓箭'].includes(wizardChoice?.main??profile(a).main),firearm:['gun','firearm'].includes(w.type)||wizardWeapon(a.state)&&a.state.wizard.weaponMode==='gun',ballistic:w.ballistic===true||wizardWeapon(a.state)&&a.state.wizard.weaponMode==='gun',energyWeapon:w.energyWeapon===true,grade:w.grade,hardnessIgnore:a.state.wizard?.form==='earth'&&wizardWeapon(a.state)?6:ignore,spiritEligible:a.spiritStrike===true||w.spiritStrike===true||magic>0||resourceBonus(a.state,'weaponSpirit')>0 };
+  return { ...(gale?{reductionMode:type}:{}),...(techniqueRows.length?{techniqueContributions:techniqueRows}:{}),...(iaiReady?{iaiApplied:true,iaiDefensePenalty:iai.p.defensePenalty}:{}),rawDP, dp:rawDP, attribute:attackAttribute, handling, legacyCompatible,weaponType,severity:actualWeapon?w.severity??'L':profile(a).severity??'L',weapon, cap, fixed, ap, magic, speed, extra, ignore, aggravate, electric, ...(thunderRows.length?{electricMode:thunder.electricMode}:{}), reduction, range, explode,magical:w.magical===true||resourceBonus(a.state,'weaponMagical')>0,ranged:actualWeapon?['bow','gun','thrown'].includes(weaponType):w.range>0||['射击','枪械','弓箭'].includes(wizardChoice?.main??profile(a).main),firearm:['gun','firearm'].includes(w.type)||wizardWeapon(a.state)&&a.state.wizard.weaponMode==='gun',ballistic:w.ballistic===true||wizardWeapon(a.state)&&a.state.wizard.weaponMode==='gun',energyWeapon:w.energyWeapon===true,grade:w.grade,hardnessIgnore:a.state.wizard?.form==='earth'&&wizardWeapon(a.state)?6:ignore,spiritEligible:a.spiritStrike===true||w.spiritStrike===true||magic>0||resourceBonus(a.state,'weaponSpirit')>0 };
 }
 
 function initiative(b,a) { return currentInitiative(a); }
@@ -324,7 +348,7 @@ export function resolveDefense(b, id, attackerId, attack = {}, resourceAlternati
   if(a.state.wizard?.form!=='wind')eat(['base','dodge','insight'],(a.state.timedEffects?.wizardWaterPenalty?.points??0)+(a.state.timedEffects?.garudaInterference?.points??0));
   const terrainPenalty=Math.max(0,...(b.map?.features??[]).filter(f=>!f.destroyed&&contains(a.position,f)).map(f=>f.defensePenalty??0));
   eat(['base','dodge','block'],Math.max(0,remainingPenalty(a.state,'environment',terrainPenalty)-(a.kind==='yulin'&&a.buffs.tengzhuan?5:0))+penaltyPoints(a,'亢奋'));
-  if (a.buffs.iaiPenalty) eat(['base','dodge','block','insight','cultivation','armor','natural'],2);
+  if (a.buffs.iaiPenalty) eat(['base','dodge','block','insight','cultivation','armor','natural'],typeof a.buffs.iaiPenalty==='number'?a.buffs.iaiPenalty:2);
   if (attack.contact) { p.armor=0; p.natural=0; }
   eat(['base','dodge','block','insight','cultivation'],Math.max(0,(attack.speed??0)-compatibleContribution(a,'ignoreSpeed',kitContext).value));
   const maneuver=a.state.combatManeuvers;
@@ -333,7 +357,7 @@ export function resolveDefense(b, id, attackerId, attack = {}, resourceAlternati
   if(attack.calledPenalty&&p.base>0&&attacker&&canObserve(b,attacker,a.id))p.dodge+=attack.calledPenalty;
   eat(Object.keys(p),(maneuver?.allOut?2:0)+(maneuver?.chargePenalty??0));
   const protectedDeflection=a.buffs.zheng?p.deflection:0;
-  if(attack.reduction===8) eat(['base','dodge','block','insight','cultivation','armor','natural','force',...(protectedDeflection?[]:['deflection'])],8);
+  if(attack.reductionMode==='tornado'||!attack.reductionMode&&attack.reduction===8) eat(['base','dodge','block','insight','cultivation','armor','natural','force',...(protectedDeflection?[]:['deflection'])],attack.reduction);
   else eat(['base','dodge','block'],attack.reduction??0);
   if(a.willDefenseReady)p.will=3+resourceBonus(a.state,'willEnhancement')+geneticCheckBonus(a.state,{willEligible:true,willSpent:true})-geneticCheckBonus(a.state,{willEligible:true});
   const ignoredAP=resourceAlternative?.stat==='ignoreAP'?resourceAlternative.value:0;
@@ -572,7 +596,8 @@ function recordAttackUse(b,a,t,c,p,afterDefense,feature){
     }
     else a.combos[t.id]=c.finisher?0:Math.min(5,(a.combos[t.id]??0)+1);
   }
-  if (p.legacyCompatible&&a.kind==='huang' && a.buffs.drawnRound===b.round && !a.buffs.drawUsed && c.abilityId!=='conduct') {
+  if(p.iaiApplied){a.buffs.drawUsed=true;a.buffs.iaiPenalty=p.iaiDefensePenalty;}
+  else if (!a.techniqueBindings?.iai&&p.legacyCompatible&&a.kind==='huang' && a.buffs.drawnRound===b.round && !a.buffs.drawUsed && c.abilityId!=='conduct') {
     a.buffs.drawUsed=true; a.buffs.iaiPenalty=true;
   }
   if(c.empowered) a.buffs.fistQi=false;
@@ -710,7 +735,7 @@ function performStrike(b,a,t,c,result,drawDice,{opportunity=false,freeResponse=f
   let aggravated=Math.min(amount,p.aggravate);
   if(p.energyWeapon&&!wizardArmor)aggravated=Math.max(aggravated,Math.min(amount,Math.floor(p.weapon/2)));
   if(p.legacyCompatible&&a.kind==='jiang'&&a.ruleset!=='opening-20261022' && !d.parts.armor) aggravated=Math.min(amount,Math.floor(p.weapon/2),5);
-  const electric=a.ruleset==='opening-20261022'?Math.min(amount,p.electric):Math.floor(amount*p.electric);
+  const electric=(p.electricMode??(a.ruleset==='opening-20261022'?'fixed':'fraction'))==='fixed'?Math.min(amount,p.electric):Math.floor(amount*p.electric);
   // Allocate the worsened points to the electrical part first. No duplicate damage:
   // total segment amounts must equal the capped attack successes.
   const ea=Math.min(electric,aggravated), pa=aggravated-ea;
@@ -827,6 +852,7 @@ function advance(b,result,choices={},drawDice=randomDice) {
     for(const other of Object.values(b.actors)){for(const [key,e]of Object.entries(other.state.timedEffects??{}))if(e.clockActorId===a.id){e.remainingTurns=Math.max(0,e.remainingTurns-1);e.remainingMinutes=e.remainingTurns/10;if(!e.remainingTurns)delete other.state.timedEffects[key];}for(const e of other.state.statuses)if(e.clockActorId===a.id){e.remainingTurns=Math.max(0,e.remainingTurns-1);e.remainingMinutes=e.remainingTurns/10;}other.state.statuses=other.state.statuses.filter(e=>e.remainingMinutes!==0);}
     if(b.map)b.map.features=b.map.features.filter(f=>!f.wizardOwner||b.actors[f.wizardOwner]?.state.timedEffects?.wizardDefend?.form==='earth');
     delete a.buffs.block; delete a.buffs.zheng; delete a.buffs.iaiPenalty;
+    if(a.techniqueBindings?.iai){delete a.buffs.drawnRound;delete a.buffs.drawUsed;}
     beginCommonTurn(b,a);
     delete a.defenseIntent;delete a.rapidAdjacentHits;
     if(a.aim?.pendingRound<b.round) {a.aim.rounds=Math.min(3,(a.aim.rounds??0)+1);delete a.aim.pendingRound;}
@@ -872,9 +898,9 @@ export function rapidFireTargets(b,c){
  return Object.values(b.actors).filter(x=>x.present&&x.id!==t.id&&x.id!==a.id&&!a.rapidAdjacentHits?.includes(x.id)&&spatialDistance(b.map,t.position,x.position)<=1.5&&spatialDistance(b.map,a.position,x.position)<=100&&clearLine(b.map,a.position,x.position)&&canObserve(b,x,a.id));
 }
 export function galeTargets(b,c) {
-  const a=b.actors[c.actorId];
+  const a=b.actors[c.actorId],range=galeTerms(a,'gale')?.p.rangeMeters??20;
   return Object.values(b.actors).filter(x=>x.present&&x.id!==a.id&&x.team!==a.team&&!unconscious(x)&&
-    spatialDistance(b.map,a.position,x.position)<=20&&canObserve(b,x,a.id)&&clearLine(b.map,a.position,x.position));
+    spatialDistance(b.map,a.position,x.position)<=range&&canObserve(b,x,a.id)&&clearLine(b.map,a.position,x.position));
 }
 
 // Sight-only cover does not stop the roar's area effect; solid terrain does.
@@ -920,7 +946,10 @@ export function act(input,command,{drawDice=randomDice,playerAuthorized=false,de
   requireThat(a?.present,'参战者不存在');
   requireThat(a.controller!=='player'||playerAuthorized,'玩家角色须由玩家明确选择动作');
   requireThat(a.abilities.includes(id)||BASIC_ACTIONS[id]||COMMON_ACTIONS[id]||id==='reload'&&weaponAmmoSpec(a,equipment(a).weapon)||['firstAid','escapeGrip','pressGrip','grappleAttack','ringStore','ringRetrieve','mechanism','statusEvent','wake','jump','continueJump','search'].includes(id)||id==='medicine'&&a.state.inventory||id==='door'||id==='destroy'&&a.abilities.includes('strike'),'该参战者没有此能力');
+  const thunder=id==='thunder'?thunderTerms(a,c):null;
+  const rock=id==='cleaveRock'?rockTerms(a,c):null;
   const commandKeys=id==='medicine'?['actorId','abilityId','medicine','resource','choice','statusIndex']:['door','destroy'].includes(id)?['actorId','abilityId','featureId',...(id==='door'?['open']:[])]:['actorId','abilityId','targetId','tier','empowered','finisher','strength','payment','to','via','enabled','resource'];
+  if(id==='thunder'&&thunder?.adapted)commandKeys.push('electricFraction');
   commandKeys.push('preActionDC','deteriorationChoices',...(id==='readyWeapon'?['weapon']:[]),...(id==='doubleStrike'?['secondTargetId']:[]),...(id==='morph'?['form']:[]),...(id==='releaseGrip'?['claw']:[]),...(id==='escapeGrip'?['method']:[]),...(['move','step'].includes(id)?['run','climb','movementSource','flightEnd','motionObjectId','motionPart']:[]));
   if(['ringStore','ringRetrieve'].includes(id))commandKeys.push('itemId');
   if(id==='mechanism')commandKeys.push('objectId','operation','part');
@@ -987,8 +1016,8 @@ export function act(input,command,{drawDice=randomDice,playerAuthorized=false,de
   requireThat((a.cooldowns[coolKey]??0)<=b.round,'能力仍在冷却');
   if(['thunder','cleaveRock','lightning','conduct'].includes(id)) {
     if(['lightning','conduct'].includes(id)) requireThat([1,2,3].includes(c.tier),'御雷须选择tier1/2/3');
-    pay(a,'灵力',['lightning','conduct'].includes(id)?[1,3,5][c.tier-1]:1,c.payment);
-    a.cooldowns[coolKey]=b.round+1;
+    pay(a,rock?.cost.pool??thunder?.cost.pool??'灵力',['lightning','conduct'].includes(id)?[1,3,5][c.tier-1]:rock?.cost.amount??thunder?.cost.amount??1,c.payment);
+    a.cooldowns[coolKey]=b.round+(rock?.cooldownRounds??thunder?.cooldownRounds??1);
   }
   if(a.kind==='mireya'&&['move','step','block','drawClub','readyBow','door','destroy','aim'].includes(id))delete a.calibration;
   switch(id) {
@@ -1293,8 +1322,10 @@ export function act(input,command,{drawDice=randomDice,playerAuthorized=false,de
     }
     case 'tornado': case 'gale': {
       if(id==='tornado')requireThat(t?.present,'需要指定已知角色ID作为目标');
-      requireThat((a.ruleset==='opening-20261022'?['流风']:['风池','魔力']).includes(c.resource??(a.ruleset==='opening-20261022'?'流风':'风池')),'需要合用能量');
-      pay(a,c.resource??(a.ruleset==='opening-20261022'?'流风':'风池'),1);a.sheathed=false;
+      const terms=galeTerms(a,id),pools=terms?.e.resourcePools??(a.ruleset==='opening-20261022'?['流风']:['风池','魔力']);
+      const pool=c.resource??pools[0];requireThat(pools.includes(pool),'需要已绑定的合用能量');
+      if(terms&&id==='tornado')requireThat(t.team!==a.team&&canObserve(b,t,a.id)&&clearLine(b.map,a.position,t.position),'狂岚需要已定位且作用线可达的敌方目标');
+      pay(a,pool,terms?.cost??1);a.sheathed=false;
       const targets=id==='tornado'?[t]:galeTargets(b,c);
       requireThat(targets.length>0,'范围内无有效目标');
       for(let i=0;i<targets.length;i++) {
@@ -1518,7 +1549,8 @@ export function stateResult(b,actorId,abilityId,notes=[]) {
   return {actorId,abilityId,round:b.round,damage:[],statuses:[],saves:[],healing:[],notes,
     after:{status:b.status,winner:b.winner,activeId:b.activeId,...(b.pending?{awaiting:b.pending.awaiting}:{}),
       visibleTo:Object.fromEntries([...Object.values(b.actors),...Object.values(b.observers??{})].filter(a=>a.present).map(a=>[a.id,Object.values(b.actors).filter(t=>canObserve(b,t,a.id)).map(t=>t.id)])),
-      participants:Object.values(b.actors).filter(x=>x.present).map(x=>({id:x.id,name:x.name,team:x.team,health:clone(x.state.health),energy:clone(x.state.resources),actions:clone(x.state.turn),position:clone(x.position),statuses:clone(x.state.statuses)}))}};
+      participants:Object.values(b.actors).filter(x=>x.present).map(x=>({id:x.id,name:x.name,team:x.team,health:clone(x.state.health),energy:clone(x.state.resources),actions:clone(x.state.turn),position:clone(x.position),statuses:clone(x.state.statuses),
+        ...(x.state.grapple?{grapple:{pressed:x.state.grapple.pressed===true}}:{})}))}};
 }
 
 export const TACTICS='敌人与同伴沿用相同流程：按目标、已知信息和剩余资源选招。先核动作、距离、能量、冷却及友军范围；需要时防御、移动或撤退，不机械重复最高伤害招式。若是隔离演练，目标是完成对练、分出胜负；移动应服务于下一次攻击或明确恢复，不在没有后续计划时反复远离对手。程序面板和结算为准，不自行改数或掷骰。玩家角色的选择交给玩家。';
@@ -1594,7 +1626,7 @@ export function currentContext(b) {
     panelNotes:'面板已计当前增益及减益；defense是未指定攻击者的防御。matchups为当前行动者与敌方的普通攻击对位，已计连击、先攻与穿透；rollDP是投骰池，非伤害，非正数投幸运骰。weaponReady/inReach只说明武器与距离，能否行动以legalOptions为准。cooldowns是剩余轮数；actions为当前余量，可标准→移动→迅捷换用。',
     participants:actors.map(a=>compactPanel(b,a)),
     matchups:matchups(actors,b),
-    abilities:Object.fromEntries([...new Set(actors.flatMap(a=>availableActorActions(a)))].map(id=>[id,b.actors[b.activeId]?.abilityDefinitions?.[id]??ABILITIES[id]])),
+    abilities:Object.fromEntries([...new Set(actors.flatMap(a=>availableActorActions(a)))].map(id=>[id,techniqueDescription(b.actors[b.activeId],id)??b.actors[b.activeId]?.abilityDefinitions?.[id]??ABILITIES[id]])),
     passiveRules: Object.fromEntries(Object.entries({
       jiang:'拳掌含龙象：力判＋12、忽略4指定伤害防护、实伤后2L和4晕眩；红鹤高速4；破身恶化须破尽盔甲；每轮医疗1B/L。同目标每次攻击加下次增强1，封顶5。',
       huang:'刀身及攻击上限以当前面板为准；先攻高于攻击者基础防御＋5；防御附成3。灵力可用payment:"restraint"代付，但精神束缚会减攻防和速度，超过意志5定身。',

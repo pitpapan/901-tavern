@@ -1,0 +1,81 @@
+✔ bound unit schema factors shared fields once without weakening either status branch (918.9492ms)
+✔ bound prompt uses one output envelope while retaining shared field and coordinate contracts (6.0194ms)
+✔ bound schema carries recipient response evidence and new-message coverage at the responsible fields (8.5923ms)
+✔ bounded reception narrows generation scope and supplies exact source ranges without accepting old wrong spans (19.62ms)
+✔ bound prompt retains the existing direct-reception rule without changing schema, input or other guidance (17.1225ms)
+✔ existing fact index does not limit new dialogue reception and never fills a false none (8.2667ms)
+✔ direct speech needs no acknowledgement; explicit obstruction and uncertainty retain their own outcomes (48.7877ms)
+✔ bound utterance maps only explicit nested receipts and retains mandatory coverage (3.027ms)
+✔ action, forged reference, missing receipts and omitted target coverage reject without mutation (3.643ms)
+✔ uncertain coverage preserves explicit partial receipt plus uncertainty without blanket blocking (3.1435ms)
+✔ none and unresolved-only coverage require actual source evidence, never synthesize receipts (2.6444ms)
+✔ original source, role, null-pair and identity checks remain in force (3.4453ms)
+✔ schema rejects nested action and missing coverage and allows explicit none and uncertainty (904.6014ms)
+✔ model adapter uses version2 and original MVU path persists coverage and independent known/pending rows (20.6566ms)
+✔ historical flat failures are retained and cannot silently enter the new wire (31.3494ms)
+✔ model-path invalid coverage writes nothing; explicit unreceived and none never grant or ask (29.5889ms)
+✔ planned speech keeps original intent claim and none coverage without creating utterance (2.0482ms)
+✔ existing Tavern completion maps exact messages and schema without settings or response repair (13.7813ms)
+✔ listener references can ground a current reply but cannot refer to its speaker (26.9908ms)
+✔ implicit response positive and obstacle/ambiguity/unsaid controls use original receipts without filling gaps (46.7941ms)
+✔ spoken content excludes intervening narration while source checks remain unchanged (8.4081ms)
+✔ reception evidence distinguishes identity from reception and limits reused evidence to its supported scope (1.7225ms)
+✔ reused listening evidence preserves explicit full, limited, unknown and absent reception through existing MVU (137.4475ms)
+✔ historical short evidence and blanket overhearing remain preserved rather than silently corrected (6.6782ms)
+✖ custom385 conflicting whole-speech receipts reject unchanged despite valid JSON Schema (919.7331ms)
+✖ same recipient cannot receive incompatible statuses on overlapping speech content across claim IDs (5.2422ms)
+✔ disjoint and adjacent content ranges and different listeners keep independent statuses (4.2442ms)
+✔ repeated identical words at distinct source positions are separate speech occurrences (3.2699ms)
+✖ custom385 is rejected before any MVU write through the real adapter; authored content fragments still register independently (39.9281ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 26
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3991.7172
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-bound.test.mjs:311:1
+✖ custom385 conflicting whole-speech receipts reject unchanged despite valid JSON Schema (919.7331ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-bound.test.mjs:317:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /Conflicting dialogue reception ranges/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-bound.test.mjs:321:1
+✖ same recipient cannot receive incompatible statuses on overlapping speech content across claim IDs (5.2422ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-bound.test.mjs:328:42)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /Conflicting dialogue reception ranges/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-bound.test.mjs:353:1
+✖ custom385 is rejected before any MVU write through the real adapter; authored content fragments still register independently (39.9281ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-bound.test.mjs:369:19)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /Conflicting dialogue reception ranges/,
+    operator: 'rejects',
+    diff: 'simple'
+  }

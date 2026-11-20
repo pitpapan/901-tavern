@@ -1,0 +1,50 @@
+{
+  "diagnosis": "Original runtime supports fragment utterances; prior prompt lacked explicit link between receipt content scope and utterance span. Model283 supplied no received partial receipt; not local record loss.",
+  "productChange": "Only ordinary extraction generation instructions; existing checker, persistence and shared assertion contract unchanged.",
+  "newTests": 5,
+  "red": {
+    "pass": 4,
+    "fail": 1,
+    "reason": "missing content-scoped receipt guidance"
+  },
+  "offlinePassed": 175,
+  "enginePassed": 56,
+  "campaignPassed": 119,
+  "originalEvidenceUnchanged": 244,
+  "modelCalls": 1,
+  "cumulative": 284,
+  "remainingUnusedClosed": 2,
+  "modelVerdict": "fail",
+  "modelTargetObservation": "Correct partial receipt split, but whole output rejected. Not accepted knowledge registration.",
+  "firstContractError": "INVALID_ROLE_SPAN",
+  "missingSpans": [
+    {
+      "claimId": "c2",
+      "field": "args.name",
+      "value": "状态"
+    },
+    {
+      "claimId": "c3",
+      "field": "args.actor",
+      "value": "听者"
+    },
+    {
+      "claimId": "c5",
+      "field": "args.property",
+      "value": "听清范围"
+    },
+    {
+      "claimId": "c7",
+      "field": "args.value",
+      "value": "before"
+    }
+  ],
+  "additionalStructuralErrors": [
+    "c7 order.from points to c1 utterance; contract requires distinct action endpoints",
+    "both receptions reason=null; contract requires string"
+  ],
+  "existingSpanCount": 35,
+  "existingSpansExact": true,
+  "isolatedRevision": 0,
+  "repair": false
+}

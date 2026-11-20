@@ -1,0 +1,31 @@
+{
+  "kind": "v6.accept.identity_unknown",
+  "startedAt": "2026-11-15T21:09:06.093Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T21:09:09.835Z",
+  "headersElapsedMs": 3742,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b13c29ec42e46c-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 21:09:09 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=fBajxqM9frzG0pW2aziWLsKE0N6JhbVAMA1%2BUMCa9pYd9Pxdo%2BQVncTL4dRcWg4NT0iLHg2onF%2Fj47rj%2BE33ZicCXoi9OHnj4S2Mnhtv9gyOuIbQM2EaBPyR%2BgwuEw%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611152109067398149488268d9d6OeKKljur",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "b0ecac1b-21b0-4969-b2e0-50dd0294f18f"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"b36c98e9-9957-42c8-b954-64f4ae51743a\",\"object\":\"chat.completion\",\"created\":1794776949,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/6\\\",\\\"contextRef\\\":\\\"5e8c21a2ad64526e13e6e67122b4457b9327d2640e23a7aa93a621b03ba49d15\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"speaker\\\":{\\\"actorId\\\":\\\"huang\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"}},\\\"content\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"明早从山路绕行。\\\"},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":{\\\"value\\\":\\\"明早\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"明早\\\"}},\\\"condition\\\":{\\\"value\\\":\\\"从山路绕行\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"从山路绕行\\\"}},\\\"attribution\\\":{\\\"value\\\":\\\"黄泉答道\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉答道\\\"}}},\\\"anchor\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉答道：\\\"},\\\"receptions\\\":[{\\\"content\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"明早从山路绕行。\\\"},\\\"listener\\\":{\\\"actorId\\\":null,\\\"kind\\\":\\\"unknown\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"两人中只有一人听见\\\"},\\\"historyMessageId\\\":null},\\\"evidence\\\":{\\\"kind\\\":\\\"unknown\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"但无法确定是谁。\\\"}},\\\"propositionRef\\\":null,\\\"reason\\\":\\\"原文明确两人中只有一人听见，但无法确定具体听者是谁。\\\"}]}],\\\"unresolved\\\":[{\\\"span\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"两人中只有一人听见，但无法确定是谁。\\\"},\\\"reason\\\":\\\"听者身份无法确定，存在歧义\\\"}],\\\"coverage\\\":{\\\"status\\\":\\\"uncertain\\\",\\\"evidence\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"两人中只有一人听见，但无法确定是谁。\\\"},\\\"reason\\\":\\\"虽然有人听见，但具体接收者身份不明。\\\" Justin\\\"}}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2570,\"completion_tokens\":440,\"total_tokens\":3010}}",
+  "responseBytes": 1916,
+  "responseBodySha256BeforePrivacyRedaction": "55f9c5793b86423af4184f5233796bd51321d9713f306b0669825301170fe8d7",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T21:09:09.848Z",
+  "elapsedMs": 3754
+}

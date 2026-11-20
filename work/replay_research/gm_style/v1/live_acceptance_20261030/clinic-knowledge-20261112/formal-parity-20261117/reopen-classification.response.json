@@ -1,0 +1,31 @@
+{
+  "kind": "classification",
+  "startedAt": "2026-11-17T19:18:15.869Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-17T19:18:18.765Z",
+  "headersElapsedMs": 2896,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5c1148b8fa0038d-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Tue, 17 Nov 2026 19:18:18 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=xARDBVp7uxigzI9ld8MGi3w1nzxf1BB3y5FJ5W8Pf1ydVB2SB3c4LpIPaMP91V5ihFGRDWLNG4jYhbpn025Ar9tQNQ2vrsxDiTkPx8WhN98QpcPWQ5O2rFZ40UsfCQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611171918156981296708268d9d6NWwkSVDu",
+    "x-zeabur-ip-country": "ES",
+    "x-zeabur-request-id": "cdb03498-1821-4631-b2ff-f7895795749b"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"3570bf28-8fac-4be8-b36a-ac5eacdde1c9\",\"object\":\"chat.completion\",\"created\":1794943098,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"status\\\":\\\"NO_CHECK\\\",\\\"basis\\\":\\\"ordinary_dialogue\\\",\\\"reason\\\":\\\"御临风对同伴布莱特的口头询问属于同伴间的普通日常对话，不涉及对NPC施加影响的社交检定、欺骗、威吓或战斗与资源消耗行动，布莱特可直接依其已知信息与人设进行自然应答。\\\"}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":22019,\"completion_tokens\":93,\"total_tokens\":22112}}",
+  "responseBytes": 600,
+  "responseBodySha256BeforePrivacyRedaction": "99f17651ed5c6371863a9edb7ec97f588d7908f83726ea3c640197d36f5e59e1",
+  "outcome": "completed",
+  "finishedAt": "2026-11-17T19:18:18.771Z",
+  "elapsedMs": 2902
+}

@@ -1,0 +1,202 @@
+{
+  "against611": {
+    "baselineRequest": {
+      "file": "../question-wording-node-live-20261120/611.request.json",
+      "sha256": "351af2e5759f5591867feafd25a878581237d7a0d73aeba6a1ebe49f434a02ec",
+      "messageIndex": 11
+    },
+    "priorVisibleDialogueOrderPreserved": true,
+    "M0": {
+      "oldCodePoints": 32896,
+      "newCodePoints": 31531,
+      "oldSha256": "226dc4eaf6ba44c5a0c5e6c9b81c4a29fe120872c4f2dcc996cd8732efbef1a7",
+      "newSha256": "ef50fbd11687afbe1523c256470baff3bc2a472316f43edc3fee851ee7eba8f8",
+      "deletions": [
+        {
+          "oldContentCodePointSpan": [
+            22595,
+            22906
+          ],
+          "newContentCodePointSpan": [
+            22595,
+            22595
+          ],
+          "oldContentByteSpan": [
+            65674,
+            66541
+          ],
+          "newContentByteSpan": [
+            65674,
+            65674
+          ],
+          "removedBytesSha256": "2a1cbb8d527be76a361a56c995e58345e540763a41adf05728aa3437a5cf3fb3"
+        },
+        {
+          "oldContentCodePointSpan": [
+            22924,
+            23662
+          ],
+          "newContentCodePointSpan": [
+            22613,
+            22613
+          ],
+          "oldContentByteSpan": [
+            66590,
+            68754
+          ],
+          "newContentByteSpan": [
+            65723,
+            65723
+          ],
+          "removedBytesSha256": "48d26f434e0bd45fb187abf956dc0565a9bb1cf51f01a66a65cfd214d518fb93"
+        },
+        {
+          "oldContentCodePointSpan": [
+            27860,
+            28176
+          ],
+          "newContentCodePointSpan": [
+            26811,
+            26811
+          ],
+          "oldContentByteSpan": [
+            81081,
+            82007
+          ],
+          "newContentByteSpan": [
+            78050,
+            78050
+          ],
+          "removedBytesSha256": "eb90731e75b7e4f85ac7a3123d6882f37e3d5708c80ac6b0a50edc0221347991"
+        }
+      ],
+      "noLongerActivated": [
+        {
+          "book": "901_04_能力与战力_20261023",
+          "uid": "30512113",
+          "title": "凌迟与悠悠涉及的诅咒",
+          "constant": false,
+          "scanDepth": 4,
+          "keyContains": "悠悠"
+        },
+        {
+          "book": "901_03_人物资料库_20261023",
+          "uid": "216568469",
+          "title": "人物·悠悠",
+          "constant": false,
+          "scanDepth": 4,
+          "keyContains": "悠悠"
+        },
+        {
+          "book": "901_06_当前剧本与局势_20261023",
+          "uid": "1237848913",
+          "title": "悠悠诊视与求治接续",
+          "constant": false,
+          "scanDepth": 4,
+          "keyContains": "悠悠"
+        }
+      ],
+      "basis": "都是非恒定、scanDepth=4 的关键字条目。611最近四条角色消息中含悠悠，续问中该处已移出这四条。行为与现有窗口匹配，未保留逐条激活日志。"
+    },
+    "sameAuthorNote": {
+      "oldMessageIndex": 7,
+      "newMessageIndex": 9,
+      "metadataField": "note_prompt",
+      "configuredDepth": 4,
+      "configuredPosition": 1,
+      "sha256": "7b23362eff63c9ef971a4e93d59e19efc3019e4f4aafa5405b46bed87a149624",
+      "basis": "新增真实问答两楼后原备注仍按相同消息深度插入，正文相对顺序不变。"
+    },
+    "addedHistory": {
+      "retained611ReplyIndex": 12,
+      "followupQuestionIndex": 13
+    },
+    "positions": {
+      "retained611Question": {
+        "old": 11,
+        "new": 11
+      },
+      "materialsInstruction": {
+        "old": 12,
+        "new": 14
+      },
+      "playerActionAndKnowledgeProjection": {
+        "old": 13,
+        "new": 15
+      }
+    },
+    "unchangedRequestParameters": true,
+    "knowledgeChanges": "新增黄泉与玩家的 rumor；布莱特原记录随原生分支绑定只重定向 chatID。"
+  },
+  "coordinateConvention": "零基左闭右开，完整请求的UTF-8字节偏移和已解码消息内容的Unicode码点偏移。",
+  "from": {
+    "file": "huang-followup.request.json",
+    "bytes": 113556,
+    "sha256": "551a738c0bb88f1bb32de7f045bc412da02c6abbbd2bb78ab7415aa1e6c5f755"
+  },
+  "to": {
+    "file": "bright-followup.request.json",
+    "bytes": 113496,
+    "sha256": "e16a57818f1bdcdbc6bd7f50899a0a7a8991867eff1d8f255db8bf989f2a2a9d"
+  },
+  "edits": [
+    {
+      "pointer": "/messages/13/content",
+      "role": "user",
+      "huangByteSpan": [
+        99738,
+        99822
+      ],
+      "brightByteSpan": [
+        99738,
+        99792
+      ],
+      "huangContentCodePointSpan": [
+        0,
+        28
+      ],
+      "brightContentCodePointSpan": [
+        0,
+        18
+      ],
+      "huang": "御临风转向黄泉：“你现在对老馆主和雪老的关系了解多少？”",
+      "bright": "御临风问布莱特：“你从哪里听来的？”"
+    },
+    {
+      "pointer": "/messages/15/content",
+      "role": "user",
+      "huangByteSpan": [
+        101397,
+        101481
+      ],
+      "brightByteSpan": [
+        101367,
+        101421
+      ],
+      "huangContentCodePointSpan": [
+        5,
+        33
+      ],
+      "brightContentCodePointSpan": [
+        5,
+        23
+      ],
+      "huang": "御临风转向黄泉：“你现在对老馆主和雪老的关系了解多少？”",
+      "bright": "御临风问布莱特：“你从哪里听来的？”"
+    }
+  ],
+  "byteReconstructionVerified": true,
+  "stateAndRetainedHistoryEqual": true,
+  "frozenSources": {
+    "huang": {
+      "file": "evidence/captures/before.narration.request.json",
+      "bytes": 113556,
+      "sha256": "551a738c0bb88f1bb32de7f045bc412da02c6abbbd2bb78ab7415aa1e6c5f755"
+    },
+    "bright": {
+      "file": "evidence/captures/received-bright.narration.request.json",
+      "bytes": 113496,
+      "sha256": "e16a57818f1bdcdbc6bd7f50899a0a7a8991867eff1d8f255db8bf989f2a2a9d"
+    }
+  }
+}

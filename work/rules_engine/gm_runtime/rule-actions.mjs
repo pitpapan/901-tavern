@@ -15,7 +15,7 @@ import {ATTRIBUTES,check,oppose,upgradeAttribute,upgradeSkill,firstAid,applyStat
   spendAction,actionEligibility,checkBeforeAction,advanceDeterioration,settleNode,recover,beginTurn,upgradeFeat} from '../core.mjs';
 import {saveProfile,refreshDerived} from '../combat/mechanics.mjs';
 import {requireKnownSkill} from '../../character_builder/builder.mjs';
-import {advanceTime,advanceActorsTime} from '../recovery.mjs';
+import {advanceActorsTime} from '../recovery.mjs';
 import {ringTransfer} from '../possessions.mjs';
 import {actorCheckRules,CHECK_PURPOSES} from './actor-rules.mjs';
 import {runSceneMechanism,advanceSceneTime} from './scene-rules.mjs';
@@ -173,7 +173,8 @@ export function reduceRuleAction(input,request,{drawDice,actorTemplates={},event
       }
       case 'inventory': {
         const out=ringTransfer(a,r);a.state=out.actor.state;result=out.result;
-        if(out.result.elapsedMinutes)advanceTime(a,out.result.elapsedMinutes,[],{drawDice:dice,root:next});break;
+        if(result.elapsedMinutes){const changes=[];passTime(result.elapsedMinutes,changes);
+        result.timeChanges=changes;result.sceneChanges=advanceSceneTime(next.ruleScene,result.elapsedMinutes);}break;
       }
       case 'time': {
         const changes=[];passTime(r.minutes,changes);
@@ -208,8 +209,8 @@ export function reduceRuleAction(input,request,{drawDice,actorTemplates={},event
         progress.complete=progress.accumulated>=r.target;s.extendedChecks[r.taskId]=progress;
         const changes=[];
         passTime(r.periodMinutes,changes);
-        advanceSceneTime(next.ruleScene,r.periodMinutes);
-        result={...progress,roll,elapsedMinutes:r.periodMinutes,timeChanges:changes,success:progress.complete,expired:!progress.complete&&progress.periods>=r.maxPeriods};break;
+        const sceneChanges=advanceSceneTime(next.ruleScene,r.periodMinutes);
+        result={...progress,roll,elapsedMinutes:r.periodMinutes,timeChanges:changes,sceneChanges,success:progress.complete,expired:!progress.complete&&progress.periods>=r.maxPeriods};break;
       }
       case 'growth': {
         requireGrowthWindow(next,r);

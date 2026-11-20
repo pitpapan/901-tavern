@@ -1,0 +1,52 @@
+--- formal/work/rules_engine/gm_runtime/replay-gate-script.example.js
++++ isolated/work/rules_engine/gm_runtime/replay-gate-script.example.js
+@@ -105,8 +105,9 @@
+ };
+ const latestPending = () => replayPendingFromChat(SillyTavern.chat, playerFloor());
+ export function registerReplayGate({ getMvu = async () => globalThis.Mvu, npcContext,
+-  scriptedOpportunities = {}, geneticOpportunities={},initialGeneticLock,ruleEvents={},ruleFeats={},combat = null, profile = {} } = {}) {
++  scriptedOpportunities = {}, geneticOpportunities={},initialGeneticLock,ruleEvents={},ruleFeats={},combat = null, profile = {}, knowledge=null } = {}) {
+ const debug=profile.debug??REPLAY_GATE_DEBUG;
++const generateKnown=request=>knowledge?knowledge.generate({request,generateRaw,eventOn,eventRemoveListener,event:tavern_events.CHAT_COMPLETION_SETTINGS_READY}):generateRaw(request);
+ if (typeof getMvu !== 'function') throw new Error('MVU provider required');
+ if (typeof eventMakeFirst !== 'function' || !tavern_events?.GENERATE_AFTER_DATA)
+   throw new Error('Pre-narration hook unavailable');
+@@ -324,9 +325,10 @@
+         mark('request_lorebook_read');
+         const book = typeof getCurrentCharPrimaryLorebook === 'function'
+           ? getCurrentCharPrimaryLorebook() : null;
+-        const relatedFacts = book && typeof getLorebookEntries === 'function'
+-          ? relevantLorebookFacts((await Promise.all(replayLorebookNames({book,books:profile.lorebooks})
+-            .map(name=>getLorebookEntries(name)))).flat(), { action: context.original.text, scene }) : [];
++        const entries = book && typeof getLorebookEntries === 'function'
++          ? (await Promise.all(replayLorebookNames({book,books:profile.lorebooks})
++            .map(async name=>(await getLorebookEntries(name)).map(e=>({...e,world:name}))))).flat() : [];
++        const relatedFacts=relevantLorebookFacts(knowledge?knowledge.projectEntries(entries):entries,{action:context.original.text,scene});
+         mark('request_build');
+         const request = replayClassificationRequest({ context,
+           scene, relatedFacts,
+@@ -391,7 +393,7 @@
+             mark('request_dispatched', { generationId,
+               classificationRequests: diagnostic.classificationRequests + 1 });
+             try {
+-              decision = await classifyWithDeadline({ generateRaw,
++              decision = await classifyWithDeadline({ generateRaw:generateKnown,
+                 stopGenerationById: id => { deadlineStops.add(id); return stopGenerationById(id); },
+                 request, generationId, timeoutMs: profile.classificationTimeoutMs ?? 30000 });
+               stillCurrent();
+@@ -489,7 +491,8 @@
+           // original callback. Explicit removal prevents a filter escaping its request.
+           eventOn:(event,listener)=>{eventOn(event,listener);return {stop:()=>eventRemoveListener(event,listener)};},
+           event: tavern_events.WORLDINFO_ENTRIES_LOADED,
+-          generate: () => generateRaw({ ...model, ...modelOptions, user_input:
++          eventRemoveListener,projectEntries:knowledge?entries=>knowledge.projectEntries(entries):undefined,
++          generate: () => generateKnown({ ...model, ...modelOptions, user_input:
+         `玩家行动：${context.original.text}\n` +
+         (context.latest.messageId !== context.original.messageId ? `本次补充：${context.latest.text}\n` : '') +
+         `裁定路径：${decision.status}\n` +
+@@ -598,4 +601,5 @@
+     console.log('[901-REPLAY-GATE]', readiness.ready ? 'READY' : 'NOT_READY', readiness.missing);
+   } catch (error) { console.warn('[901-REPLAY-GATE] NOT_READY', error?.message); }
+ })();
++return {receiveKnowledge:async receipt=>{if(!knowledge)throw Error('Story knowledge is not configured');if(running||combat?.busy)throw Error('Wait for the current story operation');return knowledge.receive(receipt);}};
+ }

@@ -1,0 +1,31 @@
+{
+  "kind": "dialogue-dependency",
+  "startedAt": "2026-11-14T18:12:47.770Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-14T18:12:55.265Z",
+  "headersElapsedMs": 7495,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5a7fc8489109b3b-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sat, 14 Nov 2026 18:12:54 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=j6fHaE8pnQ16E8RJtwAC4UqaDUrp8CaQRzn%2FiXDnBPhCUfOtOQDATsAeMWWWLzrgXfj3Hiauekr66Fv9u1o5rvoLrjkrNVUsZPZiGPElroyI3s9aeXFpZiiCi0oJZA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611141812478577412038268d9d6HBHeovEZ",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "7851422c-a234-4cdd-bea7-daa6dd6dd08a"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"574ae59b-65f8-414b-9e05-b9161fb615ad\",\"object\":\"chat.completion\",\"created\":1794679974,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"inputRef\\\":\\\"bcf706c2184bec532d2b5ad388adaa1eb9bf2040c4d9616d0d1c34f6a4df76f6\\\",\\\"required\\\":[\\\"dialogue.a88eacccb9aebd77a86e1b0dc27d702d0684aaff715c435a1786c51a930ac7e8.7b5714850f54942f0da4a9701187dd9727e31beb7121d5d1606281ac34934ed6\\\"]}\",\"reasoning_content\":\"The request asks whether an old key can be used to enter a warehouse, based on information provided earlier. There's a pending message that needs processing. This suggests a need to retrieve and analyze the warehouse details to determine the key's compatibility.\\n\\n\\n\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":791,\"completion_tokens\":196,\"total_tokens\":1491,\"completion_tokens_details\":{\"reasoning_tokens\":504}}}",
+  "responseBytes": 872,
+  "responseBodySha256BeforePrivacyRedaction": "cf987f0a0ce7f0c96802ee1d500ac706cc3c4850d36a9e321ab01af2cf04b02c",
+  "outcome": "completed",
+  "finishedAt": "2026-11-14T18:12:55.271Z",
+  "elapsedMs": 7502
+}

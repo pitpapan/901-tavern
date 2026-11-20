@@ -1,0 +1,5 @@
+{
+  "reason": "No demonstrated improvement in actual extraction; keep baseline product instead of stacking ineffective wording. Contract ambiguity was a hypothesis, not proven root cause.",
+  "candidateSourceSha256": "5e732740398cb61ec2291624f6f12edd033fc95166192295702c7443645134e2",
+  "guidanceSource": " messages[0].content+='\\n普通对白的信息传递覆盖合同：本轮接收事实必须有可引用的utterance投影。对于已经发生且用于判断信息接收的言说，先保留speaker/content及其原文引用；action或听者state不能替代这个言说投影。它是同一言说的信息内容表示，不是另造一次发言，也不把消息内容确认为世界事实。每条reception.claimId只引用内容范围对应的utterance.id。'+\n '逐项覆盖原文明示的接收、未接收和接收不确定范围：听清状态已抽成claim不等于已经输出reception，明确接收仍须关联相应内容与接收者；不确定是否听见不等于没听见或没有事件，保留明确参与者和内容，给出uncertain及原文依据，不确定的归属或范围另留unresolved。不得以receptions空数组或删除歧义来规避无法确定的部分，也不得删除明确内容以求结构通过。'+\n '没有实际发生的言说，不为计划、内心话或假设制造utterance；没有接收证据时不得猜测在场者已接收。原文无相关接收事实或只有尚未发生的传话时，receptions可以为空；言说内容或参与者确实无法确定到足以构造合法引用时，保留已明确部分，在unresolved留下对应原文和原因，不伪造内容、id或回执。提交前按原文核对言说投影与接收记录是否对应、明示接收和歧义是否遗漏；这种生成自查不构成程序批准或完整性证明。';\n"
+}

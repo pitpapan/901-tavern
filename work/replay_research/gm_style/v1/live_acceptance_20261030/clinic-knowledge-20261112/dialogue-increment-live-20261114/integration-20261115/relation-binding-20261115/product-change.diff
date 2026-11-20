@@ -1,0 +1,106 @@
+--- before/story-dialogue-knowledge.mjs
++++ TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-knowledge.mjs
+@@ -6,6 +6,7 @@
+ const boundContract='dialogue-reception/2';
+ const scopedContract='dialogue-reception/3';
+ const selectedContract='dialogue-reception/4';
++const relatedContract='dialogue-reception/5';
+ const receptionStatusGuidance='明确直接向某人说出且没有接收障碍可以received，不强求复述确认；计划、假设、内心话不算接收。';
+ const receptionPropositionGuidance='propositionRef仅在内容与已有命题一致时引用其ID，否则null表示新的有来源说法；转述与谎言不自动确认内容为真。';
+ // Explicit opt-in bridge to the host's existing generation API. No HTTP client,
+@@ -35,12 +36,12 @@
+ }
+ // A host may bind its existing semantic transport explicitly. This module never
+ // discovers credentials, calls fetch, chooses a model, retries or starts a route.
+-export function createDialogueSemanticAdapter({complete,readMemory,outputContract=selectedContract}){
++export function createDialogueSemanticAdapter({complete,readMemory,outputContract=relatedContract}){
+  if(typeof complete!=='function')throw Error('Explicit semantic completion callback required');
+- if(![boundContract,scopedContract,selectedContract].includes(outputContract))throw Error('Unsupported dialogue contract');
++ if(![boundContract,scopedContract,selectedContract,relatedContract].includes(outputContract))throw Error('Unsupported dialogue contract');
+  const parse=value=>typeof value==='string'?JSON.parse(value):value;
+  const extract=Object.assign(async(_input,messages,responseFormat)=>{
+-  if(responseFormat?.json_schema?.name!==({[selectedContract]:'dialogue_reception_v4',[scopedContract]:'dialogue_reception_v3',[boundContract]:'dialogue_reception_v2'}[outputContract]))throw Error('Bound dialogue contract required');
++  if(responseFormat?.json_schema?.name!==({[relatedContract]:'dialogue_reception_v5',[selectedContract]:'dialogue_reception_v4',[scopedContract]:'dialogue_reception_v3',[boundContract]:'dialogue_reception_v2'}[outputContract]))throw Error('Bound dialogue contract required');
+   return parse(await complete({purpose:'dialogue-reception',messages,responseFormat}));
+  },{outputContract});
+  return {
+@@ -227,6 +228,62 @@
+  }};
+ }
+ 
++// V5 makes the roles of source selections explicit. A receipt has one listener;
++// its parent utterance and contentSpan bind both identity and reception evidence.
++// Decoding valid fields to the existing receipt is not correction or inference.
++export async function prepareRelatedDialogueExtraction(options){
++ const selected=await prepareSelectedDialogueExtraction(options),{input}=selected;
++ const {inputRef:unused,...body}=input.assertion,encoded=canonical(body),hash=await dialogueDigest(body);
++ const contract=createAssertionContract(value=>{if(canonical(value)!==encoded)throw Error('Extraction input changed');return hash;});
++ const responseFormat=structuredClone(selected.responseFormat),schema=responseFormat.json_schema.schema;
++ const props=schema.properties.units.items.properties.utterances.items.properties.receptions.items.properties;
++ const object=properties=>({type:'object',properties,required:Object.keys(properties),additionalProperties:false});
++ const span={$ref:'#/$defs/assertionSpan'},actor={type:'string',enum:Object.keys(input.actors)};
++ const historyIds=input.history.map(h=>h.messageId).filter(Number.isSafeInteger);
++ const historyId=historyIds.length?{anyOf:[{type:'integer',enum:historyIds},{type:'null'}]}:{type:'null'};
++ const listener={...object({actorId:{anyOf:[actor,{type:'null'}]},kind:{type:'string',enum:['explicit','reply','unknown']},span,historyMessageId:historyId}),
++  description:'本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。'};
++ const evidence={...object({kind:{type:'string',enum:['direct','reply','overheard','obstacle','unknown']},span}),
++  description:'只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。'};
++ const {recipientIds:unusedIds,recipientSpans:unusedSpans,evidence:unusedEvidence,...retained}=props;
++ schema.properties.units.items.properties.utterances.items.properties.receptions.items=object({...retained,listener,evidence});
++ schema.properties.schemaVersion.enum=[relatedContract];responseFormat.json_schema.name='dialogue_reception_v5';
++ const messages=structuredClone(selected.messages);
++ messages[0].content=messages[0].content.replace('本次使用'+selectedContract,'本次使用'+relatedContract)
++  .replace('接收记录沿原id/contentSpan/speakerId/recipientIds/recipientSpans/evidence/status/propositionRef/reason字段','每条接收记录使用id/contentSpan/speakerId/listener/evidence/status/propositionRef/reason字段，一个listener对应一种接收范围和状态')
++  .replace('speakerId和recipientIds仅用actors的ID。按Schema对应字段说明分别填写听者引用、接收依据与命题关联；','speakerId和listener.actorId仅用actors中的ID，身份未定用null。按Schema分别填写listener身份关系、evidence传达关系及contentSpan接收范围；')
++  .replace('未知接收人留空且uncertain。','listener.kind=unknown或evidence.kind=unknown时status=uncertain；direct/reply/overheard对应received，obstacle对应not_received。');
++ const receiptKeys=Object.keys(schema.properties.units.items.properties.utterances.items.properties.receptions.items.properties);
++ return {input,messages,responseFormat,check(wire){
++  if(!shape(wire,['schemaVersion','contextRef','inputRef','units'])||wire.schemaVersion!==relatedContract||wire.contextRef!==input.contextRef||wire.inputRef!==input.assertion.inputRef||!Array.isArray(wire.units))throw Error('Invalid related dialogue reply');
++  const decoded=structuredClone(wire),bindings=[];decoded.schemaVersion=selectedContract;
++  for(const unit of decoded.units)for(const item of unit.utterances){
++   item.receptions=item.receptions.map(r=>{
++    if(!shape(r,receiptKeys)||!shape(r.listener,['actorId','kind','span','historyMessageId'])||!shape(r.evidence,['kind','span']))throw Error('Invalid reception relation');
++    const l=r.listener,e=r.evidence,unknown=l.kind==='unknown';
++    if(!['explicit','reply','unknown'].includes(l.kind)||unknown!==(l.actorId===null)||(!unknown&&!Object.hasOwn(input.actors,l.actorId)))throw Error('Invalid listener identity');
++    if(l.kind==='reply'?!Number.isSafeInteger(l.historyMessageId)||input.history.filter(h=>h.messageId===l.historyMessageId).length!==1:l.historyMessageId!==null)throw Error('Invalid listener history binding');
++    const statuses={direct:'received',reply:'received',overheard:'received',obstacle:'not_received',unknown:'uncertain'};
++    if(!Object.hasOwn(statuses,e.kind)||r.status!==statuses[e.kind]||unknown&&e.kind!=='unknown'||e.kind==='reply'&&l.kind!=='reply')throw Error('Contradictory reception relation');
++    bindings.push({id:r.id,listener:structuredClone(l),evidence:structuredClone(e)});
++    const {listener,evidence,...rest}=r;
++    return {...rest,recipientIds:unknown?[]:[l.actorId],recipientSpans:unknown?[]:[l.span],evidence:e.span};
++   });
++  }
++  const checked=selected.check(decoded);
++  // Unknown identity still carries a source selection even though the legacy
++  // receipt has no recipient. Validate it through the same selection resolver.
++  const within=(a,b)=>a.documentId===b.documentId&&a.start>=b.start&&a.end<=b.end;
++  const receptionBindings=bindings.map(b=>{
++   const r=checked.receptions.find(r=>r.id===b.id),c=checked.assertions.units.flatMap(u=>u.claims).find(c=>c.id===r.claimId);
++   const identity=contract.resolveAssertionSelection(b.listener.span,input.assertion);
++   if(b.listener.kind==='reply'&&!within(identity,c.argumentSpans.content)||b.evidence.kind==='reply'&&!within(r.evidence,c.argumentSpans.content))throw Error('Reply evidence must reference current answer');
++   return {id:b.id,listener:{...b.listener,span:identity},evidence:{kind:b.evidence.kind,span:structuredClone(r.evidence)}};
++  });
++  return {...checked,receptionBindings};
++ }};
++}
++
+ export function createDialogueKnowledge({api,catalog,tavern,getAnchor,retainedSource,saveBatch,options}){
+  options={...options};
+  let busy=false;
+@@ -249,7 +306,7 @@
+    const anchor=structuredClone(getAnchor()),batchId='dialogue.'+await dialogueDigest(sourceAnchor),prior=batches()[batchId]??Object.values(batches()).find(b=>canonical(b.sourceAnchor)===canonical(sourceAnchor));
+    if(prior)return prior.status==='prepared'?await apply(prior):{status:'processed',pending:pending().filter(r=>r.batchId===prior.id)};
+    const state=api.read();
+-   const prepare=options.extract.outputContract===selectedContract?prepareSelectedDialogueExtraction:options.extract.outputContract===scopedContract?prepareScopedDialogueExtraction:options.extract.outputContract===boundContract?prepareBoundDialogueExtraction:prepareDialogueExtraction;
++   const prepare=options.extract.outputContract===relatedContract?prepareRelatedDialogueExtraction:options.extract.outputContract===selectedContract?prepareSelectedDialogueExtraction:options.extract.outputContract===scopedContract?prepareScopedDialogueExtraction:options.extract.outputContract===boundContract?prepareBoundDialogueExtraction:prepareDialogueExtraction;
+    const prepared=await prepare({sourceAnchor,history:tavern.chat.slice(Math.max(0,sourceAnchor.messageId-4),sourceAnchor.messageId).map((m,i)=>({messageId:Math.max(0,sourceAnchor.messageId-4)+i,role:m.is_user?'user':'assistant',text:m.mes})),actors:catalog.actors,facts:state.facts,memory:await options.readMemory?.()});
+    const reply=prepared.check(await options.extract(prepared.input,prepared.messages,prepared.responseFormat));
+    if(canonical(getAnchor())!==canonical(anchor)||!retainedSource(sourceAnchor)||canonical(api.read())!==canonical(state))throw Error('Dialogue source changed during extraction');
+@@ -268,6 +325,7 @@
+     rows.push({id:batchId+'.'+await dialogueDigest(r.id),claimId:r.claimId,speakerId:r.speakerId,recipientIds:r.recipientIds,
+      propositionRef:r.propositionRef,content:(r.contentSpan??claim.argumentSpans.content)?.quote??null,quote:(r.contentSpan??claim.argumentSpans.content)?.quote??null,
+      ...(r.contentSpan?{contentSpan:structuredClone(r.contentSpan)}:{}),
++     ...(reply.receptionBindings?{receptionBinding:structuredClone(reply.receptionBindings.find(b=>b.id===r.id))}:{}),
+      belief:r.propositionRef?(sourceGrant?.belief??fact.certainty):'uncertain',status:certain?'ready':'pending',extractionReason:r.reason,
+      reason:blockingReason||(certain?'':r.reason||'接收或归属未确定'),
+      evidence:r.evidence,unresolved});

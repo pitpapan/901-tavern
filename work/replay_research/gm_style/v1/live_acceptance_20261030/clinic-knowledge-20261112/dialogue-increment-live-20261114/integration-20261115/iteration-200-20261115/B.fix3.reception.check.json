@@ -1,0 +1,101 @@
+{
+  "id": "B.fix3.reception",
+  "checked": {
+    "contextRef": "9a1ce5db1d2c7ce69873c7551401e64507f8cfd3229ae651deacf644d7acab4a",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.7749afa08f52b661ba81761ef6496ebd34f0964b47cc13cd8be0375ec705f9df",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "utterance.bright.1",
+              "type": "utterance",
+              "args": {
+                "speaker": "布莱特",
+                "content": "刚才大车过去之前，黄泉转述的是商贩说明天改到南门外的石桥旁取货。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 0,
+                  "end": 3,
+                  "quote": "布莱特"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 36,
+                  "end": 68,
+                  "quote": "刚才大车过去之前，黄泉转述的是商贩说明天改到南门外的石桥旁取货。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 35,
+                "end": 69,
+                "quote": "“刚才大车过去之前，黄泉转述的是商贩说明天改到南门外的石桥旁取货。”"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "reception.bright.1.player",
+        "speakerId": "bright",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 22,
+            "end": 25,
+            "quote": "御临风"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 15,
+          "end": 26,
+          "quote": "他侧过头来面向御临风，"
+        },
+        "status": "received",
+        "propositionRef": "dialogue.28e35f389cbb7d6a2193a79e45aa4682c3388f9280612f4264e4c4d43929740a.e7743f6d803220bd4c93dce6362c27bac07bdf33f58ef22281b9b009ad3d078a.message",
+        "reason": "",
+        "claimId": "utterance.bright.1"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "recorded",
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 142,
+          "quote": "布莱特牵着马绳，步子没有停下。他侧过头来面向御临风，语气平和自然：\n\n“刚才大车过去之前，黄泉转述的是商贩说明天改到南门外的石桥旁取货。”\n\n身旁的水渠边正有洗菜的妇人舀水，街面上的喧闹声一阵阵掠过，城东的方向还在主道的前方铺展着。\n\n<StatusPlaceHolderImpl/>"
+        },
+        "reason": "布莱特面向御临风直接说出商贩改地取货的消息，且内容与已有命题一致，御临风无障碍接收。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false
+  },
+  "pass": true
+}

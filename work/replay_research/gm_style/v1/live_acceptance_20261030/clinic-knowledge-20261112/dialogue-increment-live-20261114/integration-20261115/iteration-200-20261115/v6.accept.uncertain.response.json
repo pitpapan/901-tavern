@@ -1,0 +1,31 @@
+{
+  "kind": "v6.accept.uncertain",
+  "startedAt": "2026-11-15T21:06:41.440Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T21:06:45.002Z",
+  "headersElapsedMs": 3562,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b138a25f35cfce-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 21:06:44 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=o9WZ04usF3Kt6S8kVP7rwlhV6jEyRYxt5108C3%2BaAbdITm8TZIEO8aTlVcGAFbBDEncE0m0epCyG87BLvpAulV4aHMihzWDXMp7hbWQOjoziumXN05oq3j%2BVMIEHyw%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611152106421281415288268d9d6E5gWDz5o",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "476cd41c-9ec3-43da-9e1c-34ec1c1f7ef0"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"b4fa79b6-8744-4cb4-a517-4436459d63aa\",\"object\":\"chat.completion\",\"created\":1794776804,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/6\\\",\\\"contextRef\\\":\\\"a99e464c3e1f421386d06588875cec6542221cfafb03f611baabb647278ab086\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"speaker\\\":{\\\"actorId\\\":\\\"huang\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"}},\\\"content\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"山路已经封闭了，明早在渡口会合。\\\"},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"答道\\\"},\\\"receptions\\\":[{\\\"content\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"山路已经封闭了，\\\"},\\\"listener\\\":{\\\"actorId\\\":\\\"bright\\\",\\\"kind\\\":\\\"reply\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"山路已经封闭了，\\\"},\\\"historyMessageId\\\":0},\\\"evidence\\\":{\\\"kind\\\":\\\"reply\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"布莱特听清了前半句\\\"}},\\\"propositionRef\\\":null,\\\"reason\\\":\\\"布莱特听清了回答的前半句。\\\"},{\\\"content\\\":{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"明早在渡口会合。\\\"},\\\"listener\\\":{\\\"actorId\\\":\\\"bright\\\",\\\"kind\\\":\\\"reply\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"明早在渡口会合。\\\"},\\\"historyMessageId\\\":0},\\\"evidence\\\":{\\\"kind\\\":\\\"unknown\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"钟声响起后，他有没有听清后半句，眼下无人能确定。\\\"}},\\\"propositionRef\\\":null,\\\"reason\\\":\\\"钟声响起后，布莱特是否听清后半句眼下无人能确定。\\\"}]}],\\\"unresolved\\\":[],\\\"coverage\\\":{\\\"status\\\":\\\"uncertain\\\",\\\"evidence\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"钟声响起后，他有没有听清后半句，眼下无人能确定。\\\"},\\\"reason\\\":\\\"后半句是否听清处于未确定状态。\\\"}}]\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2711,\"completion_tokens\":457,\"total_tokens\":3168}}",
+  "responseBytes": 1983,
+  "responseBodySha256BeforePrivacyRedaction": "ead3820a1f06d8e0185b908924724ac74acb4194b4d3dd4f9c2eb11599bf4b8a",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T21:06:45.016Z",
+  "elapsedMs": 3576
+}

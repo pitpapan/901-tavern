@@ -1,0 +1,30 @@
+{
+  "version": "source-context-20261113",
+  "evidence": "Executed in this task; summary of actual node:test console results, not a new model verdict",
+  "red": {
+    "command": "node --test --test-name-pattern='hidden source|later explicit source confirmation' work/rules_engine/gm_runtime/story-knowledge.test.mjs",
+    "tests": 2,
+    "passed": 0,
+    "failed": 2,
+    "observedFailure": "sourceAnchor lacked text; both actual source contexts were undefined"
+  },
+  "green": {
+    "command": "node --test work/rules_engine/gm_runtime/story-knowledge.test.mjs",
+    "tests": 21,
+    "passed": 21,
+    "failed": 0,
+    "newTests": 2
+  },
+  "ordinaryEntry": {
+    "command": "node --test --test-name-pattern='ordinary story generation consumes recipient knowledge|ordinary classifier and narration both consume time' work/rules_engine/gm_runtime/replay-gate-script.test.mjs",
+    "tests": 2,
+    "passed": 2,
+    "failed": 0,
+    "log": "ordinary-entry-regression.log"
+  },
+  "totalDistinctPassingTestsThisTask": 23,
+  "historical135TestsRerun": false,
+  "browserAndFinalRequestChecks": "verification.json",
+  "modelCalls": 0,
+  "credentialsRead": false
+}

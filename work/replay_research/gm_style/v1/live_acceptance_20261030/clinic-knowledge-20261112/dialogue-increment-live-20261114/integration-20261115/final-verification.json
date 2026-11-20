@@ -1,0 +1,96 @@
+{
+  "status": "twelve-stage-local-candidate-refreshed-v3",
+  "browser": {
+    "A": {
+      "reopenedMVUIdentical": true,
+      "playerReceivedOnly": true,
+      "brightUnknown": true,
+      "noPending": true,
+      "nextNarrationProjectionCorrect": true,
+      "noAdditionalExtractionOnReopen": true
+    },
+    "B": {
+      "realPendingFrom": 401,
+      "frontOnlyBeforeConfirmation": true,
+      "unrelatedRequired": [],
+      "unrelatedPreservesPending": true,
+      "dependentRequired": [
+        "dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.c3e6243c65ebd62654c2412ccb8aa94826f9d8265c38949c66cc606272e267ba"
+      ],
+      "uiQuestionContent": "明早从南桥走。",
+      "explicitIsolatedConfirmation": true,
+      "samePlayerRequestOnce": true,
+      "actualNarration": 404,
+      "actualNarrationReception": 405,
+      "pendingAfterConfirmation": 0,
+      "finalKnowledgeGrants": 4,
+      "mechanicsUnchanged": true
+    },
+    "calls": [
+      400,
+      401,
+      402,
+      403,
+      404,
+      405
+    ],
+    "used": 71,
+    "remaining": 129,
+    "all71OriginalRequestResponseHashesIntact": true,
+    "priorAttemptLedgerUnchanged": true,
+    "formalProtectedUnchanged": 22,
+    "limits": [
+      "A1/B1 starting narration and A2/B2 quiet scenes are declared fixtures, not model narratives.",
+      "Classification is local NO_CHECK; memory is a declared read-only fixture.",
+      "Finite cases, not statistical accuracy, all-character coverage, formal deployment, or automatic approval."
+    ],
+    "uiStyleReplay": {
+      "sameThreeRequestsAndRawResponses": true,
+      "finalMVUIdentical": true,
+      "newModelCalls": 0,
+      "screenshot": "confirmation-fixed.jpg"
+    }
+  },
+  "regression": {
+    "reusedScoped": 284,
+    "scopedEvidence": "../scoped-reception-20261115/verification.json",
+    "afterDisplayFix": 38,
+    "newLog": "ui-regression.log"
+  },
+  "budget": {
+    "newCalls": 6,
+    "total": 200,
+    "used": 71,
+    "remaining": 129,
+    "cumulative": 405
+  },
+  "candidate": {
+    "modules": 135,
+    "assets": 3,
+    "entries": 141,
+    "changedFrom380": [
+      "work/rules_engine/gm_runtime/replay-gate-script.example.js",
+      "work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs"
+    ],
+    "sha256": "60480d7f7d2b96f5af12613672428b6948b95ac0731be18b10ee6d8a35f834e2",
+    "bytes": 748965,
+    "defaultDisabled": true,
+    "sourceAndIsolatedClosureMatch": true
+  },
+  "sourceHashes": {
+    "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "01bea155f89b830c3dba9d79838af1dff534700af051705ebecbdda6ce81f179",
+    "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "4d44064546f4452d882109b7988e63a932f5397eedf8c47a18fd774ec5b6c9d4",
+    "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93"
+  },
+  "displaySourceSha256": "75c0532a387e3a6e16fb3185afad0c65ece202c3c0ed49c89a0236d09c0d571c",
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalOrRevision": false,
+  "rawPreserved": true,
+  "serviceStopped": true,
+  "limits": [
+    "A1/B1 starting narration and A2/B2 quiet scenes are declared fixtures, not model narratives.",
+    "Classification is local NO_CHECK; memory is a declared read-only fixture.",
+    "Finite cases, not statistical accuracy, all-character coverage, formal deployment, or automatic approval."
+  ]
+}

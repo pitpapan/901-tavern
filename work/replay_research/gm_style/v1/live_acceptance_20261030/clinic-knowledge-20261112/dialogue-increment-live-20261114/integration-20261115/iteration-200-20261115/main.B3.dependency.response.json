@@ -1,0 +1,31 @@
+{
+  "kind": "main.B3.dependency",
+  "startedAt": "2026-11-15T11:10:02.515Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T11:10:05.761Z",
+  "headersElapsedMs": 3247,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5adcea23c1c038f-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 11:10:05 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=UV1CyrtGlR7e2NJVIk4ZSrl8Cy7eFnrPnHbcT84Hv30fj%2B5OaOjBud7KdECa6jNcYbSY%2FMXeGbz0wgebqH8XSpBpywPSic6F%2FhjpChA2jebRExRktGA8R%2F%2FffGQL%2Bg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611151110030222112768268d9d61UvqEK8s",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "1b976eb0-ace5-4ea9-84aa-027ca36a0df4"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"6ac8a72f-84d5-4ced-bfa5-e28b6bdf8544\",\"object\":\"chat.completion\",\"created\":1794741005,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"inputRef\\\":\\\"a93812647e02c3a99d3625cd848d43477b6a696ae9d687f4d600b570ff6339dc\\\",\\\"required\\\":[\\\"dialogue.5c4eb05fe17f58370316088beb892fae3d668cad1a4951b23f07532930c07429.c3e6243c65ebd62654c2412ccb8aa94826f9d8265c38949c66cc606272e267ba\\\"]}\",\"reasoning_content\":\"The question directly asks Bright about the correct departure location based on the latter half of a statement. The provided dialogue includes a clear instruction \\\"明早从南桥走\\\" (Tomorrow morning, go from South Bridge) from the \\\"huang\\\" speaker to Bright, which addresses the core inquiry. Due to uncertainty regarding Bright's comprehension of the full statement, the response will convey this explicit directive from the dialogue.\\n\\n\\n\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":949,\"completion_tokens\":202,\"total_tokens\":1457,\"completion_tokens_details\":{\"reasoning_tokens\":306}}}",
+  "responseBytes": 1049,
+  "responseBodySha256BeforePrivacyRedaction": "ef9d8d5f808d7ebc3d196c10cfcd54b4ce1002004cbc55b4298c7f07a1f86ac3",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T11:10:05.779Z",
+  "elapsedMs": 3265
+}

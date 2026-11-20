@@ -1,0 +1,51 @@
+✔ bound unit schema factors shared fields once without weakening either status branch (962.5201ms)
+✔ bound prompt uses one output envelope while retaining shared field and coordinate contracts (7.1558ms)
+✔ bound schema carries recipient response evidence and new-message coverage at the responsible fields (7.2023ms)
+✔ bounded reception narrows generation scope and supplies exact source ranges without accepting old wrong spans (19.1074ms)
+✔ bound prompt retains the existing direct-reception rule without changing schema, input or other guidance (25.5953ms)
+✔ existing fact index does not limit new dialogue reception and never fills a false none (4.3253ms)
+✔ direct speech needs no acknowledgement; explicit obstruction and uncertainty retain their own outcomes (50.5624ms)
+✔ bound utterance maps only explicit nested receipts and retains mandatory coverage (3.2797ms)
+✔ action, forged reference, missing receipts and omitted target coverage reject without mutation (5.5305ms)
+✔ uncertain coverage preserves explicit partial receipt plus uncertainty without blanket blocking (2.4644ms)
+✔ none and unresolved-only coverage require actual source evidence, never synthesize receipts (2.4993ms)
+✔ original source, role, null-pair and identity checks remain in force (3.1069ms)
+✔ schema rejects nested action and missing coverage and allows explicit none and uncertainty (931.093ms)
+✔ model adapter uses version2 and original MVU path persists coverage and independent known/pending rows (22.6739ms)
+✔ historical flat failures are retained and cannot silently enter the new wire (31.7193ms)
+✔ model-path invalid coverage writes nothing; explicit unreceived and none never grant or ask (30.3821ms)
+✔ planned speech keeps original intent claim and none coverage without creating utterance (2.8786ms)
+✔ existing Tavern completion maps exact messages and schema without settings or response repair (17.8932ms)
+✔ listener references can ground a current reply but cannot refer to its speaker (27.3191ms)
+✔ implicit response positive and obstacle/ambiguity/unsaid controls use original receipts without filling gaps (47.6583ms)
+✔ spoken content excludes intervening narration while source checks remain unchanged (9.4203ms)
+✖ reception evidence distinguishes identity from reception and limits reused evidence to its supported scope (16.303ms)
+✔ reused listening evidence preserves explicit full, limited, unknown and absent reception through existing MVU (150.0518ms)
+✔ historical short evidence and blanket overhearing remain preserved rather than silently corrected (7.5559ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 23
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3163.7892
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-bound.test.mjs:258:1
+✖ reception evidence distinguishes identity from reception and limits reused evidence to its supported scope (16.303ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(r.evidence.description.includes('识别听者不等于证明接收'))
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-bound.test.mjs:260:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

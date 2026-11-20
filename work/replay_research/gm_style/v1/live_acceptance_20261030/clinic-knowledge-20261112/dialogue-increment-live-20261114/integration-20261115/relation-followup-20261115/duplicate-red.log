@@ -1,0 +1,40 @@
+✖ semantic adapter rejects duplicate JSON member names before native last-value overwrite is accepted (28.4556ms)
+✖ actual441 duplicate reason is rejected by the real adapter before isolated MVU writes, raw stays intact (55.3219ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 837.5309
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-related.test.mjs:138:1
+✖ semantic adapter rejects duplicate JSON member names before native last-value overwrite is accepted (28.4556ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-related.test.mjs:142:3)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /Duplicate JSON object key/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-related.test.mjs:149:1
+✖ actual441 duplicate reason is rejected by the real adapter before isolated MVU writes, raw stays intact (55.3219ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-related.test.mjs:155:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /Duplicate JSON object key/,
+    operator: 'rejects',
+    diff: 'simple'
+  }

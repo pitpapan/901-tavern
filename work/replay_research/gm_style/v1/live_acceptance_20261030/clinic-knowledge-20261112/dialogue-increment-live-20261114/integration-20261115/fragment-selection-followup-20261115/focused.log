@@ -1,0 +1,20 @@
+✔ fragment selections preserve UTF16, CRLF, whitespace and exact duplicate occurrences (9.3236ms)
+✔ fragment mode is explicit; existing coordinate output and checker remain strict (1.3965ms)
+✔ fragment containers expose occurrence containment, not matching text from a different occurrence (3.2534ms)
+✔ container metadata never broadens acceptance or supplies missing selection fields (1.2423ms)
+✔ v4 selects text, program derives UTF16 coordinates, preserves input and partial receipt (817.5644ms)
+✔ rejects missing, forged, ambiguous, legacy-coordinate and out-of-parent selections unchanged (15.4756ms)
+✔ repeated identical text selects the intended occurrence; ambiguous full target rejects (7.5037ms)
+✔ default adapter persists partial knowledge, pending and reopen through existing MVU without repair (64.211ms)
+✔ none and not_received do not invent receipts or grant knowledge; semantic omissions stay unverified (5.5851ms)
+✔ three original failed replies remain unchanged and rejected by both historical and selected contracts (33.3333ms)
+✔ selected wire states JSON serialization in the existing envelope instruction without a second pseudo-object (3.9894ms)
+✔ v4 failed raw JSON and out-of-fragment originals still reject; valid original423 decodes identically (36.0397ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1749.8412

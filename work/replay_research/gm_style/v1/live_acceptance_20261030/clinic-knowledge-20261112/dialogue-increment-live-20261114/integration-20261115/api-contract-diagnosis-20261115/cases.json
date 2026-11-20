@@ -1,0 +1,52 @@
+[
+  {
+    "id": "wireprobe.baseline",
+    "purpose": "No-format cooperative control; response format absent",
+    "sha256": "87c5cdf30f2258b067d2566fbc3c818454b979967853f92e0a7e01f76a2f1854",
+    "bytes": 435
+  },
+  {
+    "id": "wireprobe.strict",
+    "purpose": "Only response_format changes vs baseline; schema-only unpredictable token checks consumption",
+    "sha256": "33a10ea2644d4c7815fdd8ac0e402f247a6fde2d558076ccb2678dd494a41959",
+    "bytes": 715
+  },
+  {
+    "id": "wireprobe.nonstrict",
+    "purpose": "Only strict true to false vs strict; consumption/enforcement comparison",
+    "sha256": "be4c20b547e911bf512cd46555580f948e012661246d87d68610a29a62e600ec",
+    "bytes": 716
+  },
+  {
+    "id": "wireprobe.conflict_baseline",
+    "purpose": "No-format plain text control",
+    "sha256": "68a5977decb9e7c9ef9aa69eb2d1337c231dd9c69b5b15e6d40db08f0975491d",
+    "bytes": 384
+  },
+  {
+    "id": "wireprobe.conflict_strict",
+    "purpose": "Same conflicting messages; strict schema must exclude plain text if grammar enforced",
+    "sha256": "41c795a08540e095db33c10cce608ce03ad3ce2f625ed7c385d1c3e0a6c337fd",
+    "bytes": 664
+  },
+  {
+    "id": "wireprobe.conflict_nonstrict",
+    "purpose": "Only strict toggled vs conflict_strict",
+    "sha256": "a2531e0e2bf1c51e62ff222d3e8bc342263160ec7bd858c9673db275dfa915d8",
+    "bytes": 665
+  },
+  {
+    "id": "wireprobe.copy_baseline",
+    "purpose": "Copy original480 raw structurally valid JSON, including known semantic defects unchanged; isolate full v6 schema effect, not story acceptance",
+    "bytes": 1836,
+    "sha256": "687c16a6630dda9051a4b57d33a98528b6870c55b48aca481dd404408336da6d",
+    "sourceContent": "v6.accept.npc_reply.content.txt"
+  },
+  {
+    "id": "wireprobe.copy_fullschema",
+    "purpose": "Copy original480 raw structurally valid JSON, including known semantic defects unchanged; isolate full v6 schema effect, not story acceptance",
+    "bytes": 37292,
+    "sha256": "8eed37c4d506748a41b0bba96a09fbb21dfbc0b3bb4de3a5d36773db6a17025a",
+    "sourceContent": "v6.accept.npc_reply.content.txt"
+  }
+]

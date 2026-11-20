@@ -1,0 +1,12 @@
+08-ambiguous-listener
+{"schemaVersion":"dialogue-reception/2","contextRef":"82d91a3d6d9a18c3fd0ff3d0e4b821d580144f37f890d24cc470c0146b4d490b","inputRef":"assertion.09bc4e709a45b17c38123cf85bb7ea7d21d87408601042050cf5bb7e5635481f","units":[{"id":"turn","claims":[],"utterances":[{"claim":{"id":"turn.utterance.1","type":"utterance","args":{"speaker":"黄泉","content":"交货地点改到南岗。"},"argumentSpans":{"speaker":{"documentId":"current","start":0,"end":2,"quote":"黄泉"},"content":{"documentId":"current","start":13,"end":22,"quote":"交货地点改到南岗。"}},"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"scopeSpans":{"time":null,"condition":null,"attribution":null},"anchor":{"documentId":"current","start":0,"end":23,"quote":"黄泉对御临风和布莱特说：“交货地点改到南岗。”"}},"receptions":[{"id":"turn.reception.1","speakerId":"huang","recipientIds":["player","bright"],"recipientSpans":[{"documentId":"current","start":3,"end":6,"quote":"御临风"},{"documentId":"current","start":7,"end":10,"quote":"布莱特"}],"evidence":{"documentId":"current","start":23,"end":45,"quote":"两人中有一人没听清，但记录无法指出是哪一人。"},"status":"uncertain","propositionRef":null,"reason":"两人中有一人没听清，但记录无法指出是哪一人，因此具体接收状态无法确定。"}]}],"coverage":{"status":"uncertain","evidence":{"documentId":"current","start":0,"end":45,"quote":"黄泉对御临风和布莱特说：“交货地点改到南岗。”两人中有一人没听清，但记录无法指出是哪一人。"},"reason":"黄泉对御临风和布莱特说出话语，但其中有一人没听清且无法指出具体是谁，接收存在不确定性。"},"status":"extracted","unresolved":[]}]}
+人工核对：保留两人中一人没听清但无法指认的歧义；两名被告知者列在uncertain回执，无人获知情，待核1且当轮不问。utterance绑定与coverage正确，Schema及7引用通过。
+
+09-unrelated-from08
+{"inputRef":"713f3f5b73d4b01c00ddde817265e58a39324bcc85ce45c9182b89e40dfa0d1f","required":[]}
+人工核对：承接本次332真实待核，原午饭/衣领请求未变；模型required空，原运行链ready/questions空/asked0，仍无知情授予；隔离seed保持revision2。
+
+10-dependent-from08
+{"inputRef":"f078a01c79fd7583b3c612cadd07c622be6d8cb0dbf1d0bcbed380d4051bf88e","required":["dialogue.b3ac974b07ad4379ee6468f3b9084b6398a71eb429db4687fb8ff4005990a54b.7d7b722139b74a4a94d46a80b03256007302141d1bbfe7c715efee5ea3be31b0"]}
+人工核对：原交货地点依赖请求不变，返回本次332唯一真实待核ID；原运行链deferred/询问1次，保持原歧义与来源，不代答、不授予知情，只标prompted。与09为同一真实08快照的平行对照。
+

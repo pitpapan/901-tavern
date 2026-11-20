@@ -1,0 +1,35 @@
+✔ interpretation_request_supplies_exact_utf16_length_for_boundary_validation (4.6309ms)
+✔ model_chat_requests_keep_interpretation_and_narration_contexts_separate (0.4924ms)
+✔ model_chat_requests_reject_private_context_and_invalid_configuration (1.1061ms)
+✔ model_chat_response_returns_only_validated_candidate_or_draft (0.8444ms)
+✔ model_chat_rejects_incomplete_refusal_tools_and_multiple_choices (0.8863ms)
+✔ model_chat_http_failures_and_oversize_bodies_are_sanitized (0.7481ms)
+✔ model_client_selects_models_and_does_not_retry_failed_requests (1.7287ms)
+✔ model_client_timeout_bounds_uncooperative_transport_and_ignores_late_result (21.1879ms)
+✔ model_client_cancellation_before_and_during_request_is_sanitized (0.9057ms)
+✔ model_http_transport_sends_only_explicit_endpoint_and_bearer_with_no_redirect (22.0247ms)
+✔ model_http_transport_bounds_stream_and_never_exposes_provider_error_text (2.875ms)
+✔ model_http_json_flows_through_real_host_and_reopen_without_reinterpretation (162.3582ms)
+✔ model_narration_truncation_falls_back_without_replaying_engine (98.8225ms)
+✔ model_late_interpretation_never_saves_a_candidate_or_changes_game (44.4328ms)
+✔ model_client_validates_against_original_context_when_caller_mutates_input (0.5529ms)
+✔ model_http_transport_rejects_invalid_utf8_in_json_text (0.6057ms)
+✔ isolated profile disables every executable V5 hook and text-transforming regex (0.1487ms)
+✔ isolated active prompt chain has native markers and 901 authority only, without V5 macros (0.6863ms)
+✔ reviewed pure V5 tool predicate filters model, channel and generation type, not function_calling (1.2239ms)
+✔ actual engine JSON protocol does not consume V5 macros, native cache, hidden history or swipes (0.3965ms)
+✔ actual engine parser rejects V5 XML, publish_story tool output and empty content (0.3945ms)
+✔ FIND matches literal punctuation and replacement text remains literal (1.0304ms)
+✔ ambiguous FIND across prose and parallel segments changes neither (0.2975ms)
+✔ patches use the original message and reject cascading or overlapping edits (0.1633ms)
+✔ patches do not target thought, report or status containers (0.1706ms)
+✔ 901 candidate expands the no-MVU instruction and preserves order metadata consistency (0.5848ms)
+✔ 901 candidate keeps unverified publishing scripts inactive and uses campaign controls (0.2579ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 627.6819

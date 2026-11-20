@@ -1,0 +1,86 @@
+{
+  "results": [
+    {
+      "id": "boundary.reproduce.long_json",
+      "call": 457,
+      "verdict": "fail",
+      "syntax": {
+        "position": 1491,
+        "message": "Expecting ',' delimiter",
+        "excerpt": "强上十倍。要是能在窗边坐下，再来一壶温热的麦茶，这几天的奔波才算真正缓过劲来。\"加载中...}}},{\"id\":\"rec.u1.huang\",\"contentS"
+      },
+      "isolatedWrites": 0,
+      "assessment": "457 unchanged long original raw JSON syntax failure at1491; rejected with writes0, no repair or semantic success claim."
+    },
+    {
+      "id": "boundary.reproduce.short_json",
+      "call": 458,
+      "verdict": "fail",
+      "syntax": {
+        "position": 988,
+        "message": "Expecting ',' delimiter",
+        "excerpt": "an\":{\"fragmentId\":\"f3\",\"quote\":\"午后就闭门了。\"复合_null\":null}}}]}],\"coverage\":{\"status\""
+      },
+      "isolatedWrites": 0,
+      "assessment": "458 short input again raw JSON syntax failure at988; writes0. Visible correct implicit answer fields cannot turn malformed raw into a pass; no repair."
+    },
+    {
+      "id": "boundary.reproduce.whole_reply",
+      "call": 459,
+      "verdict": "fail",
+      "syntax": {
+        "position": 1009,
+        "message": "Expecting ',' delimiter",
+        "excerpt": "an\":{\"fragmentId\":\"f3\",\"quote\":\"渡口今晚停航。\"资源}}}]}],\"coverage\":{\"status\":\"recorded\""
+      },
+      "isolatedWrites": 0,
+      "assessment": "459 visible reply evidence now selects current answer without narration, but raw JSON invalid at1009; rejected writes0, no semantic pass or generation-fix attribution."
+    },
+    {
+      "id": "boundary.reproduce.identity",
+      "call": 460,
+      "verdict": "fail",
+      "syntax": {
+        "position": 1057,
+        "message": "Expecting ',' delimiter",
+        "excerpt": ":{\"fragmentId\":\"f3\",\"quote\":\"已听不到这里的声音。\"学者}}}]}]，\"coverage\":{\"status\":\"recorded\""
+      },
+      "isolatedWrites": 0,
+      "assessment": "460 visible reply identity uses actual current answer and obstacle supports not_received, but raw JSON invalid at1057 with further closure issues; original rejected writes0. No repaired acceptance."
+    },
+    {
+      "id": "boundary.probe.reply",
+      "call": 461,
+      "verdict": "fail",
+      "syntax": {
+        "position": 1026,
+        "message": "Expecting ',' delimiter",
+        "excerpt": "an\":{\"fragmentId\":\"f4\",\"quote\":\"渡船午后启程。\"循环}}}]}],\"coverage\":{\"status\":\"recorded\""
+      },
+      "isolatedWrites": 0,
+      "assessment": "461 nearby implicit answer raw JSON syntax failure at1026; writes0. Current-answer selections visible but malformed response cannot pass; no repair or generation attribution."
+    }
+  ],
+  "newCalls": 5,
+  "used": 127,
+  "remaining": 73,
+  "cumulative": 461,
+  "newTests": 1,
+  "freshOfflineTests": 164,
+  "productSourcesUnchanged": true,
+  "generationContractUnchanged": true,
+  "originalRequestsByteIdentical": 4,
+  "originalEvidenceFilesPreserved": 599,
+  "formalProtectedFilesUnchanged": 22,
+  "historicalLedgerPrefixUnchanged": true,
+  "allRawBytesUnmodified": true,
+  "syntaxFailures": 5,
+  "overallPasses": 0,
+  "allIsolatedStatesUnchanged": true,
+  "scope": "Four representative originals and one nearby contrast; other old failures retained, not all replayed this turn",
+  "rawRepair": false,
+  "validationRelaxed": false,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalOrRevisionRestored": false
+}

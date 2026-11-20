@@ -1,0 +1,31 @@
+{
+  "kind": "implicit.parallel",
+  "startedAt": "2026-11-15T01:41:21.675Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T01:41:29.252Z",
+  "headersElapsedMs": 7578,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5aa8d9b1efddc2f-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 01:41:29 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=CcJxMYV64Y5mPcHhb4qyNcWRE8RpfqNBgAgh7YFnWLnJtVjweZ%2BkLeL8ZlkfTEHyj7lAZtEkzxEUJM8F0c2C0Q0PhZyketp5jEaJ91g7VqkT580H0b%2BA4y0KPdxEfQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611150141224322692698268d9d6RW7rlMcb",
+    "x-zeabur-ip-country": "ES",
+    "x-zeabur-request-id": "566e9358-831c-49f4-88d5-beccef602886"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"f63e092a-6504-481c-af1d-842de372a6f0\",\"object\":\"chat.completion\",\"created\":1794706889,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/2\\\",\\\"contextRef\\\":\\\"23117d44d8a1899df90dcfe32b2ad8e06bc82e5d19f13e3bdd0581d668ac0f91\\\",\\\"inputRef\\\":\\\"assertion.c65e4dcf101e84d78fed1ddb5ae6f923924caf8411b6a383e0bb9bc17fada74e\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"turn.utterance.1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"日落后就锁门。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":2,\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":14,\\\"end\\\":21,\\\"quote\\\":\\\"日落后就锁门。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":22,\\\"quote\\\":\\\"黄泉把钥匙收进袖袋，答道：“日落后就锁门。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"turn.reception.1\\\",\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"player\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":14,\\\"end\\\":21,\\\"quote\\\":\\\"日落后就锁门。\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":10,\\\"end\\\":22,\\\"quote\\\":\\\"答道：“日落后就锁门。”\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"黄泉正面回答玩家的问题，玩家正常接收。\\\"}]},{\\\"claim\\\":{\\\"id\\\":\\\"turn.utterance.2\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"明早再来吧。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":22,\\\"end\\\":23,\\\"quote\\\":\\\"她\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":35,\\\"end\\\":41,\\\"quote\\\":\\\"明早再来吧。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":22,\\\"end\\\":42,\\\"quote\\\":\\\"她稍作停顿，又补了一句：“明早再来吧。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"turn.reception.2\\\",\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"player\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":35,\\\"end\\\":41,\\\"quote\\\":\\\"明早再来吧。\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":28,\\\"end\\\":42,\\\"quote\\\":\\\"又补了一句：“明早再来吧。”\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"黄泉补充说明，玩家正常接收。\\\"}]}],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":42,\\\"quote\\\":\\\"黄泉把钥匙收进袖袋，答道：“日落后就锁门。”她稍作停顿，又补了一句：“明早再来吧。”\\\"},\\\"reason\\\":\\\"本轮两处言说均明确由黄泉对玩家说出并已记录接收。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4108,\"completion_tokens\":787,\"total_tokens\":4895}}",
+  "responseBytes": 3109,
+  "responseBodySha256BeforePrivacyRedaction": "21939559dc011edd50f088893551b884437d7b376f82c3a9dfe18cfab0d6d1f9",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T01:41:29.263Z",
+  "elapsedMs": 7589
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "v7.diag.npc_reply",
+  "startedAt": "2026-11-15T22:44:23.994Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T22:44:26.219Z",
+  "headersElapsedMs": 2224,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b1c7c2cf07cbd3-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 22:44:26 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=nVSJaVw0pp0yU79kt%2BAmZzgrl5vavOn3KC%2FlQsuNH1tQYW5AbuE7MBhd7HDhTl8tWJEVMxkQhRmArjRsbLLyiEFIVnZFfBMsVvSla0g2KiIteepceOvbD1eDIXdYag%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611152244244974854848268d9d6wPRBmlmb",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "729ce8fd-558c-405a-829e-dac4b748602a"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"dca967a7-5ddd-4409-afdf-2a7704290de3\",\"object\":\"chat.completion\",\"created\":1794782666,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/7\\\",\\\"contextRef\\\":\\\"05ae727f494e07f20886fec20d2ae8f49b36238886c897d76debbe0704f864c6\\\",\\\"selections\\\":[{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"},{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"渡口今晚停航。\\\"},{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"答道\\\"},{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"今晚\\\"},{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉答道：“渡口今晚停航。”\\\"}],\\\"utterances\\\":[{\\\"speakerId\\\":\\\"huang\\\",\\\"speaker\\\":0,\\\"content\\\":1,\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":3,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":2}],\\\"receptions\\\":[{\\\"utterance\\\":0,\\\"content\\\":1,\\\"listenerId\\\":\\\"bright\\\",\\\"identityKind\\\":\\\"reply\\\",\\\"identity\\\":2,\\\"historyMessageId\\\":0,\\\"evidenceKind\\\":\\\"reply\\\",\\\"evidence\\\":2,\\\"propositionRef\\\":null}],\\\"unresolved\\\":[],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":4}}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2363,\"completion_tokens\":264,\"total_tokens\":2627}}",
+  "responseBytes": 1154,
+  "responseBodySha256BeforePrivacyRedaction": "a44748082f83b6e8ea3289ced63e00d20442fc67c946fd2745c2e8b8306604c5",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T22:44:26.225Z",
+  "elapsedMs": 2230
+}

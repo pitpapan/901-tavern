@@ -1,0 +1,19 @@
+--- before
++++ after
+@@ -92,12 +92,13 @@
+     const overlaps=(a,b)=>a.documentId===b.documentId&&a.start<b.end&&b.start<a.end;
+     const unresolved=unit.unresolved.filter(u=>overlaps(u.span,claim.anchor)||overlaps(u.span,r.evidence));
+     const identityConflict=Object.entries(catalog.actors).some(([id,name])=>name===claim.args.speaker&&id!==r.speakerId)||r.recipientSpans.some((s,i)=>Object.entries(catalog.actors).some(([id,name])=>name===s.quote&&id!==r.recipientIds[i]));
+-    const reason=r.reason||(!r.speakerId||identityConflict?'来源身份或指代未确定':!claim.args.content?'传达内容未确定':unresolved[0]?.reason)||
++    const blockingReason=(!r.speakerId||identityConflict?'来源身份或指代未确定':!claim.args.content?'传达内容未确定':unresolved[0]?.reason)||
+      (r.propositionRef&&!sourceGrant&&!publicFact?'发送者没有该命题的取得依据':'');
+-    const certain=r.status==='received'&&claim.mode==='asserted'&&!unresolved.length&&r.recipientIds.length>0&&!!claim.args.content&&!reason;
++    const certain=r.status==='received'&&claim.mode==='asserted'&&!unresolved.length&&r.recipientIds.length>0&&!!claim.args.content&&!blockingReason;
+     rows.push({id:batchId+'.'+await dialogueDigest(r.id),claimId:r.claimId,speakerId:r.speakerId,recipientIds:r.recipientIds,
+      propositionRef:r.propositionRef,content:claim.argumentSpans.content?.quote??null,quote:claim.argumentSpans.content?.quote??null,
+-     belief:r.propositionRef?(sourceGrant?.belief??fact.certainty):'uncertain',status:certain?'ready':'pending',reason:reason||'接收或归属未确定',
++     belief:r.propositionRef?(sourceGrant?.belief??fact.certainty):'uncertain',status:certain?'ready':'pending',extractionReason:r.reason,
++     reason:blockingReason||(certain?'':r.reason||'接收或归属未确定'),
+      evidence:r.evidence,unresolved});
+    }
+    for(const unit of reply.assertions.units)for(const item of unit.unresolved){

@@ -1,0 +1,91 @@
+[
+  {
+    "original": "v7.diag.npc_reply",
+    "error": "Reply evidence must reference current answer",
+    "oldSchemaDescriptions": {
+      "identity": null,
+      "evidence": null
+    },
+    "existingContractDescriptions": {
+      "identity": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+      "evidence": "只描述本条listener对父言说中content的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。"
+    },
+    "newDescriptionsOnly": true,
+    "previousCoverageFixApplied": true,
+    "unsupportedReplySelections": [
+      {
+        "i": 0,
+        "identity": "答道",
+        "parent": "渡口今晚停航。"
+      }
+    ]
+  },
+  {
+    "original": "v7.diag.long",
+    "error": "Reply evidence must reference current answer",
+    "oldSchemaDescriptions": {
+      "identity": null,
+      "evidence": null
+    },
+    "existingContractDescriptions": {
+      "identity": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+      "evidence": "只描述本条listener对父言说中content的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。"
+    },
+    "newDescriptionsOnly": true,
+    "previousCoverageFixApplied": true,
+    "unsupportedReplySelections": [
+      {
+        "i": 0,
+        "identity": "布莱特听到这话，",
+        "parent": "“真要说想念的，哪怕只是小酒馆里一碗炖得烂熟的杂烩肉汤，配上刚烤透、皮还是脆的热麦饼，也比干粮强上十倍。要是能在窗边坐下，再来一壶温热的麦茶，这几天的奔波才算真正缓过劲来。”\n"
+      },
+      {
+        "i": 2,
+        "identity": "走在另一侧的黄泉顺手整了整马鞍旁的带子，听着前方的市井动静，语气依旧平淡，但也带了点闲适：\n",
+        "parent": "“热汤面，或者刚出锅的肉串。赶路的时候总觉得随便填饱肚子就行，真闻到街边的烟火气，倒确实想吃口带油盐味的热食。”\n"
+      }
+    ]
+  },
+  {
+    "original": "v7.coverage.near.implicit",
+    "error": "Reply evidence must reference current answer",
+    "oldSchemaDescriptions": {
+      "identity": null,
+      "evidence": null
+    },
+    "existingContractDescriptions": {
+      "identity": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+      "evidence": "只描述本条listener对父言说中content的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。"
+    },
+    "newDescriptionsOnly": true,
+    "previousCoverageFixApplied": false,
+    "unsupportedReplySelections": [
+      {
+        "i": 0,
+        "identity": "答道：",
+        "parent": "渡船今晚不再开航。"
+      }
+    ]
+  },
+  {
+    "original": "v7.coverage.near.obstacle",
+    "error": "Reply evidence must reference current answer",
+    "oldSchemaDescriptions": {
+      "identity": null,
+      "evidence": null
+    },
+    "existingContractDescriptions": {
+      "identity": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+      "evidence": "只描述本条listener对父言说中content的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。"
+    },
+    "newDescriptionsOnly": true,
+    "previousCoverageFixApplied": false,
+    "unsupportedReplySelections": [
+      {
+        "i": 0,
+        "identity": "回答",
+        "parent": "仓库要到明天才开门。"
+      }
+    ]
+  }
+]

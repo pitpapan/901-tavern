@@ -1,0 +1,96 @@
+--- before/story-dialogue-knowledge.mjs
++++ current/story-dialogue-knowledge.mjs
+@@ -89,7 +89,7 @@
+  const responseFormat={type:'json_schema',json_schema:{name:'dialogue_reception_v1',strict:true,schema}};
+  return {input,messages,responseFormat,check(reply){
+   if(!shape(reply,['contextRef','assertions','receptions'])||reply.contextRef!==input.contextRef||!contract.checkAssertionReply(reply.assertions,assertion).ok||!Array.isArray(reply.receptions))throw Error('Invalid dialogue extraction');
+-  const claims=reply.assertions.units.flatMap(u=>u.claims),ids=new Set();
++  const claims=reply.assertions.units.flatMap(u=>u.claims),ids=new Set(),ranges=[];
+   const validSpan=s=>shape(s,['documentId','start','end','quote'])&&s.documentId==='current'&&Number.isSafeInteger(s.start)&&Number.isSafeInteger(s.end)&&s.start>=0&&s.end>s.start&&s.end<=sourceAnchor.text.length&&sourceAnchor.text.slice(s.start,s.end)===s.quote;
+   for(const r of reply.receptions){
+    const claim=claims.find(c=>c.id===r.claimId);
+@@ -97,6 +97,14 @@
+     (r.speakerId!==null&&!Object.hasOwn(actors,r.speakerId))||!Array.isArray(r.recipientIds)||new Set(r.recipientIds).size!==r.recipientIds.length||r.recipientIds.some(id=>!Object.hasOwn(actors,id))||
+     !Array.isArray(r.recipientSpans)||r.recipientSpans.length!==r.recipientIds.length||!r.recipientSpans.every(validSpan)||!validSpan(r.evidence)||
+     !['received','not_received','uncertain'].includes(r.status)||typeof r.reason!=='string'||(r.propositionRef!==null&&!Object.hasOwn(facts,r.propositionRef)))throw Error('Invalid dialogue reception');
++   // Receipts describe the occurrence at these exact source coordinates, not
++   // their free-text reasons. One listener cannot have incompatible statuses
++   // over overlapping content of that occurrence, even under different IDs.
++   const span=claim.argumentSpans.content;
++   if(span){
++    for(const prior of ranges)if(prior.status!==r.status&&prior.span.documentId===span.documentId&&prior.span.start<span.end&&span.start<prior.span.end&&r.recipientIds.some(id=>prior.recipientIds.includes(id)))throw Error('Conflicting dialogue reception ranges');
++    ranges.push({span,status:r.status,recipientIds:r.recipientIds});
++   }
+    ids.add(r.id);
+   }
+   return structuredClone(reply);
+--- before/story-dialogue-bound.test.mjs
++++ current/story-dialogue-bound.test.mjs
+@@ -307,3 +307,67 @@
+  assert.equal(checked.receptions.filter(r=>r.recipientIds.includes('bright')&&r.status==='received').length,3);
+  assert.equal(await readFile(new URL('omission.original.nested.content.txt',dir),'utf8'),raw);
+ });
++
++test('custom385 conflicting whole-speech receipts reject unchanged despite valid JSON Schema',async()=>{
++ const dir=new URL('../../replay_research/gm_style/v1/live_acceptance_20261030/clinic-knowledge-20261112/dialogue-increment-live-20261114/integration-20261115/iteration-200-20261115/',import.meta.url);
++ const req=JSON.parse(await readFile(new URL('scope.partial.request.json',dir),'utf8')),raw=await readFile(new URL('scope.partial.content.txt',dir),'utf8'),value=JSON.parse(raw),before=structuredClone(value);
++ const p=await dialogue.prepareBoundDialogueExtraction(JSON.parse(req.messages[1].content));
++ assert.deepEqual(p.messages,req.messages); // Fix the consistency check, not the prompt.
++ const schema=spawnSync('python',['-c','import sys,json,jsonschema\nx=json.loads(sys.stdin.buffer.read());jsonschema.validate(x["value"],x["schema"])'],{input:JSON.stringify({value,schema:p.responseFormat.json_schema.schema}),encoding:'utf8'});assert.equal(schema.status,0,schema.stderr);
++ assert.throws(()=>p.check(value),/Conflicting dialogue reception ranges/);
++ assert.deepEqual(value,before);assert.equal(await readFile(new URL('scope.partial.content.txt',dir),'utf8'),raw);
++});
++
++test('same recipient cannot receive incompatible statuses on overlapping speech content across claim IDs',async()=>{
++ const p=await prepare();
++ for(const pair of [['received','uncertain'],['received','not_received'],['not_received','uncertain']])for(const otherClaim of [false,true]){
++  const w=wire(p),first=w.units[0].utterances[0];first.receptions[0].status=pair[0];
++  const second={...receipt('r2',pair[1]),evidence:full};
++  if(otherClaim)w.units[0].utterances.push({claim:claim('overlapping','口停航'),receptions:[second]});else first.receptions.push(second);
++  w.units[0].coverage.status=pair.includes('uncertain')?'uncertain':'recorded';
++  const before=structuredClone(w);assert.throws(()=>p.check(w),/Conflicting dialogue reception ranges/);assert.deepEqual(w,before);
++ }
++});
++
++test('disjoint and adjacent content ranges and different listeners keep independent statuses',async()=>{
++ const p=await prepare();
++ for(const fragment of ['改走山路','，改走山路']){
++  const w=wire(p);w.units[0].utterances.push({claim:claim('part2',fragment),receptions:[receipt('r2','uncertain')]});w.units[0].coverage.status='uncertain';
++  assert.deepEqual(p.check(w).receptions.map(r=>r.status),['received','uncertain']);
++ }
++ const w=wire(p);w.units[0].utterances[0].receptions.push({...receipt('r2','uncertain'),recipientIds:['c'],recipientSpans:[span('乙')]});w.units[0].coverage.status='uncertain';
++ assert.deepEqual(p.check(w).receptions.map(r=>r.recipientIds),[['b'],['c']]);
++ // Unknown identity is not assumed to overlap a known listener.
++ w.units[0].utterances[0].receptions[1].recipientIds=[];w.units[0].utterances[0].receptions[1].recipientSpans=[];
++ assert.equal(p.check(w).receptions[1].status,'uncertain');
++});
++
++test('repeated identical words at distinct source positions are separate speech occurrences',async()=>{
++ const source='甲对乙说：“渡口停航。”乙听清了。甲再说：“渡口停航。”乙这次没听见。';
++ const at=(q,last=false)=>({documentId:'current',start:last?source.lastIndexOf(q):source.indexOf(q),end:(last?source.lastIndexOf(q):source.indexOf(q))+q.length,quote:q});
++ const p=await dialogue.prepareBoundDialogueExtraction({...options,sourceAnchor:{...options.sourceAnchor,text:source}}),w=wire(p);w.units[0].coverage.evidence=at(source);
++ w.units[0].utterances=[false,true].map((last,i)=>({claim:{...claim('s'+i,'渡口停航。'),argumentSpans:{speaker:at('甲',last),content:at('渡口停航。',last)},anchor:at(source)},receptions:[{...receipt('r'+i,i?'not_received':'received'),recipientSpans:[at('乙',last)],evidence:at(i?'乙这次没听见':'乙听清了')}]}));
++ assert.deepEqual(p.check(w).receptions.map(r=>r.status),['received','not_received']);
++});
++
++test('custom385 is rejected before any MVU write through the real adapter; authored content fragments still register independently',async()=>{
++ const dir=new URL('../../replay_research/gm_style/v1/live_acceptance_20261030/clinic-knowledge-20261112/dialogue-increment-live-20261114/integration-20261115/iteration-200-20261115/',import.meta.url);
++ const req=JSON.parse(await readFile(new URL('scope.partial.request.json',dir),'utf8')),raw=await readFile(new URL('scope.partial.content.txt',dir),'utf8'),input=JSON.parse(req.messages[1].content),anchor=input.sourceAnchor;
++ for(const useOriginal of [true,false]){
++  const chat=Array.from({length:anchor.messageId+1},()=>({mes:'',is_user:false}));for(const h of input.history)chat[h.messageId]={mes:h.text,is_user:h.role==='user'};chat[anchor.messageId]={mes:anchor.text,is_user:false,swipe_id:anchor.swipeId};
++  let state={stat_data:{'901_rules_poc':{schemaVersion:1,revision:0,chatId:anchor.chatId,actors:createOpeningFixture().actors,operations:{}}}},writes=0,calls=0;
++  const mvu={getMvuData:()=>structuredClone(state),replaceMvuData:async v=>{writes++;state=structuredClone(v);}};
++  const tavern={chatId:anchor.chatId,chat,saveChat:async()=>{},readSavedChat:async()=>[{},...chat.map(m=>({...m,variables:[structuredClone(state)]}))]};
++  const at=q=>({documentId:'current',start:anchor.text.indexOf(q),end:anchor.text.indexOf(q)+q.length,quote:q});
++  const adapter=dialogue.createDialogueSemanticAdapter({complete:async request=>{
++   calls++;if(useOriginal)return raw;
++   // Independently authored positive fixture, not a repaired model response.
++   const bound=JSON.parse(request.messages[1].content),parts=[['full','渡口今晚停航，明早从南桥走。','player','received'],['front','渡口今晚停航','bright','received'],['back','明早从南桥走。','bright','uncertain']];
++   return {schemaVersion:'dialogue-reception/2',contextRef:bound.contextRef,inputRef:bound.assertion.inputRef,units:[{id:'turn',status:'extracted',claims:[],unresolved:[],coverage:{status:'uncertain',evidence:at(anchor.text),reason:'逐人按实际内容范围记录'},utterances:parts.map(([id,q,who,status])=>({claim:{id,type:'utterance',args:{speaker:'黄泉',content:q},argumentSpans:{speaker:at('黄泉'),content:at(q)},mode:'asserted',scope:{time:null,condition:null,attribution:null},scopeSpans:{time:null,condition:null,attribution:null},anchor:at('黄泉对御临风说：“渡口今晚停航，明早从南桥走。”')},receptions:[{id:'r.'+id,speakerId:'huang',recipientIds:[who],recipientSpans:[at(input.actors[who])],evidence:at(who==='player'?'黄泉对御临风说：“渡口今晚停航，明早从南桥走。”':status==='received'?'布莱特只听清“渡口今晚停航”':'后半句有没有听见无法确定'),status,propositionRef:null,reason:''}]}))}]};
++  },readMemory:async()=>input.memory});
++  const k=createStoryKnowledgeRuntime({mvu,tavern,getAnchor:()=>({chatId:anchor.chatId,messageId:anchor.messageId,swipeId:anchor.swipeId}),catalog:{id:'range.test',actors:input.actors,facts:Object.values(input.facts)},dialogue:adapter}),before=structuredClone(state);
++  if(useOriginal){await assert.rejects(k.observeDialogue(anchor),/Conflicting dialogue reception ranges/);assert.equal(writes,0);assert.deepEqual(state,before);}
++  else{const result=await k.observeDialogue(anchor);assert.deepEqual(k.context().actorKnowledge.find(a=>a.actorId==='bright').facts.map(f=>f.content.text),['渡口今晚停航']);assert.equal(result.pending.length,1);assert.equal(result.pending[0].content,'明早从南桥走。');assert.deepEqual(k.dialogueQuestions([]),[]);}
++  assert.equal(calls,1);assert.equal(chat[anchor.messageId].mes,anchor.text);
++ }
++});

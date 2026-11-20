@@ -1,0 +1,63 @@
+{
+  "authorization": "2026-11-14 用户明确允许新增2次叙事，验证已实现的归属纠正投影，承接custom261核对新增核实方式与披露范围；其余参数不变，失败即停、不重试；沿既有密钥和端点授权。",
+  "baseline": 261,
+  "limit": 2,
+  "ceiling": 263,
+  "cumulative": 263,
+  "remaining": 0,
+  "attempts": [
+    {
+      "id": "01",
+      "customRequest": 262,
+      "state": "completed",
+      "requestBytes": 121742,
+      "requestSha256": "6891624581a8829045ff0a52a162046338a88d68140f2677b9d213d889727655",
+      "status": 200,
+      "elapsedMs": 10975,
+      "rawResponseSha256": "c972076bd28dcb51a18a27e0b29d0aee0e2028979923e23b30f4b6616f7f2556",
+      "responseBytes": 1261,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "24f392be-4c8e-4e04-b462-45387310661d",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 30446,
+        "completion_tokens": 277,
+        "total_tokens": 30723
+      }
+    },
+    {
+      "id": "02",
+      "customRequest": 263,
+      "state": "completed",
+      "requestBytes": 123149,
+      "requestSha256": "9a309b23c0c2044ccacd08f2497743018f6148b122ff516974dcbf8350138f2b",
+      "status": 200,
+      "elapsedMs": 5387,
+      "rawResponseSha256": "c88aede01d4407cac78790ac2065c658e47fdde96e8dec61c9cb2dc7705dd6df",
+      "responseBytes": 1105,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "1098529f-6356-4e76-8192-44ce126f3c14",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 30792,
+        "completion_tokens": 212,
+        "total_tokens": 31004,
+        "prompt_tokens_details": {
+          "cached_tokens": 28522
+        }
+      }
+    }
+  ],
+  "classification": "retained local NO_CHECK control",
+  "classificationCalls": 0,
+  "automaticExtractionApprovalRevision": false,
+  "retries": 0,
+  "timeoutMs": 180000,
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "deployed": false,
+  "formalStoryWritten": false,
+  "closed": true,
+  "stopReason": "two-authorized-narrations-completed"
+}

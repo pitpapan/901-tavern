@@ -1,0 +1,89 @@
+{
+  "scope": "Isolated state/save/reopen plus exact pending ordinary narration requests; no model outcome claimed",
+  "states": [
+    {
+      "state": "01-before-startup",
+      "revision": 0,
+      "facts": {
+        "player": 0,
+        "bright": 0,
+        "huang": 0
+      },
+      "activeEqualsSaved": true,
+      "extractionDisabled": true
+    },
+    {
+      "state": "02-received-received",
+      "revision": 1,
+      "facts": {
+        "player": 0,
+        "bright": 1,
+        "huang": 0
+      },
+      "activeEqualsSaved": true,
+      "extractionDisabled": true
+    },
+    {
+      "state": "03-reopened-startup",
+      "revision": 1,
+      "facts": {
+        "player": 0,
+        "bright": 1,
+        "huang": 0
+      },
+      "activeEqualsSaved": true,
+      "extractionDisabled": true
+    }
+  ],
+  "receivedEqualsReopenedWholeRoot": true,
+  "receivedEqualsReopenedContext": true,
+  "receivedEqualsReopenedRequestBytes": true,
+  "manualReceptionOnly": true,
+  "automaticReceptionAcceptance": false,
+  "requests": [
+    {
+      "id": "01-before.02.narration",
+      "file": "captures/01-before.02.narration.request.json",
+      "bytes": 108003,
+      "sha256": "641dc06e41959db0b692e035395b9d59e3719286cace8bf00358f6e164354c47",
+      "messages": 16,
+      "sent": false
+    },
+    {
+      "id": "02-received.04.narration",
+      "file": "captures/02-received.04.narration.request.json",
+      "bytes": 109278,
+      "sha256": "181fccd46cd6fb990e5a8005d06697b8128ae9cdb1fc02499441d0215a30eb87",
+      "messages": 16,
+      "sent": false
+    },
+    {
+      "id": "03-reopened.06.narration",
+      "file": "captures/03-reopened.06.narration.request.json",
+      "bytes": 109278,
+      "sha256": "181fccd46cd6fb990e5a8005d06697b8128ae9cdb1fc02499441d0215a30eb87",
+      "messages": 16,
+      "sent": false
+    }
+  ],
+  "externalCalls": 0,
+  "classificationModelCalls": 0,
+  "classificationFixtures": 3,
+  "extractionCalls": 0,
+  "ledger": {
+    "sha256": "b0acc30dbccf7f268a216300ad6d3813fb712632a6992611566b1ae874223df4",
+    "limit": 200,
+    "used": 197,
+    "remaining": 3,
+    "cumulative": 531,
+    "closed": true,
+    "complete": true,
+    "unchanged": true
+  },
+  "protectedFilesUnchanged": true,
+  "adoptedStyleAndAssetsUnchanged": true,
+  "persistentCardExtractionDisabled": true,
+  "capturedFailuresPreserved": 3,
+  "finalChatIsExactSavedReceivedSeed": true,
+  "remainingBlocker": "Automatic approval rejected external transmission of the concrete story payload to configured API; explicit payload/destination approval needed."
+}

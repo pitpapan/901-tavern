@@ -1,0 +1,52 @@
+2026-11-14 直接告知判定说明复用修复与剩余7次验收
+
+修复：原story-dialogue-knowledge.mjs提取已有receptionStatusGuidance常量，旧prepareDialogueExtraction与新版prepareBoundDialogueExtraction共同引用。内容为：明确直接向某人说出且没有接收障碍可以received，不强求复述确认；计划、假设、内心话不算接收。
+旧提示最终文本不变；新版system仅插入该句。Schema、业务输入、UTF-16坐标参照、隔离seed、生成参数及原严格校验均不变。没有添加关键词分类、自动补回执、action转换、自动修补或世界事实推定。
+
+离线回归：新增2项（其中一项覆盖三组接收状态）。修复前12项中1项失败，准确定位新版缺失该句；修复后相关128/128通过。涵盖无确认反馈的直接告知登记、明确障碍不登记、听见不确定保留待核、原有未开口反例、action父项拒绝、缺覆盖/缺引用拒绝以及旧真实324仍保持uncertain。本地合成回复只验证处理，不算模型通过。
+
+用户明确授权复用上一批余额7；基线累计324、上一批余额7。新325—331共7次，每例只发送一次，逐例按原始回复验收后再发送下一例，额度归零关闭。没有重试。既有324失败及所有更早失败均原样保留。实际请求28082—28592字节，相对对应冻结新版请求都只增加131字节的上述说明。
+
+逐例结果（仅本轮言说绑定/覆盖/知情指标）：
+
+custom325 / 02-received-rumor：通过。utterance绑定及recorded覆盖正确；直接告知无需复述，御临风获得同一rumor且保留黄泉来源，不升为确认；布莱特无增量，pending0/询问0。Schema与6处引用通过，原文及参数不变。
+请求28082字节，HTTP200/stop，5382ms；返回model=gemini-3.8-flash-n，精确原文引用6处。
+请求SHA256=daae7a4ca29fb1558c542a3425a74af940601bb2b8ba8bc80b9a022b6b96559c
+原始响应SHA256=ef2fe185a7dbb28a1e98d99bf5d039860d44ed063eb314a654e7404feb2af464
+
+custom326 / 05-partial-first：通过。完整言说保留，分片utterance绑定received/not_received；仅布莱特收到北门暂停通行，西桥绕行未授予；来源为player的uncertain说法，无世界真相升级。pending0/询问0，Schema及14引用通过。
+请求28591字节，HTTP200/stop，7821ms；返回model=gemini-3.8-flash-n，精确原文引用14处。
+请求SHA256=af9ee5aa539775cb55331cf226d9971b3e0ee6e034471a25b33ae412bcec8375
+原始响应SHA256=6f26d8d66859333d881cb30ca7e39068892942f9807b0036d5ba18d0e162e2ce
+
+custom327 / 06-partial-second：通过。完整言说保留，前半句not_received/后半句received直接绑定分片；只给布莱特登记改从西桥绕行的来源说法，不授予北门停用，不共享他人。pending0/询问0，Schema与14引用通过。
+请求28592字节，HTTP200/stop，7872ms；返回model=gemini-3.8-flash-n，精确原文引用14处。
+请求SHA256=078e78f019e439ddfc8527c448536f78e59358a758639df68b82d2daf36d94e7
+原始响应SHA256=4ec3eefd7e549f6009d770ee8c03512043d5fef7440939aa734a8cf8572ce07c
+
+custom328 / 07-ambiguous-hearing：通过。直接绑定黄泉言说；御临风是否听清保留uncertain回执及coverage，未漏抽也未猜授予。待核1/知情增量0/询问0，保留真实待核ID；Schema与6引用通过。本轮不包含后续依赖调用。
+请求28375字节，HTTP200/stop，2853ms；返回model=gemini-3.8-flash-control，精确原文引用6处。
+请求SHA256=b175e5a3882afcd5dbb6113fb0cb4444b27ba5309a9af7ff629b1d7ac4d9aaa3
+原始响应SHA256=247c4661b05ec541f98843f1d03f14da440ed44886a57ac2342d7b36409e5335
+
+custom329 / 01-received-new：通过。布莱特明确收到御临风关于西侧栈桥暂时停用的新消息，绑定utterance及recorded正确；以uncertain来源说法登记，非世界事实，其他角色无增量。pending0/询问0，Schema及6引用通过。
+请求28282字节，HTTP200/stop，8448ms；返回model=gemini-3.8-flash-n，精确原文引用6处。
+请求SHA256=451045343ccd7d83221202c49e57eab997ebb57fcdde6a002de64aba6d80c707
+原始响应SHA256=27f2acb3702dc26e6fa5121cf05f8567b2336f92e9f14b5104e1ed87959e207f
+
+custom330 / 03-not-heard：通过。隔音窗及明确没听见保留，实际言说绑定not_received，recorded表示记录了未接收而非授予。所有角色知情增量0/pending0/询问0；Schema及6引用通过。
+请求28301字节，HTTP200/stop，5100ms；返回model=gemini-3.8-flash-n，精确原文引用6处。
+请求SHA256=26c2dadde9ea48ccddb4ee2cf7796d4452c1eeb25f032cfaa8b32420b394607f
+原始响应SHA256=d75c264528e8854eb65527ab72df890af47f56c13fb2502730b720e112a67c25
+
+custom331 / 04-not-yet-said：通过。拟传内容完整保留在准备转告的外层命题内，未独立断言渡船停航为世界事实；尚未说出口为denied，utterances空/coverage none。知情0/pending0/询问0，Schema及9引用通过。仅判本例知情指标，不宣称所有动作分类正确。
+请求28112字节，HTTP200/stop，5389ms；返回model=gemini-3.8-flash-n，精确原文引用9处。
+请求SHA256=b7eb37371b6b5c503bc460740e9145a3699717ecfa8093c5bba3fb4abdc37188
+原始响应SHA256=faf93c93c300223cf106bc30357fafdb0a214a464f3a015fc26f6f8f2f3ff089
+
+实际改善：02不再要求听者额外复述，直接登记同一传闻并保留来源/rumor；01明确新消息登记为有来源未确认说法；05/06分别只登记明确听清的内容；07实际产出言说绑定的uncertain回执和coverage，保留真实待核而不凭空授予；03/04未接收与未发生边界保持。所有接收记录均来自模型显式输出，未从coverage补回执。没有把接收成功变成内容为真。
+
+通过范围与限制：7份均通过JSON Schema、原严格运行时及61处原文UTF-16引用。07待核1，其余待核0；全部当轮询问0。07后续依赖测试本轮未调用，08及09—10未重测，不把此前版本结果合并为本版全套通过；不能证明长期稳定、任意人数/剧情覆盖或完整抽取语义。04将“准备”列为外层action，拟传内容未单独断言且开口denied；本轮未验收所有动作/状态分类。请求model保持[抗截断]gemini-3.8-flash；上游328响应标识gemini-3.8-flash-control，其他六份为gemini-3.8-flash-n，未由本地调整，不能据此声称固定后端模型对照或单一因果效果。
+
+保存内容：batch保存所有冻结请求/原seed；live保存逐例完整请求、响应元数据、原始HTTP响应、完整模型内容及原运行链隔离回放。complete-outputs.txt保留七份完整输出和人工核对；offline-audit.json核对请求只改说明、Schema和引用；verification.json核对729份旧证据、22份正式文件及7份产品源。仅1份产品源为本轮明确提示修复，其余未变。
+未部署、未写正式剧情、未恢复自动批准/修订路线。模型额度已用尽（本轮7/7，累计331），不继续调用。

@@ -1,0 +1,242 @@
+✖ compact registry preserves original input, partial range and uncertainty through old strict receipt checker (2.9713ms)
+✖ compact scoped values come from explicitly selected source, not string coercion or omitted defaults (0.266ms)
+✖ compact invalid selections, bindings, omitted fields and cross-reception ranges are rejected without repair (0.2591ms)
+✖ compact reply identity requires a known history row and a selection inside current answer (0.2424ms)
+✖ compact explicit none, obstacle, unknown identity and unresolved preserve separate meanings (0.2564ms)
+✖ invalid v7 raw reply persists unprocessed only; unrelated play, reload and observe never re-extract or ask (2.4396ms)
+✖ actual dependency triggers one bounded new extraction using frozen failed input; real partial/pending then uses old ask (0.7964ms)
+✖ second format failure remains technical unprocessed, never fake none or semantic confirmation and never loops (1.0332ms)
+✖ valid recovery with explicit no reception clears only the failed increment (0.8803ms)
+✖ source/branch changes and state persistence failures are not masked as extraction failures (0.8385ms)
+✖ existing knowledge survives a later failed increment (0.8745ms)
+✖ historical malformed replies remain rejected by explicit v7, never repaired or interpreted as a new wire (0.3943ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 0
+ℹ fail 12
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 448.7982
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-compact.test.mjs:20:1
+✖ compact registry preserves original input, partial range and uncertainty through old strict receipt checker (2.9713ms)
+  AssertionError [ERR_ASSERTION]: compact selection preparer required
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at prepare (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:10:42)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:21:16)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-compact.test.mjs:27:1
+✖ compact scoped values come from explicitly selected source, not string coercion or omitted defaults (0.266ms)
+  AssertionError [ERR_ASSERTION]: compact selection preparer required
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at prepare (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:10:42)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:28:16)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-compact.test.mjs:31:1
+✖ compact invalid selections, bindings, omitted fields and cross-reception ranges are rejected without repair (0.2591ms)
+  AssertionError [ERR_ASSERTION]: compact selection preparer required
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at prepare (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:10:42)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:32:16)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-compact.test.mjs:43:1
+✖ compact reply identity requires a known history row and a selection inside current answer (0.2424ms)
+  AssertionError [ERR_ASSERTION]: compact selection preparer required
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at prepare (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:10:42)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:44:16)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-compact.test.mjs:47:1
+✖ compact explicit none, obstacle, unknown identity and unresolved preserve separate meanings (0.2564ms)
+  AssertionError [ERR_ASSERTION]: compact selection preparer required
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at prepare (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:10:42)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:48:16)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-compact.test.mjs:64:1
+✖ invalid v7 raw reply persists unprocessed only; unrelated play, reload and observe never re-extract or ask (2.4396ms)
+  Error: Unsupported dialogue contract
+      at Module.createDialogueSemanticAdapter (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs:43:118)
+      at runtime (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:59:25)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:65:58)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-compact.test.mjs:70:1
+✖ actual dependency triggers one bounded new extraction using frozen failed input; real partial/pending then uses old ask (0.7964ms)
+  Error: Unsupported dialogue contract
+      at Module.createDialogueSemanticAdapter (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs:43:118)
+      at runtime (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:59:25)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:71:19)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-compact.test.mjs:78:1
+✖ second format failure remains technical unprocessed, never fake none or semantic confirmation and never loops (1.0332ms)
+  Error: Unsupported dialogue contract
+      at Module.createDialogueSemanticAdapter (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs:43:118)
+      at runtime (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:59:25)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:79:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-compact.test.mjs:85:1
+✖ valid recovery with explicit no reception clears only the failed increment (0.8803ms)
+  Error: Unsupported dialogue contract
+      at Module.createDialogueSemanticAdapter (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs:43:118)
+      at runtime (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:59:25)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:86:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-compact.test.mjs:89:1
+✖ source/branch changes and state persistence failures are not masked as extraction failures (0.8385ms)
+  Error: Unsupported dialogue contract
+      at Module.createDialogueSemanticAdapter (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs:43:118)
+      at runtime (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:59:25)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:90:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-compact.test.mjs:92:1
+✖ existing knowledge survives a later failed increment (0.8745ms)
+  Error: Unsupported dialogue contract
+      at Module.createDialogueSemanticAdapter (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs:43:118)
+      at runtime (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:59:25)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:93:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-compact.test.mjs:96:1
+✖ historical malformed replies remain rejected by explicit v7, never repaired or interpreted as a new wire (0.3943ms)
+  AssertionError [ERR_ASSERTION]: compact selection preparer required
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at prepare (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:10:42)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:97:210)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

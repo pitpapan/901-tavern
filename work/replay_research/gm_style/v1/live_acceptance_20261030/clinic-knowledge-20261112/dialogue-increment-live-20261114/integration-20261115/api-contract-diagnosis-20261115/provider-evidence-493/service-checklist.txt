@@ -1,0 +1,20 @@
+提供方排查清单：strict=true 返回纯文本（现有请求493）
+
+复现事实
+POST https://cdn.sta1n.cn/v1/chat/completions；请求体request.json恰好958个UTF-8字节，请保留原字节。它是人工格式探针，不含战役正文或人物资料；contextRef只是人工测试数据产生的绑定值。
+response_format.type=json_schema，json_schema.strict=true。Schema本地按JSON Schema Draft2020检查合法，要求根对象包含schemaVersion/contextRef/units，units恰好一项，项内id=turn，均禁止额外字段。messages故意要求纯文本，用于测试所谓严格格式约束是否实际执行。此前同一messages配简单Schema时能输出符合约束的JSON；这份请求却返回HTTP200/stop，content为PROBE_PLAIN_73a91f2c，连JSON都不是。
+raw-response.txt是完整保存的HTTP正文（解压后303字节），response-content.txt是其中原样的choices[0].message.content。capture-metadata.json给出请求/响应时间、摘要和服务端关联编号。没有请求Authorization真实值、cookie或密钥。不要把response model字符串当成真实底层模型身份的充分证明。
+
+请按同一次请求逐项核对并返回证据
+1. 用x-oneapi-request-id、x-zeabur-request-id和UTC时间定位服务入口记录。核对收到的request body是否与request.json相同；如果重新序列化，至少对比完整JSON字段，尤其response_format/json_schema/schema/strict，不只看HTTP200。
+2. 确认实际选中路由、通道、提供商和底层模型版本。[抗截断]前缀对应什么行为？这次是否有别名替换、负载分配、fallback、内部重试或缓存命中？列明实际执行路径，不仅返回客户端请求的模型名。
+3. 提供格式转换后真正送到模型提供商的请求（隐藏凭据即可）。核对strict是否保留，Schema被放到哪个实际字段，required/additionalProperties/enum/minItems/maxItems是否被删除、改写或降级；是否只作为文本提示传入？如存在条件分支，列出此次命中的分支及原因。
+4. 说明该通道/模型对json_schema strict的真实支持范围：是否启用受约束解码；是硬性限制还是尽力遵从；不支持的字段是否会报错，是否可能静默退化为普通文本生成。当前错误不能用“已接收response_format”代替“已执行约束”的证明。
+5. 提供模型提供商返回、进入网关后处理之前的原始响应。比较原始content、finish_reason与本包raw-response.txt；如有清洗、拼接、抗截断、去标签、流式转非流式或格式改写，给出处理前后差异及相应版本/配置。
+6. 若原模型输出合法但最终响应非法，定位处理步骤；若实际发出的约束已丢失，定位转换步骤；若完整约束确已发出而原输出违规，继续查提供商约束执行。不要仅以模型能复制合法JSON作为结案证据。
+7. 同时解释当前接口对minContains/maxContains报generation_config.response_schema不认识字段的兼容边界（另有原始496错误保留；本包核心只包含493）。这条错误说明服务链处理了Schema，但不能证明所有字段都原样生效。
+
+我们目前能证明的范围
+客户端冻结request bytes与实际传给fetch的body一致；原始响应保存哈希一致；本例不经过运行中的酒馆前端/后端。它不能由本地剧情提取、酒馆显示或回复修补解释。我们看不到网关内部实际转发体、提供商原始生成和后处理，因此不会先判定具体责任在模型还是网关。
+
+本材料仅供已有请求的服务端日志追踪。未发送给任何服务方，也未执行新的复现请求。若要重新调用，需要用户另行决定；此包不含自动运行脚本或密钥。

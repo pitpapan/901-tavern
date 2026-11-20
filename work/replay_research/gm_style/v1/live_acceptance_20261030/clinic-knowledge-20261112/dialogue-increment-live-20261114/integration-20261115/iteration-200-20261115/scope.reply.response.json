@@ -1,0 +1,31 @@
+{
+  "kind": "scope.reply",
+  "startedAt": "2026-11-15T09:54:55.741Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T09:55:03.216Z",
+  "headersElapsedMs": 7475,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5ad609a88675570-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 09:55:03 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2B0KUvVptrn8h0HxtVlAT7AKdAFvdasyJM%2FTuhlTDkPv4KKnt8K4GDVbZpPyd1Gr5aPpbWVDaPbotLLYIKBI2gDUPoKDxKvcJ44L7nNye%2FDUv3rz5p1f4SZCMxbKrDg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611150954558507833498268d9d6qbO0Op0T",
+    "x-zeabur-ip-country": "ES",
+    "x-zeabur-request-id": "31f01f25-a1a7-4ce4-99cf-531895a99da9"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"f5a346fd-39bb-4b02-aa8b-ec0509af2179\",\"object\":\"chat.completion\",\"created\":1794736503,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/2\\\",\\\"contextRef\\\":\\\"d30f70d3dfe157cfe8eb99a34d9bd831890ab7e277ad426f2c88222e94127dac\\\",\\\"inputRef\\\":\\\"assertion.62ecfc979006e6d7937fa37123778257f6bacfbf442a5166575eeb3b4324dcc1\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"utterance-1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"渡口今晚停航。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":2,\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":6,\\\"end\\\":13,\\\"quote\\\":\\\"渡口今晚停航。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":14,\\\"quote\\\":\\\"黄泉答道：“渡口今晚停航。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"reception-1\\\",\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"player\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":6,\\\"end\\\":13,\\\"quote\\\":\\\"渡口今晚停航。\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":14,\\\"quote\\\":\\\"黄泉答道：“渡口今晚停航。”\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"\\\"}]},{\\\"claim\\\":{\\\"id\\\":\\\"utterance-2\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"明早从南桥走。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":14,\\\"end\\\":15,\\\"quote\\\":\\\"她\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":24,\\\"end\\\":31,\\\"quote\\\":\\\"明早从南桥走。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":14,\\\"end\\\":32,\\\"quote\\\":\\\"她略想了想，又答：“明早从南桥走。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"reception-2\\\",\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"player\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":24,\\\"end\\\":31,\\\"quote\\\":\\\"明早从南桥走。\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":20,\\\"end\\\":32,\\\"quote\\\":\\\"又答：“明早从南桥走。”\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"\\\"}]}],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":32,\\\"quote\\\":\\\"黄泉答道：“渡口今晚停航。”她略想了想，又答：“明早从南桥走。”\\\"},\\\"reason\\\":\\\"黄泉对御临风的提问作出了明确回答，御临风正常接收全部回答内容。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":3979,\"completion_tokens\":750,\"total_tokens\":4729}}",
+  "responseBytes": 2957,
+  "responseBodySha256BeforePrivacyRedaction": "3118de03db19a5bcc74f1fd82784fccc97ff5090a40d330080b1abbc06470186",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T09:55:03.227Z",
+  "elapsedMs": 7486
+}

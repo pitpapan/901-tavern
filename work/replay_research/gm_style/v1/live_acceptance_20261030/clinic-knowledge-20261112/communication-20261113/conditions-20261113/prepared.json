@@ -1,0 +1,307 @@
+{
+  "status": "two-final-requests-frozen-not-sent",
+  "version": "source-context-20261113",
+  "modelCalls": 0,
+  "cumulative": 252,
+  "remaining": 0,
+  "credentialsRead": false,
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "minimumFutureNarrationCalls": 2,
+  "classification": "local NO_CHECK only",
+  "parameters": {
+    "model": "[抗截断]gemini-3.8-flash",
+    "temperature": 1,
+    "max_tokens": 4096,
+    "stream": false,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "top_p": 1
+  },
+  "precedingSeedSha256": "cb52b4ba4da4affd61355a9490c16c2d665139a9ef5f247a52012aacd40b7f29",
+  "precedingResponseSha256": "affdfe70f8a0f86579de175d8f8d7a36318fe3bb99f2c1a0c8685649867dd97e",
+  "sourceIdentity": {
+    "originalMessage": 11,
+    "promiseMessage": 12,
+    "description": "同一来客；原文相对身份可确定，未命名，senderId仍为空，不补人名或世界身份"
+  },
+  "cases": [
+    {
+      "id": "pending",
+      "seed": "pending.seed.jsonl",
+      "seedSha256": "c4bf6c14ef4dca7b24a2dfcde6c78d74acdf2178f1b65a83cec2fe31167667a6",
+      "input": "“现在呢，你还有什么想补充的吗？”\n（桌外隔离验收，非正式剧情：承接前文，写布莱特的回应；可以回应在场同伴，不替御临风新增对白、心理或决定。）",
+      "scene": "桌外隔离验收场景设定（非正式剧情）：承接刚才的送信讨论，御临风、黄泉和布莱特已在帝都街边一处安静、适合交谈的位置短暂停留，尚未到达医馆或递交推荐信。此为本次隔离场景设定，不是正式剧情，也不补写御临风的对白、心理或新承诺。",
+      "condition": "原来客与布莱特尚未进行原约定要求的单独确认；本分支没有新增或变更披露约定的事件。",
+      "receipt": null,
+      "context": {
+        "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+        "actorKnowledge": [
+          {
+            "actorId": "player",
+            "name": "御临风",
+            "facts": []
+          },
+          {
+            "actorId": "bright",
+            "name": "布莱特",
+            "facts": [
+              {
+                "id": "clinic.owner.xuelao.old-friend",
+                "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                "belief": "confirmed",
+                "access": "learned",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 12,
+                  "actorId": "legacy.story"
+                },
+                "sources": [
+                  {
+                    "eventRef": "received.browser.received",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 11,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "901 帝都正式续玩 20261106",
+                      "messageId": 11,
+                      "swipeId": 0,
+                      "text": "桌外隔离验收事件（非正式剧情）：可信来客私下向布莱特告知：九雪医馆馆主与雪老有旧。布莱特已实际听到；御临风与黄泉均未听到。"
+                    },
+                    "disclosure": null
+                  },
+                  {
+                    "eventRef": "received.communication.promise",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 12,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "901 帝都正式续玩 20261106",
+                      "messageId": 12,
+                      "swipeId": 0,
+                      "text": "桌外隔离验收事件（非正式剧情）：同一来客向布莱特补充约定：“这件事先不要向御临风和黄泉透露，等我们单独确认后再说。”布莱特听到并答应了该约定；另两人未听见。"
+                    },
+                    "disclosure": {
+                      "sourceQuote": "这件事先不要向御临风和黄泉透露，等我们单独确认后再说。"
+                    }
+                  }
+                ],
+                "eventRef": "received.communication.promise",
+                "channel": "message",
+                "learnedAtMessage": 12
+              }
+            ]
+          },
+          {
+            "actorId": "huang",
+            "name": "黄泉",
+            "facts": []
+          }
+        ],
+        "availableInformation": [
+          {
+            "access": "can-inquire",
+            "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+          }
+        ]
+      },
+      "status": "captured-not-sent",
+      "request": {
+        "file": "pending.request.json",
+        "bytes": 113839,
+        "sha256": "d6546046d7062c254a0e9b42e811603eef862be829d3a7a753786f3c6c6ac48e",
+        "status": "captured-not-sent"
+      },
+      "captures": [
+        {
+          "file": "1794608271894-classification.json",
+          "kind": "classification",
+          "sha256": "04bd999ef9bf8b021324c2f6481a026e5b9ea885aec9cb242ae7ac23de1006c1"
+        },
+        {
+          "file": "1794608273035-narration.json",
+          "kind": "narration",
+          "sha256": "07a1bf469d2670e19e1280bcedddacc1005b3bb4d0d87759283d4d2abc2d83f3"
+        }
+      ]
+    },
+    {
+      "id": "confirmed",
+      "seed": "confirmed.seed.jsonl",
+      "seedSha256": "f9d4853a7fac7ce0b68b34e75fb9149309473b82bde6925aa23e8ca50a2efa1b",
+      "input": "“现在呢，你还有什么想补充的吗？”\n（桌外隔离验收，非正式剧情：承接前文，写布莱特的回应；可以回应在场同伴，不替御临风新增对白、心理或决定。）",
+      "scene": "桌外隔离验收场景设定（非正式剧情）：承接刚才的送信讨论，御临风、黄泉和布莱特已在帝都街边一处安静、适合交谈的位置短暂停留，尚未到达医馆或递交推荐信。此为本次隔离场景设定，不是正式剧情，也不补写御临风的对白、心理或新承诺。",
+      "condition": "原来客与布莱特已在两名同伴听不到的地方完成原约定要求的单独确认。",
+      "receipt": {
+        "id": "condition.confirmed.20261113",
+        "status": "received",
+        "authority": "host-confirmed",
+        "sourceAnchor": {
+          "chatId": "901 帝都正式续玩 20261106",
+          "messageId": 20,
+          "swipeId": 0,
+          "text": "桌外隔离验收来源（非正式剧情）：保留消息11中告知旧交、消息12中向布莱特提出约定的同一位可信来客，已与布莱特单独确认九雪医馆馆主与雪老有旧；确认后，该来客对布莱特说：“我们约定的单独确认已经完成。这件事现在可以向御临风和黄泉说明，由你决定是否提起。”布莱特实际听到并理解此话；御临风和黄泉没有听到这次私下谈话。来客已经离开，此刻不在三人的谈话现场。"
+        },
+        "recipientIds": [
+          "bright"
+        ],
+        "propositionRefs": [
+          "clinic.owner.xuelao.old-friend"
+        ],
+        "channel": "message",
+        "belief": "confirmed",
+        "disclosure": {
+          "sourceQuote": "我们约定的单独确认已经完成。这件事现在可以向御临风和黄泉说明，由你决定是否提起。"
+        }
+      },
+      "context": {
+        "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+        "actorKnowledge": [
+          {
+            "actorId": "player",
+            "name": "御临风",
+            "facts": []
+          },
+          {
+            "actorId": "bright",
+            "name": "布莱特",
+            "facts": [
+              {
+                "id": "clinic.owner.xuelao.old-friend",
+                "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+                "belief": "confirmed",
+                "access": "learned",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 20,
+                  "actorId": "legacy.story"
+                },
+                "sources": [
+                  {
+                    "eventRef": "received.browser.received",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 11,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "901 帝都正式续玩 20261106",
+                      "messageId": 11,
+                      "swipeId": 0,
+                      "text": "桌外隔离验收事件（非正式剧情）：可信来客私下向布莱特告知：九雪医馆馆主与雪老有旧。布莱特已实际听到；御临风与黄泉均未听到。"
+                    },
+                    "disclosure": null
+                  },
+                  {
+                    "eventRef": "received.communication.promise",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 12,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "901 帝都正式续玩 20261106",
+                      "messageId": 12,
+                      "swipeId": 0,
+                      "text": "桌外隔离验收事件（非正式剧情）：同一来客向布莱特补充约定：“这件事先不要向御临风和黄泉透露，等我们单独确认后再说。”布莱特听到并答应了该约定；另两人未听见。"
+                    },
+                    "disclosure": {
+                      "sourceQuote": "这件事先不要向御临风和黄泉透露，等我们单独确认后再说。"
+                    }
+                  },
+                  {
+                    "eventRef": "received.condition.confirmed.20261113",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 20,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "901 帝都正式续玩 20261106",
+                      "messageId": 20,
+                      "swipeId": 0,
+                      "text": "桌外隔离验收来源（非正式剧情）：保留消息11中告知旧交、消息12中向布莱特提出约定的同一位可信来客，已与布莱特单独确认九雪医馆馆主与雪老有旧；确认后，该来客对布莱特说：“我们约定的单独确认已经完成。这件事现在可以向御临风和黄泉说明，由你决定是否提起。”布莱特实际听到并理解此话；御临风和黄泉没有听到这次私下谈话。来客已经离开，此刻不在三人的谈话现场。"
+                    },
+                    "disclosure": {
+                      "sourceQuote": "我们约定的单独确认已经完成。这件事现在可以向御临风和黄泉说明，由你决定是否提起。"
+                    }
+                  }
+                ],
+                "eventRef": "received.condition.confirmed.20261113",
+                "channel": "message",
+                "learnedAtMessage": 20
+              }
+            ]
+          },
+          {
+            "actorId": "huang",
+            "name": "黄泉",
+            "facts": []
+          }
+        ],
+        "availableInformation": [
+          {
+            "access": "can-inquire",
+            "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+          }
+        ]
+      },
+      "status": "captured-not-sent",
+      "request": {
+        "file": "confirmed.request.json",
+        "bytes": 114836,
+        "sha256": "b059e39c9fb86949f4b0d7789d36bec04df060e509d8ffe3af42b5754deade61",
+        "status": "captured-not-sent"
+      },
+      "captures": [
+        {
+          "file": "1794608467563-classification.json",
+          "kind": "classification",
+          "sha256": "75a80223a8b66ecb9e6f91874dfe9381596de42a8b95e9c6b567e9d3aae776db"
+        },
+        {
+          "file": "1794608468559-narration.json",
+          "kind": "narration",
+          "sha256": "8a3ad4537ed2350be7c421a49b649ec7aae773bc2105faba1c675f83a9c75b0f"
+        }
+      ]
+    }
+  ]
+}

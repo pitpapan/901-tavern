@@ -1,0 +1,50 @@
+{
+  "status": "frozen-awaiting-specific-external-payload-approval",
+  "destination": "https://cdn.sta1n.cn/v1/chat/completions",
+  "dataScope": "Existing private fictional campaign history, character/world context, adopted style, existing memory and explicit manual test receipt. No formal story writes; no credentials in payloads.",
+  "parameters": {
+    "model": "[抗截断]gemini-3.8-flash",
+    "temperature": 1,
+    "max_tokens": 4096,
+    "stream": false,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "top_p": 1
+  },
+  "requests": [
+    {
+      "id": "01-before.02.narration",
+      "file": "captures/01-before.02.narration.request.json",
+      "bytes": 108003,
+      "sha256": "641dc06e41959db0b692e035395b9d59e3719286cace8bf00358f6e164354c47",
+      "messages": 16,
+      "sent": false
+    },
+    {
+      "id": "02-received.04.narration",
+      "file": "captures/02-received.04.narration.request.json",
+      "bytes": 109278,
+      "sha256": "181fccd46cd6fb990e5a8005d06697b8128ae9cdb1fc02499441d0215a30eb87",
+      "messages": 16,
+      "sent": false
+    },
+    {
+      "id": "03-reopened.06.narration",
+      "file": "captures/03-reopened.06.narration.request.json",
+      "bytes": 109278,
+      "sha256": "181fccd46cd6fb990e5a8005d06697b8128ae9cdb1fc02499441d0215a30eb87",
+      "messages": 16,
+      "sent": false
+    }
+  ],
+  "plannedMaximumExternalCalls": 3,
+  "classificationExternalCalls": 0,
+  "extractionCalls": 0,
+  "newAllowance": 0,
+  "originalRemaining": 3,
+  "cumulative": 531,
+  "plannedReopenComparisonIsIdenticalRequest": true,
+  "sendAutomatically": false,
+  "approvalBlock": "blocked-send.json",
+  "fullStateEvidence": "verification.json"
+}

@@ -1,0 +1,65 @@
+{
+  "status": "local-candidate-and-batch-ready-no-model-output",
+  "modelCalls": 0,
+  "credentialsRead": false,
+  "cumulativeRequestAttempts": 266,
+  "newAllowance": 0,
+  "regression": {
+    "command": "node --test work/rules_engine/gm_runtime/story-knowledge.test.mjs work/rules_engine/gm_runtime/story-knowledge-entry.test.mjs work/rules_engine/gm_runtime/replay-gate-script.test.mjs",
+    "tests": 79,
+    "passed": 79,
+    "failed": 0,
+    "log": "offline-regression.log",
+    "scope": "Projection/state/entry regressions, not semantic model evaluation"
+  },
+  "examples": {
+    "total": 18,
+    "newPairs": {
+      "organization-scope": [
+        "relation-other-branch",
+        "relation-target-confirmed"
+      ],
+      "known-or-undetermined": [
+        "relation-reception-policy",
+        "relation-reception-established"
+      ],
+      "history-and-confirmation": [
+        "relation-history-only",
+        "relation-history-confirmed-later"
+      ],
+      "requirement-and-reason": [
+        "purpose-not-stated",
+        "purpose-reason-stated"
+      ],
+      "claim-and-independent-fact": [
+        "purpose-source-claim",
+        "purpose-independent-confirmed"
+      ],
+      "choice-and-mutual-change": [
+        "arrangement-personal",
+        "arrangement-mutual-change"
+      ]
+    },
+    "labels": "human semantic rubric; acceptable examples are not unique answers"
+  },
+  "sourceFiles": {
+    "work/rules_engine/gm_runtime/story-knowledge.mjs": "0e86b3b59bb359dc5e16e85507e9f3f9aef458db2228ce8bba1eb1d90b44b4bb",
+    "work/rules_engine/gm_runtime/story-source-reference.examples.json": "fc7b5af19a5181636bf0ff35dfa4ed529ffae6ff98cf8f6949f1e00696aba4d9",
+    "work/rules_engine/gm_runtime/story-knowledge.test.mjs": "bce5c4e5c350863f60c462f0f379928ec7c9ac4a128917db4d2a3fe8f34c9791"
+  },
+  "candidateModules": 133,
+  "isolatedCardEntryMatchesCandidatePlusExcludedFixtureControls": true,
+  "actualBrowserEvidence": "browser-verification.json",
+  "firstRequests": 4,
+  "followupRules": 2,
+  "archive": {
+    "file": "relationship-purpose-candidate.zip",
+    "bytes": 721805,
+    "sha256": "956f2f830804133a2d4a74a77f058a45b4f735a6356288f01aa762baa6ff5a8b",
+    "entries": 139
+  },
+  "deploymentDifferences": "deployment-diff.json",
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticRoutesResumed": false
+}

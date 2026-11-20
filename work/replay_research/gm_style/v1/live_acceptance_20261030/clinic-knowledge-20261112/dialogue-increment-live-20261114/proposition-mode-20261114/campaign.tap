@@ -1,0 +1,698 @@
+TAP version 13
+# Subtest: ordinary saved narration invokes configured dialogue adapter without changing prose or memory route
+ok 1 - ordinary saved narration invokes configured dialogue adapter without changing prose or memory route
+  ---
+  duration_ms: 93.6885
+  type: 'test'
+  ...
+# Subtest: saved prose survives extraction failure and completed-turn replay does not request prose again
+ok 2 - saved prose survives extraction failure and completed-turn replay does not request prose again
+  ---
+  duration_ms: 11.219
+  type: 'test'
+  ...
+# Subtest: ordinary next turn asks only when pending information is relevant, and deferred answer does not regenerate prose
+ok 3 - ordinary next turn asks only when pending information is relevant, and deferred answer does not regenerate prose
+  ---
+  duration_ms: 29.8473
+  type: 'test'
+  ...
+# Subtest: ordinary story generation consumes recipient knowledge and exposes only an explicit saved-receipt entry
+ok 4 - ordinary story generation consumes recipient knowledge and exposes only an explicit saved-receipt entry
+  ---
+  duration_ms: 13.5274
+  type: 'test'
+  ...
+# Subtest: ordinary classifier and narration both consume time and discovery filtered knowledge
+ok 5 - ordinary classifier and narration both consume time and discovery filtered knowledge
+  ---
+  duration_ms: 9.9218
+  type: 'test'
+  ...
+# Subtest: unconfirmed rule persistence blocks narration and reports memory-only settlement
+ok 6 - unconfirmed rule persistence blocks narration and reports memory-only settlement
+  ---
+  duration_ms: 16.3798
+  type: 'test'
+  ...
+# Subtest: postcombat story classification failure retains its diagnostic instead of using combat fallback
+ok 7 - postcombat story classification failure retains its diagnostic instead of using combat fallback
+  ---
+  duration_ms: 9.3575
+  type: 'test'
+  ...
+# Subtest: dialogue classification timeout reports a processing failure without implying an attempted action
+ok 8 - dialogue classification timeout reports a processing failure without implying an attempted action
+  ---
+  duration_ms: 6.711
+  type: 'test'
+  ...
+# Subtest: classification timeout retries the same input once with a new id and ignores the late first decision
+ok 9 - classification timeout retries the same input once with a new id and ignores the late first decision
+  ---
+  duration_ms: 26.2364
+  type: 'test'
+  ...
+# Subtest: classification recovery stops after two timeouts without narration or settlement
+ok 10 - classification recovery stops after two timeouts without narration or settlement
+  ---
+  duration_ms: 30.4552
+  type: 'test'
+  ...
+# Subtest: classification recovery does not retry after explicit stop, changed input, or unconfirmed cancellation
+ok 11 - classification recovery does not retry after explicit stop, changed input, or unconfirmed cancellation
+  ---
+  duration_ms: 46.3399
+  type: 'test'
+  ...
+# Subtest: postcombat story continuation failure remains resumable without reclassifying or settling
+ok 12 - postcombat story continuation failure remains resumable without reclassifying or settling
+  ---
+  duration_ms: 12.4443
+  type: 'test'
+  ...
+# Subtest: a failure inside combat handling still uses the combat recovery route
+ok 13 - a failure inside combat handling still uses the combat recovery route
+  ---
+  duration_ms: 6.5796
+  type: 'test'
+  ...
+# Subtest: native combat regeneration restores the deleted report and unique latest root before a cancelled menu
+ok 14 - native combat regeneration restores the deleted report and unique latest root before a cancelled menu
+  ---
+  duration_ms: 6.2281
+  type: 'test'
+  ...
+# Subtest: debug-disabled malformed recovery retains a precise failure without settling
+ok 15 - debug-disabled malformed recovery retains a precise failure without settling
+  ---
+  duration_ms: 6.4494
+  type: 'test'
+  ...
+# Subtest: debug-disabled invalid check attribute identifies model input failure without exposing DC
+ok 16 - debug-disabled invalid check attribute identifies model input failure without exposing DC
+  ---
+  duration_ms: 6.5816
+  type: 'test'
+  ...
+# Subtest: debug-disabled upstream quota failure is distinguished from invalid model output
+ok 17 - debug-disabled upstream quota failure is distinguished from invalid model output
+  ---
+  duration_ms: 6.4843
+  type: 'test'
+  ...
+# Subtest: explicit additional lorebooks reach classification and ordinary narration
+ok 18 - explicit additional lorebooks reach classification and ordinary narration
+  ---
+  duration_ms: 9.022
+  type: 'test'
+  ...
+# Subtest: ordinary narration releases its lore filter even when host stop handle is broken
+ok 19 - ordinary narration releases its lore filter even when host stop handle is broken
+  ---
+  duration_ms: 16.6459
+  type: 'test'
+  ...
+# Subtest: active combat handles the turn before ordinary classification or narration
+ok 20 - active combat handles the turn before ordinary classification or narration
+  ---
+  duration_ms: 4.529
+  type: 'test'
+  ...
+# Subtest: host saved recovery survives failed narration and script reload without another debit
+ok 21 - host saved recovery survives failed narration and script reload without another debit
+  ---
+  duration_ms: 15.5494
+  type: 'test'
+  ...
+# Subtest: host executes the exact compound declaration once and resumes final sequence narration after reload
+ok 22 - host executes the exact compound declaration once and resumes final sequence narration after reload
+  ---
+  duration_ms: 16.0684
+  type: 'test'
+  ...
+# Subtest: a completed pending medicine keeps its original operation across a later player floor and native regeneration
+ok 23 - a completed pending medicine keeps its original operation across a later player floor and native regeneration
+  ---
+  duration_ms: 15.4754
+  type: 'test'
+  ...
+# Subtest: host classification passes a registered encounter to the player-bound combat entry
+ok 24 - host classification passes a registered encounter to the player-bound combat entry
+  ---
+  duration_ms: 8.179
+  type: 'test'
+  ...
+# Subtest: integrated profile cannot grant the old demo scene bonus
+ok 25 - integrated profile cannot grant the old demo scene bonus
+  ---
+  duration_ms: 9.2032
+  type: 'test'
+  ...
+# Subtest: ordinary narration resolves current model options locally for each request
+ok 26 - ordinary narration resolves current model options locally for each request
+  ---
+  duration_ms: 7.24
+  type: 'test'
+  ...
+# Subtest: controller persists failed NO_CHECK and recovers after reload with no new player input
+ok 27 - controller persists failed NO_CHECK and recovers after reload with no new player input
+  ---
+  duration_ms: 9.1108
+  type: 'test'
+  ...
+# Subtest: host cancels only the unexecuted medicine pending and anchors the current dialogue
+ok 28 - host cancels only the unexecuted medicine pending and anchors the current dialogue
+  ---
+  duration_ms: 8.5944
+  type: 'test'
+  ...
+# Subtest: a cancellation declaration cannot undo a committed operation awaiting narration
+ok 29 - a cancellation declaration cannot undo a committed operation awaiting narration
+  ---
+  duration_ms: 10.9621
+  type: 'test'
+  ...
+# Subtest: regenerating a completed turn reuses its narration without model calls or another assistant message
+ok 30 - regenerating a completed turn reuses its narration without model calls or another assistant message
+  ---
+  duration_ms: 7.5391
+  type: 'test'
+  ...
+# Subtest: regenerating a committed direct effect does not repeat classification, narration, or MVU writes
+ok 31 - regenerating a committed direct effect does not repeat classification, narration, or MVU writes
+  ---
+  duration_ms: 9.3997
+  type: 'test'
+  ...
+# Subtest: lost direct-effect failure notice resumes saved operation without reclassification
+ok 32 - lost direct-effect failure notice resumes saved operation without reclassification
+  ---
+  duration_ms: 9.6147
+  type: 'test'
+  ...
+# Subtest: a completed-looking assistant cannot bypass a missing JS operation
+ok 33 - a completed-looking assistant cannot bypass a missing JS operation
+  ---
+  duration_ms: 4.0968
+  type: 'test'
+  ...
+# Subtest: completed assistant with missing MVU projection restores state without model requests
+ok 34 - completed assistant with missing MVU projection restores state without model requests
+  ---
+  duration_ms: 7.0923
+  type: 'test'
+  ...
+# Subtest: planned speech with full content grants no knowledge or questions; actual received speech still registers
+ok 35 - planned speech with full content grants no knowledge or questions; actual received speech still registers
+  ---
+  duration_ms: 35.1762
+  type: 'test'
+  ...
+# Subtest: original custom281 keeps asserted plus intent attribution; updated shared guidance does not repair or certify it
+ok 36 - original custom281 keeps asserted plus intent attribution; updated shared guidance does not repair or certify it
+  ---
+  duration_ms: 17.7906
+  type: 'test'
+  ...
+# Subtest: received explanation is retained as explanation, not a registration blocker
+ok 37 - received explanation is retained as explanation, not a registration blocker
+  ---
+  duration_ms: 30.9124
+  type: 'test'
+  ...
+# Subtest: positive explanation cannot bypass status, scope, unresolved, identity, recipients or source acquisition
+ok 38 - positive explanation cannot bypass status, scope, unresolved, identity, recipients or source acquisition
+  ---
+  duration_ms: 49.6678
+  type: 'test'
+  ...
+# Subtest: positive explanation never repairs a missing or forged role span
+ok 39 - positive explanation never repairs a missing or forged role span
+  ---
+  duration_ms: 5.7816
+  type: 'test'
+  ...
+# Subtest: original custom273 response still fails INVALID_ROLE_SPAN unchanged; no source auto-completion
+ok 40 - original custom273 response still fails INVALID_ROLE_SPAN unchanged; no source auto-completion
+  ---
+  duration_ms: 3.6751
+  type: 'test'
+  ...
+# Subtest: original custom274 normalized label without span remains rejected; new guidance reaches ordinary extraction
+ok 41 - original custom274 normalized label without span remains rejected; new guidance reaches ordinary extraction
+  ---
+  duration_ms: 3.5134
+  type: 'test'
+  ...
+# Subtest: original custom276 shifted spans remain rejected with deterministic coordinates present
+ok 42 - original custom276 shifted spans remain rejected with deterministic coordinates present
+  ---
+  duration_ms: 3.7731
+  type: 'test'
+  ...
+# Subtest: original custom280 object in scope.time still fails unchanged under explicit scalar instructions
+ok 43 - original custom280 object in scope.time still fails unchanged under explicit scalar instructions
+  ---
+  duration_ms: 4.2921
+  type: 'test'
+  ...
+# Subtest: shared span guidance reaches ordinary extraction; partial hearing retains only received content
+ok 44 - shared span guidance reaches ordinary extraction; partial hearing retains only received content
+  ---
+  duration_ms: 8.595
+  type: 'test'
+  ...
+# Subtest: ordinary prose: new message is attributed information, not a new world truth; persisted and idempotent
+ok 45 - ordinary prose: new message is attributed information, not a new world truth; persisted and idempotent
+  ---
+  duration_ms: 13.27
+  type: 'test'
+  ...
+# Subtest: existing proposition relay keeps rumor and rejects invented sender acquisition
+ok 46 - existing proposition relay keeps rumor and rejects invented sender acquisition
+  ---
+  duration_ms: 20.3504
+  type: 'test'
+  ...
+# Subtest: planned never grants knowledge or prompts
+ok 47 - planned never grants knowledge or prompts
+  ---
+  duration_ms: 9.7112
+  type: 'test'
+  ...
+# Subtest: denied never grants knowledge or prompts
+ok 48 - denied never grants knowledge or prompts
+  ---
+  duration_ms: 7.0609
+  type: 'test'
+  ...
+# Subtest: question never grants knowledge or prompts
+ok 49 - question never grants knowledge or prompts
+  ---
+  duration_ms: 7.3233
+  type: 'test'
+  ...
+# Subtest: not received never grants knowledge or prompts
+ok 50 - not received never grants knowledge or prompts
+  ---
+  duration_ms: 6.5577
+  type: 'test'
+  ...
+# Subtest: ambiguous hearing persists across reopen and asks only for matching dependencies; explicit answer resolves once
+ok 51 - ambiguous hearing persists across reopen and asks only for matching dependencies; explicit answer resolves once
+  ---
+  duration_ms: 18.8096
+  type: 'test'
+  ...
+# Subtest: unresolved extraction cannot auto grant even if reception says received
+ok 52 - unresolved extraction cannot auto grant even if reception says received
+  ---
+  duration_ms: 8.3877
+  type: 'test'
+  ...
+# Subtest: invalid span or recipient rejects entire candidate batch before any write
+ok 53 - invalid span or recipient rejects entire candidate batch before any write
+  ---
+  duration_ms: 7.8404
+  type: 'test'
+  ...
+# Subtest: source changes while extraction waits: no knowledge write
+ok 54 - source changes while extraction waits: no knowledge write
+  ---
+  duration_ms: 3.7588
+  type: 'test'
+  ...
+# Subtest: missing extractor is explicit disabled, not empty successful extraction
+ok 55 - missing extractor is explicit disabled, not empty successful extraction
+  ---
+  duration_ms: 0.6294
+  type: 'test'
+  ...
+# Subtest: extractor failure is not cached as no change and does not write story
+ok 56 - extractor failure is not cached as no change and does not write story
+  ---
+  duration_ms: 3.3478
+  type: 'test'
+  ...
+# Subtest: dependency callback gates questions, dismissal is not repeated on every turn
+ok 57 - dependency callback gates questions, dismissal is not repeated on every turn
+  ---
+  duration_ms: 13.1176
+  type: 'test'
+  ...
+# Subtest: new content uses quoted words, never model normalization as an added fact
+ok 58 - new content uses quoted words, never model normalization as an added fact
+  ---
+  duration_ms: 9.6571
+  type: 'test'
+  ...
+# Subtest: prepared batch resumes without extracting again after receipt persistence interruption
+ok 59 - prepared batch resumes without extracting again after receipt persistence interruption
+  ---
+  duration_ms: 10.5089
+  type: 'test'
+  ...
+# Subtest: native fork retains unresolved questions on its own branch
+ok 60 - native fork retains unresolved questions on its own branch
+  ---
+  duration_ms: 12.4098
+  type: 'test'
+  ...
+# Subtest: unresolved-only semantic output is retained, not falsely treated as no changes
+ok 61 - unresolved-only semantic output is retained, not falsely treated as no changes
+  ---
+  duration_ms: 13.3808
+  type: 'test'
+  ...
+# Subtest: browser extraction uses the same frozen assertion SHA contract as existing Node extractor
+ok 62 - browser extraction uses the same frozen assertion SHA contract as existing Node extractor
+  ---
+  duration_ms: 1.3129
+  type: 'test'
+  ...
+# Subtest: explicit semantic adapter accepts offline completion and binds dependency response; no review routes
+ok 63 - explicit semantic adapter accepts offline completion and binds dependency response; no review routes
+  ---
+  duration_ms: 9.6929
+  type: 'test'
+  ...
+# Subtest: an unrelated unresolved passage does not prevent explicit reception in the same turn
+ok 64 - an unrelated unresolved passage does not prevent explicit reception in the same turn
+  ---
+  duration_ms: 9.5462
+  type: 'test'
+  ...
+# Subtest: explicit contradictory actor mapping stays pending rather than granting the wrong actor
+ok 65 - explicit contradictory actor mapping stays pending rather than granting the wrong actor
+  ---
+  duration_ms: 8.9309
+  type: 'test'
+  ...
+# Subtest: unknown or reported assertions do not automatically grant reception
+ok 66 - unknown or reported assertions do not automatically grant reception
+  ---
+  duration_ms: 17.1988
+  type: 'test'
+  ...
+# (node:5068) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/pit/AppData/Local/Packages/openai.codex_2p2nqsd0c76g0/AC/%23!sandbox.%7B15d4a01a-6ee1-4604-941b-9468feb9a9d9%7D/Temp/901-knowledge-wijyOS/shared/901-trpg-engine/tools/trpg-engine/gm/knowledge.js is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to \\\\?\\C:\\Users\\pit\\package.json.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: actual adopted ordinary entry constructs runtime, passes it to gate and exposes explicit receipts
+ok 67 - actual adopted ordinary entry constructs runtime, passes it to gate and exposes explicit receipts
+  ---
+  duration_ms: 5.7952
+  type: 'test'
+  ...
+# Subtest: original Host knowledge closure packages as browser imports and stays executable
+ok 68 - original Host knowledge closure packages as browser imports and stays executable
+  ---
+  duration_ms: 2105.2278
+  type: 'test'
+  ...
+# Subtest: reviewed lore and rejected old utterance are projected without editing original story
+ok 69 - reviewed lore and rejected old utterance are projected without editing original story
+  ---
+  duration_ms: 1.7042
+  type: 'test'
+  ...
+# Subtest: only the two reviewed attribution failures are annotated in their real retained continuation
+ok 70 - only the two reviewed attribution failures are annotated in their real retained continuation
+  ---
+  duration_ms: 45.8111
+  type: 'test'
+  ...
+# Subtest: generation distinguishes source requirements, personal choices and reviewed mistaken dialogue
+ok 71 - generation distinguishes source requirements, personal choices and reviewed mistaken dialogue
+  ---
+  duration_ms: 4.9786
+  type: 'test'
+  ...
+# Subtest: reviewed attribution annotation preserves original prose, personal choices and source state through generation
+ok 72 - reviewed attribution annotation preserves original prose, personal choices and source state through generation
+  ---
+  duration_ms: 10.9117
+  type: 'test'
+  ...
+# Subtest: attribution annotations require the reviewed utterance and its original source on the retained branch
+ok 73 - attribution annotations require the reviewed utterance and its original source on the retained branch
+  ---
+  duration_ms: 20.0561
+  type: 'test'
+  ...
+# Subtest: matching language in a supported agreement or a new adopted agreement is not automatically flagged
+ok 74 - matching language in a supported agreement or a new adopted agreement is not automatically flagged
+  ---
+  duration_ms: 7.2712
+  type: 'test'
+  ...
+# Subtest: generation contract preserves source identity and condition roles while keeping disclosure optional
+ok 75 - generation contract preserves source identity and condition roles while keeping disclosure optional
+  ---
+  duration_ms: 0.8871
+  type: 'test'
+  ...
+# Subtest: source/reference projection preserves evidence and leaves output unadopted: unlinked-identities
+ok 76 - source/reference projection preserves evidence and leaves output unadopted: unlinked-identities
+  ---
+  duration_ms: 11.0891
+  type: 'test'
+  ...
+# Subtest: source/reference projection preserves evidence and leaves output unadopted: explicit-same-identity
+ok 77 - source/reference projection preserves evidence and leaves output unadopted: explicit-same-identity
+  ---
+  duration_ms: 6.7063
+  type: 'test'
+  ...
+# Subtest: source/reference projection preserves evidence and leaves output unadopted: pending-condition-quiet-place
+ok 78 - source/reference projection preserves evidence and leaves output unadopted: pending-condition-quiet-place
+  ---
+  duration_ms: 8.7586
+  type: 'test'
+  ...
+# Subtest: source/reference projection preserves evidence and leaves output unadopted: confirmed-choice
+ok 79 - source/reference projection preserves evidence and leaves output unadopted: confirmed-choice
+  ---
+  duration_ms: 13.0905
+  type: 'test'
+  ...
+# Subtest: source/reference projection preserves evidence and leaves output unadopted: quotation-viewpoint-shift
+ok 80 - source/reference projection preserves evidence and leaves output unadopted: quotation-viewpoint-shift
+  ---
+  duration_ms: 7.3912
+  type: 'test'
+  ...
+# Subtest: source/reference projection preserves evidence and leaves output unadopted: unresolved-reference
+ok 81 - source/reference projection preserves evidence and leaves output unadopted: unresolved-reference
+  ---
+  duration_ms: 14.104
+  type: 'test'
+  ...
+# Subtest: source/reference projection preserves evidence and leaves output unadopted: relation-other-branch
+ok 82 - source/reference projection preserves evidence and leaves output unadopted: relation-other-branch
+  ---
+  duration_ms: 4.4133
+  type: 'test'
+  ...
+# Subtest: source/reference projection preserves evidence and leaves output unadopted: relation-target-confirmed
+ok 83 - source/reference projection preserves evidence and leaves output unadopted: relation-target-confirmed
+  ---
+  duration_ms: 4.69
+  type: 'test'
+  ...
+# Subtest: source/reference projection preserves evidence and leaves output unadopted: relation-reception-policy
+ok 84 - source/reference projection preserves evidence and leaves output unadopted: relation-reception-policy
+  ---
+  duration_ms: 5.0763
+  type: 'test'
+  ...
+# Subtest: source/reference projection preserves evidence and leaves output unadopted: relation-reception-established
+ok 85 - source/reference projection preserves evidence and leaves output unadopted: relation-reception-established
+  ---
+  duration_ms: 5.7388
+  type: 'test'
+  ...
+# Subtest: source/reference projection preserves evidence and leaves output unadopted: relation-history-only
+ok 86 - source/reference projection preserves evidence and leaves output unadopted: relation-history-only
+  ---
+  duration_ms: 4.4777
+  type: 'test'
+  ...
+# Subtest: source/reference projection preserves evidence and leaves output unadopted: relation-history-confirmed-later
+ok 87 - source/reference projection preserves evidence and leaves output unadopted: relation-history-confirmed-later
+  ---
+  duration_ms: 4.9706
+  type: 'test'
+  ...
+# Subtest: source/reference projection preserves evidence and leaves output unadopted: purpose-not-stated
+ok 88 - source/reference projection preserves evidence and leaves output unadopted: purpose-not-stated
+  ---
+  duration_ms: 8.1936
+  type: 'test'
+  ...
+# Subtest: source/reference projection preserves evidence and leaves output unadopted: purpose-reason-stated
+ok 89 - source/reference projection preserves evidence and leaves output unadopted: purpose-reason-stated
+  ---
+  duration_ms: 10.955
+  type: 'test'
+  ...
+# Subtest: source/reference projection preserves evidence and leaves output unadopted: purpose-source-claim
+ok 90 - source/reference projection preserves evidence and leaves output unadopted: purpose-source-claim
+  ---
+  duration_ms: 11.1569
+  type: 'test'
+  ...
+# Subtest: source/reference projection preserves evidence and leaves output unadopted: purpose-independent-confirmed
+ok 91 - source/reference projection preserves evidence and leaves output unadopted: purpose-independent-confirmed
+  ---
+  duration_ms: 10.575
+  type: 'test'
+  ...
+# Subtest: source/reference projection preserves evidence and leaves output unadopted: arrangement-personal
+ok 92 - source/reference projection preserves evidence and leaves output unadopted: arrangement-personal
+  ---
+  duration_ms: 9.1919
+  type: 'test'
+  ...
+# Subtest: source/reference projection preserves evidence and leaves output unadopted: arrangement-mutual-change
+ok 93 - source/reference projection preserves evidence and leaves output unadopted: arrangement-mutual-change
+  ---
+  duration_ms: 9.4151
+  type: 'test'
+  ...
+# Subtest: private knowledge exposes its actual source without inventing a duty of secrecy
+ok 94 - private knowledge exposes its actual source without inventing a duty of secrecy
+  ---
+  duration_ms: 4.9912
+  type: 'test'
+  ...
+# Subtest: explicit disclosure notes remain source-bound after reopening and are not silently inherited by a listener
+ok 95 - explicit disclosure notes remain source-bound after reopening and are not silently inherited by a listener
+  ---
+  duration_ms: 10.5666
+  type: 'test'
+  ...
+# Subtest: a disclosure constraint must quote the retained source rather than arbitrary inferred secrecy
+ok 96 - a disclosure constraint must quote the retained source rather than arbitrary inferred secrecy
+  ---
+  duration_ms: 2.294
+  type: 'test'
+  ...
+# Subtest: ordinary generation carries choice guidance and source notes without prescribing prose or granting listeners
+ok 97 - ordinary generation carries choice guidance and source notes without prescribing prose or granting listeners
+  ---
+  duration_ms: 3.4973
+  type: 'test'
+  ...
+# Subtest: a hidden source retains the speaker and quotation context in the final knowledge projection
+ok 98 - a hidden source retains the speaker and quotation context in the final knowledge projection
+  ---
+  duration_ms: 4.1938
+  type: 'test'
+  ...
+# Subtest: a later explicit source confirmation retains both source contexts without granting listeners
+ok 99 - a later explicit source confirmation retains both source contexts without granting listeners
+  ---
+  duration_ms: 6.8515
+  type: 'test'
+  ...
+# Subtest: catalog time, discovery and dependency boundaries survive initialization and control public projection
+ok 100 - catalog time, discovery and dependency boundaries survive initialization and control public projection
+  ---
+  duration_ms: 4.6184
+  type: 'test'
+  ...
+# Subtest: future or differently clocked facts cannot be granted by a current message receipt
+ok 101 - future or differently clocked facts cannot be granted by a current message receipt
+  ---
+  duration_ms: 3.4973
+  type: 'test'
+  ...
+# Subtest: later-recorded old receipt cannot replace newer belief or upgrade a relay
+ok 102 - later-recorded old receipt cannot replace newer belief or upgrade a relay
+  ---
+  duration_ms: 6.9723
+  type: 'test'
+  ...
+# Subtest: source replaced while disk save is pending cannot create an acquisition event
+ok 103 - source replaced while disk save is pending cannot create an acquisition event
+  ---
+  duration_ms: 0.67
+  type: 'test'
+  ...
+# Subtest: public but undiscovered facts cannot be relayed by an uninformed sender
+ok 104 - public but undiscovered facts cannot be relayed by an uninformed sender
+  ---
+  duration_ms: 6.5952
+  type: 'test'
+  ...
+# Subtest: historical known state retains its own effective and learned time rather than receiving an unseen update
+ok 105 - historical known state retains its own effective and learned time rather than receiving an unseen update
+  ---
+  duration_ms: 3.5869
+  type: 'test'
+  ...
+# Subtest: receipt survives actual JSONL disk save and a fresh runtime reconstructed from saved variables
+ok 106 - receipt survives actual JSONL disk save and a fresh runtime reconstructed from saved variables
+  ---
+  duration_ms: 28.0841
+  type: 'test'
+  ...
+# Subtest: author truth is not initial party knowledge, while ordinary public facts remain available
+ok 107 - author truth is not initial party knowledge, while ordinary public facts remain available
+  ---
+  duration_ms: 3.1429
+  type: 'test'
+  ...
+# Subtest: actual receipt grants only named listeners and explicit later relay reaches its recipient
+ok 108 - actual receipt grants only named listeners and explicit later relay reaches its recipient
+  ---
+  duration_ms: 7.3432
+  type: 'test'
+  ...
+# Subtest: retrieval, unreceived messages and an uninformed sender never grant knowledge
+ok 109 - retrieval, unreceived messages and an uninformed sender never grant knowledge
+  ---
+  duration_ms: 1.2222
+  type: 'test'
+  ...
+# Subtest: saved reopen and idempotent receipts retain knowledge without a second state or grant
+ok 110 - saved reopen and idempotent receipts retain knowledge without a second state or grant
+  ---
+  duration_ms: 6.5609
+  type: 'test'
+  ...
+# Subtest: rumor is retained as rumor and a relay cannot silently upgrade belief
+ok 111 - rumor is retained as rumor and a relay cannot silently upgrade belief
+  ---
+  duration_ms: 7.078
+  type: 'test'
+  ...
+# Subtest: lore projection is bound to source identity, preserves other content and does not guess changed sources
+ok 112 - lore projection is bound to source identity, preserves other content and does not guess changed sources
+  ---
+  duration_ms: 0.5617
+  type: 'test'
+  ...
+# Subtest: native branch adoption inherits the fork snapshot without sharing later receptions
+ok 113 - native branch adoption inherits the fork snapshot without sharing later receptions
+  ---
+  duration_ms: 8.9955
+  type: 'test'
+  ...
+# Subtest: changed or discarded source swipes cannot continue to prove knowledge
+ok 114 - changed or discarded source swipes cannot continue to prove knowledge
+  ---
+  duration_ms: 2.3025
+  type: 'test'
+  ...
+1..114
+# tests 114
+# suites 0
+# pass 114
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2865.0088

@@ -1,0 +1,32 @@
+2026-11-15 最新合同第08—10例补测
+
+结果：新增3次全部使用（custom332—334），三例通过本轮知情边界与依赖指标，余额0、累计334，批次关闭，无重试。没有修改产品代码、合同或校验。
+
+复用与输入：第08例仍为“黄泉对御临风和布莱特说：‘交货地点改到南岗。’两人中有一人没听清，但记录无法指出是哪一人。”（实际引号与完整请求以batch为准）。与此前冻结新版请求相比仅沿用已验收的直接接收说明，其余业务输入、坐标、Schema、seed和生成参数保持。
+09/10明确沿用上次实际执行的from08对照，不混成原07渡船分支：09“我和御临风谈谈午饭的口味，再整理一下衣领。”；10“让御临风依据黄泉刚才说的交货地点，决定把货物运到哪里。”。在第08例通过后，由原prepareDialogueTurn生成两份请求，只更新真实待核记录及其确定性inputRef；依赖system、原请求文本、记忆、生成参数保持。两份都是本次332真实after.seed的独立平行对照，非手工构造、非旧301待核，也非新增叙事。
+
+08：模型显式输出utterance与嵌套uncertain回执，列出两名被告知者但不猜谁听清，reason保留恰有一人未听清却无法指出身份；coverage uncertain。Schema及7处UTF-16原文引用准确。原运行链无知情增量、待核1、询问0。
+09：模型返回required=[]；原运行链ready、questions空、询问0。状态与08结束时完全一致，待核未消失、没有知情授予。
+10：模型返回08真实待核ID；原运行链deferred、询问1，未代答或决定接收，仍无知情增量。逐字段比对仅pending行增加prompted=true，其他知情状态与来源均保持。
+
+通过范围：三次接口均HTTP200/stop，完整回复经过原运行链离线回放。08按新版Schema检查，09/10沿既有dependency合同校验，未另加Schema或抽取/批准/修订流程。没有自动补回执、转换action、修补回复或放宽校验。没有产品改动，未重复运行上一轮128项代码回归；本轮新增的是原始模型验收与隔离回放证据。
+限制：与上轮01—07一起，可覆盖当前合同这组10类知情目标的有限样例；不是长期稳定性、全部语义抽取或正式游玩部署验收。09/10只证明这两条具体请求的依赖行为，不证明所有隐含依赖可正确识别；询问回调留空，未验证用户后续实际回答。请求模型参数相同，上游08响应model=gemini-3.8-flash，09/10为gemini-3.8-flash-n，不能宣称固定后端模型实验。
+
+证据：batch保存冻结请求及seed；live保存完整发送体、完整原始HTTP响应、模型内容及原运行链回放；complete-outputs.txt含三份完整输出与人工核对；offline-audit.json验证输入/参数/Schema/引用；state-audit.json验证无关不变与依赖仅标prompted；verification.json验证796旧证据、22正式文件、7产品源码均未改变。原失败全部保留。
+
+未部署、未写正式剧情、未恢复自动批准/修订路线。
+
+08-ambiguous-listener / custom332：28552字节，4213ms，gemini-3.8-flash
+请求SHA256=0e9442606b36f4e87f39caeb19296760aca286c2eecc074b9c423fe2fb7c7bf2
+原始响应SHA256=148f8bf2cf6493a086bc60a2d49a58e08bdb6717b122682ecad2147eef9620f6
+保留两人中一人没听清但无法指认的歧义；两名被告知者列在uncertain回执，无人获知情，待核1且当轮不问。utterance绑定与coverage正确，Schema及7引用通过。
+
+09-unrelated-from08 / custom333：2143字节，3176ms，gemini-3.8-flash-n
+请求SHA256=704a2492a52f0fd83b3d1dcc5fa797a3fcbf5a5b684195b2f00c6bdeae1b3d15
+原始响应SHA256=cd65fb95ddf65746e54c84782ffbc368398041d1cb88b10b34d0731db090a61b
+承接本次332真实待核，原午饭/衣领请求未变；模型required空，原运行链ready/questions空/asked0，仍无知情授予；隔离seed保持revision2。
+
+10-dependent-from08 / custom334：2161字节，7258ms，gemini-3.8-flash-n
+请求SHA256=03eadeb743d7bcc2e53888d0c207b4f75020ff757313bb68c986bf31c1afbd19
+原始响应SHA256=9c85ffe5e0a4f1a3da1b0cbcd7a2ab30ff07604b293440bbdeef0d38aa8d5b33
+原交货地点依赖请求不变，返回本次332唯一真实待核ID；原运行链deferred/询问1次，保持原歧义与来源，不代答、不授予知情，只标prompted。与09为同一真实08快照的平行对照。

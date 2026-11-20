@@ -1,0 +1,75 @@
+{
+  "authorization": "用户新增九次，继续第02至10例普通对白知情增量模型验证；不部署、不写正式剧情、不恢复自动批准或修订。按已声明策略：失败即停、不重试。",
+  "baseline": 277,
+  "limit": 9,
+  "cumulative": 280,
+  "remaining": 6,
+  "attempts": [
+    {
+      "id": "02-received-rumor",
+      "customRequest": 278,
+      "state": "completed",
+      "requestBytes": 7537,
+      "requestSha256": "a441c9c611d32a0a805944bbc14472e89d8eb71d4d0a730f8a1ab1052584e2b0",
+      "status": 200,
+      "elapsedMs": 7155,
+      "rawResponseSha256": "4b35c844f000922b19c6156bd33ae8b3580e6b68f5a8acf19a8a11afc544a8f5",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 2128,
+        "completion_tokens": 622,
+        "total_tokens": 2750
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "Protocol and supplied spans valid. Direct speech grants only huang harbor.closed; existing sender acquisition retained, belief remains rumor, no player grant or confirmation prompt. No world-truth upgrade."
+    },
+    {
+      "id": "03-not-heard",
+      "customRequest": 279,
+      "state": "completed",
+      "requestBytes": 7705,
+      "requestSha256": "31887f58c9a83378e847444f2993fd0bf5c57642e4e06c509b2a24aac5d647ca",
+      "status": 200,
+      "elapsedMs": 11845,
+      "rawResponseSha256": "9f7634b5119537225ca5a360d96bff3427336c111770f1ae3d264d1982706c02",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 2230,
+        "completion_tokens": 1697,
+        "total_tokens": 3927
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "Protocol valid. Speech remains reported content; explicit not_received and denied hearing preserved. All actors have no knowledge grants, pending empty, no question. Action object null noted without loss of reception association."
+    },
+    {
+      "id": "04-not-yet-said",
+      "customRequest": 280,
+      "state": "completed",
+      "requestBytes": 7598,
+      "requestSha256": "ad3b7907b44d6e89421b1b810b7f31eaeac14728ac8d5d3fe094ca17f4bbdc54",
+      "status": 200,
+      "elapsedMs": 5769,
+      "rawResponseSha256": "6ad4b04cabd6ba4ec86c4fc6fc286b4b38cf53109d889f273a8b96f61c94a1bb",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 2169,
+        "completion_tokens": 523,
+        "total_tokens": 2692
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Intent and not-yet-spoken meaning preserved, receptions empty, but c2.scope.time is a span object instead of string/null. INVALID_ROLE_SPAN. No coordinate mismatch found; revision0 and no grants. Stop without retry or repair."
+    }
+  ],
+  "closed": true,
+  "retries": 0,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "stopReason": "manual-fail"
+}

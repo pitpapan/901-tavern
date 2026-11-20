@@ -289,8 +289,11 @@ function executeProgram(root,r,{combat=false,preActionCleared=false,drawDice}={}
   if(op.projection)inspectProjectionCreation(root,r.actorId,op.projection,plan,val);
   if(op.op==='projectionControl')inspectProjectionControl(root,r.actorId,object.resourceId,plan,op.mode);
  }
- const cost=val(program.cost??(rank==='C'?3:1))+val(program.repetition?.extraCost??0)*Math.max(0,targetIds.length-1);
- const selectedPool=policyPool(program,s,learned,plan,cost),pool=selectedPool??plan.pool??caster?.pool;
+ const baseCost=val(program.cost??(rank==='C'?3:1))+val(program.repetition?.extraCost??0)*Math.max(0,targetIds.length-1);
+ const selectedPool=policyPool(program,s,learned,plan,0),pool=selectedPool??plan.pool??caster?.pool;
+ const reduction=program.casting&&['精神魔力','天生魔力','生命魔力'].includes(selectedPool?program.executionPolicy.pool.kind:s.resources?.[pool]?.kind)?resourceBonus(s,'spellManaCostReduction',{casting:true}):0;
+ const cost=baseCost>0?Math.max(1,baseCost-reduction):baseCost;
+ if(program.executionPolicy?.pool)policyPool(program,s,learned,plan,cost);
  if(cost&&!program.executionPolicy?.pool){
   const energy=s.resources?.[pool];if(!energy)need('须选择实际施法能量池','resource.pool');
   if(definition.tree==='guanlan')requireFact(energy.generic===true&&!energy.special,'此技艺须单个非特殊通用能量池');

@@ -1,0 +1,35 @@
+{
+  "authorization": "用户授权十次普通对白知情增量模型验证；不部署、不写正式剧情、不恢复自动批准或修订。按已声明策略：失败即停、不重试。",
+  "baseline": 275,
+  "limit": 10,
+  "cumulative": 276,
+  "remaining": 9,
+  "attempts": [
+    {
+      "id": "01-received-new",
+      "customRequest": 276,
+      "state": "completed",
+      "requestBytes": 6186,
+      "requestSha256": "f71663b589315a8a2670804e60a4b97ab39944d936901f21d18fa0a0e91a91e0",
+      "status": 200,
+      "elapsedMs": 6976,
+      "rawResponseSha256": "5f80932b491eaae1933dfcf4dd5912e1152a9df53bfda2985be4d516c292a313",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 1702,
+        "completion_tokens": 732,
+        "total_tokens": 2434
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "HTTP200/stop; c3 actor/verb/anchor and reception evidence have incorrect offsets. Exact source slices do not match quote. INVALID_ASSERTION_CLAIM, revision0, no knowledge grants. Stop after 1 of 10, no retry or repair."
+    }
+  ],
+  "closed": true,
+  "retries": 0,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "stopReason": "manual-fail"
+}

@@ -1,0 +1,407 @@
+{
+  "id": "implicit.partial.nested",
+  "exactCurrentMessages": true,
+  "structuralPass": true,
+  "checked": {
+    "contextRef": "ce4f6d72db7bd34485d6076add12659c460638a820639921431aff4224df7748",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.8a7b734777e2ab66835a6d5403d0e4ff9f452075835b2ec5811c7111fb5842a0",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "turn.utterance.1",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "日落后锁门，"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 0,
+                  "end": 2,
+                  "quote": "黄泉"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 6,
+                  "end": 12,
+                  "quote": "日落后锁门，"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 0,
+                "end": 12,
+                "quote": "黄泉答道：“日落后锁门，"
+              }
+            },
+            {
+              "id": "turn.utterance.2",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "明早在渡口碰头。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 0,
+                  "end": 2,
+                  "quote": "黄泉"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 12,
+                  "end": 20,
+                  "quote": "明早在渡口碰头。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 0,
+                "end": 21,
+                "quote": "黄泉答道：“日落后锁门，明早在渡口碰头。”"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "turn.utterance.1.reception.1",
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 6,
+            "end": 12,
+            "quote": "日落后锁门，"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 21,
+          "end": 30,
+          "quote": "御临风只听清前半句"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "御临风只听清前半句发言",
+        "claimId": "turn.utterance.1"
+      },
+      {
+        "id": "turn.utterance.2.reception.1",
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 12,
+            "end": 20,
+            "quote": "明早在渡口碰头。"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 31,
+          "end": 39,
+          "quote": "后半句被钟声盖住"
+        },
+        "status": "not_received",
+        "propositionRef": null,
+        "reason": "后半句被钟声盖住未听清",
+        "claimId": "turn.utterance.2"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "recorded",
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 40,
+          "quote": "黄泉答道：“日落后锁门，明早在渡口碰头。”御临风只听清前半句，后半句被钟声盖住。"
+        },
+        "reason": "本轮言说的两段内容及其接收与未接收情况均已明确记录"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false
+  },
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": [
+        {
+          "id": "dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "日落后锁门，"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 1,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "implicit.offline.implicit.partial",
+                "messageId": 1,
+                "swipeId": 0,
+                "text": "黄泉答道：“日落后锁门，明早在渡口碰头。”御临风只听清前半句，后半句被钟声盖住。"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7",
+          "channel": "message",
+          "learnedAtMessage": 1
+        }
+      ]
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": []
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "pending": [],
+  "noQuestionWithoutDependency": true,
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "implicit.regression",
+    "chatId": "implicit.offline.implicit.partial",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      },
+      "dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7.message": {
+        "id": "dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "日落后锁门，"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      }
+    },
+    "events": {
+      "received.dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7": {
+        "id": "received.dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player"
+          ],
+          "propositionRefs": [
+            "dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "implicit.offline.implicit.partial",
+            "messageId": 1,
+            "swipeId": 0,
+            "text": "黄泉答道：“日落后锁门，明早在渡口碰头。”御临风只听清前半句，后半句被钟声盖住。"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/implicit.offline.implicit.partial",
+            "line": 2
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7.player.dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7.message.event": {
+        "id": "dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7.player.dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7.player.dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7.message",
+            "eventRef": "received.dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 1,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/implicit.offline.implicit.partial",
+            "line": 2
+          }
+        ]
+      }
+    },
+    "knowledge": {
+      "dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7.player.dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7.message": {
+        "id": "dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7.player.dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7.message",
+        "eventRef": "received.dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      }
+    },
+    "dialogueBatches": {
+      "dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d": {
+        "id": "dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d",
+        "sourceAnchor": {
+          "chatId": "implicit.offline.implicit.partial",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "黄泉答道：“日落后锁门，明早在渡口碰头。”御临风只听清前半句，后半句被钟声盖住。"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.6f302257135a2076cbd2c2e0800f6b91008c5d16ec7136a962f871da9053b98d.fce84f444161b158ab7fe3ee114f53d8a41cfe918bbea0457405e75fc10410a7",
+            "claimId": "turn.utterance.1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "日落后锁门，",
+            "quote": "日落后锁门，",
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "御临风只听清前半句发言",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 21,
+              "end": 30,
+              "quote": "御临风只听清前半句"
+            },
+            "unresolved": []
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "recorded",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 40,
+              "quote": "黄泉答道：“日落后锁门，明早在渡口碰头。”御临风只听清前半句，后半句被钟声盖住。"
+            },
+            "reason": "本轮言说的两段内容及其接收与未接收情况均已明确记录"
+          }
+        ]
+      }
+    }
+  }
+}

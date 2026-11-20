@@ -1,0 +1,100 @@
+{
+  "design": "partial-background-ablation",
+  "offsetConventions": "Messages use zero-based indexes. Line is one-based. Decoded content offsets count Unicode code points and raw offsets count original-request UTF-8 bytes. Both ranges are half-open. Replace old with new by descending raw byte offset.",
+  "base": {
+    "file": "../scene2-v3-preparation-20261119/scene2.request.json",
+    "bytes": 111147,
+    "sha256": "e25f6a9b25675f408ede511c0c5c958ef49c8dae13abab0e59b78ad5a3710c29"
+  },
+  "control": {
+    "file": "control.request.json",
+    "bytes": 111147,
+    "sha256": "e25f6a9b25675f408ede511c0c5c958ef49c8dae13abab0e59b78ad5a3710c29"
+  },
+  "ablation": {
+    "file": "ablation.request.json",
+    "bytes": 111147,
+    "sha256": "d138156cce1705496af7ee2409d63d23b158382cb26ced962d652cf0754644cd"
+  },
+  "lengthMethod": "Exact Unicode code-point and UTF-8 byte length for each replacement. Token lengths were not measured or matched.",
+  "retainedMessageIndices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "retainedParameters": {
+    "model": "[抗截断]gemini-3.8-flash",
+    "temperature": 1,
+    "max_tokens": 4096,
+    "stream": false,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "top_p": 1
+  },
+  "replacements": [
+    {
+      "id": "R1",
+      "messageIndex": 0,
+      "line1": 379,
+      "contentCodePointStart": 24802,
+      "contentCodePointEnd": 24817,
+      "controlRequestByteStart": 72536,
+      "controlRequestByteEnd": 72581,
+      "old": "是长期为帝国及兄弟会任事的老兵",
+      "new": "是行事看重职责与实际条件的老兵",
+      "oldCodePoints": 15,
+      "newCodePoints": 15,
+      "oldUtf8Bytes": 45,
+      "newUtf8Bytes": 45,
+      "oldSha256Utf8": "4e67e8a7a946ea5b0a64f664e5fcb11a65b8f613617df7e6468cb0512826fbb4",
+      "newSha256Utf8": "1f2e758f817c8a21b9c7e7a9165831fa35f29b3e078f80053326373b1e4ee1d2",
+      "reason": "保留老兵和后接旧识，以已载入的职责与务实办事倾向替换机构任职。"
+    },
+    {
+      "id": "R2",
+      "messageIndex": 0,
+      "line1": 379,
+      "contentCodePointStart": 24830,
+      "contentCodePointEnd": 24869,
+      "controlRequestByteStart": 72620,
+      "controlRequestByteEnd": 72737,
+      "old": "旧任务中失去儿子、儿媳并武功尽毁，帝治疗至常人水平后多年重练；他想多陪孙女，又",
+      "new": "办理公务时先看眼前能解决的困难，安排好手边事务；待人温和，触及原则态度严肃。他",
+      "oldCodePoints": 39,
+      "newCodePoints": 39,
+      "oldUtf8Bytes": 117,
+      "newUtf8Bytes": 117,
+      "oldSha256Utf8": "fb95149a3ab1e8e09abedbf2b42b226e8c939fe4de82da72a42f92be39fd2a31",
+      "newSha256Utf8": "4e0a7e51dd6aae981b9825feab1cbbf29e3af1eeb8ca9e567749dc82e29a24c3",
+      "reason": "用 M0 同一人物表达及条件行动里的公务、分寸与温和严肃描述替换整条旧史和孙女愿望。保留后续职责取向和未退役条件。"
+    },
+    {
+      "id": "R3",
+      "messageIndex": 0,
+      "line1": 385,
+      "contentCodePointStart": 25055,
+      "contentCodePointEnd": 25062,
+      "controlRequestByteStart": 73289,
+      "controlRequestByteEnd": 73310,
+      "old": "露露缇耶是孙女",
+      "new": "待人温和而有礼",
+      "oldCodePoints": 7,
+      "newCodePoints": 7,
+      "oldUtf8Bytes": 21,
+      "newUtf8Bytes": 21,
+      "oldSha256Utf8": "688b788edbe54b1f39a832c840eefa2e723ca89bc3871566d002b0e71396f417",
+      "newSha256Utf8": "b58859814a6f56fab3e679b6395fc4e361e5166d46708c9ee4b9172c02f3a103",
+      "reason": "替换明确的孙女姓名配对，采用现有人物的温和与教养。后接真实关系和知情边界全部保留。"
+    }
+  ]
+}

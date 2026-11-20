@@ -1,0 +1,31 @@
+{
+  "kind": "implicit.npc_question.nested",
+  "startedAt": "2026-11-15T02:01:41.324Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T02:01:46.984Z",
+  "headersElapsedMs": 5660,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5aaab61fe4ef77d-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 02:01:46 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=3i2l4jDOjgc12HToBMHjvVg8HdgcsKKL38Nn2jyJhmr9x%2Fe4C3CADEd3jqfH1rxDuTnGEOBuLCO%2FyoCGQpF%2FLls5ONyJGkxA8HCAsz3aHRQff1%2BZsFyUbpA0IUjDpw%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611150201415070035518268d9d6ir2FoY6k",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "50e7021d-5723-4ec3-a455-8f3e0e704f21"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"3e719ec7-e41e-4607-ac98-d399828fca75\",\"object\":\"chat.completion\",\"created\":1794708106,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/2\\\",\\\"contextRef\\\":\\\"f600e705952b47dfa66fc2b2dd0a45d619141d281bb2b80dbcf470267c07b85f\\\",\\\"inputRef\\\":\\\"assertion.4914712d5fbbf1c31d6ac62e83a54b30e317e66f6d9cbf2aec98f53fe298eb02\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"turn.utterance.1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"huang\\\",\\\"content\\\":\\\"日落后就锁门。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":2,\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":6,\\\"end\\\":13,\\\"quote\\\":\\\"日落后就锁门。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":14,\\\"quote\\\":\\\"黄泉答道：“日落后就锁门。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"turn.reception.1\\\",\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"bright\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":6,\\\"end\\\":13,\\\"quote\\\":\\\"日落后就锁门。\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":5,\\\"quote\\\":\\\"黄泉答道：\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"\\\"}]}],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":14,\\\"quote\\\":\\\"黄泉答道：“日落后就锁门。”\\\"},\\\"reason\\\":\\\"黄泉应答布莱特的提问，言说内容已被布莱特正常接收。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":3700,\"completion_tokens\":476,\"total_tokens\":4176}}",
+  "responseBytes": 1851,
+  "responseBodySha256BeforePrivacyRedaction": "1e7865525a4b65ac4b9099ea9fa41aa727fcfbd7fdbae6f27892c961a4eddad0",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T02:01:46.995Z",
+  "elapsedMs": 5671
+}

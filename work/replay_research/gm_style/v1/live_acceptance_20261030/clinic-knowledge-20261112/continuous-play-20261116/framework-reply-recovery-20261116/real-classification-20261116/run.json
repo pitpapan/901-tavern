@@ -1,0 +1,120 @@
+{
+  "authorization": "authorization.json",
+  "baseline": 542,
+  "limit": 4,
+  "used": 4,
+  "remaining": 0,
+  "cumulative": 546,
+  "ceiling": 546,
+  "attempts": [
+    {
+      "id": "dialogue-classification",
+      "kind": "classification",
+      "customRequest": 543,
+      "state": "completed",
+      "purpose": "用户明确要求接回真实分类，两轮总上限4次。第1轮普通对白的真实分类；沿此前明确同意的数据范围和原端点，原始响应交回现有门禁，不修补输出。",
+      "requestBytes": 82776,
+      "requestSha256": "6df426343588e1c331810a08df793dcde3aee276880b9bcaeaf7f56f221e34cf",
+      "startedAt": "2026-11-16T21:23:24.129Z",
+      "status": 200,
+      "elapsedMs": 2932,
+      "rawResponseSha256": "b7c24a4fbadf20d854f0458b1af3dc5cbf1b4c86cec485acc3c70cf99e20f521",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 21360,
+        "completion_tokens": 92,
+        "total_tokens": 21452
+      },
+      "relayReleased": true,
+      "manualVerdict": "pass",
+      "assessment": "真实543返回合法NO_CHECK/ordinary_dialogue，原门禁接受并产生正文请求02；无机械结算。"
+    },
+    {
+      "id": "dialogue-narration",
+      "kind": "narration",
+      "customRequest": 544,
+      "state": "completed",
+      "purpose": "四次上限的第2次：承接真实543已被程序接受的NO_CHECK，生成普通对白正文，原样交回并保存。",
+      "requestBytes": 125782,
+      "requestSha256": "f7269d6d727c974def8f6bafa5a456cb2ba1200313cbb1a4f5f4d31dd9c1dbda",
+      "startedAt": "2026-11-16T21:24:08.774Z",
+      "status": 200,
+      "elapsedMs": 4348,
+      "rawResponseSha256": "4092f50337281f53de64c3ff05a1301b711c2d70e3531c887cc02377656d1d73",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 31652,
+        "completion_tokens": 239,
+        "total_tokens": 31891
+      },
+      "relayReleased": true,
+      "manualVerdict": "pass",
+      "assessment": "真实543分类NO_CHECK后，544正文原样保存；活动与磁盘根相等，revision6，完整规则根较本轮基线不变，无机械结算。"
+    },
+    {
+      "id": "mechanical-classification",
+      "kind": "classification",
+      "customRequest": 545,
+      "state": "completed",
+      "purpose": "四次上限的第3次：真实分类明确十五分钟完整短休。机械请求必须由模型选择已有支持，程序按原MVU唯一结算，不补写分类或数值。",
+      "requestBytes": 79867,
+      "requestSha256": "8034e3a350a576ccdc8be92aa7665f11ac0d8f7138f1031d168adeeb4e4c2241",
+      "startedAt": "2026-11-16T21:26:03.552Z",
+      "status": 200,
+      "elapsedMs": 2406,
+      "rawResponseSha256": "a45443a80f57240d3d96967b8beeb0f6cc45ea07b2622584e45616b177a61cec",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 20592,
+        "completion_tokens": 75,
+        "total_tokens": 20667
+      },
+      "relayReleased": true,
+      "manualVerdict": "pass",
+      "assessment": "真实545原样返回RECOVERY_REQUIRED，request为rest/short/15；原执行器在正文前已提交MVU，revision6到7，玩家休息时钟15，唯一新恢复操作保存。"
+    },
+    {
+      "id": "mechanical-narration",
+      "kind": "narration",
+      "customRequest": 546,
+      "state": "completed",
+      "purpose": "本批第4次也是最后一次：消费原MVU已保存的十五分钟短休结果，生成机械动作正文。不得由模型写机械状态；原始正文交回原入口。",
+      "requestBytes": 127368,
+      "requestSha256": "ddf5acbbe7fb01110054d38210ab4e080f1ce7b6e0bbba14419ce4c5e48fc90b",
+      "startedAt": "2026-11-16T21:27:25.647Z",
+      "status": 200,
+      "elapsedMs": 5800,
+      "rawResponseSha256": "7f8959ba3f54705680cef140f4e7df5c357e9f89d7d40e4086f115f5656ba4bb",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 32039,
+        "completion_tokens": 304,
+        "total_tokens": 32343,
+        "prompt_tokens_details": {
+          "cached_tokens": 28522
+        }
+      },
+      "relayReleased": true,
+      "manualVerdict": "pass",
+      "assessment": "真实546正文原样保存为APPLIED；正文前后MVU根完全一致，revision7、休息时钟15、仅一条恢复操作；活动与磁盘一致，无重复结算，旧知情状态未变。"
+    }
+  ],
+  "closed": true,
+  "complete": true,
+  "finishedAt": "2026-11-16T21:33:14.388957+00:00",
+  "stopReason": "Two real classification/narration rounds passed; four-call cap exhausted.",
+  "classificationModelCalls": 2,
+  "narrationModelCalls": 2,
+  "extractionModelCalls": 0,
+  "reviewModelCalls": 0,
+  "failures": 0,
+  "retries": 0
+}

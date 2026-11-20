@@ -1,0 +1,47 @@
+{
+  "readOnly": true,
+  "globalSettingsChanged": false,
+  "settingPath": "extension_settings.mvu_settings.自动清理变量",
+  "configuration": {
+    "启用": true,
+    "快照保留间隔": 50,
+    "要保留变量的最近楼层数": 20,
+    "触发恢复变量的最近楼层数": 10
+  },
+  "observedChatLength": 25,
+  "clearedFloors": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "retainedFloors": [
+    0,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "upstreamSources": [
+    "https://raw.githubusercontent.com/MagicalAstrogy/MagVarUpdate/master/src/function/cleanup/index.ts",
+    "https://raw.githubusercontent.com/MagicalAstrogy/MagVarUpdate/master/src/function/cleanup/cleanup_variables.ts",
+    "https://raw.githubusercontent.com/MagicalAstrogy/MagVarUpdate/master/src/store.ts"
+  ],
+  "conclusion": "Observed cleared range matches enabled 20-floor retention and five-message cleanup cadence; exact loaded bundle bytes were not obtained. No old variables rewritten."
+}

@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "id": "selection.play006",
+      "original": "play.006.reception",
+      "customRequest": 421,
+      "verdict": "fail",
+      "schemaPass": false,
+      "strictPass": false,
+      "mvuWrites": 0,
+      "error": "Expected ',' or '}' after property value in JSON at position 2160 (line 1 column 2161)",
+      "originalInputAndParametersUnchanged": true,
+      "rawUnmodified": true
+    },
+    {
+      "id": "selection.play009",
+      "original": "play.009.reception",
+      "customRequest": 422,
+      "verdict": "fail",
+      "schemaPass": true,
+      "strictPass": false,
+      "mvuWrites": 0,
+      "error": "Missing or ambiguous source selection",
+      "originalInputAndParametersUnchanged": true,
+      "rawUnmodified": true
+    },
+    {
+      "id": "selection.play014",
+      "original": "play.014.reception",
+      "customRequest": 423,
+      "verdict": "pass",
+      "schemaPass": true,
+      "strictPass": true,
+      "mvuWrites": 4,
+      "error": null,
+      "originalInputAndParametersUnchanged": true,
+      "rawUnmodified": true
+    }
+  ],
+  "newCalls": 3,
+  "cumulative": 423,
+  "used": 89,
+  "remaining": 111,
+  "oldEvidenceFilesUnchanged": 9,
+  "allPriorLedgerAttemptsUnchanged": true,
+  "formalProtectedFilesUnchanged": 22,
+  "sourceHashes": {
+    "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "c0d7a01f35508e94c28cd9b4aa0fca48ebab6dcf6ba96290815d14b0248f81ca",
+    "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "55f1dd8067e9fa04fdb13b05e148e6c785a9b341234e9259df9516ca0ebd9154"
+  },
+  "offlineTests": {
+    "campaign": 142,
+    "engine": 48,
+    "total": 190
+  },
+  "newBehaviorTests": 8,
+  "oldV3MessagesUnchanged": true,
+  "oldFailedRepliesStillRejected": true,
+  "programCoordinatesOnlyAfterValidSelection": true,
+  "rawRepair": false,
+  "validationRelaxed": false,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalOrRevisionRestored": false,
+  "candidatePackage": "405 historical package retained; current v4 source verified through existing temporary package-closure test, no installation or historical ZIP overwrite"
+}

@@ -1,0 +1,571 @@
+{
+  "id": "scope.reply",
+  "exactCurrentMessages": true,
+  "structuralPass": true,
+  "checked": {
+    "contextRef": "d30f70d3dfe157cfe8eb99a34d9bd831890ab7e277ad426f2c88222e94127dac",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.62ecfc979006e6d7937fa37123778257f6bacfbf442a5166575eeb3b4324dcc1",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "utterance-1",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "渡口今晚停航。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 0,
+                  "end": 2,
+                  "quote": "黄泉"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 6,
+                  "end": 13,
+                  "quote": "渡口今晚停航。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 0,
+                "end": 14,
+                "quote": "黄泉答道：“渡口今晚停航。”"
+              }
+            },
+            {
+              "id": "utterance-2",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "明早从南桥走。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 14,
+                  "end": 15,
+                  "quote": "她"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 24,
+                  "end": 31,
+                  "quote": "明早从南桥走。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 14,
+                "end": 32,
+                "quote": "她略想了想，又答：“明早从南桥走。”"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "reception-1",
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 6,
+            "end": 13,
+            "quote": "渡口今晚停航。"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 14,
+          "quote": "黄泉答道：“渡口今晚停航。”"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "",
+        "claimId": "utterance-1"
+      },
+      {
+        "id": "reception-2",
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 24,
+            "end": 31,
+            "quote": "明早从南桥走。"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 20,
+          "end": 32,
+          "quote": "又答：“明早从南桥走。”"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "",
+        "claimId": "utterance-2"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "recorded",
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 32,
+          "quote": "黄泉答道：“渡口今晚停航。”她略想了想，又答：“明早从南桥走。”"
+        },
+        "reason": "黄泉对御临风的提问作出了明确回答，御临风正常接收全部回答内容。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false
+  },
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": [
+        {
+          "id": "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "渡口今晚停航。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 1,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "scope.offline.scope.reply",
+                "messageId": 1,
+                "swipeId": 0,
+                "text": "黄泉答道：“渡口今晚停航。”她略想了想，又答：“明早从南桥走。”"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a",
+          "channel": "message",
+          "learnedAtMessage": 1
+        },
+        {
+          "id": "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "明早从南桥走。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 1,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "scope.offline.scope.reply",
+                "messageId": 1,
+                "swipeId": 0,
+                "text": "黄泉答道：“渡口今晚停航。”她略想了想，又答：“明早从南桥走。”"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62",
+          "channel": "message",
+          "learnedAtMessage": 1
+        }
+      ]
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": []
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "pending": [],
+  "noQuestionWithoutDependency": true,
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "implicit.regression",
+    "chatId": "scope.offline.scope.reply",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      },
+      "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a.message": {
+        "id": "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "渡口今晚停航。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      },
+      "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62.message": {
+        "id": "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "明早从南桥走。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      }
+    },
+    "events": {
+      "received.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a": {
+        "id": "received.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player"
+          ],
+          "propositionRefs": [
+            "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "scope.offline.scope.reply",
+            "messageId": 1,
+            "swipeId": 0,
+            "text": "黄泉答道：“渡口今晚停航。”她略想了想，又答：“明早从南桥走。”"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/scope.offline.scope.reply",
+            "line": 2
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a.player.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a.message.event": {
+        "id": "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a.player.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a.player.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a.message",
+            "eventRef": "received.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 1,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/scope.offline.scope.reply",
+            "line": 2
+          }
+        ]
+      },
+      "received.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62": {
+        "id": "received.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player"
+          ],
+          "propositionRefs": [
+            "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 1,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "scope.offline.scope.reply",
+            "messageId": 1,
+            "swipeId": 0,
+            "text": "黄泉答道：“渡口今晚停航。”她略想了想，又答：“明早从南桥走。”"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/scope.offline.scope.reply",
+            "line": 2
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62.player.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62.message.event": {
+        "id": "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62.player.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62.player.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62.message",
+            "eventRef": "received.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 1,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/scope.offline.scope.reply",
+            "line": 2
+          }
+        ]
+      }
+    },
+    "knowledge": {
+      "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a.player.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a.message": {
+        "id": "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a.player.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a.message",
+        "eventRef": "received.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      },
+      "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62.player.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62.message": {
+        "id": "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62.player.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62.message",
+        "eventRef": "received.dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 1,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      }
+    },
+    "dialogueBatches": {
+      "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38": {
+        "id": "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38",
+        "sourceAnchor": {
+          "chatId": "scope.offline.scope.reply",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "黄泉答道：“渡口今晚停航。”她略想了想，又答：“明早从南桥走。”"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.629a654ca02381b0fd21dbc79c4462bbafaffe3e53a93831013932f1f749d60a",
+            "claimId": "utterance-1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "渡口今晚停航。",
+            "quote": "渡口今晚停航。",
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 14,
+              "quote": "黄泉答道：“渡口今晚停航。”"
+            },
+            "unresolved": []
+          },
+          {
+            "id": "dialogue.ed61175b047a2edc7eb1fdc7c19174bbae3e3408480d71aba886e661182dfc38.d442c7c48a420feb86b2ce1fe42aff4edf05d7c31182ef9671d09aaf0229af62",
+            "claimId": "utterance-2",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "明早从南桥走。",
+            "quote": "明早从南桥走。",
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 20,
+              "end": 32,
+              "quote": "又答：“明早从南桥走。”"
+            },
+            "unresolved": []
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "recorded",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 32,
+              "quote": "黄泉答道：“渡口今晚停航。”她略想了想，又答：“明早从南桥走。”"
+            },
+            "reason": "黄泉对御临风的提问作出了明确回答，御临风正常接收全部回答内容。"
+          }
+        ]
+      }
+    }
+  }
+}

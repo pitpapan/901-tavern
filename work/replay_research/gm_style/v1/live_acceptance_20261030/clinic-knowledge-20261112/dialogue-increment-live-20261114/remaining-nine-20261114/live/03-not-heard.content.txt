@@ -1,0 +1,220 @@
+{
+  "contextRef": "49ad9386f5383886a56484744959691f4c444ab271c6c64f23be862069d7fed3",
+  "assertions": {
+    "schemaVersion": "gm-assertion-output/1",
+    "inputRef": "assertion.fab237d77a119e6f58cb0965f1545d60cf74485894fa2c63962b1de336b4782d",
+    "units": [
+      {
+        "id": "turn",
+        "status": "extracted",
+        "claims": [
+          {
+            "id": "claim.turn.01",
+            "type": "utterance",
+            "args": {
+              "speaker": "布莱特",
+              "content": "东门封闭。"
+            },
+            "argumentSpans": {
+              "speaker": {
+                "documentId": "current",
+                "start": 0,
+                "end": 3,
+                "quote": "布莱特"
+              },
+              "content": {
+                "documentId": "current",
+                "start": 9,
+                "end": 14,
+                "quote": "东门封闭。"
+              }
+            },
+            "mode": "asserted",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 0,
+              "end": 15,
+              "quote": "布莱特对黄泉说：“东门封闭。”"
+            }
+          },
+          {
+            "id": "claim.turn.02",
+            "type": "state",
+            "args": {
+              "entity": "东门",
+              "name": "封闭状态",
+              "value": "封闭"
+            },
+            "argumentSpans": {
+              "entity": {
+                "documentId": "current",
+                "start": 9,
+                "end": 11,
+                "quote": "东门"
+              },
+              "name": {
+                "documentId": "current",
+                "start": 11,
+                "end": 13,
+                "quote": "封闭"
+              },
+              "value": {
+                "documentId": "current",
+                "start": 11,
+                "end": 13,
+                "quote": "封闭"
+              }
+            },
+            "mode": "reported",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": "布莱特"
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": {
+                "documentId": "current",
+                "start": 0,
+                "end": 3,
+                "quote": "布莱特"
+              }
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 9,
+              "end": 14,
+              "quote": "东门封闭。"
+            }
+          },
+          {
+            "id": "claim.turn.03",
+            "type": "state",
+            "args": {
+              "entity": "黄泉",
+              "name": "穿戴",
+              "value": "隔音耳罩"
+            },
+            "argumentSpans": {
+              "entity": {
+                "documentId": "current",
+                "start": 15,
+                "end": 17,
+                "quote": "黄泉"
+              },
+              "name": {
+                "documentId": "current",
+                "start": 17,
+                "end": 19,
+                "quote": "戴着"
+              },
+              "value": {
+                "documentId": "current",
+                "start": 19,
+                "end": 23,
+                "quote": "隔音耳罩"
+              }
+            },
+            "mode": "asserted",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 15,
+              "end": 23,
+              "quote": "黄泉戴着隔音耳罩"
+            }
+          },
+          {
+            "id": "claim.turn.04",
+            "type": "action",
+            "args": {
+              "actor": "黄泉",
+              "verb": "听见",
+              "object": null
+            },
+            "argumentSpans": {
+              "actor": {
+                "documentId": "current",
+                "start": 15,
+                "end": 17,
+                "quote": "黄泉"
+              },
+              "verb": {
+                "documentId": "current",
+                "start": 26,
+                "end": 28,
+                "quote": "听见"
+              },
+              "object": null
+            },
+            "mode": "denied",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 24,
+              "end": 29,
+              "quote": "没有听见。"
+            }
+          }
+        ],
+        "unresolved": []
+      }
+    ]
+  },
+  "receptions": [
+    {
+      "id": "reception.turn.01",
+      "claimId": "claim.turn.01",
+      "speakerId": "bright",
+      "recipientIds": [
+        "huang"
+      ],
+      "recipientSpans": [
+        {
+          "documentId": "current",
+          "start": 4,
+          "end": 6,
+          "quote": "黄泉"
+        }
+      ],
+      "evidence": {
+        "documentId": "current",
+        "start": 15,
+        "end": 28,
+        "quote": "黄泉戴着隔音耳罩，没有听见"
+      },
+      "status": "not_received",
+      "propositionRef": null,
+      "reason": "黄泉戴着隔音耳罩，明确没有听见布莱特所说的话。"
+    }
+  ]
+}

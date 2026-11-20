@@ -1,0 +1,31 @@
+{
+  "kind": "dialogue-reception",
+  "startedAt": "2026-11-14T16:16:01.543Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-14T16:16:08.667Z",
+  "headersElapsedMs": 7123,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5a75179ef8d4b08-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sat, 14 Nov 2026 16:16:08 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=cWd%2BS2MkY45UjFNYkp4obC8it3%2BjRFnuOMiOgZ1sbMgRMikq36hKbDARj9lTazi7t1bXeJm0YdVJzFJ9OXM5ME%2BZHUVocujynHyvQZzuozTuQjwJQ68laM072CO%2Fhw%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611141616020835196298268d9d6HxQ9yhmd",
+    "x-zeabur-ip-country": "ES",
+    "x-zeabur-request-id": "b20816b0-e34a-4646-93d7-3c0672580961"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"58e3fd91-b7b9-4936-96d1-a11262ced157\",\"object\":\"chat.completion\",\"created\":1794672968,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"contextRef\\\":\\\"20d9c702edeaee6f8dce872fa4eb43c1e13cb8b308a8303f8937aaf786444191\\\",\\\"assertions\\\":{\\\"schemaVersion\\\":\\\"gm-assertion-output/1\\\",\\\"inputRef\\\":\\\"assertion.2e5b504c979b75e2b387fc7c782413875034c8a8b35db1ec69726a271a998369\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"status\\\":\\\"extracted\\\",\\\"claims\\\":[{\\\"id\\\":\\\"c1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"布莱特\\\",\\\"content\\\":\\\"码头停航。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":3,\\\"quote\\\":\\\"布莱特\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":9,\\\"end\\\":14,\\\"quote\\\":\\\"码头停航。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":15,\\\"quote\\\":\\\"布莱特对黄泉说：“码头停航。”\\\"}},{\\\"id\\\":\\\"c2\\\",\\\"type\\\":\\\"state\\\",\\\"args\\\":{\\\"entity\\\":\\\"码头\\\",\\\"name\\\":\\\"航运状态\\\",\\\"value\\\":\\\"停航\\\"},\\\"argumentSpans\\\":{\\\"entity\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":9,\\\"end\\\":11,\\\"quote\\\":\\\"码头\\\"},\\\"name\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":11,\\\"end\\\":13,\\\"quote\\\":\\\"停航\\\"},\\\"value\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":11,\\\"end\\\":13,\\\"quote\\\":\\\"停航\\\"}},\\\"mode\\\":\\\"reported\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":\\\"布莱特\\\"},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":3,\\\"quote\\\":\\\"布莱特\\\"}},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":9,\\\"end\\\":13,\\\"quote\\\":\\\"码头停航\\\"}}],\\\"unresolved\\\":[]}]},\\\"receptions\\\":[{\\\"id\\\":\\\"r1\\\",\\\"claimId\\\":\\\"c1\\\",\\\"speakerId\\\":\\\"bright\\\",\\\"recipientIds\\\":[\\\"huang\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":4,\\\"end\\\":6,\\\"quote\\\":\\\"黄泉\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":15,\\\"quote\\\":\\\"布莱特对黄泉说：“码头停航。”\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":\\\"harbor.closed\\\",\\\"reason\\\":\\\"布莱特当面对黄泉说话，表述清晰直接且无接收障碍，内容与既有命题一致\\\"}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2128,\"completion_tokens\":622,\"total_tokens\":2750}}",
+  "responseBytes": 2417,
+  "responseBodySha256BeforePrivacyRedaction": "4b35c844f000922b19c6156bd33ae8b3580e6b68f5a8acf19a8a11afc544a8f5",
+  "outcome": "completed",
+  "finishedAt": "2026-11-14T16:16:08.699Z",
+  "elapsedMs": 7155
+}

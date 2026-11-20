@@ -173,7 +173,7 @@ export async function settleCombat({ mvu, getAnchor, expectedChatId, operationId
     nr.actors = {...nr.actors,...Object.fromEntries(Object.entries(outcome.battle.actors)
       .map(([id, actor]) => [id, { ...nr.actors[id], name: actor.name, state: clone(actor.state),...(actor.state.verticalPosition?{position:clone(actor.position)}:{}),
         ...(actor.sceneBound?{present:actor.present,sceneBound:true,ownerId:actor.ownerId,kind:actor.kind,combatProfile:clone(actor.combatProfile)}:{}),
-        combatCarry: Object.fromEntries(['senseSources','visionAvailable','equipment','parameters','ammunition','loaded','weaponMode','squeezed','recoveryLocks','knownWeaknesses','weaponSize','durationCarry','cooldownCarry','sceneInstanceId','used','claws','form','underground','weaponsAvailable',...(actor.state.verticalPosition?['position']:[])]
+        combatCarry: Object.fromEntries(['techniqueBindings','senseSources','visionAvailable','equipment','parameters','ammunition','loaded','weaponMode','squeezed','recoveryLocks','knownWeaknesses','weaponSize','durationCarry','cooldownCarry','sceneInstanceId','used','claws','form','underground','weaponsAvailable',...(actor.state.verticalPosition?['position']:[])]
           .filter(key => actor[key] !== undefined).map(key => [key, clone(actor[key])])) }]))};
     for (const id of Object.keys(nr.actors)) actorOf(nr, id);
     nr.revision++;
@@ -246,6 +246,29 @@ export async function settleRecovery({mvu,getAnchor,expectedChatId,operationId,
 
 // One transaction for ordinary noncombat rules, including two actors. The
 // reducer is application code; no model-provided state or JSON patch is accepted.
+// Story knowledge shares the selected MVU page and its CAS/idempotency journal.
+// It cannot replace actors, battle state, resources or the database memory tool.
+export async function settleStoryKnowledge({mvu,getAnchor,expectedChatId,operationId,expectedRevision,request,reduce}) {
+  const anchor=anchorOf(getAnchor);
+  if(anchor.chatId!==expectedChatId)throw Error('Knowledge chat identity mismatch');
+  const key=operationKey(anchor);if(inFlight.has(key))throw Error('MVU operation already in progress');
+  inFlight.add(key);
+  try {
+    const initial=read(mvu,anchor),root=rootOf(initial,expectedChatId),signature=JSON.stringify(request),saved=root.operations[operationId];
+    if(saved){if(saved.signature!==signature)throw Error('Knowledge operation ID conflict');return {...clone(saved.summary),status:'already_applied'};}
+    if(root.revision!==expectedRevision)throw Error('MVU state version conflict');
+    const knowledge=reduce(clone(root.storyKnowledge));
+    if(!record(knowledge)||knowledge.chatId!==expectedChatId)throw Error('Trusted branch knowledge required');
+    const next=clone(initial),nr=next.stat_data[NAMESPACE];nr.storyKnowledge=clone(knowledge);nr.revision++;
+    const result={status:'applied',kind:'knowledge',operationId,revision:nr.revision,messageId:anchor.messageId,swipeId:anchor.swipeId};
+    nr.operations[operationId]={signature,summary:result};
+    ensureAnchor(getAnchor,anchor);if(!same(read(mvu,anchor),initial))throw Error('MVU data changed before save');
+    await mvu.replaceMvuData(next,{type:'message',message_id:anchor.messageId});ensureAnchor(getAnchor,anchor);
+    if(!same(read(mvu,anchor),next))throw Error('MVU save was not confirmed by readback');
+    return result;
+  }finally{inFlight.delete(key);}
+}
+
 export async function settleRuleAction({mvu,getAnchor,expectedChatId,operationId,expectedRevision,request,reduce}) {
   const anchor=anchorOf(getAnchor);
   if(anchor.chatId!==expectedChatId)throw Error('Refusing write outside the named test chat');
@@ -669,6 +692,18 @@ export async function carryTestState({ mvu, getSourceAnchor, getAnchor,
 
 // ST saveChat may resolve after an HTTP failure. A saved receipt therefore
 // requires a read-back of this operation's page, never just its MVU memory.
+export async function readPersistedTavernChat({tavern,chatId,readSavedChat}) {
+  const context=tavern.getContext?.()??tavern;
+  readSavedChat??=context.readSavedChat;
+  if(readSavedChat)return readSavedChat(chatId);
+  const avatar=context.characters?.[context.characterId]?.avatar;
+  if(!avatar||context.groupId||typeof context.getRequestHeaders!=='function')throw Error('Saved chat reader unavailable');
+  const response=await fetch('/api/chats/get',{method:'POST',cache:'no-store',headers:context.getRequestHeaders(),
+    body:JSON.stringify({avatar_url:avatar,file_name:chatId})});
+  if(!response.ok)throw Error('Saved chat readback failed');
+  return response.json();
+}
+
 export async function persistTavernRuleState({mvu,tavern,getAnchor,readSavedChat}) {
   const context=tavern.getContext?.()??tavern;
   readSavedChat??=context.readSavedChat;
@@ -679,15 +714,7 @@ export async function persistTavernRuleState({mvu,tavern,getAnchor,readSavedChat
   await context.saveChat();
   let saved;
   try {
-    if(readSavedChat)saved=await readSavedChat(anchor.chatId);
-    else {
-      const avatar=context.characters?.[context.characterId]?.avatar;
-      if(!avatar||context.groupId||typeof context.getRequestHeaders!=='function')throw failure();
-      const response=await fetch('/api/chats/get',{method:'POST',cache:'no-store',headers:context.getRequestHeaders(),
-        body:JSON.stringify({avatar_url:avatar,file_name:anchor.chatId})});
-      if(!response.ok)throw failure();
-      saved=await response.json();
-    }
+    saved=await readPersistedTavernChat({tavern:context,chatId:anchor.chatId,readSavedChat});
   } catch {throw failure();}
   ensureAnchor(getAnchor,anchor);
   const message=saved?.[anchor.messageId+1],page=message?.variables?.[anchor.swipeId];
@@ -741,6 +768,17 @@ export async function adoptNativeChatBranch({mvu,tavern,expectedParentChatId,exp
     for(const id of Object.keys(source.actors))actorOf(source,id);
     const next=clone(initial),root=next.stat_data[NAMESPACE];
     root.chatId=anchor.chatId;root.revision++;
+    if(root.storyKnowledge){
+      if(root.storyKnowledge.chatId!==expectedParentChatId)throw Error('Knowledge branch source mismatch');
+      root.storyKnowledge.chatId=anchor.chatId;
+      for(const event of Object.values(root.storyKnowledge.events??{})){
+        const source=event.data?.sourceAnchor;
+        if(source?.chatId===expectedParentChatId)source.chatId=anchor.chatId;
+      }
+      for(const batch of Object.values(root.storyKnowledge.dialogueBatches??{})){
+        if(batch.sourceAnchor?.chatId===expectedParentChatId)batch.sourceAnchor.chatId=anchor.chatId;
+      }
+    }
     const result={status:'adopted',operationId,revision:root.revision,sourceChatId:expectedParentChatId,
       sourceRevision:source.revision,messageId:anchor.messageId,swipeId:anchor.swipeId};
     root.operations[operationId]={signature:JSON.stringify({kind:'nativeBranch',sourceChatId:expectedParentChatId,

@@ -1,0 +1,31 @@
+{
+  "kind": "v7.binding.near.partial",
+  "startedAt": "2026-11-15T23:01:03.214Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T23:01:08.345Z",
+  "headersElapsedMs": 5130,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b1e0288c63cbf0-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 23:01:08 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=OSUnZr9BWGq1EqHGkvoGm5W8DB6hM1zdMrCqYlzWCcCqhPlzQavlRisojq1TX%2FNnenHmiZw8NLvkPkrmpIWwEjxJtiKfj4az%2F7A6AIjROKqnf9QXaoIa4Et52%2BQJOg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611152301035205744988268d9d68MiExYow",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "a858839d-041b-477e-96ef-9c454baf99c1"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"78f344af-458c-4f7e-98f2-a06f8e8520d3\",\"object\":\"chat.completion\",\"created\":1794783668,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/7\\\",\\\"contextRef\\\":\\\"65adafca2da251a69499101f79d7c2d69cbbaf86c8e5cb699e59df10939f2c4e\\\",\\\"selections\\\":[{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"},{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"渡船今晚停驶；清晨改在西桥集合。\\\"},{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"答道\\\"},{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"渡船今晚停驶\\\"},{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"清晨改在西桥集合\\\"},{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"布莱特\\\"},{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"只听见前一项\\\"},{\\\"fragmentId\\\":\\\"f6\\\",\\\"quote\\\":\\\"后一项是否听到还不清楚\\\"}],\\\"utterances\\\":[{\\\"speakerId\\\":\\\"huang\\\",\\\"speaker\\\":0,\\\"content\\\":1,\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":2}],\\\"receptions\\\":[{\\\"utterance\\\":0,\\\"content\\\":3,\\\"listenerId\\\":\\\"bright\\\",\\\"identityKind\\\":\\\"explicit\\\",\\\"identity\\\":5,\\\"historyMessageId\\\":null,\\\"evidenceKind\\\":\\\"direct\\\",\\\"evidence\\\":6,\\\"propositionRef\\\":null},{\\\"utterance\\\":0,\\\"content\\\":4,\\\"listenerId\\\":\\\"bright\\\",\\\"identityKind\\\":\\\"explicit\\\",\\\"identity\\\":5,\\\"historyMessageId\\\":null,\\\"evidenceKind\\\":\\\"unknown\\\",\\\"evidence\\\":7,\\\"propositionRef\\\":null}],\\\"unresolved\\\":[],\\\"coverage\\\":{\\\"status\\\":\\\"uncertain\\\",\\\"evidence\\\":7}}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2507,\"completion_tokens\":353,\"total_tokens\":2860}}",
+  "responseBytes": 1560,
+  "responseBodySha256BeforePrivacyRedaction": "bb89492314c435d5405c16457cebd3ed702ca44edccad4f691c2652b4e23d1ac",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T23:01:08.352Z",
+  "elapsedMs": 5138
+}

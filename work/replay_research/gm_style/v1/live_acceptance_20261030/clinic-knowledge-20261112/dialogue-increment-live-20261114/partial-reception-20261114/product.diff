@@ -1,0 +1,10 @@
+--- before/story-dialogue-knowledge.mjs
++++ after/story-dialogue-knowledge.mjs
+@@ -41,6 +41,7 @@
+  '只知道在场不代表听见，部分听见只抽实际内容；未知接收者留空并标uncertain，歧义写入unresolved。'+
+  'propositionRef仅在内容与已有命题一致时引用其ID，否则null表示新的有来源说法；转述与谎言不自动确认内容为真。'+
+  'history和memory只用于理解指代、查找来源，摘要不作为本轮接收证据。不批准或修订正文，不改变角色选择，不输出状态补丁。';
++ messages[0].content+='\n接收范围：每条reception的claimId必须指向与该条接收范围一致的utterance，登记内容取该utterance的argumentSpans.content.quote。原言说含多项内容而接收范围不同时，保留原完整言说，并为需要分别记录的内容生成独立id的utterance；拆分是同一言说的内容投影，不是新增言说事件，speaker仍是原说话者，content及其span只覆盖该项实际说出的内容。分别关联接收者、接收依据和status：明确听清的部分为received，明确没听清的部分不授予，只有确实不确定的部分为uncertain；不得因未完整接收整句而将明确听清的部分降为uncertain或清空已知接收者，也不要为同一范围重复输出整句不确定回执。不同听者按各自范围记录，不把部分内容扩成全部。不得把听者的听清状态claim当作原说话者的utterance，不得拼接不连续片段伪造quote；分片仍保留原说法的否定、条件与归属，不能截断限定改变含义，无法确定的范围才保留待核。';
+  messages[1].content=JSON.stringify(input);
+  return {input,messages,check(reply){
+   if(!shape(reply,['contextRef','assertions','receptions'])||reply.contextRef!==input.contextRef||!contract.checkAssertionReply(reply.assertions,assertion).ok||!Array.isArray(reply.receptions))throw Error('Invalid dialogue extraction');

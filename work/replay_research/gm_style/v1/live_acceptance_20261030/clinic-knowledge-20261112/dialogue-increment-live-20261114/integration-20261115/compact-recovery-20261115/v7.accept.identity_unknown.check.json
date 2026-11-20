@@ -1,0 +1,435 @@
+{
+  "id": "v7.accept.identity_unknown",
+  "actualMessagesAndSchemaMatch": true,
+  "schemaPass": true,
+  "checked": {
+    "contextRef": "5e8c21a2ad64526e13e6e67122b4457b9327d2640e23a7aa93a621b03ba49d15",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.22ad7f85786a7beb0c5b0e0b677b9a83a9c9b52bf29abf541acc247a05d96e8b",
+      "units": [
+        {
+          "id": "turn",
+          "status": "unresolved",
+          "claims": [
+            {
+              "id": "semantic.turn.u0",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "“明早从山路绕行。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 0,
+                  "end": 2,
+                  "quote": "黄泉"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 5,
+                  "end": 14,
+                  "quote": "“明早从山路绕行。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 2,
+                "end": 4,
+                "quote": "答道"
+              }
+            }
+          ],
+          "unresolved": [
+            {
+              "span": {
+                "documentId": "current",
+                "start": 15,
+                "end": 33,
+                "quote": "两人中只有一人听见，但无法确定是谁。"
+              },
+              "reason": "听者身份存在歧义，原文说明两人中只有一人听见但无法确定具体是谁"
+            }
+          ]
+        }
+      ]
+    },
+    "receptions": [],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "uncertain",
+        "evidence": {
+          "documentId": "current",
+          "start": 15,
+          "end": 33,
+          "quote": "两人中只有一人听见，但无法确定是谁。"
+        },
+        "reason": "显式覆盖选择；不证明语义完整。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false,
+    "receptionBindings": []
+  },
+  "structuralPass": true,
+  "observation": {
+    "status": "processed",
+    "pending": [
+      {
+        "id": "dialogue.2db835c110432391f68b45ede32ff557be11e8f5275e3a6c685b2f7eb0dce1c6.unresolved.d059c2bb75dcb13f1ec666fc713ddbaa5d4e870519a8b29316e50454b412036d",
+        "claimId": null,
+        "speakerId": null,
+        "recipientIds": [],
+        "propositionRef": null,
+        "content": null,
+        "quote": null,
+        "belief": "uncertain",
+        "status": "pending",
+        "reason": "听者身份存在歧义，原文说明两人中只有一人听见但无法确定具体是谁",
+        "evidence": {
+          "documentId": "current",
+          "start": 15,
+          "end": 33,
+          "quote": "两人中只有一人听见，但无法确定是谁。"
+        },
+        "unresolved": [
+          {
+            "span": {
+              "documentId": "current",
+              "start": 15,
+              "end": 33,
+              "quote": "两人中只有一人听见，但无法确定是谁。"
+            },
+            "reason": "听者身份存在歧义，原文说明两人中只有一人听见但无法确定具体是谁"
+          }
+        ],
+        "sourceAnchor": {
+          "chatId": "relation.offline.ambiguous",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "黄泉答道：“明早从山路绕行。”两人中只有一人听见，但无法确定是谁。"
+        },
+        "batchId": "dialogue.2db835c110432391f68b45ede32ff557be11e8f5275e3a6c685b2f7eb0dce1c6"
+      }
+    ]
+  },
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "compact.regression",
+    "chatId": "relation.offline.ambiguous",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      }
+    },
+    "events": {},
+    "knowledge": {},
+    "dialogueBatches": {
+      "dialogue.2db835c110432391f68b45ede32ff557be11e8f5275e3a6c685b2f7eb0dce1c6": {
+        "id": "dialogue.2db835c110432391f68b45ede32ff557be11e8f5275e3a6c685b2f7eb0dce1c6",
+        "sourceAnchor": {
+          "chatId": "relation.offline.ambiguous",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "黄泉答道：“明早从山路绕行。”两人中只有一人听见，但无法确定是谁。"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.2db835c110432391f68b45ede32ff557be11e8f5275e3a6c685b2f7eb0dce1c6.unresolved.d059c2bb75dcb13f1ec666fc713ddbaa5d4e870519a8b29316e50454b412036d",
+            "claimId": null,
+            "speakerId": null,
+            "recipientIds": [],
+            "propositionRef": null,
+            "content": null,
+            "quote": null,
+            "belief": "uncertain",
+            "status": "pending",
+            "reason": "听者身份存在歧义，原文说明两人中只有一人听见但无法确定具体是谁",
+            "evidence": {
+              "documentId": "current",
+              "start": 15,
+              "end": 33,
+              "quote": "两人中只有一人听见，但无法确定是谁。"
+            },
+            "unresolved": [
+              {
+                "span": {
+                  "documentId": "current",
+                  "start": 15,
+                  "end": 33,
+                  "quote": "两人中只有一人听见，但无法确定是谁。"
+                },
+                "reason": "听者身份存在歧义，原文说明两人中只有一人听见但无法确定具体是谁"
+              }
+            ]
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "uncertain",
+            "evidence": {
+              "documentId": "current",
+              "start": 15,
+              "end": 33,
+              "quote": "两人中只有一人听见，但无法确定是谁。"
+            },
+            "reason": "显式覆盖选择；不证明语义完整。"
+          }
+        ],
+        "extractionInput": {
+          "assertion": {
+            "schemaVersion": "gm-assertion-input/1",
+            "stage": "source",
+            "documents": [
+              {
+                "id": "current",
+                "text": "黄泉答道：“明早从山路绕行。”两人中只有一人听见，但无法确定是谁。"
+              }
+            ],
+            "targets": [
+              {
+                "id": "turn",
+                "documentId": "current",
+                "start": 0,
+                "end": 33
+              }
+            ],
+            "prior": null,
+            "inputRef": "assertion.22ad7f85786a7beb0c5b0e0b677b9a83a9c9b52bf29abf541acc247a05d96e8b"
+          },
+          "sourceAnchor": {
+            "chatId": "relation.offline.ambiguous",
+            "messageId": 1,
+            "swipeId": 0,
+            "text": "黄泉答道：“明早从山路绕行。”两人中只有一人听见，但无法确定是谁。"
+          },
+          "history": [
+            {
+              "messageId": 0,
+              "role": "user",
+              "text": "御临风和布莱特先后问黄泉路线怎么安排。"
+            }
+          ],
+          "actors": {
+            "player": "御临风",
+            "bright": "布莱特",
+            "huang": "黄泉"
+          },
+          "facts": {
+            "clinic.owner.xuelao.old-friend": {
+              "effectiveAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 0,
+                "actorId": "legacy.story"
+              },
+              "discoveryConditions": [
+                "actual-receipt"
+              ],
+              "dependencyRefs": [],
+              "id": "clinic.owner.xuelao.old-friend",
+              "entityId": "clinic.owner",
+              "field": "relationship",
+              "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+              "certainty": "confirmed",
+              "visibility": "private"
+            },
+            "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message": {
+              "effectiveAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 12,
+                "actorId": "legacy.story"
+              },
+              "discoveryConditions": [
+                "actual-receipt"
+              ],
+              "dependencyRefs": [],
+              "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+              "entityId": "bright",
+              "field": "reported_message",
+              "value": {
+                "kind": "reported_message",
+                "speakerId": "bright",
+                "text": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+              },
+              "certainty": "uncertain",
+              "visibility": "private"
+            },
+            "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message": {
+              "effectiveAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 12,
+                "actorId": "legacy.story"
+              },
+              "discoveryConditions": [
+                "actual-receipt"
+              ],
+              "dependencyRefs": [],
+              "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+              "entityId": "bright",
+              "field": "reported_message",
+              "value": {
+                "kind": "reported_message",
+                "speakerId": "bright",
+                "text": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+              },
+              "certainty": "uncertain",
+              "visibility": "private"
+            },
+            "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message": {
+              "effectiveAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 12,
+                "actorId": "legacy.story"
+              },
+              "discoveryConditions": [
+                "actual-receipt"
+              ],
+              "dependencyRefs": [],
+              "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+              "entityId": "bright",
+              "field": "reported_message",
+              "value": {
+                "kind": "reported_message",
+                "speakerId": "bright",
+                "text": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+              },
+              "certainty": "uncertain",
+              "visibility": "private"
+            }
+          },
+          "memory": null,
+          "contextRef": "5e8c21a2ad64526e13e6e67122b4457b9327d2640e23a7aa93a621b03ba49d15"
+        },
+        "recoveryAttempted": false,
+        "attempts": [
+          {
+            "status": "validated",
+            "rawReply": "{\"schemaVersion\":\"dialogue-reception/7\",\"contextRef\":\"5e8c21a2ad64526e13e6e67122b4457b9327d2640e23a7aa93a621b03ba49d15\",\"selections\":[{\"fragmentId\":\"f2\",\"quote\":\"黄泉\"},{\"fragmentId\":\"f3\",\"quote\":\"“明早从山路绕行。\"},{\"fragmentId\":\"f2\",\"quote\":\"答道\"},{\"fragmentId\":\"f1\",\"quote\":\"两人中只有一人听见，但无法确定是谁。\"}],\"utterances\":[{\"speakerId\":\"huang\",\"speaker\":0,\"content\":1,\"mode\":\"asserted\",\"scope\":{\"time\":null,\"condition\":null,\"attribution\":null},\"anchor\":2}],\"receptions\":[],\"unresolved\":[{\"selection\":3,\"reason\":\"听者身份存在歧义，原文说明两人中只有一人听见但无法确定具体是谁\"}],\"coverage\":{\"status\":\"uncertain\",\"evidence\":3}}"
+          }
+        ]
+      }
+    }
+  },
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": []
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": []
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "counts": {
+    "writes": 2,
+    "asked": 0
+  }
+}

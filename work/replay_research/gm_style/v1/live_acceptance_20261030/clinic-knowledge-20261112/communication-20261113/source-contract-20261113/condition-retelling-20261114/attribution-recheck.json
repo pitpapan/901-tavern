@@ -1,0 +1,183 @@
+{
+  "status": "attribution-source-and-projection-recheck-passed",
+  "requestsVerified": 3,
+  "sourceProjectionsVerified": 6,
+  "offlineRegression": {
+    "tests": 28,
+    "passed": 28,
+    "failed": 0,
+    "log": "attribution-offline-regression.log"
+  },
+  "modelCalls": 0,
+  "productChanges": 0,
+  "cumulativeRequestAttempts": 260,
+  "formalProtectedFilesUnchanged": 22,
+  "semanticAssessment": "Manual, separate from these byte/state assertions",
+  "results": [
+    {
+      "id": "01",
+      "requestSha256": "12af701ecae9d6c85a9c4f2008748de7e2453a6e74dee93f34bbec9969382ae8",
+      "rawResponseSha256": "55a9f6dcd42cbc82bb30462e3e1a411dadcecd6c16493da990489826a7054f60",
+      "savedSourceToContextToGenerateToSentExact": true,
+      "sourceEvidence": [
+        {
+          "eventRef": "received.browser.received",
+          "channel": "message",
+          "belief": "confirmed",
+          "senderId": null,
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 11,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "901 帝都正式续玩 20261106",
+            "messageId": 11,
+            "swipeId": 0,
+            "text": "桌外隔离验收事件（非正式剧情）：可信来客私下向布莱特告知：九雪医馆馆主与雪老有旧。布莱特已实际听到；御临风与黄泉均未听到。"
+          },
+          "disclosure": null
+        },
+        {
+          "eventRef": "received.communication.promise",
+          "channel": "message",
+          "belief": "confirmed",
+          "senderId": null,
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 12,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "901 帝都正式续玩 20261106",
+            "messageId": 12,
+            "swipeId": 0,
+            "text": "桌外隔离验收事件（非正式剧情）：同一来客向布莱特补充约定：“这件事先不要向御临风和黄泉透露，等我们单独确认后再说。”布莱特听到并答应了该约定；另两人未听见。"
+          },
+          "disclosure": {
+            "sourceQuote": "这件事先不要向御临风和黄泉透露，等我们单独确认后再说。"
+          }
+        }
+      ],
+      "knowledgeCounts": [
+        0,
+        1,
+        0
+      ],
+      "stateUnchanged": true,
+      "completeCurrentInstructionPresent": true
+    },
+    {
+      "id": "02",
+      "requestSha256": "4b605995d7e97d2003e27c7ce3d3b19f2fdaa68ff20d2a22523d361029d1293a",
+      "rawResponseSha256": "ee2e20c4925637db4ca20d9bed2e45af04945922fe50b918d8866d519695e85b",
+      "savedSourceToContextToGenerateToSentExact": true,
+      "sourceEvidence": [
+        {
+          "eventRef": "received.browser.received",
+          "channel": "message",
+          "belief": "confirmed",
+          "senderId": null,
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 11,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "901 帝都正式续玩 20261106",
+            "messageId": 11,
+            "swipeId": 0,
+            "text": "桌外隔离验收事件（非正式剧情）：可信来客私下向布莱特告知：九雪医馆馆主与雪老有旧。布莱特已实际听到；御临风与黄泉均未听到。"
+          },
+          "disclosure": null
+        },
+        {
+          "eventRef": "received.communication.promise",
+          "channel": "message",
+          "belief": "confirmed",
+          "senderId": null,
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 12,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "901 帝都正式续玩 20261106",
+            "messageId": 12,
+            "swipeId": 0,
+            "text": "桌外隔离验收事件（非正式剧情）：同一来客向布莱特补充约定：“这件事先不要向御临风和黄泉透露，等我们单独确认后再说。”布莱特听到并答应了该约定；另两人未听见。"
+          },
+          "disclosure": {
+            "sourceQuote": "这件事先不要向御临风和黄泉透露，等我们单独确认后再说。"
+          }
+        }
+      ],
+      "knowledgeCounts": [
+        0,
+        1,
+        0
+      ],
+      "stateUnchanged": true,
+      "completeCurrentInstructionPresent": true
+    },
+    {
+      "id": "03",
+      "requestSha256": "a73e7f646dde1fa4f7cfcd0176ffcc7e87dde7187d6b17ac7102fe5f8b0cbb80",
+      "rawResponseSha256": "23733787801ee9a96f32ac340409d2d796a23eeee657bec2580e20dc41f1a882",
+      "savedSourceToContextToGenerateToSentExact": true,
+      "sourceEvidence": [
+        {
+          "eventRef": "received.browser.received",
+          "channel": "message",
+          "belief": "confirmed",
+          "senderId": null,
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 11,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "901 帝都正式续玩 20261106",
+            "messageId": 11,
+            "swipeId": 0,
+            "text": "桌外隔离验收事件（非正式剧情）：可信来客私下向布莱特告知：九雪医馆馆主与雪老有旧。布莱特已实际听到；御临风与黄泉均未听到。"
+          },
+          "disclosure": null
+        },
+        {
+          "eventRef": "received.communication.promise",
+          "channel": "message",
+          "belief": "confirmed",
+          "senderId": null,
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 12,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "901 帝都正式续玩 20261106",
+            "messageId": 12,
+            "swipeId": 0,
+            "text": "桌外隔离验收事件（非正式剧情）：同一来客向布莱特补充约定：“这件事先不要向御临风和黄泉透露，等我们单独确认后再说。”布莱特听到并答应了该约定；另两人未听见。"
+          },
+          "disclosure": {
+            "sourceQuote": "这件事先不要向御临风和黄泉透露，等我们单独确认后再说。"
+          }
+        }
+      ],
+      "knowledgeCounts": [
+        0,
+        1,
+        0
+      ],
+      "stateUnchanged": true,
+      "completeCurrentInstructionPresent": true
+    }
+  ]
+}

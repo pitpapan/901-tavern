@@ -1,0 +1,138 @@
+{
+  "status": "prepared_pending_orchestrator_review_and_new_user_authorization",
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "requestParameters": {
+    "model": "[抗截断]gemini-3.8-flash",
+    "temperature": 1,
+    "max_tokens": 4096,
+    "stream": false,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "top_p": 1
+  },
+  "plannedMaximumNarrationAttempts": 8,
+  "newAuthorizedAttempts": 0,
+  "used": 0,
+  "attempts": [],
+  "priorLedger": {
+    "file": "../../clinic-boundary-live-20261120/run.json",
+    "bytes": 83488,
+    "sha256": "e6c41dad18e6910b8513aad8dc6a7ca35c9c0f2536a2c93bf009327ce555dd36",
+    "cumulative": 600,
+    "remaining": 0,
+    "closed": true
+  },
+  "rules": [
+    {
+      "file": "../runtime-rubric.md",
+      "bytes": 3389,
+      "sha256": "15413ac8d0be3034dc522f4aa2670863ca33fc00c933e47e1c2c8bff3b033dda"
+    },
+    {
+      "file": "../human-calibration.md",
+      "bytes": 3646,
+      "sha256": "719193a531f29c3a7f27460e8674245a2dfcd9bb91cbfee2886bfcc8ab37e552"
+    }
+  ],
+  "reviewedEngineeringEvidence": {
+    "file": "../ASSESSMENT.md",
+    "bytes": 5874,
+    "sha256": "78e13949326963899a9f7338fab92815937358af258538befd64a923e9112f4e"
+  },
+  "classification": {
+    "reused": "547 NO_CHECK / ordinary_dialogue",
+    "newCalls": 0,
+    "newClassificationAcceptance": false
+  },
+  "reception": "隔离存档的测试告知与接收由人工确认，未启用自动抽取",
+  "policyIfAuthorized": {
+    "perSlotMaxAttempts": 1,
+    "automaticRetry": false,
+    "failedAttemptCounts": true,
+    "extraClassificationExtractionOrReviewCalls": 0,
+    "replaceOrFillFailedSlots": false,
+    "preserveExactSentBytesAndRawResponses": true
+  },
+  "identicalInputGroups": {
+    "original": {
+      "conditions": [
+        "received-bright",
+        "reopened-bright"
+      ],
+      "sha256": "351af2e5759f5591867feafd25a878581237d7a0d73aeba6a1ebe49f434a02ec"
+    },
+    "neutral": {
+      "conditions": [
+        "received-bright",
+        "reopened-bright"
+      ],
+      "sha256": "63cea602824890c9d835cda4d5186ce3302fb6c49f77611cbb9a304b8948a857"
+    }
+  },
+  "schedule": [
+    {
+      "slot": 1,
+      "condition": "before",
+      "wording": "original",
+      "file": "before.original.request.json",
+      "bytes": 111635,
+      "sha256": "37fa363001346e7ee76f4bc27f8a82a99e76070dcc17502c8b0c52e1db2748a3"
+    },
+    {
+      "slot": 2,
+      "condition": "received-huang",
+      "wording": "neutral",
+      "file": "received-huang.neutral.request.json",
+      "bytes": 112881,
+      "sha256": "2d56f202057834193b852814a69d64a310044dd0cb9c7b94fd1a96fee4e6569e"
+    },
+    {
+      "slot": 3,
+      "condition": "received-bright",
+      "wording": "original",
+      "file": "received-bright.original.request.json",
+      "bytes": 112905,
+      "sha256": "351af2e5759f5591867feafd25a878581237d7a0d73aeba6a1ebe49f434a02ec"
+    },
+    {
+      "slot": 4,
+      "condition": "reopened-bright",
+      "wording": "neutral",
+      "file": "reopened-bright.neutral.request.json",
+      "bytes": 112881,
+      "sha256": "63cea602824890c9d835cda4d5186ce3302fb6c49f77611cbb9a304b8948a857"
+    },
+    {
+      "slot": 5,
+      "condition": "received-huang",
+      "wording": "original",
+      "file": "received-huang.original.request.json",
+      "bytes": 112905,
+      "sha256": "954032a4299fb8c6570eae2814f5f7e40a5d749f8bb885395bc94c15a596187e"
+    },
+    {
+      "slot": 6,
+      "condition": "before",
+      "wording": "neutral",
+      "file": "before.neutral.request.json",
+      "bytes": 111611,
+      "sha256": "c09c8890374788a2b636a5a35cc4742ca94ae1f149ff169ba9adbac48f8952be"
+    },
+    {
+      "slot": 7,
+      "condition": "reopened-bright",
+      "wording": "original",
+      "file": "reopened-bright.original.request.json",
+      "bytes": 112905,
+      "sha256": "351af2e5759f5591867feafd25a878581237d7a0d73aeba6a1ebe49f434a02ec"
+    },
+    {
+      "slot": 8,
+      "condition": "received-bright",
+      "wording": "neutral",
+      "file": "received-bright.neutral.request.json",
+      "bytes": 112881,
+      "sha256": "63cea602824890c9d835cda4d5186ce3302fb6c49f77611cbb9a304b8948a857"
+    }
+  ]
+}

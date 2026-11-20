@@ -1,0 +1,46 @@
+✔ ordinary saved narration invokes configured dialogue adapter without changing prose or memory route (142.0108ms)
+✔ saved prose survives extraction failure and completed-turn replay does not request prose again (19.1095ms)
+✔ ordinary next turn asks only when pending information is relevant, and deferred answer does not regenerate prose (55.644ms)
+✔ ordinary story generation consumes recipient knowledge and exposes only an explicit saved-receipt entry (22.3796ms)
+✔ ordinary classifier and narration both consume time and discovery filtered knowledge (17.0466ms)
+✔ unconfirmed rule persistence blocks narration and reports memory-only settlement (31.8723ms)
+✔ postcombat story classification failure retains its diagnostic instead of using combat fallback (11.4356ms)
+✔ dialogue classification timeout reports a processing failure without implying an attempted action (10.6516ms)
+✔ classification timeout retries the same input once with a new id and ignores the late first decision (38.3321ms)
+✔ classification recovery stops after two timeouts without narration or settlement (45.7946ms)
+✔ classification recovery does not retry after explicit stop, changed input, or unconfirmed cancellation (61.2423ms)
+✔ postcombat story continuation failure remains resumable without reclassifying or settling (15.186ms)
+✔ a failure inside combat handling still uses the combat recovery route (6.2658ms)
+✔ native combat regeneration restores the deleted report and unique latest root before a cancelled menu (6.6866ms)
+✔ debug-disabled malformed recovery retains a precise failure without settling (9.5017ms)
+✔ debug-disabled invalid check attribute identifies model input failure without exposing DC (10.1424ms)
+✔ debug-disabled upstream quota failure is distinguished from invalid model output (10.8722ms)
+✔ explicit additional lorebooks reach classification and ordinary narration (15.032ms)
+✔ ordinary narration releases its lore filter even when host stop handle is broken (28.0378ms)
+✔ active combat handles the turn before ordinary classification or narration (7.0651ms)
+✔ host saved recovery survives failed narration and script reload without another debit (22.9368ms)
+✔ host executes the exact compound declaration once and resumes final sequence narration after reload (24.9749ms)
+✔ a completed pending medicine keeps its original operation across a later player floor and native regeneration (21.5503ms)
+✔ host classification passes a registered encounter to the player-bound combat entry (11.9073ms)
+✔ integrated profile cannot grant the old demo scene bonus (10.923ms)
+✔ ordinary narration resolves current model options locally for each request (16.3549ms)
+✔ controller persists failed NO_CHECK and recovers after reload with no new player input (16.7225ms)
+✔ host cancels only the unexecuted medicine pending and anchors the current dialogue (19.307ms)
+✔ a cancellation declaration cannot undo a committed operation awaiting narration (21.0075ms)
+✔ regenerating a completed turn reuses its narration without model calls or another assistant message (13.3164ms)
+✔ regenerating a committed direct effect does not repeat classification, narration, or MVU writes (15.708ms)
+✔ lost direct-effect failure notice resumes saved operation without reclassification (31.9615ms)
+✔ a completed-looking assistant cannot bypass a missing JS operation (9.8652ms)
+✔ completed assistant with missing MVU projection restores state without model requests (33.8809ms)
+✔ explicit completion host binds v2 unchanged and can disable without touching memory (137.007ms)
+✔ deferred local resolution resumes the same request without resending player input (106.8895ms)
+✔ completed reply recovery consumes prepared batch without another extraction or narration (33.4043ms)
+✔ native ordinary regeneration retains dialogue snapshot and never re-extracts (29.9342ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 38
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1907.8406

@@ -1,0 +1,30 @@
+✔ reception-purpose references provide exact reusable target and line spans without normalizing source (8.9042ms)
+✖ short copy ranges partition punctuation and retain every UTF-16 unit (1.1753ms)
+✔ coordinate instructions and deterministic data preserve original input and zero-based end-exclusive bounds (1.1076ms)
+✔ decoded quotes, backslashes, tabs, spaces and CRLF remain separate original units (0.7501ms)
+✔ astral and combining characters use UTF-16 offsets without visual-character normalization (0.6435ms)
+✔ long references retain global offsets and do not split a surrogate pair across blocks (0.7673ms)
+✔ repeated quotes and separate documents keep their own positions; changed source gets a new binding (1.0259ms)
+✔ coordinates never repair replies: shifted, block-local, inclusive-end or forged quotes still fail (2.7815ms)
+✔ a real repeated substring is not certified as the right semantic occurrence (1.8154ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 8
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 286.0857
+
+✖ failing tests:
+
+test at 901-trpg-engine\tools\trpg-engine\tests\gm-assertion-coordinates.test.js:35:1
+✖ short copy ranges partition punctuation and retain every UTF-16 unit (1.1753ms)
+  TypeError [Error]: Cannot read properties of undefined (reading 'map')
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/901-trpg-engine/tools/trpg-engine/tests/gm-assertion-coordinates.test.js:38:28)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)

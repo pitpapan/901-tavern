@@ -1,0 +1,62 @@
+{
+  "results": [
+    {
+      "id": "rawcheck.reproduce.long",
+      "call": 462,
+      "verdict": "fail",
+      "syntax": {
+        "position": 1460,
+        "message": "Expecting property name enclosed in double quotes",
+        "excerpt": "倍。要是能在窗边坐下，再来一壶温热的麦茶，这几天的奔波才算真正缓过劲来。\"}},{\"id\":\"turn.u1.r2\",\"contentSpan\":{\"fragm"
+      },
+      "isolatedWrites": 0,
+      "assessment": "462 unchanged long original JSON syntax failure at1460; rejected writes0, no raw repair or semantic pass."
+    },
+    {
+      "id": "rawcheck.reproduce.identity",
+      "call": 463,
+      "verdict": "fail",
+      "syntax": {
+        "position": 1076,
+        "message": "Expecting ',' delimiter",
+        "excerpt": ":{\"fragmentId\":\"f3\",\"quote\":\"已听不到这里的声音。\"学者}}}]],\"coverage\":{\"status\":\"recorded\","
+      },
+      "isolatedWrites": 0,
+      "assessment": "463 unchanged identity/nonreception original raw JSON syntax failure at1076 and invalid closure; strict parser rejects writes0. Visible selections reasonable but not accepted."
+    },
+    {
+      "id": "rawcheck.probe.reply",
+      "call": 464,
+      "verdict": "fail",
+      "syntax": {
+        "position": 1416,
+        "message": "Expecting ',' delimiter",
+        "excerpt": "{\"fragmentId\":\"f4\",\"quote\":\"山路已经封闭了。\"}}}顶]}],\"coverage\":{\"status\":\"recorded\",\"ev"
+      },
+      "isolatedWrites": 0,
+      "assessment": "464 nearby implicit answer raw JSON stray token at1416; parser rejects writes0. Visible current-answer identity/evidence cannot count as accepted output, no repair."
+    }
+  ],
+  "newCalls": 3,
+  "used": 130,
+  "remaining": 70,
+  "cumulative": 464,
+  "newTests": 0,
+  "freshOfflineTests": 164,
+  "productSourcesUnchanged": true,
+  "generationContractUnchanged": true,
+  "originalRequestsByteIdentical": 2,
+  "originalEvidenceFilesPreserved": 619,
+  "formalProtectedFilesUnchanged": 22,
+  "historicalLedgerPrefixUnchanged": true,
+  "allRawBytesUnmodified": true,
+  "syntaxFailures": 3,
+  "overallPasses": 0,
+  "allIsolatedStatesUnchanged": true,
+  "scope": "Two representative originals and one nearby contrast; other old failures retained, not all replayed this turn",
+  "rawRepair": false,
+  "validationRelaxed": false,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalOrRevisionRestored": false
+}

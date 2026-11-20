@@ -1,0 +1,67 @@
+[
+  {
+    "id": "relation.followup.006",
+    "original": "relation.original.006.network",
+    "mode": "--reproduce-failure",
+    "requestSha256": "49ade2aa08743f9cca3365ad72ddb384023cfc7e4856e82758102b5fa4907d17",
+    "bytes": 111682
+  },
+  {
+    "id": "relation.followup.009",
+    "original": "relation.original.009",
+    "mode": "--reproduce-failure",
+    "requestSha256": "c0edd470e4bdef0348dde2d7f72b28401c2b7dbe63901f5360776de1c791108d",
+    "bytes": 125686
+  },
+  {
+    "id": "relation.followup.direct",
+    "original": "relation.direct",
+    "mode": "--reproduce-failure",
+    "requestSha256": "44909cdea9ed58ba26f2474ebb2677274c2e1a08baebc1f36e46245a556abcfe",
+    "bytes": 54931
+  },
+  {
+    "id": "relation.followup.npc_reply",
+    "original": "relation.npc_reply",
+    "mode": "--reproduce-failure",
+    "requestSha256": "1b2e144a1789b297b97203fd17dca0dafbc284e32f31772336e92b62260a3ccd",
+    "bytes": 53065
+  },
+  {
+    "id": "relation.followup.partial",
+    "original": "relation.partial",
+    "mode": "--reproduce-failure",
+    "requestSha256": "93f57ab10df2e5562ff9d2790081238da2e85946f65156d803365358c574b15e",
+    "bytes": 54986
+  },
+  {
+    "id": "relation.followup.ambiguous",
+    "original": "relation.ambiguous",
+    "mode": "--reproduce-failure",
+    "requestSha256": "81c534fab43f3310bd8f5ec9f01d34c1da232a655303d84a9516762ab677e9ba",
+    "bytes": 53739
+  },
+  {
+    "id": "relation.followup.obstacle",
+    "original": "relation.obstacle",
+    "mode": "--reproduce-failure",
+    "requestSha256": "79c97b17423625709b116fba120834c77243e4b5240d5621be8e5b32a4aa1590",
+    "bytes": 54765
+  },
+  {
+    "id": "relation.followup.new_direct",
+    "original": null,
+    "mode": "--send",
+    "expected": "玩家直接received不要求复述；bright明确not_received，不新增字段。",
+    "requestSha256": "15bcc4b1121973c8b21fbc6b41af135b635b39f1e0288d7eeb808ea196e74317",
+    "bytes": 54870
+  },
+  {
+    "id": "relation.followup.new_partial",
+    "original": null,
+    "mode": "--send",
+    "expected": "玩家前半received，后半uncertain，保留实际内容范围且无关时不问，不猜bright接收。",
+    "requestSha256": "a3c390655820748f05d2b57d22fda18f8f1e6b8668fe9609407563fae13258bc",
+    "bytes": 54380
+  }
+]

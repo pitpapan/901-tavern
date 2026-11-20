@@ -1,0 +1,138 @@
+[
+  {
+    "original": "v7.accept.uncertain",
+    "errorClass": "selection",
+    "actualError": "Missing or ambiguous source selection",
+    "invalidSelections": [
+      {
+        "i": 6,
+        "fragmentId": "f7",
+        "quote": "他有没有听清后半句，眼下无人能确定。",
+        "selectedText": "他有没有听清后半句，"
+      }
+    ],
+    "missing": [],
+    "invalidReply": [],
+    "actualContractMatchesSource": true,
+    "conclusion": "Raw output violates existing sent contract; no evidenced local omission. No product change."
+  },
+  {
+    "original": "v7.failure.recover",
+    "errorClass": "selection",
+    "actualError": "Missing or ambiguous source selection",
+    "invalidSelections": [
+      {
+        "i": 7,
+        "fragmentId": "f7",
+        "quote": "他有没有听清后半句，眼下无人能确定。",
+        "selectedText": "他有没有听清后半句，"
+      }
+    ],
+    "missing": [],
+    "invalidReply": [],
+    "actualContractMatchesSource": true,
+    "conclusion": "Raw output violates existing sent contract; no evidenced local omission. No product change."
+  },
+  {
+    "original": "v7.accept.npc_reply",
+    "errorClass": "reply",
+    "actualError": "Reply evidence must reference current answer",
+    "invalidSelections": [],
+    "missing": [],
+    "invalidReply": [
+      {
+        "i": 0,
+        "identity": {
+          "fragmentId": "f2",
+          "quote": "答道"
+        },
+        "answer": {
+          "fragmentId": "f3",
+          "quote": "渡口今晚停航。"
+        }
+      }
+    ],
+    "actualContractMatchesSource": true,
+    "conclusion": "Raw output violates existing sent contract; no evidenced local omission. No product change."
+  },
+  {
+    "original": "v7.accept.long",
+    "errorClass": "missing",
+    "actualError": "Invalid compact record fields",
+    "invalidSelections": [],
+    "missing": [
+      {
+        "i": 1,
+        "fields": [
+          "historyMessageId"
+        ]
+      },
+      {
+        "i": 3,
+        "fields": [
+          "historyMessageId"
+        ]
+      },
+      {
+        "i": 4,
+        "fields": [
+          "historyMessageId"
+        ]
+      },
+      {
+        "i": 5,
+        "fields": [
+          "historyMessageId"
+        ]
+      }
+    ],
+    "invalidReply": [
+      {
+        "i": 0,
+        "identity": {
+          "fragmentId": "f17",
+          "quote": "听到这话"
+        },
+        "answer": {
+          "fragmentId": "f4",
+          "quote": "“真要说想念的，哪怕只是小酒馆里一碗炖得烂熟的杂烩肉汤，配上刚烤透、皮还是脆的热麦饼，也比干粮强上十倍。要是能在窗边坐下，再来一壶温热的麦茶，这几天的奔波才算真正缓过劲来。”\n"
+        }
+      },
+      {
+        "i": 2,
+        "identity": {
+          "fragmentId": "f17",
+          "quote": "听到这话"
+        },
+        "answer": {
+          "fragmentId": "f8",
+          "quote": "“热汤面，或者刚出锅的肉串。赶路的时候总觉得随便填饱肚子就行，真闻到街边的烟火气，倒确实想吃口带油盐味的热食。”\n"
+        }
+      }
+    ],
+    "actualContractMatchesSource": true,
+    "conclusion": "Raw output violates existing sent contract; no evidenced local omission. No product change."
+  },
+  {
+    "original": "v7.accept.obstacle",
+    "errorClass": "reply",
+    "actualError": "Reply evidence must reference current answer",
+    "invalidSelections": [],
+    "missing": [],
+    "invalidReply": [
+      {
+        "i": 0,
+        "identity": {
+          "fragmentId": "f5",
+          "quote": "答"
+        },
+        "answer": {
+          "fragmentId": "f6",
+          "quote": "“山路已经封闭了。"
+        }
+      }
+    ],
+    "actualContractMatchesSource": true,
+    "conclusion": "Raw output violates existing sent contract; no evidenced local omission. No product change."
+  }
+]

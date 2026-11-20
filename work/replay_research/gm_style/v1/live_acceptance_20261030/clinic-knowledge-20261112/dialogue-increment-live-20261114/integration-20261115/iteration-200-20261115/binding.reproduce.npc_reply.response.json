@@ -1,0 +1,31 @@
+{
+  "kind": "binding.reproduce.npc_reply",
+  "startedAt": "2026-11-15T16:16:19.217Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T16:16:24.065Z",
+  "headersElapsedMs": 4848,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5af8f4939efe46c-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 16:16:24 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=pzKj1duATEUpuh%2Fv3iyy6JmvY8R9y8o7Dh4LFgAvBc9kZ7njSn8zaV7oEKaURYcxzRQ6%2BA%2B8ePI4ZI5A973JEVAUhOurYjoXGZYPgHedXR2wRW4vjb8UXioUU0%2FIJA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611151616195088477028268d9d6FCWux2QD",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "0a67f846-2972-4a86-b1be-ed7fc7a65425"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"49c23208-6ec2-4312-9e08-72dd053122f2\",\"object\":\"chat.completion\",\"created\":1794759383,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/5\\\",\\\"contextRef\\\":\\\"05ae727f494e07f20886fec20d2ae8f49b36238886c897d76debbe0704f864c6\\\",\\\"inputRef\\\":\\\"assertion.92387b1a8cf078b31a77b5825171475bd7515bcdf5211586c35987199501ba37\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"claim-utt-1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"渡口今晚停航。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"渡口今晚停航。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉答道：“渡口今晚停航。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"rec-1\\\",\\\"contentSpan\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"渡口今晚停航。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"布莱特此前向黄泉发问，黄泉直接回答布莱特的问题，布莱特作为被回应者接收到回答内容。\\\",\\\"listener\\\":{\\\"actorId\\\":\\\"bright\\\",\\\"kind\\\":\\\"reply\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"渡口今晚停航。\\\"},\\\"historyMessageId\\\":0},\\\"evidence\\\":{\\\"kind\\\":\\\"reply\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉答道：“渡口今晚停航。”\\\"}}}]}],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉答道：“渡口今晚停航。”\\\"},\\\"reason\\\":\\\"黄泉回答布莱特关于渡口的问询，布莱特已接收该回答，御临风在远处听不到因而无接收。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4594,\"completion_tokens\":514,\"total_tokens\":5108}}",
+  "responseBytes": 2007,
+  "responseBodySha256BeforePrivacyRedaction": "f7ba0e1cdfa33116f71a2b5ebe81cf67b20e6099e69bb083daa940045145d99a",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T16:16:24.081Z",
+  "elapsedMs": 4863
+}

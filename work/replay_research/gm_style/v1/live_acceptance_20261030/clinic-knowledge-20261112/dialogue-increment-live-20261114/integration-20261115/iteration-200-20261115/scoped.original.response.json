@@ -1,0 +1,31 @@
+{
+  "kind": "scoped.original",
+  "startedAt": "2026-11-15T10:22:45.370Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T10:22:51.832Z",
+  "headersElapsedMs": 6462,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5ad895e3d78ad04-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 10:22:51 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=W8D8VADCQGXmpZRcqk4GelR1tyA7XvISeilao6ioqtKudBuHUqPyOmCTrdMuM3TbjZBzaP%2FVaZPyQBGxEuIa48y3JrMaW1Kyn%2FFL6YWV2M%2Bq5AdNC5VZztqJDRTbMQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611151022459885912268268d9d6VogvWgf2",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "079cddb4-0e6c-4603-acb8-93d5aa60a21f"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"5d60c863-aaf5-4490-b519-204b49445d75\",\"object\":\"chat.completion\",\"created\":1794738171,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/3\\\",\\\"contextRef\\\":\\\"ea4eaf7e8399e65420cc755df9f968dbdb515290260459a4f42b96c9effe1cdc\\\",\\\"inputRef\\\":\\\"assertion.4b6d62ae55c37f8356d1d687addd595f51e2d93e58f25a576f808cc87ace954b\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"turn.utterance.1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"渡口今晚停航，明早从南桥走。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":2,\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":9,\\\"end\\\":23,\\\"quote\\\":\\\"渡口今晚停航，明早从南桥走。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":24,\\\"quote\\\":\\\"黄泉对御临风说：“渡口今晚停航，明早从南桥走。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"turn.utterance.1.rec.1\\\",\\\"contentSpan\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":9,\\\"end\\\":23,\\\"quote\\\":\\\"渡口今晚停航，明早从南桥走。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"player\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":3,\\\"end\\\":6,\\\"quote\\\":\\\"御临风\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":8,\\\"quote\\\":\\\"黄泉对御临风说：\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"黄泉直接对御临风说出完整话语，御临风无接收障碍，属于正常接收。\\\"},{\\\"id\\\":\\\"turn.utterance.1.rec.2\\\",\\\"contentSpan\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":9,\\\"end\\\":15,\\\"quote\\\":\\\"渡口今晚停航\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"bright\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":24,\\\"end\\\":27,\\\"quote\\\":\\\"布莱特\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":24,\\\"end\\\":38,\\\"quote\\\":\\\"布莱特只听清“渡口今晚停航”\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"布莱特明确只听清前半句“渡口今晚停航”。\\\"},{\\\"id\\\":\\\"turn.utterance.1.rec.3\\\",\\\"contentSpan\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":16,\\\"end\\\":23,\\\"quote\\\":\\\"明早从南桥走。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"bright\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":24,\\\"end\\\":27,\\\"quote\\\":\\\"布莱特\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":39,\\\"end\\\":52,\\\"quote\\\":\\\"后半句有没有听见无法确定。\\\"},\\\"status\\\":\\\"uncertain\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"原文明确指出布莱特对后半句有没有听见无法确定。\\\"}]}],\\\"coverage\\\":{\\\"status\\\":\\\"uncertain\\\",\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":52,\\\"quote\\\":\\\"黄泉对御临风说：“渡口今晚停航，明早从南桥走。”布莱特只听清“渡口今晚停航”，后半句有没有听见无法确定。\\\"},\\\"reason\\\":\\\"御临风全部接收，布莱特前半句听清，但后半句是否听见无法确定，故整体包含uncertain。\\\"},\\\"status\\\":\\\"unresolved\\\",\\\"unresolved\\\":[{\\\"span\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":39,\\\"end\\\":52,\\\"quote\\\":\\\"后半句有没有听见无法确定。\\\"},\\\"reason\\\":\\\"布莱特对后半句“明早从南桥走。”是否听见在原文中明确无法确定。\\\"}]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4204,\"completion_tokens\":935,\"total_tokens\":5139}}",
+  "responseBytes": 3609,
+  "responseBodySha256BeforePrivacyRedaction": "9d4ca80af493e4741b6504d25d11fe6c80d84dce462a8c8764f89a58da6d543e",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T10:22:51.841Z",
+  "elapsedMs": 6472
+}

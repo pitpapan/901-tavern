@@ -1,0 +1,23 @@
+[
+  {
+    "phase": "01-before",
+    "archive": "01-before.capture-failed.chat.jsonl",
+    "restoredFrom": "before.seed.jsonl",
+    "preservedFailure": true,
+    "reason": "Remove only newly captured, archived error placeholder from next experimental context; no knowledge/pending was erased"
+  },
+  {
+    "phase": "02-received",
+    "archive": "02-received.capture-failed.chat.jsonl",
+    "restoredFrom": "02-received.ready.seed.jsonl",
+    "preservedFailure": true,
+    "reason": "Reopen exact saved received state without archived capture failure; no pending exists or is cleared"
+  },
+  {
+    "phase": "03-reopened",
+    "archive": "03-reopened.capture-failed.chat.jsonl",
+    "restoredFrom": "02-received.ready.seed.jsonl",
+    "preservedFailure": true,
+    "reason": "Final review opens verified saved received state without capture-only error placeholder"
+  }
+]

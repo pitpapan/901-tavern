@@ -15,11 +15,14 @@ import {movementCandidates,movementPurpose,tacticalInspection,lastSeenFoes} from
 import { initializeTestState, settleCombat, readCombat } from '../mvu_poc/adapter.mjs';
 import { act, currentContext, panel, attackProfile, TACTICS, stateResult, opportunityActors, roarTargets, galeTargets,rapidFireTargets } from './engine.mjs';
 import { ABILITIES } from './catalog.mjs';
+import {techniqueDescription} from './thunder-technique.mjs';
 import { beginTurn, freshTurn,lifeStatus,willEnhancement } from '../core.mjs';
 import { RuleInputError, IllegalAction, refreshDerived,equipment, blockValue } from './mechanics.mjs';
 import {heldTargets,grappleMembers} from './grapple.mjs';
 import { resolveStep } from './transitions.mjs';
 import {resourceCapability} from '../resource-lifecycle.mjs';
+import {RESOURCE_CATALOG} from '../resource-catalog.mjs';
+import {RESOURCE_DEFINITIONS} from '../resource-definitions.mjs';
 
 export function visibleTo(b,a,observer) {
   return canObserve(b,a,observer.id);
@@ -27,7 +30,12 @@ export function visibleTo(b,a,observer) {
 
 function candidatesFor(battle) {
   const a=battle.actors[battle.activeId], candidates=[];
-  const add=(abilityId,extra={})=>candidates.push({actorId:a.id,abilityId,...extra});
+  const add=(abilityId,extra={})=>{
+    candidates.push({actorId:a.id,abilityId,...extra});
+    const pools=a.techniqueBindings?.kuanglan?.evidence?.resourcePools;
+    if(['gale','tornado'].includes(abilityId)&&extra.resource===undefined&&Array.isArray(pools))
+      for(const resource of pools)candidates.push({actorId:a.id,abilityId,...extra,resource});
+  };
   for(const id of Object.keys(BASIC_ACTIONS))add(id);
   add('search');
   if(a.state.paidMotion?.phase==='airborne')add('continueJump');
@@ -71,6 +79,7 @@ function candidatesFor(battle) {
         for(const tier of variants) {
           const command={targetId:t.id,...(tier?{tier}:{})};
           add(id,command);
+          if(id==='thunder'&&a.techniqueBindings?.thunder)add(id,{...command,electricFraction:0});
           if(id==='strike'&&a.state.wizard?.weaponDrawn&&a.state.wizard.weaponMode==='gun')add(id,{...command,rapidFire:true});
           if(id==='strike'&&a.state.wizard?.form==='wind'){const adjacentTargetIds=enemies.filter(x=>x.id!==t.id&&spatialDistance(battle.map,x.position,t.position)<=1.5).map(x=>x.id);if(adjacentTargetIds.length)add(id,{...command,adjacentTargetIds});}
           if(id==='doubleStrike')for(const second of enemies)if(second.id!==t.id)add(id,{...command,secondTargetId:second.id});
@@ -170,6 +179,21 @@ function previewOutcome(b,c,out) {
     preview.energy=Object.fromEntries(Object.entries(a.state.resources).map(([k,v])=>[k,v.current-after.state.resources[k].current]).filter(([,n])=>n!==0));
     if(c.payment==='restraint') preview.payment=`精神束缚＋${Math.max(0,...after.state.statuses.filter(s=>s.type==='精神束缚').map(s=>s.points))-Math.max(0,...a.state.statuses.filter(s=>s.type==='精神束缚').map(s=>s.points))}`;
   }
+  // Project the existing disposable trial and registered plan. This is not a
+  // second target selector, caster validator or resource executor.
+  if(c.abilityId==='mechanism'){
+    const object=b.ruleScene?.objects?.[c.objectId],definition=RESOURCE_DEFINITIONS[object?.resourceId],program=definition?.programs?.[c.operation],plan=object?.plans?.[c.part];
+    if(object?.type==='kitResource'&&program&&Object.values(definition.programs).some(p=>p.casting)&&out.result.mechanism?.resourceId===object.resourceId){
+      const targets=out.result.mechanism.targets?.map(t=>t.targetId)??(program.target==='self'?[c.actorId]:plan.targetIds??(plan.targetId?[plan.targetId]:[]));
+      preview.resource={name:RESOURCE_CATALOG[object.resourceId]?.name??'法术',grade:plan.grade??a.state.learnedResources?.[object.resourceId]?.grade??definition.grade,
+        operation:c.operation,action:program.action,channel:program.channel??null,area:!!program.area,targetIds:[...new Set(targets)],
+        payment:{pool:out.result.mechanism.pool??null,quantity:out.result.mechanism.cost??0},
+        ...(typeof plan.label==='string'?{label:plan.label}:{}),
+        ...(program.area?{center:program.area.center==='self'?[...a.position]:plan.center??null}:{})};
+      preview.willSpent=out.result.receipt?.willSpent??0;
+      preview.items=out.result.receipt?.items??[];
+    }
+  }
   if(['move','step'].includes(c.abilityId))preview.movement={...movementPurpose(b,c),...(c.flightEnd?{flightEnd:c.flightEnd,velocity:after.state.flightKinematics?.velocity}:{}),cost:out.result.movement?.cost??measurePath(b.map,a.position,c.to,c.via,{ignoreDifficult:a.ignoreDifficult,climb:c.climb}).cost};
   if(attack?.pendingDefense)preview.attack={dp:attack.rawDP,auto:attack.fixed,cap:attack.cap,pendingDefense:true};
   else if(attack) preview.attack={dp:attack.rawDP,auto:attack.fixed,cap:attack.cap,ap:attack.ap,magic:attack.magic,speed:attack.speed,
@@ -221,6 +245,7 @@ export function decisionContext(b,revision,inspection=inspectCommands(b)) {
     if(p.attack&&!canSeeStats(command.targetId)) {delete p.attack.defense;delete p.attack.rollDP;delete p.attack.defenseAuto;p.attack.targetDefense='未知';}
     if(p.affected) p.affected=p.affected.filter(id=>visible.some(a=>a.id===id));
     if(p.friendlyFire) p.friendlyFire=p.friendlyFire.filter(id=>visible.some(a=>a.id===id));
+    if(p.resource)p.resource.targetIds=p.resource.targetIds.filter(id=>visible.some(a=>a.id===id));
     for(const key of ['actions','energy']) if(p[key]&&!Object.keys(p[key]).length) delete p[key];
     if(p.attack) {
       const x=p.attack;
@@ -238,7 +263,7 @@ export function decisionContext(b,revision,inspection=inspectCommands(b)) {
     phase:b.pending?'reaction':'action',participants,projections:projectionView(b,observer.id),legalOptions,previews,
     tactics:observer.tactics??{intent:'engage',recent:[]},terrain:mapView(b,observer.id)?.features??[],
     lastSeen:lastSeenFoes(b,observer),vagueObservations:mapView(b,observer.id)?.vagueObservations??[],pendingPerceptions:Object.values(observer.state.resourcePendingPerceptions??{}),
-    abilities:Object.fromEntries([...ids].map(id=>[id,observer.abilityDefinitions?.[id]??(id==='block'?{...ABILITIES.block,
+    abilities:Object.fromEntries([...ids].map(id=>[id,techniqueDescription(observer,id)??observer.abilityDefinitions?.[id]??(id==='block'?{...ABILITIES.block,
       action:observer.kind==='huang'?'自由':'移动',
       text:`获得${blockValue(observer)}格挡加值，持续至下次本人行动开始；须能行动并具备相应武器。`}:ABILITIES[id])])),
     unavailable:inspection.unavailable.filter(x=>x.status==='NEEDS_INPUT'),
@@ -268,7 +293,7 @@ export function createCombatRuntime({mvu,getAnchor,expectedChatId,drawDice}) {
           for(const [id,a] of Object.entries(next.actors)) if(root.actors[id]) {
             a.state=structuredClone(root.actors[id].state);a.state.turn=freshTurn();delete a.state.resourceTurnOrder;
             const prior={...root.battle?.actors[id],...root.actors[id].combatCarry};
-            for(const key of ['equipment','parameters','ammunition','loaded','weaponMode','squeezed','recoveryLocks','knownWeaknesses','weaponSize','claws','form','underground','weaponsAvailable']) if(prior?.[key]!==undefined) a[key]=structuredClone(prior[key]);
+            for(const key of ['techniqueBindings','equipment','parameters','ammunition','loaded','weaponMode','squeezed','recoveryLocks','knownWeaknesses','weaponSize','claws','form','underground','weaponsAvailable']) if(prior?.[key]!==undefined) a[key]=structuredClone(prior[key]);
             if(a.ruleset==='opening-20261022'&&prior?.durationCarry) {
               a.durationCarry=structuredClone(prior.durationCarry);
               for(const [key,effect]of Object.entries(a.durationCarry))if(effect.remainingRounds>0){a.buffs[key]=effect.value;(a.expires??={})[key]=next.round+effect.remainingRounds;}

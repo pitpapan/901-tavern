@@ -1,0 +1,123 @@
+{
+  "results": [
+    {
+      "id": "relation.followup.006",
+      "call": 437,
+      "verdict": "fail",
+      "error": "Unexpected non-whitespace character after JSON at position 3675 (line 1 column 3676)",
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "assessment": "437 unchanged original returns invalid JSON closure; rejected unchanged with writes0. Visible content still merges Huang speech with narration and grants Huang full Bright message from presence/public-speaking inference; no fix or semantic pass."
+    },
+    {
+      "id": "relation.followup.009",
+      "call": 438,
+      "verdict": "fail",
+      "error": "Reply evidence must reference current answer",
+      "schemaPass": true,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "assessment": "438 JSON/schema valid but existing v5 rejects reply evidence outside current answer (speaker hearing previous question), writes0. Third speech also uses head-turn as direct evidence and overgrants Huang. Actual boundary protection observed, not model pass."
+    },
+    {
+      "id": "relation.followup.direct",
+      "call": 439,
+      "verdict": "fail",
+      "error": "Expected ',' or '}' after property value in JSON at position 1040 (line 1 column 1041)",
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "assessment": "439 extra listenerId not repeated, but raw JSON now contains stray tokens in evidence spans; unchanged parser rejects writes0. Visible direct/obstacle choices plausible, not valid success; no repair."
+    },
+    {
+      "id": "relation.followup.npc_reply",
+      "call": 440,
+      "verdict": "fail",
+      "error": "Expected ',' or '}' after property value in JSON at position 1035 (line 1 column 1036)",
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "assessment": "440 raw JSON has unexpected token inside evidence; parser rejects writes0. Visible recipient bright and current answer/history0 are reasonable and no spurious player receipt this time, but invalid output cannot pass."
+    },
+    {
+      "id": "relation.followup.partial",
+      "call": 441,
+      "verdict": "fail",
+      "error": "Duplicate JSON object key: \"reason\"",
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "assessment": "441 contains duplicate reason member; previous native parser silently overwrote first reason and isolated writes4. Raw preserved; minimal strict-member fix now rejects exact raw before writes0. Partial ranges semantically correct, original output not accepted."
+    },
+    {
+      "id": "relation.followup.partial.strict",
+      "call": 442,
+      "verdict": "fail",
+      "error": "Expected ',' or '}' after property value in JSON at position 1858 (line 1 column 1859)",
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "assessment": "442 unchanged request after parser fix has invalid JSON plus duplicate evidence visible; native syntax rejects before unique-key scan, writes0. No claim duplicate-key scan improved generation; original raw preserved."
+    },
+    {
+      "id": "relation.followup.ambiguous",
+      "call": 443,
+      "verdict": "fail",
+      "error": "Expected ',' or '}' after property value in JSON at position 1075 (line 1 column 1076)",
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "assessment": "443 raw JSON has unexpected text in evidence; rejected unchanged writes0. Unknown listener intention visible but no valid pending state exists; no repaired replay."
+    },
+    {
+      "id": "relation.followup.obstacle",
+      "call": 444,
+      "verdict": "fail",
+      "error": "Reply evidence must reference current answer",
+      "schemaPass": true,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "assessment": "444 JSON/schema pass and not_received/obstacle meaning correct, but reply listener reference is narration 仍答道 outside current utterance; existing v5 binding rejects writes0. No relaxed quote rule."
+    },
+    {
+      "id": "relation.followup.new_direct",
+      "call": 445,
+      "verdict": "fail",
+      "error": "Expected ',' or '}' after property value in JSON at position 1031 (line 1 column 1032)",
+      "schemaPass": false,
+      "structuralPass": false,
+      "isolatedWrites": 0,
+      "assessment": "445 new direct contrast raw JSON contains unexpected field-like text; rejected unchanged writes0. Visible reception and explicit nonreception sensible, not accepted due raw syntax."
+    },
+    {
+      "id": "relation.followup.new_partial",
+      "call": 446,
+      "verdict": "pass",
+      "error": null,
+      "schemaPass": true,
+      "structuralPass": true,
+      "isolatedWrites": 3,
+      "assessment": "446 passes scoped reception: player only first clause received, second clause uncertain with actual pending1, others no grant; full utterance retained, exact evidence/ranges correct. No question with empty dependency refs. Isolated writes3. No live dependency model test or stability claim."
+    }
+  ],
+  "newCalls": 10,
+  "used": 112,
+  "remaining": 88,
+  "cumulative": 446,
+  "newTests": 4,
+  "freshOfflineTests": 161,
+  "originalEvidenceFilesPreserved": 519,
+  "formalProtectedFilesUnchanged": 22,
+  "historicalLedgerPrefixUnchanged": true,
+  "originalRequestBodiesByteIdentical": true,
+  "productFix": "Reject duplicate JSON object members before accepting native last-value overwrite; original JSON syntax parsing and all span checks retained",
+  "duplicate441BeforeWrites": 4,
+  "duplicate441AfterWrites": 0,
+  "generationContractUnchanged": true,
+  "rawRepair": false,
+  "validationRelaxed": false,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalOrRevisionRestored": false
+}

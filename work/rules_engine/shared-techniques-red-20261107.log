@@ -1,0 +1,112 @@
+✖ adoption is a pure binding, not an acquisition, reset or later-template switch (12.9194ms)
+✖ rock replaces its opening and later clauses and leaves unrelated attack values alone (15.9229ms)
+✖ rock keeps old payment/cooldown, rejects unsupported evolution and actual one-hand grip (1.8557ms)
+✖ iai replaces first-strike bonus, applies to thunder once, and never adds a second move bonus (1.8226ms)
+✖ iai requires recorded qualifications, does not buff an unrelated weapon and expires on next own turn (2.0072ms)
+✖ gale and tornado use their own shared clauses, one payment and original eligibility filtering (2.1615ms)
+✖ shared definition mutations drive consumers; missing or stale source never falls back (1.6804ms)
+✖ bindings survive the existing leave/enter save path without granting skills or refreshing pools (1.82ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 0
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 666.4384
+
+✖ failing tests:
+
+test at work\rules_engine\combat\shared-techniques.test.mjs:21:1
+✖ adoption is a pure binding, not an acquisition, reset or later-template switch (12.9194ms)
+  TypeError [Error]: clauses.adoptWeaponTechnique is not a function
+      at adopt (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/shared-techniques.test.mjs:20:68)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/shared-techniques.test.mjs:23:58)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+
+test at work\rules_engine\combat\shared-techniques.test.mjs:29:1
+✖ rock replaces its opening and later clauses and leaves unrelated attack values alone (15.9229ms)
+  TypeError [Error]: clauses.adoptWeaponTechnique is not a function
+      at adopt (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/shared-techniques.test.mjs:20:68)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/shared-techniques.test.mjs:33:50)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at work\rules_engine\combat\shared-techniques.test.mjs:41:1
+✖ rock keeps old payment/cooldown, rejects unsupported evolution and actual one-hand grip (1.8557ms)
+  TypeError [Error]: clauses.adoptWeaponTechnique is not a function
+      at adopt (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/shared-techniques.test.mjs:20:68)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/shared-techniques.test.mjs:42:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at work\rules_engine\combat\shared-techniques.test.mjs:49:1
+✖ iai replaces first-strike bonus, applies to thunder once, and never adds a second move bonus (1.8226ms)
+  TypeError [Error]: clauses.adoptWeaponTechnique is not a function
+      at adopt (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/shared-techniques.test.mjs:20:68)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/shared-techniques.test.mjs:50:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at work\rules_engine\combat\shared-techniques.test.mjs:62:1
+✖ iai requires recorded qualifications, does not buff an unrelated weapon and expires on next own turn (2.0072ms)
+  TypeError [Error]: clauses.adoptWeaponTechnique is not a function
+      at adopt (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/shared-techniques.test.mjs:20:68)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/shared-techniques.test.mjs:65:2)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at work\rules_engine\combat\shared-techniques.test.mjs:72:1
+✖ gale and tornado use their own shared clauses, one payment and original eligibility filtering (2.1615ms)
+  TypeError [Error]: clauses.adoptWeaponTechnique is not a function
+      at adopt (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/shared-techniques.test.mjs:20:68)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/shared-techniques.test.mjs:73:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at work\rules_engine\combat\shared-techniques.test.mjs:81:1
+✖ shared definition mutations drive consumers; missing or stale source never falls back (1.6804ms)
+  TypeError [Error]: clauses.adoptWeaponTechnique is not a function
+      at adopt (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/shared-techniques.test.mjs:20:68)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/shared-techniques.test.mjs:84:49)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at work\rules_engine\combat\shared-techniques.test.mjs:92:1
+✖ bindings survive the existing leave/enter save path without granting skills or refreshing pools (1.82ms)
+  TypeError [Error]: clauses.adoptWeaponTechnique is not a function
+      at adopt (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/shared-techniques.test.mjs:20:68)
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/combat/shared-techniques.test.mjs:93:22)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

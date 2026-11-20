@@ -1,0 +1,17 @@
+{
+  "scope": "Isolated integration only; no formal or source-product changes",
+  "issues": [
+    {
+      "failure": "projectEntries missed lore returned without world",
+      "responsibleLayer": "controller lore loading",
+      "fix": "Reuse existing world:name provenance binding before projection"
+    },
+    {
+      "failure": "inherited knowledge retained parent chatId",
+      "responsibleLayer": "adoptNativeChatBranch in MVU adapter",
+      "fix": "Reuse existing storyKnowledge source/batch identity rebinding"
+    }
+  ],
+  "newPrompts": false,
+  "modelCalls": 0
+}

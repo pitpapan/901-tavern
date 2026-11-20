@@ -1,0 +1,861 @@
+{
+  "id": "selection.play014",
+  "exactCurrentMessages": true,
+  "schemaPass": true,
+  "structuralPass": true,
+  "checked": {
+    "contextRef": "5cde45aa979e3a71abb8af41b5b1e9923ff2720ec4a2661cade8b331c2d64cab",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.38b90e889719d64f61fc9d420852cfc46bba2d1f9bafd92cb6153c717ad47a26",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "claim.utterance.1",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "靠里面的那家，匾额上写着九雪。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 92,
+                  "end": 94,
+                  "quote": "黄泉"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 117,
+                  "end": 132,
+                  "quote": "靠里面的那家，匾额上写着九雪。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 116,
+                "end": 134,
+                "quote": "“靠里面的那家，匾额上写着九雪。”\n"
+              }
+            },
+            {
+              "id": "claim.utterance.2",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 135,
+                  "end": 136,
+                  "quote": "她"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 164,
+                  "end": 193,
+                  "quote": "不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 163,
+                "end": 195,
+                "quote": "“不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。”\n"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "reception.1.1",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 117,
+          "end": 132,
+          "quote": "靠里面的那家，匾额上写着九雪。"
+        },
+        "speakerId": "huang",
+        "recipientIds": [
+          "player",
+          "bright"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 117,
+            "end": 132,
+            "quote": "靠里面的那家，匾额上写着九雪。"
+          },
+          {
+            "documentId": "current",
+            "start": 210,
+            "end": 216,
+            "quote": "听到黄泉的话"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 210,
+          "end": 216,
+          "quote": "听到黄泉的话"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "黄泉回答御临风上一轮的询问，布莱特明确听到黄泉的话，御临风在旁当面听取。",
+        "claimId": "claim.utterance.1"
+      },
+      {
+        "id": "reception.2.1",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 164,
+          "end": 193,
+          "quote": "不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。"
+        },
+        "speakerId": "huang",
+        "recipientIds": [
+          "player",
+          "bright"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 164,
+            "end": 193,
+            "quote": "不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。"
+          },
+          {
+            "documentId": "current",
+            "start": 210,
+            "end": 216,
+            "quote": "听到黄泉的话"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 210,
+          "end": 216,
+          "quote": "听到黄泉的话"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "黄泉紧接着补充说明医馆情况，布莱特与身旁御临风当面听取，布莱特随后有明确反应确认。",
+        "claimId": "claim.utterance.2"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "recorded",
+        "evidence": {
+          "documentId": "current",
+          "start": 196,
+          "end": 265,
+          "quote": "布莱特牵着马立在御临风身旁，听到黄泉的话，侧耳朝桥对面的街巷辨了辨，只能听到邻近几家药铺的捣药声与算盘声，九雪医馆那头确实显得格外安静。\n"
+        },
+        "reason": "黄泉的两句说明均被御临风与布莱特当面听取，布莱特有明确听到依据。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false
+  },
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": [
+        {
+          "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "靠里面的那家，匾额上写着九雪。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 18,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 18,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 18,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "901 帝都正式续玩 20261106",
+                "messageId": 18,
+                "swipeId": 0,
+                "text": "黄泉牵着马停在桥头，视线越过矮石栏，顺着桥对面的整排门面逐一看过去。\n\n那几间挂着木匾的铺子隔着些距离，门前大多挂着挑出屋檐的幌子。最前头几家正开门营业，抓药与问询的顾客进进出出。\n\n黄泉看清了中间偏深处的一处门脸，抬手指了指：\n\n“靠里面的那家，匾额上写着九雪。”\n\n她顺着那方向打量了片刻，眉头略微动了动，补充了一句：\n\n“不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。”\n\n布莱特牵着马立在御临风身旁，听到黄泉的话，侧耳朝桥对面的街巷辨了辨，只能听到邻近几家药铺的捣药声与算盘声，九雪医馆那头确实显得格外安静。\n\n<StatusPlaceHolderImpl/>"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec",
+          "channel": "message",
+          "learnedAtMessage": 18
+        },
+        {
+          "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 18,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 18,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 18,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "901 帝都正式续玩 20261106",
+                "messageId": 18,
+                "swipeId": 0,
+                "text": "黄泉牵着马停在桥头，视线越过矮石栏，顺着桥对面的整排门面逐一看过去。\n\n那几间挂着木匾的铺子隔着些距离，门前大多挂着挑出屋檐的幌子。最前头几家正开门营业，抓药与问询的顾客进进出出。\n\n黄泉看清了中间偏深处的一处门脸，抬手指了指：\n\n“靠里面的那家，匾额上写着九雪。”\n\n她顺着那方向打量了片刻，眉头略微动了动，补充了一句：\n\n“不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。”\n\n布莱特牵着马立在御临风身旁，听到黄泉的话，侧耳朝桥对面的街巷辨了辨，只能听到邻近几家药铺的捣药声与算盘声，九雪医馆那头确实显得格外安静。\n\n<StatusPlaceHolderImpl/>"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31",
+          "channel": "message",
+          "learnedAtMessage": 18
+        }
+      ]
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": [
+        {
+          "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "靠里面的那家，匾额上写着九雪。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 18,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 18,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 18,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "901 帝都正式续玩 20261106",
+                "messageId": 18,
+                "swipeId": 0,
+                "text": "黄泉牵着马停在桥头，视线越过矮石栏，顺着桥对面的整排门面逐一看过去。\n\n那几间挂着木匾的铺子隔着些距离，门前大多挂着挑出屋檐的幌子。最前头几家正开门营业，抓药与问询的顾客进进出出。\n\n黄泉看清了中间偏深处的一处门脸，抬手指了指：\n\n“靠里面的那家，匾额上写着九雪。”\n\n她顺着那方向打量了片刻，眉头略微动了动，补充了一句：\n\n“不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。”\n\n布莱特牵着马立在御临风身旁，听到黄泉的话，侧耳朝桥对面的街巷辨了辨，只能听到邻近几家药铺的捣药声与算盘声，九雪医馆那头确实显得格外安静。\n\n<StatusPlaceHolderImpl/>"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec",
+          "channel": "message",
+          "learnedAtMessage": 18
+        },
+        {
+          "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 18,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 18,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 18,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "901 帝都正式续玩 20261106",
+                "messageId": 18,
+                "swipeId": 0,
+                "text": "黄泉牵着马停在桥头，视线越过矮石栏，顺着桥对面的整排门面逐一看过去。\n\n那几间挂着木匾的铺子隔着些距离，门前大多挂着挑出屋檐的幌子。最前头几家正开门营业，抓药与问询的顾客进进出出。\n\n黄泉看清了中间偏深处的一处门脸，抬手指了指：\n\n“靠里面的那家，匾额上写着九雪。”\n\n她顺着那方向打量了片刻，眉头略微动了动，补充了一句：\n\n“不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。”\n\n布莱特牵着马立在御临风身旁，听到黄泉的话，侧耳朝桥对面的街巷辨了辨，只能听到邻近几家药铺的捣药声与算盘声，九雪医馆那头确实显得格外安静。\n\n<StatusPlaceHolderImpl/>"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31",
+          "channel": "message",
+          "learnedAtMessage": 18
+        }
+      ]
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "pending": [],
+  "noQuestionWithoutDependency": true,
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "implicit.regression",
+    "chatId": "901 帝都正式续玩 20261106",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.message": {
+        "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "靠里面的那家，匾额上写着九雪。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 18,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      },
+      "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message": {
+        "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 18,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      }
+    },
+    "events": {
+      "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec": {
+        "id": "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player",
+            "bright"
+          ],
+          "propositionRefs": [
+            "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 18,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "901 帝都正式续玩 20261106",
+            "messageId": 18,
+            "swipeId": 0,
+            "text": "黄泉牵着马停在桥头，视线越过矮石栏，顺着桥对面的整排门面逐一看过去。\n\n那几间挂着木匾的铺子隔着些距离，门前大多挂着挑出屋檐的幌子。最前头几家正开门营业，抓药与问询的顾客进进出出。\n\n黄泉看清了中间偏深处的一处门脸，抬手指了指：\n\n“靠里面的那家，匾额上写着九雪。”\n\n她顺着那方向打量了片刻，眉头略微动了动，补充了一句：\n\n“不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。”\n\n布莱特牵着马立在御临风身旁，听到黄泉的话，侧耳朝桥对面的街巷辨了辨，只能听到邻近几家药铺的捣药声与算盘声，九雪医馆那头确实显得格外安静。\n\n<StatusPlaceHolderImpl/>"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 19
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.player.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.message.event": {
+        "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.player.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.player.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.message",
+            "eventRef": "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 18,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 19
+          }
+        ]
+      },
+      "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.bright.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.message.event": {
+        "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.bright.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.bright.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.message",
+            "knowerId": "bright",
+            "propositionRef": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.message",
+            "eventRef": "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 18,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 19
+          }
+        ]
+      },
+      "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31": {
+        "id": "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player",
+            "bright"
+          ],
+          "propositionRefs": [
+            "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 18,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "901 帝都正式续玩 20261106",
+            "messageId": 18,
+            "swipeId": 0,
+            "text": "黄泉牵着马停在桥头，视线越过矮石栏，顺着桥对面的整排门面逐一看过去。\n\n那几间挂着木匾的铺子隔着些距离，门前大多挂着挑出屋檐的幌子。最前头几家正开门营业，抓药与问询的顾客进进出出。\n\n黄泉看清了中间偏深处的一处门脸，抬手指了指：\n\n“靠里面的那家，匾额上写着九雪。”\n\n她顺着那方向打量了片刻，眉头略微动了动，补充了一句：\n\n“不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。”\n\n布莱特牵着马立在御临风身旁，听到黄泉的话，侧耳朝桥对面的街巷辨了辨，只能听到邻近几家药铺的捣药声与算盘声，九雪医馆那头确实显得格外安静。\n\n<StatusPlaceHolderImpl/>"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 19
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.player.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message.event": {
+        "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.player.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.player.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message",
+            "eventRef": "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 18,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 19
+          }
+        ]
+      },
+      "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.bright.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message.event": {
+        "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.bright.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.bright.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message",
+            "knowerId": "bright",
+            "propositionRef": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message",
+            "eventRef": "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 18,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 19
+          }
+        ]
+      }
+    },
+    "knowledge": {
+      "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.player.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.message": {
+        "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.player.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.message",
+        "eventRef": "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 18,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      },
+      "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.bright.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.message": {
+        "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.bright.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.message",
+        "knowerId": "bright",
+        "propositionRef": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec.message",
+        "eventRef": "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 18,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      },
+      "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.player.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message": {
+        "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.player.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message",
+        "eventRef": "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 18,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      },
+      "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.bright.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message": {
+        "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.bright.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message",
+        "knowerId": "bright",
+        "propositionRef": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31.message",
+        "eventRef": "received.dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 18,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      }
+    },
+    "dialogueBatches": {
+      "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87": {
+        "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87",
+        "sourceAnchor": {
+          "chatId": "901 帝都正式续玩 20261106",
+          "messageId": 18,
+          "swipeId": 0,
+          "text": "黄泉牵着马停在桥头，视线越过矮石栏，顺着桥对面的整排门面逐一看过去。\n\n那几间挂着木匾的铺子隔着些距离，门前大多挂着挑出屋檐的幌子。最前头几家正开门营业，抓药与问询的顾客进进出出。\n\n黄泉看清了中间偏深处的一处门脸，抬手指了指：\n\n“靠里面的那家，匾额上写着九雪。”\n\n她顺着那方向打量了片刻，眉头略微动了动，补充了一句：\n\n“不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。”\n\n布莱特牵着马立在御临风身旁，听到黄泉的话，侧耳朝桥对面的街巷辨了辨，只能听到邻近几家药铺的捣药声与算盘声，九雪医馆那头确实显得格外安静。\n\n<StatusPlaceHolderImpl/>"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.1afa695f2be487dcae13a093af74ec27b4e25bf368edc6f58e44b9f4fe0d35ec",
+            "claimId": "claim.utterance.1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player",
+              "bright"
+            ],
+            "propositionRef": null,
+            "content": "靠里面的那家，匾额上写着九雪。",
+            "quote": "靠里面的那家，匾额上写着九雪。",
+            "contentSpan": {
+              "documentId": "current",
+              "start": 117,
+              "end": 132,
+              "quote": "靠里面的那家，匾额上写着九雪。"
+            },
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "黄泉回答御临风上一轮的询问，布莱特明确听到黄泉的话，御临风在旁当面听取。",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 210,
+              "end": 216,
+              "quote": "听到黄泉的话"
+            },
+            "unresolved": []
+          },
+          {
+            "id": "dialogue.693501ae07d964cf566e2ca37027f15acfe49ad5e9d579840f9d2e4d88f7bd87.273a31f4bc1eba624df5b13384fff1dd3ec657ddc52b69a16a372f055d7fdd31",
+            "claimId": "claim.utterance.2",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player",
+              "bright"
+            ],
+            "propositionRef": null,
+            "content": "不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。",
+            "quote": "不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。",
+            "contentSpan": {
+              "documentId": "current",
+              "start": 164,
+              "end": 193,
+              "quote": "不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。"
+            },
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "黄泉紧接着补充说明医馆情况，布莱特与身旁御临风当面听取，布莱特随后有明确反应确认。",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 210,
+              "end": 216,
+              "quote": "听到黄泉的话"
+            },
+            "unresolved": []
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "recorded",
+            "evidence": {
+              "documentId": "current",
+              "start": 196,
+              "end": 265,
+              "quote": "布莱特牵着马立在御临风身旁，听到黄泉的话，侧耳朝桥对面的街巷辨了辨，只能听到邻近几家药铺的捣药声与算盘声，九雪医馆那头确实显得格外安静。\n"
+            },
+            "reason": "黄泉的两句说明均被御临风与布莱特当面听取，布莱特有明确听到依据。"
+          }
+        ]
+      }
+    }
+  },
+  "mvuWrites": 4,
+  "replayStateUnchanged": false
+}

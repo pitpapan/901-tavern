@@ -1,0 +1,31 @@
+{
+  "kind": "range.repeat",
+  "startedAt": "2026-11-15T10:12:59.218Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T10:13:22.934Z",
+  "headersElapsedMs": 23716,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5ad7b0e18d7666c-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 10:13:22 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=EJRNb7E%2Bw10dEy9qlnU6hsf5xE%2BfVgNCLGifbJgG3V8iUEyjgQ%2F%2FoyJwuy%2FBWrOyFvVsf5mTV7YfR10BQyo%2BUJ%2Bu7jpUYu9qRK5rxAZOe0Jk4GCSWdOHtc9DJRYZOA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611151012593109068888268d9d6W0HjKDcA",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "1f8d5ac5-d254-4b98-990f-42a68955508b"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"f8be9850-6823-4462-ba3a-6ddcaa2712b5\",\"object\":\"chat.completion\",\"created\":1794737602,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/2\\\",\\\"contextRef\\\":\\\"4ed4cf1d4d6ce05ec36087ff185398e71daf37b816ad1066d27629b38f214049\\\",\\\"inputRef\\\":\\\"assertion.a2f6a2a0a522c4a55a691130b18ab18e41816576e2be15034da2732793edb3d7\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"utterance.turn.1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"西门今晚关闭。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":2,\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":9,\\\"end\\\":16,\\\"quote\\\":\\\"西门今晚关闭。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":17,\\\"quote\\\":\\\"黄泉对布莱特说：“西门今晚关闭。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"reception.turn.1.1\\\",\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"bright\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":3,\\\"end\\\":6,\\\"quote\\\":\\\"布莱特\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":17,\\\"end\\\":24,\\\"quote\\\":\\\"布莱特听清了。\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"原文明确记载布莱特听清了黄泉说的“西门今晚关闭。”\\\"}]},{\\\"claim\\\":{\\\"id\\\":\\\"utterance.turn.2\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"西门今晚关闭。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":24,\\\"end\\\":26,\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":37,\\\"end\\\":44,\\\"quote\\\":\\\"西门今晚关闭。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":24,\\\"end\\\":45,\\\"quote\\\":\\\"黄泉又对布莱特说了一遍：“西门今晚关闭。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"reception.turn.2.1\\\",\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"bright\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":28,\\\"end\\\":31,\\\"quote\\\":\\\"布莱特\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":45,\\\"end\\\":55,\\\"quote\\\":\\\"这一次布莱特没听见。\\\"},\\\"status\\\":\\\"not_received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"原文明确记载这一次布莱特没听见黄泉所说的话。\\\"}]}] ,\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":55,\\\"quote\\\":\\\"黄泉对布莱特说：“西门今晚关闭。”布莱特听清了。黄泉又对布莱特说了一遍：“西门今晚关闭。”这一次布莱特没听见。\\\"},\\\"reason\\\":\\\"本轮对话包含两次言说，分别明确记载了布莱特听清和没听见的接收情况。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4263,\"completion_tokens\":809,\"total_tokens\":5072}}",
+  "responseBytes": 3172,
+  "responseBodySha256BeforePrivacyRedaction": "673f7fea8e6deeba8feac283ea270975ae624e0045810cdc12acfcb7176cf29a",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T10:13:22.945Z",
+  "elapsedMs": 23727
+}

@@ -1,0 +1,31 @@
+{
+  "case": "02-received-rumor",
+  "customRequest": 324,
+  "schemaPassed": true,
+  "originalRuntimePassed": true,
+  "exactUtf16Spans": 6,
+  "expected": "黄泉已有该传闻的可信隔离取得回执；御临风取得同一传闻或等价未确认来源说法，不升级为确认，不强求复述。",
+  "semanticVerdict": "fail",
+  "actualReceiptStatus": "uncertain",
+  "coverageStored": "uncertain",
+  "pending": 1,
+  "asked": 0,
+  "newPlayerKnowledge": 0,
+  "priorRumorPreserved": true,
+  "onlyContractChanged": true,
+  "oldDirectSpeechRulePresent": true,
+  "newDirectSpeechRulePresent": false,
+  "diagnosis": "Old no-mandatory-confirmation instruction absent from actual v2 request. Model reason demands listener feedback. This is a proven instruction projection omission, not proof it is the only cause. No repair or retest this turn.",
+  "unrun": [
+    "05-partial-first",
+    "06-partial-second",
+    "07-ambiguous-hearing",
+    "01-received-new",
+    "03-not-heard",
+    "04-not-yet-said",
+    "08-ambiguous-listener"
+  ],
+  "callsUsed": 1,
+  "remaining": 7,
+  "closedOnFirstFailure": true
+}

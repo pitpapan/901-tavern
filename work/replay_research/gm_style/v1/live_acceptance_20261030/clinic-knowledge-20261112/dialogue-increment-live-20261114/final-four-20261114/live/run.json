@@ -1,0 +1,35 @@
+{
+  "authorization": "用户新增10次，继续研发07—10，发现有证据问题则修复并离线回归后用剩余额度验收；失败先停诊断，不盲目重发、不修补回复或放宽校验。依赖承接真实待核结果，不部署/正式剧情/自动批准修订",
+  "baseline": 286,
+  "limit": 10,
+  "cumulative": 287,
+  "remaining": 9,
+  "attempts": [
+    {
+      "id": "07-ambiguous-hearing",
+      "customRequest": 287,
+      "state": "completed",
+      "requestBytes": 11467,
+      "requestSha256": "77bc964128b526224eee4f30b61186c5e1401a7c371ed693aa589e32ee59b242",
+      "status": 200,
+      "elapsedMs": 16790,
+      "rawResponseSha256": "72b31461de97a6a9dffd1db372db8a2a0700e312be5f4c225f27e4543d5e7e73",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3099,
+        "completion_tokens": 2233,
+        "total_tokens": 5332
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Model reception is correctly uncertain, but degree.args.property has value 音量 with null argumentSpans.property, violating existing pairing guidance. Original checker rejects before state writes. Preserve raw; diagnose and revise generation contract presentation before any retest."
+    }
+  ],
+  "closed": true,
+  "retries": 0,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "stopReason": "manual-fail"
+}

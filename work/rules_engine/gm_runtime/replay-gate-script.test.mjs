@@ -3,11 +3,13 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import {createOpeningRoster} from '../combat/opening.mjs';
 import {createRecoveryFixture} from './recovery-fixture.mjs';
+import {createStoryKnowledgeRuntime} from './story-knowledge.mjs';
+import {prepareCompactDialogueExtraction} from './story-dialogue-knowledge.mjs';
 
 // Run the browser controller itself; replace only host APIs and model transport.
 // Real Builder, gate and MVU adapter modules still execute.
 async function hostFixture({ action = '我向布莱特点头，说：“我们到了。”',
-  decision = { status: 'NO_CHECK', basis: 'ordinary_dialogue', reason: '普通问候' }, combat = null, profile = {}, lorebooks = {901:[]}, generationError = null, brokenListenerStop = false, classificationTransport = null, stopResult = true } = {}) {
+  decision = { status: 'NO_CHECK', basis: 'ordinary_dialogue', reason: '普通问候' }, combat = null, profile = {}, lorebooks = {901:[]}, generationError = null, brokenListenerStop = false, classificationTransport = null, stopResult = true,knowledgeCatalog=null,knowledgeDialogue=null,failProcessedBatchOnce=false } = {}) {
   const root = new URL('../../../', import.meta.url);
   const source = (await readFile(new URL('./replay-gate-script.example.js', import.meta.url), 'utf8'))
     .replaceAll("'/901-rules-runtime/", `'${root.href}`)
@@ -22,13 +24,13 @@ async function hostFixture({ action = '我向布莱特点头，说：“我们�
   const generationHooks=new Map();
   const mvu = {
     getMvuData: ({ message_id }) => structuredClone(floors[message_id] ?? { stat_data: {} }),
-    replaceMvuData: async (value, { message_id }) => { floors[message_id] = structuredClone(value); },
+    replaceMvuData: async (value, { message_id }) => { if(failProcessedBatchOnce&&Object.values(value.stat_data?.['901_rules_poc']?.storyKnowledge?.dialogueBatches??{}).some(b=>b.status==='processed')){failProcessedBatchOnce=false;throw Error('isolated interruption before processed write');} floors[message_id] = structuredClone(value); },
   };
   const host = {
     window: { top: { document: { getElementById: () => null } }, addEventListener() {} },
     console: { log() {}, info() {}, error() {} },
     SillyTavern: { chatId: 'host-test', chat, stopGeneration() {}, saveChat: async () => { stats.saves++; } },
-    tavern_events: { GENERATION_STARTED:'start', GENERATION_STOPPED:'stopped', GENERATE_AFTER_DATA: 'generate', WORLDINFO_ENTRIES_LOADED: 'worlds' },
+    tavern_events: { GENERATION_STARTED:'start', GENERATION_STOPPED:'stopped', GENERATE_AFTER_DATA: 'generate', WORLDINFO_ENTRIES_LOADED: 'worlds',CHAT_COMPLETION_SETTINGS_READY:'settings' },
     eventMakeFirst: (event, listener) => { if(event==='generate')hook=listener;else generationHooks.set(event,listener); },
     eventOn: (event, listener) => { listeners.set(event, listener); return { stop: () => { if(!brokenListenerStop)listeners.delete(event); } }; },
     eventRemoveListener: (event, listener) => { if(listeners.get(event)===listener)listeners.delete(event); },
@@ -47,10 +49,13 @@ async function hostFixture({ action = '我向布莱特点头，说：“我们�
       stats.narrations++;
       stats.lastNarrationRequest = request;
       const lores = { globalLore: [{ world: 'foreign', position: 4, content: '<JSONPatch>' }],
-        characterLore: Object.keys(lorebooks).map(world=>({world,content:world})), chatLore: [], personaLore: [] };
+        characterLore: Object.entries(lorebooks).flatMap(([world,entries])=>entries.length?entries.map(e=>({...e,world})):[{world,content:world}]), chatLore: [], personaLore: [] };
       listeners.get('worlds')?.(lores);
+      stats.lastProjectedLore=structuredClone(lores);
+      const assembled={messages:[{role:'user',content:request.user_input}]};listeners.get('settings')?.(assembled);
+      stats.lastAssembledNarration=assembled;
       assert.deepEqual(lores.globalLore, []);
-      assert.deepEqual(lores.characterLore.map(e=>e.world),Object.keys(lorebooks));
+      assert.deepEqual([...new Set(lores.characterLore.map(e=>e.world))],Object.keys(lorebooks));
       if (decision.status === 'NO_CHECK') {
         assert.equal(chat.findLast(message=>message.is_user).extra['901_replay_gate'].status, 'NARRATION_PENDING');
         assert.ok(stats.saves > 0);
@@ -83,15 +88,100 @@ async function hostFixture({ action = '我向布莱特点头，说：“我们�
       }
     },
   };
+  let controller;
+  const knowledge=knowledgeCatalog?createStoryKnowledgeRuntime({mvu,tavern:host.SillyTavern,
+    getAnchor:()=>({chatId:host.SillyTavern.chatId,messageId:chat.length-1,swipeId:chat.at(-1).swipe_id??0}),catalog:knowledgeCatalog,dialogue:knowledgeDialogue,
+    readSavedChat:async()=>[{},...chat.map((m,i)=>({...m,variables:[structuredClone(floors[i]??{})]}))]}):null;
   const load = async () => {
     const register = await new (Object.getPrototypeOf(async function() {}).constructor)(...Object.keys(host),
       source + '\nreturn registerReplayGate;')(...Object.values(host));
     profile.readSavedChat??=async()=>[{},...chat.map((m,i)=>({...m,variables:m.variables??[structuredClone(floors[i]??{})]}))];
-    register({ getMvu: async () => mvu, combat, profile });
+    controller=register({ getMvu: async () => mvu, combat, profile,knowledge });
   };
   await load();
-  return { chat, floors, stats, listeners, load, start:(type='regenerate')=>generationHooks.get('start')?.(type,{},false),run: () => hook({}, false), succeed: () => { fail = false; } };
+  return { chat, floors, stats, listeners, load,knowledge,get controller(){return controller;}, start:(type='regenerate')=>generationHooks.get('start')?.(type,{},false),run: () => hook({}, false), succeed: () => { fail = false; } };
 }
+
+test('ordinary saved narration invokes configured dialogue adapter without changing prose or memory route',async()=>{
+ let extracted=0;
+ const f=await hostFixture({knowledgeCatalog:{id:'dialogue.gate',actors:{bright:'布莱特'},facts:[]},knowledgeDialogue:{extract:async input=>{
+  extracted++;assert.equal(input.sourceAnchor.text,'布莱特微微颔首。');
+  return {contextRef:input.contextRef,assertions:{schemaVersion:'gm-assertion-output/1',inputRef:input.assertion.inputRef,units:[{id:'turn',status:'extracted',claims:[],unresolved:[]}]},receptions:[]};
+ }}});f.succeed();await f.run();assert.equal(extracted,1);assert.equal(f.chat.at(-1).mes,'布莱特微微颔首。');
+ assert.equal(Object.values(f.knowledge.read().dialogueBatches)[0].status,'processed');
+ assert.equal(f.stats.narrations,1);
+});
+test('saved prose survives extraction failure and completed-turn replay does not request prose again',async()=>{
+ const statuses=[];const f=await hostFixture({knowledgeCatalog:{id:'dialogue.failure',actors:{bright:'布莱特'},facts:[]},profile:{onKnowledgeStatus:s=>statuses.push(s)},
+  knowledgeDialogue:{extract:async()=>{throw Error('offline extraction failed');}}});
+ f.succeed();await f.run();assert.equal(f.chat.at(-1).mes,'布莱特微微颔首。');assert.equal(statuses.at(-1).status,'unprocessed');
+ assert.equal(f.chat.at(-1).extra['901_replay_gate'].status,'NO_CHECK');await f.run();assert.equal(f.stats.narrations,1);
+});
+
+test('explicit compact host preserves failed prose, continues unrelated play and recovers only on actual dependency',async()=>{
+ let extracted=0,asks=0;const seen=[],statuses=[];
+ const f=await hostFixture({knowledgeCatalog:{id:'dialogue.compact.host',actors:{bright:'布莱特'},facts:[]},profile:{onKnowledgeStatus:s=>statuses.push(s),askKnowledge:async()=>{asks++;return null;}}});
+ f.controller.configureKnowledgeDialogueHost({enabled:true,outputContract:'dialogue-reception/7',complete:async req=>{
+  seen.push(structuredClone(req));const input=JSON.parse(req.messages[1].content);
+  if(req.purpose==='dialogue-dependency')return JSON.stringify({inputRef:input.inputRef,required:input.request.text==='依赖这条消息'?input.pending.map(p=>p.id):[]});
+  extracted++;assert.equal(req.responseFormat.json_schema.name,'dialogue_reception_v7');if(extracted===1)return 'retained invalid original';
+  const p=await prepareCompactDialogueExtraction(input),fragments=JSON.parse(p.messages[2].content).fragments;
+  return JSON.stringify({schemaVersion:'dialogue-reception/7',contextRef:p.input.contextRef,selections:[{fragmentId:fragments[0].id,quote:input.sourceAnchor.text}],utterances:[],receptions:[],unresolved:[],coverage:{status:'none',evidence:0}});
+ }});
+ f.succeed();await f.run();assert.equal(statuses.at(-1).status,'unprocessed');assert.equal(f.chat[1].mes,'布莱特微微颔首。');assert.equal(f.stats.narrations,1);
+ await f.run();assert.equal(extracted,1);assert.equal(f.stats.narrations,1);
+ f.chat.push({is_user:true,mes:'无关闲聊',swipe_id:0});await f.run();assert.equal(f.stats.narrations,2);assert.equal(extracted,2);assert.equal(asks,0);
+ f.chat.push({is_user:true,mes:'依赖这条消息',swipe_id:0});await f.run();assert.equal(f.stats.narrations,3);assert.equal(extracted,4);assert.equal(asks,0);
+ const recovered=Object.values(f.knowledge.read().dialogueBatches).find(b=>b.sourceAnchor.messageId===1);assert.equal(recovered.status,'processed');assert.equal(recovered.attempts[0].rawReply,'retained invalid original');assert.equal(recovered.attempts.length,2);
+ const recovery=seen.find(r=>r.purpose==='dialogue-reception'&&r.messages.length===4);assert.equal(JSON.parse(recovery.messages[1].content).sourceAnchor.messageId,1);assert.equal(JSON.parse(recovery.messages[3].content).dependency.text,'依赖这条消息');
+});
+test('ordinary next turn asks only when pending information is relevant, and deferred answer does not regenerate prose',async()=>{
+ let relevant=false,asks=0;const statuses=[];
+ const f=await hostFixture({knowledgeCatalog:{id:'dialogue.question',actors:{bright:'布莱特'},facts:[]},profile:{onKnowledgeStatus:s=>statuses.push(s),askKnowledge:async()=>{asks++;return null;}},
+  knowledgeDialogue:{extract:async input=>{const text=input.sourceAnchor.text;return {contextRef:input.contextRef,assertions:{schemaVersion:'gm-assertion-output/1',inputRef:input.assertion.inputRef,units:[{id:'turn',status:'unresolved',claims:[],unresolved:[{span:{documentId:'current',start:0,end:text.length,quote:text},reason:'未确定是否传达消息'}]}]},receptions:[]};},
+   dependencies:async({pending})=>relevant?[pending[0].id]:[]}});
+ f.succeed();await f.run();assert.equal(asks,0);
+ f.chat.push({is_user:true,mes:'无关闲聊',swipe_id:0});await f.run();assert.equal(asks,0);assert.equal(f.stats.narrations,2);
+ relevant=true;f.chat.push({is_user:true,mes:'依赖那条消息行动',swipe_id:0});await f.run();assert.equal(asks,1);assert.equal(f.stats.narrations,2);assert.equal(statuses.at(-1).status,'deferred');
+ await f.run();assert.equal(asks,1);assert.equal(f.stats.narrations,2);
+});
+
+test('ordinary story generation consumes recipient knowledge and exposes only an explicit saved-receipt entry',async()=>{
+ const catalog={id:'isolated.story.gate',actors:{player:'御临风',bright:'布莱特',huang:'黄泉'},
+  facts:[{id:'test.private',entityId:'test.owner',field:'relationship',value:'隔离关系命题',certainty:'confirmed',visibility:'private'}],
+  lore:[{book:'901',uid:31,content:'医馆。隔离关系命题',publicContent:'医馆。'}]};
+ const f=await hostFixture({action:'我询问医馆。',knowledgeCatalog:catalog,lorebooks:{901:[{uid:31,enabled:true,keys:['医馆'],content:'医馆。隔离关系命题'}]}});f.succeed();await f.run();
+ assert.match(f.stats.lastClassificationRequest.user_input,/901逐角色知情投影/);
+ assert.match(f.stats.lastNarrationRequest.user_input,/901逐角色知情投影/);
+ assert.match(f.stats.lastNarrationRequest.user_input,/来源关系未明确关联时保持未定/);
+ assert.match(f.stats.lastNarrationRequest.user_input,/条件满足只表示可以披露，仍由人物决定是否说出/);
+ assert.doesNotMatch(f.stats.lastNarrationRequest.user_input,/隔离关系命题/);
+ assert.doesNotMatch(JSON.stringify(f.stats.lastClassificationRequest),/隔离关系命题/);
+ assert.equal(f.stats.lastProjectedLore.characterLore[0].content,'医馆。');
+ f.chat.at(-1).mes='【隔离、非Canon】来客私下明确告知布莱特：隔离关系命题。其他人没有收到。';
+ await f.controller.receiveKnowledge({id:'test.disclosure',authority:'host-confirmed',status:'received',
+  sourceAnchor:{chatId:'host-test',messageId:f.chat.length-1,swipeId:0,text:f.chat.at(-1).mes},
+  propositionRefs:['test.private'],recipientIds:['bright'],channel:'message',belief:'confirmed'});
+ assert.ok(f.knowledge.context().actorKnowledge.find(a=>a.actorId==='bright').facts.length);
+ assert.equal(f.knowledge.context().actorKnowledge.find(a=>a.actorId==='huang').facts.length,0);
+ assert.ok(!f.listeners.has('settings'));
+});
+
+test('ordinary classifier and narration both consume time and discovery filtered knowledge',async()=>{
+ const base={entityId:'gate.location',field:'access',certainty:'confirmed',visibility:'public'};
+ const catalog={id:'isolated.boundaries',actors:{player:'御临风',bright:'布莱特',huang:'黄泉'},facts:[
+  {...base,id:'common',value:'一般可询问开放时间'},
+  {...base,id:'future',value:'未来开放事实',effectiveAt:{id:'legacy.story.order',clock:'turn',at:10,actorId:'legacy.story'}},
+  {...base,id:'conditional',value:'尚未发现的事实',discoveryConditions:['confirmed.visit']},
+  {...base,id:'other.clock',value:'无映射世界时间事实',effectiveAt:{id:'world',clock:'worldMinutes',at:0,actorId:null}}]};
+ const f=await hostFixture({knowledgeCatalog:catalog});f.succeed();await f.run();
+ for(const request of [f.stats.lastClassificationRequest,f.stats.lastNarrationRequest]){
+  assert.match(request.user_input,/一般可询问开放时间/);
+  assert.doesNotMatch(request.user_input,/未来开放事实|尚未发现的事实|无映射世界时间事实/);
+  assert.match(request.user_input,/effectiveAt/);
+ }
+ assert.equal(f.floors[0].stat_data['901_rules_poc'].storyKnowledge,undefined);
+});
 
 test('unconfirmed rule persistence blocks narration and reports memory-only settlement',async()=>{
  const fixture=await hostFixture({action:'我完整长休八小时。',decision:{status:'RECOVERY_REQUIRED',reason:'完整长休',
@@ -152,6 +242,20 @@ test('unclassified technical failure recovers after reload on the same turn or a
   f.chat.push({is_user:true,mes:'我点头，继续听他的回答。',swipe_id:0});await f.load();await f.run();
   assert.equal(f.stats.narrations,2);assert.equal(f.chat.at(-1).extra['901_replay_gate'].status,'NO_CHECK');
  }
+});
+
+test('saved prose extraction failure releases the controller for next chat and reload without settling twice',async()=>{
+ let extractions=0;
+ const f=await hostFixture({knowledgeCatalog:{id:'dialogue.failure.resume',actors:{bright:'布莱特'},facts:[]},profile:{onKnowledgeStatus:()=>{}},
+  knowledgeDialogue:{extract:async()=>{extractions++;throw Error('injected optional extraction failure');}}});
+ f.succeed();await f.run();const prose=f.chat[1].mes;
+ await f.run();assert.equal(f.stats.narrations,1);assert.equal(extractions,1);
+ f.chat.push({is_user:true,mes:'我问布莱特还有什么要补充。',swipe_id:0});await f.run();
+ assert.equal(f.stats.narrations,2);assert.equal(f.chat[1].mes,prose);
+ await f.load();f.chat.push({is_user:true,mes:'重开后我继续听他说话。',swipe_id:0});await f.run();
+ assert.equal(f.stats.narrations,3);assert.equal(extractions,3);assert.equal(f.chat[1].mes,prose);
+ const root=f.floors[f.chat.length-1].stat_data['901_rules_poc'];
+ assert.equal(root.revision,0);assert.deepEqual(root.operations,{});
 });
 
 test('a second classification failure belongs to the new message and remains recoverable',async()=>{
@@ -589,4 +693,39 @@ test('completed assistant with missing MVU projection restores state without mod
   assert.equal(fixture.chat.length, 3);
   assert.equal(fixture.stats.classifications, 1);
   assert.equal(fixture.stats.narrations, 1);
+});
+
+// Integration-only synthetic completions; no live model, source or secret access.
+test('explicit completion host binds selected v4 references and can disable without touching memory',async()=>{
+ const f=await hostFixture({knowledgeCatalog:{id:'host.binding',actors:{bright:'布莱特'},facts:[]}});f.succeed();let calls=0;
+ const complete=async request=>{calls++;assert.equal(request.purpose,'dialogue-reception');assert.equal(request.responseFormat.json_schema.name,'dialogue_reception_v5');
+  const input=JSON.parse(request.messages[1].content),text=input.sourceAnchor.text,fragment=JSON.parse(request.messages[2].content).fragments.find(f=>f.text===text);
+  return JSON.stringify({schemaVersion:'dialogue-reception/5',contextRef:input.contextRef,inputRef:input.assertion.inputRef,units:[{id:'turn',status:'extracted',claims:[],utterances:[],unresolved:[],coverage:{status:'none',evidence:{fragmentId:fragment.id,quote:text},reason:'合成普通动作，无消息传达'}}]});};
+ assert.equal(f.controller.configureKnowledgeDialogueHost({enabled:true,complete}).status,'enabled');await f.run();assert.equal(calls,1);
+ assert.equal(f.controller.configureKnowledgeDialogueHost({enabled:false}).status,'disabled');
+ f.chat.push({is_user:true,mes:'继续闲聊。',swipe_id:0});await f.run();assert.equal(calls,1);assert.equal(f.stats.narrations,2);
+});
+test('deferred local resolution resumes the same request without resending player input',async()=>{
+ let extractions=0,asks=0;const statuses=[];
+ const f=await hostFixture({knowledgeCatalog:{id:'host.resume',actors:{bright:'布莱特'},facts:[]},profile:{askKnowledge:async()=>{asks++;return null;},onKnowledgeStatus:s=>statuses.push(s)},knowledgeDialogue:{
+  extract:async input=>{const text=input.sourceAnchor.text;return {contextRef:input.contextRef,assertions:{schemaVersion:'gm-assertion-output/1',inputRef:input.assertion.inputRef,units:[{id:'turn',status:++extractions===1?'unresolved':'extracted',claims:[],unresolved:extractions===1?[{span:{documentId:'current',start:0,end:text.length,quote:text},reason:'合成待核，不确定是否转达'}]:[]}]},receptions:[]};},
+  dependencies:async({pending})=>pending.map(p=>p.id)}});
+ f.succeed();await f.run();f.chat.push({is_user:true,mes:'依据该消息继续原行动。',swipe_id:0});await f.run();
+ assert.equal(asks,1);assert.equal(f.stats.narrations,1);const q=statuses.at(-1).questions[0];
+ await f.controller.resolveKnowledgeDialogue({id:q.id,received:false,recipientIds:[]});
+ assert.equal(f.stats.narrations,2);assert.equal(f.chat.filter(m=>m.is_user).length,2);assert.equal(asks,1);
+ assert.ok(f.knowledge.context().actorKnowledge.every(a=>!a.facts.length));
+});
+test('completed reply recovery consumes prepared batch without another extraction or narration',async()=>{
+ let extracted=0;const f=await hostFixture({failProcessedBatchOnce:true,knowledgeCatalog:{id:'host.recovery',actors:{bright:'布莱特'},facts:[]},knowledgeDialogue:{extract:async input=>{
+  extracted++;return {contextRef:input.contextRef,assertions:{schemaVersion:'gm-assertion-output/1',inputRef:input.assertion.inputRef,units:[{id:'turn',status:'extracted',claims:[],unresolved:[]}]},receptions:[]};}}});
+ f.succeed();await f.run();const state=f.floors[1].stat_data['901_rules_poc'].storyKnowledge;assert.equal(Object.values(state.dialogueBatches)[0].status,'prepared');
+ await f.load();await f.run();assert.equal(Object.values(f.floors[1].stat_data['901_rules_poc'].storyKnowledge.dialogueBatches)[0].status,'processed');assert.equal(extracted,1);assert.equal(f.stats.narrations,1);
+ assert.equal(f.chat[1].extra['901_knowledge_status'],undefined);
+});
+
+test('native ordinary regeneration retains dialogue snapshot and never re-extracts',async()=>{
+ let calls=0;const f=await hostFixture({knowledgeCatalog:{id:'ordinary.regen',actors:{bright:'布莱特'},facts:[]},knowledgeDialogue:{extract:async input=>{calls++;return {contextRef:input.contextRef,assertions:{schemaVersion:'gm-assertion-output/1',inputRef:input.assertion.inputRef,units:[{id:'turn',status:'extracted',claims:[],unresolved:[]}]},receptions:[]};}}});
+ f.succeed();await f.run();const saved=structuredClone(f.floors[1]);await f.start();f.chat.pop();delete f.floors[1];await f.run();
+ assert.deepEqual(f.floors[1],saved);assert.equal(calls,1);assert.equal(f.stats.narrations,1);
 });

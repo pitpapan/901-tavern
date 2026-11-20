@@ -1,0 +1,156 @@
+{
+  "authorization": "明确授权修复后复用上一批剩余7次，先复测02；仅新增共享直接接收判定说明。失败即停止整个批次，不重试、不继续不同例、不自动补回执、不转换action、不放宽校验，不部署/正式剧情/自动批准修订。",
+  "baseline": 324,
+  "limit": 7,
+  "cumulative": 331,
+  "remaining": 0,
+  "attempts": [
+    {
+      "id": "02-received-rumor",
+      "customRequest": 325,
+      "state": "completed",
+      "requestBytes": 28082,
+      "requestSha256": "daae7a4ca29fb1558c542a3425a74af940601bb2b8ba8bc80b9a022b6b96559c",
+      "status": 200,
+      "elapsedMs": 5382,
+      "rawResponseSha256": "ef2fe185a7dbb28a1e98d99bf5d039860d44ed063eb314a654e7404feb2af464",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3422,
+        "completion_tokens": 502,
+        "total_tokens": 3924
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "utterance绑定及recorded覆盖正确；直接告知无需复述，御临风获得同一rumor且保留黄泉来源，不升为确认；布莱特无增量，pending0/询问0。Schema与6处引用通过，原文及参数不变。"
+    },
+    {
+      "id": "05-partial-first",
+      "customRequest": 326,
+      "state": "completed",
+      "requestBytes": 28591,
+      "requestSha256": "af9ee5aa539775cb55331cf226d9971b3e0ee6e034471a25b33ae412bcec8375",
+      "status": 200,
+      "elapsedMs": 7821,
+      "rawResponseSha256": "6f26d8d66859333d881cb30ca7e39068892942f9807b0036d5ba18d0e162e2ce",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3668,
+        "completion_tokens": 927,
+        "total_tokens": 4595
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "完整言说保留，分片utterance绑定received/not_received；仅布莱特收到北门暂停通行，西桥绕行未授予；来源为player的uncertain说法，无世界真相升级。pending0/询问0，Schema及14引用通过。"
+    },
+    {
+      "id": "06-partial-second",
+      "customRequest": 327,
+      "state": "completed",
+      "requestBytes": 28592,
+      "requestSha256": "078e78f019e439ddfc8527c448536f78e59358a758639df68b82d2daf36d94e7",
+      "status": 200,
+      "elapsedMs": 7872,
+      "rawResponseSha256": "4ec3eefd7e549f6009d770ee8c03512043d5fef7440939aa734a8cf8572ce07c",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3681,
+        "completion_tokens": 967,
+        "total_tokens": 4648
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "完整言说保留，前半句not_received/后半句received直接绑定分片；只给布莱特登记改从西桥绕行的来源说法，不授予北门停用，不共享他人。pending0/询问0，Schema与14引用通过。"
+    },
+    {
+      "id": "07-ambiguous-hearing",
+      "customRequest": 328,
+      "state": "completed",
+      "requestBytes": 28375,
+      "requestSha256": "b175e5a3882afcd5dbb6113fb0cb4444b27ba5309a9af7ff629b1d7ac4d9aaa3",
+      "status": 200,
+      "elapsedMs": 2853,
+      "rawResponseSha256": "247c4661b05ec541f98843f1d03f14da440ed44886a57ac2342d7b36409e5335",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-control",
+      "usage": {
+        "prompt_tokens": 3582,
+        "completion_tokens": 506,
+        "total_tokens": 4088
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "直接绑定黄泉言说；御临风是否听清保留uncertain回执及coverage，未漏抽也未猜授予。待核1/知情增量0/询问0，保留真实待核ID；Schema与6引用通过。本轮不包含后续依赖调用。"
+    },
+    {
+      "id": "01-received-new",
+      "customRequest": 329,
+      "state": "completed",
+      "requestBytes": 28282,
+      "requestSha256": "451045343ccd7d83221202c49e57eab997ebb57fcdde6a002de64aba6d80c707",
+      "status": 200,
+      "elapsedMs": 8448,
+      "rawResponseSha256": "27f2acb3702dc26e6fa5121cf05f8567b2336f92e9f14b5104e1ed87959e207f",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3543,
+        "completion_tokens": 507,
+        "total_tokens": 4050
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "布莱特明确收到御临风关于西侧栈桥暂时停用的新消息，绑定utterance及recorded正确；以uncertain来源说法登记，非世界事实，其他角色无增量。pending0/询问0，Schema及6引用通过。"
+    },
+    {
+      "id": "03-not-heard",
+      "customRequest": 330,
+      "state": "completed",
+      "requestBytes": 28301,
+      "requestSha256": "26c2dadde9ea48ccddb4ee2cf7796d4452c1eeb25f032cfaa8b32420b394607f",
+      "status": 200,
+      "elapsedMs": 5100,
+      "rawResponseSha256": "d75c264528e8854eb65527ab72df890af47f56c13fb2502730b720e112a67c25",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3553,
+        "completion_tokens": 525,
+        "total_tokens": 4078
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "隔音窗及明确没听见保留，实际言说绑定not_received，recorded表示记录了未接收而非授予。所有角色知情增量0/pending0/询问0；Schema及6引用通过。"
+    },
+    {
+      "id": "04-not-yet-said",
+      "customRequest": 331,
+      "state": "completed",
+      "requestBytes": 28112,
+      "requestSha256": "b7eb37371b6b5c503bc460740e9145a3699717ecfa8093c5bba3fb4abdc37188",
+      "status": 200,
+      "elapsedMs": 5389,
+      "rawResponseSha256": "faf93c93c300223cf106bc30357fafdb0a214a464f3a015fc26f6f8f2f3ff089",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3478,
+        "completion_tokens": 612,
+        "total_tokens": 4090
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "拟传内容完整保留在准备转告的外层命题内，未独立断言渡船停航为世界事实；尚未说出口为denied，utterances空/coverage none。知情0/pending0/询问0，Schema及9引用通过。仅判本例知情指标，不宣称所有动作分类正确。"
+    }
+  ],
+  "closed": true,
+  "retries": 0,
+  "stopOnAnyFailure": true,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "stopReason": "budget-exhausted"
+}

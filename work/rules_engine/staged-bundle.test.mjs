@@ -92,7 +92,7 @@ test('granted spell executes using the new caster and pool, with arcane DP in th
  assert.equal(out.actors.player.state.resources.精神魔力.current,s.resources.精神魔力.current-1);
  const attack=x=>x.result.targets[0].steps.find(x=>x.op==='attack').roll.dp;assert.equal(attack(out),attack(plain)+6);
 });
-test('registered D/C offers and gift choice survive MVU reload without duplicate charges or free ownership',async()=>{
+for(const specialization of ['奥术','冰霜'])test(specialization+' registered D/C offers and gift choice survive MVU reload without duplicate charges or free ownership',async()=>{
  const opening=createOpeningFixture(),original=structuredClone({actors:opening.actors,baseline:opening.baseline}),actors=structuredClone(opening.actors);actors.player.state.xp=100;
  const chat=[{is_user:false,mes:'隔离取得测试',swipe_id:0}],floors={};
  const tavern={chatId:'arcane-acquisition-test',chat,saveChat:async()=>{}};
@@ -101,7 +101,7 @@ test('registered D/C offers and gift choice survive MVU reload without duplicate
  const session=createIntegratedSession({baseline:opening.baseline,mvu,tavern,fixtureFactory:()=>({...opening,actors}),generateRaw:async()=>{throw Error('No external model');},createChatMessages:async()=>{},setChatMessages:async()=>{}});
  await session.prepare();
  const current=()=>floors[chat.length-1].stat_data['901_rules_poc'];
- const register=async grade=>session.registerRuleScene({source,growthWindow:{id:'study',source,open:true,actorIds:['player']},learningOffers:{['mage-'+grade]:offer(grade,grade==='D'?undefined:{})},objects:{bundle:{type:'kitResource',resourceId:id,source,actorIds:['player'],plans:{gift:{source,grantId:id+'/D/gift',resourceIds:['imperial-magic:D:魔能爆']}}}}});
+ const register=async grade=>session.registerRuleScene({source,growthWindow:{id:'study',source,open:true,actorIds:['player']},learningOffers:{['mage-'+grade]:offer(grade,grade==='D'?{specialization,pool:'精神魔力',initialCurrent:0}:{})},objects:{bundle:{type:'kitResource',resourceId:id,source,actorIds:['player'],plans:{gift:{source,grantId:id+'/D/gift',resourceIds:['imperial-magic:D:魔能爆']}}}}});
  const opts={baseline:opening.baseline,mvu,getAnchor,expectedChatId:tavern.chatId};
  const settle=(operation,request,text)=>createReplayCheckRuntime(opts).settle({operationId:'gm-runtime/'+tavern.chatId+'/'+operation,request,context:{latest:{text}}});
  const request=grade=>({kind:'rule',action:'resource',actorId:'player',offerId:'mage-'+grade});
@@ -114,6 +114,55 @@ test('registered D/C offers and gift choice survive MVU reload without duplicate
  assert.equal(saved.actors.player.state.xp,50);assert.equal(saved.actors.player.state.learnedResources['imperial-magic:D:魔能爆'].casterSource,id);
  for(const actorId of Object.keys(actors).filter(x=>x!=='player'))assert.deepEqual(saved.actors[actorId].state,actors[actorId].state);
  assert.deepEqual({actors:opening.actors,baseline:opening.baseline},original);
+});
+
+
+test('frost D/C keeps its own capacity and cold DP; C discounts actual spells to at least one',()=>{
+ const frost=grade=>offer(grade,grade==='D'?{specialization:'冰霜',pool:'精神魔力',initialCurrent:0}:{});
+ let d=buy(fresh(),frost('D'));const max=d.resources.精神魔力.max;
+ assert.equal(resourceBonus(d,'check',{casting:true,spellDamageTypes:['cold']}),6);
+ assert.equal(resourceBonus(d,'check',{casting:true,spellDamageTypes:['force']}),0);
+ const c=buy(d,frost('C'));assert.equal(c.resources.精神魔力.max,max);assert.equal(c.xp,50);
+ assert.deepEqual(c.learnedResources[id].completedStages,['D','C']);
+ assert.throws(()=>buy(c,offer('C',{specialization:'奥术'})));
+ for(const spell of ['imperial-magic:D:寒冰箭','imperial-magic:D:魔能爆']){
+  const initial=fresh();initial.resources.精神魔力={kind:'精神魔力',generic:true,origin:'test-existing-pool',max:8,current:8};let state=buy(initial,offer('D',{specialization:'冰霜',pool:'精神魔力'}));claimLearningGrant(state,id+'/D/gift',[spell],definitions,source);
+  state=buy(state,frost('C'));claimLearningGrant(state,id+'/C/gift',[spell],definitions,source);
+  state.resources.精神魔力.current=state.resources.精神魔力.max;
+  state.skills.神秘={level:3,subs:{塑能:{level:1}}};
+  for(const grade of ['D','C']){
+   const actors=createOpeningRoster();actors.player.state=structuredClone(state);
+   const plan={source,grade,targetIds:grade==='C'&&spell.endsWith('魔能爆')?['huang','huang']:['huang'],distance:1,effectLine:true,precise:true,components:{posture:true,language:true,focus:true}};
+   const r={actors,ruleScene:{objects:{spell:{type:'kitResource',resourceId:spell,source,actorIds:['player'],plans:{use:plan}}}}};
+   const out=reduceRuleAction(r,{kind:'rule',action:'mechanism',actorId:'player',objectId:'spell',operation:'cast',part:'use'},{drawDice:()=>Array(200).fill(8)});
+   assert.equal(out.result.cost,grade==='C'?2:1);
+   const plain=structuredClone(r);delete plain.actors.player.state.learnedResources[id];plain.actors.player.state.casting={imperial:{grade:'C',pool:'精神魔力'}};delete plain.actors.player.state.learnedResources[spell].casterSource;
+   const baseline=reduceRuleAction(plain,{kind:'rule',action:'mechanism',actorId:'player',objectId:'spell',operation:'cast',part:'use'},{drawDice:()=>Array(200).fill(8)});
+   assert.equal(baseline.result.cost,grade==='C'?3:1);
+   const dp=x=>x.result.targets[0].steps.find(step=>step.op==='attack').roll.dp;assert.equal(dp(out)-dp(baseline),spell.endsWith('寒冰箭')?6:0);assert.equal(out.actors.player.state.resources.精神魔力.current,state.resources.精神魔力.max-out.result.cost);
+   assert.deepEqual(out.actors.player.state.resources.流风,state.resources.流风);
+  }
+ }
+});
+
+
+test('frost cost uses the final one-pool debit for all mana kinds, repetitions and minimum; other energy and zero stay unchanged',()=>{
+ const spell='imperial-magic:D:魔能爆',original=definitions[spell];
+ try{
+  let state=buy(fresh(),offer('D',{specialization:'冰霜',pool:'精神魔力',initialCurrent:0}));
+  claimLearningGrant(state,id+'/D/gift',[spell],definitions,source);state=buy(state,offer('C',{}));claimLearningGrant(state,id+'/C/gift',[spell],definitions,source);
+  for(const [kind,base,extra,expected]of [['精神魔力',3,0,2],['天生魔力',3,0,2],['生命魔力',3,0,2],['流风',3,0,3],['精神魔力',1,0,1],['精神魔力',0,0,0],['精神魔力',3,2,4]]){
+   definitions[spell]=structuredClone(original);const program=definitions[spell].programs.cast;program.cost=base;program.repetition={maximum:2,extraCost:extra};
+   const actors=createOpeningRoster();actors.player.state=structuredClone(state);actors.player.state.resources.精神魔力={...state.resources.精神魔力,kind,max:10,current:expected};
+   const plan={source,grade:'C',targetIds:['huang','huang'],distance:1,effectLine:true,precise:true,components:{posture:true,language:true,focus:true}};
+   // Exercise the existing learned-choice energy policy as well as ordinary caster payment.
+   program.executionPolicy={ranks:{C:{level:2,power:2}},pool:{selection:'learned-choice',choice:'pool',kind}};actors.player.state.learnedResources[spell].choices={pool:'精神魔力'};
+   if(kind==='天生魔力'){actors.player.state.resources.精神魔力.kind='未标定';actors.player.state.learnedResources[spell].qualifications={energyPools:{精神魔力:{kind,source}}};}
+   const root={actors,ruleScene:{objects:{spell:{type:'kitResource',resourceId:spell,source,actorIds:['player'],plans:{use:plan}}}}},q={kind:'rule',action:'mechanism',actorId:'player',objectId:'spell',operation:'cast',part:'use'};
+   const out=reduceRuleAction(root,q,{drawDice:()=>Array(200).fill(8)});assert.equal(out.result.cost,expected);assert.equal(out.actors.player.state.resources.精神魔力.current,0);
+   if(expected){root.actors.player.state.resources.精神魔力.current=expected-1;const before=structuredClone(root);assert.throws(()=>reduceRuleAction(root,q,{drawDice:()=>Array(200).fill(8)}),/施法能量不足/);assert.deepEqual(root,before);}
+  }
+ }finally{definitions[spell]=original;}
 });
 
 });

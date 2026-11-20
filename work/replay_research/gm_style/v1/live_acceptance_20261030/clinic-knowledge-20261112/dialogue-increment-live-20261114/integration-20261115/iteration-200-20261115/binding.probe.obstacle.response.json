@@ -1,0 +1,31 @@
+{
+  "kind": "binding.probe.obstacle",
+  "startedAt": "2026-11-15T16:20:20.341Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T16:20:24.424Z",
+  "headersElapsedMs": 4083,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5af952c3cddcfe7-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 16:20:24 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=TeGp%2F4P8yxk7dZe%2Fx0bQtuW9yRNfM8%2Fweq4zAyMZFj%2FfSfFSN35SZe7jlBDPJj%2B073ZL%2B7pguKh34TTxGQIj3A5gfd5pRmD1BmnQRFHfREsXSQZfBtk45bTFwPhJcg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611151620209796294698268d9d6uqHflpI5",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "431b075f-91e4-4047-8dee-e2317f823eb8"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"ebb7c0eb-8ede-4828-897b-619746a64401\",\"object\":\"chat.completion\",\"created\":1794759624,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/5\\\",\\\"contextRef\\\":\\\"97e9e57a9da6761f98246fdc5f9977d0584d4af26b6f7bc52ce143122f63ea16\\\",\\\"inputRef\\\":\\\"assertion.98c96fba21d8274401db7aff2bc5cd6ccf388a045f264b62240dfee7983205f3\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"utterance_1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"山路今天封闭。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"山路今天封闭。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉仍答道：“山路今天封闭。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"reception_1\\\",\\\"contentSpan\\\":{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"山路今天封闭。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"status\\\":\\\"not_received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"御临风已转过街角，听不到这里的说话声，存在明确传达障碍。\\\",\\\"listener\\\":{\\\"actorId\\\":\\\"player\\\",\\\"kind\\\":\\\"reply\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"山路今天封闭。\\\"},\\\"historyMessageId\\\":0},\\\"evidence\\\":{\\\"kind\\\":\\\"obstacle\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"听不到这里的说话声。\\\"}}}一部]}],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"听不到这里的说话声。\\\"},\\\"reason\\\":\\\"黄泉回答了上一轮御临风的提问，但因御临风已转过街角而听不到，接收状态记录为not_received。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4662,\"completion_tokens\":486,\"total_tokens\":5148}}",
+  "responseBytes": 1972,
+  "responseBodySha256BeforePrivacyRedaction": "0406dc9446d357de43843ba1d94561c2c3f6e6fe70f5929ede6be5a7ac89ab9a",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T16:20:24.436Z",
+  "elapsedMs": 4095
+}

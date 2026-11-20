@@ -1,0 +1,31 @@
+{
+  "kind": "dialogue-reception",
+  "startedAt": "2026-11-14T19:15:20.171Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-14T19:15:22.723Z",
+  "headersElapsedMs": 2552,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5a85820fd3cca6c-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sat, 14 Nov 2026 19:15:22 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=bZz5ATzWecVzaJXM6itwK5d6v%2BjZr8Rfylkkzazw87Mx6LhT4N3zcq7ZrYZs49oebCz7E%2F6UvLsl12926hma0NMaffYHJrXLs8NdX3DcHwkKyMt9U5f0Z1C6q3uI0w%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611141915199092310898268d9d63Ois5bNW",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "d742accb-3762-4738-8bab-357cd619db6d"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"bab2701b-0010-4e44-b0cc-80e1a1751fd5\",\"object\":\"chat.completion\",\"created\":1794683722,\"model\":\"gemini-3.8-flash-control\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"contextRef\\\":\\\"0da8b16b39df9e40714bb3e4d8da3d53d0e14f4b83847af96867be9562fe0f94\\\",\\\"assertions\\\":{\\\"schemaVersion\\\":\\\"gm-assertion-output/1\\\",\\\"inputRef\\\":\\\"assertion.c69175474df9c44a93c923258fa3b504335782865b73999009fb30c1dab7559c\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[{\\\"id\\\":\\\"c1\\\",\\\"type\\\":\\\"action\\\",\\\"args\\\":{\\\"actor\\\":\\\"御临风\\\",\\\"verb\\\":\\\"说\\\",\\\"object\\\":\\\"西侧栈桥暂时停用。\\\"},\\\"argumentSpans\\\":{\\\"actor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":3,\\\"quote\\\":\\\"御临风\\\"},\\\"verb\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":7,\\\"end\\\":8,\\\"quote\\\":\\\"说\\\"},\\\"object\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":9,\\\"end\\\":20,\\\"quote\\\":\\\"“西侧栈桥暂时停用。”\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":20,\\\"quote\\\":\\\"御临风对布莱特说：“西侧栈桥暂时停用。”\\\"}},{\\\"id\\\":\\\"c2\\\",\\\"type\\\":\\\"action\\\",\\\"args\\\":{\\\"actor\\\":\\\"布莱特\\\",\\\"verb\\\":\\\"听到\\\",\\\"object\\\":\\\"这句话\\\"},\\\"argumentSpans\\\":{\\\"actor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":20,\\\"end\\\":23,\\\"quote\\\":\\\"布莱特\\\"},\\\"verb\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":26,\\\"end\\\":28,\\\"quote\\\":\\\"听\\\"},\\\"object\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":29,\\\"end\\\":32,\\\"quote\\\":\\\"这句话\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":20,\\\"end\\\":33,\\\"quote\\\":\\\"布莱特清楚地听到了这句话。\\\"}}],\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]},\\\"receptions\\\":[]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":3578,\"completion_tokens\":523,\"total_tokens\":4101}}",
+  "responseBytes": 2026,
+  "responseBodySha256BeforePrivacyRedaction": "b4ee65318a54f1259f1ae52c18efb15d33400c95a2c78a9ca83e5039cafd18ea",
+  "outcome": "completed",
+  "finishedAt": "2026-11-14T19:15:22.730Z",
+  "elapsedMs": 2559
+}

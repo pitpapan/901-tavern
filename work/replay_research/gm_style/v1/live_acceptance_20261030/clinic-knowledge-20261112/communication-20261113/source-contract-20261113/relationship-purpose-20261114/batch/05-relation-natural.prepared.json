@@ -1,0 +1,134 @@
+{
+  "id": "05-relation-natural",
+  "input": "“眼下这份清单还需要准备些什么？”\n（桌外隔离验收，非正式剧情：承接前轮真实回复，保持原人物和文风，不替御临风新增对白、心理或决定。）",
+  "parent": "02-relation-undetermined",
+  "parentResponseId": "d905c03b-3d9d-4eee-b087-9c434df5a639",
+  "parentRequestSha256": "8e5963f86afa2700a7cf128edd2de593e0a5de6a2068a29e07d2a0ba18589345",
+  "parentRawResponseSha256": "9fc96523371137e205db9d4abf3a6551ed24da35ed3e38a8509c6b3dafb109a6",
+  "parentContentSha256": "ec2c7d48841aca3a4ade241c7b181d4f59b84f1230f6dee6c81a7f948fec5628",
+  "context": {
+    "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+    "actorKnowledge": [
+      {
+        "actorId": "player",
+        "name": "御临风",
+        "facts": [
+          {
+            "id": "scene.public",
+            "content": "非Canon独立场景：御临风、布莱特和黄泉在帝都一间普通工坊外的廊下，工坊没有专名。门开着，内侧柜台有人整理单据，尚未开始接待他们；御临风手边有一份待递交的修理清单，尚未交付或承诺付费。布莱特保持原有失明状态。工坊接待员叫陶宁；本例没有战斗、资源消耗或新的伤势。",
+            "belief": "confirmed",
+            "access": "public",
+            "effectiveAt": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 0,
+              "actorId": "legacy.story"
+            },
+            "learnedAt": null,
+            "sources": []
+          }
+        ]
+      },
+      {
+        "actorId": "bright",
+        "name": "布莱特",
+        "facts": [
+          {
+            "id": "scene.public",
+            "content": "非Canon独立场景：御临风、布莱特和黄泉在帝都一间普通工坊外的廊下，工坊没有专名。门开着，内侧柜台有人整理单据，尚未开始接待他们；御临风手边有一份待递交的修理清单，尚未交付或承诺付费。布莱特保持原有失明状态。工坊接待员叫陶宁；本例没有战斗、资源消耗或新的伤势。",
+            "belief": "confirmed",
+            "access": "public",
+            "effectiveAt": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 0,
+              "actorId": "legacy.story"
+            },
+            "learnedAt": null,
+            "sources": []
+          },
+          {
+            "id": "source.evidence",
+            "content": "本例既有记录：布莱特曾与协会登记员罗恩办过两次交接，双方相识。罗恩与本工坊接待员陶宁不是同一人。布莱特与陶宁的关系未获确认；没有登记信任、帮助承诺或秘密访问权。",
+            "belief": "confirmed",
+            "access": "learned",
+            "effectiveAt": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 0,
+              "actorId": "legacy.story"
+            },
+            "learnedAt": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 1,
+              "actorId": "legacy.story"
+            },
+            "sources": [
+              {
+                "eventRef": "received.fixture.evidence",
+                "channel": "message",
+                "belief": "confirmed",
+                "senderId": null,
+                "learnedAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 1,
+                  "actorId": "legacy.story"
+                },
+                "sourceAnchor": {
+                  "chatId": "isolated.relationship-purpose.02-relation-undetermined",
+                  "messageId": 1,
+                  "swipeId": 0,
+                  "text": "非Canon测试来源：本例既有记录：布莱特曾与协会登记员罗恩办过两次交接，双方相识。罗恩与本工坊接待员陶宁不是同一人。布莱特与陶宁的关系未获确认；没有登记信任、帮助承诺或秘密访问权。此段为本例隔离资料，布莱特已取得上述记录，御临风与黄泉未取得其中的私人内容。"
+                },
+                "disclosure": null
+              }
+            ],
+            "eventRef": "received.fixture.evidence",
+            "channel": "message",
+            "learnedAtMessage": 1
+          }
+        ]
+      },
+      {
+        "actorId": "huang",
+        "name": "黄泉",
+        "facts": [
+          {
+            "id": "scene.public",
+            "content": "非Canon独立场景：御临风、布莱特和黄泉在帝都一间普通工坊外的廊下，工坊没有专名。门开着，内侧柜台有人整理单据，尚未开始接待他们；御临风手边有一份待递交的修理清单，尚未交付或承诺付费。布莱特保持原有失明状态。工坊接待员叫陶宁；本例没有战斗、资源消耗或新的伤势。",
+            "belief": "confirmed",
+            "access": "public",
+            "effectiveAt": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 0,
+              "actorId": "legacy.story"
+            },
+            "learnedAt": null,
+            "sources": []
+          }
+        ]
+      }
+    ],
+    "availableInformation": [
+      {
+        "access": "can-inquire",
+        "content": "可以尝试向实际接触的人询问接待情况；计划联系不表示会面、关系建立或消息送达已经发生。"
+      }
+    ]
+  },
+  "sourceCatalog": "02-relation-undetermined.catalog.json",
+  "seed": "05-relation-natural.seed.jsonl",
+  "request": {
+    "file": "05-relation-natural.request.json",
+    "bytes": 107710,
+    "sha256": "c905be869db0101cdd0f8b89520a4ca309bf4eba3efd043ed1d2d8f84016100d"
+  },
+  "manualStateReview": "Parent NPC remained at the workshop; no actual handover, meeting, new agreement or accepted player plan. Retain all prose, including unsupported character policy assertion or proposed waiting; do not adopt them as source facts.",
+  "actualSpeechRetained": true,
+  "newKnowledgeReceipts": 0,
+  "classificationModelCalls": 0,
+  "construction": "offline current packaged runtime with exact real parent reply; no new browser capture"
+}

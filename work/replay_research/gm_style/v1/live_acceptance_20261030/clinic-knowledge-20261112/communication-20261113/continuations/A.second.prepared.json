@@ -1,0 +1,85 @@
+{
+  "id": "A",
+  "reviewedFirstResponse": true,
+  "selection": "nextIfNotShared",
+  "next": "“先把你觉得该说的告诉黄泉；拿不准的就留着当面问。”\n（桌外隔离验收，非正式剧情：承接前文，写布莱特的回应；可以回应在场同伴，不替御临风新增对白、心理或决定。）",
+  "previousResponseId": "c2928fbc-633b-4a1a-8475-d4f8e56b8a2f",
+  "previousContentSha256": "fbeb2cdbabaa6eda7303268cf40a6f339010dd1596d437371245d6c213bcaeec",
+  "previousRawResponseSha256": "00ae4230fb556cb42a2068bff6306210d7225e9cf29306ef5d3b9458575e5004",
+  "requestSha256": "71b7a4dfad3e66a0e6cf3aeb9d00af176f50ab16cc52aec1c421058bcde7ad78",
+  "requestBytes": 111628,
+  "classification": "local NO_CHECK",
+  "newKnowledgeReceipts": [],
+  "knowledgeContext": {
+    "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+    "actorKnowledge": [
+      {
+        "actorId": "player",
+        "name": "御临风",
+        "facts": []
+      },
+      {
+        "actorId": "bright",
+        "name": "布莱特",
+        "facts": [
+          {
+            "id": "clinic.owner.xuelao.old-friend",
+            "content": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+            "belief": "confirmed",
+            "access": "learned",
+            "effectiveAt": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 0,
+              "actorId": "legacy.story"
+            },
+            "learnedAt": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 11,
+              "actorId": "legacy.story"
+            },
+            "sources": [
+              {
+                "eventRef": "received.browser.received",
+                "channel": "message",
+                "belief": "confirmed",
+                "senderId": null,
+                "learnedAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 11,
+                  "actorId": "legacy.story"
+                },
+                "sourceAnchor": {
+                  "chatId": "901 帝都正式续玩 20261106",
+                  "messageId": 11,
+                  "swipeId": 0
+                },
+                "disclosure": null
+              }
+            ],
+            "eventRef": "received.browser.received",
+            "channel": "message",
+            "learnedAtMessage": 11
+          }
+        ]
+      },
+      {
+        "actorId": "huang",
+        "name": "黄泉",
+        "facts": []
+      }
+    ],
+    "availableInformation": [
+      {
+        "access": "can-inquire",
+        "content": "可以向实际接触的人询问医馆与接待情况；能询问不代表已经获知或获准住宿。"
+      }
+    ]
+  },
+  "memoryPreserved": true,
+  "parametersUnchanged": true,
+  "assembly": "First request captured by actual browser; second derived after reading actual first reply through existing knowledge.generate/projectMessages; not a fresh browser capture.",
+  "preparedAt": "2026-11-13T18:44:53.727Z"
+}

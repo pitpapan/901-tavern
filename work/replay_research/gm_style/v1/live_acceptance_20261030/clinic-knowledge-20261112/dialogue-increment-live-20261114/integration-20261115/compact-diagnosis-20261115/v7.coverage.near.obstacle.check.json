@@ -1,0 +1,306 @@
+{
+  "id": "v7.coverage.near.obstacle",
+  "actualMessagesAndSchemaMatch": true,
+  "schemaPass": true,
+  "structuralPass": false,
+  "error": "Reply evidence must reference current answer",
+  "observation": {
+    "status": "unprocessed",
+    "pending": [
+      {
+        "id": "dialogue.0dfde37e44d2a68731fed6ef396b22d3c5d9a921e39dfa4038f32618406cae12.unprocessed",
+        "kind": "unprocessed",
+        "status": "pending",
+        "speakerId": null,
+        "recipientIds": [],
+        "propositionRef": null,
+        "content": null,
+        "quote": null,
+        "reason": "本轮知情增量尚未可靠处理；不是无人接收。",
+        "sourceAnchor": {
+          "chatId": "v7.diag.obstacle",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "布莱特问完便转过街角，已听不到身后的声音。黄泉仍回答：“仓库要到明天才开门。”"
+        },
+        "batchId": "dialogue.0dfde37e44d2a68731fed6ef396b22d3c5d9a921e39dfa4038f32618406cae12"
+      }
+    ]
+  },
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "compact.regression",
+    "chatId": "v7.diag.obstacle",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      }
+    },
+    "events": {},
+    "knowledge": {},
+    "dialogueBatches": {
+      "dialogue.0dfde37e44d2a68731fed6ef396b22d3c5d9a921e39dfa4038f32618406cae12": {
+        "id": "dialogue.0dfde37e44d2a68731fed6ef396b22d3c5d9a921e39dfa4038f32618406cae12",
+        "sourceAnchor": {
+          "chatId": "v7.diag.obstacle",
+          "messageId": 1,
+          "swipeId": 0,
+          "text": "布莱特问完便转过街角，已听不到身后的声音。黄泉仍回答：“仓库要到明天才开门。”"
+        },
+        "status": "failed",
+        "extractionInput": {
+          "assertion": {
+            "schemaVersion": "gm-assertion-input/1",
+            "stage": "source",
+            "documents": [
+              {
+                "id": "current",
+                "text": "布莱特问完便转过街角，已听不到身后的声音。黄泉仍回答：“仓库要到明天才开门。”"
+              }
+            ],
+            "targets": [
+              {
+                "id": "turn",
+                "documentId": "current",
+                "start": 0,
+                "end": 39
+              }
+            ],
+            "prior": null,
+            "inputRef": "assertion.4060fc67dc189a41277d71c7b76470663079c5ca5cf30c37bb1abcb44e33bc88"
+          },
+          "sourceAnchor": {
+            "chatId": "v7.diag.obstacle",
+            "messageId": 1,
+            "swipeId": 0,
+            "text": "布莱特问完便转过街角，已听不到身后的声音。黄泉仍回答：“仓库要到明天才开门。”"
+          },
+          "history": [
+            {
+              "messageId": 0,
+              "role": "user",
+              "text": "布莱特问黄泉：“仓库现在能进去吗？”"
+            }
+          ],
+          "actors": {
+            "player": "御临风",
+            "bright": "布莱特",
+            "huang": "黄泉"
+          },
+          "facts": {
+            "clinic.owner.xuelao.old-friend": {
+              "effectiveAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 0,
+                "actorId": "legacy.story"
+              },
+              "discoveryConditions": [
+                "actual-receipt"
+              ],
+              "dependencyRefs": [],
+              "id": "clinic.owner.xuelao.old-friend",
+              "entityId": "clinic.owner",
+              "field": "relationship",
+              "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+              "certainty": "confirmed",
+              "visibility": "private"
+            },
+            "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message": {
+              "effectiveAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 12,
+                "actorId": "legacy.story"
+              },
+              "discoveryConditions": [
+                "actual-receipt"
+              ],
+              "dependencyRefs": [],
+              "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+              "entityId": "bright",
+              "field": "reported_message",
+              "value": {
+                "kind": "reported_message",
+                "speakerId": "bright",
+                "text": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+              },
+              "certainty": "uncertain",
+              "visibility": "private"
+            },
+            "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message": {
+              "effectiveAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 12,
+                "actorId": "legacy.story"
+              },
+              "discoveryConditions": [
+                "actual-receipt"
+              ],
+              "dependencyRefs": [],
+              "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+              "entityId": "bright",
+              "field": "reported_message",
+              "value": {
+                "kind": "reported_message",
+                "speakerId": "bright",
+                "text": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+              },
+              "certainty": "uncertain",
+              "visibility": "private"
+            },
+            "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message": {
+              "effectiveAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 12,
+                "actorId": "legacy.story"
+              },
+              "discoveryConditions": [
+                "actual-receipt"
+              ],
+              "dependencyRefs": [],
+              "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+              "entityId": "bright",
+              "field": "reported_message",
+              "value": {
+                "kind": "reported_message",
+                "speakerId": "bright",
+                "text": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+              },
+              "certainty": "uncertain",
+              "visibility": "private"
+            }
+          },
+          "memory": null,
+          "contextRef": "124a7e5a7f6a270d0d780b6a9ea76428d31bb026f946e3c07a9060de8371e041"
+        },
+        "recoveryAttempted": false,
+        "attempts": [
+          {
+            "status": "failed",
+            "rawReply": "{\"schemaVersion\":\"dialogue-reception/7\",\"contextRef\":\"124a7e5a7f6a270d0d780b6a9ea76428d31bb026f946e3c07a9060de8371e041\",\"selections\":[{\"fragmentId\":\"f4\",\"quote\":\"黄泉\"},{\"fragmentId\":\"f5\",\"quote\":\"仓库要到明天才开门。\"},{\"fragmentId\":\"f4\",\"quote\":\"回答\"},{\"fragmentId\":\"f3\",\"quote\":\"已听不到身后的声音。\"},{\"fragmentId\":\"f2\",\"quote\":\"布莱特\"}],\"utterances\":[{\"speakerId\":\"huang\",\"speaker\":0,\"content\":1,\"mode\":\"asserted\",\"scope\":{\"time\":null,\"condition\":null,\"attribution\":null},\"anchor\":2}],\"receptions\":[{\"utterance\":0,\"content\":1,\"listenerId\":\"bright\",\"identityKind\":\"reply\",\"identity\":2,\"historyMessageId\":0,\"evidenceKind\":\"obstacle\",\"evidence\":3,\"propositionRef\":null}],\"unresolved\":[],\"coverage\":{\"status\":\"recorded\",\"evidence\":3}}",
+            "error": "Reply evidence must reference current answer"
+          }
+        ],
+        "rows": [
+          {
+            "id": "dialogue.0dfde37e44d2a68731fed6ef396b22d3c5d9a921e39dfa4038f32618406cae12.unprocessed",
+            "kind": "unprocessed",
+            "status": "pending",
+            "speakerId": null,
+            "recipientIds": [],
+            "propositionRef": null,
+            "content": null,
+            "quote": null,
+            "reason": "本轮知情增量尚未可靠处理；不是无人接收。"
+          }
+        ]
+      }
+    }
+  },
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": []
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": []
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "counts": {
+    "writes": 1,
+    "asked": 0
+  }
+}

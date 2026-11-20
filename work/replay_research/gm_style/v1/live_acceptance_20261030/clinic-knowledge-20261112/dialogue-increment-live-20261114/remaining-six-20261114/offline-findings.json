@@ -1,0 +1,86 @@
+{
+  "id": "05-partial-first",
+  "customRequest": 283,
+  "verdict": "fail",
+  "reason": "Clear partial reception was converted into uncertainty about whole utterance, so confirmed heard content was not registered.",
+  "localProtocolPassed": true,
+  "exactUTF16Spans": 21,
+  "explicitPartialHearingGuidancePresent": true,
+  "modelExtractedHeardContent": {
+    "id": "c4",
+    "type": "state",
+    "args": {
+      "entity": "黄泉",
+      "name": "听清内容",
+      "value": "东门封闭"
+    },
+    "argumentSpans": {
+      "entity": {
+        "documentId": "current",
+        "start": 20,
+        "end": 22,
+        "quote": "黄泉"
+      },
+      "name": {
+        "documentId": "current",
+        "start": 23,
+        "end": 25,
+        "quote": "听清"
+      },
+      "value": {
+        "documentId": "current",
+        "start": 26,
+        "end": 30,
+        "quote": "东门封闭"
+      }
+    },
+    "mode": "asserted",
+    "scope": {
+      "time": null,
+      "condition": null,
+      "attribution": null
+    },
+    "scopeSpans": {
+      "time": null,
+      "condition": null,
+      "attribution": null
+    },
+    "anchor": {
+      "documentId": "current",
+      "start": 20,
+      "end": 32,
+      "quote": "黄泉只听清“东门封闭”，"
+    }
+  },
+  "modelReception": [
+    {
+      "id": "r1",
+      "claimId": "c1",
+      "speakerId": "bright",
+      "recipientIds": [],
+      "recipientSpans": [],
+      "evidence": {
+        "documentId": "current",
+        "start": 20,
+        "end": 39,
+        "quote": "黄泉只听清“东门封闭”，没听清后半句。"
+      },
+      "status": "uncertain",
+      "propositionRef": null,
+      "reason": "黄泉只听清前半句“东门封闭”，未完整接收整句对白“东门封闭，改走南门。”"
+    }
+  ],
+  "registeredFacts": 0,
+  "pendingCount": 1,
+  "questionsAsked": 0,
+  "rawUnmodified": true,
+  "rawSHA256": "e2ede3fc5019e628adf9f4b007d0333b6269416e2bf92159adf48c3d4723f29d",
+  "remainingCasesNotSent": [
+    "06-partial-second",
+    "07-ambiguous-hearing",
+    "08-ambiguous-listener",
+    "09-unrelated",
+    "10-dependent"
+  ],
+  "limitation": "No cause classification or product fix in this turn. Parser did not drop a received partial-content receipt: model supplied only uncertain whole-utterance reception. Dependency followups not built from substitutes."
+}

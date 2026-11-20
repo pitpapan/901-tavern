@@ -1,0 +1,31 @@
+{
+  "kind": "v7.coverage.near.multi",
+  "startedAt": "2026-11-15T22:50:00.815Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T22:50:02.880Z",
+  "headersElapsedMs": 2065,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b1cffbbe35f771-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 22:50:02 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=OcZXadk7DjzZ2Tw8CSiJVJ7UWgjYTPBNbncdnLH7KFy0fIaEvj6rNg40hRARY%2FpDH5IKtKkp4UOsKYrITdWcH9PIHXBKSIVTPZ%2BCnk7e%2B1%2B7jYkbpaDK9EMnHxofgQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611152250009893798688268d9d6qBXiyLMb",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "212d3195-bdff-45d7-a264-148f497cbc9e"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"4054edd0-04a2-409b-b308-3c6edec1a89e\",\"object\":\"chat.completion\",\"created\":1794783002,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/7\\\",\\\"contextRef\\\":\\\"7e228cb9fecfa48a79390437e5987d330c037e55541a86c8bc21131d819fd8e5\\\",\\\"selections\\\":[{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"},{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"北桥已经关闭。\\\"},{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"说\\\"},{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"布莱特\\\"},{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"布莱特听清了。\\\"},{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"黄泉\\\"},{\\\"fragmentId\\\":\\\"f6\\\",\\\"quote\\\":\\\"沿河的小路仍能通行。\\\"},{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"说\\\"},{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"御临风\\\"},{\\\"fragmentId\\\":\\\"f7\\\",\\\"quote\\\":\\\"御临风也听清了。\\\"},{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉对布莱特说：“北桥已经关闭。”布莱特听清了。随后黄泉对御临风说：“沿河的小路仍能通行。”御临风也听清了。\\\"}],\\\"utterances\\\":[{\\\"speakerId\\\":\\\"huang\\\",\\\"speaker\\\":0,\\\"content\\\":1,\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":2},{\\\"speakerId\\\":\\\"huang\\\",\\\"speaker\\\":5,\\\"content\\\":6,\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":7}],\\\"receptions\\\":[{\\\"utterance\\\":0,\\\"content\\\":1,\\\"listenerId\\\":\\\"bright\\\",\\\"identityKind\\\":\\\"explicit\\\",\\\"identity\\\":3,\\\"historyMessageId\\\":null,\\\"evidenceKind\\\":\\\"direct\\\",\\\"evidence\\\":4,\\\"propositionRef\\\":null},{\\\"utterance\\\":1,\\\"content\\\":6,\\\"listenerId\\\":\\\"player\\\",\\\"identityKind\\\":\\\"explicit\\\",\\\"identity\\\":8,\\\"historyMessageId\\\":null,\\\"evidenceKind\\\":\\\"direct\\\",\\\"evidence\\\":9,\\\"propositionRef\\\":null}],\\\"unresolved\\\":[],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":10}}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2563,\"completion_tokens\":459,\"total_tokens\":3022}}",
+  "responseBytes": 1963,
+  "responseBodySha256BeforePrivacyRedaction": "44a3907a0fe997cf0bfa1ca9dcd5266fe79e5642bfd207fae2379d105c142856",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T22:50:02.885Z",
+  "elapsedMs": 2070
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "main.B3.reception",
+  "startedAt": "2026-11-15T11:11:39.143Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T11:11:43.366Z",
+  "headersElapsedMs": 4223,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5add0fddf1364b9-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 11:11:43 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=apSMOzyuTCNnKph9%2BS4MncUwNTE4%2BM1mprFdU5eTsPemaQcdhHGW%2FOZ5KrbtBFCnRpg446zNg9z5wApOgahximKWamODxa8uKvn5aipYL0tvFkHPAMJmHq0AiZrx8A%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611151111396448820578268d9d6RPufb6Pt",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "d3475e79-befd-4f3b-b8c7-d9a8e547c4db"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"2c46bcc6-4811-4518-8093-48c60526f90b\",\"object\":\"chat.completion\",\"created\":1794741103,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/3\\\",\\\"contextRef\\\":\\\"5ba774ccc09fecdf5a52a6c5707e07a9f9b6e2faee78b40ac17e08800bce840d\\\",\\\"inputRef\\\":\\\"assertion.159028c092dff8b23181067544ea0db16b43633be749c1342e278395db047c57\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"turn.utterance.bright.1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"布莱特\\\",\\\"content\\\":\\\"南桥。黄泉刚才说的是明早从南桥走。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":31,\\\"end\\\":32,\\\"quote\\\":\\\"他\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":50,\\\"end\\\":67,\\\"quote\\\":\\\"南桥。黄泉刚才说的是明早从南桥走。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":31,\\\"end\\\":68,\\\"quote\\\":\\\"他微微侧了下头，神色平静地应道：\\\\n\\\\n“南桥。黄泉刚才说的是明早从南桥走。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"turn.reception.1\\\",\\\"contentSpan\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":50,\\\"end\\\":67,\\\"quote\\\":\\\"南桥。黄泉刚才说的是明早从南桥走。\\\"},\\\"speakerId\\\":\\\"bright\\\",\\\"recipientIds\\\":[\\\"player\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":18,\\\"end\\\":21,\\\"quote\\\":\\\"御临风\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":16,\\\"end\\\":47,\\\"quote\\\":\\\"听到御临风直接向他问起这一句，他微微侧了下头，神色平静地应道：\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"布莱特直接回应御临风的提问，当面应答无接收障碍。\\\"}]}],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":183,\\\"quote\\\":\\\"布莱特牵着马缰绳，脚步没有停下。听到御临风直接向他问起这一句，他微微侧了下头，神色平静地应道：\\\\n\\\\n“南桥。黄泉刚才说的是明早从南桥走。”\\\\n\\\\n街市上的车马声在身旁来回响着，两旁的行人依然顺着石板路各自走着，没有谁特意往他们这边看。九雪医馆的方向仍在城东，眼前的引水渠边，那几名脚夫已经挑起空担子，沿着巷口朝深处走去。\\\\n\\\\n<StatusPlaceHolderImpl/>\\\"},\\\"reason\\\":\\\"已完整记录布莱特对御临风的应答言说及接收情况。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":7623,\"completion_tokens\":731,\"total_tokens\":8354}}",
+  "responseBytes": 2721,
+  "responseBodySha256BeforePrivacyRedaction": "7653120b58c51f8f2934a39c710e8ebe1c43998b1a5eef9a12dce500a4b402fc",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T11:11:43.378Z",
+  "elapsedMs": 4235
+}

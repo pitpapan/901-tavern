@@ -1,0 +1,77 @@
+[
+  {
+    "id": "replyrange.reproduce.partial",
+    "call": 469,
+    "jsonError": {
+      "position": 1080,
+      "message": "Expecting ',' delimiter",
+      "excerpt": "{\"fragmentId\":\"f1\",\"quote\":\"山路已经封闭了，明早在渡口会合。\"满足条件不用写\"}}},{\"id\":\"turn.utterance.1.reception.2\",\""
+    },
+    "strict": true,
+    "requiredUnitFields": [
+      "id",
+      "claims",
+      "utterances",
+      "coverage",
+      "status",
+      "unresolved"
+    ],
+    "receiptClosed": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "rawUnmodified": true,
+    "finishReason": "stop",
+    "tokens": 689,
+    "assessment": "469 unchanged468 original raw JSON syntax failure at1080; visible split heard/unheard content preserved but full answer used as received evidence, no accepted semantic result. Strict parser rejects0 writes."
+  },
+  {
+    "id": "replyrange.reproduce.obstacle",
+    "call": 470,
+    "jsonError": {
+      "position": 1071,
+      "message": "Expecting ',' delimiter",
+      "excerpt": "n\":{\"fragmentId\":\"f3\",\"quote\":\"已听不到这里的声音。\"}}}遮断了传达}]}]}],\"coverage\":{\"status\":\"recorded\",\"evide"
+    },
+    "strict": true,
+    "requiredUnitFields": [
+      "id",
+      "claims",
+      "utterances",
+      "coverage",
+      "status",
+      "unresolved"
+    ],
+    "receiptClosed": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "rawUnmodified": true,
+    "finishReason": "stop",
+    "tokens": 526,
+    "assessment": "470 raw JSON stray text/closures at1071; visible listener now current answer, bright/not_received and obstacle correct, but invalid output not accepted. Strict parser0 writes."
+  },
+  {
+    "id": "replyrange.probe.answer",
+    "call": 471,
+    "jsonError": {
+      "position": 1002,
+      "message": "Expecting ',' delimiter",
+      "excerpt": ",\"span\":{\"fragmentId\":\"f4\",\"quote\":\"渡口明天才开放。\"成品\"}}}]}]}"
+    },
+    "strict": true,
+    "requiredUnitFields": [
+      "id",
+      "claims",
+      "utterances",
+      "coverage",
+      "status",
+      "unresolved"
+    ],
+    "receiptClosed": true,
+    "listenerDescription": "本条唯一听者的身份依据。explicit引用本轮称谓/代词/听取关系且historyMessageId=null；reply仅用于history唯一确定的被回应者，选已有messageId并引用父言说中的当前回答；unknown使用actorId=null、historyMessageId=null并保留歧义原文。历史只消歧，不充当本轮引用；旁听者不能借用问答身份。",
+    "evidenceDescription": "只描述本条listener对父言说中contentSpan的传达关系。direct为直接告知，reply为承接回答，overheard为旁听，obstacle为明确未接收，unknown为未确定。引用需支持该关系及范围；身份/在场/说话动作本身不证明收到。reply须配reply身份且引用当前回答内容；其余引用保留原文传达关系或障碍，不用上轮接收替代本轮。",
+    "rawUnmodified": true,
+    "finishReason": "stop",
+    "tokens": 387,
+    "assessment": "471 nearby reply raw JSON token at1002; visible bright/current-answer binding reasonable but required unit coverage/status/unresolved absent as well; raw output rejected0 writes, no repair."
+  }
+]

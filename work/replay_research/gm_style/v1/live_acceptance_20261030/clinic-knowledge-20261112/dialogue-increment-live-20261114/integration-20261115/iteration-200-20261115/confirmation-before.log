@@ -1,0 +1,72 @@
+✔ generation distinguishes source requirements, personal choices and reviewed mistaken dialogue (7.5819ms)
+✔ reviewed attribution annotation preserves original prose, personal choices and source state through generation (14.1971ms)
+✔ attribution annotations require the reviewed utterance and its original source on the retained branch (32.2233ms)
+✔ matching language in a supported agreement or a new adopted agreement is not automatically flagged (11.3671ms)
+✔ generation contract preserves source identity and condition roles while keeping disclosure optional (1.6211ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: unlinked-identities (17.5707ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: explicit-same-identity (11.7744ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: pending-condition-quiet-place (14.811ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: confirmed-choice (20.9138ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: quotation-viewpoint-shift (9.1526ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: unresolved-reference (8.001ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: relation-other-branch (9.404ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: relation-target-confirmed (9.3409ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: relation-reception-policy (8.73ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: relation-reception-established (9.3814ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: relation-history-only (8.1586ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: relation-history-confirmed-later (9.0785ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: purpose-not-stated (8.6868ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: purpose-reason-stated (9.1353ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: purpose-source-claim (8.6209ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: purpose-independent-confirmed (8.3428ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: arrangement-personal (9.0766ms)
+✔ source/reference projection preserves evidence and leaves output unadopted: arrangement-mutual-change (8.3215ms)
+✔ private knowledge exposes its actual source without inventing a duty of secrecy (5.3382ms)
+✔ explicit disclosure notes remain source-bound after reopening and are not silently inherited by a listener (15.1272ms)
+✔ a disclosure constraint must quote the retained source rather than arbitrary inferred secrecy (4.1405ms)
+✔ ordinary generation carries choice guidance and source notes without prescribing prose or granting listeners (6.1529ms)
+✔ a hidden source retains the speaker and quotation context in the final knowledge projection (5.3627ms)
+✔ a later explicit source confirmation retains both source contexts without granting listeners (9.1253ms)
+✔ catalog time, discovery and dependency boundaries survive initialization and control public projection (4.0674ms)
+✔ future or differently clocked facts cannot be granted by a current message receipt (4.6557ms)
+✔ later-recorded old receipt cannot replace newer belief or upgrade a relay (10.8004ms)
+✔ source replaced while disk save is pending cannot create an acquisition event (0.7648ms)
+✔ public but undiscovered facts cannot be relayed by an uninformed sender (10.9676ms)
+✔ historical known state retains its own effective and learned time rather than receiving an unseen update (5.4895ms)
+✔ receipt survives actual JSONL disk save and a fresh runtime reconstructed from saved variables (36.3366ms)
+✔ author truth is not initial party knowledge, while ordinary public facts remain available (3.2961ms)
+✔ actual receipt grants only named listeners and explicit later relay reaches its recipient (10.8777ms)
+✔ retrieval, unreceived messages and an uninformed sender never grant knowledge (1.7823ms)
+✔ saved reopen and idempotent receipts retain knowledge without a second state or grant (9.9736ms)
+✔ rumor is retained as rumor and a relay cannot silently upgrade belief (9.8133ms)
+✔ lore projection is bound to source identity, preserves other content and does not guess changed sources (0.8022ms)
+✔ native branch adoption inherits the fork snapshot without sharing later receptions (12.1436ms)
+✔ changed or discarded source swipes cannot continue to prove knowledge (3.8741ms)
+✖ retained explicit reception decisions accompany their granted source without changing belief or prose (77.0111ms)
+ℹ tests 45
+ℹ suites 0
+ℹ pass 44
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1154.5274
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-knowledge.test.mjs:361:1
+✖ retained explicit reception decisions accompany their granted source without changing belief or prose (77.0111ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-knowledge.test.mjs:368:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,31 @@
+{
+  "kind": "relation.followup.partial.strict",
+  "startedAt": "2026-11-15T15:57:37.199Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T15:57:44.469Z",
+  "headersElapsedMs": 7270,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5af73e49fa92b0f-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 15:57:44 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=vpbRIWQ6BDKeEAYEgcdmhoicPGnFX1uzJqz1v02Vmao7DxORgH61oEhRQ3bLvLXHWDDN2TuO29s7qpRNCKJAMz8vw9dVVYuchh9uxTKsDCZ6WuNHi59GZNZFXP1qLA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611151557378430222398268d9d6bFqJh2Nn",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "5a73f865-1ad8-4338-9143-c60b3b6461c3"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"0d3d4c56-0e6f-42d8-8817-f5c35ebaaf0a\",\"object\":\"chat.completion\",\"created\":1794758264,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/5\\\",\\\"contextRef\\\":\\\"7248546c4bbd78fa12ef4c9bd6de69d0567f806075c1f07cb4d1a5584cfed19c\\\",\\\"inputRef\\\":\\\"assertion.242657176818dfef1ea4d31e53718e20ccaf6144ad40e7c2af01830235306232\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"utterance.1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"huang\\\",\\\"content\\\":\\\"渡口今晚停航，明早从山路绕行。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"渡口今晚停航，明早从山路绕行。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉对御临风说：“渡口今晚停航，明早从山路绕行。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"reception.1\\\",\\\"contentSpan\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"渡口今晚停航，明早从山路绕行。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"御临风听清了黄泉说的全部内容。\\\",\\\"listener\\\":{\\\"actorId\\\":\\\"player\\\",\\\"kind\\\":\\\"explicit\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"御临风\\\"},\\\"historyMessageId\\\":null},\\\"evidence\\\":{\\\"kind\\\":\\\"direct\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"御临风听清了全部。\\\"}},\\\"evidence\\\":{\\\"kind\\\":\\\"direct\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"御临风听清了全部。\\\"}}},{\\\"id\\\":\\\"reception.2\\\",\\\"contentSpan\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"渡口今晚停航，\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"布莱特旁听并只听清了前半句“渡口今晚停航”。\\\",\\\"listener\\\":{\\\"actorId\\\":\\\"bright\\\",\\\"kind\\\":\\\"explicit\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f6\\\",\\\"quote\\\":\\\"布莱特\\\"},\\\"historyMessageId\\\":null},\\\"evidence\\\":{\\\"kind\\\":\\\"overheard\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f6\\\",\\\"quote\\\":\\\"布莱特只听清“渡口今晚停航”，\\\"}}},{\\\"id\\\":\\\"reception.3\\\",\\\"contentSpan\\\":{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"明早从山路绕行。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"status\\\":\\\"not_received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"布莱特后半句被车声盖住未能听清。\\\",\\\"listener\\\":{\\\"actorId\\\":\\\"bright\\\",\\\"kind\\\":\\\"explicit\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f6\\\",\\\"quote\\\":\\\"布莱特\\\"},\\\"historyMessageId\\\":null},\\\"evidence\\\":{\\\"kind\\\":\\\"obstacle\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f7\\\",\\\"quote\\\":\\\"后半句被车声盖住。\\\"堆}}}]}],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉对御临风说：“渡口今晚停航，明早从山路绕行。”御临风听清了全部。布莱特只听清“渡口今晚停航”，后半句被车声盖住。\\\"},\\\"reason\\\":\\\"已完整记录黄泉的言说，以及御临风与布莱特各自的接收与未接收情况。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4792,\"completion_tokens\":830,\"total_tokens\":5622,\"prompt_tokens_details\":{\"cached_tokens\":2050}}}",
+  "responseBytes": 3315,
+  "responseBodySha256BeforePrivacyRedaction": "da6de314e69ce4a211de7a4b526156a242e52ba370fe2e7c47a6da43daf53733",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T15:57:44.482Z",
+  "elapsedMs": 7283
+}

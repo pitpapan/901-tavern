@@ -1,0 +1,35 @@
+{
+  "authorization": "用户授权十次普通对白知情增量模型验证；不部署、不写正式剧情、不恢复自动批准或修订。按已声明策略：失败即停、不重试。",
+  "baseline": 272,
+  "limit": 10,
+  "cumulative": 273,
+  "remaining": 9,
+  "attempts": [
+    {
+      "id": "01-received-new",
+      "customRequest": 273,
+      "state": "completed",
+      "requestBytes": 4531,
+      "requestSha256": "405d961d2daea5853ed24cd66654c0eeeb8070c9797a29d2024b0bafe92cfc3d",
+      "status": 200,
+      "elapsedMs": 7238,
+      "rawResponseSha256": "6cc2adcc95f114f81d5593500ba7777931bfab5400871736546b2ab6da0a1c5c",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 1320,
+        "completion_tokens": 734,
+        "total_tokens": 2054
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "HTTP200/stop完整返回，但原始抽取c3.args.object非空而argumentSpans.object为null，违反现有非空角色必须有原文span的合同；原始回复未修补，本地revision0、无知情授予。失败即停，剩余9次不自动续发。"
+    }
+  ],
+  "closed": true,
+  "retries": 0,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "stopReason": "manual-fail"
+}

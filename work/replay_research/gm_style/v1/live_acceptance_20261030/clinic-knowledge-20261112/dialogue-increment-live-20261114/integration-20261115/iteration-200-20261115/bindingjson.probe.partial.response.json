@@ -1,0 +1,31 @@
+{
+  "kind": "bindingjson.probe.partial",
+  "startedAt": "2026-11-15T17:31:33.340Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T17:31:37.033Z",
+  "headersElapsedMs": 3692,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5affd7e9f9099c4-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 17:31:37 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=XQefInZkZa3EUhhb7JUL7E%2FSiwNY3k9jL6b4vvBb80ImpM%2BxbKyPLOtUjyF1rfmDhK0lt3JMB4JwSs6XGxwTkIGGUnuqwWlWkD7xzVopkWQ7AiXbkmHDbX0lio5CgQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611151731337119794558268d9d6EHx6LIME",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "e652f094-1485-4a3d-93ad-7271b17ccfbb"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"33264ef1-1475-4d7b-951b-76ace9128881\",\"object\":\"chat.completion\",\"created\":1794763896,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/5\\\",\\\"contextRef\\\":\\\"88975d1f8fb4eb5a7c1dd17418f86a6831cbd62fb11363d61550e92cc9dd7137\\\",\\\"inputRef\\\":\\\"assertion.88d620028e3d1c080b13f52623ff9603d479e1c0041d927a94a321ab223eff5e\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"turn.huang.utterance\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"huang\\\",\\\"content\\\":\\\"山路已经封闭了，明早在渡口会合。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"山路已经封闭了，明早在渡口会合。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉答道：“山路已经封闭了，明早在渡口会合。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"turn.huang.utterance.rec1\\\",\\\"contentSpan\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"山路已经封闭了，\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"布莱特只听清前半句\\\",\\\"listener\\\":{\\\"actorId\\\":\\\"bright\\\",\\\"kind\\\":\\\"reply\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"山路已经封闭了，明早在渡口会合。\\\"},\\\"historyMessageId\\\":0},\\\"evidence\\\":{\\\"kind\\\":\\\"reply\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"山路已经封闭了，明早在渡口会合。\\\"构}}},{\\\"id\\\":\\\"turn.huang.utterance.rec2\\\",\\\"contentSpan\\\":{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"明早在渡口会合。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"status\\\":\\\"not_received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"后半句被钟声盖住，布莱特未听清\\\",\\\"listener\\\":{\\\"actorId\\\":\\\"bright\\\",\\\"kind\\\":\\\"reply\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"山路已经封闭了，明早在渡口会合。\\\"},\\\"historyMessageId\\\":0},\\\"evidence\\\":{\\\"kind\\\":\\\"obstacle\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f6\\\",\\\"quote\\\":\\\"后半句被钟声盖住。\\\"伴}}}]}],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉答道：“山路已经封闭了，明早在渡口会合。”布莱特只听清前半句，后半句被钟声盖住。\\\"},\\\"reason\\\":\\\"黄泉回答的内容前半句被布莱特听清，后半句因钟声盖住未听清，均已记录。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4720,\"completion_tokens\":679,\"total_tokens\":5399}}",
+  "responseBytes": 2671,
+  "responseBodySha256BeforePrivacyRedaction": "3344716194e1820fb0493d2b004faea598cf334187300be9186f2af136aa5fcd",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T17:31:37.044Z",
+  "elapsedMs": 3703
+}

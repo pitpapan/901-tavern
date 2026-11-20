@@ -1,0 +1,31 @@
+{
+  "kind": "implicit.obstacle.r2",
+  "startedAt": "2026-11-15T01:46:00.923Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T01:46:04.183Z",
+  "headersElapsedMs": 3260,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5aa946c0d4c722b-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 01:46:04 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=RbzHiDxUyb%2Bw2hQOJmImORVlhepCQxmXFCfyS1aAXIKJFK9w4%2F%2F57Ddq54DJo4hfHeO6Ew6gSZy%2BwKm0%2F%2BWcfjCfa60xofgOU6rfY12wdkNN0zo7RuFEGZ2SPhEFPA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611150146010481963558268d9d6rdrP4WCp",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "7a63bacd-4573-429c-9369-5f3829355780"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"488044ac-bcca-4af9-a2a7-9c80604d61c4\",\"object\":\"chat.completion\",\"created\":1794707163,\"model\":\"gemini-3.8-flash-control\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/2\\\",\\\"contextRef\\\":\\\"73e7f01bb57dbb2e8bb41e0bbbacf4f42996100349e33c15b37924a9568cf171\\\",\\\"inputRef\\\":\\\"assertion.d548392c3b5309b244f9553daf6e08948176e757b22006199c531e4e8ff3e8f0\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[{\\\"id\\\":\\\"turn.claim.1\\\",\\\"type\\\":\\\"action\\\",\\\"args\\\":{\\\"actor\\\":\\\"御临风\\\",\\\"verb\\\":\\\"走远\\\",\\\"object\\\":null},\\\"argumentSpans\\\":{\\\"actor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":3,\\\"quote\\\":\\\"御临风\\\"},\\\"verb\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":6,\\\"end\\\":8,\\\"quote\\\":\\\"走远\\\"},\\\"object\\\":null},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":9,\\\"quote\\\":\\\"御临风问完便走远，\\\"}}],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"turn.utterance.1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"日落后就锁门。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":19,\\\"end\\\":21,\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":31,\\\"end\\\":38,\\\"quote\\\":\\\"日落后就锁门。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":19,\\\"end\\\":39,\\\"quote\\\":\\\"黄泉没有察觉，仍答道：“日落后就锁门。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"turn.reception.1\\\",\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"player\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":31,\\\"end\\\":38,\\\"quote\\\":\\\"日落后就锁门。\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":9,\\\"end\\\":19,\\\"quote\\\":\\\"已听不到这里的声音。\\\"},\\\"status\\\":\\\"not_received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"御临风走远已听不到声音，明确未收到黄泉的回答。\\\"}]}],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":39,\\\"quote\\\":\\\"御临风问完便走远，已听不到这里的声音。黄泉没有察觉，仍答道：“日落后就锁门。”\\\"},\\\"reason\\\":\\\"黄泉回答御临风的问题，但御临风已走远听不到，记录为明确未接收（not_received）。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4026,\"completion_tokens\":682,\"total_tokens\":4708}}",
+  "responseBytes": 2662,
+  "responseBodySha256BeforePrivacyRedaction": "0fa9277edb937050d9762a186157f2bd3911c693a1331efabcadd5d4fd7ac56a",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T01:46:04.193Z",
+  "elapsedMs": 3270
+}

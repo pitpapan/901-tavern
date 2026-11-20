@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "id": "replyrange.reproduce.partial",
+      "call": 469,
+      "verdict": "fail",
+      "syntax": {
+        "position": 1080,
+        "message": "Expecting ',' delimiter",
+        "excerpt": "gmentId\":\"f1\",\"quote\":\"山路已经封闭了，明早在渡口会合。\"满足条件不用写\"}}},{\"id\":\"turn.utterance.1.rece"
+      },
+      "checkError": "Expected ',' or '}' after property value in JSON at position 1080 (line 1 column 1081)",
+      "isolatedWrites": 0,
+      "assessment": "469 unchanged468 original raw JSON syntax failure at1080; visible split heard/unheard content preserved but full answer used as received evidence, no accepted semantic result. Strict parser rejects0 writes."
+    },
+    {
+      "id": "replyrange.reproduce.obstacle",
+      "call": 470,
+      "verdict": "fail",
+      "syntax": {
+        "position": 1071,
+        "message": "Expecting ',' delimiter",
+        "excerpt": "fragmentId\":\"f3\",\"quote\":\"已听不到这里的声音。\"}}}遮断了传达}]}]}],\"coverage\":{\"status\":\"record"
+      },
+      "checkError": "Expected ',' or ']' after array element in JSON at position 1071 (line 1 column 1072)",
+      "isolatedWrites": 0,
+      "assessment": "470 raw JSON stray text/closures at1071; visible listener now current answer, bright/not_received and obstacle correct, but invalid output not accepted. Strict parser0 writes."
+    },
+    {
+      "id": "replyrange.probe.answer",
+      "call": 471,
+      "verdict": "fail",
+      "syntax": {
+        "position": 1002,
+        "message": "Expecting ',' delimiter",
+        "excerpt": "n\":{\"fragmentId\":\"f4\",\"quote\":\"渡口明天才开放。\"成品\"}}}]}]}"
+      },
+      "checkError": "Expected ',' or '}' after property value in JSON at position 1002 (line 1 column 1003)",
+      "isolatedWrites": 0,
+      "assessment": "471 nearby reply raw JSON token at1002; visible bright/current-answer binding reasonable but required unit coverage/status/unresolved absent as well; raw output rejected0 writes, no repair."
+    }
+  ],
+  "newCalls": 3,
+  "used": 137,
+  "remaining": 63,
+  "cumulative": 471,
+  "newTests": 0,
+  "freshOfflineTests": 164,
+  "productSourcesUnchanged": true,
+  "generationContractUnchanged": true,
+  "originalRequestsByteIdentical": 2,
+  "originalEvidenceFilesPreserved": 647,
+  "formalProtectedFilesUnchanged": 22,
+  "historicalLedgerPrefixUnchanged": true,
+  "allRawBytesUnmodified": true,
+  "syntaxFailures": 3,
+  "bindingFailures": 0,
+  "overallPasses": 0,
+  "allIsolatedStatesUnchanged": true,
+  "scope": "Two latest partial/nonreception originals and one nearby implicit-answer contrast; other old failures retained, not all replayed this turn",
+  "rawRepair": false,
+  "validationRelaxed": false,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalOrRevisionRestored": false
+}

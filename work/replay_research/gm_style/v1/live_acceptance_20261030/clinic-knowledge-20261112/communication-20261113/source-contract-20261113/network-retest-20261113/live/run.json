@@ -1,0 +1,63 @@
+{
+  "authorization": "2026-11-13 用户明确允许排查DNS环境限制，网络可用后原样重发未确认及已确认各一次；失败即停、不重试；沿既有密钥和端点授权。",
+  "baseline": 255,
+  "limit": 2,
+  "ceiling": 257,
+  "cumulative": 257,
+  "remaining": 0,
+  "attempts": [
+    {
+      "id": "pending",
+      "customRequest": 256,
+      "state": "completed",
+      "requestBytes": 114519,
+      "requestSha256": "63e0007d7ce76504ce114814e6f21be7760c4c1459693ce0adccce6c6f5ff9b0",
+      "status": 200,
+      "elapsedMs": 3756,
+      "rawResponseSha256": "729e26fe3dd23545566d63e23714ed490070f961826fb55d0c853e530aec3f0f",
+      "responseBytes": 953,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "293e3610-044c-4ca1-92c1-f75fc2c381b0",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 28710,
+        "completion_tokens": 200,
+        "total_tokens": 28910
+      }
+    },
+    {
+      "id": "confirmed",
+      "customRequest": 257,
+      "state": "completed",
+      "requestBytes": 115516,
+      "requestSha256": "b18ebe14d76309cb0a7369b94a464e9e5e0c30940466f02bf609c12d10373a07",
+      "status": 200,
+      "elapsedMs": 3053,
+      "rawResponseSha256": "c05e17df4a514c6b3b12ad72be3640b73802e644a00f06045acf543175f41ab1",
+      "responseBytes": 1181,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "1bf13770-b5f2-455b-aae9-9c3dc132f37b",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 28979,
+        "completion_tokens": 238,
+        "total_tokens": 29217,
+        "prompt_tokens_details": {
+          "cached_tokens": 24480
+        }
+      }
+    }
+  ],
+  "classification": "retained local NO_CHECK control",
+  "classificationCalls": 0,
+  "automaticExtractionApprovalRevision": false,
+  "retries": 0,
+  "timeoutMs": 180000,
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "deployed": false,
+  "formalStoryWritten": false,
+  "closed": true,
+  "stopReason": "two-authorized-resends-completed"
+}

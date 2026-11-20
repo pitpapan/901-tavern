@@ -1,0 +1,838 @@
+{
+  "id": "play.003.reception",
+  "exactCurrentMessages": true,
+  "schemaPass": true,
+  "structuralPass": true,
+  "checked": {
+    "contextRef": "0e67802be7a5553b7d378301be9148c67ec43461c5d8ab4a0fc85a981de8602c",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.c34f4895d0b126db9b9a5bcc0cdc0bda398ad539207aa210259cde04ccf9bf53",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "turn.utterance.1",
+              "type": "utterance",
+              "args": {
+                "speaker": "布莱特",
+                "content": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 80,
+                  "end": 83,
+                  "quote": "布莱特"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 51,
+                  "end": 79,
+                  "quote": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 50,
+                "end": 97,
+                "quote": "“寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。”布莱特侧过头，对着御临风的方向说道"
+              }
+            },
+            {
+              "id": "turn.utterance.2",
+              "type": "utterance",
+              "args": {
+                "speaker": "布莱特",
+                "content": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 80,
+                  "end": 83,
+                  "quote": "布莱特"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 99,
+                  "end": 165,
+                  "quote": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 87,
+                "end": 166,
+                "quote": "对着御临风的方向说道，“不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。”"
+              }
+            },
+            {
+              "id": "turn.utterance.3",
+              "type": "utterance",
+              "args": {
+                "speaker": "布莱特",
+                "content": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 168,
+                  "end": 169,
+                  "quote": "他"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 195,
+                  "end": 246,
+                  "quote": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 168,
+                "end": 247,
+                "quote": "他顿了顿，顺着水渠边渐渐密集起来的街巷听了片刻：\n\n“先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。”"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "turn.utterance.1.rec.1",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 51,
+          "end": 79,
+          "quote": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+        },
+        "speakerId": "bright",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 89,
+            "end": 92,
+            "quote": "御临风"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 80,
+          "end": 97,
+          "quote": "布莱特侧过头，对着御临风的方向说道"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "布莱特侧过头对着御临风方向说明，直接传达给御临风。",
+        "claimId": "turn.utterance.1"
+      },
+      {
+        "id": "turn.utterance.2.rec.1",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 99,
+          "end": 165,
+          "quote": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+        },
+        "speakerId": "bright",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 89,
+            "end": 92,
+            "quote": "御临风"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 87,
+          "end": 97,
+          "quote": "对着御临风的方向说道"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "布莱特明确对着御临风直接回答其信件转交问题，御临风正常接收。",
+        "claimId": "turn.utterance.2"
+      },
+      {
+        "id": "turn.utterance.3.rec.1",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 195,
+          "end": 246,
+          "quote": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+        },
+        "speakerId": "bright",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 195,
+            "end": 246,
+            "quote": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 195,
+          "end": 246,
+          "quote": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "本句紧承前文对御临风提问的应答，指明后续具体做法与御临风面对的情况，御临风作为提问与应答对象接收该内容。",
+        "claimId": "turn.utterance.3"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "recorded",
+        "evidence": {
+          "documentId": "current",
+          "start": 50,
+          "end": 247,
+          "quote": "“寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。”布莱特侧过头，对着御临风的方向说道，“不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。”\n\n他顿了顿，顺着水渠边渐渐密集起来的街巷听了片刻：\n\n“先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。”"
+        },
+        "reason": "布莱特针对御临风前轮关于信件交接方式的疑问进行当面回答，御临风作为直接被说明对象且无听取障碍，正常接收了布莱特的完整回复内容。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false
+  },
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": [
+        {
+          "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "bright",
+            "text": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 12,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 12,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 12,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "901 帝都正式续玩 20261106",
+                "messageId": 12,
+                "swipeId": 0,
+                "text": "布莱特牵着缰绳，脚步不紧不慢地走在平整的石板路上。水渠里的流水从一侧缓缓冲刷而过，带出些许凉意。\n\n“寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。”布莱特侧过头，对着御临风的方向说道，“不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。”\n\n他顿了顿，顺着水渠边渐渐密集起来的街巷听了片刻：\n\n“先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。”\n\n水渠旁的石板路向前分出一道缓坡，连接着另一片开阔的街市。沿途的药材铺和杂货行渐渐多了起来，空气里偶尔能闻到晒干草药的微苦气息，几名挑着竹筐的行人正从前方的巷口穿过。\n\n<StatusPlaceHolderImpl/>"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2",
+          "channel": "message",
+          "learnedAtMessage": 12
+        },
+        {
+          "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "bright",
+            "text": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 12,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 12,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 12,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "901 帝都正式续玩 20261106",
+                "messageId": 12,
+                "swipeId": 0,
+                "text": "布莱特牵着缰绳，脚步不紧不慢地走在平整的石板路上。水渠里的流水从一侧缓缓冲刷而过，带出些许凉意。\n\n“寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。”布莱特侧过头，对着御临风的方向说道，“不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。”\n\n他顿了顿，顺着水渠边渐渐密集起来的街巷听了片刻：\n\n“先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。”\n\n水渠旁的石板路向前分出一道缓坡，连接着另一片开阔的街市。沿途的药材铺和杂货行渐渐多了起来，空气里偶尔能闻到晒干草药的微苦气息，几名挑着竹筐的行人正从前方的巷口穿过。\n\n<StatusPlaceHolderImpl/>"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b",
+          "channel": "message",
+          "learnedAtMessage": 12
+        },
+        {
+          "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "bright",
+            "text": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 12,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 12,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 12,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "901 帝都正式续玩 20261106",
+                "messageId": 12,
+                "swipeId": 0,
+                "text": "布莱特牵着缰绳，脚步不紧不慢地走在平整的石板路上。水渠里的流水从一侧缓缓冲刷而过，带出些许凉意。\n\n“寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。”布莱特侧过头，对着御临风的方向说道，“不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。”\n\n他顿了顿，顺着水渠边渐渐密集起来的街巷听了片刻：\n\n“先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。”\n\n水渠旁的石板路向前分出一道缓坡，连接着另一片开阔的街市。沿途的药材铺和杂货行渐渐多了起来，空气里偶尔能闻到晒干草药的微苦气息，几名挑着竹筐的行人正从前方的巷口穿过。\n\n<StatusPlaceHolderImpl/>"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d",
+          "channel": "message",
+          "learnedAtMessage": 12
+        }
+      ]
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": []
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "pending": [],
+  "noQuestionWithoutDependency": true,
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "implicit.regression",
+    "chatId": "901 帝都正式续玩 20261106",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message": {
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message": {
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message": {
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      }
+    },
+    "events": {
+      "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2": {
+        "id": "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player"
+          ],
+          "propositionRefs": [
+            "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 12,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "901 帝都正式续玩 20261106",
+            "messageId": 12,
+            "swipeId": 0,
+            "text": "布莱特牵着缰绳，脚步不紧不慢地走在平整的石板路上。水渠里的流水从一侧缓缓冲刷而过，带出些许凉意。\n\n“寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。”布莱特侧过头，对着御临风的方向说道，“不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。”\n\n他顿了顿，顺着水渠边渐渐密集起来的街巷听了片刻：\n\n“先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。”\n\n水渠旁的石板路向前分出一道缓坡，连接着另一片开阔的街市。沿途的药材铺和杂货行渐渐多了起来，空气里偶尔能闻到晒干草药的微苦气息，几名挑着竹筐的行人正从前方的巷口穿过。\n\n<StatusPlaceHolderImpl/>"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 13
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.player.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message.event": {
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.player.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.player.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+            "eventRef": "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 12,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 13
+          }
+        ]
+      },
+      "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b": {
+        "id": "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player"
+          ],
+          "propositionRefs": [
+            "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 12,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "901 帝都正式续玩 20261106",
+            "messageId": 12,
+            "swipeId": 0,
+            "text": "布莱特牵着缰绳，脚步不紧不慢地走在平整的石板路上。水渠里的流水从一侧缓缓冲刷而过，带出些许凉意。\n\n“寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。”布莱特侧过头，对着御临风的方向说道，“不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。”\n\n他顿了顿，顺着水渠边渐渐密集起来的街巷听了片刻：\n\n“先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。”\n\n水渠旁的石板路向前分出一道缓坡，连接着另一片开阔的街市。沿途的药材铺和杂货行渐渐多了起来，空气里偶尔能闻到晒干草药的微苦气息，几名挑着竹筐的行人正从前方的巷口穿过。\n\n<StatusPlaceHolderImpl/>"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 13
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.player.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message.event": {
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.player.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.player.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+            "eventRef": "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 12,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 13
+          }
+        ]
+      },
+      "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d": {
+        "id": "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player"
+          ],
+          "propositionRefs": [
+            "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 12,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "901 帝都正式续玩 20261106",
+            "messageId": 12,
+            "swipeId": 0,
+            "text": "布莱特牵着缰绳，脚步不紧不慢地走在平整的石板路上。水渠里的流水从一侧缓缓冲刷而过，带出些许凉意。\n\n“寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。”布莱特侧过头，对着御临风的方向说道，“不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。”\n\n他顿了顿，顺着水渠边渐渐密集起来的街巷听了片刻：\n\n“先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。”\n\n水渠旁的石板路向前分出一道缓坡，连接着另一片开阔的街市。沿途的药材铺和杂货行渐渐多了起来，空气里偶尔能闻到晒干草药的微苦气息，几名挑着竹筐的行人正从前方的巷口穿过。\n\n<StatusPlaceHolderImpl/>"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 13
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.player.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message.event": {
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.player.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.player.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+            "eventRef": "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 12,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 13
+          }
+        ]
+      }
+    },
+    "knowledge": {
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.player.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message": {
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.player.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+        "eventRef": "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.player.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message": {
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.player.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+        "eventRef": "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.player.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message": {
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.player.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+        "eventRef": "received.dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      }
+    },
+    "dialogueBatches": {
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461": {
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461",
+        "sourceAnchor": {
+          "chatId": "901 帝都正式续玩 20261106",
+          "messageId": 12,
+          "swipeId": 0,
+          "text": "布莱特牵着缰绳，脚步不紧不慢地走在平整的石板路上。水渠里的流水从一侧缓缓冲刷而过，带出些许凉意。\n\n“寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。”布莱特侧过头，对着御临风的方向说道，“不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。”\n\n他顿了顿，顺着水渠边渐渐密集起来的街巷听了片刻：\n\n“先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。”\n\n水渠旁的石板路向前分出一道缓坡，连接着另一片开阔的街市。沿途的药材铺和杂货行渐渐多了起来，空气里偶尔能闻到晒干草药的微苦气息，几名挑着竹筐的行人正从前方的巷口穿过。\n\n<StatusPlaceHolderImpl/>"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2",
+            "claimId": "turn.utterance.1",
+            "speakerId": "bright",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。",
+            "quote": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。",
+            "contentSpan": {
+              "documentId": "current",
+              "start": 51,
+              "end": 79,
+              "quote": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+            },
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "布莱特侧过头对着御临风方向说明，直接传达给御临风。",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 80,
+              "end": 97,
+              "quote": "布莱特侧过头，对着御临风的方向说道"
+            },
+            "unresolved": []
+          },
+          {
+            "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b",
+            "claimId": "turn.utterance.2",
+            "speakerId": "bright",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。",
+            "quote": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。",
+            "contentSpan": {
+              "documentId": "current",
+              "start": 99,
+              "end": 165,
+              "quote": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+            },
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "布莱特明确对着御临风直接回答其信件转交问题，御临风正常接收。",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 87,
+              "end": 97,
+              "quote": "对着御临风的方向说道"
+            },
+            "unresolved": []
+          },
+          {
+            "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d",
+            "claimId": "turn.utterance.3",
+            "speakerId": "bright",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。",
+            "quote": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。",
+            "contentSpan": {
+              "documentId": "current",
+              "start": 195,
+              "end": 246,
+              "quote": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+            },
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "本句紧承前文对御临风提问的应答，指明后续具体做法与御临风面对的情况，御临风作为提问与应答对象接收该内容。",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 195,
+              "end": 246,
+              "quote": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+            },
+            "unresolved": []
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "recorded",
+            "evidence": {
+              "documentId": "current",
+              "start": 50,
+              "end": 247,
+              "quote": "“寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。”布莱特侧过头，对着御临风的方向说道，“不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。”\n\n他顿了顿，顺着水渠边渐渐密集起来的街巷听了片刻：\n\n“先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。”"
+            },
+            "reason": "布莱特针对御临风前轮关于信件交接方式的疑问进行当面回答，御临风作为直接被说明对象且无听取障碍，正常接收了布莱特的完整回复内容。"
+          }
+        ]
+      }
+    }
+  },
+  "mvuWrites": 5,
+  "replayStateUnchanged": false
+}

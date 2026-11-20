@@ -1,0 +1,10 @@
+--- before/story-dialogue-knowledge.mjs
++++ after/story-dialogue-knowledge.mjs
+@@ -37,6 +37,7 @@
+  const messages=contract.buildAssertionMessages(assertion);
+  messages[0].content+='\n本次只识别本轮普通对白的信息传递。输出{contextRef:原样回填输入contextRef,assertions:上述抽取结构,receptions:[{id,claimId,speakerId,recipientIds,recipientSpans,evidence,status,propositionRef,reason}]}。'+
+  'claimId引用本轮utterance；speakerId和recipientIds只能用actors中的ID，recipientSpans与接收者逐个对应，evidence为本轮接收依据span。'+
++ 'reception.reason必须为字符串，没有补充说明时填空字符串，不能为null、对象或数组；reason只是解释，不能代替status、接收者或内容范围，也不能自动决定是否登记。'+
+  'status只能为received/not_received/uncertain：明确直接向某人说出且没有接收障碍可以received，不强求复述确认；计划、假设、内心话不算接收。'+
+  '只知道在场不代表听见，部分听见只抽实际内容；未知接收者留空并标uncertain，歧义写入unresolved。'+
+  'propositionRef仅在内容与已有命题一致时引用其ID，否则null表示新的有来源说法；转述与谎言不自动确认内容为真。'+

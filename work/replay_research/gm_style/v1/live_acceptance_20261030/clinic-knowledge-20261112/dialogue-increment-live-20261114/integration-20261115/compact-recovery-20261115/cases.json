@@ -1,0 +1,65 @@
+[
+  {
+    "id": "v7.accept.partial",
+    "original": "v6.accept.partial",
+    "expected": "bright仅前半山路封闭received，后半渡口会合not_received；引用不能用答道旁白。",
+    "bytes": 10290,
+    "oldBytes": 43854,
+    "requestSha256": "ce5d77af2030f0d46b9fd4890a4e2c3bc3136ccdb3c0647516f119b9590cc15a",
+    "originalInputAndParametersUnchanged": true
+  },
+  {
+    "id": "v7.accept.uncertain",
+    "original": "v6.accept.uncertain",
+    "expected": "bright前半received；后半接收不明只待核该范围；无关时不问，不猜未收到。",
+    "bytes": 10651,
+    "oldBytes": 44995,
+    "requestSha256": "fb23969b3390f6a622e26ee8efebb169ba04a22cbc9ab1e4f9917627f46542bc",
+    "originalInputAndParametersUnchanged": true
+  },
+  {
+    "id": "v7.accept.npc_reply",
+    "original": "v6.accept.npc_reply",
+    "expected": "bright唯一隐含听者；当前回答引用与history0绑定；player不接收。",
+    "bytes": 9809,
+    "oldBytes": 42593,
+    "requestSha256": "31264bd67a11cf616e729228a52e2a336d919682b30db6de7f48d701585201b9",
+    "originalInputAndParametersUnchanged": true
+  },
+  {
+    "id": "v7.accept.long",
+    "original": "v6.accept.long",
+    "expected": "原长文三段言说均保留；区分回答对象、当前接收依据与范围，不凭在场或说话动作授予。",
+    "bytes": 54510,
+    "oldBytes": 114516,
+    "requestSha256": "40150f9d9e8d02499e809bd099dc9189dd910534f5ebc67571b1e34fa1e78a47",
+    "originalInputAndParametersUnchanged": true
+  },
+  {
+    "id": "v7.accept.identity_unknown",
+    "original": "v6.accept.identity_unknown",
+    "expected": "原两人中谁听见未知，不猜身份；保留待核且无关不问。",
+    "bytes": 10083,
+    "oldBytes": 43257,
+    "requestSha256": "707d4eac9f36d50fdec1c26a0563e7575d8ee810aca271fffe81fd6ae6edbacc",
+    "originalInputAndParametersUnchanged": true
+  },
+  {
+    "id": "v7.accept.obstacle",
+    "original": "v6.accept.obstacle",
+    "expected": "bright为回答对象但已走远听不到，not_received，无新增知情。",
+    "bytes": 10331,
+    "oldBytes": 44285,
+    "requestSha256": "62babce06bca1d81a918710d17f926c76e044e5eedf2df8dcee32b336777e039",
+    "originalInputAndParametersUnchanged": true
+  },
+  {
+    "id": "v7.accept.unsaid",
+    "original": "v6.accept.unsaid",
+    "expected": "只拟答未开口，不生成实际接收或凭空待核。",
+    "bytes": 9853,
+    "oldBytes": 42247,
+    "requestSha256": "b95e696514e8c8e34a953291ff83a2ad9407a1d59a793303a72600c78d33c3c9",
+    "originalInputAndParametersUnchanged": true
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "v6.accept.partial",
+    "original": "uncertaintycheck.reproduce.partial",
+    "expected": "bright仅前半山路封闭received，后半渡口会合not_received；引用不能用答道旁白。",
+    "requestSha256": "892d4c9a393b772f6d6b630080bcc1d4c78f3b8cd0adaf8733b265738383669b",
+    "bytes": 43854,
+    "inputAndFragmentMessagesUnchanged": true,
+    "generationParametersUnchanged": true
+  },
+  {
+    "id": "v6.accept.uncertain",
+    "original": "uncertaintycheck.probe.partial",
+    "expected": "bright前半received；后半接收不明只待核该范围；无关时不问，不猜未收到。",
+    "requestSha256": "38d06f38a0d8907e2f66cf32379335899e9a9c47e7333a5312ac811efec0a76d",
+    "bytes": 44995,
+    "inputAndFragmentMessagesUnchanged": true,
+    "generationParametersUnchanged": true
+  },
+  {
+    "id": "v6.accept.npc_reply",
+    "original": "bindingjson.reproduce.npc_reply",
+    "expected": "bright唯一隐含听者；当前回答引用与history0绑定；player不接收。",
+    "requestSha256": "f208f10c78b3d84268b90026a504759d339600550acc8e6b1ba869a492b24b6d",
+    "bytes": 42593,
+    "inputAndFragmentMessagesUnchanged": true,
+    "generationParametersUnchanged": true
+  },
+  {
+    "id": "v6.accept.long",
+    "original": "bindingjson.reproduce.long",
+    "expected": "原长文三段言说均保留；区分回答对象、当前接收依据与范围，不凭在场或说话动作授予。",
+    "requestSha256": "f54fbbafa16bbf6bbb6e74ec3c514f6bb8173796259fe833587447de884ab8b4",
+    "bytes": 114516,
+    "inputAndFragmentMessagesUnchanged": true,
+    "generationParametersUnchanged": true
+  },
+  {
+    "id": "v6.accept.identity_unknown",
+    "original": "relation.ambiguous",
+    "expected": "原两人中谁听见未知，不猜身份；保留待核且无关不问。",
+    "requestSha256": "3febfe18ff3e6a51b4ea6f48cfa30dfc5ba5301f6f2b5cd474d5d5df5b24c4f3",
+    "bytes": 43257,
+    "inputAndFragmentMessagesUnchanged": true,
+    "generationParametersUnchanged": true
+  },
+  {
+    "id": "v6.accept.obstacle",
+    "original": "uncertaintycheck.reproduce.obstacle",
+    "expected": "bright为回答对象但已走远听不到，not_received，无新增知情。",
+    "requestSha256": "9fc3b85604a8437a9501ad72675f8f94d278211c58122ba5b0dbff9d0e0fab65",
+    "bytes": 44285,
+    "inputAndFragmentMessagesUnchanged": true,
+    "generationParametersUnchanged": true
+  },
+  {
+    "id": "v6.accept.unsaid",
+    "original": "receiptformat.probe.unsaid",
+    "expected": "只拟答未开口，不生成实际接收或凭空待核。",
+    "requestSha256": "b4023e4315928ea4ece052433d8df44a59e033c9d19e310899e67d165d30f2b9",
+    "bytes": 42247,
+    "inputAndFragmentMessagesUnchanged": true,
+    "generationParametersUnchanged": true
+  }
+]

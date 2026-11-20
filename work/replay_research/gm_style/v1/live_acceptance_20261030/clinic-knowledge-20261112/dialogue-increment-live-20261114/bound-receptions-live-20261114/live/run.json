@@ -1,0 +1,36 @@
+{
+  "authorization": "新增最多8次模型调用验证新版言说绑定和逐target覆盖。失败即停止整个批次，不重试、不继续不同例、不自动补回执、不转换action、不放宽校验，不部署/正式剧情/自动批准修订。",
+  "baseline": 323,
+  "limit": 8,
+  "cumulative": 324,
+  "remaining": 7,
+  "attempts": [
+    {
+      "id": "02-received-rumor",
+      "customRequest": 324,
+      "state": "completed",
+      "requestBytes": 27951,
+      "requestSha256": "e869c6bb55a9070d2eb66c70d4fe0b666bf2d2dffe74a7e695fa6cb38de96449",
+      "status": 200,
+      "elapsedMs": 6456,
+      "rawResponseSha256": "0d3670a49abb63eb117e2842200dc5d22866fef8889ccc6612092021ed51b9f2",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3392,
+        "completion_tokens": 522,
+        "total_tokens": 3914
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Binding and original strict structural validation pass: nested utterance, correct speaker/recipient/proposition and coverage retained. Semantic target fails: model requires explicit listener confirmation/feedback and marks direct unobstructed speech uncertain, so player gets no rumor and one pending item is created. Frozen case expects received without mandatory echo. Stop entire batch after first failure; no retry or remaining cases."
+    }
+  ],
+  "closed": true,
+  "retries": 0,
+  "stopOnAnyFailure": true,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "stopReason": "manual-fail"
+}

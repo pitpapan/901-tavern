@@ -1,0 +1,117 @@
+{
+  "status": "offline_preparation_verified_pending_review_and_specific_authorization",
+  "scope": "隔离聊天的实际保留、读回与普通生成入口捕获",
+  "sourceChat": "901 帝都正式续玩 20261106 - Branch #2",
+  "sourceRevision": 3,
+  "isolationPort": 18132,
+  "childChat": "901 帝都正式续玩 20261106 - Branch #5",
+  "childRevision": 4,
+  "departureAnchor": {
+    "chatId": "901 帝都正式续玩 20261106 - Branch #5",
+    "messageId": 11,
+    "swipeId": 0
+  },
+  "snapshotRootReadbackEquality": true,
+  "rootUnchangedByDeparture": true,
+  "retainedSource": {
+    "chatId": "901 帝都正式续玩 20261106 - Branch #5",
+    "messageId": 9,
+    "swipeId": 0,
+    "text": "桌外隔离测试告知（test-only，非正式剧情）：一名来客单独对布莱特说：“我听说九雪医馆馆主与雪老有旧，二者是不同的人。递出这条口信时以钴蓝纸燕为记。”布莱特听清原话，御临风与黄泉不在听距内，也未获告。"
+  },
+  "privateBelief": "rumor",
+  "newReceivedEvents": 0,
+  "newGrants": 0,
+  "existingEvents": [
+    {
+      "id": "received.clinic.topic.bright.test.20261120",
+      "type": "message.arrived"
+    },
+    {
+      "id": "clinic.topic.bright.test.20261120.bright.clinic.owner.xuelao.old-friend.event",
+      "type": "knowledge.granted"
+    }
+  ],
+  "actorFacts": {
+    "player": 0,
+    "bright": 1,
+    "huang": 0
+  },
+  "completeRequestContextEqualsSavedProjection": true,
+  "testOnlyPresence": {
+    "present": [
+      "player",
+      "huang"
+    ],
+    "absent": [
+      "bright"
+    ],
+    "evidenceMessageIndex": 12,
+    "structuredCombatRoster": false,
+    "T0FallbackMessageIndexes": [
+      0,
+      14,
+      15
+    ],
+    "retainedCurrentNarrativeHasPriority": true
+  },
+  "publicContinuationBodiesExcluded": [
+    611,
+    617,
+    618,
+    619,
+    620
+  ],
+  "noSourceMessageInGeneralDialogue": true,
+  "captureProof": {
+    "classification": {
+      "phase": "before",
+      "kind": "classification",
+      "sha256": "651c01c6da8dbbcc3d71a793a2948e7458910446280872d04e7d2a5cac87fd94",
+      "bytes": 80988,
+      "localClassificationFixture": true,
+      "upstreamCalls": 0,
+      "endpointIsLocal": true
+    },
+    "narration": {
+      "phase": "before",
+      "kind": "narration",
+      "sha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9",
+      "bytes": 109191,
+      "localClassificationFixture": false,
+      "upstreamCalls": 0,
+      "endpointIsLocal": true
+    }
+  },
+  "captureArchive": {
+    "file": "capture-attempt.seed.jsonl",
+    "sha256": "cba374c9657e2ba3c8fdeedf4fd743906b7f7518b7fec9b2105551d1f7db04ee",
+    "lastPlayer": "御临风问黄泉：“你知道老馆主和雪老是否相识、有没有来往吗？”",
+    "localPlaceholder": "行动已判定无需检定，叙述尚未完成；重新生成本条回复即可恢复，无需重复发送行动。\n\n<StatusPlaceHolderImpl/>"
+  },
+  "classificationFixture": {
+    "sourceCall": 547,
+    "status": "NO_CHECK",
+    "basis": "ordinary_dialogue",
+    "newModelCalls": 0
+  },
+  "frozenRequest": {
+    "file": "huang-absent-bright.request.json",
+    "bytes": 109191,
+    "sha256": "ed088edaa46a54aa6df67cd0eadb3a4db83bd60c41647632c42ce0f93fb465f9"
+  },
+  "completeRequestRebuiltFrom610Diff": true,
+  "protectedChecks": {
+    "old": 171,
+    "products": 4,
+    "formal": 288,
+    "isolatedChats": 4,
+    "isolatedRuntime": 5,
+    "appendOnlyLogs": 2
+  },
+  "protectedMismatches": [],
+  "allTemporaryConfigurationRestored": true,
+  "externalModelCalls": 0,
+  "cumulative": 620,
+  "available": 0
+}

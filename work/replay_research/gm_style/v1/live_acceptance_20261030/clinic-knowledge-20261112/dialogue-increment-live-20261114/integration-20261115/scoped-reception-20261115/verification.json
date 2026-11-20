@@ -1,0 +1,100 @@
+{
+  "offline": {
+    "pass": 284,
+    "fail": 0,
+    "newScopedTests": 5
+  },
+  "model": {
+    "calls": 6,
+    "pass": 6,
+    "fail": 0,
+    "usedOf200": 65,
+    "remaining": 135,
+    "cumulative": 399,
+    "attempts": [
+      {
+        "id": "scoped.original",
+        "request": 394,
+        "prior": "range.original",
+        "verdict": "pass",
+        "assessment": "原385/388输入不变；一条完整言说，三条回执显式范围分别为player整句received、bright前半received、后半uncertain。Schema/精确引用/父范围/冲突检查通过，原MVU仅登记bright前半，后半1待核，无关0问，无自动修补。",
+        "returnedModel": "gemini-3.8-flash",
+        "requestBytes": 221886,
+        "mvuWrites": 4,
+        "pendingCount": 1
+      },
+      {
+        "id": "scoped.back",
+        "request": 395,
+        "prior": "range.back",
+        "verdict": "pass",
+        "assessment": "一条完整言说，player整句received，bright前半not_received后半received，contentSpan各自准确；原MVU只登记bright后半，无待核，原389格式失败此次无重现。",
+        "returnedModel": "gemini-3.8-flash",
+        "requestBytes": 221728,
+        "mvuWrites": 4,
+        "pendingCount": 0
+      },
+      {
+        "id": "scoped.full",
+        "request": 396,
+        "prior": "range.full",
+        "verdict": "pass",
+        "assessment": "完整言说和整句contentSpan由两位听者共用received回执；两人各获得完整消息，无待核，未误强制分片。",
+        "returnedModel": "gemini-3.8-flash",
+        "requestBytes": 221383,
+        "mvuWrites": 3,
+        "pendingCount": 0
+      },
+      {
+        "id": "scoped.none",
+        "request": 397,
+        "prior": "range.none",
+        "verdict": "pass",
+        "assessment": "同一整句range分别对player received和bright not_received，严格检查通过；只有player新增知情，bright0，无待核。",
+        "returnedModel": "gemini-3.8-flash",
+        "requestBytes": 221858,
+        "mvuWrites": 3,
+        "pendingCount": 0
+      },
+      {
+        "id": "scoped.listeners",
+        "request": 398,
+        "prior": "range.listeners",
+        "verdict": "pass",
+        "assessment": "完整言说保留1条，四条回执显式前后范围及逐人相反状态；严格检查和MVU通过，player只前半、bright只后半，0待核。",
+        "returnedModel": "gemini-3.8-flash",
+        "requestBytes": 222336,
+        "mvuWrites": 4,
+        "pendingCount": 0
+      },
+      {
+        "id": "scoped.repeat",
+        "request": 399,
+        "prior": "range.repeat",
+        "verdict": "pass",
+        "assessment": "两次相同原话保留两个发生位置，各条contentSpan位于对应父言说；第一次received第二次not_received，bright仅获一次完整内容，无待核或跨发生错绑。",
+        "returnedModel": "gemini-3.8-flash",
+        "requestBytes": 222046,
+        "mvuWrites": 3,
+        "pendingCount": 0
+      }
+    ]
+  },
+  "verified": {
+    "originalBusinessInputsAndCoordinatesUnchanged": true,
+    "generationParametersUnchanged": true,
+    "rawResponsesPreserved": true,
+    "oldEvidenceUnchanged": 285,
+    "formalProtectedUnchanged": 22,
+    "oldLedgerAttemptsUnchanged": true,
+    "schemaConstraintsRetainedWithRequiredReceiptSpan": true,
+    "noAutomaticRepairOrFallback": true,
+    "noDeploymentFormalStoryOrAutomaticApprovalRevision": true
+  },
+  "limits": [
+    "本轮六份各一次，不能证明长期稳定或全部语义范围正确。",
+    "精确引用与父范围检查不能自动证明语义完整：模型仍可能选择包含太多内容的合法范围，或省略否定/条件限定。",
+    "未知范围继续用原uncertain/unresolved，不能从reason自动补范围。",
+    "旧记录不迁移、不重抽；旧380候选ZIP和隔离安装未更新。"
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "contextRef": "588699a2b6949e36dfb14e4ecbd4921025f087cedf82fac5e65e5d911e75fa50",
+  "assertions": {
+    "schemaVersion": "gm-assertion-output/1",
+    "inputRef": "assertion.1c13dbb3d8e765d6ec6539d3c773a3beac4b71588c80b1a4d817bc357a839bfd",
+    "units": [
+      {
+        "id": "turn",
+        "status": "extracted",
+        "claims": [
+          {
+            "id": "claim.1",
+            "type": "utterance",
+            "args": {
+              "speaker": "布莱特",
+              "content": "见面改在钟楼。"
+            },
+            "argumentSpans": {
+              "speaker": {
+                "documentId": "current",
+                "start": 0,
+                "end": 3,
+                "quote": "布莱特"
+              },
+              "content": {
+                "documentId": "current",
+                "start": 13,
+                "end": 20,
+                "quote": "见面改在钟楼。"
+              }
+            },
+            "mode": "asserted",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 0,
+              "end": 21,
+              "quote": "布莱特对黄泉和御临风说：“见面改在钟楼。”"
+            }
+          },
+          {
+            "id": "claim.2",
+            "type": "location",
+            "args": {
+              "entity": "见面",
+              "landmark": "钟楼",
+              "region": null
+            },
+            "argumentSpans": {
+              "entity": {
+                "documentId": "current",
+                "start": 13,
+                "end": 15,
+                "quote": "见面"
+              },
+              "landmark": {
+                "documentId": "current",
+                "start": 17,
+                "end": 19,
+                "quote": "钟楼"
+              },
+              "region": null
+            },
+            "mode": "reported",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": "布莱特"
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": {
+                "documentId": "current",
+                "start": 0,
+                "end": 3,
+                "quote": "布莱特"
+              }
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 13,
+              "end": 20,
+              "quote": "见面改在钟楼。"
+            }
+          },
+          {
+            "id": "claim.3",
+            "type": "state",
+            "args": {
+              "entity": "其中一人",
+              "name": "听清状态",
+              "value": "没听清"
+            },
+            "argumentSpans": {
+              "entity": {
+                "documentId": "current",
+                "start": 21,
+                "end": 25,
+                "quote": "其中一人"
+              },
+              "name": {
+                "documentId": "current",
+                "start": 26,
+                "end": 28,
+                "quote": "听清"
+              },
+              "value": {
+                "documentId": "current",
+                "start": 25,
+                "end": 28,
+                "quote": "没听清"
+              }
+            },
+            "mode": "asserted",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 21,
+              "end": 28,
+              "quote": "其中一人没听清"
+            }
+          },
+          {
+            "id": "claim.4",
+            "type": "property",
+            "args": {
+              "entity": "记录",
+              "name": "说明是谁",
+              "value": "说明是谁"
+            },
+            "argumentSpans": {
+              "entity": {
+                "documentId": "current",
+                "start": 29,
+                "end": 31,
+                "quote": "记录"
+              },
+              "name": {
+                "documentId": "current",
+                "start": 33,
+                "end": 37,
+                "quote": "说明是谁"
+              },
+              "value": {
+                "documentId": "current",
+                "start": 33,
+                "end": 37,
+                "quote": "说明是谁"
+              }
+            },
+            "mode": "denied",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 29,
+              "end": 38,
+              "quote": "记录没有说明是谁。"
+            }
+          }
+        ],
+        "unresolved": [
+          {
+            "span": {
+              "documentId": "current",
+              "start": 21,
+              "end": 25,
+              "quote": "其中一人"
+            },
+            "reason": "原文仅指出‘其中一人没听清’且‘记录没有说明是谁’，无法确定黄泉与御临风中具体是谁没听清、谁听清。"
+          }
+        ]
+      }
+    ]
+  },
+  "receptions": [
+    {
+      "id": "reception.1",
+      "claimId": "claim.1",
+      "speakerId": "bright",
+      "recipientIds": [],
+      "recipientSpans": [],
+      "evidence": {
+        "documentId": "current",
+        "start": 21,
+        "end": 38,
+        "quote": "其中一人没听清，记录没有说明是谁。"
+      },
+      "status": "uncertain",
+      "propositionRef": null,
+      "reason": "布莱特虽向黄泉与御临风说话，但原文明确陈述其中一人没听清且未记录具体是谁，无法确定具体哪位听清或未听清。"
+    }
+  ]
+}

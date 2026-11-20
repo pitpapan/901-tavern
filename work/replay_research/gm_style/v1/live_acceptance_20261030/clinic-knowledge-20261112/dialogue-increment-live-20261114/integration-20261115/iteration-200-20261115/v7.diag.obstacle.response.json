@@ -1,0 +1,31 @@
+{
+  "kind": "v7.diag.obstacle",
+  "startedAt": "2026-11-15T22:45:18.475Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T22:45:21.386Z",
+  "headersElapsedMs": 2911,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b1c916f9a0d119-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 22:45:21 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=xa90aiamdBl%2BLKxVbWattNap0qxSw0Bn3Ws7xaEpjB9eNveHH2OnidYjIYzvm7DoxTWZtawWJhAFkZsbxRh1YlWGPjaK2C3IhHxqGDU1pZb8CcljKlmmVX0Nmx2kJg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611152245192406928228268d9d6pbSg0vXH",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "a160f6c8-adba-4ac0-a5cb-a959e94ece5f"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"77bb9f16-0e16-4a17-b6dd-bbf8306881d6\",\"object\":\"chat.completion\",\"created\":1794782721,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/7\\\",\\\"contextRef\\\":\\\"c280d0a16d0ff7be00eb4299201b607ca4ac80bcf07e35926f8c380fbb25d602\\\",\\\"selections\\\":[{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"黄泉\\\"},{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"仍答道：\\\"},{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"“山路已经封闭了。”\\\"},{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"布莱特问完便走远，已听不到这里的声音。\\\"}],\\\"utterances\\\":[{\\\"speakerId\\\":\\\"huang\\\",\\\"speaker\\\":0,\\\"content\\\":2,\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":1}],\\\"receptions\\\":[],\\\"unresolved\\\":[],\\\"coverage\\\":{\\\"status\\\":\\\"none\\\",\\\"evidence\\\":3}}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2481,\"completion_tokens\":214,\"total_tokens\":2695}}",
+  "responseBytes": 950,
+  "responseBodySha256BeforePrivacyRedaction": "481f8bff7952161ff78854ce2a5729179733a71c7e5474f5a17ba4b5268eaf5b",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T22:45:21.391Z",
+  "elapsedMs": 2917
+}

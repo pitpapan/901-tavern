@@ -1,0 +1,48 @@
+Request 499: v7.accept.partial
+pass: 499 v7 raw JSON/schema/exact selections pass; bright receives only mountain closure, meeting remainder obstacle, no extra actor grants/pending. Offline harness initially compared JSON key order, corrected harness only and retained its false failure diagnostic; raw response/product unchanged.
+{"schemaVersion":"dialogue-reception/7","contextRef":"88975d1f8fb4eb5a7c1dd17418f86a6831cbd62fb11363d61550e92cc9dd7137","selections":[{"fragmentId":"f2","quote":"黄泉"},{"fragmentId":"f1","quote":"山路已经封闭了，明早在渡口会合。"},{"fragmentId":"f2","quote":"答道"},{"fragmentId":"f1","quote":"山路已经封闭了"},{"fragmentId":"f5","quote":"布莱特"},{"fragmentId":"f5","quote":"只听清前半句"},{"fragmentId":"f4","quote":"明早在渡口会合"},{"fragmentId":"f6","quote":"后半句被钟声盖住"}],"utterances":[{"speakerId":"huang","speaker":0,"content":1,"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"anchor":2}],"receptions":[{"utterance":0,"content":3,"listenerId":"bright","identityKind":"explicit","identity":4,"historyMessageId":null,"evidenceKind":"direct","evidence":5,"propositionRef":null},{"utterance":0,"content":6,"listenerId":"bright","identityKind":"explicit","identity":4,"historyMessageId":null,"evidenceKind":"obstacle","evidence":7,"propositionRef":null}],"unresolved":[],"coverage":{"status":"recorded","evidence":5}}
+
+Request 500: v7.accept.uncertain
+fail: JSON/Schema有效；selections[6]把横跨f7/f8的连续原文选成f7，违反片段内引用规则，原样严格拒绝。实际运行只保存unprocessed及原始回复，无知情授予，不修补、不重发。
+{"schemaVersion":"dialogue-reception/7","contextRef":"a99e464c3e1f421386d06588875cec6542221cfafb03f611baabb647278ab086","selections":[{"fragmentId":"f2","quote":"黄泉"},{"fragmentId":"f1","quote":"山路已经封闭了，明早在渡口会合。"},{"fragmentId":"f2","quote":"答道"},{"fragmentId":"f5","quote":"布莱特"},{"fragmentId":"f3","quote":"山路已经封闭了，"},{"fragmentId":"f5","quote":"听清了前半句"},{"fragmentId":"f7","quote":"他有没有听清后半句，眼下无人能确定。"}],"utterances":[{"speakerId":"huang","speaker":0,"content":1,"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"anchor":2}],"receptions":[{"utterance":0,"content":4,"listenerId":"bright","identityKind":"explicit","identity":3,"historyMessageId":null,"evidenceKind":"direct","evidence":5,"propositionRef":null}],"unresolved":[{"selection":6,"reason":"钟声响起后布莱特是否听清后半句存在不确定性，眼下无人能确定"}],"coverage":{"status":"uncertain","evidence":6}}
+
+Request 501: v7.failure.unrelated
+pass: 真实500失败seed，无关后续required空，ready/0问/0写，无重抽。
+{"inputRef":"57c4064c3568d28b590c9dbf916726bc924ff89073bb92af9215e33278804e21","required":[]}
+
+Request 502: v7.failure.dependent
+pass: required仅真实500 unprocessed ID，本地原流程确实生成带实际依赖上下文的单次恢复请求。
+{"inputRef":"dd94180464808aa7ea39e6b69db2bfad8f0a095ee198d0d975ff3c992d0f2c77","required":["dialogue.7f3e1c354e8a4e48f3f9a00b94945bc2d9640104be4a2e60951476cf1417d1bd.unprocessed"]}
+
+Request 503: v7.failure.recover
+fail: 503仍把跨f7/f8原文绑定f7，严格拒绝、无知情；真实502→503回放返回unavailable/0问，不修补、不再恢复。技术失败隔离边界通过，但抽取失败。
+{"schemaVersion":"dialogue-reception/7","contextRef":"a99e464c3e1f421386d06588875cec6542221cfafb03f611baabb647278ab086","selections":[{"fragmentId":"f2","quote":"黄泉"},{"fragmentId":"f1","quote":"山路已经封闭了，明早在渡口会合。"},{"fragmentId":"f2","quote":"答道"},{"fragmentId":"f1","quote":"山路已经封闭了"},{"fragmentId":"f5","quote":"布莱特"},{"fragmentId":"f5","quote":"听清了前半句"},{"fragmentId":"f1","quote":"明早在渡口会合。"},{"fragmentId":"f7","quote":"他有没有听清后半句，眼下无人能确定。"}],"utterances":[{"speakerId":"huang","speaker":0,"content":1,"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"anchor":2}],"receptions":[{"utterance":0,"content":3,"listenerId":"bright","identityKind":"explicit","identity":4,"historyMessageId":null,"evidenceKind":"direct","evidence":5,"propositionRef":null}],"unresolved":[{"selection":7,"reason":"听者是否听清后半句眼下无人能确定，存在接收障碍与状态歧义"}],"coverage":{"status":"uncertain","evidence":7}}
+
+Request 504: v7.accept.npc_reply
+fail: Schema通过，但reply身份和接收依据选择言说外的答道；现有合同要求父回答内原文，旧严格检查拒绝，保存unprocessed且不授予。未发现本地转换丢项，不堆提示或放宽。
+{"schemaVersion":"dialogue-reception/7","contextRef":"05ae727f494e07f20886fec20d2ae8f49b36238886c897d76debbe0704f864c6","selections":[{"fragmentId":"f2","quote":"黄泉"},{"fragmentId":"f3","quote":"渡口今晚停航。"},{"fragmentId":"f2","quote":"答道"},{"fragmentId":"f3","quote":"今晚"}],"utterances":[{"speakerId":"huang","speaker":0,"content":1,"mode":"asserted","scope":{"time":3,"condition":null,"attribution":null},"anchor":2}],"receptions":[{"utterance":0,"content":1,"listenerId":"bright","identityKind":"reply","identity":2,"historyMessageId":0,"evidenceKind":"reply","evidence":2,"propositionRef":null}],"unresolved":[],"coverage":{"status":"recorded","evidence":2}}
+
+Request 505: v7.accept.long
+fail: 四条receptions缺必填historyMessageId，Schema及原runtime拒绝；另有reply依据不在父回答内、以几人走下缓坡作明确接收依据的语义问题。原样保存unprocessed，无授予、不补字段。
+{"schemaVersion":"dialogue-reception/7","contextRef":"b815a29418321fe278c1ec7497a2ad85c21e4277f9ef7dc711b3ea6a2cc508c2","selections":[{"fragmentId":"f17","quote":"布莱特"},{"fragmentId":"f4","quote":"“真要说想念的，哪怕只是小酒馆里一碗炖得烂熟的杂烩肉汤，配上刚烤透、皮还是脆的热麦饼，也比干粮强上十倍。要是能在窗边坐下，再来一壶温热的麦茶，这几天的奔波才算真正缓过劲来。”\n"},{"fragmentId":"f19","quote":"牵着马缰走得颇为轻快："},{"fragmentId":"f17","quote":"听到这话"},{"fragmentId":"f30","quote":"黄泉"},{"fragmentId":"f8","quote":"“热汤面，或者刚出锅的肉串。赶路的时候总觉得随便填饱肚子就行，真闻到街边的烟火气，倒确实想吃口带油盐味的热食。”\n"},{"fragmentId":"f33","quote":"但也带了点闲适："},{"fragmentId":"f50","quote":"布莱特"},{"fragmentId":"f12","quote":"“闻着味道，前面不远就有几家脚店和小食肆。咱们办完正事，找地方落脚填肚子倒不用愁了。”"},{"fragmentId":"f51","quote":"辨了辨方向："},{"fragmentId":"f43","quote":"几人已经走下了缓坡。"}],"utterances":[{"speakerId":"bright","speaker":0,"content":1,"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"anchor":2},{"speakerId":"huang","speaker":4,"content":5,"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"anchor":6},{"speakerId":"bright","speaker":7,"content":8,"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"anchor":9}],"receptions":[{"utterance":0,"content":1,"listenerId":"player","identityKind":"reply","identity":3,"historyMessageId":15,"evidenceKind":"reply","evidence":3,"propositionRef":null},{"utterance":0,"content":1,"listenerId":"huang","identityKind":"explicit","identity":4,"evidenceKind":"direct","evidence":10,"propositionRef":null},{"utterance":1,"content":5,"listenerId":"player","identityKind":"reply","identity":3,"historyMessageId":15,"evidenceKind":"reply","evidence":6,"propositionRef":null},{"utterance":1,"content":5,"listenerId":"bright","identityKind":"explicit","identity":0,"evidenceKind":"direct","evidence":10,"propositionRef":null},{"utterance":2,"content":8,"listenerId":"player","identityKind":"explicit","identity":10,"evidenceKind":"direct","evidence":10,"propositionRef":null},{"utterance":2,"content":8,"listenerId":"huang","identityKind":"explicit","identity":10,"evidenceKind":"direct","evidence":10,"propositionRef":null}],"unresolved":[],"coverage":{"status":"recorded","evidence":10}}
+
+Request 506: v7.accept.identity_unknown
+pass: Schema及严格原文引用通过；保留两人中一人听见但身份不明的真实unresolved，不猜接收者，无知情授予、当轮0问。
+{"schemaVersion":"dialogue-reception/7","contextRef":"5e8c21a2ad64526e13e6e67122b4457b9327d2640e23a7aa93a621b03ba49d15","selections":[{"fragmentId":"f2","quote":"黄泉"},{"fragmentId":"f3","quote":"“明早从山路绕行。"},{"fragmentId":"f2","quote":"答道"},{"fragmentId":"f1","quote":"两人中只有一人听见，但无法确定是谁。"}],"utterances":[{"speakerId":"huang","speaker":0,"content":1,"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"anchor":2}],"receptions":[],"unresolved":[{"selection":3,"reason":"听者身份存在歧义，原文说明两人中只有一人听见但无法确定具体是谁"}],"coverage":{"status":"uncertain","evidence":3}}
+
+Request 507: v7.accept.obstacle
+fail: 障碍语义选对，但listener reply身份依据答不在父回答内，严格引用失败；原样保留unprocessed，无授予。未接收语义方向正确不能算完整通过。
+{"schemaVersion":"dialogue-reception/7","contextRef":"c280d0a16d0ff7be00eb4299201b607ca4ac80bcf07e35926f8c380fbb25d602","selections":[{"fragmentId":"f4","quote":"黄泉"},{"fragmentId":"f5","quote":"答道："},{"fragmentId":"f6","quote":"“山路已经封闭了。"},{"fragmentId":"f2","quote":"布莱特"},{"fragmentId":"f5","quote":"答"},{"fragmentId":"f3","quote":"已听不到这里的声音。"}],"utterances":[{"speakerId":"huang","speaker":0,"content":2,"mode":"asserted","scope":{"time":null,"condition":null,"attribution":null},"anchor":1}],"receptions":[{"utterance":0,"content":2,"listenerId":"bright","identityKind":"reply","identity":4,"historyMessageId":0,"evidenceKind":"obstacle","evidence":5,"propositionRef":null}],"unresolved":[],"coverage":{"status":"recorded","evidence":1}}
+
+Request 508: v7.accept.unsaid
+pass: Schema/引用通过，尚未开口coverage none，无实际言说/回执/知情/待核，0问。
+{"schemaVersion":"dialogue-reception/7","contextRef":"4b61d1088acbcd0dc7ff45a3424366ccfa3bfe708ed2939fc9a5b782e88f4ac1","selections":[{"fragmentId":"f3","quote":"却始终没有开口。"}],"utterances":[],"receptions":[],"unresolved":[],"coverage":{"status":"none","evidence":0}}
+
+Request 509: v7.pending.unrelated
+pass: 承接506真实待核，无关后续required空，ready/0问/0写，无知情授予。
+{"inputRef":"b483a7cb103868f8aacaa371dae3da7e38612c8f80e39af6c718d55a0e7b1e8e","required":[]}
+
+Request 510: v7.pending.dependent
+pass: 承接506真实待核，required只真实ID，deferred/1问/仅prompted写入，不代答不授予；同seed无关对照509为ready零问。
+{"inputRef":"31ce712cd66a55955d9e99fa3317720bfe38ffcb72b560c11f60dd4c2b53cb5a","required":["dialogue.2db835c110432391f68b45ede32ff557be11e8f5275e3a6c685b2f7eb0dce1c6.unresolved.d059c2bb75dcb13f1ec666fc713ddbaa5d4e870519a8b29316e50454b412036d"]}
+

@@ -1,0 +1,31 @@
+{
+  "kind": "dialogue-reception",
+  "startedAt": "2026-11-14T18:45:19.657Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-14T18:45:27.169Z",
+  "headersElapsedMs": 7513,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5a82c2bdb7a2180-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sat, 14 Nov 2026 18:45:26 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=50NcoE4xUdFjF9AtrT5Wy4ad66Bu0sc8FXZYQ0EqK%2BKQRQDd%2F1PDHGMAyN0wq07EkLi7RnHdUi%2FWPIlqhR8j3%2F6345%2BuQKE8cS7Czgn9SUb9s16j9oNqWFm6Y1CdNA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611141845197521320458268d9d6gYYxYTdN",
+    "x-zeabur-ip-country": "ES",
+    "x-zeabur-request-id": "539aaa5d-318c-4839-b801-4f0b1ab30c0d"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"b6b7e7fd-1096-4bc9-bfc1-0beb475363bd\",\"object\":\"chat.completion\",\"created\":1794681926,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"contextRef\\\":\\\"13b114382ffbb77d8c8c94ca06831da3c656d7a0008afcfc9731c970ad30492a\\\",\\\"assertions\\\":{\\\"schemaVersion\\\":\\\"gm-assertion-output/1\\\",\\\"inputRef\\\":\\\"assertion.4a9436967b14cf43cc10d1c28b7bc62021df6b46653ec84d93cf427347613c6b\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"status\\\":\\\"extracted\\\",\\\"claims\\\":[{\\\"id\\\":\\\"c1\\\",\\\"type\\\":\\\"state\\\",\\\"args\\\":{\\\"entity\\\":\\\"隔音窗\\\",\\\"name\\\":\\\"状态\\\",\\\"value\\\":\\\"关闭\\\"},\\\"argumentSpans\\\":{\\\"entity\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":8,\\\"end\\\":11,\\\"quote\\\":\\\"隔音窗\\\"},\\\"name\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":5,\\\"end\\\":7,\\\"quote\\\":\\\"关闭\\\"},\\\"value\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":5,\\\"end\\\":7,\\\"quote\\\":\\\"关闭\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":5,\\\"end\\\":11,\\\"quote\\\":\\\"关闭的隔音窗\\\"}},{\\\"id\\\":\\\"c2\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"御临风\\\",\\\"content\\\":\\\"北门暂停通行。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":3,\\\"quote\\\":\\\"御临风\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":18,\\\"end\\\":25,\\\"quote\\\":\\\"北门暂停通行。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":26,\\\"quote\\\":\\\"御临风隔着关闭的隔音窗对布莱特说：“北门暂停通行。”\\\"}},{\\\"id\\\":\\\"c3\\\",\\\"type\\\":\\\"state\\\",\\\"args\\\":{\\\"entity\\\":\\\"北门\\\",\\\"name\\\":\\\"通行状态\\\",\\\"value\\\":\\\"暂停通行\\\"},\\\"argumentSpans\\\":{\\\"entity\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":18,\\\"end\\\":20,\\\"quote\\\":\\\"北门\\\"},\\\"name\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":20,\\\"end\\\":24,\\\"quote\\\":\\\"暂停通行\\\"},\\\"value\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":20,\\\"end\\\":24,\\\"quote\\\":\\\"暂停通行\\\"}},\\\"mode\\\":\\\"reported\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":\\\"御临风\\\"},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":3,\\\"quote\\\":\\\"御临风\\\"}},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":18,\\\"end\\\":25,\\\"quote\\\":\\\"北门暂停通行。\\\"}},{\\\"id\\\":\\\"c4\\\",\\\"type\\\":\\\"action\\\",\\\"args\\\":{\\\"actor\\\":\\\"布莱特\\\",\\\"verb\\\":\\\"听见\\\",\\\"object\\\":null},\\\"argumentSpans\\\":{\\\"actor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":26,\\\"end\\\":29,\\\"quote\\\":\\\"布莱特\\\"},\\\"verb\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":31,\\\"end\\\":33,\\\"quote\\\":\\\"听见\\\"},\\\"object\\\":null},\\\"mode\\\":\\\"denied\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":26,\\\"end\\\":34,\\\"quote\\\":\\\"布莱特没有听见。\\\"}}],\\\"unresolved\\\":[]}]},\\\"receptions\\\":[{\\\"id\\\":\\\"rec-1\\\",\\\"claimId\\\":\\\"c2\\\",\\\"speakerId\\\":\\\"player\\\",\\\"recipientIds\\\":[\\\"bright\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":12,\\\"end\\\":15,\\\"quote\\\":\\\"布莱特\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":26,\\\"end\\\":34,\\\"quote\\\":\\\"布莱特没有听见。\\\"},\\\"status\\\":\\\"not_received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"原文明确陈述布莱特没有听见。\\\"}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":3588,\"completion_tokens\":914,\"total_tokens\":4502}}",
+  "responseBytes": 3625,
+  "responseBodySha256BeforePrivacyRedaction": "8c3d7015f452ebb14eb2e350b45683a48fde7941ec1e668bcd6abbfcc58692d5",
+  "outcome": "completed",
+  "finishedAt": "2026-11-14T18:45:27.180Z",
+  "elapsedMs": 7523
+}

@@ -1,0 +1,25 @@
+{
+  "deployed": false,
+  "parentDeploymentDiff": "../../deployment-diff.json",
+  "recoveryManifest": "../../recovery/manifest.json",
+  "changesFromLastPackagedCandidate": [
+    {
+      "source": "work/rules_engine/gm_runtime/clinic-knowledge-catalog.mjs",
+      "previousSha256": "cd29151b939c3f848fc69dba8431d7dc4cc5a3e48eeb4276c21ec851f637fa50",
+      "candidateSha256": "d683302baddefecf1c4cbd797a2ae2361f1d36cec1d7e86acf2c17780c006a50"
+    },
+    {
+      "source": "work/rules_engine/gm_runtime/story-knowledge.mjs",
+      "previousSha256": "89f7f7d5847be86b990e90391d0197e356a440694a5959174c85879318e9fea1",
+      "candidateSha256": "8fb22a37e06b3af412d5f1c00708d07b86adf7b8fddb9d473f1ae452f281448f"
+    }
+  ],
+  "unchangedModules": 131,
+  "entryUnchanged": true,
+  "assetsUnchanged": true,
+  "thisTurnRuntimeChange": [
+    "work/rules_engine/gm_runtime/story-knowledge.mjs"
+  ],
+  "inheritedUnpackagedChanges": "story-knowledge source/attribution work and the two previously reviewed catalog annotations; no new 265/266 annotation",
+  "originalDeploymentChangedModules": 30
+}

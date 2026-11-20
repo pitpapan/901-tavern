@@ -1,0 +1,271 @@
+✖ FIND matches literal punctuation and replacement text remains literal (3.3649ms)
+✖ ambiguous FIND across prose and parallel segments changes neither (0.4815ms)
+✖ patches use the original message and reject cascading or overlapping edits (0.3712ms)
+✔ patches do not target thought, report or status containers (0.4084ms)
+✖ 901 candidate expands the no-MVU instruction and preserves order metadata consistency (0.6568ms)
+✖ 901 candidate keeps unverified publishing scripts inactive and uses campaign controls (0.2287ms)
+✔ a positive meditation declaration cannot authorize an explicitly excluded pool (1.6997ms)
+✔ recovery sequence schema and authorization preserve the complete declaration order (2.1053ms)
+✔ sequence narration uses final pending and preserves actual order and residual injury (0.4445ms)
+✔ recovery selectors require explicit player execution and preserve saved retry decision (2.8209ms)
+✔ pending C narration facts describe consumption without immediate healing and keep numbers in the MVU view (0.3568ms)
+✔ recovery narration retains remaining severe wounds and a partially filled energy pool without numeric prose facts (0.325ms)
+✔ ordinary classifier receives legal attributes, success-count DC and GM difficulty responsibility (0.986ms)
+✔ recorded social-as-attribute error is typed and never reaches settlement (0.2144ms)
+✔ null request on an unsettled decision is empty but real requests remain rejected (0.3403ms)
+✔ 901 generation excludes foreign global and depth entries without changing worldbook settings (0.3936ms)
+✔ saved NO_CHECK narration resumes after refresh without reclassification or settlement (0.4109ms)
+✔ recorded continuation failure permits NO_CHECK recovery but an unresolved action does not (0.581ms)
+✔ explicit cancellation of the unexecuted medicine declaration continues the actual current turn only (1.0195ms)
+✔ player-facing result metadata omits check numbers and secret roll existence (0.1265ms)
+✔ routine conversation enters prose only after structured NO_CHECK (0.1813ms)
+✔ controlled model response crosses dispatch, parse, gate and continuation once (0.7698ms)
+✔ malformed model response is isolated at response_parse before narration (0.2979ms)
+✔ a fenced JSON decision follows the ordinary gate without another request (0.2734ms)
+✔ DIRECT_EFFECT requires a saved JS result before narration (0.341ms)
+✔ player display exposes only public pool construction and compact GM facts omit logs (0.2478ms)
+✔ saved operation resumes its original adjudication without another model classification (0.1026ms)
+✔ committed player operation recovers classification after a lost failure notice (0.1515ms)
+✔ different risky phrasings both require a result before prose (0.2188ms)
+✔ pending action keeps original operation ID across a later input message (0.2442ms)
+✔ UNRESOLVED and invalid classification cannot narrate success (0.2393ms)
+✔ negating an attack does not block ordinary observation or erase a separate declared attack (0.2343ms)
+✔ NO_CHECK cannot clear the reported traffic and climbing risks (0.213ms)
+✔ gate readiness names missing runtime dependencies and player anchor (0.3271ms)
+✔ failed narration can retry saved operation without changing operation ID (0.2805ms)
+✔ classifier request includes only explicit action, current scene and relevant state (0.3604ms)
+✖ dream side channels never become scene facts or trigger worldbook entries (0.455ms)
+✖ legacy unwrapped dream output keeps prose but excludes summaries and unfinished side blocks (0.2016ms)
+✖ a supplementary-only reply does not replace the last actual scene (0.1955ms)
+✔ classifier request does not offer an invented default DC for an uncertain compound action (0.4215ms)
+✔ current action selects a named NPC worldbook entry without unrelated entries (0.4141ms)
+✔ classification deadline stops only its generation and ignores a late result (29.2899ms)
+✔ registered encounter decisions hand off before ordinary checks and narration (0.3419ms)
+✔ saved return to story closes an earlier interrupted combat handoff (0.1483ms)
+ℹ tests 44
+ℹ suites 0
+ℹ pass 36
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 339.479
+
+✖ failing tests:
+
+test at work\replay_research\model_preset_v1\mengjing-v5.test.mjs:15:1
+✖ FIND matches literal punctuation and replacement text remains literal (3.3649ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 2
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/replay_research/model_preset_v1/mengjing-v5.test.mjs:17:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 2,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at work\replay_research\model_preset_v1\mengjing-v5.test.mjs:21:1
+✖ ambiguous FIND across prose and parallel segments changes neither (0.4815ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/replay_research/model_preset_v1/mengjing-v5.test.mjs:24:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at work\replay_research\model_preset_v1\mengjing-v5.test.mjs:29:1
+✖ patches use the original message and reject cascading or overlapping edits (0.3712ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  3 !== 2
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/replay_research/model_preset_v1/mengjing-v5.test.mjs:31:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 3,
+    expected: 2,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at work\replay_research\model_preset_v1\mengjing-v5.test.mjs:45:1
+✖ 901 candidate expands the no-MVU instruction and preserves order metadata consistency (0.6568ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /\{\{getvar::sleep_var_mvu_no_update\}\}/. Input:
+  
+  '【最新输入】\n' +
+    '<dreamer_input>\n' +
+    '{{lastUserMessage}}\n' +
+    '</dreamer_input>\n' +
+    '{{getvar::sleep_var_qianghua}}\n' +
+    '\n' +
+    '【写作要求】\n' +
+    '<writing_setting>\n' +
+    '{{getvar::sleep_var_wenfeng}}\n' +
+    '{{getvar::sleep_var_juese}}\n' +
+    '{{getvar::sleep_var_rencheng}}\n' +
+    '\n' +
+    '用词设定：禁止使用任何“先否定、再补充真实含义”的句式。\n' +
+    '* 例如，不要写“不是X”，不要写“不是X，而是Y”。\n' +
+    '* 表达含义时直接写Y，不保留X。\n' +
+    '\n' +
+    '\n' +
+    '禁词设定：\n' +
+    '* 禁止`指节泛白`。\n' +
+    '{{getvar::sleep_var_ban_word}}\n' +
+    '\n' +
+    '字数要求：\n' +
+    '- 在`<dream_body>`中，输出字数应当满足 {{getvar::sleep_var_zishu}}\n' +
+    '- 该字数仅针对正文，其余输出内容字数不计入该字数要求，必须使得正文字数不少于最低要求字数。\n' +
+    '\n' +
+    '{{setvar::sleep_var_mvu_no_update::}}\n' +
+    '</writing_setting>\n' +
+    '\n' +
+    '【叙事者设定】\n' +
+    '在梦境之中，思客拥有一个用于剧情分析与推进的暗人格：叙事者人格。\n' +
+    '叙事者人格会审阅用户输入，并根据人格特征，分析输入内容、设计剧情发展、制造合理难度。\n' +
+    '<narrator>\n' +
+    '{{getvar::sleep_var_tuijin}}\n' +
+    '</narrator>\n' +
+    '\n' +
+    '【格式要求】\n' +
+    '1. 分析`<dream_dx_setting>`、`<dream_setting>`和`<dream_history>`中有哪些明确需求插入指令的格式要求。需要注意，剧情总结不属于格式要求，不得重复总结。\n' +
+    '2. 若出现“在正文后”、“在文末”等格式插入指令，其含义为在`<dream_after_format>`中插入内容，应当严格遵守要求，插入对应的格式要求内容，禁止在无要求的情况下为格式或状态栏内容添加标题。\n' +
+    '3. 若出现“在正文开始前”、“在正文中”等格式插入指令，其含义为在`<dream_body>`内部的正文开始前、正文中插入内容。需要按原样插入，不得转义。`<dream_body>`本身不属于正文，`<dream_body>`内输出的内容为正文。\n' +
+    '4. 不得捏造没有要求过的格式内容、状态栏等。\n' +
+    '5. 若无明显格式指令插入要求，则`<dream_after_format>`只能输出`<dream_done/>`。\n' +
+    '\n' +
+    '思客，你需要根据"</thought_of_chain>"进行思考，最终输出内容必须为一个xml文档。\n' +
+    '本次输出使用 DREAM_PLOT 协议，输出内容必须为一个XML文档。\n' +
+    '\n' +
+    '{{getvar::sleep_var_thought_of_chain}}'
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/replay_research/model_preset_v1/mengjing-v5.test.mjs:46:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '【最新输入】\n<dreamer_input>\n{{lastUserMessage}}\n</dreamer_input>\n{{getvar::sleep_var_qianghua}}\n\n【写作要求】\n<writing_setting>\n{{getvar::sleep_var_wenfeng}}\n{{getvar::sleep_var_juese}}\n...',
+    expected: /\{\{getvar::sleep_var_mvu_no_update\}\}/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at work\replay_research\model_preset_v1\mengjing-v5.test.mjs:56:1
+✖ 901 candidate keeps unverified publishing scripts inactive and uses campaign controls (0.2287ms)
+  AssertionError [ERR_ASSERTION]: 基米工具 1.0
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/replay_research/model_preset_v1/mengjing-v5.test.mjs:58:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at work\rules_engine\gm_runtime\adjudication-gate.test.mjs:502:1
+✖ dream side channels never become scene facts or trigger worldbook entries (0.455ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '<dream_think>秘密推演</dream_think><dream_plot><dream_body><dream_scene><location>猜测地点</location></dream_scene>你站在广场。</dream_body><dream_after_format><dream_parallel_event>暗室守卫收到密令。</dream_parallel_event><dream_big_discuss>考虑去王宫。</dream_big_discuss></dream_after_format></dream_plot>'
+  - '你站在广场。'
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/adjudication-gate.test.mjs:508:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '<dream_think>秘密推演</dream_think><dream_plot><dream_body><dream_scene><location>猜测地点</location></dream_scene>你站在广场。</dream_body><dream_after_format><dream_parallel_event>暗室守卫收到密令。</dream_parallel_event><dream_big_discuss>考虑去王宫。</dream_big_discuss></dream_after_format></dream_plot>',
+    expected: '你站在广场。',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at work\rules_engine\gm_runtime\adjudication-gate.test.mjs:516:1
+✖ legacy unwrapped dream output keeps prose but excludes summaries and unfinished side blocks (0.2016ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '同伴来到广场。<dream_summary>旧剧情</dream_summary><dream_parallel_event>幕后人物行动中'
+  - '同伴来到广场。'
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/adjudication-gate.test.mjs:519:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '同伴来到广场。<dream_summary>旧剧情</dream_summary><dream_parallel_event>幕后人物行动中',
+    expected: '同伴来到广场。',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at work\rules_engine\gm_runtime\adjudication-gate.test.mjs:522:1
+✖ a supplementary-only reply does not replace the last actual scene (0.1955ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '<dream_self_check>修文报告</dream_self_check><dream_option>下一步</dream_option>'
+  - '你仍在广场。'
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/adjudication-gate.test.mjs:525:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '<dream_self_check>修文报告</dream_self_check><dream_option>下一步</dream_option>',
+    expected: '你仍在广场。',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

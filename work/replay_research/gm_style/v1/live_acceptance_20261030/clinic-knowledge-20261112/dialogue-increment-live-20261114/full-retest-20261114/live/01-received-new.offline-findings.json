@@ -1,0 +1,45 @@
+{
+  "contract": {
+    "ok": false,
+    "issues": [
+      {
+        "code": "INVALID_ASSERTION_CLAIM"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false
+  },
+  "mismatches": [
+    {
+      "path": "reply.assertions.units.0.claims.2.argumentSpans.actor",
+      "start": 16,
+      "end": 18,
+      "quote": "黄泉",
+      "actualSlice": "泉听"
+    },
+    {
+      "path": "reply.assertions.units.0.claims.2.argumentSpans.verb",
+      "start": 18,
+      "end": 20,
+      "quote": "听清",
+      "actualSlice": "清了"
+    },
+    {
+      "path": "reply.assertions.units.0.claims.2.anchor",
+      "start": 16,
+      "end": 21,
+      "quote": "黄泉听清了。",
+      "actualSlice": "泉听清了。"
+    },
+    {
+      "path": "reply.receptions.0.evidence",
+      "start": 16,
+      "end": 21,
+      "quote": "黄泉听清了。",
+      "actualSlice": "泉听清了。"
+    }
+  ],
+  "replyUnmodified": true,
+  "patchedCopyCreated": false,
+  "firstCaseOnly": true
+}

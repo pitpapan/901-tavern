@@ -3,8 +3,8 @@ import assert from 'node:assert/strict';
 import {createOpeningEncounter} from '../combat/opening.mjs';
 import {act} from '../combat/engine.mjs';
 import {normalizeMap} from '../combat/map.mjs';
-import {combatActionReport} from '../combat/presentation.mjs';
-import {validateStep} from './narrative.mjs';
+import {combatActionReport,playerDeclarationContext,publicScene} from '../combat/presentation.mjs';
+import {validateStep,interpretDeclaration} from './narrative.mjs';
 import {beginTurn} from '../core.mjs';
 
 function fresh() {
@@ -19,10 +19,26 @@ test('a cost attributed to the first action does not constrain the second',()=>{
  const text='用移动动作后退3米，然后快步1.5米';
  const steps=[{quote:'用移动动作后退3米',command:{abilityId:'move',to:[-3,0]},cost:{actions:{move:1}}},
   {quote:'快步1.5米',command:{abilityId:'step',to:[-4.5,0]},cost:{actions:{move:1}}}];
- let b=fresh();b=act(b,validateStep(steps[0],text,b,{steps}),opts).battle;
+ let b=fresh();const first=act(b,validateStep(steps[0],text,b,{steps}),opts);b=first.battle;
  const out=act(b,validateStep(steps[1],text,b,{steps}),opts);
  assert.deepEqual(out.result.receipt.actions,{standard:1});
  assert.deepEqual(out.battle.actors.player.position,[-4.5,0]);
+ const facts=publicScene({battle:out.battle,actors:out.battle.actors,revision:2,operations:{
+  first:{signature:JSON.stringify({...steps[0].command,actorId:'player'}),summary:{revision:1,result:first.result}},
+  second:{signature:JSON.stringify({...steps[1].command,actorId:'player'}),summary:{revision:2,result:out.result}}}});
+ assert.deepEqual(facts.events.map(e=>e.travelMeters),[3,1.5]);
+ assert.deepEqual(facts.events.map(e=>e.status),['resolved','resolved']);
+});
+
+test('recorded case 65 retry pays move then standard without the invented movement restriction',()=>{
+ const text='御临风用移动动作向后移动3米，然后继续沿同方向五尺快步1.5米；不攻击。';
+ // Original server log, unchanged-input retry a583411d-aa1a-46fb-bafa-77883e720c8d.
+ const {steps}=JSON.parse('{"steps":[{"quote":"用移动动作向后移动3米","command":{"abilityId":"move","to":[-3,0]},"cost":{"actions":{"move":1}},"actionCostQuote":"用移动动作向后移动3米"},{"quote":"沿同方向五尺快步1.5米","command":{"abilityId":"step","to":[-4.5,0]}}]}');
+ let b=fresh();const health=structuredClone(b.actors.player.state.health),resources=structuredClone(b.actors.player.state.resources),paid=[];
+ for(const step of steps){const out=act(b,validateStep(step,text,b,{steps}),opts);paid.push(out.result.receipt.actions);b=out.battle;}
+ assert.deepEqual(paid,[{move:1},{standard:1}]);assert.deepEqual(b.actors.player.position,[-4.5,0]);
+ assert.equal(b.actors.player.state.turn.swift,1);assert.equal(b.activeId,'player');
+ assert.deepEqual(b.actors.player.state.health,health);assert.deepEqual(b.actors.player.state.resources,resources);
 });
 
 test('ambiguous multi-action cost attribution is rejected before execution',()=>{
@@ -51,6 +67,17 @@ test('model-estimated movement costs cannot block a declared move then step paid
  assert.deepEqual(out.result.receipt.actions,{standard:1});
  assert.equal(out.battle.actors.player.state.turn.move,0);
  assert.equal(out.battle.actors.player.state.turn.standard,0);
+});
+
+test('declaration input still offers a legal step after ordinary movement with standard action remaining',async()=>{
+ const b=act(fresh(),{actorId:'player',abilityId:'move',to:[-3,0]},opts).battle;
+ let request;
+ await interpretDeclaration({text:'继续快步1.5米',context:playerDeclarationContext(b,1)},async r=>{request=r;return '{"steps":[]}';});
+ const context=JSON.parse(request.user_input).context;
+ assert.ok(context.legalOptions.some(c=>c.abilityId==='step'));
+ assert.equal(context.abilities.step.name,'五尺快步');
+ assert.doesNotMatch(context.abilities.step.text,/普通移动后不能|不能.*普通移动/);
+ assert.deepEqual(b.actors.player.position,[-3,0]);
 });
 
 test('an actual player action-cost claim still rejects a mismatch before payment',()=>{

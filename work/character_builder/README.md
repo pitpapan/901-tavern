@@ -8,6 +8,8 @@
 
 **备用 NPC 收录：**主持与模型优先读取[901 备用 NPC 速读卡](backup_npc_quick_cards.md)；其中包含雪老救援五人、达卡斯追兵三类、[矮人工匠托尔金](capital_dwarf_torjin_candidate.md)、[峡谷战相关敌人](capital_canyon_enemies_candidate.md)及御主／从者四张候选卡。证据、细算与未定条件由速读卡链接到各详稿；本目录的备用卡不自动成为已出场或正式运行人物。
 
+**劳霖战斗卡候选（2026-10-30）：**[沐透线后期详卡](laolin_candidate_20261030.md)按已见剑术、斗气与水下牵制补出901面板，暂估RE P9；魔法入门仅列可选的精神魔力池与 RE 无支线法术，均未获原团实证。速读入口见[备用NPC卡](backup_npc_quick_cards.md)，不把后期配置回填重开T0。
+
 **第一部主世界补卡（2026-10-22）：**[怪眼队长与未知弓手](first_volume_npcs_20261022_candidate.md)，RE整数候选分别为10和7。两卡包含完整派生值、动作与消耗，原团依据和估值比较集中附后；仅存候选，未加入运行名单。本批范围限主世界。
 
 **同日续补：**新增[黄翔、哈克、雪拉、露露缇耶、慕少艾五名支援人物](first_volume_support_20261022_candidate.md)、[右近、杰洛特、威廉、悠悠四名专家](first_volume_experts_20261022_candidate.md)、[峡谷岩石聚合巨像与章末持盒瘦男子](first_volume_constructs_20261022_candidate.md)，共11张主世界候选卡；已有条目沿用，不收梦境怪物。另存[四名原创擂台对手](arena_opponents_20261022_candidate.md)：盾守／快剑／长枪／术法，RE粗估5／7／9／11。数值与能力由6.1 Sol high起草，主代理核对原帖、派生与动作后修订；正文及来源／推定／估值依据分节，统一入口见[备用速读卡](backup_npc_quick_cards.md)。本批只收录候选资料，没有接入JS引擎、当前MVU或自动安排遭遇。

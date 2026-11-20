@@ -1,0 +1,32 @@
+{
+  "completedRounds": 5,
+  "actualNewModelCalls": 15,
+  "cumulative": 420,
+  "used": 86,
+  "remaining": 114,
+  "formalFilesUnchanged": 22,
+  "candidateModulesUnchanged": 135,
+  "allRawResponsesUnmodified": true,
+  "allFiveBodiesPreserved": true,
+  "reopenExact": true,
+  "receptionPasses": 2,
+  "receptionFailures": 3,
+  "unprocessedFlagsPreserved": 3,
+  "failedExtractionWrites": 0,
+  "classificationReplay": {
+    "source": 415,
+    "newCalls": 0,
+    "exactRequest": true
+  },
+  "productChanges": 0,
+  "regressionRerun": false,
+  "reason": "Only acceptance timeout and evidence helpers changed; original product checks retained.",
+  "memory": "Existing real database read path retained, automatic updates originally off and summary originally frozen; not proof of automatic memory writes.",
+  "notCovered": [
+    "Natural pending/dependency confirmation: no valid pending produced in these five rounds",
+    "Stable extraction of normal dialogue",
+    "Long-term or many-character generalization",
+    "Formal deployment"
+  ],
+  "narrativeLimit": "Round5 seal detail was not present in request; unverified scene addition, not adopted as canonical."
+}

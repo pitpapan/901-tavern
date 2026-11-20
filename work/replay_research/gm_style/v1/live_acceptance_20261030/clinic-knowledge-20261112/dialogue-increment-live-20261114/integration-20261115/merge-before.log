@@ -1,0 +1,40 @@
+✔ bound prompt retains the existing direct-reception rule without changing schema, input or other guidance (28.6399ms)
+✔ direct speech needs no acknowledgement; explicit obstruction and uncertainty retain their own outcomes (53.4549ms)
+✔ bound utterance maps only explicit nested receipts and retains mandatory coverage (2.7401ms)
+✔ action, forged reference, missing receipts and omitted target coverage reject without mutation (3.7017ms)
+✔ uncertain coverage preserves explicit partial receipt plus uncertainty without blanket blocking (2.5249ms)
+✔ none and unresolved-only coverage require actual source evidence, never synthesize receipts (2.8511ms)
+✔ original source, role, null-pair and identity checks remain in force (3.2194ms)
+✔ schema rejects nested action and missing coverage and allows explicit none and uncertainty (844.8777ms)
+✔ model adapter uses version2 and original MVU path persists coverage and independent known/pending rows (22.5147ms)
+✔ historical flat failures are retained and cannot silently enter the new wire (12.3572ms)
+✔ model-path invalid coverage writes nothing; explicit unreceived and none never grant or ask (25.9172ms)
+✔ planned speech keeps original intent claim and none coverage without creating utterance (2.3531ms)
+✖ existing Tavern completion maps exact messages and schema without settings or response repair (11.6519ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 12
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1639.2445
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-bound.test.mjs:128:1
+✖ existing Tavern completion maps exact messages and schema without settings or response repair (11.6519ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  'merge' !== ''
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-bound.test.mjs:136:216)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'merge',
+    expected: '',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

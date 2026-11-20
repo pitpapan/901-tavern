@@ -1,0 +1,72 @@
+{
+  "id": "05-partial-first",
+  "localProtocolPassed": true,
+  "result": {
+    "status": "processed",
+    "pending": []
+  },
+  "asked": [],
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "isolated.dialogue.live.v1",
+    "chatId": "isolated.dialogue.parallel.05-partial-first",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "well.closed": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "well.closed",
+        "entityId": "well",
+        "field": "reported_status",
+        "value": "北街水井暂时停用",
+        "certainty": "rumor",
+        "visibility": "private"
+      }
+    },
+    "events": {},
+    "knowledge": {},
+    "dialogueBatches": {
+      "dialogue.7f45fc4c9242e40716815632e9a587d9c658fa050fdf065ddcdb2e57d5a44d31": {
+        "id": "dialogue.7f45fc4c9242e40716815632e9a587d9c658fa050fdf065ddcdb2e57d5a44d31",
+        "sourceAnchor": {
+          "chatId": "isolated.dialogue.parallel.05-partial-first",
+          "messageId": 0,
+          "swipeId": 0,
+          "text": "御临风对布莱特说：“北门暂停通行，改从西桥绕行。”布莱特只听清“北门暂停通行”，没听清后半句。"
+        },
+        "status": "processed",
+        "rows": []
+      }
+    }
+  },
+  "context": {
+    "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+    "actorKnowledge": [
+      {
+        "actorId": "bright",
+        "name": "布莱特",
+        "facts": []
+      },
+      {
+        "actorId": "huang",
+        "name": "黄泉",
+        "facts": []
+      },
+      {
+        "actorId": "player",
+        "name": "御临风",
+        "facts": []
+      }
+    ],
+    "availableInformation": []
+  },
+  "semanticAssessment": "pending-manual"
+}

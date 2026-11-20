@@ -1,0 +1,30 @@
+{
+  "authorization": "继续诊断五例失败并改善输出格式遵从；沿用前轮30次授权剩余20次，不重置额度。先原五例各一次，后续根据真实结果诊断，不自动修补/放宽校验/部署/正式剧情/自动批准修订。",
+  "originalAuthorization": 30,
+  "alreadyUsed": 10,
+  "baseline": 303,
+  "limit": 20,
+  "cumulative": 304,
+  "remaining": 19,
+  "attempts": [
+    {
+      "id": "01-received-new",
+      "customRequest": 304,
+      "state": "service-error",
+      "requestBytes": 27040,
+      "requestSha256": "821169ea4e479ad7b282b9ef6ce7200e15c7ee31994ede524caba757aa9a0d3e",
+      "status": 400,
+      "elapsedMs": 894,
+      "rawResponseSha256": "47a86cd0f8145c59be328b62603ca3b291b42238e111af515cd090ace8c37103",
+      "rawUnmodified": true,
+      "manualVerdict": "fail",
+      "manualAssessment": "HTTP400 explicitly rejects minContains/maxContains; no model content. Single fixed target and length1 make those keywords redundant; next revision removes only that redundancy, retaining multi-target cardinality and original checker."
+    }
+  ],
+  "closed": true,
+  "retries": 0,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "stopReason": "manual-fail"
+}

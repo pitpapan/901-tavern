@@ -1,0 +1,167 @@
+{
+  "phase": "round2",
+  "floor": 16,
+  "revision": 16,
+  "operationCount": 16,
+  "pool": {
+    "kind": "精神魔力",
+    "generic": true,
+    "special": false,
+    "origin": "candidate-901-magic-bundle-ba577210e69dafd5",
+    "acquisitionSources": [
+      "candidate-901-magic-bundle-ba577210e69dafd5"
+    ],
+    "max": 12,
+    "current": 11
+  },
+  "turn": {
+    "phase": "active",
+    "standard": 1,
+    "move": 1,
+    "swift": 1,
+    "reactionLock": false,
+    "reactionLockEnds": 0,
+    "responseDebt": false,
+    "opportunityUsed": false
+  },
+  "cooldowns": {
+    "imperial-magic:D:魔能爆": 1
+  },
+  "battle": {
+    "id": "resource-turn-20261028",
+    "round": 2,
+    "activeId": "player",
+    "mode": "combat",
+    "status": "active",
+    "pending": null
+  },
+  "huangHealth": {
+    "intact": 8,
+    "B": 0,
+    "L": 4,
+    "A": 0,
+    "temp": 0,
+    "coma": false,
+    "deteriorationStopped": false
+  },
+  "lastResult": {
+    "status": "applied",
+    "operationId": "combat/15/0/15",
+    "revision": 16,
+    "messageId": 15,
+    "swipeId": 0,
+    "result": {
+      "actorId": "huang",
+      "abilityId": "end",
+      "round": 2,
+      "damage": [],
+      "statuses": [],
+      "saves": [],
+      "healing": [],
+      "notes": [],
+      "resourceTriggers": [],
+      "after": {
+        "status": "active",
+        "winner": null,
+        "activeId": "player",
+        "visibleTo": {
+          "player": [
+            "player",
+            "huang"
+          ],
+          "huang": [
+            "player",
+            "huang"
+          ]
+        },
+        "participants": [
+          {
+            "id": "player",
+            "name": "御临风",
+            "team": "施法方",
+            "health": {
+              "intact": 12,
+              "B": 0,
+              "L": 0,
+              "A": 0,
+              "temp": 0,
+              "coma": false,
+              "deteriorationStopped": false
+            },
+            "energy": {
+              "流风": {
+                "current": 22,
+                "max": 22
+              },
+              "精神魔力": {
+                "kind": "精神魔力",
+                "generic": true,
+                "special": false,
+                "origin": "candidate-901-magic-bundle-ba577210e69dafd5",
+                "acquisitionSources": [
+                  "candidate-901-magic-bundle-ba577210e69dafd5"
+                ],
+                "max": 12,
+                "current": 11
+              }
+            },
+            "actions": {
+              "phase": "active",
+              "standard": 1,
+              "move": 1,
+              "swift": 1,
+              "reactionLock": false,
+              "reactionLockEnds": 0,
+              "responseDebt": false,
+              "opportunityUsed": false
+            },
+            "position": [
+              0,
+              0
+            ],
+            "statuses": []
+          },
+          {
+            "id": "huang",
+            "name": "黄泉",
+            "team": "受术方",
+            "health": {
+              "intact": 8,
+              "B": 0,
+              "L": 4,
+              "A": 0,
+              "temp": 0,
+              "coma": false,
+              "deteriorationStopped": false
+            },
+            "energy": {
+              "灵力": {
+                "current": 5,
+                "max": 5
+              }
+            },
+            "actions": {
+              "phase": "ended",
+              "standard": 0,
+              "move": 0,
+              "swift": 0,
+              "reactionLock": false,
+              "reactionLockEnds": 0,
+              "responseDebt": false,
+              "opportunityUsed": false
+            },
+            "position": [
+              1,
+              0
+            ],
+            "statuses": []
+          }
+        ]
+      }
+    }
+  },
+  "earlierRootsUnchanged": true,
+  "spectatorsUnchanged": true,
+  "protectedFilesUnchanged": 160,
+  "moduleHashesMatched": 112
+}

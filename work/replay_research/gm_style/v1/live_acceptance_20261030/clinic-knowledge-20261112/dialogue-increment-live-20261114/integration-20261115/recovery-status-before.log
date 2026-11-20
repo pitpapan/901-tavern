@@ -1,0 +1,33 @@
+✖ completed reply recovery consumes prepared batch without another extraction or narration (128.8531ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 821.1862
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\replay-gate-script.test.mjs:649:1
+✖ completed reply recovery consumes prepared batch without another extraction or narration (128.8531ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + {
+  +   reason: 'dialogue-extraction-failed',
+  +   status: 'unprocessed'
+  + }
+  - undefined
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/replay-gate-script.test.mjs:654:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { status: 'unprocessed', reason: 'dialogue-extraction-failed' },
+    expected: undefined,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

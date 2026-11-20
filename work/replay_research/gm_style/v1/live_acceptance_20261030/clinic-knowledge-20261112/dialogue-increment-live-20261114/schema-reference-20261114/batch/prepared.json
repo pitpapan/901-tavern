@@ -1,0 +1,79 @@
+{
+  "authorization": "继续诊断五例失败并改善输出格式遵从；沿用前轮30次授权剩余13次（304—310含一次格式探针均已计入），不重置额度。先原五例各一次，后续根据真实结果诊断，不自动修补/放宽校验/部署/正式剧情/自动批准修订。",
+  "baseline": 310,
+  "limit": 13,
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "parameters": {
+    "model": "[抗截断]gemini-3.8-flash",
+    "temperature": 1,
+    "max_tokens": 4096,
+    "stream": false,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "top_p": 1
+  },
+  "cases": [
+    {
+      "id": "01-received-new",
+      "text": "御临风对布莱特说：“西侧栈桥暂时停用。”布莱特清楚地听到了这句话。",
+      "speaker": "player",
+      "recipient": "bright",
+      "content": "西侧栈桥暂时停用",
+      "expected": "只给布莱特登记该来源说法，不确认世界真相；其余人不共享，pending为空。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 27216,
+      "requestSha256": "ec314bf96552c432cdfc2f177db3220b4d0ab06fae724a99368b36c4b3671e31",
+      "change": "response_format only; original messages, coordinates, parameters and seed identical"
+    },
+    {
+      "id": "02-received-rumor",
+      "text": "黄泉对御临风说：“北街水井暂时停用。”",
+      "speaker": "huang",
+      "recipient": "player",
+      "content": "北街水井暂时停用",
+      "known": true,
+      "expected": "黄泉已有该传闻的可信隔离取得回执；御临风取得同一传闻或等价未确认来源说法，不升级为确认，不强求复述。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 27016,
+      "requestSha256": "c8d072cd96e7036b5636d77bfbd783d1f1ddd78faf22fb965c7ada0d930da8e7",
+      "change": "response_format only; original messages, coordinates, parameters and seed identical"
+    },
+    {
+      "id": "05-partial-first",
+      "text": "御临风对布莱特说：“北门暂停通行，改从西桥绕行。”布莱特只听清“北门暂停通行”，没听清后半句。",
+      "speaker": "player",
+      "recipient": "bright",
+      "content": "北门暂停通行",
+      "expected": "只给布莱特登记前半句，不给后半句，不共享他人，pending为空。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 27525,
+      "requestSha256": "33bd4f27c71a2dc89f5420775174b864dd8660ece2a833ded5fece52cdf478db",
+      "change": "response_format only; original messages, coordinates, parameters and seed identical"
+    },
+    {
+      "id": "06-partial-second",
+      "text": "御临风对布莱特说：“北门暂停通行，改从西桥绕行。”布莱特只听清“改从西桥绕行”，没听清前半句。",
+      "speaker": "player",
+      "recipient": "bright",
+      "content": "改从西桥绕行",
+      "expected": "只给布莱特登记后半句，不给前半句，不共享他人，pending为空。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 27526,
+      "requestSha256": "4bc4ddb17994ef3a7819bccca21b003034947d09ea3e8a1d26629b8bbcd3cea7",
+      "change": "response_format only; original messages, coordinates, parameters and seed identical"
+    },
+    {
+      "id": "07-ambiguous-hearing",
+      "text": "黄泉轻声说：“渡船明早停航。”御临风在走廊另一端，记录不能确定他是否听清。",
+      "speaker": "huang",
+      "recipient": "player",
+      "content": "渡船明早停航",
+      "expected": "不确定接收保留待核，不因在场或指代明确授予知情，不立即询问。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 27309,
+      "requestSha256": "19a8b4d872892565cb86984ed3618f29cd32ec90e645c79a3767c97e33bb62ed",
+      "change": "response_format only; original messages, coordinates, parameters and seed identical"
+    }
+  ],
+  "followups": []
+}

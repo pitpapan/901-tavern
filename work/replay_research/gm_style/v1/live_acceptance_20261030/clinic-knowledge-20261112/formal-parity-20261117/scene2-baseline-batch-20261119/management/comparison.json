@@ -1,0 +1,296 @@
+{
+  "createdAt": "2026-11-19T11:24:35.291369+00:00",
+  "kind": "comparison-after-independent-initials-not-consensus-rescoring",
+  "reviewers": [
+    {
+      "name": "A",
+      "agent": "/root/scene2_reviewer_a",
+      "modelSetting": "gpt-6.2-sol",
+      "effortSetting": "high",
+      "forkTurns": "none",
+      "priorDiscussionInherited": false
+    },
+    {
+      "name": "B",
+      "agent": "/root/scene2_reviewer_b",
+      "modelSetting": "gpt-6.1-sol",
+      "effortSetting": "high",
+      "forkTurns": "none",
+      "priorDiscussionInherited": false
+    }
+  ],
+  "reviewProcess": {
+    "sameShuffledPacket": true,
+    "previousRatingsSupplied": false,
+    "mutualRatingsSuppliedBeforeSealing": false,
+    "additionalContextRequested": false,
+    "bothInitialsSavedBeforeOrchestratorReadResponses": true,
+    "humanReviewer": false,
+    "platformWorkspaceInstructionsAutomaticallyAvailable": true
+  },
+  "primaryCounts": {
+    "A": {
+      "replies": 8,
+      "p2": {
+        "明确失败": 5,
+        "无明确失败": 0,
+        "待核": 0,
+        "未触及": 3,
+        "未裁定（被P2决定）": 0
+      },
+      "p1": {
+        "明确失败": 0,
+        "无明确失败": 7,
+        "待核": 0,
+        "未触及": 0,
+        "未裁定（被P2决定）": 1
+      },
+      "overall": {
+        "明确失败": 5,
+        "无明确失败": 3,
+        "待核": 0,
+        "未触及": 0,
+        "未裁定（被P2决定）": 0
+      },
+      "pastCommunication": {
+        "有": 8,
+        "无": 0
+      },
+      "cleanControlledAnswer": {
+        "有": 0,
+        "无": 8
+      },
+      "topicNotExercised": {
+        "有": 0,
+        "无": 8
+      },
+      "unsupportedSideClaims": {
+        "有": 6,
+        "无": 2,
+        "逐项条数": 11
+      }
+    },
+    "B": {
+      "p2": {
+        "明确失败": 4,
+        "待核": 1,
+        "无明确失败": 3,
+        "未触及": 0,
+        "未裁定（被P2决定）": 0
+      },
+      "p1": {
+        "明确失败": 0,
+        "待核": 0,
+        "无明确失败": 7,
+        "未触及": 0,
+        "未裁定（被P2决定）": 1
+      },
+      "overall": {
+        "明确失败": 4,
+        "待核": 1,
+        "无明确失败": 3,
+        "未触及": 0,
+        "未裁定（被P2决定）": 0
+      },
+      "pastCommunication": {
+        "有": 8,
+        "无": 0
+      },
+      "cleanControlledAnswer": {
+        "有": 0,
+        "无": 8
+      },
+      "unsupportedSideClaims": {
+        "有": 6,
+        "无": 2,
+        "逐项条数": 11
+      },
+      "topicNotExercised": {
+        "有": 0,
+        "无": 8
+      }
+    }
+  },
+  "exactLabelAgreement": {
+    "p1": 8,
+    "p2": 4,
+    "overall": 7
+  },
+  "allThreeAgree": 4,
+  "jointDefiniteFailureCalls": [
+    565,
+    566,
+    569,
+    570
+  ],
+  "jointNoDefiniteFailureCalls": [
+    567,
+    568,
+    571
+  ],
+  "rows": [
+    {
+      "id": "R-fa9bd08db7e141feaeb3f9a76b6a9864",
+      "call": 572,
+      "a": {
+        "p2": "明确失败",
+        "p1": "无明确失败",
+        "overall": "明确失败"
+      },
+      "b": {
+        "p2": "待核",
+        "p1": "无明确失败",
+        "overall": "待核"
+      },
+      "sideClaimCountA": 1,
+      "sideClaimCountB": 0
+    },
+    {
+      "id": "R-95b1f36918b24e31bd13d6e865bb46bc",
+      "call": 569,
+      "a": {
+        "p2": "明确失败",
+        "p1": "无明确失败",
+        "overall": "明确失败"
+      },
+      "b": {
+        "p2": "明确失败",
+        "p1": "无明确失败",
+        "overall": "明确失败"
+      },
+      "sideClaimCountA": 0,
+      "sideClaimCountB": 1
+    },
+    {
+      "id": "R-106180d03d0246c89593eace77d61578",
+      "call": 567,
+      "a": {
+        "p2": "未触及",
+        "p1": "无明确失败",
+        "overall": "无明确失败"
+      },
+      "b": {
+        "p2": "无明确失败",
+        "p1": "无明确失败",
+        "overall": "无明确失败"
+      },
+      "sideClaimCountA": 2,
+      "sideClaimCountB": 2
+    },
+    {
+      "id": "R-3cecc24b626f4322b875513a7a26e33d",
+      "call": 566,
+      "a": {
+        "p2": "明确失败",
+        "p1": "未裁定（被P2决定）",
+        "overall": "明确失败"
+      },
+      "b": {
+        "p2": "明确失败",
+        "p1": "未裁定（被P2决定）",
+        "overall": "明确失败"
+      },
+      "sideClaimCountA": 3,
+      "sideClaimCountB": 2
+    },
+    {
+      "id": "R-8b24570fcf984b0d8787ab91554e4b2e",
+      "call": 568,
+      "a": {
+        "p2": "未触及",
+        "p1": "无明确失败",
+        "overall": "无明确失败"
+      },
+      "b": {
+        "p2": "无明确失败",
+        "p1": "无明确失败",
+        "overall": "无明确失败"
+      },
+      "sideClaimCountA": 2,
+      "sideClaimCountB": 2
+    },
+    {
+      "id": "R-3ffcdee4d76a4b07b7776f0a2e05e16e",
+      "call": 565,
+      "a": {
+        "p2": "明确失败",
+        "p1": "无明确失败",
+        "overall": "明确失败"
+      },
+      "b": {
+        "p2": "明确失败",
+        "p1": "无明确失败",
+        "overall": "明确失败"
+      },
+      "sideClaimCountA": 1,
+      "sideClaimCountB": 2
+    },
+    {
+      "id": "R-c5e725791e2d4cbbb18a5970e8966f0e",
+      "call": 570,
+      "a": {
+        "p2": "明确失败",
+        "p1": "无明确失败",
+        "overall": "明确失败"
+      },
+      "b": {
+        "p2": "明确失败",
+        "p1": "无明确失败",
+        "overall": "明确失败"
+      },
+      "sideClaimCountA": 0,
+      "sideClaimCountB": 0
+    },
+    {
+      "id": "R-2af0c2239ba647ee98b693caccfeb94b",
+      "call": 571,
+      "a": {
+        "p2": "未触及",
+        "p1": "无明确失败",
+        "overall": "无明确失败"
+      },
+      "b": {
+        "p2": "无明确失败",
+        "p1": "无明确失败",
+        "overall": "无明确失败"
+      },
+      "sideClaimCountA": 2,
+      "sideClaimCountB": 2
+    }
+  ],
+  "fileSha256": {
+    "reviews/reviewer-a.initial.json": "8a0e5b18356a651c7062ff39ba63f9b3ec7254069e8f77e658f8c1ce8689ffb0",
+    "reviews/reviewer-a.initial.md": "774ae34d70e5d2aa78d0b2d2a1cba9c242d2193e5f5b979916c777bf7f5c2763",
+    "reviews/reviewer-b.initial.json": "5ab5342d94e0d56f16c7b3a8008cbe3cefdbe692903020619383f1ba37cf68ef",
+    "reviews/reviewer-b.initial.md": "b8e90825083197be280e82bef558c16b4f29a7bf5814e80eafc633255a626ae2",
+    "reviewer-packet/context.md": "4a77acedf62f83a366ee33c82d0cdc2b372e4b40c6ef56b632d0386b7fa8f482",
+    "reviewer-packet/rating-template.md": "923b2b04258847679389ba53e35fe1d357cd2653c437ebb9d2b3b0d16b326977",
+    "reviewer-packet/responses.json": "870b1fa53534c455769423a56c65e05b4fdd7f8236734761e6191a591dc0d8b9",
+    "reviewer-packet/rubric-v3.0.md": "b5cbf03edd0a7aab524843010c3e5e9e035b9f0be29dda050216da0e6fa37de8"
+  },
+  "technicalVerification": {
+    "attempts": 8,
+    "requestBytes": 111147,
+    "allRequestsFrozenIdentical": true,
+    "allResponseContentAndAnonymousBodyMatched": true,
+    "rawResponseHttp200StopCount": 8,
+    "returnedModel": "gemini-3.8-flash-n",
+    "technicalFailures": 0,
+    "retries": 0,
+    "cumulative": 572,
+    "balance": 0,
+    "protectedPriorFilesUnchanged": 54,
+    "reviewQuoteChecks": {
+      "A": 39,
+      "B": 39
+    },
+    "reviewCountsRecomputed": true
+  },
+  "limitations": [
+    "AI reviewers, no human review; no claim of statistical independence.",
+    "P2 exact-label differences include three unexercised-versus-no-definite-failure labels, and one substantive framing disagreement.",
+    "Side-claim totals match but item selection and granularity differ.",
+    "Single new fact, same speaker and location, offline fact scope and reused NO_CHECK; no runtime knowledge integration or deployed change.",
+    "No stable rate estimate, causal attribution, treatment comparison or claim that v3 is fully validated."
+  ]
+}

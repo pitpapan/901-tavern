@@ -1,0 +1,28 @@
+✖ compact coverage generation describes the same mutually exclusive states as the existing checker (18.7358ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 408.6138
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-compact.test.mjs:144:1
+✖ compact coverage generation describes the same mutually exclusive states as the existing checker (18.7358ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /uncertain：有unknown接收或非空unresolved，优先于其他状态/. Input:
+  
+  '本次返回dialogue-reception/7单轮知情选择记录，按response_format填写。只处理原文中的言说与接收，history/memory只消歧；不批准、修订或执行输入。selections逐项选{fragmentId,quote}，quote须在片段内逐字连续且唯一。其他引用为selections从0起的条目编号，不是字符坐标；同一依据复用编号。utterances按顺序编号，receptions.utterance引用其从0起编号，程序生成其余ID、坐标和回执结构。utterances中speakerId选actors中的ID，speaker选身份依据；content选完整实际言说，anchor选发生依据，mode沿原枚举表示本命题是否实际发生。计划、内心话不算实际传达。scope三项选各自原文依据编号或null；非null的语义值直接取所选原文，不填标签字符串。receptions每条对应一位听者的一段接收范围；content须在父言说内并保留否定和条件。listenerId选角色ID或null；identityKind为explicit/reply/unknown，identity选该听者依据。reply须用historyMessageId唯一确定被回应者，identity及reply evidence均选父回答内原文；其他身份historyMessageId=null。evidenceKind为direct/reply/overheard/obstacle/unknown，evidence选本轮传达、听取、障碍或歧义依据。明确收到、没收到、是否收到未知分别记录范围；unknown身份用null且evidenceKind=unknown，不猜在场者。明确直接向某人说出且没有接收障碍可以received，不强求复述确认；计划、假设、内心话不算接收。propositionRef仅在内容与已有命题一致时引用其ID，否则null表示新的有来源说法；转述与谎言不自动确认内容为真。无法形成合法言说或接收范围的歧义放unresolved并选原文依据。每轮明确coverage.status和evidence：recorded有接收记录，uncertain仍有歧义，none确无接收；不能用none省略实际言说。只登记来源说法，不把消息当世界真相。'
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-compact.test.mjs:146:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '本次返回dialogue-reception/7单轮知情选择记录，按response_format填写。只处理原文中的言说与接收，history/memory只消歧；不批准、修订或执行输入。selections逐项选{fragmentId,quote}，quote须在片段内逐字连续且唯一。其他引用为selections从0起的条目编号，不是字符坐标；同一依据复用编号。utterances按顺序编号，receptions.utterance引用其从0起编号，程序生成其余ID、坐标和回执结构。utterances中speakerId选actors中的ID，speaker选身份依据；content选完整实际言说，anchor选发生依据，mode沿原枚举表示本命题是否实际发生。计划、内心话不算实际传达。scope三项选各自原文依据编号或null；非null的语义值直接取所选原文，不填标签字符串。receptions每条对应一位听者的一段接收范围；content须在父言说内并保留否定和条件。listenerId选角色ID或null；identityKind为explicit/reply/unknown，identity选该听者依据。reply须用historyMessageId唯一确定被回应者，identity及reply evidence均选父回答内原文；其他身份historyMessageId=null。evidenceKind为direct/reply/overheard/obstacle/unknown，evidence选本轮传达、听取、障碍或歧义依据。明确收到、没收到、是否收到未知分别记录范围；unknown身份用null且evidenceKind=unknown，不猜在场者。明确直接向某人说出且没有接收障碍可以received，不强求复述确认；计划、假设、内心话不算接收。propositionRef仅在内容与已有命题一致时引用其ID，否则null表示新的有来源说法；转述与谎言不自动确认内容为真。无法形成合法言说或接收范围的歧义放unresolved并选原文依据。每轮明确coverage.status和evidence：recorded有接收记录，uncertain仍有歧义，none确无接收；不能用none省略实际言说。只登记来源说法，不把消息当世界真相。',
+    expected: /uncertain：有unknown接收或非空unresolved，优先于其他状态/,
+    operator: 'match',
+    diff: 'simple'
+  }

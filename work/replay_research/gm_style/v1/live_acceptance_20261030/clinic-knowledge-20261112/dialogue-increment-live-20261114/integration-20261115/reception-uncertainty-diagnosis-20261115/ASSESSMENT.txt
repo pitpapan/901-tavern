@@ -1,0 +1,19 @@
+2026-11-15 JSON与引用绑定续诊（475—477）
+
+本轮未发现新的明确本地程序缺口，未修改产品、提示、Schema、引用校验或测试。复用原prepareRelatedDialogueExtraction、createDialogueSemanticAdapter、片段选择、接收范围与知情回执。原始回复全部保留，不自动补字段、修JSON、改选引用或转换动作。
+
+诊断：复核472/473的非法解释文字，均已存在于HTTP原始message.content中；474未开口反例合法通过，说明同一合同并非只能输出非法JSON，不能据此定位到非空回执的必然错误。reply身份/依据必须引用当前回答的规则仍已发出。此次三份实际messages和response_format与当前合同深比较一致，没有漏传证据。原164项正反例离线回归通过，没有新增重复用例。
+
+有限对照各一次，逐份核对：
+475 uncertaintycheck.reproduce.partial：原472请求54346字节逐字节保持。这次JSON/Schema通过，完整言说及前半received、后半not_received的contentSpan正确分开；但两条listener.reply均选“答道”，前半evidence.reply也选“答道”。这些引用在旁白而非父回答内容内，违反现有已发合同，原校验Reply evidence must reference current answer拒绝，隔离写入0。不是把正确的范围判断说成错误，也不是本地丢项。
+476 uncertaintycheck.reproduce.obstacle：原473请求54787字节逐字节保持。JSON/Schema/引用检查及本次未接收知情指标通过。父言说是黄泉回答“山路已经封闭了”；listener bright/reply/history0并引用当前回答，evidence obstacle准确引用“已听不到这里的声音。”，status not_received，不给player/bright或其他角色新增消息。隔离knowledge/events/pending空，facts与输入相同，dialogueQuestions([])为0；只有2次批次保存，processed rows为空。可采用本次未接收指标，不代表所有动作/状态断言完整，也不是修改代码后的改善。
+477 uncertaintycheck.probe.partial：相近新例，布莱特明确听清前半句，后半是否听清无人能确定。可读部分将前半received、后半uncertain分片，第一条直接引用听清关系，第二条保留代词“他”身份及未知证据、unresolved。原始JSON在位置1423混入非法文字，原生解析拒绝，隔离写入0。未据可读片段修补成对象，未生成真实待核，所以本轮没有验证后续依赖时才问的真实承接。不能把局部内容合理算整体成功。
+
+结果：本轮1份原例通过有限未接收指标，1份绑定失败、1份JSON语法失败。没有稳定性改善可归因；476证明当前合同和本地严格校验可以容纳这一原例的正确回复，不能因此清除475等历史失败。其他历史用例没有声称全部重跑；上一轮已通过的474未开口控制未重复耗用。
+
+三份HTTP200/stop，输出638/509/716 tokens均低于4096。原始响应保存前后哈希一致，进一步上游根因未确定。不能把本地拒绝正确等同于模型已可靠，也不能将所有失败归为输入或Schema不可表达。
+
+额度：本轮3次（475—477），原200额度已用143，余57，累计477；本轮有限对照关闭，未使用余额保留。671份旧证据、全部历史逐次账本和22份正式保护文件哈希不变；两份原请求逐字节相同，三份生成参数不变。
+
+未自动修补、放宽校验、补关键词、部署、写正式剧情、恢复自动批准或修订路线。
+证据：diagnosis.json、contract-verification.json、campaign-tests.log、cases.json、各check.json、verification.json、complete-outputs.txt；完整请求和HTTP原始响应在同级iteration-200-20261115对应文件。

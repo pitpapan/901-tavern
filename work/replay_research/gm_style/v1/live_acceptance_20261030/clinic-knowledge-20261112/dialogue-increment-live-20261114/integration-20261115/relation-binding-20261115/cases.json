@@ -1,0 +1,66 @@
+[
+  {
+    "id": "relation.original.006",
+    "original": "selection.reproduce.play006",
+    "expected": "三段言说完整；黄泉回答给玩家，布莱特听黄泉按实际范围；布莱特回答不凭同行或咱们给黄泉授予全段。",
+    "bytes": 111682,
+    "requestSha256": "49ade2aa08743f9cca3365ad72ddb384023cfc7e4856e82758102b5fa4907d17",
+    "inputAndCatalogueUnchanged": true
+  },
+  {
+    "id": "relation.original.009",
+    "original": "selection.reproduce.play009",
+    "expected": "三段回答完整；当前回答对应玩家，接收依据不误用布莱特听上轮提问；无依据不互授整段。",
+    "bytes": 125686,
+    "requestSha256": "c0edd470e4bdef0348dde2d7f72b28401c2b7dbe63901f5360776de1c791108d",
+    "inputAndCatalogueUnchanged": true
+  },
+  {
+    "id": "relation.direct",
+    "original": null,
+    "expected": "玩家直接接收，不要求复述；布莱特不接收。",
+    "bytes": 54931,
+    "requestSha256": "44909cdea9ed58ba26f2474ebb2677274c2e1a08baebc1f36e46245a556abcfe",
+    "inputAndCatalogueUnchanged": false
+  },
+  {
+    "id": "relation.npc_reply",
+    "original": null,
+    "expected": "唯一被回应者bright，引用当前回答承接历史，不把user楼层当作player身份，不给player授予。",
+    "bytes": 53065,
+    "requestSha256": "1b2e144a1789b297b97203fd17dca0dafbc284e32f31772336e92b62260a3ccd",
+    "inputAndCatalogueUnchanged": false
+  },
+  {
+    "id": "relation.partial",
+    "original": null,
+    "expected": "玩家全段；bright仅前半received，后半not_received；不得全句误绑。",
+    "bytes": 54986,
+    "requestSha256": "93f57ab10df2e5562ff9d2790081238da2e85946f65156d803365358c574b15e",
+    "inputAndCatalogueUnchanged": false
+  },
+  {
+    "id": "relation.ambiguous",
+    "original": null,
+    "expected": "保留实际言说和未知听者待核，不授予任一人，无关时不问。",
+    "bytes": 53739,
+    "requestSha256": "81c534fab43f3310bd8f5ec9f01d34c1da232a655303d84a9516762ab677e9ba",
+    "inputAndCatalogueUnchanged": false
+  },
+  {
+    "id": "relation.obstacle",
+    "original": null,
+    "expected": "实际言说保留；玩家not_received，不能因问答身份而received。",
+    "bytes": 54765,
+    "requestSha256": "79c97b17423625709b116fba120834c77243e4b5240d5621be8e5b32a4aa1590",
+    "inputAndCatalogueUnchanged": false
+  },
+  {
+    "id": "relation.unsaid",
+    "original": null,
+    "expected": "不产生实际言说接收/新知情，coverage none；内心内容不当asserted世界事实。",
+    "bytes": 52679,
+    "requestSha256": "b74816d941b0bff6410cd7218518a0015392a19d3cd1aad547579c651746cf99",
+    "inputAndCatalogueUnchanged": false
+  }
+]

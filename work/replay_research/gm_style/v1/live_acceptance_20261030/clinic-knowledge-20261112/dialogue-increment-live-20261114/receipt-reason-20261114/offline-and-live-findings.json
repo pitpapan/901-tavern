@@ -1,0 +1,49 @@
+{
+  "diagnosis": "Missing explicit reception.reason type guidance; role-span and action-endpoint rules already present in custom284, whose violations remain model noncompliance.",
+  "productChange": "Only reason string/empty string explanation; no validator/schema/value conversion changes.",
+  "newTests": 4,
+  "red": {
+    "pass": 3,
+    "fail": 1
+  },
+  "offlineTestsPassed": 179,
+  "campaignPassed": 123,
+  "enginePassed": 56,
+  "oldEvidenceUnchanged": 270,
+  "results": [
+    {
+      "id": "05-partial-first",
+      "verdict": "pass-for-case-target",
+      "exactUTF16Spans": 26,
+      "huangReceivedOnly": "东门封闭",
+      "otherActorsReceived": false,
+      "pending": 0,
+      "asked": 0,
+      "worldTruthConfirmed": false,
+      "rawResponseSHA256": "3dff1174b5111c3f2e1a59feb9ca88d41ca86c21e8ff2b7c27937c893fbdeffe"
+    },
+    {
+      "id": "06-partial-second",
+      "verdict": "pass-for-case-target",
+      "exactUTF16Spans": 26,
+      "huangReceivedOnly": "改走南门",
+      "otherActorsReceived": false,
+      "pending": 0,
+      "asked": 0,
+      "worldTruthConfirmed": false,
+      "rawResponseSHA256": "e5fa175f07907ae2150b58a3c943e3ff78983514fcfe7ed8c6a43f15b34829fa"
+    }
+  ],
+  "callsThisTurn": 2,
+  "previousAuthorizedPoolLimit": 3,
+  "previouslyUsed": 1,
+  "totalPoolUsed": 3,
+  "remaining": 0,
+  "cumulative": 286,
+  "diagnosticNote": "Initial offline script assumed one events entry per receipt. Existing system records receipt and per-recipient knowledge event separately; corrected diagnostic assumption only. Product/reply unchanged.",
+  "limitations": [
+    "Two cases pass target checks, not whole-suite or universal semantic certification.",
+    "Cases07-10 remain untested.",
+    "Historical284 failure and original responses retained; no causal reliability claim from two outputs."
+  ]
+}

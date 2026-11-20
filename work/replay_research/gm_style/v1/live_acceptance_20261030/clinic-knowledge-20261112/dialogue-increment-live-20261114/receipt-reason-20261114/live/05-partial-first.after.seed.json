@@ -1,0 +1,864 @@
+{
+  "chatId": "isolated.dialogue.live.05-partial-first",
+  "chat": [
+    {
+      "mes": "布莱特对黄泉说：“东门封闭，改走南门。”黄泉只听清“东门封闭”，没听清后半句。",
+      "is_user": false,
+      "swipe_id": 0
+    }
+  ],
+  "floors": {
+    "0": {
+      "stat_data": {
+        "901_rules_poc": {
+          "schemaVersion": 1,
+          "revision": 3,
+          "chatId": "isolated.dialogue.live.05-partial-first",
+          "actors": {
+            "player": {
+              "name": "御临风",
+              "state": {
+                "name": "御临风",
+                "attributes": {
+                  "力量": 5,
+                  "敏捷": 5,
+                  "智力": 4,
+                  "感知": 4,
+                  "意志": 1,
+                  "风度": 2
+                },
+                "size": 5,
+                "hpBonus": 0,
+                "derived": {
+                  "hpMax": 12,
+                  "defense": 4,
+                  "speed": 25,
+                  "initiative": 7,
+                  "willMax": 3,
+                  "vision": 40
+                },
+                "skills": {
+                  "运动": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "肉搏": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "白刃": {
+                    "level": 5,
+                    "subs": {
+                      "长剑": {
+                        "level": 3
+                      }
+                    }
+                  },
+                  "射击": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "隐藏": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "求生": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "驾驶": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "学识": {
+                    "level": 2,
+                    "subs": {}
+                  },
+                  "科学": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "神秘": {
+                    "level": 2,
+                    "subs": {}
+                  },
+                  "电脑": {
+                    "level": 2,
+                    "subs": {}
+                  },
+                  "医疗": {
+                    "level": 2,
+                    "subs": {}
+                  },
+                  "洞察": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "社交": {
+                    "level": 2,
+                    "subs": {}
+                  }
+                },
+                "resources": {
+                  "流风": {
+                    "current": 22,
+                    "max": 22
+                  }
+                },
+                "attributeAuto": {},
+                "derivedOverrides": [
+                  "hpMax",
+                  "willMax",
+                  "speed",
+                  "initiative"
+                ],
+                "health": {
+                  "intact": 12,
+                  "B": 0,
+                  "L": 0,
+                  "A": 0,
+                  "temp": 0,
+                  "coma": false,
+                  "deteriorationStopped": false
+                },
+                "will": {
+                  "current": 3,
+                  "max": 3
+                },
+                "xp": 0,
+                "greatPowersAvailable": 0,
+                "statuses": [],
+                "attributeDamage": {},
+                "turn": {
+                  "phase": "ready",
+                  "standard": 0,
+                  "move": 0,
+                  "swift": 0,
+                  "reactionLock": false,
+                  "reactionLockEnds": 0,
+                  "responseDebt": false,
+                  "opportunityUsed": false
+                },
+                "extendedActions": {},
+                "inventory": [
+                  {
+                    "name": "雪莲子",
+                    "quantity": 1,
+                    "source": "原"
+                  },
+                  {
+                    "name": "培元丹",
+                    "quantity": 3,
+                    "source": "原"
+                  },
+                  {
+                    "name": "药A",
+                    "quantity": 2,
+                    "source": "原"
+                  },
+                  {
+                    "name": "药B",
+                    "quantity": 3,
+                    "source": "原"
+                  },
+                  {
+                    "name": "药C",
+                    "quantity": 4,
+                    "source": "原"
+                  },
+                  {
+                    "name": "雷霆药剂",
+                    "quantity": null,
+                    "source": "原：数量未记"
+                  },
+                  {
+                    "name": "恶灵提示符",
+                    "quantity": null,
+                    "source": "原：100为价格，非数量"
+                  }
+                ],
+                "unknownSkills": {
+                  "制造": {
+                    "level": null,
+                    "subs": {
+                      "炼药": {
+                        "level": 2
+                      }
+                    }
+                  }
+                },
+                "recoveryRules": {
+                  "flow": {
+                    "attributes": [
+                      "敏捷",
+                      "感知"
+                    ],
+                    "physical": true,
+                    "longRest": true
+                  },
+                  "flowRecoveryCheck": {
+                    "attributes": [
+                      "敏捷",
+                      "感知"
+                    ],
+                    "source": "用户2026-10-23确认"
+                  }
+                }
+              }
+            },
+            "huang": {
+              "name": "黄泉",
+              "state": {
+                "name": "黄泉",
+                "attributes": {
+                  "力量": 5,
+                  "敏捷": 6,
+                  "智力": 2,
+                  "感知": 5,
+                  "意志": 3,
+                  "风度": 3
+                },
+                "size": 5,
+                "hpBonus": 0,
+                "derived": {
+                  "hpMax": 12,
+                  "defense": 5,
+                  "speed": 16,
+                  "initiative": 13,
+                  "willMax": 6,
+                  "vision": 50
+                },
+                "skills": {
+                  "运动": {
+                    "level": 2,
+                    "subs": {}
+                  },
+                  "肉搏": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "白刃": {
+                    "level": 5,
+                    "subs": {
+                      "太刀": {
+                        "level": 1
+                      }
+                    }
+                  },
+                  "射击": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "隐藏": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "求生": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "驾驶": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "学识": {
+                    "level": 2,
+                    "subs": {}
+                  },
+                  "科学": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "神秘": {
+                    "level": 1,
+                    "subs": {
+                      "除灵": {
+                        "level": 1
+                      }
+                    }
+                  },
+                  "调查": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "洞察": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "社交": {
+                    "level": 1,
+                    "subs": {
+                      "感受": {
+                        "level": 1
+                      },
+                      "表达": {
+                        "level": 1
+                      },
+                      "说服": {
+                        "level": 1
+                      }
+                    }
+                  },
+                  "电脑": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "医疗": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "制造": {
+                    "level": 0,
+                    "subs": {}
+                  }
+                },
+                "resources": {
+                  "灵力": {
+                    "current": 5,
+                    "max": 5
+                  }
+                },
+                "attributeAuto": {},
+                "derivedOverrides": [
+                  "hpMax",
+                  "willMax",
+                  "speed",
+                  "initiative"
+                ],
+                "health": {
+                  "intact": 12,
+                  "B": 0,
+                  "L": 0,
+                  "A": 0,
+                  "temp": 0,
+                  "coma": false,
+                  "deteriorationStopped": false
+                },
+                "will": {
+                  "current": 6,
+                  "max": 6
+                },
+                "xp": 0,
+                "greatPowersAvailable": 0,
+                "statuses": [],
+                "attributeDamage": {},
+                "turn": {
+                  "phase": "ready",
+                  "standard": 0,
+                  "move": 0,
+                  "swift": 0,
+                  "reactionLock": false,
+                  "reactionLockEnds": 0,
+                  "responseDebt": false,
+                  "opportunityUsed": false
+                },
+                "extendedActions": {}
+              }
+            },
+            "jiang": {
+              "name": "姜子尤",
+              "state": {
+                "name": "姜子尤",
+                "attributes": {
+                  "力量": 8,
+                  "敏捷": 2,
+                  "智力": 2,
+                  "感知": 3,
+                  "意志": 3,
+                  "风度": 3
+                },
+                "size": 5,
+                "hpBonus": 2,
+                "derived": {
+                  "hpMax": 20,
+                  "defense": 2,
+                  "speed": 25,
+                  "initiative": 6,
+                  "willMax": 6,
+                  "vision": 30
+                },
+                "skills": {
+                  "运动": {
+                    "level": 3,
+                    "subs": {}
+                  },
+                  "肉搏": {
+                    "level": 5,
+                    "subs": {
+                      "拳击": {
+                        "level": 2
+                      }
+                    }
+                  },
+                  "白刃": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "射击": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "隐藏": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "求生": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "驾驶": {
+                    "level": 2,
+                    "subs": {}
+                  },
+                  "学识": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "科学": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "神秘": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "调查": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "洞察": {
+                    "level": 2,
+                    "subs": {}
+                  },
+                  "社交": {
+                    "level": 1,
+                    "subs": {
+                      "威逼": {
+                        "level": 2
+                      },
+                      "街头智慧": {
+                        "level": 1
+                      },
+                      "沟通": {
+                        "level": 1
+                      }
+                    }
+                  },
+                  "电脑": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "医疗": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "制造": {
+                    "level": 0,
+                    "subs": {}
+                  }
+                },
+                "resources": {
+                  "气": {
+                    "current": 2,
+                    "max": 2
+                  },
+                  "斗气": {
+                    "current": 2,
+                    "max": 2
+                  }
+                },
+                "attributeAuto": {},
+                "derivedOverrides": [
+                  "hpMax",
+                  "willMax",
+                  "speed",
+                  "initiative"
+                ],
+                "health": {
+                  "intact": 20,
+                  "B": 0,
+                  "L": 0,
+                  "A": 0,
+                  "temp": 0,
+                  "coma": false,
+                  "deteriorationStopped": false
+                },
+                "will": {
+                  "current": 6,
+                  "max": 6
+                },
+                "xp": 0,
+                "greatPowersAvailable": 0,
+                "statuses": [],
+                "attributeDamage": {},
+                "turn": {
+                  "phase": "ready",
+                  "standard": 0,
+                  "move": 0,
+                  "swift": 0,
+                  "reactionLock": false,
+                  "reactionLockEnds": 0,
+                  "responseDebt": false,
+                  "opportunityUsed": false
+                },
+                "extendedActions": {}
+              }
+            },
+            "bright": {
+              "name": "布莱特",
+              "state": {
+                "name": "布莱特",
+                "attributes": {
+                  "力量": 3,
+                  "敏捷": 4,
+                  "智力": 2,
+                  "感知": 4,
+                  "意志": 2,
+                  "风度": 1
+                },
+                "size": 5,
+                "hpBonus": 0,
+                "derived": {
+                  "hpMax": 8,
+                  "defense": 4,
+                  "speed": 22,
+                  "initiative": 9,
+                  "willMax": 5,
+                  "vision": 40
+                },
+                "skills": {
+                  "运动": {
+                    "level": 2,
+                    "subs": {}
+                  },
+                  "肉搏": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "白刃": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "射击": {
+                    "level": 1,
+                    "subs": {
+                      "长弓": {
+                        "level": 4
+                      }
+                    }
+                  },
+                  "隐藏": {
+                    "level": 2,
+                    "subs": {}
+                  },
+                  "求生": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "驾驶": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "学识": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "科学": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "神秘": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "调查": {
+                    "level": 2,
+                    "subs": {
+                      "搜索": {
+                        "level": 1
+                      }
+                    }
+                  },
+                  "洞察": {
+                    "level": 2,
+                    "subs": {
+                      "追踪": {
+                        "level": 1
+                      }
+                    }
+                  },
+                  "社交": {
+                    "level": 1,
+                    "subs": {
+                      "动物沟通": {
+                        "level": 1
+                      },
+                      "感受": {
+                        "level": 1
+                      },
+                      "唬骗": {
+                        "level": 1
+                      },
+                      "说服": {
+                        "level": 1
+                      }
+                    }
+                  },
+                  "电脑": {
+                    "level": 0,
+                    "subs": {}
+                  },
+                  "医疗": {
+                    "level": 1,
+                    "subs": {}
+                  },
+                  "制造": {
+                    "level": 0,
+                    "subs": {
+                      "淬毒": {
+                        "level": 2
+                      }
+                    }
+                  }
+                },
+                "resources": {},
+                "attributeAuto": {},
+                "derivedOverrides": [
+                  "hpMax",
+                  "willMax",
+                  "speed",
+                  "initiative"
+                ],
+                "health": {
+                  "intact": 8,
+                  "B": 0,
+                  "L": 0,
+                  "A": 0,
+                  "temp": 0,
+                  "coma": false,
+                  "deteriorationStopped": false
+                },
+                "will": {
+                  "current": 5,
+                  "max": 5
+                },
+                "xp": 0,
+                "greatPowersAvailable": 0,
+                "statuses": [],
+                "attributeDamage": {},
+                "turn": {
+                  "phase": "ready",
+                  "standard": 0,
+                  "move": 0,
+                  "swift": 0,
+                  "reactionLock": false,
+                  "reactionLockEnds": 0,
+                  "responseDebt": false,
+                  "opportunityUsed": false
+                },
+                "extendedActions": {}
+              }
+            }
+          },
+          "operations": {
+            "story-dialogue/38df70aa28e11a4200d3f9ac441554b4b2e0aa75b7e548df4ae8e8fed2c1c3b7": {
+              "signature": "{\"id\":\"dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b\",\"sourceAnchor\":{\"chatId\":\"isolated.dialogue.live.05-partial-first\",\"messageId\":0,\"swipeId\":0,\"text\":\"布莱特对黄泉说：“东门封闭，改走南门。”黄泉只听清“东门封闭”，没听清后半句。\"},\"status\":\"prepared\",\"rows\":[{\"id\":\"dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894\",\"claimId\":\"c1_part1\",\"speakerId\":\"bright\",\"recipientIds\":[\"huang\"],\"propositionRef\":null,\"content\":\"东门封闭\",\"quote\":\"东门封闭\",\"belief\":\"uncertain\",\"status\":\"ready\",\"extractionReason\":\"\",\"reason\":\"\",\"evidence\":{\"documentId\":\"current\",\"start\":20,\"end\":31,\"quote\":\"黄泉只听清“东门封闭”\"},\"unresolved\":[]}]}",
+              "summary": {
+                "status": "applied",
+                "kind": "knowledge",
+                "operationId": "story-dialogue/38df70aa28e11a4200d3f9ac441554b4b2e0aa75b7e548df4ae8e8fed2c1c3b7",
+                "revision": 1,
+                "messageId": 0,
+                "swipeId": 0
+              }
+            },
+            "story-knowledge/dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894": {
+              "signature": "{\"id\":\"dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894\",\"status\":\"received\",\"authority\":\"host-confirmed\",\"sourceAnchor\":{\"chatId\":\"isolated.dialogue.live.05-partial-first\",\"messageId\":0,\"swipeId\":0,\"text\":\"布莱特对黄泉说：“东门封闭，改走南门。”黄泉只听清“东门封闭”，没听清后半句。\"},\"recipientIds\":[\"huang\"],\"propositionRefs\":[\"dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894.message\"],\"channel\":\"message\",\"belief\":\"uncertain\",\"reportedMessage\":{\"speakerId\":\"bright\",\"text\":\"东门封闭\",\"quote\":\"东门封闭\"}}",
+              "summary": {
+                "status": "applied",
+                "kind": "knowledge",
+                "operationId": "story-knowledge/dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894",
+                "revision": 2,
+                "messageId": 0,
+                "swipeId": 0
+              }
+            },
+            "story-dialogue/118f2b9f67e77ac452cfa762248d33fd733875bc606cab9ca1b235dbd2b3dcf3": {
+              "signature": "{\"id\":\"dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b\",\"sourceAnchor\":{\"chatId\":\"isolated.dialogue.live.05-partial-first\",\"messageId\":0,\"swipeId\":0,\"text\":\"布莱特对黄泉说：“东门封闭，改走南门。”黄泉只听清“东门封闭”，没听清后半句。\"},\"status\":\"processed\",\"rows\":[{\"id\":\"dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894\",\"claimId\":\"c1_part1\",\"speakerId\":\"bright\",\"recipientIds\":[\"huang\"],\"propositionRef\":null,\"content\":\"东门封闭\",\"quote\":\"东门封闭\",\"belief\":\"uncertain\",\"status\":\"registered\",\"extractionReason\":\"\",\"reason\":\"\",\"evidence\":{\"documentId\":\"current\",\"start\":20,\"end\":31,\"quote\":\"黄泉只听清“东门封闭”\"},\"unresolved\":[]}]}",
+              "summary": {
+                "status": "applied",
+                "kind": "knowledge",
+                "operationId": "story-dialogue/118f2b9f67e77ac452cfa762248d33fd733875bc606cab9ca1b235dbd2b3dcf3",
+                "revision": 3,
+                "messageId": 0,
+                "swipeId": 0
+              }
+            }
+          },
+          "storyKnowledge": {
+            "schemaVersion": 1,
+            "catalogId": "isolated.dialogue.live.v1",
+            "chatId": "isolated.dialogue.live.05-partial-first",
+            "timeBasis": "retained-chat-message-order",
+            "facts": {
+              "harbor.closed": {
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "discoveryConditions": [
+                  "actual-receipt"
+                ],
+                "dependencyRefs": [],
+                "id": "harbor.closed",
+                "entityId": "harbor",
+                "field": "reported_status",
+                "value": "码头停航",
+                "certainty": "rumor",
+                "visibility": "private"
+              },
+              "dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894.message": {
+                "id": "dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894.message",
+                "entityId": "bright",
+                "field": "reported_message",
+                "value": {
+                  "kind": "reported_message",
+                  "speakerId": "bright",
+                  "text": "东门封闭"
+                },
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "certainty": "uncertain",
+                "visibility": "private",
+                "discoveryConditions": [
+                  "actual-receipt"
+                ],
+                "dependencyRefs": []
+              }
+            },
+            "events": {
+              "received.dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894": {
+                "id": "received.dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894",
+                "kind": "message.arrived",
+                "data": {
+                  "knowerIds": [
+                    "huang"
+                  ],
+                  "propositionRefs": [
+                    "dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894.message"
+                  ],
+                  "at": {
+                    "id": "legacy.story.order",
+                    "clock": "turn",
+                    "at": 0,
+                    "actorId": "legacy.story"
+                  },
+                  "sourceAnchor": {
+                    "chatId": "isolated.dialogue.live.05-partial-first",
+                    "messageId": 0,
+                    "swipeId": 0,
+                    "text": "布莱特对黄泉说：“东门封闭，改走南门。”黄泉只听清“东门封闭”，没听清后半句。"
+                  }
+                },
+                "sourceRefs": [
+                  {
+                    "file": "retained-chat/isolated.dialogue.live.05-partial-first",
+                    "line": 1
+                  }
+                ],
+                "causeRefs": []
+              },
+              "dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894.huang.dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894.message.event": {
+                "id": "dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894.huang.dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894.message.event",
+                "kind": "knowledge.granted",
+                "data": {
+                  "grant": {
+                    "id": "dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894.huang.dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894.message",
+                    "knowerId": "huang",
+                    "propositionRef": "dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894.message",
+                    "eventRef": "received.dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894",
+                    "at": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 0,
+                      "actorId": "legacy.story"
+                    },
+                    "channel": "message",
+                    "belief": "uncertain"
+                  }
+                },
+                "causeRefs": [
+                  "received.dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894"
+                ],
+                "sourceRefs": [
+                  {
+                    "file": "retained-chat/isolated.dialogue.live.05-partial-first",
+                    "line": 1
+                  }
+                ]
+              }
+            },
+            "knowledge": {
+              "dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894.huang.dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894.message": {
+                "id": "dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894.huang.dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894.message",
+                "knowerId": "huang",
+                "propositionRef": "dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894.message",
+                "eventRef": "received.dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894",
+                "at": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "channel": "message",
+                "belief": "uncertain"
+              }
+            },
+            "dialogueBatches": {
+              "dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b": {
+                "id": "dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b",
+                "sourceAnchor": {
+                  "chatId": "isolated.dialogue.live.05-partial-first",
+                  "messageId": 0,
+                  "swipeId": 0,
+                  "text": "布莱特对黄泉说：“东门封闭，改走南门。”黄泉只听清“东门封闭”，没听清后半句。"
+                },
+                "status": "processed",
+                "rows": [
+                  {
+                    "id": "dialogue.4b60c1b2eba500da3f16f58110fc02a996ce39344fe80de787ff4ca7a557bd0b.aee3d30407ccfb32dbb15266aaf45f0c534ab53070ff6124d195cca995fe4894",
+                    "claimId": "c1_part1",
+                    "speakerId": "bright",
+                    "recipientIds": [
+                      "huang"
+                    ],
+                    "propositionRef": null,
+                    "content": "东门封闭",
+                    "quote": "东门封闭",
+                    "belief": "uncertain",
+                    "status": "registered",
+                    "extractionReason": "",
+                    "reason": "",
+                    "evidence": {
+                      "documentId": "current",
+                      "start": 20,
+                      "end": 31,
+                      "quote": "黄泉只听清“东门封闭”"
+                    },
+                    "unresolved": []
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

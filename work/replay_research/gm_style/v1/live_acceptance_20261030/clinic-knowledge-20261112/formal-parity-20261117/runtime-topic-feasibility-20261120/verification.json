@@ -1,0 +1,143 @@
+{
+  "status": "isolated-native-save-and-capture-verified",
+  "modelCalls": 0,
+  "cumulative": 600,
+  "remaining": 0,
+  "classificationFixture": "NO_CHECK / ordinary_dialogue, derived from historical 547; no new classification",
+  "captures": {
+    "before.classification": {
+      "phase": "before",
+      "kind": "classification",
+      "sha256": "c6a501101ee4599267e40b606d51f7cf05a60d6fe0cdfcb4015f24b590e2685e",
+      "bytes": 84317,
+      "localClassificationFixture": true,
+      "upstreamCalls": 0,
+      "endpointIsLocal": true,
+      "messageCount": 2
+    },
+    "before.narration": {
+      "phase": "before",
+      "kind": "narration",
+      "sha256": "37fa363001346e7ee76f4bc27f8a82a99e76070dcc17502c8b0c52e1db2748a3",
+      "bytes": 111635,
+      "localClassificationFixture": false,
+      "upstreamCalls": 0,
+      "endpointIsLocal": true,
+      "messageCount": 14
+    },
+    "received-bright.classification": {
+      "phase": "received-bright",
+      "kind": "classification",
+      "sha256": "dcf723ed999a127091a5b7b558b6a24f59ef940497ba9b1a387669bf9013537d",
+      "bytes": 85531,
+      "localClassificationFixture": true,
+      "upstreamCalls": 0,
+      "endpointIsLocal": true,
+      "messageCount": 2
+    },
+    "received-bright.narration": {
+      "phase": "received-bright",
+      "kind": "narration",
+      "sha256": "351af2e5759f5591867feafd25a878581237d7a0d73aeba6a1ebe49f434a02ec",
+      "bytes": 112905,
+      "localClassificationFixture": false,
+      "upstreamCalls": 0,
+      "endpointIsLocal": true,
+      "messageCount": 14
+    },
+    "reopened-bright.classification": {
+      "phase": "reopened-bright",
+      "kind": "classification",
+      "sha256": "dcf723ed999a127091a5b7b558b6a24f59ef940497ba9b1a387669bf9013537d",
+      "bytes": 85531,
+      "localClassificationFixture": true,
+      "upstreamCalls": 0,
+      "endpointIsLocal": true,
+      "messageCount": 2
+    },
+    "reopened-bright.narration": {
+      "phase": "reopened-bright",
+      "kind": "narration",
+      "sha256": "351af2e5759f5591867feafd25a878581237d7a0d73aeba6a1ebe49f434a02ec",
+      "bytes": 112905,
+      "localClassificationFixture": false,
+      "upstreamCalls": 0,
+      "endpointIsLocal": true,
+      "messageCount": 14
+    },
+    "received-huang.classification": {
+      "phase": "received-huang",
+      "kind": "classification",
+      "sha256": "24728a3de123e832f5d6ad6fb1730784152ff2e9fd33696d596df3d9c5f09898",
+      "bytes": 85531,
+      "localClassificationFixture": true,
+      "upstreamCalls": 0,
+      "endpointIsLocal": true,
+      "messageCount": 2
+    },
+    "received-huang.narration": {
+      "phase": "received-huang",
+      "kind": "narration",
+      "sha256": "954032a4299fb8c6570eae2814f5f7e40a5d749f8bb885395bc94c15a596187e",
+      "bytes": 112905,
+      "localClassificationFixture": false,
+      "upstreamCalls": 0,
+      "endpointIsLocal": true,
+      "messageCount": 14
+    }
+  },
+  "snapshots": {
+    "before": "ad40bf14fcbfef625b07efe32e52696367dc32931328fa94823dc44023e19ac2",
+    "received": "7efa7e890a730e0cda86d4230109df4b96d551d493b67d55957e1430b482868a",
+    "idempotent": "7efa7e890a730e0cda86d4230109df4b96d551d493b67d55957e1430b482868a",
+    "reopened": "7efa7e890a730e0cda86d4230109df4b96d551d493b67d55957e1430b482868a"
+  },
+  "source": {
+    "chatId": "901 帝都正式续玩 20261106 - Branch #2",
+    "messageId": 9,
+    "swipeId": 0,
+    "text": "桌外隔离测试告知（test-only，非正式剧情）：一名来客单独对布莱特说：“我听说九雪医馆馆主与雪老有旧，二者是不同的人。递出这条口信时以钴蓝纸燕为记。”布莱特听清原话，御临风与黄泉不在听距内，也未获告。"
+  },
+  "belief": "rumor",
+  "receipts": [
+    {
+      "chatId": "901 帝都正式续玩 20261106 - Branch #2",
+      "sourceId": 9,
+      "result": {
+        "status": "applied",
+        "kind": "knowledge",
+        "operationId": "story-knowledge/clinic.topic.bright.test.20261120",
+        "revision": 3,
+        "messageId": 9,
+        "swipeId": 0
+      }
+    },
+    {
+      "chatId": "901 帝都正式续玩 20261106 - Branch #2",
+      "sourceId": 9,
+      "result": {
+        "status": "already_applied",
+        "kind": "knowledge",
+        "operationId": "story-knowledge/clinic.topic.bright.test.20261120",
+        "revision": 3,
+        "messageId": 9,
+        "swipeId": 0
+      }
+    }
+  ],
+  "sameRequestBytesAfterReopen": true,
+  "sameProjectionBytesAcrossRecipientBranches": true,
+  "recipientBodiesDifferOnlyByQuestion": true,
+  "formalBaselineFiles": 288,
+  "formalFilesWithChangedHash": [
+    "data/default-user/settings.json"
+  ],
+  "priorEvidenceVerified": 30,
+  "browser": {
+    "port": 18132,
+    "operatedBy": "main agent",
+    "terraCouldBindMainTab": false
+  },
+  "deployed": false,
+  "humanCalibrationCompleted": false
+}

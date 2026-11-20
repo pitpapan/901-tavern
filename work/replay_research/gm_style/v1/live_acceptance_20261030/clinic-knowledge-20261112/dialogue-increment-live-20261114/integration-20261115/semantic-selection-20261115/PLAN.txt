@@ -1,0 +1,9 @@
+语义选择记录最小实现；沿现有统一计划执行，规格为本轮用户确认的上一条方案。
+1 [x] 先添加失败测试：显式dialogue-reception/6；合法选择等价展开、拒绝缺项/额外字段/旧格式/错误引用/错误历史；部分明确+未知不串范围；未接收/未开口；源快照失效和原始JSON失败零写入。
+2 [x] 在story-dialogue-knowledge原模块增加prepareSemanticDialogueExtraction，复用v5准备及check。utterance只填speaker选择/content选择/mode/显式scope配对/anchor/receptions；回执只填content选择、listener、evidence、propositionRef、reason。显式ref只允许utterance.content/reception.content，不接受省略为默认。程序生成utterance/receipt IDs、重复正文及speakerId、接收status、unit.status、内部inputRef。coverage/必要非言说claims仍显式原合同，后者保留原ID以兼容order/interval端点，不重写完整Game IR。
+3 [x] createDialogueSemanticAdapter及observeDialogue新增显式v6分派；默认v5与未配置disabled保持。新wire独立校验后展开，旧wire绝不自动升级。复用MVU、不增加生产状态归属。
+4 [x] 运行新测试红→绿及现有164项相关回归；核对Schema合法性及正负一致性、重开幂等、无关0问/依赖才问、历史失败原字节与22正式文件保持；更新原说明及统一计划。
+Ruling: 新wire只替换生成结构说明，复用原Schema组件和校验；不在旧提示后叠加。模型仍负责语义与原文选择，非言说必要claims仍沿共享完整合同。
+Ruling: 使用现有工作区，由主agent执行及检查；本轮不调用任何剧情模型或外部审查模型，不新增自动路线，不部署/打包正式产物/写正式剧情/提交已有脏工作。
+
+完成记录：首轮7项失败确认缺API，首次实现7/7绿；集中检查新增角色数字ID用例9/10红，修正新speaker选择器类型检查；最终10新增+164既有=174/174。无审查模型或剧情模型调用。

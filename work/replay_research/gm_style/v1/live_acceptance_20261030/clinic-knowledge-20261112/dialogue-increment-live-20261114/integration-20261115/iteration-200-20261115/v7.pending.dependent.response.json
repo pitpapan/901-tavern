@@ -1,0 +1,31 @@
+{
+  "kind": "v7.pending.dependent",
+  "startedAt": "2026-11-15T22:33:21.586Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T22:33:24.617Z",
+  "headersElapsedMs": 3032,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b1b7965d27f2ba-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 22:33:24 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=YQk4gV%2FaU9XvrM4FSwyyRG7KHEml7PIiqCzPvbwO7uKcHO75h0oBj5DTh9%2Fpc7ruBIs9Kl%2BmS2ribHDjzrX6UrBGfHN1Im6%2BC6jAcmwfVTyHvggjNvj2NA5ykah5zQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611152233217293729228268d9d6l8edS2zY",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "6800f6ef-7cb0-45cb-a6e4-3a04a663b2b1"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"9d3850c6-8126-43a4-88e5-5f2c9e1ecd3a\",\"object\":\"chat.completion\",\"created\":1794782004,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"inputRef\\\":\\\"31ce712cd66a55955d9e99fa3317720bfe38ffcb72b560c11f60dd4c2b53cb5a\\\",\\\"required\\\":[\\\"dialogue.2db835c110432391f68b45ede32ff557be11e8f5275e3a6c685b2f7eb0dce1c6.unresolved.d059c2bb75dcb13f1ec666fc713ddbaa5d4e870519a8b29316e50454b412036d\\\"]}\",\"reasoning_content\":\"The dialogue indicates that one person heard the detour route for tomorrow morning, but it's unclear if the addressee in the user request, \\\"Bright,\\\" is the one. Confirmation is needed to verify whether Bright possesses the required information to navigate independently. If the context of the conversation can determine which individual received the information, that will be critical to answering the user's request.\\n\\n\\n\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":786,\"completion_tokens\":200,\"total_tokens\":1436,\"completion_tokens_details\":{\"reasoning_tokens\":450}}}",
+  "responseBytes": 1038,
+  "responseBodySha256BeforePrivacyRedaction": "13b00c6832958d6492a5eaf5430bd4991e23415ef95423bdddd989802b71cfb7",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T22:33:24.622Z",
+  "elapsedMs": 3037
+}

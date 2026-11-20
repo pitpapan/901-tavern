@@ -1,0 +1,72 @@
+{
+  "id": "03-not-heard",
+  "localProtocolPassed": true,
+  "result": {
+    "status": "processed",
+    "pending": []
+  },
+  "asked": [],
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "isolated.dialogue.live.v1",
+    "chatId": "isolated.dialogue.live.03-not-heard",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "harbor.closed": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "harbor.closed",
+        "entityId": "harbor",
+        "field": "reported_status",
+        "value": "码头停航",
+        "certainty": "rumor",
+        "visibility": "private"
+      }
+    },
+    "events": {},
+    "knowledge": {},
+    "dialogueBatches": {
+      "dialogue.71fd23a8cde66e348ecdc4f63d91e742d028e3b02033415ad0b82567c9bd9a8e": {
+        "id": "dialogue.71fd23a8cde66e348ecdc4f63d91e742d028e3b02033415ad0b82567c9bd9a8e",
+        "sourceAnchor": {
+          "chatId": "isolated.dialogue.live.03-not-heard",
+          "messageId": 0,
+          "swipeId": 0,
+          "text": "布莱特对黄泉说：“东门封闭。”黄泉戴着隔音耳罩，没有听见。"
+        },
+        "status": "processed",
+        "rows": []
+      }
+    }
+  },
+  "context": {
+    "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+    "actorKnowledge": [
+      {
+        "actorId": "bright",
+        "name": "布莱特",
+        "facts": []
+      },
+      {
+        "actorId": "huang",
+        "name": "黄泉",
+        "facts": []
+      },
+      {
+        "actorId": "player",
+        "name": "御临风",
+        "facts": []
+      }
+    ],
+    "availableInformation": []
+  },
+  "semanticAssessment": "pending-manual"
+}

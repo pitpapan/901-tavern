@@ -1,0 +1,31 @@
+{
+  "kind": "v7.accept.uncertain",
+  "startedAt": "2026-11-15T22:26:21.553Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T22:26:24.307Z",
+  "headersElapsedMs": 2755,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b1ad552d070312-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 22:26:24 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=sfwU%2BvnoOu97rZRdxIEOLI45d%2FRXC5Zs21F%2Fj0tc3W0I271FJPbYJn5X2yt7aLJaVGKjqLyeSuY41dwkZqMCC%2B47P9umFC9xrQQ0hyGCShVw6OWgX4rLs7HVO%2Bz0LQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611152226216939217048268d9d6xbh6dpTv",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "6c0e7df8-69da-4dae-aa0e-a2ee2a09fdfc"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"65dd8949-f1b6-41b8-90cb-8a81e0a6ab27\",\"object\":\"chat.completion\",\"created\":1794781584,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/7\\\",\\\"contextRef\\\":\\\"a99e464c3e1f421386d06588875cec6542221cfafb03f611baabb647278ab086\\\",\\\"selections\\\":[{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"},{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"山路已经封闭了，明早在渡口会合。\\\"},{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"答道\\\"},{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"布莱特\\\"},{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"山路已经封闭了，\\\"},{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"听清了前半句\\\"},{\\\"fragmentId\\\":\\\"f7\\\",\\\"quote\\\":\\\"他有没有听清后半句，眼下无人能确定。\\\"}],\\\"utterances\\\":[{\\\"speakerId\\\":\\\"huang\\\",\\\"speaker\\\":0,\\\"content\\\":1,\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":2}],\\\"receptions\\\":[{\\\"utterance\\\":0,\\\"content\\\":4,\\\"listenerId\\\":\\\"bright\\\",\\\"identityKind\\\":\\\"explicit\\\",\\\"identity\\\":3,\\\"historyMessageId\\\":null,\\\"evidenceKind\\\":\\\"direct\\\",\\\"evidence\\\":5,\\\"propositionRef\\\":null}],\\\"unresolved\\\":[{\\\"selection\\\":6,\\\"reason\\\":\\\"钟声响起后布莱特是否听清后半句存在不确定性，眼下无人能确定\\\"}],\\\"coverage\\\":{\\\"status\\\":\\\"uncertain\\\",\\\"evidence\\\":6}}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2562,\"completion_tokens\":330,\"total_tokens\":2892}}",
+  "responseBytes": 1447,
+  "responseBodySha256BeforePrivacyRedaction": "59014bd5bbbd4ca1eb8129f5cdcd1278a6de40770c30993fd4df91c540b09550",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T22:26:24.314Z",
+  "elapsedMs": 2761
+}

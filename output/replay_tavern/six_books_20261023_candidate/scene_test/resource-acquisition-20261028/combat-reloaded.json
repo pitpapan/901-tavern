@@ -1,0 +1,309 @@
+{
+  "phase": "reloaded",
+  "floor": 20,
+  "revision": 19,
+  "operationCount": 19,
+  "pool": {
+    "kind": "精神魔力",
+    "generic": true,
+    "special": false,
+    "origin": "candidate-901-magic-bundle-ba577210e69dafd5",
+    "acquisitionSources": [
+      "candidate-901-magic-bundle-ba577210e69dafd5"
+    ],
+    "max": 12,
+    "current": 10
+  },
+  "turn": {
+    "phase": "active",
+    "standard": 0,
+    "move": 1,
+    "swift": 1,
+    "reactionLock": false,
+    "reactionLockEnds": 0,
+    "responseDebt": false,
+    "opportunityUsed": false
+  },
+  "cooldowns": {
+    "imperial-magic:D:魔能爆": 2
+  },
+  "battle": {
+    "id": "resource-turn-20261028",
+    "round": 3,
+    "activeId": "player",
+    "mode": "combat",
+    "status": "active",
+    "pending": null
+  },
+  "huangHealth": {
+    "intact": 5,
+    "B": 0,
+    "L": 7,
+    "A": 0,
+    "temp": 0,
+    "coma": false,
+    "deteriorationStopped": false
+  },
+  "lastResult": {
+    "status": "applied",
+    "operationId": "combat-acceptance/901 资源取得隔离验收 20261028 - 2026-10-28@08h03m47s108ms/D-cast",
+    "revision": 19,
+    "messageId": 18,
+    "swipeId": 0,
+    "result": {
+      "actorId": "player",
+      "abilityId": "mechanism",
+      "round": 3,
+      "damage": [],
+      "statuses": [],
+      "saves": [],
+      "healing": [],
+      "notes": [],
+      "mechanism": {
+        "resourceId": "imperial-magic:D:魔能爆",
+        "operation": "cast",
+        "cost": 1,
+        "pool": "精神魔力",
+        "counterPayments": [],
+        "targets": [
+          {
+            "targetId": "huang",
+            "effectivePower": 3,
+            "steps": [
+              {
+                "op": "attack",
+                "weapon": 7,
+                "defense": {
+                  "total": 10,
+                  "parts": {
+                    "base": 7,
+                    "natural": 0,
+                    "armor": 3,
+                    "dodge": 0,
+                    "insight": 0,
+                    "block": 0,
+                    "cover": 0,
+                    "cultivation": 0,
+                    "force": 0,
+                    "device": 0,
+                    "shield": 0,
+                    "luck": 0,
+                    "morale": 0,
+                    "enhancement": 0,
+                    "holy": 0,
+                    "unholy": 0,
+                    "technique": 0,
+                    "performance": 0,
+                    "intrinsic": 0,
+                    "unnamed": 0
+                  },
+                  "remainingAP": 0,
+                  "guarded": false,
+                  "extraSuccesses": 0
+                },
+                "roll": {
+                  "eligible": true,
+                  "willCost": 0,
+                  "skill": {
+                    "level": 2,
+                    "auto": 0,
+                    "main": 2,
+                    "sub": 0
+                  },
+                  "adjustments": {
+                    "allowed": true,
+                    "penalty": 0,
+                    "bonus": 0,
+                    "entries": []
+                  },
+                  "autoSuccesses": 0,
+                  "dp": 9,
+                  "luck": false,
+                  "dice": [
+                    6,
+                    8,
+                    7,
+                    1,
+                    2,
+                    8,
+                    10,
+                    4,
+                    4,
+                    7
+                  ],
+                  "used": 10,
+                  "rolledSuccesses": 3,
+                  "luckMishap": false,
+                  "reExtraSuccesses": 0,
+                  "total": 3
+                },
+                "damage": 3
+              },
+              {
+                "op": "damage",
+                "actualDamage": 3
+              }
+            ]
+          }
+        ],
+        "damage": [
+          {
+            "targetId": "huang",
+            "kind": "energy",
+            "energyType": "force",
+            "input": 3,
+            "inputSeverity": "L",
+            "severity": "L",
+            "actualDamage": 3,
+            "causedDamage": true,
+            "temporaryAbsorbed": 0
+          }
+        ],
+        "damageEvents": [
+          {
+            "sourceActorId": "player",
+            "targetId": "huang",
+            "damageNature": "attack",
+            "originalSegments": [
+              {
+                "amount": 3,
+                "severity": "L",
+                "kind": "energy",
+                "energyType": "force",
+                "magical": true,
+                "grade": "D",
+                "sourceId": "imperial-magic:D:魔能爆",
+                "unavoidable": false,
+                "attack": true,
+                "ranged": true
+              }
+            ],
+            "causedDamage": true,
+            "converted": 0,
+            "temporaryAbsorbed": 0,
+            "actualDamage": 3,
+            "additionalActualDamage": 0,
+            "additionalSources": []
+          }
+        ],
+        "locationDisclosures": [
+          {
+            "observerId": "huang",
+            "source": "imperial-magic:D:魔能爆",
+            "targetId": "player",
+            "position": [
+              0,
+              0
+            ],
+            "precision": "vague",
+            "battleId": "resource-turn-20261028",
+            "round": 3,
+            "movementSerial": 0
+          }
+        ]
+      },
+      "after": {
+        "status": "active",
+        "winner": null,
+        "activeId": "player",
+        "visibleTo": {
+          "player": [
+            "player",
+            "huang"
+          ],
+          "huang": [
+            "player",
+            "huang"
+          ]
+        },
+        "participants": [
+          {
+            "id": "player",
+            "name": "御临风",
+            "team": "施法方",
+            "health": {
+              "intact": 12,
+              "B": 0,
+              "L": 0,
+              "A": 0,
+              "temp": 0,
+              "coma": false,
+              "deteriorationStopped": false
+            },
+            "energy": {
+              "流风": {
+                "current": 22,
+                "max": 22
+              },
+              "精神魔力": {
+                "kind": "精神魔力",
+                "generic": true,
+                "special": false,
+                "origin": "candidate-901-magic-bundle-ba577210e69dafd5",
+                "acquisitionSources": [
+                  "candidate-901-magic-bundle-ba577210e69dafd5"
+                ],
+                "max": 12,
+                "current": 10
+              }
+            },
+            "actions": {
+              "phase": "active",
+              "standard": 0,
+              "move": 1,
+              "swift": 1,
+              "reactionLock": false,
+              "reactionLockEnds": 0,
+              "responseDebt": false,
+              "opportunityUsed": false
+            },
+            "position": [
+              0,
+              0
+            ],
+            "statuses": []
+          },
+          {
+            "id": "huang",
+            "name": "黄泉",
+            "team": "受术方",
+            "health": {
+              "intact": 5,
+              "B": 0,
+              "L": 7,
+              "A": 0,
+              "temp": 0,
+              "coma": false,
+              "deteriorationStopped": false
+            },
+            "energy": {
+              "灵力": {
+                "current": 5,
+                "max": 5
+              }
+            },
+            "actions": {
+              "phase": "ended",
+              "standard": 0,
+              "move": 0,
+              "swift": 0,
+              "reactionLock": false,
+              "reactionLockEnds": 0,
+              "responseDebt": false,
+              "opportunityUsed": false
+            },
+            "position": [
+              1,
+              0
+            ],
+            "statuses": []
+          }
+        ]
+      }
+    }
+  },
+  "earlierRootsUnchanged": true,
+  "spectatorsUnchanged": true,
+  "protectedFilesUnchanged": 160,
+  "moduleHashesMatched": 112
+}

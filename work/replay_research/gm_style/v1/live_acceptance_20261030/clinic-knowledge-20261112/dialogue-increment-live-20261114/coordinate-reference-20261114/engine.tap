@@ -1,0 +1,280 @@
+TAP version 13
+# Subtest: coordinate instructions and deterministic data preserve original input and zero-based end-exclusive bounds
+ok 1 - coordinate instructions and deterministic data preserve original input and zero-based end-exclusive bounds
+  ---
+  duration_ms: 6.4276
+  type: 'test'
+  ...
+# Subtest: decoded quotes, backslashes, tabs, spaces and CRLF remain separate original units
+ok 2 - decoded quotes, backslashes, tabs, spaces and CRLF remain separate original units
+  ---
+  duration_ms: 0.8572
+  type: 'test'
+  ...
+# Subtest: astral and combining characters use UTF-16 offsets without visual-character normalization
+ok 3 - astral and combining characters use UTF-16 offsets without visual-character normalization
+  ---
+  duration_ms: 0.8083
+  type: 'test'
+  ...
+# Subtest: long references retain global offsets and do not split a surrogate pair across blocks
+ok 4 - long references retain global offsets and do not split a surrogate pair across blocks
+  ---
+  duration_ms: 0.7526
+  type: 'test'
+  ...
+# Subtest: repeated quotes and separate documents keep their own positions; changed source gets a new binding
+ok 5 - repeated quotes and separate documents keep their own positions; changed source gets a new binding
+  ---
+  duration_ms: 1.2
+  type: 'test'
+  ...
+# Subtest: coordinates never repair replies: shifted, block-local, inclusive-end or forged quotes still fail
+ok 6 - coordinates never repair replies: shifted, block-local, inclusive-end or forged quotes still fail
+  ---
+  duration_ms: 3.2128
+  type: 'test'
+  ...
+# Subtest: a real repeated substring is not certified as the right semantic occurrence
+ok 7 - a real repeated substring is not certified as the right semantic occurrence
+  ---
+  duration_ms: 1.1897
+  type: 'test'
+  ...
+# Subtest: 60 references are frozen separately from text-only cases
+ok 8 - 60 references are frozen separately from text-only cases
+  ---
+  duration_ms: 11.0055
+  type: 'test'
+  ...
+# Subtest: draft requests are source-blind; answers/categories cannot enter extraction messages or affect cache identities
+ok 9 - draft requests are source-blind; answers/categories cannot enter extraction messages or affect cache identities
+  ---
+  duration_ms: 10.1377
+  type: 'test'
+  ...
+# Subtest: all 120 reference-shaped replies validate, without making an approval or semantic completeness claim
+ok 10 - all 120 reference-shaped replies validate, without making an approval or semantic completeness claim
+  ---
+  duration_ms: 43.7085
+  type: 'test'
+  ...
+# Subtest: forged quotes, stale binding, duplicate units, complete flags and missing qualifiers fail the contract
+ok 11 - forged quotes, stale binding, duplicate units, complete flags and missing qualifiers fail the contract
+  ---
+  duration_ms: 2.003
+  type: 'test'
+  ...
+# Subtest: order endpoints need distinct action witnesses, not just distinct invented IDs
+ok 12 - order endpoints need distinct action witnesses, not just distinct invented IDs
+  ---
+  duration_ms: 1.0393
+  type: 'test'
+  ...
+# Subtest: empty claimed extraction is structurally possible but must not be mistaken for semantic success
+ok 13 - empty claimed extraction is structurally possible but must not be mistaken for semantic success
+  ---
+  duration_ms: 0.8442
+  type: 'test'
+  ...
+# Subtest: audit gets only the same draft and validated prior extraction, never source or stale output
+ok 14 - audit gets only the same draft and validated prior extraction, never source or stale output
+  ---
+  duration_ms: 2.293
+  type: 'test'
+  ...
+# Subtest: saved case003 action is model-authored and structural compilation grants no semantic approval
+ok 15 - saved case003 action is model-authored and structural compilation grants no semantic approval
+  ---
+  duration_ms: 17.7886
+  type: 'test'
+  ...
+# Subtest: all120 synthetic fixtures compile without changes, without approval and without mutating input
+ok 16 - all120 synthetic fixtures compile without changes, without approval and without mutating input
+  ---
+  duration_ms: 80.5292
+  type: 'test'
+  ...
+# Subtest: scope and property fields bind scalar values to witnesses across types, no repairs
+ok 17 - scope and property fields bind scalar values to witnesses across types, no repairs
+  ---
+  duration_ms: 47.9333
+  type: 'test'
+  ...
+# Subtest: independent development fields preserve temporal/condition/reported scope, no anchor borrowing
+ok 18 - independent development fields preserve temporal/condition/reported scope, no anchor borrowing
+  ---
+  duration_ms: 2.5059
+  type: 'test'
+  ...
+# Subtest: standard JSON Schema rejects mixed field types/null witnesses before compilation
+ok 19 - standard JSON Schema rejects mixed field types/null witnesses before compilation
+  ---
+  duration_ms: 21409.3334
+  type: 'test'
+  ...
+# Subtest: batch schema requires each requested case exactly once while allowing reordered replies
+ok 20 - batch schema requires each requested case exactly once while allowing reordered replies
+  ---
+  duration_ms: 2557.2669
+  type: 'test'
+  ...
+# Subtest: grounded batch is source-blind and emits strict schema; legacy request replay remains default
+ok 21 - grounded batch is source-blind and emits strict schema; legacy request replay remains default
+  ---
+  duration_ms: 3.6259
+  type: 'test'
+  ...
+# Subtest: grounded batch compiles each canonical reply and rejects duplicate items or any missing witness
+ok 22 - grounded batch compiles each canonical reply and rejects duplicate items or any missing witness
+  ---
+  duration_ms: 29.4154
+  type: 'test'
+  ...
+# Subtest: paired fields preserve old rejection of invented quotes and same-action relation endpoints
+ok 23 - paired fields preserve old rejection of invented quotes and same-action relation endpoints
+  ---
+  duration_ms: 26.6764
+  type: 'test'
+  ...
+# Subtest: unsupported order and added posture remain score failures after lossless compilation
+ok 24 - unsupported order and added posture remain score failures after lossless compilation
+  ---
+  duration_ms: 188.9609
+  type: 'test'
+  ...
+# Subtest: current door state cannot support continuous state while an explicit equivalent duration can
+ok 25 - current door state cannot support continuous state while an explicit equivalent duration can
+  ---
+  duration_ms: 9.1414
+  type: 'test'
+  ...
+# Subtest: continuous-state evidence retains the starting boundary
+ok 26 - continuous-state evidence retains the starting boundary
+  ---
+  duration_ms: 0.8262
+  type: 'test'
+  ...
+# Subtest: comma-separated bounds, conditions and attribution remain attached to the assertion
+ok 27 - comma-separated bounds, conditions and attribution remain attached to the assertion
+  ---
+  duration_ms: 2.8834
+  type: 'test'
+  ...
+# Subtest: seeing late or already does not establish a first occurrence
+ok 28 - seeing late or already does not establish a first occurrence
+  ---
+  duration_ms: 0.9954
+  type: 'test'
+  ...
+# Subtest: uncertain, quoted attribution, metadata and another source do not supply a state assertion
+ok 29 - uncertain, quoted attribution, metadata and another source do not supply a state assertion
+  ---
+  duration_ms: 1.1172
+  type: 'test'
+  ...
+# Subtest: actual supported reply cannot approve always-open door under current detail policy
+ok 30 - actual supported reply cannot approve always-open door under current detail policy
+  ---
+  duration_ms: 64.7031
+  type: 'test'
+  ...
+# Subtest: an extreme position needs explicit same-object inscription evidence, even beside a negative field
+ok 31 - an extreme position needs explicit same-object inscription evidence, even beside a negative field
+  ---
+  duration_ms: 1.0923
+  type: 'test'
+  ...
+# Subtest: negative original-document scope cannot be narrowed away or broadened without evidence
+ok 32 - negative original-document scope cannot be narrowed away or broadened without evidence
+  ---
+  duration_ms: 2.0245
+  type: 'test'
+  ...
+# Subtest: actual extreme-position text and narrowed negative remain rejected even when the model supports both
+ok 33 - actual extreme-position text and narrowed negative remain rejected even when the model supports both
+  ---
+  duration_ms: 27.3824
+  type: 'test'
+  ...
+# Subtest: negative coverage is checked across the complete same-source unit group, never another source
+ok 34 - negative coverage is checked across the complete same-source unit group, never another source
+  ---
+  duration_ms: 0.8215
+  type: 'test'
+  ...
+# Subtest: shared prompt specifies paired evidence, cross-sentence scope, ambiguity and no deletion escape
+ok 35 - shared prompt specifies paired evidence, cross-sentence scope, ambiguity and no deletion escape
+  ---
+  duration_ms: 5.1965
+  type: 'test'
+  ...
+# Subtest: explicit object requires exact role evidence; malformed pairs remain rejected without mutation
+ok 36 - explicit object requires exact role evidence; malformed pairs remain rejected without mutation
+  ---
+  duration_ms: 5.8972
+  type: 'test'
+  ...
+# Subtest: unique cross-sentence object can cite preceding text outside action anchor with UTF-16 offsets
+ok 37 - unique cross-sentence object can cite preceding text outside action anchor with UTF-16 offsets
+  ---
+  duration_ms: 1.6029
+  type: 'test'
+  ...
+# Subtest: unmentioned object stays paired null while clear action survives
+ok 38 - unmentioned object stays paired null while clear action survives
+  ---
+  duration_ms: 1.2508
+  type: 'test'
+  ...
+# Subtest: ambiguous antecedent retains action and located unresolved evidence without guessing
+ok 39 - ambiguous antecedent retains action and located unresolved evidence without guessing
+  ---
+  duration_ms: 1.2703
+  type: 'test'
+  ...
+# Subtest: valid quotes cannot certify correct role semantics or completeness; no automatic approval
+ok 40 - valid quotes cannot certify correct role semantics or completeness; no automatic approval
+  ---
+  duration_ms: 1.6371
+  type: 'test'
+  ...
+# Subtest: shared prompt distinguishes normalized meaning from verbatim evidence and permits supported shared spans
+ok 41 - shared prompt distinguishes normalized meaning from verbatim evidence and permits supported shared spans
+  ---
+  duration_ms: 0.8167
+  type: 'test'
+  ...
+# Subtest: explicit and normalized property labels retain values and can share exact supporting evidence
+ok 42 - explicit and normalized property labels retain values and can share exact supporting evidence
+  ---
+  duration_ms: 3.9925
+  type: 'test'
+  ...
+# Subtest: normalized and shared evidence still reject missing, forged and mismatched spans without filling from value
+ok 43 - normalized and shared evidence still reject missing, forged and mismatched spans without filling from value
+  ---
+  duration_ms: 2.0586
+  type: 'test'
+  ...
+# Subtest: unresolved property category or subject retains known content and original ambiguity evidence
+ok 44 - unresolved property category or subject retains known content and original ambiguity evidence
+  ---
+  duration_ms: 1.2585
+  type: 'test'
+  ...
+# Subtest: normalization cannot be certified from real quotes alone: inferred emotion, other subject and omission stay unverified
+ok 45 - normalization cannot be certified from real quotes alone: inferred emotion, other subject and omission stay unverified
+  ---
+  duration_ms: 1.2785
+  type: 'test'
+  ...
+1..45
+# tests 45
+# suites 0
+# pass 45
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 25019.7457

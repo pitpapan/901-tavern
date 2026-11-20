@@ -1,0 +1,29 @@
+{
+  "authorization": "2026-11-13 用户要求最小实现及离线回归通过后立刻调用模型；沿现有凭据和当前端点持续授权。代理将本轮限定为原未确认/已确认各一次。",
+  "baseline": 254,
+  "limit": 2,
+  "ceiling": 256,
+  "cumulative": 255,
+  "remaining": 1,
+  "attempts": [
+    {
+      "id": "pending",
+      "customRequest": 255,
+      "state": "transport-error",
+      "requestBytes": 114519,
+      "requestSha256": "63e0007d7ce76504ce114814e6f21be7760c4c1459693ce0adccce6c6f5ff9b0",
+      "status": null,
+      "elapsedMs": 150
+    }
+  ],
+  "classification": "retained local NO_CHECK control",
+  "classificationCalls": 0,
+  "automaticExtractionApprovalRevision": false,
+  "retries": 0,
+  "timeoutMs": 180000,
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "deployed": false,
+  "formalStoryWritten": false,
+  "closed": true,
+  "stopReason": "transport-error"
+}

@@ -1,0 +1,197 @@
+{
+  "limit": 10,
+  "used": 7,
+  "unused": 3,
+  "closed": true,
+  "cumulative": 293,
+  "attempts": [
+    {
+      "id": "07-ambiguous-hearing",
+      "customRequest": 287,
+      "state": "completed",
+      "requestBytes": 11467,
+      "requestSha256": "77bc964128b526224eee4f30b61186c5e1401a7c371ed693aa589e32ee59b242",
+      "status": 200,
+      "elapsedMs": 16790,
+      "rawResponseSha256": "72b31461de97a6a9dffd1db372db8a2a0700e312be5f4c225f27e4543d5e7e73",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3099,
+        "completion_tokens": 2233,
+        "total_tokens": 5332
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Model reception is correctly uncertain, but degree.args.property has value 音量 with null argumentSpans.property, violating existing pairing guidance. Original checker rejects before state writes. Preserve raw; diagnose and revise generation contract presentation before any retest.",
+      "evidenceFolder": "final-four-20261114"
+    },
+    {
+      "id": "07-ambiguous-hearing",
+      "customRequest": 288,
+      "state": "completed",
+      "requestBytes": 12456,
+      "requestSha256": "701b634487848206e95b35d328c448619c43d8b5c7c9f938b4b7b925250c9b1a",
+      "status": 200,
+      "elapsedMs": 16606,
+      "rawResponseSha256": "f970a546da7c4122fe1d3ca653035404a7dc5e73f44385eb9142bcbe3e5a893b",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3422,
+        "completion_tokens": 2553,
+        "total_tokens": 5975
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Missing property span no longer reproduced, but model invented type manner outside existing type map; original contract rejects entire reply. Reception uncertain is preserved. No coercion; revise explicit closed type contract then retest within same pool.",
+      "evidenceFolder": "final-four-pairing-20261114"
+    },
+    {
+      "id": "07-ambiguous-hearing",
+      "customRequest": 289,
+      "state": "completed",
+      "requestBytes": 12668,
+      "requestSha256": "f689fe05b50a1d4e5c78dd9778346219634fe8c7890fb5ee6ed0dbc5347d9577",
+      "status": 200,
+      "elapsedMs": 16898,
+      "rawResponseSha256": "06bedbd941e153b81545166ff1f3b4c53c93fbd9e5ac59665713f6fdd53a878f",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3473,
+        "completion_tokens": 2294,
+        "total_tokens": 5767
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "Original contract passes. Unknown hearing preserved, one pending message for Huang, no grants to any actor and no immediate questions. Content remains attributed, source and spatial facts retained. Suitable actual pending parent for cases09/10.",
+      "evidenceFolder": "final-four-types-20261114"
+    },
+    {
+      "id": "08-ambiguous-listener",
+      "customRequest": 290,
+      "state": "completed",
+      "requestBytes": 12861,
+      "requestSha256": "d09217ff34ae0c4d34ea3320ce1574d637dd8dbb73c31e8b61ecf4dbe3f11f0e",
+      "status": 200,
+      "elapsedMs": 11836,
+      "rawResponseSha256": "dcbb58b062ebac1839cbc6d6746e5d28349559f8cf5d3ef4237406aebba5c998",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3554,
+        "completion_tokens": 1750,
+        "total_tokens": 5304
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Receiver identity remains genuinely unresolved and no guesses, but unit.status=extracted with nonempty unresolved violates original unit invariant. Reject whole reply unchanged. Clarify status/list pairing before retest; actual passing case07 remains parent for dependencies.",
+      "evidenceFolder": "final-four-types-20261114"
+    },
+    {
+      "id": "08-ambiguous-listener",
+      "customRequest": 291,
+      "state": "completed",
+      "requestBytes": 13145,
+      "requestSha256": "5f73704b05078efdab749a46f04131418d721476834994012a91647a3d442139",
+      "status": 200,
+      "elapsedMs": 13431,
+      "rawResponseSha256": "e945cc48683696e067e3b27f89eed9ebeccd3a6d6840063778c79c438d747c74",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3622,
+        "completion_tokens": 1742,
+        "total_tokens": 5364
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "Original contract passes with unresolved unit and genuine ambiguous-person span. No receiver guessed, no grants to anyone, one pending message with empty recipients, no immediate questions. Known claims retained; case08 target passes.",
+      "evidenceFolder": "final-four-unit-status-20261114"
+    },
+    {
+      "id": "09-unrelated",
+      "customRequest": 292,
+      "state": "completed",
+      "requestBytes": 1882,
+      "requestSha256": "00273d36ab40ddf62f8b7d40780e41793d0864ac0f5256809897e2e0bff921fa",
+      "status": 200,
+      "elapsedMs": 3752,
+      "rawResponseSha256": "7ec72ca6c731e61d9b6df6851b89454dfbcbfad714cd45a78cc03ac403ed1f65",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 787,
+        "completion_tokens": 80,
+        "total_tokens": 1052,
+        "completion_tokens_details": {
+          "reasoning_tokens": 185
+        }
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "Actual custom289 pending state retained, model returns required empty for unrelated chat; original dependency validator passes; ready, zero questions, no grant or pending resolution.",
+      "evidenceFolder": "final-four-unit-status-20261114"
+    },
+    {
+      "id": "10-dependent",
+      "customRequest": 293,
+      "state": "completed",
+      "requestBytes": 1918,
+      "requestSha256": "1912a072e8a9bfafb6ba1ba55a39efae0499e2485e4ddbcf7b4ddc951dd087c3",
+      "status": 200,
+      "elapsedMs": 7502,
+      "rawResponseSha256": "cf987f0a0ce7f0c96802ee1d500ac706cc3c4850d36a9e321ab01af2cf04b02c",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 791,
+        "completion_tokens": 196,
+        "total_tokens": 1491,
+        "completion_tokens_details": {
+          "reasoning_tokens": 504
+        }
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "Dependency response selects exactly the actual custom289 pending id. Original validator passes; one isolated ask callback, deferred with unanswered pending, no grant to any actor. No dependency inference from synthetic substitutes.",
+      "evidenceFolder": "final-four-unit-status-20261114"
+    }
+  ],
+  "latestCaseVerdicts": {
+    "07": "pass",
+    "08": "pass",
+    "09": "pass",
+    "10": "pass"
+  },
+  "newTests": 7,
+  "finalOfflineTests": {
+    "engine": 60,
+    "campaign": 126,
+    "total": 186
+  },
+  "exactSpanCounts": {
+    "07-ambiguous-hearing": 25,
+    "08-ambiguous-listener": 17
+  },
+  "dependenciesBoundToActualResponse": 289,
+  "sameActualPendingId": "dialogue.a88eacccb9aebd77a86e1b0dc27d702d0684aaff715c435a1786c51a930ac7e8.7b5714850f54942f0da4a9701187dd9727e31beb7121d5d1606281ac34934ed6",
+  "inputAndCoordinatesUnchangedForRetests": true,
+  "validatorInputConstructionAndCoordinatesUnchanged": true,
+  "changes": [
+    "shared type-slot value/span table generated from existing definition",
+    "explicit closed type vocabulary",
+    "unit.status paired with unresolved list"
+  ],
+  "limitations": [
+    "one passing observation per target, after retained failures",
+    "07 passed before final unit-status wording clarification; no claim that all cases were resampled with identical final prompts",
+    "dependency asks tested in isolated existing-runtime callback, not formal browser deployment",
+    "no universal semantic completeness or stability claim"
+  ],
+  "modelRetries": 0,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false
+}

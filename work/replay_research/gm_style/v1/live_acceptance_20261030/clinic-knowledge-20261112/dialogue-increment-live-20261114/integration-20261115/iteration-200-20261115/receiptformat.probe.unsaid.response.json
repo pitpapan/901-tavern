@@ -1,0 +1,31 @@
+{
+  "kind": "receiptformat.probe.unsaid",
+  "startedAt": "2026-11-15T20:15:23.446Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T20:15:26.911Z",
+  "headersElapsedMs": 3465,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b0ed7cbff204ae-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 20:15:26 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=CR8tNtIByueNvMmhfP4DHu%2BaKg%2FIoklIQ%2FJ5VIJZ6c9O8Bl2C4sAHTOkjAa1FwuYYnw0EOx95KPNzcXL2OOahdnXx4VmGHqpDfDWamI49%2FF4EcxwhDQhx6stDo%2BRMg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611152015240629695148268d9d6tkUarncD",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "2a07b4a4-49f6-4c6d-9637-855cae852fb6"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"c8c57c63-3b79-4f0b-bbe6-4bce80418375\",\"object\":\"chat.completion\",\"created\":1794773726,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/5\\\",\\\"contextRef\\\":\\\"4b61d1088acbcd0dc7ff45a3424366ccfa3bfe708ed2939fc9a5b782e88f4ac1\\\",\\\"inputRef\\\":\\\"assertion.4619fccadb9a7a0948a04831fa7b601d934139ea2d5ed9f2fd01e9fe0c62cf3d\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[],\\\"coverage\\\":{\\\"status\\\":\\\"none\\\",\\\"evidence\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉在心里拟好了“渡口明天才开放”的回答，却始终没有开口。\\\"},\\\"reason\\\":\\\"黄泉仅在心里拟好回答，始终没有开口，本轮未发生实际言说与信息传递。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4583,\"completion_tokens\":234,\"total_tokens\":4817}}",
+  "responseBytes": 900,
+  "responseBodySha256BeforePrivacyRedaction": "3575e5411c5c3f0cf785fac2594e50d7f2e8ca26014a74c2b845c66287c13427",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T20:15:26.925Z",
+  "elapsedMs": 3479
+}

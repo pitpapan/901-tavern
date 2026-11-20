@@ -1,0 +1,109 @@
+{
+  "authorization": "2026-11-13 user explicitly grants four additional narration calls, active tavern credential read and full story send to current endpoint",
+  "baseline": 248,
+  "limit": 4,
+  "ceiling": 252,
+  "cumulative": 252,
+  "remaining": 0,
+  "attempts": [
+    {
+      "id": "A1",
+      "customRequest": 249,
+      "state": "completed",
+      "requestBytes": 110516,
+      "requestSha256": "b49e95399aac5d091f8b633f9792f4f6e315797caf4f1d4f86c0e3933bcffb25",
+      "status": 200,
+      "elapsedMs": 5603,
+      "rawResponseSha256": "00ae4230fb556cb42a2068bff6306210d7225e9cf29306ef5d3b9458575e5004",
+      "responseBytes": 1107,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "c2928fbc-633b-4a1a-8475-d4f8e56b8a2f",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 27704,
+        "completion_tokens": 248,
+        "total_tokens": 27952
+      }
+    },
+    {
+      "id": "A2",
+      "customRequest": 250,
+      "state": "completed",
+      "requestBytes": 111628,
+      "requestSha256": "71b7a4dfad3e66a0e6cf3aeb9d00af176f50ab16cc52aec1c421058bcde7ad78",
+      "status": 200,
+      "elapsedMs": 4227,
+      "rawResponseSha256": "cd982283f0ef72339c6ef74b1072fce6c1a0d242299218bebc07a874a542b49c",
+      "responseBytes": 1182,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "b2c9a65c-cade-4c47-83d8-bee68c146e69",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 28003,
+        "completion_tokens": 243,
+        "total_tokens": 28246,
+        "prompt_tokens_details": {
+          "cached_tokens": 24485
+        }
+      }
+    },
+    {
+      "id": "B1",
+      "customRequest": 251,
+      "state": "completed",
+      "requestBytes": 111114,
+      "requestSha256": "ff78ed6af83c3cec52e81fe02d950a1b6e2d3fabe03161cdfa38098a988c07cf",
+      "status": 200,
+      "elapsedMs": 2933,
+      "rawResponseSha256": "ad57b076b9a9ff2dc8ecb93da6174570155f89e6cf1c928f629970a87a65ffe8",
+      "responseBytes": 992,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "2dda059d-f0f3-4857-8711-6a72b295b959",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 27852,
+        "completion_tokens": 200,
+        "total_tokens": 28052,
+        "prompt_tokens_details": {
+          "cached_tokens": 24491
+        }
+      }
+    },
+    {
+      "id": "B2",
+      "customRequest": 252,
+      "state": "completed",
+      "requestBytes": 112036,
+      "requestSha256": "d7c6f19c76e0a3b703e5020bc1d03625655267cc17e8638a41d062c11925dbbb",
+      "status": 200,
+      "elapsedMs": 3511,
+      "rawResponseSha256": "41e5ed5b9347c0ca316a8610d8a17637696287736ecf5171a7e698ca41c3818c",
+      "responseBytes": 1023,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "49cd363c-db98-4d1c-b127-d17e718ed62e",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 28094,
+        "completion_tokens": 204,
+        "total_tokens": 28298,
+        "prompt_tokens_details": {
+          "cached_tokens": 24485
+        }
+      }
+    }
+  ],
+  "classification": "local NO_CHECK control",
+  "classificationCalls": 0,
+  "automaticExtractionApprovalRevision": false,
+  "retries": 0,
+  "timeoutMs": 180000,
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "deployed": false,
+  "formalStoryWritten": false,
+  "closed": true,
+  "stopReason": "four-authorized-narrations-completed"
+}

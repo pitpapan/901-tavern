@@ -1,0 +1,31 @@
+{
+  "kind": "relation.followup.new_direct",
+  "startedAt": "2026-11-15T15:59:32.360Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T15:59:38.289Z",
+  "headersElapsedMs": 5929,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5af76b439a4300c-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 15:59:38 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=VQx37vTioxAC9J0u%2FmtOVJQJVSrcQ0ZtQxyfZlLTQCg5ca0tsw6F2bJRgqt9NkLFtqx%2FCZjgfHVqx8Zv9R6Etb3jCBtGlKv%2BX8GEcf5iz%2FsAorX94vd0tPtLNurzIQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611151559325826374788268d9d6cLeVKn5T",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "472350b6-b8cb-447b-adcd-7baad8b3a460"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"231e6608-b25f-4dea-980d-8bf9f7da997d\",\"object\":\"chat.completion\",\"created\":1794758378,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/5\\\",\\\"contextRef\\\":\\\"299306d303e60d6a97cc315abf71f5747ae2d4fcfeb00a0912ba52c5a7b7db71\\\",\\\"inputRef\\\":\\\"assertion.44658d5e4894878475bbaf249087b09545d109b1fed8867e07b307245022a3a4\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"utterance.turn.1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"货栈午后闭门。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"货栈午后闭门。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉对御临风说：“货栈午后闭门。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"reception.turn.1\\\",\\\"contentSpan\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"货栈午后闭门。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"黄泉直接对御临风说话，御临风在场并直接接收。\\\",\\\"listener\\\":{\\\"actorId\\\":\\\"player\\\",\\\"kind\\\":\\\"explicit\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"御临风\\\"},\\\"historyMessageId\\\":null},\\\"evidence\\\":{\\\"kind\\\":\\\"direct\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"对御临风说\\\" relapse_check:null}}},{\\\"id\\\":\\\"reception.turn.2\\\",\\\"contentSpan\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"货栈午后闭门。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"status\\\":\\\"not_received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"布莱特已到街外，听不到这番话，存在明确接收障碍。\\\",\\\"listener\\\":{\\\"actorId\\\":\\\"bright\\\",\\\"kind\\\":\\\"explicit\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f6\\\",\\\"quote\\\":\\\"布莱特\\\"},\\\"historyMessageId\\\":null},\\\"evidence\\\":{\\\"kind\\\":\\\"obstacle\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f7\\\",\\\"quote\\\":\\\"听不到这番话\\\"}}}]}],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉对御临风说：“货栈午后闭门。”御临风没有复述，继续整理缰绳。布莱特已到街外，听不到这番话。\\\"},\\\"reason\\\":\\\"已完整记录黄泉的言说及其向御临风的直接传达与布莱特的明确未接收。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4753,\"completion_tokens\":648,\"total_tokens\":5401}}",
+  "responseBytes": 2553,
+  "responseBodySha256BeforePrivacyRedaction": "21351d00427f53bac581094db72f41d6c618f15662f24bed4c42384a427b014a",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T15:59:38.301Z",
+  "elapsedMs": 5941
+}

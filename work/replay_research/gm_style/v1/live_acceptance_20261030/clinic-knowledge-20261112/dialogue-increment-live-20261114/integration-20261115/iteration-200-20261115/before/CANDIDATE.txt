@@ -1,0 +1,14 @@
+901 普通对白知情入口集成本地候选 / 2026-11-15
+仅供审查，未部署。135个浏览器模块、3项原资产和candidate-entry.js。
+默认语义完成函数disabled；未显式配置不会新增接收抽取/依赖请求。
+安装候选不等于允许调用模型。实际使用需另行授权并明确启用：
+window.top.__901StoryKnowledge.configureDialogueHost({enabled:true,useExistingHost:true});
+或传入{enabled:true,complete}，complete接收purpose/messages/responseFormat，返回原始回复。
+关闭使用{enabled:false}。可由宿主在初始化前提供window.top.__901DialogueHost同形配置；产品不保存该配置、不发现凭据、不改模型或采样设置。
+普通请求：必要时依赖判断→确认→原分类→正文→保存/读回→接收抽取→原严格校验/MVU→下一轮知情投影。
+通常每条完成正文增加1次接收抽取；有待核的后续轮另加1次依赖判断。原分类与叙事调用继续存在。
+没有自动批准世界事实、关系或约定，没有回复修补/坐标修正/action转换/自动重试。
+本次修改原story-dialogue-knowledge、replay-gate-script、narrative-style-projection；后者生成入口，不在运行闭包内。
+相对正式安装32项模块差异，包含之前战斗/资源/MVU/知情工作；相对上一133模块候选5项差异，详见candidate-delta.json和deployment-diff.json，不把整包视为本次成果。
+两条实际隔离浏览器主链及最终入口检查使用本地合成接口，外部调用0；不能称新模型准确率通过。
+先审阅DELIVERY.txt、model-batch/plan.json及现有恢复记录。无部署脚本，不覆盖正式角色卡/聊天/世界书；无测试按钮、合成记忆、seed、capture后端或密钥随包。

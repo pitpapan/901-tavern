@@ -1,0 +1,123 @@
+{
+  "authorization": "用户明确范围01—10各一组新平行例，新增30次模型总额度；本组先最多10次，失败先诊断，有明确依据再修复后用剩余额度验收，不盲目重发、不修补回复、不放宽校验、不部署/正式剧情/自动批准修订。",
+  "baseline": 293,
+  "limit": 30,
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "parameters": {
+    "model": "[抗截断]gemini-3.8-flash",
+    "temperature": 1,
+    "max_tokens": 4096,
+    "stream": false,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "top_p": 1
+  },
+  "cases": [
+    {
+      "id": "01-received-new",
+      "text": "御临风对布莱特说：“西侧栈桥暂时停用。”布莱特清楚地听到了这句话。",
+      "speaker": "player",
+      "recipient": "bright",
+      "content": "西侧栈桥暂时停用",
+      "expected": "只给布莱特登记该来源说法，不确认世界真相；其余人不共享，pending为空。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 13039,
+      "requestSha256": "776efcdb7ea83582c16adabc48a668260d958a8cc005703667e51ba12241d120"
+    },
+    {
+      "id": "02-received-rumor",
+      "text": "黄泉对御临风说：“北街水井暂时停用。”",
+      "speaker": "huang",
+      "recipient": "player",
+      "content": "北街水井暂时停用",
+      "known": true,
+      "expected": "黄泉已有该传闻的可信隔离取得回执；御临风取得同一传闻或等价未确认来源说法，不升级为确认，不强求复述。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 12839,
+      "requestSha256": "a30024a13a10d6471599c74d43103f504827bdc51bc83ddfb2a7e85e0fb92edb"
+    },
+    {
+      "id": "03-not-heard",
+      "text": "御临风隔着关闭的隔音窗对布莱特说：“北门暂停通行。”布莱特没有听见。",
+      "speaker": "player",
+      "recipient": "bright",
+      "content": "北门暂停通行",
+      "expected": "没有收到，不给任何人新增知情，不产生多余待核。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 13058,
+      "requestSha256": "ab5599e169efa2c49f7177edeb078ec0f693002695901cfdc0505343877e2735"
+    },
+    {
+      "id": "04-not-yet-said",
+      "text": "黄泉准备向御临风转告：“渡船今晚停航。”她尚未说出口。",
+      "speaker": "huang",
+      "recipient": "player",
+      "content": "渡船今晚停航",
+      "expected": "仅意图存在；未传达、不授予接收、不把内层内容当世界事实、不产生多余待核。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 12869,
+      "requestSha256": "0a3172e96ee53fd794ee9c1f10276f0ad433db5771eac4d35f1f0088f7e098e1"
+    },
+    {
+      "id": "05-partial-first",
+      "text": "御临风对布莱特说：“北门暂停通行，改从西桥绕行。”布莱特只听清“北门暂停通行”，没听清后半句。",
+      "speaker": "player",
+      "recipient": "bright",
+      "content": "北门暂停通行",
+      "expected": "只给布莱特登记前半句，不给后半句，不共享他人，pending为空。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 13348,
+      "requestSha256": "774ce88f1ea1b1f0e663a359cc22cc0569db117a0c65aaa9bf5838d21714346a"
+    },
+    {
+      "id": "06-partial-second",
+      "text": "御临风对布莱特说：“北门暂停通行，改从西桥绕行。”布莱特只听清“改从西桥绕行”，没听清前半句。",
+      "speaker": "player",
+      "recipient": "bright",
+      "content": "改从西桥绕行",
+      "expected": "只给布莱特登记后半句，不给前半句，不共享他人，pending为空。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 13349,
+      "requestSha256": "5693404c6bcd0479c6d2971910cb4d59b05695278c2b1bbae23647f42636a1c1"
+    },
+    {
+      "id": "07-ambiguous-hearing",
+      "text": "黄泉轻声说：“渡船明早停航。”御临风在走廊另一端，记录不能确定他是否听清。",
+      "speaker": "huang",
+      "recipient": "player",
+      "content": "渡船明早停航",
+      "expected": "不确定接收保留待核，不因在场或指代明确授予知情，不立即询问。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 13132,
+      "requestSha256": "2e40126d571d747a9382ecde28ed79cc8d529646d2cfa8691c193ffce5ce6b5b"
+    },
+    {
+      "id": "08-ambiguous-listener",
+      "text": "黄泉对御临风和布莱特说：“交货地点改到南岗。”两人中有一人没听清，但记录无法指出是哪一人。",
+      "speaker": "huang",
+      "recipient": null,
+      "content": "交货地点改到南岗",
+      "expected": "不能猜哪位听清，无知情授予，保留身份歧义和对应待核。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 13309,
+      "requestSha256": "fc250dbb708bebf8a27c58fb7bc5a7dab48fa2a6a2df0ba57dfc6d7d9c5cd290"
+    }
+  ],
+  "followups": [
+    {
+      "id": "09-unrelated",
+      "parent": "07-ambiguous-hearing",
+      "text": "我和御临风谈谈午饭的口味，再整理一下衣领。",
+      "expected": "不依赖待核渡船消息，required为空，不询问。"
+    },
+    {
+      "id": "10-dependent",
+      "parent": "07-ambiguous-hearing",
+      "text": "让御临风依据黄泉刚才说的渡船消息，安排明早过河的路线。",
+      "expected": "依赖御临风是否获知渡船消息，返回真实相关待核id并询问，不代答或授予知情。"
+    }
+  ],
+  "kind": "new-parallel-cases-frozen-before-model-output",
+  "browserCapture": false,
+  "casesSha256": "b4cb2fa2d8645f8a36dbfe8f348c439df185b1a1947cd67b513f8218d399198d"
+}

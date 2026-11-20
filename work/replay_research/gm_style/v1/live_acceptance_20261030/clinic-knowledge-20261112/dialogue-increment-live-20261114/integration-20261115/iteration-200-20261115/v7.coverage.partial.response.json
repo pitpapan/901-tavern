@@ -1,0 +1,31 @@
+{
+  "kind": "v7.coverage.partial",
+  "startedAt": "2026-11-15T22:48:45.401Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T22:48:48.027Z",
+  "headersElapsedMs": 2626,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b1ce24ed1354ca-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 22:48:48 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=IgALofu9tfiH7mTdw4DSbTo2ank37yat921c2486pPlydrwMFoa1E0eyLQhSToGlD%2B4wYr56nEYTXevk7kP1aPARTm3ECFlyCBOUFRNN%2BluKKC61Ce%2BpO2T8IoKXOw%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611152248457036066168268d9d6Egas6hI6",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "55741ae6-1bbc-4012-a0a8-3e27907cc06a"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"f7eb12ef-cb96-448a-9807-d42b0184db5d\",\"object\":\"chat.completion\",\"created\":1794782927,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/7\\\",\\\"contextRef\\\":\\\"378614872c71a324fec449250c7b81b9e331ef4e4e87852f3a4d8ed8c420971f\\\",\\\"selections\\\":[{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"},{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"石桥今晚停用；明早在北门碰面。\\\"},{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"答道\\\"},{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"布莱特\\\"},{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"石桥今晚停用\\\"},{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"听清了石桥停用一事\\\"},{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"明早在北门碰面\\\"},{\\\"fragmentId\\\":\\\"f7\\\",\\\"quote\\\":\\\"谁也不能确定他是否听见\\\"},{\\\"fragmentId\\\":\\\"f7\\\",\\\"quote\\\":\\\"谁也不能确定他是否听见。\\\"}],\\\"utterances\\\":[{\\\"speakerId\\\":\\\"huang\\\",\\\"speaker\\\":0,\\\"content\\\":1,\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":2}],\\\"receptions\\\":[{\\\"utterance\\\":0,\\\"content\\\":4,\\\"listenerId\\\":\\\"bright\\\",\\\"identityKind\\\":\\\"explicit\\\",\\\"identity\\\":3,\\\"historyMessageId\\\":null,\\\"evidenceKind\\\":\\\"direct\\\",\\\"evidence\\\":5,\\\"propositionRef\\\":null},{\\\"utterance\\\":0,\\\"content\\\":6,\\\"listenerId\\\":\\\"bright\\\",\\\"identityKind\\\":\\\"explicit\\\",\\\"identity\\\":3,\\\"historyMessageId\\\":null,\\\"evidenceKind\\\":\\\"unknown\\\",\\\"evidence\\\":7,\\\"propositionRef\\\":null}],\\\"unresolved\\\":[],\\\"coverage\\\":{\\\"status\\\":\\\"uncertain\\\",\\\"evidence\\\":8}}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2572,\"completion_tokens\":378,\"total_tokens\":2950}}",
+  "responseBytes": 1638,
+  "responseBodySha256BeforePrivacyRedaction": "d0dd87e5475a1d29b5102fddf8a16baab2aae231075d7d0e1172e912a9662d9d",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T22:48:48.032Z",
+  "elapsedMs": 2631
+}

@@ -1,0 +1,180 @@
+{
+  "status": "isolated_deterministic_checks_passed_pending_orchestrator_review",
+  "sourceBranch": "901 帝都正式续玩 20261106 - Branch #4",
+  "sourceAnchor": {
+    "chatId": "901 帝都正式续玩 20261106 - Branch #4",
+    "messageId": 11,
+    "swipeId": 0
+  },
+  "sourceReplySha256": "225e9d4d81d8761daffa38b666996531a9d8b4d7c4ec1ae0baa8713c1b7d0c6d",
+  "savedPlayerMessageId": 10,
+  "testProviderSourceMessageId": 9,
+  "appliedReceipt": {
+    "id": "clinic.continuation.611.relay",
+    "status": "received",
+    "authority": "host-confirmed",
+    "sourceAnchor": {
+      "chatId": "901 帝都正式续玩 20261106 - Branch #4",
+      "messageId": 11,
+      "swipeId": 0,
+      "text": "布莱特牵着马往前走了两步，避开旁边一个推着两轮菜车经过的汉子，这才偏过头应道：\n\n“他们二人的底细我并不全清楚，不过此前确实听过一句传言——九雪医馆那位老馆主和雪老算是有旧识，彼此不是同一人。至于他们早年具体是怎么结识的、又有过什么深浅交情，我就没听说过了。”\n\n他说到这里顿了顿，语气依旧平稳：“若是想打听，到了医馆当面见着人，顺着求医问药的由头探问一句，总比在街上凭空乱猜要实在。”\n\n黄泉在一旁听着，视线从前方的街口收回，只淡淡接了一句：“先到了地方再说。”\n\n街道两侧的引水渠泛着粼粼波光，水流沿着石槽平稳向东流淌。街上的行人、商贩与往来的轻便马车各自忙碌着，城内深处的街巷向两侧渐次展开。"
+    },
+    "senderId": "bright",
+    "recipientIds": [
+      "huang",
+      "player"
+    ],
+    "propositionRefs": [
+      "clinic.owner.xuelao.old-friend"
+    ],
+    "channel": "message",
+    "belief": "rumor"
+  },
+  "receiptStatuses": [
+    "applied",
+    "already_applied"
+  ],
+  "oldSourceUnchangedExceptBranchAdoption": true,
+  "brightProjectionUnchangedAfterRelay": true,
+  "newRecipients": [
+    "huang",
+    "player"
+  ],
+  "receivedRumor": true,
+  "revisionBeforeRelay": 4,
+  "revisionAfterRelay": 5,
+  "exactSnapshotHashes": {
+    "retained-before-relay": {
+      "file": "evidence/retained-before-relay.seed.jsonl",
+      "bytes": 1200745,
+      "sha256": "36d385fca89eab1d5d2e3e71c5aa7a7351e51786f3f441bc1b86c71e4d78b2b1"
+    },
+    "confirmed": {
+      "file": "evidence/confirmed.seed.jsonl",
+      "bytes": 1205767,
+      "sha256": "85b4b43f4d7f384fac2d5d0e911451908c2dfa663569e61c738c520536650a1c"
+    },
+    "idempotent": {
+      "file": "evidence/idempotent.seed.jsonl",
+      "bytes": 1205767,
+      "sha256": "85b4b43f4d7f384fac2d5d0e911451908c2dfa663569e61c738c520536650a1c"
+    },
+    "huang-reopened": {
+      "file": "evidence/huang-reopened.seed.jsonl",
+      "bytes": 1205767,
+      "sha256": "85b4b43f4d7f384fac2d5d0e911451908c2dfa663569e61c738c520536650a1c"
+    },
+    "bright-reopened": {
+      "file": "evidence/bright-reopened.seed.jsonl",
+      "bytes": 1205767,
+      "sha256": "85b4b43f4d7f384fac2d5d0e911451908c2dfa663569e61c738c520536650a1c"
+    }
+  },
+  "receiveRepetitionByteIdentical": true,
+  "reopenAndCapturedRequests": {
+    "huang": {
+      "classification": {
+        "beforeReopen": {
+          "file": "evidence/captures/before.classification.request.json",
+          "bytes": 87378,
+          "sha256": "76ad0376c5b5d31073d1ed001025950d028adbdd35e6f86c62c599e984692134"
+        },
+        "afterReopen": {
+          "file": "evidence/captures/received-huang.classification.request.json",
+          "bytes": 87378,
+          "sha256": "76ad0376c5b5d31073d1ed001025950d028adbdd35e6f86c62c599e984692134"
+        },
+        "sameBytes": true,
+        "questionMessageIndexes": [
+          1
+        ]
+      },
+      "narration": {
+        "beforeReopen": {
+          "file": "evidence/captures/before.narration.request.json",
+          "bytes": 113556,
+          "sha256": "551a738c0bb88f1bb32de7f045bc412da02c6abbbd2bb78ab7415aa1e6c5f755"
+        },
+        "afterReopen": {
+          "file": "evidence/captures/received-huang.narration.request.json",
+          "bytes": 113556,
+          "sha256": "551a738c0bb88f1bb32de7f045bc412da02c6abbbd2bb78ab7415aa1e6c5f755"
+        },
+        "sameBytes": true,
+        "questionMessageIndexes": [
+          13,
+          15
+        ]
+      }
+    },
+    "bright": {
+      "classification": {
+        "beforeReopen": {
+          "file": "evidence/captures/received-bright.classification.request.json",
+          "bytes": 87348,
+          "sha256": "4b71264bd536019d74762f2cc37c6645a8a67fc99b2f395f383b870e6ed370bd"
+        },
+        "afterReopen": {
+          "file": "evidence/captures/reopened-bright.classification.request.json",
+          "bytes": 87348,
+          "sha256": "4b71264bd536019d74762f2cc37c6645a8a67fc99b2f395f383b870e6ed370bd"
+        },
+        "sameBytes": true,
+        "questionMessageIndexes": [
+          1
+        ]
+      },
+      "narration": {
+        "beforeReopen": {
+          "file": "evidence/captures/received-bright.narration.request.json",
+          "bytes": 113496,
+          "sha256": "e16a57818f1bdcdbc6bd7f50899a0a7a8991867eff1d8f255db8bf989f2a2a9d"
+        },
+        "afterReopen": {
+          "file": "evidence/captures/reopened-bright.narration.request.json",
+          "bytes": 113496,
+          "sha256": "e16a57818f1bdcdbc6bd7f50899a0a7a8991867eff1d8f255db8bf989f2a2a9d"
+        },
+        "sameBytes": true,
+        "questionMessageIndexes": [
+          13,
+          15
+        ]
+      }
+    }
+  },
+  "frozenCompleteNarrationRequests": {
+    "huang": {
+      "file": "huang-followup.request.json",
+      "bytes": 113556,
+      "sha256": "551a738c0bb88f1bb32de7f045bc412da02c6abbbd2bb78ab7415aa1e6c5f755"
+    },
+    "bright": {
+      "file": "bright-followup.request.json",
+      "bytes": 113496,
+      "sha256": "e16a57818f1bdcdbc6bd7f50899a0a7a8991867eff1d8f255db8bf989f2a2a9d"
+    }
+  },
+  "guardVerified": true,
+  "settingsAndCardRestored": true,
+  "protectedCounts": {
+    "old": 99,
+    "product": 4,
+    "formal": 288
+  },
+  "protectedChanges": {
+    "old": [],
+    "formal": [],
+    "product": []
+  },
+  "appendOnlyIsolatedLogs": [
+    {
+      "file": "evidence/host-start.stdout.log",
+      "preservedPrefixBytes": 3837,
+      "totalBytes": 7677
+    }
+  ],
+  "externalModelCalls": 0,
+  "cumulative": 616,
+  "available": 0
+}

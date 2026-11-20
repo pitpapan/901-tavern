@@ -1,0 +1,206 @@
+{
+  "authorization": "用户2026-11-13回复：给与8次调用",
+  "baseline": 240,
+  "limit": 8,
+  "ceiling": 248,
+  "plannedThisRound": 4,
+  "attempts": [
+    {
+      "id": "01-before",
+      "customRequest": 241,
+      "state": "completed",
+      "requestBytes": 104349,
+      "requestSha256": "5e6ac2a7e5be9d48191fd915f94878c6bf220155e1dbc34c8193c29221c79640",
+      "status": 200,
+      "elapsedMs": 4259,
+      "finishReason": "stop",
+      "responseId": "1d14c172-38a1-4783-8102-24efbf19720d",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 26121,
+        "completion_tokens": 97,
+        "total_tokens": 26218
+      },
+      "contentCharacters": 101
+    },
+    {
+      "id": "02-received",
+      "customRequest": 242,
+      "state": "completed",
+      "requestBytes": 105060,
+      "requestSha256": "fe219949006bd8b8cca8a7414fb1ce50257b2fdf21e630e57404ac2e510438c3",
+      "status": 200,
+      "elapsedMs": 3590,
+      "finishReason": "stop",
+      "responseId": "824c02fb-91f5-4032-8fa7-39dc03222447",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 26307,
+        "completion_tokens": 82,
+        "total_tokens": 26389
+      },
+      "contentCharacters": 79
+    },
+    {
+      "id": "03-unreceived",
+      "customRequest": 243,
+      "state": "completed",
+      "requestBytes": 105054,
+      "requestSha256": "ac79dc279f0f8d33387c577f34d9b8c129bcd298ba53b04d5992262a4b19441f",
+      "status": 200,
+      "elapsedMs": 2505,
+      "finishReason": "stop",
+      "responseId": "df943111-4b1a-45c1-84f9-99100e8a9a18",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 26305,
+        "completion_tokens": 75,
+        "total_tokens": 26380,
+        "prompt_tokens_details": {
+          "cached_tokens": 24247
+        }
+      },
+      "contentCharacters": 75
+    },
+    {
+      "id": "04-relayed",
+      "customRequest": 244,
+      "state": "completed",
+      "requestBytes": 105685,
+      "requestSha256": "91520d5760afc679b6dfc17f8456a5098ad0bbea462958777486ebbe860961b5",
+      "status": 200,
+      "elapsedMs": 3087,
+      "finishReason": "stop",
+      "responseId": "67afc586-120d-4955-984c-2f3d5c5e46d3",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 26468,
+        "completion_tokens": 70,
+        "total_tokens": 26538,
+        "prompt_tokens_details": {
+          "cached_tokens": 24262
+        }
+      },
+      "contentCharacters": 69
+    },
+    {
+      "id": "05-known-unasked",
+      "customRequest": 245,
+      "state": "completed",
+      "requestBytes": 106948,
+      "requestSha256": "84566de16a073c5935cec91ec1b44fa7904ae92c67e1ce66105172fc02934248",
+      "status": 200,
+      "elapsedMs": 4253,
+      "finishReason": "stop",
+      "responseId": "4b312045-d5d5-4d1c-bb08-4f066364e8ac",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 26761,
+        "completion_tokens": 101,
+        "total_tokens": 26862
+      },
+      "contentCharacters": 104
+    },
+    {
+      "id": "06-known-asked",
+      "customRequest": 246,
+      "state": "completed",
+      "requestBytes": 106924,
+      "requestSha256": "87a8dafed33c6fe9f31ab51e5b2b7531088167b4a4ddc098f8e271a6e4ca2009",
+      "status": 200,
+      "elapsedMs": 3479,
+      "finishReason": "stop",
+      "responseId": "4955f299-a49e-4ff5-a539-9de18371b177",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 26750,
+        "completion_tokens": 104,
+        "total_tokens": 26854,
+        "prompt_tokens_details": {
+          "cached_tokens": 24640
+        }
+      },
+      "contentCharacters": 114
+    },
+    {
+      "id": "07-unknown-asked",
+      "customRequest": 247,
+      "state": "completed",
+      "requestBytes": 105860,
+      "requestSha256": "01b40a0e044c93d02d0d6fbae9fac6503ca8d243e7cfe24d2ebc0a28e09c13c3",
+      "status": 200,
+      "elapsedMs": 2865,
+      "finishReason": "stop",
+      "responseId": "5e08787e-2202-4f87-942e-d92d2f7ac0d3",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 26469,
+        "completion_tokens": 70,
+        "total_tokens": 26539
+      },
+      "contentCharacters": 67
+    },
+    {
+      "id": "08-confidential-asked",
+      "customRequest": 248,
+      "state": "completed",
+      "requestBytes": 107604,
+      "requestSha256": "d8e0e62d73da466b2afe12dd8ebe829d8dfea12e541e7f680d3967a27f206664",
+      "status": 200,
+      "elapsedMs": 7012,
+      "finishReason": "stop",
+      "responseId": "c5ba9cd9-98d3-4bbe-9c7c-b0b580aae4af",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 26917,
+        "completion_tokens": 124,
+        "total_tokens": 27041,
+        "prompt_tokens_details": {
+          "cached_tokens": 12312
+        }
+      },
+      "contentCharacters": 138
+    }
+  ],
+  "remaining": 0,
+  "model": "[抗截断]gemini-3.8-flash",
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "requestTimeoutMs": 180000,
+  "sharedTimeoutMs": 180000,
+  "retries": 0,
+  "classificationCalls": 0,
+  "extractionOrReviewCalls": 0,
+  "deployed": false,
+  "startedAt": "2026-11-13T11:50:02.796Z",
+  "elapsedMs": 17633,
+  "cumulative": 248,
+  "closed": true,
+  "rounds": [
+    {
+      "ids": [
+        "01-before",
+        "02-received",
+        "03-unreceived",
+        "04-relayed"
+      ],
+      "startedAt": "2026-11-13T10:13:55.816Z",
+      "finishedAt": "2026-11-13T10:14:09.281Z",
+      "elapsedMs": 13465,
+      "stopReason": "four-frozen-requests-completed"
+    },
+    {
+      "ids": [
+        "05-known-unasked",
+        "06-known-asked",
+        "07-unknown-asked",
+        "08-confidential-asked"
+      ],
+      "startedAt": "2026-11-13T11:50:02.796Z",
+      "finishedAt": "2026-11-13T11:50:20.429Z",
+      "elapsedMs": 17633,
+      "stopReason": "four-frozen-requests-completed"
+    }
+  ],
+  "stopReason": "four-frozen-requests-completed",
+  "finishedAt": "2026-11-13T11:50:20.429Z"
+}

@@ -1,0 +1,141 @@
+{
+  "id": "08-ambiguous-listener",
+  "localProtocolPassed": true,
+  "result": {
+    "status": "processed",
+    "pending": [
+      {
+        "id": "dialogue.b7d9124ee2d4c16bd331109d6f50fa5603d46b8fe74c658f39f1bff01afa3f40.c3f5cbfa9b12b79678d9b519e3a6f6c8af5c2ad1259449138e809895247762c4",
+        "claimId": "claim.utterance.bright",
+        "speakerId": "bright",
+        "recipientIds": [],
+        "propositionRef": null,
+        "content": "见面改在钟楼。",
+        "quote": "见面改在钟楼。",
+        "belief": "uncertain",
+        "status": "pending",
+        "extractionReason": "布莱特对黄泉和御临风说话，但其中一人没听清且未说明是谁，无法确定具体哪位听清哪位没听清",
+        "reason": "“其中一人”无法确定具体指黄泉还是御临风，记录未说明具体是谁没听清",
+        "evidence": {
+          "documentId": "current",
+          "start": 21,
+          "end": 38,
+          "quote": "其中一人没听清，记录没有说明是谁。"
+        },
+        "unresolved": [
+          {
+            "span": {
+              "documentId": "current",
+              "start": 21,
+              "end": 25,
+              "quote": "其中一人"
+            },
+            "reason": "“其中一人”无法确定具体指黄泉还是御临风，记录未说明具体是谁没听清"
+          }
+        ],
+        "sourceAnchor": {
+          "chatId": "isolated.dialogue.live.08-ambiguous-listener",
+          "messageId": 0,
+          "swipeId": 0,
+          "text": "布莱特对黄泉和御临风说：“见面改在钟楼。”其中一人没听清，记录没有说明是谁。"
+        },
+        "batchId": "dialogue.b7d9124ee2d4c16bd331109d6f50fa5603d46b8fe74c658f39f1bff01afa3f40"
+      }
+    ]
+  },
+  "asked": [],
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "isolated.dialogue.live.v1",
+    "chatId": "isolated.dialogue.live.08-ambiguous-listener",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "harbor.closed": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "harbor.closed",
+        "entityId": "harbor",
+        "field": "reported_status",
+        "value": "码头停航",
+        "certainty": "rumor",
+        "visibility": "private"
+      }
+    },
+    "events": {},
+    "knowledge": {},
+    "dialogueBatches": {
+      "dialogue.b7d9124ee2d4c16bd331109d6f50fa5603d46b8fe74c658f39f1bff01afa3f40": {
+        "id": "dialogue.b7d9124ee2d4c16bd331109d6f50fa5603d46b8fe74c658f39f1bff01afa3f40",
+        "sourceAnchor": {
+          "chatId": "isolated.dialogue.live.08-ambiguous-listener",
+          "messageId": 0,
+          "swipeId": 0,
+          "text": "布莱特对黄泉和御临风说：“见面改在钟楼。”其中一人没听清，记录没有说明是谁。"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.b7d9124ee2d4c16bd331109d6f50fa5603d46b8fe74c658f39f1bff01afa3f40.c3f5cbfa9b12b79678d9b519e3a6f6c8af5c2ad1259449138e809895247762c4",
+            "claimId": "claim.utterance.bright",
+            "speakerId": "bright",
+            "recipientIds": [],
+            "propositionRef": null,
+            "content": "见面改在钟楼。",
+            "quote": "见面改在钟楼。",
+            "belief": "uncertain",
+            "status": "pending",
+            "extractionReason": "布莱特对黄泉和御临风说话，但其中一人没听清且未说明是谁，无法确定具体哪位听清哪位没听清",
+            "reason": "“其中一人”无法确定具体指黄泉还是御临风，记录未说明具体是谁没听清",
+            "evidence": {
+              "documentId": "current",
+              "start": 21,
+              "end": 38,
+              "quote": "其中一人没听清，记录没有说明是谁。"
+            },
+            "unresolved": [
+              {
+                "span": {
+                  "documentId": "current",
+                  "start": 21,
+                  "end": 25,
+                  "quote": "其中一人"
+                },
+                "reason": "“其中一人”无法确定具体指黄泉还是御临风，记录未说明具体是谁没听清"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "context": {
+    "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+    "actorKnowledge": [
+      {
+        "actorId": "bright",
+        "name": "布莱特",
+        "facts": []
+      },
+      {
+        "actorId": "huang",
+        "name": "黄泉",
+        "facts": []
+      },
+      {
+        "actorId": "player",
+        "name": "御临风",
+        "facts": []
+      }
+    ],
+    "availableInformation": []
+  },
+  "semanticAssessment": "pending-manual"
+}

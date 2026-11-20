@@ -1,0 +1,165 @@
+{
+  "id": "A.scene1.reception",
+  "checked": {
+    "contextRef": "493cec79fcaca929a3b029e6696ee693fec968a0399a52e210e0a79e162a9f80",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.ac2bf783a69d256fc249acd8e46816d74c167518866bf8e9d3f99c87cfa3a3ef",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "turn.utterance.1",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "我不认得这里的字。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 0,
+                  "end": 2,
+                  "quote": "黄泉"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 29,
+                  "end": 38,
+                  "quote": "我不认得这里的字。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 28,
+                "end": 39,
+                "quote": "“我不认得这里的字。”"
+              }
+            },
+            {
+              "id": "turn.utterance.2",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "上面写了什么，得等布莱特回来，或者找个认字的路人问问。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 79,
+                  "end": 80,
+                  "quote": "她"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 99,
+                  "end": 126,
+                  "quote": "上面写了什么，得等布莱特回来，或者找个认字的路人问问。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 98,
+                "end": 127,
+                "quote": "“上面写了什么，得等布莱特回来，或者找个认字的路人问问。”"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "turn.utterance.1.rec.1",
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 17,
+            "end": 20,
+            "quote": "御临风"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 11,
+          "end": 26,
+          "quote": "转头看了一眼御临风，语气平淡："
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "",
+        "claimId": "turn.utterance.1"
+      },
+      {
+        "id": "turn.utterance.2.rec.1",
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 17,
+            "end": 20,
+            "quote": "御临风"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 203,
+          "end": 220,
+          "quote": "并无人特别留心他们这边的简短对答。"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "",
+        "claimId": "turn.utterance.2"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "recorded",
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 246,
+          "quote": "黄泉牵着马缰停在路边，转头看了一眼御临风，语气平淡：\n\n“我不认得这里的字。”\n\n主神留下的加持能让她听懂和说出这边的言语，但纸上画着的规整文字并不包含在内。她收回视线，目光顺着街道往前看去：\n\n“上面写了什么，得等布莱特回来，或者找个认字的路人问问。”\n\n街道另一端的人流依旧熙攘，几间店铺门前飘出面点的热气，布莱特的身影还在那边的摊位前尚未返回。街边的石砌水渠里水流平缓，两旁的行人神色如常地各自走着，并无人特别留心他们这边的简短对答。\n\n<StatusPlaceHolderImpl/>"
+        },
+        "reason": "黄泉对御临风的两次言说均已记录且被御临风正常接收，布莱特尚未返回且行人未留心，对话未涉及医馆旧识等事实引用。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false
+  },
+  "pass": true
+}

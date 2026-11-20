@@ -1,0 +1,21 @@
+2026-11-15 JSON与引用绑定继续诊断（472—474）
+
+结论：未发现新的明确本地程序遗漏。本轮没有修改产品代码、生成提示、Schema、解析器或引用校验；不靠关键词、输出修补或放宽验收解决上游非法输出。
+
+诊断沿用prepareRelatedDialogueExtraction、createDialogueSemanticAdapter、原片段选择与知情回执链。复核469—471：非法文字在原始HTTP响应message.content中即已存在；保存前后哈希一致；471遗漏的coverage/status/unresolved仍属于实际Schema必填字段。没有证据归因于本地丢字段或改写。此前467的listener引用旁白“答”违反已发送的当前回答范围要求，原拒绝合理，未放宽。
+
+离线：已有相关正反例164/164通过，覆盖原JSON/重复键、片段引用、身份/接收关系/范围、未收到/未开口和待核依赖边界；无新增重复测试。三份本轮实际messages和response_format均与当前prepare+现有flattenSchema输出深比较一致；生成参数保持原值。
+
+预先冻结三份，各一次、逐份检查：
+472 receiptformat.reproduce.partial：原469请求54346字节逐字节一致。原始JSON在位置1076混入未加引号的自评/说明文字；可见结尾缺coverage/status/unresolved。可读contentSpan分开前半received、后半not_received，但前半接收依据仍用整句回答，完整结构及语义未验收。原生解析拒绝，隔离写入0。
+473 receiptformat.reproduce.obstacle：原470请求54787字节逐字节一致。可读listener为bright/reply/history0且引用当前回答；not_received与实际障碍相符，但原始JSON位置1031在quote之后混入解释文字。整份拒绝，隔离写入0。局部合理不能证明原绑定问题稳定解决。
+474 receiptformat.probe.unsaid：新相近反例，布莱特询问渡口何时开放；黄泉只在心中拟好“渡口明天才开放”的回答，没有开口。JSON/Schema/严格引用通过，utterances/receptions空、coverage=none，未把引号内心内容登记为接收；无knowledge/events/pending增量，无关时0问。隔离运行有2次批次初始化/处理保存，rows为空；事实目录与原输入完全一致，不是正式存档写入。判本次未开口知情指标通过，不宣称完整断言抽取（claims为空）或普通对白稳定性通过。
+
+这组对照说明同一完整合同和生成参数下，无接收回执的本例可以输出合法格式；不能因此认定非法JSON必然由非空回执触发，不能证明原因是Schema复杂度、模型或上游中间层。两份原失败仍然失败，本轮没有产品改善可归因。三份finish_reason均stop，输出599/490/234 tokens，低于4096，没有截断证据。
+
+账本：本轮3次（472—474），原200额度已用140，余60，累计474，本轮有限批次关闭。659份旧证据、全部历史逐次记录、22份正式保护文件保持。两份原请求逐字节相同，三份原始响应保存前后哈希一致，源代码/参数保持。不自动重试至通过，其余旧失败未全部重跑。
+
+实际结果：两份语法失败零写入，一份未开口知情反例通过；生成和绑定可靠性仍未验收。继续原样重发不是修复，当前证据支持把主要阻断定位到本地解析前的格式不遵从，尚不足以确定更具体的上游机制。
+
+未自动修补、不放宽校验、不补关键词、不部署、不写正式剧情、不恢复自动批准/修订路线。
+证据：diagnosis.json、contract-verification.json、campaign-tests.log、cases.json、各check.json、verification.json、complete-outputs.txt；完整请求和原始HTTP响应保存在同级iteration-200-20261115对应文件。

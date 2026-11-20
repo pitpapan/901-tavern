@@ -1,0 +1,55 @@
+[
+  {
+    "id": "v7.binding.npc_reply",
+    "original": "v7.diag.npc_reply",
+    "kind": "original-failure",
+    "inputAndParametersUnchanged": true,
+    "bytes": 10732,
+    "requestSha256": "bb9faed9bb1200031c57660cedc66eb33d9e23bb9b342201665de3548257ae21"
+  },
+  {
+    "id": "v7.binding.long",
+    "original": "v7.diag.long",
+    "kind": "original-failure",
+    "inputAndParametersUnchanged": true,
+    "bytes": 55433,
+    "requestSha256": "803f70565907caf012078ab282172caa3b45de3fb30864035a214ddcf7cf839b"
+  },
+  {
+    "id": "v7.binding.implicit",
+    "original": "v7.coverage.near.implicit",
+    "kind": "original-failure",
+    "inputAndParametersUnchanged": true,
+    "bytes": 10876,
+    "requestSha256": "cfe7188de36979cd07aa0fa9e087a9104df84bac0d786ba29f4ab0c0cd763d39"
+  },
+  {
+    "id": "v7.binding.obstacle",
+    "original": "v7.coverage.near.obstacle",
+    "kind": "original-failure",
+    "inputAndParametersUnchanged": true,
+    "bytes": 11153,
+    "requestSha256": "1ce397ac1f7bf2d648d0ab683a5b733fa1fb5a8ea34009fe3c8512460648d84c"
+  },
+  {
+    "id": "v7.binding.near.multi",
+    "kind": "nearby-control",
+    "expected": "two separate answer contents, player as implicit questioner, no narrative-as-reception or cross-binding",
+    "bytes": 12961,
+    "requestSha256": "007b007b9822123494c7084aef46416a1f641bbe1efd71af61531fbaa794a3c2"
+  },
+  {
+    "id": "v7.binding.near.obstacle",
+    "kind": "nearby-control",
+    "expected": "implicit bright known through history but not_received from current obstacle",
+    "bytes": 11173,
+    "requestSha256": "ca96fdf820ef61a949f80d7e6e06c8976007e55059453739f0d3ed72a0f0ba85"
+  },
+  {
+    "id": "v7.binding.near.partial",
+    "kind": "nearby-control",
+    "expected": "first range received, second uncertain, no full answer grant",
+    "bytes": 11253,
+    "requestSha256": "b1b024512e1c88d0e1977036cff6f020a8c051b6256501651ccf919d5c971f51"
+  }
+]

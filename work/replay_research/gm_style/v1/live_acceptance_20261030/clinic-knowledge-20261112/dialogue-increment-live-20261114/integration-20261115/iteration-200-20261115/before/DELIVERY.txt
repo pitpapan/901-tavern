@@ -1,0 +1,50 @@
+普通对白知情入口集成：十二阶段本地交付（2026-11-15）
+
+后续真实验收更新：用户已授权12次，实际custom335/336共2次后因接收引用错误失败即停，余10未发送、累计336。原候选未改；本地交付仍有效，但不能称端到端真实模型通过。最新证据见live-model-20261115/ASSESSMENT.txt与verification.json。下方是本地交付时的状态记录。
+
+当前停止点：本地候选、两条隔离浏览器主链、最终入口、相关离线回归、恢复依据和待授权模型批次已交付。没有新的真实模型输出，也没有部署。累计334，当前新增额度0。
+上一回复custom332—334是旧补测结果，不是本任务交付；旧结果保持，本任务以本文件及统一计划顶部断点为准。原十二阶段授权见task-authorization.txt。
+
+阶段与实际依据
+1 完成：baseline.json及before/固定起点、22正式保护文件和8源文件；原v2合同与325—334有限模型证据保留。
+2 完成：原调用图见下；复用createDialogueSemanticAdapter/createStoryKnowledgeRuntime/registerReplayGate及MVU，没有另建执行器或客户端。
+3 完成（本地）：显式complete或原generateRaw宿主映射，默认disabled；原文/顺序/坐标/Schema送达，映射行为回归及browser-request-audit.json。
+4 完成（本地）：正文先保存读回；prepared恢复不重抽，processed幂等，失败正文保留；final-regression.log。恢复后残留unprocessed标记缺陷由recovery-status-before.log复现，现只清除对应已处理且来源仍匹配的标记。
+5 完成（本地）：B-deferred/B-resumed.chat.jsonl与B-required/B-resumed.jpg证明暂缓→现有按钮→明确接收→同一玩家请求续行；未收到分支见B-not-received.local-state.json及原控制器测试。
+6 完成（投影）：A2与B末轮实际分类/叙事请求均含更新后的逐人来源与uncertain；未收到的布莱特facts空。browser-state-audit.json，不以人物必须复述或披露为通过标准。
+7 完成（隔离合成）：A明确接收→保存→重开→下一轮，B待核→无关不问→相关一次必要确认→暂缓→手动重开确认→续行。17份主链请求，另3份最终候选入口请求；均实际UI触发，接口为明确标注的合成夹具，外部调用0。
+8 完成（本地边界）：原来源变化/分支继承/未绑定/错误回复/回执幂等测试复用；本次增加prepared恢复及普通原生重生成快照覆盖。A重开无重复授予，B暂缓再次检查不自动弹窗；切换/分支不是新增浏览器压力矩阵。
+9 完成：final-regression.log为187/187；最终135模块闭包与3原资产、入口、ZIP及清单。package-verification.json、final-verification.json、deployment-diff.json。
+10 完成（准备），真实运行待授权：model-batch/plan.json列出12次最大外部调用、5次本地分类控制。两份首轮完整请求冻结，十份后续只给真实结果构造规则，未发送。
+11 部分：本地交互体验已核对：无关不问、相关才问、暂缓可处理、选择后不重发玩家输入、错误不重写正文。真实自然叙事质量与持续模型遵从仍待验证；本地固定台词不计文学质量成绩。
+12 完成（本地交付）：此说明、候选、完整证据、原统一计划断点与具体批次齐备。外部模型与正式部署均是后续独立决定，不能据此称正式游玩全面验收完成。
+
+实际修改与调用图
+本次产品源仅story-dialogue-knowledge.mjs、replay-gate-script.example.js、narrative-style-projection.mjs；测试主要扩展story-dialogue-bound与replay-gate-script。local-change.diff与before/可逐项核对。已认可的story-knowledge通用文风/关系目的合同源保持本轮起点不变。
+可配置宿主→createDialogueSemanticAdapter→原普通控制器：
+玩家楼层→[存在pending才dependencies，可能1次模型]→[相关且未询问时原对话框；暂缓deferred；明确答案resolve]→原分类[通常1次模型]→原generateKnown叙事[1次模型]→创建正文/原MVU承接/保存读回→observeDialogue→接收抽取[1次模型]→严格v2结构、原文引用、上下文绑定→原receive/saveBatch→MVU storyKnowledge/dialogueBatches→下一轮knowledge.context进入分类与叙事。
+原生成回调在接收/依赖目的中只映射原消息与Schema，清空该请求的merge_tools后处理，避免相邻业务JSON与坐标数据被合并；不改全局配置或正文。原酒馆服务flattenSchema将$defs展开；核验脚本按原宿主函数比较完整展开结果并继续使用原p.check，未将Schema差异直接忽略。
+处理成功不代表消息为世界真相；只给实际接收者登记private/uncertain来源说法，原传闻belief保持。coverage不补回执，action不转言说。来源变更、模型无效、未绑定能力和待核分别处理，不自动ready。
+默认不自动启用，也不自动扫描旧全文或重开失败批次；已有prepared只恢复保存好的合格结果。只读记忆接口保留，不把旧摘要/历史对白当取得依据。
+
+浏览器证据与限制
+browser-evidence/保存20份实际本地接口请求及合成原返回；A/B各状态快照保持原正文和来源。browser-request-audit.json核对6份接收的原消息/原校验和完整宿主Schema，以及2份依赖绑定。browser-state-audit.json核对无授予/单人授予、真实待核来源、重开、无关保持、确认续行与未收到局部回放。
+A1→A2仍只有1条御临风来源消息；B只在实际选择后授予御临风，送货请求在聊天中只有一次。未收到局部回放从实际B-deferred快照分支，非正式玩家决定，原API返回dismissed、knowledge空、ready；原控制器测试同时证明未收到后原请求续行。
+两条主链完成后修了恢复显示标记；browser-final-delta.json明确唯一后续模块差异，final-entry.chat.jsonl及Final-*捕获来自最终包的重开后入口。最终对应版本已同步并核验，未把早期浏览器版本冒充最终所有改动的UI覆盖。
+历史merge_tools及合成夹具末尾失败在browser-failures.txt，原失败快照未覆盖；恢复标记失败也保留。不能把这些接口夹具叫真实模型回复，也不能凭Schema/坐标合法断言语义没有遗漏。
+20份本地请求含6次分类、6次叙事、6次接收、2次依赖；分类均NO_CHECK测试控制。正文固定且重复是夹具行为，不是模型文风结果。未测试真实抽取延迟、长篇稳定性、所有隐含依赖或完整自主分类。请求体成本真实记录：主链正文约104—110KB、接收约92—94KB，宿主展开Schema有体积成本；上游是否接受该组合尚未验证。
+
+候选、差异与恢复
+dialogue-integration-candidate.zip只含135模块、3原资产、candidate-entry.js和清单/使用说明。显式配置见CANDIDATE.txt及原story-dialogue-knowledge.md。
+相对上一关系目的候选有5个模块变化：本次宿主/普通控制器部分，加此前已有但旧包未收录的assertion-contract、story-knowledge、MVU适配变化。入口生成器另在源diff和candidate-entry中体现。相对正式安装32个差异并非本次全新增；candidate-delta.json、deployment-diff.json逐项区分。
+恢复复用../../communication-20261113/recovery/manifest.json及../../installed-entry.js，已有16份原件验证；新增文件列表按本次deployment-diff完整保留。未执行任何部署/恢复/删除。将来若部署，先保存当时角色卡/入口，复核实际目标哈希；仅恢复对应备份，新增文件仅在部署记录确认归属且仍匹配候选时删除，不能套用旧清单删除别的工作。
+
+待授权模型批次与判断
+最多12次：A两轮4次（正文/抽取各2）；B三轮8次（正文/抽取各3，依赖2）。分类继续5次本地控制，不能称真实分类通过；若要改用真实分类，需另计5次并重新明确预算。
+首轮完整请求A1为108317字节、B1为108299字节，参数来自实际宿主：[抗截断]gemini-3.8-flash，temperature=1、top_p=1、max_tokens=4096、stream=false；既有端点标签https://cdn.sta1n.cn/v1/chat/completions，未探测或读取凭据。
+后续严格承接实际保存的新回复与待核ID，不能沿用本地合成理想答案。B首轮自然提问不保证模型产生接收歧义；若没有合法待核，停止并记“该分支未覆盖”，不强造pending或自动追加调用，也不把合理清晰回复判成语义失败。
+首次传输、结构、引用、归属或本轮语义失败即停，不重试；保留完整请求/HTTP原响应/返回模型标签/用量，失败后继续离线收尾。当前12次仅申请，不属于现有授权，未安排后台发送。
+
+体验结论
+已改善的是程序使用链：可明确启用宿主，接收结果保存后能进入下一轮；歧义不必每轮打断，必要确认后可续行；恢复不重复抽取，恢复成功不继续标未完成。
+仍不能证明模型总能正确识别谁听见、遗漏足够少、自然文风更好或真实长篇游玩稳定。收到不等于相信，知情不等于必须披露；角色的自主选择、玩家行动权和原文风基线不改变。

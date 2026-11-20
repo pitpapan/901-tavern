@@ -1,0 +1,31 @@
+{
+  "kind": "scoped.none",
+  "startedAt": "2026-11-15T10:25:01.277Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T10:25:05.844Z",
+  "headersElapsedMs": 4568,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5ad8caefd7efe6b-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 10:25:05 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=ERBT%2B4CrRBmeGwCvD7jMrRL0aicfN3jBJ8XQk%2By9gJInniJm5Eat89zzQhWkIoneR7ieae0goYqOURhBA%2F%2BKbQH8lA0xsSJwjqDjvC2YuifCAVs7rC4V4jwpkP3TXg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611151025013716123068268d9d6UyDpJknD",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "f9ac1dc6-892b-4e50-a669-5e3f9a89a864"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"3408ec4f-cc4c-4d1d-8555-3de059fc1329\",\"object\":\"chat.completion\",\"created\":1794738305,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/3\\\",\\\"contextRef\\\":\\\"20a4a124690cd735265d21f0d0551a47d66ef2ec3b4e72c237c5bcb0d46e035a\\\",\\\"inputRef\\\":\\\"assertion.0fbd031c9198f021a8f433da3a88a2a9c2dbaf36923ff596b00829a230615940\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"claim.utterance.huang.0\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"huang\\\",\\\"content\\\":\\\"西门今晚关闭，明早从石桥走。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":2,\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":9,\\\"end\\\":23,\\\"quote\\\":\\\"西门今晚关闭，明早从石桥走。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":24,\\\"quote\\\":\\\"黄泉对御临风说：“西门今晚关闭，明早从石桥走。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"reception.huang.player.0\\\",\\\"contentSpan\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":9,\\\"end\\\":23,\\\"quote\\\":\\\"西门今晚关闭，明早从石桥走。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"player\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":3,\\\"end\\\":6,\\\"quote\\\":\\\"御临风\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":24,\\\"end\\\":34,\\\"quote\\\":\\\"御临风听清了整句话。\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"御临风明确听清了黄泉说的整句话\\\"},{\\\"id\\\":\\\"reception.huang.bright.0\\\",\\\"contentSpan\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":9,\\\"end\\\":23,\\\"quote\\\":\\\"西门今晚关闭，明早从石桥走。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"bright\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":34,\\\"end\\\":37,\\\"quote\\\":\\\"布莱特\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":34,\\\"end\\\":49,\\\"quote\\\":\\\"布莱特离得太远，一句也没听见。\\\"},\\\"status\\\":\\\"not_received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"布莱特离得太远，一句也没听见\\\"}]}],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":49,\\\"quote\\\":\\\"黄泉对御临风说：“西门今晚关闭，明早从石桥走。”御临风听清了整句话。布莱特离得太远，一句也没听见。\\\"},\\\"reason\\\":\\\"黄泉的言说及御临风听清、布莱特未听见的接收记录均已完整记录\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4196,\"completion_tokens\":728,\"total_tokens\":4924}}",
+  "responseBytes": 2778,
+  "responseBodySha256BeforePrivacyRedaction": "38252f12547cf5cdef41672e970471fc7146db86b356d0ab2e0c7cd043d35004",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T10:25:05.855Z",
+  "elapsedMs": 4579
+}

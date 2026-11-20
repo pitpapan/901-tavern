@@ -1,0 +1,179 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {spawnSync} from 'node:child_process';
+import * as dialogue from './story-dialogue-knowledge.mjs';
+import {createStoryKnowledgeRuntime} from './story-knowledge.mjs';
+import {createOpeningFixture} from './opening.mjs';
+
+const text='甲对乙说：“桥面结冰，改走南门。”乙听清前半句，后半句是否听清不明。';
+const options={sourceAnchor:{chatId:'compact.test',messageId:1,swipeId:0,text},history:[{messageId:0,role:'user',text:'乙询问甲通行情况。'}],actors:{a:'甲',b:'乙'},facts:{},memory:null};
+async function prepare(o=options){assert.equal(typeof dialogue.prepareCompactDialogueExtraction,'function','compact selection preparer required');return dialogue.prepareCompactDialogueExtraction(o);}
+function wire(p){
+ const selections=[],fragments=JSON.parse(p.messages[2].content).fragments;
+ const q=quote=>{const f=fragments.filter(f=>f.text.includes(quote)&&f.text.indexOf(quote)===f.text.lastIndexOf(quote)).sort((a,b)=>a.text.length-b.text.length)[0];assert.ok(f,quote);const s={fragmentId:f.id,quote},i=selections.findIndex(x=>JSON.stringify(x)===JSON.stringify(s));if(i>=0)return i;selections.push(s);return selections.length-1;};
+ const w={schemaVersion:'dialogue-reception/7',contextRef:p.input.contextRef,selections,utterances:[{speakerId:'a',speaker:q('甲'),content:q('桥面结冰，改走南门。'),mode:'asserted',scope:{time:null,condition:null,attribution:null},anchor:q('甲对乙说：“桥面结冰，改走南门。”')}],receptions:[
+  {utterance:0,content:q('桥面结冰'),listenerId:'b',identityKind:'explicit',identity:q('乙'),historyMessageId:null,evidenceKind:'direct',evidence:q('乙听清前半句'),propositionRef:null},
+  {utterance:0,content:q('改走南门。'),listenerId:'b',identityKind:'explicit',identity:q('乙'),historyMessageId:null,evidenceKind:'unknown',evidence:q('后半句是否听清不明'),propositionRef:null},
+ ],unresolved:[],coverage:{status:'uncertain',evidence:q(p.input.sourceAnchor.text)}};
+ return {w,q};
+}
+test('compact registry preserves original input, partial range and uncertainty through old strict receipt checker',async()=>{
+ const p=await prepare(),old=await dialogue.prepareSemanticDialogueExtraction(options),{w}=wire(p),copy=structuredClone(w),result=p.check(w);
+ assert.deepEqual(p.input,old.input);assert.deepEqual(p.messages.slice(1),old.messages.slice(1));assert.equal(p.responseFormat.json_schema.name,'dialogue_reception_v7');
+ assert.deepEqual(result.receptions.map(r=>[r.status,r.contentSpan.quote]),[['received','桥面结冰'],['uncertain','改走南门。']]);
+ assert.equal(result.canApprove,false);assert.equal(result.semanticCompletenessVerified,false);assert.deepEqual(w,copy);
+ assert.ok(JSON.stringify(p.responseFormat).length<JSON.stringify(old.responseFormat).length/2);
+ const schema=spawnSync('python',['-c','import json,sys,jsonschema\nx=json.loads(sys.stdin.buffer.read());jsonschema.Draft202012Validator.check_schema(x["schema"]);jsonschema.Draft202012Validator(x["schema"]).validate(x["value"])'],{input:JSON.stringify({schema:p.responseFormat.json_schema.schema,value:w}),encoding:'utf8'});assert.equal(schema.status,0,schema.stderr);
+});
+test('compact scoped values come from explicitly selected source, not string coercion or omitted defaults',async()=>{
+ const p=await prepare(),{w,q}=wire(p);w.utterances[0].scope.condition=q('桥面结冰');const c=p.check(w).assertions.units[0].claims[0];assert.equal(c.scope.condition,'桥面结冰');assert.equal(c.scopeSpans.condition.quote,'桥面结冰');
+ w.utterances[0].scope.condition='null';assert.throws(()=>p.check(w));
+});
+test('compact invalid selections, bindings, omitted fields and cross-reception ranges are rejected without repair',async()=>{
+ const p=await prepare();for(const mutate of [
+  w=>w.schemaVersion='dialogue-reception/6',w=>w.contextRef='stale',w=>w.units=[],w=>delete w.coverage,
+  w=>w.selections[0].quote='无此原文',w=>w.selections.push({fragmentId:'missing',quote:'错'}),
+  w=>w.utterances[0].speakerId=1,w=>w.utterances[0].content=999,w=>w.utterances[0].content='1',
+  w=>delete w.utterances[0].scope.time,w=>w.utterances[0].scope.time={},w=>w.utterances[0].status='received',
+  w=>w.receptions[0].utterance=99,w=>w.receptions[0].listenerId='missing',w=>w.receptions[0].content=w.coverage.evidence,
+  w=>w.receptions[0].evidence=null,w=>w.receptions[0].claimId='action',w=>w.receptions[0].evidenceKind='invented',
+  w=>w.receptions[0].identityKind='reply',w=>w.receptions[0].historyMessageId=99,
+  w=>w.receptions[0].content=w.utterances[0].content,w=>w.coverage.status='none',
+ ]){const {w}=wire(p);mutate(w);const copy=structuredClone(w);assert.throws(()=>p.check(w));assert.deepEqual(w,copy);}
+});
+test('compact reply identity requires a known history row and a selection inside current answer',async()=>{
+ const p=await prepare(),{w}=wire(p),r=w.receptions[0];r.identityKind='reply';r.identity=w.utterances[0].content;r.historyMessageId=0;r.evidenceKind='reply';r.evidence=r.content;
+ assert.equal(p.check(w).receptionBindings[0].listener.kind,'reply');r.identity=w.utterances[0].speaker;assert.throws(()=>p.check(w),/current answer/);
+});
+test('compact explicit none, obstacle, unknown identity and unresolved preserve separate meanings',async()=>{
+ const p=await prepare();
+ const {w}=wire(p);w.receptions[0].evidenceKind='obstacle';assert.equal(p.check(w).receptions[0].status,'not_received');
+ const unknown=wire(p).w;unknown.receptions[1].listenerId=null;unknown.receptions[1].identityKind='unknown';unknown.receptions[1].identity=unknown.receptions[1].evidence;assert.deepEqual(p.check(unknown).receptions[1].recipientIds,[]);
+ const none=wire(p).w;none.utterances=[];none.receptions=[];none.coverage.status='none';assert.deepEqual(p.check(none).receptions,[]);
+ none.unresolved=[{selection:none.coverage.evidence,reason:'传达范围未定'}];none.coverage.status='uncertain';assert.equal(p.check(none).assertions.units[0].unresolved.length,1);
+});
+
+function runtime(complete,{dependencies,ask}={}){
+ let state={stat_data:{'901_rules_poc':{schemaVersion:1,revision:0,chatId:options.sourceAnchor.chatId,actors:createOpeningFixture().actors,operations:{}}}},writes=0,calls=0,asked=0;
+ const chat=[{mes:options.history[0].text,is_user:true},{mes:text,is_user:false,swipe_id:0}];
+ const mvu={getMvuData:()=>structuredClone(state),replaceMvuData:async v=>{writes++;state=v;}},tavern={chatId:options.sourceAnchor.chatId,chat,saveChat:async()=>{},readSavedChat:async()=>[{},...chat.map(m=>({...m,variables:[structuredClone(state)]}))]};
+ const adapter=dialogue.createDialogueSemanticAdapter({outputContract:'dialogue-reception/7',complete:async req=>{calls++;return complete(req,calls,chat);}});
+ const make=()=>createStoryKnowledgeRuntime({mvu,tavern,catalog:{id:'compact.test',actors:options.actors,facts:[]},getAnchor:()=>({...options.sourceAnchor}),dialogue:{...adapter,dependencies:dependencies??(async({request,pending})=>request.text==='依赖'?pending.map(p=>p.id):[]),ask:async q=>{asked++;return ask?.(q)??null;}}});
+ return {make,chat,state:()=>structuredClone(state),counts:()=>({writes,calls,asked})};
+}
+async function good(req){return JSON.stringify(wire(await prepare(JSON.parse(req.messages[1].content))).w);}
+test('invalid v7 raw reply persists unprocessed only; unrelated play, reload and observe never re-extract or ask',async()=>{
+ const raw='{"schemaVersion": illegal original';const rt=runtime(async()=>raw),k=rt.make(),result=await k.observeDialogue(options.sourceAnchor);
+ assert.equal(result.status,'unprocessed');assert.equal(result.pending.length,1);assert.equal(result.pending[0].kind,'unprocessed');assert.equal(Object.keys(k.read().knowledge).length,0);assert.equal(Object.keys(k.read().events).length,0);
+ const batch=Object.values(k.read().dialogueBatches)[0];assert.equal(batch.status,'failed');assert.equal(batch.attempts[0].rawReply,raw);assert.deepEqual(rt.chat[1].mes,text);
+ const reopened=rt.make();await reopened.observeDialogue(options.sourceAnchor);await reopened.resumeDialogue();assert.equal((await reopened.prepareDialogueTurn({text:'无关'})).status,'ready');assert.equal(rt.counts().calls,1);assert.equal(rt.counts().asked,0);
+});
+test('actual dependency triggers one bounded new extraction using frozen failed input; real partial/pending then uses old ask',async()=>{
+ const seen=[],rt=runtime(async(req,n)=>{seen.push(structuredClone(req));return n===1?'bad original':good(req);}),k=rt.make();await k.observeDialogue(options.sourceAnchor);
+ const result=await rt.make().prepareDialogueTurn({text:'依赖'});assert.equal(result.status,'deferred');assert.equal(rt.counts().calls,2);assert.equal(rt.counts().asked,1);
+ assert.deepEqual(seen[1].messages.slice(0,3),seen[0].messages);assert.equal(JSON.parse(seen[1].messages[3].content).dependency.text,'依赖');
+ const state=k.read(),batch=Object.values(state.dialogueBatches)[0];assert.equal(batch.attempts[0].rawReply,'bad original');assert.equal(batch.attempts.length,2);assert.equal(batch.recoveryAttempted,true);
+ assert.deepEqual(k.context().actorKnowledge.find(a=>a.actorId==='b').facts.map(f=>f.content.text),['桥面结冰']);assert.equal(result.questions[0].content,'改走南门。');
+ await k.prepareDialogueTurn({text:'依赖'});assert.equal(rt.counts().calls,2);assert.equal(rt.counts().asked,1);
+});
+test('second format failure remains technical unprocessed, never fake none or semantic confirmation and never loops',async()=>{
+ const rt=runtime(async(_r,n)=>'bad'+n),k=rt.make();await k.observeDialogue(options.sourceAnchor);const result=await k.prepareDialogueTurn({text:'依赖'});
+ assert.equal(result.status,'unavailable');assert.equal(result.reason,'dialogue-increment-unprocessed');assert.equal(rt.counts().calls,2);assert.equal(rt.counts().asked,0);
+ await rt.make().prepareDialogueTurn({text:'依赖'});assert.equal(rt.counts().calls,2);assert.equal((await k.prepareDialogueTurn({text:'无关'})).status,'ready');assert.equal(Object.keys(k.read().knowledge).length,0);
+ assert.deepEqual(Object.values(k.read().dialogueBatches)[0].attempts.map(a=>a.rawReply),['bad1','bad2']);
+ await assert.rejects(k.resolveDialogue({id:result.unprocessed[0].id,received:false,recipientIds:[]}),/unprocessed/);
+});
+test('valid recovery with explicit no reception clears only the failed increment',async()=>{
+ const rt=runtime(async(req,n)=>{if(n===1)return 'invalid';const {w}=wire(await prepare(JSON.parse(req.messages[1].content)));w.utterances=[];w.receptions=[];w.coverage.status='none';return JSON.stringify(w);}),k=rt.make();await k.observeDialogue(options.sourceAnchor);
+ assert.equal((await k.prepareDialogueTurn({text:'依赖'})).status,'ready');assert.equal(rt.counts().asked,0);assert.equal(Object.keys(k.read().knowledge).length,0);assert.equal(Object.values(k.read().dialogueBatches)[0].status,'processed');
+});
+test('source/branch changes and state persistence failures are not masked as extraction failures',async()=>{
+ const rt=runtime(async(req,_n,chat)=>{const raw=await good(req);chat[1].mes+='改';return raw;});await assert.rejects(rt.make().observeDialogue(options.sourceAnchor),/changed/);assert.equal(rt.counts().writes,0);
+});
+test('existing knowledge survives a later failed increment',async()=>{
+ const rt=runtime(async()=>'{bad'),k=rt.make();await k.receive({id:'old',status:'received',authority:'host-confirmed',sourceAnchor:options.sourceAnchor,recipientIds:['a'],propositionRefs:['old.message'],channel:'message',belief:'uncertain',reportedMessage:{speakerId:'a',text:'桥面结冰',quote:'桥面结冰'}});
+ const known=structuredClone(k.read().knowledge);await k.observeDialogue(options.sourceAnchor);assert.deepEqual(k.read().knowledge,known);assert.equal(k.context().actorKnowledge.find(a=>a.actorId==='a').facts.length,1);
+});
+test('historical malformed replies remain rejected by explicit v7, never repaired or interpreted as a new wire',async()=>{
+ const dir=new URL('../../replay_research/gm_style/v1/live_acceptance_20261030/clinic-knowledge-20261112/dialogue-increment-live-20261114/integration-20261115/iteration-200-20261115/',import.meta.url),p=await prepare();
+ for(const id of ['v6.accept.partial','v6.accept.uncertain','wireprobe.shallow_units']){const raw=await readFile(new URL(id+'.content.txt',dir),'utf8'),a=dialogue.createDialogueSemanticAdapter({outputContract:'dialogue-reception/7',complete:async()=>raw});await assert.rejects(async()=>p.check(await a.extract(p.input,p.messages,p.responseFormat)));assert.equal(await readFile(new URL(id+'.content.txt',dir),'utf8'),raw);}
+});
+test('primitive, duplicate-key and invalid-selection failures retain exact raw replies, without any receipt adoption',async()=>{
+ for(const kind of ['primitive','duplicate','selection']){
+  let raw;const rt=runtime(async req=>{const {w}=wire(await prepare(JSON.parse(req.messages[1].content)));w.selections[0].quote='错';raw=kind==='primitive'?'  123  ':kind==='duplicate'?' {"schemaVersion":7,"schemaVersion":8} ':JSON.stringify(w);return raw;}),k=rt.make();
+  assert.equal((await k.observeDialogue(options.sourceAnchor)).status,'unprocessed');assert.equal(Object.values(k.read().dialogueBatches)[0].attempts[0].rawReply,raw);assert.equal(Object.keys(k.read().knowledge).length,0);
+ }
+});
+test('recovery rechecks actual pending dependencies instead of asking about unrelated unresolved remainder',async()=>{
+ const rt=runtime(async(req,n)=>n===1?'bad':good(req),{dependencies:async({pending})=>pending.filter(p=>p.kind==='unprocessed').map(p=>p.id)}),k=rt.make();await k.observeDialogue(options.sourceAnchor);
+ assert.equal((await k.prepareDialogueTurn({text:'只依赖已经听清的前半句'})).status,'ready');assert.equal(rt.counts().calls,2);assert.equal(rt.counts().asked,0);assert.equal(Object.values(k.read().dialogueBatches)[0].rows.filter(r=>r.status==='pending').length,1);
+});
+test('frozen reply identity cannot be recovered after its original history was edited',async()=>{
+ const rt=runtime(async(req,n)=>n===1?'bad':good(req)),k=rt.make();await k.observeDialogue(options.sourceAnchor);rt.chat[0].mes='丙而不是乙询问甲。';
+ await assert.rejects(k.prepareDialogueTurn({text:'依赖'}),/history changed/);assert.equal(rt.counts().calls,1);assert.equal(Object.keys(k.read().knowledge).length,0);
+});
+
+test('original and new coverage failures remain rejected without local field loss or reply repair',async()=>{
+ const dir=new URL('../../replay_research/gm_style/v1/live_acceptance_20261030/clinic-knowledge-20261112/dialogue-increment-live-20261114/integration-20261115/iteration-200-20261115/',import.meta.url);
+ for(const [name,expected] of [['v7.accept.uncertain',/Missing or ambiguous source selection/],['v7.accept.npc_reply',/current answer/],['v7.accept.long',/Invalid compact record fields/],['v7.accept.obstacle',/current answer/],['v7.failure.recover',/Missing or ambiguous source selection/],['v7.diag.recovery',/Inconsistent reception coverage/],['v7.diag.near.partial_unknown',/Inconsistent reception coverage/]]){
+  const request=JSON.parse(await readFile(new URL(name+'.request.json',dir),'utf8')),raw=await readFile(new URL(name+'.content.txt',dir),'utf8'),p=await prepare(JSON.parse(request.messages[1].content));
+  assert.deepEqual(JSON.parse(p.messages[1].content),JSON.parse(request.messages[1].content));assert.deepEqual(p.messages[2],request.messages[2]);
+  assert.ok(request.response_format.json_schema.schema.properties.receptions.items.required.includes('historyMessageId'));
+  const parsed=JSON.parse(raw),adapter=dialogue.createDialogueSemanticAdapter({outputContract:'dialogue-reception/7',complete:async()=>raw});
+  const value=await adapter.extract(p.input,request.messages,p.responseFormat);assert.deepEqual(value,parsed);
+  assert.throws(()=>p.check(value),expected);assert.deepEqual(value,parsed);assert.equal(await readFile(new URL(name+'.content.txt',dir),'utf8'),raw);
+ }
+});
+test('a cross-boundary selection must explicitly choose its containing fragment; resolver never substitutes it',async()=>{
+ const p=await prepare(),{w}=wire(p),fragments=JSON.parse(p.messages[2].content).fragments,quote='乙听清前半句，后半句是否听清不明。';
+ const parent=fragments.find(f=>f.text.includes(quote)),child=fragments.find(f=>f.text.includes('乙听清前半句')&&!f.text.includes(quote));assert.ok(parent&&child);
+ w.coverage.evidence=w.selections.push({fragmentId:parent.id,quote})-1;assert.equal(p.check(w).receptions.length,2);
+ w.selections[w.coverage.evidence].fragmentId=child.id;const snapshot=structuredClone(w);assert.throws(()=>p.check(w),/Missing or ambiguous/);assert.deepEqual(w,snapshot);
+});
+test('explicit listener requires an actual null history value, not an absent field',async()=>{
+ const p=await prepare(),{w}=wire(p);assert.equal(p.check(w).receptions[0].status,'received');
+ delete w.receptions[0].historyMessageId;const snapshot=structuredClone(w);assert.throws(()=>p.check(w),/Invalid compact record fields/);assert.deepEqual(w,snapshot);assert.equal(Object.hasOwn(w.receptions[0],'historyMessageId'),false);
+});
+test('implicit reply identity and obstacle evidence keep separate ranges',async()=>{
+ const p=await prepare({...options,sourceAnchor:{...options.sourceAnchor,text:'甲答道：“渡船停驶。”乙已走远，听不到回答。'}}),selections=[],q=quote=>selections.push({fragmentId:'f1',quote})-1;
+ const w={schemaVersion:'dialogue-reception/7',contextRef:p.input.contextRef,selections,utterances:[{speakerId:'a',speaker:q('甲'),content:q('渡船停驶。'),mode:'asserted',scope:{time:null,condition:null,attribution:null},anchor:q('答道')}],receptions:[],unresolved:[],coverage:{status:'recorded',evidence:q('听不到回答')}};
+ const r={utterance:0,content:w.utterances[0].content,listenerId:'b',identityKind:'reply',identity:w.utterances[0].content,historyMessageId:0,evidenceKind:'obstacle',evidence:w.coverage.evidence,propositionRef:null};w.receptions.push(r);
+ assert.equal(p.check(w).receptions[0].status,'not_received');r.identity=w.utterances[0].anchor;const snapshot=structuredClone(w);assert.throws(()=>p.check(w),/current answer/);assert.deepEqual(w,snapshot);
+});
+test('compact coverage generation describes the same mutually exclusive states as the existing checker',async()=>{
+ const p=await prepare(),{w}=wire(p);
+ assert.match(p.messages[0].content,/uncertain：有unknown接收或非空unresolved，优先于其他状态/);
+ assert.match(p.messages[0].content,/recorded：接收记录非空且没有上述歧义/);
+ assert.match(p.messages[0].content,/none：接收记录和unresolved均为空/);
+ assert.equal(p.check(w).coverage[0].status,'uncertain');w.coverage.status='recorded';assert.throws(()=>p.check(w),/Inconsistent reception coverage/);
+ w.receptions[1].evidenceKind='obstacle';assert.equal(p.check(w).coverage[0].status,'recorded');
+ w.unresolved=[{selection:w.coverage.evidence,reason:'另有无法确定的接收范围'}];assert.throws(()=>p.check(w),/Inconsistent reception coverage/);w.coverage.status='uncertain';assert.equal(p.check(w).coverage[0].status,'uncertain');
+ w.receptions=[];w.unresolved=[];w.coverage.status='none';assert.equal(p.check(w).coverage[0].status,'none');
+});
+
+test('compact schema retains existing listener and reception evidence descriptions rather than losing them during projection',async()=>{
+ const p=await prepare(),old=await dialogue.prepareSemanticDialogueExtraction(options),source=old.responseFormat.json_schema.schema.properties.units.items.properties.utterances.items.properties.receptions.items.properties;
+ const projected=p.responseFormat.json_schema.schema.properties.receptions.items.properties;
+ assert.equal(projected.identity.description,source.listener.description.replaceAll('actorId','listenerId'));
+ assert.equal(projected.evidence.description,source.evidence.description);
+ assert.equal(projected.identity.type,'integer');assert.equal(projected.evidence.type,'integer');
+});
+test('implicit listeners remain tied to separate answer contents across intervening narrative',async()=>{
+ const p=await prepare({...options,actors:{a:'甲',b:'乙',c:'丙'},history:[{messageId:0,role:'user',text:'甲问乙和丙：“桥与城门能通行吗？”'}],sourceAnchor:{...options.sourceAnchor,text:'乙整理背包，答道：“桥面结冰。”丙望了一眼街口，接着说：“南门照常开放。”三人沿着院墙往前走。'}}),selections=[],q=quote=>selections.push({fragmentId:'f1',quote})-1;
+ const w={schemaVersion:'dialogue-reception/7',contextRef:p.input.contextRef,selections,utterances:[
+  {speakerId:'b',speaker:q('乙'),content:q('桥面结冰。'),mode:'asserted',scope:{time:null,condition:null,attribution:null},anchor:q('答道')},
+  {speakerId:'c',speaker:q('丙'),content:q('南门照常开放。'),mode:'asserted',scope:{time:null,condition:null,attribution:null},anchor:q('接着说')}],
+ receptions:[],unresolved:[],coverage:{status:'recorded',evidence:q('乙整理背包，答道：“桥面结冰。”丙望了一眼街口，接着说：“南门照常开放。”')}};
+ w.receptions=w.utterances.map((u,i)=>({utterance:i,content:u.content,listenerId:'a',identityKind:'reply',identity:u.content,historyMessageId:0,evidenceKind:'reply',evidence:u.content,propositionRef:null}));
+ assert.deepEqual(p.check(w).receptions.map(r=>[r.speakerId,r.recipientIds,r.contentSpan.quote]),[['b',['a'],'桥面结冰。'],['c',['a'],'南门照常开放。']]);
+ const wrongIdentity=structuredClone(w);wrongIdentity.receptions[0].identity=w.utterances[0].anchor;assert.throws(()=>p.check(wrongIdentity),/current answer/);
+ const crossed=structuredClone(w);crossed.receptions[0].content=w.utterances[1].content;assert.throws(()=>p.check(crossed));assert.equal(crossed.receptions[0].content,w.utterances[1].content);
+});
+test('latest implicit-listener and long raw failures stay rejected unchanged',async()=>{
+ const dir=new URL('../../replay_research/gm_style/v1/live_acceptance_20261030/clinic-knowledge-20261112/dialogue-increment-live-20261114/integration-20261115/iteration-200-20261115/',import.meta.url);
+ for(const id of ['v7.diag.npc_reply','v7.diag.long','v7.coverage.near.implicit','v7.coverage.near.obstacle']){
+  const request=JSON.parse(await readFile(new URL(id+'.request.json',dir),'utf8')),raw=await readFile(new URL(id+'.content.txt',dir),'utf8'),p=await prepare(JSON.parse(request.messages[1].content)),value=JSON.parse(raw),copy=structuredClone(value);
+  assert.throws(()=>p.check(value),/current answer/);assert.deepEqual(value,copy);assert.equal(await readFile(new URL(id+'.content.txt',dir),'utf8'),raw);
+ }
+});

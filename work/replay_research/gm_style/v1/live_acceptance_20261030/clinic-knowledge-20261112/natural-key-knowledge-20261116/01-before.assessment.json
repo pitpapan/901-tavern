@@ -1,0 +1,40 @@
+{
+  "id": "01-before.02.narration",
+  "customRequest": 532,
+  "verdict": "fail",
+  "knowledgeBoundary": "pass: no old-friend attribution or shared secret",
+  "playerControl": "fail: final sentence advances collective movement without current player declaration",
+  "outputQuote": "主街上的喧闹声随着几人的步子被渐渐抛在身后。",
+  "contextEvidence": [
+    {
+      "message": 0,
+      "role": "system",
+      "quote": "用户。 本轮中用于衔接场景的一句话或小动作也受这一边界约束：不替御临风新增对白、主动报信、回答追问、确认判断、回忆细节、承诺或接受带路。采用有限代办：玩家已授权告知或连续行动时，可在已明确的接收者、内容和行动范围内，用第三人称旁白概述完成，不必等待玩家逐字写出重复问答。新增具体对白仍由玩家写；概述不增加信息、立场、承诺或决定。事实已知、对"
+    },
+    {
+      "message": 0,
+      "role": "system",
+      "quote": "或答应邀请，沉默不算同意；NPC带路只成立NPC自己的动作，包含御临风的集体行动也须有其参与授权。明确授权告知或连续行动后，可用第三人称概述授权范围内的执行及客观后果，不要求玩家逐句补对白、逐步重复许可；不编主角新台词，不增披露内容或承诺。遇到真正的新选择时留给玩家，已成立外力、伤势和能力的客观后果照常处理。不要以握拳、心跳、瞳孔变化或本"
+    },
+    {
+      "message": 0,
+      "role": "system",
+      "quote": "新对白、内心、判断、主动承诺、信息披露及行动选择由玩家决定。讨论方向不自动授权出发、交钱、换装或答应邀请，沉默不算同意；NPC带路只成立NPC自己的动作，包含御临风的集体行动也须有其参与授权。明确授权告知或连续行动后，可用第三人称概述授权范围内的执行及客观后果，不要求玩家逐句补对白、逐步重复许可；不编主角新台词，不增披露内容或承诺。遇到真"
+    },
+    {
+      "message": 15,
+      "role": "user",
+      "quote": "则数值结算。\n承接本轮已声明言行的客观后果和相关人物的回应，不补御临风未声明的动作、台词、心理、选择或承诺。普通应答完成即可结束，未变化的环境、站位和闲置动作无需逐人复述；不以等待安排交棒。感官只呈现已有现场可支持的观察；普通休息、闲聊没有线索依据时不新增可疑人物或暗示危险。不公开NPC数值，不自动开战。若有JS结果，必须遵守成败及数值；"
+    },
+    {
+      "message": 15,
+      "role": "user",
+      "quote": "C、NPC数值或秘密修正。不得把原团后期事件当作重玩已发生，不替御临风选择新行动或心理。\n【901逐角色知情投影】\n{\"timeBasis\":\"当前保留聊天楼层顺序；不是世界时间或机械回合\",\"actorKnowledge\":[{\"actorId\":\"player\",\"name\":\"御临风\",\"facts\":[]},{\"actorId\":"
+    }
+  ],
+  "diagnosis": "Explicit player-control instructions were present in the frozen request. Existing history contains earlier walking descriptions; the new ending nevertheless supplies current collective movement. No missing instruction or local response rewrite found.",
+  "nextStep": "Keep this actual failure unchanged. Continue only the independently frozen bright-only known-state input, with no prompt/parameter/product changes. No retry of 532.",
+  "severity": "Minor and context-limited player position continuation; not a fabricated choice of destination, question, arrival, dialogue or psychology.",
+  "contextQualification": "Earlier retained history includes walking after entering the city. The new collective footsteps still advance current position; retain the failure without overstating it.",
+  "terraReview": "Read-only comparison agreed with this limited interpretation."
+}

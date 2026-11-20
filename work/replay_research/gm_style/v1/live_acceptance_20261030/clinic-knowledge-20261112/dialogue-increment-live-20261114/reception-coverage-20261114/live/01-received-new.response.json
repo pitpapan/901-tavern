@@ -1,0 +1,31 @@
+{
+  "kind": "dialogue-reception",
+  "startedAt": "2026-11-14T19:55:57.041Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-14T19:56:00.419Z",
+  "headersElapsedMs": 3378,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5a893a06c7ef2ba-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sat, 14 Nov 2026 19:56:00 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2FDk2Q0XfhNP6FCBa%2FuPBVPlfOfeKP7o4X%2BZp4tyyKgBznTWvHMA3maQ2U0DBeHmNMMo%2BvgEMmM8lIdSybEDn%2BmBL2gWX7kbhtwC1byC4FRoXwTWG8Qg1gI%2Fwp1%2B9WQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611141955569755416218268d9d66hnbrJ4C",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "616d72b7-6de3-41b3-b1aa-15e6a6c03871"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"35956409-69c7-4a0c-99a9-8293b98bcb65\",\"object\":\"chat.completion\",\"created\":1794686160,\"model\":\"gemini-3.8-flash-control\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"contextRef\\\":\\\"0da8b16b39df9e40714bb3e4d8da3d53d0e14f4b83847af96867be9562fe0f94\\\",\\\"assertions\\\":{\\\"schemaVersion\\\":\\\"gm-assertion-output/1\\\",\\\"inputRef\\\":\\\"assertion.c69175474df9c44a93c923258fa3b504335782865b73999009fb30c1dab7559c\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"status\\\":\\\"extracted\\\",\\\"claims\\\":[{\\\"id\\\":\\\"c1\\\",\\\"type\\\":\\\"action\\\",\\\"args\\\":{\\\"actor\\\":\\\"御临风\\\",\\\"verb\\\":\\\"说\\\",\\\"object\\\":\\\"西侧栈桥暂时停用。\\\"},\\\"argumentSpans\\\":{\\\"actor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":3,\\\"quote\\\":\\\"御临风\\\"},\\\"verb\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":7,\\\"end\\\":8,\\\"quote\\\":\\\"说\\\"},\\\"object\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":9,\\\"end\\\":20,\\\"quote\\\":\\\"“西侧栈桥暂时停用。”\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":20,\\\"quote\\\":\\\"御临风对布莱特说：“西侧栈桥暂时停用。”\\\"}},{\\\"id\\\":\\\"c2\\\",\\\"type\\\":\\\"action\\\",\\\"args\\\":{\\\"actor\\\":\\\"布莱特\\\",\\\"verb\\\":\\\"听到\\\",\\\"object\\\":\\\"这句话\\\"},\\\"argumentSpans\\\":{\\\"actor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":20,\\\"end\\\":23,\\\"quote\\\":\\\"布莱特\\\"},\\\"verb\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":26,\\\"end\\\":28,\\\"quote\\\":\\\"听到\\\"},\\\"object\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":29,\\\"end\\\":32,\\\"quote\\\":\\\"这句话\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":20,\\\"end\\\":33,\\\"quote\\\":\\\"布莱特清楚地听到了这句话。\\\"}}],\\\"unresolved\\\":[]}]},\\\"receptions\\\":[{\\\"id\\\":\\\"r1\\\",\\\"claimId\\\":\\\"c1\\\",\\\"speakerId\\\":\\\"player\\\",\\\"recipientIds\\\":[\\\"bright\\\"],\\\"recipientSpans\\\":[{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":20,\\\"end\\\":23,\\\"quote\\\":\\\"布莱特\\\"}],\\\"evidence\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":20,\\\"end\\\":33,\\\"quote\\\":\\\"布莱特清楚地听到了这句话。\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"\\\"}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":3908,\"completion_tokens\":612,\"total_tokens\":4520}}",
+  "responseBytes": 2400,
+  "responseBodySha256BeforePrivacyRedaction": "643a390a00ad4e86e07b0e6a3501e186f3767b7b57fdc7134b780854499150f1",
+  "outcome": "completed",
+  "finishedAt": "2026-11-14T19:56:00.424Z",
+  "elapsedMs": 3384
+}

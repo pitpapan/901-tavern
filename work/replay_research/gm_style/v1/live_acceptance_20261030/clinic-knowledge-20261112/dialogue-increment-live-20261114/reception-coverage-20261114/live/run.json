@@ -1,0 +1,194 @@
+{
+  "authorization": "单独诊断action引用和明确接收/歧义漏抽；现有合同澄清后使用剩余8次额度，不重置授权。八份不同输入预先冻结，每份一次，失败先诊断才继续独立对照；不自动修补/放宽校验/部署/正式剧情/自动批准修订。",
+  "originalAuthorization": 30,
+  "alreadyUsed": 22,
+  "baseline": 315,
+  "limit": 8,
+  "cumulative": 323,
+  "remaining": 0,
+  "attempts": [
+    {
+      "id": "02-received-rumor",
+      "customRequest": 316,
+      "state": "completed",
+      "requestBytes": 28167,
+      "requestSha256": "d7c6985fcf19a8c6fe55d1a33da1e85964bc280e0dcda10436b176f6f841a14e",
+      "status": 200,
+      "elapsedMs": 5664,
+      "rawResponseSha256": "08cadf71180457cc9d01fd5b89c6adbecb2da33fe72afb07ac6106c5b04b06b2",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3787,
+        "completion_tokens": 450,
+        "total_tokens": 4237
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "The actual request includes required utterance projection and receipt coverage, but received still references action. Source slices and known rumor reference are correct; original reception checker rejects, prior rumor unchanged, revision1. Clarification has not solved this sample; no conversion.",
+      "diagnosedContinuation": {
+        "reason": "Preserve316 failure after diagnosis; proceed to pre-frozen partial-hearing input once, not retry02 or add phrase patches.",
+        "nextCase": "05-partial-first",
+        "originalFailureRetained": true
+      }
+    },
+    {
+      "id": "05-partial-first",
+      "customRequest": 317,
+      "state": "completed",
+      "requestBytes": 28676,
+      "requestSha256": "de09039182275efc73fa19df9086fb6d34b8e048bed10ee061c4b63a762fa17e",
+      "status": 200,
+      "elapsedMs": 4547,
+      "rawResponseSha256": "d2540d5f17ffa5ea77fbad5be8f7930c1908bcee986e948f634704e407d7d26a",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 4033,
+        "completion_tokens": 339,
+        "total_tokens": 4372
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Structural check accepts but model drops message content, explicit partial hearing and all receptions. Zero grants and pending; revision2 is processing only. Complete coverage instruction was actually present. This is semantic omission, not successful abstention or local loss.",
+      "diagnosedContinuation": {
+        "reason": "Keep omission failure; continue distinct frozen06 as specified bounded contrast, no response repair or repeat.",
+        "nextCase": "06-partial-second",
+        "originalFailureRetained": true
+      }
+    },
+    {
+      "id": "06-partial-second",
+      "customRequest": 318,
+      "state": "completed",
+      "requestBytes": 28677,
+      "requestSha256": "6d46b83b5586058ce59fc85f3d450e7d69b22280e3835206e61aff399d90faaf",
+      "status": 200,
+      "elapsedMs": 4768,
+      "rawResponseSha256": "158e00af8f4d16b4473b8927b58522a29f75205d4d619814c5c3933812ae2d00",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 4046,
+        "completion_tokens": 369,
+        "total_tokens": 4415
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Schema and structural checks pass but hearing range and receptions entirely omitted. No second-clause grant despite explicit source; revision2 only processing. Current guidance did not improve this case; preserve empty output, do not reconstruct.",
+      "diagnosedContinuation": {
+        "reason": "Continue pre-frozen07 ambiguity case once; no new prompt or retry after316-318 diagnosis.",
+        "nextCase": "07-ambiguous-hearing",
+        "originalFailureRetained": true
+      }
+    },
+    {
+      "id": "07-ambiguous-hearing",
+      "customRequest": 319,
+      "state": "completed",
+      "requestBytes": 28460,
+      "requestSha256": "8ea9d1e694943ecb681790a92338fbf16146c3e5cf37551114bcfa089386fe94",
+      "status": 200,
+      "elapsedMs": 6734,
+      "rawResponseSha256": "12da08c75b7648096a4f1fdd21e85ce88ed40d27aec99686e9a2135ab5a84375",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3947,
+        "completion_tokens": 787,
+        "total_tokens": 4734
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Raw uncertain reception for player reappears with exact evidence, but claimId still targets action. Original checker rejects; pending not adopted. Also location/record interpretation rendered as actions. Cannot claim restored usable ambiguity or complete semantics.",
+      "diagnosedContinuation": {
+        "reason": "Target ambiguity preserved only in invalid reply; continue frozen positive/negative controls without changing this version.",
+        "nextCase": "01-received-new",
+        "originalFailureRetained": true
+      }
+    },
+    {
+      "id": "01-received-new",
+      "customRequest": 320,
+      "state": "completed",
+      "requestBytes": 28367,
+      "requestSha256": "1b6a71362333765308decb52d504f6ba87b4fb601f4d540e7e453ee8c6a507ad",
+      "status": 200,
+      "elapsedMs": 3384,
+      "rawResponseSha256": "643a390a00ad4e86e07b0e6a3501e186f3767b7b57fdc7134b780854499150f1",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-control",
+      "usage": {
+        "prompt_tokens": 3908,
+        "completion_tokens": 612,
+        "total_tokens": 4520
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Raw received decision and exact source references preserved, but c1 remains action, so original checker rejects revision0. All five scene replies still lack usable utterance linkage. Pause remaining scene controls for same-full-wrapper format capability probe; earlier probe only exercised claim at root.",
+      "diagnosedContinuation": {
+        "reason": "Full-wrapper probe321 exactly copied utterance plus linked receipt, ruling out unavoidable first-branch restriction for this schema. Complete frozen03/04 negative controls with remaining two calls;08 remains prepared but uncalled.",
+        "nextCase": "03-not-heard",
+        "originalFailureRetained": true
+      }
+    },
+    {
+      "id": "03-not-heard",
+      "customRequest": 322,
+      "state": "completed",
+      "requestBytes": 28386,
+      "requestSha256": "1e801048aed459a0f9745df631af97be46e3159766c9e42b41562de74d39bbba",
+      "status": 200,
+      "elapsedMs": 6824,
+      "rawResponseSha256": "c20423f5bec8fbfd06356177efcd3448072e7914cefccdb401542c80756611e8",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3918,
+        "completion_tokens": 593,
+        "total_tokens": 4511
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Correct denied hearing and not_received retained, but receipt targets action. Original checker rejects before writes, revision0. Negative knowledge boundary is safe in this output but protocol target fails; do not call full pass.",
+      "diagnosedContinuation": {
+        "reason": "Run final frozen04 planned-not-spoken control with last authorized call. Preserve all failures; no08 call beyond remaining budget.",
+        "nextCase": "04-not-yet-said",
+        "originalFailureRetained": true
+      }
+    },
+    {
+      "id": "04-not-yet-said",
+      "customRequest": 323,
+      "state": "completed",
+      "requestBytes": 28197,
+      "requestSha256": "32b6a8cd3b51e833849816e5c74abb7f80a41276e76e6890a5dc1d1e0de9465d",
+      "status": 200,
+      "elapsedMs": 4738,
+      "rawResponseSha256": "572aec092c9fb896c18bedf25e1628dd7026875a72c296592c99b9d538047e07",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3843,
+        "completion_tokens": 510,
+        "total_tokens": 4353
+      },
+      "manualVerdict": "pass",
+      "manualAssessment": "Outer preparation keeps intended recipient and full ferry message, speech is denied with 尚未 retained in full source anchor. No independent asserted inner world fact, no receptions, pending or knowledge grant. Pass for this unspoken-message boundary only, not full temporal or semantic completeness."
+    }
+  ],
+  "closed": true,
+  "retries": 0,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "stopReason": "budget-exhausted",
+  "externalFormatProbes": [
+    {
+      "customRequest": 321,
+      "record": "nested-probe.run.json",
+      "counted": true
+    }
+  ]
+}

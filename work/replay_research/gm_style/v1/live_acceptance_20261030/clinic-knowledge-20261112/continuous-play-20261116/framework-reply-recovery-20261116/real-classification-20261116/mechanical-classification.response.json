@@ -1,0 +1,31 @@
+{
+  "kind": "classification",
+  "startedAt": "2026-11-16T21:26:03.716Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-16T21:26:06.110Z",
+  "headersElapsedMs": 2395,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b992655f8b0341-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Mon, 16 Nov 2026 21:26:06 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=RYGacDhFGRrlqKFK0%2FnK%2FuORnFtX03YlDUnAD2TcFQe39Iw0pkvHf9pQd8M%2BNTKfOJ7Ra48CTTSSvTqZ2s%2FIY%2B9hhi%2FTx7TBr9%2B5FWRyvHOOR5r%2FXAh8ZeyrX%2BmcDA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611162126048722508528268d9d66H9loFdO",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "a814235d-0aab-491c-ba01-1193ff7ce9c2"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"4b5619f9-cd9d-493b-8100-25f3bf49528a\",\"object\":\"chat.completion\",\"created\":1794864366,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"status\\\":\\\"RECOVERY_REQUIRED\\\",\\\"reason\\\":\\\"玩家明确声明找位置坐下并完整短休十五分钟，期间不做其他行动，符合短休15分钟的恢复接口规范。\\\",\\\"request\\\":{\\\"kind\\\":\\\"recovery\\\",\\\"type\\\":\\\"rest\\\",\\\"rest\\\":\\\"short\\\",\\\"minutes\\\":15}}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":20592,\"completion_tokens\":75,\"total_tokens\":20667}}",
+  "responseBytes": 559,
+  "responseBodySha256BeforePrivacyRedaction": "a45443a80f57240d3d96967b8beeb0f6cc45ea07b2622584e45616b177a61cec",
+  "outcome": "completed",
+  "finishedAt": "2026-11-16T21:26:06.122Z",
+  "elapsedMs": 2406
+}

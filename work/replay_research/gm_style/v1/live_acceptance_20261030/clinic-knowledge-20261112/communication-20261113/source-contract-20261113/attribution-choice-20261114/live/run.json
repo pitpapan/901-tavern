@@ -1,0 +1,86 @@
+{
+  "authorization": "2026-11-14 用户澄清本轮离线核对后追加3次归属测试，承接custom263核对个人选择与原约定的边界；其余参数不变，失败即停、不重试；沿既有密钥和端点授权。",
+  "baseline": 263,
+  "limit": 3,
+  "ceiling": 266,
+  "cumulative": 266,
+  "remaining": 0,
+  "attempts": [
+    {
+      "id": "01",
+      "customRequest": 264,
+      "state": "completed",
+      "requestBytes": 124319,
+      "requestSha256": "88da09f442d85d3bc57d88cd2c63f19e33017a709702b7c31a3849ce86d0c3d1",
+      "status": 200,
+      "elapsedMs": 4990,
+      "rawResponseSha256": "903c9eeca6c33a891d3674f5307e81a3079f397301f53cf0ff50d30edc3194f4",
+      "responseBytes": 1365,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "04643887-fc3c-47f5-bb71-3c6b3e3e0bcb",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 31069,
+        "completion_tokens": 295,
+        "total_tokens": 31364
+      }
+    },
+    {
+      "id": "02",
+      "customRequest": 265,
+      "state": "completed",
+      "requestBytes": 125740,
+      "requestSha256": "5c7c2ed8e3ef6c8c6d507b1c739b48e915e01bb8d583101a11b9169a8a9bdecf",
+      "status": 200,
+      "elapsedMs": 6905,
+      "rawResponseSha256": "2e43ed5dc60ada3989cb10c129fd1b2f85b19bd25056b727a49060f779f6cae2",
+      "responseBytes": 1335,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "4cfed421-f210-40a6-b82d-c6d3198c53f0",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 31419,
+        "completion_tokens": 271,
+        "total_tokens": 31690,
+        "prompt_tokens_details": {
+          "cached_tokens": 28511
+        }
+      }
+    },
+    {
+      "id": "03",
+      "customRequest": 266,
+      "state": "completed",
+      "requestBytes": 127104,
+      "requestSha256": "85f787821c91f36e9db63db7d1b4097457dce89988abe0a93476462f4630af4d",
+      "status": 200,
+      "elapsedMs": 4053,
+      "rawResponseSha256": "8879420dd4e99f1edf9459550a01070b245b15822218857ef4abc629a4472495",
+      "responseBytes": 1233,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "c3eadcdc-7260-4842-8388-358d639ab3e0",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 31751,
+        "completion_tokens": 242,
+        "total_tokens": 31993,
+        "prompt_tokens_details": {
+          "cached_tokens": 28505
+        }
+      }
+    }
+  ],
+  "classification": "retained local NO_CHECK control",
+  "classificationCalls": 0,
+  "automaticExtractionApprovalRevision": false,
+  "retries": 0,
+  "timeoutMs": 180000,
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "deployed": false,
+  "formalStoryWritten": false,
+  "closed": true,
+  "stopReason": "three-authorized-narrations-completed"
+}

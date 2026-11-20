@@ -1,0 +1,75 @@
+{
+  "results": [
+    {
+      "id": "bindingjson.reproduce.long",
+      "call": 465,
+      "verdict": "fail",
+      "syntax": {
+        "position": 1495,
+        "message": "Expecting ',' delimiter",
+        "excerpt": "倍。要是能在窗边坐下，再来一壶温热的麦茶，这几天的奔波才算真正缓过劲来。\"}}}损坏]},{\"claim\":{\"id\":\"turn.utt2\",\"type\":\""
+      },
+      "checkError": "Expected ',' or ']' after array element in JSON at position 1495 (line 1 column 1496)",
+      "isolatedWrites": 0,
+      "assessment": "465 raw JSON stray tokens at1495, present in HTTP content; strict parse rejects with0 writes. No output repair; semantic completeness not accepted."
+    },
+    {
+      "id": "bindingjson.reproduce.npc_reply",
+      "call": 466,
+      "verdict": "fail",
+      "syntax": {
+        "position": 1043,
+        "message": "Expecting ',' delimiter",
+        "excerpt": "an\":{\"fragmentId\":\"f3\",\"quote\":\"渡口今晚停航。\"资源\"}}}]}],\"coverage\":{\"status\":\"recorded"
+      },
+      "checkError": "Expected ',' or '}' after property value in JSON at position 1043 (line 1 column 1044)",
+      "isolatedWrites": 0,
+      "assessment": "466 raw JSON stray token at1043; visible bright listener and current-answer reply selected correctly but cannot accept invalid whole output;0 isolated writes."
+    },
+    {
+      "id": "bindingjson.probe.obstacle",
+      "call": 467,
+      "verdict": "fail",
+      "syntax": null,
+      "checkError": "Reply evidence must reference current answer",
+      "isolatedWrites": 0,
+      "assessment": "467 JSON/schema valid; bright/not_received/obstacle correct. Listener reply span selects narration 答 outside parent answer, violating actual sent contract. Strict binding rejects0 writes; no new local gap."
+    },
+    {
+      "id": "bindingjson.probe.partial",
+      "call": 468,
+      "verdict": "fail",
+      "syntax": {
+        "position": 1075,
+        "message": "Expecting ',' delimiter",
+        "excerpt": "gmentId\":\"f1\",\"quote\":\"山路已经封闭了，明早在渡口会合。\"构}}},{\"id\":\"turn.huang.utterance.rec2\",\""
+      },
+      "checkError": "Expected ',' or '}' after property value in JSON at position 1075 (line 1 column 1076)",
+      "isolatedWrites": 0,
+      "assessment": "468 raw JSON stray tokens at1075 and second obstacle selection; visible contentSpan splits heard/unheard halves, but whole output invalid and0 writes. Reply evidence still full answer, partial reception evidence accuracy not accepted."
+    }
+  ],
+  "newCalls": 4,
+  "used": 134,
+  "remaining": 66,
+  "cumulative": 468,
+  "newTests": 0,
+  "freshOfflineTests": 164,
+  "productSourcesUnchanged": true,
+  "generationContractUnchanged": true,
+  "originalRequestsByteIdentical": 2,
+  "originalEvidenceFilesPreserved": 631,
+  "formalProtectedFilesUnchanged": 22,
+  "historicalLedgerPrefixUnchanged": true,
+  "allRawBytesUnmodified": true,
+  "syntaxFailures": 3,
+  "bindingFailures": 1,
+  "overallPasses": 0,
+  "allIsolatedStatesUnchanged": true,
+  "scope": "Two representative originals and two nearby hearing contrasts; other old failures retained, not all replayed this turn",
+  "rawRepair": false,
+  "validationRelaxed": false,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalOrRevisionRestored": false
+}

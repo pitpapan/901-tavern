@@ -1,0 +1,116 @@
+{
+  "manualVerdict": "pass-for-case04-target",
+  "inputText": "布莱特打算告诉黄泉：“东门封闭。”他还没有开口。",
+  "claims": [
+    {
+      "id": "c1",
+      "type": "state",
+      "args": {
+        "entity": "布莱特",
+        "name": "打算",
+        "value": "告诉黄泉：“东门封闭。”"
+      },
+      "argumentSpans": {
+        "entity": {
+          "documentId": "current",
+          "start": 0,
+          "end": 3,
+          "quote": "布莱特"
+        },
+        "name": {
+          "documentId": "current",
+          "start": 3,
+          "end": 5,
+          "quote": "打算"
+        },
+        "value": {
+          "documentId": "current",
+          "start": 5,
+          "end": 17,
+          "quote": "告诉黄泉：“东门封闭。”"
+        }
+      },
+      "mode": "asserted",
+      "scope": {
+        "time": null,
+        "condition": null,
+        "attribution": null
+      },
+      "scopeSpans": {
+        "time": null,
+        "condition": null,
+        "attribution": null
+      },
+      "anchor": {
+        "documentId": "current",
+        "start": 0,
+        "end": 17,
+        "quote": "布莱特打算告诉黄泉：“东门封闭。”"
+      }
+    },
+    {
+      "id": "c2",
+      "type": "action",
+      "args": {
+        "actor": "布莱特",
+        "verb": "开口",
+        "object": null
+      },
+      "argumentSpans": {
+        "actor": {
+          "documentId": "current",
+          "start": 17,
+          "end": 18,
+          "quote": "他"
+        },
+        "verb": {
+          "documentId": "current",
+          "start": 21,
+          "end": 23,
+          "quote": "开口"
+        },
+        "object": null
+      },
+      "mode": "denied",
+      "scope": {
+        "time": "还",
+        "condition": null,
+        "attribution": null
+      },
+      "scopeSpans": {
+        "time": {
+          "documentId": "current",
+          "start": 18,
+          "end": 19,
+          "quote": "还"
+        },
+        "condition": null,
+        "attribution": null
+      },
+      "anchor": {
+        "documentId": "current",
+        "start": 17,
+        "end": 24,
+        "quote": "他还没有开口。"
+      }
+    }
+  ],
+  "spanCount": 8,
+  "allSpansExactUTF16": true,
+  "outerIntentionRetainsRecipientAndFullContent": true,
+  "noStandaloneEmbeddedWorldState": true,
+  "unspokenBoundaryRetained": true,
+  "temporalScopeAssessment": "scope.time=还引用原文还，否定由mode=denied表达；anchor保留他还没有开口整句。组合保留尚未发生边界，不需要把没有重复塞入time。",
+  "receptions": [],
+  "pending": [],
+  "knowledgeGrantCount": 0,
+  "worldFactIncrementCount": 0,
+  "onlyNewModeGuidanceChanged": true,
+  "parametersAndCoordinatesUnchanged": true,
+  "rawResponseSHA256": "679592ab43ea740d8399a2fbf66125006892c3901c387cc4da7ff2905cd04699",
+  "limitations": [
+    "单次对照中的正面证据，不证明跨场景稳定性或因果效果",
+    "结构校验仍不证明语义完整，未恢复自动批准或修订",
+    "其余未完成对照未发送"
+  ]
+}

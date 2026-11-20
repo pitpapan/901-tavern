@@ -1,0 +1,51 @@
+{
+  "oldEvidencePreserved": 1061,
+  "formalFilesPreserved": 22,
+  "oldLedgerPrefixPreserved": true,
+  "sourceHashes": {
+    "TRPG outputs/work/rules_engine/gm_runtime/story-dialogue-knowledge.mjs": "73ca2a850f28678bbfbbb083023fe33122ec68aa1c27937617e202f4b09e1fac",
+    "TRPG outputs/work/rules_engine/gm_runtime/story-knowledge.mjs": "bacaebc6ac03802712a98d5b4c65ff1c8b7d6debe403505ecd12b8b1cb4b9d93",
+    "TRPG outputs/work/rules_engine/gm_runtime/replay-gate-script.example.js": "ed3d72a6251325bc11a91b707deefed1a1847b78892b85f9154780e44875054e",
+    "901-trpg-engine/tools/trpg-engine/gm/assertion-contract.js": "4f784bbbab0b9475b84af241af5b1c84d30106cea2fd4d8b62bd5203c94a0a59"
+  },
+  "onlyCompactSchemaMetadataChanged": true,
+  "allSystemInstructionsAndChecksUnchangedThisTurn": true,
+  "schemaConstraintsUnchanged": true,
+  "olderTwoRequestsInheritPreviousCoverageFix": true,
+  "offline": {
+    "tests": 243,
+    "pass": 243
+  },
+  "live": {
+    "calls": 9,
+    "extractions": 7,
+    "schemaAndReferencePass": 7,
+    "semanticPass": 5,
+    "semanticFail": 2,
+    "dependencies": 2,
+    "dependencyPass": 2,
+    "cumulative": 531,
+    "totalBudget": 200,
+    "used": 197,
+    "remaining": 3
+  },
+  "realPendingDependencyVerified": true,
+  "rawResponsesPreserved": true,
+  "noFormalStateOrDeploymentWrites": true,
+  "limitations": {
+    "long": {
+      "structuralPass": true,
+      "semanticPass": false,
+      "isolatedWrites": 8,
+      "receivedEvents": 6,
+      "reason": "Unsupported overheard relations still admitted by structural checks."
+    },
+    "implicit": {
+      "structuralPass": true,
+      "semanticPass": false,
+      "isolatedWrites": 2,
+      "receivedEvents": 0,
+      "reason": "Asserted spoken negative content incorrectly marked denied; reception omitted."
+    }
+  }
+}

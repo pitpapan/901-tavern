@@ -1,0 +1,571 @@
+{
+  "id": "implicit.original.nested",
+  "exactCurrentMessages": true,
+  "structuralPass": true,
+  "checked": {
+    "contextRef": "27465bfb195236e78f9074c52410c3f0aea1109072c782a248064f4c889a2f0a",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.d823063f02cae057a28b36272adebc9f694322949f62c47fae12d4f75ef97683",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "utterance.turn.huang.1",
+              "type": "utterance",
+              "args": {
+                "speaker": "huang",
+                "content": "风有点凉，不过不算难受。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 66,
+                  "end": 67,
+                  "quote": "她"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 53,
+                  "end": 65,
+                  "quote": "风有点凉，不过不算难受。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 52,
+                "end": 81,
+                "quote": "“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，"
+              }
+            },
+            {
+              "id": "utterance.turn.huang.2",
+              "type": "utterance",
+              "args": {
+                "speaker": "huang",
+                "content": "比山路上好走多了。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 66,
+                  "end": 67,
+                  "quote": "她"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 82,
+                  "end": 91,
+                  "quote": "比山路上好走多了。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 66,
+                "end": 92,
+                "quote": "她收回视线，语气依旧简洁平缓，“比山路上好走多了。”"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "reception.turn.huang.1.player",
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 53,
+            "end": 65,
+            "quote": "风有点凉，不过不算难受。"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 53,
+          "end": 65,
+          "quote": "风有点凉，不过不算难受。"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "黄泉直接应答御临风在上一轮提出的询问（“黄泉，今天这天气走在街上感觉怎么样？”），无遮挡或接收障碍，御临风正常接收应答。",
+        "claimId": "utterance.turn.huang.1"
+      },
+      {
+        "id": "reception.turn.huang.2.player",
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 82,
+            "end": 91,
+            "quote": "比山路上好走多了。"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 82,
+          "end": 91,
+          "quote": "比山路上好走多了。"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "承接上一句对御临风提问的持续回答，无接收障碍，御临风正常接收。",
+        "claimId": "utterance.turn.huang.2"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "recorded",
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 236,
+          "quote": "黄泉手里牵着马缰，步子没停。她抬头看了一眼上方透着微白的天色，又扫过街边被风吹得轻轻晃动的铺子布帘。\n\n“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，“比山路上好走多了。”\n\n主道旁的水渠里水流平稳地流淌着，带起些许细微的水声。街上的行人和往来摊贩各自忙碌，喧闹声在渐开的街市间散开。远处高耸的法师塔在半空映出清晰的轮廓，两旁的石木建筑遮住了大半偏侧的风，走在宽敞的石板路上，脚下确实比此前的荒野要踏实不少。\n\n<StatusPlaceHolderImpl/>"
+        },
+        "reason": "本轮黄泉对御临风此前询问的两段直接言说及接收均已明确记录。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false
+  },
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": [
+        {
+          "id": "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "风有点凉，不过不算难受。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 15,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 15,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 15,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "901 帝都正式续玩 20261106",
+                "messageId": 15,
+                "swipeId": 0,
+                "text": "黄泉手里牵着马缰，步子没停。她抬头看了一眼上方透着微白的天色，又扫过街边被风吹得轻轻晃动的铺子布帘。\n\n“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，“比山路上好走多了。”\n\n主道旁的水渠里水流平稳地流淌着，带起些许细微的水声。街上的行人和往来摊贩各自忙碌，喧闹声在渐开的街市间散开。远处高耸的法师塔在半空映出清晰的轮廓，两旁的石木建筑遮住了大半偏侧的风，走在宽敞的石板路上，脚下确实比此前的荒野要踏实不少。\n\n<StatusPlaceHolderImpl/>"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a",
+          "channel": "message",
+          "learnedAtMessage": 15
+        },
+        {
+          "id": "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "比山路上好走多了。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 15,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 15,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 15,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "901 帝都正式续玩 20261106",
+                "messageId": 15,
+                "swipeId": 0,
+                "text": "黄泉手里牵着马缰，步子没停。她抬头看了一眼上方透着微白的天色，又扫过街边被风吹得轻轻晃动的铺子布帘。\n\n“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，“比山路上好走多了。”\n\n主道旁的水渠里水流平稳地流淌着，带起些许细微的水声。街上的行人和往来摊贩各自忙碌，喧闹声在渐开的街市间散开。远处高耸的法师塔在半空映出清晰的轮廓，两旁的石木建筑遮住了大半偏侧的风，走在宽敞的石板路上，脚下确实比此前的荒野要踏实不少。\n\n<StatusPlaceHolderImpl/>"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec",
+          "channel": "message",
+          "learnedAtMessage": 15
+        }
+      ]
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": []
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "pending": [],
+  "noQuestionWithoutDependency": true,
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "implicit.regression",
+    "chatId": "901 帝都正式续玩 20261106",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      },
+      "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a.message": {
+        "id": "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "风有点凉，不过不算难受。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 15,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      },
+      "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec.message": {
+        "id": "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "比山路上好走多了。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 15,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      }
+    },
+    "events": {
+      "received.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a": {
+        "id": "received.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player"
+          ],
+          "propositionRefs": [
+            "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 15,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "901 帝都正式续玩 20261106",
+            "messageId": 15,
+            "swipeId": 0,
+            "text": "黄泉手里牵着马缰，步子没停。她抬头看了一眼上方透着微白的天色，又扫过街边被风吹得轻轻晃动的铺子布帘。\n\n“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，“比山路上好走多了。”\n\n主道旁的水渠里水流平稳地流淌着，带起些许细微的水声。街上的行人和往来摊贩各自忙碌，喧闹声在渐开的街市间散开。远处高耸的法师塔在半空映出清晰的轮廓，两旁的石木建筑遮住了大半偏侧的风，走在宽敞的石板路上，脚下确实比此前的荒野要踏实不少。\n\n<StatusPlaceHolderImpl/>"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 16
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a.player.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a.message.event": {
+        "id": "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a.player.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a.player.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a.message",
+            "eventRef": "received.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 15,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 16
+          }
+        ]
+      },
+      "received.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec": {
+        "id": "received.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player"
+          ],
+          "propositionRefs": [
+            "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 15,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "901 帝都正式续玩 20261106",
+            "messageId": 15,
+            "swipeId": 0,
+            "text": "黄泉手里牵着马缰，步子没停。她抬头看了一眼上方透着微白的天色，又扫过街边被风吹得轻轻晃动的铺子布帘。\n\n“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，“比山路上好走多了。”\n\n主道旁的水渠里水流平稳地流淌着，带起些许细微的水声。街上的行人和往来摊贩各自忙碌，喧闹声在渐开的街市间散开。远处高耸的法师塔在半空映出清晰的轮廓，两旁的石木建筑遮住了大半偏侧的风，走在宽敞的石板路上，脚下确实比此前的荒野要踏实不少。\n\n<StatusPlaceHolderImpl/>"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 16
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec.player.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec.message.event": {
+        "id": "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec.player.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec.player.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec.message",
+            "eventRef": "received.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 15,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 16
+          }
+        ]
+      }
+    },
+    "knowledge": {
+      "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a.player.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a.message": {
+        "id": "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a.player.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a.message",
+        "eventRef": "received.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 15,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      },
+      "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec.player.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec.message": {
+        "id": "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec.player.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec.message",
+        "eventRef": "received.dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 15,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      }
+    },
+    "dialogueBatches": {
+      "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128": {
+        "id": "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128",
+        "sourceAnchor": {
+          "chatId": "901 帝都正式续玩 20261106",
+          "messageId": 15,
+          "swipeId": 0,
+          "text": "黄泉手里牵着马缰，步子没停。她抬头看了一眼上方透着微白的天色，又扫过街边被风吹得轻轻晃动的铺子布帘。\n\n“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，“比山路上好走多了。”\n\n主道旁的水渠里水流平稳地流淌着，带起些许细微的水声。街上的行人和往来摊贩各自忙碌，喧闹声在渐开的街市间散开。远处高耸的法师塔在半空映出清晰的轮廓，两旁的石木建筑遮住了大半偏侧的风，走在宽敞的石板路上，脚下确实比此前的荒野要踏实不少。\n\n<StatusPlaceHolderImpl/>"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.176bf66f350ae41125053e31d3d7ddb6cbfa35c8aabb6d975d2f46d8af7e004a",
+            "claimId": "utterance.turn.huang.1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "风有点凉，不过不算难受。",
+            "quote": "风有点凉，不过不算难受。",
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "黄泉直接应答御临风在上一轮提出的询问（“黄泉，今天这天气走在街上感觉怎么样？”），无遮挡或接收障碍，御临风正常接收应答。",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 53,
+              "end": 65,
+              "quote": "风有点凉，不过不算难受。"
+            },
+            "unresolved": []
+          },
+          {
+            "id": "dialogue.ee0dd41292e30f387b6206237e630da0e39c22859d069816190d326c88660128.281e4f75aeb872516f8dc14f1bd02d25b40c184246f5c404f5618b62161caeec",
+            "claimId": "utterance.turn.huang.2",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "比山路上好走多了。",
+            "quote": "比山路上好走多了。",
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "承接上一句对御临风提问的持续回答，无接收障碍，御临风正常接收。",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 82,
+              "end": 91,
+              "quote": "比山路上好走多了。"
+            },
+            "unresolved": []
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "recorded",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 236,
+              "quote": "黄泉手里牵着马缰，步子没停。她抬头看了一眼上方透着微白的天色，又扫过街边被风吹得轻轻晃动的铺子布帘。\n\n“风有点凉，不过不算难受。”她收回视线，语气依旧简洁平缓，“比山路上好走多了。”\n\n主道旁的水渠里水流平稳地流淌着，带起些许细微的水声。街上的行人和往来摊贩各自忙碌，喧闹声在渐开的街市间散开。远处高耸的法师塔在半空映出清晰的轮廓，两旁的石木建筑遮住了大半偏侧的风，走在宽敞的石板路上，脚下确实比此前的荒野要踏实不少。\n\n<StatusPlaceHolderImpl/>"
+            },
+            "reason": "本轮黄泉对御临风此前询问的两段直接言说及接收均已明确记录。"
+          }
+        ]
+      }
+    }
+  }
+}

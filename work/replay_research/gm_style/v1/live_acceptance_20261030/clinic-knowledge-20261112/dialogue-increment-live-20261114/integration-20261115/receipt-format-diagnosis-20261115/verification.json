@@ -1,0 +1,65 @@
+{
+  "results": [
+    {
+      "id": "receiptformat.reproduce.partial",
+      "call": 472,
+      "verdict": "fail",
+      "syntax": {
+        "position": 1076,
+        "message": "Expecting ',' delimiter",
+        "excerpt": "gmentId\":\"f1\",\"quote\":\"山路已经封闭了，明早在渡口会合。\"满足？不，evidence.kind为reply，span必须支持传达关系}}}"
+      },
+      "checkError": "Expected ',' or '}' after property value in JSON at position 1076 (line 1 column 1077)",
+      "isolatedWrites": 0,
+      "assessment": "472 original469 raw JSON syntax error at1076 with unquoted explanatory text; visible partial content splits but no valid receipt object, mandatory unit fields also absent.0 writes; no repair."
+    },
+    {
+      "id": "receiptformat.reproduce.obstacle",
+      "call": 473,
+      "verdict": "fail",
+      "syntax": {
+        "position": 1031,
+        "message": "Expecting ',' delimiter",
+        "excerpt": ":{\"fragmentId\":\"f3\",\"quote\":\"已听不到这里的声音。\"在这个上下文明确表达障碍}}}]}],\"coverage\":{\"status\":"
+      },
+      "checkError": "Expected ',' or '}' after property value in JSON at position 1031 (line 1 column 1032)",
+      "isolatedWrites": 0,
+      "assessment": "473 original470 raw JSON unquoted explanation at1031; visible current-answer listener and nonreception obstacle reasonable, but invalid whole output rejected0 writes."
+    },
+    {
+      "id": "receiptformat.probe.unsaid",
+      "call": 474,
+      "verdict": "pass",
+      "syntax": null,
+      "checkError": null,
+      "isolatedWrites": 2,
+      "assessment": "474 passes scoped unsaid/reception control: JSON/schema/strict citation valid, no utterances or receipts, coverage none, no knowledge/events/pending/questions.2 isolated bookkeeping writes only. Not full assertion completeness or stable model proof."
+    }
+  ],
+  "newCalls": 3,
+  "used": 140,
+  "remaining": 60,
+  "cumulative": 474,
+  "newTests": 0,
+  "freshOfflineTests": 164,
+  "productSourcesUnchanged": true,
+  "generationContractUnchanged": true,
+  "originalRequestsByteIdentical": 2,
+  "originalEvidenceFilesPreserved": 659,
+  "formalProtectedFilesUnchanged": 22,
+  "historicalLedgerPrefixUnchanged": true,
+  "allRawBytesUnmodified": true,
+  "syntaxFailures": 2,
+  "bindingFailures": 0,
+  "scopedKnowledgePasses": 1,
+  "overallSemanticCompletenessProven": false,
+  "failedIsolatedStatesUnchanged": true,
+  "controlBookkeepingWrites": 2,
+  "allKnowledgeUnchanged": true,
+  "scope": "Two latest partial/nonreception originals and one nearby unsaid contrast; other old failures retained, not all replayed this turn",
+  "rawRepair": false,
+  "validationRelaxed": false,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalOrRevisionRestored": false
+}

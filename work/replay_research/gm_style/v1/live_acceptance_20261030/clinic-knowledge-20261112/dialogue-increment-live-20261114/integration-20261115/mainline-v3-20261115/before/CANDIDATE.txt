@@ -1,0 +1,16 @@
+901 普通对白知情入口集成候选 / 2026-11-15
+仅供审查，未部署。135个浏览器模块、3项原资产和candidate-entry.js。
+十二阶段本地候选与两条有限真实模型链已完成，271项相关离线回归通过。不是通用模型准确率或正式游玩稳定性证明。
+默认语义完成函数disabled；未显式配置不会新增接收抽取/依赖请求。
+明确启用原宿主：window.top.__901StoryKnowledge.configureDialogueHost({enabled:true,useExistingHost:true});
+或传入{enabled:true,complete}，complete接收purpose/messages/responseFormat，返回原始回复。
+关闭使用{enabled:false}。可由宿主在初始化前提供window.top.__901DialogueHost同形配置；产品不保存该配置、不发现凭据、不改模型或采样设置。
+普通请求：必要时依赖判断→确认→原分类→正文→保存/读回→接收抽取→原严格校验/MVU→下一轮知情投影。
+通常每条完成正文增加1次接收抽取；有待核的后续轮另加1次依赖判断。原分类与叙事调用继续存在。
+不存在自动批准世界事实、关系或约定；没有回复修补/坐标修正/action转换/自动重试。
+此次任务修改story-dialogue-knowledge、replay-gate-script、narrative-style-projection、story-knowledge及共享assertion-contract；入口生成器不在运行闭包内。
+相对正式安装32项模块差异包含此前其他工作；相对上一133模块候选5项差异也包含继承的MVU适配，详见candidate-delta.json/deployment-diff.json，不把整包视为本次成果。
+200次总额度已用46次（335—380），余154未使用；本轮新增23次，原输入2例及相近8例最终通过本轮指标。真实浏览器采用原样请求外发、原始响应精确回放；分类为本地NO_CHECK控制，不计模型验收。
+已知模型仍可能错坐标、漏抽或错认隐含听者引用。348/349语义失败由验收人工拦下，产品没有新增自动语义审查器。
+详见DELIVERY.txt和implicit-reception-20261115/verification.json。无部署脚本；无测试按钮、合成记忆、seed、capture后端、密钥或完整剧情随包。
+本轮只更新生成合同及其Schema投影；原349/350和338以相同原文/历史复测，没有新增点名替代。9份中间失败保留，有限通过不保证长期准确。最新候选未重跑浏览器UI。

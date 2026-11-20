@@ -1,0 +1,44 @@
+✔ bounded reception narrows generation scope and supplies exact source ranges without accepting old wrong spans (34.5556ms)
+✔ bound prompt retains the existing direct-reception rule without changing schema, input or other guidance (11.5522ms)
+✔ existing fact index does not limit new dialogue reception and never fills a false none (3.2693ms)
+✔ direct speech needs no acknowledgement; explicit obstruction and uncertainty retain their own outcomes (54.7026ms)
+✔ bound utterance maps only explicit nested receipts and retains mandatory coverage (3.6817ms)
+✔ action, forged reference, missing receipts and omitted target coverage reject without mutation (3.5442ms)
+✔ uncertain coverage preserves explicit partial receipt plus uncertainty without blanket blocking (2.5486ms)
+✔ none and unresolved-only coverage require actual source evidence, never synthesize receipts (2.4429ms)
+✔ original source, role, null-pair and identity checks remain in force (3.0019ms)
+✔ schema rejects nested action and missing coverage and allows explicit none and uncertainty (868.6609ms)
+✔ model adapter uses version2 and original MVU path persists coverage and independent known/pending rows (20.7016ms)
+✔ historical flat failures are retained and cannot silently enter the new wire (12.9957ms)
+✔ model-path invalid coverage writes nothing; explicit unreceived and none never grant or ask (27.4457ms)
+✔ planned speech keeps original intent claim and none coverage without creating utterance (2.0641ms)
+✔ existing Tavern completion maps exact messages and schema without settings or response repair (9.7715ms)
+✖ listener references can ground a current reply but cannot refer to its speaker (8.9648ms)
+✔ spoken content excludes intervening narration while source checks remain unchanged (11.835ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 16
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1730.0877
+
+✖ failing tests:
+
+test at TRPG outputs\work\rules_engine\gm_runtime\story-dialogue-bound.test.mjs:162:1
+✖ listener references can ground a current reply but cannot refer to its speaker (8.9648ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(p.messages[0].content.includes('不能用指向说话者自身的片段替代听者依据'))
+  
+      at TestContext.<anonymous> (file:///C:/Users/pit/.codex/worktrees/yulinfeng-tavern-plan/TRPG%20outputs/work/rules_engine/gm_runtime/story-dialogue-bound.test.mjs:163:33)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

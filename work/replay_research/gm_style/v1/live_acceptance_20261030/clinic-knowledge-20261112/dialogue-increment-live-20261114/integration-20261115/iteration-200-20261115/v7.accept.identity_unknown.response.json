@@ -1,0 +1,31 @@
+{
+  "kind": "v7.accept.identity_unknown",
+  "startedAt": "2026-11-15T22:31:39.075Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T22:31:42.149Z",
+  "headersElapsedMs": 3074,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b1b515aea02951-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 22:31:42 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2BcrmwHcEEF3C7%2F1XwyolVhNfzSBdWrMkpdvIOFWelWRGzJbIRXyAdMLzxkowD0nMvM49pzjXoTSJkQmP%2BEzLGahrtrN98HS1f1gHQ5Vii2U7nxy38V0kxLed6ZXvbw%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611152231397979949768268d9d6qjSEfCQN",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "e6c8c34e-f4a4-4d35-ab49-d8e09aa5eb55"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"05582e66-73b9-4a9a-9f7e-8615a722f8cd\",\"object\":\"chat.completion\",\"created\":1794781902,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/7\\\",\\\"contextRef\\\":\\\"5e8c21a2ad64526e13e6e67122b4457b9327d2640e23a7aa93a621b03ba49d15\\\",\\\"selections\\\":[{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"},{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"“明早从山路绕行。\\\"},{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"答道\\\"},{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"两人中只有一人听见，但无法确定是谁。\\\"}],\\\"utterances\\\":[{\\\"speakerId\\\":\\\"huang\\\",\\\"speaker\\\":0,\\\"content\\\":1,\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":2}],\\\"receptions\\\":[],\\\"unresolved\\\":[{\\\"selection\\\":3,\\\"reason\\\":\\\"听者身份存在歧义，原文说明两人中只有一人听见但无法确定具体是谁\\\"}],\\\"coverage\\\":{\\\"status\\\":\\\"uncertain\\\",\\\"evidence\\\":3}}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2421,\"completion_tokens\":242,\"total_tokens\":2663}}",
+  "responseBytes": 1069,
+  "responseBodySha256BeforePrivacyRedaction": "0eadd0954b8b45eecdf0ecd6a62967bf9633dc8e1a316fade02e3d5e48f47a4e",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T22:31:42.157Z",
+  "elapsedMs": 3082
+}

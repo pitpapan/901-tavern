@@ -1,0 +1,1027 @@
+{
+  "id": "v7.accept.long",
+  "actualMessagesAndSchemaMatch": true,
+  "structuralPass": false,
+  "error": "[\"'historyMessageId' is a required property\", \"'historyMessageId' is a required property\", \"'historyMessageId' is a required property\", \"'historyMessageId' is a required property\"]\r\n\n\n1 !== 0\n",
+  "observation": {
+    "status": "unprocessed",
+    "pending": [
+      {
+        "id": "dialogue.d3743824c6bf49b447455fd247d8dbda5be12aaffb06a2e8a067201e9fecd260.unprocessed",
+        "kind": "unprocessed",
+        "status": "pending",
+        "speakerId": null,
+        "recipientIds": [],
+        "propositionRef": null,
+        "content": null,
+        "quote": null,
+        "reason": "本轮知情增量尚未可靠处理；不是无人接收。",
+        "sourceAnchor": {
+          "chatId": "901 帝都正式续玩 20261106",
+          "messageId": 16,
+          "swipeId": 0,
+          "text": "布莱特听到这话，嘴角扬了扬，牵着马缰走得颇为轻快：\n\n“真要说想念的，哪怕只是小酒馆里一碗炖得烂熟的杂烩肉汤，配上刚烤透、皮还是脆的热麦饼，也比干粮强上十倍。要是能在窗边坐下，再来一壶温热的麦茶，这几天的奔波才算真正缓过劲来。”\n\n走在另一侧的黄泉顺手整了整马鞍旁的带子，听着前方的市井动静，语气依旧平淡，但也带了点闲适：\n\n“热汤面，或者刚出锅的肉串。赶路的时候总觉得随便填饱肚子就行，真闻到街边的烟火气，倒确实想吃口带油盐味的热食。”\n\n说话间，几人已经走下了缓坡。前方的街道两旁挑着各式各样的幌子，除了药材铺与杂货铺，不远处的街角还支着一处冒着白色热气的食摊，铁锅翻炒与油花滋拉的声响顺着微风飘了过来，夹杂在淡淡的草药清苦味里。\n\n布莱特微微侧过头，辨了辨方向：“闻着味道，前面不远就有几家脚店和小食肆。咱们办完正事，找地方落脚填肚子倒不用愁了。”\n\n再往前走过一道矮石桥，街巷向深处延伸，几名抱着药包的学徒正匆匆穿过巷口。桥那头的一排木石房屋门面整齐，挂着好几块不同名号的医馆与药堂木匾。\n\n<StatusPlaceHolderImpl/>"
+        },
+        "batchId": "dialogue.d3743824c6bf49b447455fd247d8dbda5be12aaffb06a2e8a067201e9fecd260"
+      }
+    ]
+  },
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "compact.regression",
+    "chatId": "901 帝都正式续玩 20261106",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      },
+      "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 12,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+        "entityId": "bright",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "bright",
+          "text": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+        },
+        "certainty": "uncertain",
+        "visibility": "private"
+      }
+    },
+    "events": {},
+    "knowledge": {},
+    "dialogueBatches": {
+      "dialogue.d3743824c6bf49b447455fd247d8dbda5be12aaffb06a2e8a067201e9fecd260": {
+        "id": "dialogue.d3743824c6bf49b447455fd247d8dbda5be12aaffb06a2e8a067201e9fecd260",
+        "sourceAnchor": {
+          "chatId": "901 帝都正式续玩 20261106",
+          "messageId": 16,
+          "swipeId": 0,
+          "text": "布莱特听到这话，嘴角扬了扬，牵着马缰走得颇为轻快：\n\n“真要说想念的，哪怕只是小酒馆里一碗炖得烂熟的杂烩肉汤，配上刚烤透、皮还是脆的热麦饼，也比干粮强上十倍。要是能在窗边坐下，再来一壶温热的麦茶，这几天的奔波才算真正缓过劲来。”\n\n走在另一侧的黄泉顺手整了整马鞍旁的带子，听着前方的市井动静，语气依旧平淡，但也带了点闲适：\n\n“热汤面，或者刚出锅的肉串。赶路的时候总觉得随便填饱肚子就行，真闻到街边的烟火气，倒确实想吃口带油盐味的热食。”\n\n说话间，几人已经走下了缓坡。前方的街道两旁挑着各式各样的幌子，除了药材铺与杂货铺，不远处的街角还支着一处冒着白色热气的食摊，铁锅翻炒与油花滋拉的声响顺着微风飘了过来，夹杂在淡淡的草药清苦味里。\n\n布莱特微微侧过头，辨了辨方向：“闻着味道，前面不远就有几家脚店和小食肆。咱们办完正事，找地方落脚填肚子倒不用愁了。”\n\n再往前走过一道矮石桥，街巷向深处延伸，几名抱着药包的学徒正匆匆穿过巷口。桥那头的一排木石房屋门面整齐，挂着好几块不同名号的医馆与药堂木匾。\n\n<StatusPlaceHolderImpl/>"
+        },
+        "status": "failed",
+        "extractionInput": {
+          "assertion": {
+            "schemaVersion": "gm-assertion-input/1",
+            "stage": "source",
+            "documents": [
+              {
+                "id": "current",
+                "text": "布莱特听到这话，嘴角扬了扬，牵着马缰走得颇为轻快：\n\n“真要说想念的，哪怕只是小酒馆里一碗炖得烂熟的杂烩肉汤，配上刚烤透、皮还是脆的热麦饼，也比干粮强上十倍。要是能在窗边坐下，再来一壶温热的麦茶，这几天的奔波才算真正缓过劲来。”\n\n走在另一侧的黄泉顺手整了整马鞍旁的带子，听着前方的市井动静，语气依旧平淡，但也带了点闲适：\n\n“热汤面，或者刚出锅的肉串。赶路的时候总觉得随便填饱肚子就行，真闻到街边的烟火气，倒确实想吃口带油盐味的热食。”\n\n说话间，几人已经走下了缓坡。前方的街道两旁挑着各式各样的幌子，除了药材铺与杂货铺，不远处的街角还支着一处冒着白色热气的食摊，铁锅翻炒与油花滋拉的声响顺着微风飘了过来，夹杂在淡淡的草药清苦味里。\n\n布莱特微微侧过头，辨了辨方向：“闻着味道，前面不远就有几家脚店和小食肆。咱们办完正事，找地方落脚填肚子倒不用愁了。”\n\n再往前走过一道矮石桥，街巷向深处延伸，几名抱着药包的学徒正匆匆穿过巷口。桥那头的一排木石房屋门面整齐，挂着好几块不同名号的医馆与药堂木匾。\n\n<StatusPlaceHolderImpl/>"
+              }
+            ],
+            "targets": [
+              {
+                "id": "turn",
+                "documentId": "current",
+                "start": 0,
+                "end": 474
+              }
+            ],
+            "prior": null,
+            "inputRef": "assertion.6cb471f99cc25ea314b9d8f48479209b3c170a1882a893233014f05964cc08cc"
+          },
+          "sourceAnchor": {
+            "chatId": "901 帝都正式续玩 20261106",
+            "messageId": 16,
+            "swipeId": 0,
+            "text": "布莱特听到这话，嘴角扬了扬，牵着马缰走得颇为轻快：\n\n“真要说想念的，哪怕只是小酒馆里一碗炖得烂熟的杂烩肉汤，配上刚烤透、皮还是脆的热麦饼，也比干粮强上十倍。要是能在窗边坐下，再来一壶温热的麦茶，这几天的奔波才算真正缓过劲来。”\n\n走在另一侧的黄泉顺手整了整马鞍旁的带子，听着前方的市井动静，语气依旧平淡，但也带了点闲适：\n\n“热汤面，或者刚出锅的肉串。赶路的时候总觉得随便填饱肚子就行，真闻到街边的烟火气，倒确实想吃口带油盐味的热食。”\n\n说话间，几人已经走下了缓坡。前方的街道两旁挑着各式各样的幌子，除了药材铺与杂货铺，不远处的街角还支着一处冒着白色热气的食摊，铁锅翻炒与油花滋拉的声响顺着微风飘了过来，夹杂在淡淡的草药清苦味里。\n\n布莱特微微侧过头，辨了辨方向：“闻着味道，前面不远就有几家脚店和小食肆。咱们办完正事，找地方落脚填肚子倒不用愁了。”\n\n再往前走过一道矮石桥，街巷向深处延伸，几名抱着药包的学徒正匆匆穿过巷口。桥那头的一排木石房屋门面整齐，挂着好几块不同名号的医馆与药堂木匾。\n\n<StatusPlaceHolderImpl/>"
+          },
+          "history": [
+            {
+              "messageId": 12,
+              "role": "assistant",
+              "text": "布莱特牵着缰绳，脚步不紧不慢地走在平整的石板路上。水渠里的流水从一侧缓缓冲刷而过，带出些许凉意。\n\n“寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。”布莱特侧过头，对着御临风的方向说道，“不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。”\n\n他顿了顿，顺着水渠边渐渐密集起来的街巷听了片刻：\n\n“先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。”\n\n水渠旁的石板路向前分出一道缓坡，连接着另一片开阔的街市。沿途的药材铺和杂货行渐渐多了起来，空气里偶尔能闻到晒干草药的微苦气息，几名挑着竹筐的行人正从前方的巷口穿过。\n\n<StatusPlaceHolderImpl/>"
+            },
+            {
+              "messageId": 13,
+              "role": "user",
+              "text": "“那就先请接待的人转达，不急着催馆主。”御临风转向黄泉，“等会你想一起进去，还是留在外头照看马？若得等上一阵，我们再找地方歇脚。”"
+            },
+            {
+              "messageId": 14,
+              "role": "assistant",
+              "text": "黄泉随手带了带缰绳，让马步子放稳，目光从前方渐渐密集的药铺幌子收了回来。\n\n“在外头看着马就行。”她简短答道，“两匹马和这么多行囊总要有人守着。你和布莱特先进去递信，若里面顺当，出来叫我便是；若要久等，找个附近的茶摊或者脚店坐下也一样。”\n\n布莱特在旁微微侧耳听着两人的话，牵着马匹顺着缓坡往下走，口中补了一句：\n\n“我和你进去也方便些，真要问起路上求医的由头，我也能替你说两句。前头街面变窄了些，咱们顺着药味最重的那条巷子过去，应当就离九雪医馆不远了。”\n\n石板路下方的街口开阔起来，两侧多是挑着布幔的生药铺与杂货摊，空气中草药微苦的气味越发清晰，几名提着药包的行人正从前方的石桥上走过。\n\n<StatusPlaceHolderImpl/>"
+            },
+            {
+              "messageId": 15,
+              "role": "user",
+              "text": "御临风闻着街边的药味，笑了笑：“送完信若还能找碗热汤喝，总比一直嚼干粮好。你们赶路时有没有特别想吃的东西？”"
+            }
+          ],
+          "actors": {
+            "player": "御临风",
+            "bright": "布莱特",
+            "huang": "黄泉"
+          },
+          "facts": {
+            "clinic.owner.xuelao.old-friend": {
+              "effectiveAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 0,
+                "actorId": "legacy.story"
+              },
+              "discoveryConditions": [
+                "actual-receipt"
+              ],
+              "dependencyRefs": [],
+              "id": "clinic.owner.xuelao.old-friend",
+              "entityId": "clinic.owner",
+              "field": "relationship",
+              "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+              "certainty": "confirmed",
+              "visibility": "private"
+            },
+            "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message": {
+              "effectiveAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 12,
+                "actorId": "legacy.story"
+              },
+              "discoveryConditions": [
+                "actual-receipt"
+              ],
+              "dependencyRefs": [],
+              "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.4d7ef7259f483f472e71d1fe6f22a4f08c0341032f592fe4ac4a8ade92887bd2.message",
+              "entityId": "bright",
+              "field": "reported_message",
+              "value": {
+                "kind": "reported_message",
+                "speakerId": "bright",
+                "text": "寻常医馆若只是抓药看诊，前堂的学徒或伙计接了方子就能办。"
+              },
+              "certainty": "uncertain",
+              "visibility": "private"
+            },
+            "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message": {
+              "effectiveAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 12,
+                "actorId": "legacy.story"
+              },
+              "discoveryConditions": [
+                "actual-receipt"
+              ],
+              "dependencyRefs": [],
+              "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.d6bdce8c3df89fc42064161b1a2cd5485ce245dc8855323a9dff8c60a2d1d95b.message",
+              "entityId": "bright",
+              "field": "reported_message",
+              "value": {
+                "kind": "reported_message",
+                "speakerId": "bright",
+                "text": "不过村医写的是举荐你求医求学的信，这算熟人之间的托付。前堂的人多半不敢擅自拿主意，即便接了信，最后也得转交到馆主手里，由他亲自过目。"
+              },
+              "certainty": "uncertain",
+              "visibility": "private"
+            },
+            "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message": {
+              "effectiveAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 12,
+                "actorId": "legacy.story"
+              },
+              "discoveryConditions": [
+                "actual-receipt"
+              ],
+              "dependencyRefs": [],
+              "id": "dialogue.84ce040523c7049bfe86990805584b69d70ecfa893b79b7aefadb76c1c049461.313b5e1b5e85f266f052a9981dae175809257449a1159b5a5c9e964e2124487d.message",
+              "entityId": "bright",
+              "field": "reported_message",
+              "value": {
+                "kind": "reported_message",
+                "speakerId": "bright",
+                "text": "先递给门前接待的人引荐即可。馆主若是愿意见，自然会出来同你说话；若是有急诊在忙，也得看他们里头的安排。"
+              },
+              "certainty": "uncertain",
+              "visibility": "private"
+            }
+          },
+          "memory": {
+            "source": "existing-database",
+            "data": {
+              "mate": {
+                "type": "chatSheets",
+                "version": 2,
+                "updateConfigUiSentinel": -1,
+                "globalInjectionConfig": {
+                  "readableEntryPlacement": {
+                    "position": "before_character_definition",
+                    "depth": 2,
+                    "order": 99981
+                  },
+                  "wrapperPlacement": {
+                    "position": "before_character_definition",
+                    "depth": 2,
+                    "order": 99980
+                  }
+                }
+              },
+              "sheet_quan_ju_shu_ju_biao": {
+                "uid": "sheet_quan_ju_shu_ju_biao",
+                "name": "全局数据表",
+                "sourceData": {
+                  "note": "记录当前主角所在地点及时间相关参数。此表有且仅有一行。\n\n【列定义】（列号为 0 基，与表格数据中的列标一致）\n- 列0: 全局状态 story_state\n- 列1: 当前详细地点 current_location\n- 列2: 当前次要地区 current_minor_region\n- 列3: 当前主要地区 current_major_region\n- 列4: 上轮场景时间 prev_scene_time（初始化时为NULL）\n- 列5: 经过的时间 elapsed_time\n- 列6: 当前时间 cur_time\n\n【强制约束】\n全局状态为固定字符串`全局状态`，标题性质。\n\n地点层级从小到大：详细地点 < 次要地区 < 主要地区。\n每个字段只写本级名称，不拼上级前缀。\n√ 当前详细地点填 “御苑”\n× 当前详细地点填 “东京-新宿区-御苑”\n\n时间格式：\nprev_scene_time / cur_time: YYYY-MM-DD HH:MM\nelapsed_time: {数值}{单位}，多单位用空格连。\n单位集合：[纪元,千年,百年,年,月,周,天,小时,分]\n示例：\"3小时20分\" | \"2天\" | \"3年6月\"\n\n时间计算公式：cur_time = prev_scene_time + elapsed_time\n- 初始化时prev_scene_time为NULL，cur_time直接填写初始时间，无需计算\n- 每轮推进时，将上一轮的cur_time赋值给prev_scene_time，然后填写本次的elapsed_time，最后计算得到新的cur_time",
+                  "initNode": "故事初始化时，插入唯一条目，记录用户开局初始时间与初始地点。禁止直接照搬示例中的地点和日期。\n\nSQL示例: INSERT INTO global_state (story_state, current_location, current_minor_region, current_major_region, prev_scene_time, elapsed_time, cur_time)\nVALUES ('全局状态', '御苑', '新宿区', '东京都', NULL, '0分', '2026-02-03 09:00');",
+                  "deleteNode": "禁止。",
+                  "updateNode": "每轮推进时更新 prev_scene_time、elapsed_time 和 cur_time；若地点变动则同步更新三级地点字段。\n\n【更新约束】\n除初始化时 prev_scene_time 可为 NULL 外，其余字段均不可写 NULL 或空串。\n\n【更新SQL示例（同日+跨日+位置变动综合覆盖）】\nSQL示例(同日推进): UPDATE global_state SET prev_scene_time = '2026-02-03 09:00', elapsed_time = '3小时', cur_time = '2026-02-03 12:00' WHERE row_id = 1;\n\nSQL示例(跨日推进): UPDATE global_state SET prev_scene_time = '2026-02-03 23:55', elapsed_time = '20分', cur_time = '2026-02-04 00:15' WHERE row_id = 1;\n\nSQL示例(含位置变动): UPDATE global_state SET current_location = '新宿车站', current_minor_region = '新宿区', current_major_region = '东京都', prev_scene_time = '2026-02-03 12:00', elapsed_time = '30分', cur_time = '2026-02-03 12:30' WHERE row_id = 1;",
+                  "insertNode": "禁止。",
+                  "ddl": "CREATE TABLE global_state ( -- 全局数据表\n  row_id INTEGER PRIMARY KEY, -- 行号\n  story_state TEXT, -- 全局状态\n  current_location TEXT, -- 当前详细地点\n  current_minor_region TEXT, -- 当前次要地区\n  current_major_region TEXT, -- 当前主要地区\n  prev_scene_time TEXT, -- 上轮场景时间\n  elapsed_time TEXT, -- 经过的时间\n  cur_time TEXT -- 当前时间\n);"
+                },
+                "content": [
+                  [
+                    "row_id",
+                    "全局状态",
+                    "当前详细地点",
+                    "当前次要地区",
+                    "当前主要地区",
+                    "上轮场景时间",
+                    "经过的时间",
+                    "当前时间"
+                  ]
+                ],
+                "updateConfig": {
+                  "uiSentinel": -1,
+                  "contextDepth": -1,
+                  "updateFrequency": -1,
+                  "batchSize": -1,
+                  "skipFloors": -1,
+                  "groupId": -1
+                },
+                "exportConfig": {
+                  "enabled": false,
+                  "splitByRow": false,
+                  "entryName": "全局数据表",
+                  "entryType": "constant",
+                  "keywords": "",
+                  "preventRecursion": true,
+                  "injectionTemplate": "",
+                  "extraIndexEnabled": false,
+                  "extraIndexEntryName": "全局数据表-索引",
+                  "extraIndexColumns": [],
+                  "extraIndexColumnModes": {},
+                  "extraIndexInjectionTemplate": "",
+                  "sqlInjectionTemplate": "",
+                  "entryPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 10000
+                  },
+                  "extraIndexPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 10010
+                  },
+                  "fixedEntryPlacement": {
+                    "position": "before_character_definition",
+                    "depth": 2,
+                    "order": 99981
+                  },
+                  "fixedIndexPlacement": {
+                    "position": "before_character_definition",
+                    "depth": 2,
+                    "order": 99982
+                  }
+                },
+                "orderNo": 0
+              },
+              "sheet_zhu_jue_xin_xi_biao": {
+                "uid": "sheet_zhu_jue_xin_xi_biao",
+                "name": "主角信息表",
+                "sourceData": {
+                  "note": "记录主角的核心身份信息。此表有且仅有一行。\n\n【列定义】（列号为 0 基，与表格数据中的列标一致）\n- 列0: 姓名 name\n- 列1: 性别 gender\n- 列2: 年龄 age\n- 列3: 外貌特征 appearance（含日常穿衣风格，写出整体印象，避免罗列数据）\n- 列4: 身份 identity_text（逗号分隔）\n- 列5: 近况 current_condition\n- 列6: 所在地点 location_name\n- 列7: 随身财物 belongings（可留空）\n\n【强制约束】\n1. 所在地点只写地点名不带层级前缀。位置变化时同步更新。\n\n2. 近况用一句话描述主角当前的身体感觉、情绪状态或心头惦记的事。\n正常时期填\"一切如常\"，有异常时直接写具体感受，不用标签堆叠。\n√ 昨晚没睡好，脑子有点沉\n√ 刚从雨里跑回来，衣服还湿着\n\n3. 随身财物只写当前身上带着的有意义物品，不写游戏化资源。\n√ 钱包里夹着第一次看电影的票根\n√ 口袋里剩两颗橘子糖",
+                  "initNode": "故事初始化时，插入主角的唯一条目。",
+                  "deleteNode": "禁止。",
+                  "updateNode": "已存在的这一行，字段值变化时更新：年龄、外貌、身份、近况、所在地点、随身财物。\n\n【更新SQL示例（近况+位置变化）】\n更新SQL示例(近况变化): UPDATE protagonist_info SET current_condition = '疲劳，左膝擦伤', location_name = '御苑' WHERE row_id = 1;\n\n更新SQL示例(随身财物变化): UPDATE protagonist_info SET belongings = '钱包里夹着第一次看电影的票根，口袋里剩两颗橘子糖' WHERE row_id = 1;",
+                  "insertNode": "禁止。",
+                  "ddl": "CREATE TABLE protagonist_info ( -- 主角信息\n  row_id INTEGER PRIMARY KEY, -- 行号，仅允许为 1\n  name TEXT, -- 姓名\n  gender TEXT, -- 性别\n  age TEXT, -- 年龄\n  appearance TEXT, -- 外貌特征\n  identity_text TEXT, -- 身份\n  current_condition TEXT, -- 近况\n  location_name TEXT, -- 所在地点\n  belongings TEXT -- 随身财物\n);"
+                },
+                "content": [
+                  [
+                    "row_id",
+                    "姓名",
+                    "性别",
+                    "年龄",
+                    "外貌特征",
+                    "身份",
+                    "近况",
+                    "所在地点",
+                    "随身财物"
+                  ]
+                ],
+                "updateConfig": {
+                  "uiSentinel": -1,
+                  "contextDepth": -1,
+                  "updateFrequency": -1,
+                  "batchSize": -1,
+                  "skipFloors": -1,
+                  "groupId": -1
+                },
+                "exportConfig": {
+                  "enabled": false,
+                  "splitByRow": false,
+                  "entryName": "主角信息",
+                  "entryType": "constant",
+                  "keywords": "",
+                  "preventRecursion": true,
+                  "injectionTemplate": "",
+                  "extraIndexEnabled": false,
+                  "extraIndexEntryName": "主角信息-索引",
+                  "extraIndexColumns": [],
+                  "extraIndexColumnModes": {},
+                  "extraIndexInjectionTemplate": "",
+                  "sqlInjectionTemplate": "",
+                  "entryPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 10000
+                  },
+                  "extraIndexPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 10010
+                  },
+                  "fixedEntryPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 99990
+                  },
+                  "fixedIndexPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 99991
+                  }
+                },
+                "orderNo": 1
+              },
+              "sheet_zhong_yao_jue_se_biao": {
+                "uid": "sheet_zhong_yao_jue_se_biao",
+                "name": "重要角色表",
+                "sourceData": {
+                  "note": "记录已知人物身份、外貌、在场状态和过往经历，不按提名补全档案或默认形象。relation_text为停用兼容列，保持SQL NULL：关系只在独立关系事项表维护，委托状态由任务与事件表和纪要维护。past_experience保留来源及知情者；interaction_options留空，旧选项不构成已选动作。",
+                  "initNode": "有具体人物事实时初始化相应人物行，只填已知字段。",
+                  "deleteNode": "暂时离场或无新信息保留原行；仅明确永久离开且不再需要追踪时删除。",
+                  "updateNode": "只更新有新证据的身份、状态、位置和经历，不更新relation_text，不把私人想法变成该人物知识。",
+                  "insertNode": "新出现且有相关事实的人物按唯一姓名新增，已有者更新原行。",
+                  "ddl": "CREATE TABLE important_non_romance ( -- 重要角色表\n  row_id INTEGER PRIMARY KEY, -- 行号\n  name TEXT, -- 姓名\n  gender TEXT, -- 性别\n  age TEXT, -- 年龄\n  brief_intro TEXT, -- 一句话介绍\n  appearance TEXT, -- 外貌特征\n  outfit_text TEXT, -- 穿着打扮\n  location_name TEXT, -- 所在地点\n  presence_status TEXT, -- 在场状态\n  relation_text TEXT, -- 人际关系\n  past_experience TEXT, -- 过往经历\n  interaction_options TEXT -- 交互选项\n);"
+                },
+                "content": [
+                  [
+                    "row_id",
+                    "姓名",
+                    "性别",
+                    "年龄",
+                    "一句话介绍",
+                    "外貌特征",
+                    "穿着打扮",
+                    "所在地点",
+                    "在场状态",
+                    "人际关系",
+                    "过往经历",
+                    "交互选项"
+                  ]
+                ],
+                "updateConfig": {
+                  "uiSentinel": -1,
+                  "contextDepth": -1,
+                  "updateFrequency": -1,
+                  "batchSize": -1,
+                  "skipFloors": -1,
+                  "groupId": -1
+                },
+                "exportConfig": {
+                  "enabled": true,
+                  "splitByRow": true,
+                  "entryName": "重要角色表",
+                  "entryType": "keyword",
+                  "keywords": "姓名",
+                  "preventRecursion": true,
+                  "injectionTemplate": "",
+                  "extraIndexEnabled": true,
+                  "extraIndexEntryName": "重要角色表-索引",
+                  "extraIndexColumns": [
+                    "姓名",
+                    "一句话介绍"
+                  ],
+                  "extraIndexColumnModes": {
+                    "姓名": "both",
+                    "一句话介绍": "index_only"
+                  },
+                  "extraIndexInjectionTemplate": "以下为已经登场过的重要角色：\n<重要角色索引>\n$1\n</重要角色索引>",
+                  "sqlInjectionTemplate": "",
+                  "entryPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 10000,
+                    "order": 10000
+                  },
+                  "extraIndexPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 10000,
+                    "order": 8010
+                  },
+                  "fixedEntryPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 10000,
+                    "order": 99985
+                  },
+                  "fixedIndexPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 10000,
+                    "order": 99986
+                  }
+                },
+                "orderNo": 2
+              },
+              "sheet_zhu_jue_ji_neng_biao": {
+                "uid": "sheet_zhu_jue_ji_neng_biao",
+                "name": "主角技能表",
+                "sourceData": {
+                  "note": "记录主角获得的所有技能项目。（列号为 0 基，与表格数据中的列标一致）\n- 列0: 技能名称 - 技能的名称，不得与表中已有技能重名。\n- 列1: 技能类型 - 技能的类别（如：“被动”、“主动”）。\n- 列2: 等级/阶段 - 技能的当前等级或阶段。\n- 列3: 效果描述 - 技能在当前等级下的具体效果。",
+                  "initNode": "游戏初始化时，根据设定为主角添加初始技能。",
+                  "deleteNode": "技能因剧情被剥夺或替换时删除。\nSQL示例: DELETE FROM protagonist_skills WHERE skill_name = '被剥夺的技能';",
+                  "updateNode": "已有技能被升级时更新其等级/阶段和效果描述。\nSQL示例: UPDATE protagonist_skills SET skill_level = 'Lv.3', effect_desc = '新效果描述' WHERE skill_name = '火球术';",
+                  "insertNode": "主角获得新的技能时添加。\nSQL示例: INSERT INTO protagonist_skills (skill_name, skill_type, skill_level, effect_desc) VALUES ('新技能', '主动', 'Lv.1', '效果描述');",
+                  "ddl": "CREATE TABLE protagonist_skills ( -- 主角技能表\n  row_id INTEGER PRIMARY KEY, -- 行号\n  skill_name TEXT, -- 技能名称\n  skill_type TEXT, -- 技能类型\n  skill_level TEXT, -- 等级/阶段\n  effect_desc TEXT -- 效果描述\n);"
+                },
+                "content": [
+                  [
+                    "row_id",
+                    "技能名称",
+                    "技能类型",
+                    "等级/阶段",
+                    "效果描述"
+                  ]
+                ],
+                "updateConfig": {
+                  "uiSentinel": -1,
+                  "contextDepth": -1,
+                  "updateFrequency": -1,
+                  "batchSize": -1,
+                  "skipFloors": -1
+                },
+                "exportConfig": {
+                  "enabled": false,
+                  "splitByRow": false,
+                  "entryName": "主角技能表",
+                  "entryType": "constant",
+                  "keywords": "",
+                  "preventRecursion": true,
+                  "injectionTemplate": "",
+                  "extraIndexEnabled": false,
+                  "extraIndexEntryName": "主角技能表-索引",
+                  "extraIndexColumns": [],
+                  "extraIndexColumnModes": {},
+                  "extraIndexInjectionTemplate": "",
+                  "sqlInjectionTemplate": "",
+                  "entryPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 10000
+                  },
+                  "extraIndexPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 10010
+                  },
+                  "fixedEntryPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 99990
+                  },
+                  "fixedIndexPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 99991
+                  }
+                },
+                "orderNo": 3
+              },
+              "sheet_bei_bao_wu_pin_biao": {
+                "uid": "sheet_bei_bao_wu_pin_biao",
+                "name": "背包物品表",
+                "sourceData": {
+                  "note": "记录主角拥有的所有物品、装备。（列号为 0 基，与表格数据中的列标一致）\n- 列0: 物品名称 - 物品的名称，不得与表中已有物品重名。\n- 列1: 数量 - 拥有的数量。\n- 列2: 描述/效果 - 物品的功能或背景描述。\n- 列3: 类别 - 物品的类别（如：“武器”、“消耗品”、“杂物”）。",
+                  "initNode": "游戏初始化时，根据剧情与设定添加主角的初始携带物品。",
+                  "deleteNode": "物品被完全消耗、丢弃或摧毁时删除。\nSQL示例: DELETE FROM inventory WHERE item_name = '已消耗物品';\nSQL示例(批量): DELETE FROM inventory WHERE quantity <= 0;",
+                  "updateNode": "获得已有的物品，使其数量增加时更新，已有物品状态变化时更新。\nSQL示例: UPDATE inventory SET quantity = quantity + 3 WHERE item_name = '治疗药水';\nSQL示例(多列): UPDATE inventory SET quantity = quantity - 1, description = '已损坏' WHERE item_name = '铁剑';",
+                  "insertNode": "主角获得背包中没有的全新物品时添加。\nSQL示例: INSERT INTO inventory (item_name, quantity, description, category) VALUES ('新物品', 1, '物品描述', '杂物');",
+                  "ddl": "CREATE TABLE inventory ( -- 背包物品表\n  row_id INTEGER PRIMARY KEY, -- 行号\n  item_name TEXT, -- 物品名称\n  quantity TEXT, -- 数量\n  description TEXT, -- 描述/效果\n  category TEXT -- 类别\n);"
+                },
+                "content": [
+                  [
+                    "row_id",
+                    "物品名称",
+                    "数量",
+                    "描述/效果",
+                    "类别"
+                  ]
+                ],
+                "updateConfig": {
+                  "uiSentinel": -1,
+                  "contextDepth": -1,
+                  "updateFrequency": -1,
+                  "batchSize": -1,
+                  "skipFloors": -1
+                },
+                "exportConfig": {
+                  "enabled": false,
+                  "splitByRow": false,
+                  "entryName": "背包物品表",
+                  "entryType": "constant",
+                  "keywords": "",
+                  "preventRecursion": true,
+                  "injectionTemplate": "",
+                  "extraIndexEnabled": false,
+                  "extraIndexEntryName": "背包物品表-索引",
+                  "extraIndexColumns": [],
+                  "extraIndexColumnModes": {},
+                  "extraIndexInjectionTemplate": "",
+                  "sqlInjectionTemplate": "",
+                  "entryPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 10000
+                  },
+                  "extraIndexPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 10010
+                  },
+                  "fixedEntryPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 99990
+                  },
+                  "fixedIndexPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 99991
+                  }
+                },
+                "orderNo": 4
+              },
+              "sheet_ren_wu_yu_shi_jian_biao": {
+                "uid": "sheet_ren_wu_yu_shi_jian_biao",
+                "name": "任务与事件表",
+                "sourceData": {
+                  "note": "记录所有当前正在进行的任务。（列号为 0 基，与表格数据中的列标一致）\n- 列0: 任务名称 - 任务的标题，不得与表中已有任务重名。\n- 列1: 任务类型 - “主线任务”或“支线任务”。\n- 列2: 发布者 - 发布该任务的角色或势力。\n- 列3: 详细描述 - 任务的目标和要求。\n- 列4: 当前进度 - 对任务完成度的简要描述。\n- 列5: 任务时限 - 完成任务的剩余时间。\n- 列6: 奖励 - 完成任务可获得的奖励。\n- 列7: 惩罚 - 任务失败的后果。",
+                  "initNode": "游戏初始化时，根据剧情与设定添加一条主线剧情。",
+                  "deleteNode": "任务完成、失败或过期时删除。\nSQL示例: DELETE FROM quests_events WHERE quest_name = '已完成的任务';",
+                  "updateNode": "任务取得关键进展时进行更新。\nSQL示例: UPDATE quests_events SET current_progress = '已完成第一阶段', time_limit = '剩余3天' WHERE quest_name = '拯救公主';",
+                  "insertNode": "主角接取或触发新的主线或支线任务时添加。\nSQL示例: INSERT INTO quests_events (quest_name, quest_type, issuer, detail_desc, current_progress, time_limit, reward, penalty) VALUES ('新任务', '支线任务', '村长', '任务描述', '刚接取', '7天', '金币100', '声望降低');",
+                  "ddl": "CREATE TABLE quests_events ( -- 任务与事件表\n  row_id INTEGER PRIMARY KEY, -- 行号\n  quest_name TEXT, -- 任务名称\n  quest_type TEXT, -- 任务类型\n  issuer TEXT, -- 发布者\n  detail_desc TEXT, -- 详细描述\n  current_progress TEXT, -- 当前进度\n  time_limit TEXT, -- 任务时限\n  reward TEXT, -- 奖励\n  penalty TEXT -- 惩罚\n);"
+                },
+                "content": [
+                  [
+                    "row_id",
+                    "任务名称",
+                    "任务类型",
+                    "发布者",
+                    "详细描述",
+                    "当前进度",
+                    "任务时限",
+                    "奖励",
+                    "惩罚"
+                  ]
+                ],
+                "updateConfig": {
+                  "uiSentinel": -1,
+                  "contextDepth": -1,
+                  "updateFrequency": -1,
+                  "batchSize": -1,
+                  "skipFloors": -1
+                },
+                "exportConfig": {
+                  "enabled": false,
+                  "splitByRow": false,
+                  "entryName": "任务与事件表",
+                  "entryType": "constant",
+                  "keywords": "",
+                  "preventRecursion": true,
+                  "injectionTemplate": "",
+                  "extraIndexEnabled": false,
+                  "extraIndexEntryName": "任务与事件表-索引",
+                  "extraIndexColumns": [],
+                  "extraIndexColumnModes": {},
+                  "extraIndexInjectionTemplate": "",
+                  "sqlInjectionTemplate": "",
+                  "entryPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 10000
+                  },
+                  "extraIndexPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 10010
+                  },
+                  "fixedEntryPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 99990
+                  },
+                  "fixedIndexPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 99991
+                  }
+                },
+                "orderNo": 5
+              },
+              "sheet_ji_yao_biao": {
+                "uid": "sheet_ji_yao_biao",
+                "name": "纪要表",
+                "sourceData": {
+                  "note": "轮次日志。每轮交互结束后立刻插入一条新记录。\n\n【列定义】（列号为 0 基，与表格数据中的列标一致）\n- 列0: 编码索引 code_index（AM0001起递增，不得与已有编号重复）\n- 列1: 时间跨度 time_span\n- 列2: 概览 summary（≤30字）\n- 列3: 纪要 chronicle_text（240-480字）\n- 列4: 重要对话 key_dialogue（可留空）\n\n【强制约束】\n1.编码索引格式 AMXXXX，从0001开始递增。\n2.时间跨度格式为 \"YYYY-MM-DD HH:MM ~ YYYY-MM-DD HH:MM\"，覆盖本轮事件的实际时间范围。\n3.概览一句话概括本轮纪要内容，≤30字。\n\n4.纪要规范：\n- 以第三方视角中立客观记录正文发生的一切，移除所有修辞与对话。不滥用环境描写、不进行动作细节分析、不加评论，不抒情，不升华。\n- 用词直白生活化，避免正式措辞（如“达成协议”“确立计划”）。\n- 结尾必须开放，在事件自然流动中结束，不得归纳状态或做出封闭式收束。\n违例：故事仍在继续 / 新的篇章开启 / 二人关系迈入新阶段 / 未来等待着他们。\n- 多轮交互整合为一条记录。\n- 禁止内容：极端情绪（崩溃、狂喜、绝望等）、夸张、比喻、升华、情绪总结、支配欲、掌控欲、总结性收尾。\n\n5.重要对话仅摘录直接推动剧情转折、揭示关键信息、改变人物关系/决策或构成承诺/誓约/约定的原文台词，标明说话人。排除寒暄、重复、情绪感叹。通常3句，最多5句，总token不超过150。",
+                  "initNode": "故事初始化时，插入一条新记录用于记录剧情。",
+                  "deleteNode": "禁止。",
+                  "updateNode": "禁止。",
+                  "insertNode": "每轮交互结束后插入一条新记录。\n\n【填写规范】\ncode_index、time_span、summary、chronicle_text 必须全部填写，不得留空或写 NULL。\ntime_span 格式必须为 YYYY-MM-DD HH:MM ~ YYYY-MM-DD HH:MM。\ncode_index 格式必须为 AM0001 这种四位编号，且不得与已有编号重复。\n\nSQL示例：INSERT INTO chronicle (code_index, time_span, summary, chronicle_text, key_dialogue) VALUES ('AM0036', '2026-02-04 08:00 ~ 2026-02-04 08:30', '一句话概括', '本轮纪要内容...', NULL);",
+                  "ddl": "CREATE TABLE chronicle ( -- 纪要表\n  row_id INTEGER PRIMARY KEY, -- 行号\n  code_index TEXT, -- 编码索引\n  time_span TEXT, -- 时间跨度\n  summary TEXT, -- 概览\n  chronicle_text TEXT, -- 纪要\n  key_dialogue TEXT -- 重要对话\n);"
+                },
+                "content": [
+                  [
+                    "row_id",
+                    "编码索引",
+                    "时间跨度",
+                    "概览",
+                    "纪要",
+                    "重要对话"
+                  ]
+                ],
+                "updateConfig": {
+                  "uiSentinel": -1,
+                  "contextDepth": -1,
+                  "updateFrequency": -1,
+                  "batchSize": -1,
+                  "skipFloors": -1,
+                  "groupId": -1
+                },
+                "exportConfig": {
+                  "enabled": true,
+                  "splitByRow": true,
+                  "entryName": "纪要",
+                  "entryType": "constant",
+                  "keywords": "编码索引",
+                  "preventRecursion": true,
+                  "injectionTemplate": "<记忆回溯>\n$1\n</记忆回溯>",
+                  "extraIndexEnabled": false,
+                  "extraIndexEntryName": "纪要索引",
+                  "extraIndexColumns": [
+                    "编码索引",
+                    "时间跨度",
+                    "概览"
+                  ],
+                  "extraIndexColumnModes": {
+                    "编码索引": "both",
+                    "时间跨度": "both",
+                    "概览": "index_only"
+                  },
+                  "extraIndexInjectionTemplate": "<已发生的事件概览>\n$1\n</已发生的事件概览>",
+                  "sqlInjectionTemplate": "",
+                  "entryPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 999,
+                    "order": 10000
+                  },
+                  "extraIndexPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 1000,
+                    "order": 10010
+                  },
+                  "fixedEntryPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 9999,
+                    "order": 99987
+                  },
+                  "fixedIndexPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 9999,
+                    "order": 99988
+                  }
+                },
+                "orderNo": 6
+              },
+              "sheet_xuan_xiang_biao": {
+                "uid": "sheet_xuan_xiang_biao",
+                "name": "选项表",
+                "sourceData": {
+                  "note": "记录每轮主角可以进行的动作选项。此表有且仅有一行。（列号为 0 基，与表格数据中的列标一致）\n- 列0: 选项一 – 以第三人称描述主角可采取的合理行动，偏向策略或推进剧情。\n- 列1: 选项二 – 以第三人称描述主角可采取的中立行动，不偏向任何立场。\n- 列2: 选项三 – 以第三人称描述主角可采取的善意行动，体现帮助、保护或安抚。\n- 列3: 选项四 – 以第三人称描述主角可采取的 NSFW 相关行动，但必须符合剧情逻辑，不得代替主角说话。\n所有选项必须使用第三人称（如“主角尝试…”，“主角决定…”），不得代替主角发言；必须紧扣当前剧情；四个选项需风格明确、互不重复。",
+                  "initNode": "游戏初始化时，生成四个初始选项。",
+                  "deleteNode": "禁止删除。",
+                  "updateNode": "每轮交互后必须更新此表，根据当前剧情生成新的四个选项覆盖原有内容。\nSQL示例: UPDATE options SET option_1 = '新选项一', option_2 = '新选项二', option_3 = '新选项三', option_4 = '新选项四' WHERE row_id = 1;",
+                  "insertNode": "禁止操作。",
+                  "ddl": "CREATE TABLE options ( -- 选项表\n  row_id INTEGER PRIMARY KEY, -- 行号\n  option_1 TEXT, -- 选项一\n  option_2 TEXT, -- 选项二\n  option_3 TEXT, -- 选项三\n  option_4 TEXT -- 选项四\n);"
+                },
+                "content": [
+                  [
+                    "row_id",
+                    "选项一",
+                    "选项二",
+                    "选项三",
+                    "选项四"
+                  ]
+                ],
+                "updateConfig": {
+                  "uiSentinel": -1,
+                  "contextDepth": -1,
+                  "updateFrequency": -1,
+                  "batchSize": -1,
+                  "skipFloors": -1
+                },
+                "exportConfig": {
+                  "enabled": false,
+                  "splitByRow": false,
+                  "entryName": "选项表",
+                  "entryType": "constant",
+                  "keywords": "",
+                  "preventRecursion": true,
+                  "injectionTemplate": "",
+                  "extraIndexEnabled": false,
+                  "extraIndexEntryName": "选项表-索引",
+                  "extraIndexColumns": [],
+                  "extraIndexColumnModes": {},
+                  "extraIndexInjectionTemplate": "",
+                  "sqlInjectionTemplate": "",
+                  "entryPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 10000
+                  },
+                  "extraIndexPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 10010
+                  },
+                  "fixedEntryPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 99990
+                  },
+                  "fixedIndexPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 2,
+                    "order": 99991
+                  },
+                  "injectIntoWorldbook": false
+                },
+                "orderNo": 7
+              },
+              "sheet_da_zong_jie": {
+                "uid": "sheet_da_zong_jie",
+                "name": "大总结",
+                "sourceData": {
+                  "note": "按已完成阶段追加历史总结，已有行不可修改或删除。仅当本次请求中已存在的可见纪要达到$RECENT_CHRONICLE_ROWS条时新增，不计本轮拟插入行。按因果与时序承接新事件、决定、订正及知情范围；关系读独立关系事项表，同一对象的不同事项可并存。关系当前状态由事项表持续供续写读取，总结不代替或删除事项行；涉及借还明确借入方、借出方及待履行者。新增后由系统隐藏已归纳纪要，不自行操作隐藏列。",
+                  "initNode": "不因初始化新增。",
+                  "deleteNode": "禁止删除已有总结。",
+                  "updateNode": "禁止修改已有总结。",
+                  "insertNode": "本次请求中已存在的可见纪要达到$RECENT_CHRONICLE_ROWS条才新增阶段总结，不计本轮拟插入行；未达阈值不新增。",
+                  "ddl": "CREATE TABLE flight_big_summary ( -- 大总结\n  row_id INTEGER PRIMARY KEY, -- 行号\n  summary_text TEXT NOT NULL -- 总结\n);"
+                },
+                "content": [
+                  [
+                    "row_id",
+                    "总结"
+                  ]
+                ],
+                "updateConfig": {
+                  "uiSentinel": -1,
+                  "contextDepth": -1,
+                  "updateFrequency": -1,
+                  "batchSize": -1,
+                  "skipFloors": -1,
+                  "groupId": -1
+                },
+                "exportConfig": {
+                  "enabled": true,
+                  "splitByRow": false,
+                  "entryName": "大总结",
+                  "entryType": "constant",
+                  "keywords": "",
+                  "preventRecursion": true,
+                  "injectionTemplate": "<大总结>\n$1\n</大总结>",
+                  "extraIndexEnabled": false,
+                  "extraIndexEntryName": "大总结-索引",
+                  "extraIndexColumns": [],
+                  "extraIndexColumnModes": {},
+                  "extraIndexInjectionTemplate": "",
+                  "sqlInjectionTemplate": "",
+                  "entryPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 1000,
+                    "order": 10010
+                  },
+                  "extraIndexPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 1000,
+                    "order": 10010
+                  },
+                  "fixedEntryPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 1000,
+                    "order": 10010
+                  },
+                  "fixedIndexPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 1000,
+                    "order": 10010
+                  }
+                },
+                "orderNo": 8
+              },
+              "sheet_relationship_facts": {
+                "uid": "sheet_relationship_facts",
+                "name": "独立关系事项",
+                "sourceData": {
+                  "ddl": "CREATE TABLE relationship_facts ( -- 独立关系事项\n row_id INTEGER PRIMARY KEY, -- 行号\n subject_name TEXT NOT NULL, -- 主体\n object_name TEXT NOT NULL, -- 对象\n matter TEXT NOT NULL, -- 具体事项\n relation_kind TEXT NOT NULL, -- 关系种类\n state TEXT, -- 当前状态\n source TEXT, -- 来源\n known_by TEXT, -- 知情范围\n UNIQUE(subject_name,object_name,matter,relation_kind)\n);",
+                  "note": "每行只保存主体对对象的一种具体事项，主体＋对象＋事项＋关系种类标识同一记录。合作、对某件事的信任、对另一消息的可信度、借还、欠款、行程披露分别成立，不合成总体亲疏。subject_name/object_name不互换；借入行主体是借入方、对象是借出方、matter是物品，state用未归还/已归还/有据其他状态。来源留原话或已有纪要编号，known_by只记有知情证据者，玩家[]按私人想法标明未告知NPC。任务承接/进度仍归任务表与纪要，不在此重复。",
+                  "initNode": "按明确的已有关系建立独立事项，没有关系证据则空表。",
+                  "insertNode": "有新事项或不同关系种类时新增；先匹配主体、对象、事项与关系种类，不能用新事项替换另一个事项。",
+                  "updateNode": "同一事项的状态、来源或知情范围任一有新证据时，更新对应列：态度不变但当面说出或转告，也更新source及known_by，保留state。WHERE用该行row_id或完整四项身份；不改变身份字段，不因未再提及覆盖旧值。",
+                  "deleteNode": "不因阶段总结或人物暂离删除；结束的借还等更新状态并保留来源。"
+                },
+                "content": [
+                  [
+                    "row_id",
+                    "主体",
+                    "对象",
+                    "具体事项",
+                    "关系种类",
+                    "当前状态",
+                    "来源",
+                    "知情范围"
+                  ]
+                ],
+                "updateConfig": {
+                  "uiSentinel": -1,
+                  "contextDepth": -1,
+                  "updateFrequency": -1,
+                  "batchSize": -1,
+                  "skipFloors": -1,
+                  "groupId": -1
+                },
+                "exportConfig": {
+                  "enabled": false,
+                  "splitByRow": true,
+                  "entryName": "独立关系事项",
+                  "entryType": "keyword",
+                  "keywords": "姓名",
+                  "preventRecursion": true,
+                  "injectionTemplate": "",
+                  "extraIndexEnabled": false,
+                  "extraIndexEntryName": "重要角色表-索引",
+                  "extraIndexColumns": [
+                    "姓名",
+                    "一句话介绍"
+                  ],
+                  "extraIndexColumnModes": {
+                    "姓名": "both",
+                    "一句话介绍": "index_only"
+                  },
+                  "extraIndexInjectionTemplate": "以下为已经登场过的重要角色：\n<重要角色索引>\n$1\n</重要角色索引>",
+                  "sqlInjectionTemplate": "",
+                  "entryPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 10000,
+                    "order": 10000
+                  },
+                  "extraIndexPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 10000,
+                    "order": 8010
+                  },
+                  "fixedEntryPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 10000,
+                    "order": 99985
+                  },
+                  "fixedIndexPlacement": {
+                    "position": "at_depth_as_system",
+                    "depth": 10000,
+                    "order": 99986
+                  }
+                },
+                "orderNo": 9
+              }
+            }
+          },
+          "contextRef": "b815a29418321fe278c1ec7497a2ad85c21e4277f9ef7dc711b3ea6a2cc508c2"
+        },
+        "recoveryAttempted": false,
+        "attempts": [
+          {
+            "status": "failed",
+            "rawReply": "{\"schemaVersion\":\"dialogue-reception/7\",\"contextRef\":\"b815a29418321fe278c1ec7497a2ad85c21e4277f9ef7dc711b3ea6a2cc508c2\",\"selections\":[{\"fragmentId\":\"f17\",\"quote\":\"布莱特\"},{\"fragmentId\":\"f4\",\"quote\":\"“真要说想念的，哪怕只是小酒馆里一碗炖得烂熟的杂烩肉汤，配上刚烤透、皮还是脆的热麦饼，也比干粮强上十倍。要是能在窗边坐下，再来一壶温热的麦茶，这几天的奔波才算真正缓过劲来。”\\n\"},{\"fragmentId\":\"f19\",\"quote\":\"牵着马缰走得颇为轻快：\"},{\"fragmentId\":\"f17\",\"quote\":\"听到这话\"},{\"fragmentId\":\"f30\",\"quote\":\"黄泉\"},{\"fragmentId\":\"f8\",\"quote\":\"“热汤面，或者刚出锅的肉串。赶路的时候总觉得随便填饱肚子就行，真闻到街边的烟火气，倒确实想吃口带油盐味的热食。”\\n\"},{\"fragmentId\":\"f33\",\"quote\":\"但也带了点闲适：\"},{\"fragmentId\":\"f50\",\"quote\":\"布莱特\"},{\"fragmentId\":\"f12\",\"quote\":\"“闻着味道，前面不远就有几家脚店和小食肆。咱们办完正事，找地方落脚填肚子倒不用愁了。”\"},{\"fragmentId\":\"f51\",\"quote\":\"辨了辨方向：\"},{\"fragmentId\":\"f43\",\"quote\":\"几人已经走下了缓坡。\"}],\"utterances\":[{\"speakerId\":\"bright\",\"speaker\":0,\"content\":1,\"mode\":\"asserted\",\"scope\":{\"time\":null,\"condition\":null,\"attribution\":null},\"anchor\":2},{\"speakerId\":\"huang\",\"speaker\":4,\"content\":5,\"mode\":\"asserted\",\"scope\":{\"time\":null,\"condition\":null,\"attribution\":null},\"anchor\":6},{\"speakerId\":\"bright\",\"speaker\":7,\"content\":8,\"mode\":\"asserted\",\"scope\":{\"time\":null,\"condition\":null,\"attribution\":null},\"anchor\":9}],\"receptions\":[{\"utterance\":0,\"content\":1,\"listenerId\":\"player\",\"identityKind\":\"reply\",\"identity\":3,\"historyMessageId\":15,\"evidenceKind\":\"reply\",\"evidence\":3,\"propositionRef\":null},{\"utterance\":0,\"content\":1,\"listenerId\":\"huang\",\"identityKind\":\"explicit\",\"identity\":4,\"evidenceKind\":\"direct\",\"evidence\":10,\"propositionRef\":null},{\"utterance\":1,\"content\":5,\"listenerId\":\"player\",\"identityKind\":\"reply\",\"identity\":3,\"historyMessageId\":15,\"evidenceKind\":\"reply\",\"evidence\":6,\"propositionRef\":null},{\"utterance\":1,\"content\":5,\"listenerId\":\"bright\",\"identityKind\":\"explicit\",\"identity\":0,\"evidenceKind\":\"direct\",\"evidence\":10,\"propositionRef\":null},{\"utterance\":2,\"content\":8,\"listenerId\":\"player\",\"identityKind\":\"explicit\",\"identity\":10,\"evidenceKind\":\"direct\",\"evidence\":10,\"propositionRef\":null},{\"utterance\":2,\"content\":8,\"listenerId\":\"huang\",\"identityKind\":\"explicit\",\"identity\":10,\"evidenceKind\":\"direct\",\"evidence\":10,\"propositionRef\":null}],\"unresolved\":[],\"coverage\":{\"status\":\"recorded\",\"evidence\":10}}",
+            "error": "Invalid compact record fields"
+          }
+        ],
+        "rows": [
+          {
+            "id": "dialogue.d3743824c6bf49b447455fd247d8dbda5be12aaffb06a2e8a067201e9fecd260.unprocessed",
+            "kind": "unprocessed",
+            "status": "pending",
+            "speakerId": null,
+            "recipientIds": [],
+            "propositionRef": null,
+            "content": null,
+            "quote": null,
+            "reason": "本轮知情增量尚未可靠处理；不是无人接收。"
+          }
+        ]
+      }
+    }
+  },
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": []
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": []
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "counts": {
+    "writes": 1,
+    "asked": 0
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "authorization": "2026-11-13 user explicitly grants two additional narration calls; active tavern credential and unchanged complete paired requests to current endpoint",
+  "baseline": 252,
+  "limit": 2,
+  "ceiling": 254,
+  "cumulative": 254,
+  "remaining": 0,
+  "attempts": [
+    {
+      "id": "pending",
+      "customRequest": 253,
+      "state": "completed",
+      "requestBytes": 113839,
+      "requestSha256": "d6546046d7062c254a0e9b42e811603eef862be829d3a7a753786f3c6c6ac48e",
+      "status": 200,
+      "elapsedMs": 5025,
+      "rawResponseSha256": "eecf548fcd173a7c45b4689672ae189e20e6e35632ed731b248957a67dfe5302",
+      "responseBytes": 965,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "e3ceec79-3a72-4197-ab63-2fc60a8cf31e",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 28554,
+        "completion_tokens": 203,
+        "total_tokens": 28757
+      }
+    },
+    {
+      "id": "confirmed",
+      "customRequest": 254,
+      "state": "completed",
+      "requestBytes": 114836,
+      "requestSha256": "b059e39c9fb86949f4b0d7789d36bec04df060e509d8ffe3af42b5754deade61",
+      "status": 200,
+      "elapsedMs": 26864,
+      "rawResponseSha256": "96dff51bb015dfb856e16509730357a58c7554450c2d22f151575e0081ba9fea",
+      "responseBytes": 1104,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "01443257-db90-464a-a37b-3710ca14cc7d",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 28823,
+        "completion_tokens": 224,
+        "total_tokens": 29047,
+        "prompt_tokens_details": {
+          "cached_tokens": 24480
+        }
+      }
+    }
+  ],
+  "classification": "local NO_CHECK control",
+  "classificationCalls": 0,
+  "automaticExtractionApprovalRevision": false,
+  "retries": 0,
+  "timeoutMs": 180000,
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "deployed": false,
+  "formalStoryWritten": false,
+  "closed": true,
+  "stopReason": "two-authorized-narrations-completed"
+}

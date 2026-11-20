@@ -1,0 +1,77 @@
+{
+  "authorization": "用户新增6次，第05至10例；最新抽取合同，其余输入/坐标参照/参数不变；依赖承接真实待核结果。失败即停、不重试、不修补、不放宽校验，不部署/正式剧情/自动批准修订。",
+  "baseline": 282,
+  "limit": 6,
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "parameters": {
+    "model": "[抗截断]gemini-3.8-flash",
+    "temperature": 1,
+    "max_tokens": 4096,
+    "stream": false,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "top_p": 1
+  },
+  "cases": [
+    {
+      "id": "05-partial-first",
+      "text": "布莱特对黄泉说：“东门封闭，改走南门。”黄泉只听清“东门封闭”，没听清后半句。",
+      "expected": "黄泉仅获得东门封闭，不能获得改走南门。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 10392,
+      "requestSha256": "073795b29398d5f894c1bf7acfe6f2fa2ddf00b390e4cc80d1fef8a0c84754d1",
+      "onlyLatestContractGuidanceChanged": true,
+      "inputAndCoordinatesUnchanged": true,
+      "parametersUnchanged": true
+    },
+    {
+      "id": "06-partial-second",
+      "text": "布莱特对黄泉说：“东门封闭，改走南门。”黄泉只听清“改走南门”，没听清前半句。",
+      "expected": "黄泉仅获得改走南门，不能获得东门封闭。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 10393,
+      "requestSha256": "16d5181e924952158f75213847f9e47644d3bc502cb8deca2f5f042cecc4d4e4",
+      "onlyLatestContractGuidanceChanged": true,
+      "inputAndCoordinatesUnchanged": true,
+      "parametersUnchanged": true
+    },
+    {
+      "id": "07-ambiguous-hearing",
+      "text": "布莱特低声说：“仓库换了锁。”黄泉站在门边，不确定她是否听清。",
+      "expected": "不确定是否听清应待核；不直接授予黄泉。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 10182,
+      "requestSha256": "445ff1681e232f7bb562afdfbefb50a38ee7ea21f5949875fe0f56a9b43c283a",
+      "onlyLatestContractGuidanceChanged": true,
+      "inputAndCoordinatesUnchanged": true,
+      "parametersUnchanged": true
+    },
+    {
+      "id": "08-ambiguous-listener",
+      "text": "布莱特对黄泉和御临风说：“见面改在钟楼。”其中一人没听清，记录没有说明是谁。",
+      "expected": "不得猜测哪个人听清；接收范围待核。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 10375,
+      "requestSha256": "127fba2f8fcfabd7dcbebdd0add3b509c83bf692e511369b9d3299b659ad18c9",
+      "onlyLatestContractGuidanceChanged": true,
+      "inputAndCoordinatesUnchanged": true,
+      "parametersUnchanged": true
+    }
+  ],
+  "followups": [
+    {
+      "id": "09-unrelated",
+      "parent": "07-ambiguous-hearing",
+      "text": "我整理衣袖，和黄泉聊聊今天的饭菜。",
+      "expected": "不依赖待核消息，required为空，不询问。"
+    },
+    {
+      "id": "10-dependent",
+      "parent": "07-ambiguous-hearing",
+      "text": "让黄泉根据布莱特刚才告知的仓库情况，判断能否用旧钥匙进去。",
+      "expected": "实际依赖黄泉是否收到仓库换锁消息，应返回相关待核id并触发询问；不代替用户回答。"
+    }
+  ],
+  "kind": "actual-semantic-adapter-requests-with-isolated-synthetic-prose",
+  "browserCapture": false
+}

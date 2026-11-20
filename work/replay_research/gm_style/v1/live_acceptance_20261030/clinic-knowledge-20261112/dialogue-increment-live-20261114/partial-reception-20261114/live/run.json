@@ -1,0 +1,35 @@
+{
+  "authorization": "用户新增3次，诊断并最小修复接收范围合同后验证第05、第06、第07例；仅增加接收范围说明，其余输入/坐标参照/参数不变。失败即停、不重试、不修补、不放宽校验，不部署/正式剧情/自动批准修订。",
+  "baseline": 283,
+  "limit": 3,
+  "cumulative": 284,
+  "remaining": 2,
+  "attempts": [
+    {
+      "id": "05-partial-first",
+      "customRequest": 284,
+      "state": "completed",
+      "requestBytes": 11462,
+      "requestSha256": "8e8c2260d162dd902de8024ed75e14199e89b626c6434e1f20009fcd3552a4ae",
+      "status": 200,
+      "elapsedMs": 12532,
+      "rawResponseSha256": "f61948cfc3d21987dc1d3b2b3ca47d6edc63a074bb1f8b6617e021f02dcd934a",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3161,
+        "completion_tokens": 1799,
+        "total_tokens": 4960
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Model now split first-clause received and second-clause not_received correctly, but original protocol rejects entire reply: four nonnull semantic fields lack spans, order endpoint c1 is utterance not action, and both receipt reasons are null. No repair; isolated revision remains zero. Stop; do not send cases06/07."
+    }
+  ],
+  "closed": true,
+  "retries": 0,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "stopReason": "manual-fail"
+}

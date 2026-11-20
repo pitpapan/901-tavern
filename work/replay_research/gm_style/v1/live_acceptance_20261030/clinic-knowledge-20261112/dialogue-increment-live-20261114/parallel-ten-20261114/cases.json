@@ -1,0 +1,83 @@
+{
+  "cases": [
+    {
+      "id": "01-received-new",
+      "text": "御临风对布莱特说：“西侧栈桥暂时停用。”布莱特清楚地听到了这句话。",
+      "speaker": "player",
+      "recipient": "bright",
+      "content": "西侧栈桥暂时停用",
+      "expected": "只给布莱特登记该来源说法，不确认世界真相；其余人不共享，pending为空。"
+    },
+    {
+      "id": "02-received-rumor",
+      "text": "黄泉对御临风说：“北街水井暂时停用。”",
+      "speaker": "huang",
+      "recipient": "player",
+      "content": "北街水井暂时停用",
+      "known": true,
+      "expected": "黄泉已有该传闻的可信隔离取得回执；御临风取得同一传闻或等价未确认来源说法，不升级为确认，不强求复述。"
+    },
+    {
+      "id": "03-not-heard",
+      "text": "御临风隔着关闭的隔音窗对布莱特说：“北门暂停通行。”布莱特没有听见。",
+      "speaker": "player",
+      "recipient": "bright",
+      "content": "北门暂停通行",
+      "expected": "没有收到，不给任何人新增知情，不产生多余待核。"
+    },
+    {
+      "id": "04-not-yet-said",
+      "text": "黄泉准备向御临风转告：“渡船今晚停航。”她尚未说出口。",
+      "speaker": "huang",
+      "recipient": "player",
+      "content": "渡船今晚停航",
+      "expected": "仅意图存在；未传达、不授予接收、不把内层内容当世界事实、不产生多余待核。"
+    },
+    {
+      "id": "05-partial-first",
+      "text": "御临风对布莱特说：“北门暂停通行，改从西桥绕行。”布莱特只听清“北门暂停通行”，没听清后半句。",
+      "speaker": "player",
+      "recipient": "bright",
+      "content": "北门暂停通行",
+      "expected": "只给布莱特登记前半句，不给后半句，不共享他人，pending为空。"
+    },
+    {
+      "id": "06-partial-second",
+      "text": "御临风对布莱特说：“北门暂停通行，改从西桥绕行。”布莱特只听清“改从西桥绕行”，没听清前半句。",
+      "speaker": "player",
+      "recipient": "bright",
+      "content": "改从西桥绕行",
+      "expected": "只给布莱特登记后半句，不给前半句，不共享他人，pending为空。"
+    },
+    {
+      "id": "07-ambiguous-hearing",
+      "text": "黄泉轻声说：“渡船明早停航。”御临风在走廊另一端，记录不能确定他是否听清。",
+      "speaker": "huang",
+      "recipient": "player",
+      "content": "渡船明早停航",
+      "expected": "不确定接收保留待核，不因在场或指代明确授予知情，不立即询问。"
+    },
+    {
+      "id": "08-ambiguous-listener",
+      "text": "黄泉对御临风和布莱特说：“交货地点改到南岗。”两人中有一人没听清，但记录无法指出是哪一人。",
+      "speaker": "huang",
+      "recipient": null,
+      "content": "交货地点改到南岗",
+      "expected": "不能猜哪位听清，无知情授予，保留身份歧义和对应待核。"
+    }
+  ],
+  "followups": [
+    {
+      "id": "09-unrelated",
+      "parent": "07-ambiguous-hearing",
+      "text": "我和御临风谈谈午饭的口味，再整理一下衣领。",
+      "expected": "不依赖待核渡船消息，required为空，不询问。"
+    },
+    {
+      "id": "10-dependent",
+      "parent": "07-ambiguous-hearing",
+      "text": "让御临风依据黄泉刚才说的渡船消息，安排明早过河的路线。",
+      "expected": "依赖御临风是否获知渡船消息，返回真实相关待核id并询问，不代答或授予知情。"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "id": "07-ambiguous-hearing",
+  "localProtocolPassed": true,
+  "result": {
+    "status": "processed",
+    "pending": [
+      {
+        "id": "dialogue.84bc39c01b3eb16e6f067cd96e9551ee70741d5b83915d9497d73c490a126eff.96571c45513373c08bac1116b84ed51ef7bfe899c0fd9d0e86d052ba68c0f963",
+        "claimId": "utterance.1",
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "propositionRef": null,
+        "content": "渡船明早停航。",
+        "quote": "渡船明早停航。",
+        "belief": "uncertain",
+        "status": "pending",
+        "extractionReason": "原文明确指出御临风在走廊另一端，记录不能确定他是否听清。",
+        "reason": "原文明确指出御临风在走廊另一端，记录不能确定他是否听清。",
+        "evidence": {
+          "documentId": "current",
+          "start": 15,
+          "end": 37,
+          "quote": "御临风在走廊另一端，记录不能确定他是否听清。"
+        },
+        "unresolved": [],
+        "sourceAnchor": {
+          "chatId": "isolated.dialogue.parallel.07-ambiguous-hearing",
+          "messageId": 0,
+          "swipeId": 0,
+          "text": "黄泉轻声说：“渡船明早停航。”御临风在走廊另一端，记录不能确定他是否听清。"
+        },
+        "batchId": "dialogue.84bc39c01b3eb16e6f067cd96e9551ee70741d5b83915d9497d73c490a126eff"
+      }
+    ]
+  },
+  "asked": [],
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "isolated.dialogue.live.v1",
+    "chatId": "isolated.dialogue.parallel.07-ambiguous-hearing",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "well.closed": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "well.closed",
+        "entityId": "well",
+        "field": "reported_status",
+        "value": "北街水井暂时停用",
+        "certainty": "rumor",
+        "visibility": "private"
+      }
+    },
+    "events": {},
+    "knowledge": {},
+    "dialogueBatches": {
+      "dialogue.84bc39c01b3eb16e6f067cd96e9551ee70741d5b83915d9497d73c490a126eff": {
+        "id": "dialogue.84bc39c01b3eb16e6f067cd96e9551ee70741d5b83915d9497d73c490a126eff",
+        "sourceAnchor": {
+          "chatId": "isolated.dialogue.parallel.07-ambiguous-hearing",
+          "messageId": 0,
+          "swipeId": 0,
+          "text": "黄泉轻声说：“渡船明早停航。”御临风在走廊另一端，记录不能确定他是否听清。"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.84bc39c01b3eb16e6f067cd96e9551ee70741d5b83915d9497d73c490a126eff.96571c45513373c08bac1116b84ed51ef7bfe899c0fd9d0e86d052ba68c0f963",
+            "claimId": "utterance.1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "渡船明早停航。",
+            "quote": "渡船明早停航。",
+            "belief": "uncertain",
+            "status": "pending",
+            "extractionReason": "原文明确指出御临风在走廊另一端，记录不能确定他是否听清。",
+            "reason": "原文明确指出御临风在走廊另一端，记录不能确定他是否听清。",
+            "evidence": {
+              "documentId": "current",
+              "start": 15,
+              "end": 37,
+              "quote": "御临风在走廊另一端，记录不能确定他是否听清。"
+            },
+            "unresolved": []
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "uncertain",
+            "evidence": {
+              "documentId": "current",
+              "start": 15,
+              "end": 37,
+              "quote": "御临风在走廊另一端，记录不能确定他是否听清。"
+            },
+            "reason": "听者御临风的接收状态明确为不确定是否听清。"
+          }
+        ]
+      }
+    }
+  },
+  "context": {
+    "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+    "actorKnowledge": [
+      {
+        "actorId": "bright",
+        "name": "布莱特",
+        "facts": []
+      },
+      {
+        "actorId": "huang",
+        "name": "黄泉",
+        "facts": []
+      },
+      {
+        "actorId": "player",
+        "name": "御临风",
+        "facts": []
+      }
+    ],
+    "availableInformation": []
+  },
+  "semanticAssessment": "pending-manual"
+}

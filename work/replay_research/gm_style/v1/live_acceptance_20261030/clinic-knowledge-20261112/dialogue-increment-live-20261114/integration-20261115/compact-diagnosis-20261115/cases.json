@@ -1,0 +1,56 @@
+[
+  {
+    "id": "v7.diag.uncertain",
+    "original": "v7.accept.uncertain",
+    "kind": "exact-failed-reproduction",
+    "bytes": 10651
+  },
+  {
+    "id": "v7.diag.recovery",
+    "original": "v7.failure.recover",
+    "kind": "exact-failed-reproduction",
+    "bytes": 11058
+  },
+  {
+    "id": "v7.diag.npc_reply",
+    "original": "v7.accept.npc_reply",
+    "kind": "exact-failed-reproduction",
+    "bytes": 9809
+  },
+  {
+    "id": "v7.diag.long",
+    "original": "v7.accept.long",
+    "kind": "exact-failed-reproduction",
+    "bytes": 54510
+  },
+  {
+    "id": "v7.diag.obstacle",
+    "original": "v7.accept.obstacle",
+    "kind": "exact-failed-reproduction",
+    "bytes": 10331
+  },
+  {
+    "id": "v7.diag.near.partial_unknown",
+    "kind": "nearby-control",
+    "expected": "received stone bridge only; meeting uncertain, no full-speech binding",
+    "bytes": 10538
+  },
+  {
+    "id": "v7.diag.near.implicit",
+    "kind": "nearby-control",
+    "expected": "implicit bright through real history, no explicit listener inserted",
+    "bytes": 9953
+  },
+  {
+    "id": "v7.diag.near.obstacle",
+    "kind": "nearby-control",
+    "expected": "implicit bright not_received; current answer identity versus independent obstacle",
+    "bytes": 10230
+  },
+  {
+    "id": "v7.diag.near.multi",
+    "kind": "nearby-control",
+    "expected": "two explicit recipients each receives its own message; all historyMessageId null",
+    "bytes": 10489
+  }
+]

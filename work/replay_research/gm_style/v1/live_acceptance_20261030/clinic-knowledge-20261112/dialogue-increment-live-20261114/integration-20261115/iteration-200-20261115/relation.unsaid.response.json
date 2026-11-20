@@ -1,0 +1,31 @@
+{
+  "kind": "relation.unsaid",
+  "startedAt": "2026-11-15T15:43:58.414Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T15:44:01.848Z",
+  "headersElapsedMs": 3434,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5af5fe71b680419-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 15:44:01 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=h6tn6ODl%2FprhG3UwE2KQiEYaQnQLOyZgOvSGXNRtaDeWOognvT2cFbSSnVyRLNFY0jn41SzHFilmjzul305D6ulttN%2Bz9CIWNtzWZ8y%2F%2F47vteazdEinQeCYOvQZeg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611151543590014660098268d9d6X3YjmhwA",
+    "x-zeabur-ip-country": "ES",
+    "x-zeabur-request-id": "a6d99f86-7ff8-42b2-9ceb-eda7b0daf3ed"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"c07d70e4-2739-4219-a7d5-f37543fbebb0\",\"object\":\"chat.completion\",\"created\":1794757441,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/5\\\",\\\"contextRef\\\":\\\"2ebef667aca6468479c3b1731eab053a4131a2448e54139cd37fcc33aca0cc0c\\\",\\\"inputRef\\\":\\\"assertion.53bd63cab473a6d0dff0083555505e3cd7bcd1ce3908e1503c758a1523240643\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[],\\\"coverage\\\":{\\\"status\\\":\\\"none\\\",\\\"evidence\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉在心里拟好了“渡口今晚停航”的回答，却始终没有开口。\\\"},\\\"reason\\\":\\\"黄泉仅在心中拟定回答但始终没有开口，本轮未实际发生言说与接收传达。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4587,\"completion_tokens\":238,\"total_tokens\":4825}}",
+  "responseBytes": 897,
+  "responseBodySha256BeforePrivacyRedaction": "f08614c302f8d5efaa31f3bbd0a340830aa5de68e025979f02e409c4aa554178",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T15:44:01.859Z",
+  "elapsedMs": 3445
+}

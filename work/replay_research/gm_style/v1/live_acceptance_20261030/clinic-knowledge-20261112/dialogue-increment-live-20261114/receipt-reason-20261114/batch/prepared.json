@@ -1,0 +1,42 @@
+{
+  "authorization": "用户明确继续迭代，使用前次3次授权中未使用的2次；不新增总额度。修复reason字段合同后依次验证05、06，仅增加reason字符串说明，其他输入/坐标参照/参数不变。失败即停、不重试、不修补、不放宽校验，不部署/正式剧情/自动批准修订。",
+  "baseline": 284,
+  "limit": 2,
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "parameters": {
+    "model": "[抗截断]gemini-3.8-flash",
+    "temperature": 1,
+    "max_tokens": 4096,
+    "stream": false,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "top_p": 1
+  },
+  "cases": [
+    {
+      "id": "05-partial-first",
+      "text": "布莱特对黄泉说：“东门封闭，改走南门。”黄泉只听清“东门封闭”，没听清后半句。",
+      "expected": "黄泉仅获得东门封闭，不能获得改走南门。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 11677,
+      "requestSha256": "0af99ce3ea21027464345c164df776b7966fd5d9dd159cad56e7380269194824",
+      "onlyLatestContractGuidanceChanged": true,
+      "inputAndCoordinatesUnchanged": true,
+      "parametersUnchanged": true
+    },
+    {
+      "id": "06-partial-second",
+      "text": "布莱特对黄泉说：“东门封闭，改走南门。”黄泉只听清“改走南门”，没听清前半句。",
+      "expected": "黄泉仅获得改走南门，不能获得东门封闭。",
+      "purpose": "dialogue-reception",
+      "requestBytes": 11678,
+      "requestSha256": "604efcf0c9e65c4bd07eada166f43fae43a22c132755086bd835e27d7bd37505",
+      "onlyLatestContractGuidanceChanged": true,
+      "inputAndCoordinatesUnchanged": true,
+      "parametersUnchanged": true
+    }
+  ],
+  "followups": [],
+  "kind": "actual-semantic-adapter-requests-with-isolated-synthetic-prose",
+  "browserCapture": false
+}

@@ -1,0 +1,617 @@
+{
+  "status": "four-frozen-first-requests-two-rules-awaiting-authorization",
+  "modelCalls": 0,
+  "newAllowance": 0,
+  "cumulativeRequestAttempts": 266,
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "parameters": {
+    "model": "[抗截断]gemini-3.8-flash",
+    "temperature": 1,
+    "max_tokens": 4096,
+    "stream": false,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "top_p": 1
+  },
+  "minimumNarrativeCalls": 6,
+  "classificationModelCalls": 0,
+  "classificationControl": "Existing local NO_CHECK fixture; classification ability is not evaluated.",
+  "sourceBrowserCapture": {
+    "file": "../browser.capture.json",
+    "requestSha256": "09009a47cfefcf5259e6bc7a907f48a9c34a5a9902714521e162d858ae778a10",
+    "requestBytes": 128121
+  },
+  "scope": "Two independent non-Canon scene pairs. The previous clinic correction chain is regression evidence only.",
+  "comparisonLimits": "Only pair-specific relation evidence or stated-reason evidence changes. Tone, refusal, brevity and whether to use the relation/reason can legitimately differ. One output per condition cannot isolate stochastic variation or prove causality, long-term stability or overall literary quality.",
+  "dataRange": "Original narrative style, current character/background material, synthetic scene/three memory records, explicit source and per-actor state, player question; followups additionally include the exact real parent reply. No formal chat writes or credentials in requests.",
+  "runConditions": [
+    "Obtain explicit batch budget before credential access or sending.",
+    "Each planned request at most once; no retry or cherry-picked regeneration.",
+    "Retain exact requests, raw responses and failed attempts separately from complete replies.",
+    "Stop on transport/incomplete response or a clear material boundary failure; continue offline analysis after stopping.",
+    "A concise refusal, personal interpretation or non-disclosure is not by itself failure.",
+    "Do not auto-extract/approve/revise facts or agreements.",
+    "Create each followup only after the real parent reply and manual state review; no synthetic future reply.",
+    "Record utterance, listener reception and explicit host receipt separately; never automatically share knowledge."
+  ],
+  "cases": [
+    {
+      "id": "01-relation-known",
+      "pair": "relation",
+      "condition": "known",
+      "source": "非Canon测试来源：本例既有记录：布莱特曾与协会登记员罗恩办过两次交接，双方相识。罗恩与本工坊接待员陶宁不是同一人。布莱特也曾与陶宁办过两次交接，双方相识；没有登记信任、帮助承诺或秘密访问权。此段为本例隔离资料，布莱特已取得上述记录，御临风与黄泉未取得其中的私人内容。",
+      "input": "“布莱特，这份修理清单要交到这间工坊。你看先怎么接洽合适？”\n（桌外隔离验收，非正式剧情：按本例场景承接对话，保持原人物和文风，不替御临风新增对白、心理或决定。）",
+      "dimensions": [
+        "有依据的相识可自然使用，也可不求助",
+        "相识不升级为必定援助、信任或秘密授权",
+        "人物提议不等于玩家采纳"
+      ],
+      "context": {
+        "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+        "actorKnowledge": [
+          {
+            "actorId": "player",
+            "name": "御临风",
+            "facts": [
+              {
+                "id": "scene.public",
+                "content": "非Canon独立场景：御临风、布莱特和黄泉在帝都一间普通工坊外的廊下，工坊没有专名。门开着，内侧柜台有人整理单据，尚未开始接待他们；御临风手边有一份待递交的修理清单，尚未交付或承诺付费。布莱特保持原有失明状态。工坊接待员叫陶宁；本例没有战斗、资源消耗或新的伤势。",
+                "belief": "confirmed",
+                "access": "public",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": null,
+                "sources": []
+              }
+            ]
+          },
+          {
+            "actorId": "bright",
+            "name": "布莱特",
+            "facts": [
+              {
+                "id": "scene.public",
+                "content": "非Canon独立场景：御临风、布莱特和黄泉在帝都一间普通工坊外的廊下，工坊没有专名。门开着，内侧柜台有人整理单据，尚未开始接待他们；御临风手边有一份待递交的修理清单，尚未交付或承诺付费。布莱特保持原有失明状态。工坊接待员叫陶宁；本例没有战斗、资源消耗或新的伤势。",
+                "belief": "confirmed",
+                "access": "public",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": null,
+                "sources": []
+              },
+              {
+                "id": "source.evidence",
+                "content": "本例既有记录：布莱特曾与协会登记员罗恩办过两次交接，双方相识。罗恩与本工坊接待员陶宁不是同一人。布莱特也曾与陶宁办过两次交接，双方相识；没有登记信任、帮助承诺或秘密访问权。",
+                "belief": "confirmed",
+                "access": "learned",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 1,
+                  "actorId": "legacy.story"
+                },
+                "sources": [
+                  {
+                    "eventRef": "received.fixture.evidence",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 1,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "isolated.relationship-purpose.01-relation-known",
+                      "messageId": 1,
+                      "swipeId": 0,
+                      "text": "非Canon测试来源：本例既有记录：布莱特曾与协会登记员罗恩办过两次交接，双方相识。罗恩与本工坊接待员陶宁不是同一人。布莱特也曾与陶宁办过两次交接，双方相识；没有登记信任、帮助承诺或秘密访问权。此段为本例隔离资料，布莱特已取得上述记录，御临风与黄泉未取得其中的私人内容。"
+                    },
+                    "disclosure": null
+                  }
+                ],
+                "eventRef": "received.fixture.evidence",
+                "channel": "message",
+                "learnedAtMessage": 1
+              }
+            ]
+          },
+          {
+            "actorId": "huang",
+            "name": "黄泉",
+            "facts": [
+              {
+                "id": "scene.public",
+                "content": "非Canon独立场景：御临风、布莱特和黄泉在帝都一间普通工坊外的廊下，工坊没有专名。门开着，内侧柜台有人整理单据，尚未开始接待他们；御临风手边有一份待递交的修理清单，尚未交付或承诺付费。布莱特保持原有失明状态。工坊接待员叫陶宁；本例没有战斗、资源消耗或新的伤势。",
+                "belief": "confirmed",
+                "access": "public",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": null,
+                "sources": []
+              }
+            ]
+          }
+        ],
+        "availableInformation": [
+          {
+            "access": "can-inquire",
+            "content": "可以尝试向实际接触的人询问接待情况；计划联系不表示会面、关系建立或消息送达已经发生。"
+          }
+        ]
+      },
+      "seed": "01-relation-known.seed.jsonl",
+      "request": {
+        "file": "01-relation-known.request.json",
+        "bytes": 106807,
+        "sha256": "4f46b33c27ad3b5ec56d2d50f68f6335915c44cdbf159e0fba7b733ef89e7692"
+      },
+      "status": "frozen-not-sent",
+      "construction": "offline derived from actual final browser capture via packaged generate/context/projectMessages",
+      "memoryRecords": 3,
+      "historicalAssistantReplies": 0,
+      "reviewedAnnotations": 0
+    },
+    {
+      "id": "02-relation-undetermined",
+      "pair": "relation",
+      "condition": "undetermined",
+      "source": "非Canon测试来源：本例既有记录：布莱特曾与协会登记员罗恩办过两次交接，双方相识。罗恩与本工坊接待员陶宁不是同一人。布莱特与陶宁的关系未获确认；没有登记信任、帮助承诺或秘密访问权。此段为本例隔离资料，布莱特已取得上述记录，御临风与黄泉未取得其中的私人内容。",
+      "input": "“布莱特，这份修理清单要交到这间工坊。你看先怎么接洽合适？”\n（桌外隔离验收，非正式剧情：按本例场景承接对话，保持原人物和文风，不替御临风新增对白、心理或决定。）",
+      "dimensions": [
+        "协会登记员关系不迁移到工坊接待员",
+        "允许直接问路、接洽、求介绍或另提办法",
+        "未定不写成确定陌生，未来联系不补成旧交"
+      ],
+      "context": {
+        "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+        "actorKnowledge": [
+          {
+            "actorId": "player",
+            "name": "御临风",
+            "facts": [
+              {
+                "id": "scene.public",
+                "content": "非Canon独立场景：御临风、布莱特和黄泉在帝都一间普通工坊外的廊下，工坊没有专名。门开着，内侧柜台有人整理单据，尚未开始接待他们；御临风手边有一份待递交的修理清单，尚未交付或承诺付费。布莱特保持原有失明状态。工坊接待员叫陶宁；本例没有战斗、资源消耗或新的伤势。",
+                "belief": "confirmed",
+                "access": "public",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": null,
+                "sources": []
+              }
+            ]
+          },
+          {
+            "actorId": "bright",
+            "name": "布莱特",
+            "facts": [
+              {
+                "id": "scene.public",
+                "content": "非Canon独立场景：御临风、布莱特和黄泉在帝都一间普通工坊外的廊下，工坊没有专名。门开着，内侧柜台有人整理单据，尚未开始接待他们；御临风手边有一份待递交的修理清单，尚未交付或承诺付费。布莱特保持原有失明状态。工坊接待员叫陶宁；本例没有战斗、资源消耗或新的伤势。",
+                "belief": "confirmed",
+                "access": "public",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": null,
+                "sources": []
+              },
+              {
+                "id": "source.evidence",
+                "content": "本例既有记录：布莱特曾与协会登记员罗恩办过两次交接，双方相识。罗恩与本工坊接待员陶宁不是同一人。布莱特与陶宁的关系未获确认；没有登记信任、帮助承诺或秘密访问权。",
+                "belief": "confirmed",
+                "access": "learned",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 1,
+                  "actorId": "legacy.story"
+                },
+                "sources": [
+                  {
+                    "eventRef": "received.fixture.evidence",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 1,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "isolated.relationship-purpose.02-relation-undetermined",
+                      "messageId": 1,
+                      "swipeId": 0,
+                      "text": "非Canon测试来源：本例既有记录：布莱特曾与协会登记员罗恩办过两次交接，双方相识。罗恩与本工坊接待员陶宁不是同一人。布莱特与陶宁的关系未获确认；没有登记信任、帮助承诺或秘密访问权。此段为本例隔离资料，布莱特已取得上述记录，御临风与黄泉未取得其中的私人内容。"
+                    },
+                    "disclosure": null
+                  }
+                ],
+                "eventRef": "received.fixture.evidence",
+                "channel": "message",
+                "learnedAtMessage": 1
+              }
+            ]
+          },
+          {
+            "actorId": "huang",
+            "name": "黄泉",
+            "facts": [
+              {
+                "id": "scene.public",
+                "content": "非Canon独立场景：御临风、布莱特和黄泉在帝都一间普通工坊外的廊下，工坊没有专名。门开着，内侧柜台有人整理单据，尚未开始接待他们；御临风手边有一份待递交的修理清单，尚未交付或承诺付费。布莱特保持原有失明状态。工坊接待员叫陶宁；本例没有战斗、资源消耗或新的伤势。",
+                "belief": "confirmed",
+                "access": "public",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": null,
+                "sources": []
+              }
+            ]
+          }
+        ],
+        "availableInformation": [
+          {
+            "access": "can-inquire",
+            "content": "可以尝试向实际接触的人询问接待情况；计划联系不表示会面、关系建立或消息送达已经发生。"
+          }
+        ]
+      },
+      "seed": "02-relation-undetermined.seed.jsonl",
+      "request": {
+        "file": "02-relation-undetermined.request.json",
+        "bytes": 106760,
+        "sha256": "8e5963f86afa2700a7cf128edd2de593e0a5de6a2068a29e07d2a0ba18589345"
+      },
+      "status": "frozen-not-sent",
+      "construction": "offline derived from actual final browser capture via packaged generate/context/projectMessages",
+      "memoryRecords": 3,
+      "historicalAssistantReplies": 0,
+      "reviewedAnnotations": 0
+    },
+    {
+      "id": "03-purpose-unstated",
+      "pair": "purpose",
+      "condition": "unstated",
+      "source": "非Canon测试来源：温衡先前私下向布莱特说：“这份清单等我与你核对完，再交给陶宁。”布莱特答应了，尚未与温衡核对；其他两人没有听见。该记录没有说明理由。此段为本例隔离资料，布莱特已取得上述记录，御临风与黄泉未取得其中的私人内容。",
+      "input": "“布莱特，递交这份清单的事你准备怎么安排？为什么要这样办？”\n（桌外隔离验收，非正式剧情：按本例场景承接对话，保持原人物和文风，不替御临风新增对白、心理或决定。）",
+      "dimensions": [
+        "核对参与者及未完成状态保留",
+        "可以解释个人安排或不展开动机",
+        "个人解释不归为温衡交代的目的；效果不证明动机"
+      ],
+      "context": {
+        "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+        "actorKnowledge": [
+          {
+            "actorId": "player",
+            "name": "御临风",
+            "facts": [
+              {
+                "id": "scene.public",
+                "content": "非Canon独立场景：御临风、布莱特和黄泉在帝都一间普通工坊外的廊下，工坊没有专名。门开着，内侧柜台有人整理单据，尚未开始接待他们；御临风手边有一份待递交的修理清单，尚未交付或承诺付费。布莱特保持原有失明状态。工坊接待员叫陶宁；本例没有战斗、资源消耗或新的伤势。",
+                "belief": "confirmed",
+                "access": "public",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": null,
+                "sources": []
+              }
+            ]
+          },
+          {
+            "actorId": "bright",
+            "name": "布莱特",
+            "facts": [
+              {
+                "id": "scene.public",
+                "content": "非Canon独立场景：御临风、布莱特和黄泉在帝都一间普通工坊外的廊下，工坊没有专名。门开着，内侧柜台有人整理单据，尚未开始接待他们；御临风手边有一份待递交的修理清单，尚未交付或承诺付费。布莱特保持原有失明状态。工坊接待员叫陶宁；本例没有战斗、资源消耗或新的伤势。",
+                "belief": "confirmed",
+                "access": "public",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": null,
+                "sources": []
+              },
+              {
+                "id": "source.evidence",
+                "content": "布莱特收到并答应了温衡关于递交清单的要求：温衡先前私下向布莱特说：“这份清单等我与你核对完，再交给陶宁。”布莱特答应了，尚未与温衡核对；其他两人没有听见。该记录没有说明理由。",
+                "belief": "confirmed",
+                "access": "learned",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 1,
+                  "actorId": "legacy.story"
+                },
+                "sources": [
+                  {
+                    "eventRef": "received.fixture.evidence",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 1,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "isolated.relationship-purpose.03-purpose-unstated",
+                      "messageId": 1,
+                      "swipeId": 0,
+                      "text": "非Canon测试来源：温衡先前私下向布莱特说：“这份清单等我与你核对完，再交给陶宁。”布莱特答应了，尚未与温衡核对；其他两人没有听见。该记录没有说明理由。此段为本例隔离资料，布莱特已取得上述记录，御临风与黄泉未取得其中的私人内容。"
+                    },
+                    "disclosure": {
+                      "sourceQuote": "这份清单等我与你核对完，再交给陶宁。"
+                    }
+                  }
+                ],
+                "eventRef": "received.fixture.evidence",
+                "channel": "message",
+                "learnedAtMessage": 1
+              }
+            ]
+          },
+          {
+            "actorId": "huang",
+            "name": "黄泉",
+            "facts": [
+              {
+                "id": "scene.public",
+                "content": "非Canon独立场景：御临风、布莱特和黄泉在帝都一间普通工坊外的廊下，工坊没有专名。门开着，内侧柜台有人整理单据，尚未开始接待他们；御临风手边有一份待递交的修理清单，尚未交付或承诺付费。布莱特保持原有失明状态。工坊接待员叫陶宁；本例没有战斗、资源消耗或新的伤势。",
+                "belief": "confirmed",
+                "access": "public",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": null,
+                "sources": []
+              }
+            ]
+          }
+        ],
+        "availableInformation": [
+          {
+            "access": "can-inquire",
+            "content": "可以尝试向实际接触的人询问接待情况；计划联系不表示会面、关系建立或消息送达已经发生。"
+          }
+        ]
+      },
+      "seed": "03-purpose-unstated.seed.jsonl",
+      "request": {
+        "file": "03-purpose-unstated.request.json",
+        "bytes": 106764,
+        "sha256": "693b375b8436927c6132e92a70f2d925ca414e67c67cb7bdd4c5478f589317ef"
+      },
+      "status": "frozen-not-sent",
+      "construction": "offline derived from actual final browser capture via packaged generate/context/projectMessages",
+      "memoryRecords": 3,
+      "historicalAssistantReplies": 0,
+      "reviewedAnnotations": 0
+    },
+    {
+      "id": "04-purpose-stated",
+      "pair": "purpose",
+      "condition": "stated",
+      "source": "非Canon测试来源：温衡先前私下向布莱特说：“这份清单等我与你核对完，再交给陶宁。我是怕未核完的项目误导接待员。”布莱特答应了，尚未与温衡核对；其他两人没有听见。该理由是温衡自己的说明，没有额外的内心事实记录。此段为本例隔离资料，布莱特已取得上述记录，御临风与黄泉未取得其中的私人内容。",
+      "input": "“布莱特，递交这份清单的事你准备怎么安排？为什么要这样办？”\n（桌外隔离验收，非正式剧情：按本例场景承接对话，保持原人物和文风，不替御临风新增对白、心理或决定。）",
+      "dimensions": [
+        "允许准确转述温衡给出的理由，也可选择不说或质疑",
+        "来源自述不自动成为旁白确认的唯一真实目的",
+        "个人做法与约定仍分开，尚未核对不写成已完成"
+      ],
+      "context": {
+        "timeBasis": "当前保留聊天楼层顺序；不是世界时间或机械回合",
+        "actorKnowledge": [
+          {
+            "actorId": "player",
+            "name": "御临风",
+            "facts": [
+              {
+                "id": "scene.public",
+                "content": "非Canon独立场景：御临风、布莱特和黄泉在帝都一间普通工坊外的廊下，工坊没有专名。门开着，内侧柜台有人整理单据，尚未开始接待他们；御临风手边有一份待递交的修理清单，尚未交付或承诺付费。布莱特保持原有失明状态。工坊接待员叫陶宁；本例没有战斗、资源消耗或新的伤势。",
+                "belief": "confirmed",
+                "access": "public",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": null,
+                "sources": []
+              }
+            ]
+          },
+          {
+            "actorId": "bright",
+            "name": "布莱特",
+            "facts": [
+              {
+                "id": "scene.public",
+                "content": "非Canon独立场景：御临风、布莱特和黄泉在帝都一间普通工坊外的廊下，工坊没有专名。门开着，内侧柜台有人整理单据，尚未开始接待他们；御临风手边有一份待递交的修理清单，尚未交付或承诺付费。布莱特保持原有失明状态。工坊接待员叫陶宁；本例没有战斗、资源消耗或新的伤势。",
+                "belief": "confirmed",
+                "access": "public",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": null,
+                "sources": []
+              },
+              {
+                "id": "source.evidence",
+                "content": "布莱特收到并答应了温衡关于递交清单的要求：温衡先前私下向布莱特说：“这份清单等我与你核对完，再交给陶宁。我是怕未核完的项目误导接待员。”布莱特答应了，尚未与温衡核对；其他两人没有听见。该理由是温衡自己的说明，没有额外的内心事实记录。",
+                "belief": "confirmed",
+                "access": "learned",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 1,
+                  "actorId": "legacy.story"
+                },
+                "sources": [
+                  {
+                    "eventRef": "received.fixture.evidence",
+                    "channel": "message",
+                    "belief": "confirmed",
+                    "senderId": null,
+                    "learnedAt": {
+                      "id": "legacy.story.order",
+                      "clock": "turn",
+                      "at": 1,
+                      "actorId": "legacy.story"
+                    },
+                    "sourceAnchor": {
+                      "chatId": "isolated.relationship-purpose.04-purpose-stated",
+                      "messageId": 1,
+                      "swipeId": 0,
+                      "text": "非Canon测试来源：温衡先前私下向布莱特说：“这份清单等我与你核对完，再交给陶宁。我是怕未核完的项目误导接待员。”布莱特答应了，尚未与温衡核对；其他两人没有听见。该理由是温衡自己的说明，没有额外的内心事实记录。此段为本例隔离资料，布莱特已取得上述记录，御临风与黄泉未取得其中的私人内容。"
+                    },
+                    "disclosure": {
+                      "sourceQuote": "这份清单等我与你核对完，再交给陶宁。"
+                    }
+                  }
+                ],
+                "eventRef": "received.fixture.evidence",
+                "channel": "message",
+                "learnedAtMessage": 1
+              }
+            ]
+          },
+          {
+            "actorId": "huang",
+            "name": "黄泉",
+            "facts": [
+              {
+                "id": "scene.public",
+                "content": "非Canon独立场景：御临风、布莱特和黄泉在帝都一间普通工坊外的廊下，工坊没有专名。门开着，内侧柜台有人整理单据，尚未开始接待他们；御临风手边有一份待递交的修理清单，尚未交付或承诺付费。布莱特保持原有失明状态。工坊接待员叫陶宁；本例没有战斗、资源消耗或新的伤势。",
+                "belief": "confirmed",
+                "access": "public",
+                "effectiveAt": {
+                  "id": "legacy.story.order",
+                  "clock": "turn",
+                  "at": 0,
+                  "actorId": "legacy.story"
+                },
+                "learnedAt": null,
+                "sources": []
+              }
+            ]
+          }
+        ],
+        "availableInformation": [
+          {
+            "access": "can-inquire",
+            "content": "可以尝试向实际接触的人询问接待情况；计划联系不表示会面、关系建立或消息送达已经发生。"
+          }
+        ]
+      },
+      "seed": "04-purpose-stated.seed.jsonl",
+      "request": {
+        "file": "04-purpose-stated.request.json",
+        "bytes": 107023,
+        "sha256": "5343acff4f4b62fe6c802c6877daaa95c9583642894a2f4e1fba7c4e3e795aca"
+      },
+      "status": "frozen-not-sent",
+      "construction": "offline derived from actual final browser capture via packaged generate/context/projectMessages",
+      "memoryRecords": 3,
+      "historicalAssistantReplies": 0,
+      "reviewedAnnotations": 0
+    }
+  ],
+  "followups": [
+    {
+      "id": "05-relation-natural",
+      "parent": "02-relation-undetermined",
+      "status": "rule-only-awaiting-real-reply",
+      "rule": "固定承接02，不按哪份表现好挑选。保留完整真实回复、原关系来源和场景。若布莱特仍在场且清单未递交，可自然问清单之外要准备什么；若他已自行开始联系，承接其实际去向与已发生动作，不替御临风跟随，也不宣布介绍成功。若出现新的必要选择，仅取已授权的普通交流范围。",
+      "proposedInputIfCompatible": "“眼下这份清单还需要准备些什么？”",
+      "evaluate": [
+        "回应眼前事务",
+        "原关系边界是否在普通交流中保持",
+        "不自动完成会面或关系建立",
+        "NPC建议与玩家采纳分开",
+        "不反复讲来源边界"
+      ]
+    },
+    {
+      "id": "06-purpose-natural",
+      "parent": "03-purpose-unstated",
+      "status": "rule-only-awaiting-real-reply",
+      "rule": "固定承接03，保留真实回复与原要求。若仍未核对且清单在手边，转问递交前还需准备什么；若前轮已合理发生联系或取物，按实际结果调整指代，不重置场景。提供材料与参加原双方核对分别处理，不补核对完成或约定变更。",
+      "proposedInputIfCompatible": "“清单我先留在手边。递交之前，还有什么东西需要备齐？”",
+      "evaluate": [
+        "回到准备递交的普通场景",
+        "不把个人解释写入原约定或世界事实",
+        "条件参与者/完成状态保持",
+        "不擅自扩大披露范围",
+        "允许简短回应与个人做法"
+      ]
+    }
+  ]
+}

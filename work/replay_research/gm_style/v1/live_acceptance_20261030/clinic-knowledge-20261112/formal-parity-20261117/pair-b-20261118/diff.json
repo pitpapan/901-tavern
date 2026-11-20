@@ -1,0 +1,92 @@
+{
+  "A1": {
+    "relativePath": "../pair-a-preparation-20261118/A1.request.json",
+    "sha256": "64db4043559d82638ef6b7acee079874f5a8f2182256f7990ab0504ddb469496"
+  },
+  "B1": {
+    "file": "B1.request.json",
+    "bytes": 111219,
+    "sha256": "5bc4654c93cc427f83f397499e88ebbeacead7278d6ae6589c50d935336144cb"
+  },
+  "B2": {
+    "file": "B2.request.json",
+    "bytes": 112319,
+    "sha256": "6b8d4e11a7bac1f687fbd3315bd10105c4109f139c7be25c4a580352a21b3702"
+  },
+  "A1ToCommonB": [
+    {
+      "jsonPointer": "/messages/7/content",
+      "zeroBasedA1ByteOffset": 98909,
+      "oldText": "本聊天续玩锚点（2026-11-06核对）：已通过城门，当前在帝都城内街市，在场同行为布莱特、黄泉。",
+      "newText": "此前续玩锚点（2026-11-06核对）：已通过城门，当时在帝都城内街市，同行为布莱特、黄泉。",
+      "reason": "Time-scope the original attendance record as prior history."
+    },
+    {
+      "jsonPointer": "/messages/11/content",
+      "zeroBasedA1ByteOffset": 102591,
+      "oldText": "御临风问布莱特：“若想向老馆主打听雪老的事，你知道他们有什么来往吗？”黄泉也在旁边。",
+      "newText": "御临风问黄泉：“若想向老馆主打听雪老的事，你知道他们有什么来往吗？”",
+      "reason": "Ask Huang Quan the same quoted question in the current user turn."
+    },
+    {
+      "jsonPointer": "/messages/12/content",
+      "zeroBasedA1ByteOffset": 103519,
+      "oldText": "重玩帝都T0：御临风、黄泉、布莱特首次抵都。当前地点、在场人物、伤势、资源与地图以本聊天当前存档及实际叙事为准。",
+      "newText": "隔离对照（非正式剧情）：御临风与黄泉在帝都城内街市，布莱特此时不在场。伤势、资源与地图以原存档及实际叙事为准。",
+      "reason": "Use the shared test scene in the system scene projection."
+    },
+    {
+      "jsonPointer": "/messages/13/content",
+      "zeroBasedA1ByteOffset": 104292,
+      "oldText": "御临风问布莱特：“若想向老馆主打听雪老的事，你知道他们有什么来往吗？”黄泉也在旁边。",
+      "newText": "御临风问黄泉：“若想向老馆主打听雪老的事，你知道他们有什么来往吗？”",
+      "reason": "Use the same question in the repeated action projection."
+    },
+    {
+      "jsonPointer": "/messages/13/content",
+      "zeroBasedA1ByteOffset": 105037,
+      "oldText": "当前实际现场：重玩帝都T0：御临风、黄泉、布莱特首次抵都。当前地点、在场人物、伤势、资源与地图以本聊天当前存档及实际叙事为准。",
+      "newText": "当前实际现场：隔离对照（非正式剧情）：御临风与黄泉在帝都城内街市，布莱特此时不在场。伤势、资源与地图以原存档及实际叙事为准。",
+      "reason": "Use the shared test scene in the current scene projection."
+    }
+  ],
+  "B1ToB2": {
+    "jsonPointer": "/messages/13/content",
+    "projectionPath": "actorKnowledge[1]",
+    "actorId": "bright",
+    "zeroBasedB1ByteOffset": 106409,
+    "oldEscapedByteCount": 60,
+    "newEscapedByteCount": 1160,
+    "oldText": "{\"actorId\":\"bright\",\"name\":\"布莱特\",\"facts\":[]}",
+    "newText": "{\"actorId\":\"bright\",\"name\":\"布莱特\",\"facts\":[{\"id\":\"clinic.owner.xuelao.old-friend\",\"content\":\"九雪医馆馆主与雪老有旧，二者是不同的人。\",\"belief\":\"confirmed\",\"access\":\"learned\",\"effectiveAt\":{\"id\":\"legacy.story.order\",\"clock\":\"turn\",\"at\":0,\"actorId\":\"legacy.story\"},\"learnedAt\":{\"id\":\"legacy.story.order\",\"clock\":\"turn\",\"at\":9,\"actorId\":\"legacy.story\"},\"sources\":[{\"eventRef\":\"received.clinic.parity.bright.20261117\",\"channel\":\"message\",\"belief\":\"confirmed\",\"senderId\":null,\"learnedAt\":{\"id\":\"legacy.story.order\",\"clock\":\"turn\",\"at\":9,\"actorId\":\"legacy.story\"},\"sourceAnchor\":{\"chatId\":\"901 帝都正式续玩 20261106 - Branch #1\",\"messageId\":9,\"swipeId\":0,\"text\":\"桌外隔离验收事件（非正式剧情）：一名来客避开御临风和黄泉，只对布莱特说：“九雪医馆馆主与雪老有旧，二者是不同的人。”布莱特听清了这句话；御临风与黄泉没有听见。\"},\"disclosure\":null}],\"eventRef\":\"received.clinic.parity.bright.20261117\",\"channel\":\"message\",\"learnedAtMessage\":9}]}",
+    "sourceFile": "../after-narration.request.json",
+    "sourceSha256": "60430f56176311c3b75b0ad32b2dcdeac2ef7bbb64b2a773421fc1c1ec31e9b5",
+    "sourcePath": "/messages/13/content → 【901逐角色知情投影】 → actorKnowledge[1]",
+    "exactSourceEntry": true,
+    "privateSourceInB2ExactlyOnceInSourceAnchorOnly": true
+  },
+  "parameters": {
+    "model": "[抗截断]gemini-3.8-flash",
+    "temperature": 1,
+    "max_tokens": 4096,
+    "stream": false,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "top_p": 1
+  },
+  "fixedDecision": "NO_CHECK",
+  "referenceClassification": 547,
+  "classificationCallsThisPreparation": 0,
+  "priorEvidenceSha256": {
+    "before-narration.request.json": "64db4043559d82638ef6b7acee079874f5a8f2182256f7990ab0504ddb469496",
+    "before-narration.raw-response.txt": "32fef71f80a0324a5d900f1fbd1c0f241e4556f6e957cb5db3bd91619231f109",
+    "before-classification.content.txt": "fb753638a68fd267e48baa3b0546caed7e744ca5dba0afc372ee802613ebfc55",
+    "after-narration.request.json": "60430f56176311c3b75b0ad32b2dcdeac2ef7bbb64b2a773421fc1c1ec31e9b5",
+    "run.json": "e3d5fdae80bc62b759f8f3e38a39f485fe92fd4911c23731631c652c6ebd4693",
+    "pair-a-preparation-20261118/A1.request.json": "64db4043559d82638ef6b7acee079874f5a8f2182256f7990ab0504ddb469496",
+    "pair-a-preparation-20261118/A2.request.json": "f2e85a5f08201998fd8fb947bf1cf83999f808435ae7ff41a0bb420df3c9b007",
+    "pair-a-preparation-20261118/live-20261118/run.json": "12841404ea453e53260c3b576013ade29b41059c7726b7c3a397c2a5f40cee47",
+    "pair-a-preparation-20261118/live-20261118/A1.raw-response.bin": "8d58c072f246b832ea62f79934c9bbe0bcbbc014979029f4f4b1c878abf9fea2",
+    "pair-a-preparation-20261118/live-20261118/A2.raw-response.bin": "c67bf6cb0c2b9e91512dc03bb850f5537b84f6e3480c3100c80d113a46df4a17"
+  }
+}

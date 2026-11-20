@@ -1,0 +1,31 @@
+{
+  "kind": "v6.accept.obstacle",
+  "startedAt": "2026-11-15T21:09:49.196Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T21:09:52.170Z",
+  "headersElapsedMs": 2974,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b13d3758b3e8d2-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 21:09:52 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=OzYkyNVwnFKEH4387UVCbzNkGguXDDmB5ZrJWEi1x4cgBOFA402ls6NAKH7qdabXBpT7EFXL4dhu2j09DTnAST5RuOUhZTJepIzPEJEU7fuMqo089Jxl8ZBxwzRoow%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611152109500248310808268d9d66oxelYPS",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "379f9cb0-fdd4-47ff-b662-96f36be39934"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"7cb0907f-1126-46e0-96e5-867d0272db59\",\"object\":\"chat.completion\",\"created\":1794776992,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/6\\\",\\\"contextRef\\\":\\\"c280d0a16d0ff7be00eb4299201b607ca4ac80bcf07e35926f8c380fbb25d602\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"speaker\\\":{\\\"actorId\\\":\\\"huang\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"黄泉\\\"}},\\\"content\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"山路已经封闭了。\\\"},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"fragmentId\\\":\\\"f5\\\",\\\"quote\\\":\\\"仍答道：\\\"},\\\"receptions\\\":[{\\\"content\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"山路已经封闭了。\\\"},\\\"listener\\\":{\\\"actorId\\\":\\\"bright\\\",\\\"kind\\\":\\\"reply\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"山路已经封闭了。\\\"},\\\"historyMessageId\\\":0},\\\"evidence\\\":{\\\"kind\\\":\\\"obstacle\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"已听不到这里的声音。\\\"}},\\\"propositionRef\\\":null,\\\"reason\\\":\\\"布莱特已走远并听不到声音，存在明确物理接收障碍\\\"}]}],\\\"unresolved\\\":[],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"fragmentId\\\":\\\"f3\\\",\\\"quote\\\":\\\"已听不到这里的声音。\\\"},\\\"reason\\\":\\\"黄泉回答的内容因布莱特走远未被接收，已明确记录障碍\\\"凝聚}}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2630,\"completion_tokens\":333,\"total_tokens\":2963}}",
+  "responseBytes": 1498,
+  "responseBodySha256BeforePrivacyRedaction": "abb6e89820ffe8ae974a4086145c89c1e9e66818837c6853612b899c83100d20",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T21:09:52.181Z",
+  "elapsedMs": 2984
+}

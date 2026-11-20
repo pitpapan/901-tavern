@@ -1,0 +1,31 @@
+{
+  "kind": "dialogue-reception",
+  "startedAt": "2026-11-14T19:24:23.349Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-14T19:24:27.931Z",
+  "headersElapsedMs": 4582,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5a86563c977344b-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sat, 14 Nov 2026 19:24:27 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=kE7TYNwypCD2NPF2v3pDgKGWQIFT%2FiXqBGAbh0yV%2BGIijVDITnStWC0gAWYMxXsCNjy1LNeMciiAcQJdSOlC6dkpeNce2bny9FOZO8Wengf1uCU%2B%2BVQxhD3LH%2FF7Jg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611141924230756274458268d9d69d1T83iv",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "a48de798-7caf-4de5-8418-c8943639ab78"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"59f4c067-bada-4ba9-8a23-55180e34d075\",\"object\":\"chat.completion\",\"created\":1794684267,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"contextRef\\\":\\\"a6c7fa7e18ac8e603709e9b898db3e8fffaf8850d5b111b928a08af71d075828\\\",\\\"assertions\\\":{\\\"schemaVersion\\\":\\\"gm-assertion-output/1\\\",\\\"inputRef\\\":\\\"assertion.aa743b59e75545b1fe756a7839e5f0c30d0b6afa11bb1378833287be0093e217\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[{\\\"id\\\":\\\"c1\\\",\\\"type\\\":\\\"action\\\",\\\"args\\\":{\\\"actor\\\":\\\"黄泉\\\",\\\"verb\\\":\\\"说\\\",\\\"object\\\":\\\"渡船明早停航。\\\"},\\\"argumentSpans\\\":{\\\"actor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":2,\\\"quote\\\":\\\"黄泉\\\"},\\\"verb\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":4,\\\"end\\\":5,\\\"quote\\\":\\\"说\\\"},\\\"object\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":7,\\\"end\\\":14,\\\"quote\\\":\\\"渡船明早停航。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":15,\\\"quote\\\":\\\"黄泉轻声说：“渡船明早停航。”\\\"}}],\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]},\\\"receptions\\\":[]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":3617,\"completion_tokens\":347,\"total_tokens\":3964}}",
+  "responseBytes": 1313,
+  "responseBodySha256BeforePrivacyRedaction": "2a0dda221f0e1bc1978a04071169a61517c430c4e0e829eef251c41883f0bc2b",
+  "outcome": "completed",
+  "finishedAt": "2026-11-14T19:24:27.937Z",
+  "elapsedMs": 4588
+}

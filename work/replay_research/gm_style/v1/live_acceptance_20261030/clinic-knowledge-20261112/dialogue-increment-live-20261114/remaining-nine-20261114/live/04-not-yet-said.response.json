@@ -1,0 +1,31 @@
+{
+  "kind": "dialogue-reception",
+  "startedAt": "2026-11-14T16:17:27.252Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-14T16:17:33.008Z",
+  "headersElapsedMs": 5757,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5a753909ced7e29-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sat, 14 Nov 2026 16:17:32 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=tYL7N6zEqMUbx1WlgCwA2HznxLeeAv5HqKuuZ3T04FJiOBVfrTZ0Ei8F2zO84kPpj4rogi8vuK8TCqvaiwgSbTf0B77JLCpgI%2F80OOe0FJwpb0c50U2LJlc%2Bg%2FDp9g%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611141617271979990888268d9d6NjKjU212",
+    "x-zeabur-ip-country": "ES",
+    "x-zeabur-request-id": "b3af37d5-f175-45f1-a23a-aa325059c81b"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"8019a90d-f467-4c68-a871-851a7f4742d7\",\"object\":\"chat.completion\",\"created\":1794673052,\"model\":\"gemini-3.8-flash-n\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"contextRef\\\":\\\"d452cb7bd2565a436f8e2ac022318f1f657fc706b061bcf01e5158d6bfecfa14\\\",\\\"assertions\\\":{\\\"schemaVersion\\\":\\\"gm-assertion-output/1\\\",\\\"inputRef\\\":\\\"assertion.fd2db186b63e5d59c8f1a6ec1748e3fa608613f65df5dff017ecb5e81513922a\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"status\\\":\\\"extracted\\\",\\\"claims\\\":[{\\\"id\\\":\\\"c1\\\",\\\"type\\\":\\\"state\\\",\\\"args\\\":{\\\"entity\\\":\\\"布莱特\\\",\\\"name\\\":\\\"intent\\\",\\\"value\\\":\\\"告诉黄泉：“东门封闭。”\\\"},\\\"argumentSpans\\\":{\\\"entity\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":3,\\\"quote\\\":\\\"布莱特\\\"},\\\"name\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":3,\\\"end\\\":5,\\\"quote\\\":\\\"打算\\\"},\\\"value\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":5,\\\"end\\\":17,\\\"quote\\\":\\\"告诉黄泉：“东门封闭。”\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":0,\\\"end\\\":17,\\\"quote\\\":\\\"布莱特打算告诉黄泉：“东门封闭。”\\\"}},{\\\"id\\\":\\\"c2\\\",\\\"type\\\":\\\"action\\\",\\\"args\\\":{\\\"actor\\\":\\\"布莱特\\\",\\\"verb\\\":\\\"开口\\\",\\\"object\\\":null},\\\"argumentSpans\\\":{\\\"actor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":17,\\\"end\\\":18,\\\"quote\\\":\\\"他\\\"},\\\"verb\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":21,\\\"end\\\":23,\\\"quote\\\":\\\"开口\\\"},\\\"object\\\":null},\\\"mode\\\":\\\"denied\\\",\\\"scope\\\":{\\\"time\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":18,\\\"end\\\":21,\\\"quote\\\":\\\"还没有\\\"},\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":18,\\\"end\\\":21,\\\"quote\\\":\\\"还没有\\\"},\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"documentId\\\":\\\"current\\\",\\\"start\\\":17,\\\"end\\\":24,\\\"quote\\\":\\\"他还没有开口。\\\"}}],\\\"unresolved\\\":[]}]},\\\"receptions\\\":[]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2169,\"completion_tokens\":523,\"total_tokens\":2692}}",
+  "responseBytes": 2068,
+  "responseBodySha256BeforePrivacyRedaction": "6ad4b04cabd6ba4ec86c4fc6fc286b4b38cf53109d889f273a8b96f61c94a1bb",
+  "outcome": "completed",
+  "finishedAt": "2026-11-14T16:17:33.021Z",
+  "elapsedMs": 5769
+}

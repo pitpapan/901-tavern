@@ -1,0 +1,389 @@
+{
+  "id": "main.A1.reception",
+  "exactCurrentMessages": true,
+  "schemaPass": true,
+  "structuralPass": true,
+  "checked": {
+    "contextRef": "99beb414e2135fec79823e675d1ae5396816df970986b4502c78e2199f23400d",
+    "assertions": {
+      "schemaVersion": "gm-assertion-output/1",
+      "inputRef": "assertion.b1d934bb5fdeab52a759d649943b9aa1fb005b0206d1e71d681c4905dad1dff9",
+      "units": [
+        {
+          "id": "turn",
+          "status": "extracted",
+          "claims": [
+            {
+              "id": "turn.utterance.1",
+              "type": "utterance",
+              "args": {
+                "speaker": "黄泉",
+                "content": "西门今晚关闭，明早从石桥走。"
+              },
+              "argumentSpans": {
+                "speaker": {
+                  "documentId": "current",
+                  "start": 0,
+                  "end": 2,
+                  "quote": "黄泉"
+                },
+                "content": {
+                  "documentId": "current",
+                  "start": 9,
+                  "end": 23,
+                  "quote": "西门今晚关闭，明早从石桥走。"
+                }
+              },
+              "mode": "asserted",
+              "scope": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "scopeSpans": {
+                "time": null,
+                "condition": null,
+                "attribution": null
+              },
+              "anchor": {
+                "documentId": "current",
+                "start": 0,
+                "end": 24,
+                "quote": "黄泉对御临风说：“西门今晚关闭，明早从石桥走。”"
+              }
+            }
+          ],
+          "unresolved": []
+        }
+      ]
+    },
+    "receptions": [
+      {
+        "id": "turn.utterance.1.rec.player",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 9,
+          "end": 23,
+          "quote": "西门今晚关闭，明早从石桥走。"
+        },
+        "speakerId": "huang",
+        "recipientIds": [
+          "player"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 3,
+            "end": 6,
+            "quote": "御临风"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 24,
+          "end": 34,
+          "quote": "御临风听清了整句话。"
+        },
+        "status": "received",
+        "propositionRef": null,
+        "reason": "原文直接指明御临风听清了整句话。",
+        "claimId": "turn.utterance.1"
+      },
+      {
+        "id": "turn.utterance.1.rec.bright",
+        "contentSpan": {
+          "documentId": "current",
+          "start": 9,
+          "end": 23,
+          "quote": "西门今晚关闭，明早从石桥走。"
+        },
+        "speakerId": "huang",
+        "recipientIds": [
+          "bright"
+        ],
+        "recipientSpans": [
+          {
+            "documentId": "current",
+            "start": 34,
+            "end": 37,
+            "quote": "布莱特"
+          }
+        ],
+        "evidence": {
+          "documentId": "current",
+          "start": 34,
+          "end": 49,
+          "quote": "布莱特离得太远，一句也没听见。"
+        },
+        "status": "not_received",
+        "propositionRef": null,
+        "reason": "原文明确指出布莱特离得太远，一句也没听见。",
+        "claimId": "turn.utterance.1"
+      }
+    ],
+    "coverage": [
+      {
+        "targetId": "turn",
+        "status": "recorded",
+        "evidence": {
+          "documentId": "current",
+          "start": 0,
+          "end": 75,
+          "quote": "黄泉对御临风说：“西门今晚关闭，明早从石桥走。”御临风听清了整句话。布莱特离得太远，一句也没听见。\n\n<StatusPlaceHolderImpl/>"
+        },
+        "reason": "黄泉对御临风的言说已记录，御临风完整听清与布莱特因距离太远未听见均有明确依据并记录。"
+      }
+    ],
+    "canApprove": false,
+    "semanticCompletenessVerified": false
+  },
+  "knowledge": [
+    {
+      "actorId": "player",
+      "name": "御临风",
+      "facts": [
+        {
+          "id": "dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message",
+          "content": {
+            "kind": "reported_message",
+            "speakerId": "huang",
+            "text": "西门今晚关闭，明早从石桥走。"
+          },
+          "belief": "uncertain",
+          "access": "learned",
+          "effectiveAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 13,
+            "actorId": "legacy.story"
+          },
+          "learnedAt": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 13,
+            "actorId": "legacy.story"
+          },
+          "sources": [
+            {
+              "eventRef": "received.dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37",
+              "channel": "message",
+              "belief": "uncertain",
+              "senderId": null,
+              "learnedAt": {
+                "id": "legacy.story.order",
+                "clock": "turn",
+                "at": 13,
+                "actorId": "legacy.story"
+              },
+              "sourceAnchor": {
+                "chatId": "901 帝都正式续玩 20261106",
+                "messageId": 13,
+                "swipeId": 0,
+                "text": "黄泉对御临风说：“西门今晚关闭，明早从石桥走。”御临风听清了整句话。布莱特离得太远，一句也没听见。\n\n<StatusPlaceHolderImpl/>"
+              },
+              "disclosure": null
+            }
+          ],
+          "eventRef": "received.dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37",
+          "channel": "message",
+          "learnedAtMessage": 13
+        }
+      ]
+    },
+    {
+      "actorId": "bright",
+      "name": "布莱特",
+      "facts": []
+    },
+    {
+      "actorId": "huang",
+      "name": "黄泉",
+      "facts": []
+    }
+  ],
+  "pending": [],
+  "noQuestionWithoutDependency": true,
+  "state": {
+    "schemaVersion": 1,
+    "catalogId": "implicit.regression",
+    "chatId": "901 帝都正式续玩 20261106",
+    "timeBasis": "retained-chat-message-order",
+    "facts": {
+      "clinic.owner.xuelao.old-friend": {
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 0,
+          "actorId": "legacy.story"
+        },
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": [],
+        "id": "clinic.owner.xuelao.old-friend",
+        "entityId": "clinic.owner",
+        "field": "relationship",
+        "value": "九雪医馆馆主与雪老有旧，二者是不同的人。",
+        "certainty": "confirmed",
+        "visibility": "private"
+      },
+      "dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message": {
+        "id": "dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message",
+        "entityId": "huang",
+        "field": "reported_message",
+        "value": {
+          "kind": "reported_message",
+          "speakerId": "huang",
+          "text": "西门今晚关闭，明早从石桥走。"
+        },
+        "effectiveAt": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 13,
+          "actorId": "legacy.story"
+        },
+        "certainty": "uncertain",
+        "visibility": "private",
+        "discoveryConditions": [
+          "actual-receipt"
+        ],
+        "dependencyRefs": []
+      }
+    },
+    "events": {
+      "received.dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37": {
+        "id": "received.dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37",
+        "kind": "message.arrived",
+        "data": {
+          "knowerIds": [
+            "player"
+          ],
+          "propositionRefs": [
+            "dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message"
+          ],
+          "at": {
+            "id": "legacy.story.order",
+            "clock": "turn",
+            "at": 13,
+            "actorId": "legacy.story"
+          },
+          "sourceAnchor": {
+            "chatId": "901 帝都正式续玩 20261106",
+            "messageId": 13,
+            "swipeId": 0,
+            "text": "黄泉对御临风说：“西门今晚关闭，明早从石桥走。”御临风听清了整句话。布莱特离得太远，一句也没听见。\n\n<StatusPlaceHolderImpl/>"
+          }
+        },
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 14
+          }
+        ],
+        "causeRefs": []
+      },
+      "dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.player.dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message.event": {
+        "id": "dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.player.dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message.event",
+        "kind": "knowledge.granted",
+        "data": {
+          "grant": {
+            "id": "dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.player.dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message",
+            "knowerId": "player",
+            "propositionRef": "dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message",
+            "eventRef": "received.dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37",
+            "at": {
+              "id": "legacy.story.order",
+              "clock": "turn",
+              "at": 13,
+              "actorId": "legacy.story"
+            },
+            "channel": "message",
+            "belief": "uncertain"
+          }
+        },
+        "causeRefs": [
+          "received.dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37"
+        ],
+        "sourceRefs": [
+          {
+            "file": "retained-chat/901 帝都正式续玩 20261106",
+            "line": 14
+          }
+        ]
+      }
+    },
+    "knowledge": {
+      "dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.player.dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message": {
+        "id": "dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.player.dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message",
+        "knowerId": "player",
+        "propositionRef": "dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37.message",
+        "eventRef": "received.dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37",
+        "at": {
+          "id": "legacy.story.order",
+          "clock": "turn",
+          "at": 13,
+          "actorId": "legacy.story"
+        },
+        "channel": "message",
+        "belief": "uncertain"
+      }
+    },
+    "dialogueBatches": {
+      "dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31": {
+        "id": "dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31",
+        "sourceAnchor": {
+          "chatId": "901 帝都正式续玩 20261106",
+          "messageId": 13,
+          "swipeId": 0,
+          "text": "黄泉对御临风说：“西门今晚关闭，明早从石桥走。”御临风听清了整句话。布莱特离得太远，一句也没听见。\n\n<StatusPlaceHolderImpl/>"
+        },
+        "status": "processed",
+        "rows": [
+          {
+            "id": "dialogue.049ebeebed891087c970fbb6105d04cc968885028c7bc12f77037debe3473a31.4ad8cfcf62189e48e611858db875984d22dba4cf80490f5eab39b88c4670ab37",
+            "claimId": "turn.utterance.1",
+            "speakerId": "huang",
+            "recipientIds": [
+              "player"
+            ],
+            "propositionRef": null,
+            "content": "西门今晚关闭，明早从石桥走。",
+            "quote": "西门今晚关闭，明早从石桥走。",
+            "contentSpan": {
+              "documentId": "current",
+              "start": 9,
+              "end": 23,
+              "quote": "西门今晚关闭，明早从石桥走。"
+            },
+            "belief": "uncertain",
+            "status": "registered",
+            "extractionReason": "原文直接指明御临风听清了整句话。",
+            "reason": "",
+            "evidence": {
+              "documentId": "current",
+              "start": 24,
+              "end": 34,
+              "quote": "御临风听清了整句话。"
+            },
+            "unresolved": []
+          }
+        ],
+        "receptionCoverage": [
+          {
+            "targetId": "turn",
+            "status": "recorded",
+            "evidence": {
+              "documentId": "current",
+              "start": 0,
+              "end": 75,
+              "quote": "黄泉对御临风说：“西门今晚关闭，明早从石桥走。”御临风听清了整句话。布莱特离得太远，一句也没听见。\n\n<StatusPlaceHolderImpl/>"
+            },
+            "reason": "黄泉对御临风的言说已记录，御临风完整听清与布莱特因距离太远未听见均有明确依据并记录。"
+          }
+        ]
+      }
+    }
+  },
+  "mvuWrites": 3,
+  "replayStateUnchanged": false
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "v7.accept.uncertain",
+  "text": "布莱特现在是否知道明早在哪里会合？请依据他刚才实际听清的部分决定他下一步能否直接赶往会合地点。",
+  "responses": [
+    "v7.failure.dependent",
+    "v7.coverage.recovery"
+  ],
+  "consumed": 2,
+  "purpose": "dialogue-dependency",
+  "sourceSeed": "v7.accept.uncertain.after.seed.json",
+  "captureOnly": true,
+  "discardedSimulationState": true
+}

@@ -1,0 +1,86 @@
+{
+  "authorization": "2026-11-14 用户明确允许新增3次叙事，承接未确认分支真实回复追问核实条件；其余参数不变，失败即停、不重试；沿既有密钥和端点授权。",
+  "baseline": 257,
+  "limit": 3,
+  "ceiling": 260,
+  "cumulative": 260,
+  "remaining": 0,
+  "attempts": [
+    {
+      "id": "01",
+      "customRequest": 258,
+      "state": "completed",
+      "requestBytes": 115603,
+      "requestSha256": "12af701ecae9d6c85a9c4f2008748de7e2453a6e74dee93f34bbec9969382ae8",
+      "status": 200,
+      "elapsedMs": 6038,
+      "rawResponseSha256": "55a9f6dcd42cbc82bb30462e3e1a411dadcecd6c16493da990489826a7054f60",
+      "responseBytes": 1328,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "f4ec4b06-80a1-43c1-9769-16af4c623ca3",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 28978,
+        "completion_tokens": 281,
+        "total_tokens": 29259
+      }
+    },
+    {
+      "id": "02",
+      "customRequest": 259,
+      "state": "completed",
+      "requestBytes": 116972,
+      "requestSha256": "4b605995d7e97d2003e27c7ce3d3b19f2fdaa68ff20d2a22523d361029d1293a",
+      "status": 200,
+      "elapsedMs": 3559,
+      "rawResponseSha256": "ee2e20c4925637db4ca20d9bed2e45af04945922fe50b918d8866d519695e85b",
+      "responseBytes": 894,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "13814a04-c81c-491d-a181-71be2a784e2b",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 29316,
+        "completion_tokens": 161,
+        "total_tokens": 29477,
+        "prompt_tokens_details": {
+          "cached_tokens": 24468
+        }
+      }
+    },
+    {
+      "id": "03",
+      "customRequest": 260,
+      "state": "completed",
+      "requestBytes": 117886,
+      "requestSha256": "a73e7f646dde1fa4f7cfcd0176ffcc7e87dde7187d6b17ac7102fe5f8b0cbb80",
+      "status": 200,
+      "elapsedMs": 6108,
+      "rawResponseSha256": "23733787801ee9a96f32ac340409d2d796a23eeee657bec2580e20dc41f1a882",
+      "responseBytes": 1222,
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseId": "075440bf-22c1-40ee-ab8c-b3a1333d082d",
+      "responseModel": "gemini-3.8-flash",
+      "usage": {
+        "prompt_tokens": 29539,
+        "completion_tokens": 245,
+        "total_tokens": 29784,
+        "prompt_tokens_details": {
+          "cached_tokens": 24462
+        }
+      }
+    }
+  ],
+  "classification": "retained local NO_CHECK control",
+  "classificationCalls": 0,
+  "automaticExtractionApprovalRevision": false,
+  "retries": 0,
+  "timeoutMs": 180000,
+  "endpoint": "https://cdn.sta1n.cn/v1/chat/completions",
+  "deployed": false,
+  "formalStoryWritten": false,
+  "closed": true,
+  "stopReason": "three-authorized-narrations-completed"
+}

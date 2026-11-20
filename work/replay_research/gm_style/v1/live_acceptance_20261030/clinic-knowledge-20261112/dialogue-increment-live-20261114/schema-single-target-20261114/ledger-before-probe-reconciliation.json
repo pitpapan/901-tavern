@@ -1,0 +1,110 @@
+{
+  "authorization": "继续诊断五例失败并改善输出格式遵从；沿用前轮30次授权剩余19次（304不兼容错误已计入），不重置额度。先原五例各一次，后续根据真实结果诊断，不自动修补/放宽校验/部署/正式剧情/自动批准修订。",
+  "originalAuthorization": 30,
+  "alreadyUsed": 11,
+  "baseline": 304,
+  "limit": 19,
+  "cumulative": 308,
+  "remaining": 15,
+  "attempts": [
+    {
+      "id": "01-received-new",
+      "customRequest": 305,
+      "state": "completed",
+      "requestBytes": 26895,
+      "requestSha256": "1302ff1a3a2516e164c913eb39aa28fa44fec6e9f9798b9a4c112f843ebd685a",
+      "status": 200,
+      "elapsedMs": 2559,
+      "rawResponseSha256": "b4ee65318a54f1259f1ae52c18efb15d33400c95a2c78a9ca83e5039cafd18ea",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-control",
+      "usage": {
+        "prompt_tokens": 3578,
+        "completion_tokens": 523,
+        "total_tokens": 4101
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "HTTP200 and JSON Schema valid: original scalar type issue absent. But source coordinates are wrong and all claims are action with receptions empty despite clear receipt. Original exact validator rejects revision0. Response model changed to flash-control; do not attribute effect solely to constraints. Preserve new failure, no repair.",
+      "diagnosedContinuation": {
+        "reason": "Schema request accepted; remaining failure is exact references and reception omission despite original instructions. Do not repeat01; examine next frozen failed input once to measure format impact.",
+        "nextCase": "02-received-rumor",
+        "originalFailureRetained": true
+      }
+    },
+    {
+      "id": "02-received-rumor",
+      "customRequest": 306,
+      "state": "completed",
+      "requestBytes": 26695,
+      "requestSha256": "c520c474826b41e3efa333e8057d9719839db4187b2de1d925200673ebdbb753",
+      "status": 200,
+      "elapsedMs": 5251,
+      "rawResponseSha256": "a19253b38c63e0ee90f06c7d52e3a95dd01fed3b3d837a08db129ee8cab5567b",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3457,
+        "completion_tokens": 446,
+        "total_tokens": 3903
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "Scalar/JSON shape now valid and assertion exact references pass, but received rec1 points to action c1 instead of required utterance. Original reception checker rejects, prior rumor unchanged, revision1. No response conversion. Next input tests independent JSON syntax failure.",
+      "diagnosedContinuation": {
+        "reason": "Preserve action/utterance link failure. Continue frozen05 once to assess Schema syntax effect, not repeat02.",
+        "nextCase": "05-partial-first",
+        "originalFailureRetained": true
+      }
+    },
+    {
+      "id": "05-partial-first",
+      "customRequest": 307,
+      "state": "completed",
+      "requestBytes": 27204,
+      "requestSha256": "c54a2bae32bdb1a61fceca775b97f10ece09e68ee31415ca1e95a5b80b17c5d0",
+      "status": 200,
+      "elapsedMs": 9075,
+      "rawResponseSha256": "ba2145783cb6da953d7b9ff18eb4e697f4f4d2b157cc3fe4a7df0252336d9e68",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3703,
+        "completion_tokens": 966,
+        "total_tokens": 4669
+      },
+      "manualVerdict": "fail",
+      "manualAssessment": "JSON syntax repaired by generation constraint, not local repair; exact assertion spans pass. But every utterance projected as action and receipt refers action c2, original checker rejects. Third output selects first schema claim branch; pause remaining06/07 to test provider union handling before further scene calls.",
+      "diagnosedContinuation": {
+        "reason": "Probe308 exactly copied later utterance branch, disproving forced-first-branch hypothesis for this probe. Keep305-307 semantic/link failures; continue frozen06 once without code or prompt change.",
+        "nextCase": "06-partial-second",
+        "originalFailureRetained": true
+      }
+    },
+    {
+      "id": "06-partial-second",
+      "customRequest": 308,
+      "state": "completed",
+      "requestBytes": 27205,
+      "requestSha256": "c4f96b41ff2e4deadc226c8dd6d63f6c1a764ebad4c9e4a05363dc4077548912",
+      "status": 200,
+      "elapsedMs": 9757,
+      "rawResponseSha256": "9d3700ade69e8142a6c7f2a104de90d6ccb2fb0a53a357e7cf42d056aa3b5aad",
+      "rawUnmodified": true,
+      "finishReason": "stop",
+      "responseModel": "gemini-3.8-flash-n",
+      "usage": {
+        "prompt_tokens": 3716,
+        "completion_tokens": 1279,
+        "total_tokens": 4995
+      }
+    }
+  ],
+  "closed": false,
+  "retries": 0,
+  "deployed": false,
+  "formalStoryWritten": false,
+  "automaticApprovalRevision": false,
+  "stopReason": "diagnosed-failure-continue-next-independent-frozen-case"
+}

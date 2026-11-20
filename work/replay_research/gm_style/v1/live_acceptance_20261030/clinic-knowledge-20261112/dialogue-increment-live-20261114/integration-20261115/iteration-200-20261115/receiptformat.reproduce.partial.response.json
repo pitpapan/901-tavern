@@ -1,0 +1,31 @@
+{
+  "kind": "receiptformat.reproduce.partial",
+  "startedAt": "2026-11-15T20:14:05.233Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T20:14:09.461Z",
+  "headersElapsedMs": 4228,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5b0eb94295b70b7-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 20:14:09 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=vjFDur%2BTeRxmjyL%2BsD34hedWAsDEfEAMQXIHejY2sFjEJhbCmBYTfoonv0LzksiEq1xgkkJ1jXPATpjBmQ0CGBzQ%2B2%2BswDKgd5mPDdKxJZy%2FJ%2Fc1yKNox8k1v756gQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611152014060773048388268d9d6QQhplJm7",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "c37a91ca-2d98-4657-8d1d-e2959c19d8e5"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"84903ee6-afb5-4c10-9c49-c5ec21459b32\",\"object\":\"chat.completion\",\"created\":1794773649,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/5\\\",\\\"contextRef\\\":\\\"88975d1f8fb4eb5a7c1dd17418f86a6831cbd62fb11363d61550e92cc9dd7137\\\",\\\"inputRef\\\":\\\"assertion.88d620028e3d1c080b13f52623ff9603d479e1c0041d927a94a321ab223eff5e\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"turn.huang.utterance\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"huang\\\",\\\"content\\\":\\\"山路已经封闭了，明早在渡口会合。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"fragmentId\\\":\\\"f2\\\",\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"山路已经封闭了，明早在渡口会合。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"黄泉答道：“山路已经封闭了，明早在渡口会合。”\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"turn.huang.utterance.rec1\\\",\\\"contentSpan\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"山路已经封闭了，\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"布莱特只听清前半句。\\\",\\\"listener\\\":{\\\"actorId\\\":\\\"bright\\\",\\\"kind\\\":\\\"reply\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"山路已经封闭了，明早在渡口会合。\\\"},\\\"historyMessageId\\\":0},\\\"evidence\\\":{\\\"kind\\\":\\\"reply\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"山路已经封闭了，明早在渡口会合。\\\"满足？不，evidence.kind为reply，span必须支持传达关系}}},{\\\"id\\\":\\\"turn.huang.utterance.rec2\\\",\\\"contentSpan\\\":{\\\"fragmentId\\\":\\\"f4\\\",\\\"quote\\\":\\\"明早在渡口会合。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"status\\\":\\\"not_received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"后半句被钟声盖住，布莱特未听清。\\\",\\\"listener\\\":{\\\"actorId\\\":\\\"bright\\\",\\\"kind\\\":\\\"reply\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f1\\\",\\\"quote\\\":\\\"山路已经封闭了，明早在渡口会合。\\\"},\\\"historyMessageId\\\":0},\\\"evidence\\\":{\\\"kind\\\":\\\"obstacle\\\",\\\"span\\\":{\\\"fragmentId\\\":\\\"f6\\\",\\\"quote\\\":\\\"后半句被钟声盖住。\\\"}}}]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4720,\"completion_tokens\":599,\"total_tokens\":5319}}",
+  "responseBytes": 2358,
+  "responseBodySha256BeforePrivacyRedaction": "dc2db1c02add9380a27cd171fd7abdc56dc6d924bac2e400be8e038ef64f2217",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T20:14:09.474Z",
+  "elapsedMs": 4242
+}

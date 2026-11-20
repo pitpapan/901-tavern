@@ -1,0 +1,31 @@
+{
+  "kind": "selection.play014",
+  "startedAt": "2026-11-15T13:42:32.078Z",
+  "status": 200,
+  "bodyComplete": true,
+  "statusText": "",
+  "responseUrl": "https://cdn.sta1n.cn/v1/chat/completions",
+  "headersAt": "2026-11-15T13:42:37.548Z",
+  "headersElapsedMs": 5470,
+  "headers": {
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a5aeae0278e558db-MAD",
+    "content-encoding": "br",
+    "content-type": "application/json",
+    "date": "Sun, 15 Nov 2026 13:42:37 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=NXLXL2ZZ9WRn9xmmAhCVBtzPWgc7PWnXG0ejFWHzMn8lFfZSJ%2B2xE5HJIhDfMMgIX9MLZZ%2FbbqIHeWA1%2FBHmWi64GKi%2FI%2Fe4QtM%2BeCuotAK8BtDfgtYk%2FLbsD1dWOA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-oneapi-request-id": "202611151342325534925708268d9d6hZdk9FQv",
+    "x-zeabur-ip-country": "US",
+    "x-zeabur-request-id": "31ac4e56-af5d-4238-8518-3eabf5452be7"
+  },
+  "redactedHeaderNames": [],
+  "responseText": "{\"id\":\"7fc4f1f7-b7ed-427d-9bf3-3eadd1ed8faf\",\"object\":\"chat.completion\",\"created\":1794750157,\"model\":\"gemini-3.8-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":\\\"dialogue-reception/4\\\",\\\"contextRef\\\":\\\"5cde45aa979e3a71abb8af41b5b1e9923ff2720ec4a2661cade8b331c2d64cab\\\",\\\"inputRef\\\":\\\"assertion.38b90e889719d64f61fc9d420852cfc46bba2d1f9bafd92cb6153c717ad47a26\\\",\\\"units\\\":[{\\\"id\\\":\\\"turn\\\",\\\"claims\\\":[],\\\"utterances\\\":[{\\\"claim\\\":{\\\"id\\\":\\\"claim.utterance.1\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"靠里面的那家，匾额上写着九雪。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"fragmentId\\\":\\\"f26\\\",\\\"quote\\\":\\\"黄泉\\\"},\\\"content\\\":{\\\"fragmentId\\\":\\\"f8\\\",\\\"quote\\\":\\\"靠里面的那家，匾额上写着九雪。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"fragmentId\\\":\\\"f8\\\",\\\"quote\\\":\\\"“靠里面的那家，匾额上写着九雪。”\\\\n\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"reception.1.1\\\",\\\"contentSpan\\\":{\\\"fragmentId\\\":\\\"f8\\\",\\\"quote\\\":\\\"靠里面的那家，匾额上写着九雪。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"player\\\",\\\"bright\\\"],\\\"recipientSpans\\\":[{\\\"fragmentId\\\":\\\"f8\\\",\\\"quote\\\":\\\"靠里面的那家，匾额上写着九雪。\\\"},{\\\"fragmentId\\\":\\\"f43\\\",\\\"quote\\\":\\\"听到黄泉的话\\\"}],\\\"evidence\\\":{\\\"fragmentId\\\":\\\"f43\\\",\\\"quote\\\":\\\"听到黄泉的话\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"黄泉回答御临风上一轮的询问，布莱特明确听到黄泉的话，御临风在旁当面听取。\\\"}]},{\\\"claim\\\":{\\\"id\\\":\\\"claim.utterance.2\\\",\\\"type\\\":\\\"utterance\\\",\\\"args\\\":{\\\"speaker\\\":\\\"黄泉\\\",\\\"content\\\":\\\"不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。\\\"},\\\"argumentSpans\\\":{\\\"speaker\\\":{\\\"fragmentId\\\":\\\"f33\\\",\\\"quote\\\":\\\"她\\\"},\\\"content\\\":{\\\"fragmentId\\\":\\\"f12\\\",\\\"quote\\\":\\\"不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。\\\"}},\\\"mode\\\":\\\"asserted\\\",\\\"scope\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"scopeSpans\\\":{\\\"time\\\":null,\\\"condition\\\":null,\\\"attribution\\\":null},\\\"anchor\\\":{\\\"fragmentId\\\":\\\"f12\\\",\\\"quote\\\":\\\"“不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。”\\\\n\\\"}},\\\"receptions\\\":[{\\\"id\\\":\\\"reception.2.1\\\",\\\"contentSpan\\\":{\\\"fragmentId\\\":\\\"f12\\\",\\\"quote\\\":\\\"不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。\\\"},\\\"speakerId\\\":\\\"huang\\\",\\\"recipientIds\\\":[\\\"player\\\",\\\"bright\\\"],\\\"recipientSpans\\\":[{\\\"fragmentId\\\":\\\"f12\\\",\\\"quote\\\":\\\"不过门板是合上的，外面没挂接诊的牌子，门前也没见有人进出。\\\"},{\\\"fragmentId\\\":\\\"f43\\\",\\\"quote\\\":\\\"听到黄泉的话\\\"}],\\\"evidence\\\":{\\\"fragmentId\\\":\\\"f43\\\",\\\"quote\\\":\\\"听到黄泉的话\\\"},\\\"status\\\":\\\"received\\\",\\\"propositionRef\\\":null,\\\"reason\\\":\\\"黄泉紧接着补充说明医馆情况，布莱特与身旁御临风当面听取，布莱特随后有明确反应确认。\\\"}]}],\\\"coverage\\\":{\\\"status\\\":\\\"recorded\\\",\\\"evidence\\\":{\\\"fragmentId\\\":\\\"f14\\\",\\\"quote\\\":\\\"布莱特牵着马立在御临风身旁，听到黄泉的话，侧耳朝桥对面的街巷辨了辨，只能听到邻近几家药铺的捣药声与算盘声，九雪医馆那头确实显得格外安静。\\\\n\\\"},\\\"reason\\\":\\\"黄泉的两句说明均被御临风与布莱特当面听取，布莱特有明确听到依据。\\\"},\\\"status\\\":\\\"extracted\\\",\\\"unresolved\\\":[]}]}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":15145,\"completion_tokens\":936,\"total_tokens\":16081}}",
+  "responseBytes": 3677,
+  "responseBodySha256BeforePrivacyRedaction": "61c0af819df398c15cca1b6404a21b222985680cd1a1b4336ed1882020d43768",
+  "outcome": "completed",
+  "finishedAt": "2026-11-15T13:42:37.560Z",
+  "elapsedMs": 5482
+}

@@ -9,12 +9,14 @@ import {equipment} from './mechanics.mjs';
 import {decisionContext} from './runtime.mjs';
 import {statusLevel,lifeStatus} from '../core.mjs';
 
+const DAMAGE_TYPE_NAMES={B:'冲击',L:'严重',A:'恶性'};
+
 // The player's explicit consequence receipt is assembled after narration. It
 // never gives the narrator private opponent figures or asks it to infer damage.
 export function ownImpactReport(root,{afterRevision=0,playerId='player'}={}) {
   const actor=root.actors[playerId];if(!actor)return '';
   const damage={B:0,L:0,A:0},changes=[],changedTypes=new Set();
-  let before;
+  let before,hasNewPlayerSnapshot=false,grappleInBatch=false,hasResolvedPlayerSnapshot=false,hasPendingPlayerSnapshot=false;
   const operations=Object.values(root.operations).filter(o=>Array.isArray(o.summary?.result?.damage)&&o.summary.result.after?.participants)
     .sort((a,b)=>a.summary.revision-b.summary.revision);
   for(const op of operations) {
@@ -23,6 +25,9 @@ export function ownImpactReport(root,{afterRevision=0,playerId='player'}={}) {
       for(const hit of [...r.damage,...(r.opportunities??[]).flatMap(x=>x.damage)])
         if(hit.targetId===playerId&&Object.hasOwn(damage,hit.severity))damage[hit.severity]+=hit.actualDamage;
       if(after) {
+        hasNewPlayerSnapshot=true;grappleInBatch||=Boolean(before?.grapple||after.grapple);
+        hasPendingPlayerSnapshot=Boolean(r.after.awaiting);
+        if(!hasPendingPlayerSnapshot)hasResolvedPlayerSnapshot=true;
         const oldState={...actor.state,statuses:before?.statuses??[]},newState={...actor.state,statuses:after.statuses};
         for(const type of new Set([...oldState.statuses,...newState.statuses].map(s=>s.type))) {
           const old=statusLevel(oldState,type),now=statusLevel(newState,type);
@@ -38,8 +43,18 @@ export function ownImpactReport(root,{afterRevision=0,playerId='player'}={}) {
     }
     if(after)before=after;
   }
-  const injuries=Object.entries(damage).filter(([,n])=>n>0).map(([s,n])=>`${n}点${({B:'冲击',L:'严重',A:'恶性'})[s]}伤害（${n}${s}）`);
+  const injuries=Object.entries(damage).filter(([,n])=>n>0).map(([s,n])=>`${n}点${DAMAGE_TYPE_NAMES[s]}伤害（${n}${s}）`);
   const parts=[...(injuries.length?[`受到${injuries.join('、')}`]:[]),...changes];
+  const reportsGrapple=hasNewPlayerSnapshot&&Boolean(actor.state.grapple||grappleInBatch);
+  if(reportsGrapple) {
+    if(!injuries.length)parts.unshift('本次未受到伤害');
+    const state=actor.state.grapple?(actor.state.grapple.pressed?'已压制（仍在擒抱中）':'擒抱中（未压制）'):'已解除';
+    parts.push(`当前擒抱状态：${state}`);
+  }
+  if(hasResolvedPlayerSnapshot&&!hasPendingPlayerSnapshot) {
+    if(!injuries.length&&!reportsGrapple)parts.unshift('本次无伤害');
+    if(!changedTypes.size&&!reportsGrapple)parts.push('无新增状态');
+  }
   if(parts.length) {
     const current={...actor.state,statuses:before?.statuses??actor.state.statuses};
     const remaining=[...new Set(current.statuses.map(s=>s.type))].filter(type=>!changedTypes.has(type))
@@ -157,6 +172,11 @@ export function publicScene(root,{afterRevision=0,playerId='player'}={}) {
       event.execution=r.abilityId==='door'?(r.terrain.open?'推开眼前的门':'将眼前的门关上'):'以当前武器攻击所声明的障碍段';
     }
     const damage=[...r.damage,...(r.opportunities??[]).flatMap(x=>x.damage)];
+    // Project only the player's actual, post-conversion injury types. Nested
+    // opportunities may already be resolved while the parent action is pending.
+    const settledDamage=[...(!r.after.awaiting?r.damage:[]),...(r.opportunities??[]).flatMap(x=>x.damage)];
+    const playerDamageTypes=Object.keys(DAMAGE_TYPE_NAMES).filter(type=>settledDamage.some(x=>x.targetId===playerId&&x.actualDamage>0&&x.severity===type));
+    if(playerDamageTypes.length&&seen.has(playerId))event.playerDamageTypes=playerDamageTypes.map(type=>DAMAGE_TYPE_NAMES[type]);
     const affectedIds=[...new Set(damage.filter(x=>x.actualDamage>0&&seen.has(x.targetId)).map(x=>x.targetId))];
     event.affected=affectedIds.map(id=>seen.get(id));
     if(event.affected.length) {
@@ -172,6 +192,14 @@ export function publicScene(root,{afterRevision=0,playerId='player'}={}) {
     if(!r.after.awaiting){
       const held=[...new Set((r.grapples??[]).filter(g=>g.success&&seen.has(g.targetId)).map(g=>seen.get(g.targetId)))];
       if(held.length)event.consequence=`${event.consequence??''}${held.join('、')}已被夹住。`;
+      // Use this action's saved state, never a later hold/suppression outcome.
+      const grappleIds=[...new Set([...(r.grapples??[]).filter(g=>g.success).map(g=>g.targetId),
+        ...(['grapple','pressGrip'].includes(r.abilityId)&&r.grapple?[command.targetId]:[])])];
+      const grappleStates=grappleIds.filter(id=>seen.has(id)).flatMap(id=>{
+        const saved=r.after.participants.find(p=>p.id===id)?.grapple;
+        return typeof saved?.pressed==='boolean'?[{actor:seen.get(id),state:saved.pressed?'已压制':'擒抱中，未压制'}]:[];
+      });
+      if(grappleStates.length)event.grappleStates=grappleStates;
     }
     if(['move','step','charge'].includes(r.abilityId)&&!pendingMovement) {
       const to=r.after.participants.find(x=>x.id===r.actorId)?.position;
@@ -228,12 +256,21 @@ const slotNames={standard:'标准',move:'移动',swift:'迅捷',reflex:'反射'}
 const slots=o=>Object.entries(o??{}).filter(([,n])=>n>0).map(([k,n])=>`${slotNames[k]??k}×${n}`).join('、')||'无';
 export function combatActionReport(root,{afterRevision=0,playerId='player'}={}){
  if(!root.battle)return '';
- const lines=[],ops=Object.values(root.operations).filter(o=>o.summary?.revision>afterRevision&&o.summary.result?.after?.participants).sort((a,b)=>a.summary.revision-b.summary.revision);
- for(const op of ops){
+ const lines=[],ops=Object.values(root.operations).filter(o=>o.summary?.result?.after?.participants).sort((a,b)=>a.summary.revision-b.summary.revision);
+ for(const [index,op] of ops.entries()){
+  if(op.summary.revision<=afterRevision)continue;
   const r=op.summary.result,a=root.actors[r.actorId];if(!a||['enter','leave','parameters','map','mapUpdate','react'].includes(r.abilityId)||r.abilityId==='end'&&r.actorId!==playerId)continue;
   if(r.after.awaiting&&op.summary.revision!==root.revision)continue;
   const seen=r.after.visibleTo?.[playerId]??[];
-  if(r.actorId!==playerId&&!seen.includes(r.actorId))continue;
+  if(r.actorId!==playerId&&!seen.includes(r.actorId)){
+   // Preserve the witnessed departure, not the actor's later hidden actions.
+   const beforeSeen=ops[index-1]?.summary.result.after.visibleTo?.[playerId]??[];
+   if(r.abilityId==='burrow'&&!r.after.awaiting&&beforeSeen.includes(r.actorId)){
+    const label=root.battle.actors[r.actorId]?.abilityDefinitions?.[r.abilityId]?.name??'土遁入地';
+    lines.push(`${a.name}｜${label}`,'状态：已入土，离开视线；地下位置与后续行动不可见。');
+   }
+   continue;
+  }
   for(const opportunity of r.opportunities??[]){
    if(opportunity.actorId!==playerId&&!seen.includes(opportunity.actorId))continue;
    const attacker=root.actors[opportunity.actorId],target=root.actors[r.actorId];
@@ -256,7 +293,9 @@ export function combatActionReport(root,{afterRevision=0,playerId='player'}={}){
    lines.push(`资源消耗：${resources.join('、')||'无'}`,`主动移动：${q.movement}米`,`剩余动作：${slots(q.remaining)}`);
   }else if(r.movement)lines.push(`可见移动：${r.movement.length}米`);
   for(const response of r.responses??[])if(response.targetId===playerId||seen.includes(response.targetId))lines.push(`防御（${root.actors[response.targetId]?.name??'受击者'}）：${response.method??(response.guarded?'使用已就绪的主动格挡':'基础及被动防护，未主动格挡')}`);
-  if(!(r.responses?.length))lines.push(['block','zheng','fullDefense','brace'].includes(r.abilityId)?'防御：已完成防护准备，尚不代表挡住一次攻击。':'防御：本动作没有防御结算。');
+  const shieldSaves=r.contest?.kind==='shieldPush'?(r.saves??[]).filter(s=>s.type==='fort'):[];
+  for(const save of shieldSaves)if(save.targetId===playerId||seen.includes(save.targetId))lines.push(`防御（${root.actors[save.targetId]?.name??'受击者'}）：强韧抵抗`);
+  if(!(r.responses?.length)&&!shieldSaves.length)lines.push(['block','zheng','fullDefense','brace'].includes(r.abilityId)?'防御：已完成防护准备，尚不代表挡住一次攻击。':'防御：本动作没有防御结算。');
   if(r.forcedMovement&&(r.forcedMovement.targetId===playerId||seen.includes(r.forcedMovement.targetId)))lines.push(`被迫位移（${root.actors[r.forcedMovement.targetId]?.name??'目标'}）：${r.forcedMovement.length}米${r.forcedMovement.blocked?'（受阻）':''}`);
   if(r.disarmed)lines.push(`装备结果：${r.disarmed.name}已脱手落地。`);
   if(r.equipmentDamage)lines.push(`装备结果：${r.equipmentDamage.name}${r.equipmentDamage.destroyed?'已损毁':r.equipmentDamage.structuralDamage>0?'已受损':'未突破硬度'}。`);

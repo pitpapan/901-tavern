@@ -1,0 +1,14 @@
+✔ v4 selects text, program derives UTF16 coordinates, preserves input and partial receipt (809.0736ms)
+✔ rejects missing, forged, ambiguous, legacy-coordinate and out-of-parent selections unchanged (15.4271ms)
+✔ repeated identical text selects the intended occurrence; ambiguous full target rejects (7.0347ms)
+✔ default adapter persists partial knowledge, pending and reopen through existing MVU without repair (79.3504ms)
+✔ none and not_received do not invent receipts or grant knowledge; semantic omissions stay unverified (7.4379ms)
+✔ three original failed replies remain unchanged and rejected by both historical and selected contracts (54.0793ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1674.6744

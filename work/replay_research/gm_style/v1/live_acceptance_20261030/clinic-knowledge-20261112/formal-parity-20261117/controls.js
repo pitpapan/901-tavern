@@ -1,0 +1,56 @@
+// Explicit manual test controls, present only in the isolated card.
+if(window.top.location.port!=='18129')throw Error('Isolated clinic controls require top-level port 18129');
+const {adoptNativeChatBranch:adoptParityBranch,carryTestState:carryParityState,readPersistedTavernChat:readParityChat}=await import('/901-opening-combat/work/rules_engine/mvu_poc/adapter.mjs');
+const parityParent=__PARENT__,parityParentRevision=__PARENT_REVISION__;
+const parityDocument=window.top.document;
+parityDocument.getElementById('clinic-parity-controls')?.remove();
+const parityPanel=parityDocument.createElement('section');parityPanel.id='clinic-parity-controls';
+parityPanel.style.cssText='position:fixed;right:8px;top:45px;z-index:99999;background:#142c30;color:white;padding:10px;max-width:330px;font:13px sans-serif';
+const parityStatus=parityDocument.createElement('pre');parityStatus.style.cssText='white-space:pre-wrap';
+parityStatus.textContent='医馆旧交 · 正式同构隔离\n人工确认接收；通用抽取关闭\n请求经隔离中转；次数以本轮账本为准';parityPanel.append(parityStatus);parityDocument.body.append(parityPanel);
+const parityTavern=()=>SillyTavern.getContext?.()??SillyTavern;
+const parityAnchor=()=>({chatId:SillyTavern.getCurrentChatId?.()??SillyTavern.chatId,messageId:SillyTavern.chat.length-1,swipeId:SillyTavern.chat.at(-1)?.swipe_id??0});
+const parityPost=async(path,data)=>{const r=await fetch('/api/backends/chat-completions/'+path,{method:'POST',headers:parityTavern().getRequestHeaders(),body:JSON.stringify(data)});if(!r.ok)throw Error('Local evidence '+r.status);return r.json();};
+function parityButton(label,action){const b=parityDocument.createElement('button');b.textContent=label;b.onclick=async()=>{b.disabled=true;try{await action();}catch(e){parityStatus.textContent='未完成：'+e.message;}finally{b.disabled=false;}};parityPanel.append(b);}
+parityButton('绑定当前原生测试分支',async()=>{
+ const result=await adoptParityBranch({mvu:Mvu,tavern:parityTavern(),expectedParentChatId:parityParent,expectedRevision:parityParentRevision});
+ await SillyTavern.saveChat();parityStatus.textContent='原生分支已绑定：'+result.status+'\n未初始化人物；请保存baseline快照';
+});
+const paritySource='桌外隔离验收事件（非正式剧情）：一名来客避开御临风和黄泉，只对布莱特说：“九雪医馆馆主与雪老有旧，二者是不同的人。”布莱特听清了这句话；御临风与黄泉没有听见。';
+parityButton('人工测试告知：仅布莱特收到',async()=>{
+ let sourceId=SillyTavern.chat.findIndex(m=>m.mes===paritySource);
+ if(sourceId<0){
+  const old=parityAnchor(),root=Mvu.getMvuData({type:'message',message_id:old.messageId}).stat_data['901_rules_poc'];
+  const operationId=Object.keys(root.operations).findLast(id=>root.operations[id].summary?.kind!=='knowledge')??Object.keys(root.operations).at(-1);
+  await createChatMessages([{role:'system',message:paritySource,is_hidden:true,extra:{clinicParityTestSource:true}}]);
+  sourceId=SillyTavern.chat.length-1;
+  await carryParityState({mvu:Mvu,getSourceAnchor:()=>old,getAnchor:parityAnchor,expectedChatId:old.chatId,operationId});
+  await SillyTavern.saveChat();
+ }
+ const source=SillyTavern.chat[sourceId],anchor=parityAnchor();
+ const result=await window.top.__901StoryKnowledge.receive({id:'clinic.parity.bright.20261117',authority:'host-confirmed',status:'received',
+  sourceAnchor:{chatId:anchor.chatId,messageId:sourceId,swipeId:source.swipe_id??0,text:source.mes},
+  propositionRefs:['clinic.owner.xuelao.old-friend'],recipientIds:['bright'],channel:'message',belief:'confirmed'});
+ parityStatus.textContent='人工确认已提交原receive：'+result.status+'\n来源原文已保存；仅布莱特收到';
+});
+// The operator clicks only after reading the actual retained utterance and confirming audibility.
+parityButton('人工确认当前对白：御临风与黄泉听清',async()=>{
+ const anchor=parityAnchor(),source=SillyTavern.chat[anchor.messageId];
+ if(!['after','reopen'].includes(parityPhase.value)||source.is_user||source.is_system||source.extra?.['901_replay_gate']?.status!=='NO_CHECK')throw Error('Select after/reopen and retain an actual completed assistant utterance first');
+ const result=await window.top.__901StoryKnowledge.receive({id:'clinic.parity.public.'+parityPhase.value+'.20261117',authority:'host-confirmed',status:'received',
+  sourceAnchor:{...anchor,text:source.mes},propositionRefs:['clinic.owner.xuelao.old-friend'],recipientIds:['player','huang'],senderId:'bright',channel:'message',belief:'confirmed'});
+ parityStatus.textContent='人工确认实际对白接收：'+result.status+'\n原告知不重复授予；当前来源为实际保存的模型正文';
+});
+const parityPhase=parityDocument.createElement('select');parityPhase.setAttribute('aria-label','三状态捕获阶段');
+for(const phase of ['before','after','reopen']){const o=parityDocument.createElement('option');o.value=phase;o.textContent=phase;parityPhase.append(o);}parityPanel.append(parityPhase);
+parityButton('切换请求捕获阶段',async()=>{await parityPost('clinic-parity-phase',{phase:parityPhase.value});parityStatus.textContent='仅捕获真实入口请求：'+parityPhase.value+'\n分类使用实际模型响应；次数见账本';});
+const parityLabel=parityDocument.createElement('input');parityLabel.setAttribute('aria-label','三状态快照名称');parityLabel.value='baseline';parityPanel.append(parityLabel);
+parityButton('保存当前swipe与磁盘快照',async()=>{
+ await SillyTavern.saveChat();const anchor=parityAnchor(),saved=await readParityChat({tavern:SillyTavern,chatId:anchor.chatId});
+ const pages=SillyTavern.chat.map((_,i)=>Mvu.getMvuData({type:'message',message_id:i}));
+ const result=await parityPost('clinic-parity-evidence',{label:parityLabel.value,chatId:anchor.chatId,nonCanon:true,modelCalls:'server-ledger',
+  anchor,chat:structuredClone(SillyTavern.chat),pages,saved,knowledgeContext:storyKnowledge.context(),
+  dialogueDisabled:(await storyKnowledge.resumeDialogue()).status==='disabled'});
+ parityStatus.textContent='已保存：'+parityLabel.value+'\n知情 '+storyKnowledge.context().actorKnowledge.map(a=>a.name+':'+a.facts.length).join(' / ')+'\n模型调用：'+result.modelCalls+'，累计'+result.cumulative+'\n磁盘seed：'+result.seedSha256.slice(0,12);
+});
+window.addEventListener('pagehide',()=>parityPanel.remove());

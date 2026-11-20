@@ -1,0 +1,168 @@
+{
+  "scope": "Isolated state/save/reopen, three paid frozen narration outputs, exact-response replay through ordinary gate and saved MVU",
+  "states": [
+    {
+      "state": "01-before-startup",
+      "revision": 0,
+      "facts": {
+        "player": 0,
+        "bright": 0,
+        "huang": 0
+      },
+      "activeEqualsSaved": true,
+      "extractionDisabled": true
+    },
+    {
+      "state": "02-received-received",
+      "revision": 1,
+      "facts": {
+        "player": 0,
+        "bright": 1,
+        "huang": 0
+      },
+      "activeEqualsSaved": true,
+      "extractionDisabled": true
+    },
+    {
+      "state": "03-reopened-startup",
+      "revision": 1,
+      "facts": {
+        "player": 0,
+        "bright": 1,
+        "huang": 0
+      },
+      "activeEqualsSaved": true,
+      "extractionDisabled": true
+    }
+  ],
+  "receivedEqualsReopenedWholeRoot": true,
+  "receivedEqualsReopenedContext": true,
+  "receivedEqualsReopenedRequestBytes": true,
+  "manualReceptionOnly": true,
+  "automaticReceptionAcceptance": false,
+  "requests": [
+    {
+      "id": "01-before.02.narration",
+      "file": "captures/01-before.02.narration.request.json",
+      "bytes": 108003,
+      "sha256": "641dc06e41959db0b692e035395b9d59e3719286cace8bf00358f6e164354c47",
+      "messages": 16,
+      "sent": true,
+      "customRequest": 532,
+      "responseModel": "gemini-3.8-flash",
+      "rawResponseSha256": "3935564e25990caa57cff0307d4681ffd3884cf3dc7bc3e19fec7c69a7669685",
+      "manualVerdict": "fail"
+    },
+    {
+      "id": "02-received.04.narration",
+      "file": "captures/02-received.04.narration.request.json",
+      "bytes": 109278,
+      "sha256": "181fccd46cd6fb990e5a8005d06697b8128ae9cdb1fc02499441d0215a30eb87",
+      "messages": 16,
+      "sent": true,
+      "customRequest": 533,
+      "responseModel": "gemini-3.8-flash",
+      "rawResponseSha256": "352b1b9f9869a43d3b22d6c9cf2e648cd5207a043d48656046f631970725edec",
+      "manualVerdict": "pass"
+    },
+    {
+      "id": "03-reopened.06.narration",
+      "file": "captures/03-reopened.06.narration.request.json",
+      "bytes": 109278,
+      "sha256": "181fccd46cd6fb990e5a8005d06697b8128ae9cdb1fc02499441d0215a30eb87",
+      "messages": 16,
+      "sent": true,
+      "customRequest": 534,
+      "responseModel": "gemini-3.8-flash",
+      "rawResponseSha256": "6b75aad909f07ffa86977d5ac573636a57aed85e8981f331a697fe3bd0168f6c",
+      "manualVerdict": "uncovered"
+    }
+  ],
+  "externalCalls": 3,
+  "classificationModelCalls": 0,
+  "classificationFixtures": 6,
+  "extractionCalls": 0,
+  "ledger": {
+    "sha256": "abf9516796fd91e5eec10eb503d87a870c5a3fdf040fedb194e2ffea305d1d92",
+    "limit": 200,
+    "used": 200,
+    "remaining": 0,
+    "cumulative": 534,
+    "closed": true,
+    "complete": true,
+    "priorAttemptsUnchanged": true
+  },
+  "protectedFilesUnchanged": true,
+  "adoptedStyleAndAssetsUnchanged": true,
+  "persistentCardExtractionDisabled": true,
+  "capturedFailuresPreserved": 3,
+  "browserResults": [
+    {
+      "case": "01-before",
+      "activeEqualsSaved": true,
+      "wholeRootEqualsFrozenState": true,
+      "contextEqualsFrozenState": true,
+      "revision": 0,
+      "facts": {
+        "player": 0,
+        "bright": 0,
+        "huang": 0
+      },
+      "savedContentMatchesActualResponse": true,
+      "presentation": "none; original content plus original host suffix",
+      "extractionDisabled": true,
+      "dialogueBatches": 0,
+      "savedChat": "C:\\Users\\pit\\.codex\\worktrees\\yulinfeng-tavern-plan\\TRPG outputs\\work\\replay_research\\gm_style\\v1\\live_acceptance_20261030\\clinic-knowledge-20261112\\natural-key-knowledge-20261116\\live-results\\01-before\\result.chat.jsonl",
+      "savedChatSha256": "b5cefd290a268a119b143caee188e1a997c307491a83b44fed59abbbd61ec55e",
+      "externalCalls": 0,
+      "classificationFixture": 1
+    },
+    {
+      "case": "02-received",
+      "activeEqualsSaved": true,
+      "wholeRootEqualsFrozenState": true,
+      "contextEqualsFrozenState": true,
+      "revision": 1,
+      "facts": {
+        "player": 0,
+        "bright": 1,
+        "huang": 0
+      },
+      "savedContentMatchesActualResponse": true,
+      "presentation": "none; original content plus original host suffix",
+      "extractionDisabled": true,
+      "dialogueBatches": 0,
+      "savedChat": "C:\\Users\\pit\\.codex\\worktrees\\yulinfeng-tavern-plan\\TRPG outputs\\work\\replay_research\\gm_style\\v1\\live_acceptance_20261030\\clinic-knowledge-20261112\\natural-key-knowledge-20261116\\live-results\\02-received\\result.chat.jsonl",
+      "savedChatSha256": "c6ba04d2262bd85268642d6ebb42439e7c94d80ee9e48940b76b7fcd4c5abb46",
+      "externalCalls": 0,
+      "classificationFixture": 1
+    },
+    {
+      "case": "03-reopened",
+      "activeEqualsSaved": true,
+      "wholeRootEqualsFrozenState": true,
+      "contextEqualsFrozenState": true,
+      "revision": 1,
+      "facts": {
+        "player": 0,
+        "bright": 1,
+        "huang": 0
+      },
+      "savedContentMatchesActualResponse": true,
+      "presentation": "none; original content plus original host suffix",
+      "extractionDisabled": true,
+      "dialogueBatches": 0,
+      "savedChat": "C:\\Users\\pit\\.codex\\worktrees\\yulinfeng-tavern-plan\\TRPG outputs\\work\\replay_research\\gm_style\\v1\\live_acceptance_20261030\\clinic-knowledge-20261112\\natural-key-knowledge-20261116\\live-results\\03-reopened\\result.chat.jsonl",
+      "savedChatSha256": "05197fc1b8906e928097cffe2c64658b636a1e762bcd53e0aeff864fe1da2944",
+      "externalCalls": 0,
+      "classificationFixture": 1
+    }
+  ],
+  "finalChatContainsActualReopenedOutput": true,
+  "narrativeVerdicts": {
+    "01-before": "fail: minor player position continuation",
+    "02-received": "pass on this limited input",
+    "03-reopened": "uncovered: forward-movement subject ambiguous"
+  },
+  "remainingIssue": "State persistence and prompt equality passed. Player control remains imperfect or ambiguous; these samples do not establish general narrative stability or use of the secret when needed. Budget exhausted."
+}

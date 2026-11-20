@@ -1,0 +1,310 @@
+{
+  "contextRef": "0c9553cd4548da1c67c7d46e2ec2f505569a058aa44168822f2e33fd39ebc129",
+  "assertions": {
+    "schemaVersion": "gm-assertion-output/1",
+    "inputRef": "assertion.6b2735bf0e91149301b1b1ae60cc9eadded76389b4028f67d8c42994dd53f865",
+    "units": [
+      {
+        "id": "turn",
+        "status": "extracted",
+        "claims": [
+          {
+            "id": "claim-01",
+            "type": "utterance",
+            "args": {
+              "speaker": "布莱特",
+              "content": "仓库换了锁。"
+            },
+            "argumentSpans": {
+              "speaker": {
+                "documentId": "current",
+                "start": 0,
+                "end": 3,
+                "quote": "布莱特"
+              },
+              "content": {
+                "documentId": "current",
+                "start": 8,
+                "end": 14,
+                "quote": "仓库换了锁。"
+              }
+            },
+            "mode": "asserted",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 0,
+              "end": 15,
+              "quote": "布莱特低声说：“仓库换了锁。”"
+            }
+          },
+          {
+            "id": "claim-02",
+            "type": "degree",
+            "args": {
+              "entity": "布莱特",
+              "property": "音量",
+              "value": "低声"
+            },
+            "argumentSpans": {
+              "entity": {
+                "documentId": "current",
+                "start": 0,
+                "end": 3,
+                "quote": "布莱特"
+              },
+              "property": {
+                "documentId": "current",
+                "start": 4,
+                "end": 5,
+                "quote": "声"
+              },
+              "value": {
+                "documentId": "current",
+                "start": 3,
+                "end": 5,
+                "quote": "低声"
+              }
+            },
+            "mode": "asserted",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 0,
+              "end": 6,
+              "quote": "布莱特低声说"
+            }
+          },
+          {
+            "id": "claim-03",
+            "type": "state",
+            "args": {
+              "entity": "仓库",
+              "name": "锁具状态",
+              "value": "换了锁"
+            },
+            "argumentSpans": {
+              "entity": {
+                "documentId": "current",
+                "start": 8,
+                "end": 10,
+                "quote": "仓库"
+              },
+              "name": {
+                "documentId": "current",
+                "start": 12,
+                "end": 13,
+                "quote": "锁"
+              },
+              "value": {
+                "documentId": "current",
+                "start": 10,
+                "end": 13,
+                "quote": "换了锁"
+              }
+            },
+            "mode": "reported",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": "布莱特"
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": {
+                "documentId": "current",
+                "start": 0,
+                "end": 3,
+                "quote": "布莱特"
+              }
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 7,
+              "end": 15,
+              "quote": "“仓库换了锁。”"
+            }
+          },
+          {
+            "id": "claim-04",
+            "type": "location",
+            "args": {
+              "entity": "黄泉",
+              "landmark": "门",
+              "region": "门边"
+            },
+            "argumentSpans": {
+              "entity": {
+                "documentId": "current",
+                "start": 15,
+                "end": 17,
+                "quote": "黄泉"
+              },
+              "landmark": {
+                "documentId": "current",
+                "start": 19,
+                "end": 20,
+                "quote": "门"
+              },
+              "region": {
+                "documentId": "current",
+                "start": 19,
+                "end": 21,
+                "quote": "门边"
+              }
+            },
+            "mode": "asserted",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 15,
+              "end": 21,
+              "quote": "黄泉站在门边"
+            }
+          },
+          {
+            "id": "claim-05",
+            "type": "posture",
+            "args": {
+              "entity": "黄泉",
+              "value": "站"
+            },
+            "argumentSpans": {
+              "entity": {
+                "documentId": "current",
+                "start": 15,
+                "end": 17,
+                "quote": "黄泉"
+              },
+              "value": {
+                "documentId": "current",
+                "start": 17,
+                "end": 18,
+                "quote": "站"
+              }
+            },
+            "mode": "asserted",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 15,
+              "end": 21,
+              "quote": "黄泉站在门边"
+            }
+          },
+          {
+            "id": "claim-06",
+            "type": "state",
+            "args": {
+              "entity": "黄泉",
+              "name": "听清状态",
+              "value": "听清"
+            },
+            "argumentSpans": {
+              "entity": {
+                "documentId": "current",
+                "start": 25,
+                "end": 26,
+                "quote": "她"
+              },
+              "name": {
+                "documentId": "current",
+                "start": 28,
+                "end": 30,
+                "quote": "听清"
+              },
+              "value": {
+                "documentId": "current",
+                "start": 28,
+                "end": 30,
+                "quote": "听清"
+              }
+            },
+            "mode": "unknown",
+            "scope": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "scopeSpans": {
+              "time": null,
+              "condition": null,
+              "attribution": null
+            },
+            "anchor": {
+              "documentId": "current",
+              "start": 22,
+              "end": 31,
+              "quote": "不确定她是否听清。"
+            }
+          }
+        ],
+        "unresolved": []
+      }
+    ]
+  },
+  "receptions": [
+    {
+      "id": "rec-01",
+      "claimId": "claim-01",
+      "speakerId": "bright",
+      "recipientIds": [
+        "huang"
+      ],
+      "recipientSpans": [
+        {
+          "documentId": "current",
+          "start": 25,
+          "end": 26,
+          "quote": "她"
+        }
+      ],
+      "evidence": {
+        "documentId": "current",
+        "start": 22,
+        "end": 31,
+        "quote": "不确定她是否听清。"
+      },
+      "status": "uncertain",
+      "propositionRef": null,
+      "reason": "原文明确指出不确定她是否听清"
+    }
+  ]
+}
