@@ -37,6 +37,14 @@ Models and bounded delegation
 - Keep personality, tone, narrative direction, and consequential choices in direct user conversation. A subagent returns unresolved choices to its parent. Relay the user's correction accurately and cancel or redirect obsolete work instead of continuing an abandoned brief.
 - Review and research agents report findings without editing files. Maintenance may write only within an explicitly assigned task and paths. Start one child for a bounded job; add parallel children only for genuinely independent work. Children do not spawn further agents or initiate review chains.
 - Use actual available agent tools and supported model settings. If delegation is unavailable, perform the bounded task directly when feasible. Do not fabricate a delegation result or silently substitute a more expensive model.
+
+### 主窗口内置浏览器与 Terra
+
+- 用户指定此模式时，主代理在当前聊天打开或沿用内置浏览器标签，确认地址和目标实例，再让 Terra 子代理参与浏览。调用工具支持的 Terra 模型标识，例如 `gpt-6.1-terra`。
+- 主代理把当前标签的可见页面、控件和状态发给 Terra。Terra 根据这些观察提出具体的下一步并解读结果。主代理使用 `mcp__cua_repl` 在同一标签执行该动作，取得新页面状态后回传给 Terra，直至完成。
+- Terra 通过主代理取得实时观察和执行浏览动作，无需在子代理会话绑定主窗口标签，也不另开浏览器。若浏览动作失败，回传实际页面或工具结果，由 Terra 据此调整。
+- 浏览、提交表单、写入存档和外部模型调用沿用当前任务分别授予的范围。酒馆隔离验收先核对实例地址和分支。交付时说明 Terra 的判断、主代理执行的动作，以及实际页面证据。
+
 3. Skills and context
 - Before the first 901-* use in a session, read the relevant parts of docs/901_skills_integration.md if they are not already in context. It identifies real project paths, branch entry points, and approved integration boundaries.
 - Reuse unchanged instructions already available. Reread only what changed, was lost from context, or is needed to resolve a concrete question. Read task-relevant files rather than the whole repository.
