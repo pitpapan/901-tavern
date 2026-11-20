@@ -1,7 +1,51 @@
 {
   "date": "2026-11-20",
-  "status": "prepared-not-yet-committed-or-pushed",
-  "authorization": "User requested commit and upload of current state, with new-main-chat handoff instructions.",
-  "scope": "Three existing development branches, no merge to main, no force push, no deployment/model calls.",
-  "repositories": []
+  "status": "all-three-checkpoints-committed-engine-pushed-two-public-uploads-await-explicit-confirmation",
+  "scope": "Current three development branches; no deployment, merge or model calls.",
+  "repositories": [
+    {
+      "repository": "901-resource-authoring-kit",
+      "branch": "codex/resource-reconciliation",
+      "before": "595a074ed0dd9c703265133fc53ea53d62c61bc3",
+      "commit": "09f309c4d9c5d4a8d6df31e918fca8314fbab7eb",
+      "changedPaths": 30,
+      "exactIndexByteChecks": 30,
+      "postCommitDirtyPaths": 0,
+      "repositoryUrl": "https://github.com/pitpapan/901-resource-authoring-kit",
+      "remoteHeadObserved": null,
+      "status": "local-commit-complete-push-blocked-by-automatic-review",
+      "visibility": "public",
+      "ownerVerified": "Authenticated GitHub login pitpapan owns this repository (same user id); admin/push permissions confirmed.",
+      "approvalRequired": "Automatic approval rejected external transfer without explicit destination confirmation. Need user confirmation to publish this checkpoint to this public repository and specified development branch."
+    },
+    {
+      "repository": "901-trpg-engine",
+      "branch": "codex/gm-b1",
+      "before": "3068eb926d1fc0691486238fac37f61a290bbe79",
+      "commit": "e726181738b8ccd001d074b018b03725e41735b0",
+      "changedPaths": 324,
+      "exactIndexByteChecks": 316,
+      "postCommitDirtyPaths": 0,
+      "repositoryUrl": "https://github.com/pitpapan/901-trpg-engine",
+      "remoteHeadObserved": "e726181738b8ccd001d074b018b03725e41735b0",
+      "status": "pushed-and-remote-verified"
+    },
+    {
+      "repository": "TRPG outputs",
+      "branch": "codex/tavern-resource-reconciliation",
+      "before": "de28c9606a37c43ef2e42f5f54acc694c53b0b87",
+      "commit": "49ab3ed135835066477c106eb19333cd8cd162c7",
+      "changedPaths": 6345,
+      "exactIndexByteChecks": 6294,
+      "postCommitDirtyPaths": 0,
+      "repositoryUrl": "https://github.com/pitpapan/901-tavern",
+      "remoteHeadObserved": "986df0ddc647b6972f151a0db87599458a5e6bb2",
+      "status": "local-commit-complete-push-blocked-by-automatic-review",
+      "visibility": "public",
+      "ownerVerified": "Authenticated GitHub login pitpapan owns this repository (same user id); admin/push permissions confirmed.",
+      "approvalRequired": "Automatic approval rejected external transfer without explicit destination confirmation. Need user confirmation to publish this checkpoint to this public repository and specified development branch."
+    }
+  ],
+  "currentCampaignPayloadCommit": "49ab3ed135835066477c106eb19333cd8cd162c7",
+  "receiptNote": "The campaign commit containing this receipt follows the payload commit. Read git HEAD for the receipt commit; no self-referential hash is embedded."
 }
