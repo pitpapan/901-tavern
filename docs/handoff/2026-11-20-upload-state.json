@@ -1,6 +1,6 @@
 {
   "date": "2026-11-20",
-  "status": "all-three-checkpoints-committed-engine-pushed-two-public-uploads-await-explicit-confirmation",
+  "status": "all-three-checkpoints-pushed-and-remotes-verified",
   "scope": "Current three development branches; no deployment, merge or model calls.",
   "repositories": [
     {
@@ -12,11 +12,12 @@
       "exactIndexByteChecks": 30,
       "postCommitDirtyPaths": 0,
       "repositoryUrl": "https://github.com/pitpapan/901-resource-authoring-kit",
-      "remoteHeadObserved": null,
-      "status": "local-commit-complete-push-blocked-by-automatic-review",
+      "remoteHeadObserved": "09f309c4d9c5d4a8d6df31e918fca8314fbab7eb",
+      "status": "pushed-and-remote-verified",
       "visibility": "public",
       "ownerVerified": "Authenticated GitHub login pitpapan owns this repository (same user id); admin/push permissions confirmed.",
-      "approvalRequired": "Automatic approval rejected external transfer without explicit destination confirmation. Need user confirmation to publish this checkpoint to this public repository and specified development branch."
+      "payloadCommit": "09f309c4d9c5d4a8d6df31e918fca8314fbab7eb",
+      "explicitPublicUploadConfirmation": "User confirmed: 确认，上传到这两个公开仓库; payloads, public destinations and current branches named in the question, including subsequent upload-receipt-only commits."
     },
     {
       "repository": "901-trpg-engine",
@@ -28,24 +29,27 @@
       "postCommitDirtyPaths": 0,
       "repositoryUrl": "https://github.com/pitpapan/901-trpg-engine",
       "remoteHeadObserved": "e726181738b8ccd001d074b018b03725e41735b0",
-      "status": "pushed-and-remote-verified"
+      "status": "pushed-and-remote-verified",
+      "payloadCommit": "e726181738b8ccd001d074b018b03725e41735b0"
     },
     {
       "repository": "TRPG outputs",
       "branch": "codex/tavern-resource-reconciliation",
       "before": "de28c9606a37c43ef2e42f5f54acc694c53b0b87",
-      "commit": "49ab3ed135835066477c106eb19333cd8cd162c7",
+      "commit": "de9c5f8ed92fb909272336020ce1f2f05d993698",
       "changedPaths": 6345,
       "exactIndexByteChecks": 6294,
       "postCommitDirtyPaths": 0,
       "repositoryUrl": "https://github.com/pitpapan/901-tavern",
-      "remoteHeadObserved": "986df0ddc647b6972f151a0db87599458a5e6bb2",
-      "status": "local-commit-complete-push-blocked-by-automatic-review",
+      "remoteHeadObserved": "de9c5f8ed92fb909272336020ce1f2f05d993698",
+      "status": "pushed-and-remote-verified",
       "visibility": "public",
       "ownerVerified": "Authenticated GitHub login pitpapan owns this repository (same user id); admin/push permissions confirmed.",
-      "approvalRequired": "Automatic approval rejected external transfer without explicit destination confirmation. Need user confirmation to publish this checkpoint to this public repository and specified development branch."
+      "payloadCommit": "49ab3ed135835066477c106eb19333cd8cd162c7",
+      "explicitPublicUploadConfirmation": "User confirmed: 确认，上传到这两个公开仓库; payloads, public destinations and current branches named in the question, including subsequent upload-receipt-only commits."
     }
   ],
   "currentCampaignPayloadCommit": "49ab3ed135835066477c106eb19333cd8cd162c7",
-  "receiptNote": "The campaign commit containing this receipt follows the payload commit. Read git HEAD for the receipt commit; no self-referential hash is embedded."
+  "receiptNote": "Remote SHAs here were verified before this receipt-only commit. The final campaign HEAD contains this receipt; resolve git HEAD / remote branch for that final commit. Resource and engine heads remain as recorded.",
+  "priorAutomaticApprovalRejection": "Resolved by the user explicitly confirming both public destinations and checkpoint contents. Original local payload commits retained; no bypass, no force push."
 }
